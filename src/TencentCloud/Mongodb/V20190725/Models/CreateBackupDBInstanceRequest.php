@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBackupDBInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getBackupMethod() Obtain Valid values: 0 (logical backup), 1 (physical backup)
- * @method void setBackupMethod(integer $BackupMethod) Set Valid values: 0 (logical backup), 1 (physical backup)
- * @method string getBackupRemark() Obtain Backup remarks
- * @method void setBackupRemark(string $BackupRemark) Set Backup remarks
+ * @method string getInstanceId() Obtain Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+ * @method integer getBackupMethod() Obtain Sets the backup method.
+ - 0: logical backup.
+ - 1: physical backup.
+ * @method void setBackupMethod(integer $BackupMethod) Set Sets the backup method.
+ - 0: logical backup.
+ - 1: physical backup.
+ * @method string getBackupRemark() Obtain Backup remarks information.
+ * @method void setBackupRemark(string $BackupRemark) Set Backup remarks information.
  */
 class CreateBackupDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var integer Valid values: 0 (logical backup), 1 (physical backup)
+     * @var integer Sets the backup method.
+ - 0: logical backup.
+ - 1: physical backup.
      */
     public $BackupMethod;
 
     /**
-     * @var string Backup remarks
+     * @var string Backup remarks information.
      */
     public $BackupRemark;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param integer $BackupMethod Valid values: 0 (logical backup), 1 (physical backup)
-     * @param string $BackupRemark Backup remarks
+     * @param string $InstanceId Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+     * @param integer $BackupMethod Sets the backup method.
+ - 0: logical backup.
+ - 1: physical backup.
+     * @param string $BackupRemark Backup remarks information.
      */
     function __construct()
     {

@@ -20,50 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceNetworkAddress request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getOldIpExpiredTime() Obtain Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
- * @method void setOldIpExpiredTime(integer $OldIpExpiredTime) Set Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
- * @method string getNewUniqVpcId() Obtain ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
- * @method void setNewUniqVpcId(string $NewUniqVpcId) Set ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
- * @method string getNewUniqSubnetId() Obtain ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
- * @method void setNewUniqSubnetId(string $NewUniqSubnetId) Set ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
- * @method array getNetworkAddresses() Obtain IP information to be modified
- * @method void setNetworkAddresses(array $NetworkAddresses) Set IP information to be modified
+ * @method string getInstanceId() Obtain Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
+ * @method void setInstanceId(string $InstanceId) Set Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
+ * @method integer getOldIpExpiredTime() Obtain Retention period of the original IP address.
+ - Unit: minutes. 0 means that the IP address is immediately repossessed.
+ - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
+
+ * @method void setOldIpExpiredTime(integer $OldIpExpiredTime) Set Retention period of the original IP address.
+ - Unit: minutes. 0 means that the IP address is immediately repossessed.
+ - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
+
+ * @method string getNewUniqVpcId() Obtain VPC ID after the switch. If the instance is using a basic network, this field is not required.
+ * @method void setNewUniqVpcId(string $NewUniqVpcId) Set VPC ID after the switch. If the instance is using a basic network, this field is not required.
+ * @method string getNewUniqSubnetId() Obtain VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
+ * @method void setNewUniqSubnetId(string $NewUniqSubnetId) Set VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
+ * @method array getNetworkAddresses() Obtain IP address information, including the new IP address and the original IP address.
+ * @method void setNetworkAddresses(array $NetworkAddresses) Set IP address information, including the new IP address and the original IP address.
  */
 class ModifyDBInstanceNetworkAddressRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
      */
     public $InstanceId;
 
     /**
-     * @var integer Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
+     * @var integer Retention period of the original IP address.
+ - Unit: minutes. 0 means that the IP address is immediately repossessed.
+ - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
+
      */
     public $OldIpExpiredTime;
 
     /**
-     * @var string ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+     * @var string VPC ID after the switch. If the instance is using a basic network, this field is not required.
      */
     public $NewUniqVpcId;
 
     /**
-     * @var string ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+     * @var string VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
      */
     public $NewUniqSubnetId;
 
     /**
-     * @var array IP information to be modified
+     * @var array IP address information, including the new IP address and the original IP address.
      */
     public $NetworkAddresses;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param integer $OldIpExpiredTime Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
-     * @param string $NewUniqVpcId ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
-     * @param string $NewUniqSubnetId ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
-     * @param array $NetworkAddresses IP information to be modified
+     * @param string $InstanceId Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
+     * @param integer $OldIpExpiredTime Retention period of the original IP address.
+ - Unit: minutes. 0 means that the IP address is immediately repossessed.
+ - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
+
+     * @param string $NewUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required.
+     * @param string $NewUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
+     * @param array $NetworkAddresses IP address information, including the new IP address and the original IP address.
      */
     function __construct()
     {

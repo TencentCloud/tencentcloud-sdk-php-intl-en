@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceSecurityGroup request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method array getSecurityGroupIds() Obtain Target security group IDs
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Target security group IDs
+ * @method string getInstanceId() Obtain Instance ID. For example, cmgo-7pje****.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. For example, cmgo-7pje****.
+ * @method array getSecurityGroupIds() Obtain IDs of target security groups. Call the [DescribeSecurityGroup](https://intl.cloud.tencent.com/document/product/240/55675?from_cn_redirect=1) API to view IDs of specific security groups.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set IDs of target security groups. Call the [DescribeSecurityGroup](https://intl.cloud.tencent.com/document/product/240/55675?from_cn_redirect=1) API to view IDs of specific security groups.
  */
 class ModifyDBInstanceSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. For example, cmgo-7pje****.
      */
     public $InstanceId;
 
     /**
-     * @var array Target security group IDs
+     * @var array IDs of target security groups. Call the [DescribeSecurityGroup](https://intl.cloud.tencent.com/document/product/240/55675?from_cn_redirect=1) API to view IDs of specific security groups.
      */
     public $SecurityGroupIds;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param array $SecurityGroupIds Target security group IDs
+     * @param string $InstanceId Instance ID. For example, cmgo-7pje****.
+     * @param array $SecurityGroupIds IDs of target security groups. Call the [DescribeSecurityGroup](https://intl.cloud.tencent.com/document/product/240/55675?from_cn_redirect=1) API to view IDs of specific security groups.
      */
     function __construct()
     {

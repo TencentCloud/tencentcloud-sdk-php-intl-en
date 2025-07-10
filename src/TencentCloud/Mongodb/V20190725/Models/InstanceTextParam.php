@@ -18,76 +18,84 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The collection of modifiable text parameters of an instance.
+ * Collection of modifiable instance parameters whose values are of the Text type.
  *
- * @method string getCurrentValue() Obtain Current value
- * @method void setCurrentValue(string $CurrentValue) Set Current value
- * @method string getDefaultValue() Obtain Default value
- * @method void setDefaultValue(string $DefaultValue) Set Default value
- * @method string getNeedRestart() Obtain Whether to restart the instance for the parameter to take effect
- * @method void setNeedRestart(string $NeedRestart) Set Whether to restart the instance for the parameter to take effect
- * @method string getParamName() Obtain Parameter name
- * @method void setParamName(string $ParamName) Set Parameter name
- * @method string getTextValue() Obtain Value of a text parameter
- * @method void setTextValue(string $TextValue) Set Value of a text parameter
- * @method array getTips() Obtain Parameter description
- * @method void setTips(array $Tips) Set Parameter description
- * @method string getValueType() Obtain Value type
- * @method void setValueType(string $ValueType) Set Value type
- * @method string getStatus() Obtain Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
- * @method void setStatus(string $Status) Set Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+ * @method string getCurrentValue() Obtain Current parameter value.
+ * @method void setCurrentValue(string $CurrentValue) Set Current parameter value.
+ * @method string getDefaultValue() Obtain Default parameter value.
+ * @method void setDefaultValue(string $DefaultValue) Set Default parameter value.
+ * @method string getNeedRestart() Obtain Whether a restart is required after the parameter values are modified.
+ * @method void setNeedRestart(string $NeedRestart) Set Whether a restart is required after the parameter values are modified.
+ * @method string getParamName() Obtain Parameter name.
+ * @method void setParamName(string $ParamName) Set Parameter name.
+ * @method string getTextValue() Obtain Corresponding values of the Text-type parameters.
+ * @method void setTextValue(string $TextValue) Set Corresponding values of the Text-type parameters.
+ * @method array getTips() Obtain Parameter description.
+ * @method void setTips(array $Tips) Set Parameter description.
+ * @method string getValueType() Obtain Parameter type description.
+ * @method void setValueType(string $ValueType) Set Parameter type description.
+ * @method string getStatus() Obtain Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
+ * @method void setStatus(string $Status) Set Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
  */
 class InstanceTextParam extends AbstractModel
 {
     /**
-     * @var string Current value
+     * @var string Current parameter value.
      */
     public $CurrentValue;
 
     /**
-     * @var string Default value
+     * @var string Default parameter value.
      */
     public $DefaultValue;
 
     /**
-     * @var string Whether to restart the instance for the parameter to take effect
+     * @var string Whether a restart is required after the parameter values are modified.
      */
     public $NeedRestart;
 
     /**
-     * @var string Parameter name
+     * @var string Parameter name.
      */
     public $ParamName;
 
     /**
-     * @var string Value of a text parameter
+     * @var string Corresponding values of the Text-type parameters.
      */
     public $TextValue;
 
     /**
-     * @var array Parameter description
+     * @var array Parameter description.
      */
     public $Tips;
 
     /**
-     * @var string Value type
+     * @var string Parameter type description.
      */
     public $ValueType;
 
     /**
-     * @var string Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+     * @var string Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
      */
     public $Status;
 
     /**
-     * @param string $CurrentValue Current value
-     * @param string $DefaultValue Default value
-     * @param string $NeedRestart Whether to restart the instance for the parameter to take effect
-     * @param string $ParamName Parameter name
-     * @param string $TextValue Value of a text parameter
-     * @param array $Tips Parameter description
-     * @param string $ValueType Value type
-     * @param string $Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+     * @param string $CurrentValue Current parameter value.
+     * @param string $DefaultValue Default parameter value.
+     * @param string $NeedRestart Whether a restart is required after the parameter values are modified.
+     * @param string $ParamName Parameter name.
+     * @param string $TextValue Corresponding values of the Text-type parameters.
+     * @param array $Tips Parameter description.
+     * @param string $ValueType Parameter type description.
+     * @param string $Status Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
      */
     function __construct()
     {

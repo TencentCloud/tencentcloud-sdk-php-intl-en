@@ -20,178 +20,270 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Specifications of purchasable MongoDB instances
  *
- * @method string getSpecCode() Obtain Specification information identifier
- * @method void setSpecCode(string $SpecCode) Set Specification information identifier
- * @method integer getStatus() Obtain Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
- * @method void setStatus(integer $Status) Set Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
- * @method integer getCpu() Obtain Computing resource specification in terms of CPU core
- * @method void setCpu(integer $Cpu) Set Computing resource specification in terms of CPU core
- * @method integer getMemory() Obtain Memory size in MB
- * @method void setMemory(integer $Memory) Set Memory size in MB
- * @method integer getDefaultStorage() Obtain Default disk size in MB
- * @method void setDefaultStorage(integer $DefaultStorage) Set Default disk size in MB
- * @method integer getMaxStorage() Obtain Maximum disk size in MB
- * @method void setMaxStorage(integer $MaxStorage) Set Maximum disk size in MB
- * @method integer getMinStorage() Obtain Minimum disk size in MB
- * @method void setMinStorage(integer $MinStorage) Set Minimum disk size in MB
- * @method integer getQps() Obtain Maximum QPS
- * @method void setQps(integer $Qps) Set Maximum QPS
- * @method integer getConns() Obtain Maximum number of connections
- * @method void setConns(integer $Conns) Set Maximum number of connections
- * @method string getMongoVersionCode() Obtain MongoDB version information of an instance
- * @method void setMongoVersionCode(string $MongoVersionCode) Set MongoDB version information of an instance
- * @method integer getMongoVersionValue() Obtain MongoDB version number of an instance
- * @method void setMongoVersionValue(integer $MongoVersionValue) Set MongoDB version number of an instance
- * @method string getVersion() Obtain MongoDB version number of an instance (short)
- * @method void setVersion(string $Version) Set MongoDB version number of an instance (short)
- * @method string getEngineName() Obtain Storage engine
- * @method void setEngineName(string $EngineName) Set Storage engine
- * @method integer getClusterType() Obtain Cluster type. Valid values: 1 (sharding cluster), 0 (replica set cluster)
- * @method void setClusterType(integer $ClusterType) Set Cluster type. Valid values: 1 (sharding cluster), 0 (replica set cluster)
- * @method integer getMinNodeNum() Obtain Minimum number of secondary nodes in a replica set
- * @method void setMinNodeNum(integer $MinNodeNum) Set Minimum number of secondary nodes in a replica set
- * @method integer getMaxNodeNum() Obtain Maximum number of secondary nodes in a replica set
- * @method void setMaxNodeNum(integer $MaxNodeNum) Set Maximum number of secondary nodes in a replica set
- * @method integer getMinReplicateSetNum() Obtain Minimum number of shards
- * @method void setMinReplicateSetNum(integer $MinReplicateSetNum) Set Minimum number of shards
- * @method integer getMaxReplicateSetNum() Obtain Maximum number of shards
- * @method void setMaxReplicateSetNum(integer $MaxReplicateSetNum) Set Maximum number of shards
- * @method integer getMinReplicateSetNodeNum() Obtain Minimum number of secondary nodes in a shard
- * @method void setMinReplicateSetNodeNum(integer $MinReplicateSetNodeNum) Set Minimum number of secondary nodes in a shard
- * @method integer getMaxReplicateSetNodeNum() Obtain Maximum number of secondary nodes in a shard
- * @method void setMaxReplicateSetNodeNum(integer $MaxReplicateSetNodeNum) Set Maximum number of secondary nodes in a shard
- * @method string getMachineType() Obtain Server type. Valid values: 0 (HIO), 4 (HIO10G)
- * @method void setMachineType(string $MachineType) Set Server type. Valid values: 0 (HIO), 4 (HIO10G)
+ * @method string getSpecCode() Obtain Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
+ - Node types are as follows:
+ - mongo: Mongod node.
+ - mongos: Mongos node.
+ - cfgstr: ConfigServer node.
+ - Specification types are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+ - Memory specifications are as follows:
+ - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
+ - Unit: g, indicating GB. 128g means 128 GB.
+ * @method void setSpecCode(string $SpecCode) Set Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
+ - Node types are as follows:
+ - mongo: Mongod node.
+ - mongos: Mongos node.
+ - cfgstr: ConfigServer node.
+ - Specification types are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+ - Memory specifications are as follows:
+ - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
+ - Unit: g, indicating GB. 128g means 128 GB.
+ * @method integer getStatus() Obtain Saleable specification status flag. Valid values are as follows:
+ - 0: selling stopped.
+ - 1: available for sale.
+ * @method void setStatus(integer $Status) Set Saleable specification status flag. Valid values are as follows:
+ - 0: selling stopped.
+ - 1: available for sale.
+ * @method integer getCpu() Obtain Computing resource specification, indicating the number of CPU cores.
+ * @method void setCpu(integer $Cpu) Set Computing resource specification, indicating the number of CPU cores.
+ * @method integer getMemory() Obtain Memory specification. Unit: MB.
+ * @method void setMemory(integer $Memory) Set Memory specification. Unit: MB.
+ * @method integer getDefaultStorage() Obtain Default disk specification. Unit: MB.
+ * @method void setDefaultStorage(integer $DefaultStorage) Set Default disk specification. Unit: MB.
+ * @method integer getMaxStorage() Obtain Maximum disk specification. Unit: MB.
+ * @method void setMaxStorage(integer $MaxStorage) Set Maximum disk specification. Unit: MB.
+ * @method integer getMinStorage() Obtain Minimum disk specification. Unit: MB.
+ * @method void setMinStorage(integer $MinStorage) Set Minimum disk specification. Unit: MB.
+ * @method integer getQps() Obtain Maximum number of requests per second. Unit: requests/second.
+ * @method void setQps(integer $Qps) Set Maximum number of requests per second. Unit: requests/second.
+ * @method integer getConns() Obtain Maximum number of connections supported for the specification.
+ * @method void setConns(integer $Conns) Set Maximum number of connections supported for the specification.
+ * @method string getMongoVersionCode() Obtain Storage engine version information on instances.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+ * @method void setMongoVersionCode(string $MongoVersionCode) Set Storage engine version information on instances.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+ * @method integer getMongoVersionValue() Obtain Digital version corresponding to the instance version.
+ * @method void setMongoVersionValue(integer $MongoVersionValue) Set Digital version corresponding to the instance version.
+ * @method string getVersion() Obtain Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
+
+ * @method void setVersion(string $Version) Set Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
+
+ * @method string getEngineName() Obtain Storage engine.
+ * @method void setEngineName(string $EngineName) Set Storage engine.
+ * @method integer getClusterType() Obtain Cluster type. Valid values are as follows:
+ - 1: sharded cluster.
+ - 0: replica set cluster.
+ * @method void setClusterType(integer $ClusterType) Set Cluster type. Valid values are as follows:
+ - 1: sharded cluster.
+ - 0: replica set cluster.
+ * @method integer getMinNodeNum() Obtain Minimum number of nodes for each replica set.
+ * @method void setMinNodeNum(integer $MinNodeNum) Set Minimum number of nodes for each replica set.
+ * @method integer getMaxNodeNum() Obtain Maximum number of nodes for each replica set.
+ * @method void setMaxNodeNum(integer $MaxNodeNum) Set Maximum number of nodes for each replica set.
+ * @method integer getMinReplicateSetNum() Obtain Minimum number of shards.
+ * @method void setMinReplicateSetNum(integer $MinReplicateSetNum) Set Minimum number of shards.
+ * @method integer getMaxReplicateSetNum() Obtain Maximum number of shards.
+ * @method void setMaxReplicateSetNum(integer $MaxReplicateSetNum) Set Maximum number of shards.
+ * @method integer getMinReplicateSetNodeNum() Obtain Minimum number of nodes for each shard.
+ * @method void setMinReplicateSetNodeNum(integer $MinReplicateSetNodeNum) Set Minimum number of nodes for each shard.
+ * @method integer getMaxReplicateSetNodeNum() Obtain Maximum number of nodes for each shard.
+ * @method void setMaxReplicateSetNodeNum(integer $MaxReplicateSetNodeNum) Set Maximum number of nodes for each shard.
+ * @method string getMachineType() Obtain Cluster specification type. Valid values are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+ * @method void setMachineType(string $MachineType) Set Cluster specification type. Valid values are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
  */
 class SpecItem extends AbstractModel
 {
     /**
-     * @var string Specification information identifier
+     * @var string Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
+ - Node types are as follows:
+ - mongo: Mongod node.
+ - mongos: Mongos node.
+ - cfgstr: ConfigServer node.
+ - Specification types are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+ - Memory specifications are as follows:
+ - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
+ - Unit: g, indicating GB. 128g means 128 GB.
      */
     public $SpecCode;
 
     /**
-     * @var integer Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+     * @var integer Saleable specification status flag. Valid values are as follows:
+ - 0: selling stopped.
+ - 1: available for sale.
      */
     public $Status;
 
     /**
-     * @var integer Computing resource specification in terms of CPU core
+     * @var integer Computing resource specification, indicating the number of CPU cores.
      */
     public $Cpu;
 
     /**
-     * @var integer Memory size in MB
+     * @var integer Memory specification. Unit: MB.
      */
     public $Memory;
 
     /**
-     * @var integer Default disk size in MB
+     * @var integer Default disk specification. Unit: MB.
      */
     public $DefaultStorage;
 
     /**
-     * @var integer Maximum disk size in MB
+     * @var integer Maximum disk specification. Unit: MB.
      */
     public $MaxStorage;
 
     /**
-     * @var integer Minimum disk size in MB
+     * @var integer Minimum disk specification. Unit: MB.
      */
     public $MinStorage;
 
     /**
-     * @var integer Maximum QPS
+     * @var integer Maximum number of requests per second. Unit: requests/second.
      */
     public $Qps;
 
     /**
-     * @var integer Maximum number of connections
+     * @var integer Maximum number of connections supported for the specification.
      */
     public $Conns;
 
     /**
-     * @var string MongoDB version information of an instance
+     * @var string Storage engine version information on instances.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
      */
     public $MongoVersionCode;
 
     /**
-     * @var integer MongoDB version number of an instance
+     * @var integer Digital version corresponding to the instance version.
      */
     public $MongoVersionValue;
 
     /**
-     * @var string MongoDB version number of an instance (short)
+     * @var string Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
+
      */
     public $Version;
 
     /**
-     * @var string Storage engine
+     * @var string Storage engine.
      */
     public $EngineName;
 
     /**
-     * @var integer Cluster type. Valid values: 1 (sharding cluster), 0 (replica set cluster)
+     * @var integer Cluster type. Valid values are as follows:
+ - 1: sharded cluster.
+ - 0: replica set cluster.
      */
     public $ClusterType;
 
     /**
-     * @var integer Minimum number of secondary nodes in a replica set
+     * @var integer Minimum number of nodes for each replica set.
      */
     public $MinNodeNum;
 
     /**
-     * @var integer Maximum number of secondary nodes in a replica set
+     * @var integer Maximum number of nodes for each replica set.
      */
     public $MaxNodeNum;
 
     /**
-     * @var integer Minimum number of shards
+     * @var integer Minimum number of shards.
      */
     public $MinReplicateSetNum;
 
     /**
-     * @var integer Maximum number of shards
+     * @var integer Maximum number of shards.
      */
     public $MaxReplicateSetNum;
 
     /**
-     * @var integer Minimum number of secondary nodes in a shard
+     * @var integer Minimum number of nodes for each shard.
      */
     public $MinReplicateSetNodeNum;
 
     /**
-     * @var integer Maximum number of secondary nodes in a shard
+     * @var integer Maximum number of nodes for each shard.
      */
     public $MaxReplicateSetNodeNum;
 
     /**
-     * @var string Server type. Valid values: 0 (HIO), 4 (HIO10G)
+     * @var string Cluster specification type. Valid values are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
      */
     public $MachineType;
 
     /**
-     * @param string $SpecCode Specification information identifier
-     * @param integer $Status Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
-     * @param integer $Cpu Computing resource specification in terms of CPU core
-     * @param integer $Memory Memory size in MB
-     * @param integer $DefaultStorage Default disk size in MB
-     * @param integer $MaxStorage Maximum disk size in MB
-     * @param integer $MinStorage Minimum disk size in MB
-     * @param integer $Qps Maximum QPS
-     * @param integer $Conns Maximum number of connections
-     * @param string $MongoVersionCode MongoDB version information of an instance
-     * @param integer $MongoVersionValue MongoDB version number of an instance
-     * @param string $Version MongoDB version number of an instance (short)
-     * @param string $EngineName Storage engine
-     * @param integer $ClusterType Cluster type. Valid values: 1 (sharding cluster), 0 (replica set cluster)
-     * @param integer $MinNodeNum Minimum number of secondary nodes in a replica set
-     * @param integer $MaxNodeNum Maximum number of secondary nodes in a replica set
-     * @param integer $MinReplicateSetNum Minimum number of shards
-     * @param integer $MaxReplicateSetNum Maximum number of shards
-     * @param integer $MinReplicateSetNodeNum Minimum number of secondary nodes in a shard
-     * @param integer $MaxReplicateSetNodeNum Maximum number of secondary nodes in a shard
-     * @param string $MachineType Server type. Valid values: 0 (HIO), 4 (HIO10G)
+     * @param string $SpecCode Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
+ - Node types are as follows:
+ - mongo: Mongod node.
+ - mongos: Mongos node.
+ - cfgstr: ConfigServer node.
+ - Specification types are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+ - Memory specifications are as follows:
+ - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
+ - Unit: g, indicating GB. 128g means 128 GB.
+     * @param integer $Status Saleable specification status flag. Valid values are as follows:
+ - 0: selling stopped.
+ - 1: available for sale.
+     * @param integer $Cpu Computing resource specification, indicating the number of CPU cores.
+     * @param integer $Memory Memory specification. Unit: MB.
+     * @param integer $DefaultStorage Default disk specification. Unit: MB.
+     * @param integer $MaxStorage Maximum disk specification. Unit: MB.
+     * @param integer $MinStorage Minimum disk specification. Unit: MB.
+     * @param integer $Qps Maximum number of requests per second. Unit: requests/second.
+     * @param integer $Conns Maximum number of connections supported for the specification.
+     * @param string $MongoVersionCode Storage engine version information on instances.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+     * @param integer $MongoVersionValue Digital version corresponding to the instance version.
+     * @param string $Version Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
+
+     * @param string $EngineName Storage engine.
+     * @param integer $ClusterType Cluster type. Valid values are as follows:
+ - 1: sharded cluster.
+ - 0: replica set cluster.
+     * @param integer $MinNodeNum Minimum number of nodes for each replica set.
+     * @param integer $MaxNodeNum Maximum number of nodes for each replica set.
+     * @param integer $MinReplicateSetNum Minimum number of shards.
+     * @param integer $MaxReplicateSetNum Maximum number of shards.
+     * @param integer $MinReplicateSetNodeNum Minimum number of nodes for each shard.
+     * @param integer $MaxReplicateSetNodeNum Maximum number of nodes for each shard.
+     * @param string $MachineType Cluster specification type. Valid values are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
      */
     function __construct()
     {

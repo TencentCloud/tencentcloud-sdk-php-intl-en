@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getSubnetId() Obtain Subnet ID of VPC
  * @method void setSubnetId(string $SubnetId) Set Subnet ID of VPC
- * @method integer getStatus() Obtain Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
- * @method void setStatus(integer $Status) Set Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+ * @method integer getStatus() Obtain Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
+ * @method void setStatus(integer $Status) Set Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
  * @method string getVip() Obtain Instance IP
  * @method void setVip(string $Vip) Set Instance IP
  * @method integer getVport() Obtain Port number
@@ -96,38 +96,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceStatusDesc(string $InstanceStatusDesc) Set Instance status description
  * @method string getRealInstanceId() Obtain Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
  * @method void setRealInstanceId(string $RealInstanceId) Set Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
- * @method integer getMongosNodeNum() Obtain Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMongosNodeNum(integer $MongosNodeNum) Set Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMongosMemory() Obtain mongos node memory
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMongosMemory(integer $MongosMemory) Set mongos node memory
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMongosCpuNum() Obtain Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMongosCpuNum(integer $MongosCpuNum) Set Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getConfigServerNodeNum() Obtain Number of ConfigServer nodes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConfigServerNodeNum(integer $ConfigServerNodeNum) Set Number of ConfigServer nodes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getConfigServerMemory() Obtain Memory of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConfigServerMemory(integer $ConfigServerMemory) Set Memory of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getConfigServerVolume() Obtain Disk size of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConfigServerVolume(integer $ConfigServerVolume) Set Disk size of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getConfigServerCpuNum() Obtain CPU number of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConfigServerCpuNum(integer $ConfigServerCpuNum) Set CPU number of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getReadonlyNodeNum() Obtain Number of read-only nodes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReadonlyNodeNum(integer $ReadonlyNodeNum) Set Number of read-only nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMongosNodeNum() Obtain Number of Mongos nodes.
+ * @method void setMongosNodeNum(integer $MongosNodeNum) Set Number of Mongos nodes.
+ * @method integer getMongosMemory() Obtain Mongos node memory.
+ * @method void setMongosMemory(integer $MongosMemory) Set Mongos node memory.
+ * @method integer getMongosCpuNum() Obtain Number of Mongos node CPU cores.
+ * @method void setMongosCpuNum(integer $MongosCpuNum) Set Number of Mongos node CPU cores.
+ * @method integer getConfigServerNodeNum() Obtain Number of ConfigServer nodes.
+ * @method void setConfigServerNodeNum(integer $ConfigServerNodeNum) Set Number of ConfigServer nodes.
+ * @method integer getConfigServerMemory() Obtain ConfigServer node memory.
+ * @method void setConfigServerMemory(integer $ConfigServerMemory) Set ConfigServer node memory.
+ * @method integer getConfigServerVolume() Obtain ConfigServer node disk size.
+ * @method void setConfigServerVolume(integer $ConfigServerVolume) Set ConfigServer node disk size.
+ * @method integer getConfigServerCpuNum() Obtain Number of ConfigServer node CPU cores.
+ * @method void setConfigServerCpuNum(integer $ConfigServerCpuNum) Set Number of ConfigServer node CPU cores.
+ * @method integer getReadonlyNodeNum() Obtain Number of read-only nodes.
+ * @method void setReadonlyNodeNum(integer $ReadonlyNodeNum) Set Number of read-only nodes.
  */
 class InstanceDetail extends AbstractModel
 {
@@ -182,7 +166,7 @@ class InstanceDetail extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+     * @var integer Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
      */
     public $Status;
 
@@ -322,50 +306,42 @@ class InstanceDetail extends AbstractModel
     public $RealInstanceId;
 
     /**
-     * @var integer Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of Mongos nodes.
      */
     public $MongosNodeNum;
 
     /**
-     * @var integer mongos node memory
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Mongos node memory.
      */
     public $MongosMemory;
 
     /**
-     * @var integer Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of Mongos node CPU cores.
      */
     public $MongosCpuNum;
 
     /**
-     * @var integer Number of ConfigServer nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of ConfigServer nodes.
      */
     public $ConfigServerNodeNum;
 
     /**
-     * @var integer Memory of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer ConfigServer node memory.
      */
     public $ConfigServerMemory;
 
     /**
-     * @var integer Disk size of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer ConfigServer node disk size.
      */
     public $ConfigServerVolume;
 
     /**
-     * @var integer CPU number of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of ConfigServer node CPU cores.
      */
     public $ConfigServerCpuNum;
 
     /**
-     * @var integer Number of read-only nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of read-only nodes.
      */
     public $ReadonlyNodeNum;
 
@@ -380,7 +356,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $NetType Network type. Valid values: 0 (basic network), 1 (VPC)
      * @param string $VpcId VPC ID
      * @param string $SubnetId Subnet ID of VPC
-     * @param integer $Status Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+     * @param integer $Status Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
      * @param string $Vip Instance IP
      * @param integer $Vport Port number
      * @param string $CreateTime Instance creation time
@@ -408,22 +384,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $InstanceType Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
      * @param string $InstanceStatusDesc Instance status description
      * @param string $RealInstanceId Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
-     * @param integer $MongosNodeNum Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MongosMemory mongos node memory
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MongosCpuNum Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ConfigServerNodeNum Number of ConfigServer nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ConfigServerMemory Memory of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ConfigServerVolume Disk size of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ConfigServerCpuNum CPU number of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ReadonlyNodeNum Number of read-only nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MongosNodeNum Number of Mongos nodes.
+     * @param integer $MongosMemory Mongos node memory.
+     * @param integer $MongosCpuNum Number of Mongos node CPU cores.
+     * @param integer $ConfigServerNodeNum Number of ConfigServer nodes.
+     * @param integer $ConfigServerMemory ConfigServer node memory.
+     * @param integer $ConfigServerVolume ConfigServer node disk size.
+     * @param integer $ConfigServerCpuNum Number of ConfigServer node CPU cores.
+     * @param integer $ReadonlyNodeNum Number of read-only nodes.
      */
     function __construct()
     {

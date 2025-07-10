@@ -21,19 +21,16 @@ use TencentCloud\Common\AbstractModel;
  * Instance price
  *
  * @method float getUnitPrice() Obtain Unit price.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUnitPrice(float $UnitPrice) Set Unit price.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method float getOriginalPrice() Obtain Original price.
  * @method void setOriginalPrice(float $OriginalPrice) Set Original price.
- * @method float getDiscountPrice() Obtain Discounted price.
- * @method void setDiscountPrice(float $DiscountPrice) Set Discounted price.
+ * @method float getDiscountPrice() Obtain Discount price.
+ * @method void setDiscountPrice(float $DiscountPrice) Set Discount price.
  */
 class DBInstancePrice extends AbstractModel
 {
     /**
      * @var float Unit price.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $UnitPrice;
 
@@ -43,15 +40,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $OriginalPrice;
 
     /**
-     * @var float Discounted price.
+     * @var float Discount price.
      */
     public $DiscountPrice;
 
     /**
      * @param float $UnitPrice Unit price.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param float $OriginalPrice Original price.
-     * @param float $DiscountPrice Discounted price.
+     * @param float $DiscountPrice Discount price.
      */
     function __construct()
     {

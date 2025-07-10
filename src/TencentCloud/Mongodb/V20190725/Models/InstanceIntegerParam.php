@@ -18,92 +18,108 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The collection of modifiable integer parameters of an instance.
+ * Collection of modifiable instance parameters of the Integer type.
  *
- * @method string getCurrentValue() Obtain Current value
- * @method void setCurrentValue(string $CurrentValue) Set Current value
- * @method string getDefaultValue() Obtain Default value
- * @method void setDefaultValue(string $DefaultValue) Set Default value
- * @method string getMax() Obtain Maximum value
- * @method void setMax(string $Max) Set Maximum value
- * @method string getMin() Obtain Minimum value
- * @method void setMin(string $Min) Set Minimum value
- * @method string getNeedRestart() Obtain Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
- * @method void setNeedRestart(string $NeedRestart) Set Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
- * @method string getParamName() Obtain Parameter name
- * @method void setParamName(string $ParamName) Set Parameter name
- * @method array getTips() Obtain Parameter description
- * @method void setTips(array $Tips) Set Parameter description
- * @method string getValueType() Obtain Data type of the parameter
- * @method void setValueType(string $ValueType) Set Data type of the parameter
- * @method integer getStatus() Obtain Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
- * @method void setStatus(integer $Status) Set Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
- * @method string getUnit() Obtain Redundant field which can be ignored
- * @method void setUnit(string $Unit) Set Redundant field which can be ignored
+ * @method string getCurrentValue() Obtain Current parameter value.
+ * @method void setCurrentValue(string $CurrentValue) Set Current parameter value.
+ * @method string getDefaultValue() Obtain Default parameter value.
+ * @method void setDefaultValue(string $DefaultValue) Set Default parameter value.
+ * @method string getMax() Obtain Maximum parameter value.
+ * @method void setMax(string $Max) Set Maximum parameter value.
+ * @method string getMin() Obtain Minimum value.
+ * @method void setMin(string $Min) Set Minimum value.
+ * @method string getNeedRestart() Obtain Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
+ * @method void setNeedRestart(string $NeedRestart) Set Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
+ * @method string getParamName() Obtain Parameter name.
+ * @method void setParamName(string $ParamName) Set Parameter name.
+ * @method array getTips() Obtain Parameter description.
+ * @method void setTips(array $Tips) Set Parameter description.
+ * @method string getValueType() Obtain Parameter type.
+ * @method void setValueType(string $ValueType) Set Parameter type.
+ * @method integer getStatus() Obtain Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
+ * @method void setStatus(integer $Status) Set Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
+ * @method string getUnit() Obtain Redundant field. It can be ignored.
+ * @method void setUnit(string $Unit) Set Redundant field. It can be ignored.
  */
 class InstanceIntegerParam extends AbstractModel
 {
     /**
-     * @var string Current value
+     * @var string Current parameter value.
      */
     public $CurrentValue;
 
     /**
-     * @var string Default value
+     * @var string Default parameter value.
      */
     public $DefaultValue;
 
     /**
-     * @var string Maximum value
+     * @var string Maximum parameter value.
      */
     public $Max;
 
     /**
-     * @var string Minimum value
+     * @var string Minimum value.
      */
     public $Min;
 
     /**
-     * @var string Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+     * @var string Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
      */
     public $NeedRestart;
 
     /**
-     * @var string Parameter name
+     * @var string Parameter name.
      */
     public $ParamName;
 
     /**
-     * @var array Parameter description
+     * @var array Parameter description.
      */
     public $Tips;
 
     /**
-     * @var string Data type of the parameter
+     * @var string Parameter type.
      */
     public $ValueType;
 
     /**
-     * @var integer Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+     * @var integer Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
      */
     public $Status;
 
     /**
-     * @var string Redundant field which can be ignored
+     * @var string Redundant field. It can be ignored.
      */
     public $Unit;
 
     /**
-     * @param string $CurrentValue Current value
-     * @param string $DefaultValue Default value
-     * @param string $Max Maximum value
-     * @param string $Min Minimum value
-     * @param string $NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
-     * @param string $ParamName Parameter name
-     * @param array $Tips Parameter description
-     * @param string $ValueType Data type of the parameter
-     * @param integer $Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
-     * @param string $Unit Redundant field which can be ignored
+     * @param string $CurrentValue Current parameter value.
+     * @param string $DefaultValue Default parameter value.
+     * @param string $Max Maximum parameter value.
+     * @param string $Min Minimum value.
+     * @param string $NeedRestart Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
+     * @param string $ParamName Parameter name.
+     * @param array $Tips Parameter description.
+     * @param string $ValueType Parameter type.
+     * @param integer $Status Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
+     * @param string $Unit Redundant field. It can be ignored.
      */
     function __construct()
     {

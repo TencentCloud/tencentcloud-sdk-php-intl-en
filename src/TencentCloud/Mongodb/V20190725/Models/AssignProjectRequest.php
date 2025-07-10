@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssignProject request structure.
  *
- * @method array getInstanceIds() Obtain List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
- * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+ * @method array getInstanceIds() Obtain Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
  * @method integer getProjectId() Obtain Unique ID of an existing project (instead of a new project).
  * @method void setProjectId(integer $ProjectId) Set Unique ID of an existing project (instead of a new project).
  */
 class AssignProjectRequest extends AbstractModel
 {
     /**
-     * @var array List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * @var array Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
      */
     public $InstanceIds;
 
@@ -38,7 +38,7 @@ class AssignProjectRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @param array $InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * @param array $InstanceIds Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
      * @param integer $ProjectId Unique ID of an existing project (instead of a new project).
      */
     function __construct()

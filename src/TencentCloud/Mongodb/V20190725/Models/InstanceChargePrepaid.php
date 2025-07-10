@@ -20,54 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Description on the billing mode of an instance
  *
- * @method integer getPeriod() Obtain Purchased usage period (in month). Valid values: `1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36`. Default value: `1`.
-(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
- * @method void setPeriod(integer $Period) Set Purchased usage period (in month). Valid values: `1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36`. Default value: `1`.
-(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
- * @method string getRenewFlag() Obtain Auto-renewal flag. Valid values:
-`NOTIFY_AND_AUTO_RENEW`: notify expiration and renew automatically
-`NOTIFY_AND_MANUAL_RENEW`: notify expiration but not renew automatically
-`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify expiration nor renew automatically
-
-Default value: `NOTIFY_AND_MANUAL_RENEW`. If this parameter is specified as `NOTIFY_AND_AUTO_RENEW`, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
-(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
- * @method void setRenewFlag(string $RenewFlag) Set Auto-renewal flag. Valid values:
-`NOTIFY_AND_AUTO_RENEW`: notify expiration and renew automatically
-`NOTIFY_AND_MANUAL_RENEW`: notify expiration but not renew automatically
-`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify expiration nor renew automatically
-
-Default value: `NOTIFY_AND_MANUAL_RENEW`. If this parameter is specified as `NOTIFY_AND_AUTO_RENEW`, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
-(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
+ * @method integer getPeriod() Obtain Instance purchase duration. Unit: months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Default value: 1.
+ * @method void setPeriod(integer $Period) Set Instance purchase duration. Unit: months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Default value: 1.
+ * @method string getRenewFlag() Obtain Automatic renewal flag. Valid values:
+ - NOTIFY_AND_AUTO_RENEW: A notification is sent upon expiration, and the instance is renewed automatically. If the account balance is sufficient, the instance will be renewed automatically on a monthly basis after expiration.
+ - NOTIFY_AND_MANUAL_RENEW: A notification is sent upon expiration, but the instance is not renewed automatically. Default value: NOTIFY_AND_MANUAL_RENEW.
+ - DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification is sent upon expiration, and the instance is not renewed automatically.
+ * @method void setRenewFlag(string $RenewFlag) Set Automatic renewal flag. Valid values:
+ - NOTIFY_AND_AUTO_RENEW: A notification is sent upon expiration, and the instance is renewed automatically. If the account balance is sufficient, the instance will be renewed automatically on a monthly basis after expiration.
+ - NOTIFY_AND_MANUAL_RENEW: A notification is sent upon expiration, but the instance is not renewed automatically. Default value: NOTIFY_AND_MANUAL_RENEW.
+ - DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification is sent upon expiration, and the instance is not renewed automatically.
  */
 class InstanceChargePrepaid extends AbstractModel
 {
     /**
-     * @var integer Purchased usage period (in month). Valid values: `1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36`. Default value: `1`.
-(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
+     * @var integer Instance purchase duration. Unit: months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Default value: 1.
      */
     public $Period;
 
     /**
-     * @var string Auto-renewal flag. Valid values:
-`NOTIFY_AND_AUTO_RENEW`: notify expiration and renew automatically
-`NOTIFY_AND_MANUAL_RENEW`: notify expiration but not renew automatically
-`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify expiration nor renew automatically
-
-Default value: `NOTIFY_AND_MANUAL_RENEW`. If this parameter is specified as `NOTIFY_AND_AUTO_RENEW`, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
-(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
+     * @var string Automatic renewal flag. Valid values:
+ - NOTIFY_AND_AUTO_RENEW: A notification is sent upon expiration, and the instance is renewed automatically. If the account balance is sufficient, the instance will be renewed automatically on a monthly basis after expiration.
+ - NOTIFY_AND_MANUAL_RENEW: A notification is sent upon expiration, but the instance is not renewed automatically. Default value: NOTIFY_AND_MANUAL_RENEW.
+ - DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification is sent upon expiration, and the instance is not renewed automatically.
      */
     public $RenewFlag;
 
     /**
-     * @param integer $Period Purchased usage period (in month). Valid values: `1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36`. Default value: `1`.
-(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
-     * @param string $RenewFlag Auto-renewal flag. Valid values:
-`NOTIFY_AND_AUTO_RENEW`: notify expiration and renew automatically
-`NOTIFY_AND_MANUAL_RENEW`: notify expiration but not renew automatically
-`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify expiration nor renew automatically
-
-Default value: `NOTIFY_AND_MANUAL_RENEW`. If this parameter is specified as `NOTIFY_AND_AUTO_RENEW`, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
-(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
+     * @param integer $Period Instance purchase duration. Unit: months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Default value: 1.
+     * @param string $RenewFlag Automatic renewal flag. Valid values:
+ - NOTIFY_AND_AUTO_RENEW: A notification is sent upon expiration, and the instance is renewed automatically. If the account balance is sufficient, the instance will be renewed automatically on a monthly basis after expiration.
+ - NOTIFY_AND_MANUAL_RENEW: A notification is sent upon expiration, but the instance is not renewed automatically. Default value: NOTIFY_AND_MANUAL_RENEW.
+ - DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification is sent upon expiration, and the instance is not renewed automatically.
      */
     function __construct()
     {

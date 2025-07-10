@@ -20,84 +20,155 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDBInstance request structure.
  *
- * @method integer getNodeNum() Obtain The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
- * @method void setNodeNum(integer $NodeNum) Set The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
- * @method integer getMemory() Obtain Instance memory size in GB.
- * @method void setMemory(integer $Memory) Set Instance memory size in GB.
- * @method integer getVolume() Obtain Instance disk size in GB.
- * @method void setVolume(integer $Volume) Set Instance disk size in GB.
- * @method string getMongoVersion() Obtain Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
- * @method void setMongoVersion(string $MongoVersion) Set Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
+ * @method integer getNodeNum() Obtain  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+ - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
+ * @method void setNodeNum(integer $NodeNum) Set  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+ - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
+ * @method integer getMemory() Obtain Instance memory size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain specific saleable memory specifications.
+ * @method void setMemory(integer $Memory) Set Instance memory size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain specific saleable memory specifications.
+ * @method integer getVolume() Obtain Instance disk size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
+ * @method void setVolume(integer $Volume) Set Instance disk size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
+ * @method string getMongoVersion() Obtain Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+ * @method void setMongoVersion(string $MongoVersion) Set Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
  * @method integer getGoodsNum() Obtain Number of instances. Minimum value: 1. Maximum value: 10.
  * @method void setGoodsNum(integer $GoodsNum) Set Number of instances. Minimum value: 1. Maximum value: 10.
- * @method string getZone() Obtain AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
- * @method void setZone(string $Zone) Set AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
- * @method integer getPeriod() Obtain Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
- * @method void setPeriod(integer $Period) Set Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
- * @method string getMachineCode() Obtain Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
- * @method void setMachineCode(string $MachineCode) Set Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
- * @method string getClusterType() Obtain Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
- * @method void setClusterType(string $ClusterType) Set Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
- * @method integer getReplicateSetNum() Obtain Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
- * @method void setReplicateSetNum(integer $ReplicateSetNum) Set Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
- * @method integer getProjectId() Obtain Project ID. If this parameter is not set, the default project will be used.
- * @method void setProjectId(integer $ProjectId) Set Project ID. If this parameter is not set, the default project will be used.
- * @method string getVpcId() Obtain VPC ID. If this parameter is not set, the classic network will be used. Please use the `DescribeVpcs` API to query the VPC list.
- * @method void setVpcId(string $VpcId) Set VPC ID. If this parameter is not set, the classic network will be used. Please use the `DescribeVpcs` API to query the VPC list.
- * @method string getSubnetId() Obtain VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. Please use the `DescribeSubnets` API to query the subnet list.
- * @method void setSubnetId(string $SubnetId) Set VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. Please use the `DescribeSubnets` API to query the subnet list.
- * @method string getPassword() Obtain Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
- * @method void setPassword(string $Password) Set Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
+ * @method string getZone() Obtain AZ information. Format: ap-guangzhou-2.
+ - Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the specific information.
+ - This parameter indicates the primary AZ. If multi-AZ deployment is adopted, the value of Zone should be one of the values of AvailabilityZoneList.
+ * @method void setZone(string $Zone) Set AZ information. Format: ap-guangzhou-2.
+ - Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the specific information.
+ - This parameter indicates the primary AZ. If multi-AZ deployment is adopted, the value of Zone should be one of the values of AvailabilityZoneList.
+ * @method integer getPeriod() Obtain Specifies the purchase duration during instance purchase. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Unit: months.
+
+ * @method void setPeriod(integer $Period) Set Specifies the purchase duration during instance purchase. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Unit: months.
+
+ * @method string getMachineCode() Obtain Product specification type.
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+ * @method void setMachineCode(string $MachineCode) Set Product specification type.
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+ * @method string getClusterType() Obtain Instance architecture type.
+ - REPLSET: replica set.
+ - SHARD: sharded cluster.
+ * @method void setClusterType(string $ClusterType) Set Instance architecture type.
+ - REPLSET: replica set.
+ - SHARD: sharded cluster.
+ * @method integer getReplicateSetNum() Obtain  - Specifies the number of replica sets during replica set instance creation. This parameter can only be set to 1.
+ - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
+ * @method void setReplicateSetNum(integer $ReplicateSetNum) Set  - Specifies the number of replica sets during replica set instance creation. This parameter can only be set to 1.
+ - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
+ * @method integer getProjectId() Obtain Project ID.  - The default project is used if this parameter is not specified.
+ - The project ID can be obtained on the [project management page in the TencentDB for MongoDB console](https://console.cloud.tencent.com/project).
+ * @method void setProjectId(integer $ProjectId) Set Project ID.  - The default project is used if this parameter is not specified.
+ - The project ID can be obtained on the [project management page in the TencentDB for MongoDB console](https://console.cloud.tencent.com/project).
+ * @method string getVpcId() Obtain VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
+ * @method void setVpcId(string $VpcId) Set VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
+ * @method string getSubnetId() Obtain VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
+ * @method void setSubnetId(string $SubnetId) Set VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
+ * @method string getPassword() Obtain Instance password. The requirements are as follows:
+ - The number of characters should be in the range of [8, 32].
+ - Characters within the ranges [A,Z], [a,z], and [0,9] are allowed.
+ - Special characters that can be entered include exclamation marks (!), at signs (@), number signs (#), percent signs (%), carets (^), asterisks (\*), brackets (()), and underscores (_).
+ - It cannot contain only the same letters or digits.
+ * @method void setPassword(string $Password) Set Instance password. The requirements are as follows:
+ - The number of characters should be in the range of [8, 32].
+ - Characters within the ranges [A,Z], [a,z], and [0,9] are allowed.
+ - Special characters that can be entered include exclamation marks (!), at signs (@), number signs (#), percent signs (%), carets (^), asterisks (\*), brackets (()), and underscores (_).
+ - It cannot contain only the same letters or digits.
  * @method array getTags() Obtain Instance tag information.
  * @method void setTags(array $Tags) Set Instance tag information.
- * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. Valid values: 0 (auto-renewal not enabled), 1 (auto-renewal enabled). Default value: 0.
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. Valid values: 0 (auto-renewal not enabled), 1 (auto-renewal enabled). Default value: 0.
- * @method integer getAutoVoucher() Obtain Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
- * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
- * @method integer getClone() Obtain Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
- * @method void setClone(integer $Clone) Set Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
- * @method string getFather() Obtain Primary instance ID. It is required for read-only, disaster recovery, and cloned instances.
- * @method void setFather(string $Father) Set Primary instance ID. It is required for read-only, disaster recovery, and cloned instances.
- * @method array getSecurityGroup() Obtain Security group.
- * @method void setSecurityGroup(array $SecurityGroup) Set Security group.
- * @method string getRestoreTime() Obtain The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
- * @method void setRestoreTime(string $RestoreTime) Set The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
- * @method string getInstanceName() Obtain Instance name, which can contain up to 60 letters, digits, or symbols (_-).
- * @method void setInstanceName(string $InstanceName) Set Instance name, which can contain up to 60 letters, digits, or symbols (_-).
- * @method array getAvailabilityZoneList() Obtain AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
- * @method void setAvailabilityZoneList(array $AvailabilityZoneList) Set AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
- * @method integer getMongosCpu() Obtain The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
- * @method void setMongosCpu(integer $MongosCpu) Set The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
- * @method integer getMongosMemory() Obtain The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
- * @method void setMongosMemory(integer $MongosMemory) Set The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
- * @method integer getMongosNodeNum() Obtain The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
- * @method void setMongosNodeNum(integer $MongosNodeNum) Set The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
- * @method integer getReadonlyNodeNum() Obtain Number of read-only nodes. Value range: 2-7.
- * @method void setReadonlyNodeNum(integer $ReadonlyNodeNum) Set Number of read-only nodes. Value range: 2-7.
- * @method array getReadonlyNodeAvailabilityZoneList() Obtain The AZ where the read-only node is deployed
- * @method void setReadonlyNodeAvailabilityZoneList(array $ReadonlyNodeAvailabilityZoneList) Set The AZ where the read-only node is deployed
- * @method string getHiddenZone() Obtain The AZ where the hidden node resides. It is required for cross-AZ instances.
- * @method void setHiddenZone(string $HiddenZone) Set The AZ where the hidden node resides. It is required for cross-AZ instances.
+ * @method integer getAutoRenewFlag() Obtain Automatic renewal flag.
+ - 0: no automatic renewal.
+ - 1: automatic renewal.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Automatic renewal flag.
+ - 0: no automatic renewal.
+ - 1: automatic renewal.
+ * @method integer getAutoVoucher() Obtain Whether to automatically select a voucher.
+ - 1: yes.
+ - 0: no. Default value: 0.
+ * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select a voucher.
+ - 1: yes.
+ - 0: no. Default value: 0.
+ * @method integer getClone() Obtain Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: instance cloned from a complete instance. Note: For a cloned instance, RestoreTime is required.
+ * @method void setClone(integer $Clone) Set Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: instance cloned from a complete instance. Note: For a cloned instance, RestoreTime is required.
+ * @method string getFather() Obtain Parent instance ID. This parameter is required when the **Clone** parameter is set to 3 or 4, indicating a read-only or disaster recovery instance.
+ * @method void setFather(string $Father) Set Parent instance ID. This parameter is required when the **Clone** parameter is set to 3 or 4, indicating a read-only or disaster recovery instance.
+ * @method array getSecurityGroup() Obtain Security group ID.  
+ * @method void setSecurityGroup(array $SecurityGroup) Set Security group ID.  
+ * @method string getRestoreTime() Obtain Rollback time of the cloned instance. It is required when the Clone value is 5 or 6. - This parameter is required for cloned instances. Format: 2021-08-13 16:30:00. - Rollback time range: Only data within the last 7 days can be rolled back.
+ * @method void setRestoreTime(string $RestoreTime) Set Rollback time of the cloned instance. It is required when the Clone value is 5 or 6. - This parameter is required for cloned instances. Format: 2021-08-13 16:30:00. - Rollback time range: Only data within the last 7 days can be rolled back.
+ * @method string getInstanceName() Obtain Instance name. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
+ * @method void setInstanceName(string $InstanceName) Set Instance name. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
+ * @method array getAvailabilityZoneList() Obtain Specifies the list of AZs during multi-AZ deployment of TencentDB for MongoDB instances.
+ - For instances in multi-AZ deployment mode, the **Zone** parameter specifies the primary AZ, and **AvailabilityZoneList** specifies all AZs, including the primary AZ. Format: [ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4].
+ - The [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain AZs planned for TencentDB for MongoDB instances in different regions, helping you specify valid AZs.
+ - Nodes in multi-AZ deployment mode can only be deployed in 3 different AZs. Deploying most nodes of a cluster in the same AZ is not supported. For example, a 3-node cluster does not support deploying 2 nodes in the same AZ.
+ * @method void setAvailabilityZoneList(array $AvailabilityZoneList) Set Specifies the list of AZs during multi-AZ deployment of TencentDB for MongoDB instances.
+ - For instances in multi-AZ deployment mode, the **Zone** parameter specifies the primary AZ, and **AvailabilityZoneList** specifies all AZs, including the primary AZ. Format: [ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4].
+ - The [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain AZs planned for TencentDB for MongoDB instances in different regions, helping you specify valid AZs.
+ - Nodes in multi-AZ deployment mode can only be deployed in 3 different AZs. Deploying most nodes of a cluster in the same AZ is not supported. For example, a 3-node cluster does not support deploying 2 nodes in the same AZ.
+ * @method integer getMongosCpu() Obtain Number of Mongos node CPU cores. Valid values: 1, 2, 4, 8, and 16. This parameter is required during sharded cluster instance purchase.
+ * @method void setMongosCpu(integer $MongosCpu) Set Number of Mongos node CPU cores. Valid values: 1, 2, 4, 8, and 16. This parameter is required during sharded cluster instance purchase.
+ * @method integer getMongosMemory() Obtain Mongos node memory size.
+ - This parameter is required during sharded cluster instance purchase.
+ - Unit: GB. 1-core 2GB, 2-core 4GB, 4-core 8GB, 8-core 16GB, and 16-core 32GB are supported.
+ * @method void setMongosMemory(integer $MongosMemory) Set Mongos node memory size.
+ - This parameter is required during sharded cluster instance purchase.
+ - Unit: GB. 1-core 2GB, 2-core 4GB, 4-core 8GB, 8-core 16GB, and 16-core 32GB are supported.
+ * @method integer getMongosNodeNum() Obtain Number of Mongos nodes. This parameter is required during sharded cluster instance purchase.
+ - For instances in single-AZ deployment mode, the value range is [3,32].
+ - For instances in multi-AZ deployment mode, the value range is [6,32].
+ * @method void setMongosNodeNum(integer $MongosNodeNum) Set Number of Mongos nodes. This parameter is required during sharded cluster instance purchase.
+ - For instances in single-AZ deployment mode, the value range is [3,32].
+ - For instances in multi-AZ deployment mode, the value range is [6,32].
+ * @method integer getReadonlyNodeNum() Obtain Number of read-only nodes. Value ranges: [0,5].
+ * @method void setReadonlyNodeNum(integer $ReadonlyNodeNum) Set Number of read-only nodes. Value ranges: [0,5].
+ * @method array getReadonlyNodeAvailabilityZoneList() Obtain Array of AZs of read-only nodes. This parameter is required for instances in multi-AZ deployment mode when **ReadonlyNodeNum** is not set to **0**.
+ * @method void setReadonlyNodeAvailabilityZoneList(array $ReadonlyNodeAvailabilityZoneList) Set Array of AZs of read-only nodes. This parameter is required for instances in multi-AZ deployment mode when **ReadonlyNodeNum** is not set to **0**.
+ * @method string getHiddenZone() Obtain AZ of the hidden node. This parameter is required for instances in multi-AZ deployment mode.
+ * @method void setHiddenZone(string $HiddenZone) Set AZ of the hidden node. This parameter is required for instances in multi-AZ deployment mode.
+ * @method string getParamTemplateId() Obtain Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions and instance types supported by templates.
+ * @method void setParamTemplateId(string $ParamTemplateId) Set Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions and instance types supported by templates.
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+     * @var integer  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+ - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
      */
     public $NodeNum;
 
     /**
-     * @var integer Instance memory size in GB.
+     * @var integer Instance memory size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain specific saleable memory specifications.
      */
     public $Memory;
 
     /**
-     * @var integer Instance disk size in GB.
+     * @var integer Instance disk size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
      */
     public $Volume;
 
     /**
-     * @var string Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
+     * @var string Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
      */
     public $MongoVersion;
 
@@ -107,47 +178,60 @@ class CreateDBInstanceRequest extends AbstractModel
     public $GoodsNum;
 
     /**
-     * @var string AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
+     * @var string AZ information. Format: ap-guangzhou-2.
+ - Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the specific information.
+ - This parameter indicates the primary AZ. If multi-AZ deployment is adopted, the value of Zone should be one of the values of AvailabilityZoneList.
      */
     public $Zone;
 
     /**
-     * @var integer Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+     * @var integer Specifies the purchase duration during instance purchase. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Unit: months.
+
      */
     public $Period;
 
     /**
-     * @var string Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
+     * @var string Product specification type.
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
      */
     public $MachineCode;
 
     /**
-     * @var string Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
+     * @var string Instance architecture type.
+ - REPLSET: replica set.
+ - SHARD: sharded cluster.
      */
     public $ClusterType;
 
     /**
-     * @var integer Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
+     * @var integer  - Specifies the number of replica sets during replica set instance creation. This parameter can only be set to 1.
+ - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
      */
     public $ReplicateSetNum;
 
     /**
-     * @var integer Project ID. If this parameter is not set, the default project will be used.
+     * @var integer Project ID.  - The default project is used if this parameter is not specified.
+ - The project ID can be obtained on the [project management page in the TencentDB for MongoDB console](https://console.cloud.tencent.com/project).
      */
     public $ProjectId;
 
     /**
-     * @var string VPC ID. If this parameter is not set, the classic network will be used. Please use the `DescribeVpcs` API to query the VPC list.
+     * @var string VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
      */
     public $VpcId;
 
     /**
-     * @var string VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. Please use the `DescribeSubnets` API to query the subnet list.
+     * @var string VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
      */
     public $SubnetId;
 
     /**
-     * @var string Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
+     * @var string Instance password. The requirements are as follows:
+ - The number of characters should be in the range of [8, 32].
+ - Characters within the ranges [A,Z], [a,z], and [0,9] are allowed.
+ - Special characters that can be entered include exclamation marks (!), at signs (@), number signs (#), percent signs (%), carets (^), asterisks (\*), brackets (()), and underscores (_).
+ - It cannot contain only the same letters or digits.
      */
     public $Password;
 
@@ -157,105 +241,153 @@ class CreateDBInstanceRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer Auto-renewal flag. Valid values: 0 (auto-renewal not enabled), 1 (auto-renewal enabled). Default value: 0.
+     * @var integer Automatic renewal flag.
+ - 0: no automatic renewal.
+ - 1: automatic renewal.
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
+     * @var integer Whether to automatically select a voucher.
+ - 1: yes.
+ - 0: no. Default value: 0.
      */
     public $AutoVoucher;
 
     /**
-     * @var integer Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
+     * @var integer Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: instance cloned from a complete instance. Note: For a cloned instance, RestoreTime is required.
      */
     public $Clone;
 
     /**
-     * @var string Primary instance ID. It is required for read-only, disaster recovery, and cloned instances.
+     * @var string Parent instance ID. This parameter is required when the **Clone** parameter is set to 3 or 4, indicating a read-only or disaster recovery instance.
      */
     public $Father;
 
     /**
-     * @var array Security group.
+     * @var array Security group ID.  
      */
     public $SecurityGroup;
 
     /**
-     * @var string The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
+     * @var string Rollback time of the cloned instance. It is required when the Clone value is 5 or 6. - This parameter is required for cloned instances. Format: 2021-08-13 16:30:00. - Rollback time range: Only data within the last 7 days can be rolled back.
      */
     public $RestoreTime;
 
     /**
-     * @var string Instance name, which can contain up to 60 letters, digits, or symbols (_-).
+     * @var string Instance name. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
      */
     public $InstanceName;
 
     /**
-     * @var array AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
+     * @var array Specifies the list of AZs during multi-AZ deployment of TencentDB for MongoDB instances.
+ - For instances in multi-AZ deployment mode, the **Zone** parameter specifies the primary AZ, and **AvailabilityZoneList** specifies all AZs, including the primary AZ. Format: [ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4].
+ - The [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain AZs planned for TencentDB for MongoDB instances in different regions, helping you specify valid AZs.
+ - Nodes in multi-AZ deployment mode can only be deployed in 3 different AZs. Deploying most nodes of a cluster in the same AZ is not supported. For example, a 3-node cluster does not support deploying 2 nodes in the same AZ.
      */
     public $AvailabilityZoneList;
 
     /**
-     * @var integer The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+     * @var integer Number of Mongos node CPU cores. Valid values: 1, 2, 4, 8, and 16. This parameter is required during sharded cluster instance purchase.
      */
     public $MongosCpu;
 
     /**
-     * @var integer The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+     * @var integer Mongos node memory size.
+ - This parameter is required during sharded cluster instance purchase.
+ - Unit: GB. 1-core 2GB, 2-core 4GB, 4-core 8GB, 8-core 16GB, and 16-core 32GB are supported.
      */
     public $MongosMemory;
 
     /**
-     * @var integer The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
+     * @var integer Number of Mongos nodes. This parameter is required during sharded cluster instance purchase.
+ - For instances in single-AZ deployment mode, the value range is [3,32].
+ - For instances in multi-AZ deployment mode, the value range is [6,32].
      */
     public $MongosNodeNum;
 
     /**
-     * @var integer Number of read-only nodes. Value range: 2-7.
+     * @var integer Number of read-only nodes. Value ranges: [0,5].
      */
     public $ReadonlyNodeNum;
 
     /**
-     * @var array The AZ where the read-only node is deployed
+     * @var array Array of AZs of read-only nodes. This parameter is required for instances in multi-AZ deployment mode when **ReadonlyNodeNum** is not set to **0**.
      */
     public $ReadonlyNodeAvailabilityZoneList;
 
     /**
-     * @var string The AZ where the hidden node resides. It is required for cross-AZ instances.
+     * @var string AZ of the hidden node. This parameter is required for instances in multi-AZ deployment mode.
      */
     public $HiddenZone;
 
     /**
-     * @param integer $NodeNum The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
-     * @param integer $Memory Instance memory size in GB.
-     * @param integer $Volume Instance disk size in GB.
-     * @param string $MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
+     * @var string Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions and instance types supported by templates.
+     */
+    public $ParamTemplateId;
+
+    /**
+     * @param integer $NodeNum  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+ - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
+     * @param integer $Memory Instance memory size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain specific saleable memory specifications.
+     * @param integer $Volume Instance disk size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
+     * @param string $MongoVersion Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
      * @param integer $GoodsNum Number of instances. Minimum value: 1. Maximum value: 10.
-     * @param string $Zone AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
-     * @param integer $Period Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
-     * @param string $MachineCode Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
-     * @param string $ClusterType Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
-     * @param integer $ReplicateSetNum Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
-     * @param integer $ProjectId Project ID. If this parameter is not set, the default project will be used.
-     * @param string $VpcId VPC ID. If this parameter is not set, the classic network will be used. Please use the `DescribeVpcs` API to query the VPC list.
-     * @param string $SubnetId VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. Please use the `DescribeSubnets` API to query the subnet list.
-     * @param string $Password Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
+     * @param string $Zone AZ information. Format: ap-guangzhou-2.
+ - Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the specific information.
+ - This parameter indicates the primary AZ. If multi-AZ deployment is adopted, the value of Zone should be one of the values of AvailabilityZoneList.
+     * @param integer $Period Specifies the purchase duration during instance purchase. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Unit: months.
+
+     * @param string $MachineCode Product specification type.
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+     * @param string $ClusterType Instance architecture type.
+ - REPLSET: replica set.
+ - SHARD: sharded cluster.
+     * @param integer $ReplicateSetNum  - Specifies the number of replica sets during replica set instance creation. This parameter can only be set to 1.
+ - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
+     * @param integer $ProjectId Project ID.  - The default project is used if this parameter is not specified.
+ - The project ID can be obtained on the [project management page in the TencentDB for MongoDB console](https://console.cloud.tencent.com/project).
+     * @param string $VpcId VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
+     * @param string $SubnetId VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
+     * @param string $Password Instance password. The requirements are as follows:
+ - The number of characters should be in the range of [8, 32].
+ - Characters within the ranges [A,Z], [a,z], and [0,9] are allowed.
+ - Special characters that can be entered include exclamation marks (!), at signs (@), number signs (#), percent signs (%), carets (^), asterisks (\*), brackets (()), and underscores (_).
+ - It cannot contain only the same letters or digits.
      * @param array $Tags Instance tag information.
-     * @param integer $AutoRenewFlag Auto-renewal flag. Valid values: 0 (auto-renewal not enabled), 1 (auto-renewal enabled). Default value: 0.
-     * @param integer $AutoVoucher Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
-     * @param integer $Clone Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
-     * @param string $Father Primary instance ID. It is required for read-only, disaster recovery, and cloned instances.
-     * @param array $SecurityGroup Security group.
-     * @param string $RestoreTime The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
-     * @param string $InstanceName Instance name, which can contain up to 60 letters, digits, or symbols (_-).
-     * @param array $AvailabilityZoneList AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
-     * @param integer $MongosCpu The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
-     * @param integer $MongosMemory The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
-     * @param integer $MongosNodeNum The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
-     * @param integer $ReadonlyNodeNum Number of read-only nodes. Value range: 2-7.
-     * @param array $ReadonlyNodeAvailabilityZoneList The AZ where the read-only node is deployed
-     * @param string $HiddenZone The AZ where the hidden node resides. It is required for cross-AZ instances.
+     * @param integer $AutoRenewFlag Automatic renewal flag.
+ - 0: no automatic renewal.
+ - 1: automatic renewal.
+     * @param integer $AutoVoucher Whether to automatically select a voucher.
+ - 1: yes.
+ - 0: no. Default value: 0.
+     * @param integer $Clone Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: instance cloned from a complete instance. Note: For a cloned instance, RestoreTime is required.
+     * @param string $Father Parent instance ID. This parameter is required when the **Clone** parameter is set to 3 or 4, indicating a read-only or disaster recovery instance.
+     * @param array $SecurityGroup Security group ID.  
+     * @param string $RestoreTime Rollback time of the cloned instance. It is required when the Clone value is 5 or 6. - This parameter is required for cloned instances. Format: 2021-08-13 16:30:00. - Rollback time range: Only data within the last 7 days can be rolled back.
+     * @param string $InstanceName Instance name. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
+     * @param array $AvailabilityZoneList Specifies the list of AZs during multi-AZ deployment of TencentDB for MongoDB instances.
+ - For instances in multi-AZ deployment mode, the **Zone** parameter specifies the primary AZ, and **AvailabilityZoneList** specifies all AZs, including the primary AZ. Format: [ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4].
+ - The [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain AZs planned for TencentDB for MongoDB instances in different regions, helping you specify valid AZs.
+ - Nodes in multi-AZ deployment mode can only be deployed in 3 different AZs. Deploying most nodes of a cluster in the same AZ is not supported. For example, a 3-node cluster does not support deploying 2 nodes in the same AZ.
+     * @param integer $MongosCpu Number of Mongos node CPU cores. Valid values: 1, 2, 4, 8, and 16. This parameter is required during sharded cluster instance purchase.
+     * @param integer $MongosMemory Mongos node memory size.
+ - This parameter is required during sharded cluster instance purchase.
+ - Unit: GB. 1-core 2GB, 2-core 4GB, 4-core 8GB, 8-core 16GB, and 16-core 32GB are supported.
+     * @param integer $MongosNodeNum Number of Mongos nodes. This parameter is required during sharded cluster instance purchase.
+ - For instances in single-AZ deployment mode, the value range is [3,32].
+ - For instances in multi-AZ deployment mode, the value range is [6,32].
+     * @param integer $ReadonlyNodeNum Number of read-only nodes. Value ranges: [0,5].
+     * @param array $ReadonlyNodeAvailabilityZoneList Array of AZs of read-only nodes. This parameter is required for instances in multi-AZ deployment mode when **ReadonlyNodeNum** is not set to **0**.
+     * @param string $HiddenZone AZ of the hidden node. This parameter is required for instances in multi-AZ deployment mode.
+     * @param string $ParamTemplateId Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions and instance types supported by templates.
      */
     function __construct()
     {
@@ -389,6 +521,10 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("HiddenZone",$param) and $param["HiddenZone"] !== null) {
             $this->HiddenZone = $param["HiddenZone"];
+        }
+
+        if (array_key_exists("ParamTemplateId",$param) and $param["ParamTemplateId"] !== null) {
+            $this->ParamTemplateId = $param["ParamTemplateId"];
         }
     }
 }

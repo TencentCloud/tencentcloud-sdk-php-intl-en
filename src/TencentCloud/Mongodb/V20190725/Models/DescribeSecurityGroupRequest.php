@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityGroup request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of "cmgo-p8vnipr5"
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of "cmgo-p8vnipr5"
+ * @method string getInstanceId() Obtain Instance ID. For example, cmgo-p8vn****.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. For example, cmgo-p8vn****.
  */
 class DescribeSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of "cmgo-p8vnipr5"
+     * @var string Instance ID. For example, cmgo-p8vn****.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID in the format of "cmgo-p8vnipr5"
+     * @param string $InstanceId Instance ID. For example, cmgo-p8vn****.
      */
     function __construct()
     {

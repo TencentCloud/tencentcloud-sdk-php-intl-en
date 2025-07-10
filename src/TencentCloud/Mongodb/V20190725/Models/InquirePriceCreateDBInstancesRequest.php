@@ -22,38 +22,80 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain Instance region name in the format of ap-guangzhou-2.
  * @method void setZone(string $Zone) Set Instance region name in the format of ap-guangzhou-2.
- * @method integer getNodeNum() Obtain Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
- * @method void setNodeNum(integer $NodeNum) Set Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
- * @method integer getMemory() Obtain Instance memory size in GB.
- * @method void setMemory(integer $Memory) Set Instance memory size in GB.
- * @method integer getVolume() Obtain  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
- * @method void setVolume(integer $Volume) Set  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
- * @method string getMongoVersion() Obtain Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
- * @method void setMongoVersion(string $MongoVersion) Set Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
- * @method string getMachineCode() Obtain Server type. Valid values: `HIO` (high IO), `HIO10G` (ten-gigabit high IO)
- * @method void setMachineCode(string $MachineCode) Set Server type. Valid values: `HIO` (high IO), `HIO10G` (ten-gigabit high IO)
+ * @method integer getNodeNum() Obtain  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+ - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
+ * @method void setNodeNum(integer $NodeNum) Set  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+ - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
+ * @method integer getMemory() Obtain Instance memory size.
+
+ - Unit: GB.
+ - For the value range, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The CPU and Memory parameters in the returned data structure SpecItems correspond to the number of CPU cores and the memory specification, respectively.
+ * @method void setMemory(integer $Memory) Set Instance memory size.
+
+ - Unit: GB.
+ - For the value range, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The CPU and Memory parameters in the returned data structure SpecItems correspond to the number of CPU cores and the memory specification, respectively.
+ * @method integer getVolume() Obtain Instance disk size.
+ - Unit: GB.
+ - For the value range, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The MinStorage and MaxStorage parameters in the returned data structure SpecItems correspond to the minimum and maximum disk specifications, respectively.
+ * @method void setVolume(integer $Volume) Set Instance disk size.
+ - Unit: GB.
+ - For the value range, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The MinStorage and MaxStorage parameters in the returned data structure SpecItems correspond to the minimum and maximum disk specifications, respectively.
+ * @method string getMongoVersion() Obtain Instance version information. For specific supported versions, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The MongoVersionCode parameter in the returned data structure SpecItems indicates the information on versions supported for instances. The correspondence between version information and version number is as follows:
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+ * @method void setMongoVersion(string $MongoVersion) Set Instance version information. For specific supported versions, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The MongoVersionCode parameter in the returned data structure SpecItems indicates the information on versions supported for instances. The correspondence between version information and version number is as follows:
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+ * @method string getMachineCode() Obtain Product specification type.
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk.
+ * @method void setMachineCode(string $MachineCode) Set Product specification type.
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk.
  * @method integer getGoodsNum() Obtain Number of instances. Minimum value: 1. Maximum value: 10.
  * @method void setGoodsNum(integer $GoodsNum) Set Number of instances. Minimum value: 1. Maximum value: 10.
- * @method string getClusterType() Obtain Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
- * @method void setClusterType(string $ClusterType) Set Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
- * @method integer getReplicateSetNum() Obtain Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
- * @method void setReplicateSetNum(integer $ReplicateSetNum) Set Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
- * @method integer getPeriod() Obtain Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
- * @method void setPeriod(integer $Period) Set Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
- * @method string getInstanceChargeType() Obtain 
- * @method void setInstanceChargeType(string $InstanceChargeType) Set 
- * @method integer getMongosCpu() Obtain 
- * @method void setMongosCpu(integer $MongosCpu) Set 
- * @method integer getMongosMemory() Obtain 
- * @method void setMongosMemory(integer $MongosMemory) Set 
- * @method integer getMongosNum() Obtain 
- * @method void setMongosNum(integer $MongosNum) Set 
- * @method integer getConfigServerCpu() Obtain 
- * @method void setConfigServerCpu(integer $ConfigServerCpu) Set 
- * @method integer getConfigServerMemory() Obtain 
- * @method void setConfigServerMemory(integer $ConfigServerMemory) Set 
- * @method integer getConfigServerVolume() Obtain 
- * @method void setConfigServerVolume(integer $ConfigServerVolume) Set 
+ * @method string getClusterType() Obtain Instance type.
+
+ - REPLSET: replica set.
+ - SHARD: sharded cluster.
+ * @method void setClusterType(string $ClusterType) Set Instance type.
+
+ - REPLSET: replica set.
+ - SHARD: sharded cluster.
+ * @method integer getReplicateSetNum() Obtain  - Specifies the number of replica sets during replica set instance creation. This parameter can only be set to 1.
+ - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
+ * @method void setReplicateSetNum(integer $ReplicateSetNum) Set  - Specifies the number of replica sets during replica set instance creation. This parameter can only be set to 1.
+ - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
+ * @method integer getPeriod() Obtain  - When the monthly subscription mode is selected, that is, when <b>InstanceChargeType</b> is set to <b>PREPAID</b>, this parameter is required for specifying the purchase duration of instances. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Unit: months.
+ - When pay-as-you-go is selected, that is, when <b>InstanceChargeType</b> is set to **POSTPAID_BY_HOUR**, this parameter only can be set to 1.
+ * @method void setPeriod(integer $Period) Set  - When the monthly subscription mode is selected, that is, when <b>InstanceChargeType</b> is set to <b>PREPAID</b>, this parameter is required for specifying the purchase duration of instances. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Unit: months.
+ - When pay-as-you-go is selected, that is, when <b>InstanceChargeType</b> is set to **POSTPAID_BY_HOUR**, this parameter only can be set to 1.
+ * @method string getInstanceChargeType() Obtain Instance payment method.
+ - PREPAID: monthly subscription.
+ - POSTPAID_BY_HOUR: pay-as-you-go.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance payment method.
+ - PREPAID: monthly subscription.
+ - POSTPAID_BY_HOUR: pay-as-you-go.
+ * @method integer getMongosCpu() Obtain Number of Mongos node CPU cores. Valid values: 1, 2, 4, 8, and 16. This parameter is required during sharded cluster instance purchase. If this parameter is left blank, the default value 2 is used.
+ * @method void setMongosCpu(integer $MongosCpu) Set Number of Mongos node CPU cores. Valid values: 1, 2, 4, 8, and 16. This parameter is required during sharded cluster instance purchase. If this parameter is left blank, the default value 2 is used.
+ * @method integer getMongosMemory() Obtain Mongos node memory size. - This parameter is required during sharded cluster instance purchase. - Unit: GB. Valid values: 2 (for 1 core), 4 (for 2 cores), 8 (for 4 cores), 16 (for 8 cores), and 32 (for 16 cores). If this parameter is left blank, the default value 4 is used.
+ * @method void setMongosMemory(integer $MongosMemory) Set Mongos node memory size. - This parameter is required during sharded cluster instance purchase. - Unit: GB. Valid values: 2 (for 1 core), 4 (for 2 cores), 8 (for 4 cores), 16 (for 8 cores), and 32 (for 16 cores). If this parameter is left blank, the default value 4 is used.
+ * @method integer getMongosNum() Obtain Specifies the number of Mongos nodes. Value range: [3,32]. For querying the price of sharded cluster instances, this parameter is required. If it is left blank, the default value 3 is used.
+ * @method void setMongosNum(integer $MongosNum) Set Specifies the number of Mongos nodes. Value range: [3,32]. For querying the price of sharded cluster instances, this parameter is required. If it is left blank, the default value 3 is used.
+ * @method integer getConfigServerCpu() Obtain Specifies the number of ConfigServer CPU cores. The value is fixed as 1.
+ * @method void setConfigServerCpu(integer $ConfigServerCpu) Set Specifies the number of ConfigServer CPU cores. The value is fixed as 1.
+ * @method integer getConfigServerMemory() Obtain Specifies the ConfigServer memory size. The value is fixed as 2. Unit: GB. This parameter can be left blank.
+ * @method void setConfigServerMemory(integer $ConfigServerMemory) Set Specifies the ConfigServer memory size. The value is fixed as 2. Unit: GB. This parameter can be left blank.
+ * @method integer getConfigServerVolume() Obtain Specifies the ConfigServer disk size. The value is fixed as 20. Unit: GB. This parameter can be left blank.
+ * @method void setConfigServerVolume(integer $ConfigServerVolume) Set Specifies the ConfigServer disk size. The value is fixed as 20. Unit: GB. This parameter can be left blank.
  */
 class InquirePriceCreateDBInstancesRequest extends AbstractModel
 {
@@ -63,27 +105,41 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
+     * @var integer  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+ - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
      */
     public $NodeNum;
 
     /**
-     * @var integer Instance memory size in GB.
+     * @var integer Instance memory size.
+
+ - Unit: GB.
+ - For the value range, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The CPU and Memory parameters in the returned data structure SpecItems correspond to the number of CPU cores and the memory specification, respectively.
      */
     public $Memory;
 
     /**
-     * @var integer  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
+     * @var integer Instance disk size.
+ - Unit: GB.
+ - For the value range, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The MinStorage and MaxStorage parameters in the returned data structure SpecItems correspond to the minimum and maximum disk specifications, respectively.
      */
     public $Volume;
 
     /**
-     * @var string Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
+     * @var string Instance version information. For specific supported versions, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The MongoVersionCode parameter in the returned data structure SpecItems indicates the information on versions supported for instances. The correspondence between version information and version number is as follows:
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
      */
     public $MongoVersion;
 
     /**
-     * @var string Server type. Valid values: `HIO` (high IO), `HIO10G` (ten-gigabit high IO)
+     * @var string Product specification type.
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk.
      */
     public $MachineCode;
 
@@ -93,73 +149,101 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
     public $GoodsNum;
 
     /**
-     * @var string Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
+     * @var string Instance type.
+
+ - REPLSET: replica set.
+ - SHARD: sharded cluster.
      */
     public $ClusterType;
 
     /**
-     * @var integer Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
+     * @var integer  - Specifies the number of replica sets during replica set instance creation. This parameter can only be set to 1.
+ - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
      */
     public $ReplicateSetNum;
 
     /**
-     * @var integer Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+     * @var integer  - When the monthly subscription mode is selected, that is, when <b>InstanceChargeType</b> is set to <b>PREPAID</b>, this parameter is required for specifying the purchase duration of instances. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Unit: months.
+ - When pay-as-you-go is selected, that is, when <b>InstanceChargeType</b> is set to **POSTPAID_BY_HOUR**, this parameter only can be set to 1.
      */
     public $Period;
 
     /**
-     * @var string 
+     * @var string Instance payment method.
+ - PREPAID: monthly subscription.
+ - POSTPAID_BY_HOUR: pay-as-you-go.
      */
     public $InstanceChargeType;
 
     /**
-     * @var integer 
+     * @var integer Number of Mongos node CPU cores. Valid values: 1, 2, 4, 8, and 16. This parameter is required during sharded cluster instance purchase. If this parameter is left blank, the default value 2 is used.
      */
     public $MongosCpu;
 
     /**
-     * @var integer 
+     * @var integer Mongos node memory size. - This parameter is required during sharded cluster instance purchase. - Unit: GB. Valid values: 2 (for 1 core), 4 (for 2 cores), 8 (for 4 cores), 16 (for 8 cores), and 32 (for 16 cores). If this parameter is left blank, the default value 4 is used.
      */
     public $MongosMemory;
 
     /**
-     * @var integer 
+     * @var integer Specifies the number of Mongos nodes. Value range: [3,32]. For querying the price of sharded cluster instances, this parameter is required. If it is left blank, the default value 3 is used.
      */
     public $MongosNum;
 
     /**
-     * @var integer 
+     * @var integer Specifies the number of ConfigServer CPU cores. The value is fixed as 1.
      */
     public $ConfigServerCpu;
 
     /**
-     * @var integer 
+     * @var integer Specifies the ConfigServer memory size. The value is fixed as 2. Unit: GB. This parameter can be left blank.
      */
     public $ConfigServerMemory;
 
     /**
-     * @var integer 
+     * @var integer Specifies the ConfigServer disk size. The value is fixed as 20. Unit: GB. This parameter can be left blank.
      */
     public $ConfigServerVolume;
 
     /**
      * @param string $Zone Instance region name in the format of ap-guangzhou-2.
-     * @param integer $NodeNum Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
-     * @param integer $Memory Instance memory size in GB.
-     * @param integer $Volume  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
-     * @param string $MongoVersion Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
-     * @param string $MachineCode Server type. Valid values: `HIO` (high IO), `HIO10G` (ten-gigabit high IO)
+     * @param integer $NodeNum  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+ - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
+     * @param integer $Memory Instance memory size.
+
+ - Unit: GB.
+ - For the value range, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The CPU and Memory parameters in the returned data structure SpecItems correspond to the number of CPU cores and the memory specification, respectively.
+     * @param integer $Volume Instance disk size.
+ - Unit: GB.
+ - For the value range, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The MinStorage and MaxStorage parameters in the returned data structure SpecItems correspond to the minimum and maximum disk specifications, respectively.
+     * @param string $MongoVersion Instance version information. For specific supported versions, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The MongoVersionCode parameter in the returned data structure SpecItems indicates the information on versions supported for instances. The correspondence between version information and version number is as follows:
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+     * @param string $MachineCode Product specification type.
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk.
      * @param integer $GoodsNum Number of instances. Minimum value: 1. Maximum value: 10.
-     * @param string $ClusterType Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
-     * @param integer $ReplicateSetNum Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
-     * @param integer $Period Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
-     * @param string $InstanceChargeType 
-     * @param integer $MongosCpu 
-     * @param integer $MongosMemory 
-     * @param integer $MongosNum 
-     * @param integer $ConfigServerCpu 
-     * @param integer $ConfigServerMemory 
-     * @param integer $ConfigServerVolume 
+     * @param string $ClusterType Instance type.
+
+ - REPLSET: replica set.
+ - SHARD: sharded cluster.
+     * @param integer $ReplicateSetNum  - Specifies the number of replica sets during replica set instance creation. This parameter can only be set to 1.
+ - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
+     * @param integer $Period  - When the monthly subscription mode is selected, that is, when <b>InstanceChargeType</b> is set to <b>PREPAID</b>, this parameter is required for specifying the purchase duration of instances. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Unit: months.
+ - When pay-as-you-go is selected, that is, when <b>InstanceChargeType</b> is set to **POSTPAID_BY_HOUR**, this parameter only can be set to 1.
+     * @param string $InstanceChargeType Instance payment method.
+ - PREPAID: monthly subscription.
+ - POSTPAID_BY_HOUR: pay-as-you-go.
+     * @param integer $MongosCpu Number of Mongos node CPU cores. Valid values: 1, 2, 4, 8, and 16. This parameter is required during sharded cluster instance purchase. If this parameter is left blank, the default value 2 is used.
+     * @param integer $MongosMemory Mongos node memory size. - This parameter is required during sharded cluster instance purchase. - Unit: GB. Valid values: 2 (for 1 core), 4 (for 2 cores), 8 (for 4 cores), 16 (for 8 cores), and 32 (for 16 cores). If this parameter is left blank, the default value 4 is used.
+     * @param integer $MongosNum Specifies the number of Mongos nodes. Value range: [3,32]. For querying the price of sharded cluster instances, this parameter is required. If it is left blank, the default value 3 is used.
+     * @param integer $ConfigServerCpu Specifies the number of ConfigServer CPU cores. The value is fixed as 1.
+     * @param integer $ConfigServerMemory Specifies the ConfigServer memory size. The value is fixed as 2. Unit: GB. This parameter can be left blank.
+     * @param integer $ConfigServerVolume Specifies the ConfigServer disk size. The value is fixed as 20. Unit: GB. This parameter can be left blank.
      */
     function __construct()
     {

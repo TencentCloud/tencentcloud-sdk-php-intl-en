@@ -20,74 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The collection of modifiable enum parameters of an instance.
  *
- * @method string getCurrentValue() Obtain Current value
- * @method void setCurrentValue(string $CurrentValue) Set Current value
- * @method string getDefaultValue() Obtain Default value
- * @method void setDefaultValue(string $DefaultValue) Set Default value
- * @method array getEnumValue() Obtain Acceptable values
- * @method void setEnumValue(array $EnumValue) Set Acceptable values
- * @method string getNeedRestart() Obtain Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
- * @method void setNeedRestart(string $NeedRestart) Set Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
- * @method string getParamName() Obtain Parameter name
- * @method void setParamName(string $ParamName) Set Parameter name
- * @method array getTips() Obtain Parameter description
- * @method void setTips(array $Tips) Set Parameter description
- * @method string getValueType() Obtain Data type of the parameter
- * @method void setValueType(string $ValueType) Set Data type of the parameter
- * @method integer getStatus() Obtain Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
- * @method void setStatus(integer $Status) Set Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+ * @method string getCurrentValue() Obtain Current parameter value.
+ * @method void setCurrentValue(string $CurrentValue) Set Current parameter value.
+ * @method string getDefaultValue() Obtain Default parameter value.
+ * @method void setDefaultValue(string $DefaultValue) Set Default parameter value.
+ * @method array getEnumValue() Obtain Enumerated values, which indicate all supported values.
+ * @method void setEnumValue(array $EnumValue) Set Enumerated values, which indicate all supported values.
+ * @method string getNeedRestart() Obtain Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
+ * @method void setNeedRestart(string $NeedRestart) Set Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
+ * @method string getParamName() Obtain Parameter name.
+ * @method void setParamName(string $ParamName) Set Parameter name.
+ * @method array getTips() Obtain Parameter description.
+ * @method void setTips(array $Tips) Set Parameter description.
+ * @method string getValueType() Obtain Parameter type description.
+ * @method void setValueType(string $ValueType) Set Parameter type description.
+ * @method integer getStatus() Obtain Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
+ * @method void setStatus(integer $Status) Set Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
  */
 class InstanceEnumParam extends AbstractModel
 {
     /**
-     * @var string Current value
+     * @var string Current parameter value.
      */
     public $CurrentValue;
 
     /**
-     * @var string Default value
+     * @var string Default parameter value.
      */
     public $DefaultValue;
 
     /**
-     * @var array Acceptable values
+     * @var array Enumerated values, which indicate all supported values.
      */
     public $EnumValue;
 
     /**
-     * @var string Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+     * @var string Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
      */
     public $NeedRestart;
 
     /**
-     * @var string Parameter name
+     * @var string Parameter name.
      */
     public $ParamName;
 
     /**
-     * @var array Parameter description
+     * @var array Parameter description.
      */
     public $Tips;
 
     /**
-     * @var string Data type of the parameter
+     * @var string Parameter type description.
      */
     public $ValueType;
 
     /**
-     * @var integer Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+     * @var integer Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
      */
     public $Status;
 
     /**
-     * @param string $CurrentValue Current value
-     * @param string $DefaultValue Default value
-     * @param array $EnumValue Acceptable values
-     * @param string $NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
-     * @param string $ParamName Parameter name
-     * @param array $Tips Parameter description
-     * @param string $ValueType Data type of the parameter
-     * @param integer $Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+     * @param string $CurrentValue Current parameter value.
+     * @param string $DefaultValue Default parameter value.
+     * @param array $EnumValue Enumerated values, which indicate all supported values.
+     * @param string $NeedRestart Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
+     * @param string $ParamName Parameter name.
+     * @param array $Tips Parameter description.
+     * @param string $ValueType Parameter type description.
+     * @param integer $Status Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
      */
     function __construct()
     {

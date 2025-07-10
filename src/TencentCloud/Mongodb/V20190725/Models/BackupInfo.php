@@ -20,37 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Backup information
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method integer getBackupType() Obtain Backup mode. 0: automatic backup; 1: manual backup
  * @method void setBackupType(integer $BackupType) Set Backup mode. 0: automatic backup; 1: manual backup
  * @method string getBackupName() Obtain Backup name
  * @method void setBackupName(string $BackupName) Set Backup name
- * @method string getBackupDesc() Obtain Backup remarks
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBackupDesc(string $BackupDesc) Set Backup remarks
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getBackupSize() Obtain Backup file size in KB
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBackupSize(integer $BackupSize) Set Backup file size in KB
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStartTime() Obtain Backup start time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) Set Backup start time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEndTime() Obtain Backup end time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(string $EndTime) Set Backup end time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBackupDesc() Obtain Backup remarks.
+ * @method void setBackupDesc(string $BackupDesc) Set Backup remarks.
+ * @method integer getBackupSize() Obtain Backup file size. Unit: KB.
+ * @method void setBackupSize(integer $BackupSize) Set Backup file size. Unit: KB.
+ * @method string getStartTime() Obtain Backup start time.
+ * @method void setStartTime(string $StartTime) Set Backup start time.
+ * @method string getEndTime() Obtain Backup end time.
+ * @method void setEndTime(string $EndTime) Set Backup end time.
  * @method integer getStatus() Obtain Backup status. 1: backing up; 2: backed up successful
  * @method void setStatus(integer $Status) Set Backup status. 1: backing up; 2: backed up successful
  * @method integer getBackupMethod() Obtain Backup method. 0: logical backup; 1: physical backup
  * @method void setBackupMethod(integer $BackupMethod) Set Backup method. 0: logical backup; 1: physical backup
+ * @method integer getBackId() Obtain Backup record ID.
+ * @method void setBackId(integer $BackId) Set Backup record ID.
+ * @method string getDeleteTime() Obtain Backup deletion time.
+ * @method void setDeleteTime(string $DeleteTime) Set Backup deletion time.
+ * @method string getBackupRegion() Obtain Region for cross-region backup.
+ * @method void setBackupRegion(string $BackupRegion) Set Region for cross-region backup.
  */
 class BackupInfo extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
@@ -65,26 +63,22 @@ class BackupInfo extends AbstractModel
     public $BackupName;
 
     /**
-     * @var string Backup remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Backup remarks.
      */
     public $BackupDesc;
 
     /**
-     * @var integer Backup file size in KB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Backup file size. Unit: KB.
      */
     public $BackupSize;
 
     /**
-     * @var string Backup start time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Backup start time.
      */
     public $StartTime;
 
     /**
-     * @var string Backup end time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Backup end time.
      */
     public $EndTime;
 
@@ -99,19 +93,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $BackupMethod;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @var integer Backup record ID.
+     */
+    public $BackId;
+
+    /**
+     * @var string Backup deletion time.
+     */
+    public $DeleteTime;
+
+    /**
+     * @var string Region for cross-region backup.
+     */
+    public $BackupRegion;
+
+    /**
+     * @param string $InstanceId Instance ID.
      * @param integer $BackupType Backup mode. 0: automatic backup; 1: manual backup
      * @param string $BackupName Backup name
-     * @param string $BackupDesc Backup remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $BackupSize Backup file size in KB
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StartTime Backup start time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EndTime Backup end time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BackupDesc Backup remarks.
+     * @param integer $BackupSize Backup file size. Unit: KB.
+     * @param string $StartTime Backup start time.
+     * @param string $EndTime Backup end time.
      * @param integer $Status Backup status. 1: backing up; 2: backed up successful
      * @param integer $BackupMethod Backup method. 0: logical backup; 1: physical backup
+     * @param integer $BackId Backup record ID.
+     * @param string $DeleteTime Backup deletion time.
+     * @param string $BackupRegion Region for cross-region backup.
      */
     function __construct()
     {
@@ -160,6 +168,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BackupMethod",$param) and $param["BackupMethod"] !== null) {
             $this->BackupMethod = $param["BackupMethod"];
+        }
+
+        if (array_key_exists("BackId",$param) and $param["BackId"] !== null) {
+            $this->BackId = $param["BackId"];
+        }
+
+        if (array_key_exists("DeleteTime",$param) and $param["DeleteTime"] !== null) {
+            $this->DeleteTime = $param["DeleteTime"];
+        }
+
+        if (array_key_exists("BackupRegion",$param) and $param["BackupRegion"] !== null) {
+            $this->BackupRegion = $param["BackupRegion"];
         }
     }
 }

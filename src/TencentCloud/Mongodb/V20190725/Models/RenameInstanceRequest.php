@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenameInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
- * @method string getNewName() Obtain Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
- * @method void setNewName(string $NewName) Set Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
+ * @method string getInstanceId() Obtain Instance ID. Format: cmgo-p8vnipr5. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB#/) and copy the instance ID from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Format: cmgo-p8vnipr5. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB#/) and copy the instance ID from the instance list.
+ * @method string getNewName() Obtain Custom instance name. It can contain any character, with a length from 1 to 128 characters.
+ * @method void setNewName(string $NewName) Set Custom instance name. It can contain any character, with a length from 1 to 128 characters.
  */
 class RenameInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * @var string Instance ID. Format: cmgo-p8vnipr5. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB#/) and copy the instance ID from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
+     * @var string Custom instance name. It can contain any character, with a length from 1 to 128 characters.
      */
     public $NewName;
 
     /**
-     * @param string $InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-     * @param string $NewName Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
+     * @param string $InstanceId Instance ID. Format: cmgo-p8vnipr5. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB#/) and copy the instance ID from the instance list.
+     * @param string $NewName Custom instance name. It can contain any character, with a length from 1 to 128 characters.
      */
     function __construct()
     {

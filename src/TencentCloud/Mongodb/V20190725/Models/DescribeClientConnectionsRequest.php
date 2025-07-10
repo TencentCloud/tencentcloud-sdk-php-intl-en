@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClientConnections request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
- * @method integer getLimit() Obtain Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
- * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
- * @method integer getOffset() Obtain Offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
+ * @method string getInstanceId() Obtain Specifies the ID of the instance to be queried. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
+ * @method void setInstanceId(string $InstanceId) Set Specifies the ID of the instance to be queried. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
+ * @method integer getLimit() Obtain Number of entries returned per request. Minimum value: 1. Maximum value: 1000. Default value: 1000.
+ * @method void setLimit(integer $Limit) Set Number of entries returned per request. Minimum value: 1. Maximum value: 1000. Default value: 1000.
+ * @method integer getOffset() Obtain Offset. Default value: 0. Offset = Limit x (page number - 1).
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0. Offset = Limit x (page number - 1).
  */
 class DescribeClientConnectionsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * @var string Specifies the ID of the instance to be queried. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
      */
     public $InstanceId;
 
     /**
-     * @var integer Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
+     * @var integer Number of entries returned per request. Minimum value: 1. Maximum value: 1000. Default value: 1000.
      */
     public $Limit;
 
     /**
-     * @var integer Offset. Default value: 0.
+     * @var integer Offset. Default value: 0. Offset = Limit x (page number - 1).
      */
     public $Offset;
 
     /**
-     * @param string $InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-     * @param integer $Limit Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
-     * @param integer $Offset Offset. Default value: 0.
+     * @param string $InstanceId Specifies the ID of the instance to be queried. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
+     * @param integer $Limit Number of entries returned per request. Minimum value: 1. Maximum value: 1000. Default value: 1000.
+     * @param integer $Offset Offset. Default value: 0. Offset = Limit x (page number - 1).
      */
     function __construct()
     {

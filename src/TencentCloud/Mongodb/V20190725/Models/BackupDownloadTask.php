@@ -38,10 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) Set Backup download address
  * @method integer getBackupMethod() Obtain Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
  * @method void setBackupMethod(integer $BackupMethod) Set Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
- * @method string getBackupDesc() Obtain Backup description you set when starting a backup task
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setBackupDesc(string $BackupDesc) Set Backup description you set when starting a backup task
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getBackupDesc() Obtain Specifies the remarks for backup.
+ * @method void setBackupDesc(string $BackupDesc) Set Specifies the remarks for backup.
+ * @method string getRegion() Obtain Region information.
+ * @method void setRegion(string $Region) Set Region information.
+ * @method string getBucket() Obtain Bucket information.
+ * @method void setBucket(string $Bucket) Set Bucket information.
  */
 class BackupDownloadTask extends AbstractModel
 {
@@ -91,10 +93,19 @@ class BackupDownloadTask extends AbstractModel
     public $BackupMethod;
 
     /**
-     * @var string Backup description you set when starting a backup task
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Specifies the remarks for backup.
      */
     public $BackupDesc;
+
+    /**
+     * @var string Region information.
+     */
+    public $Region;
+
+    /**
+     * @var string Bucket information.
+     */
+    public $Bucket;
 
     /**
      * @param string $CreateTime Task creation time
@@ -106,8 +117,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param integer $TimeSpend Task duration in seconds
      * @param string $Url Backup download address
      * @param integer $BackupMethod Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
-     * @param string $BackupDesc Backup description you set when starting a backup task
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $BackupDesc Specifies the remarks for backup.
+     * @param string $Region Region information.
+     * @param string $Bucket Bucket information.
      */
     function __construct()
     {
@@ -160,6 +172,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("BackupDesc",$param) and $param["BackupDesc"] !== null) {
             $this->BackupDesc = $param["BackupDesc"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
+            $this->Bucket = $param["Bucket"];
         }
     }
 }
