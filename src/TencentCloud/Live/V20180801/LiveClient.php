@@ -39,6 +39,8 @@ Best practice: https://intl.cloud.tencent.com/document/product/267/45566?from_cn
  * @method Models\CreateLiveCallbackTemplateResponse CreateLiveCallbackTemplate(Models\CreateLiveCallbackTemplateRequest $req) This API is used to create a callback template. Up to 50 templates can be created. After the template ID is returned, you need to call the [CreateLiveCallbackRule](https://intl.cloud.tencent.com/document/product/267/32638?from_cn_redirect=1) API to bind the template ID to a domain name/path.
 <br>For information about callback protocols, see [How to Receive Event Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
 Note: You need to specify at least one callback URL.
+ * @method Models\CreateLivePadRuleResponse CreateLivePadRule(Models\CreateLivePadRuleRequest $req) create a live pad rule.
+ * @method Models\CreateLivePadTemplateResponse CreateLivePadTemplate(Models\CreateLivePadTemplateRequest $req) create a live pad template
  * @method Models\CreateLivePullStreamTaskResponse CreateLivePullStreamTask(Models\CreateLivePullStreamTaskRequest $req) This API is used to create a task to pull streams from video files or an external live streaming source and publish them to a specified destination URL.
 Notes:
 1. By default, you can have at most 20 stream pulling tasks at a time. You can submit a ticket to raise the limit.
