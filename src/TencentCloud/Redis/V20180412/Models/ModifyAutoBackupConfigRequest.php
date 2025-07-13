@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimePeriod(string $TimePeriod) Set Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
  * @method integer getAutoBackupType() Obtain Automatic backup type.  Valid value:  `1` (scheduled backup).
  * @method void setAutoBackupType(integer $AutoBackupType) Set Automatic backup type.  Valid value:  `1` (scheduled backup).
+ * @method integer getBackupStorageDays() Obtain Specifies the retention days of full backup files. unit: day.
+ * @method void setBackupStorageDays(integer $BackupStorageDays) Set Specifies the retention days of full backup files. unit: day.
  */
 class ModifyAutoBackupConfigRequest extends AbstractModel
 {
@@ -55,11 +57,17 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
     public $AutoBackupType;
 
     /**
+     * @var integer Specifies the retention days of full backup files. unit: day.
+     */
+    public $BackupStorageDays;
+
+    /**
      * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
 
      * @param array $WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
      * @param string $TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
      * @param integer $AutoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
+     * @param integer $BackupStorageDays Specifies the retention days of full backup files. unit: day.
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
 
         if (array_key_exists("AutoBackupType",$param) and $param["AutoBackupType"] !== null) {
             $this->AutoBackupType = $param["AutoBackupType"];
+        }
+
+        if (array_key_exists("BackupStorageDays",$param) and $param["BackupStorageDays"] !== null) {
+            $this->BackupStorageDays = $param["BackupStorageDays"];
         }
     }
 }
