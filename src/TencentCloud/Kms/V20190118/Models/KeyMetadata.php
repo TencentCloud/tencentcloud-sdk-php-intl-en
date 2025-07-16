@@ -56,6 +56,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRotateDays(integer $RotateDays) Set Key rotation period (days).
  * @method integer getLastRotateTime() Obtain Last disorderly rotation time (Unix timestamp).
  * @method void setLastRotateTime(integer $LastRotateTime) Set Last disorderly rotation time (Unix timestamp).
+ * @method integer getIsSyncReplica() Obtain Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+ * @method void setIsSyncReplica(integer $IsSyncReplica) Set Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+ * @method string getSourceRegion() Obtain Synchronous original region.
+ * @method void setSourceRegion(string $SourceRegion) Set Synchronous original region.
+ * @method integer getSyncStatus() Obtain The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+ * @method void setSyncStatus(integer $SyncStatus) Set The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+ * @method string getSyncMessages() Obtain Describes the synchronous result.
+ * @method void setSyncMessages(string $SyncMessages) Set Describes the synchronous result.
+ * @method integer getSyncStartTime() Obtain Start time of synchronization.
+ * @method void setSyncStartTime(integer $SyncStartTime) Set Start time of synchronization.
+ * @method integer getSyncEndTime() Obtain Specifies the synchronous end time.
+ * @method void setSyncEndTime(integer $SyncEndTime) Set Specifies the synchronous end time.
+ * @method string getSourceHsmClusterId() Obtain Synchronous original cluster. if empty, it is a public cloud public cluster.
+ * @method void setSourceHsmClusterId(string $SourceHsmClusterId) Set Synchronous original cluster. if empty, it is a public cloud public cluster.
  */
 class KeyMetadata extends AbstractModel
 {
@@ -150,6 +164,41 @@ class KeyMetadata extends AbstractModel
     public $LastRotateTime;
 
     /**
+     * @var integer Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+     */
+    public $IsSyncReplica;
+
+    /**
+     * @var string Synchronous original region.
+     */
+    public $SourceRegion;
+
+    /**
+     * @var integer The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+     */
+    public $SyncStatus;
+
+    /**
+     * @var string Describes the synchronous result.
+     */
+    public $SyncMessages;
+
+    /**
+     * @var integer Start time of synchronization.
+     */
+    public $SyncStartTime;
+
+    /**
+     * @var integer Specifies the synchronous end time.
+     */
+    public $SyncEndTime;
+
+    /**
+     * @var string Synchronous original cluster. if empty, it is a public cloud public cluster.
+     */
+    public $SourceHsmClusterId;
+
+    /**
      * @param string $KeyId Globally unique CMK ID
      * @param string $Alias Alias that makes a key more recognizable and understandable
      * @param integer $CreateTime Key creation time
@@ -168,6 +217,13 @@ class KeyMetadata extends AbstractModel
      * @param string $HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
      * @param integer $RotateDays Key rotation period (days).
      * @param integer $LastRotateTime Last disorderly rotation time (Unix timestamp).
+     * @param integer $IsSyncReplica Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+     * @param string $SourceRegion Synchronous original region.
+     * @param integer $SyncStatus The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+     * @param string $SyncMessages Describes the synchronous result.
+     * @param integer $SyncStartTime Start time of synchronization.
+     * @param integer $SyncEndTime Specifies the synchronous end time.
+     * @param string $SourceHsmClusterId Synchronous original cluster. if empty, it is a public cloud public cluster.
      */
     function __construct()
     {
@@ -252,6 +308,34 @@ class KeyMetadata extends AbstractModel
 
         if (array_key_exists("LastRotateTime",$param) and $param["LastRotateTime"] !== null) {
             $this->LastRotateTime = $param["LastRotateTime"];
+        }
+
+        if (array_key_exists("IsSyncReplica",$param) and $param["IsSyncReplica"] !== null) {
+            $this->IsSyncReplica = $param["IsSyncReplica"];
+        }
+
+        if (array_key_exists("SourceRegion",$param) and $param["SourceRegion"] !== null) {
+            $this->SourceRegion = $param["SourceRegion"];
+        }
+
+        if (array_key_exists("SyncStatus",$param) and $param["SyncStatus"] !== null) {
+            $this->SyncStatus = $param["SyncStatus"];
+        }
+
+        if (array_key_exists("SyncMessages",$param) and $param["SyncMessages"] !== null) {
+            $this->SyncMessages = $param["SyncMessages"];
+        }
+
+        if (array_key_exists("SyncStartTime",$param) and $param["SyncStartTime"] !== null) {
+            $this->SyncStartTime = $param["SyncStartTime"];
+        }
+
+        if (array_key_exists("SyncEndTime",$param) and $param["SyncEndTime"] !== null) {
+            $this->SyncEndTime = $param["SyncEndTime"];
+        }
+
+        if (array_key_exists("SourceHsmClusterId",$param) and $param["SourceHsmClusterId"] !== null) {
+            $this->SourceHsmClusterId = $param["SourceHsmClusterId"];
         }
     }
 }

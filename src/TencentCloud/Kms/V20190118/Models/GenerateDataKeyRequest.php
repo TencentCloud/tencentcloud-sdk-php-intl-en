@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryptionPublicKey(string $EncryptionPublicKey) Set PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
  * @method string getEncryptionAlgorithm() Obtain Asymmetric encryption algorithm. Valid values: `SM2` (C1C3C2 ciphertext is returned)`, `SM2_C1C3C2_ASN1` (C1C3C2 ASN1 ciphertext is returned), `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, an SM2 public key will be used by default.
  * @method void setEncryptionAlgorithm(string $EncryptionAlgorithm) Set Asymmetric encryption algorithm. Valid values: `SM2` (C1C3C2 ciphertext is returned)`, `SM2_C1C3C2_ASN1` (C1C3C2 ASN1 ciphertext is returned), `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, an SM2 public key will be used by default.
+ * @method integer getIsHostedByKms() Obtain Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS.
+ * @method void setIsHostedByKms(integer $IsHostedByKms) Set Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS.
+ * @method string getDataKeyName() Obtain Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
+ * @method void setDataKeyName(string $DataKeyName) Set Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
+ * @method string getDescription() Obtain Describes the data key. maximum 100 bytes.
+ * @method void setDescription(string $Description) Set Describes the data key. maximum 100 bytes.
+ * @method string getHsmClusterId() Obtain HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
+ * @method void setHsmClusterId(string $HsmClusterId) Set HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
  */
 class GenerateDataKeyRequest extends AbstractModel
 {
@@ -66,12 +74,36 @@ class GenerateDataKeyRequest extends AbstractModel
     public $EncryptionAlgorithm;
 
     /**
+     * @var integer Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS.
+     */
+    public $IsHostedByKms;
+
+    /**
+     * @var string Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
+     */
+    public $DataKeyName;
+
+    /**
+     * @var string Describes the data key. maximum 100 bytes.
+     */
+    public $Description;
+
+    /**
+     * @var string HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
+     */
+    public $HsmClusterId;
+
+    /**
      * @param string $KeyId Globally unique CMK ID
      * @param string $KeySpec Specifies the encryption algorithm and size of the `DataKey`. Valid values: AES_128, AES_256. Either `KeySpec` or `NumberOfBytes` must be specified.
      * @param integer $NumberOfBytes Length of the `DataKey`. If both `NumberOfBytes` and `KeySpec` are specified, `NumberOfBytes` will prevail. Minimum value: 1; maximum value: 1024. Either `KeySpec` or `NumberOfBytes` must be specified.
      * @param string $EncryptionContext JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
      * @param string $EncryptionPublicKey PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
      * @param string $EncryptionAlgorithm Asymmetric encryption algorithm. Valid values: `SM2` (C1C3C2 ciphertext is returned)`, `SM2_C1C3C2_ASN1` (C1C3C2 ASN1 ciphertext is returned), `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, an SM2 public key will be used by default.
+     * @param integer $IsHostedByKms Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS.
+     * @param string $DataKeyName Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
+     * @param string $Description Describes the data key. maximum 100 bytes.
+     * @param string $HsmClusterId HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
      */
     function __construct()
     {
@@ -108,6 +140,22 @@ class GenerateDataKeyRequest extends AbstractModel
 
         if (array_key_exists("EncryptionAlgorithm",$param) and $param["EncryptionAlgorithm"] !== null) {
             $this->EncryptionAlgorithm = $param["EncryptionAlgorithm"];
+        }
+
+        if (array_key_exists("IsHostedByKms",$param) and $param["IsHostedByKms"] !== null) {
+            $this->IsHostedByKms = $param["IsHostedByKms"];
+        }
+
+        if (array_key_exists("DataKeyName",$param) and $param["DataKeyName"] !== null) {
+            $this->DataKeyName = $param["DataKeyName"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("HsmClusterId",$param) and $param["HsmClusterId"] !== null) {
+            $this->HsmClusterId = $param["HsmClusterId"];
         }
     }
 }

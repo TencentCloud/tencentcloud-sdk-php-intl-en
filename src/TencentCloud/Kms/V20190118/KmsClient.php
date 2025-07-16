@@ -27,6 +27,7 @@ use TencentCloud\Kms\V20190118\Models as Models;
  * @method Models\AsymmetricRsaDecryptResponse AsymmetricRsaDecrypt(Models\AsymmetricRsaDecryptRequest $req) This API is used to decrypt data with the specified private key that is encrypted with RSA asymmetric cryptographic algorithm. The ciphertext must be encrypted with the corresponding public key. The asymmetric key must be in `Enabled` state for decryption.
  * @method Models\AsymmetricSm2DecryptResponse AsymmetricSm2Decrypt(Models\AsymmetricSm2DecryptRequest $req) This API is used to decrypt data with the specified private key that is encrypted with SM2 asymmetric cryptographic algorithm. The ciphertext must be encrypted with the corresponding public key. The asymmetric key must be in `Enabled` state for decryption. The length of the ciphertext passed in cannot exceed 256 bytes.
  * @method Models\BindCloudResourceResponse BindCloudResource(Models\BindCloudResourceRequest $req) This API is used to bind a key with a Tencent Cloud resource. If the key has been set to be expired automatically, the setting will be canceled to ensure that the key will not be invalid automatically. If the key and the resource has already been bound, the call will still be successful.
+ * @method Models\CancelDataKeyDeletionResponse CancelDataKeyDeletion(Models\CancelDataKeyDeletionRequest $req) This API is used to cancel scheduled deletion for a data key.
  * @method Models\CancelKeyArchiveResponse CancelKeyArchive(Models\CancelKeyArchiveRequest $req) This API is used to unarchive keys. If a key is unarchived, its status will be `Enabled`.
  * @method Models\CancelKeyDeletionResponse CancelKeyDeletion(Models\CancelKeyDeletionRequest $req) Cancel the scheduled deletion of CMK
  * @method Models\CreateKeyResponse CreateKey(Models\CreateKeyRequest $req) Create a master key CMK (Custom Master Key) for user management data keys
@@ -34,6 +35,8 @@ use TencentCloud\Kms\V20190118\Models as Models;
  * @method Models\DecryptResponse Decrypt(Models\DecryptRequest $req) This API is used to decrypt the ciphertext and obtain the plaintext data.
  * @method Models\DeleteImportedKeyMaterialResponse DeleteImportedKeyMaterial(Models\DeleteImportedKeyMaterialRequest $req) This API is used to delete the imported key material. It is only valid for EXTERNAL CMKs. Specifically, it puts a CMK into `PendingImport` status instead of deleting the CMK, so that the CMK can be used again after key material is reimported. To delete the CMK completely, please call the `ScheduleKeyDeletion` API.
  * @method Models\DeleteWhiteBoxKeyResponse DeleteWhiteBoxKey(Models\DeleteWhiteBoxKeyRequest $req) This API is used to delete a white-box key. Note: only disabled white-box keys can be deleted.
+ * @method Models\DescribeDataKeyResponse DescribeDataKey(Models\DescribeDataKeyRequest $req) This API is used to retrieve data key details.
+ * @method Models\DescribeDataKeysResponse DescribeDataKeys(Models\DescribeDataKeysRequest $req) This API is used to return the key attribute information list.
  * @method Models\DescribeKeyResponse DescribeKey(Models\DescribeKeyRequest $req) This API is used to get the attribute details of the CMK with a specified `KeyId`.
  * @method Models\DescribeKeysResponse DescribeKeys(Models\DescribeKeysRequest $req) This API is used to get the attribute information of CMKs in batches.
  * @method Models\DescribeWhiteBoxDecryptKeyResponse DescribeWhiteBoxDecryptKey(Models\DescribeWhiteBoxDecryptKeyRequest $req) This API is used to get a white-box decryption key.
@@ -41,11 +44,15 @@ use TencentCloud\Kms\V20190118\Models as Models;
  * @method Models\DescribeWhiteBoxKeyResponse DescribeWhiteBoxKey(Models\DescribeWhiteBoxKeyRequest $req) This API is used to display white-box key information.
  * @method Models\DescribeWhiteBoxKeyDetailsResponse DescribeWhiteBoxKeyDetails(Models\DescribeWhiteBoxKeyDetailsRequest $req) This API is used to get the white-box key list.
  * @method Models\DescribeWhiteBoxServiceStatusResponse DescribeWhiteBoxServiceStatus(Models\DescribeWhiteBoxServiceStatusRequest $req) This API is used to get the white-box key service status.
+ * @method Models\DisableDataKeyResponse DisableDataKey(Models\DisableDataKeyRequest $req) This API is used to disable the data key.
+ * @method Models\DisableDataKeysResponse DisableDataKeys(Models\DisableDataKeysRequest $req) This API is used to batch disable data keys.
  * @method Models\DisableKeyResponse DisableKey(Models\DisableKeyRequest $req) This API is used to disable a master key. The disabled key cannot be used for encryption and decryption operations.
  * @method Models\DisableKeyRotationResponse DisableKeyRotation(Models\DisableKeyRotationRequest $req) Disabled key rotation for the specified CMK.
  * @method Models\DisableKeysResponse DisableKeys(Models\DisableKeysRequest $req) This API is used to batch prohibit the use of CMK.
  * @method Models\DisableWhiteBoxKeyResponse DisableWhiteBoxKey(Models\DisableWhiteBoxKeyRequest $req) This API is used to disable a white-box key.
  * @method Models\DisableWhiteBoxKeysResponse DisableWhiteBoxKeys(Models\DisableWhiteBoxKeysRequest $req) This API is used to disable white-box keys in batches.
+ * @method Models\EnableDataKeyResponse EnableDataKey(Models\EnableDataKeyRequest $req) This API is used to enable the data key.
+ * @method Models\EnableDataKeysResponse EnableDataKeys(Models\EnableDataKeysRequest $req) This API is used to batch enable data keys.
  * @method Models\EnableKeyResponse EnableKey(Models\EnableKeyRequest $req) Enable a specified CMK.
  * @method Models\EnableKeyRotationResponse EnableKeyRotation(Models\EnableKeyRotationRequest $req) Turn on the key rotation function for the specified CMK.
  * @method Models\EnableKeysResponse EnableKeys(Models\EnableKeysRequest $req) This API is used to enable CMK in batches.
@@ -55,14 +62,19 @@ use TencentCloud\Kms\V20190118\Models as Models;
  * @method Models\EncryptByWhiteBoxResponse EncryptByWhiteBox(Models\EncryptByWhiteBoxRequest $req) This API is used to encrypt data with a white-box key.
  * @method Models\GenerateDataKeyResponse GenerateDataKey(Models\GenerateDataKeyRequest $req) This API generates a data key, which you can use to encrypt local data.
  * @method Models\GenerateRandomResponse GenerateRandom(Models\GenerateRandomRequest $req) This API is used to generate a random number.
+ * @method Models\GetDataKeyCiphertextBlobResponse GetDataKeyCiphertextBlob(Models\GetDataKeyCiphertextBlobRequest $req) This API is used to download the encrypted data key.
+ * @method Models\GetDataKeyPlaintextResponse GetDataKeyPlaintext(Models\GetDataKeyPlaintextRequest $req) This API is used to retrieve the key plaintext.
  * @method Models\GetKeyRotationStatusResponse GetKeyRotationStatus(Models\GetKeyRotationStatusRequest $req) Query whether the specified CMK has the key rotation function.
  * @method Models\GetParametersForImportResponse GetParametersForImport(Models\GetParametersForImportRequest $req) This API is used to obtain the parameters of the material to be imported into a CMK. The returned `Token` is used as one of the parameters to execute `ImportKeyMaterial`, and the returned `PublicKey` is used to encrypt the key material. The `Token` and `PublicKey` are valid for 24 hours. If they are expired, you will need to call the API again to get a new `Token` and `PublicKey`.
  * @method Models\GetPublicKeyResponse GetPublicKey(Models\GetPublicKeyRequest $req) This API is used to get the public key of an asymmetric KMS key (which must be enabled). With the public key, you can encrypt messages and verify signatures.
  * @method Models\GetRegionsResponse GetRegions(Models\GetRegionsRequest $req) This API is used to return all regions support KMS service.
  * @method Models\GetServiceStatusResponse GetServiceStatus(Models\GetServiceStatusRequest $req) Used to query whether the user has activated the KMS service.
+ * @method Models\ImportDataKeyResponse ImportDataKey(Models\ImportDataKeyRequest $req) Data key import API, managed by KMS.
  * @method Models\ImportKeyMaterialResponse ImportKeyMaterial(Models\ImportKeyMaterialRequest $req) This API is used to import key material into an EXTERNAL CMK. The key obtained through the `GetParametersForImport` API is used to encrypt the key material. You can only reimport the same key material into the specified CMK and set a new expiration time. After the CMK key material is imported, it cannot be replaced. After the key material is expired or deleted, the CMK will remain unavailable until the same key material is reimported. CMKs are independent, which means that the same key material can be imported into different CMKs, but data encrypted by one CMK cannot be decrypted by another one.
 Key material can only be imported into CMKs in `Enabled` and `PendingImport` status.
  * @method Models\ListAlgorithmsResponse ListAlgorithms(Models\ListAlgorithmsRequest $req) This API is used to list the encryption methods supported in the current region.
+ * @method Models\ListDataKeyDetailResponse ListDataKeyDetail(Models\ListDataKeyDetailRequest $req) This API is used to retrieve data key list details based on specified Offset and Limit.
+ * @method Models\ListDataKeysResponse ListDataKeys(Models\ListDataKeysRequest $req) This API is used to query the list of data keys.
  * @method Models\ListKeyDetailResponse ListKeyDetail(Models\ListKeyDetailRequest $req) Get the master key list details according to the specified Offset and Limit.
  * @method Models\ListKeysResponse ListKeys(Models\ListKeysRequest $req) This API is used to list the KeyIds of CMKs in `Enabled`, `Disabled`, and `PendingImport` status under the account.
  * @method Models\OverwriteWhiteBoxDeviceFingerprintsResponse OverwriteWhiteBoxDeviceFingerprints(Models\OverwriteWhiteBoxDeviceFingerprintsRequest $req) This API is used to overwrite the device fingerprint information of a specified key.
@@ -71,11 +83,14 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
  * @method Models\PostQuantumCryptoSignResponse PostQuantumCryptoSign(Models\PostQuantumCryptoSignRequest $req) This API is used to sign using PQC.
  * @method Models\PostQuantumCryptoVerifyResponse PostQuantumCryptoVerify(Models\PostQuantumCryptoVerifyRequest $req) This API is used to verify a signature using PQC.
  * @method Models\ReEncryptResponse ReEncrypt(Models\ReEncryptRequest $req) Re-encrypt the ciphertext using the specified CMK.
+ * @method Models\ScheduleDataKeyDeletionResponse ScheduleDataKeyDeletion(Models\ScheduleDataKeyDeletionRequest $req) Schedule deletion for a data key.
  * @method Models\ScheduleKeyDeletionResponse ScheduleKeyDeletion(Models\ScheduleKeyDeletionRequest $req) CMK planned deletion API, used to specify the time of CMK deletion, the optional time interval is [7,30] days
  * @method Models\SignByAsymmetricKeyResponse SignByAsymmetricKey(Models\SignByAsymmetricKeyRequest $req) This API is used to generate a signature with an asymmetric key.
 Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `ASYMMETRIC_SIGN_VERIFY_SM2` and `ASYMMETRIC_SIGN_VERIFY_ECC`), the key can be used for signing.
  * @method Models\UnbindCloudResourceResponse UnbindCloudResource(Models\UnbindCloudResourceRequest $req) This API is used to unbind a key with a Tencent Cloud resource, indicating that the Tencent Cloud resource will not use the key any longer.
  * @method Models\UpdateAliasResponse UpdateAlias(Models\UpdateAliasRequest $req) This API is used to modify the alias of a CMK. CMKs in `PendingDelete` status cannot be modified.
+ * @method Models\UpdateDataKeyDescriptionResponse UpdateDataKeyDescription(Models\UpdateDataKeyDescriptionRequest $req) This API is used to modify the description of a data key.
+ * @method Models\UpdateDataKeyNameResponse UpdateDataKeyName(Models\UpdateDataKeyNameRequest $req) This API is used to modify the data key name.
  * @method Models\UpdateKeyDescriptionResponse UpdateKeyDescription(Models\UpdateKeyDescriptionRequest $req) This API is used to modify the description of the specified CMK. CMKs in `PendingDelete` status cannot be modified.
  * @method Models\VerifyByAsymmetricKeyResponse VerifyByAsymmetricKey(Models\VerifyByAsymmetricKeyRequest $req) This API is used to verify a signature with an asymmetric key.
  */
