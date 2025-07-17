@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Configuration information of an event in the plan
  *
- * @method string getEventType() Obtain Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK. If it is not specified, `INPUT_SWITCH` will be used.
- * @method void setEventType(string $EventType) Set Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK. If it is not specified, `INPUT_SWITCH` will be used.
+ * @method string getEventType() Obtain Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used.
+ * @method void setEventType(string $EventType) Set Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used.
  * @method string getInputAttachment() Obtain ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
  * @method void setInputAttachment(string $InputAttachment) Set ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
  * @method string getOutputGroupName() Obtain Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class EventSettingsReq extends AbstractModel
 {
     /**
-     * @var string Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK. If it is not specified, `INPUT_SWITCH` will be used.
+     * @var string Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used.
      */
     public $EventType;
 
@@ -101,7 +101,7 @@ class EventSettingsReq extends AbstractModel
     public $StaticImageDeactivateSetting;
 
     /**
-     * @param string $EventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK. If it is not specified, `INPUT_SWITCH` will be used.
+     * @param string $EventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used.
      * @param string $InputAttachment ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
      * @param string $OutputGroupName Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.
      * @param string $ManifestName Name of the manifest file for timed recording, which must end with `.m3u8` for HLS and `.mpd` for DASH. This parameter is required if `EventType` is `TIMED_RECORD`.
