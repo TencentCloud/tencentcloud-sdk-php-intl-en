@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyScalingPolicy request structure.
  *
- * @method string getAutoScalingPolicyId() Obtain Alarm policy ID.
- * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) Set Alarm policy ID.
- * @method string getScalingPolicyName() Obtain Alarm policy name.
- * @method void setScalingPolicyName(string $ScalingPolicyName) Set Alarm policy name.
+ * @method string getAutoScalingPolicyId() Obtain Specifies the alert policy ID. obtain the alert policy ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeScalingPolicies (https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1), and retrieve the AutoScalingPolicyId from the returned information.
+ * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) Set Specifies the alert policy ID. obtain the alert policy ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeScalingPolicies (https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1), and retrieve the AutoScalingPolicyId from the returned information.
+ * @method string getScalingPolicyName() Obtain The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal separators.
+ * @method void setScalingPolicyName(string $ScalingPolicyName) Set The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal separators.
  * @method string getAdjustmentType() Obtain The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
  * @method void setAdjustmentType(string $AdjustmentType) Set The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
  * @method integer getAdjustmentValue() Obtain The adjustment value for the expected number of instances after an alarm is triggered. It applies only to simple policies. <li>When AdjustmentType is CHANGE_IN_CAPACITY, a positive AdjustmentValue indicates an increase in the number of instances after the alarm is triggered, and a negative AdjustmentValue indicates a decrease in the number of instances after the alarm is triggered.</li> <li>When AdjustmentType is EXACT_CAPACITY, the value of AdjustmentValue represents the expected number of instances after the alarm is triggered, which should be greater than or equal to 0.</li> <li>When AdjustmentType is PERCENT_CHANGE_IN_CAPACITY, a positive AdjustmentValue indicates an increase in the number of instances by percentage after the alarm is triggered, and a negative AdjustmentValue indicates a decrease in the number of instances by percentage after the alarm is triggered. The unit is: %.</li>
@@ -48,12 +48,12 @@ Notification group ID, which is the set of user group IDs.
 class ModifyScalingPolicyRequest extends AbstractModel
 {
     /**
-     * @var string Alarm policy ID.
+     * @var string Specifies the alert policy ID. obtain the alert policy ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeScalingPolicies (https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1), and retrieve the AutoScalingPolicyId from the returned information.
      */
     public $AutoScalingPolicyId;
 
     /**
-     * @var string Alarm policy name.
+     * @var string The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal separators.
      */
     public $ScalingPolicyName;
 
@@ -104,8 +104,8 @@ Notification group ID, which is the set of user group IDs.
     public $NotificationUserGroupIds;
 
     /**
-     * @param string $AutoScalingPolicyId Alarm policy ID.
-     * @param string $ScalingPolicyName Alarm policy name.
+     * @param string $AutoScalingPolicyId Specifies the alert policy ID. obtain the alert policy ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeScalingPolicies (https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1), and retrieve the AutoScalingPolicyId from the returned information.
+     * @param string $ScalingPolicyName The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal separators.
      * @param string $AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
      * @param integer $AdjustmentValue The adjustment value for the expected number of instances after an alarm is triggered. It applies only to simple policies. <li>When AdjustmentType is CHANGE_IN_CAPACITY, a positive AdjustmentValue indicates an increase in the number of instances after the alarm is triggered, and a negative AdjustmentValue indicates a decrease in the number of instances after the alarm is triggered.</li> <li>When AdjustmentType is EXACT_CAPACITY, the value of AdjustmentValue represents the expected number of instances after the alarm is triggered, which should be greater than or equal to 0.</li> <li>When AdjustmentType is PERCENT_CHANGE_IN_CAPACITY, a positive AdjustmentValue indicates an increase in the number of instances by percentage after the alarm is triggered, and a negative AdjustmentValue indicates a decrease in the number of instances by percentage after the alarm is triggered. The unit is: %.</li>
      * @param integer $Cooldown Cooldown period (in seconds). It’s only available when `ScalingPolicyType` is `Simple`.

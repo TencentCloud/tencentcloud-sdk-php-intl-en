@@ -24,11 +24,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID.
  * @method RefreshSettings getRefreshSettings() Obtain Refresh settings.
  * @method void setRefreshSettings(RefreshSettings $RefreshSettings) Set Refresh settings.
- * @method string getRefreshMode() Obtain Refresh mode. Valid values:
-<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+ * @method string getRefreshMode() Obtain Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
 <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
- * @method void setRefreshMode(string $RefreshMode) Set Refresh mode. Valid values:
-<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+ * @method void setRefreshMode(string $RefreshMode) Set Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
 <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
  */
 class StartInstanceRefreshRequest extends AbstractModel
@@ -44,8 +44,8 @@ class StartInstanceRefreshRequest extends AbstractModel
     public $RefreshSettings;
 
     /**
-     * @var string Refresh mode. Valid values:
-<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+     * @var string Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
 <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
      */
     public $RefreshMode;
@@ -53,8 +53,8 @@ class StartInstanceRefreshRequest extends AbstractModel
     /**
      * @param string $AutoScalingGroupId Scaling group ID.
      * @param RefreshSettings $RefreshSettings Refresh settings.
-     * @param string $RefreshMode Refresh mode. Valid values:
-<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+     * @param string $RefreshMode Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
 <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
      */
     function __construct()

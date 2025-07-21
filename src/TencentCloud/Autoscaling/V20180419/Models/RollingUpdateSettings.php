@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
 <li>AUTOMATIC: Do not pause.</li>
  * @method integer getMaxSurge() Obtain The maximum additional quantity of instances. After this parameter is set, create a batch of additional pay-as-you-go instances according to the launch configuration before the rolling update starts. After the rolling update is completed, the additional instances will be terminated.This parameter is used to ensure a certain number of instances available during the rolling update. The maximum additional quantity of instances cannot exceed the number of refreshing instances in a single batch of the rolling update. The rollback process does not support this parameter currently.
  * @method void setMaxSurge(integer $MaxSurge) Set The maximum additional quantity of instances. After this parameter is set, create a batch of additional pay-as-you-go instances according to the launch configuration before the rolling update starts. After the rolling update is completed, the additional instances will be terminated.This parameter is used to ensure a certain number of instances available during the rolling update. The maximum additional quantity of instances cannot exceed the number of refreshing instances in a single batch of the rolling update. The rollback process does not support this parameter currently.
+ * @method string getFailProcess() Obtain Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+<Li>AUTO_PAUSE: suspended after refresh fails</li>.
+<li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+<Li>AUTO_CANCEL: cancel after refresh fails</li>.
+ * @method void setFailProcess(string $FailProcess) Set Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+<Li>AUTO_PAUSE: suspended after refresh fails</li>.
+<li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+<Li>AUTO_CANCEL: cancel after refresh fails</li>.
  */
 class RollingUpdateSettings extends AbstractModel
 {
@@ -54,12 +62,24 @@ class RollingUpdateSettings extends AbstractModel
     public $MaxSurge;
 
     /**
+     * @var string Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+<Li>AUTO_PAUSE: suspended after refresh fails</li>.
+<li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+<Li>AUTO_CANCEL: cancel after refresh fails</li>.
+     */
+    public $FailProcess;
+
+    /**
      * @param integer $BatchNumber Batch quantity. The batch quantity should be a positive integer greater than 0, but cannot exceed the total number of instances pending refresh.
      * @param string $BatchPause Pause policy between batches. Default value: Automatic. Valid values:
 <li>FIRST_BATCH_PAUSE: Pause after the first batch of updates is completed.</li>
 <li>BATCH_INTERVAL_PAUSE: Pause between batches.</li>
 <li>AUTOMATIC: Do not pause.</li>
      * @param integer $MaxSurge The maximum additional quantity of instances. After this parameter is set, create a batch of additional pay-as-you-go instances according to the launch configuration before the rolling update starts. After the rolling update is completed, the additional instances will be terminated.This parameter is used to ensure a certain number of instances available during the rolling update. The maximum additional quantity of instances cannot exceed the number of refreshing instances in a single batch of the rolling update. The rollback process does not support this parameter currently.
+     * @param string $FailProcess Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+<Li>AUTO_PAUSE: suspended after refresh fails</li>.
+<li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+<Li>AUTO_CANCEL: cancel after refresh fails</li>.
      */
     function __construct()
     {
@@ -84,6 +104,10 @@ class RollingUpdateSettings extends AbstractModel
 
         if (array_key_exists("MaxSurge",$param) and $param["MaxSurge"] !== null) {
             $this->MaxSurge = $param["MaxSurge"];
+        }
+
+        if (array_key_exists("FailProcess",$param) and $param["FailProcess"] !== null) {
+            $this->FailProcess = $param["FailProcess"];
         }
     }
 }

@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKey(string $Key) Set Tag key
  * @method string getValue() Obtain Tag value
  * @method void setValue(string $Value) Set Tag value
- * @method string getResourceType() Obtain Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResourceType(string $ResourceType) Set Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getResourceType() Obtain Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
+ * @method void setResourceType(string $ResourceType) Set Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
  */
 class Tag extends AbstractModel
 {
@@ -42,16 +40,14 @@ class Tag extends AbstractModel
     public $Value;
 
     /**
-     * @var string Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
      */
     public $ResourceType;
 
     /**
      * @param string $Key Tag key
      * @param string $Value Tag value
-     * @param string $ResourceType Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ResourceType Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
      */
     function __construct()
     {

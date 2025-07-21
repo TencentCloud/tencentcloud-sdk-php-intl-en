@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Application load balancer
  *
- * @method string getLoadBalancerId() Obtain Load balancer ID
- * @method void setLoadBalancerId(string $LoadBalancerId) Set Load balancer ID
- * @method string getListenerId() Obtain Application load balancer listener ID
- * @method void setListenerId(string $ListenerId) Set Application load balancer listener ID
- * @method array getTargetAttributes() Obtain List of target rule attributes
- * @method void setTargetAttributes(array $TargetAttributes) Set List of target rule attributes
- * @method string getLocationId() Obtain ID of a forwarding rule. This parameter is required for layer-7 listeners.
- * @method void setLocationId(string $LocationId) Set ID of a forwarding rule. This parameter is required for layer-7 listeners.
+ * @method string getLoadBalancerId() Obtain ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+ * @method string getListenerId() Obtain CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+ * @method void setListenerId(string $ListenerId) Set CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+ * @method array getTargetAttributes() Obtain Target rule attribute list. as an input parameter, this parameter is required.
+ * @method void setTargetAttributes(array $TargetAttributes) Set Target rule attribute list. as an input parameter, this parameter is required.
+ * @method string getLocationId() Obtain The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+ * @method void setLocationId(string $LocationId) Set The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
  * @method string getRegion() Obtain The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
  * @method void setRegion(string $Region) Set The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
  */
 class ForwardLoadBalancer extends AbstractModel
 {
     /**
-     * @var string Load balancer ID
+     * @var string ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     public $LoadBalancerId;
 
     /**
-     * @var string Application load balancer listener ID
+     * @var string CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     public $ListenerId;
 
     /**
-     * @var array List of target rule attributes
+     * @var array Target rule attribute list. as an input parameter, this parameter is required.
      */
     public $TargetAttributes;
 
     /**
-     * @var string ID of a forwarding rule. This parameter is required for layer-7 listeners.
+     * @var string The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     public $LocationId;
 
@@ -59,10 +59,10 @@ class ForwardLoadBalancer extends AbstractModel
     public $Region;
 
     /**
-     * @param string $LoadBalancerId Load balancer ID
-     * @param string $ListenerId Application load balancer listener ID
-     * @param array $TargetAttributes List of target rule attributes
-     * @param string $LocationId ID of a forwarding rule. This parameter is required for layer-7 listeners.
+     * @param string $LoadBalancerId ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+     * @param string $ListenerId CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+     * @param array $TargetAttributes Target rule attribute list. as an input parameter, this parameter is required.
+     * @param string $LocationId The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      * @param string $Region The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
      */
     function __construct()

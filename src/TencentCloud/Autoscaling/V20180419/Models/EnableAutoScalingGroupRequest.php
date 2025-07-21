@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableAutoScalingGroup request structure.
  *
- * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
+ * @method string getAutoScalingGroupId() Obtain Scaling group ID. you can obtain the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or making an api call to [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID. you can obtain the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or making an api call to [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.
  */
 class EnableAutoScalingGroupRequest extends AbstractModel
 {
     /**
-     * @var string Auto scaling group ID
+     * @var string Scaling group ID. you can obtain the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or making an api call to [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.
      */
     public $AutoScalingGroupId;
 
     /**
-     * @param string $AutoScalingGroupId Auto scaling group ID
+     * @param string $AutoScalingGroupId Scaling group ID. you can obtain the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or making an api call to [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.
      */
     function __construct()
     {

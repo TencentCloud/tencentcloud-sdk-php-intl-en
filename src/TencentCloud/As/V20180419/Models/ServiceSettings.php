@@ -32,18 +32,22 @@ WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instan
 Default value: CLASSIC_SCALING
  * @method boolean getReplaceLoadBalancerUnhealthy() Obtain Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
  * @method void setReplaceLoadBalancerUnhealthy(boolean $ReplaceLoadBalancerUnhealthy) Set Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
- * @method string getReplaceMode() Obtain Replace mode of unhealthy replacement service. Valid values:
-RECREATE: Rebuild an instance to replace the original unhealthy instance.
-RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+ * @method string getReplaceMode() Obtain Replacement mode of the unhealthy replacement service. valid values:.
+RECREATE: rebuild an instance to replace the unhealthy instance.
+RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
 Default value: RECREATE.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReplaceMode(string $ReplaceMode) Set Replace mode of unhealthy replacement service. Valid values:
-RECREATE: Rebuild an instance to replace the original unhealthy instance.
-RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+ * @method void setReplaceMode(string $ReplaceMode) Set Replacement mode of the unhealthy replacement service. valid values:.
+RECREATE: rebuild an instance to replace the unhealthy instance.
+RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
 Default value: RECREATE.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getAutoUpdateInstanceTags() Obtain Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
- * @method void setAutoUpdateInstanceTags(boolean $AutoUpdateInstanceTags) Set Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+ * @method boolean getAutoUpdateInstanceTags() Obtain Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency.
+ * @method void setAutoUpdateInstanceTags(boolean $AutoUpdateInstanceTags) Set Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency.
+ * @method boolean getDesiredCapacitySyncWithMaxMinSize() Obtain Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+<Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+<Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
+ * @method void setDesiredCapacitySyncWithMaxMinSize(boolean $DesiredCapacitySyncWithMaxMinSize) Set Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+<Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+<Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
  */
 class ServiceSettings extends AbstractModel
 {
@@ -66,18 +70,24 @@ Default value: CLASSIC_SCALING
     public $ReplaceLoadBalancerUnhealthy;
 
     /**
-     * @var string Replace mode of unhealthy replacement service. Valid values:
-RECREATE: Rebuild an instance to replace the original unhealthy instance.
-RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+     * @var string Replacement mode of the unhealthy replacement service. valid values:.
+RECREATE: rebuild an instance to replace the unhealthy instance.
+RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
 Default value: RECREATE.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReplaceMode;
 
     /**
-     * @var boolean Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+     * @var boolean Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency.
      */
     public $AutoUpdateInstanceTags;
+
+    /**
+     * @var boolean Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+<Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+<Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
+     */
+    public $DesiredCapacitySyncWithMaxMinSize;
 
     /**
      * @param boolean $ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
@@ -86,12 +96,14 @@ CLASSIC_SCALING: this is the typical scaling method, which creates and terminate
 WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
 Default value: CLASSIC_SCALING
      * @param boolean $ReplaceLoadBalancerUnhealthy Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
-     * @param string $ReplaceMode Replace mode of unhealthy replacement service. Valid values:
-RECREATE: Rebuild an instance to replace the original unhealthy instance.
-RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+     * @param string $ReplaceMode Replacement mode of the unhealthy replacement service. valid values:.
+RECREATE: rebuild an instance to replace the unhealthy instance.
+RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
 Default value: RECREATE.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $AutoUpdateInstanceTags Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+     * @param boolean $AutoUpdateInstanceTags Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency.
+     * @param boolean $DesiredCapacitySyncWithMaxMinSize Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+<Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+<Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
      */
     function __construct()
     {
@@ -124,6 +136,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("AutoUpdateInstanceTags",$param) and $param["AutoUpdateInstanceTags"] !== null) {
             $this->AutoUpdateInstanceTags = $param["AutoUpdateInstanceTags"];
+        }
+
+        if (array_key_exists("DesiredCapacitySyncWithMaxMinSize",$param) and $param["DesiredCapacitySyncWithMaxMinSize"] !== null) {
+            $this->DesiredCapacitySyncWithMaxMinSize = $param["DesiredCapacitySyncWithMaxMinSize"];
         }
     }
 }

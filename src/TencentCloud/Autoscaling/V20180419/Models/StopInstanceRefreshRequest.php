@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopInstanceRefresh request structure.
  *
- * @method string getAutoScalingGroupId() Obtain Scaling group ID.
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID.
- * @method string getRefreshActivityId() Obtain Refresh activity ID.
- * @method void setRefreshActivityId(string $RefreshActivityId) Set Refresh activity ID.
+ * @method string getAutoScalingGroupId() Obtain Scaling group ID. you can obtain available scaling group ids in the following ways.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Get the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID. you can obtain available scaling group ids in the following ways.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Get the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+ * @method string getRefreshActivityId() Obtain Refresh activity ID. you can call the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and obtain the instance refresh activity ID from the returned information.
+ * @method void setRefreshActivityId(string $RefreshActivityId) Set Refresh activity ID. you can call the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and obtain the instance refresh activity ID from the returned information.
  */
 class StopInstanceRefreshRequest extends AbstractModel
 {
     /**
-     * @var string Scaling group ID.
+     * @var string Scaling group ID. you can obtain available scaling group ids in the following ways.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Get the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
      */
     public $AutoScalingGroupId;
 
     /**
-     * @var string Refresh activity ID.
+     * @var string Refresh activity ID. you can call the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and obtain the instance refresh activity ID from the returned information.
      */
     public $RefreshActivityId;
 
     /**
-     * @param string $AutoScalingGroupId Scaling group ID.
-     * @param string $RefreshActivityId Refresh activity ID.
+     * @param string $AutoScalingGroupId Scaling group ID. you can obtain available scaling group ids in the following ways.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Get the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+     * @param string $RefreshActivityId Refresh activity ID. you can call the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and obtain the instance refresh activity ID from the returned information.
      */
     function __construct()
     {

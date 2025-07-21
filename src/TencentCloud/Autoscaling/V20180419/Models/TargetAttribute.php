@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Load balancer target attribute
  *
- * @method integer getPort() Obtain Port
- * @method void setPort(integer $Port) Set Port
- * @method integer getWeight() Obtain Weight
- * @method void setWeight(integer $Weight) Set Weight
+ * @method integer getPort() Obtain Port. value range: [1,65535]. as an input parameter, this parameter is required.
+ * @method void setPort(integer $Port) Set Port. value range: [1,65535]. as an input parameter, this parameter is required.
+ * @method integer getWeight() Obtain Weight. value range: [0,100]. this parameter is required as an input parameter.
+ * @method void setWeight(integer $Weight) Set Weight. value range: [0,100]. this parameter is required as an input parameter.
  */
 class TargetAttribute extends AbstractModel
 {
     /**
-     * @var integer Port
+     * @var integer Port. value range: [1,65535]. as an input parameter, this parameter is required.
      */
     public $Port;
 
     /**
-     * @var integer Weight
+     * @var integer Weight. value range: [0,100]. this parameter is required as an input parameter.
      */
     public $Weight;
 
     /**
-     * @param integer $Port Port
-     * @param integer $Weight Weight
+     * @param integer $Port Port. value range: [1,65535]. as an input parameter, this parameter is required.
+     * @param integer $Weight Weight. value range: [0,100]. this parameter is required as an input parameter.
      */
     function __construct()
     {

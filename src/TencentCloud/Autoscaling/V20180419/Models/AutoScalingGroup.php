@@ -74,22 +74,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method array getSubnetIdSet() Obtain List of subnet IDs
  * @method void setSubnetIdSet(array $SubnetIdSet) Set List of subnet IDs
- * @method array getTerminationPolicySet() Obtain Termination policy
- * @method void setTerminationPolicySet(array $TerminationPolicySet) Set Termination policy
- * @method string getVpcId() Obtain VPC ID
- * @method void setVpcId(string $VpcId) Set VPC ID
+ * @method array getTerminationPolicySet() Obtain Destruction policy. valid values are as follows:.
+<Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+<Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>.
+ * @method void setTerminationPolicySet(array $TerminationPolicySet) Set Destruction policy. valid values are as follows:.
+<Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+<Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>.
+ * @method string getVpcId() Obtain VPC ID.
+ * @method void setVpcId(string $VpcId) Set VPC ID.
  * @method array getZoneSet() Obtain List of availability zones
  * @method void setZoneSet(array $ZoneSet) Set List of availability zones
- * @method string getRetryPolicy() Obtain Retry policy
- * @method void setRetryPolicy(string $RetryPolicy) Set Retry policy
+ * @method string getRetryPolicy() Obtain Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+<Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+<Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+<Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>.
+ * @method void setRetryPolicy(string $RetryPolicy) Set Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+<Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+<Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+<Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>.
  * @method string getInActivityStatus() Obtain Whether the auto scaling group is performing a scaling activity. `IN_ACTIVITY` indicates yes, and `NOT_IN_ACTIVITY` indicates no.
  * @method void setInActivityStatus(string $InActivityStatus) Set Whether the auto scaling group is performing a scaling activity. `IN_ACTIVITY` indicates yes, and `NOT_IN_ACTIVITY` indicates no.
  * @method array getTags() Obtain List of auto scaling group tags
  * @method void setTags(array $Tags) Set List of auto scaling group tags
  * @method ServiceSettings getServiceSettings() Obtain Service settings
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) Set Service settings
- * @method integer getIpv6AddressCount() Obtain The number of IPv6 addresses that an instance has.
- * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set The number of IPv6 addresses that an instance has.
+ * @method integer getIpv6AddressCount() Obtain The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+ * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
  * @method string getMultiZoneSubnetPolicy() Obtain Multi-AZ/subnet policy.
 <li>PRIORITY: The instances are attempted to be created taking the order of the AZ/subnet list as the priority. If the highest-priority AZ/subnet can create instances successfully, instances can always be created in that AZ/subnet.</li>
 <li>EQUALITY: Select the AZ/subnet with the least number of instances for scale-out. In this way, each AZ/subnet has an opportunity for scale-out. Instances produced from multiple scale-out operations will be distributed to multiple AZs/subnets.</li>
@@ -102,8 +112,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheckType(string $HealthCheckType) Set Scaling group instance health check type, whose valid values include:
 <li>CVM: Determine whether an instance is unhealthy based on its network status. An unhealthy network status is indicated by an event where instances become unreachable via PING. Detailed criteria of judgment can be found in [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1).</li>
 <li>CLB: Determine whether an instance is unhealthy based on the health check status of CLB. For principles behind CLB health checks, see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).</li>
- * @method integer getLoadBalancerHealthCheckGracePeriod() Obtain Grace period of the CLB health check
- * @method void setLoadBalancerHealthCheckGracePeriod(integer $LoadBalancerHealthCheckGracePeriod) Set Grace period of the CLB health check
+ * @method integer getLoadBalancerHealthCheckGracePeriod() Obtain Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+Default value: 0. value range: [0, 7200]. measurement unit: seconds.
+ * @method void setLoadBalancerHealthCheckGracePeriod(integer $LoadBalancerHealthCheckGracePeriod) Set Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+Default value: 0. value range: [0, 7200]. measurement unit: seconds.
  * @method string getInstanceAllocationPolicy() Obtain Instance assignment policy, whose valid values include LAUNCH_CONFIGURATION and SPOT_MIXED.
 <li>LAUNCH_CONFIGURATION: Represent the traditional mode of assigning instances according to the launch configuration.</li>
 <li>SPOT_MIXED: Represent the spot mixed mode. Currently, this mode is supported only when the launch configuration is set to the pay-as-you-go billing mode. In the mixed mode, the scaling group will scale out pay-as-you-go models or spot models based on the predefined settings. When the mixed mode is used, the billing type of the associated launch configuration cannot be modified.</li>
@@ -121,9 +133,7 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
 <li>TRUE: Enable this feature. When spot instances in the scaling group are about to be automatically recycled by the spot instance service, AS proactively initiates the termination process of the spot instances. If there is a configured scale-in hook, it will be triggered before termination. After the termination process starts, AS asynchronously initiates the scale-out to reach the expected number of instances.</li>
 <li>FALSE: Disable this feature. AS waits for the spot instance to be terminated before scaling out to reach the number of instances expected by the scaling group.</li>
  * @method InstanceNameIndexSettings getInstanceNameIndexSettings() Obtain Instance name sequencing settings.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setInstanceNameIndexSettings(InstanceNameIndexSettings $InstanceNameIndexSettings) Set Instance name sequencing settings.
-Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AutoScalingGroup extends AbstractModel
 {
@@ -223,12 +233,14 @@ class AutoScalingGroup extends AbstractModel
     public $SubnetIdSet;
 
     /**
-     * @var array Termination policy
+     * @var array Destruction policy. valid values are as follows:.
+<Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+<Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>.
      */
     public $TerminationPolicySet;
 
     /**
-     * @var string VPC ID
+     * @var string VPC ID.
      */
     public $VpcId;
 
@@ -238,7 +250,10 @@ class AutoScalingGroup extends AbstractModel
     public $ZoneSet;
 
     /**
-     * @var string Retry policy
+     * @var string Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+<Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+<Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+<Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>.
      */
     public $RetryPolicy;
 
@@ -258,7 +273,7 @@ class AutoScalingGroup extends AbstractModel
     public $ServiceSettings;
 
     /**
-     * @var integer The number of IPv6 addresses that an instance has.
+     * @var integer The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
      */
     public $Ipv6AddressCount;
 
@@ -277,7 +292,8 @@ class AutoScalingGroup extends AbstractModel
     public $HealthCheckType;
 
     /**
-     * @var integer Grace period of the CLB health check
+     * @var integer Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+Default value: 0. value range: [0, 7200]. measurement unit: seconds.
      */
     public $LoadBalancerHealthCheckGracePeriod;
 
@@ -303,7 +319,6 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
 
     /**
      * @var InstanceNameIndexSettings Instance name sequencing settings.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $InstanceNameIndexSettings;
 
@@ -335,21 +350,27 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $MinSize Minimum number of instances
      * @param integer $ProjectId Project ID
      * @param array $SubnetIdSet List of subnet IDs
-     * @param array $TerminationPolicySet Termination policy
-     * @param string $VpcId VPC ID
+     * @param array $TerminationPolicySet Destruction policy. valid values are as follows:.
+<Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+<Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>.
+     * @param string $VpcId VPC ID.
      * @param array $ZoneSet List of availability zones
-     * @param string $RetryPolicy Retry policy
+     * @param string $RetryPolicy Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+<Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+<Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+<Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>.
      * @param string $InActivityStatus Whether the auto scaling group is performing a scaling activity. `IN_ACTIVITY` indicates yes, and `NOT_IN_ACTIVITY` indicates no.
      * @param array $Tags List of auto scaling group tags
      * @param ServiceSettings $ServiceSettings Service settings
-     * @param integer $Ipv6AddressCount The number of IPv6 addresses that an instance has.
+     * @param integer $Ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
      * @param string $MultiZoneSubnetPolicy Multi-AZ/subnet policy.
 <li>PRIORITY: The instances are attempted to be created taking the order of the AZ/subnet list as the priority. If the highest-priority AZ/subnet can create instances successfully, instances can always be created in that AZ/subnet.</li>
 <li>EQUALITY: Select the AZ/subnet with the least number of instances for scale-out. In this way, each AZ/subnet has an opportunity for scale-out. Instances produced from multiple scale-out operations will be distributed to multiple AZs/subnets.</li>
      * @param string $HealthCheckType Scaling group instance health check type, whose valid values include:
 <li>CVM: Determine whether an instance is unhealthy based on its network status. An unhealthy network status is indicated by an event where instances become unreachable via PING. Detailed criteria of judgment can be found in [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1).</li>
 <li>CLB: Determine whether an instance is unhealthy based on the health check status of CLB. For principles behind CLB health checks, see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).</li>
-     * @param integer $LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check
+     * @param integer $LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+Default value: 0. value range: [0, 7200]. measurement unit: seconds.
      * @param string $InstanceAllocationPolicy Instance assignment policy, whose valid values include LAUNCH_CONFIGURATION and SPOT_MIXED.
 <li>LAUNCH_CONFIGURATION: Represent the traditional mode of assigning instances according to the launch configuration.</li>
 <li>SPOT_MIXED: Represent the spot mixed mode. Currently, this mode is supported only when the launch configuration is set to the pay-as-you-go billing mode. In the mixed mode, the scaling group will scale out pay-as-you-go models or spot models based on the predefined settings. When the mixed mode is used, the billing type of the associated launch configuration cannot be modified.</li>
@@ -359,7 +380,6 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
 <li>TRUE: Enable this feature. When spot instances in the scaling group are about to be automatically recycled by the spot instance service, AS proactively initiates the termination process of the spot instances. If there is a configured scale-in hook, it will be triggered before termination. After the termination process starts, AS asynchronously initiates the scale-out to reach the expected number of instances.</li>
 <li>FALSE: Disable this feature. AS waits for the spot instance to be terminated before scaling out to reach the number of instances expected by the scaling group.</li>
      * @param InstanceNameIndexSettings $InstanceNameIndexSettings Instance name sequencing settings.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

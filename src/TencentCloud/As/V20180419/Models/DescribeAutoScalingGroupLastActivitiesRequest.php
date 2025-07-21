@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAutoScalingGroupLastActivities request structure.
  *
- * @method array getAutoScalingGroupIds() Obtain ID list of auto scaling groups.
- * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) Set ID list of auto scaling groups.
+ * @method array getAutoScalingGroupIds() Obtain Auto scaling group ID list. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving AutoScalingGroupId from the returned information.
+ * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) Set Auto scaling group ID list. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving AutoScalingGroupId from the returned information.
  * @method boolean getExcludeCancelledActivity() Obtain Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
  * @method void setExcludeCancelledActivity(boolean $ExcludeCancelledActivity) Set Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
  */
 class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
 {
     /**
-     * @var array ID list of auto scaling groups.
+     * @var array Auto scaling group ID list. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving AutoScalingGroupId from the returned information.
      */
     public $AutoScalingGroupIds;
 
@@ -38,7 +38,7 @@ class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
     public $ExcludeCancelledActivity;
 
     /**
-     * @param array $AutoScalingGroupIds ID list of auto scaling groups.
+     * @param array $AutoScalingGroupIds Auto scaling group ID list. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving AutoScalingGroupId from the returned information.
      * @param boolean $ExcludeCancelledActivity Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
      */
     function __construct()

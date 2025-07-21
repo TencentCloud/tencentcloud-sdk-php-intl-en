@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 - For a Linux system, the password should contain 8 to 30 characters consisting of at least two of the four character types: lowercase letters, uppercase letters, digits, and special characters.
 - For a Windows system, the password should contain 12 to 30 characters consisting of at least three of the four character types: lowercase letters, uppercase letters, digits, and special characters.
 - If this parameter is not specified, the system will generate a random password and notify the user via the message centerSupported special characters: ( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? /
- * @method array getKeyIds() Obtain List of key IDs. After an instance is associated with a key, you can access the instance with the private key in the key pair. You can call `DescribeKeyPairs` to obtain `KeyId`. Key and password cannot be specified at the same time. Windows instances do not support keys. Currently, you can only specify one key when purchasing an instance.
- * @method void setKeyIds(array $KeyIds) Set List of key IDs. After an instance is associated with a key, you can access the instance with the private key in the key pair. You can call `DescribeKeyPairs` to obtain `KeyId`. Key and password cannot be specified at the same time. Windows instances do not support keys. Currently, you can only specify one key when purchasing an instance.
+ * @method array getKeyIds() Obtain List of key ids. after associating a key, you can access the instance through the corresponding private key. KeyId can be obtained by calling the api [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1). key and password cannot be specified simultaneously. the Windows operating system does not support specifying a key. currently, only one key can be specified during purchase.
+ * @method void setKeyIds(array $KeyIds) Set List of key ids. after associating a key, you can access the instance through the corresponding private key. KeyId can be obtained by calling the api [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1). key and password cannot be specified simultaneously. the Windows operating system does not support specifying a key. currently, only one key can be specified during purchase.
  * @method boolean getKeepImageLogin() Obtain Retain the original settings of the image. This parameter cannot be specified simultaneously with Password or KeyIds.N. It can only be set to TRUE when you create an instance by using a custom image, shared image, or externally imported image. Valid values:
 <li>TRUE: Retain the login settings of the image.</li>
 <li>FALSE: Do not retain the login settings of the image.</li> Default value: FALSE.
@@ -48,7 +48,7 @@ class LoginSettings extends AbstractModel
     public $Password;
 
     /**
-     * @var array List of key IDs. After an instance is associated with a key, you can access the instance with the private key in the key pair. You can call `DescribeKeyPairs` to obtain `KeyId`. Key and password cannot be specified at the same time. Windows instances do not support keys. Currently, you can only specify one key when purchasing an instance.
+     * @var array List of key ids. after associating a key, you can access the instance through the corresponding private key. KeyId can be obtained by calling the api [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1). key and password cannot be specified simultaneously. the Windows operating system does not support specifying a key. currently, only one key can be specified during purchase.
      */
     public $KeyIds;
 
@@ -64,7 +64,7 @@ class LoginSettings extends AbstractModel
 - For a Linux system, the password should contain 8 to 30 characters consisting of at least two of the four character types: lowercase letters, uppercase letters, digits, and special characters.
 - For a Windows system, the password should contain 12 to 30 characters consisting of at least three of the four character types: lowercase letters, uppercase letters, digits, and special characters.
 - If this parameter is not specified, the system will generate a random password and notify the user via the message centerSupported special characters: ( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? /
-     * @param array $KeyIds List of key IDs. After an instance is associated with a key, you can access the instance with the private key in the key pair. You can call `DescribeKeyPairs` to obtain `KeyId`. Key and password cannot be specified at the same time. Windows instances do not support keys. Currently, you can only specify one key when purchasing an instance.
+     * @param array $KeyIds List of key ids. after associating a key, you can access the instance through the corresponding private key. KeyId can be obtained by calling the api [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1). key and password cannot be specified simultaneously. the Windows operating system does not support specifying a key. currently, only one key can be specified during purchase.
      * @param boolean $KeepImageLogin Retain the original settings of the image. This parameter cannot be specified simultaneously with Password or KeyIds.N. It can only be set to TRUE when you create an instance by using a custom image, shared image, or externally imported image. Valid values:
 <li>TRUE: Retain the login settings of the image.</li>
 <li>FALSE: Do not retain the login settings of the image.</li> Default value: FALSE.

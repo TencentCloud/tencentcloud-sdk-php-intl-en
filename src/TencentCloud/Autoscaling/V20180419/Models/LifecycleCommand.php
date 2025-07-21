@@ -20,46 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Remote command execution object.
  *
- * @method string getCommandId() Obtain Remote command ID. It’s required to execute a command.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCommandId(string $CommandId) Set Remote command ID. It’s required to execute a command.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getParameters() Obtain Custom parameter. The field type is JSON encoded string. For example, {"varA": "222"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If this parameter is not specified, the `DefaultParameters` of `Command` is used.
-Up to 20 customer parameters allowed. The parameter name can contain up to 64 characters, including [a-z], [A-Z], [0-9] and [-_].
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setParameters(string $Parameters) Set Custom parameter. The field type is JSON encoded string. For example, {"varA": "222"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If this parameter is not specified, the `DefaultParameters` of `Command` is used.
-Up to 20 customer parameters allowed. The parameter name can contain up to 64 characters, including [a-z], [A-Z], [0-9] and [-_].
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCommandId() Obtain Remote command ID. this item is required if you select to execute command.
+ * @method void setCommandId(string $CommandId) Set Remote command ID. this item is required if you select to execute command.
+ * @method string getParameters() Obtain Custom parameter. field type is json encoded string, for example: {"varA": "222"}.
+key specifies the custom parameter name, and value specifies the default. both are string type.
+If the parameter value is not provided, the DefaultParameters of Command will be used to replace it.
+Custom parameters support a maximum of 20 entries. the custom parameter name must meet the following standard: number of characters has a cap of 64, value range [a-zA-Z0-9-_].
+ * @method void setParameters(string $Parameters) Set Custom parameter. field type is json encoded string, for example: {"varA": "222"}.
+key specifies the custom parameter name, and value specifies the default. both are string type.
+If the parameter value is not provided, the DefaultParameters of Command will be used to replace it.
+Custom parameters support a maximum of 20 entries. the custom parameter name must meet the following standard: number of characters has a cap of 64, value range [a-zA-Z0-9-_].
  */
 class LifecycleCommand extends AbstractModel
 {
     /**
-     * @var string Remote command ID. It’s required to execute a command.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Remote command ID. this item is required if you select to execute command.
      */
     public $CommandId;
 
     /**
-     * @var string Custom parameter. The field type is JSON encoded string. For example, {"varA": "222"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If this parameter is not specified, the `DefaultParameters` of `Command` is used.
-Up to 20 customer parameters allowed. The parameter name can contain up to 64 characters, including [a-z], [A-Z], [0-9] and [-_].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Custom parameter. field type is json encoded string, for example: {"varA": "222"}.
+key specifies the custom parameter name, and value specifies the default. both are string type.
+If the parameter value is not provided, the DefaultParameters of Command will be used to replace it.
+Custom parameters support a maximum of 20 entries. the custom parameter name must meet the following standard: number of characters has a cap of 64, value range [a-zA-Z0-9-_].
      */
     public $Parameters;
 
     /**
-     * @param string $CommandId Remote command ID. It’s required to execute a command.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Parameters Custom parameter. The field type is JSON encoded string. For example, {"varA": "222"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If this parameter is not specified, the `DefaultParameters` of `Command` is used.
-Up to 20 customer parameters allowed. The parameter name can contain up to 64 characters, including [a-z], [A-Z], [0-9] and [-_].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CommandId Remote command ID. this item is required if you select to execute command.
+     * @param string $Parameters Custom parameter. field type is json encoded string, for example: {"varA": "222"}.
+key specifies the custom parameter name, and value specifies the default. both are string type.
+If the parameter value is not provided, the DefaultParameters of Command will be used to replace it.
+Custom parameters support a maximum of 20 entries. the custom parameter name must meet the following standard: number of characters has a cap of 64, value range [a-zA-Z0-9-_].
      */
     function __construct()
     {

@@ -20,22 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResumeInstanceRefresh request structure.
  *
- * @method string getAutoScalingGroupId() Obtain Scaling group ID.
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID.
- * @method string getRefreshActivityId() Obtain Refresh activity ID.
- * @method void setRefreshActivityId(string $RefreshActivityId) Set Refresh activity ID.
+ * @method string getAutoScalingGroupId() Obtain Scaling group ID. obtain in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID. obtain in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
+ * @method string getRefreshActivityId() Obtain Refresh activity ID. you can get the instance refresh activity ID by calling the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and retrieving the RefreshActivityId from the returned information.
+ * @method void setRefreshActivityId(string $RefreshActivityId) Set Refresh activity ID. you can get the instance refresh activity ID by calling the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and retrieving the RefreshActivityId from the returned information.
  * @method string getResumeMode() Obtain Recovery mode of instances that have failed to be refreshed in the current batch. If there are no failed instances, this parameter is invalid. Default value: RETRY. Valid values: <li>RETRY: Retry instances that have failed to be refreshed in the current batch.</li> <li>CONTINUE: Skip instances that have failed to be refreshed in the current batch.</li>
  * @method void setResumeMode(string $ResumeMode) Set Recovery mode of instances that have failed to be refreshed in the current batch. If there are no failed instances, this parameter is invalid. Default value: RETRY. Valid values: <li>RETRY: Retry instances that have failed to be refreshed in the current batch.</li> <li>CONTINUE: Skip instances that have failed to be refreshed in the current batch.</li>
  */
 class ResumeInstanceRefreshRequest extends AbstractModel
 {
     /**
-     * @var string Scaling group ID.
+     * @var string Scaling group ID. obtain in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
      */
     public $AutoScalingGroupId;
 
     /**
-     * @var string Refresh activity ID.
+     * @var string Refresh activity ID. you can get the instance refresh activity ID by calling the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and retrieving the RefreshActivityId from the returned information.
      */
     public $RefreshActivityId;
 
@@ -45,8 +51,10 @@ class ResumeInstanceRefreshRequest extends AbstractModel
     public $ResumeMode;
 
     /**
-     * @param string $AutoScalingGroupId Scaling group ID.
-     * @param string $RefreshActivityId Refresh activity ID.
+     * @param string $AutoScalingGroupId Scaling group ID. obtain in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
+     * @param string $RefreshActivityId Refresh activity ID. you can get the instance refresh activity ID by calling the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and retrieving the RefreshActivityId from the returned information.
      * @param string $ResumeMode Recovery mode of instances that have failed to be refreshed in the current batch. If there are no failed instances, this parameter is invalid. Default value: RETRY. Valid values: <li>RETRY: Retry instances that have failed to be refreshed in the current batch.</li> <li>CONTINUE: Skip instances that have failed to be refreshed in the current batch.</li>
      */
     function __construct()

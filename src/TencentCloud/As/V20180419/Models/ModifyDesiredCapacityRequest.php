@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDesiredCapacity request structure.
  *
- * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
- * @method integer getDesiredCapacity() Obtain Desired capacity
- * @method void setDesiredCapacity(integer $DesiredCapacity) Set Desired capacity
- * @method integer getMinSize() Obtain Minimum number of instances. Value range: 0-2000.
- * @method void setMinSize(integer $MinSize) Set Minimum number of instances. Value range: 0-2000.
- * @method integer getMaxSize() Obtain Maximum number of instances. Value range: 0-2000.
- * @method void setMaxSize(integer $MaxSize) Set Maximum number of instances. Value range: 0-2000.
+ * @method string getAutoScalingGroupId() Obtain Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+ * @method integer getDesiredCapacity() Obtain Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize.
+ * @method void setDesiredCapacity(integer $DesiredCapacity) Set Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize.
+ * @method integer getMinSize() Obtain Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+ * @method void setMinSize(integer $MinSize) Set Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+ * @method integer getMaxSize() Obtain Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+ * @method void setMaxSize(integer $MaxSize) Set Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
  */
 class ModifyDesiredCapacityRequest extends AbstractModel
 {
     /**
-     * @var string Auto scaling group ID
+     * @var string Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
      */
     public $AutoScalingGroupId;
 
     /**
-     * @var integer Desired capacity
+     * @var integer Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize.
      */
     public $DesiredCapacity;
 
     /**
-     * @var integer Minimum number of instances. Value range: 0-2000.
+     * @var integer Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
      */
     public $MinSize;
 
     /**
-     * @var integer Maximum number of instances. Value range: 0-2000.
+     * @var integer Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
      */
     public $MaxSize;
 
     /**
-     * @param string $AutoScalingGroupId Auto scaling group ID
-     * @param integer $DesiredCapacity Desired capacity
-     * @param integer $MinSize Minimum number of instances. Value range: 0-2000.
-     * @param integer $MaxSize Maximum number of instances. Value range: 0-2000.
+     * @param string $AutoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+     * @param integer $DesiredCapacity Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize.
+     * @param integer $MinSize Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+     * @param integer $MaxSize Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNotificationConfiguration request structure.
  *
- * @method string getAutoScalingNotificationId() Obtain ID of the notification to be modified.
- * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) Set ID of the notification to be modified.
+ * @method string getAutoScalingNotificationId() Obtain Specifies the notification ID that needs modification. get the notification ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeNotificationConfigurations](https://intl.cloud.tencent.com/document/api/377/33183?from_cn_redirect=1) and getting `AutoScalingNotificationId` from the returned information.
+ * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) Set Specifies the notification ID that needs modification. get the notification ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeNotificationConfigurations](https://intl.cloud.tencent.com/document/api/377/33183?from_cn_redirect=1) and getting `AutoScalingNotificationId` from the returned information.
  * @method array getNotificationTypes() Obtain Notification type, i.e., the set of types of notifications to be subscribed to. Value range:
 <li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>
 <li>SCALE_OUT_FAILED: scale-out failed</li>
@@ -36,17 +36,17 @@ use TencentCloud\Common\AbstractModel;
 <li>SCALE_IN_FAILED: scale-in failed</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
- * @method array getNotificationUserGroupIds() Obtain Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
- * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
- * @method string getQueueName() Obtain CMQ or TDMQ CMQ queue name.
- * @method void setQueueName(string $QueueName) Set CMQ or TDMQ CMQ queue name.
- * @method string getTopicName() Obtain CMQ or TDMQ CMQ toipc name.
- * @method void setTopicName(string $TopicName) Set CMQ or TDMQ CMQ toipc name.
+ * @method array getNotificationUserGroupIds() Obtain Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when `TargetType` is `USER_GROUP`.
+ * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when `TargetType` is `USER_GROUP`.
+ * @method string getQueueName() Obtain The TDMQ CMQ QUEUE name. [the original CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended for use. this parameter is valid only when `TargetType` is `TDMQ_CMQ_QUEUE`.
+ * @method void setQueueName(string $QueueName) Set The TDMQ CMQ QUEUE name. [the original CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended for use. this parameter is valid only when `TargetType` is `TDMQ_CMQ_QUEUE`.
+ * @method string getTopicName() Obtain The TDMQ CMQ TOPIC name. [original CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended for use. this parameter is valid only when `TargetType` is `TDMQ_CMQ_TOPIC`.
+ * @method void setTopicName(string $TopicName) Set The TDMQ CMQ TOPIC name. [original CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended for use. this parameter is valid only when `TargetType` is `TDMQ_CMQ_TOPIC`.
  */
 class ModifyNotificationConfigurationRequest extends AbstractModel
 {
     /**
-     * @var string ID of the notification to be modified.
+     * @var string Specifies the notification ID that needs modification. get the notification ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeNotificationConfigurations](https://intl.cloud.tencent.com/document/api/377/33183?from_cn_redirect=1) and getting `AutoScalingNotificationId` from the returned information.
      */
     public $AutoScalingNotificationId;
 
@@ -62,22 +62,22 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
     public $NotificationTypes;
 
     /**
-     * @var array Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+     * @var array Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when `TargetType` is `USER_GROUP`.
      */
     public $NotificationUserGroupIds;
 
     /**
-     * @var string CMQ or TDMQ CMQ queue name.
+     * @var string The TDMQ CMQ QUEUE name. [the original CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended for use. this parameter is valid only when `TargetType` is `TDMQ_CMQ_QUEUE`.
      */
     public $QueueName;
 
     /**
-     * @var string CMQ or TDMQ CMQ toipc name.
+     * @var string The TDMQ CMQ TOPIC name. [original CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended for use. this parameter is valid only when `TargetType` is `TDMQ_CMQ_TOPIC`.
      */
     public $TopicName;
 
     /**
-     * @param string $AutoScalingNotificationId ID of the notification to be modified.
+     * @param string $AutoScalingNotificationId Specifies the notification ID that needs modification. get the notification ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeNotificationConfigurations](https://intl.cloud.tencent.com/document/api/377/33183?from_cn_redirect=1) and getting `AutoScalingNotificationId` from the returned information.
      * @param array $NotificationTypes Notification type, i.e., the set of types of notifications to be subscribed to. Value range:
 <li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>
 <li>SCALE_OUT_FAILED: scale-out failed</li>
@@ -85,9 +85,9 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
 <li>SCALE_IN_FAILED: scale-in failed</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
-     * @param array $NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
-     * @param string $QueueName CMQ or TDMQ CMQ queue name.
-     * @param string $TopicName CMQ or TDMQ CMQ toipc name.
+     * @param array $NotificationUserGroupIds Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when `TargetType` is `USER_GROUP`.
+     * @param string $QueueName The TDMQ CMQ QUEUE name. [the original CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended for use. this parameter is valid only when `TargetType` is `TDMQ_CMQ_QUEUE`.
+     * @param string $TopicName The TDMQ CMQ TOPIC name. [original CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended for use. this parameter is valid only when `TargetType` is `TDMQ_CMQ_TOPIC`.
      */
     function __construct()
     {

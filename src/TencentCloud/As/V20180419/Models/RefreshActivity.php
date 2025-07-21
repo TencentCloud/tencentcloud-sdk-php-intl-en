@@ -24,14 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID.
  * @method string getRefreshActivityId() Obtain Refresh activity ID.
  * @method void setRefreshActivityId(string $RefreshActivityId) Set Refresh activity ID.
- * @method string getOriginRefreshActivityId() Obtain Original refresh activity ID, which exists only in the rollback refresh activity.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setOriginRefreshActivityId(string $OriginRefreshActivityId) Set Original refresh activity ID, which exists only in the rollback refresh activity.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getOriginRefreshActivityId() Obtain Original refresh activity ID. exists only in rollback refresh activity.
+ * @method void setOriginRefreshActivityId(string $OriginRefreshActivityId) Set Original refresh activity ID. exists only in rollback refresh activity.
  * @method array getRefreshBatchSet() Obtain Refresh batch information list.
  * @method void setRefreshBatchSet(array $RefreshBatchSet) Set Refresh batch information list.
- * @method string getRefreshMode() Obtain Refresh mode.
- * @method void setRefreshMode(string $RefreshMode) Set Refresh mode.
+ * @method string getRefreshMode() Obtain Refresh mode. valid values as follows:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
+ * @method void setRefreshMode(string $RefreshMode) Set Refresh mode. valid values as follows:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
  * @method RefreshSettings getRefreshSettings() Obtain Instance update setting parameters.
  * @method void setRefreshSettings(RefreshSettings $RefreshSettings) Set Instance update setting parameters.
  * @method string getActivityType() Obtain Refresh activity type. Valid values:
@@ -58,22 +60,18 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>MANUAL_PAUSE: manually paused.</li>
 <li>CANCELLED: canceled.</li>
 <li>FAILED: failed.</li>
- * @method integer getCurrentRefreshBatchNum() Obtain Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCurrentRefreshBatchNum(integer $CurrentRefreshBatchNum) Set Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getStartTime() Obtain Refresh activity start time.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setStartTime(string $StartTime) Set Refresh activity start time.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getEndTime() Obtain Refresh activity end time.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setEndTime(string $EndTime) Set Refresh activity end time.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getCreatedTime() Obtain Refresh activity creation time.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCreatedTime(string $CreatedTime) Set Refresh activity creation time.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getCurrentRefreshBatchNum() Obtain Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity.
+ * @method void setCurrentRefreshBatchNum(integer $CurrentRefreshBatchNum) Set Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity.
+ * @method string getStartTime() Obtain The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStartTime(string $StartTime) Set The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEndTime() Obtain Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEndTime(string $EndTime) Set Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreatedTime() Obtain Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+ * @method void setCreatedTime(string $CreatedTime) Set Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
  */
 class RefreshActivity extends AbstractModel
 {
@@ -88,8 +86,7 @@ class RefreshActivity extends AbstractModel
     public $RefreshActivityId;
 
     /**
-     * @var string Original refresh activity ID, which exists only in the rollback refresh activity.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Original refresh activity ID. exists only in rollback refresh activity.
      */
     public $OriginRefreshActivityId;
 
@@ -99,7 +96,9 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $RefreshBatchSet;
 
     /**
-     * @var string Refresh mode.
+     * @var string Refresh mode. valid values as follows:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
      */
     public $RefreshMode;
 
@@ -129,36 +128,35 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $Status;
 
     /**
-     * @var integer Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity.
      */
     public $CurrentRefreshBatchNum;
 
     /**
-     * @var string Refresh activity start time.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StartTime;
 
     /**
-     * @var string Refresh activity end time.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EndTime;
 
     /**
-     * @var string Refresh activity creation time.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
      */
     public $CreatedTime;
 
     /**
      * @param string $AutoScalingGroupId Scaling group ID.
      * @param string $RefreshActivityId Refresh activity ID.
-     * @param string $OriginRefreshActivityId Original refresh activity ID, which exists only in the rollback refresh activity.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $OriginRefreshActivityId Original refresh activity ID. exists only in rollback refresh activity.
      * @param array $RefreshBatchSet Refresh batch information list.
-     * @param string $RefreshMode Refresh mode.
+     * @param string $RefreshMode Refresh mode. valid values as follows:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
      * @param RefreshSettings $RefreshSettings Instance update setting parameters.
      * @param string $ActivityType Refresh activity type. Valid values:
 <li>NORMAL: normal refresh activity.</li>
@@ -172,14 +170,12 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>MANUAL_PAUSE: manually paused.</li>
 <li>CANCELLED: canceled.</li>
 <li>FAILED: failed.</li>
-     * @param integer $CurrentRefreshBatchNum Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $StartTime Refresh activity start time.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $EndTime Refresh activity end time.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $CreatedTime Refresh activity creation time.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $CurrentRefreshBatchNum Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity.
+     * @param string $StartTime The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EndTime Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreatedTime Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
      */
     function __construct()
     {

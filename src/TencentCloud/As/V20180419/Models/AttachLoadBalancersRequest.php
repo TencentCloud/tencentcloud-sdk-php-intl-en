@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AttachLoadBalancers request structure.
  *
- * @method string getAutoScalingGroupId() Obtain Scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID
- * @method array getLoadBalancerIds() Obtain List of classic CLB IDs. Up to 20 classic CLBs can be bound to a security group. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
- * @method void setLoadBalancerIds(array $LoadBalancerIds) Set List of classic CLB IDs. Up to 20 classic CLBs can be bound to a security group. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
- * @method array getForwardLoadBalancers() Obtain List of application CLBs. Up to 100 application CLBs can be bound to a scaling group. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
- * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) Set List of application CLBs. Up to 100 application CLBs can be bound to a scaling group. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+ * @method string getAutoScalingGroupId() Obtain Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+ * @method array getLoadBalancerIds() Obtain Specifies a list of classic clb ids. each scaling group can bind a maximum of 20 classic clbs. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set Specifies a list of classic clb ids. each scaling group can bind a maximum of 20 classic clbs. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+ * @method array getForwardLoadBalancers() Obtain Specifies the list of load balancers. each scaling group can bind a maximum of 100 application clbs. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+ * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) Set Specifies the list of load balancers. each scaling group can bind a maximum of 100 application clbs. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
  */
 class AttachLoadBalancersRequest extends AbstractModel
 {
     /**
-     * @var string Scaling group ID
+     * @var string Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
      */
     public $AutoScalingGroupId;
 
     /**
-     * @var array List of classic CLB IDs. Up to 20 classic CLBs can be bound to a security group. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+     * @var array Specifies a list of classic clb ids. each scaling group can bind a maximum of 20 classic clbs. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     public $LoadBalancerIds;
 
     /**
-     * @var array List of application CLBs. Up to 100 application CLBs can be bound to a scaling group. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+     * @var array Specifies the list of load balancers. each scaling group can bind a maximum of 100 application clbs. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     public $ForwardLoadBalancers;
 
     /**
-     * @param string $AutoScalingGroupId Scaling group ID
-     * @param array $LoadBalancerIds List of classic CLB IDs. Up to 20 classic CLBs can be bound to a security group. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
-     * @param array $ForwardLoadBalancers List of application CLBs. Up to 100 application CLBs can be bound to a scaling group. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+     * @param string $AutoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+     * @param array $LoadBalancerIds Specifies a list of classic clb ids. each scaling group can bind a maximum of 20 classic clbs. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+     * @param array $ForwardLoadBalancers Specifies the list of load balancers. each scaling group can bind a maximum of 100 application clbs. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     function __construct()
     {

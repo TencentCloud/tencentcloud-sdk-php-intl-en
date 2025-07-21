@@ -22,26 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoScalingGroupName() Obtain Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) Set Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
- * @method string getLaunchConfigurationId() Obtain Launch configuration ID
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID
- * @method integer getMaxSize() Obtain Maximum number of instances. Value range: 0-2,000.
- * @method void setMaxSize(integer $MaxSize) Set Maximum number of instances. Value range: 0-2,000.
- * @method integer getMinSize() Obtain Minimum number of instances. Value range: 0-2,000.
- * @method void setMinSize(integer $MinSize) Set Minimum number of instances. Value range: 0-2,000.
- * @method string getVpcId() Obtain VPC ID; if on a basic network, enter an empty string
- * @method void setVpcId(string $VpcId) Set VPC ID; if on a basic network, enter an empty string
- * @method integer getDefaultCooldown() Obtain Default cooldown period in seconds. Default value: 300
- * @method void setDefaultCooldown(integer $DefaultCooldown) Set Default cooldown period in seconds. Default value: 300
- * @method integer getDesiredCapacity() Obtain Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
- * @method void setDesiredCapacity(integer $DesiredCapacity) Set Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
- * @method array getLoadBalancerIds() Obtain List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
- * @method void setLoadBalancerIds(array $LoadBalancerIds) Set List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
- * @method integer getProjectId() Obtain Project ID of an instance in a scaling group. The default project is used if it’s left blank.
- * @method void setProjectId(integer $ProjectId) Set Project ID of an instance in a scaling group. The default project is used if it’s left blank.
- * @method array getForwardLoadBalancers() Obtain List of application CLBs. Up to 100 CLBs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
- * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) Set List of application CLBs. Up to 100 CLBs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
- * @method array getSubnetIds() Obtain List of subnet IDs. A subnet must be specified in the VPC scenario. If multiple subnets are entered, their priority will be determined by the order in which they are entered, and they will be tried one by one until instances can be successfully created.
- * @method void setSubnetIds(array $SubnetIds) Set List of subnet IDs. A subnet must be specified in the VPC scenario. If multiple subnets are entered, their priority will be determined by the order in which they are entered, and they will be tried one by one until instances can be successfully created.
+ * @method string getLaunchConfigurationId() Obtain Launch configuration ID. you can obtain the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config) or making an api call to [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID. you can obtain the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config) or making an api call to [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.
+ * @method integer getMaxSize() Obtain Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+ * @method void setMaxSize(integer $MaxSize) Set Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+ * @method integer getMinSize() Obtain Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+ * @method void setMinSize(integer $MinSize) Set Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+ * @method string getVpcId() Obtain vpc ID. a valid vpc ID can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc). you can also call the api DescribeVpc (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
+ * @method void setVpcId(string $VpcId) Set vpc ID. a valid vpc ID can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc). you can also call the api DescribeVpc (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
+ * @method integer getDefaultCooldown() Obtain Default cooldown period in seconds. default value: 300. value range: [0,3600].
+ * @method void setDefaultCooldown(integer $DefaultCooldown) Set Default cooldown period in seconds. default value: 300. value range: [0,3600].
+ * @method integer getDesiredCapacity() Obtain The expected number of instances, in the range of [0,2000], default value equals current MinSize, and must meet MaxSize >= DesiredCapacity >= MinSize.
+ * @method void setDesiredCapacity(integer $DesiredCapacity) Set The expected number of instances, in the range of [0,2000], default value equals current MinSize, and must meet MaxSize >= DesiredCapacity >= MinSize.
+ * @method array getLoadBalancerIds() Obtain A list of classic load balancer ids with a current maximum length of 20. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set A list of classic load balancer ids with a current maximum length of 20. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+ * @method integer getProjectId() Obtain Project ID of the instance within the scaling group. default value is 0, indicates usage of the default project. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `projectId` field in the return value.
+ * @method void setProjectId(integer $ProjectId) Set Project ID of the instance within the scaling group. default value is 0, indicates usage of the default project. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `projectId` field in the return value.
+ * @method array getForwardLoadBalancers() Obtain Specifies the list of load balancers with a current maximum length of 100. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time.
+ * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) Set Specifies the list of load balancers with a current maximum length of 100. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time.
+ * @method array getSubnetIds() Obtain The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the console (https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the DescribeSubnets API (https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1).
+ * @method void setSubnetIds(array $SubnetIds) Set The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the console (https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the DescribeSubnets API (https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1).
  * @method array getTerminationPolicies() Obtain Termination policy, whose maximum length is currently 1. Valid values: OLDEST_INSTANCE and NEWEST_INSTANCE. Default value: OLDEST_INSTANCE.
 <li>OLDEST_INSTANCE: Terminate the oldest instance in the scaling group first.</li>
 <li>NEWEST_INSTANCE: Terminate the newest instance in the scaling group first.</li>
@@ -70,12 +70,12 @@ If there is no AZ or subnet in Zones/SubnetIds, a verification error will be rep
 
 Common reasons for unavailable AZs or subnets include the CVM InstanceType in the AZ being sold out, the CBS cloud disk in the AZ being sold out, insufficient quota in the AZ, and insufficient IP addresses in the subnet.
 If there is no AZ or subnet in Zones/SubnetIds, a verification error will be reported regardless of the values of ZonesCheckPolicy.
- * @method array getTags() Obtain List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
- * @method void setTags(array $Tags) Set List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+ * @method array getTags() Obtain List of Tag descriptions. by specifying this parameter, you can bind tags to a scaling group and corresponding resource instances. each scaling group supports up to 30 tags. you can call the [GetTags](https://intl.cloud.tencent.com/document/product/651/72275?from_cn_redirect=1) API to retrieve existing Tag key-value pairs based on the response.
+ * @method void setTags(array $Tags) Set List of Tag descriptions. by specifying this parameter, you can bind tags to a scaling group and corresponding resource instances. each scaling group supports up to 30 tags. you can call the [GetTags](https://intl.cloud.tencent.com/document/product/651/72275?from_cn_redirect=1) API to retrieve existing Tag key-value pairs based on the response.
  * @method ServiceSettings getServiceSettings() Obtain Service settings such as unhealthy instance replacement.
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) Set Service settings such as unhealthy instance replacement.
- * @method integer getIpv6AddressCount() Obtain The number of IPv6 addresses that an instance has. Valid values: 0 and 1. Default value: 0.
- * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set The number of IPv6 addresses that an instance has. Valid values: 0 and 1. Default value: 0.
+ * @method integer getIpv6AddressCount() Obtain The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+ * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
  * @method string getMultiZoneSubnetPolicy() Obtain Multi-AZ/multi-subnet policy, whose valid values include PRIORITY and EQUALITY, with the default value being PRIORITY.
 <li>PRIORITY: The instances are attempted to be created taking the order of the AZ/subnet list as the priority. If instances can be successfully created in the highest-priority AZ/subnet, they will always be created in that AZ/subnet.</li>
 <li>EQUALITY: The instances added through scale-out will be distributed across multiple AZs/subnets to ensure a relatively balanced number of instances in each AZ/subnet after scaling out.</li>
@@ -133,52 +133,52 @@ class CreateAutoScalingGroupRequest extends AbstractModel
     public $AutoScalingGroupName;
 
     /**
-     * @var string Launch configuration ID
+     * @var string Launch configuration ID. you can obtain the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config) or making an api call to [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.
      */
     public $LaunchConfigurationId;
 
     /**
-     * @var integer Maximum number of instances. Value range: 0-2,000.
+     * @var integer Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
      */
     public $MaxSize;
 
     /**
-     * @var integer Minimum number of instances. Value range: 0-2,000.
+     * @var integer Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
      */
     public $MinSize;
 
     /**
-     * @var string VPC ID; if on a basic network, enter an empty string
+     * @var string vpc ID. a valid vpc ID can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc). you can also call the api DescribeVpc (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
      */
     public $VpcId;
 
     /**
-     * @var integer Default cooldown period in seconds. Default value: 300
+     * @var integer Default cooldown period in seconds. default value: 300. value range: [0,3600].
      */
     public $DefaultCooldown;
 
     /**
-     * @var integer Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
+     * @var integer The expected number of instances, in the range of [0,2000], default value equals current MinSize, and must meet MaxSize >= DesiredCapacity >= MinSize.
      */
     public $DesiredCapacity;
 
     /**
-     * @var array List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
+     * @var array A list of classic load balancer ids with a current maximum length of 20. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     public $LoadBalancerIds;
 
     /**
-     * @var integer Project ID of an instance in a scaling group. The default project is used if it’s left blank.
+     * @var integer Project ID of the instance within the scaling group. default value is 0, indicates usage of the default project. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `projectId` field in the return value.
      */
     public $ProjectId;
 
     /**
-     * @var array List of application CLBs. Up to 100 CLBs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+     * @var array Specifies the list of load balancers with a current maximum length of 100. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time.
      */
     public $ForwardLoadBalancers;
 
     /**
-     * @var array List of subnet IDs. A subnet must be specified in the VPC scenario. If multiple subnets are entered, their priority will be determined by the order in which they are entered, and they will be tried one by one until instances can be successfully created.
+     * @var array The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the console (https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the DescribeSubnets API (https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1).
      */
     public $SubnetIds;
 
@@ -213,7 +213,7 @@ If there is no AZ or subnet in Zones/SubnetIds, a verification error will be rep
     public $ZonesCheckPolicy;
 
     /**
-     * @var array List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+     * @var array List of Tag descriptions. by specifying this parameter, you can bind tags to a scaling group and corresponding resource instances. each scaling group supports up to 30 tags. you can call the [GetTags](https://intl.cloud.tencent.com/document/product/651/72275?from_cn_redirect=1) API to retrieve existing Tag key-value pairs based on the response.
      */
     public $Tags;
 
@@ -223,7 +223,7 @@ If there is no AZ or subnet in Zones/SubnetIds, a verification error will be rep
     public $ServiceSettings;
 
     /**
-     * @var integer The number of IPv6 addresses that an instance has. Valid values: 0 and 1. Default value: 0.
+     * @var integer The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
      */
     public $Ipv6AddressCount;
 
@@ -281,16 +281,16 @@ Default value: FALSE.
 
     /**
      * @param string $AutoScalingGroupName Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
-     * @param string $LaunchConfigurationId Launch configuration ID
-     * @param integer $MaxSize Maximum number of instances. Value range: 0-2,000.
-     * @param integer $MinSize Minimum number of instances. Value range: 0-2,000.
-     * @param string $VpcId VPC ID; if on a basic network, enter an empty string
-     * @param integer $DefaultCooldown Default cooldown period in seconds. Default value: 300
-     * @param integer $DesiredCapacity Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
-     * @param array $LoadBalancerIds List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
-     * @param integer $ProjectId Project ID of an instance in a scaling group. The default project is used if it’s left blank.
-     * @param array $ForwardLoadBalancers List of application CLBs. Up to 100 CLBs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
-     * @param array $SubnetIds List of subnet IDs. A subnet must be specified in the VPC scenario. If multiple subnets are entered, their priority will be determined by the order in which they are entered, and they will be tried one by one until instances can be successfully created.
+     * @param string $LaunchConfigurationId Launch configuration ID. you can obtain the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config) or making an api call to [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.
+     * @param integer $MaxSize Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+     * @param integer $MinSize Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+     * @param string $VpcId vpc ID. a valid vpc ID can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc). you can also call the api DescribeVpc (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
+     * @param integer $DefaultCooldown Default cooldown period in seconds. default value: 300. value range: [0,3600].
+     * @param integer $DesiredCapacity The expected number of instances, in the range of [0,2000], default value equals current MinSize, and must meet MaxSize >= DesiredCapacity >= MinSize.
+     * @param array $LoadBalancerIds A list of classic load balancer ids with a current maximum length of 20. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+     * @param integer $ProjectId Project ID of the instance within the scaling group. default value is 0, indicates usage of the default project. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `projectId` field in the return value.
+     * @param array $ForwardLoadBalancers Specifies the list of load balancers with a current maximum length of 100. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time.
+     * @param array $SubnetIds The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the console (https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the DescribeSubnets API (https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1).
      * @param array $TerminationPolicies Termination policy, whose maximum length is currently 1. Valid values: OLDEST_INSTANCE and NEWEST_INSTANCE. Default value: OLDEST_INSTANCE.
 <li>OLDEST_INSTANCE: Terminate the oldest instance in the scaling group first.</li>
 <li>NEWEST_INSTANCE: Terminate the newest instance in the scaling group first.</li>
@@ -305,9 +305,9 @@ Default value: FALSE.
 
 Common reasons for unavailable AZs or subnets include the CVM InstanceType in the AZ being sold out, the CBS cloud disk in the AZ being sold out, insufficient quota in the AZ, and insufficient IP addresses in the subnet.
 If there is no AZ or subnet in Zones/SubnetIds, a verification error will be reported regardless of the values of ZonesCheckPolicy.
-     * @param array $Tags List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+     * @param array $Tags List of Tag descriptions. by specifying this parameter, you can bind tags to a scaling group and corresponding resource instances. each scaling group supports up to 30 tags. you can call the [GetTags](https://intl.cloud.tencent.com/document/product/651/72275?from_cn_redirect=1) API to retrieve existing Tag key-value pairs based on the response.
      * @param ServiceSettings $ServiceSettings Service settings such as unhealthy instance replacement.
-     * @param integer $Ipv6AddressCount The number of IPv6 addresses that an instance has. Valid values: 0 and 1. Default value: 0.
+     * @param integer $Ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
      * @param string $MultiZoneSubnetPolicy Multi-AZ/multi-subnet policy, whose valid values include PRIORITY and EQUALITY, with the default value being PRIORITY.
 <li>PRIORITY: The instances are attempted to be created taking the order of the AZ/subnet list as the priority. If instances can be successfully created in the highest-priority AZ/subnet, they will always be created in that AZ/subnet.</li>
 <li>EQUALITY: The instances added through scale-out will be distributed across multiple AZs/subnets to ensure a relatively balanced number of instances in each AZ/subnet after scaling out.</li>

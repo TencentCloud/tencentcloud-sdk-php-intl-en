@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveInstances request structure.
  *
- * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
- * @method array getInstanceIds() Obtain List of CVM instance IDs
- * @method void setInstanceIds(array $InstanceIds) Set List of CVM instance IDs
+ * @method string getAutoScalingGroupId() Obtain Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
+ * @method array getInstanceIds() Obtain CVM instance ID list. you can obtain available instance ID in the following ways:.
+<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
+ * @method void setInstanceIds(array $InstanceIds) Set CVM instance ID list. you can obtain available instance ID in the following ways:.
+<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
  */
 class RemoveInstancesRequest extends AbstractModel
 {
     /**
-     * @var string Auto scaling group ID
+     * @var string Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
      */
     public $AutoScalingGroupId;
 
     /**
-     * @var array List of CVM instance IDs
+     * @var array CVM instance ID list. you can obtain available instance ID in the following ways:.
+<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
      */
     public $InstanceIds;
 
     /**
-     * @param string $AutoScalingGroupId Auto scaling group ID
-     * @param array $InstanceIds List of CVM instance IDs
+     * @param string $AutoScalingGroupId Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
+     * @param array $InstanceIds CVM instance ID list. you can obtain available instance ID in the following ways:.
+<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
      */
     function __construct()
     {

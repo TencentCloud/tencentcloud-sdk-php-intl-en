@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ClearLaunchConfigurationAttributes request structure.
  *
- * @method string getLaunchConfigurationId() Obtain Launch configuration ID
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID
+ * @method string getLaunchConfigurationId() Obtain Launch configuration ID. obtain in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID. obtain in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
  * @method boolean getClearDataDisks() Obtain Whether to clear data disk information. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
  * @method void setClearDataDisks(boolean $ClearDataDisks) Set Whether to clear data disk information. This parameter is optional and the default value is `false`.
@@ -48,7 +52,9 @@ If true is filled in, it indicates that the instance tag list should be cleared.
 class ClearLaunchConfigurationAttributesRequest extends AbstractModel
 {
     /**
-     * @var string Launch configuration ID
+     * @var string Launch configuration ID. obtain in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
      */
     public $LaunchConfigurationId;
 
@@ -88,7 +94,9 @@ If true is filled in, it indicates that the instance tag list should be cleared.
     public $ClearMetadata;
 
     /**
-     * @param string $LaunchConfigurationId Launch configuration ID
+     * @param string $LaunchConfigurationId Launch configuration ID. obtain in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
      * @param boolean $ClearDataDisks Whether to clear data disk information. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
      * @param boolean $ClearHostNameSettings Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.

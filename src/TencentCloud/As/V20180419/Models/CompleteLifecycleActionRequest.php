@@ -20,42 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CompleteLifecycleAction request structure.
  *
- * @method string getLifecycleHookId() Obtain Lifecycle hook ID
- * @method void setLifecycleHookId(string $LifecycleHookId) Set Lifecycle hook ID
- * @method string getLifecycleActionResult() Obtain Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
- * @method void setLifecycleActionResult(string $LifecycleActionResult) Set Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
- * @method string getInstanceId() Obtain Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
- * @method void setInstanceId(string $InstanceId) Set Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
- * @method string getLifecycleActionToken() Obtain Either "InstanceId" or "LifecycleActionToken" must be specified
- * @method void setLifecycleActionToken(string $LifecycleActionToken) Set Either "InstanceId" or "LifecycleActionToken" must be specified
+ * @method string getLifecycleHookId() Obtain Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information.
+ * @method void setLifecycleHookId(string $LifecycleHookId) Set Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information.
+ * @method string getLifecycleActionResult() Obtain Describes the result of the lifecycle action. valid values are as follows:.
+<Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+<li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>.
+ * @method void setLifecycleActionResult(string $LifecycleActionResult) Set Describes the result of the lifecycle action. valid values are as follows:.
+<Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+<li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>.
+ * @method string getInstanceId() Obtain One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
+ * @method void setInstanceId(string $InstanceId) Set One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
+ * @method string getLifecycleActionToken() Obtain Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message.
+ * @method void setLifecycleActionToken(string $LifecycleActionToken) Set Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message.
  */
 class CompleteLifecycleActionRequest extends AbstractModel
 {
     /**
-     * @var string Lifecycle hook ID
+     * @var string Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information.
      */
     public $LifecycleHookId;
 
     /**
-     * @var string Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
+     * @var string Describes the result of the lifecycle action. valid values are as follows:.
+<Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+<li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>.
      */
     public $LifecycleActionResult;
 
     /**
-     * @var string Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
+     * @var string One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
      */
     public $InstanceId;
 
     /**
-     * @var string Either "InstanceId" or "LifecycleActionToken" must be specified
+     * @var string Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message.
      */
     public $LifecycleActionToken;
 
     /**
-     * @param string $LifecycleHookId Lifecycle hook ID
-     * @param string $LifecycleActionResult Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
-     * @param string $InstanceId Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
-     * @param string $LifecycleActionToken Either "InstanceId" or "LifecycleActionToken" must be specified
+     * @param string $LifecycleHookId Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information.
+     * @param string $LifecycleActionResult Describes the result of the lifecycle action. valid values are as follows:.
+<Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+<li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>.
+     * @param string $InstanceId One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
+     * @param string $LifecycleActionToken Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message.
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLoadBalancerTargetAttributes request structure.
  *
- * @method string getAutoScalingGroupId() Obtain Scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID
- * @method array getForwardLoadBalancers() Obtain List of application CLBs to modify. Up to 100 CLBs allowed.
- * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) Set List of application CLBs to modify. Up to 100 CLBs allowed.
+ * @method string getAutoScalingGroupId() Obtain Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+ * @method array getForwardLoadBalancers() Obtain Specifies the list of load balancers whose target rule attributes need modification, with a list length limit of 100. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+ * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) Set Specifies the list of load balancers whose target rule attributes need modification, with a list length limit of 100. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
  */
 class ModifyLoadBalancerTargetAttributesRequest extends AbstractModel
 {
     /**
-     * @var string Scaling group ID
+     * @var string Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
      */
     public $AutoScalingGroupId;
 
     /**
-     * @var array List of application CLBs to modify. Up to 100 CLBs allowed.
+     * @var array Specifies the list of load balancers whose target rule attributes need modification, with a list length limit of 100. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     public $ForwardLoadBalancers;
 
     /**
-     * @param string $AutoScalingGroupId Scaling group ID
-     * @param array $ForwardLoadBalancers List of application CLBs to modify. Up to 100 CLBs allowed.
+     * @param string $AutoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+     * @param array $ForwardLoadBalancers Specifies the list of load balancers whose target rule attributes need modification, with a list length limit of 100. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     function __construct()
     {

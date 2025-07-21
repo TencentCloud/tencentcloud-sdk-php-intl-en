@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExecuteScalingPolicy request structure.
  *
- * @method string getAutoScalingPolicyId() Obtain Auto-scaling policy ID. This parameter is not available to a target tracking policy.
- * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) Set Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+ * @method string getAutoScalingPolicyId() Obtain Alarm scaling policy ID. target tracking policy is unsupported. the alert policy type can be obtained via the `ScalingPolicyType` parameter in the api response of [DescribeScalingPolicies](https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1).
+ * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) Set Alarm scaling policy ID. target tracking policy is unsupported. the alert policy type can be obtained via the `ScalingPolicyType` parameter in the api response of [DescribeScalingPolicies](https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1).
  * @method boolean getHonorCooldown() Obtain Whether to check if the auto scaling group is in the cooldown period. Default value: false
  * @method void setHonorCooldown(boolean $HonorCooldown) Set Whether to check if the auto scaling group is in the cooldown period. Default value: false
  * @method string getTriggerSource() Obtain Source that triggers the scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ExecuteScalingPolicyRequest extends AbstractModel
 {
     /**
-     * @var string Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+     * @var string Alarm scaling policy ID. target tracking policy is unsupported. the alert policy type can be obtained via the `ScalingPolicyType` parameter in the api response of [DescribeScalingPolicies](https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1).
      */
     public $AutoScalingPolicyId;
 
@@ -45,7 +45,7 @@ class ExecuteScalingPolicyRequest extends AbstractModel
     public $TriggerSource;
 
     /**
-     * @param string $AutoScalingPolicyId Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+     * @param string $AutoScalingPolicyId Alarm scaling policy ID. target tracking policy is unsupported. the alert policy type can be obtained via the `ScalingPolicyType` parameter in the api response of [DescribeScalingPolicies](https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1).
      * @param boolean $HonorCooldown Whether to check if the auto scaling group is in the cooldown period. Default value: false
      * @param string $TriggerSource Source that triggers the scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
      */

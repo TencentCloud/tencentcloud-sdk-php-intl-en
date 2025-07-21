@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryCustomersCredit request structure.
  *
- * @method string getFilterType() Obtain Search condition type. You can only search by customer ID, name, remarks, or email.
- * @method void setFilterType(string $FilterType) Set Search condition type. You can only search by customer ID, name, remarks, or email.
+ * @method string getFilterType() Obtain Search condition type. You can only search by ClientUin, Name, Remark, or Email.
+ * @method void setFilterType(string $FilterType) Set Search condition type. You can only search by ClientUin, Name, Remark, or Email.
  * @method string getFilter() Obtain Search condition
  * @method void setFilter(string $Filter) Set Search condition
  * @method integer getPage() Obtain A pagination parameter that specifies the current page number, with a value starting from 1.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class QueryCustomersCreditRequest extends AbstractModel
 {
     /**
-     * @var string Search condition type. You can only search by customer ID, name, remarks, or email.
+     * @var string Search condition type. You can only search by ClientUin, Name, Remark, or Email.
      */
     public $FilterType;
 
@@ -59,7 +59,7 @@ class QueryCustomersCreditRequest extends AbstractModel
     public $Order;
 
     /**
-     * @param string $FilterType Search condition type. You can only search by customer ID, name, remarks, or email.
+     * @param string $FilterType Search condition type. You can only search by ClientUin, Name, Remark, or Email.
      * @param string $Filter Search condition
      * @param integer $Page A pagination parameter that specifies the current page number, with a value starting from 1.
      * @param integer $PageSize A pagination parameter that specifies the number of entries per page.

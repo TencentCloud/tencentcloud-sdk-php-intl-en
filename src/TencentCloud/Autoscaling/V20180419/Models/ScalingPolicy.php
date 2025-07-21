@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdjustmentType(string $AdjustmentType) Set The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
  * @method integer getAdjustmentValue() Obtain The adjusted value of desired capacity after the alarm is triggered. This parameter is only applicable to a simple policy.
  * @method void setAdjustmentValue(integer $AdjustmentValue) Set The adjusted value of desired capacity after the alarm is triggered. This parameter is only applicable to a simple policy.
- * @method integer getCooldown() Obtain Cooldown period. This parameter is only applicable to a simple policy.
- * @method void setCooldown(integer $Cooldown) Set Cooldown period. This parameter is only applicable to a simple policy.
+ * @method integer getCooldown() Obtain Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds.
+ * @method void setCooldown(integer $Cooldown) Set Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds.
  * @method MetricAlarm getMetricAlarm() Obtain Alarm monitoring metrics of a simple policy.
  * @method void setMetricAlarm(MetricAlarm $MetricAlarm) Set Alarm monitoring metrics of a simple policy.
  * @method string getPredefinedMetricType() Obtain Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
@@ -98,7 +98,7 @@ class ScalingPolicy extends AbstractModel
     public $AdjustmentValue;
 
     /**
-     * @var integer Cooldown period. This parameter is only applicable to a simple policy.
+     * @var integer Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds.
      */
     public $Cooldown;
 
@@ -151,7 +151,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $ScalingPolicyName Alarm trigger policy name.
      * @param string $AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
      * @param integer $AdjustmentValue The adjusted value of desired capacity after the alarm is triggered. This parameter is only applicable to a simple policy.
-     * @param integer $Cooldown Cooldown period. This parameter is only applicable to a simple policy.
+     * @param integer $Cooldown Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds.
      * @param MetricAlarm $MetricAlarm Alarm monitoring metrics of a simple policy.
      * @param string $PredefinedMetricType Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
 Note: This field may return `null`, indicating that no valid values can be obtained.

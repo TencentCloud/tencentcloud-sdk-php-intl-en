@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLaunchConfigurationName(string $LaunchConfigurationName) Set Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed..
  * @method string getImageId() Obtain [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
  * @method void setImageId(string $ImageId) Set [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
- * @method integer getProjectId() Obtain Project ID of the launch configuration. The default project is used if it is left blank.
-Note that this project ID is not the same as the project ID of the scaling group. 
- * @method void setProjectId(integer $ProjectId) Set Project ID of the launch configuration. The default project is used if it is left blank.
-Note that this project ID is not the same as the project ID of the scaling group. 
+ * @method integer getProjectId() Obtain Project ID of the launch configuration. default value is 0, indicating usage of the default project. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1).
+Note: the instance's project ID within the scaling group takes the project ID of the scaling group, which is irrelevant here.
+ * @method void setProjectId(integer $ProjectId) Set Project ID of the launch configuration. default value is 0, indicating usage of the default project. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1).
+Note: the instance's project ID within the scaling group takes the project ID of the scaling group, which is irrelevant here.
  * @method string getInstanceType() Obtain Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
 `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
  * @method void setInstanceType(string $InstanceType) Set Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
@@ -56,23 +56,23 @@ Note that this project ID is not the same as the project ID of the scaling group
 <li> CDCPAID: dedicated cluster</li>
  * @method InstanceMarketOptionsRequest getInstanceMarketOptions() Obtain Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) Set Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
- * @method array getInstanceTypes() Obtain List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
-`InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
- * @method void setInstanceTypes(array $InstanceTypes) Set List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
-`InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
- * @method string getCamRoleName() Obtain CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
- * @method void setCamRoleName(string $CamRoleName) Set CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
- * @method string getInstanceTypesCheckPolicy() Obtain InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
-<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
-<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+ * @method array getInstanceTypes() Obtain Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
+The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+ * @method void setInstanceTypes(array $InstanceTypes) Set Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
+The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+ * @method string getCamRoleName() Obtain CAM role name. you can obtain it from the roleName in the return value from the API [DescribeRoleList](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+ * @method void setCamRoleName(string $CamRoleName) Set CAM role name. you can obtain it from the roleName in the return value from the API [DescribeRoleList](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+ * @method string getInstanceTypesCheckPolicy() Obtain Instance type validation policy. valid values include ALL and ANY. default value: ANY. this parameter is valid only when the InstanceTypes parameter contains multiple instance types.
+<li>ALL: verification passes if ALL instancetypes are available; otherwise, a verification error will be reported.</li>.
+<li>ANY: verification passes if ANY InstanceType is available; otherwise, a verification error will be reported.</li>.
 
-Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+Common reasons for unavailable instancetypes include the instancetype being sold out and the corresponding cloud disk being sold out.
 If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
- * @method void setInstanceTypesCheckPolicy(string $InstanceTypesCheckPolicy) Set InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
-<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
-<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+ * @method void setInstanceTypesCheckPolicy(string $InstanceTypesCheckPolicy) Set Instance type validation policy. valid values include ALL and ANY. default value: ANY. this parameter is valid only when the InstanceTypes parameter contains multiple instance types.
+<li>ALL: verification passes if ALL instancetypes are available; otherwise, a verification error will be reported.</li>.
+<li>ANY: verification passes if ANY InstanceType is available; otherwise, a verification error will be reported.</li>.
 
-Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+Common reasons for unavailable instancetypes include the instancetype being sold out and the corresponding cloud disk being sold out.
 If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
  * @method array getInstanceTags() Obtain List of tags. This parameter is used to bind up to 10 tags to newly added instances.
  * @method void setInstanceTags(array $InstanceTags) Set List of tags. This parameter is used to bind up to 10 tags to newly added instances.
@@ -92,18 +92,18 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
  * @method void setDiskTypePolicy(string $DiskTypePolicy) Set Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
 <li>ORIGINAL: Use the set cloud disk type.</li>
 <li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
- * @method string getHpcClusterId() Obtain HPC ID<br>
-Note: This field is default to empty
- * @method void setHpcClusterId(string $HpcClusterId) Set HPC ID<br>
-Note: This field is default to empty
+ * @method string getHpcClusterId() Obtain High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
+ * @method void setHpcClusterId(string $HpcClusterId) Set High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
  * @method IPv6InternetAccessible getIPv6InternetAccessible() Obtain IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
  * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) Set IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
  * @method array getDisasterRecoverGroupIds() Obtain Placement group ID. Only one is allowed.
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group ID. Only one is allowed.
- * @method string getImageFamily() Obtain Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
- * @method void setImageFamily(string $ImageFamily) Set Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
- * @method string getDedicatedClusterId() Obtain CDC ID.
- * @method void setDedicatedClusterId(string $DedicatedClusterId) Set CDC ID.
+ * @method string getImageFamily() Obtain Image family name. one and only one must be filled in between image Id and image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
+ * @method void setImageFamily(string $ImageFamily) Set Image family name. one and only one must be filled in between image Id and image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
+ * @method string getDedicatedClusterId() Obtain Local exclusive cluster ID. this parameter can be obtained through the [DescribeDedicatedClusters](https://intl.cloud.tencent.com/document/product/1346/73758?from_cn_redirect=1) api.
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set Local exclusive cluster ID. this parameter can be obtained through the [DescribeDedicatedClusters](https://intl.cloud.tencent.com/document/product/1346/73758?from_cn_redirect=1) api.
  * @method Metadata getMetadata() Obtain Custom metadata.
  * @method void setMetadata(Metadata $Metadata) Set Custom metadata.
  */
@@ -120,8 +120,8 @@ class CreateLaunchConfigurationRequest extends AbstractModel
     public $ImageId;
 
     /**
-     * @var integer Project ID of the launch configuration. The default project is used if it is left blank.
-Note that this project ID is not the same as the project ID of the scaling group. 
+     * @var integer Project ID of the launch configuration. default value is 0, indicating usage of the default project. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1).
+Note: the instance's project ID within the scaling group takes the project ID of the scaling group, which is irrelevant here.
      */
     public $ProjectId;
 
@@ -180,22 +180,22 @@ Note that this project ID is not the same as the project ID of the scaling group
     public $InstanceMarketOptions;
 
     /**
-     * @var array List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
-`InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
+     * @var array Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
+The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
      */
     public $InstanceTypes;
 
     /**
-     * @var string CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+     * @var string CAM role name. you can obtain it from the roleName in the return value from the API [DescribeRoleList](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
      */
     public $CamRoleName;
 
     /**
-     * @var string InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
-<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
-<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+     * @var string Instance type validation policy. valid values include ALL and ANY. default value: ANY. this parameter is valid only when the InstanceTypes parameter contains multiple instance types.
+<li>ALL: verification passes if ALL instancetypes are available; otherwise, a verification error will be reported.</li>.
+<li>ANY: verification passes if ANY InstanceType is available; otherwise, a verification error will be reported.</li>.
 
-Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+Common reasons for unavailable instancetypes include the instancetype being sold out and the corresponding cloud disk being sold out.
 If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
      */
     public $InstanceTypesCheckPolicy;
@@ -234,8 +234,8 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
     public $DiskTypePolicy;
 
     /**
-     * @var string HPC ID<br>
-Note: This field is default to empty
+     * @var string High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
      */
     public $HpcClusterId;
 
@@ -250,12 +250,12 @@ Note: This field is default to empty
     public $DisasterRecoverGroupIds;
 
     /**
-     * @var string Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
+     * @var string Image family name. one and only one must be filled in between image Id and image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
      */
     public $ImageFamily;
 
     /**
-     * @var string CDC ID.
+     * @var string Local exclusive cluster ID. this parameter can be obtained through the [DescribeDedicatedClusters](https://intl.cloud.tencent.com/document/product/1346/73758?from_cn_redirect=1) api.
      */
     public $DedicatedClusterId;
 
@@ -267,8 +267,8 @@ Note: This field is default to empty
     /**
      * @param string $LaunchConfigurationName Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed..
      * @param string $ImageId [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
-     * @param integer $ProjectId Project ID of the launch configuration. The default project is used if it is left blank.
-Note that this project ID is not the same as the project ID of the scaling group. 
+     * @param integer $ProjectId Project ID of the launch configuration. default value is 0, indicating usage of the default project. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1).
+Note: the instance's project ID within the scaling group takes the project ID of the scaling group, which is irrelevant here.
      * @param string $InstanceType Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
 `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
      * @param SystemDisk $SystemDisk System disk configuration of the instance. If this parameter is not specified, the default value will be used.
@@ -283,14 +283,14 @@ Note that this project ID is not the same as the project ID of the scaling group
 <li>SPOTPAID: spot instance</li>
 <li> CDCPAID: dedicated cluster</li>
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-     * @param array $InstanceTypes List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
-`InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
-     * @param string $CamRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
-     * @param string $InstanceTypesCheckPolicy InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
-<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
-<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+     * @param array $InstanceTypes Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
+The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+     * @param string $CamRoleName CAM role name. you can obtain it from the roleName in the return value from the API [DescribeRoleList](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+     * @param string $InstanceTypesCheckPolicy Instance type validation policy. valid values include ALL and ANY. default value: ANY. this parameter is valid only when the InstanceTypes parameter contains multiple instance types.
+<li>ALL: verification passes if ALL instancetypes are available; otherwise, a verification error will be reported.</li>.
+<li>ANY: verification passes if ANY InstanceType is available; otherwise, a verification error will be reported.</li>.
 
-Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+Common reasons for unavailable instancetypes include the instancetype being sold out and the corresponding cloud disk being sold out.
 If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
      * @param array $InstanceTags List of tags. This parameter is used to bind up to 10 tags to newly added instances.
      * @param array $Tags List of tags. You can specify tags that you want to bind to the launch configuration. Each launch configuration can have up to 30 tags.
@@ -301,12 +301,12 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
      * @param string $DiskTypePolicy Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
 <li>ORIGINAL: Use the set cloud disk type.</li>
 <li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
-     * @param string $HpcClusterId HPC ID<br>
-Note: This field is default to empty
+     * @param string $HpcClusterId High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
      * @param array $DisasterRecoverGroupIds Placement group ID. Only one is allowed.
-     * @param string $ImageFamily Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
-     * @param string $DedicatedClusterId CDC ID.
+     * @param string $ImageFamily Image family name. one and only one must be filled in between image Id and image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
+     * @param string $DedicatedClusterId Local exclusive cluster ID. this parameter can be obtained through the [DescribeDedicatedClusters](https://intl.cloud.tencent.com/document/product/1346/73758?from_cn_redirect=1) api.
      * @param Metadata $Metadata Custom metadata.
      */
     function __construct()

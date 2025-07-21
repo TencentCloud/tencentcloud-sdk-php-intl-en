@@ -22,18 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getInstanceStatus() Obtain Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found.
- * @method void setInstanceStatus(string $InstanceStatus) Set Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found.
- * @method string getLastActivityId() Obtain The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
+ * @method string getInstanceStatus() Obtain Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>.
+ * @method void setInstanceStatus(string $InstanceStatus) Set Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>.
+ * @method string getLastActivityId() Obtain The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
 Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setLastActivityId(string $LastActivityId) Set The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
+ * @method void setLastActivityId(string $LastActivityId) Set The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
 Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getInstanceStatusMessage() Obtain Instance refresh status information.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setInstanceStatusMessage(string $InstanceStatusMessage) Set Instance refresh status information.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getInstanceStatusMessage() Obtain Describes the instance refresh status.
+ * @method void setInstanceStatusMessage(string $InstanceStatusMessage) Set Describes the instance refresh status.
  */
 class RefreshBatchRelatedInstance extends AbstractModel
 {
@@ -43,31 +39,27 @@ class RefreshBatchRelatedInstance extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found.
+     * @var string Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>.
      */
     public $InstanceStatus;
 
     /**
-     * @var string The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
+     * @var string The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
 Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $LastActivityId;
 
     /**
-     * @var string Instance refresh status information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Describes the instance refresh status.
      */
     public $InstanceStatusMessage;
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param string $InstanceStatus Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found.
-     * @param string $LastActivityId The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
+     * @param string $InstanceStatus Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>.
+     * @param string $LastActivityId The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
 Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $InstanceStatusMessage Instance refresh status information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $InstanceStatusMessage Describes the instance refresh status.
      */
     function __construct()
     {

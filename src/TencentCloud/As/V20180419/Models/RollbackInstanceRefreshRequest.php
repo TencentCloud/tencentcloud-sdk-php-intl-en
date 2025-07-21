@@ -20,19 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RollbackInstanceRefresh request structure.
  *
- * @method string getAutoScalingGroupId() Obtain Scaling group ID.
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID.
+ * @method string getAutoScalingGroupId() Obtain Scaling group ID. you can obtain available scaling group ids in the following ways. 
+<li>Query the scaling group ID by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/group">console</a>.</li>.
+<li>Obtain the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID. you can obtain available scaling group ids in the following ways. 
+<li>Query the scaling group ID by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/group">console</a>.</li>.
+<li>Obtain the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
  * @method RefreshSettings getRefreshSettings() Obtain Refresh settings.
  * @method void setRefreshSettings(RefreshSettings $RefreshSettings) Set Refresh settings.
- * @method string getOriginRefreshActivityId() Obtain Original refresh activity ID.
- * @method void setOriginRefreshActivityId(string $OriginRefreshActivityId) Set Original refresh activity ID.
+ * @method string getOriginRefreshActivityId() Obtain The original refresh activity ID. you can obtain the original refresh activity ID by calling the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and retrieving the OriginRefreshActivityId from the returned information.
+ * @method void setOriginRefreshActivityId(string $OriginRefreshActivityId) Set The original refresh activity ID. you can obtain the original refresh activity ID by calling the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and retrieving the OriginRefreshActivityId from the returned information.
  * @method string getRefreshMode() Obtain Refresh mode, currently, only rolling updates are supported, with the default value being ROLLING_UPDATE_RESET.
  * @method void setRefreshMode(string $RefreshMode) Set Refresh mode, currently, only rolling updates are supported, with the default value being ROLLING_UPDATE_RESET.
  */
 class RollbackInstanceRefreshRequest extends AbstractModel
 {
     /**
-     * @var string Scaling group ID.
+     * @var string Scaling group ID. you can obtain available scaling group ids in the following ways. 
+<li>Query the scaling group ID by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/group">console</a>.</li>.
+<li>Obtain the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
      */
     public $AutoScalingGroupId;
 
@@ -42,7 +48,7 @@ class RollbackInstanceRefreshRequest extends AbstractModel
     public $RefreshSettings;
 
     /**
-     * @var string Original refresh activity ID.
+     * @var string The original refresh activity ID. you can obtain the original refresh activity ID by calling the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and retrieving the OriginRefreshActivityId from the returned information.
      */
     public $OriginRefreshActivityId;
 
@@ -52,9 +58,11 @@ class RollbackInstanceRefreshRequest extends AbstractModel
     public $RefreshMode;
 
     /**
-     * @param string $AutoScalingGroupId Scaling group ID.
+     * @param string $AutoScalingGroupId Scaling group ID. you can obtain available scaling group ids in the following ways. 
+<li>Query the scaling group ID by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/group">console</a>.</li>.
+<li>Obtain the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
      * @param RefreshSettings $RefreshSettings Refresh settings.
-     * @param string $OriginRefreshActivityId Original refresh activity ID.
+     * @param string $OriginRefreshActivityId The original refresh activity ID. you can obtain the original refresh activity ID by calling the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and retrieving the OriginRefreshActivityId from the returned information.
      * @param string $RefreshMode Refresh mode, currently, only rolling updates are supported, with the default value being ROLLING_UPDATE_RESET.
      */
     function __construct()

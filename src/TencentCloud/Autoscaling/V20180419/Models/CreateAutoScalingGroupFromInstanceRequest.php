@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoScalingGroupName() Obtain The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) Set The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
- * @method string getInstanceId() Obtain The instance ID.
- * @method void setInstanceId(string $InstanceId) Set The instance ID.
- * @method integer getMinSize() Obtain The minimum number of instances. Value range: 0-2000.
- * @method void setMinSize(integer $MinSize) Set The minimum number of instances. Value range: 0-2000.
- * @method integer getMaxSize() Obtain The maximum number of instances. Value range: 0-2000.
- * @method void setMaxSize(integer $MaxSize) Set The maximum number of instances. Value range: 0-2000.
- * @method integer getDesiredCapacity() Obtain The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
- * @method void setDesiredCapacity(integer $DesiredCapacity) Set The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
+ * @method string getInstanceId() Obtain Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
+ * @method integer getMinSize() Obtain Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+ * @method void setMinSize(integer $MinSize) Set Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+ * @method integer getMaxSize() Obtain Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+ * @method void setMaxSize(integer $MaxSize) Set Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+ * @method integer getDesiredCapacity() Obtain Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize.
+ * @method void setDesiredCapacity(integer $DesiredCapacity) Set Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize.
  * @method boolean getInheritInstanceTag() Obtain Whether to inherit the instance tag. Default value: False
  * @method void setInheritInstanceTag(boolean $InheritInstanceTag) Set Whether to inherit the instance tag. Default value: False
  */
@@ -41,22 +41,22 @@ class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel
     public $AutoScalingGroupName;
 
     /**
-     * @var string The instance ID.
+     * @var string Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
      */
     public $InstanceId;
 
     /**
-     * @var integer The minimum number of instances. Value range: 0-2000.
+     * @var integer Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
      */
     public $MinSize;
 
     /**
-     * @var integer The maximum number of instances. Value range: 0-2000.
+     * @var integer Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
      */
     public $MaxSize;
 
     /**
-     * @var integer The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
+     * @var integer Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize.
      */
     public $DesiredCapacity;
 
@@ -67,10 +67,10 @@ class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel
 
     /**
      * @param string $AutoScalingGroupName The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
-     * @param string $InstanceId The instance ID.
-     * @param integer $MinSize The minimum number of instances. Value range: 0-2000.
-     * @param integer $MaxSize The maximum number of instances. Value range: 0-2000.
-     * @param integer $DesiredCapacity The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
+     * @param string $InstanceId Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
+     * @param integer $MinSize Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+     * @param integer $MaxSize Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+     * @param integer $DesiredCapacity Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize.
      * @param boolean $InheritInstanceTag Whether to inherit the instance tag. Default value: False
      */
     function __construct()

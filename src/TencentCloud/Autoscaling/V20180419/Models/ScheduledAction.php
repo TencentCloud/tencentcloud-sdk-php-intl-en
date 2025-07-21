@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set ID of the auto scaling group where the scheduled task is located.
  * @method string getStartTime() Obtain Start time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
  * @method void setStartTime(string $StartTime) Set Start time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
- * @method string getRecurrence() Obtain Repeating mode of the scheduled task.
- * @method void setRecurrence(string $Recurrence) Set Repeating mode of the scheduled task.
+ * @method string getRecurrence() Obtain Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
+ * @method void setRecurrence(string $Recurrence) Set Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
  * @method string getEndTime() Obtain End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
  * @method void setEndTime(string $EndTime) Set End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
  * @method integer getMaxSize() Obtain Maximum number of instances set by the scheduled task.
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesiredCapacity(integer $DesiredCapacity) Set Desired number of instances set by the scheduled task.
  * @method integer getMinSize() Obtain Minimum number of instances set by the scheduled task.
  * @method void setMinSize(integer $MinSize) Set Minimum number of instances set by the scheduled task.
- * @method string getCreatedTime() Obtain Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
- * @method void setCreatedTime(string $CreatedTime) Set Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+ * @method string getCreatedTime() Obtain The creation time of the scheduled task. value is in standard `UTC` time, formatted as `YYYY-MM-DDThh:MM:ssZ` according to the `ISO8601` standard.
+ * @method void setCreatedTime(string $CreatedTime) Set The creation time of the scheduled task. value is in standard `UTC` time, formatted as `YYYY-MM-DDThh:MM:ssZ` according to the `ISO8601` standard.
  * @method string getScheduledType() Obtain Scheduled task execution type. Valid values:
 <li>CRONTAB: repeated execution.</li>
 <li>ONCE: single execution.</li>
@@ -70,7 +70,7 @@ class ScheduledAction extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string Repeating mode of the scheduled task.
+     * @var string Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
      */
     public $Recurrence;
 
@@ -95,7 +95,7 @@ class ScheduledAction extends AbstractModel
     public $MinSize;
 
     /**
-     * @var string Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+     * @var string The creation time of the scheduled task. value is in standard `UTC` time, formatted as `YYYY-MM-DDThh:MM:ssZ` according to the `ISO8601` standard.
      */
     public $CreatedTime;
 
@@ -111,12 +111,12 @@ class ScheduledAction extends AbstractModel
      * @param string $ScheduledActionName Scheduled task name.
      * @param string $AutoScalingGroupId ID of the auto scaling group where the scheduled task is located.
      * @param string $StartTime Start time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
-     * @param string $Recurrence Repeating mode of the scheduled task.
+     * @param string $Recurrence Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
      * @param string $EndTime End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
      * @param integer $MaxSize Maximum number of instances set by the scheduled task.
      * @param integer $DesiredCapacity Desired number of instances set by the scheduled task.
      * @param integer $MinSize Minimum number of instances set by the scheduled task.
-     * @param string $CreatedTime Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+     * @param string $CreatedTime The creation time of the scheduled task. value is in standard `UTC` time, formatted as `YYYY-MM-DDThh:MM:ssZ` according to the `ISO8601` standard.
      * @param string $ScheduledType Scheduled task execution type. Valid values:
 <li>CRONTAB: repeated execution.</li>
 <li>ONCE: single execution.</li>

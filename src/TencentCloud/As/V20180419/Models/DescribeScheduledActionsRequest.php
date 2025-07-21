@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScheduledActions request structure.
  *
- * @method array getScheduledActionIds() Obtain Queries by one or more scheduled task IDs in the format of asst-am691zxo. The maximum number of instances per request is 100. This parameter does not support specifying both ScheduledActionIds` and `Filters` at the same time.
- * @method void setScheduledActionIds(array $ScheduledActionIds) Set Queries by one or more scheduled task IDs in the format of asst-am691zxo. The maximum number of instances per request is 100. This parameter does not support specifying both ScheduledActionIds` and `Filters` at the same time.
- * @method array getFilters() Obtain Filter.
-<li> scheduled-action-id - String - Required: No - (Filter) Filter by scheduled task ID.</li>
-<li> scheduled-action-name - String - Required: No - (Filter) Filter by scheduled task name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
- * @method void setFilters(array $Filters) Set Filter.
-<li> scheduled-action-id - String - Required: No - (Filter) Filter by scheduled task ID.</li>
-<li> scheduled-action-name - String - Required: No - (Filter) Filter by scheduled task name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
+ * @method array getScheduledActionIds() Obtain Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
+ * @method void setScheduledActionIds(array $ScheduledActionIds) Set Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
+ * @method array getFilters() Obtain Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
+<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
+<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>.
+ * @method void setFilters(array $Filters) Set Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
+<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
+<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>.
  * @method integer getOffset() Obtain Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
@@ -38,15 +38,15 @@ use TencentCloud\Common\AbstractModel;
 class DescribeScheduledActionsRequest extends AbstractModel
 {
     /**
-     * @var array Queries by one or more scheduled task IDs in the format of asst-am691zxo. The maximum number of instances per request is 100. This parameter does not support specifying both ScheduledActionIds` and `Filters` at the same time.
+     * @var array Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
      */
     public $ScheduledActionIds;
 
     /**
-     * @var array Filter.
-<li> scheduled-action-id - String - Required: No - (Filter) Filter by scheduled task ID.</li>
-<li> scheduled-action-name - String - Required: No - (Filter) Filter by scheduled task name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
+     * @var array Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
+<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
+<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>.
      */
     public $Filters;
 
@@ -61,11 +61,11 @@ class DescribeScheduledActionsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $ScheduledActionIds Queries by one or more scheduled task IDs in the format of asst-am691zxo. The maximum number of instances per request is 100. This parameter does not support specifying both ScheduledActionIds` and `Filters` at the same time.
-     * @param array $Filters Filter.
-<li> scheduled-action-id - String - Required: No - (Filter) Filter by scheduled task ID.</li>
-<li> scheduled-action-name - String - Required: No - (Filter) Filter by scheduled task name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
+     * @param array $ScheduledActionIds Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
+     * @param array $Filters Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
+<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
+<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>.
      * @param integer $Offset Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
      */

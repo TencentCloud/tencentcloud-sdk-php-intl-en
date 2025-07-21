@@ -18,34 +18,34 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information on eligible scaling activities.
+ * Information of auto scaling activity.
  *
  * @method string getAutoScalingGroupId() Obtain Auto scaling group ID.
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
  * @method string getActivityId() Obtain Scaling activity ID.
  * @method void setActivityId(string $ActivityId) Set Scaling activity ID.
  * @method string getActivityType() Obtain Scaling activity type. Valid values:
-<li>SCALE_OUT: Scale out an instance.</li>
-<li>SCALE_IN: Scale in an instance.</li>
-<li>ATTACH_INSTANCES: Add an instance.</li>
-<li>REMOVE_INSTANCES: Terminate an instance.</li>
-<li>DETACH_INSTANCES: Remove an instance.</li>
-<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-<li>START_INSTANCES: Start an instance.</li>
-<li>STOP_INSTANCES: Stop an instance.</li>
-<li>INVOKE_COMMAND: Execute a command.</li>
+<li>SCALE_OUT: Scale out instance(s).</li>
+<li>SCALE_IN: Scale in instance(s).</li>
+<li>ATTACH_INSTANCES: Add instance(s).</li>
+<li>REMOVE_INSTANCES: Terminate instance(s).</li>
+<li>DETACH_INSTANCES: Remove instance(s).</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+<li>START_INSTANCES: Start instance(s).</li>
+<li>STOP_INSTANCES: Stop instance(s).</li>
+<li>INVOKE_COMMAND: Execute a command in instance(s).</li>
  * @method void setActivityType(string $ActivityType) Set Scaling activity type. Valid values:
-<li>SCALE_OUT: Scale out an instance.</li>
-<li>SCALE_IN: Scale in an instance.</li>
-<li>ATTACH_INSTANCES: Add an instance.</li>
-<li>REMOVE_INSTANCES: Terminate an instance.</li>
-<li>DETACH_INSTANCES: Remove an instance.</li>
-<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-<li>START_INSTANCES: Start an instance.</li>
-<li>STOP_INSTANCES: Stop an instance.</li>
-<li>INVOKE_COMMAND: Execute a command.</li>
+<li>SCALE_OUT: Scale out instance(s).</li>
+<li>SCALE_IN: Scale in instance(s).</li>
+<li>ATTACH_INSTANCES: Add instance(s).</li>
+<li>REMOVE_INSTANCES: Terminate instance(s).</li>
+<li>DETACH_INSTANCES: Remove instance(s).</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+<li>START_INSTANCES: Start instance(s).</li>
+<li>STOP_INSTANCES: Stop instance(s).</li>
+<li>INVOKE_COMMAND: Execute a command in instance(s).</li>
  * @method string getStatusCode() Obtain Scaling activity status. Valid values:
 <li>INIT: initializing.</li>
 <li>RUNNING: running.</li>
@@ -66,24 +66,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCause(string $Cause) Set Cause of the scaling activity.
  * @method string getDescription() Obtain Description of the scaling activity.
  * @method void setDescription(string $Description) Set Description of the scaling activity.
- * @method string getStartTime() Obtain Start time of the scaling activity.
- * @method void setStartTime(string $StartTime) Set Start time of the scaling activity.
- * @method string getEndTime() Obtain End time of the scaling activity.
- * @method void setEndTime(string $EndTime) Set End time of the scaling activity.
- * @method string getCreatedTime() Obtain Creation time of the scaling activity.
- * @method void setCreatedTime(string $CreatedTime) Set Creation time of the scaling activity.
+ * @method string getStartTime() Obtain Start time of the auto scaling activity in UTC standard time.
+ * @method void setStartTime(string $StartTime) Set Start time of the auto scaling activity in UTC standard time.
+ * @method string getEndTime() Obtain End time of the scaling activity in UTC standard time.
+ * @method void setEndTime(string $EndTime) Set End time of the scaling activity in UTC standard time.
+ * @method string getCreatedTime() Obtain Create time of the scaling activity in UTC standard time.
+ * @method void setCreatedTime(string $CreatedTime) Set Create time of the scaling activity in UTC standard time.
  * @method array getActivityRelatedInstanceSet() Obtain This parameter has been deprecated.
  * @method void setActivityRelatedInstanceSet(array $ActivityRelatedInstanceSet) Set This parameter has been deprecated.
  * @method string getStatusMessageSimplified() Obtain Brief description of the scaling activity status.
  * @method void setStatusMessageSimplified(string $StatusMessageSimplified) Set Brief description of the scaling activity status.
  * @method array getLifecycleActionResultSet() Obtain Result of the lifecycle hook action in the scaling activity
  * @method void setLifecycleActionResultSet(array $LifecycleActionResultSet) Set Result of the lifecycle hook action in the scaling activity
- * @method array getDetailedStatusMessageSet() Obtain Detailed description of scaling activity status
- * @method void setDetailedStatusMessageSet(array $DetailedStatusMessageSet) Set Detailed description of scaling activity status
+ * @method array getDetailedStatusMessageSet() Obtain Detailed description of the scaling activity status
+ * @method void setDetailedStatusMessageSet(array $DetailedStatusMessageSet) Set Detailed description of the scaling activity status
  * @method array getInvocationResultSet() Obtain Result of the command execution
  * @method void setInvocationResultSet(array $InvocationResultSet) Set Result of the command execution
- * @method array getRelatedInstanceSet() Obtain Information set of the instances related to the scaling activity.
- * @method void setRelatedInstanceSet(array $RelatedInstanceSet) Set Information set of the instances related to the scaling activity.
+ * @method array getRelatedInstanceSet() Obtain Related instance information set of the scaling activity.
+ * @method void setRelatedInstanceSet(array $RelatedInstanceSet) Set Related instance information set of the scaling activity.
  */
 class Activity extends AbstractModel
 {
@@ -99,16 +99,16 @@ class Activity extends AbstractModel
 
     /**
      * @var string Scaling activity type. Valid values:
-<li>SCALE_OUT: Scale out an instance.</li>
-<li>SCALE_IN: Scale in an instance.</li>
-<li>ATTACH_INSTANCES: Add an instance.</li>
-<li>REMOVE_INSTANCES: Terminate an instance.</li>
-<li>DETACH_INSTANCES: Remove an instance.</li>
-<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-<li>START_INSTANCES: Start an instance.</li>
-<li>STOP_INSTANCES: Stop an instance.</li>
-<li>INVOKE_COMMAND: Execute a command.</li>
+<li>SCALE_OUT: Scale out instance(s).</li>
+<li>SCALE_IN: Scale in instance(s).</li>
+<li>ATTACH_INSTANCES: Add instance(s).</li>
+<li>REMOVE_INSTANCES: Terminate instance(s).</li>
+<li>DETACH_INSTANCES: Remove instance(s).</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+<li>START_INSTANCES: Start instance(s).</li>
+<li>STOP_INSTANCES: Stop instance(s).</li>
+<li>INVOKE_COMMAND: Execute a command in instance(s).</li>
      */
     public $ActivityType;
 
@@ -139,17 +139,17 @@ class Activity extends AbstractModel
     public $Description;
 
     /**
-     * @var string Start time of the scaling activity.
+     * @var string Start time of the auto scaling activity in UTC standard time.
      */
     public $StartTime;
 
     /**
-     * @var string End time of the scaling activity.
+     * @var string End time of the scaling activity in UTC standard time.
      */
     public $EndTime;
 
     /**
-     * @var string Creation time of the scaling activity.
+     * @var string Create time of the scaling activity in UTC standard time.
      */
     public $CreatedTime;
 
@@ -170,7 +170,7 @@ class Activity extends AbstractModel
     public $LifecycleActionResultSet;
 
     /**
-     * @var array Detailed description of scaling activity status
+     * @var array Detailed description of the scaling activity status
      */
     public $DetailedStatusMessageSet;
 
@@ -180,7 +180,7 @@ class Activity extends AbstractModel
     public $InvocationResultSet;
 
     /**
-     * @var array Information set of the instances related to the scaling activity.
+     * @var array Related instance information set of the scaling activity.
      */
     public $RelatedInstanceSet;
 
@@ -188,16 +188,16 @@ class Activity extends AbstractModel
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param string $ActivityId Scaling activity ID.
      * @param string $ActivityType Scaling activity type. Valid values:
-<li>SCALE_OUT: Scale out an instance.</li>
-<li>SCALE_IN: Scale in an instance.</li>
-<li>ATTACH_INSTANCES: Add an instance.</li>
-<li>REMOVE_INSTANCES: Terminate an instance.</li>
-<li>DETACH_INSTANCES: Remove an instance.</li>
-<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-<li>START_INSTANCES: Start an instance.</li>
-<li>STOP_INSTANCES: Stop an instance.</li>
-<li>INVOKE_COMMAND: Execute a command.</li>
+<li>SCALE_OUT: Scale out instance(s).</li>
+<li>SCALE_IN: Scale in instance(s).</li>
+<li>ATTACH_INSTANCES: Add instance(s).</li>
+<li>REMOVE_INSTANCES: Terminate instance(s).</li>
+<li>DETACH_INSTANCES: Remove instance(s).</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+<li>START_INSTANCES: Start instance(s).</li>
+<li>STOP_INSTANCES: Stop instance(s).</li>
+<li>INVOKE_COMMAND: Execute a command in instance(s).</li>
      * @param string $StatusCode Scaling activity status. Valid values:
 <li>INIT: initializing.</li>
 <li>RUNNING: running.</li>
@@ -208,15 +208,15 @@ class Activity extends AbstractModel
      * @param string $StatusMessage Description of the scaling activity status.
      * @param string $Cause Cause of the scaling activity.
      * @param string $Description Description of the scaling activity.
-     * @param string $StartTime Start time of the scaling activity.
-     * @param string $EndTime End time of the scaling activity.
-     * @param string $CreatedTime Creation time of the scaling activity.
+     * @param string $StartTime Start time of the auto scaling activity in UTC standard time.
+     * @param string $EndTime End time of the scaling activity in UTC standard time.
+     * @param string $CreatedTime Create time of the scaling activity in UTC standard time.
      * @param array $ActivityRelatedInstanceSet This parameter has been deprecated.
      * @param string $StatusMessageSimplified Brief description of the scaling activity status.
      * @param array $LifecycleActionResultSet Result of the lifecycle hook action in the scaling activity
-     * @param array $DetailedStatusMessageSet Detailed description of scaling activity status
+     * @param array $DetailedStatusMessageSet Detailed description of the scaling activity status
      * @param array $InvocationResultSet Result of the command execution
-     * @param array $RelatedInstanceSet Information set of the instances related to the scaling activity.
+     * @param array $RelatedInstanceSet Related instance information set of the scaling activity.
      */
     function __construct()
     {

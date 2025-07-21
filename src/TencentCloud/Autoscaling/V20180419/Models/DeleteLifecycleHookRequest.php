@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLifecycleHook request structure.
  *
- * @method string getLifecycleHookId() Obtain Lifecycle hook ID
- * @method void setLifecycleHookId(string $LifecycleHookId) Set Lifecycle hook ID
+ * @method string getLifecycleHookId() Obtain Lifecycle hook ID. calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information obtains the lifecycle hook ID.
+ * @method void setLifecycleHookId(string $LifecycleHookId) Set Lifecycle hook ID. calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information obtains the lifecycle hook ID.
  */
 class DeleteLifecycleHookRequest extends AbstractModel
 {
     /**
-     * @var string Lifecycle hook ID
+     * @var string Lifecycle hook ID. calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information obtains the lifecycle hook ID.
      */
     public $LifecycleHookId;
 
     /**
-     * @param string $LifecycleHookId Lifecycle hook ID
+     * @param string $LifecycleHookId Lifecycle hook ID. calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information obtains the lifecycle hook ID.
      */
     function __construct()
     {

@@ -20,32 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAutoScalingGroup request structure.
  *
- * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
+ * @method string getAutoScalingGroupId() Obtain Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
  * @method string getAutoScalingGroupName() Obtain Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) Set Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
- * @method integer getDefaultCooldown() Obtain Default cooldown period in seconds. Default value: 300
- * @method void setDefaultCooldown(integer $DefaultCooldown) Set Default cooldown period in seconds. Default value: 300
- * @method integer getDesiredCapacity() Obtain Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
- * @method void setDesiredCapacity(integer $DesiredCapacity) Set Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
- * @method string getLaunchConfigurationId() Obtain Launch configuration ID
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID
- * @method integer getMaxSize() Obtain Maximum number of instances. Value range: 0-2,000.
- * @method void setMaxSize(integer $MaxSize) Set Maximum number of instances. Value range: 0-2,000.
- * @method integer getMinSize() Obtain Minimum number of instances. Value range: 0-2,000.
- * @method void setMinSize(integer $MinSize) Set Minimum number of instances. Value range: 0-2,000.
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method array getSubnetIds() Obtain List of subnet IDs
- * @method void setSubnetIds(array $SubnetIds) Set List of subnet IDs
+ * @method integer getDefaultCooldown() Obtain Default cooldown period in seconds. value ranges from 0 to 3600. default value: 300.
+ * @method void setDefaultCooldown(integer $DefaultCooldown) Set Default cooldown period in seconds. value ranges from 0 to 3600. default value: 300.
+ * @method integer getDesiredCapacity() Obtain Expected number of instances, value ranges from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
+ * @method void setDesiredCapacity(integer $DesiredCapacity) Set Expected number of instances, value ranges from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
+ * @method string getLaunchConfigurationId() Obtain Launch configuration ID. obtain available launch configuration ids in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Specifies the launch configuration ID obtained by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.</li>.
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID. obtain available launch configuration ids in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Specifies the launch configuration ID obtained by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.</li>.
+ * @method integer getMaxSize() Obtain Maximum number of instances, value range from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
+ * @method void setMaxSize(integer $MaxSize) Set Maximum number of instances, value range from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
+ * @method integer getMinSize() Obtain Minimum number of instances. value range [0,2000]. to meet maximum value equal to or greater than expected value, expected value equal to or greater than minimum value.
+ * @method void setMinSize(integer $MinSize) Set Minimum number of instances. value range [0,2000]. to meet maximum value equal to or greater than expected value, expected value equal to or greater than minimum value.
+ * @method integer getProjectId() Obtain Project ID. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `ProjectId` field in the return value. default value is 0, indicates usage of the default project.
+ * @method void setProjectId(integer $ProjectId) Set Project ID. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `ProjectId` field in the return value. default value is 0, indicates usage of the default project.
+ * @method array getSubnetIds() Obtain subnet ID list. you can obtain a valid vpc subnet ID by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet). you can also call the API [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) and retrieve the valid vpc subnet ID from the SubnetId field in the API response.
+ * @method void setSubnetIds(array $SubnetIds) Set subnet ID list. you can obtain a valid vpc subnet ID by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet). you can also call the API [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) and retrieve the valid vpc subnet ID from the SubnetId field in the API response.
  * @method array getTerminationPolicies() Obtain Termination policy, whose maximum length is currently 1. Valid values include OLDEST_INSTANCE and NEWEST_INSTANCE.
 <li>OLDEST_INSTANCE: Terminate the oldest instance in the scaling group first.</li>
 <li>NEWEST_INSTANCE: Terminate the newest instance in the scaling group first.</li>
  * @method void setTerminationPolicies(array $TerminationPolicies) Set Termination policy, whose maximum length is currently 1. Valid values include OLDEST_INSTANCE and NEWEST_INSTANCE.
 <li>OLDEST_INSTANCE: Terminate the oldest instance in the scaling group first.</li>
 <li>NEWEST_INSTANCE: Terminate the newest instance in the scaling group first.</li>
- * @method string getVpcId() Obtain VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
- * @method void setVpcId(string $VpcId) Set VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
+ * @method string getVpcId() Obtain vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc) or obtained from the VpcId field in the api response by calling the DescribeVpc api (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1).
+ * @method void setVpcId(string $VpcId) Set vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc) or obtained from the VpcId field in the api response by calling the DescribeVpc api (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1).
  * @method array getZones() Obtain List of availability zones
  * @method void setZones(array $Zones) Set List of availability zones
  * @method string getRetryPolicy() Obtain Retry policy, whose valid values include IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY, with the default value being IMMEDIATE_RETRY. A partially successful scaling activity is considered a failed activity.
@@ -70,8 +78,8 @@ Common reasons for unavailable AZs or subnets include the CVM InstanceType in th
 If there is no AZ or subnet in Zones/SubnetIds, a verification error will be reported regardless of the values of ZonesCheckPolicy.
  * @method ServiceSettings getServiceSettings() Obtain Service settings such as unhealthy instance replacement.
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) Set Service settings such as unhealthy instance replacement.
- * @method integer getIpv6AddressCount() Obtain The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
- * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
+ * @method integer getIpv6AddressCount() Obtain The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+ * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
  * @method string getMultiZoneSubnetPolicy() Obtain Multi-AZ/multi-subnet policy, whose valid values include PRIORITY and EQUALITY, with the default value being PRIORITY.
 <li>PRIORITY: Instances are attempted to be created taking the order of the AZ/subnet list as the priority. If the highest-priority AZ/subnet can create instances successfully, instances can always be created in that AZ/subnet.</li>
 <li>EQUALITY: The instances added through scale-out will be distributed across multiple AZs/subnets to ensure a relatively balanced number of instances in each AZ/subnet after scaling out.</li>
@@ -118,7 +126,9 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
 class ModifyAutoScalingGroupRequest extends AbstractModel
 {
     /**
-     * @var string Auto scaling group ID
+     * @var string Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
      */
     public $AutoScalingGroupId;
 
@@ -128,37 +138,39 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
     public $AutoScalingGroupName;
 
     /**
-     * @var integer Default cooldown period in seconds. Default value: 300
+     * @var integer Default cooldown period in seconds. value ranges from 0 to 3600. default value: 300.
      */
     public $DefaultCooldown;
 
     /**
-     * @var integer Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
+     * @var integer Expected number of instances, value ranges from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
      */
     public $DesiredCapacity;
 
     /**
-     * @var string Launch configuration ID
+     * @var string Launch configuration ID. obtain available launch configuration ids in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Specifies the launch configuration ID obtained by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.</li>.
      */
     public $LaunchConfigurationId;
 
     /**
-     * @var integer Maximum number of instances. Value range: 0-2,000.
+     * @var integer Maximum number of instances, value range from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
      */
     public $MaxSize;
 
     /**
-     * @var integer Minimum number of instances. Value range: 0-2,000.
+     * @var integer Minimum number of instances. value range [0,2000]. to meet maximum value equal to or greater than expected value, expected value equal to or greater than minimum value.
      */
     public $MinSize;
 
     /**
-     * @var integer Project ID
+     * @var integer Project ID. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `ProjectId` field in the return value. default value is 0, indicates usage of the default project.
      */
     public $ProjectId;
 
     /**
-     * @var array List of subnet IDs
+     * @var array subnet ID list. you can obtain a valid vpc subnet ID by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet). you can also call the API [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) and retrieve the valid vpc subnet ID from the SubnetId field in the API response.
      */
     public $SubnetIds;
 
@@ -170,7 +182,7 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
     public $TerminationPolicies;
 
     /**
-     * @var string VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
+     * @var string vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc) or obtained from the VpcId field in the api response by calling the DescribeVpc api (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1).
      */
     public $VpcId;
 
@@ -203,7 +215,7 @@ If there is no AZ or subnet in Zones/SubnetIds, a verification error will be rep
     public $ServiceSettings;
 
     /**
-     * @var integer The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
+     * @var integer The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
      */
     public $Ipv6AddressCount;
 
@@ -257,19 +269,23 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
     public $InstanceNameIndexSettings;
 
     /**
-     * @param string $AutoScalingGroupId Auto scaling group ID
+     * @param string $AutoScalingGroupId Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
      * @param string $AutoScalingGroupName Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
-     * @param integer $DefaultCooldown Default cooldown period in seconds. Default value: 300
-     * @param integer $DesiredCapacity Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
-     * @param string $LaunchConfigurationId Launch configuration ID
-     * @param integer $MaxSize Maximum number of instances. Value range: 0-2,000.
-     * @param integer $MinSize Minimum number of instances. Value range: 0-2,000.
-     * @param integer $ProjectId Project ID
-     * @param array $SubnetIds List of subnet IDs
+     * @param integer $DefaultCooldown Default cooldown period in seconds. value ranges from 0 to 3600. default value: 300.
+     * @param integer $DesiredCapacity Expected number of instances, value ranges from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
+     * @param string $LaunchConfigurationId Launch configuration ID. obtain available launch configuration ids in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Specifies the launch configuration ID obtained by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.</li>.
+     * @param integer $MaxSize Maximum number of instances, value range from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
+     * @param integer $MinSize Minimum number of instances. value range [0,2000]. to meet maximum value equal to or greater than expected value, expected value equal to or greater than minimum value.
+     * @param integer $ProjectId Project ID. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `ProjectId` field in the return value. default value is 0, indicates usage of the default project.
+     * @param array $SubnetIds subnet ID list. you can obtain a valid vpc subnet ID by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet). you can also call the API [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) and retrieve the valid vpc subnet ID from the SubnetId field in the API response.
      * @param array $TerminationPolicies Termination policy, whose maximum length is currently 1. Valid values include OLDEST_INSTANCE and NEWEST_INSTANCE.
 <li>OLDEST_INSTANCE: Terminate the oldest instance in the scaling group first.</li>
 <li>NEWEST_INSTANCE: Terminate the newest instance in the scaling group first.</li>
-     * @param string $VpcId VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
+     * @param string $VpcId vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc) or obtained from the VpcId field in the api response by calling the DescribeVpc api (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1).
      * @param array $Zones List of availability zones
      * @param string $RetryPolicy Retry policy, whose valid values include IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY, with the default value being IMMEDIATE_RETRY. A partially successful scaling activity is considered a failed activity.
 <li>IMMEDIATE_RETRY: Immediately retry, and quickly retry in a short period. There will be no retry anymore after a certain number of consecutive failures (5).</li>
@@ -282,7 +298,7 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
 Common reasons for unavailable AZs or subnets include the CVM InstanceType in the AZ being sold out, the CBS cloud disk in the AZ being sold out, insufficient quota in the AZ, and insufficient IP addresses in the subnet.
 If there is no AZ or subnet in Zones/SubnetIds, a verification error will be reported regardless of the values of ZonesCheckPolicy.
      * @param ServiceSettings $ServiceSettings Service settings such as unhealthy instance replacement.
-     * @param integer $Ipv6AddressCount The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
+     * @param integer $Ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
      * @param string $MultiZoneSubnetPolicy Multi-AZ/multi-subnet policy, whose valid values include PRIORITY and EQUALITY, with the default value being PRIORITY.
 <li>PRIORITY: Instances are attempted to be created taking the order of the AZ/subnet list as the priority. If the highest-priority AZ/subnet can create instances successfully, instances can always be created in that AZ/subnet.</li>
 <li>EQUALITY: The instances added through scale-out will be distributed across multiple AZs/subnets to ensure a relatively balanced number of instances in each AZ/subnet after scaling out.</li>

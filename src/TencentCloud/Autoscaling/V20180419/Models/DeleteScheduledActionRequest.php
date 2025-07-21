@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteScheduledAction request structure.
  *
- * @method string getScheduledActionId() Obtain ID of the scheduled task to be deleted.
- * @method void setScheduledActionId(string $ScheduledActionId) Set ID of the scheduled task to be deleted.
+ * @method string getScheduledActionId() Obtain Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information.
+ * @method void setScheduledActionId(string $ScheduledActionId) Set Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information.
  */
 class DeleteScheduledActionRequest extends AbstractModel
 {
     /**
-     * @var string ID of the scheduled task to be deleted.
+     * @var string Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information.
      */
     public $ScheduledActionId;
 
     /**
-     * @param string $ScheduledActionId ID of the scheduled task to be deleted.
+     * @param string $ScheduledActionId Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information.
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNotificationConfiguration request structure.
  *
- * @method string getAutoScalingGroupId() Obtain Auto scaling group ID.
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
+ * @method string getAutoScalingGroupId() Obtain Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
  * @method array getNotificationTypes() Obtain Notification type, i.e., the set of types of notifications to be subscribed to. Value range:
 <li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>
 <li>SCALE_OUT_FAILED: scale-out failed</li>
@@ -36,33 +36,33 @@ use TencentCloud\Common\AbstractModel;
 <li>SCALE_IN_FAILED: scale-in failed</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
- * @method array getNotificationUserGroupIds() Obtain Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
- * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
- * @method string getTargetType() Obtain Notification receiver type. Valid values:
-<br><li>USER_GROUP:User group
-<br><li>CMQ_QUEUE:CMQ queue
-<br><li>CMQ_TOPIC:CMQ topic
-<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+ * @method array getNotificationUserGroupIds() Obtain Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP.
+ * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP.
+ * @method string getTargetType() Obtain Notification receiver type. values as follows:.
+<Li>USER_GROUP: user group</li>.
+<Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+<Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+<li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+<li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
 
 Default value: `USER_GROUP`.
- * @method void setTargetType(string $TargetType) Set Notification receiver type. Valid values:
-<br><li>USER_GROUP:User group
-<br><li>CMQ_QUEUE:CMQ queue
-<br><li>CMQ_TOPIC:CMQ topic
-<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+ * @method void setTargetType(string $TargetType) Set Notification receiver type. values as follows:.
+<Li>USER_GROUP: user group</li>.
+<Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+<Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+<li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+<li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
 
 Default value: `USER_GROUP`.
- * @method string getQueueName() Obtain CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
- * @method void setQueueName(string $QueueName) Set CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
- * @method string getTopicName() Obtain CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
- * @method void setTopicName(string $TopicName) Set CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+ * @method string getQueueName() Obtain TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`.
+ * @method void setQueueName(string $QueueName) Set TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`.
+ * @method string getTopicName() Obtain TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`.
+ * @method void setTopicName(string $TopicName) Set TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`.
  */
 class CreateNotificationConfigurationRequest extends AbstractModel
 {
     /**
-     * @var string Auto scaling group ID.
+     * @var string Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
      */
     public $AutoScalingGroupId;
 
@@ -78,34 +78,34 @@ class CreateNotificationConfigurationRequest extends AbstractModel
     public $NotificationTypes;
 
     /**
-     * @var array Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+     * @var array Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP.
      */
     public $NotificationUserGroupIds;
 
     /**
-     * @var string Notification receiver type. Valid values:
-<br><li>USER_GROUP:User group
-<br><li>CMQ_QUEUE:CMQ queue
-<br><li>CMQ_TOPIC:CMQ topic
-<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+     * @var string Notification receiver type. values as follows:.
+<Li>USER_GROUP: user group</li>.
+<Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+<Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+<li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+<li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
 
 Default value: `USER_GROUP`.
      */
     public $TargetType;
 
     /**
-     * @var string CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+     * @var string TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`.
      */
     public $QueueName;
 
     /**
-     * @var string CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+     * @var string TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`.
      */
     public $TopicName;
 
     /**
-     * @param string $AutoScalingGroupId Auto scaling group ID.
+     * @param string $AutoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
      * @param array $NotificationTypes Notification type, i.e., the set of types of notifications to be subscribed to. Value range:
 <li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>
 <li>SCALE_OUT_FAILED: scale-out failed</li>
@@ -113,17 +113,17 @@ Default value: `USER_GROUP`.
 <li>SCALE_IN_FAILED: scale-in failed</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
-     * @param array $NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
-     * @param string $TargetType Notification receiver type. Valid values:
-<br><li>USER_GROUP:User group
-<br><li>CMQ_QUEUE:CMQ queue
-<br><li>CMQ_TOPIC:CMQ topic
-<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+     * @param array $NotificationUserGroupIds Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP.
+     * @param string $TargetType Notification receiver type. values as follows:.
+<Li>USER_GROUP: user group</li>.
+<Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+<Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+<li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+<li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
 
 Default value: `USER_GROUP`.
-     * @param string $QueueName CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
-     * @param string $TopicName CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+     * @param string $QueueName TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`.
+     * @param string $TopicName TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`.
      */
     function __construct()
     {

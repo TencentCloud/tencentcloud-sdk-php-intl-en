@@ -44,16 +44,24 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUserData(string $UserData) Set Custom data.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreatedTime() Obtain Creation time of the launch configuration.
- * @method void setCreatedTime(string $CreatedTime) Set Creation time of the launch configuration.
+ * @method string getCreatedTime() Obtain Specifies the startup configuration creation time. uses UTC standard time.
+ * @method void setCreatedTime(string $CreatedTime) Set Specifies the startup configuration creation time. uses UTC standard time.
  * @method EnhancedService getEnhancedService() Obtain Conditions of enhancement services for the instance and their settings.
  * @method void setEnhancedService(EnhancedService $EnhancedService) Set Conditions of enhancement services for the instance and their settings.
  * @method string getImageId() Obtain Image ID.
  * @method void setImageId(string $ImageId) Set Image ID.
  * @method string getLaunchConfigurationStatus() Obtain Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
  * @method void setLaunchConfigurationStatus(string $LaunchConfigurationStatus) Set Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
- * @method string getInstanceChargeType() Obtain Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
+ * @method string getInstanceChargeType() Obtain Instance billing type. valid values:.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+<Li>SPOTPAID: spot payment</li>.
+<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+<Li>CDCPAID: dedicated cluster payment</li>.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type. valid values:.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+<Li>SPOTPAID: spot payment</li>.
+<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+<Li>CDCPAID: dedicated cluster payment</li>.
  * @method InstanceMarketOptionsRequest getInstanceMarketOptions() Obtain Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) Set Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
@@ -62,16 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setInstanceTypes(array $InstanceTypes) Set List of instance models.
  * @method array getInstanceTags() Obtain List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
  * @method void setInstanceTags(array $InstanceTags) Set List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
- * @method array getTags() Obtain Tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
+ * @method void setTags(array $Tags) Set Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
  * @method integer getVersionNumber() Obtain Version
  * @method void setVersionNumber(integer $VersionNumber) Set Version
- * @method string getUpdatedTime() Obtain Update time
- * @method void setUpdatedTime(string $UpdatedTime) Set Update time
- * @method string getCamRoleName() Obtain CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
- * @method void setCamRoleName(string $CamRoleName) Set CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+ * @method string getUpdatedTime() Obtain Last update time is in standard UTC time.
+ * @method void setUpdatedTime(string $UpdatedTime) Set Last update time is in standard UTC time.
+ * @method string getCamRoleName() Obtain Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+ * @method void setCamRoleName(string $CamRoleName) Set Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
  * @method string getLastOperationInstanceTypesCheckPolicy() Obtain Value of InstanceTypesCheckPolicy upon the last operation.
  * @method void setLastOperationInstanceTypesCheckPolicy(string $LastOperationInstanceTypesCheckPolicy) Set Value of InstanceTypesCheckPolicy upon the last operation.
  * @method HostNameSettings getHostNameSettings() Obtain CVM hostname settings.
@@ -91,9 +97,7 @@ Note: This field is default to empty
  * @method array getDisasterRecoverGroupIds() Obtain Placement group ID, supporting specification of only one.
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group ID, supporting specification of only one.
  * @method string getImageFamily() Obtain Image family name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setImageFamily(string $ImageFamily) Set Image family name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDedicatedClusterId() Obtain CDC ID.
  * @method void setDedicatedClusterId(string $DedicatedClusterId) Set CDC ID.
  */
@@ -156,7 +160,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UserData;
 
     /**
-     * @var string Creation time of the launch configuration.
+     * @var string Specifies the startup configuration creation time. uses UTC standard time.
      */
     public $CreatedTime;
 
@@ -176,7 +180,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $LaunchConfigurationStatus;
 
     /**
-     * @var string Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
+     * @var string Instance billing type. valid values:.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+<Li>SPOTPAID: spot payment</li>.
+<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+<Li>CDCPAID: dedicated cluster payment</li>.
      */
     public $InstanceChargeType;
 
@@ -197,8 +205,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $InstanceTags;
 
     /**
-     * @var array Tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
      */
     public $Tags;
 
@@ -208,12 +215,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VersionNumber;
 
     /**
-     * @var string Update time
+     * @var string Last update time is in standard UTC time.
      */
     public $UpdatedTime;
 
     /**
-     * @var string CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+     * @var string Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
      */
     public $CamRoleName;
 
@@ -260,7 +267,6 @@ Note: This field is default to empty
 
     /**
      * @var string Image family name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ImageFamily;
 
@@ -282,20 +288,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $AutoScalingGroupAbstractSet Auto scaling group associated with the launch configuration.
      * @param string $UserData Custom data.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreatedTime Creation time of the launch configuration.
+     * @param string $CreatedTime Specifies the startup configuration creation time. uses UTC standard time.
      * @param EnhancedService $EnhancedService Conditions of enhancement services for the instance and their settings.
      * @param string $ImageId Image ID.
      * @param string $LaunchConfigurationStatus Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
-     * @param string $InstanceChargeType Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
+     * @param string $InstanceChargeType Instance billing type. valid values:.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+<Li>SPOTPAID: spot payment</li>.
+<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+<Li>CDCPAID: dedicated cluster payment</li>.
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $InstanceTypes List of instance models.
      * @param array $InstanceTags List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
-     * @param array $Tags Tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
      * @param integer $VersionNumber Version
-     * @param string $UpdatedTime Update time
-     * @param string $CamRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+     * @param string $UpdatedTime Last update time is in standard UTC time.
+     * @param string $CamRoleName Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
      * @param string $LastOperationInstanceTypesCheckPolicy Value of InstanceTypesCheckPolicy upon the last operation.
      * @param HostNameSettings $HostNameSettings CVM hostname settings.
      * @param InstanceNameSettings $InstanceNameSettings Settings of CVM instance names
@@ -306,7 +315,6 @@ Note: This field is default to empty
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6 public network bandwidth configuration.
      * @param array $DisasterRecoverGroupIds Placement group ID, supporting specification of only one.
      * @param string $ImageFamily Image family name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DedicatedClusterId CDC ID.
      */
     function __construct()

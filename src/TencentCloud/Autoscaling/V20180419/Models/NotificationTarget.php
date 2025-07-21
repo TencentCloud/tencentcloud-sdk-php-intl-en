@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Notification target
  *
- * @method string getTargetType() Obtain Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
-<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
-<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
-<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
-<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
- * @method void setTargetType(string $TargetType) Set Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
-<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
-<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
-<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
-<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
+ * @method string getTargetType() Obtain Target type. valid values include `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE`, `TDMQ_CMQ_TOPIC`.
+<li>CMQ_QUEUE, specifies tencent cloud message QUEUE - queueing model. the corresponding product is offline. it is recommended to switch to TDMQ_CMQ_QUEUE (https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1).</li>.
+<li>CMQ_TOPIC, specifies tencent cloud message queue - TOPIC model. the corresponding product is offline. it is recommended to switch to TDMQ_CMQ_TOPIC (https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1).</li>.
+<li> TDMQ_CMQ_QUEUE. specifies the tencent cloud TDMQ message QUEUE - queueing model.</li>.
+<Li>TDMQ_CMQ_TOPIC. specifies tencent cloud tdmq message queue - topic model.</li>.
+ * @method void setTargetType(string $TargetType) Set Target type. valid values include `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE`, `TDMQ_CMQ_TOPIC`.
+<li>CMQ_QUEUE, specifies tencent cloud message QUEUE - queueing model. the corresponding product is offline. it is recommended to switch to TDMQ_CMQ_QUEUE (https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1).</li>.
+<li>CMQ_TOPIC, specifies tencent cloud message queue - TOPIC model. the corresponding product is offline. it is recommended to switch to TDMQ_CMQ_TOPIC (https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1).</li>.
+<li> TDMQ_CMQ_QUEUE. specifies the tencent cloud TDMQ message QUEUE - queueing model.</li>.
+<Li>TDMQ_CMQ_TOPIC. specifies tencent cloud tdmq message queue - topic model.</li>.
  * @method string getQueueName() Obtain Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
  * @method void setQueueName(string $QueueName) Set Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
  * @method string getTopicName() Obtain Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
@@ -38,11 +38,11 @@ use TencentCloud\Common\AbstractModel;
 class NotificationTarget extends AbstractModel
 {
     /**
-     * @var string Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
-<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
-<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
-<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
-<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
+     * @var string Target type. valid values include `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE`, `TDMQ_CMQ_TOPIC`.
+<li>CMQ_QUEUE, specifies tencent cloud message QUEUE - queueing model. the corresponding product is offline. it is recommended to switch to TDMQ_CMQ_QUEUE (https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1).</li>.
+<li>CMQ_TOPIC, specifies tencent cloud message queue - TOPIC model. the corresponding product is offline. it is recommended to switch to TDMQ_CMQ_TOPIC (https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1).</li>.
+<li> TDMQ_CMQ_QUEUE. specifies the tencent cloud TDMQ message QUEUE - queueing model.</li>.
+<Li>TDMQ_CMQ_TOPIC. specifies tencent cloud tdmq message queue - topic model.</li>.
      */
     public $TargetType;
 
@@ -57,11 +57,11 @@ class NotificationTarget extends AbstractModel
     public $TopicName;
 
     /**
-     * @param string $TargetType Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
-<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
-<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
-<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
-<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
+     * @param string $TargetType Target type. valid values include `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE`, `TDMQ_CMQ_TOPIC`.
+<li>CMQ_QUEUE, specifies tencent cloud message QUEUE - queueing model. the corresponding product is offline. it is recommended to switch to TDMQ_CMQ_QUEUE (https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1).</li>.
+<li>CMQ_TOPIC, specifies tencent cloud message queue - TOPIC model. the corresponding product is offline. it is recommended to switch to TDMQ_CMQ_TOPIC (https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1).</li>.
+<li> TDMQ_CMQ_QUEUE. specifies the tencent cloud TDMQ message QUEUE - queueing model.</li>.
+<Li>TDMQ_CMQ_TOPIC. specifies tencent cloud tdmq message queue - topic model.</li>.
      * @param string $QueueName Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
      * @param string $TopicName Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
      */

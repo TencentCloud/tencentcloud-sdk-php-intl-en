@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLaunchConfigurationAttributes request structure.
  *
- * @method string getLaunchConfigurationId() Obtain Launch configuration ID
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID
+ * @method string getLaunchConfigurationId() Obtain Launch configuration ID. obtain the launch configuration ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/config) or calling the api DescribeLaunchConfigurations (https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID. obtain the launch configuration ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/config) or calling the api DescribeLaunchConfigurations (https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.
  * @method string getImageId() Obtain [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
  * @method void setImageId(string $ImageId) Set [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
- * @method array getInstanceTypes() Obtain List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
- * @method void setInstanceTypes(array $InstanceTypes) Set List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
+ * @method array getInstanceTypes() Obtain Types of cvm instances. different instance models specify different resource specifications. supports up to 10 instance models.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. specifying the `InstanceTypes` field will invalidate the original `InstanceType`. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+ * @method void setInstanceTypes(array $InstanceTypes) Set Types of cvm instances. different instance models specify different resource specifications. supports up to 10 instance models.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. specifying the `InstanceTypes` field will invalidate the original `InstanceType`. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
  * @method string getInstanceTypesCheckPolicy() Obtain InstanceType verification policy, which is effective when actual modification is made to InstanceTypes. Valid values include ALL and ANY and the default value is ANY.
 <li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
 <li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
@@ -102,24 +102,24 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
 This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
  * @method EnhancedService getEnhancedService() Obtain Specifies whether to enable additional services, such as security services and monitoring service.
  * @method void setEnhancedService(EnhancedService $EnhancedService) Set Specifies whether to enable additional services, such as security services and monitoring service.
- * @method string getCamRoleName() Obtain CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
- * @method void setCamRoleName(string $CamRoleName) Set CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
- * @method string getHpcClusterId() Obtain HPC ID<br>
-Note: This field is default to empty
- * @method void setHpcClusterId(string $HpcClusterId) Set HPC ID<br>
-Note: This field is default to empty
+ * @method string getCamRoleName() Obtain Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+ * @method void setCamRoleName(string $CamRoleName) Set Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+ * @method string getHpcClusterId() Obtain High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
+ * @method void setHpcClusterId(string $HpcClusterId) Set High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
  * @method IPv6InternetAccessible getIPv6InternetAccessible() Obtain IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
  * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) Set IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
- * @method array getDisasterRecoverGroupIds() Obtain Placement group ID. Only one is allowed.
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group ID. Only one is allowed.
+ * @method array getDisasterRecoverGroupIds() Obtain Placement group id. only one can be specified. obtain through the API [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1).
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group id. only one can be specified. obtain through the API [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1).
  * @method LoginSettings getLoginSettings() Obtain Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
  * @method void setLoginSettings(LoginSettings $LoginSettings) Set Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
  * @method array getInstanceTags() Obtain Instance tag list. By specifying this parameter, the instances added through scale-out can be bound to the tag. Up to 10 Tags can be specified.
 This parameter will overwrite the original instance tag list. To add new tags, you need to pass the new tags along with the original tags.
  * @method void setInstanceTags(array $InstanceTags) Set Instance tag list. By specifying this parameter, the instances added through scale-out can be bound to the tag. Up to 10 Tags can be specified.
 This parameter will overwrite the original instance tag list. To add new tags, you need to pass the new tags along with the original tags.
- * @method string getImageFamily() Obtain Image family name.
- * @method void setImageFamily(string $ImageFamily) Set Image family name.
+ * @method string getImageFamily() Obtain Image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
+ * @method void setImageFamily(string $ImageFamily) Set Image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
  * @method string getDedicatedClusterId() Obtain Cloud Dedicated Cluster (CDC) ID.
  * @method void setDedicatedClusterId(string $DedicatedClusterId) Set Cloud Dedicated Cluster (CDC) ID.
  * @method Metadata getMetadata() Obtain Custom metadata.
@@ -128,7 +128,7 @@ This parameter will overwrite the original instance tag list. To add new tags, y
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
     /**
-     * @var string Launch configuration ID
+     * @var string Launch configuration ID. obtain the launch configuration ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/config) or calling the api DescribeLaunchConfigurations (https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.
      */
     public $LaunchConfigurationId;
 
@@ -138,8 +138,8 @@ class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
     public $ImageId;
 
     /**
-     * @var array List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
+     * @var array Types of cvm instances. different instance models specify different resource specifications. supports up to 10 instance models.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. specifying the `InstanceTypes` field will invalidate the original `InstanceType`. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
      */
     public $InstanceTypes;
 
@@ -237,13 +237,13 @@ This field requires passing in the `InstanceName` field. Other fields that are n
     public $EnhancedService;
 
     /**
-     * @var string CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+     * @var string Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
      */
     public $CamRoleName;
 
     /**
-     * @var string HPC ID<br>
-Note: This field is default to empty
+     * @var string High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
      */
     public $HpcClusterId;
 
@@ -253,7 +253,7 @@ Note: This field is default to empty
     public $IPv6InternetAccessible;
 
     /**
-     * @var array Placement group ID. Only one is allowed.
+     * @var array Placement group id. only one can be specified. obtain through the API [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1).
      */
     public $DisasterRecoverGroupIds;
 
@@ -269,7 +269,7 @@ This parameter will overwrite the original instance tag list. To add new tags, y
     public $InstanceTags;
 
     /**
-     * @var string Image family name.
+     * @var string Image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
      */
     public $ImageFamily;
 
@@ -284,10 +284,10 @@ This parameter will overwrite the original instance tag list. To add new tags, y
     public $Metadata;
 
     /**
-     * @param string $LaunchConfigurationId Launch configuration ID
+     * @param string $LaunchConfigurationId Launch configuration ID. obtain the launch configuration ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/config) or calling the api DescribeLaunchConfigurations (https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.
      * @param string $ImageId [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
-     * @param array $InstanceTypes List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
+     * @param array $InstanceTypes Types of cvm instances. different instance models specify different resource specifications. supports up to 10 instance models.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. specifying the `InstanceTypes` field will invalidate the original `InstanceType`. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
      * @param string $InstanceTypesCheckPolicy InstanceType verification policy, which is effective when actual modification is made to InstanceTypes. Valid values include ALL and ANY and the default value is ANY.
 <li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
 <li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
@@ -325,15 +325,15 @@ This field requires passing the `HostName` field. Other fields that are not pass
 If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
 This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
      * @param EnhancedService $EnhancedService Specifies whether to enable additional services, such as security services and monitoring service.
-     * @param string $CamRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
-     * @param string $HpcClusterId HPC ID<br>
-Note: This field is default to empty
+     * @param string $CamRoleName Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+     * @param string $HpcClusterId High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
-     * @param array $DisasterRecoverGroupIds Placement group ID. Only one is allowed.
+     * @param array $DisasterRecoverGroupIds Placement group id. only one can be specified. obtain through the API [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1).
      * @param LoginSettings $LoginSettings Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
      * @param array $InstanceTags Instance tag list. By specifying this parameter, the instances added through scale-out can be bound to the tag. Up to 10 Tags can be specified.
 This parameter will overwrite the original instance tag list. To add new tags, you need to pass the new tags along with the original tags.
-     * @param string $ImageFamily Image family name.
+     * @param string $ImageFamily Image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
      * @param string $DedicatedClusterId Cloud Dedicated Cluster (CDC) ID.
      * @param Metadata $Metadata Custom metadata.
      */

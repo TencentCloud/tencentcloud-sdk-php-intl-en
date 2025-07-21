@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ScaleInInstances request structure.
  *
- * @method string getAutoScalingGroupId() Obtain Scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID
- * @method integer getScaleInNumber() Obtain Number of instances to be reduced
- * @method void setScaleInNumber(integer $ScaleInNumber) Set Number of instances to be reduced
+ * @method string getAutoScalingGroupId() Obtain Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
+ * @method integer getScaleInNumber() Obtain Number of resource instances to scale in. this parameter has a static value range of [1,2000] and must not be larger than the difference between the desired number and the minimum value. for example, if the scaling group desired number is 100 and the minimum value is 20, the permissible range is [1,80].
+ * @method void setScaleInNumber(integer $ScaleInNumber) Set Number of resource instances to scale in. this parameter has a static value range of [1,2000] and must not be larger than the difference between the desired number and the minimum value. for example, if the scaling group desired number is 100 and the minimum value is 20, the permissible range is [1,80].
  */
 class ScaleInInstancesRequest extends AbstractModel
 {
     /**
-     * @var string Scaling group ID
+     * @var string Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
      */
     public $AutoScalingGroupId;
 
     /**
-     * @var integer Number of instances to be reduced
+     * @var integer Number of resource instances to scale in. this parameter has a static value range of [1,2000] and must not be larger than the difference between the desired number and the minimum value. for example, if the scaling group desired number is 100 and the minimum value is 20, the permissible range is [1,80].
      */
     public $ScaleInNumber;
 
     /**
-     * @param string $AutoScalingGroupId Scaling group ID
-     * @param integer $ScaleInNumber Number of instances to be reduced
+     * @param string $AutoScalingGroupId Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
+     * @param integer $ScaleInNumber Number of resource instances to scale in. this parameter has a static value range of [1,2000] and must not be larger than the difference between the desired number and the minimum value. for example, if the scaling group desired number is 100 and the minimum value is 20, the permissible range is [1,80].
      */
     function __construct()
     {

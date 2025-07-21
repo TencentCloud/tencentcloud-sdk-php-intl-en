@@ -20,44 +20,56 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeLifecycleHook request structure.
  *
- * @method string getLifecycleHookId() Obtain Lifecycle hook ID
- * @method void setLifecycleHookId(string $LifecycleHookId) Set Lifecycle hook ID
- * @method string getLifecycleHookName() Obtain Lifecycle hook name
- * @method void setLifecycleHookName(string $LifecycleHookName) Set Lifecycle hook name
- * @method string getLifecycleTransition() Obtain Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
- * @method void setLifecycleTransition(string $LifecycleTransition) Set Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
- * @method string getDefaultResult() Obtain Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
- * @method void setDefaultResult(string $DefaultResult) Set Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
+ * @method string getLifecycleHookId() Obtain Lifecycle hook ID. you can call the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieve the LifecycleHookId from the returned information to obtain the lifecycle hook ID.
+ * @method void setLifecycleHookId(string $LifecycleHookId) Set Lifecycle hook ID. you can call the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieve the LifecycleHookId from the returned information to obtain the lifecycle hook ID.
+ * @method string getLifecycleHookName() Obtain Lifecycle hook name, which can contain chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 characters.
+ * @method void setLifecycleHookName(string $LifecycleHookName) Set Lifecycle hook name, which can contain chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 characters.
+ * @method string getLifecycleTransition() Obtain Scenario for performing the lifecycle hook. valid values:.
+`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+`INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
+ * @method void setLifecycleTransition(string $LifecycleTransition) Set Scenario for performing the lifecycle hook. valid values:.
+`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+`INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
+ * @method string getDefaultResult() Obtain Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values are as follows:.
+Default value, means CONTINUE to execute capacity expansion or reduction.
+* ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand will be released directly or removed. for scale-in hooks, scale-in activities will continue.
+ * @method void setDefaultResult(string $DefaultResult) Set Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values are as follows:.
+Default value, means CONTINUE to execute capacity expansion or reduction.
+* ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand will be released directly or removed. for scale-in hooks, scale-in activities will continue.
  * @method integer getHeartbeatTimeout() Obtain The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
  * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) Set The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
- * @method string getNotificationMetadata() Obtain Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
- * @method void setNotificationMetadata(string $NotificationMetadata) Set Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
+ * @method string getNotificationMetadata() Obtain Additional information sent by auto scaling to notification targets, used when configuring a notification (default value: ""). NotificationMetadata and LifecycleCommand are mutually exclusive parameters and cannot be specified simultaneously.
+ * @method void setNotificationMetadata(string $NotificationMetadata) Set Additional information sent by auto scaling to notification targets, used when configuring a notification (default value: ""). NotificationMetadata and LifecycleCommand are mutually exclusive parameters and cannot be specified simultaneously.
  * @method NotificationTarget getNotificationTarget() Obtain Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
  * @method void setNotificationTarget(NotificationTarget $NotificationTarget) Set Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
  * @method string getLifecycleTransitionType() Obtain The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
  * @method void setLifecycleTransitionType(string $LifecycleTransitionType) Set The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
- * @method LifecycleCommand getLifecycleCommand() Obtain Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
- * @method void setLifecycleCommand(LifecycleCommand $LifecycleCommand) Set Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+ * @method LifecycleCommand getLifecycleCommand() Obtain Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` are mutually exclusive and cannot be specified simultaneously.
+ * @method void setLifecycleCommand(LifecycleCommand $LifecycleCommand) Set Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` are mutually exclusive and cannot be specified simultaneously.
  */
 class UpgradeLifecycleHookRequest extends AbstractModel
 {
     /**
-     * @var string Lifecycle hook ID
+     * @var string Lifecycle hook ID. you can call the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieve the LifecycleHookId from the returned information to obtain the lifecycle hook ID.
      */
     public $LifecycleHookId;
 
     /**
-     * @var string Lifecycle hook name
+     * @var string Lifecycle hook name, which can contain chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 characters.
      */
     public $LifecycleHookName;
 
     /**
-     * @var string Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
+     * @var string Scenario for performing the lifecycle hook. valid values:.
+`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+`INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
      */
     public $LifecycleTransition;
 
     /**
-     * @var string Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
+     * @var string Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values are as follows:.
+Default value, means CONTINUE to execute capacity expansion or reduction.
+* ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand will be released directly or removed. for scale-in hooks, scale-in activities will continue.
      */
     public $DefaultResult;
 
@@ -67,7 +79,7 @@ class UpgradeLifecycleHookRequest extends AbstractModel
     public $HeartbeatTimeout;
 
     /**
-     * @var string Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
+     * @var string Additional information sent by auto scaling to notification targets, used when configuring a notification (default value: ""). NotificationMetadata and LifecycleCommand are mutually exclusive parameters and cannot be specified simultaneously.
      */
     public $NotificationMetadata;
 
@@ -82,20 +94,24 @@ class UpgradeLifecycleHookRequest extends AbstractModel
     public $LifecycleTransitionType;
 
     /**
-     * @var LifecycleCommand Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+     * @var LifecycleCommand Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` are mutually exclusive and cannot be specified simultaneously.
      */
     public $LifecycleCommand;
 
     /**
-     * @param string $LifecycleHookId Lifecycle hook ID
-     * @param string $LifecycleHookName Lifecycle hook name
-     * @param string $LifecycleTransition Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
-     * @param string $DefaultResult Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
+     * @param string $LifecycleHookId Lifecycle hook ID. you can call the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieve the LifecycleHookId from the returned information to obtain the lifecycle hook ID.
+     * @param string $LifecycleHookName Lifecycle hook name, which can contain chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 characters.
+     * @param string $LifecycleTransition Scenario for performing the lifecycle hook. valid values:.
+`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+`INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
+     * @param string $DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values are as follows:.
+Default value, means CONTINUE to execute capacity expansion or reduction.
+* ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand will be released directly or removed. for scale-in hooks, scale-in activities will continue.
      * @param integer $HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
-     * @param string $NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
+     * @param string $NotificationMetadata Additional information sent by auto scaling to notification targets, used when configuring a notification (default value: ""). NotificationMetadata and LifecycleCommand are mutually exclusive parameters and cannot be specified simultaneously.
      * @param NotificationTarget $NotificationTarget Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
      * @param string $LifecycleTransitionType The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
-     * @param LifecycleCommand $LifecycleCommand Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+     * @param LifecycleCommand $LifecycleCommand Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` are mutually exclusive and cannot be specified simultaneously.
      */
     function __construct()
     {

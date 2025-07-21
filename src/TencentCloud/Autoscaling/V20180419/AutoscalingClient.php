@@ -23,16 +23,16 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Autoscaling\V20180419\Models as Models;
 
 /**
- * @method Models\AttachInstancesResponse AttachInstances(Models\AttachInstancesRequest $req) This API is used to add CVM instances to an auto scaling group.
+ * @method Models\AttachInstancesResponse AttachInstances(Models\AttachInstancesRequest $req) This interface (AttachInstances) is used to add CVM instances to a scaling group.
 * Only CVM instances in `RUNNING` or `STOPPED` status can be added.
-* The added CVM instances must in the same VPC as the scaling group.
-
+This API is used to ensure added CVM instances match the VPC network of the scaling group.
  * @method Models\AttachLoadBalancersResponse AttachLoadBalancers(Models\AttachLoadBalancersRequest $req) This API is used to add CLBs to a security group.
  * @method Models\CancelInstanceRefreshResponse CancelInstanceRefresh(Models\CancelInstanceRefreshRequest $req) This API is used to cancel the instance refresh activity of the scaling group.
-* The batches that have already been refreshed or are currently being refreshed remain unaffected, but the batches pending refresh will be canceled.
-* If a refresh fails, the affected instances will remain in the secondary status, and require manual intervention to exit the secondary status or terminate the instances.
-* Rollback operations are not allowed after cancellation, and recovery is also unsupported.
-* The instances temporarily scaled out due to the MaxSurge parameter are automatically terminated after cancellation.
+* The batches that have already been refreshed remain unaffected, but the batches pending refresh will be canceled.
+* If a batch is currently refreshing, cancellation is not allowed. You can suspend the event and wait until the current batch finishes before canceling.
+This API is used to refresh the failed instances. If a refresh fails, the affected instances will remain in standby status, and require manual intervention to exit the standby status or terminate the instances.
+* Rollback operations are not allowed after cancellation, and recovery is unsupported.
+Temporarily expanded instances due to the maxSurge parameter are automatically destroyed after cancellation.
 * During scale-in, all instances have already been updated and cannot be canceled.
  * @method Models\ClearLaunchConfigurationAttributesResponse ClearLaunchConfigurationAttributes(Models\ClearLaunchConfigurationAttributesRequest $req) This API is used to clear specific attributes of the launch configuration.
  * @method Models\CompleteLifecycleActionResponse CompleteLifecycleAction(Models\CompleteLifecycleActionRequest $req) This API is used to complete a lifecycle action by setting the status of lifecycle hook to `CONTINUE` or `ABANDON`.
@@ -42,16 +42,16 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
  * @method Models\CreateAutoScalingGroupFromInstanceResponse CreateAutoScalingGroupFromInstance(Models\CreateAutoScalingGroupFromInstanceRequest $req) This API is used to create launch configurations and scaling groups based on an instance.
 
 Note: for a scaling group that is created based on a monthly-subscribed instance, the instances added for scale-out are pay-as-you-go instance.
- * @method Models\CreateLaunchConfigurationResponse CreateLaunchConfiguration(Models\CreateLaunchConfigurationRequest $req) This API is used to create a launch configuration.
+ * @method Models\CreateLaunchConfigurationResponse CreateLaunchConfiguration(Models\CreateLaunchConfigurationRequest $req) This interface (CreateLaunchConfiguration) is used to create new launch configuration.
 
-* To modify a launch configuration, please use `ModifyLaunchConfigurationAttributes`.
+* To modify a launch configuration, use [ModifyLaunchConfigurationAttributes](https://intl.cloud.tencent.com/document/api/377/31298?from_cn_redirect=1) to partially modify fields. If needed, create a new launch configuration.
 
-* Up to 20 launch configurations can be created for each project. For more information, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
- * @method Models\CreateLifecycleHookResponse CreateLifecycleHook(Models\CreateLifecycleHookRequest $req) This API is used to create a lifecycle hook.
+By default, 50 launch configurations can be created per region. For details, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
+ * @method Models\CreateLifecycleHookResponse CreateLifecycleHook(Models\CreateLifecycleHookRequest $req) This interface (CreateLifecycleHook) is used for creating a lifecycle hook.
 
-* You can configure notifications or automation commands (TAT) for the lifecycle hook.
+* You can configure notifications or automation commands for the lifecycle hook.
 
-If you configured a notification, Auto Scaling will notify the TDMQ queue of the following information:
+If you configured a notification, Auto Scaling will notify the TDMQ Message Queue of the following information:.
 
 ```
 {
@@ -59,11 +59,11 @@ If you configured a notification, Auto Scaling will notify the TDMQ queue of the
 	"Time": "2019-03-14T10:15:11Z",
 	"AppId": "1251783334",
 	"ActivityId": "asa-fznnvrja",
-	"AutoScalingGroupId": "asg-rrrrtttt",
-	"LifecycleHookId": "ash-xxxxyyyy",
+	"AutoScalingGroupId": "asg-ft6y7u8n",
+	"LifecycleHookId": "ash-p9i7y6t5",
 	"LifecycleHookName": "my-hook",
 	"LifecycleActionToken": "3080e1c9-0efe-4dd7-ad3b-90cd6618298f",
-	"InstanceId": "ins-aaaabbbb",
+	"InstanceId": "ins-y6dr5e43",
 	"LifecycleTransition": "INSTANCE_LAUNCHING",
 	"NotificationMetadata": ""
 }
@@ -101,8 +101,7 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
  * @method Models\DeleteAutoScalingGroupResponse DeleteAutoScalingGroup(Models\DeleteAutoScalingGroupRequest $req) This API is used to delete an auto-scaling group. Make sure that there are no `IN_SERVICE` instances in the group, and there are no ongoing scaling activities. When you delete a scaling group, instances in the status of `CREATION_FAILED`, `TERMINATION_FAILED` and `DETACH_FAILED` are not terminated.
  * @method Models\DeleteLaunchConfigurationResponse DeleteLaunchConfiguration(Models\DeleteLaunchConfigurationRequest $req) This API (DeleteLaunchConfiguration) is used to delete a launch configuration.
 
-* If the launch configuration is active in an auto scaling group, it cannot be deleted.
-
+* If the launch configuration is active in a scaling group, it cannot be deleted.
  * @method Models\DeleteLifecycleHookResponse DeleteLifecycleHook(Models\DeleteLifecycleHookRequest $req) This API (DeleteLifeCycleHook) is used to delete a lifecycle hook.
  * @method Models\DeleteNotificationConfigurationResponse DeleteNotificationConfiguration(Models\DeleteNotificationConfigurationRequest $req) This API (DeleteNotificationConfiguration) is used to delete the specified notification.
  * @method Models\DeleteScalingPolicyResponse DeleteScalingPolicy(Models\DeleteScalingPolicyRequest $req) This API (DeleteScalingPolicy) is used to delete an alarm trigger policy.
@@ -157,20 +156,24 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
     - Shut down CVM instances in a scaling group (StopAutoScalingInstances)
     - Start up CVM instances in a scaling group (StartAutoScalingInstances)
  * @method Models\EnableAutoScalingGroupResponse EnableAutoScalingGroup(Models\EnableAutoScalingGroupRequest $req) This API (EnableAutoScalingGroup) is used to enable the specified auto scaling group.
+ * @method Models\EnterStandbyResponse EnterStandby(Models\EnterStandbyRequest $req) This API is used to set instances within the scaling group to standby status.
+Instances in standby status have a CLB weight value of 0 and will not be selected for scaling in, unhealthy replacement, or refresh operation.
+This API is used to call the Auto Scaling power-on/power-off API which may change the standby status, while the Cloud Virtual Machine server power on/off API will not affect it.
+The instance enters standby status, and the scaling group attempts to lower the expected number of instances, which will not be less than the minimum value.
  * @method Models\ExecuteScalingPolicyResponse ExecuteScalingPolicy(Models\ExecuteScalingPolicyRequest $req) This API is used to execute a scaling policy.
 
 * The scaling policy can be executed based on the scaling policy ID.
 * The policy cannot be executed if there are ongoing scaling actions on the scaling group.
 * Executing a target tracking policy is not supported.
- * @method Models\ExitStandbyResponse ExitStandby(Models\ExitStandbyRequest $req) This API is used to exit instances from the standby status in the scaling group.
-* When an instance is in standby status, its load balancer weight is set to 0. Upon exiting the standby status, the weight value automatically gets restored.
-* Initiating power-on/power-off actions on instances that are in standby status also results in them exiting from the standby status.
+ * @method Models\ExitStandbyResponse ExitStandby(Models\ExitStandbyRequest $req) This API is used to exit instances from standby status in the scaling group.
+* After exiting standby status, the instance enters running state and the CLB weight value is restored to the default value.
+This API is used to call the Auto Scaling power-on/power-off API which may change the standby status, while the Cloud Virtual Machine server power on/off API will not affect it.
+After instances exit standby status, the scaling group will raise the expected number of instances. The new expected number cannot exceed the maximum value.
  * @method Models\ModifyAutoScalingGroupResponse ModifyAutoScalingGroup(Models\ModifyAutoScalingGroupRequest $req) This API (ModifyAutoScalingGroup) is used to modify an auto scaling group.
  * @method Models\ModifyDesiredCapacityResponse ModifyDesiredCapacity(Models\ModifyDesiredCapacityRequest $req) This API (ModifyDesiredCapacity) is used to modify the desired number of instances in the specified auto scaling group.
- * @method Models\ModifyLaunchConfigurationAttributesResponse ModifyLaunchConfigurationAttributes(Models\ModifyLaunchConfigurationAttributesRequest $req) This API (ModifyLaunchConfigurationAttributes) is used to modify some attributes of a launch configuration.
+ * @method Models\ModifyLaunchConfigurationAttributesResponse ModifyLaunchConfigurationAttributes(Models\ModifyLaunchConfigurationAttributesRequest $req) This API (ModifyLaunchConfigurationAttributes) is used to modify part of a launch configuration's attributes.
 
-* The changes of launch configuration do not affect the existing instances. New instances will be created based on the modified configuration.
-* This API supports modifying certain simple types of attributes.
+This API is used to modify the startup configuration. Existing instances scaled out using this configuration will not change, while newly added instances using this launch configuration will scale out according to the new configuration.
  * @method Models\ModifyLifecycleHookResponse ModifyLifecycleHook(Models\ModifyLifecycleHookRequest $req) This API is used to modify the lifecycle hook.
  * @method Models\ModifyLoadBalancerTargetAttributesResponse ModifyLoadBalancerTargetAttributes(Models\ModifyLoadBalancerTargetAttributesRequest $req) This API is used to modify the target rule attributes of the CLB in the scaling group.
  * @method Models\ModifyLoadBalancersResponse ModifyLoadBalancers(Models\ModifyLoadBalancersRequest $req) This API is used to modify the cloud load balancers of a scaling group.

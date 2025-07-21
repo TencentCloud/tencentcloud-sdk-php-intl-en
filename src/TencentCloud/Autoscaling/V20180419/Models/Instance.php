@@ -28,76 +28,80 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID
  * @method string getLaunchConfigurationName() Obtain Launch configuration name
  * @method void setLaunchConfigurationName(string $LaunchConfigurationName) Set Launch configuration name
- * @method string getLifeCycleState() Obtain Lifecycle status. Valid values:<br>
-<li>`IN_SERVICE`: The instance is running.
-<li>`CREATING`: The instance is being created.
-<li>`CREATION_FAILED`: The instance fails to be created.
-<li>`TERMINATING`: The instance is being terminated.
-<li>`TERMINATION_FAILED`: The instance fails to be terminated.
-<li>`ATTACHING`: The instance is being bound.
-<li>`ATTACH_FAILED`: The instance fails to be bound.
-<li>`DETACHING`: The instance is being unbound.
-<li>`DETACH_FAILED`: The instance fails to be unbound.
-<li>`ATTACHING_LB`: The LB is being bound.
-<li>DETACHING_LB: The LB is being unbound.
-<li>`MODIFYING_LB`: The LB is being modified.
-<li>`STARTING`: The instance is being started up.
-<li>`START_FAILED`: The instance fails to be started up.
-<li>`STOPPING`: The instance is being shut down.
-<li>`STOP_FAILED`: The instance fails to be shut down.
-<li>`STOPPED`: The instance is shut down.
-<li>`IN_LAUNCHING_HOOK`: The lifecycle hook is being scaled out.
-<li>`IN_TERMINATING_HOOK`: The lifecycle hook is being scaled in.
- * @method void setLifeCycleState(string $LifeCycleState) Set Lifecycle status. Valid values:<br>
-<li>`IN_SERVICE`: The instance is running.
-<li>`CREATING`: The instance is being created.
-<li>`CREATION_FAILED`: The instance fails to be created.
-<li>`TERMINATING`: The instance is being terminated.
-<li>`TERMINATION_FAILED`: The instance fails to be terminated.
-<li>`ATTACHING`: The instance is being bound.
-<li>`ATTACH_FAILED`: The instance fails to be bound.
-<li>`DETACHING`: The instance is being unbound.
-<li>`DETACH_FAILED`: The instance fails to be unbound.
-<li>`ATTACHING_LB`: The LB is being bound.
-<li>DETACHING_LB: The LB is being unbound.
-<li>`MODIFYING_LB`: The LB is being modified.
-<li>`STARTING`: The instance is being started up.
-<li>`START_FAILED`: The instance fails to be started up.
-<li>`STOPPING`: The instance is being shut down.
-<li>`STOP_FAILED`: The instance fails to be shut down.
-<li>`STOPPED`: The instance is shut down.
-<li>`IN_LAUNCHING_HOOK`: The lifecycle hook is being scaled out.
-<li>`IN_TERMINATING_HOOK`: The lifecycle hook is being scaled in.
- * @method string getHealthStatus() Obtain Health status. Value range: HEALTHY, UNHEALTHY
- * @method void setHealthStatus(string $HealthStatus) Set Health status. Value range: HEALTHY, UNHEALTHY
+ * @method string getLifeCycleState() Obtain Lifecycle status. valid values are as follows:.
+<Li>IN_SERVICE: running</li>.
+<Li>CREATING: specifies the instance is being created.</li>.
+<Li>CREATION_FAILED: creation failed.</li>.
+<Li>`TERMINATING`: the instance is being terminated.</li>.
+<Li>`TERMINATION_FAILED`: the instance fails to be terminated.</li>.
+<Li>ATTACHING: binding</li>.
+<Li>`ATTACH_FAILED`: the instance fails to be bound.</li>.
+<Li>DETACHING: specifies the unbinding is in progress.</li>.
+<Li>`DETACH_FAILED`: the instance fails to be unbound.</li>.
+<Li>`ATTACHING_LB`: binding to lb</li>.
+<Li>DETACHING_LB: the lb is being unbound.</li>.
+<Li>`MODIFYING_LB`: the lb is being modified.</li>.
+<Li>`STARTING`: the instance is being started up.</li>.
+<Li>`START_FAILED`: the instance fails to be started up.</li>.
+<Li>`STOPPING`: the instance is being shut down.</li>.
+<Li>`STOP_FAILED`: the instance fails to be shut down.</li>.
+<Li>`STOPPED`: the instance is shut down.</li>.
+<Li>`IN_LAUNCHING_HOOK`: the lifecycle hook is being scaled out.</li>.
+<Li>`IN_TERMINATING_HOOK`: the lifecycle hook is being scaled in.</li>.
+ * @method void setLifeCycleState(string $LifeCycleState) Set Lifecycle status. valid values are as follows:.
+<Li>IN_SERVICE: running</li>.
+<Li>CREATING: specifies the instance is being created.</li>.
+<Li>CREATION_FAILED: creation failed.</li>.
+<Li>`TERMINATING`: the instance is being terminated.</li>.
+<Li>`TERMINATION_FAILED`: the instance fails to be terminated.</li>.
+<Li>ATTACHING: binding</li>.
+<Li>`ATTACH_FAILED`: the instance fails to be bound.</li>.
+<Li>DETACHING: specifies the unbinding is in progress.</li>.
+<Li>`DETACH_FAILED`: the instance fails to be unbound.</li>.
+<Li>`ATTACHING_LB`: binding to lb</li>.
+<Li>DETACHING_LB: the lb is being unbound.</li>.
+<Li>`MODIFYING_LB`: the lb is being modified.</li>.
+<Li>`STARTING`: the instance is being started up.</li>.
+<Li>`START_FAILED`: the instance fails to be started up.</li>.
+<Li>`STOPPING`: the instance is being shut down.</li>.
+<Li>`STOP_FAILED`: the instance fails to be shut down.</li>.
+<Li>`STOPPED`: the instance is shut down.</li>.
+<Li>`IN_LAUNCHING_HOOK`: the lifecycle hook is being scaled out.</li>.
+<Li>`IN_TERMINATING_HOOK`: the lifecycle hook is being scaled in.</li>.
+ * @method string getHealthStatus() Obtain Health status. valid values are as follows:.
+<Li>HEALTHY: the instance is in Healthy status.</li>.
+<Li>UNHEALTHY: instance ping unreachable</li>.
+<Li>CLB_UNHEALTHY: the instance port listened by clb is unhealthy</li>.
+ * @method void setHealthStatus(string $HealthStatus) Set Health status. valid values are as follows:.
+<Li>HEALTHY: the instance is in Healthy status.</li>.
+<Li>UNHEALTHY: instance ping unreachable</li>.
+<Li>CLB_UNHEALTHY: the instance port listened by clb is unhealthy</li>.
  * @method boolean getProtectedFromScaleIn() Obtain Whether to add scale-in protection
  * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) Set Whether to add scale-in protection
  * @method string getZone() Obtain Availability zone
  * @method void setZone(string $Zone) Set Availability zone
  * @method string getCreationType() Obtain Creation type. Value range: AUTO_CREATION, MANUAL_ATTACHING.
  * @method void setCreationType(string $CreationType) Set Creation type. Value range: AUTO_CREATION, MANUAL_ATTACHING.
- * @method string getAddTime() Obtain Instance addition time
- * @method void setAddTime(string $AddTime) Set Instance addition time
+ * @method string getAddTime() Obtain Instance join time is displayed in a format that conforms to the ISO8601 standard and uses UTC time.
+ * @method void setAddTime(string $AddTime) Set Instance join time is displayed in a format that conforms to the ISO8601 standard and uses UTC time.
  * @method string getInstanceType() Obtain Instance type
  * @method void setInstanceType(string $InstanceType) Set Instance type
  * @method integer getVersionNumber() Obtain Version number
  * @method void setVersionNumber(integer $VersionNumber) Set Version number
  * @method string getAutoScalingGroupName() Obtain Auto scaling group name
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) Set Auto scaling group name
- * @method string getWarmupStatus() Obtain Warming up status. Valid values:
-<li>`WAITING_ENTER_WARMUP`: The instance is waiting to be warmed up.
-<li>`NO_NEED_WARMUP`: Warming up is not required.
-<li>`IN_WARMUP`: The instance is being warmed up.
-<li>`AFTER_WARMUP`: Warming up is completed.
- * @method void setWarmupStatus(string $WarmupStatus) Set Warming up status. Valid values:
-<li>`WAITING_ENTER_WARMUP`: The instance is waiting to be warmed up.
-<li>`NO_NEED_WARMUP`: Warming up is not required.
-<li>`IN_WARMUP`: The instance is being warmed up.
-<li>`AFTER_WARMUP`: Warming up is completed.
- * @method array getDisasterRecoverGroupIds() Obtain Placement group ID. Only one is allowed.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group ID. Only one is allowed.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getWarmupStatus() Obtain Preheat status. valid values are as follows:.
+<Li>WAITING_ENTER_WARMUP: specifies the instance is waiting to enter preheating.</li>.
+<Li>`NO_NEED_WARMUP`: warming up is not required.</li>.
+<Li>IN_WARMUP: preheating.</li>.
+<Li>AFTER_WARMUP: indicates the preheating is completed.</li>.
+ * @method void setWarmupStatus(string $WarmupStatus) Set Preheat status. valid values are as follows:.
+<Li>WAITING_ENTER_WARMUP: specifies the instance is waiting to enter preheating.</li>.
+<Li>`NO_NEED_WARMUP`: warming up is not required.</li>.
+<Li>IN_WARMUP: preheating.</li>.
+<Li>AFTER_WARMUP: indicates the preheating is completed.</li>.
+ * @method array getDisasterRecoverGroupIds() Obtain Placement group ID. Only one can be specified.
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group ID. Only one can be specified.
  */
 class Instance extends AbstractModel
 {
@@ -122,31 +126,34 @@ class Instance extends AbstractModel
     public $LaunchConfigurationName;
 
     /**
-     * @var string Lifecycle status. Valid values:<br>
-<li>`IN_SERVICE`: The instance is running.
-<li>`CREATING`: The instance is being created.
-<li>`CREATION_FAILED`: The instance fails to be created.
-<li>`TERMINATING`: The instance is being terminated.
-<li>`TERMINATION_FAILED`: The instance fails to be terminated.
-<li>`ATTACHING`: The instance is being bound.
-<li>`ATTACH_FAILED`: The instance fails to be bound.
-<li>`DETACHING`: The instance is being unbound.
-<li>`DETACH_FAILED`: The instance fails to be unbound.
-<li>`ATTACHING_LB`: The LB is being bound.
-<li>DETACHING_LB: The LB is being unbound.
-<li>`MODIFYING_LB`: The LB is being modified.
-<li>`STARTING`: The instance is being started up.
-<li>`START_FAILED`: The instance fails to be started up.
-<li>`STOPPING`: The instance is being shut down.
-<li>`STOP_FAILED`: The instance fails to be shut down.
-<li>`STOPPED`: The instance is shut down.
-<li>`IN_LAUNCHING_HOOK`: The lifecycle hook is being scaled out.
-<li>`IN_TERMINATING_HOOK`: The lifecycle hook is being scaled in.
+     * @var string Lifecycle status. valid values are as follows:.
+<Li>IN_SERVICE: running</li>.
+<Li>CREATING: specifies the instance is being created.</li>.
+<Li>CREATION_FAILED: creation failed.</li>.
+<Li>`TERMINATING`: the instance is being terminated.</li>.
+<Li>`TERMINATION_FAILED`: the instance fails to be terminated.</li>.
+<Li>ATTACHING: binding</li>.
+<Li>`ATTACH_FAILED`: the instance fails to be bound.</li>.
+<Li>DETACHING: specifies the unbinding is in progress.</li>.
+<Li>`DETACH_FAILED`: the instance fails to be unbound.</li>.
+<Li>`ATTACHING_LB`: binding to lb</li>.
+<Li>DETACHING_LB: the lb is being unbound.</li>.
+<Li>`MODIFYING_LB`: the lb is being modified.</li>.
+<Li>`STARTING`: the instance is being started up.</li>.
+<Li>`START_FAILED`: the instance fails to be started up.</li>.
+<Li>`STOPPING`: the instance is being shut down.</li>.
+<Li>`STOP_FAILED`: the instance fails to be shut down.</li>.
+<Li>`STOPPED`: the instance is shut down.</li>.
+<Li>`IN_LAUNCHING_HOOK`: the lifecycle hook is being scaled out.</li>.
+<Li>`IN_TERMINATING_HOOK`: the lifecycle hook is being scaled in.</li>.
      */
     public $LifeCycleState;
 
     /**
-     * @var string Health status. Value range: HEALTHY, UNHEALTHY
+     * @var string Health status. valid values are as follows:.
+<Li>HEALTHY: the instance is in Healthy status.</li>.
+<Li>UNHEALTHY: instance ping unreachable</li>.
+<Li>CLB_UNHEALTHY: the instance port listened by clb is unhealthy</li>.
      */
     public $HealthStatus;
 
@@ -166,7 +173,7 @@ class Instance extends AbstractModel
     public $CreationType;
 
     /**
-     * @var string Instance addition time
+     * @var string Instance join time is displayed in a format that conforms to the ISO8601 standard and uses UTC time.
      */
     public $AddTime;
 
@@ -186,17 +193,16 @@ class Instance extends AbstractModel
     public $AutoScalingGroupName;
 
     /**
-     * @var string Warming up status. Valid values:
-<li>`WAITING_ENTER_WARMUP`: The instance is waiting to be warmed up.
-<li>`NO_NEED_WARMUP`: Warming up is not required.
-<li>`IN_WARMUP`: The instance is being warmed up.
-<li>`AFTER_WARMUP`: Warming up is completed.
+     * @var string Preheat status. valid values are as follows:.
+<Li>WAITING_ENTER_WARMUP: specifies the instance is waiting to enter preheating.</li>.
+<Li>`NO_NEED_WARMUP`: warming up is not required.</li>.
+<Li>IN_WARMUP: preheating.</li>.
+<Li>AFTER_WARMUP: indicates the preheating is completed.</li>.
      */
     public $WarmupStatus;
 
     /**
-     * @var array Placement group ID. Only one is allowed.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array Placement group ID. Only one can be specified.
      */
     public $DisasterRecoverGroupIds;
 
@@ -205,41 +211,43 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param string $LaunchConfigurationName Launch configuration name
-     * @param string $LifeCycleState Lifecycle status. Valid values:<br>
-<li>`IN_SERVICE`: The instance is running.
-<li>`CREATING`: The instance is being created.
-<li>`CREATION_FAILED`: The instance fails to be created.
-<li>`TERMINATING`: The instance is being terminated.
-<li>`TERMINATION_FAILED`: The instance fails to be terminated.
-<li>`ATTACHING`: The instance is being bound.
-<li>`ATTACH_FAILED`: The instance fails to be bound.
-<li>`DETACHING`: The instance is being unbound.
-<li>`DETACH_FAILED`: The instance fails to be unbound.
-<li>`ATTACHING_LB`: The LB is being bound.
-<li>DETACHING_LB: The LB is being unbound.
-<li>`MODIFYING_LB`: The LB is being modified.
-<li>`STARTING`: The instance is being started up.
-<li>`START_FAILED`: The instance fails to be started up.
-<li>`STOPPING`: The instance is being shut down.
-<li>`STOP_FAILED`: The instance fails to be shut down.
-<li>`STOPPED`: The instance is shut down.
-<li>`IN_LAUNCHING_HOOK`: The lifecycle hook is being scaled out.
-<li>`IN_TERMINATING_HOOK`: The lifecycle hook is being scaled in.
-     * @param string $HealthStatus Health status. Value range: HEALTHY, UNHEALTHY
+     * @param string $LifeCycleState Lifecycle status. valid values are as follows:.
+<Li>IN_SERVICE: running</li>.
+<Li>CREATING: specifies the instance is being created.</li>.
+<Li>CREATION_FAILED: creation failed.</li>.
+<Li>`TERMINATING`: the instance is being terminated.</li>.
+<Li>`TERMINATION_FAILED`: the instance fails to be terminated.</li>.
+<Li>ATTACHING: binding</li>.
+<Li>`ATTACH_FAILED`: the instance fails to be bound.</li>.
+<Li>DETACHING: specifies the unbinding is in progress.</li>.
+<Li>`DETACH_FAILED`: the instance fails to be unbound.</li>.
+<Li>`ATTACHING_LB`: binding to lb</li>.
+<Li>DETACHING_LB: the lb is being unbound.</li>.
+<Li>`MODIFYING_LB`: the lb is being modified.</li>.
+<Li>`STARTING`: the instance is being started up.</li>.
+<Li>`START_FAILED`: the instance fails to be started up.</li>.
+<Li>`STOPPING`: the instance is being shut down.</li>.
+<Li>`STOP_FAILED`: the instance fails to be shut down.</li>.
+<Li>`STOPPED`: the instance is shut down.</li>.
+<Li>`IN_LAUNCHING_HOOK`: the lifecycle hook is being scaled out.</li>.
+<Li>`IN_TERMINATING_HOOK`: the lifecycle hook is being scaled in.</li>.
+     * @param string $HealthStatus Health status. valid values are as follows:.
+<Li>HEALTHY: the instance is in Healthy status.</li>.
+<Li>UNHEALTHY: instance ping unreachable</li>.
+<Li>CLB_UNHEALTHY: the instance port listened by clb is unhealthy</li>.
      * @param boolean $ProtectedFromScaleIn Whether to add scale-in protection
      * @param string $Zone Availability zone
      * @param string $CreationType Creation type. Value range: AUTO_CREATION, MANUAL_ATTACHING.
-     * @param string $AddTime Instance addition time
+     * @param string $AddTime Instance join time is displayed in a format that conforms to the ISO8601 standard and uses UTC time.
      * @param string $InstanceType Instance type
      * @param integer $VersionNumber Version number
      * @param string $AutoScalingGroupName Auto scaling group name
-     * @param string $WarmupStatus Warming up status. Valid values:
-<li>`WAITING_ENTER_WARMUP`: The instance is waiting to be warmed up.
-<li>`NO_NEED_WARMUP`: Warming up is not required.
-<li>`IN_WARMUP`: The instance is being warmed up.
-<li>`AFTER_WARMUP`: Warming up is completed.
-     * @param array $DisasterRecoverGroupIds Placement group ID. Only one is allowed.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $WarmupStatus Preheat status. valid values are as follows:.
+<Li>WAITING_ENTER_WARMUP: specifies the instance is waiting to enter preheating.</li>.
+<Li>`NO_NEED_WARMUP`: warming up is not required.</li>.
+<Li>IN_WARMUP: preheating.</li>.
+<Li>AFTER_WARMUP: indicates the preheating is completed.</li>.
+     * @param array $DisasterRecoverGroupIds Placement group ID. Only one can be specified.
      */
     function __construct()
     {
