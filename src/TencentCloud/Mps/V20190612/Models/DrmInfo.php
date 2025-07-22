@@ -21,17 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * The DRM encryption details.
  *
  * @method string getType() Obtain Encryption type.
-<li>simpleaes: AES-128 encryption</li>
-<li> widevine</li>
-<li>fairplay: not supported for DASH streams</li>
-<li> playready</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+
+- simpleaes
+Can only be used for HLS. format support ts and mp4.
+Only can be used in slice mode. cannot be used in singlefile mode.
+
+- fairplay:
+Can only be used for HLS. valid values: mp4.
+Available for use in slice mode or singlefile mode.
+
+- widevine:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be in singlefile mode.
+
+- playready:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be singlefile mode.
+
  * @method void setType(string $Type) Set Encryption type.
-<li>simpleaes: AES-128 encryption</li>
-<li> widevine</li>
-<li>fairplay: not supported for DASH streams</li>
-<li> playready</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+
+- simpleaes
+Can only be used for HLS. format support ts and mp4.
+Only can be used in slice mode. cannot be used in singlefile mode.
+
+- fairplay:
+Can only be used for HLS. valid values: mp4.
+Available for use in slice mode or singlefile mode.
+
+- widevine:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be in singlefile mode.
+
+- playready:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be singlefile mode.
+
  * @method SimpleAesDrm getSimpleAesDrm() Obtain The AES-128 encryption details.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSimpleAesDrm(SimpleAesDrm $SimpleAesDrm) Set The AES-128 encryption details.
@@ -43,11 +71,25 @@ class DrmInfo extends AbstractModel
 {
     /**
      * @var string Encryption type.
-<li>simpleaes: AES-128 encryption</li>
-<li> widevine</li>
-<li>fairplay: not supported for DASH streams</li>
-<li> playready</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+
+- simpleaes
+Can only be used for HLS. format support ts and mp4.
+Only can be used in slice mode. cannot be used in singlefile mode.
+
+- fairplay:
+Can only be used for HLS. valid values: mp4.
+Available for use in slice mode or singlefile mode.
+
+- widevine:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be in singlefile mode.
+
+- playready:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be singlefile mode.
+
      */
     public $Type;
 
@@ -64,11 +106,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $Type Encryption type.
-<li>simpleaes: AES-128 encryption</li>
-<li> widevine</li>
-<li>fairplay: not supported for DASH streams</li>
-<li> playready</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+
+- simpleaes
+Can only be used for HLS. format support ts and mp4.
+Only can be used in slice mode. cannot be used in singlefile mode.
+
+- fairplay:
+Can only be used for HLS. valid values: mp4.
+Available for use in slice mode or singlefile mode.
+
+- widevine:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be in singlefile mode.
+
+- playready:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be singlefile mode.
+
      * @param SimpleAesDrm $SimpleAesDrm The AES-128 encryption details.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param SpekeDrm $SpekeDrm Information about FairPlay, WideVine, and PlayReady encryption.

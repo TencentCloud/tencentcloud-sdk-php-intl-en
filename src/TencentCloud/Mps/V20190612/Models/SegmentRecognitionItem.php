@@ -26,30 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) Set 
  * @method float getEndTimeOffset() Obtain 
  * @method void setEndTimeOffset(float $EndTimeOffset) Set 
- * @method string getSegmentUrl() Obtain 
- * @method void setSegmentUrl(string $SegmentUrl) Set 
- * @method string getCovImgUrl() Obtain Segment cover.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCovImgUrl(string $CovImgUrl) Set Segment cover.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getSegmentUrl() Obtain Specifies the split segment URL.
+ * @method void setSegmentUrl(string $SegmentUrl) Set Specifies the split segment URL.
+ * @method string getCovImgUrl() Obtain Specifies the segment cover.
+ * @method void setCovImgUrl(string $CovImgUrl) Set Specifies the segment cover.
  * @method string getTitle() Obtain Segment title.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTitle(string $Title) Set Segment title.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSummary() Obtain Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSummary(string $Summary) Set Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSummary() Obtain Specifies the segment summary.
+ * @method void setSummary(string $Summary) Set Specifies the segment summary.
  * @method array getKeywords() Obtain Segmentation keywords.
  * @method void setKeywords(array $Keywords) Set Segmentation keywords.
- * @method string getBeginTime() Obtain The start time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setBeginTime(string $BeginTime) Set The start time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getEndTime() Obtain The end time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setEndTime(string $EndTime) Set The end time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getBeginTime() Obtain Specifies the start time of a live streaming segment in the ISO date format.
+ * @method void setBeginTime(string $BeginTime) Set Specifies the start time of a live streaming segment in the ISO date format.
+ * @method string getEndTime() Obtain Specifies the end time of a live streaming segment in the ISO date format.
+ * @method void setEndTime(string $EndTime) Set Specifies the end time of a live streaming segment in the ISO date format.
  * @method string getPersonId() Obtain Specifies the character ID.
  * @method void setPersonId(string $PersonId) Set Specifies the character ID.
  */
@@ -71,25 +61,22 @@ class SegmentRecognitionItem extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var string 
+     * @var string Specifies the split segment URL.
      */
     public $SegmentUrl;
 
     /**
-     * @var string Segment cover.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Specifies the segment cover.
      */
     public $CovImgUrl;
 
     /**
      * @var string Segment title.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Title;
 
     /**
-     * @var string Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the segment summary.
      */
     public $Summary;
 
@@ -99,14 +86,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Keywords;
 
     /**
-     * @var string The start time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Specifies the start time of a live streaming segment in the ISO date format.
      */
     public $BeginTime;
 
     /**
-     * @var string The end time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Specifies the end time of a live streaming segment in the ISO date format.
      */
     public $EndTime;
 
@@ -119,18 +104,13 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param float $Confidence 
      * @param float $StartTimeOffset 
      * @param float $EndTimeOffset 
-     * @param string $SegmentUrl 
-     * @param string $CovImgUrl Segment cover.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $SegmentUrl Specifies the split segment URL.
+     * @param string $CovImgUrl Specifies the segment cover.
      * @param string $Title Segment title.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Summary Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Summary Specifies the segment summary.
      * @param array $Keywords Segmentation keywords.
-     * @param string $BeginTime The start time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $EndTime The end time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $BeginTime Specifies the start time of a live streaming segment in the ISO date format.
+     * @param string $EndTime Specifies the end time of a live streaming segment in the ISO date format.
      * @param string $PersonId Specifies the character ID.
      */
     function __construct()

@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setParagraphs(array $Paragraphs) Set Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMindMapUrl() Obtain Address of the mind map of a summary task.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setMindMapUrl(string $MindMapUrl) Set Address of the mind map of a summary task.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class MediaAiAnalysisDescriptionItem extends AbstractModel
 {
@@ -62,12 +66,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Paragraphs;
 
     /**
+     * @var string Address of the mind map of a summary task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $MindMapUrl;
+
+    /**
      * @param string $Description Intelligent description.
      * @param float $Confidence Confidence of the intelligent description, with a value range from 0 to 100.
      * @param string $Title Intelligent description title.
      * @param array $Keywords Intelligent description keywords.
      * @param array $Paragraphs Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MindMapUrl Address of the mind map of a summary task.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -105,6 +117,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->Paragraphs, $obj);
             }
+        }
+
+        if (array_key_exists("MindMapUrl",$param) and $param["MindMapUrl"] !== null) {
+            $this->MindMapUrl = $param["MindMapUrl"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStyleId() Obtain The subtitle style ID, which corresponds to the `Id` field of `ComposeStyles`.
  * @method void setStyleId(string $StyleId) Set The subtitle style ID, which corresponds to the `Id` field of `ComposeStyles`.
- * @method string getText() Obtain The subtitle text.
- * @method void setText(string $Text) Set The subtitle text.
+ * @method string getText() Obtain Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks.
+ * @method void setText(string $Text) Set Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks.
  * @method ComposeTrackTime getTrackTime() Obtain The time of the element in the timeline. If this is not specified, the element will follow the previous element.	
  * @method void setTrackTime(ComposeTrackTime $TrackTime) Set The time of the element in the timeline. If this is not specified, the element will follow the previous element.	
  */
@@ -35,7 +35,7 @@ class ComposeSubtitleItem extends AbstractModel
     public $StyleId;
 
     /**
-     * @var string The subtitle text.
+     * @var string Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks.
      */
     public $Text;
 
@@ -46,7 +46,7 @@ class ComposeSubtitleItem extends AbstractModel
 
     /**
      * @param string $StyleId The subtitle style ID, which corresponds to the `Id` field of `ComposeStyles`.
-     * @param string $Text The subtitle text.
+     * @param string $Text Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks.
      * @param ComposeTrackTime $TrackTime The time of the element in the timeline. If this is not specified, the element will follow the previous element.	
      */
     function __construct()

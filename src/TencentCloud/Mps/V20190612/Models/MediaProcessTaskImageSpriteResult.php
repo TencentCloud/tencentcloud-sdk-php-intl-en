@@ -30,10 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method ImageSpriteTaskInput getInput() Obtain Input for an image sprite generating task.
  * @method void setInput(ImageSpriteTaskInput $Input) Set Input for an image sprite generating task.
- * @method MediaImageSpriteItem getOutput() Obtain Output of an image sprite generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(MediaImageSpriteItem $Output) Set Output of an image sprite generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method MediaImageSpriteItem getOutput() Obtain Specifies the output of an image sprite task for a video.
+ * @method void setOutput(MediaImageSpriteItem $Output) Set Specifies the output of an image sprite task for a video.
+ * @method string getBeginProcessTime() Obtain Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getFinishTime() Obtain Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setFinishTime(string $FinishTime) Set Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
  */
 class MediaProcessTaskImageSpriteResult extends AbstractModel
 {
@@ -63,10 +65,19 @@ class MediaProcessTaskImageSpriteResult extends AbstractModel
     public $Input;
 
     /**
-     * @var MediaImageSpriteItem Output of an image sprite generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaImageSpriteItem Specifies the output of an image sprite task for a video.
      */
     public $Output;
+
+    /**
+     * @var string Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     */
+    public $BeginProcessTime;
+
+    /**
+     * @var string Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     */
+    public $FinishTime;
 
     /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -74,8 +85,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
      * @param string $Message Error message.
      * @param ImageSpriteTaskInput $Input Input for an image sprite generating task.
-     * @param MediaImageSpriteItem $Output Output of an image sprite generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MediaImageSpriteItem $Output Specifies the output of an image sprite task for a video.
+     * @param string $BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     function __construct()
     {
@@ -114,6 +126,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new MediaImageSpriteItem();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("BeginProcessTime",$param) and $param["BeginProcessTime"] !== null) {
+            $this->BeginProcessTime = $param["BeginProcessTime"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
         }
     }
 }

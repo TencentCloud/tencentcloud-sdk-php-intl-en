@@ -28,22 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method SmartSubtitlesTaskInput getInput() Obtain Recognition task input.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setInput(SmartSubtitlesTaskInput $Input) Set Recognition task input.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getOutput() Obtain Recognition task output.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setOutput(array $Output) Set Recognition task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method SmartSubtitlesTaskInput getInput() Obtain Input of the recognition task.
+ * @method void setInput(SmartSubtitlesTaskInput $Input) Set Input of the recognition task.
+ * @method array getOutput() Obtain Output of the identification task.
+ * @method void setOutput(array $Output) Set Output of the identification task.
  * @method string getBeginProcessTime() Obtain Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getFinishTime() Obtain Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setFinishTime(string $FinishTime) Set Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
  */
 class ScheduleSmartSubtitleTaskResult extends AbstractModel
 {
@@ -68,26 +60,22 @@ class ScheduleSmartSubtitleTaskResult extends AbstractModel
     public $Message;
 
     /**
-     * @var SmartSubtitlesTaskInput Recognition task input.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var SmartSubtitlesTaskInput Input of the recognition task.
      */
     public $Input;
 
     /**
-     * @var array Recognition task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array Output of the identification task.
      */
     public $Output;
 
     /**
      * @var string Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $BeginProcessTime;
 
     /**
      * @var string Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $FinishTime;
 
@@ -96,14 +84,10 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param SmartSubtitlesTaskInput $Input Recognition task input.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $Output Recognition task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SmartSubtitlesTaskInput $Input Input of the recognition task.
+     * @param array $Output Output of the identification task.
      * @param string $BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

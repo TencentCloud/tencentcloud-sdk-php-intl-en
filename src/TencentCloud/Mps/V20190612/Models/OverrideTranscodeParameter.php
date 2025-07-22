@@ -42,22 +42,14 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set The TSC transcoding parameters.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method SubtitleTemplate getSubtitleTemplate() Obtain The subtitle settings.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set The subtitle settings.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAddonAudioStream() Obtain The information of the external audio track to add.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddonAudioStream(array $AddonAudioStream) Set The information of the external audio track to add.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStdExtInfo() Obtain An extended field for transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStdExtInfo(string $StdExtInfo) Set An extended field for transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAddOnSubtitles() Obtain The subtitle file to add.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddOnSubtitles(array $AddOnSubtitles) Set The subtitle file to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SubtitleTemplate getSubtitleTemplate() Obtain Subtitle stream configuration parameter.
+ * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set Subtitle stream configuration parameter.
+ * @method array getAddonAudioStream() Obtain Specifies the external audio track parameter.
+ * @method void setAddonAudioStream(array $AddonAudioStream) Set Specifies the external audio track parameter.
+ * @method string getStdExtInfo() Obtain Extension field for transcoding.
+ * @method void setStdExtInfo(string $StdExtInfo) Set Extension field for transcoding.
+ * @method array getAddOnSubtitles() Obtain Subtitle file to be inserted.
+ * @method void setAddOnSubtitles(array $AddOnSubtitles) Set Subtitle file to be inserted.
  */
 class OverrideTranscodeParameter extends AbstractModel
 {
@@ -97,26 +89,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TEHDConfig;
 
     /**
-     * @var SubtitleTemplate The subtitle settings.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SubtitleTemplate Subtitle stream configuration parameter.
      */
     public $SubtitleTemplate;
 
     /**
-     * @var array The information of the external audio track to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the external audio track parameter.
      */
     public $AddonAudioStream;
 
     /**
-     * @var string An extended field for transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Extension field for transcoding.
      */
     public $StdExtInfo;
 
     /**
-     * @var array The subtitle file to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Subtitle file to be inserted.
      */
     public $AddOnSubtitles;
 
@@ -132,14 +120,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param AudioTemplateInfoForUpdate $AudioTemplate Audio stream configuration parameter.
      * @param TEHDConfigForUpdate $TEHDConfig The TSC transcoding parameters.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubtitleTemplate $SubtitleTemplate The subtitle settings.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $AddonAudioStream The information of the external audio track to add.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StdExtInfo An extended field for transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $AddOnSubtitles The subtitle file to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubtitleTemplate $SubtitleTemplate Subtitle stream configuration parameter.
+     * @param array $AddonAudioStream Specifies the external audio track parameter.
+     * @param string $StdExtInfo Extension field for transcoding.
+     * @param array $AddOnSubtitles Subtitle file to be inserted.
      */
     function __construct()
     {

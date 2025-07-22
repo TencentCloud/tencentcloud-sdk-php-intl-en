@@ -32,54 +32,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Name of a figure.
  * @method array getSegmentSet() Obtain Result set of segments that contain a figure.
  * @method void setSegmentSet(array $SegmentSet) Set Result set of segments that contain a figure.
- * @method string getGender() Obtain The person’s gender.
-<li>Male</li>
-<li>Female</li>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setGender(string $Gender) Set The person’s gender.
-<li>Male</li>
-<li>Female</li>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getBirthday() Obtain The person’s birth date.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setBirthday(string $Birthday) Set The person’s birth date.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getProfession() Obtain The person’s job or job title.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setProfession(string $Profession) Set The person’s job or job title.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getSchoolOfGraduation() Obtain The college the person graduated from.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSchoolOfGraduation(string $SchoolOfGraduation) Set The college the person graduated from.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getAbstract() Obtain The person’s profile.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setAbstract(string $Abstract) Set The person’s profile.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getPlaceOfBirth() Obtain The person’s place of birth.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setPlaceOfBirth(string $PlaceOfBirth) Set The person’s place of birth.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getPersonType() Obtain Whether the person is a politician or artist.
-<li>Politician</li>
-<li>Artist</li>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setPersonType(string $PersonType) Set Whether the person is a politician or artist.
-<li>Politician</li>
-<li>Artist</li>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getRemark() Obtain Sensitivity
-<li>Normal</li>
-<li>Sensitive</li>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setRemark(string $Remark) Set Sensitivity
-<li>Normal</li>
-<li>Sensitive</li>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getUrl() Obtain The screenshot URL.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setUrl(string $Url) Set The screenshot URL.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getGender() Obtain Gender of the person.
+<Li>Male: man.</li>.
+<Li>Female: specifies the woman.</li>.
+ * @method void setGender(string $Gender) Set Gender of the person.
+<Li>Male: man.</li>.
+<Li>Female: specifies the woman.</li>.
+ * @method string getBirthday() Obtain Date of birth.
+ * @method void setBirthday(string $Birthday) Set Date of birth.
+ * @method string getProfession() Obtain Occupation or position of a person.
+ * @method void setProfession(string $Profession) Set Occupation or position of a person.
+ * @method string getSchoolOfGraduation() Obtain Specifies the graduation institution of the person.
+ * @method void setSchoolOfGraduation(string $SchoolOfGraduation) Set Specifies the graduation institution of the person.
+ * @method string getAbstract() Obtain Description of the person.
+ * @method void setAbstract(string $Abstract) Set Description of the person.
+ * @method string getPlaceOfBirth() Obtain Specifies the birthplace or place of origin.
+ * @method void setPlaceOfBirth(string $PlaceOfBirth) Set Specifies the birthplace or place of origin.
+ * @method string getPersonType() Obtain Person type.
+<Li>Politician: specifies the official.</li>.
+<Li>Artist: specifies the artist.</li>.
+ * @method void setPersonType(string $PersonType) Set Person type.
+<Li>Politician: specifies the official.</li>.
+<Li>Artist: specifies the artist.</li>.
+ * @method string getRemark() Obtain Sensitivity labeling.
+<Li>Normal: specifies the scaling group is normal.</li>.
+<Li>Sensitive: specifies sensitivity.</li>.
+ * @method void setRemark(string $Remark) Set Sensitivity labeling.
+<Li>Normal: specifies the scaling group is normal.</li>.
+<Li>Sensitive: specifies sensitivity.</li>.
+ * @method string getUrl() Obtain Specifies the screenshot link.
+ * @method void setUrl(string $Url) Set Specifies the screenshot link.
  */
 class AiRecognitionTaskFaceResultItem extends AbstractModel
 {
@@ -106,62 +88,53 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
     public $SegmentSet;
 
     /**
-     * @var string The person’s gender.
-<li>Male</li>
-<li>Female</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Gender of the person.
+<Li>Male: man.</li>.
+<Li>Female: specifies the woman.</li>.
      */
     public $Gender;
 
     /**
-     * @var string The person’s birth date.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Date of birth.
      */
     public $Birthday;
 
     /**
-     * @var string The person’s job or job title.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Occupation or position of a person.
      */
     public $Profession;
 
     /**
-     * @var string The college the person graduated from.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Specifies the graduation institution of the person.
      */
     public $SchoolOfGraduation;
 
     /**
-     * @var string The person’s profile.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Description of the person.
      */
     public $Abstract;
 
     /**
-     * @var string The person’s place of birth.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Specifies the birthplace or place of origin.
      */
     public $PlaceOfBirth;
 
     /**
-     * @var string Whether the person is a politician or artist.
-<li>Politician</li>
-<li>Artist</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Person type.
+<Li>Politician: specifies the official.</li>.
+<Li>Artist: specifies the artist.</li>.
      */
     public $PersonType;
 
     /**
-     * @var string Sensitivity
-<li>Normal</li>
-<li>Sensitive</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Sensitivity labeling.
+<Li>Normal: specifies the scaling group is normal.</li>.
+<Li>Sensitive: specifies sensitivity.</li>.
      */
     public $Remark;
 
     /**
-     * @var string The screenshot URL.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Specifies the screenshot link.
      */
     public $Url;
 
@@ -172,30 +145,21 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>UserDefine: Custom figure library.</li>
      * @param string $Name Name of a figure.
      * @param array $SegmentSet Result set of segments that contain a figure.
-     * @param string $Gender The person’s gender.
-<li>Male</li>
-<li>Female</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Birthday The person’s birth date.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Profession The person’s job or job title.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $SchoolOfGraduation The college the person graduated from.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Abstract The person’s profile.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $PlaceOfBirth The person’s place of birth.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $PersonType Whether the person is a politician or artist.
-<li>Politician</li>
-<li>Artist</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Remark Sensitivity
-<li>Normal</li>
-<li>Sensitive</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Url The screenshot URL.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Gender Gender of the person.
+<Li>Male: man.</li>.
+<Li>Female: specifies the woman.</li>.
+     * @param string $Birthday Date of birth.
+     * @param string $Profession Occupation or position of a person.
+     * @param string $SchoolOfGraduation Specifies the graduation institution of the person.
+     * @param string $Abstract Description of the person.
+     * @param string $PlaceOfBirth Specifies the birthplace or place of origin.
+     * @param string $PersonType Person type.
+<Li>Politician: specifies the official.</li>.
+<Li>Artist: specifies the artist.</li>.
+     * @param string $Remark Sensitivity labeling.
+<Li>Normal: specifies the scaling group is normal.</li>.
+<Li>Sensitive: specifies sensitivity.</li>.
+     * @param string $Url Specifies the screenshot link.
      */
     function __construct()
     {

@@ -40,10 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFinishTime(string $FinishTime) Set Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method string getTaskId() Obtain Media processing task ID.
  * @method void setTaskId(string $TaskId) Set Media processing task ID.
- * @method BatchSubTaskResult getBatchTaskResult() Obtain Video processing task information. This field has a value only when TaskType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setBatchTaskResult(BatchSubTaskResult $BatchTaskResult) Set Video processing task information. This field has a value only when TaskType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method BatchSubTaskResult getBatchTaskResult() Obtain Video processing task information. this field has a value only when TaskType is BatchTask.
+ * @method void setBatchTaskResult(BatchSubTaskResult $BatchTaskResult) Set Video processing task information. this field has a value only when TaskType is BatchTask.
  * @method TaskNotifyConfig getTaskNotifyConfig() Obtain Event notification information of the task.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set Event notification information of the task.
@@ -96,8 +94,7 @@ class DescribeBatchTaskDetailResponse extends AbstractModel
     public $TaskId;
 
     /**
-     * @var BatchSubTaskResult Video processing task information. This field has a value only when TaskType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var BatchSubTaskResult Video processing task information. this field has a value only when TaskType is BatchTask.
      */
     public $BatchTaskResult;
 
@@ -143,8 +140,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $TaskId Media processing task ID.
-     * @param BatchSubTaskResult $BatchTaskResult Video processing task information. This field has a value only when TaskType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param BatchSubTaskResult $BatchTaskResult Video processing task information. this field has a value only when TaskType is BatchTask.
      * @param TaskNotifyConfig $TaskNotifyConfig Event notification information of the task.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $TasksPriority Priority of the task flow, with a value range of [-10, 10].

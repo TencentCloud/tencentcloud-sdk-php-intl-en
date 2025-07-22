@@ -18,18 +18,14 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The recognized text information.
+ * Word coordinates info.
  *
  * @method string getDetectedText() Obtain The text content.
  * @method void setDetectedText(string $DetectedText) Set The text content.
  * @method Polygon getCoord() Obtain The coordinates of the four vertices.
  * @method void setCoord(Polygon $Coord) Set The coordinates of the four vertices.
- * @method string getAdvancedInfo() Obtain Description.
- * @method void setAdvancedInfo(string $AdvancedInfo) Set Description.
- * @method array getWordCoord() Obtain Specifies the four-point coordinate of the word.
- * @method void setWordCoord(array $WordCoord) Set Specifies the four-point coordinate of the word.
  */
-class WordItem extends AbstractModel
+class WordPolygon extends AbstractModel
 {
     /**
      * @var string The text content.
@@ -42,20 +38,8 @@ class WordItem extends AbstractModel
     public $Coord;
 
     /**
-     * @var string Description.
-     */
-    public $AdvancedInfo;
-
-    /**
-     * @var array Specifies the four-point coordinate of the word.
-     */
-    public $WordCoord;
-
-    /**
      * @param string $DetectedText The text content.
      * @param Polygon $Coord The coordinates of the four vertices.
-     * @param string $AdvancedInfo Description.
-     * @param array $WordCoord Specifies the four-point coordinate of the word.
      */
     function __construct()
     {
@@ -77,19 +61,6 @@ class WordItem extends AbstractModel
         if (array_key_exists("Coord",$param) and $param["Coord"] !== null) {
             $this->Coord = new Polygon();
             $this->Coord->deserialize($param["Coord"]);
-        }
-
-        if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
-            $this->AdvancedInfo = $param["AdvancedInfo"];
-        }
-
-        if (array_key_exists("WordCoord",$param) and $param["WordCoord"] !== null) {
-            $this->WordCoord = [];
-            foreach ($param["WordCoord"] as $key => $value){
-                $obj = new WordPolygon();
-                $obj->deserialize($value);
-                array_push($this->WordCoord, $obj);
-            }
         }
     }
 }

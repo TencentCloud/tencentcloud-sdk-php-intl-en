@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of recognized segment in seconds.
  * @method float getConfidence() Obtain Confidence of recognized segment. Value range: 0–100.
  * @method void setConfidence(float $Confidence) Set Confidence of recognized segment. Value range: 0–100.
+ * @method string getStartTime() Obtain 
+ * @method void setStartTime(string $StartTime) Set 
+ * @method string getEndTime() Obtain 
+ * @method void setEndTime(string $EndTime) Set 
+ * @method boolean getSteadyState() Obtain 
+ * @method void setSteadyState(boolean $SteadyState) Set 
+ * @method string getUserId() Obtain User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setUserId(string $UserId) Set User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
  */
 class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
 {
@@ -52,10 +60,34 @@ class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
     public $Confidence;
 
     /**
+     * @var string 
+     */
+    public $StartTime;
+
+    /**
+     * @var string 
+     */
+    public $EndTime;
+
+    /**
+     * @var boolean 
+     */
+    public $SteadyState;
+
+    /**
+     * @var string User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $UserId;
+
+    /**
      * @param string $Text Recognized text.
      * @param float $StartPtsTime Start PTS time of recognized segment in seconds.
      * @param float $EndPtsTime End PTS time of recognized segment in seconds.
      * @param float $Confidence Confidence of recognized segment. Value range: 0–100.
+     * @param string $StartTime 
+     * @param string $EndTime 
+     * @param boolean $SteadyState 
+     * @param string $UserId User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -84,6 +116,22 @@ class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
 
         if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
             $this->Confidence = $param["Confidence"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("SteadyState",$param) and $param["SteadyState"] !== null) {
+            $this->SteadyState = $param["SteadyState"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

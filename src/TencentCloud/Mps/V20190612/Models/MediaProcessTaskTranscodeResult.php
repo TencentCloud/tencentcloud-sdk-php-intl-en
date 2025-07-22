@@ -34,10 +34,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(MediaTranscodeItem $Output) Set Output of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProgress() Obtain Transcoding progress. Value range: 0-100
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setProgress(integer $Progress) Set Transcoding progress. Value range: 0-100
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getProgress() Obtain Transcoding progress, with a value range of [0-100].
+ * @method void setProgress(integer $Progress) Set Transcoding progress, with a value range of [0-100].
  */
 class MediaProcessTaskTranscodeResult extends AbstractModel
 {
@@ -73,8 +71,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Output;
 
     /**
-     * @var integer Transcoding progress. Value range: 0-100
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer Transcoding progress, with a value range of [0-100].
      */
     public $Progress;
 
@@ -86,8 +83,7 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param TranscodeTaskInput $Input Input for a transcoding task.
      * @param MediaTranscodeItem $Output Output of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Progress Transcoding progress. Value range: 0-100
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $Progress Transcoding progress, with a value range of [0-100].
      */
     function __construct()
     {

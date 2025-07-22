@@ -20,8 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessLiveStream request structure.
  *
- * @method string getUrl() Obtain Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
- * @method void setUrl(string $Url) Set Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
+ * @method string getUrl() Obtain Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+A TRTC address is as follows:
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` is the TRTC room ID, which is a number.
+`<sdkappid>` is the SDK app ID of TRTC.
+`<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+<`usersig>` is the TRTC user signature.
+ * @method void setUrl(string $Url) Set Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+A TRTC address is as follows:
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` is the TRTC room ID, which is a number.
+`<sdkappid>` is the SDK app ID of TRTC.
+`<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+<`usersig>` is the TRTC user signature.
  * @method LiveStreamTaskNotifyConfig getTaskNotifyConfig() Obtain Event notification information of a task, which is used to specify the live stream processing result.
  * @method void setTaskNotifyConfig(LiveStreamTaskNotifyConfig $TaskNotifyConfig) Set Event notification information of a task, which is used to specify the live stream processing result.
  * @method TaskOutputStorage getOutputStorage() Obtain Target bucket of a live stream processing output file. This parameter is required if a file will be output.
@@ -54,7 +66,13 @@ Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, t
 class ProcessLiveStreamRequest extends AbstractModel
 {
     /**
-     * @var string Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
+     * @var string Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+A TRTC address is as follows:
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` is the TRTC room ID, which is a number.
+`<sdkappid>` is the SDK app ID of TRTC.
+`<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+<`usersig>` is the TRTC user signature.
      */
     public $Url;
 
@@ -113,7 +131,13 @@ Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, t
     public $ScheduleId;
 
     /**
-     * @param string $Url Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
+     * @param string $Url Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+A TRTC address is as follows:
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` is the TRTC room ID, which is a number.
+`<sdkappid>` is the SDK app ID of TRTC.
+`<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+<`usersig>` is the TRTC user signature.
      * @param LiveStreamTaskNotifyConfig $TaskNotifyConfig Event notification information of a task, which is used to specify the live stream processing result.
      * @param TaskOutputStorage $OutputStorage Target bucket of a live stream processing output file. This parameter is required if a file will be output.
      * @param string $OutputDir Target directory of a live stream processing output file, such as `/movie/201909/`. If this parameter is left empty, the `/` directory will be used.

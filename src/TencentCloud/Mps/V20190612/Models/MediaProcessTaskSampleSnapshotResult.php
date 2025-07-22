@@ -32,14 +32,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method SampleSnapshotTaskInput getInput() Obtain Input for a sampled screenshot task.
  * @method void setInput(SampleSnapshotTaskInput $Input) Set Input for a sampled screenshot task.
- * @method MediaSampleSnapshotItem getOutput() Obtain Output of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(MediaSampleSnapshotItem $Output) Set Output of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBeginProcessTime() Obtain 
- * @method void setBeginProcessTime(string $BeginProcessTime) Set 
- * @method string getFinishTime() Obtain 
- * @method void setFinishTime(string $FinishTime) Set 
+ * @method MediaSampleSnapshotItem getOutput() Obtain Specifies the output of a sampling screenshot task for a video.
+ * @method void setOutput(MediaSampleSnapshotItem $Output) Set Specifies the output of a sampling screenshot task for a video.
+ * @method string getBeginProcessTime() Obtain Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getFinishTime() Obtain Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setFinishTime(string $FinishTime) Set Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
  */
 class MediaProcessTaskSampleSnapshotResult extends AbstractModel
 {
@@ -70,18 +68,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Input;
 
     /**
-     * @var MediaSampleSnapshotItem Output of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaSampleSnapshotItem Specifies the output of a sampling screenshot task for a video.
      */
     public $Output;
 
     /**
-     * @var string 
+     * @var string Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string 
+     * @var string Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $FinishTime;
 
@@ -92,10 +89,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Message Error message.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param SampleSnapshotTaskInput $Input Input for a sampled screenshot task.
-     * @param MediaSampleSnapshotItem $Output Output of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BeginProcessTime 
-     * @param string $FinishTime 
+     * @param MediaSampleSnapshotItem $Output Specifies the output of a sampling screenshot task for a video.
+     * @param string $BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     function __construct()
     {

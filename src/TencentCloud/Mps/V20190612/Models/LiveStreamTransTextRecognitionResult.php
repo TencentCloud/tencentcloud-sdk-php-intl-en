@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(float $Confidence) Set The confidence score for a segment. Value range: 0-100.
  * @method string getTrans() Obtain The translation.
  * @method void setTrans(string $Trans) Set The translation.
+ * @method string getStartTime() Obtain 
+ * @method void setStartTime(string $StartTime) Set 
+ * @method string getEndTime() Obtain 
+ * @method void setEndTime(string $EndTime) Set 
+ * @method boolean getSteadyState() Obtain 
+ * @method void setSteadyState(boolean $SteadyState) Set 
+ * @method string getUserId() Obtain User ID in the result of real-time translation via WebSocket and TRTC.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setUserId(string $UserId) Set User ID in the result of real-time translation via WebSocket and TRTC.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class LiveStreamTransTextRecognitionResult extends AbstractModel
 {
@@ -59,11 +69,37 @@ class LiveStreamTransTextRecognitionResult extends AbstractModel
     public $Trans;
 
     /**
+     * @var string 
+     */
+    public $StartTime;
+
+    /**
+     * @var string 
+     */
+    public $EndTime;
+
+    /**
+     * @var boolean 
+     */
+    public $SteadyState;
+
+    /**
+     * @var string User ID in the result of real-time translation via WebSocket and TRTC.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $UserId;
+
+    /**
      * @param string $Text The text transcript.
      * @param float $StartPtsTime The PTS (seconds) of the start of a segment.
      * @param float $EndPtsTime The PTS (seconds) of the end of a segment.
      * @param float $Confidence The confidence score for a segment. Value range: 0-100.
      * @param string $Trans The translation.
+     * @param string $StartTime 
+     * @param string $EndTime 
+     * @param boolean $SteadyState 
+     * @param string $UserId User ID in the result of real-time translation via WebSocket and TRTC.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -96,6 +132,22 @@ class LiveStreamTransTextRecognitionResult extends AbstractModel
 
         if (array_key_exists("Trans",$param) and $param["Trans"] !== null) {
             $this->Trans = $param["Trans"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("SteadyState",$param) and $param["SteadyState"] !== null) {
+            $this->SteadyState = $param["SteadyState"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

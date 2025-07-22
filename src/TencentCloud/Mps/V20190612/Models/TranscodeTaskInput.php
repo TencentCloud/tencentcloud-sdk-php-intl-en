@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain ID of a video transcoding template.
  * @method void setDefinition(integer $Definition) Set ID of a video transcoding template.
- * @method RawTranscodeParameter getRawParameter() Obtain Custom video transcoding parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
- * @method void setRawParameter(RawTranscodeParameter $RawParameter) Set Custom video transcoding parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+ * @method RawTranscodeParameter getRawParameter() Obtain Custom video transcoding parameter. valid when Definition is set to 0.
+This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
+ * @method void setRawParameter(RawTranscodeParameter $RawParameter) Set Custom video transcoding parameter. valid when Definition is set to 0.
+This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
  * @method OverrideTranscodeParameter getOverrideParameter() Obtain Video transcoding custom parameter, which is valid when `Definition` is not 0.
 When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
 This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
@@ -34,10 +34,8 @@ Note: this field may return `null`, indicating that no valid value was found.
 When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
 This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
 Note: this field may return `null`, indicating that no valid value was found.
- * @method array getWatermarkSet() Obtain List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getWatermarkSet() Obtain Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+ * @method void setWatermarkSet(array $WatermarkSet) Set Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
  * @method array getMosaicSet() Obtain List of blurs. Up to 10 ones can be supported.
  * @method void setMosaicSet(array $MosaicSet) Set List of blurs. Up to 10 ones can be supported.
  * @method float getStartTimeOffset() Obtain Start time offset of a transcoded video, in seconds.
@@ -93,8 +91,8 @@ class TranscodeTaskInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var RawTranscodeParameter Custom video transcoding parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+     * @var RawTranscodeParameter Custom video transcoding parameter. valid when Definition is set to 0.
+This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
      */
     public $RawParameter;
 
@@ -107,8 +105,7 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $OverrideParameter;
 
     /**
-     * @var array List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */
     public $WatermarkSet;
 
@@ -169,14 +166,13 @@ Note: this field may return `null`, indicating that no valid value was found.
 
     /**
      * @param integer $Definition ID of a video transcoding template.
-     * @param RawTranscodeParameter $RawParameter Custom video transcoding parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+     * @param RawTranscodeParameter $RawParameter Custom video transcoding parameter. valid when Definition is set to 0.
+This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
      * @param OverrideTranscodeParameter $OverrideParameter Video transcoding custom parameter, which is valid when `Definition` is not 0.
 When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
 This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
 Note: this field may return `null`, indicating that no valid value was found.
-     * @param array $WatermarkSet List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      * @param array $MosaicSet List of blurs. Up to 10 ones can be supported.
      * @param float $StartTimeOffset Start time offset of a transcoded video, in seconds.
 <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
  * @method array getQualityControlItemSet() Obtain Media quality inspection configuration parameters.
  * @method void setQualityControlItemSet(array $QualityControlItemSet) Set Media quality inspection configuration parameters.
+ * @method string getRecordFormat() Obtain Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+ * @method void setRecordFormat(string $RecordFormat) Set Recording file format. Valid values:
+<li>PNG: PNG image.</li>
  */
 class ModifyQualityControlTemplateRequest extends AbstractModel
 {
@@ -52,10 +56,18 @@ class ModifyQualityControlTemplateRequest extends AbstractModel
     public $QualityControlItemSet;
 
     /**
+     * @var string Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+     */
+    public $RecordFormat;
+
+    /**
      * @param integer $Definition Unique identifier of a media quality inspection template.
      * @param string $Name Media quality inspection template name, with a length limit of 64 characters.
      * @param string $Comment Template description, with a length limit of 256 characters.
      * @param array $QualityControlItemSet Media quality inspection configuration parameters.
+     * @param string $RecordFormat Recording file format. Valid values:
+<li>PNG: PNG image.</li>
      */
     function __construct()
     {
@@ -89,6 +101,10 @@ class ModifyQualityControlTemplateRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->QualityControlItemSet, $obj);
             }
+        }
+
+        if (array_key_exists("RecordFormat",$param) and $param["RecordFormat"] !== null) {
+            $this->RecordFormat = $param["RecordFormat"];
         }
     }
 }

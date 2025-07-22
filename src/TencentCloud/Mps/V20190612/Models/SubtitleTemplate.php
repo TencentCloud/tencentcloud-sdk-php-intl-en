@@ -24,32 +24,68 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPath(string $Path) Set The URL of the subtitles to add to the video.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStreamIndex() Obtain The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStreamIndex(integer $StreamIndex) Set The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFontType() Obtain The font. Valid values:
-<li>`hei.ttf`: Heiti.</li>
-<li>`song.ttf`: Songti.</li>
-<li>`simkai.ttf`: Kaiti.</li>
-<li>`arial.ttf`: Arial.</li>
-The default is `hei.ttf`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFontType(string $FontType) Set The font. Valid values:
-<li>`hei.ttf`: Heiti.</li>
-<li>`song.ttf`: Songti.</li>
-<li>`simkai.ttf`: Kaiti.</li>
-<li>`arial.ttf`: Arial.</li>
-The default is `hei.ttf`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFontSize() Obtain The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFontSize(string $FontSize) Set The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFontColor() Obtain The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFontColor(string $FontColor) Set The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStreamIndex() Obtain Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+
+-Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+
+
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setStreamIndex(integer $StreamIndex) Set Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+
+-Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+
+
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getFontType() Obtain Font type. valid values:.
+<li>hei.ttf: simhei.</li>.
+<li>song.ttf: simsun.</li>.
+<Li>Kai.Ttf (recommend) or simkai.ttf: kaiti.</li>.
+<li>msyh.ttf: microsoft yahei</li>.
+<li>msyhbd.ttf: microsoft yahei in bold.</li>.
+<li>hkjgt.ttf: dynafont king gothic</li>.
+<li>dhttx.ttf: dianheitexiti.</li>.
+<li>xqgdzt.ttf: xiqueguzidianti</li>.
+<li>qpcyt.ttf: smart splice super round body.</li>.
+<li>arial.ttf: english only.</li>.
+<li>dinalternate.ttf:DIN Alternate Bold</li>
+<li>helveticalt.ttf:Helvetica</li>
+<li>helveticains.ttf:Helvetica Inserat</li>
+<li>trajanpro.ttf:TrajanPro-Bold</li>
+<li>korean.ttf: specifies the korean language.</li>.
+<li>japanese.ttf: specifies the japanese language.</li>.
+<li>thai.ttf: specifies the thai language.</li>.
+Default: hei.ttf (heiti). note: kaiti is recommended for use with kai.ttf.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setFontType(string $FontType) Set Font type. valid values:.
+<li>hei.ttf: simhei.</li>.
+<li>song.ttf: simsun.</li>.
+<Li>Kai.Ttf (recommend) or simkai.ttf: kaiti.</li>.
+<li>msyh.ttf: microsoft yahei</li>.
+<li>msyhbd.ttf: microsoft yahei in bold.</li>.
+<li>hkjgt.ttf: dynafont king gothic</li>.
+<li>dhttx.ttf: dianheitexiti.</li>.
+<li>xqgdzt.ttf: xiqueguzidianti</li>.
+<li>qpcyt.ttf: smart splice super round body.</li>.
+<li>arial.ttf: english only.</li>.
+<li>dinalternate.ttf:DIN Alternate Bold</li>
+<li>helveticalt.ttf:Helvetica</li>
+<li>helveticains.ttf:Helvetica Inserat</li>
+<li>trajanpro.ttf:TrajanPro-Bold</li>
+<li>korean.ttf: specifies the korean language.</li>.
+<li>japanese.ttf: specifies the japanese language.</li>.
+<li>thai.ttf: specifies the thai language.</li>.
+Default: hei.ttf (heiti). note: kaiti is recommended for use with kai.ttf.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getFontSize() Obtain Font size. Format: Npx, where N is a numerical value. If it is not specified, the font size of the subtitle file applies.
+It is 5% of the source video height by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setFontSize(string $FontSize) Set Font size. Format: Npx, where N is a numerical value. If it is not specified, the font size of the subtitle file applies.
+It is 5% of the source video height by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getFontColor() Obtain Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setFontColor(string $FontColor) Set Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method float getFontAlpha() Obtain The text transparency. Value range: 0-1.
 <li>`0`: Fully transparent.</li>
 <li>`1`: Fully opaque.</li>
@@ -60,6 +96,76 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`1`: Fully opaque.</li>
 Default value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getYPos() Obtain Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+
+ - Pixel: Npx. Value range of N: [0,4096].
+ - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+
+By default, the position is 4% of the source video height.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setYPos(string $YPos) Set Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+
+ - Pixel: Npx. Value range of N: [0,4096].
+ - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+
+By default, the position is 4% of the source video height.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getBoardY() Obtain Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+
+ - Pixel: Npx. Value range of N: [0,4096].
+ - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+
+If this parameter is not specified, the subtitle background is disabled.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setBoardY(string $BoardY) Set Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+
+ - Pixel: Npx. Value range of N: [0,4096].
+ - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+
+If this parameter is not specified, the subtitle background is disabled.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getBoardWidth() Obtain Board width. Unit: pixels. Value range: [0,4096].
+It is 90% of the source video width by default.
+
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setBoardWidth(integer $BoardWidth) Set Board width. Unit: pixels. Value range: [0,4096].
+It is 90% of the source video width by default.
+
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getBoardHeight() Obtain Board height. Unit: pixels. Value range: [0,4096].
+It is 15% of the source video height by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setBoardHeight(integer $BoardHeight) Set Board height. Unit: pixels. Value range: [0,4096].
+It is 15% of the source video height by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getBoardColor() Obtain Board color. Format: 0xRRGGBB.
+Default value: 0x000000 (black).
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setBoardColor(string $BoardColor) Set Board color. Format: 0xRRGGBB.
+Default value: 0x000000 (black).
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method float getBoardAlpha() Obtain Subtitle background transparency. Value range: [0, 1].
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 0.8.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setBoardAlpha(float $BoardAlpha) Set Subtitle background transparency. Value range: [0, 1].
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 0.8.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class SubtitleTemplate extends AbstractModel
 {
@@ -70,31 +176,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Path;
 
     /**
-     * @var integer The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+
+-Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+
+
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $StreamIndex;
 
     /**
-     * @var string The font. Valid values:
-<li>`hei.ttf`: Heiti.</li>
-<li>`song.ttf`: Songti.</li>
-<li>`simkai.ttf`: Kaiti.</li>
-<li>`arial.ttf`: Arial.</li>
-The default is `hei.ttf`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Font type. valid values:.
+<li>hei.ttf: simhei.</li>.
+<li>song.ttf: simsun.</li>.
+<Li>Kai.Ttf (recommend) or simkai.ttf: kaiti.</li>.
+<li>msyh.ttf: microsoft yahei</li>.
+<li>msyhbd.ttf: microsoft yahei in bold.</li>.
+<li>hkjgt.ttf: dynafont king gothic</li>.
+<li>dhttx.ttf: dianheitexiti.</li>.
+<li>xqgdzt.ttf: xiqueguzidianti</li>.
+<li>qpcyt.ttf: smart splice super round body.</li>.
+<li>arial.ttf: english only.</li>.
+<li>dinalternate.ttf:DIN Alternate Bold</li>
+<li>helveticalt.ttf:Helvetica</li>
+<li>helveticains.ttf:Helvetica Inserat</li>
+<li>trajanpro.ttf:TrajanPro-Bold</li>
+<li>korean.ttf: specifies the korean language.</li>.
+<li>japanese.ttf: specifies the japanese language.</li>.
+<li>thai.ttf: specifies the thai language.</li>.
+Default: hei.ttf (heiti). note: kaiti is recommended for use with kai.ttf.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $FontType;
 
     /**
-     * @var string The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Font size. Format: Npx, where N is a numerical value. If it is not specified, the font size of the subtitle file applies.
+It is 5% of the source video height by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $FontSize;
 
     /**
-     * @var string The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $FontColor;
 
@@ -108,26 +232,138 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FontAlpha;
 
     /**
+     * @var string Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+
+ - Pixel: Npx. Value range of N: [0,4096].
+ - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+
+By default, the position is 4% of the source video height.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $YPos;
+
+    /**
+     * @var string Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+
+ - Pixel: Npx. Value range of N: [0,4096].
+ - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+
+If this parameter is not specified, the subtitle background is disabled.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $BoardY;
+
+    /**
+     * @var integer Board width. Unit: pixels. Value range: [0,4096].
+It is 90% of the source video width by default.
+
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $BoardWidth;
+
+    /**
+     * @var integer Board height. Unit: pixels. Value range: [0,4096].
+It is 15% of the source video height by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $BoardHeight;
+
+    /**
+     * @var string Board color. Format: 0xRRGGBB.
+Default value: 0x000000 (black).
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $BoardColor;
+
+    /**
+     * @var float Subtitle background transparency. Value range: [0, 1].
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 0.8.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $BoardAlpha;
+
+    /**
      * @param string $Path The URL of the subtitles to add to the video.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $StreamIndex The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FontType The font. Valid values:
-<li>`hei.ttf`: Heiti.</li>
-<li>`song.ttf`: Songti.</li>
-<li>`simkai.ttf`: Kaiti.</li>
-<li>`arial.ttf`: Arial.</li>
-The default is `hei.ttf`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FontSize The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FontColor The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $StreamIndex Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+
+-Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+
+
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $FontType Font type. valid values:.
+<li>hei.ttf: simhei.</li>.
+<li>song.ttf: simsun.</li>.
+<Li>Kai.Ttf (recommend) or simkai.ttf: kaiti.</li>.
+<li>msyh.ttf: microsoft yahei</li>.
+<li>msyhbd.ttf: microsoft yahei in bold.</li>.
+<li>hkjgt.ttf: dynafont king gothic</li>.
+<li>dhttx.ttf: dianheitexiti.</li>.
+<li>xqgdzt.ttf: xiqueguzidianti</li>.
+<li>qpcyt.ttf: smart splice super round body.</li>.
+<li>arial.ttf: english only.</li>.
+<li>dinalternate.ttf:DIN Alternate Bold</li>
+<li>helveticalt.ttf:Helvetica</li>
+<li>helveticains.ttf:Helvetica Inserat</li>
+<li>trajanpro.ttf:TrajanPro-Bold</li>
+<li>korean.ttf: specifies the korean language.</li>.
+<li>japanese.ttf: specifies the japanese language.</li>.
+<li>thai.ttf: specifies the thai language.</li>.
+Default: hei.ttf (heiti). note: kaiti is recommended for use with kai.ttf.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $FontSize Font size. Format: Npx, where N is a numerical value. If it is not specified, the font size of the subtitle file applies.
+It is 5% of the source video height by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param float $FontAlpha The text transparency. Value range: 0-1.
 <li>`0`: Fully transparent.</li>
 <li>`1`: Fully opaque.</li>
 Default value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $YPos Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+
+ - Pixel: Npx. Value range of N: [0,4096].
+ - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+
+By default, the position is 4% of the source video height.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $BoardY Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+
+ - Pixel: Npx. Value range of N: [0,4096].
+ - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+
+If this parameter is not specified, the subtitle background is disabled.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $BoardWidth Board width. Unit: pixels. Value range: [0,4096].
+It is 90% of the source video width by default.
+
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $BoardHeight Board height. Unit: pixels. Value range: [0,4096].
+It is 15% of the source video height by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $BoardColor Board color. Format: 0xRRGGBB.
+Default value: 0x000000 (black).
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param float $BoardAlpha Subtitle background transparency. Value range: [0, 1].
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 0.8.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -164,6 +400,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("FontAlpha",$param) and $param["FontAlpha"] !== null) {
             $this->FontAlpha = $param["FontAlpha"];
+        }
+
+        if (array_key_exists("YPos",$param) and $param["YPos"] !== null) {
+            $this->YPos = $param["YPos"];
+        }
+
+        if (array_key_exists("BoardY",$param) and $param["BoardY"] !== null) {
+            $this->BoardY = $param["BoardY"];
+        }
+
+        if (array_key_exists("BoardWidth",$param) and $param["BoardWidth"] !== null) {
+            $this->BoardWidth = $param["BoardWidth"];
+        }
+
+        if (array_key_exists("BoardHeight",$param) and $param["BoardHeight"] !== null) {
+            $this->BoardHeight = $param["BoardHeight"];
+        }
+
+        if (array_key_exists("BoardColor",$param) and $param["BoardColor"] !== null) {
+            $this->BoardColor = $param["BoardColor"];
+        }
+
+        if (array_key_exists("BoardAlpha",$param) and $param["BoardAlpha"] !== null) {
+            $this->BoardAlpha = $param["BoardAlpha"];
         }
     }
 }

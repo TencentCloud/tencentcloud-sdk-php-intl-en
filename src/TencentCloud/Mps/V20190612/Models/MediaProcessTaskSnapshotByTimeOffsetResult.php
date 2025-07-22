@@ -30,14 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method SnapshotByTimeOffsetTaskInput getInput() Obtain Input for a time point screenshot task.
  * @method void setInput(SnapshotByTimeOffsetTaskInput $Input) Set Input for a time point screenshot task.
- * @method MediaSnapshotByTimeOffsetItem getOutput() Obtain Output of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(MediaSnapshotByTimeOffsetItem $Output) Set Output of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBeginProcessTime() Obtain The time when the task started executing, in ISO date format.
- * @method void setBeginProcessTime(string $BeginProcessTime) Set The time when the task started executing, in ISO date format.
- * @method string getFinishTime() Obtain The time when the task finished, in ISO date format.
- * @method void setFinishTime(string $FinishTime) Set The time when the task finished, in ISO date format.
+ * @method MediaSnapshotByTimeOffsetItem getOutput() Obtain Specifies the output of a screenshot task at specified time points for a video.
+ * @method void setOutput(MediaSnapshotByTimeOffsetItem $Output) Set Specifies the output of a screenshot task at specified time points for a video.
+ * @method string getBeginProcessTime() Obtain Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getFinishTime() Obtain Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setFinishTime(string $FinishTime) Set Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
  */
 class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel
 {
@@ -67,18 +65,17 @@ class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel
     public $Input;
 
     /**
-     * @var MediaSnapshotByTimeOffsetItem Output of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaSnapshotByTimeOffsetItem Specifies the output of a screenshot task at specified time points for a video.
      */
     public $Output;
 
     /**
-     * @var string The time when the task started executing, in ISO date format.
+     * @var string Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string The time when the task finished, in ISO date format.
+     * @var string Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $FinishTime;
 
@@ -88,10 +85,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
      * @param string $Message Error message.
      * @param SnapshotByTimeOffsetTaskInput $Input Input for a time point screenshot task.
-     * @param MediaSnapshotByTimeOffsetItem $Output Output of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BeginProcessTime The time when the task started executing, in ISO date format.
-     * @param string $FinishTime The time when the task finished, in ISO date format.
+     * @param MediaSnapshotByTimeOffsetItem $Output Specifies the output of a screenshot task at specified time points for a video.
+     * @param string $BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     function __construct()
     {

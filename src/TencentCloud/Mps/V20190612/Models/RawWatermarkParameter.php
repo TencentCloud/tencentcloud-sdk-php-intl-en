@@ -24,11 +24,19 @@ use TencentCloud\Common\AbstractModel;
 <li>image: image watermark.</li>
  * @method void setType(string $Type) Set Watermark type. Valid values:
 <li>image: image watermark.</li>
- * @method string getCoordinateOrigin() Obtain Origin position, which currently can only be:
-<li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text.</li>
+ * @method string getCoordinateOrigin() Obtain Origin position. valid values:.
+<Li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>.
+<Li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>.
+<Li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>.
+<li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
+
 Default value: TopLeft.
- * @method void setCoordinateOrigin(string $CoordinateOrigin) Set Origin position, which currently can only be:
-<li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text.</li>
+ * @method void setCoordinateOrigin(string $CoordinateOrigin) Set Origin position. valid values:.
+<Li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>.
+<Li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>.
+<Li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>.
+<li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
+
 Default value: TopLeft.
  * @method string getXPos() Obtain The horizontal position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
 <li>If the string ends in %, the `XPos` of the watermark will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
@@ -58,8 +66,12 @@ class RawWatermarkParameter extends AbstractModel
     public $Type;
 
     /**
-     * @var string Origin position, which currently can only be:
-<li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text.</li>
+     * @var string Origin position. valid values:.
+<Li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>.
+<Li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>.
+<Li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>.
+<li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
+
 Default value: TopLeft.
      */
     public $CoordinateOrigin;
@@ -88,8 +100,12 @@ Default value: 0 px.
     /**
      * @param string $Type Watermark type. Valid values:
 <li>image: image watermark.</li>
-     * @param string $CoordinateOrigin Origin position, which currently can only be:
-<li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text.</li>
+     * @param string $CoordinateOrigin Origin position. valid values:.
+<Li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>.
+<Li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>.
+<Li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>.
+<li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
+
 Default value: TopLeft.
      * @param string $XPos The horizontal position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
 <li>If the string ends in %, the `XPos` of the watermark will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>

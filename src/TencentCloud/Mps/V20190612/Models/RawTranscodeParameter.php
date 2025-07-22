@@ -45,9 +45,7 @@ Default value: 0.
  * @method TEHDConfig getTEHDConfig() Obtain TESHD transcoding parameter.
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set TESHD transcoding parameter.
  * @method string getStdExtInfo() Obtain Additional parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setStdExtInfo(string $StdExtInfo) Set Additional parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method EnhanceConfig getEnhanceConfig() Obtain Audio/Video enhancement configuration.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement configuration.
@@ -93,7 +91,6 @@ Default value: 0.
 
     /**
      * @var string Additional parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $StdExtInfo;
 
@@ -117,7 +114,6 @@ Default value: 0.
      * @param AudioTemplateInfo $AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
      * @param TEHDConfig $TEHDConfig TESHD transcoding parameter.
      * @param string $StdExtInfo Additional parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement configuration.
 Note: This field may return null, indicating that no valid value can be obtained.
      */

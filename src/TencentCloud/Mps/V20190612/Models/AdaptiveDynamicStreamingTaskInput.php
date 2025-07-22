@@ -53,17 +53,15 @@ Note: This field may return null, indicating that no valid value can be obtained
  * @method void setAddOnSubtitles(array $AddOnSubtitles) Set Subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method DrmInfo getDrmInfo() Obtain Drm information.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setDrmInfo(DrmInfo $DrmInfo) Set Drm information.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getDefinitionType() Obtain Adaptive transcoding template type.
-Common: audio-video.
+Common: audio/video type.
 PureAudio: audio-only.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDefinitionType(string $DefinitionType) Set Adaptive transcoding template type.
-Common: audio-video.
+Common: audio/video type.
 PureAudio: audio-only.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSubtitleTemplate() Obtain Subtitle setting.
+ * @method void setSubtitleTemplate(string $SubtitleTemplate) Set Subtitle setting.
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -113,17 +111,20 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * @var DrmInfo Drm information.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $DrmInfo;
 
     /**
      * @var string Adaptive transcoding template type.
-Common: audio-video.
+Common: audio/video type.
 PureAudio: audio-only.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DefinitionType;
+
+    /**
+     * @var string Subtitle setting.
+     */
+    public $SubtitleTemplate;
 
     /**
      * @param integer $Definition Adaptive dynamic streaming template ID.
@@ -143,11 +144,10 @@ If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicS
      * @param array $AddOnSubtitles Subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param DrmInfo $DrmInfo Drm information.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $DefinitionType Adaptive transcoding template type.
-Common: audio-video.
+Common: audio/video type.
 PureAudio: audio-only.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SubtitleTemplate Subtitle setting.
      */
     function __construct()
     {
@@ -208,6 +208,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DefinitionType",$param) and $param["DefinitionType"] !== null) {
             $this->DefinitionType = $param["DefinitionType"];
+        }
+
+        if (array_key_exists("SubtitleTemplate",$param) and $param["SubtitleTemplate"] !== null) {
+            $this->SubtitleTemplate = $param["SubtitleTemplate"];
         }
     }
 }

@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method TaskOutputStorage getOutputStorage() Obtain Storage location of a file after removal.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of a file after removal.
  * @method string getOriginSubtitlePath() Obtain Path of a subtitle file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOriginSubtitlePath(string $OriginSubtitlePath) Set Path of a subtitle file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTranslateSubtitlePath() Obtain Path of a subtitle translation file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTranslateSubtitlePath(string $TranslateSubtitlePath) Set Path of a subtitle translation file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AiAnalysisTaskDelLogoOutput extends AbstractModel
 {
@@ -47,13 +43,11 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
 
     /**
      * @var string Path of a subtitle file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OriginSubtitlePath;
 
     /**
      * @var string Path of a subtitle translation file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TranslateSubtitlePath;
 
@@ -61,9 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Path Path of a file after removal.
      * @param TaskOutputStorage $OutputStorage Storage location of a file after removal.
      * @param string $OriginSubtitlePath Path of a subtitle file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TranslateSubtitlePath Path of a subtitle translation file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
