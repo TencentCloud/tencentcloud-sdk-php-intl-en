@@ -60,8 +60,10 @@ PureAudio: audio-only.
  * @method void setDefinitionType(string $DefinitionType) Set Adaptive transcoding template type.
 Common: audio/video type.
 PureAudio: audio-only.
- * @method string getSubtitleTemplate() Obtain Subtitle setting.
- * @method void setSubtitleTemplate(string $SubtitleTemplate) Set Subtitle setting.
+ * @method SubtitleTemplate getSubtitleTemplate() Obtain Specifies the subtitle parameter.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set Specifies the subtitle parameter.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -122,7 +124,8 @@ PureAudio: audio-only.
     public $DefinitionType;
 
     /**
-     * @var string Subtitle setting.
+     * @var SubtitleTemplate Specifies the subtitle parameter.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SubtitleTemplate;
 
@@ -147,7 +150,8 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $DefinitionType Adaptive transcoding template type.
 Common: audio/video type.
 PureAudio: audio-only.
-     * @param string $SubtitleTemplate Subtitle setting.
+     * @param SubtitleTemplate $SubtitleTemplate Specifies the subtitle parameter.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -211,7 +215,8 @@ PureAudio: audio-only.
         }
 
         if (array_key_exists("SubtitleTemplate",$param) and $param["SubtitleTemplate"] !== null) {
-            $this->SubtitleTemplate = $param["SubtitleTemplate"];
+            $this->SubtitleTemplate = new SubtitleTemplate();
+            $this->SubtitleTemplate->deserialize($param["SubtitleTemplate"]);
         }
     }
 }

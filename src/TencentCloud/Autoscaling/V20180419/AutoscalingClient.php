@@ -40,8 +40,6 @@ Temporarily expanded instances due to the maxSurge parameter are automatically d
 * If this API is not called, the lifecycle hook goes to the status specified in `DefaultResult` after the timeout period.
  * @method Models\CreateAutoScalingGroupResponse CreateAutoScalingGroup(Models\CreateAutoScalingGroupRequest $req) This API (CreateAutoScalingGroup) is used to create an auto scaling group.
  * @method Models\CreateAutoScalingGroupFromInstanceResponse CreateAutoScalingGroupFromInstance(Models\CreateAutoScalingGroupFromInstanceRequest $req) This API is used to create launch configurations and scaling groups based on an instance.
-
-Note: for a scaling group that is created based on a monthly-subscribed instance, the instances added for scale-out are pay-as-you-go instance.
  * @method Models\CreateLaunchConfigurationResponse CreateLaunchConfiguration(Models\CreateLaunchConfigurationRequest $req) This interface (CreateLaunchConfiguration) is used to create new launch configuration.
 
 * To modify a launch configuration, use [ModifyLaunchConfigurationAttributes](https://intl.cloud.tencent.com/document/api/377/31298?from_cn_redirect=1) to partially modify fields. If needed, create a new launch configuration.

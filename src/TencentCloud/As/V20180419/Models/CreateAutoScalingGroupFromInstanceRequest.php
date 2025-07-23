@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAutoScalingGroupFromInstance request structure.
  *
- * @method string getAutoScalingGroupName() Obtain The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
- * @method void setAutoScalingGroupName(string $AutoScalingGroupName) Set The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
+ * @method string getAutoScalingGroupName() Obtain The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen "-" and periods. It cannot exceed 55 bytes.
+ * @method void setAutoScalingGroupName(string $AutoScalingGroupName) Set The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen "-" and periods. It cannot exceed 55 bytes.
  * @method string getInstanceId() Obtain Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
  * @method void setInstanceId(string $InstanceId) Set Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
  * @method integer getMinSize() Obtain Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel
 {
     /**
-     * @var string The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
+     * @var string The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen "-" and periods. It cannot exceed 55 bytes.
      */
     public $AutoScalingGroupName;
 
@@ -66,7 +66,7 @@ class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel
     public $InheritInstanceTag;
 
     /**
-     * @param string $AutoScalingGroupName The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
+     * @param string $AutoScalingGroupName The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen "-" and periods. It cannot exceed 55 bytes.
      * @param string $InstanceId Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
      * @param integer $MinSize Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
      * @param integer $MaxSize Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.

@@ -27,62 +27,46 @@ Example value: false
  * @method void setAutoSkip(boolean $AutoSkip) Set When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
 Example value: false
  * @method integer getCheckMode() Obtain Detection mode, parameter values are as follows:
-1: OCR+living detection & face comparison;
-2: Living detection & face comparison;
-3: Living detection;
+1: OCR+liveness detection & face comparison;
+2: Liveness detection & face comparison;
+3: Liveness detection;
 4: OCR;
 The default value is 2.
 Example value: 3
  * @method void setCheckMode(integer $CheckMode) Set Detection mode, parameter values are as follows:
-1: OCR+living detection & face comparison;
-2: Living detection & face comparison;
-3: Living detection;
+1: OCR+liveness detection & face comparison;
+2: Liveness detection & face comparison;
+3: Liveness detection;
 4: OCR;
 The default value is 2.
 Example value: 3
  * @method string getIDCardType() Obtain The type of lisence used for verification. The following types are supported.
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesiaIDCard: Indonesia ID card
-4.PhilippinesVoteID: Philippines VoteID card
+3.IndonesialDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
-10.IndonesiaDrivingLicense:Indonesia driving license
-11.ThailandIDCard: Thailand ID card
-12.ThailandDrivingLicense: Thailand driving license
-13.MLDrivingLicense: Malaysia driving license
-14.SingaporeIDCard: Singapore ID card
-15.SingaporeDrivingLicense: Singapore driving license
-16.JapanIDCard: Japan ID card
-17.JapanDrivingLicense: Japan driving license
-18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland (China) ID card
-20.MacaoIDCard: Macao (China) ID card
+9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+10.ThailandIDCard: Thailand ID card
+11.SingaporelDCard: Singapore ID card
+12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
  * @method void setIDCardType(string $IDCardType) Set The type of lisence used for verification. The following types are supported.
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesiaIDCard: Indonesia ID card
-4.PhilippinesVoteID: Philippines VoteID card
+3.IndonesialDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
-10.IndonesiaDrivingLicense:Indonesia driving license
-11.ThailandIDCard: Thailand ID card
-12.ThailandDrivingLicense: Thailand driving license
-13.MLDrivingLicense: Malaysia driving license
-14.SingaporeIDCard: Singapore ID card
-15.SingaporeDrivingLicense: Singapore driving license
-16.JapanIDCard: Japan ID card
-17.JapanDrivingLicense: Japan driving license
-18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland (China) ID card
-20.MacaoIDCard: Macao (China) ID card
+9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+10.ThailandIDCard: Thailand ID card
+11.SingaporelDCard: Singapore ID card
+12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
  * @method boolean getDisableCheckOcrWarnings() Obtain Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
  * @method void setDisableCheckOcrWarnings(boolean $DisableCheckOcrWarnings) Set Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
@@ -92,8 +76,8 @@ Example: HKIDCard
  * @method void setSkipPrivacyPolicy(boolean $SkipPrivacyPolicy) Set Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
  * @method boolean getIdCardCutReturn() Obtain The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
  * @method void setIdCardCutReturn(boolean $IdCardCutReturn) Set The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
- * @method string getThemeColor() Obtain Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
- * @method void setThemeColor(string $ThemeColor) Set Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+ * @method string getThemeColor() Obtain Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
+ * @method void setThemeColor(string $ThemeColor) Set Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
  * @method string getLanguage() Obtain International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
  * @method void setLanguage(string $Language) Set International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
  * @method integer getAutoDowngrade() Obtain Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
@@ -136,9 +120,9 @@ Example value: false
 
     /**
      * @var integer Detection mode, parameter values are as follows:
-1: OCR+living detection & face comparison;
-2: Living detection & face comparison;
-3: Living detection;
+1: OCR+liveness detection & face comparison;
+2: Liveness detection & face comparison;
+3: Liveness detection;
 4: OCR;
 The default value is 2.
 Example value: 3
@@ -149,24 +133,16 @@ Example value: 3
      * @var string The type of lisence used for verification. The following types are supported.
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesiaIDCard: Indonesia ID card
-4.PhilippinesVoteID: Philippines VoteID card
+3.IndonesialDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
-10.IndonesiaDrivingLicense:Indonesia driving license
-11.ThailandIDCard: Thailand ID card
-12.ThailandDrivingLicense: Thailand driving license
-13.MLDrivingLicense: Malaysia driving license
-14.SingaporeIDCard: Singapore ID card
-15.SingaporeDrivingLicense: Singapore driving license
-16.JapanIDCard: Japan ID card
-17.JapanDrivingLicense: Japan driving license
-18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland (China) ID card
-20.MacaoIDCard: Macao (China) ID card
+9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+10.ThailandIDCard: Thailand ID card
+11.SingaporelDCard: Singapore ID card
+12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
      */
     public $IDCardType;
@@ -192,7 +168,7 @@ Example: HKIDCard
     public $IdCardCutReturn;
 
     /**
-     * @var string Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+     * @var string Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
      */
     public $ThemeColor;
 
@@ -230,39 +206,31 @@ The default value is blink. The different action types passed in this parameter 
      * @param boolean $AutoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
 Example value: false
      * @param integer $CheckMode Detection mode, parameter values are as follows:
-1: OCR+living detection & face comparison;
-2: Living detection & face comparison;
-3: Living detection;
+1: OCR+liveness detection & face comparison;
+2: Liveness detection & face comparison;
+3: Liveness detection;
 4: OCR;
 The default value is 2.
 Example value: 3
      * @param string $IDCardType The type of lisence used for verification. The following types are supported.
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesiaIDCard: Indonesia ID card
-4.PhilippinesVoteID: Philippines VoteID card
+3.IndonesialDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
-10.IndonesiaDrivingLicense:Indonesia driving license
-11.ThailandIDCard: Thailand ID card
-12.ThailandDrivingLicense: Thailand driving license
-13.MLDrivingLicense: Malaysia driving license
-14.SingaporeIDCard: Singapore ID card
-15.SingaporeDrivingLicense: Singapore driving license
-16.JapanIDCard: Japan ID card
-17.JapanDrivingLicense: Japan driving license
-18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland (China) ID card
-20.MacaoIDCard: Macao (China) ID card
+9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+10.ThailandIDCard: Thailand ID card
+11.SingaporelDCard: Singapore ID card
+12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
      * @param boolean $DisableCheckOcrWarnings Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
      * @param integer $SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
      * @param boolean $SkipPrivacyPolicy Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
      * @param boolean $IdCardCutReturn The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
-     * @param string $ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+     * @param string $ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
      * @param string $Language International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
      * @param integer $AutoDowngrade Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
      * @param string $ActionList This interface is used to control th action sequences.

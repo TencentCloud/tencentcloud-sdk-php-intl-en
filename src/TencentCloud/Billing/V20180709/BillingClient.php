@@ -68,6 +68,7 @@ Note: The API request may fail due to network instability or other exceptions. I
  * @method Models\ModifyAllocationRuleResponse ModifyAllocationRule(Models\ModifyAllocationRuleRequest $req) Edit sharing rules.
  * @method Models\ModifyAllocationUnitResponse ModifyAllocationUnit(Models\ModifyAllocationUnitRequest $req) This API is used to modify cost allocation unit information.
  * @method Models\ModifyGatherRuleResponse ModifyGatherRule(Models\ModifyGatherRuleRequest $req) Edit a collection rule.
+ * @method Models\PayDealsResponse PayDeals(Models\PayDealsRequest $req) This API is used to pay for an order.
  */
 
 class BillingClient extends AbstractClient

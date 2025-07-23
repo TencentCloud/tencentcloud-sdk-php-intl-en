@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUser(User $User) Set This field indicates the information of the user that corresponds to the object to be detected. It can be passed in to identify the user involved in the violation.
  * @method Device getDevice() Obtain This field indicates the information of the device that corresponds to the object to be detected. It can be passed in to identify the device involved in the violation.
  * @method void setDevice(Device $Device) Set This field indicates the information of the device that corresponds to the object to be detected. It can be passed in to identify the device involved in the violation.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
  */
 class ImageModerationRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ImageModerationRequest extends AbstractModel
     public $Device;
 
     /**
+     * @var string 
+     */
+    public $Type;
+
+    /**
      * @param string $BizType This field indicates the specific number of the policy, which is used for API scheduling and can be configured in the CMS console. If the `Biztype` parameter is passed in, a moderation policy will be used based on the business scenario; otherwise, the default moderation policy will be used.<br>Note: `Biztype` can contain 3-32 digits, letters, and underscores; different `Biztype` values are associated with different business scenarios and moderation policies, so you need to verify the `Biztype` before calling this API.
      * @param string $DataId This field indicates the data ID assigned by you to the object to be detected for easier file identification and management.<br>It **can contain up to 64 letters, digits, and special symbols (_-@#)**.
      * @param string $FileContent This field indicates the Base64 encoding of the image to be detected. The image **size cannot exceed 5 MB**. **A resolution of 256x256 or higher is recommended**; otherwise, the recognition effect may be affected.<br>Note: **you must enter a value for either this field or `FileUrl`**.
@@ -88,6 +95,7 @@ class ImageModerationRequest extends AbstractModel
      * @param integer $MaxFrames **For GIF/long image detection only**. This field indicates the maximum number of frames that can be captured. The default value is 1, where only the first frame of the input GIF image will be detected, and the long image will not be split (which may cause a processing timeout).<br>Note: the `Interval` and `MaxFrames` parameters need to be used in combination; for example, if `Interval` is `3` and `MaxFrames` is `400`, the GIF/long image will be detected once every two frames for up to 400 frames.
      * @param User $User This field indicates the information of the user that corresponds to the object to be detected. It can be passed in to identify the user involved in the violation.
      * @param Device $Device This field indicates the information of the device that corresponds to the object to be detected. It can be passed in to identify the device involved in the violation.
+     * @param string $Type 
      */
     function __construct()
     {
@@ -134,6 +142,10 @@ class ImageModerationRequest extends AbstractModel
         if (array_key_exists("Device",$param) and $param["Device"] !== null) {
             $this->Device = new Device();
             $this->Device->deserialize($param["Device"]);
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

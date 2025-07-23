@@ -146,6 +146,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\RefundResourcePackageResponse RefundResourcePackage(Models\RefundResourcePackageRequest $req) This API is used to refund a resource package.
  * @method Models\ReloadBalanceProxyNodeResponse ReloadBalanceProxyNode(Models\ReloadBalanceProxyNodeRequest $req) This API is used to reload the database proxy of Cloud Load Balancer.
  * @method Models\RemoveClusterSlaveZoneResponse RemoveClusterSlaveZone(Models\RemoveClusterSlaveZoneRequest $req) This API is used to disable multi-AZ deployment for a cluster.
+ * @method Models\ReplayInstanceAuditLogResponse ReplayInstanceAuditLog(Models\ReplayInstanceAuditLogRequest $req) This API is used to replay instance audit logs.
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) This API is used to modify the database account password.
  * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) This API is used to reboot an instance.
  * @method Models\ResumeServerlessResponse ResumeServerless(Models\ResumeServerlessRequest $req) This API is used to restore a serverless cluster.
