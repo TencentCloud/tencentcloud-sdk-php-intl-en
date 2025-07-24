@@ -25,9 +25,11 @@ Such as "10000000001"
  * @method void setCustomerUin(integer $CustomerUin) Set Sub-account UIN.
 Such as "10000000001"
  * @method string getDate() Obtain Date.
-Such as" 2025-06-25"
+Such as" 2025-06-25".
+Please note: Historical daily bill dated before "2025-06-01",cannot be queried.
  * @method void setDate(string $Date) Set Date.
-Such as" 2025-06-25"
+Such as" 2025-06-25".
+Please note: Historical daily bill dated before "2025-06-01",cannot be queried.
  */
 class DescribeCustomerBillDetailByDayRequest extends AbstractModel
 {
@@ -39,7 +41,8 @@ Such as "10000000001"
 
     /**
      * @var string Date.
-Such as" 2025-06-25"
+Such as" 2025-06-25".
+Please note: Historical daily bill dated before "2025-06-01",cannot be queried.
      */
     public $Date;
 
@@ -47,7 +50,8 @@ Such as" 2025-06-25"
      * @param integer $CustomerUin Sub-account UIN.
 Such as "10000000001"
      * @param string $Date Date.
-Such as" 2025-06-25"
+Such as" 2025-06-25".
+Please note: Historical daily bill dated before "2025-06-01",cannot be queried.
      */
     function __construct()
     {
