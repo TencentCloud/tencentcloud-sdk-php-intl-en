@@ -46,6 +46,10 @@ Calculation starts from the first '/' in the url path, and the subscript starts 
 The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
  * @method void setCustomUrlParam(string $CustomUrlParam) Set Customer-defined url parameters are inserted into the specified position of the Endpoint url based on the CustomUrlParamIndex.
 The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
+ * @method boolean getDRMEnabled() Obtain Enable DRM. This is only effective for CMAF protocol.
+ * @method void setDRMEnabled(boolean $DRMEnabled) Set Enable DRM. This is only effective for CMAF protocol.
+ * @method DRMInfo getDRMInfo() Obtain DRM configuration information
+ * @method void setDRMInfo(DRMInfo $DRMInfo) Set DRM configuration information
  */
 class ModifyStreamPackageChannelEndpointRequest extends AbstractModel
 {
@@ -107,6 +111,16 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
     public $CustomUrlParam;
 
     /**
+     * @var boolean Enable DRM. This is only effective for CMAF protocol.
+     */
+    public $DRMEnabled;
+
+    /**
+     * @var DRMInfo DRM configuration information
+     */
+    public $DRMInfo;
+
+    /**
      * @param string $Id Channel ID
      * @param string $Url Channel endpoint URL
      * @param string $Name New endpoint name
@@ -120,6 +134,8 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
 Calculation starts from the first '/' in the url path, and the subscript starts from 0, the optional range of the subscript is: [0,3].
      * @param string $CustomUrlParam Customer-defined url parameters are inserted into the specified position of the Endpoint url based on the CustomUrlParamIndex.
 The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
+     * @param boolean $DRMEnabled Enable DRM. This is only effective for CMAF protocol.
+     * @param DRMInfo $DRMInfo DRM configuration information
      */
     function __construct()
     {
@@ -178,6 +194,15 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
 
         if (array_key_exists("CustomUrlParam",$param) and $param["CustomUrlParam"] !== null) {
             $this->CustomUrlParam = $param["CustomUrlParam"];
+        }
+
+        if (array_key_exists("DRMEnabled",$param) and $param["DRMEnabled"] !== null) {
+            $this->DRMEnabled = $param["DRMEnabled"];
+        }
+
+        if (array_key_exists("DRMInfo",$param) and $param["DRMInfo"] !== null) {
+            $this->DRMInfo = new DRMInfo();
+            $this->DRMInfo->deserialize($param["DRMInfo"]);
         }
     }
 }

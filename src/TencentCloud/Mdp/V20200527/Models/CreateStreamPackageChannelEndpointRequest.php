@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeShiftEnable(boolean $TimeShiftEnable) Set Whether to turn on the TimeShift function, true: on, false: off, the default is off.
  * @method integer getTimeShiftDuration() Obtain The number of days to look back in TimeShift, up to 30 days is supported.
  * @method void setTimeShiftDuration(integer $TimeShiftDuration) Set The number of days to look back in TimeShift, up to 30 days is supported.
+ * @method boolean getDRMEnabled() Obtain Enable DRM. This is only effective for CMAF protocol.
+ * @method void setDRMEnabled(boolean $DRMEnabled) Set Enable DRM. This is only effective for CMAF protocol.
+ * @method DRMInfo getDRMInfo() Obtain DRM configuration information.
+ * @method void setDRMInfo(DRMInfo $DRMInfo) Set DRM configuration information.
  */
 class CreateStreamPackageChannelEndpointRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class CreateStreamPackageChannelEndpointRequest extends AbstractModel
     public $TimeShiftDuration;
 
     /**
+     * @var boolean Enable DRM. This is only effective for CMAF protocol.
+     */
+    public $DRMEnabled;
+
+    /**
+     * @var DRMInfo DRM configuration information.
+     */
+    public $DRMInfo;
+
+    /**
      * @param string $Id Channel ID
      * @param string $Name Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores
      * @param EndpointAuthInfo $AuthInfo Authentication information
@@ -80,6 +94,8 @@ class CreateStreamPackageChannelEndpointRequest extends AbstractModel
      * @param string $Manifest Mainifest name, default is main.
      * @param boolean $TimeShiftEnable Whether to turn on the TimeShift function, true: on, false: off, the default is off.
      * @param integer $TimeShiftDuration The number of days to look back in TimeShift, up to 30 days is supported.
+     * @param boolean $DRMEnabled Enable DRM. This is only effective for CMAF protocol.
+     * @param DRMInfo $DRMInfo DRM configuration information.
      */
     function __construct()
     {
@@ -121,6 +137,15 @@ class CreateStreamPackageChannelEndpointRequest extends AbstractModel
 
         if (array_key_exists("TimeShiftDuration",$param) and $param["TimeShiftDuration"] !== null) {
             $this->TimeShiftDuration = $param["TimeShiftDuration"];
+        }
+
+        if (array_key_exists("DRMEnabled",$param) and $param["DRMEnabled"] !== null) {
+            $this->DRMEnabled = $param["DRMEnabled"];
+        }
+
+        if (array_key_exists("DRMInfo",$param) and $param["DRMInfo"] !== null) {
+            $this->DRMInfo = new DRMInfo();
+            $this->DRMInfo->deserialize($param["DRMInfo"]);
         }
     }
 }
