@@ -40,6 +40,7 @@ class TraceWatermarkInput extends AbstractModel
 
     /**
      * @var integer This parameter has been deprecated.
+     * @deprecated
      */
     public $Definition;
 

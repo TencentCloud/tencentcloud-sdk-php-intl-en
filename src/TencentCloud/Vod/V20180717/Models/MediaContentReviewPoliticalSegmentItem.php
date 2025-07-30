@@ -166,6 +166,7 @@ military:
 
     /**
      * @var integer This field has been disused. Please use `PicUrlExpireTime`.
+     * @deprecated
      */
     public $PicUrlExpireTimeStamp;
 

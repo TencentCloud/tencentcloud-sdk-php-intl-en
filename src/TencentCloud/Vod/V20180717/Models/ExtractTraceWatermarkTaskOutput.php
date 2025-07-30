@@ -34,6 +34,7 @@ class ExtractTraceWatermarkTaskOutput extends AbstractModel
 
     /**
      * @var string This parameter has been deprecated.
+     * @deprecated
      */
     public $Uid;
 

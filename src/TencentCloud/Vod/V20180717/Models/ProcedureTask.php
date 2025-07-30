@@ -122,12 +122,14 @@ class ProcedureTask extends AbstractModel
     /**
      * @var integer Disused. Please use `ErrCode` of each specific task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $ErrCode;
 
     /**
      * @var string Disused. Please use `Message` of each specific task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $Message;
 
