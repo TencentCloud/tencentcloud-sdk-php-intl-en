@@ -64,6 +64,8 @@ PureAudio: audio-only.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set Specifies the subtitle parameter.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getStdExtInfo() Obtain Extension field for transcoding.
+ * @method void setStdExtInfo(string $StdExtInfo) Set Extension field for transcoding.
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -130,6 +132,11 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $SubtitleTemplate;
 
     /**
+     * @var string Extension field for transcoding.
+     */
+    public $StdExtInfo;
+
+    /**
      * @param integer $Definition Adaptive dynamic streaming template ID.
      * @param array $WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      * @param TaskOutputStorage $OutputStorage Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
@@ -152,6 +159,7 @@ Common: audio/video type.
 PureAudio: audio-only.
      * @param SubtitleTemplate $SubtitleTemplate Specifies the subtitle parameter.
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $StdExtInfo Extension field for transcoding.
      */
     function __construct()
     {
@@ -217,6 +225,10 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("SubtitleTemplate",$param) and $param["SubtitleTemplate"] !== null) {
             $this->SubtitleTemplate = new SubtitleTemplate();
             $this->SubtitleTemplate->deserialize($param["SubtitleTemplate"]);
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
         }
     }
 }

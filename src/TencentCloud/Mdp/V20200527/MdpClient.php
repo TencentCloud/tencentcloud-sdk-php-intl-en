@@ -58,6 +58,7 @@ use TencentCloud\Mdp\V20200527\Models as Models;
  * @method Models\DescribeStreamPackageLinearAssemblyProgramsResponse DescribeStreamPackageLinearAssemblyPrograms(Models\DescribeStreamPackageLinearAssemblyProgramsRequest $req) Query channel linear assembly Programl information list.
  * @method Models\DescribeStreamPackageSSAIChannelResponse DescribeStreamPackageSSAIChannel(Models\DescribeStreamPackageSSAIChannelRequest $req) DescribeStreamPackageSSAIChannel
  * @method Models\DescribeStreamPackageSSAIChannelsResponse DescribeStreamPackageSSAIChannels(Models\DescribeStreamPackageSSAIChannelsRequest $req) DescribeStreamPackageSSAIChannels
+ * @method Models\DescribeStreamPackageSSAIUsageResponse DescribeStreamPackageSSAIUsage(Models\DescribeStreamPackageSSAIUsageRequest $req) This API is used to query SSAI ad replacement usage.
  * @method Models\DescribeStreamPackageSourceResponse DescribeStreamPackageSource(Models\DescribeStreamPackageSourceRequest $req) Query channel linear assembly Source information.
  * @method Models\DescribeStreamPackageSourceAlertsResponse DescribeStreamPackageSourceAlerts(Models\DescribeStreamPackageSourceAlertsRequest $req) Query channel linear assembly Source alarm information.
  * @method Models\DescribeStreamPackageSourceLocationResponse DescribeStreamPackageSourceLocation(Models\DescribeStreamPackageSourceLocationRequest $req) Query channel linear assembly sourceLocation information.

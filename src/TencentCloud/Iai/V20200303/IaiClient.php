@@ -34,8 +34,7 @@ If you need to judge "whether the person in the image is someone specified" in s
 >     
 - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
  * @method Models\CopyPersonResponse CopyPerson(Models\CopyPersonRequest $req) This API is used to copy a person in a group to another group (without copying the description). One person can exist in up to 100 groups at the same time.
->     
-- Note: in the case that the version of the algorithm model was 2.0 when the person was created, the copy operation will fail if the target group is not of algorithm model 2.0.
+>- Note: in the case that the version of the algorithm model was 2.0 when the person was created, the copy operation will fail if the target group is not of algorithm model 2.0.
  * @method Models\CreateFaceResponse CreateFace(Models\CreateFaceRequest $req) This API is used to add a set of face images to a person. One person can have up to 5 images. If a person exists in multiple groups, the images will be added to all those groups for the person.
 
 >     
