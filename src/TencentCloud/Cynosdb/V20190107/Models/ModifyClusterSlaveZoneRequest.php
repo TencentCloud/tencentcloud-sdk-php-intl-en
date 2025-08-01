@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewSlaveZone(string $NewSlaveZone) Set New replica AZ
  * @method string getBinlogSyncWay() Obtain Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
  * @method void setBinlogSyncWay(string $BinlogSyncWay) Set Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
+ * @method integer getSemiSyncTimeout() Obtain 
+ * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) Set 
  */
 class ModifyClusterSlaveZoneRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyClusterSlaveZoneRequest extends AbstractModel
     public $BinlogSyncWay;
 
     /**
+     * @var integer 
+     */
+    public $SemiSyncTimeout;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $OldSlaveZone Old replica AZ
      * @param string $NewSlaveZone New replica AZ
      * @param string $BinlogSyncWay Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
+     * @param integer $SemiSyncTimeout 
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyClusterSlaveZoneRequest extends AbstractModel
 
         if (array_key_exists("BinlogSyncWay",$param) and $param["BinlogSyncWay"] !== null) {
             $this->BinlogSyncWay = $param["BinlogSyncWay"];
+        }
+
+        if (array_key_exists("SemiSyncTimeout",$param) and $param["SemiSyncTimeout"] !== null) {
+            $this->SemiSyncTimeout = $param["SemiSyncTimeout"];
         }
     }
 }

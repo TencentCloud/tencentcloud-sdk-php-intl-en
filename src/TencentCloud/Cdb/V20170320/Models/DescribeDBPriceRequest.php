@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPeriod() Obtain Instance validity period in months. Value range: 1-36. This field is invalid when querying the prices of pay-as-you-go instances.
  * @method void setPeriod(integer $Period) Set Instance validity period in months. Value range: 1-36. This field is invalid when querying the prices of pay-as-you-go instances.
- * @method string getZone() Obtain AZ information in the format of "ap-guangzhou-2". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
- * @method void setZone(string $Zone) Set AZ information in the format of "ap-guangzhou-2". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
+ * @method string getZone() Obtain AZ information in the format of "ap-guangzhou-3". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
+ * @method void setZone(string $Zone) Set AZ information in the format of "ap-guangzhou-3". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
  * @method integer getGoodsNum() Obtain Number of instances. Value range: 1-100. Default value: 1. This parameter is required when `InstanceId` is empty.
  * @method void setGoodsNum(integer $GoodsNum) Set Number of instances. Value range: 1-100. Default value: 1. This parameter is required when `InstanceId` is empty.
  * @method integer getMemory() Obtain Instance memory size in MB. This parameter is required when `InstanceId` is empty.
@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID for querying renewal price. To query the renewal price of the instance, pass in the values of `InstanceId` and `Period`.
  * @method integer getLadder() Obtain Tiered pay-as-you-go pricing, which is valid only when `PayType` is set to `HOUR_PAID`. Valid values: `1`, `2`, `3`. For more information on tiered duration, visit https://intl.cloud.tencent.com/document/product/236/18335.?from_cn_redirect=1
  * @method void setLadder(integer $Ladder) Set Tiered pay-as-you-go pricing, which is valid only when `PayType` is set to `HOUR_PAID`. Valid values: `1`, `2`, `3`. For more information on tiered duration, visit https://intl.cloud.tencent.com/document/product/236/18335.?from_cn_redirect=1
+ * @method string getDiskType() Obtain 
+ * @method void setDiskType(string $DiskType) Set 
  */
 class DescribeDBPriceRequest extends AbstractModel
 {
@@ -55,7 +57,7 @@ class DescribeDBPriceRequest extends AbstractModel
     public $Period;
 
     /**
-     * @var string AZ information in the format of "ap-guangzhou-2". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
+     * @var string AZ information in the format of "ap-guangzhou-3". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
      */
     public $Zone;
 
@@ -115,8 +117,13 @@ class DescribeDBPriceRequest extends AbstractModel
     public $Ladder;
 
     /**
+     * @var string 
+     */
+    public $DiskType;
+
+    /**
      * @param integer $Period Instance validity period in months. Value range: 1-36. This field is invalid when querying the prices of pay-as-you-go instances.
-     * @param string $Zone AZ information in the format of "ap-guangzhou-2". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
+     * @param string $Zone AZ information in the format of "ap-guangzhou-3". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
      * @param integer $GoodsNum Number of instances. Value range: 1-100. Default value: 1. This parameter is required when `InstanceId` is empty.
      * @param integer $Memory Instance memory size in MB. This parameter is required when `InstanceId` is empty.
      * @param integer $Volume Instance disk size in GB. This parameter is required when `InstanceId` is empty.
@@ -128,6 +135,7 @@ class DescribeDBPriceRequest extends AbstractModel
      * @param integer $Cpu CPU core count of the price-queried instance. To ensure that the CPU value to be passed in is valid, use the [DescribeDBZoneConfig](https://www.tencentcloud.com/document/product/236/17229) API to query the number of purchasable cores. If this value is not specified, a default value based on memory size will be set.
      * @param string $InstanceId Instance ID for querying renewal price. To query the renewal price of the instance, pass in the values of `InstanceId` and `Period`.
      * @param integer $Ladder Tiered pay-as-you-go pricing, which is valid only when `PayType` is set to `HOUR_PAID`. Valid values: `1`, `2`, `3`. For more information on tiered duration, visit https://intl.cloud.tencent.com/document/product/236/18335.?from_cn_redirect=1
+     * @param string $DiskType 
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class DescribeDBPriceRequest extends AbstractModel
 
         if (array_key_exists("Ladder",$param) and $param["Ladder"] !== null) {
             $this->Ladder = $param["Ladder"];
+        }
+
+        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
+            $this->DiskType = $param["DiskType"];
         }
     }
 }

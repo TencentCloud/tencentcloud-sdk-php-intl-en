@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectionPool(boolean $ConnectionPool) Set Whether to enable the connection pool
  * @method array getProxyAllocation() Obtain Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
  * @method void setProxyAllocation(array $ProxyAllocation) Set Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
+ * @method boolean getAutoLoadBalance() Obtain 
+ * @method void setAutoLoadBalance(boolean $AutoLoadBalance) Set 
+ * @method string getAccessMode() Obtain 
+ * @method void setAccessMode(string $AccessMode) Set 
  */
 class AdjustCdbProxyAddressRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
     public $ProxyAllocation;
 
     /**
+     * @var boolean 
+     */
+    public $AutoLoadBalance;
+
+    /**
+     * @var string 
+     */
+    public $AccessMode;
+
+    /**
      * @param string $ProxyGroupId Proxy group ID
      * @param string $WeightMode Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
      * @param boolean $IsKickOut Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
@@ -120,6 +134,8 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
      * @param boolean $TransSplit Whether to enable transaction splitting. Valid values: `true`, `false`.
      * @param boolean $ConnectionPool Whether to enable the connection pool
      * @param array $ProxyAllocation Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
+     * @param boolean $AutoLoadBalance 
+     * @param string $AccessMode 
      */
     function __construct()
     {
@@ -185,6 +201,14 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ProxyAllocation, $obj);
             }
+        }
+
+        if (array_key_exists("AutoLoadBalance",$param) and $param["AutoLoadBalance"] !== null) {
+            $this->AutoLoadBalance = $param["AutoLoadBalance"];
+        }
+
+        if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
+            $this->AccessMode = $param["AccessMode"];
         }
     }
 }

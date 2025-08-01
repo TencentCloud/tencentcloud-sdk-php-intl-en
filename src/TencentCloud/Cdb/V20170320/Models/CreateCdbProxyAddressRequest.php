@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroup(array $SecurityGroup) Set Security group
  * @method string getConnectionPoolType() Obtain Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
  * @method void setConnectionPoolType(string $ConnectionPoolType) Set Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
+ * @method boolean getAutoLoadBalance() Obtain 
+ * @method void setAutoLoadBalance(boolean $AutoLoadBalance) Set 
+ * @method string getAccessMode() Obtain 
+ * @method void setAccessMode(string $AccessMode) Set 
  */
 class CreateCdbProxyAddressRequest extends AbstractModel
 {
@@ -150,6 +154,16 @@ class CreateCdbProxyAddressRequest extends AbstractModel
     public $ConnectionPoolType;
 
     /**
+     * @var boolean 
+     */
+    public $AutoLoadBalance;
+
+    /**
+     * @var string 
+     */
+    public $AccessMode;
+
+    /**
      * @param string $ProxyGroupId Proxy group ID
      * @param string $WeightMode Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
      * @param boolean $IsKickOut Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`.
@@ -168,6 +182,8 @@ class CreateCdbProxyAddressRequest extends AbstractModel
      * @param integer $VPort Port
      * @param array $SecurityGroup Security group
      * @param string $ConnectionPoolType Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
+     * @param boolean $AutoLoadBalance 
+     * @param string $AccessMode 
      */
     function __construct()
     {
@@ -257,6 +273,14 @@ class CreateCdbProxyAddressRequest extends AbstractModel
 
         if (array_key_exists("ConnectionPoolType",$param) and $param["ConnectionPoolType"] !== null) {
             $this->ConnectionPoolType = $param["ConnectionPoolType"];
+        }
+
+        if (array_key_exists("AutoLoadBalance",$param) and $param["AutoLoadBalance"] !== null) {
+            $this->AutoLoadBalance = $param["AutoLoadBalance"];
+        }
+
+        if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
+            $this->AccessMode = $param["AccessMode"];
         }
     }
 }

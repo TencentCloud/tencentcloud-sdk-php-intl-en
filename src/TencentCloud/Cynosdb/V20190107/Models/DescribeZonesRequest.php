@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeZones request structure.
  *
- * @method boolean getIncludeVirtualZones() Obtain Whether the virtual zone is included.–
- * @method void setIncludeVirtualZones(boolean $IncludeVirtualZones) Set Whether the virtual zone is included.–
- * @method boolean getShowPermission() Obtain Whether to display all AZs in a region and the user’s permissions in each AZ.
- * @method void setShowPermission(boolean $ShowPermission) Set Whether to display all AZs in a region and the user’s permissions in each AZ.
+ * @method boolean getIncludeVirtualZones() Obtain Whether the virtual zone is included.
+ * @method void setIncludeVirtualZones(boolean $IncludeVirtualZones) Set Whether the virtual zone is included.
+ * @method boolean getShowPermission() Obtain Whether to display all AZs in a region and the user's permissions in each AZ.
+ * @method void setShowPermission(boolean $ShowPermission) Set Whether to display all AZs in a region and the user's permissions in each AZ.
  */
 class DescribeZonesRequest extends AbstractModel
 {
     /**
-     * @var boolean Whether the virtual zone is included.–
+     * @var boolean Whether the virtual zone is included.
      */
     public $IncludeVirtualZones;
 
     /**
-     * @var boolean Whether to display all AZs in a region and the user’s permissions in each AZ.
+     * @var boolean Whether to display all AZs in a region and the user's permissions in each AZ.
      */
     public $ShowPermission;
 
     /**
-     * @param boolean $IncludeVirtualZones Whether the virtual zone is included.–
-     * @param boolean $ShowPermission Whether to display all AZs in a region and the user’s permissions in each AZ.
+     * @param boolean $IncludeVirtualZones Whether the virtual zone is included.
+     * @param boolean $ShowPermission Whether to display all AZs in a region and the user's permissions in each AZ.
      */
     function __construct()
     {
