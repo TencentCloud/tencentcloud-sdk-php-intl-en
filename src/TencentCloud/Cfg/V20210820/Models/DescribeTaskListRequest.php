@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationName(array $ApplicationName) Set Associated application for filtering
  * @method array getTaskStatusList() Obtain Task status for filtering, supporting multiple states (1001: not started; 1002: in progress; 1003: paused; 1004: ended)
  * @method void setTaskStatusList(array $TaskStatusList) Set Task status for filtering, supporting multiple states (1001: not started; 1002: in progress; 1003: paused; 1004: ended)
+ * @method string getArchId() Obtain 
+ * @method void setArchId(string $ArchId) Set 
+ * @method string getArchName() Obtain 
+ * @method void setArchName(string $ArchName) Set 
  */
 class DescribeTaskListRequest extends AbstractModel
 {
@@ -122,6 +126,16 @@ class DescribeTaskListRequest extends AbstractModel
     public $TaskStatusList;
 
     /**
+     * @var string 
+     */
+    public $ArchId;
+
+    /**
+     * @var string 
+     */
+    public $ArchName;
+
+    /**
      * @param integer $Limit Pagination limit
      * @param integer $Offset Pagination offset
      * @param string $TaskTitle Experiment name
@@ -136,6 +150,8 @@ class DescribeTaskListRequest extends AbstractModel
      * @param array $ApplicationId ID of the associated application for filtering
      * @param array $ApplicationName Associated application for filtering
      * @param array $TaskStatusList Task status for filtering, supporting multiple states (1001: not started; 1002: in progress; 1003: paused; 1004: ended)
+     * @param string $ArchId 
+     * @param string $ArchName 
      */
     function __construct()
     {
@@ -214,6 +230,14 @@ class DescribeTaskListRequest extends AbstractModel
 
         if (array_key_exists("TaskStatusList",$param) and $param["TaskStatusList"] !== null) {
             $this->TaskStatusList = $param["TaskStatusList"];
+        }
+
+        if (array_key_exists("ArchId",$param) and $param["ArchId"] !== null) {
+            $this->ArchId = $param["ArchId"];
+        }
+
+        if (array_key_exists("ArchName",$param) and $param["ArchName"] !== null) {
+            $this->ArchName = $param["ArchName"];
         }
     }
 }
