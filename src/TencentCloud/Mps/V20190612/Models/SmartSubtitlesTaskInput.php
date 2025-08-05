@@ -28,6 +28,34 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setRawParameter(RawSmartSubtitleParameter $RawParameter) Set Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.	
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method TaskOutputStorage getOutputStorage() Obtain Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getOutputObjectPath() Obtain Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
+
+Relative path example:
+ - File name_{variable name}.{format}.
+ - File name.{format}.
+
+Absolute path example:
+ -/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+ * @method void setOutputObjectPath(string $OutputObjectPath) Set Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
+
+Relative path example:
+ - File name_{variable name}.{format}.
+ - File name.{format}.
+
+Absolute path example:
+ -/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
  */
 class SmartSubtitlesTaskInput extends AbstractModel
 {
@@ -48,10 +76,46 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $RawParameter;
 
     /**
+     * @var TaskOutputStorage Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $OutputStorage;
+
+    /**
+     * @var string Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
+
+Relative path example:
+ - File name_{variable name}.{format}.
+ - File name.{format}.
+
+Absolute path example:
+ -/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+     */
+    public $OutputObjectPath;
+
+    /**
      * @param integer $Definition Smart subtitle template ID.	
      * @param string $UserExtPara User extension field, which does not need to be filled in for general scenarios.
      * @param RawSmartSubtitleParameter $RawParameter Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.	
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param TaskOutputStorage $OutputStorage Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $OutputObjectPath Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
+
+Relative path example:
+ - File name_{variable name}.{format}.
+ - File name.{format}.
+
+Absolute path example:
+ -/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
      */
     function __construct()
     {
@@ -77,6 +141,15 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("RawParameter",$param) and $param["RawParameter"] !== null) {
             $this->RawParameter = new RawSmartSubtitleParameter();
             $this->RawParameter->deserialize($param["RawParameter"]);
+        }
+
+        if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
+            $this->OutputStorage = new TaskOutputStorage();
+            $this->OutputStorage->deserialize($param["OutputStorage"]);
+        }
+
+        if (array_key_exists("OutputObjectPath",$param) and $param["OutputObjectPath"] !== null) {
+            $this->OutputObjectPath = $param["OutputObjectPath"];
         }
     }
 }

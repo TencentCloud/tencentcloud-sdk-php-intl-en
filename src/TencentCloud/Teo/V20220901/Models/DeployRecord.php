@@ -34,10 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>success: Released successfully. </li>
  * @method string getMessage() Obtain Release result information.
  * @method void setMessage(string $Message) Set Release result information.
- * @method string getRecordId() Obtain Release record ID. 
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRecordId(string $RecordId) Set Release record ID. 
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getRecordId() Obtain Release record ID.
+ * @method void setRecordId(string $RecordId) Set Release record ID.
  * @method string getDescription() Obtain Change description.
  * @method void setDescription(string $Description) Set Change description.
  */
@@ -67,8 +65,7 @@ class DeployRecord extends AbstractModel
     public $Message;
 
     /**
-     * @var string Release record ID. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Release record ID.
      */
     public $RecordId;
 
@@ -85,8 +82,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>failure: Release failed.</li>
 <li>success: Released successfully. </li>
      * @param string $Message Release result information.
-     * @param string $RecordId Release record ID. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $RecordId Release record ID.
      * @param string $Description Change description.
      */
     function __construct()

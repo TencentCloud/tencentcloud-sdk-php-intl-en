@@ -80,20 +80,16 @@ Note: Up to 20 ports can be input for each rule.
  * @method void setSessionPersist(boolean $SessionPersist) Set Whether to enable session persistence. Valid values:
 <li>true: Enable;</li>
 <li>false: Disable.</li>Default value: false.
- * @method integer getSessionPersistTime() Obtain Duration for session persistence. The value takes effect only when SessionPersist is true.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setSessionPersistTime(integer $SessionPersistTime) Set Duration for session persistence. The value takes effect only when SessionPersist is true.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method integer getSessionPersistTime() Obtain Duration for session persistence. the value takes effect only when SessionPersist is true.
+ * @method void setSessionPersistTime(integer $SessionPersistTime) Set Duration for session persistence. the value takes effect only when SessionPersist is true.
  * @method string getOriginPort() Obtain Origin server port. Supported formats:
 <li>A single port, such as 80.</li>
 <li>A port range, such as 81-82, indicating two ports 81 and 82.</li>
  * @method void setOriginPort(string $OriginPort) Set Origin server port. Supported formats:
 <li>A single port, such as 80.</li>
 <li>A port range, such as 81-82, indicating two ports 81 and 82.</li>
- * @method string getRuleTag() Obtain Rule tag.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setRuleTag(string $RuleTag) Set Rule tag.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method string getRuleTag() Obtain Tag of the rule.
+ * @method void setRuleTag(string $RuleTag) Set Tag of the rule.
  */
 class ApplicationProxyRule extends AbstractModel
 {
@@ -160,8 +156,7 @@ Note: Up to 20 ports can be input for each rule.
     public $SessionPersist;
 
     /**
-     * @var integer Duration for session persistence. The value takes effect only when SessionPersist is true.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var integer Duration for session persistence. the value takes effect only when SessionPersist is true.
      */
     public $SessionPersistTime;
 
@@ -173,8 +168,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     public $OriginPort;
 
     /**
-     * @var string Rule tag.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var string Tag of the rule.
      */
     public $RuleTag;
 
@@ -209,13 +203,11 @@ Note: Up to 20 ports can be input for each rule.
      * @param boolean $SessionPersist Whether to enable session persistence. Valid values:
 <li>true: Enable;</li>
 <li>false: Disable.</li>Default value: false.
-     * @param integer $SessionPersistTime Duration for session persistence. The value takes effect only when SessionPersist is true.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param integer $SessionPersistTime Duration for session persistence. the value takes effect only when SessionPersist is true.
      * @param string $OriginPort Origin server port. Supported formats:
 <li>A single port, such as 80.</li>
 <li>A port range, such as 81-82, indicating two ports 81 and 82.</li>
-     * @param string $RuleTag Rule tag.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param string $RuleTag Tag of the rule.
      */
     function __construct()
     {

@@ -20,30 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The information of a live scheme subtask.
  *
- * @method string getTaskId() Obtain The ID of a live scheme subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskId(string $TaskId) Set The ID of a live scheme subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain The task status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH` </li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set The task status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH` </li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getErrCode() Obtain If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setErrCode(integer $ErrCode) Set If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMessage() Obtain If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMessage(string $Message) Set If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUrl() Obtain The URL of the live stream.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUrl(string $Url) Set The URL of the live stream.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTaskId() Obtain Live orchestration task ID.
+ * @method void setTaskId(string $TaskId) Set Live orchestration task ID.
+ * @method string getStatus() Obtain Task stream status. Valid values:
+<li>PROCESSING: processing</li>
+<li>FINISH: completed</li>
+ * @method void setStatus(string $Status) Set Task stream status. Valid values:
+<li>PROCESSING: processing</li>
+<li>FINISH: completed</li>
+ * @method integer getErrCode() Obtain An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+ * @method void setErrCode(integer $ErrCode) Set An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+ * @method string getMessage() Obtain The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+ * @method void setMessage(string $Message) Set The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+ * @method string getUrl() Obtain Live stream URL.
+ * @method void setUrl(string $Url) Set Live stream URL.
  * @method array getLiveActivityResultSet() Obtain The task output.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLiveActivityResultSet(array $LiveActivityResultSet) Set The task output.
@@ -52,34 +42,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class LiveScheduleTask extends AbstractModel
 {
     /**
-     * @var string The ID of a live scheme subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Live orchestration task ID.
      */
     public $TaskId;
 
     /**
-     * @var string The task status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH` </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Task stream status. Valid values:
+<li>PROCESSING: processing</li>
+<li>FINISH: completed</li>
      */
     public $Status;
 
     /**
-     * @var integer If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
      */
     public $ErrCode;
 
     /**
-     * @var string If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
      */
     public $Message;
 
     /**
-     * @var string The URL of the live stream.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Live stream URL.
      */
     public $Url;
 
@@ -90,18 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $LiveActivityResultSet;
 
     /**
-     * @param string $TaskId The ID of a live scheme subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status The task status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH` </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ErrCode If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Url The URL of the live stream.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TaskId Live orchestration task ID.
+     * @param string $Status Task stream status. Valid values:
+<li>PROCESSING: processing</li>
+<li>FINISH: completed</li>
+     * @param integer $ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+     * @param string $Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+     * @param string $Url Live stream URL.
      * @param array $LiveActivityResultSet The task output.
 Note: This field may return null, indicating that no valid values can be obtained.
      */

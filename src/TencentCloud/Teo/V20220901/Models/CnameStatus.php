@@ -26,14 +26,12 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCname(string $Cname) Set The CNAME address.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain The CNAME status. Values:
-<li>`active`: Activated</li>
-<li>`moved`: Not activated </li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set The CNAME status. Values:
-<li>`active`: Activated</li>
-<li>`moved`: Not activated </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain CNAME status. valid values:.
+<li>`active`: activated</li>.
+<li>`moved`: not effective;</li>.
+ * @method void setStatus(string $Status) Set CNAME status. valid values:.
+<li>`active`: activated</li>.
+<li>`moved`: not effective;</li>.
  */
 class CnameStatus extends AbstractModel
 {
@@ -49,10 +47,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Cname;
 
     /**
-     * @var string The CNAME status. Values:
-<li>`active`: Activated</li>
-<li>`moved`: Not activated </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CNAME status. valid values:.
+<li>`active`: activated</li>.
+<li>`moved`: not effective;</li>.
      */
     public $Status;
 
@@ -60,10 +57,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $RecordName The domain name.
      * @param string $Cname The CNAME address.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status The CNAME status. Values:
-<li>`active`: Activated</li>
-<li>`moved`: Not activated </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Status CNAME status. valid values:.
+<li>`active`: activated</li>.
+<li>`moved`: not effective;</li>.
      */
     function __construct()
     {

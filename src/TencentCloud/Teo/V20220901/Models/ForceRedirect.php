@@ -26,14 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable force HTTPS redirect. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
- * @method integer getRedirectStatusCode() Obtain Redirect status code. Values:
-<li>`301`: 301 redirect</li>
-<li>`302`: 302 redirect</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Redirect status code. Values:
-<li>`301`: 301 redirect</li>
-<li>`302`: 302 redirect</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRedirectStatusCode() Obtain Redirection status code. valid values:.
+<Li>`301`: 301 redirect</li>.
+<Li>`302`: 302 redirect</li>.
+ * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Redirection status code. valid values:.
+<Li>`301`: 301 redirect</li>.
+<Li>`302`: 302 redirect</li>.
  */
 class ForceRedirect extends AbstractModel
 {
@@ -45,10 +43,9 @@ class ForceRedirect extends AbstractModel
     public $Switch;
 
     /**
-     * @var integer Redirect status code. Values:
-<li>`301`: 301 redirect</li>
-<li>`302`: 302 redirect</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Redirection status code. valid values:.
+<Li>`301`: 301 redirect</li>.
+<Li>`302`: 302 redirect</li>.
      */
     public $RedirectStatusCode;
 
@@ -56,10 +53,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Switch Whether to enable force HTTPS redirect. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-     * @param integer $RedirectStatusCode Redirect status code. Values:
-<li>`301`: 301 redirect</li>
-<li>`302`: 302 redirect</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RedirectStatusCode Redirection status code. valid values:.
+<Li>`301`: 301 redirect</li>.
+<Li>`302`: 302 redirect</li>.
      */
     function __construct()
     {

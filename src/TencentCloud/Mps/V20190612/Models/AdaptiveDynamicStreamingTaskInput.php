@@ -64,8 +64,8 @@ PureAudio: audio-only.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set Specifies the subtitle parameter.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getStdExtInfo() Obtain Extension field for transcoding.
- * @method void setStdExtInfo(string $StdExtInfo) Set Extension field for transcoding.
+ * @method string getStdExtInfo() Obtain Transcoding parameter extension field.
+ * @method void setStdExtInfo(string $StdExtInfo) Set Transcoding parameter extension field.
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -132,7 +132,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $SubtitleTemplate;
 
     /**
-     * @var string Extension field for transcoding.
+     * @var string Transcoding parameter extension field.
      */
     public $StdExtInfo;
 
@@ -159,7 +159,7 @@ Common: audio/video type.
 PureAudio: audio-only.
      * @param SubtitleTemplate $SubtitleTemplate Specifies the subtitle parameter.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $StdExtInfo Extension field for transcoding.
+     * @param string $StdExtInfo Transcoding parameter extension field.
      */
     function __construct()
     {

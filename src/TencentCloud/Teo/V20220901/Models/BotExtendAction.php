@@ -36,10 +36,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`silence`: Silence;</li>
 <li>`shortdelay`: Add short latency;</li>
 <li>`longdelay`: Add long latency.</li>
- * @method integer getPercent() Obtain The probability for triggering the action. Value range: 0-100.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setPercent(integer $Percent) Set The probability for triggering the action. Value range: 0-100.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getPercent() Obtain The probability for triggering the action. value range: 0-100.
+ * @method void setPercent(integer $Percent) Set The probability for triggering the action. value range: 0-100.
  */
 class BotExtendAction extends AbstractModel
 {
@@ -56,8 +54,7 @@ class BotExtendAction extends AbstractModel
     public $Action;
 
     /**
-     * @var integer The probability for triggering the action. Value range: 0-100.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer The probability for triggering the action. value range: 0-100.
      */
     public $Percent;
 
@@ -70,8 +67,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 <li>`silence`: Silence;</li>
 <li>`shortdelay`: Add short latency;</li>
 <li>`longdelay`: Add long latency.</li>
-     * @param integer $Percent The probability for triggering the action. Value range: 0-100.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $Percent The probability for triggering the action. value range: 0-100.
      */
     function __construct()
     {

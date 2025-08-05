@@ -56,20 +56,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMatchFromType(string $MatchFromType) Set The match method used to match the key. Values:
 <li>`equal`: Exact match</li>
 <li>`wildcard`: Wildcard match (only asterisks)</li>
- * @method array getMatchFrom() Obtain The value that matches the key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setMatchFrom(array $MatchFrom) Set The value that matches the key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getMatchFrom() Obtain Match the Key value.
+ * @method void setMatchFrom(array $MatchFrom) Set Match the Key value.
  * @method string getMatchContentType() Obtain The match method used to match the content.
 <li>`equal`: Exact match</li>
 <li>`wildcard`: Wildcard match (only asterisks)</li>
  * @method void setMatchContentType(string $MatchContentType) Set The match method used to match the content.
 <li>`equal`: Exact match</li>
 <li>`wildcard`: Wildcard match (only asterisks)</li>
- * @method array getMatchContent() Obtain The value that matches the content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setMatchContent(array $MatchContent) Set The value that matches the content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getMatchContent() Obtain Match the Value.
+ * @method void setMatchContent(array $MatchContent) Set Match the Value.
  */
 class SkipCondition extends AbstractModel
 {
@@ -104,8 +100,7 @@ class SkipCondition extends AbstractModel
     public $MatchFromType;
 
     /**
-     * @var array The value that matches the key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Match the Key value.
      */
     public $MatchFrom;
 
@@ -117,8 +112,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $MatchContentType;
 
     /**
-     * @var array The value that matches the content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Match the Value.
      */
     public $MatchContent;
 
@@ -141,13 +135,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param string $MatchFromType The match method used to match the key. Values:
 <li>`equal`: Exact match</li>
 <li>`wildcard`: Wildcard match (only asterisks)</li>
-     * @param array $MatchFrom The value that matches the key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $MatchFrom Match the Key value.
      * @param string $MatchContentType The match method used to match the content.
 <li>`equal`: Exact match</li>
 <li>`wildcard`: Wildcard match (only asterisks)</li>
-     * @param array $MatchContent The value that matches the content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $MatchContent Match the Value.
      */
     function __construct()
     {

@@ -28,18 +28,12 @@ use TencentCloud\Common\AbstractModel;
 <li>`off`: Disable</li>
  * @method array getRateLimitUserRules() Obtain The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
  * @method void setRateLimitUserRules(array $RateLimitUserRules) Set The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
- * @method RateLimitTemplate getRateLimitTemplate() Obtain The settings of the rate limiting template. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRateLimitTemplate(RateLimitTemplate $RateLimitTemplate) Set The settings of the rate limiting template. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method RateLimitIntelligence getRateLimitIntelligence() Obtain The client filtering settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRateLimitIntelligence(RateLimitIntelligence $RateLimitIntelligence) Set The client filtering settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getRateLimitCustomizes() Obtain The custom rate limiting rules. If it is `null`, the previous settings is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setRateLimitCustomizes(array $RateLimitCustomizes) Set The custom rate limiting rules. If it is `null`, the previous settings is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method RateLimitTemplate getRateLimitTemplate() Obtain The rate limit template feature. if null, use the last set configuration by default.
+ * @method void setRateLimitTemplate(RateLimitTemplate $RateLimitTemplate) Set The rate limit template feature. if null, use the last set configuration by default.
+ * @method RateLimitIntelligence getRateLimitIntelligence() Obtain Intelligent client filtering. if null, use the last set configuration by default.
+ * @method void setRateLimitIntelligence(RateLimitIntelligence $RateLimitIntelligence) Set Intelligent client filtering. if null, use the last set configuration by default.
+ * @method array getRateLimitCustomizes() Obtain The custom rate limiting rules. if it is `null`, the previous settings is used.
+ * @method void setRateLimitCustomizes(array $RateLimitCustomizes) Set The custom rate limiting rules. if it is `null`, the previous settings is used.
  */
 class RateLimitConfig extends AbstractModel
 {
@@ -56,20 +50,17 @@ class RateLimitConfig extends AbstractModel
     public $RateLimitUserRules;
 
     /**
-     * @var RateLimitTemplate The settings of the rate limiting template. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RateLimitTemplate The rate limit template feature. if null, use the last set configuration by default.
      */
     public $RateLimitTemplate;
 
     /**
-     * @var RateLimitIntelligence The client filtering settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RateLimitIntelligence Intelligent client filtering. if null, use the last set configuration by default.
      */
     public $RateLimitIntelligence;
 
     /**
-     * @var array The custom rate limiting rules. If it is `null`, the previous settings is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array The custom rate limiting rules. if it is `null`, the previous settings is used.
      */
     public $RateLimitCustomizes;
 
@@ -78,12 +69,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
      * @param array $RateLimitUserRules The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
-     * @param RateLimitTemplate $RateLimitTemplate The settings of the rate limiting template. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RateLimitIntelligence $RateLimitIntelligence The client filtering settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $RateLimitCustomizes The custom rate limiting rules. If it is `null`, the previous settings is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param RateLimitTemplate $RateLimitTemplate The rate limit template feature. if null, use the last set configuration by default.
+     * @param RateLimitIntelligence $RateLimitIntelligence Intelligent client filtering. if null, use the last set configuration by default.
+     * @param array $RateLimitCustomizes The custom rate limiting rules. if it is `null`, the previous settings is used.
      */
     function __construct()
     {

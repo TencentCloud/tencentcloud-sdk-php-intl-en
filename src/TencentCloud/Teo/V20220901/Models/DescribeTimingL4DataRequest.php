@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() Obtain The start time.
  * @method void setStartTime(string $StartTime) Set The start time.
- * @method string getEndTime() Obtain The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
- * @method void setEndTime(string $EndTime) Set The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+ * @method string getEndTime() Obtain End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+ * @method void setEndTime(string $EndTime) Set End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
  * @method array getMetricNames() Obtain Metric list. Valid values:
 <Li>l4Flow_connections: number of concurrent connections;</li>
 <Li>l4Flow_flux: total traffic;</li>
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <Li>l4Flow_outFlux: outbound traffic.</li>
 <Li>l4Flow_inBandwidth: inbound peak bandwidth.</li>
 <Li>l4Flow_outBandwidth: outbound peak bandwidth.</li>
- * @method array getZoneIds() Obtain Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
- * @method void setZoneIds(array $ZoneIds) Set Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+ * @method array getZoneIds() Obtain Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
+ * @method void setZoneIds(array $ZoneIds) Set Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
  * @method array getProxyIds() Obtain List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
  * @method void setProxyIds(array $ProxyIds) Set List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
  * @method string getInterval() Obtain The query granularity. Values:
@@ -71,7 +71,7 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @var string End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public $EndTime;
 
@@ -87,7 +87,7 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+     * @var array Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
      */
     public $ZoneIds;
 
@@ -120,7 +120,7 @@ class DescribeTimingL4DataRequest extends AbstractModel
 
     /**
      * @param string $StartTime The start time.
-     * @param string $EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @param string $EndTime End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      * @param array $MetricNames Metric list. Valid values:
 <Li>l4Flow_connections: number of concurrent connections;</li>
 <Li>l4Flow_flux: total traffic;</li>
@@ -128,7 +128,7 @@ class DescribeTimingL4DataRequest extends AbstractModel
 <Li>l4Flow_outFlux: outbound traffic.</li>
 <Li>l4Flow_inBandwidth: inbound peak bandwidth.</li>
 <Li>l4Flow_outBandwidth: outbound peak bandwidth.</li>
-     * @param array $ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+     * @param array $ZoneIds Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
      * @param array $ProxyIds List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
      * @param string $Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>

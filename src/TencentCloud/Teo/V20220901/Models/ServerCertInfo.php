@@ -20,110 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTPS server certificate configuration
  *
- * @method string getCertId() Obtain Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+ * @method string getCertId() Obtain Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
 
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setCertId(string $CertId) Set Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+ * @method void setCertId(string $CertId) Set Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
 
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method string getAlias() Obtain Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAlias(string $Alias) Set Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getType() Obtain Type of the certificate. Values:
-u200c<li>`default`: Default certificate</li>
-u200c<li>`upload`: Custom certificate</li>
-u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set Type of the certificate. Values:
-u200c<li>`default`: Default certificate</li>
-u200c<li>`upload`: Custom certificate</li>
-u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getExpireTime() Obtain Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpireTime(string $ExpireTime) Set Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDeployTime() Obtain Time when the certificate is deployed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDeployTime(string $DeployTime) Set Time when the certificate is deployed.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAlias() Obtain Certificate remark name.
+ * @method void setAlias(string $Alias) Set Certificate remark name.
+ * @method string getType() Obtain Certificate type. valid values:.
+<Li>Specifies the default certificate.</li>.
+<Li>Upload: user upload;</li>.
+<li>managed: tencent cloud hosted.</li>.
+ * @method void setType(string $Type) Set Certificate type. valid values:.
+<Li>Specifies the default certificate.</li>.
+<Li>Upload: user upload;</li>.
+<li>managed: tencent cloud hosted.</li>.
+ * @method string getExpireTime() Obtain Certificate expiration time.
+ * @method void setExpireTime(string $ExpireTime) Set Certificate expiration time.
+ * @method string getDeployTime() Obtain Specifies the cert deployment time.
+ * @method void setDeployTime(string $DeployTime) Set Specifies the cert deployment time.
  * @method string getSignAlgo() Obtain Signature algorithm.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSignAlgo(string $SignAlgo) Set Signature algorithm.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCommonName() Obtain Domain name of the certificate.
-Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCommonName(string $CommonName) Set Domain name of the certificate.
-Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class ServerCertInfo extends AbstractModel
 {
     /**
-     * @var string Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+     * @var string Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
 
-Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $CertId;
 
     /**
-     * @var string Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate remark name.
      */
     public $Alias;
 
     /**
-     * @var string Type of the certificate. Values:
-u200c<li>`default`: Default certificate</li>
-u200c<li>`upload`: Custom certificate</li>
-u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Certificate type. valid values:.
+<Li>Specifies the default certificate.</li>.
+<Li>Upload: user upload;</li>.
+<li>managed: tencent cloud hosted.</li>.
      */
     public $Type;
 
     /**
-     * @var string Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate expiration time.
      */
     public $ExpireTime;
 
     /**
-     * @var string Time when the certificate is deployed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the cert deployment time.
      */
     public $DeployTime;
 
     /**
      * @var string Signature algorithm.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SignAlgo;
 
     /**
      * @var string Domain name of the certificate.
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CommonName;
 
     /**
-     * @param string $CertId Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+     * @param string $CertId Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
 
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param string $Alias Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Type Type of the certificate. Values:
-u200c<li>`default`: Default certificate</li>
-u200c<li>`upload`: Custom certificate</li>
-u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $ExpireTime Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DeployTime Time when the certificate is deployed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Alias Certificate remark name.
+     * @param string $Type Certificate type. valid values:.
+<Li>Specifies the default certificate.</li>.
+<Li>Upload: user upload;</li>.
+<li>managed: tencent cloud hosted.</li>.
+     * @param string $ExpireTime Certificate expiration time.
+     * @param string $DeployTime Specifies the cert deployment time.
      * @param string $SignAlgo Signature algorithm.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CommonName Domain name of the certificate.
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

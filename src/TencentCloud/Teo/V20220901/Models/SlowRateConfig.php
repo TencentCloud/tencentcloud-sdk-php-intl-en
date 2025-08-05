@@ -26,14 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
- * @method integer getInterval() Obtain The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setInterval(integer $Interval) Set The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getThreshold() Obtain The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setThreshold(integer $Threshold) Set The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getInterval() Obtain The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
+ * @method void setInterval(integer $Interval) Set The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
+ * @method integer getThreshold() Obtain Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
+ * @method void setThreshold(integer $Threshold) Set Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
  */
 class SlowRateConfig extends AbstractModel
 {
@@ -45,14 +41,12 @@ class SlowRateConfig extends AbstractModel
     public $Switch;
 
     /**
-     * @var integer The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
      */
     public $Interval;
 
     /**
-     * @var integer The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
      */
     public $Threshold;
 
@@ -60,10 +54,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param string $Switch Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-     * @param integer $Interval The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $Threshold The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $Interval The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
+     * @param integer $Threshold Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
      */
     function __construct()
     {

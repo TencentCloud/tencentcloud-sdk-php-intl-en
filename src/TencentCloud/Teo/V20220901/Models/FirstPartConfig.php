@@ -20,42 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The configuration to detect slow attacks based on the transfer period the first 8 KB of requests
  *
- * @method string getSwitch() Obtain Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSwitch(string $Switch) Set Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getStatTime() Obtain The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setStatTime(integer $StatTime) Set The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSwitch() Obtain Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+ * @method integer getStatTime() Obtain The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
+ * @method void setStatTime(integer $StatTime) Set The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
  */
 class FirstPartConfig extends AbstractModel
 {
     /**
-     * @var string Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var integer The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
      */
     public $StatTime;
 
     /**
-     * @param string $Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $StatTime The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Switch Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+     * @param integer $StatTime The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
      */
     function __construct()
     {

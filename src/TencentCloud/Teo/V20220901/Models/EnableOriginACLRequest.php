@@ -20,78 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableOriginACL request structure.
  *
- * @method string getZoneId() Obtain Specifies the site ID.
- * @method void setZoneId(string $ZoneId) Set Specifies the site ID.
- * @method string getL7EnableMode() Obtain The mode of configurating origin ACLs for L7 acceleration domains.
-- all: configurate origin ACLs for all L7 acceleration domains under the site.
-- specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-When the parameter is empty, it defaults to specific.
-
- * @method void setL7EnableMode(string $L7EnableMode) Set The mode of configurating origin ACLs for L7 acceleration domains.
-- all: configurate origin ACLs for all L7 acceleration domains under the site.
-- specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-When the parameter is empty, it defaults to specific.
-
- * @method array getL7Hosts() Obtain The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time.
- * @method void setL7Hosts(array $L7Hosts) Set The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time.
- * @method string getL4EnableMode() Obtain The mode of configurating origin ACLs for L4 proxy Instances.
-- all: configurate origin ACLs for all L4 proxy Instances under the site.
-- specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-When the parameter is empty, it defaults to specific.
- * @method void setL4EnableMode(string $L4EnableMode) Set The mode of configurating origin ACLs for L4 proxy Instances.
-- all: configurate origin ACLs for all L4 proxy Instances under the site.
-- specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-When the parameter is empty, it defaults to specific.
- * @method array getL4ProxyIds() Obtain The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time.
- * @method void setL4ProxyIds(array $L4ProxyIds) Set The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method string getL7EnableMode() Obtain L7 acceleration domain name activation in origin protection mode.
+<li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+<Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
+ * @method void setL7EnableMode(string $L7EnableMode) Set L7 acceleration domain name activation in origin protection mode.
+<li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+<Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
+ * @method array getL7Hosts() Obtain Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
+ * @method void setL7Hosts(array $L7Hosts) Set Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
+ * @method string getL4EnableMode() Obtain Specifies the origin protection mode of the l4 proxy instance.
+<Li>ALL: enable for all l4 proxy instances under the site.</li>.
+<Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
+ * @method void setL4EnableMode(string $L4EnableMode) Set Specifies the origin protection mode of the l4 proxy instance.
+<Li>ALL: enable for all l4 proxy instances under the site.</li>.
+<Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
+ * @method array getL4ProxyIds() Obtain The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
+ * @method void setL4ProxyIds(array $L4ProxyIds) Set The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
  */
 class EnableOriginACLRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the site ID.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var string The mode of configurating origin ACLs for L7 acceleration domains.
-- all: configurate origin ACLs for all L7 acceleration domains under the site.
-- specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-When the parameter is empty, it defaults to specific.
-
+     * @var string L7 acceleration domain name activation in origin protection mode.
+<li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+<Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
      */
     public $L7EnableMode;
 
     /**
-     * @var array The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time.
+     * @var array Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
      */
     public $L7Hosts;
 
     /**
-     * @var string The mode of configurating origin ACLs for L4 proxy Instances.
-- all: configurate origin ACLs for all L4 proxy Instances under the site.
-- specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-When the parameter is empty, it defaults to specific.
+     * @var string Specifies the origin protection mode of the l4 proxy instance.
+<Li>ALL: enable for all l4 proxy instances under the site.</li>.
+<Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
      */
     public $L4EnableMode;
 
     /**
-     * @var array The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time.
+     * @var array The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
      */
     public $L4ProxyIds;
 
     /**
-     * @param string $ZoneId Specifies the site ID.
-     * @param string $L7EnableMode The mode of configurating origin ACLs for L7 acceleration domains.
-- all: configurate origin ACLs for all L7 acceleration domains under the site.
-- specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-When the parameter is empty, it defaults to specific.
-
-     * @param array $L7Hosts The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time.
-     * @param string $L4EnableMode The mode of configurating origin ACLs for L4 proxy Instances.
-- all: configurate origin ACLs for all L4 proxy Instances under the site.
-- specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-When the parameter is empty, it defaults to specific.
-     * @param array $L4ProxyIds The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time.
+     * @param string $ZoneId Zone ID.
+     * @param string $L7EnableMode L7 acceleration domain name activation in origin protection mode.
+<li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+<Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
+     * @param array $L7Hosts Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
+     * @param string $L4EnableMode Specifies the origin protection mode of the l4 proxy instance.
+<Li>ALL: enable for all l4 proxy instances under the site.</li>.
+<Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
+     * @param array $L4ProxyIds The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
      */
     function __construct()
     {

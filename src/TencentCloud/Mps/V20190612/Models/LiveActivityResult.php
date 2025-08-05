@@ -21,13 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * The output of a live scheme subtask.
  *
  * @method string getActivityType() Obtain Atomic task type.
-<li>LiveRecord: live recording.</li>
-<li>AiQualityControl: media quality inspection.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>LiveRecord: live recording</li>
+<li>AiQualityControl: media quality inspection</li>
  * @method void setActivityType(string $ActivityType) Set Atomic task type.
-<li>LiveRecord: live recording.</li>
-<li>AiQualityControl: media quality inspection.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>LiveRecord: live recording</li>
+<li>AiQualityControl: media quality inspection</li>
  * @method LiveActivityResItem getLiveActivityResItem() Obtain The task output.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLiveActivityResItem(LiveActivityResItem $LiveActivityResItem) Set The task output.
@@ -37,9 +35,8 @@ class LiveActivityResult extends AbstractModel
 {
     /**
      * @var string Atomic task type.
-<li>LiveRecord: live recording.</li>
-<li>AiQualityControl: media quality inspection.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>LiveRecord: live recording</li>
+<li>AiQualityControl: media quality inspection</li>
      */
     public $ActivityType;
 
@@ -51,9 +48,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $ActivityType Atomic task type.
-<li>LiveRecord: live recording.</li>
-<li>AiQualityControl: media quality inspection.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>LiveRecord: live recording</li>
+<li>AiQualityControl: media quality inspection</li>
      * @param LiveActivityResItem $LiveActivityResItem The task output.
 Note: This field may return null, indicating that no valid values can be obtained.
      */

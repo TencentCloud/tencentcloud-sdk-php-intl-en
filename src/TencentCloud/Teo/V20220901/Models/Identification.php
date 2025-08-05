@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneName() Obtain The site name.
  * @method void setZoneName(string $ZoneName) Set The site name.
- * @method string getDomain() Obtain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) Set The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDomain() Obtain The subdomain name to be verified. to verify the ownership of a site, leave it blank.
+ * @method void setDomain(string $Domain) Set The subdomain name to be verified. to verify the ownership of a site, leave it blank.
  * @method string getStatus() Obtain The verification status. Values:
 <li>`pending`: The verification is ongoing.</li>
 <li>`finished`: The verification completed.</li>
@@ -34,10 +32,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 <li>`finished`: The verification completed.</li>
  * @method AscriptionInfo getAscription() Obtain Details of the DNS record.
  * @method void setAscription(AscriptionInfo $Ascription) Set Details of the DNS record.
- * @method array getOriginalNameServers() Obtain The NS record of the domain name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginalNameServers(array $OriginalNameServers) Set The NS record of the domain name.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getOriginalNameServers() Obtain Specifies the current NS record of the domain name.
+ * @method void setOriginalNameServers(array $OriginalNameServers) Set Specifies the current NS record of the domain name.
  * @method FileAscriptionInfo getFileAscription() Obtain Details of the verification file.
  * @method void setFileAscription(FileAscriptionInfo $FileAscription) Set Details of the verification file.
  */
@@ -49,8 +45,7 @@ class Identification extends AbstractModel
     public $ZoneName;
 
     /**
-     * @var string The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string The subdomain name to be verified. to verify the ownership of a site, leave it blank.
      */
     public $Domain;
 
@@ -67,8 +62,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Ascription;
 
     /**
-     * @var array The NS record of the domain name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the current NS record of the domain name.
      */
     public $OriginalNameServers;
 
@@ -79,14 +73,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $ZoneName The site name.
-     * @param string $Domain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Domain The subdomain name to be verified. to verify the ownership of a site, leave it blank.
      * @param string $Status The verification status. Values:
 <li>`pending`: The verification is ongoing.</li>
 <li>`finished`: The verification completed.</li>
      * @param AscriptionInfo $Ascription Details of the DNS record.
-     * @param array $OriginalNameServers The NS record of the domain name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $OriginalNameServers Specifies the current NS record of the domain name.
      * @param FileAscriptionInfo $FileAscription Details of the verification file.
      */
     function __construct()

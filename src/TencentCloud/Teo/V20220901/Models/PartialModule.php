@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Module settings of the exception rule
  *
- * @method string getModule() Obtain The module. Values:
-<li>`waf`: Managed rules</li>
- * @method void setModule(string $Module) Set The module. Values:
-<li>`waf`: Managed rules</li>
- * @method array getInclude() Obtain List of managed rule IDs to be skipped.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setInclude(array $Include) Set List of managed rule IDs to be skipped.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getModule() Obtain Module name. value is.
+<li>managed-rule: managed rule Id;</li>.
+<Li>Managed-Group: managed rule group;</li>.
+<li>`waf`: to be deprecated, managed rule.</li>.
+ * @method void setModule(string $Module) Set Module name. value is.
+<li>managed-rule: managed rule Id;</li>.
+<Li>Managed-Group: managed rule group;</li>.
+<li>`waf`: to be deprecated, managed rule.</li>.
+ * @method array getInclude() Obtain Specifies the list of rule ids that require exceptions under the module.
+ * @method void setInclude(array $Include) Set Specifies the list of rule ids that require exceptions under the module.
  */
 class PartialModule extends AbstractModel
 {
     /**
-     * @var string The module. Values:
-<li>`waf`: Managed rules</li>
+     * @var string Module name. value is.
+<li>managed-rule: managed rule Id;</li>.
+<Li>Managed-Group: managed rule group;</li>.
+<li>`waf`: to be deprecated, managed rule.</li>.
      */
     public $Module;
 
     /**
-     * @var array List of managed rule IDs to be skipped.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Specifies the list of rule ids that require exceptions under the module.
      */
     public $Include;
 
     /**
-     * @param string $Module The module. Values:
-<li>`waf`: Managed rules</li>
-     * @param array $Include List of managed rule IDs to be skipped.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Module Module name. value is.
+<li>managed-rule: managed rule Id;</li>.
+<Li>Managed-Group: managed rule group;</li>.
+<li>`waf`: to be deprecated, managed rule.</li>.
+     * @param array $Include Specifies the list of rule ids that require exceptions under the module.
      */
     function __construct()
     {

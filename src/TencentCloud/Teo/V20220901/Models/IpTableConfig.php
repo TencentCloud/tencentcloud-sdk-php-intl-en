@@ -20,42 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IP/Region blocklist/allowlist configuration
  *
- * @method string getSwitch() Obtain Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSwitch(string $Switch) Set Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getIpTableRules() Obtain The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIpTableRules(array $IpTableRules) Set The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSwitch() Obtain Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: disabled;</li>.
+ * @method void setSwitch(string $Switch) Set Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: disabled;</li>.
+ * @method array getIpTableRules() Obtain Basic control rules. if null, historical configuration is used by default.
+ * @method void setIpTableRules(array $IpTableRules) Set Basic control rules. if null, historical configuration is used by default.
  */
 class IpTableConfig extends AbstractModel
 {
     /**
-     * @var string Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: disabled;</li>.
      */
     public $Switch;
 
     /**
-     * @var array The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Basic control rules. if null, historical configuration is used by default.
      */
     public $IpTableRules;
 
     /**
-     * @param string $Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $IpTableRules The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Switch Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: disabled;</li>.
+     * @param array $IpTableRules Basic control rules. if null, historical configuration is used by default.
      */
     function __construct()
     {

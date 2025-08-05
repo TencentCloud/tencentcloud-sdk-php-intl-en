@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginSubtitlePath(string $OriginSubtitlePath) Set Path of a subtitle file extracted from a video.
  * @method string getTranslateSubtitlePath() Obtain Path of a subtitle translation file extracted from a video.
  * @method void setTranslateSubtitlePath(string $TranslateSubtitlePath) Set Path of a subtitle translation file extracted from a video.
+ * @method SubtitlePosition getSubtitlePos() Obtain Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSubtitlePos(SubtitlePosition $SubtitlePos) Set Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AiAnalysisTaskDelLogoOutput extends AbstractModel
 {
@@ -52,10 +56,18 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
     public $TranslateSubtitlePath;
 
     /**
+     * @var SubtitlePosition Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $SubtitlePos;
+
+    /**
      * @param string $Path Path of a file after removal.
      * @param TaskOutputStorage $OutputStorage Storage location of a file after removal.
      * @param string $OriginSubtitlePath Path of a subtitle file extracted from a video.
      * @param string $TranslateSubtitlePath Path of a subtitle translation file extracted from a video.
+     * @param SubtitlePosition $SubtitlePos Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -85,6 +97,11 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
 
         if (array_key_exists("TranslateSubtitlePath",$param) and $param["TranslateSubtitlePath"] !== null) {
             $this->TranslateSubtitlePath = $param["TranslateSubtitlePath"];
+        }
+
+        if (array_key_exists("SubtitlePos",$param) and $param["SubtitlePos"] !== null) {
+            $this->SubtitlePos = new SubtitlePosition();
+            $this->SubtitlePos->deserialize($param["SubtitlePos"]);
         }
     }
 }

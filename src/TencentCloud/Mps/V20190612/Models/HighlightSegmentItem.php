@@ -30,14 +30,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSegmentTags(array $SegmentTags) Set Segment tag.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBeginTime() Obtain The live streaming segment corresponds to the live start time point, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setBeginTime(string $BeginTime) Set The live streaming segment corresponds to the live start time point, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getEndTime() Obtain The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setEndTime(string $EndTime) Set The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getBeginTime() Obtain Start time of the live streaming segment in ISO date and time format.	
+ * @method void setBeginTime(string $BeginTime) Set Start time of the live streaming segment in ISO date and time format.	
+ * @method string getEndTime() Obtain End time of the live streaming segment in ISO date and time format.	
+ * @method void setEndTime(string $EndTime) Set End time of the live streaming segment in ISO date and time format.	
  */
 class HighlightSegmentItem extends AbstractModel
 {
@@ -63,14 +59,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SegmentTags;
 
     /**
-     * @var string The live streaming segment corresponds to the live start time point, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Start time of the live streaming segment in ISO date and time format.	
      */
     public $BeginTime;
 
     /**
-     * @var string The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string End time of the live streaming segment in ISO date and time format.	
      */
     public $EndTime;
 
@@ -80,10 +74,8 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param float $EndTimeOffset The end time offset of the segment.
      * @param array $SegmentTags Segment tag.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BeginTime The live streaming segment corresponds to the live start time point, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $EndTime The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $BeginTime Start time of the live streaming segment in ISO date and time format.	
+     * @param string $EndTime End time of the live streaming segment in ISO date and time format.	
      */
     function __construct()
     {

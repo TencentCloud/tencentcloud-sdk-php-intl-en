@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
  * @method VanityNameServers getVanityNameServers() Obtain The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
  * @method void setVanityNameServers(VanityNameServers $VanityNameServers) Set The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
- * @method string getAliasZoneName() Obtain The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
- * @method void setAliasZoneName(string $AliasZoneName) Set The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+ * @method string getAliasZoneName() Obtain Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
+ * @method void setAliasZoneName(string $AliasZoneName) Set Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
  * @method string getArea() Obtain The region where the site requests access. Values:
 <li> `global`: Global coverage</li>
 <li> `mainland`: Chinese mainland</li>
@@ -66,7 +66,7 @@ class ModifyZoneRequest extends AbstractModel
     public $VanityNameServers;
 
     /**
-     * @var string The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     * @var string Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
      */
     public $AliasZoneName;
 
@@ -90,7 +90,7 @@ class ModifyZoneRequest extends AbstractModel
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
      * @param VanityNameServers $VanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
-     * @param string $AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     * @param string $AliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
      * @param string $Area The region where the site requests access. Values:
 <li> `global`: Global coverage</li>
 <li> `mainland`: Chinese mainland</li>

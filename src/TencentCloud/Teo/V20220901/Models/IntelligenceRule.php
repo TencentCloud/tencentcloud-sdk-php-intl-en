@@ -20,42 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Bot intelligence rules
  *
- * @method string getSwitch() Obtain Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSwitch(string $Switch) Set Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getIntelligenceRuleItems() Obtain Items in a bot intelligence rule
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIntelligenceRuleItems(array $IntelligenceRuleItems) Set Items in a bot intelligence rule
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSwitch() Obtain Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+ * @method array getIntelligenceRuleItems() Obtain Specifies the rule detail.
+ * @method void setIntelligenceRuleItems(array $IntelligenceRuleItems) Set Specifies the rule detail.
  */
 class IntelligenceRule extends AbstractModel
 {
     /**
-     * @var string Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var array Items in a bot intelligence rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the rule detail.
      */
     public $IntelligenceRuleItems;
 
     /**
-     * @param string $Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $IntelligenceRuleItems Items in a bot intelligence rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Switch Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+     * @param array $IntelligenceRuleItems Specifies the rule detail.
      */
     function __construct()
     {

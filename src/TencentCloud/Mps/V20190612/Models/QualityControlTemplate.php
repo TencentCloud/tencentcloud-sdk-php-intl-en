@@ -60,6 +60,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
 
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method QualityControlStrategy getStrategy() Obtain Spot check policy for media quality inspection.
+ * @method void setStrategy(QualityControlStrategy $Strategy) Set Spot check policy for media quality inspection.
  */
 class QualityControlTemplate extends AbstractModel
 {
@@ -112,6 +114,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UpdateTime;
 
     /**
+     * @var QualityControlStrategy Spot check policy for media quality inspection.
+     */
+    public $Strategy;
+
+    /**
      * @param integer $Definition Unique identifier of a media quality inspection template.
      * @param string $Name Media quality inspection template name.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -132,6 +139,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $UpdateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
 
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QualityControlStrategy $Strategy Spot check policy for media quality inspection.
      */
     function __construct()
     {
@@ -177,6 +185,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
+            $this->Strategy = new QualityControlStrategy();
+            $this->Strategy->deserialize($param["Strategy"]);
         }
     }
 }

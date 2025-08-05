@@ -30,18 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotManagedRule(BotManagedRule $BotManagedRule) Set The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
  * @method BotPortraitRule getBotPortraitRule() Obtain The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
  * @method void setBotPortraitRule(BotPortraitRule $BotPortraitRule) Set The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
- * @method IntelligenceRule getIntelligenceRule() Obtain The bot intelligence settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIntelligenceRule(IntelligenceRule $IntelligenceRule) Set The bot intelligence settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method IntelligenceRule getIntelligenceRule() Obtain Bot intelligent analysis. if null, use the last set configuration by default.
+ * @method void setIntelligenceRule(IntelligenceRule $IntelligenceRule) Set Bot intelligent analysis. if null, use the last set configuration by default.
  * @method array getBotUserRules() Obtain Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
  * @method void setBotUserRules(array $BotUserRules) Set Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
  * @method array getAlgDetectRule() Obtain Active bot detection rule.
  * @method void setAlgDetectRule(array $AlgDetectRule) Set Active bot detection rule.
- * @method array getCustomizes() Obtain Settings of the bot managed rule. It is only used for output.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setCustomizes(array $Customizes) Set Settings of the bot managed rule. It is only used for output.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getCustomizes() Obtain Bot managed custom policy. optional input. output usage only.
+ * @method void setCustomizes(array $Customizes) Set Bot managed custom policy. optional input. output usage only.
  */
 class BotConfig extends AbstractModel
 {
@@ -63,8 +59,7 @@ class BotConfig extends AbstractModel
     public $BotPortraitRule;
 
     /**
-     * @var IntelligenceRule The bot intelligence settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var IntelligenceRule Bot intelligent analysis. if null, use the last set configuration by default.
      */
     public $IntelligenceRule;
 
@@ -79,8 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AlgDetectRule;
 
     /**
-     * @var array Settings of the bot managed rule. It is only used for output.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array Bot managed custom policy. optional input. output usage only.
      */
     public $Customizes;
 
@@ -90,12 +84,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 <li>`off`: Disable</li>
      * @param BotManagedRule $BotManagedRule The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
      * @param BotPortraitRule $BotPortraitRule The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
-     * @param IntelligenceRule $IntelligenceRule The bot intelligence settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IntelligenceRule $IntelligenceRule Bot intelligent analysis. if null, use the last set configuration by default.
      * @param array $BotUserRules Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
      * @param array $AlgDetectRule Active bot detection rule.
-     * @param array $Customizes Settings of the bot managed rule. It is only used for output.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Customizes Bot managed custom policy. optional input. output usage only.
      */
     function __construct()
     {

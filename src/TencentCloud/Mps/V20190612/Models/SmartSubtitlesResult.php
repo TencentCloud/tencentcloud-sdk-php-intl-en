@@ -21,11 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * Smart subtitle task result.
  *
  * @method string getType() Obtain Task type. Valid values:
-<Li>AsrFullTextRecognition: full speech recognition</li>
-<Li>TransTextRecognition: speech translation</li>
+<li>AsrFullTextRecognition: full speech recognition</li>
+<li>TransTextRecognition: speech translation</li>
  * @method void setType(string $Type) Set Task type. Valid values:
-<Li>AsrFullTextRecognition: full speech recognition</li>
-<Li>TransTextRecognition: speech translation</li>
+<li>AsrFullTextRecognition: full speech recognition</li>
+<li>TransTextRecognition: speech translation</li>
  * @method SmartSubtitleTaskAsrFullTextResult getAsrFullTextTask() Obtain Full speech recognition result. When Type is
  set to AsrFullTextRecognition, this parameter takes effect.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -45,8 +45,8 @@ class SmartSubtitlesResult extends AbstractModel
 {
     /**
      * @var string Task type. Valid values:
-<Li>AsrFullTextRecognition: full speech recognition</li>
-<Li>TransTextRecognition: speech translation</li>
+<li>AsrFullTextRecognition: full speech recognition</li>
+<li>TransTextRecognition: speech translation</li>
      */
     public $Type;
 
@@ -67,8 +67,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * @param string $Type Task type. Valid values:
-<Li>AsrFullTextRecognition: full speech recognition</li>
-<Li>TransTextRecognition: speech translation</li>
+<li>AsrFullTextRecognition: full speech recognition</li>
+<li>TransTextRecognition: speech translation</li>
      * @param SmartSubtitleTaskAsrFullTextResult $AsrFullTextTask Full speech recognition result. When Type is
  set to AsrFullTextRecognition, this parameter takes effect.
 Note: This field may return null, indicating that no valid value can be obtained.

@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable cache prefresh. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
- * @method integer getPercent() Obtain The cache prefresh percentage. Values: 1-99
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPercent(integer $Percent) Set The cache prefresh percentage. Values: 1-99
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getPercent() Obtain Cache pre-refresh percentage. value range: 1-99.
+ * @method void setPercent(integer $Percent) Set Cache pre-refresh percentage. value range: 1-99.
  */
 class CachePrefresh extends AbstractModel
 {
@@ -41,8 +39,7 @@ class CachePrefresh extends AbstractModel
     public $Switch;
 
     /**
-     * @var integer The cache prefresh percentage. Values: 1-99
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Cache pre-refresh percentage. value range: 1-99.
      */
     public $Percent;
 
@@ -50,8 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Switch Whether to enable cache prefresh. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-     * @param integer $Percent The cache prefresh percentage. Values: 1-99
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Percent Cache pre-refresh percentage. value range: 1-99.
      */
     function __construct()
     {

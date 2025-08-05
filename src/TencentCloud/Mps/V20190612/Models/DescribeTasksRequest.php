@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  * @method string getScrollToken() Obtain Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
  * @method void setScrollToken(string $ScrollToken) Set Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
+ * @method string getStartTime() Obtain Query task start time.
+ * @method void setStartTime(string $StartTime) Set Query task start time.
+ * @method string getEndTime() Obtain Query task end time.
+ * @method void setEndTime(string $EndTime) Set Query task end time.
  */
 class DescribeTasksRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeTasksRequest extends AbstractModel
     public $ScrollToken;
 
     /**
+     * @var string Query task start time.
+     */
+    public $StartTime;
+
+    /**
+     * @var string Query task end time.
+     */
+    public $EndTime;
+
+    /**
      * @param string $Status Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param string $ScrollToken Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
+     * @param string $StartTime Query task start time.
+     * @param string $EndTime Query task end time.
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeTasksRequest extends AbstractModel
 
         if (array_key_exists("ScrollToken",$param) and $param["ScrollToken"] !== null) {
             $this->ScrollToken = $param["ScrollToken"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

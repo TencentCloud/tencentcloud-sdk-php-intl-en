@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQualityControlTask(AiQualityControlTaskInput $QualityControlTask) Set Media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ExecRulesTask getExecRulesTask() Obtain Conditional judgment of the task.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setExecRulesTask(ExecRulesTask $ExecRulesTask) Set Conditional judgment of the task.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain Smart subtitle task.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) Set Smart subtitle task.
@@ -101,6 +105,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $QualityControlTask;
 
     /**
+     * @var ExecRulesTask Conditional judgment of the task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $ExecRulesTask;
+
+    /**
      * @var SmartSubtitlesTaskInput Smart subtitle task.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -118,6 +128,8 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param AiRecognitionTaskInput $AiRecognitionTask A content recognition task.
      * @param AiQualityControlTaskInput $QualityControlTask Media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExecRulesTask $ExecRulesTask Conditional judgment of the task.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param SmartSubtitlesTaskInput $SmartSubtitlesTask Smart subtitle task.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -182,6 +194,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("QualityControlTask",$param) and $param["QualityControlTask"] !== null) {
             $this->QualityControlTask = new AiQualityControlTaskInput();
             $this->QualityControlTask->deserialize($param["QualityControlTask"]);
+        }
+
+        if (array_key_exists("ExecRulesTask",$param) and $param["ExecRulesTask"] !== null) {
+            $this->ExecRulesTask = new ExecRulesTask();
+            $this->ExecRulesTask->deserialize($param["ExecRulesTask"]);
         }
 
         if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {

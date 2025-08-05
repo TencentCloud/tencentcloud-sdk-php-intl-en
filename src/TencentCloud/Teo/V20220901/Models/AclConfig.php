@@ -28,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`off`: Disable</li>
  * @method array getAclUserRules() Obtain The custom rule.
  * @method void setAclUserRules(array $AclUserRules) Set The custom rule.
- * @method array getCustomizes() Obtain Custom managed rules
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setCustomizes(array $Customizes) Set Custom managed rules
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getCustomizes() Obtain Managed custom rules.
+ * @method void setCustomizes(array $Customizes) Set Managed custom rules.
  */
 class AclConfig extends AbstractModel
 {
@@ -48,8 +46,7 @@ class AclConfig extends AbstractModel
     public $AclUserRules;
 
     /**
-     * @var array Custom managed rules
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Managed custom rules.
      */
     public $Customizes;
 
@@ -58,8 +55,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
      * @param array $AclUserRules The custom rule.
-     * @param array $Customizes Custom managed rules
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $Customizes Managed custom rules.
      */
     function __construct()
     {

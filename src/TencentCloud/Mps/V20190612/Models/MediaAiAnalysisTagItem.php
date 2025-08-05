@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTag(string $Tag) Set Tag name.
  * @method float getConfidence() Obtain Confidence of tag between 0 and 100.
  * @method void setConfidence(float $Confidence) Set Confidence of tag between 0 and 100.
+ * @method string getSpecialInfo() Obtain Varies based on different types.
+ * @method void setSpecialInfo(string $SpecialInfo) Set Varies based on different types.
  */
 class MediaAiAnalysisTagItem extends AbstractModel
 {
@@ -38,8 +40,14 @@ class MediaAiAnalysisTagItem extends AbstractModel
     public $Confidence;
 
     /**
+     * @var string Varies based on different types.
+     */
+    public $SpecialInfo;
+
+    /**
      * @param string $Tag Tag name.
      * @param float $Confidence Confidence of tag between 0 and 100.
+     * @param string $SpecialInfo Varies based on different types.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class MediaAiAnalysisTagItem extends AbstractModel
 
         if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
             $this->Confidence = $param["Confidence"];
+        }
+
+        if (array_key_exists("SpecialInfo",$param) and $param["SpecialInfo"] !== null) {
+            $this->SpecialInfo = $param["SpecialInfo"];
         }
     }
 }

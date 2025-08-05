@@ -30,10 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set The error message.
  * @method AiAnalysisTaskInput getInput() Obtain The input of the content analysis task.
  * @method void setInput(AiAnalysisTaskInput $Input) Set The input of the content analysis task.
- * @method array getOutput() Obtain The output of the content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(array $Output) Set The output of the content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getOutput() Obtain Analysis task output.
+ * @method void setOutput(array $Output) Set Analysis task output.
+ * @method string getBeginProcessTime() Obtain Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getFinishTime() Obtain Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setFinishTime(string $FinishTime) Set Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
  */
 class ScheduleAnalysisTaskResult extends AbstractModel
 {
@@ -63,10 +65,19 @@ class ScheduleAnalysisTaskResult extends AbstractModel
     public $Input;
 
     /**
-     * @var array The output of the content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Analysis task output.
      */
     public $Output;
+
+    /**
+     * @var string Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     */
+    public $BeginProcessTime;
+
+    /**
+     * @var string Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     */
+    public $FinishTime;
 
     /**
      * @param string $Status The task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -74,8 +85,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode The error code. 0 indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
      * @param string $Message The error message.
      * @param AiAnalysisTaskInput $Input The input of the content analysis task.
-     * @param array $Output The output of the content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Output Analysis task output.
+     * @param string $BeginProcessTime Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $FinishTime Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
      */
     function __construct()
     {
@@ -118,6 +130,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->Output, $obj);
             }
+        }
+
+        if (array_key_exists("BeginProcessTime",$param) and $param["BeginProcessTime"] !== null) {
+            $this->BeginProcessTime = $param["BeginProcessTime"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
         }
     }
 }

@@ -1,0 +1,81 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Teo\V20220901\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * Describes the returned site information.
+ *
+ * @method string getZoneId() Obtain Site id.
+ * @method void setZoneId(string $ZoneId) Set Site id.
+ * @method string getZoneName() Obtain Site name.
+ * @method void setZoneName(string $ZoneName) Set Site name.
+ * @method boolean getPaused() Obtain Whether to disable the site. valid values: <li>false: not disabled;</li>.
+<li>true: disabled.</li>.
+ * @method void setPaused(boolean $Paused) Set Whether to disable the site. valid values: <li>false: not disabled;</li>.
+<li>true: disabled.</li>.
+ */
+class ZoneInfo extends AbstractModel
+{
+    /**
+     * @var string Site id.
+     */
+    public $ZoneId;
+
+    /**
+     * @var string Site name.
+     */
+    public $ZoneName;
+
+    /**
+     * @var boolean Whether to disable the site. valid values: <li>false: not disabled;</li>.
+<li>true: disabled.</li>.
+     */
+    public $Paused;
+
+    /**
+     * @param string $ZoneId Site id.
+     * @param string $ZoneName Site name.
+     * @param boolean $Paused Whether to disable the site. valid values: <li>false: not disabled;</li>.
+<li>true: disabled.</li>.
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
+            $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("Paused",$param) and $param["Paused"] !== null) {
+            $this->Paused = $param["Paused"];
+        }
+    }
+}

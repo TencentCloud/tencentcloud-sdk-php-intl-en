@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Pending: deploying.</li>
 <li>Deleting: deleting.</li>
 <li>Running: effective.</li>
- * @method array getL4UsedList() Obtain List of Layer-4 proxy instances bound to a LoadBalancer.
- * @method void setL4UsedList(array $L4UsedList) Set List of Layer-4 proxy instances bound to a LoadBalancer.
+ * @method array getL4UsedList() Obtain Specifies the list of l4 proxy instances bound to the load balancing instance.
+ * @method void setL4UsedList(array $L4UsedList) Set Specifies the list of l4 proxy instances bound to the load balancing instance.
  * @method array getL7UsedList() Obtain List of Layer-7 domain names bound to a LoadBalancer.
  * @method void setL7UsedList(array $L7UsedList) Set List of Layer-7 domain names bound to a LoadBalancer.
  */
@@ -108,7 +108,7 @@ class LoadBalancer extends AbstractModel
     public $Status;
 
     /**
-     * @var array List of Layer-4 proxy instances bound to a LoadBalancer.
+     * @var array Specifies the list of l4 proxy instances bound to the load balancing instance.
      */
     public $L4UsedList;
 
@@ -134,7 +134,7 @@ class LoadBalancer extends AbstractModel
 <li>Pending: deploying.</li>
 <li>Deleting: deleting.</li>
 <li>Running: effective.</li>
-     * @param array $L4UsedList List of Layer-4 proxy instances bound to a LoadBalancer.
+     * @param array $L4UsedList Specifies the list of l4 proxy instances bound to the load balancing instance.
      * @param array $L7UsedList List of Layer-7 domain names bound to a LoadBalancer.
      */
     function __construct()

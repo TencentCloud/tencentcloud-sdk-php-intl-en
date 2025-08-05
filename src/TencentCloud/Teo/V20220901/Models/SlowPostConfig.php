@@ -26,26 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
- * @method FirstPartConfig getFirstPartConfig() Obtain Detect slow attacks by the transfer period of the first 8 KB of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setFirstPartConfig(FirstPartConfig $FirstPartConfig) Set Detect slow attacks by the transfer period of the first 8 KB of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method SlowRateConfig getSlowRateConfig() Obtain Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSlowRateConfig(SlowRateConfig $SlowRateConfig) Set Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getAction() Obtain The action to taken when a slow attack is detected. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block the request</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setAction(string $Action) Set The action to taken when a slow attack is detected. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block the request</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getRuleId() Obtain ID of the rule
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setRuleId(integer $RuleId) Set ID of the rule
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method FirstPartConfig getFirstPartConfig() Obtain First packet configuration.
+ * @method void setFirstPartConfig(FirstPartConfig $FirstPartConfig) Set First packet configuration.
+ * @method SlowRateConfig getSlowRateConfig() Obtain Specifies the basic configuration.
+ * @method void setSlowRateConfig(SlowRateConfig $SlowRateConfig) Set Specifies the basic configuration.
+ * @method string getAction() Obtain Handling action for slow attack. valid values:.
+<li>`monitor`: observe</li>.
+<li>`drop`: block the request.</li>.
+ * @method void setAction(string $Action) Set Handling action for slow attack. valid values:.
+<li>`monitor`: observe</li>.
+<li>`drop`: block the request.</li>.
+ * @method integer getRuleId() Obtain Specifies the Id of this rule.
+ * @method void setRuleId(integer $RuleId) Set Specifies the Id of this rule.
  */
 class SlowPostConfig extends AbstractModel
 {
@@ -57,28 +49,24 @@ class SlowPostConfig extends AbstractModel
     public $Switch;
 
     /**
-     * @var FirstPartConfig Detect slow attacks by the transfer period of the first 8 KB of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var FirstPartConfig First packet configuration.
      */
     public $FirstPartConfig;
 
     /**
-     * @var SlowRateConfig Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var SlowRateConfig Specifies the basic configuration.
      */
     public $SlowRateConfig;
 
     /**
-     * @var string The action to taken when a slow attack is detected. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block the request</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Handling action for slow attack. valid values:.
+<li>`monitor`: observe</li>.
+<li>`drop`: block the request.</li>.
      */
     public $Action;
 
     /**
-     * @var integer ID of the rule
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Specifies the Id of this rule.
      */
     public $RuleId;
 
@@ -86,16 +74,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param string $Switch Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-     * @param FirstPartConfig $FirstPartConfig Detect slow attacks by the transfer period of the first 8 KB of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param SlowRateConfig $SlowRateConfig Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $Action The action to taken when a slow attack is detected. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block the request</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $RuleId ID of the rule
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param FirstPartConfig $FirstPartConfig First packet configuration.
+     * @param SlowRateConfig $SlowRateConfig Specifies the basic configuration.
+     * @param string $Action Handling action for slow attack. valid values:.
+<li>`monitor`: observe</li>.
+<li>`drop`: block the request.</li>.
+     * @param integer $RuleId Specifies the Id of this rule.
      */
     function __construct()
     {

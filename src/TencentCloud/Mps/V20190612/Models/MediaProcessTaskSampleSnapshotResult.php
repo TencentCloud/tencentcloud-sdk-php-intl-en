@@ -32,8 +32,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method SampleSnapshotTaskInput getInput() Obtain Input for a sampled screenshot task.
  * @method void setInput(SampleSnapshotTaskInput $Input) Set Input for a sampled screenshot task.
- * @method MediaSampleSnapshotItem getOutput() Obtain Specifies the output of a sampling screenshot task for a video.
- * @method void setOutput(MediaSampleSnapshotItem $Output) Set Specifies the output of a sampling screenshot task for a video.
+ * @method MediaSampleSnapshotItem getOutput() Obtain Output of the sampled screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setOutput(MediaSampleSnapshotItem $Output) Set Output of the sampled screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getBeginProcessTime() Obtain Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method string getFinishTime() Obtain Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
@@ -68,7 +70,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Input;
 
     /**
-     * @var MediaSampleSnapshotItem Specifies the output of a sampling screenshot task for a video.
+     * @var MediaSampleSnapshotItem Output of the sampled screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Output;
 
@@ -89,7 +92,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Message Error message.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param SampleSnapshotTaskInput $Input Input for a sampled screenshot task.
-     * @param MediaSampleSnapshotItem $Output Specifies the output of a sampling screenshot task for a video.
+     * @param MediaSampleSnapshotItem $Output Output of the sampled screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */

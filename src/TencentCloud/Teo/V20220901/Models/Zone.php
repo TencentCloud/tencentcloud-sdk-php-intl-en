@@ -94,10 +94,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`active`: Enabled</li>
 <li>`inactive`: Not activated</li>
 <li>`paused`: Disabled</li>
- * @method string getAliasZoneName() Obtain The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAliasZoneName(string $AliasZoneName) Set The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAliasZoneName() Obtain Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
+ * @method void setAliasZoneName(string $AliasZoneName) Set Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
  * @method integer getIsFake() Obtain Whether it’s a fake site. Valid values: 
 <li>`0`: Non-fake site;</li>
 <li>`1`: Fake site.</li>
@@ -219,8 +217,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ActiveStatus;
 
     /**
-     * @var string The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
      */
     public $AliasZoneName;
 
@@ -280,8 +277,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`active`: Enabled</li>
 <li>`inactive`: Not activated</li>
 <li>`paused`: Disabled</li>
-     * @param string $AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AliasZoneName Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
      * @param integer $IsFake Whether it’s a fake site. Valid values: 
 <li>`0`: Non-fake site;</li>
 <li>`1`: Fake site.</li>

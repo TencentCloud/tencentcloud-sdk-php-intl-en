@@ -66,18 +66,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceNameSet(array $InstanceNameSet) Set The list of instance names used for fuzzy match
  * @method array getVersionSet() Obtain The list of instance version numbers, such as 2008R2, 2012SP3
  * @method void setVersionSet(array $VersionSet) Set The list of instance version numbers, such as 2008R2, 2012SP3
- * @method string getZone() Obtain Instance availability zone, such as ap-guangzhou-2
- * @method void setZone(string $Zone) Set Instance availability zone, such as ap-guangzhou-2
+ * @method string getZone() Obtain Instance availability zone, such as ap-guangzhou-3
+ * @method void setZone(string $Zone) Set Instance availability zone, such as ap-guangzhou-3
  * @method array getTagKeys() Obtain The list of instance tags
  * @method void setTagKeys(array $TagKeys) Set The list of instance tags
  * @method string getSearchKey() Obtain Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
  * @method void setSearchKey(string $SearchKey) Set Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
  * @method array getUidSet() Obtain Unique Uid of an instance
  * @method void setUidSet(array $UidSet) Set Unique Uid of an instance
- * @method string getInstanceType() Obtain Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
- * @method void setInstanceType(string $InstanceType) Set Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
- * @method string getPaginationType() Obtain 
- * @method void setPaginationType(string $PaginationType) Set 
+ * @method string getInstanceType() Obtain Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+ * @method void setInstanceType(string $InstanceType) Set Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+ * @method string getPaginationType() Obtain Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber.
+ * @method void setPaginationType(string $PaginationType) Set Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber.
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -149,7 +149,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $VersionSet;
 
     /**
-     * @var string Instance availability zone, such as ap-guangzhou-2
+     * @var string Instance availability zone, such as ap-guangzhou-3
      */
     public $Zone;
 
@@ -169,12 +169,12 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $UidSet;
 
     /**
-     * @var string Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     * @var string Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
      */
     public $InstanceType;
 
     /**
-     * @var string 
+     * @var string Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber.
      */
     public $PaginationType;
 
@@ -202,12 +202,12 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $VipSet The list of instance private IPs, such as 172.1.0.12
      * @param array $InstanceNameSet The list of instance names used for fuzzy match
      * @param array $VersionSet The list of instance version numbers, such as 2008R2, 2012SP3
-     * @param string $Zone Instance availability zone, such as ap-guangzhou-2
+     * @param string $Zone Instance availability zone, such as ap-guangzhou-3
      * @param array $TagKeys The list of instance tags
      * @param string $SearchKey Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
      * @param array $UidSet Unique Uid of an instance
-     * @param string $InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
-     * @param string $PaginationType 
+     * @param string $InstanceType Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+     * @param string $PaginationType Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber.
      */
     function __construct()
     {

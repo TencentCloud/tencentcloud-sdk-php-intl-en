@@ -26,28 +26,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTarget(string $Target) Set Resource.
  * @method string getType() Obtain Type of the task.
  * @method void setType(string $Type) Set Type of the task.
- * @method string getMethod() Obtain Node cache purge method, with values:
-<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
-<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setMethod(string $Method) Set Node cache purge method, with values:
-<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
-<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method string getStatus() Obtain Status. Valid values:
-<li>processing: Processing;</li>
-<li>success: Succeeded;</li>
-<li>failed: Failed;</li>
-<li>timeout: Timed out. </li>
- * @method void setStatus(string $Status) Set Status. Valid values:
-<li>processing: Processing;</li>
-<li>success: Succeeded;</li>
-<li>failed: Failed;</li>
-<li>timeout: Timed out. </li>
+ * @method string getMethod() Obtain Node cache purge method. valid values:.
+<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
+<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
+ * @method void setMethod(string $Method) Set Node cache purge method. valid values:.
+<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
+<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
+ * @method string getStatus() Obtain Status. valid values:.
+<li>processing: indicates the operation is in progress.</li>.
+<Li>Success: specifies the success status.</li>.
+<li>failed: indicates a failure.</li>.
+<Li>Timeout: specifies the timeout period.</li>.
+<Li>Canceled: canceled.</li>.
+ * @method void setStatus(string $Status) Set Status. valid values:.
+<li>processing: indicates the operation is in progress.</li>.
+<Li>Success: specifies the success status.</li>.
+<li>failed: indicates a failure.</li>.
+<Li>Timeout: specifies the timeout period.</li>.
+<Li>Canceled: canceled.</li>.
  * @method string getCreateTime() Obtain Creation time of the task.
  * @method void setCreateTime(string $CreateTime) Set Creation time of the task.
  * @method string getUpdateTime() Obtain Completion time of the task.
  * @method void setUpdateTime(string $UpdateTime) Set Completion time of the task.
+ * @method string getFailType() Obtain Refresh and preheat failure type. valid values:.
+<li>taskFailed: specifies the task failure.</li>.
+<li>quotaExceeded: specifies the quota exceeded status.</li>.
+<li>downloadManifestFailed: specifies the file failed to download.</li>.
+<li>accessDenied: specifies access denied.</li>.
+<li>originPullFailed: specifies the origin-pull failure.</li>.
+ * @method void setFailType(string $FailType) Set Refresh and preheat failure type. valid values:.
+<li>taskFailed: specifies the task failure.</li>.
+<li>quotaExceeded: specifies the quota exceeded status.</li>.
+<li>downloadManifestFailed: specifies the file failed to download.</li>.
+<li>accessDenied: specifies access denied.</li>.
+<li>originPullFailed: specifies the origin-pull failure.</li>.
+ * @method string getFailMessage() Obtain Failure description for refresh and preheating.
+ * @method void setFailMessage(string $FailMessage) Set Failure description for refresh and preheating.
  */
 class Task extends AbstractModel
 {
@@ -67,19 +81,19 @@ class Task extends AbstractModel
     public $Type;
 
     /**
-     * @var string Node cache purge method, with values:
-<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
-<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var string Node cache purge method. valid values:.
+<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
+<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
      */
     public $Method;
 
     /**
-     * @var string Status. Valid values:
-<li>processing: Processing;</li>
-<li>success: Succeeded;</li>
-<li>failed: Failed;</li>
-<li>timeout: Timed out. </li>
+     * @var string Status. valid values:.
+<li>processing: indicates the operation is in progress.</li>.
+<Li>Success: specifies the success status.</li>.
+<li>failed: indicates a failure.</li>.
+<Li>Timeout: specifies the timeout period.</li>.
+<Li>Canceled: canceled.</li>.
      */
     public $Status;
 
@@ -94,20 +108,42 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     public $UpdateTime;
 
     /**
+     * @var string Refresh and preheat failure type. valid values:.
+<li>taskFailed: specifies the task failure.</li>.
+<li>quotaExceeded: specifies the quota exceeded status.</li>.
+<li>downloadManifestFailed: specifies the file failed to download.</li>.
+<li>accessDenied: specifies access denied.</li>.
+<li>originPullFailed: specifies the origin-pull failure.</li>.
+     */
+    public $FailType;
+
+    /**
+     * @var string Failure description for refresh and preheating.
+     */
+    public $FailMessage;
+
+    /**
      * @param string $JobId ID of the task.
      * @param string $Target Resource.
      * @param string $Type Type of the task.
-     * @param string $Method Node cache purge method, with values:
-<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
-<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param string $Status Status. Valid values:
-<li>processing: Processing;</li>
-<li>success: Succeeded;</li>
-<li>failed: Failed;</li>
-<li>timeout: Timed out. </li>
+     * @param string $Method Node cache purge method. valid values:.
+<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
+<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
+     * @param string $Status Status. valid values:.
+<li>processing: indicates the operation is in progress.</li>.
+<Li>Success: specifies the success status.</li>.
+<li>failed: indicates a failure.</li>.
+<Li>Timeout: specifies the timeout period.</li>.
+<Li>Canceled: canceled.</li>.
      * @param string $CreateTime Creation time of the task.
      * @param string $UpdateTime Completion time of the task.
+     * @param string $FailType Refresh and preheat failure type. valid values:.
+<li>taskFailed: specifies the task failure.</li>.
+<li>quotaExceeded: specifies the quota exceeded status.</li>.
+<li>downloadManifestFailed: specifies the file failed to download.</li>.
+<li>accessDenied: specifies access denied.</li>.
+<li>originPullFailed: specifies the origin-pull failure.</li>.
+     * @param string $FailMessage Failure description for refresh and preheating.
      */
     function __construct()
     {
@@ -148,6 +184,14 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("FailType",$param) and $param["FailType"] !== null) {
+            $this->FailType = $param["FailType"];
+        }
+
+        if (array_key_exists("FailMessage",$param) and $param["FailMessage"] !== null) {
+            $this->FailMessage = $param["FailMessage"];
         }
     }
 }

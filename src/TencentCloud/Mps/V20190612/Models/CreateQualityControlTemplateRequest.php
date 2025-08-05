@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <li>PNG: PNG image.</li>
  * @method void setRecordFormat(string $RecordFormat) Set Recording file format. Valid values:
 <li>PNG: PNG image.</li>
+ * @method QualityControlStrategy getStrategy() Obtain Spot check policy for media quality inspection.
+ * @method void setStrategy(QualityControlStrategy $Strategy) Set Spot check policy for media quality inspection.
  */
 class CreateQualityControlTemplateRequest extends AbstractModel
 {
@@ -55,11 +57,17 @@ class CreateQualityControlTemplateRequest extends AbstractModel
     public $RecordFormat;
 
     /**
+     * @var QualityControlStrategy Spot check policy for media quality inspection.
+     */
+    public $Strategy;
+
+    /**
      * @param string $Name Media quality inspection template name, with a length limit of 64 characters.
      * @param array $QualityControlItemSet Media quality inspection control parameters.
      * @param string $Comment Media quality inspection template description, with a length limit of 256 characters.
      * @param string $RecordFormat Recording file format. Valid values:
 <li>PNG: PNG image.</li>
+     * @param QualityControlStrategy $Strategy Spot check policy for media quality inspection.
      */
     function __construct()
     {
@@ -93,6 +101,11 @@ class CreateQualityControlTemplateRequest extends AbstractModel
 
         if (array_key_exists("RecordFormat",$param) and $param["RecordFormat"] !== null) {
             $this->RecordFormat = $param["RecordFormat"];
+        }
+
+        if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
+            $this->Strategy = new QualityControlStrategy();
+            $this->Strategy->deserialize($param["Strategy"]);
         }
     }
 }

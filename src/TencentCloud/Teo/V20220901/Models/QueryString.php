@@ -26,18 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to use `QueryString` as part of `CacheKey`. Values:
 <li>`on`: Yes</li>
 <li>`off`: No</li>
- * @method string getAction() Obtain Specifies how to use query strings in the cache key. Values:
-<li>`includeCustom`: `Include partial query strings.</li>
-<li>`excludeCustom`: Exclude partial query strings.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAction(string $Action) Set Specifies how to use query strings in the cache key. Values:
-<li>`includeCustom`: `Include partial query strings.</li>
-<li>`excludeCustom`: Exclude partial query strings.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getValue() Obtain Array of query strings used/excluded
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setValue(array $Value) Set Array of query strings used/excluded
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAction() Obtain CacheKey usage via QueryString, valid values:.
+<li>includeCustom: use partial url parameter;</li>.
+<li>excludeCustom: exclude partial url parameters.</li>.
+ * @method void setAction(string $Action) Set CacheKey usage via QueryString, valid values:.
+<li>includeCustom: use partial url parameter;</li>.
+<li>excludeCustom: exclude partial url parameters.</li>.
+ * @method array getValue() Obtain Specifies the url parameter array for usage/exclusion.
+ * @method void setValue(array $Value) Set Specifies the url parameter array for usage/exclusion.
  */
 class QueryString extends AbstractModel
 {
@@ -49,16 +45,14 @@ class QueryString extends AbstractModel
     public $Switch;
 
     /**
-     * @var string Specifies how to use query strings in the cache key. Values:
-<li>`includeCustom`: `Include partial query strings.</li>
-<li>`excludeCustom`: Exclude partial query strings.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CacheKey usage via QueryString, valid values:.
+<li>includeCustom: use partial url parameter;</li>.
+<li>excludeCustom: exclude partial url parameters.</li>.
      */
     public $Action;
 
     /**
-     * @var array Array of query strings used/excluded
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the url parameter array for usage/exclusion.
      */
     public $Value;
 
@@ -66,12 +60,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Switch Whether to use `QueryString` as part of `CacheKey`. Values:
 <li>`on`: Yes</li>
 <li>`off`: No</li>
-     * @param string $Action Specifies how to use query strings in the cache key. Values:
-<li>`includeCustom`: `Include partial query strings.</li>
-<li>`excludeCustom`: Exclude partial query strings.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Value Array of query strings used/excluded
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Action CacheKey usage via QueryString, valid values:.
+<li>includeCustom: use partial url parameter;</li>.
+<li>excludeCustom: exclude partial url parameters.</li>.
+     * @param array $Value Specifies the url parameter array for usage/exclusion.
      */
     function __construct()
     {

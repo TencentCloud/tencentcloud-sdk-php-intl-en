@@ -30,8 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method ImageSpriteTaskInput getInput() Obtain Input for an image sprite generating task.
  * @method void setInput(ImageSpriteTaskInput $Input) Set Input for an image sprite generating task.
- * @method MediaImageSpriteItem getOutput() Obtain Specifies the output of an image sprite task for a video.
- * @method void setOutput(MediaImageSpriteItem $Output) Set Specifies the output of an image sprite task for a video.
+ * @method MediaImageSpriteItem getOutput() Obtain Output of the image sprite task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setOutput(MediaImageSpriteItem $Output) Set Output of the image sprite task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getBeginProcessTime() Obtain Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method string getFinishTime() Obtain Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
@@ -65,7 +67,8 @@ class MediaProcessTaskImageSpriteResult extends AbstractModel
     public $Input;
 
     /**
-     * @var MediaImageSpriteItem Specifies the output of an image sprite task for a video.
+     * @var MediaImageSpriteItem Output of the image sprite task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Output;
 
@@ -85,7 +88,8 @@ class MediaProcessTaskImageSpriteResult extends AbstractModel
      * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
      * @param string $Message Error message.
      * @param ImageSpriteTaskInput $Input Input for an image sprite generating task.
-     * @param MediaImageSpriteItem $Output Specifies the output of an image sprite task for a video.
+     * @param MediaImageSpriteItem $Output Output of the image sprite task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */

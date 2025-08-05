@@ -46,8 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set The description of the verification result.
  * @method string getBestFrame() Obtain The best frame screenshot (in Base64) obtained during the verification.
  * @method void setBestFrame(string $BestFrame) Set The best frame screenshot (in Base64) obtained during the verification.
- * @method string getVideo() Obtain The video file (Base64) for verification.
- * @method void setVideo(string $Video) Set The video file (Base64) for verification.
+ * @method string getVideo() Obtain The video file (Base64) for verification.Used for verification, contains specific color reflection effects.
+ * @method void setVideo(string $Video) Set The video file (Base64) for verification.Used for verification, contains specific color reflection effects.
+ * @method string getActionVideo() Obtain Records the specific action performed by the user, used for AI Face Shield analysis.
+ * @method void setActionVideo(string $ActionVideo) Set Records the specific action performed by the user, used for AI Face Shield analysis.
  * @method float getSimilarity() Obtain The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setSimilarity(float $Similarity) Set The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
@@ -87,9 +89,14 @@ class GetFaceIdResultIntlResponse extends AbstractModel
     public $BestFrame;
 
     /**
-     * @var string The video file (Base64) for verification.
+     * @var string The video file (Base64) for verification.Used for verification, contains specific color reflection effects.
      */
     public $Video;
+
+    /**
+     * @var string Records the specific action performed by the user, used for AI Face Shield analysis.
+     */
+    public $ActionVideo;
 
     /**
      * @var float The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
@@ -122,7 +129,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -999: The verification process wasn't finished.
      * @param string $Description The description of the verification result.
      * @param string $BestFrame The best frame screenshot (in Base64) obtained during the verification.
-     * @param string $Video The video file (Base64) for verification.
+     * @param string $Video The video file (Base64) for verification.Used for verification, contains specific color reflection effects.
+     * @param string $ActionVideo Records the specific action performed by the user, used for AI Face Shield analysis.
      * @param float $Similarity The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Extra The pass-through parameter.
@@ -156,6 +164,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Video",$param) and $param["Video"] !== null) {
             $this->Video = $param["Video"];
+        }
+
+        if (array_key_exists("ActionVideo",$param) and $param["ActionVideo"] !== null) {
+            $this->ActionVideo = $param["ActionVideo"];
         }
 
         if (array_key_exists("Similarity",$param) and $param["Similarity"] !== null) {

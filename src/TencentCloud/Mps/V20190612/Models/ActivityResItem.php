@@ -60,6 +60,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQualityControlTask(ScheduleQualityControlTaskResult $QualityControlTask) Set Media quality inspection task output.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ScheduleExecRuleTaskResult getExecRuleTask() Obtain Conditional judgment task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setExecRuleTask(ScheduleExecRuleTaskResult $ExecRuleTask) Set Conditional judgment task output.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ScheduleSmartSubtitleTaskResult getSmartSubtitlesTask() Obtain Smart subtitle task output.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask) Set Smart subtitle task output.
@@ -128,6 +132,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $QualityControlTask;
 
     /**
+     * @var ScheduleExecRuleTaskResult Conditional judgment task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $ExecRuleTask;
+
+    /**
      * @var ScheduleSmartSubtitleTaskResult Smart subtitle task output.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -154,6 +164,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param ScheduleQualityControlTaskResult $QualityControlTask Media quality inspection task output.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ScheduleExecRuleTaskResult $ExecRuleTask Conditional judgment task output.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask Smart subtitle task output.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -218,6 +230,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("QualityControlTask",$param) and $param["QualityControlTask"] !== null) {
             $this->QualityControlTask = new ScheduleQualityControlTaskResult();
             $this->QualityControlTask->deserialize($param["QualityControlTask"]);
+        }
+
+        if (array_key_exists("ExecRuleTask",$param) and $param["ExecRuleTask"] !== null) {
+            $this->ExecRuleTask = new ScheduleExecRuleTaskResult();
+            $this->ExecRuleTask->deserialize($param["ExecRuleTask"]);
         }
 
         if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {

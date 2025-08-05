@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersionName(string $VersionName) Set Instance version
  * @method integer getRenewFlag() Obtain Instance renewal flag
  * @method void setRenewFlag(integer $RenewFlag) Set Instance renewal flag
- * @method integer getModel() Obtain High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
- * @method void setModel(integer $Model) Set High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
+ * @method integer getModel() Obtain Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster.
+ * @method void setModel(integer $Model) Set Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster.
  * @method string getRegion() Obtain Instance region name, such as ap-guangzhou
  * @method void setRegion(string $Region) Set Instance region name, such as ap-guangzhou
  * @method string getZone() Obtain Instance AZ name, such as ap-guangzhou-1
@@ -84,28 +84,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) Set Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
  * @method string getUniqSubnetId() Obtain Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
  * @method void setUniqSubnetId(string $UniqSubnetId) Set Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
- * @method string getIsolateOperator() Obtain Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsolateOperator(string $IsolateOperator) Set Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubFlag() Obtain Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubFlag(string $SubFlag) Set Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getROFlag() Obtain Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setROFlag(string $ROFlag) Set Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHAFlag() Obtain Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHAFlag(string $HAFlag) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIsolateOperator() Obtain Instance isolation operation.
+ * @method void setIsolateOperator(string $IsolateOperator) Set Instance isolation operation.
+ * @method string getSubFlag() Obtain Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription.
+ * @method void setSubFlag(string $SubFlag) Set Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription.
+ * @method string getROFlag() Obtain Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group.
+ * @method void setROFlag(string $ROFlag) Set Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group.
+ * @method string getHAFlag() Obtain Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance.
+ * @method void setHAFlag(string $HAFlag) Set Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance.
  * @method array getResourceTags() Obtain Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setResourceTags(array $ResourceTags) Set Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBackupModel() Obtain Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBackupModel(string $BackupModel) Set Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceNote() Obtain Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceNote(string $InstanceNote) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBackupModel() Obtain Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances.
+ * @method void setBackupModel(string $BackupModel) Set Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances.
+ * @method string getInstanceNote() Obtain Instance backup information.
+ * @method void setInstanceNote(string $InstanceNote) Set Instance backup information.
  * @method array getBackupCycle() Obtain Backup cycle
  * @method void setBackupCycle(array $BackupCycle) Set Backup cycle
  * @method string getBackupCycleType() Obtain Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
  * @method void setBackupCycleType(string $BackupCycleType) Set Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
  * @method integer getBackupSaveDays() Obtain Data (log) backup retention period
  * @method void setBackupSaveDays(integer $BackupSaveDays) Set Data (log) backup retention period
- * @method string getInstanceType() Obtain Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
- * @method void setInstanceType(string $InstanceType) Set Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+ * @method string getInstanceType() Obtain Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+
+ * @method void setInstanceType(string $InstanceType) Set Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+
  * @method array getCrossRegions() Obtain The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
  * @method void setCrossRegions(array $CrossRegions) Set The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
  * @method string getCrossBackupEnabled() Obtain Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
@@ -122,12 +124,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeZone(string $TimeZone) Set System time zone. Default value: `China Standard Time`.
  * @method boolean getIsDrZone() Obtain Whether the instance is deployed across AZs
  * @method void setIsDrZone(boolean $IsDrZone) Set Whether the instance is deployed across AZs
- * @method SlaveZones getSlaveZones() Obtain Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSlaveZones(SlaveZones $SlaveZones) Set Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getArchitecture() Obtain Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setArchitecture(string $Architecture) Set Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStyle() Obtain Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStyle(string $Style) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SlaveZones getSlaveZones() Obtain Secondary AZ information on the two-node instance.
+ * @method void setSlaveZones(SlaveZones $SlaveZones) Set Secondary AZ information on the two-node instance.
+ * @method string getArchitecture() Obtain Architecture flag. SINGLE: single-node; DOUBLE: two-node.
+ * @method void setArchitecture(string $Architecture) Set Architecture flag. SINGLE: single-node; DOUBLE: two-node.
+ * @method string getStyle() Obtain Type flag. EXCLUSIVE: exclusive; SHARED: shared.
+ * @method void setStyle(string $Style) Set Type flag. EXCLUSIVE: exclusive; SHARED: shared.
+ * @method array getMultiSlaveZones() Obtain 
+ * @method void setMultiSlaveZones(array $MultiSlaveZones) Set 
  */
 class DBInstance extends AbstractModel
 {
@@ -232,7 +236,7 @@ class DBInstance extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var integer High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
+     * @var integer Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster.
      */
     public $Model;
 
@@ -292,22 +296,22 @@ class DBInstance extends AbstractModel
     public $UniqSubnetId;
 
     /**
-     * @var string Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance isolation operation.
      */
     public $IsolateOperator;
 
     /**
-     * @var string Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription.
      */
     public $SubFlag;
 
     /**
-     * @var string Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group.
      */
     public $ROFlag;
 
     /**
-     * @var string Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance.
      */
     public $HAFlag;
 
@@ -317,12 +321,12 @@ class DBInstance extends AbstractModel
     public $ResourceTags;
 
     /**
-     * @var string Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances.
      */
     public $BackupModel;
 
     /**
-     * @var string Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance backup information.
      */
     public $InstanceNote;
 
@@ -342,7 +346,8 @@ class DBInstance extends AbstractModel
     public $BackupSaveDays;
 
     /**
-     * @var string Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     * @var string Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+
      */
     public $InstanceType;
 
@@ -387,19 +392,24 @@ class DBInstance extends AbstractModel
     public $IsDrZone;
 
     /**
-     * @var SlaveZones Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SlaveZones Secondary AZ information on the two-node instance.
      */
     public $SlaveZones;
 
     /**
-     * @var string Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Architecture flag. SINGLE: single-node; DOUBLE: two-node.
      */
     public $Architecture;
 
     /**
-     * @var string Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Type flag. EXCLUSIVE: exclusive; SHARED: shared.
      */
     public $Style;
+
+    /**
+     * @var array 
+     */
+    public $MultiSlaveZones;
 
     /**
      * @param string $InstanceId Instance ID
@@ -422,7 +432,7 @@ class DBInstance extends AbstractModel
      * @param integer $Storage Instance storage capacity in GB
      * @param string $VersionName Instance version
      * @param integer $RenewFlag Instance renewal flag
-     * @param integer $Model High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
+     * @param integer $Model Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster.
      * @param string $Region Instance region name, such as ap-guangzhou
      * @param string $Zone Instance AZ name, such as ap-guangzhou-1
      * @param string $BackupTime Backup time point
@@ -434,17 +444,18 @@ class DBInstance extends AbstractModel
      * @param integer $Pid Billing ID
      * @param string $UniqVpcId Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
      * @param string $UniqSubnetId Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
-     * @param string $IsolateOperator Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SubFlag Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ROFlag Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HAFlag Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IsolateOperator Instance isolation operation.
+     * @param string $SubFlag Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription.
+     * @param string $ROFlag Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group.
+     * @param string $HAFlag Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance.
      * @param array $ResourceTags Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BackupModel Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceNote Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BackupModel Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances.
+     * @param string $InstanceNote Instance backup information.
      * @param array $BackupCycle Backup cycle
      * @param string $BackupCycleType Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
      * @param integer $BackupSaveDays Data (log) backup retention period
-     * @param string $InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     * @param string $InstanceType Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+
      * @param array $CrossRegions The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
      * @param string $CrossBackupEnabled Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
      * @param integer $CrossBackupSaveDays The retention period of cross-region backup. Default value: 7 days
@@ -453,9 +464,10 @@ class DBInstance extends AbstractModel
      * @param string $Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
      * @param string $TimeZone System time zone. Default value: `China Standard Time`.
      * @param boolean $IsDrZone Whether the instance is deployed across AZs
-     * @param SlaveZones $SlaveZones Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Architecture Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Style Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SlaveZones $SlaveZones Secondary AZ information on the two-node instance.
+     * @param string $Architecture Architecture flag. SINGLE: single-node; DOUBLE: two-node.
+     * @param string $Style Type flag. EXCLUSIVE: exclusive; SHARED: shared.
+     * @param array $MultiSlaveZones 
      */
     function __construct()
     {
@@ -690,6 +702,15 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("Style",$param) and $param["Style"] !== null) {
             $this->Style = $param["Style"];
+        }
+
+        if (array_key_exists("MultiSlaveZones",$param) and $param["MultiSlaveZones"] !== null) {
+            $this->MultiSlaveZones = [];
+            foreach ($param["MultiSlaveZones"] as $key => $value){
+                $obj = new SlaveZones();
+                $obj->deserialize($value);
+                array_push($this->MultiSlaveZones, $obj);
+            }
         }
     }
 }

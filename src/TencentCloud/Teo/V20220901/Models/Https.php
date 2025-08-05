@@ -20,34 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Domain name HTTPS acceleration configuration. This is disabled by default.
  *
- * @method string getHttp2() Obtain Whether to enable HTTP2. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHttp2(string $Http2) Set Whether to enable HTTP2. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOcspStapling() Obtain Whether to enable OCSP. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOcspStapling(string $OcspStapling) Set Whether to enable OCSP. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTlsVersion() Obtain TLS version. Valid values: 
-<li>`TLSv1`: TLSv1 version;</li>
-<li>`TLSV1.1`: TLSv1.1 version;</li>
-<li>`TLSV1.2`: TLSv1.2 version;</li>
-<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setTlsVersion(array $TlsVersion) Set TLS version. Valid values: 
-<li>`TLSv1`: TLSv1 version;</li>
-<li>`TLSV1.1`: TLSv1.1 version;</li>
-<li>`TLSV1.2`: TLSv1.2 version;</li>
-<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getHttp2() Obtain http2 configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+ * @method void setHttp2(string $Http2) Set http2 configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+ * @method string getOcspStapling() Obtain OCSP configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+ * @method void setOcspStapling(string $OcspStapling) Set OCSP configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+ * @method array getTlsVersion() Obtain Tls version settings, valid values:.
+<Li>`TLSv1`: tlsv1 version;</li>.
+<li>`TLSV1.1`: TLSV1.1 version;</li>.
+<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
+ * @method void setTlsVersion(array $TlsVersion) Set Tls version settings, valid values:.
+<Li>`TLSv1`: tlsv1 version;</li>.
+<li>`TLSV1.1`: TLSV1.1 version;</li>.
+<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
  * @method Hsts getHsts() Obtain HSTS Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHsts(Hsts $Hsts) Set HSTS Configuration
@@ -56,50 +54,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCertInfo(array $CertInfo) Set The certificate configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getApplyType() Obtain Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setApplyType(string $ApplyType) Set Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getCipherSuite() Obtain The cipher suite, with values:
-<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
-<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
-<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setCipherSuite(string $CipherSuite) Set The cipher suite, with values:
-<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
-<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
-<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method string getApplyType() Obtain Application type. valid values:.
+<li>`apply`: managed by EdgeOne.</li>.
+<li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used.
+ * @method void setApplyType(string $ApplyType) Set Application type. valid values:.
+<li>`apply`: managed by EdgeOne.</li>.
+<li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used.
+ * @method string getCipherSuite() Obtain The cipher suite, with valid values:.
+<li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
+<li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
+<li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>.
+ * @method void setCipherSuite(string $CipherSuite) Set The cipher suite, with valid values:.
+<li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
+<li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
+<li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>.
  */
 class Https extends AbstractModel
 {
     /**
-     * @var string Whether to enable HTTP2. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string http2 configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public $Http2;
 
     /**
-     * @var string Whether to enable OCSP. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string OCSP configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public $OcspStapling;
 
     /**
-     * @var array TLS version. Valid values: 
-<li>`TLSv1`: TLSv1 version;</li>
-<li>`TLSV1.1`: TLSv1.1 version;</li>
-<li>`TLSV1.2`: TLSv1.2 version;</li>
-<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array Tls version settings, valid values:.
+<Li>`TLSv1`: tlsv1 version;</li>.
+<li>`TLSV1.1`: TLSV1.1 version;</li>.
+<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
      */
     public $TlsVersion;
 
@@ -116,50 +109,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CertInfo;
 
     /**
-     * @var string Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Application type. valid values:.
+<li>`apply`: managed by EdgeOne.</li>.
+<li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used.
      */
     public $ApplyType;
 
     /**
-     * @var string The cipher suite, with values:
-<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
-<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
-<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var string The cipher suite, with valid values:.
+<li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
+<li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
+<li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>.
      */
     public $CipherSuite;
 
     /**
-     * @param string $Http2 Whether to enable HTTP2. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OcspStapling Whether to enable OCSP. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $TlsVersion TLS version. Valid values: 
-<li>`TLSv1`: TLSv1 version;</li>
-<li>`TLSV1.1`: TLSv1.1 version;</li>
-<li>`TLSV1.2`: TLSv1.2 version;</li>
-<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Http2 http2 configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+     * @param string $OcspStapling OCSP configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+     * @param array $TlsVersion Tls version settings, valid values:.
+<Li>`TLSv1`: tlsv1 version;</li>.
+<li>`TLSV1.1`: TLSV1.1 version;</li>.
+<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
      * @param Hsts $Hsts HSTS Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $CertInfo The certificate configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ApplyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $CipherSuite The cipher suite, with values:
-<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
-<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
-<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param string $ApplyType Application type. valid values:.
+<li>`apply`: managed by EdgeOne.</li>.
+<li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used.
+     * @param string $CipherSuite The cipher suite, with valid values:.
+<li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
+<li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
+<li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>.
      */
     function __construct()
     {

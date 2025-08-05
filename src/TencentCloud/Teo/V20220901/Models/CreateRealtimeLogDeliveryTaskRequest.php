@@ -26,29 +26,33 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskName(string $TaskName) Set Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
  * @method string getTaskType() Obtain Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: push to a custom HTTP(S) address;</li>
-<li>s3: push to an AWS S3-compatible bucket address.</li>
+<li>custom_endpoint: push to a custom HTTP(S) endpoint;</li>
+<li>s3: push to an AWS S3-compatible bucket.</li>
  * @method void setTaskType(string $TaskType) Set Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: push to a custom HTTP(S) address;</li>
-<li>s3: push to an AWS S3-compatible bucket address.</li>
- * @method array getEntityList() Obtain List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
-<li>L7 domain name: domain.example.com;</li>
-<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
- * @method void setEntityList(array $EntityList) Set List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
-<li>L7 domain name: domain.example.com;</li>
-<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
+<li>custom_endpoint: push to a custom HTTP(S) endpoint;</li>
+<li>s3: push to an AWS S3-compatible bucket.</li>
+ * @method array getEntityList() Obtain List of entities associated with the real-time log delivery task. Valid value examples:
+<li>L7 domain name: domain.example.com</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7</li>
+<li>Edge Function instance: test-zone-2mxigizoh9l9-1257626257</li>
+ * @method void setEntityList(array $EntityList) Set List of entities associated with the real-time log delivery task. Valid value examples:
+<li>L7 domain name: domain.example.com</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7</li>
+<li>Edge Function instance: test-zone-2mxigizoh9l9-1257626257</li>
  * @method string getLogType() Obtain Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
-<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>function: Edge Function execution log;</li>
+<li>web-rateLiming: rate limiting and CC attack protection logs;</li>
 <li>web-attack: managed rule logs;</li>
 <li>web-rule: custom rule logs;</li>
 <li>web-bot: Bot management logs.</li>
  * @method void setLogType(string $LogType) Set Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
-<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>function: Edge Function execution log;</li>
+<li>web-rateLiming: rate limiting and CC attack protection logs;</li>
 <li>web-attack: managed rule logs;</li>
 <li>web-rule: custom rule logs;</li>
 <li>web-bot: Bot management logs.</li>
@@ -58,26 +62,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArea(string $Area) Set Data area. Valid values:
 <li>mainland: within the Chinese mainland;</li>
 <li>overseas: global (excluding the Chinese mainland).</li>
- * @method array getFields() Obtain List of predefined fields for delivery.
- * @method void setFields(array $Fields) Set List of predefined fields for delivery.
- * @method array getCustomFields() Obtain The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
- * @method void setCustomFields(array $CustomFields) Set The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
- * @method array getDeliveryConditions() Obtain Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
- * @method void setDeliveryConditions(array $DeliveryConditions) Set Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
+ * @method array getFields() Obtain Pre-defined log fields to be delivered. Refer to:
+<li>[Site acceleration log (L7 access log)](https://www.tencentcloud.com/document/product/1145/61300)</li>
+<li>[L4 proxy log](https://www.tencentcloud.com/document/product/1145/61301)</li>
+<li>[Edge Function execution log](https://www.tencentcloud.com/document/product/1145/67840)</li>
+ * @method void setFields(array $Fields) Set Pre-defined log fields to be delivered. Refer to:
+<li>[Site acceleration log (L7 access log)](https://www.tencentcloud.com/document/product/1145/61300)</li>
+<li>[L4 proxy log](https://www.tencentcloud.com/document/product/1145/61301)</li>
+<li>[Edge Function execution log](https://www.tencentcloud.com/document/product/1145/67840)</li>
+ * @method array getCustomFields() Obtain The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (`LogType`=`domain`) support custom fields.
+ * @method void setCustomFields(array $CustomFields) Set The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (`LogType`=`domain`) support custom fields.
+ * @method array getDeliveryConditions() Obtain Filter criteria of log delivery. If this parameter is not specified, all logs will be delivered.
+ * @method void setDeliveryConditions(array $DeliveryConditions) Set Filter criteria of log delivery. If this parameter is not specified, all logs will be delivered.
  * @method integer getSample() Obtain Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not specified, the sampling ratio is 100%.
  * @method void setSample(integer $Sample) Set Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not specified, the sampling ratio is 100%.
  * @method LogFormat getLogFormat() Obtain Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
-<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+<li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When `TaskType` is `s3`, the default format is JSON Lines;</li>Specifically, when `TaskType` is `cls`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to input `LogFormat`.
  * @method void setLogFormat(LogFormat $LogFormat) Set Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
-<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
- * @method CLSTopic getCLS() Obtain Configuration information of CLS. This parameter is required when TaskType is cls.
- * @method void setCLS(CLSTopic $CLS) Set Configuration information of CLS. This parameter is required when TaskType is cls.
- * @method CustomEndpoint getCustomEndpoint() Obtain Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
- * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) Set Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
- * @method S3 getS3() Obtain Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
- * @method void setS3(S3 $S3) Set Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+<li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When `TaskType` is `s3`, the default format is JSON Lines;</li>Specifically, when `TaskType` is `cls`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to input `LogFormat`.
+ * @method CLSTopic getCLS() Obtain Configuration information of CLS. This parameter is required when `TaskType` is `cls`.
+ * @method void setCLS(CLSTopic $CLS) Set Configuration information of CLS. This parameter is required when `TaskType` is `cls`.
+ * @method CustomEndpoint getCustomEndpoint() Obtain Configuration information of the custom HTTP endpoint. This parameter is required when `TaskType` is `custom_endpoint`.
+ * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) Set Configuration information of the custom HTTP endpoint. This parameter is required when `TaskType` is `custom_endpoint`.
+ * @method S3 getS3() Obtain Configuration information of the AWS S3-compatible bucket. This parameter is required when `TaskType` is `s3`.
+ * @method void setS3(S3 $S3) Set Configuration information of the AWS S3-compatible bucket. This parameter is required when `TaskType` is `s3`.
  */
 class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
 {
@@ -94,15 +104,16 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
     /**
      * @var string Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: push to a custom HTTP(S) address;</li>
-<li>s3: push to an AWS S3-compatible bucket address.</li>
+<li>custom_endpoint: push to a custom HTTP(S) endpoint;</li>
+<li>s3: push to an AWS S3-compatible bucket.</li>
      */
     public $TaskType;
 
     /**
-     * @var array List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
-<li>L7 domain name: domain.example.com;</li>
-<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
+     * @var array List of entities associated with the real-time log delivery task. Valid value examples:
+<li>L7 domain name: domain.example.com</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7</li>
+<li>Edge Function instance: test-zone-2mxigizoh9l9-1257626257</li>
      */
     public $EntityList;
 
@@ -110,7 +121,8 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
      * @var string Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
-<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>function: Edge Function execution log;</li>
+<li>web-rateLiming: rate limiting and CC attack protection logs;</li>
 <li>web-attack: managed rule logs;</li>
 <li>web-rule: custom rule logs;</li>
 <li>web-bot: Bot management logs.</li>
@@ -125,17 +137,20 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
     public $Area;
 
     /**
-     * @var array List of predefined fields for delivery.
+     * @var array Pre-defined log fields to be delivered. Refer to:
+<li>[Site acceleration log (L7 access log)](https://www.tencentcloud.com/document/product/1145/61300)</li>
+<li>[L4 proxy log](https://www.tencentcloud.com/document/product/1145/61301)</li>
+<li>[Edge Function execution log](https://www.tencentcloud.com/document/product/1145/67840)</li>
      */
     public $Fields;
 
     /**
-     * @var array The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
+     * @var array The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (`LogType`=`domain`) support custom fields.
      */
     public $CustomFields;
 
     /**
-     * @var array Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
+     * @var array Filter criteria of log delivery. If this parameter is not specified, all logs will be delivered.
      */
     public $DeliveryConditions;
 
@@ -146,23 +161,23 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
 
     /**
      * @var LogFormat Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
-<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+<li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When `TaskType` is `s3`, the default format is JSON Lines;</li>Specifically, when `TaskType` is `cls`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to input `LogFormat`.
      */
     public $LogFormat;
 
     /**
-     * @var CLSTopic Configuration information of CLS. This parameter is required when TaskType is cls.
+     * @var CLSTopic Configuration information of CLS. This parameter is required when `TaskType` is `cls`.
      */
     public $CLS;
 
     /**
-     * @var CustomEndpoint Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+     * @var CustomEndpoint Configuration information of the custom HTTP endpoint. This parameter is required when `TaskType` is `custom_endpoint`.
      */
     public $CustomEndpoint;
 
     /**
-     * @var S3 Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+     * @var S3 Configuration information of the AWS S3-compatible bucket. This parameter is required when `TaskType` is `s3`.
      */
     public $S3;
 
@@ -171,31 +186,36 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
      * @param string $TaskName Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
      * @param string $TaskType Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: push to a custom HTTP(S) address;</li>
-<li>s3: push to an AWS S3-compatible bucket address.</li>
-     * @param array $EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
-<li>L7 domain name: domain.example.com;</li>
-<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
+<li>custom_endpoint: push to a custom HTTP(S) endpoint;</li>
+<li>s3: push to an AWS S3-compatible bucket.</li>
+     * @param array $EntityList List of entities associated with the real-time log delivery task. Valid value examples:
+<li>L7 domain name: domain.example.com</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7</li>
+<li>Edge Function instance: test-zone-2mxigizoh9l9-1257626257</li>
      * @param string $LogType Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
-<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>function: Edge Function execution log;</li>
+<li>web-rateLiming: rate limiting and CC attack protection logs;</li>
 <li>web-attack: managed rule logs;</li>
 <li>web-rule: custom rule logs;</li>
 <li>web-bot: Bot management logs.</li>
      * @param string $Area Data area. Valid values:
 <li>mainland: within the Chinese mainland;</li>
 <li>overseas: global (excluding the Chinese mainland).</li>
-     * @param array $Fields List of predefined fields for delivery.
-     * @param array $CustomFields The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
-     * @param array $DeliveryConditions Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
+     * @param array $Fields Pre-defined log fields to be delivered. Refer to:
+<li>[Site acceleration log (L7 access log)](https://www.tencentcloud.com/document/product/1145/61300)</li>
+<li>[L4 proxy log](https://www.tencentcloud.com/document/product/1145/61301)</li>
+<li>[Edge Function execution log](https://www.tencentcloud.com/document/product/1145/67840)</li>
+     * @param array $CustomFields The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (`LogType`=`domain`) support custom fields.
+     * @param array $DeliveryConditions Filter criteria of log delivery. If this parameter is not specified, all logs will be delivered.
      * @param integer $Sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not specified, the sampling ratio is 100%.
      * @param LogFormat $LogFormat Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
-<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
-     * @param CLSTopic $CLS Configuration information of CLS. This parameter is required when TaskType is cls.
-     * @param CustomEndpoint $CustomEndpoint Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
-     * @param S3 $S3 Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+<li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When `TaskType` is `s3`, the default format is JSON Lines;</li>Specifically, when `TaskType` is `cls`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to input `LogFormat`.
+     * @param CLSTopic $CLS Configuration information of CLS. This parameter is required when `TaskType` is `cls`.
+     * @param CustomEndpoint $CustomEndpoint Configuration information of the custom HTTP endpoint. This parameter is required when `TaskType` is `custom_endpoint`.
+     * @param S3 $S3 Configuration information of the AWS S3-compatible bucket. This parameter is required when `TaskType` is `s3`.
      */
     function __construct()
     {

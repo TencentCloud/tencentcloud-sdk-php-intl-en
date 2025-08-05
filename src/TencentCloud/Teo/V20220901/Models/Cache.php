@@ -26,12 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable cache configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
- * @method integer getCacheTime() Obtain Cache expiration time setting.
-Unit: second. The maximum value is 365 days.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCacheTime(integer $CacheTime) Set Cache expiration time setting.
-Unit: second. The maximum value is 365 days.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCacheTime() Obtain Specifies the cache expiration time settings.
+Unit: seconds. the maximum settable value is 365 days.
+ * @method void setCacheTime(integer $CacheTime) Set Specifies the cache expiration time settings.
+Unit: seconds. the maximum settable value is 365 days.
  * @method string getIgnoreCacheControl() Obtain Whether to enable force cache. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
@@ -51,9 +49,8 @@ class Cache extends AbstractModel
     public $Switch;
 
     /**
-     * @var integer Cache expiration time setting.
-Unit: second. The maximum value is 365 days.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the cache expiration time settings.
+Unit: seconds. the maximum settable value is 365 days.
      */
     public $CacheTime;
 
@@ -70,9 +67,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Switch Whether to enable cache configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-     * @param integer $CacheTime Cache expiration time setting.
-Unit: second. The maximum value is 365 days.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $CacheTime Specifies the cache expiration time settings.
+Unit: seconds. the maximum settable value is 365 days.
      * @param string $IgnoreCacheControl Whether to enable force cache. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>

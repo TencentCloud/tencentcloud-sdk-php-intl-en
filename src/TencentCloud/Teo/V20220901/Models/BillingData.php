@@ -18,27 +18,25 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Billing data item
+ * Billing data item.
  *
- * @method string getTime() Obtain Data timestamp.
- * @method void setTime(string $Time) Set Data timestamp.
+ * @method string getTime() Obtain Specifies the data timestamp.
+ * @method void setTime(string $Time) Set Specifies the data timestamp.
  * @method integer getValue() Obtain Value.
  * @method void setValue(integer $Value) Set Value.
- * @method string getZoneId() Obtain Zone ID (or content identifier if enabled).
- * @method void setZoneId(string $ZoneId) Set Zone ID (or content identifier if enabled).
- * @method string getHost() Obtain Domain name.
- * @method void setHost(string $Host) Set Domain name.
- * @method string getProxyId() Obtain Layer-4 proxy instance ID.
- * @method void setProxyId(string $ProxyId) Set Layer-4 proxy instance ID.
- * @method string getRegionId() Obtain Billing region (based on EdgeOne node location). Values: 
-<li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
- * @method void setRegionId(string $RegionId) Set Billing region (based on EdgeOne node location). Values: 
-<li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
+ * @method string getZoneId() Obtain Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
+ * @method void setZoneId(string $ZoneId) Set Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
+ * @method string getHost() Obtain Specifies the domain name of the data point.
+ * @method void setHost(string $Host) Set Specifies the domain name of the data point.
+ * @method string getProxyId() Obtain Specifies the layer-4 proxy instance ID the data point belongs to.
+ * @method void setProxyId(string $ProxyId) Set Specifies the layer-4 proxy instance ID the data point belongs to.
+ * @method string getRegionId() Obtain Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
+ * @method void setRegionId(string $RegionId) Set Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
  */
 class BillingData extends AbstractModel
 {
     /**
-     * @var string Data timestamp.
+     * @var string Specifies the data timestamp.
      */
     public $Time;
 
@@ -48,34 +46,32 @@ class BillingData extends AbstractModel
     public $Value;
 
     /**
-     * @var string Zone ID (or content identifier if enabled).
+     * @var string Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
      */
     public $ZoneId;
 
     /**
-     * @var string Domain name.
+     * @var string Specifies the domain name of the data point.
      */
     public $Host;
 
     /**
-     * @var string Layer-4 proxy instance ID.
+     * @var string Specifies the layer-4 proxy instance ID the data point belongs to.
      */
     public $ProxyId;
 
     /**
-     * @var string Billing region (based on EdgeOne node location). Values: 
-<li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
+     * @var string Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
      */
     public $RegionId;
 
     /**
-     * @param string $Time Data timestamp.
+     * @param string $Time Specifies the data timestamp.
      * @param integer $Value Value.
-     * @param string $ZoneId Zone ID (or content identifier if enabled).
-     * @param string $Host Domain name.
-     * @param string $ProxyId Layer-4 proxy instance ID.
-     * @param string $RegionId Billing region (based on EdgeOne node location). Values: 
-<li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
+     * @param string $ZoneId Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
+     * @param string $Host Specifies the domain name of the data point.
+     * @param string $ProxyId Specifies the layer-4 proxy instance ID the data point belongs to.
+     * @param string $RegionId Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
      */
     function __construct()
     {

@@ -64,10 +64,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRuleName() Obtain The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRuleName(string $RuleName) Set The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRuleName() Obtain Specifies the rule name.
+ * @method void setRuleName(string $RuleName) Set Specifies the rule name.
  * @method string getMatchContent() Obtain Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
  * @method void setMatchContent(string $MatchContent) Set Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
  */
@@ -120,8 +118,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Status;
 
     /**
-     * @var string The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the rule name.
      */
     public $RuleName;
 
@@ -153,8 +150,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RuleName The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RuleName Specifies the rule name.
      * @param string $MatchContent Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
      */
     function __construct()

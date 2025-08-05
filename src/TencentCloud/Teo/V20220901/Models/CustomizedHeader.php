@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Custom header that can be configured for HTTP/HTTPS health check policies under a LoadBalancer.
  *
- * @method string getKey() Obtain Custom header key.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setKey(string $Key) Set Custom header key.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method string getValue() Obtain Custom header value.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setValue(string $Value) Set Custom header value.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method string getKey() Obtain Specifies the custom header Key.
+ * @method void setKey(string $Key) Set Specifies the custom header Key.
+ * @method string getValue() Obtain Set custom headers Value.
+ * @method void setValue(string $Value) Set Set custom headers Value.
  */
 class CustomizedHeader extends AbstractModel
 {
     /**
-     * @var string Custom header key.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var string Specifies the custom header Key.
      */
     public $Key;
 
     /**
-     * @var string Custom header value.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var string Set custom headers Value.
      */
     public $Value;
 
     /**
-     * @param string $Key Custom header key.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param string $Value Custom header value.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param string $Key Specifies the custom header Key.
+     * @param string $Value Set custom headers Value.
      */
     function __construct()
     {

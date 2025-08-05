@@ -20,154 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTPS server certificate configuration
  *
- * @method string getCertId() Obtain ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCertId(string $CertId) Set ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAlias() Obtain Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAlias(string $Alias) Set Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getType() Obtain Type of the certificate. Values:
+ * @method string getCertId() Obtain Specifies the server certificate ID.
+ * @method void setCertId(string $CertId) Set Specifies the server certificate ID.
+ * @method string getAlias() Obtain Certificate remark name.
+ * @method void setAlias(string $Alias) Set Certificate remark name.
+ * @method string getType() Obtain Certificate type. valid values:.
 <li>`default`: Default certificate;</li>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set Type of the certificate. Values:
+
+<li>`upload`: External certificate;</li>
+
+<li>`managed`: Tencent Cloud managed certificate.</li>
+ * @method void setType(string $Type) Set Certificate type. valid values:.
 <li>`default`: Default certificate;</li>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpireTime() Obtain Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpireTime(string $ExpireTime) Set Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEffectiveTime() Obtain Time when the certificate takes effect.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEffectiveTime(string $EffectiveTime) Set Time when the certificate takes effect.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCommonName() Obtain Common name of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCommonName(string $CommonName) Set Common name of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getSubjectAltName() Obtain Domain names added to the SAN certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubjectAltName(array $SubjectAltName) Set Domain names added to the SAN certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain Deployment status. Values:
-<li>`processing`: Deployment in progress</li>
-<li>`deployed`: Deployed</li>
-<li>`failed`: Deployment failed</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setStatus(string $Status) Set Deployment status. Values:
-<li>`processing`: Deployment in progress</li>
-<li>`deployed`: Deployed</li>
-<li>`failed`: Deployment failed</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getMessage() Obtain Failure description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMessage(string $Message) Set Failure description
-Note: This field may return null, indicating that no valid values can be obtained.
+
+<li>`upload`: External certificate;</li>
+
+<li>`managed`: Tencent Cloud managed certificate.</li>
+ * @method string getExpireTime() Obtain Certificate expiration time.
+ * @method void setExpireTime(string $ExpireTime) Set Certificate expiration time.
+ * @method string getEffectiveTime() Obtain Certificate Validation Time.
+ * @method void setEffectiveTime(string $EffectiveTime) Set Certificate Validation Time.
+ * @method string getCommonName() Obtain Common name of the cert.
+ * @method void setCommonName(string $CommonName) Set Common name of the cert.
+ * @method array getSubjectAltName() Obtain Specifies the SAN domain of the certificate.
+ * @method void setSubjectAltName(array $SubjectAltName) Set Specifies the SAN domain of the certificate.
+ * @method string getStatus() Obtain Deployment state. valid values:.
+<li>processing: deployment in progress;</li>.
+<Li>Deployed: deployed</li>.
+<Li>`Failed`: deployment failed</li>.
+ * @method void setStatus(string $Status) Set Deployment state. valid values:.
+<li>processing: deployment in progress;</li>.
+<Li>Deployed: deployed</li>.
+<Li>`Failed`: deployment failed</li>.
+ * @method string getMessage() Obtain Indicates the failure reason when the Status is failed.
+ * @method void setMessage(string $Message) Set Indicates the failure reason when the Status is failed.
  * @method string getSignAlgo() Obtain Certificate algorithm.
-Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSignAlgo(string $SignAlgo) Set Certificate algorithm.
-Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class DefaultServerCertInfo extends AbstractModel
 {
     /**
-     * @var string ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the server certificate ID.
      */
     public $CertId;
 
     /**
-     * @var string Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate remark name.
      */
     public $Alias;
 
     /**
-     * @var string Type of the certificate. Values:
+     * @var string Certificate type. valid values:.
 <li>`default`: Default certificate;</li>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+
+<li>`upload`: External certificate;</li>
+
+<li>`managed`: Tencent Cloud managed certificate.</li>
      */
     public $Type;
 
     /**
-     * @var string Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate expiration time.
      */
     public $ExpireTime;
 
     /**
-     * @var string Time when the certificate takes effect.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate Validation Time.
      */
     public $EffectiveTime;
 
     /**
-     * @var string Common name of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Common name of the cert.
      */
     public $CommonName;
 
     /**
-     * @var array Domain names added to the SAN certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the SAN domain of the certificate.
      */
     public $SubjectAltName;
 
     /**
-     * @var string Deployment status. Values:
-<li>`processing`: Deployment in progress</li>
-<li>`deployed`: Deployed</li>
-<li>`failed`: Deployment failed</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Deployment state. valid values:.
+<li>processing: deployment in progress;</li>.
+<Li>Deployed: deployed</li>.
+<Li>`Failed`: deployment failed</li>.
      */
     public $Status;
 
     /**
-     * @var string Failure description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Indicates the failure reason when the Status is failed.
      */
     public $Message;
 
     /**
      * @var string Certificate algorithm.
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $SignAlgo;
 
     /**
-     * @param string $CertId ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Alias Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Type Type of the certificate. Values:
+     * @param string $CertId Specifies the server certificate ID.
+     * @param string $Alias Certificate remark name.
+     * @param string $Type Certificate type. valid values:.
 <li>`default`: Default certificate;</li>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpireTime Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EffectiveTime Time when the certificate takes effect.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CommonName Common name of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $SubjectAltName Domain names added to the SAN certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status Deployment status. Values:
-<li>`processing`: Deployment in progress</li>
-<li>`deployed`: Deployed</li>
-<li>`failed`: Deployment failed</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $Message Failure description
-Note: This field may return null, indicating that no valid values can be obtained.
+
+<li>`upload`: External certificate;</li>
+
+<li>`managed`: Tencent Cloud managed certificate.</li>
+     * @param string $ExpireTime Certificate expiration time.
+     * @param string $EffectiveTime Certificate Validation Time.
+     * @param string $CommonName Common name of the cert.
+     * @param array $SubjectAltName Specifies the SAN domain of the certificate.
+     * @param string $Status Deployment state. valid values:.
+<li>processing: deployment in progress;</li>.
+<Li>Deployed: deployed</li>.
+<Li>`Failed`: deployment failed</li>.
+     * @param string $Message Indicates the failure reason when the Status is failed.
      * @param string $SignAlgo Certificate algorithm.
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

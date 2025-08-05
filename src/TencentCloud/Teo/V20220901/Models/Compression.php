@@ -26,14 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable smart compression. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
- * @method array getAlgorithms() Obtain Compression algorithm. Values:
-<li>`brotli`: Brotli algorithm</li>
-<li>`gzip`: Gzip algorithm</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAlgorithms(array $Algorithms) Set Compression algorithm. Values:
-<li>`brotli`: Brotli algorithm</li>
-<li>`gzip`: Gzip algorithm</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAlgorithms() Obtain Supported compression algorithm list. valid values:.
+<Li>Brotli: specifies the brotli algorithm.</li>.
+<Li>Gzip: specifies the gzip algorithm.</li>.
+ * @method void setAlgorithms(array $Algorithms) Set Supported compression algorithm list. valid values:.
+<Li>Brotli: specifies the brotli algorithm.</li>.
+<Li>Gzip: specifies the gzip algorithm.</li>.
  */
 class Compression extends AbstractModel
 {
@@ -45,10 +43,9 @@ class Compression extends AbstractModel
     public $Switch;
 
     /**
-     * @var array Compression algorithm. Values:
-<li>`brotli`: Brotli algorithm</li>
-<li>`gzip`: Gzip algorithm</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Supported compression algorithm list. valid values:.
+<Li>Brotli: specifies the brotli algorithm.</li>.
+<Li>Gzip: specifies the gzip algorithm.</li>.
      */
     public $Algorithms;
 
@@ -56,10 +53,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Switch Whether to enable smart compression. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-     * @param array $Algorithms Compression algorithm. Values:
-<li>`brotli`: Brotli algorithm</li>
-<li>`gzip`: Gzip algorithm</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Algorithms Supported compression algorithm list. valid values:.
+<Li>Brotli: specifies the brotli algorithm.</li>.
+<Li>Gzip: specifies the gzip algorithm.</li>.
      */
     function __construct()
     {

@@ -26,26 +26,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable the configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
- * @method integer getMaxAge() Obtain MaxAge (in seconds). The maximum value is 1 day. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setMaxAge(integer $MaxAge) Set MaxAge (in seconds). The maximum value is 1 day. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getIncludeSubDomains() Obtain Whether to contain subdomain names. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIncludeSubDomains(string $IncludeSubDomains) Set Whether to contain subdomain names. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPreload() Obtain Whether to enable preloading. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPreload(string $Preload) Set Whether to enable preloading. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxAge() Obtain MaxAge value. expressed in seconds, maximum value is 1 day.
+ * @method void setMaxAge(integer $MaxAge) Set MaxAge value. expressed in seconds, maximum value is 1 day.
+ * @method string getIncludeSubDomains() Obtain Specifies whether the subdomain is included. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+ * @method void setIncludeSubDomains(string $IncludeSubDomains) Set Specifies whether the subdomain is included. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+ * @method string getPreload() Obtain Whether to enable preloading. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+ * @method void setPreload(string $Preload) Set Whether to enable preloading. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
  */
 class Hsts extends AbstractModel
 {
@@ -57,24 +55,23 @@ class Hsts extends AbstractModel
     public $Switch;
 
     /**
-     * @var integer MaxAge (in seconds). The maximum value is 1 day. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer MaxAge value. expressed in seconds, maximum value is 1 day.
      */
     public $MaxAge;
 
     /**
-     * @var string Whether to contain subdomain names. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies whether the subdomain is included. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public $IncludeSubDomains;
 
     /**
-     * @var string Whether to enable preloading. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Whether to enable preloading. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public $Preload;
 
@@ -82,16 +79,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Switch Whether to enable the configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-     * @param integer $MaxAge MaxAge (in seconds). The maximum value is 1 day. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $IncludeSubDomains Whether to contain subdomain names. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Preload Whether to enable preloading. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxAge MaxAge value. expressed in seconds, maximum value is 1 day.
+     * @param string $IncludeSubDomains Specifies whether the subdomain is included. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+     * @param string $Preload Whether to enable preloading. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     function __construct()
     {

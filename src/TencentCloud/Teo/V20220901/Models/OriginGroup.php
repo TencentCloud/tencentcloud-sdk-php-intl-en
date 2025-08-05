@@ -38,10 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time of the origin group.
  * @method string getUpdateTime() Obtain The update time of the origin group.
  * @method void setUpdateTime(string $UpdateTime) Set The update time of the origin group.
- * @method string getHostHeader() Obtain Origin-pull host header
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setHostHeader(string $HostHeader) Set Origin-pull host header
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getHostHeader() Obtain Specifies the origin-pull Host Header.
+ * @method void setHostHeader(string $HostHeader) Set Specifies the origin-pull Host Header.
  */
 class OriginGroup extends AbstractModel
 {
@@ -83,8 +81,7 @@ class OriginGroup extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string Origin-pull host header
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Specifies the origin-pull Host Header.
      */
     public $HostHeader;
 
@@ -98,8 +95,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * @param array $References List of instances referencing this origin group.	
      * @param string $CreateTime Creation time of the origin group.
      * @param string $UpdateTime The update time of the origin group.
-     * @param string $HostHeader Origin-pull host header
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $HostHeader Specifies the origin-pull Host Header.
      */
     function __construct()
     {

@@ -20,82 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Media quality inspection result output.
  *
- * @method boolean getNoAudio() Obtain Whether there is an audio track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNoAudio(boolean $NoAudio) Set Whether there is an audio track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getNoVideo() Obtain Whether there is a video track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNoVideo(boolean $NoVideo) Set Whether there is a video track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getNoAudio() Obtain When this field is set to true, it indicates that the video has no audio track.
+ * @method void setNoAudio(boolean $NoAudio) Set When this field is set to true, it indicates that the video has no audio track.
+ * @method boolean getNoVideo() Obtain When this field is set to true, it indicates that the video has no video track.
+ * @method void setNoVideo(boolean $NoVideo) Set When this field is set to true, it indicates that the video has no video track.
  * @method integer getQualityEvaluationScore() Obtain No-reference quality score of the video (100 points in total).
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) Set No-reference quality score of the video (100 points in total).
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method float getQualityEvaluationMeanOpinionScore() Obtain No-reference quality score of the video (MOS).
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setQualityEvaluationMeanOpinionScore(float $QualityEvaluationMeanOpinionScore) Set No-reference quality score of the video (MOS).
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getQualityControlResultSet() Obtain Exception items detected in content quality inspection.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQualityControlResultSet(array $QualityControlResultSet) Set Exception items detected in content quality inspection.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getContainerDiagnoseResultSet() Obtain Exception items detected in format diagnosis.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainerDiagnoseResultSet(array $ContainerDiagnoseResultSet) Set Exception items detected in format diagnosis.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getQualityControlResultSet() Obtain Exception items identified in content quality inspection.
+ * @method void setQualityControlResultSet(array $QualityControlResultSet) Set Exception items identified in content quality inspection.
+ * @method array getContainerDiagnoseResultSet() Obtain Exception items identified in format diagnosis.
+ * @method void setContainerDiagnoseResultSet(array $ContainerDiagnoseResultSet) Set Exception items identified in format diagnosis.
  */
 class QualityControlData extends AbstractModel
 {
     /**
-     * @var boolean Whether there is an audio track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean When this field is set to true, it indicates that the video has no audio track.
      */
     public $NoAudio;
 
     /**
-     * @var boolean Whether there is a video track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean When this field is set to true, it indicates that the video has no video track.
      */
     public $NoVideo;
 
     /**
      * @var integer No-reference quality score of the video (100 points in total).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $QualityEvaluationScore;
 
     /**
      * @var float No-reference quality score of the video (MOS).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $QualityEvaluationMeanOpinionScore;
 
     /**
-     * @var array Exception items detected in content quality inspection.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Exception items identified in content quality inspection.
      */
     public $QualityControlResultSet;
 
     /**
-     * @var array Exception items detected in format diagnosis.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Exception items identified in format diagnosis.
      */
     public $ContainerDiagnoseResultSet;
 
     /**
-     * @param boolean $NoAudio Whether there is an audio track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $NoVideo Whether there is a video track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $NoAudio When this field is set to true, it indicates that the video has no audio track.
+     * @param boolean $NoVideo When this field is set to true, it indicates that the video has no video track.
      * @param integer $QualityEvaluationScore No-reference quality score of the video (100 points in total).
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param float $QualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $QualityControlResultSet Exception items detected in content quality inspection.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ContainerDiagnoseResultSet Exception items detected in format diagnosis.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $QualityControlResultSet Exception items identified in content quality inspection.
+     * @param array $ContainerDiagnoseResultSet Exception items identified in format diagnosis.
      */
     function __construct()
     {

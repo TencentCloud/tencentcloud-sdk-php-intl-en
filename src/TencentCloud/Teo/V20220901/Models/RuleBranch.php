@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sub-rule branch.
  *
- * @method string getCondition() Obtain [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
- * @method void setCondition(string $Condition) Set [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
- * @method array getActions() Obtain [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
+ * @method string getCondition() Obtain Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+ * @method void setCondition(string $Condition) Set Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+ * @method array getActions() Obtain [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setActions(array $Actions) Set [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
+ * @method void setActions(array $Actions) Set [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method array getSubRules() Obtain List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
 Note: this field may return null, which indicates a failure to obtain a valid value.
@@ -34,12 +34,12 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 class RuleBranch extends AbstractModel
 {
     /**
-     * @var string [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
+     * @var string Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
      */
     public $Condition;
 
     /**
-     * @var array [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
+     * @var array [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public $Actions;
@@ -51,8 +51,8 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     public $SubRules;
 
     /**
-     * @param string $Condition [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
-     * @param array $Actions [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
+     * @param string $Condition Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+     * @param array $Actions [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param array $SubRules List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
 Note: this field may return null, which indicates a failure to obtain a valid value.

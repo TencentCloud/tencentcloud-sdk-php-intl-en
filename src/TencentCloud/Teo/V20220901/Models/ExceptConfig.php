@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
- * @method array getExceptUserRules() Obtain The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExceptUserRules(array $ExceptUserRules) Set The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getExceptUserRules() Obtain The settings of the exception rule. if it is null, the settings that were last configured will be used.
+ * @method void setExceptUserRules(array $ExceptUserRules) Set The settings of the exception rule. if it is null, the settings that were last configured will be used.
  */
 class ExceptConfig extends AbstractModel
 {
@@ -41,8 +39,7 @@ class ExceptConfig extends AbstractModel
     public $Switch;
 
     /**
-     * @var array The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array The settings of the exception rule. if it is null, the settings that were last configured will be used.
      */
     public $ExceptUserRules;
 
@@ -50,8 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Switch Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-     * @param array $ExceptUserRules The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ExceptUserRules The settings of the exception rule. if it is null, the settings that were last configured will be used.
      */
     function __construct()
     {

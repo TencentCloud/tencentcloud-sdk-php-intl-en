@@ -26,14 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
- * @method DropPageDetail getWafDropPageDetail() Obtain The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWafDropPageDetail(DropPageDetail $WafDropPageDetail) Set The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method DropPageDetail getAclDropPageDetail() Obtain The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAclDropPageDetail(DropPageDetail $AclDropPageDetail) Set The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method DropPageDetail getWafDropPageDetail() Obtain Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
+ * @method void setWafDropPageDetail(DropPageDetail $WafDropPageDetail) Set Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
+ * @method DropPageDetail getAclDropPageDetail() Obtain Interception page configuration for custom pages. if null, use the last set configuration by default.
+ * @method void setAclDropPageDetail(DropPageDetail $AclDropPageDetail) Set Interception page configuration for custom pages. if null, use the last set configuration by default.
  */
 class DropPageConfig extends AbstractModel
 {
@@ -45,14 +41,12 @@ class DropPageConfig extends AbstractModel
     public $Switch;
 
     /**
-     * @var DropPageDetail The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var DropPageDetail Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
      */
     public $WafDropPageDetail;
 
     /**
-     * @var DropPageDetail The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var DropPageDetail Interception page configuration for custom pages. if null, use the last set configuration by default.
      */
     public $AclDropPageDetail;
 
@@ -60,10 +54,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Switch Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-     * @param DropPageDetail $WafDropPageDetail The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DropPageDetail $AclDropPageDetail The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DropPageDetail $WafDropPageDetail Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
+     * @param DropPageDetail $AclDropPageDetail Interception page configuration for custom pages. if null, use the last set configuration by default.
      */
     function __construct()
     {

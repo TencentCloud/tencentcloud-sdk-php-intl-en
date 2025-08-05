@@ -44,8 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorMsg(string $ErrorMsg) Set The description of the final verification result.
  * @method FileInfo getLiveData() Obtain The liveness algorithm package generated during this SDK-based liveness detection.
  * @method void setLiveData(FileInfo $LiveData) Set The liveness algorithm package generated during this SDK-based liveness detection.
- * @method FileInfo getLiveVideo() Obtain The download URL of the video used for verification, which is valid for 10 minutes.
- * @method void setLiveVideo(FileInfo $LiveVideo) Set The download URL of the video used for verification, which is valid for 10 minutes.
+ * @method FileInfo getLiveVideo() Obtain The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
+ * @method void setLiveVideo(FileInfo $LiveVideo) Set The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
+ * @method FileInfo getActionVideo() Obtain Records the specific action performed by the user, used for AI Face Shield analysis.
+ * @method void setActionVideo(FileInfo $ActionVideo) Set Records the specific action performed by the user, used for AI Face Shield analysis.
  * @method string getLiveErrorCode() Obtain The liveness detection result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
@@ -124,9 +126,14 @@ class CompareResult extends AbstractModel
     public $LiveData;
 
     /**
-     * @var FileInfo The download URL of the video used for verification, which is valid for 10 minutes.
+     * @var FileInfo The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
      */
     public $LiveVideo;
+
+    /**
+     * @var FileInfo Records the specific action performed by the user, used for AI Face Shield analysis.
+     */
+    public $ActionVideo;
 
     /**
      * @var string The liveness detection result code.
@@ -206,7 +213,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 2016: The similarity did not reach the passing standard.
      * @param string $ErrorMsg The description of the final verification result.
      * @param FileInfo $LiveData The liveness algorithm package generated during this SDK-based liveness detection.
-     * @param FileInfo $LiveVideo The download URL of the video used for verification, which is valid for 10 minutes.
+     * @param FileInfo $LiveVideo The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
+     * @param FileInfo $ActionVideo Records the specific action performed by the user, used for AI Face Shield analysis.
      * @param string $LiveErrorCode The liveness detection result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
@@ -262,6 +270,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("LiveVideo",$param) and $param["LiveVideo"] !== null) {
             $this->LiveVideo = new FileInfo();
             $this->LiveVideo->deserialize($param["LiveVideo"]);
+        }
+
+        if (array_key_exists("ActionVideo",$param) and $param["ActionVideo"] !== null) {
+            $this->ActionVideo = new FileInfo();
+            $this->ActionVideo->deserialize($param["ActionVideo"]);
         }
 
         if (array_key_exists("LiveErrorCode",$param) and $param["LiveErrorCode"] !== null) {

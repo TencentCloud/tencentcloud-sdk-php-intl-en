@@ -20,8 +20,80 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule engine operations.
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
+ * @method string getName() Obtain Operation Name. the Name must correspond to the parameter structure, for example, if Name=Cache, CacheParameters is required.
+<li>Cache: specifies the node Cache TTL.</li>.
+<Li>CacheKey: specifies the custom cache key.</li>.
+<Li>CachePrefresh: cache pre-refresh;</li>.
+<Li>AccessURLRedirect: url redirection;</li>.
+<Li>UpstreamURLRewrite: specifies the origin-pull url rewrite.</li>.
+<li>QUIC:QUIC;</li>
+<li>WebSocket:WebSocket;</li>
+<li>Authentication: Token Authentication;</li>.
+<li>MaxAge: browser caching TTL;</li>.
+<li>StatusCodeCache: specifies the status code cache TTL.</li>.
+<Li>OfflineCache: offline caching;</li>.
+<Li>SmartRouting: smart acceleration;</li>.
+<Li>RangeOriginPull: range-based origin pull;</li>.
+<Li>UpstreamHTTP2: http/2 origin pull;</li>.
+<Li>HostHeader: host header rewrite;</li>.
+<Li>`ForceRedirectHTTPS`: force https redirect configuration for access protocol.</li>.
+<li>OriginPullProtocol: HTTPS origin pull;</li>.
+<Li>Compression: intelligent compression configuration;</li>.
+<li>HSTS:HSTS;</li>
+<Li>ClientIPHeader: configuration for storing client request ip in header information;</li>.
+<Li>OCSPStapling: ocsp stapling;</li>.
+<Li>HTTP2: http/2 integration;</li>.
+<li>PostMaxSize: maximum size of the file uploaded for streaming via a POST request;</li>.
+<Li>ClientIPCountry: region of the client ip during origin-pull;</li>.
+<Li>UpstreamFollowRedirect: specifies the parameter configuration for redirection during origin pull.</li>.
+<Li>UpstreamRequest: origin pull request parameter;</li>.
+<li>TLSConfig: specifies SSL/TLS security.</li>.
+<Li>ModifyOrigin: modify origin server;</li>.
+<Li>HTTPUpstreamTimeout: specifies the layer 7 origin pull timeout configuration.</li>.
+<li>HttpResponse: HTTP response;</li>.
+<Li>ErrorPage: specifies the custom error page.</li>.
+<li>ModifyResponseHeader: modifies the HTTP node response header.</li>.
+<li>ModifyRequestHeader: modifies the HTTP node request header.</li>.
+<Li>ResponseSpeedLimit: download speed limit for a single connection;</li>.
+<Li>SetContentIdentifier: sets the content identifier;</li>.
+<Li>Vary: vary feature configuration.</li>.
+ * @method void setName(string $Name) Set Operation Name. the Name must correspond to the parameter structure, for example, if Name=Cache, CacheParameters is required.
+<li>Cache: specifies the node Cache TTL.</li>.
+<Li>CacheKey: specifies the custom cache key.</li>.
+<Li>CachePrefresh: cache pre-refresh;</li>.
+<Li>AccessURLRedirect: url redirection;</li>.
+<Li>UpstreamURLRewrite: specifies the origin-pull url rewrite.</li>.
+<li>QUIC:QUIC;</li>
+<li>WebSocket:WebSocket;</li>
+<li>Authentication: Token Authentication;</li>.
+<li>MaxAge: browser caching TTL;</li>.
+<li>StatusCodeCache: specifies the status code cache TTL.</li>.
+<Li>OfflineCache: offline caching;</li>.
+<Li>SmartRouting: smart acceleration;</li>.
+<Li>RangeOriginPull: range-based origin pull;</li>.
+<Li>UpstreamHTTP2: http/2 origin pull;</li>.
+<Li>HostHeader: host header rewrite;</li>.
+<Li>`ForceRedirectHTTPS`: force https redirect configuration for access protocol.</li>.
+<li>OriginPullProtocol: HTTPS origin pull;</li>.
+<Li>Compression: intelligent compression configuration;</li>.
+<li>HSTS:HSTS;</li>
+<Li>ClientIPHeader: configuration for storing client request ip in header information;</li>.
+<Li>OCSPStapling: ocsp stapling;</li>.
+<Li>HTTP2: http/2 integration;</li>.
+<li>PostMaxSize: maximum size of the file uploaded for streaming via a POST request;</li>.
+<Li>ClientIPCountry: region of the client ip during origin-pull;</li>.
+<Li>UpstreamFollowRedirect: specifies the parameter configuration for redirection during origin pull.</li>.
+<Li>UpstreamRequest: origin pull request parameter;</li>.
+<li>TLSConfig: specifies SSL/TLS security.</li>.
+<Li>ModifyOrigin: modify origin server;</li>.
+<Li>HTTPUpstreamTimeout: specifies the layer 7 origin pull timeout configuration.</li>.
+<li>HttpResponse: HTTP response;</li>.
+<Li>ErrorPage: specifies the custom error page.</li>.
+<li>ModifyResponseHeader: modifies the HTTP node response header.</li>.
+<li>ModifyRequestHeader: modifies the HTTP node request header.</li>.
+<Li>ResponseSpeedLimit: download speed limit for a single connection;</li>.
+<Li>SetContentIdentifier: sets the content identifier;</li>.
+<Li>Vary: vary feature configuration.</li>.
  * @method CacheParameters getCacheParameters() Obtain Node cache ttl configuration parameter. when name is cache, this parameter is required.
 Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setCacheParameters(CacheParameters $CacheParameters) Set Node cache ttl configuration parameter. when name is cache, this parameter is required.
@@ -154,17 +226,55 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setResponseSpeedLimitParameters(ResponseSpeedLimitParameters $ResponseSpeedLimitParameters) Set Single connection download speed limit configuration parameter. this parameter is required when name is responsespeedlimit.
 Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method SetContentIdentifierParameters getSetContentIdentifierParameters() Obtain Content identification configuration parameter. this parameter is required when name is httpresponse.
+ * @method SetContentIdentifierParameters getSetContentIdentifierParameters() Obtain Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
 
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setSetContentIdentifierParameters(SetContentIdentifierParameters $SetContentIdentifierParameters) Set Content identification configuration parameter. this parameter is required when name is httpresponse.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setSetContentIdentifierParameters(SetContentIdentifierParameters $SetContentIdentifierParameters) Set Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
 
-Note: this field may return null, which indicates a failure to obtain a valid value.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method VaryParameters getVaryParameters() Obtain Vary feature configuration parameter. when Name value is Vary, this parameter is required.
+ * @method void setVaryParameters(VaryParameters $VaryParameters) Set Vary feature configuration parameter. when Name value is Vary, this parameter is required.
  */
 class RuleEngineAction extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Operation Name. the Name must correspond to the parameter structure, for example, if Name=Cache, CacheParameters is required.
+<li>Cache: specifies the node Cache TTL.</li>.
+<Li>CacheKey: specifies the custom cache key.</li>.
+<Li>CachePrefresh: cache pre-refresh;</li>.
+<Li>AccessURLRedirect: url redirection;</li>.
+<Li>UpstreamURLRewrite: specifies the origin-pull url rewrite.</li>.
+<li>QUIC:QUIC;</li>
+<li>WebSocket:WebSocket;</li>
+<li>Authentication: Token Authentication;</li>.
+<li>MaxAge: browser caching TTL;</li>.
+<li>StatusCodeCache: specifies the status code cache TTL.</li>.
+<Li>OfflineCache: offline caching;</li>.
+<Li>SmartRouting: smart acceleration;</li>.
+<Li>RangeOriginPull: range-based origin pull;</li>.
+<Li>UpstreamHTTP2: http/2 origin pull;</li>.
+<Li>HostHeader: host header rewrite;</li>.
+<Li>`ForceRedirectHTTPS`: force https redirect configuration for access protocol.</li>.
+<li>OriginPullProtocol: HTTPS origin pull;</li>.
+<Li>Compression: intelligent compression configuration;</li>.
+<li>HSTS:HSTS;</li>
+<Li>ClientIPHeader: configuration for storing client request ip in header information;</li>.
+<Li>OCSPStapling: ocsp stapling;</li>.
+<Li>HTTP2: http/2 integration;</li>.
+<li>PostMaxSize: maximum size of the file uploaded for streaming via a POST request;</li>.
+<Li>ClientIPCountry: region of the client ip during origin-pull;</li>.
+<Li>UpstreamFollowRedirect: specifies the parameter configuration for redirection during origin pull.</li>.
+<Li>UpstreamRequest: origin pull request parameter;</li>.
+<li>TLSConfig: specifies SSL/TLS security.</li>.
+<Li>ModifyOrigin: modify origin server;</li>.
+<Li>HTTPUpstreamTimeout: specifies the layer 7 origin pull timeout configuration.</li>.
+<li>HttpResponse: HTTP response;</li>.
+<Li>ErrorPage: specifies the custom error page.</li>.
+<li>ModifyResponseHeader: modifies the HTTP node response header.</li>.
+<li>ModifyRequestHeader: modifies the HTTP node request header.</li>.
+<Li>ResponseSpeedLimit: download speed limit for a single connection;</li>.
+<Li>SetContentIdentifier: sets the content identifier;</li>.
+<Li>Vary: vary feature configuration.</li>.
      */
     public $Name;
 
@@ -367,14 +477,55 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     public $ResponseSpeedLimitParameters;
 
     /**
-     * @var SetContentIdentifierParameters Content identification configuration parameter. this parameter is required when name is httpresponse.
+     * @var SetContentIdentifierParameters Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
 
-Note: this field may return null, which indicates a failure to obtain a valid value.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $SetContentIdentifierParameters;
 
     /**
-     * @param string $Name 
+     * @var VaryParameters Vary feature configuration parameter. when Name value is Vary, this parameter is required.
+     */
+    public $VaryParameters;
+
+    /**
+     * @param string $Name Operation Name. the Name must correspond to the parameter structure, for example, if Name=Cache, CacheParameters is required.
+<li>Cache: specifies the node Cache TTL.</li>.
+<Li>CacheKey: specifies the custom cache key.</li>.
+<Li>CachePrefresh: cache pre-refresh;</li>.
+<Li>AccessURLRedirect: url redirection;</li>.
+<Li>UpstreamURLRewrite: specifies the origin-pull url rewrite.</li>.
+<li>QUIC:QUIC;</li>
+<li>WebSocket:WebSocket;</li>
+<li>Authentication: Token Authentication;</li>.
+<li>MaxAge: browser caching TTL;</li>.
+<li>StatusCodeCache: specifies the status code cache TTL.</li>.
+<Li>OfflineCache: offline caching;</li>.
+<Li>SmartRouting: smart acceleration;</li>.
+<Li>RangeOriginPull: range-based origin pull;</li>.
+<Li>UpstreamHTTP2: http/2 origin pull;</li>.
+<Li>HostHeader: host header rewrite;</li>.
+<Li>`ForceRedirectHTTPS`: force https redirect configuration for access protocol.</li>.
+<li>OriginPullProtocol: HTTPS origin pull;</li>.
+<Li>Compression: intelligent compression configuration;</li>.
+<li>HSTS:HSTS;</li>
+<Li>ClientIPHeader: configuration for storing client request ip in header information;</li>.
+<Li>OCSPStapling: ocsp stapling;</li>.
+<Li>HTTP2: http/2 integration;</li>.
+<li>PostMaxSize: maximum size of the file uploaded for streaming via a POST request;</li>.
+<Li>ClientIPCountry: region of the client ip during origin-pull;</li>.
+<Li>UpstreamFollowRedirect: specifies the parameter configuration for redirection during origin pull.</li>.
+<Li>UpstreamRequest: origin pull request parameter;</li>.
+<li>TLSConfig: specifies SSL/TLS security.</li>.
+<Li>ModifyOrigin: modify origin server;</li>.
+<Li>HTTPUpstreamTimeout: specifies the layer 7 origin pull timeout configuration.</li>.
+<li>HttpResponse: HTTP response;</li>.
+<Li>ErrorPage: specifies the custom error page.</li>.
+<li>ModifyResponseHeader: modifies the HTTP node response header.</li>.
+<li>ModifyRequestHeader: modifies the HTTP node request header.</li>.
+<Li>ResponseSpeedLimit: download speed limit for a single connection;</li>.
+<Li>SetContentIdentifier: sets the content identifier;</li>.
+<Li>Vary: vary feature configuration.</li>.
      * @param CacheParameters $CacheParameters Node cache ttl configuration parameter. when name is cache, this parameter is required.
 Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param CacheKeyParameters $CacheKeyParameters Custom cache key configuration parameter. when name is cachekey, this parameter is required.
@@ -441,9 +592,10 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param ResponseSpeedLimitParameters $ResponseSpeedLimitParameters Single connection download speed limit configuration parameter. this parameter is required when name is responsespeedlimit.
 Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param SetContentIdentifierParameters $SetContentIdentifierParameters Content identification configuration parameter. this parameter is required when name is httpresponse.
+     * @param SetContentIdentifierParameters $SetContentIdentifierParameters Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
 
-Note: this field may return null, which indicates a failure to obtain a valid value.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param VaryParameters $VaryParameters Vary feature configuration parameter. when Name value is Vary, this parameter is required.
      */
     function __construct()
     {
@@ -630,6 +782,11 @@ Note: this field may return null, which indicates a failure to obtain a valid va
         if (array_key_exists("SetContentIdentifierParameters",$param) and $param["SetContentIdentifierParameters"] !== null) {
             $this->SetContentIdentifierParameters = new SetContentIdentifierParameters();
             $this->SetContentIdentifierParameters->deserialize($param["SetContentIdentifierParameters"]);
+        }
+
+        if (array_key_exists("VaryParameters",$param) and $param["VaryParameters"] !== null) {
+            $this->VaryParameters = new VaryParameters();
+            $this->VaryParameters->deserialize($param["VaryParameters"]);
         }
     }
 }

@@ -52,16 +52,16 @@ use TencentCloud\Common\AbstractModel;
 <Li>Http: use http protocol;</li>.
 <Li>Https: use https protocol;</li>.
 <Li>Follow: follow the protocol.</li>.
- * @method integer getHTTPOriginPort() Obtain Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow.
- * @method void setHTTPOriginPort(integer $HTTPOriginPort) Set Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow.
- * @method integer getHTTPSOriginPort() Obtain Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow.
- * @method void setHTTPSOriginPort(integer $HTTPSOriginPort) Set Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow.
- * @method string getPrivateAccess() Obtain Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+ * @method integer getHTTPOriginPort() Obtain The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
+ * @method void setHTTPOriginPort(integer $HTTPOriginPort) Set The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
+ * @method integer getHTTPSOriginPort() Obtain The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
+ * @method void setHTTPSOriginPort(integer $HTTPSOriginPort) Set The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
+ * @method string getPrivateAccess() Obtain Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li> if not specified, the default value is off.
- * @method void setPrivateAccess(string $PrivateAccess) Set Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+<li>off: disable private authentication.</li>.
+ * @method void setPrivateAccess(string $PrivateAccess) Set Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li> if not specified, the default value is off.
+<li>off: disable private authentication.</li>.
  * @method OriginPrivateParameters getPrivateParameters() Obtain Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
 Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setPrivateParameters(OriginPrivateParameters $PrivateParameters) Set Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
@@ -98,19 +98,19 @@ class ModifyOriginParameters extends AbstractModel
     public $OriginProtocol;
 
     /**
-     * @var integer Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow.
+     * @var integer The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
      */
     public $HTTPOriginPort;
 
     /**
-     * @var integer Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow.
+     * @var integer The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
      */
     public $HTTPSOriginPort;
 
     /**
-     * @var string Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+     * @var string Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li> if not specified, the default value is off.
+<li>off: disable private authentication.</li>.
      */
     public $PrivateAccess;
 
@@ -137,11 +137,11 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 <Li>Http: use http protocol;</li>.
 <Li>Https: use https protocol;</li>.
 <Li>Follow: follow the protocol.</li>.
-     * @param integer $HTTPOriginPort Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow.
-     * @param integer $HTTPSOriginPort Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow.
-     * @param string $PrivateAccess Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+     * @param integer $HTTPOriginPort The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
+     * @param integer $HTTPSOriginPort The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
+     * @param string $PrivateAccess Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li> if not specified, the default value is off.
+<li>off: disable private authentication.</li>.
      * @param OriginPrivateParameters $PrivateParameters Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
 Note: this field may return null, which indicates a failure to obtain a valid value.
      */

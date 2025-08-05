@@ -32,26 +32,16 @@ use TencentCloud\Common\AbstractModel;
 <li>`monitor`: Observe</li>
  * @method integer getRuleID() Obtain The rule ID, which is only used as an output parameter.
  * @method void setRuleID(integer $RuleID) Set The rule ID, which is only used as an output parameter.
- * @method array getTransManagedIds() Obtain The ID of the rule that applies the "Allow" action.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransManagedIds(array $TransManagedIds) Set The ID of the rule that applies the "Allow" action.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAlgManagedIds() Obtain The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAlgManagedIds(array $AlgManagedIds) Set The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getCapManagedIds() Obtain The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCapManagedIds(array $CapManagedIds) Set The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getMonManagedIds() Obtain The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMonManagedIds(array $MonManagedIds) Set The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDropManagedIds() Obtain The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDropManagedIds(array $DropManagedIds) Set The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTransManagedIds() Obtain Rule ID to allow. defaults to no rules configured for allowance.
+ * @method void setTransManagedIds(array $TransManagedIds) Set Rule ID to allow. defaults to no rules configured for allowance.
+ * @method array getAlgManagedIds() Obtain Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
+ * @method void setAlgManagedIds(array $AlgManagedIds) Set Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
+ * @method array getCapManagedIds() Obtain The rule ID for digit verification code. by default, all rules do not configure digit verification code.
+ * @method void setCapManagedIds(array $CapManagedIds) Set The rule ID for digit verification code. by default, all rules do not configure digit verification code.
+ * @method array getMonManagedIds() Obtain Rule ID for observation. by default, observation is not configured for all rules.
+ * @method void setMonManagedIds(array $MonManagedIds) Set Rule ID for observation. by default, observation is not configured for all rules.
+ * @method array getDropManagedIds() Obtain Rule ID for interception. by default, all rules have no configuration interception.
+ * @method void setDropManagedIds(array $DropManagedIds) Set Rule ID for interception. by default, all rules have no configuration interception.
  */
 class BotManagedRule extends AbstractModel
 {
@@ -70,32 +60,27 @@ class BotManagedRule extends AbstractModel
     public $RuleID;
 
     /**
-     * @var array The ID of the rule that applies the "Allow" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Rule ID to allow. defaults to no rules configured for allowance.
      */
     public $TransManagedIds;
 
     /**
-     * @var array The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
      */
     public $AlgManagedIds;
 
     /**
-     * @var array The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array The rule ID for digit verification code. by default, all rules do not configure digit verification code.
      */
     public $CapManagedIds;
 
     /**
-     * @var array The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Rule ID for observation. by default, observation is not configured for all rules.
      */
     public $MonManagedIds;
 
     /**
-     * @var array The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Rule ID for interception. by default, all rules have no configuration interception.
      */
     public $DropManagedIds;
 
@@ -106,16 +91,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`alg`: JavaScript challenge</li>
 <li>`monitor`: Observe</li>
      * @param integer $RuleID The rule ID, which is only used as an output parameter.
-     * @param array $TransManagedIds The ID of the rule that applies the "Allow" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $AlgManagedIds The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $CapManagedIds The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $MonManagedIds The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $DropManagedIds The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $TransManagedIds Rule ID to allow. defaults to no rules configured for allowance.
+     * @param array $AlgManagedIds Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
+     * @param array $CapManagedIds The rule ID for digit verification code. by default, all rules do not configure digit verification code.
+     * @param array $MonManagedIds Rule ID for observation. by default, observation is not configured for all rules.
+     * @param array $DropManagedIds Rule ID for interception. by default, all rules have no configuration interception.
      */
     function __construct()
     {

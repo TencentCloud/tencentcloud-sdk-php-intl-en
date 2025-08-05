@@ -28,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable the rule.
  * @method array getAlgConditions() Obtain Condition specified for the rule.
  * @method void setAlgConditions(array $AlgConditions) Set Condition specified for the rule.
- * @method AlgDetectSession getAlgDetectSession() Obtain Validate Cookie when the condition is satisfied.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setAlgDetectSession(AlgDetectSession $AlgDetectSession) Set Validate Cookie when the condition is satisfied.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method AlgDetectSession getAlgDetectSession() Obtain Checksum of the Cookie and behavior analysis of the session.
+ * @method void setAlgDetectSession(AlgDetectSession $AlgDetectSession) Set Checksum of the Cookie and behavior analysis of the session.
  * @method array getAlgDetectJS() Obtain Validate client behavior when the condition is satisfied.
  * @method void setAlgDetectJS(array $AlgDetectJS) Set Validate client behavior when the condition is satisfied.
  * @method string getUpdateTime() Obtain The update time, which is only used as an output parameter.
@@ -60,8 +58,7 @@ class AlgDetectRule extends AbstractModel
     public $AlgConditions;
 
     /**
-     * @var AlgDetectSession Validate Cookie when the condition is satisfied.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var AlgDetectSession Checksum of the Cookie and behavior analysis of the session.
      */
     public $AlgDetectSession;
 
@@ -80,8 +77,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $RuleName Name of the rule.
      * @param string $Switch Whether to enable the rule.
      * @param array $AlgConditions Condition specified for the rule.
-     * @param AlgDetectSession $AlgDetectSession Validate Cookie when the condition is satisfied.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param AlgDetectSession $AlgDetectSession Checksum of the Cookie and behavior analysis of the session.
      * @param array $AlgDetectJS Validate client behavior when the condition is satisfied.
      * @param string $UpdateTime The update time, which is only used as an output parameter.
      */

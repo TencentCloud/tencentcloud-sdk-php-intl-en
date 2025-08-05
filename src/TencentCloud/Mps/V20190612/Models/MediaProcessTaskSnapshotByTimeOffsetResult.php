@@ -30,8 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method SnapshotByTimeOffsetTaskInput getInput() Obtain Input for a time point screenshot task.
  * @method void setInput(SnapshotByTimeOffsetTaskInput $Input) Set Input for a time point screenshot task.
- * @method MediaSnapshotByTimeOffsetItem getOutput() Obtain Specifies the output of a screenshot task at specified time points for a video.
- * @method void setOutput(MediaSnapshotByTimeOffsetItem $Output) Set Specifies the output of a screenshot task at specified time points for a video.
+ * @method MediaSnapshotByTimeOffsetItem getOutput() Obtain Output of the time point screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setOutput(MediaSnapshotByTimeOffsetItem $Output) Set Output of the time point screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getBeginProcessTime() Obtain Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method string getFinishTime() Obtain Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
@@ -65,7 +67,8 @@ class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel
     public $Input;
 
     /**
-     * @var MediaSnapshotByTimeOffsetItem Specifies the output of a screenshot task at specified time points for a video.
+     * @var MediaSnapshotByTimeOffsetItem Output of the time point screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Output;
 
@@ -85,7 +88,8 @@ class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel
      * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
      * @param string $Message Error message.
      * @param SnapshotByTimeOffsetTaskInput $Input Input for a time point screenshot task.
-     * @param MediaSnapshotByTimeOffsetItem $Output Specifies the output of a screenshot task at specified time points for a video.
+     * @param MediaSnapshotByTimeOffsetItem $Output Output of the time point screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */

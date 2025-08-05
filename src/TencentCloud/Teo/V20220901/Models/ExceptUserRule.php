@@ -32,18 +32,12 @@ use TencentCloud\Common\AbstractModel;
 <li>`off`: Disabled</li>
  * @method integer getRuleID() Obtain The rule ID, which is automatically created and only used as an output parameter.
  * @method void setRuleID(integer $RuleID) Set The rule ID, which is automatically created and only used as an output parameter.
- * @method string getUpdateTime() Obtain The update time. If it is null, the current date and time is recorded.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set The update time. If it is null, the current date and time is recorded.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getUpdateTime() Obtain Last update time. if null, the underlying layer generates it using the current system time by default.
+ * @method void setUpdateTime(string $UpdateTime) Set Last update time. if null, the underlying layer generates it using the current system time by default.
  * @method array getExceptUserRuleConditions() Obtain The matching condition.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExceptUserRuleConditions(array $ExceptUserRuleConditions) Set The matching condition.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ExceptUserRuleScope getExceptUserRuleScope() Obtain The scope to which the exception rule applies.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExceptUserRuleScope(ExceptUserRuleScope $ExceptUserRuleScope) Set The scope to which the exception rule applies.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ExceptUserRuleScope getExceptUserRuleScope() Obtain Scope where the rule takes effect.
+ * @method void setExceptUserRuleScope(ExceptUserRuleScope $ExceptUserRuleScope) Set Scope where the rule takes effect.
  * @method integer getRulePriority() Obtain The rule priority. Value range: 0-100. If it is null, it defaults to 0.
  * @method void setRulePriority(integer $RulePriority) Set The rule priority. Value range: 0-100. If it is null, it defaults to 0.
  */
@@ -72,20 +66,17 @@ class ExceptUserRule extends AbstractModel
     public $RuleID;
 
     /**
-     * @var string The update time. If it is null, the current date and time is recorded.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Last update time. if null, the underlying layer generates it using the current system time by default.
      */
     public $UpdateTime;
 
     /**
      * @var array The matching condition.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExceptUserRuleConditions;
 
     /**
-     * @var ExceptUserRuleScope The scope to which the exception rule applies.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ExceptUserRuleScope Scope where the rule takes effect.
      */
     public $ExceptUserRuleScope;
 
@@ -101,12 +92,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
      * @param integer $RuleID The rule ID, which is automatically created and only used as an output parameter.
-     * @param string $UpdateTime The update time. If it is null, the current date and time is recorded.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $UpdateTime Last update time. if null, the underlying layer generates it using the current system time by default.
      * @param array $ExceptUserRuleConditions The matching condition.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExceptUserRuleScope $ExceptUserRuleScope The scope to which the exception rule applies.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExceptUserRuleScope $ExceptUserRuleScope Scope where the rule takes effect.
      * @param integer $RulePriority The rule priority. Value range: 0-100. If it is null, it defaults to 0.
      */
     function __construct()

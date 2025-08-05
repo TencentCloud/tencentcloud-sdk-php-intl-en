@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VerifyOwnership request structure.
  *
- * @method string getDomain() Obtain Site or acceleration domain name
- * @method void setDomain(string $Domain) Set Site or acceleration domain name
+ * @method string getDomain() Obtain Specifies the site domain name or acceleration domain name under the site.
+ * @method void setDomain(string $Domain) Set Specifies the site domain name or acceleration domain name under the site.
  */
 class VerifyOwnershipRequest extends AbstractModel
 {
     /**
-     * @var string Site or acceleration domain name
+     * @var string Specifies the site domain name or acceleration domain name under the site.
      */
     public $Domain;
 
     /**
-     * @param string $Domain Site or acceleration domain name
+     * @param string $Domain Specifies the site domain name or acceleration domain name under the site.
      */
     function __construct()
     {

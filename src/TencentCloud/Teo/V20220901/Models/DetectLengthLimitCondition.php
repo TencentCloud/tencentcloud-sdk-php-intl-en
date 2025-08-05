@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
 <li>`body_depth`: detection depth of the request body packet part.</li>
  * @method void setName(string $Name) Set Parameter name of the matched condition. Values:.
 <li>`body_depth`: detection depth of the request body packet part.</li>
- * @method array getValues() Obtain Parameter value of the matched condition, used in pairs with the `Name` parameter.
-When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-<li>`8KB`;</li>
-<li>`64KB`;</li>
-<li>`128KB`.</li>
- * @method void setValues(array $Values) Set Parameter value of the matched condition, used in pairs with the `Name` parameter.
-When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-<li>`8KB`;</li>
-<li>`64KB`;</li>
-<li>`128KB`.</li>
+ * @method array getValues() Obtain The parameter value of the match condition. the value is used in pairs with Name.
+When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+<li>10KB;</li>
+<li>64KB;</li>
+<li>128KB.</li>
+ * @method void setValues(array $Values) Set The parameter value of the match condition. the value is used in pairs with Name.
+When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+<li>10KB;</li>
+<li>64KB;</li>
+<li>128KB.</li>
  */
 class DetectLengthLimitCondition extends AbstractModel
 {
@@ -44,22 +44,22 @@ class DetectLengthLimitCondition extends AbstractModel
     public $Name;
 
     /**
-     * @var array Parameter value of the matched condition, used in pairs with the `Name` parameter.
-When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-<li>`8KB`;</li>
-<li>`64KB`;</li>
-<li>`128KB`.</li>
+     * @var array The parameter value of the match condition. the value is used in pairs with Name.
+When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+<li>10KB;</li>
+<li>64KB;</li>
+<li>128KB.</li>
      */
     public $Values;
 
     /**
      * @param string $Name Parameter name of the matched condition. Values:.
 <li>`body_depth`: detection depth of the request body packet part.</li>
-     * @param array $Values Parameter value of the matched condition, used in pairs with the `Name` parameter.
-When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-<li>`8KB`;</li>
-<li>`64KB`;</li>
-<li>`128KB`.</li>
+     * @param array $Values The parameter value of the match condition. the value is used in pairs with Name.
+When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+<li>10KB;</li>
+<li>64KB;</li>
+<li>128KB.</li>
      */
     function __construct()
     {

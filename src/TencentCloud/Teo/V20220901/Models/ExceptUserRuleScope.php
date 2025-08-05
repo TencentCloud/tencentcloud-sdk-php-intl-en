@@ -26,28 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Exception mode. Values:
 <li>`complete`: Skip the exception rule for full requests.</li>
 <li>`partial`: Skip the exception rule for partial requests.</li>
- * @method array getModules() Obtain The module to be activated. Values:
-<li>`waf`: Tencent Cloud-managed rules</li>
-<li>`rate`: Rate limiting rules</li>
-<li>`acl`: Custom rule</li>
-<li>`cc`: CC attack defense</li>
-<li>`bot`: Bot protection</li>
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setModules(array $Modules) Set The module to be activated. Values:
-<li>`waf`: Tencent Cloud-managed rules</li>
-<li>`rate`: Rate limiting rules</li>
-<li>`acl`: Custom rule</li>
-<li>`cc`: CC attack defense</li>
-<li>`bot`: Bot protection</li>
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method array getPartialModules() Obtain Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setPartialModules(array $PartialModules) Set Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method array getSkipConditions() Obtain Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSkipConditions(array $SkipConditions) Set Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getModules() Obtain Effective module. the field value can be:.
+<li>`waf`: tencent cloud-managed rules</li>.
+<Li>`Rate`: rate limit</li>.
+<li>`acl`: custom rule</li>.
+<Li>`Cc`: cc attack defense</li>.
+<Li>`Bot`: bot protection</li>.
+ * @method void setModules(array $Modules) Set Effective module. the field value can be:.
+<li>`waf`: tencent cloud-managed rules</li>.
+<Li>`Rate`: rate limit</li>.
+<li>`acl`: custom rule</li>.
+<Li>`Cc`: cc attack defense</li>.
+<Li>`Bot`: bot protection</li>.
+ * @method array getPartialModules() Obtain Skip exception rule details for some rule ids. if null, use the last set configuration by default.
+ * @method void setPartialModules(array $PartialModules) Set Skip exception rule details for some rule ids. if null, use the last set configuration by default.
+ * @method array getSkipConditions() Obtain Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
+ * @method void setSkipConditions(array $SkipConditions) Set Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
  */
 class ExceptUserRuleScope extends AbstractModel
 {
@@ -59,25 +53,22 @@ class ExceptUserRuleScope extends AbstractModel
     public $Type;
 
     /**
-     * @var array The module to be activated. Values:
-<li>`waf`: Tencent Cloud-managed rules</li>
-<li>`rate`: Rate limiting rules</li>
-<li>`acl`: Custom rule</li>
-<li>`cc`: CC attack defense</li>
-<li>`bot`: Bot protection</li>
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var array Effective module. the field value can be:.
+<li>`waf`: tencent cloud-managed rules</li>.
+<Li>`Rate`: rate limit</li>.
+<li>`acl`: custom rule</li>.
+<Li>`Cc`: cc attack defense</li>.
+<Li>`Bot`: bot protection</li>.
      */
     public $Modules;
 
     /**
-     * @var array Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Skip exception rule details for some rule ids. if null, use the last set configuration by default.
      */
     public $PartialModules;
 
     /**
-     * @var array Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
      */
     public $SkipConditions;
 
@@ -85,17 +76,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param string $Type Exception mode. Values:
 <li>`complete`: Skip the exception rule for full requests.</li>
 <li>`partial`: Skip the exception rule for partial requests.</li>
-     * @param array $Modules The module to be activated. Values:
-<li>`waf`: Tencent Cloud-managed rules</li>
-<li>`rate`: Rate limiting rules</li>
-<li>`acl`: Custom rule</li>
-<li>`cc`: CC attack defense</li>
-<li>`bot`: Bot protection</li>
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param array $PartialModules Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param array $SkipConditions Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $Modules Effective module. the field value can be:.
+<li>`waf`: tencent cloud-managed rules</li>.
+<Li>`Rate`: rate limit</li>.
+<li>`acl`: custom rule</li>.
+<Li>`Cc`: cc attack defense</li>.
+<Li>`Bot`: bot protection</li>.
+     * @param array $PartialModules Skip exception rule details for some rule ids. if null, use the last set configuration by default.
+     * @param array $SkipConditions Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
      */
     function __construct()
     {

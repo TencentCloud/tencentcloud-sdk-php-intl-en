@@ -66,8 +66,8 @@ If this field is not specified, the default value 'off' will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPrivateParameters(array $PrivateParameters) Set Private authentication parameter. This parameter is valid only when PrivateAccess is on.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostHeader() Obtain current configured origin HOST header.
- * @method void setHostHeader(string $HostHeader) Set current configured origin HOST header.
+ * @method string getHostHeader() Obtain Specifies the current configuration of the origin-pull HOST header.
+ * @method void setHostHeader(string $HostHeader) Set Specifies the current configuration of the origin-pull HOST header.
  * @method integer getVodeoSubAppId() Obtain MO sub-application ID
  * @method void setVodeoSubAppId(integer $VodeoSubAppId) Set MO sub-application ID
  * @method string getVodeoDistributionRange() Obtain MO distribution range. Valid values: <li>All: all</li> <li>Bucket: bucket</li>
@@ -135,7 +135,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PrivateParameters;
 
     /**
-     * @var string current configured origin HOST header.
+     * @var string Specifies the current configuration of the origin-pull HOST header.
      */
     public $HostHeader;
 
@@ -192,7 +192,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 If this field is not specified, the default value 'off' will be used.
      * @param array $PrivateParameters Private authentication parameter. This parameter is valid only when PrivateAccess is on.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostHeader current configured origin HOST header.
+     * @param string $HostHeader Specifies the current configuration of the origin-pull HOST header.
      * @param integer $VodeoSubAppId MO sub-application ID
      * @param string $VodeoDistributionRange MO distribution range. Valid values: <li>All: all</li> <li>Bucket: bucket</li>
      * @param string $VodeoBucketId MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
