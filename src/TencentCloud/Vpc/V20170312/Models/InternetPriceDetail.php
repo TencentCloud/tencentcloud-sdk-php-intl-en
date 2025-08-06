@@ -30,8 +30,8 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setChargeUnit(string $ChargeUnit) Set Billing unit. Valid values: <ul> <li>HOUR: Indicates that the billing unit is calculated hourly. The scenarios currently involving this billing unit include TRAFFIC_POSTPAID_BY_HOUR and BANDWIDTH_POSTPAID_BY_HOUR.</li></ul>
 Note: This field may return null, indicating that no valid value was found.
- * @method float getOriginalPrice() Obtain Original price. Unit: CNY. Returned only for prepaid price inquiry.
- * @method void setOriginalPrice(float $OriginalPrice) Set Original price. Unit: CNY. Returned only for prepaid price inquiry.
+ * @method float getOriginalPrice() Obtain Original price. Unit: USD. Returned only for prepaid price inquiry.
+ * @method void setOriginalPrice(float $OriginalPrice) Set Original price. Unit: USD. Returned only for prepaid price inquiry.
  */
 class InternetPriceDetail extends AbstractModel
 {
@@ -53,7 +53,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $ChargeUnit;
 
     /**
-     * @var float Original price. Unit: CNY. Returned only for prepaid price inquiry.
+     * @var float Original price. Unit: USD. Returned only for prepaid price inquiry.
      */
     public $OriginalPrice;
 
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $ChargeUnit Billing unit. Valid values: <ul> <li>HOUR: Indicates that the billing unit is calculated hourly. The scenarios currently involving this billing unit include TRAFFIC_POSTPAID_BY_HOUR and BANDWIDTH_POSTPAID_BY_HOUR.</li></ul>
 Note: This field may return null, indicating that no valid value was found.
-     * @param float $OriginalPrice Original price. Unit: CNY. Returned only for prepaid price inquiry.
+     * @param float $OriginalPrice Original price. Unit: USD. Returned only for prepaid price inquiry.
      */
     function __construct()
     {
