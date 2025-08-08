@@ -20,186 +20,186 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReadOnlyDBInstances request structure.
  *
- * @method string getInstanceId() Obtain 
- * @method void setInstanceId(string $InstanceId) Set 
- * @method string getZone() Obtain 
- * @method void setZone(string $Zone) Set 
- * @method integer getReadOnlyGroupType() Obtain 
- * @method void setReadOnlyGroupType(integer $ReadOnlyGroupType) Set 
- * @method integer getMemory() Obtain 
- * @method void setMemory(integer $Memory) Set 
- * @method integer getStorage() Obtain 
- * @method void setStorage(integer $Storage) Set 
- * @method integer getReadOnlyGroupForcedUpgrade() Obtain 
- * @method void setReadOnlyGroupForcedUpgrade(integer $ReadOnlyGroupForcedUpgrade) Set 
- * @method string getReadOnlyGroupId() Obtain 
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set 
- * @method string getReadOnlyGroupName() Obtain 
- * @method void setReadOnlyGroupName(string $ReadOnlyGroupName) Set 
- * @method integer getReadOnlyGroupIsOfflineDelay() Obtain 
- * @method void setReadOnlyGroupIsOfflineDelay(integer $ReadOnlyGroupIsOfflineDelay) Set 
- * @method integer getReadOnlyGroupMaxDelayTime() Obtain 
- * @method void setReadOnlyGroupMaxDelayTime(integer $ReadOnlyGroupMaxDelayTime) Set 
- * @method integer getReadOnlyGroupMinInGroup() Obtain 
- * @method void setReadOnlyGroupMinInGroup(integer $ReadOnlyGroupMinInGroup) Set 
- * @method string getInstanceChargeType() Obtain 
- * @method void setInstanceChargeType(string $InstanceChargeType) Set 
- * @method integer getGoodsNum() Obtain 
- * @method void setGoodsNum(integer $GoodsNum) Set 
- * @method string getSubnetId() Obtain 
- * @method void setSubnetId(string $SubnetId) Set 
- * @method string getVpcId() Obtain 
- * @method void setVpcId(string $VpcId) Set 
- * @method integer getPeriod() Obtain 
- * @method void setPeriod(integer $Period) Set 
- * @method array getSecurityGroupList() Obtain 
- * @method void setSecurityGroupList(array $SecurityGroupList) Set 
- * @method integer getAutoVoucher() Obtain 
- * @method void setAutoVoucher(integer $AutoVoucher) Set 
- * @method array getVoucherIds() Obtain 
- * @method void setVoucherIds(array $VoucherIds) Set 
- * @method array getResourceTags() Obtain 
- * @method void setResourceTags(array $ResourceTags) Set 
- * @method string getCollation() Obtain 
- * @method void setCollation(string $Collation) Set 
- * @method string getTimeZone() Obtain 
- * @method void setTimeZone(string $TimeZone) Set 
+ * @method string getInstanceId() Obtain Instance ID in the format of  `mssql-3l3fgqn7`.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of  `mssql-3l3fgqn7`.
+ * @method string getZone() Obtain Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
+ * @method void setZone(string $Zone) Set Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
+ * @method integer getReadOnlyGroupType() Obtain Read-only group types. Valid values: `1` (each read-only replica is placed in one auto-created read-only group), `2` (all read-only replicas are placed in one auto-created read-only group), `3` (all read-only replicas are placed in one existing read-only group).
+ * @method void setReadOnlyGroupType(integer $ReadOnlyGroupType) Set Read-only group types. Valid values: `1` (each read-only replica is placed in one auto-created read-only group), `2` (all read-only replicas are placed in one auto-created read-only group), `3` (all read-only replicas are placed in one existing read-only group).
+ * @method integer getMemory() Obtain Instance memory size in GB.
+ * @method void setMemory(integer $Memory) Set Instance memory size in GB.
+ * @method integer getStorage() Obtain Instance disk size in GB.
+ * @method void setStorage(integer $Storage) Set Instance disk size in GB.
+ * @method integer getReadOnlyGroupForcedUpgrade() Obtain Valid values: `0` (not upgrade the primary instance by default), `1` (upgrade the primary instance to complete the RO deployment).  You need to pass in `1` for this parameter and upgrade the primary instance to cluster edition.
+ * @method void setReadOnlyGroupForcedUpgrade(integer $ReadOnlyGroupForcedUpgrade) Set Valid values: `0` (not upgrade the primary instance by default), `1` (upgrade the primary instance to complete the RO deployment).  You need to pass in `1` for this parameter and upgrade the primary instance to cluster edition.
+ * @method string getReadOnlyGroupId() Obtain Existing read-only group ID, which is required when `ReadOnlyGroupType` is `3`.
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set Existing read-only group ID, which is required when `ReadOnlyGroupType` is `3`.
+ * @method string getReadOnlyGroupName() Obtain New read-only group ID, which is required when `ReadOnlyGroupType` is `2`.
+ * @method void setReadOnlyGroupName(string $ReadOnlyGroupName) Set New read-only group ID, which is required when `ReadOnlyGroupType` is `2`.
+ * @method integer getReadOnlyGroupIsOfflineDelay() Obtain Whether delayed read-only instance removal is enabled in a new read-only group, which is required when `ReadOnlyGroupType` is `2`. Valid values: `1` (enabled), `0` (disabled).  The read-only replica will be automatically removed when the delay between it and the primary instance exceeds the threshold.
+ * @method void setReadOnlyGroupIsOfflineDelay(integer $ReadOnlyGroupIsOfflineDelay) Set Whether delayed read-only instance removal is enabled in a new read-only group, which is required when `ReadOnlyGroupType` is `2`. Valid values: `1` (enabled), `0` (disabled).  The read-only replica will be automatically removed when the delay between it and the primary instance exceeds the threshold.
+ * @method integer getReadOnlyGroupMaxDelayTime() Obtain The delay threshold for a new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
+ * @method void setReadOnlyGroupMaxDelayTime(integer $ReadOnlyGroupMaxDelayTime) Set The delay threshold for a new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
+ * @method integer getReadOnlyGroupMinInGroup() Obtain Minimum number of reserved read-only replicas when the delayed removal is enabled for the new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
+ * @method void setReadOnlyGroupMinInGroup(integer $ReadOnlyGroupMinInGroup) Set Minimum number of reserved read-only replicas when the delayed removal is enabled for the new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
+ * @method string getInstanceChargeType() Obtain Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+ * @method integer getGoodsNum() Obtain Number of read-only instances to be purchased this time. Default value: `2`.
+ * @method void setGoodsNum(integer $GoodsNum) Set Number of read-only instances to be purchased this time. Default value: `2`.
+ * @method string getSubnetId() Obtain VPC subnet ID in the format of `subnet-bdoe83fa`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
+ * @method void setSubnetId(string $SubnetId) Set VPC subnet ID in the format of `subnet-bdoe83fa`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
+ * @method string getVpcId() Obtain VPC ID in the format of `vpc-dsp338hz`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
+ * @method void setVpcId(string $VpcId) Set VPC ID in the format of `vpc-dsp338hz`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
+ * @method integer getPeriod() Obtain The purchase period of an instance. Default value: `1` (one month).  Maximum value: `48`.
+ * @method void setPeriod(integer $Period) Set The purchase period of an instance. Default value: `1` (one month).  Maximum value: `48`.
+ * @method array getSecurityGroupList() Obtain Security group list, which contains security group IDs in the format of `sg-xxx`.
+ * @method void setSecurityGroupList(array $SecurityGroupList) Set Security group list, which contains security group IDs in the format of `sg-xxx`.
+ * @method integer getAutoVoucher() Obtain Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
+ * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
+ * @method array getVoucherIds() Obtain Array of voucher IDs (currently, only one voucher can be used per order).
+ * @method void setVoucherIds(array $VoucherIds) Set Array of voucher IDs (currently, only one voucher can be used per order).
+ * @method array getResourceTags() Obtain Tags associated with the instances to be created.
+ * @method void setResourceTags(array $ResourceTags) Set Tags associated with the instances to be created.
+ * @method string getCollation() Obtain Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
+ * @method void setCollation(string $Collation) Set Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
+ * @method string getTimeZone() Obtain System time zone. Default value:  `China Standard Time`.
+ * @method void setTimeZone(string $TimeZone) Set System time zone. Default value:  `China Standard Time`.
  */
 class CreateReadOnlyDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Instance ID in the format of  `mssql-3l3fgqn7`.
      */
     public $InstanceId;
 
     /**
-     * @var string 
+     * @var string Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
      */
     public $Zone;
 
     /**
-     * @var integer 
+     * @var integer Read-only group types. Valid values: `1` (each read-only replica is placed in one auto-created read-only group), `2` (all read-only replicas are placed in one auto-created read-only group), `3` (all read-only replicas are placed in one existing read-only group).
      */
     public $ReadOnlyGroupType;
 
     /**
-     * @var integer 
+     * @var integer Instance memory size in GB.
      */
     public $Memory;
 
     /**
-     * @var integer 
+     * @var integer Instance disk size in GB.
      */
     public $Storage;
 
     /**
-     * @var integer 
+     * @var integer Valid values: `0` (not upgrade the primary instance by default), `1` (upgrade the primary instance to complete the RO deployment).  You need to pass in `1` for this parameter and upgrade the primary instance to cluster edition.
      */
     public $ReadOnlyGroupForcedUpgrade;
 
     /**
-     * @var string 
+     * @var string Existing read-only group ID, which is required when `ReadOnlyGroupType` is `3`.
      */
     public $ReadOnlyGroupId;
 
     /**
-     * @var string 
+     * @var string New read-only group ID, which is required when `ReadOnlyGroupType` is `2`.
      */
     public $ReadOnlyGroupName;
 
     /**
-     * @var integer 
+     * @var integer Whether delayed read-only instance removal is enabled in a new read-only group, which is required when `ReadOnlyGroupType` is `2`. Valid values: `1` (enabled), `0` (disabled).  The read-only replica will be automatically removed when the delay between it and the primary instance exceeds the threshold.
      */
     public $ReadOnlyGroupIsOfflineDelay;
 
     /**
-     * @var integer 
+     * @var integer The delay threshold for a new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
      */
     public $ReadOnlyGroupMaxDelayTime;
 
     /**
-     * @var integer 
+     * @var integer Minimum number of reserved read-only replicas when the delayed removal is enabled for the new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
      */
     public $ReadOnlyGroupMinInGroup;
 
     /**
-     * @var string 
+     * @var string Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
      */
     public $InstanceChargeType;
 
     /**
-     * @var integer 
+     * @var integer Number of read-only instances to be purchased this time. Default value: `2`.
      */
     public $GoodsNum;
 
     /**
-     * @var string 
+     * @var string VPC subnet ID in the format of `subnet-bdoe83fa`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
      */
     public $SubnetId;
 
     /**
-     * @var string 
+     * @var string VPC ID in the format of `vpc-dsp338hz`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
      */
     public $VpcId;
 
     /**
-     * @var integer 
+     * @var integer The purchase period of an instance. Default value: `1` (one month).  Maximum value: `48`.
      */
     public $Period;
 
     /**
-     * @var array 
+     * @var array Security group list, which contains security group IDs in the format of `sg-xxx`.
      */
     public $SecurityGroupList;
 
     /**
-     * @var integer 
+     * @var integer Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
      */
     public $AutoVoucher;
 
     /**
-     * @var array 
+     * @var array Array of voucher IDs (currently, only one voucher can be used per order).
      */
     public $VoucherIds;
 
     /**
-     * @var array 
+     * @var array Tags associated with the instances to be created.
      */
     public $ResourceTags;
 
     /**
-     * @var string 
+     * @var string Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
      */
     public $Collation;
 
     /**
-     * @var string 
+     * @var string System time zone. Default value:  `China Standard Time`.
      */
     public $TimeZone;
 
     /**
-     * @param string $InstanceId 
-     * @param string $Zone 
-     * @param integer $ReadOnlyGroupType 
-     * @param integer $Memory 
-     * @param integer $Storage 
-     * @param integer $ReadOnlyGroupForcedUpgrade 
-     * @param string $ReadOnlyGroupId 
-     * @param string $ReadOnlyGroupName 
-     * @param integer $ReadOnlyGroupIsOfflineDelay 
-     * @param integer $ReadOnlyGroupMaxDelayTime 
-     * @param integer $ReadOnlyGroupMinInGroup 
-     * @param string $InstanceChargeType 
-     * @param integer $GoodsNum 
-     * @param string $SubnetId 
-     * @param string $VpcId 
-     * @param integer $Period 
-     * @param array $SecurityGroupList 
-     * @param integer $AutoVoucher 
-     * @param array $VoucherIds 
-     * @param array $ResourceTags 
-     * @param string $Collation 
-     * @param string $TimeZone 
+     * @param string $InstanceId Instance ID in the format of  `mssql-3l3fgqn7`.
+     * @param string $Zone Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
+     * @param integer $ReadOnlyGroupType Read-only group types. Valid values: `1` (each read-only replica is placed in one auto-created read-only group), `2` (all read-only replicas are placed in one auto-created read-only group), `3` (all read-only replicas are placed in one existing read-only group).
+     * @param integer $Memory Instance memory size in GB.
+     * @param integer $Storage Instance disk size in GB.
+     * @param integer $ReadOnlyGroupForcedUpgrade Valid values: `0` (not upgrade the primary instance by default), `1` (upgrade the primary instance to complete the RO deployment).  You need to pass in `1` for this parameter and upgrade the primary instance to cluster edition.
+     * @param string $ReadOnlyGroupId Existing read-only group ID, which is required when `ReadOnlyGroupType` is `3`.
+     * @param string $ReadOnlyGroupName New read-only group ID, which is required when `ReadOnlyGroupType` is `2`.
+     * @param integer $ReadOnlyGroupIsOfflineDelay Whether delayed read-only instance removal is enabled in a new read-only group, which is required when `ReadOnlyGroupType` is `2`. Valid values: `1` (enabled), `0` (disabled).  The read-only replica will be automatically removed when the delay between it and the primary instance exceeds the threshold.
+     * @param integer $ReadOnlyGroupMaxDelayTime The delay threshold for a new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
+     * @param integer $ReadOnlyGroupMinInGroup Minimum number of reserved read-only replicas when the delayed removal is enabled for the new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
+     * @param string $InstanceChargeType Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+     * @param integer $GoodsNum Number of read-only instances to be purchased this time. Default value: `2`.
+     * @param string $SubnetId VPC subnet ID in the format of `subnet-bdoe83fa`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
+     * @param string $VpcId VPC ID in the format of `vpc-dsp338hz`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
+     * @param integer $Period The purchase period of an instance. Default value: `1` (one month).  Maximum value: `48`.
+     * @param array $SecurityGroupList Security group list, which contains security group IDs in the format of `sg-xxx`.
+     * @param integer $AutoVoucher Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
+     * @param array $VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
+     * @param array $ResourceTags Tags associated with the instances to be created.
+     * @param string $Collation Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
+     * @param string $TimeZone System time zone. Default value:  `China Standard Time`.
      */
     function __construct()
     {

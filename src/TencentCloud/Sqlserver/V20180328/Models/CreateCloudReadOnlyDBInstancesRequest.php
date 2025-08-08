@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
  * @method integer getReadOnlyGroupType() Obtain Read-only group types. Valid values: `1` (each read-only replica is placed in one auto-created read-only group), `2` (all read-only replicas are placed in one auto-created read-only group), `3` (all read-only replicas are placed in one existing read-only group).
  * @method void setReadOnlyGroupType(integer $ReadOnlyGroupType) Set Read-only group types. Valid values: `1` (each read-only replica is placed in one auto-created read-only group), `2` (all read-only replicas are placed in one auto-created read-only group), `3` (all read-only replicas are placed in one existing read-only group).
- * @method integer getMemory() Obtain Instance memory size in GB
- * @method void setMemory(integer $Memory) Set Instance memory size in GB
- * @method integer getStorage() Obtain Instance disk size in GB
- * @method void setStorage(integer $Storage) Set Instance disk size in GB
- * @method integer getCpu() Obtain Number of instance cores
- * @method void setCpu(integer $Cpu) Set Number of instance cores
+ * @method integer getMemory() Obtain Instance memory size in GB.
+ * @method void setMemory(integer $Memory) Set Instance memory size in GB.
+ * @method integer getStorage() Obtain Instance disk size in GB.
+ * @method void setStorage(integer $Storage) Set Instance disk size in GB.
+ * @method integer getCpu() Obtain Number of instance cores.
+ * @method void setCpu(integer $Cpu) Set Number of instance cores.
  * @method string getMachineType() Obtain The host type of purchased instance. Valid values: `CLOUD_HSSD` (virtual machine with enhanced SSD), `CLOUD_TSSD` (virtual machine with ulTra SSD), `CLOUD_BSSD` (virtual machine with balanced SSD).
  * @method void setMachineType(string $MachineType) Set The host type of purchased instance. Valid values: `CLOUD_HSSD` (virtual machine with enhanced SSD), `CLOUD_TSSD` (virtual machine with ulTra SSD), `CLOUD_BSSD` (virtual machine with balanced SSD).
  * @method integer getReadOnlyGroupForcedUpgrade() Obtain Valid values: `0` (not upgrade the primary instance by default), `1` (upgrade the primary instance to complete the RO deployment).  You need to pass in `1` for this parameter and upgrade the primary instance to cluster edition.
@@ -60,14 +60,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupList(array $SecurityGroupList) Set Security group list, which contains security group IDs in the format of `sg-xxx`.
  * @method integer getAutoVoucher() Obtain Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
- * @method array getVoucherIds() Obtain Array of voucher IDs (currently, only one voucher can be used per order)
- * @method void setVoucherIds(array $VoucherIds) Set Array of voucher IDs (currently, only one voucher can be used per order)
- * @method array getResourceTags() Obtain Tags associated with the instances to be created
- * @method void setResourceTags(array $ResourceTags) Set Tags associated with the instances to be created
- * @method string getCollation() Obtain Collation of system character sets. Default value:  Chinese_PRC_CI_AS
- * @method void setCollation(string $Collation) Set Collation of system character sets. Default value:  Chinese_PRC_CI_AS
- * @method string getTimeZone() Obtain System time zone. Default value:  `China Standard Time`
- * @method void setTimeZone(string $TimeZone) Set System time zone. Default value:  `China Standard Time`
+ * @method array getVoucherIds() Obtain Array of voucher IDs (currently, only one voucher can be used per order).
+ * @method void setVoucherIds(array $VoucherIds) Set Array of voucher IDs (currently, only one voucher can be used per order).
+ * @method array getResourceTags() Obtain Tags associated with the instances to be created.
+ * @method void setResourceTags(array $ResourceTags) Set Tags associated with the instances to be created.
+ * @method string getCollation() Obtain Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
+ * @method void setCollation(string $Collation) Set Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
+ * @method string getTimeZone() Obtain System time zone. Default value:  `China Standard Time`.
+ * @method void setTimeZone(string $TimeZone) Set System time zone. Default value:  `China Standard Time`.
+ * @method integer getDiskEncryptFlag() Obtain Disk encryption identification, 0 - no encryption, 1 - encryption.
+ * @method void setDiskEncryptFlag(integer $DiskEncryptFlag) Set Disk encryption identification, 0 - no encryption, 1 - encryption.
  */
 class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel
 {
@@ -87,17 +89,17 @@ class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel
     public $ReadOnlyGroupType;
 
     /**
-     * @var integer Instance memory size in GB
+     * @var integer Instance memory size in GB.
      */
     public $Memory;
 
     /**
-     * @var integer Instance disk size in GB
+     * @var integer Instance disk size in GB.
      */
     public $Storage;
 
     /**
-     * @var integer Number of instance cores
+     * @var integer Number of instance cores.
      */
     public $Cpu;
 
@@ -172,32 +174,37 @@ class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel
     public $AutoVoucher;
 
     /**
-     * @var array Array of voucher IDs (currently, only one voucher can be used per order)
+     * @var array Array of voucher IDs (currently, only one voucher can be used per order).
      */
     public $VoucherIds;
 
     /**
-     * @var array Tags associated with the instances to be created
+     * @var array Tags associated with the instances to be created.
      */
     public $ResourceTags;
 
     /**
-     * @var string Collation of system character sets. Default value:  Chinese_PRC_CI_AS
+     * @var string Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
      */
     public $Collation;
 
     /**
-     * @var string System time zone. Default value:  `China Standard Time`
+     * @var string System time zone. Default value:  `China Standard Time`.
      */
     public $TimeZone;
+
+    /**
+     * @var integer Disk encryption identification, 0 - no encryption, 1 - encryption.
+     */
+    public $DiskEncryptFlag;
 
     /**
      * @param string $InstanceId Instance ID in the format of  `mssql-3l3fgqn7`.
      * @param string $Zone Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
      * @param integer $ReadOnlyGroupType Read-only group types. Valid values: `1` (each read-only replica is placed in one auto-created read-only group), `2` (all read-only replicas are placed in one auto-created read-only group), `3` (all read-only replicas are placed in one existing read-only group).
-     * @param integer $Memory Instance memory size in GB
-     * @param integer $Storage Instance disk size in GB
-     * @param integer $Cpu Number of instance cores
+     * @param integer $Memory Instance memory size in GB.
+     * @param integer $Storage Instance disk size in GB.
+     * @param integer $Cpu Number of instance cores.
      * @param string $MachineType The host type of purchased instance. Valid values: `CLOUD_HSSD` (virtual machine with enhanced SSD), `CLOUD_TSSD` (virtual machine with ulTra SSD), `CLOUD_BSSD` (virtual machine with balanced SSD).
      * @param integer $ReadOnlyGroupForcedUpgrade Valid values: `0` (not upgrade the primary instance by default), `1` (upgrade the primary instance to complete the RO deployment).  You need to pass in `1` for this parameter and upgrade the primary instance to cluster edition.
      * @param string $ReadOnlyGroupId Existing read-only group ID, which is required when `ReadOnlyGroupType` is `3`.
@@ -212,10 +219,11 @@ class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel
      * @param integer $Period The purchase period of an instance. Default value: `1` (one month).  Maximum value: `48`.
      * @param array $SecurityGroupList Security group list, which contains security group IDs in the format of `sg-xxx`.
      * @param integer $AutoVoucher Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
-     * @param array $VoucherIds Array of voucher IDs (currently, only one voucher can be used per order)
-     * @param array $ResourceTags Tags associated with the instances to be created
-     * @param string $Collation Collation of system character sets. Default value:  Chinese_PRC_CI_AS
-     * @param string $TimeZone System time zone. Default value:  `China Standard Time`
+     * @param array $VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
+     * @param array $ResourceTags Tags associated with the instances to be created.
+     * @param string $Collation Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
+     * @param string $TimeZone System time zone. Default value:  `China Standard Time`.
+     * @param integer $DiskEncryptFlag Disk encryption identification, 0 - no encryption, 1 - encryption.
      */
     function __construct()
     {
@@ -329,6 +337,10 @@ class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
             $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("DiskEncryptFlag",$param) and $param["DiskEncryptFlag"] !== null) {
+            $this->DiskEncryptFlag = $param["DiskEncryptFlag"];
         }
     }
 }

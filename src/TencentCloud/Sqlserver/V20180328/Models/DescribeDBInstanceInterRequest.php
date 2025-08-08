@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getLimit() Obtain The maximum number of results returned per page. Value range: 1-100.
  * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Value range: 1-100.
- * @method string getInstanceId() Obtain Filter by instance ID
- * @method void setInstanceId(string $InstanceId) Set Filter by instance ID
+ * @method string getInstanceId() Obtain Filter by instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Filter by instance ID.
  * @method integer getStatus() Obtain Filter by status. Valid values: `1` (Enabling interworking IP), `2` (Enabled interworking IP), `3` (Adding to interworking group), `4` (Added to interworking group), `5` (Reclaiming interworking IP), `6` (Reclaimed interworking IP), `7` (Removing from interworking group), `8` (Removed from interworking group).
  * @method void setStatus(integer $Status) Set Filter by status. Valid values: `1` (Enabling interworking IP), `2` (Enabled interworking IP), `3` (Adding to interworking group), `4` (Added to interworking group), `5` (Reclaiming interworking IP), `6` (Reclaimed interworking IP), `7` (Removing from interworking group), `8` (Removed from interworking group).
- * @method array getVersionSet() Obtain The list of instance version numbers
- * @method void setVersionSet(array $VersionSet) Set The list of instance version numbers
- * @method string getZone() Obtain Instance AZ ID in the format of ap-guangzhou-2
- * @method void setZone(string $Zone) Set Instance AZ ID in the format of ap-guangzhou-2
+ * @method array getVersionSet() Obtain The list of instance version numbers.
+ * @method void setVersionSet(array $VersionSet) Set The list of instance version numbers.
+ * @method string getZone() Obtain Instance AZ ID in the format of ap-guangzhou-3.
+ * @method void setZone(string $Zone) Set Instance AZ ID in the format of ap-guangzhou-3.
  * @method integer getOffset() Obtain Page number. Default value: `0`.
  * @method void setOffset(integer $Offset) Set Page number. Default value: `0`.
  */
@@ -41,7 +41,7 @@ class DescribeDBInstanceInterRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Filter by instance ID
+     * @var string Filter by instance ID.
      */
     public $InstanceId;
 
@@ -51,12 +51,12 @@ class DescribeDBInstanceInterRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var array The list of instance version numbers
+     * @var array The list of instance version numbers.
      */
     public $VersionSet;
 
     /**
-     * @var string Instance AZ ID in the format of ap-guangzhou-2
+     * @var string Instance AZ ID in the format of ap-guangzhou-3.
      */
     public $Zone;
 
@@ -67,10 +67,10 @@ class DescribeDBInstanceInterRequest extends AbstractModel
 
     /**
      * @param integer $Limit The maximum number of results returned per page. Value range: 1-100.
-     * @param string $InstanceId Filter by instance ID
+     * @param string $InstanceId Filter by instance ID.
      * @param integer $Status Filter by status. Valid values: `1` (Enabling interworking IP), `2` (Enabled interworking IP), `3` (Adding to interworking group), `4` (Added to interworking group), `5` (Reclaiming interworking IP), `6` (Reclaimed interworking IP), `7` (Removing from interworking group), `8` (Removed from interworking group).
-     * @param array $VersionSet The list of instance version numbers
-     * @param string $Zone Instance AZ ID in the format of ap-guangzhou-2
+     * @param array $VersionSet The list of instance version numbers.
+     * @param string $Zone Instance AZ ID in the format of ap-guangzhou-3.
      * @param integer $Offset Page number. Default value: `0`.
      */
     function __construct()

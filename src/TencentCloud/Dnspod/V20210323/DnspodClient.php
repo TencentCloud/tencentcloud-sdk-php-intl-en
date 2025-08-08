@@ -27,6 +27,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\CreateDomainAliasResponse CreateDomainAlias(Models\CreateDomainAliasRequest $req) This API is used to create a domain alias.
  * @method Models\CreateDomainBatchResponse CreateDomainBatch(Models\CreateDomainBatchRequest $req) This API is used to bulk add domains.
  * @method Models\CreateDomainGroupResponse CreateDomainGroup(Models\CreateDomainGroupRequest $req) This API is used to create a domain group.
+ * @method Models\CreatePackageOrderResponse CreatePackageOrder(Models\CreatePackageOrderRequest $req) This API is used to enable a paid plan on the international website.
  * @method Models\CreateRecordResponse CreateRecord(Models\CreateRecordRequest $req) This API is used to add a record.
  * @method Models\CreateRecordBatchResponse CreateRecordBatch(Models\CreateRecordBatchRequest $req) This API is used to bulk add records.
  * @method Models\CreateRecordGroupResponse CreateRecordGroup(Models\CreateRecordGroupRequest $req) This API is used to add a record group.

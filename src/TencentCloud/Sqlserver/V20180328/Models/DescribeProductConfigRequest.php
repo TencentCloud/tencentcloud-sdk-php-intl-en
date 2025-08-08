@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProductConfig request structure.
  *
- * @method string getZone() Obtain AZ ID in the format of ap-guangzhou-1
- * @method void setZone(string $Zone) Set AZ ID in the format of ap-guangzhou-1
- * @method string getInstanceType() Obtain Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica
- * @method void setInstanceType(string $InstanceType) Set Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica
+ * @method string getZone() Obtain AZ ID in the format of ap-guangzhou-1.
+ * @method void setZone(string $Zone) Set AZ ID in the format of ap-guangzhou-1.
+ * @method string getInstanceType() Obtain Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica.
+ * @method void setInstanceType(string $InstanceType) Set Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica.
  */
 class DescribeProductConfigRequest extends AbstractModel
 {
     /**
-     * @var string AZ ID in the format of ap-guangzhou-1
+     * @var string AZ ID in the format of ap-guangzhou-1.
      */
     public $Zone;
 
     /**
-     * @var string Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica
+     * @var string Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica.
      */
     public $InstanceType;
 
     /**
-     * @param string $Zone AZ ID in the format of ap-guangzhou-1
-     * @param string $InstanceType Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica
+     * @param string $Zone AZ ID in the format of ap-guangzhou-1.
+     * @param string $InstanceType Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica.
      */
     function __construct()
     {
