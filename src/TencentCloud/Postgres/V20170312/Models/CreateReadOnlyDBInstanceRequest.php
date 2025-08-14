@@ -90,8 +90,10 @@ Default value: `0`.
 Default value: `0`.
  * @method string getName() Obtain Instance name (which will be supported in the future)
  * @method void setName(string $Name) Set Instance name (which will be supported in the future)
- * @method string getDBVersion() Obtain (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
- * @method void setDBVersion(string $DBVersion) Set (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+ * @method string getDBVersion() Obtain (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+ * @method void setDBVersion(string $DBVersion) Set (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+ * @method string getDedicatedClusterId() Obtain 
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set 
  */
 class CreateReadOnlyDBInstanceRequest extends AbstractModel
 {
@@ -207,9 +209,15 @@ Default value: `0`.
     public $Name;
 
     /**
-     * @var string (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+     * @var string (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+     * @deprecated
      */
     public $DBVersion;
+
+    /**
+     * @var string 
+     */
+    public $DedicatedClusterId;
 
     /**
      * @param string $Zone Primary AZ of an instance, such as "ap-guangzhou-3".
@@ -247,7 +255,8 @@ Default value: `0`.
 <li>`1`: Yes.
 Default value: `0`.
      * @param string $Name Instance name (which will be supported in the future)
-     * @param string $DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+     * @param string $DBVersion (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+     * @param string $DedicatedClusterId 
      */
     function __construct()
     {
@@ -341,6 +350,10 @@ Default value: `0`.
 
         if (array_key_exists("DBVersion",$param) and $param["DBVersion"] !== null) {
             $this->DBVersion = $param["DBVersion"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
     }
 }

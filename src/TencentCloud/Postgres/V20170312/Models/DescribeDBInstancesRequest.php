@@ -36,12 +36,12 @@ db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
 db-private-ip: filter by instance VPC IP (in string format)
 db-public-address: filter by instance public network address (in string format)
- * @method integer getLimit() Obtain The maximum number of results returned per page. Value range: 1-100. Default: `10`
- * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Value range: 1-100. Default: `10`
+ * @method integer getLimit() Obtain The maximum number of results returned per page. Value range: 1-100. Default: `10`.
+ * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Value range: 1-100. Default: `10`.
  * @method integer getOffset() Obtain Data offset, which starts from 0.
  * @method void setOffset(integer $Offset) Set Data offset, which starts from 0.
- * @method string getOrderBy() Obtain Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
- * @method void setOrderBy(string $OrderBy) Set Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+ * @method string getOrderBy() Obtain Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
+ * @method void setOrderBy(string $OrderBy) Set Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
  * @method string getOrderByType() Obtain Sorting order. Valid values: `asc` (ascending), `desc` (descending)
  * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `asc` (ascending), `desc` (descending)
  */
@@ -60,7 +60,7 @@ db-public-address: filter by instance public network address (in string format)
     public $Filters;
 
     /**
-     * @var integer The maximum number of results returned per page. Value range: 1-100. Default: `10`
+     * @var integer The maximum number of results returned per page. Value range: 1-100. Default: `10`.
      */
     public $Limit;
 
@@ -70,7 +70,7 @@ db-public-address: filter by instance public network address (in string format)
     public $Offset;
 
     /**
-     * @var string Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+     * @var string Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
      */
     public $OrderBy;
 
@@ -88,9 +88,9 @@ db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
 db-private-ip: filter by instance VPC IP (in string format)
 db-public-address: filter by instance public network address (in string format)
-     * @param integer $Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
+     * @param integer $Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`.
      * @param integer $Offset Data offset, which starts from 0.
-     * @param string $OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+     * @param string $OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
      * @param string $OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
      */
     function __construct()

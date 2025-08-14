@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrePaySetting(PrePaySetting $PrePaySetting) Set Prepaid parameter.
  * @method string getClientToken() Obtain The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
  * @method void setClientToken(string $ClientToken) Set The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+ * @method string getDeploymentMode() Obtain 
+ * @method void setDeploymentMode(string $DeploymentMode) Set 
  */
 class CreateSLInstanceRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateSLInstanceRequest extends AbstractModel
     public $ClientToken;
 
     /**
+     * @var string 
+     */
+    public $DeploymentMode;
+
+    /**
      * @param string $InstanceName Instance name.
      * @param integer $PayMode Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go.
      * @param string $DiskType Instance storage type. Fill in CLOUD_HSSD to represent high-performance cloud storage.
@@ -96,6 +103,7 @@ class CreateSLInstanceRequest extends AbstractModel
      * @param array $Tags List of tags to be bound to the instance.
      * @param PrePaySetting $PrePaySetting Prepaid parameter.
      * @param string $ClientToken The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+     * @param string $DeploymentMode 
      */
     function __construct()
     {
@@ -155,6 +163,10 @@ class CreateSLInstanceRequest extends AbstractModel
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("DeploymentMode",$param) and $param["DeploymentMode"] !== null) {
+            $this->DeploymentMode = $param["DeploymentMode"];
         }
     }
 }

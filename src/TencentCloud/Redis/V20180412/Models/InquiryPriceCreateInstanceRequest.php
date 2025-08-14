@@ -21,25 +21,29 @@ use TencentCloud\Common\AbstractModel;
  * InquiryPriceCreateInstance request structure.
  *
  * @method integer getTypeId() Obtain Instance type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
-- 6: Redis 4.0 Memory Edition (standard architecture).
-- 7: Redis 4.0 Memory Edition (cluster architecture).
-- 8: Redis 5.0 Memory Edition (standard architecture).
-- 9: Redis 5.0 Memory Edition (cluster architecture).
-- 15: Redis 6.2 Memory Edition (standard architecture).
-- 16: Redis 6.2 Memory Edition (cluster architecture).
-- 17: Redis 7.0 Memory Edition (standard architecture).
-- 18: Redis 7.0 Memory Edition (cluster architecture).
+
+- 2: Redis 2.8 memory edition (standard architecture).
+- 6: Redis 4.0 memory edition (standard architecture).
+- 7: Redis 4.0 memory edition (cluster architecture).
+- 8: Redis 5.0 memory edition (standard architecture).
+- 9: Redis 5.0 memory edition (cluster architecture).
+- 15: Redis 6.2 memory edition (standard architecture).
+- 16: Redis 6.2 memory edition (cluster architecture).
+- 17: Redis 7.0 memory edition (standard architecture).
+- 18: Redis 7.0 memory edition (cluster architecture).
+- 200: Memcached 1.6 memory edition (cluster architecture).
  * @method void setTypeId(integer $TypeId) Set Instance type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
-- 6: Redis 4.0 Memory Edition (standard architecture).
-- 7: Redis 4.0 Memory Edition (cluster architecture).
-- 8: Redis 5.0 Memory Edition (standard architecture).
-- 9: Redis 5.0 Memory Edition (cluster architecture).
-- 15: Redis 6.2 Memory Edition (standard architecture).
-- 16: Redis 6.2 Memory Edition (cluster architecture).
-- 17: Redis 7.0 Memory Edition (standard architecture).
-- 18: Redis 7.0 Memory Edition (cluster architecture).
+
+- 2: Redis 2.8 memory edition (standard architecture).
+- 6: Redis 4.0 memory edition (standard architecture).
+- 7: Redis 4.0 memory edition (cluster architecture).
+- 8: Redis 5.0 memory edition (standard architecture).
+- 9: Redis 5.0 memory edition (cluster architecture).
+- 15: Redis 6.2 memory edition (standard architecture).
+- 16: Redis 6.2 memory edition (cluster architecture).
+- 17: Redis 7.0 memory edition (standard architecture).
+- 18: Redis 7.0 memory edition (cluster architecture).
+- 200: Memcached 1.6 memory edition (cluster architecture).
  * @method integer getMemSize() Obtain Memory capacity in MB, which must be a multiple of 1,024. It is subject to the purchasable specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
 If `TypeId` indicates the standard architecture, `MemSize` indicates the total memory capacity of an instance; if `TypeId` indicates the cluster architecture, `MemSize` indicates the memory capacity per shard.
  * @method void setMemSize(integer $MemSize) Set Memory capacity in MB, which must be a multiple of 1,024. It is subject to the purchasable specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
@@ -81,15 +85,17 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
 {
     /**
      * @var integer Instance type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
-- 6: Redis 4.0 Memory Edition (standard architecture).
-- 7: Redis 4.0 Memory Edition (cluster architecture).
-- 8: Redis 5.0 Memory Edition (standard architecture).
-- 9: Redis 5.0 Memory Edition (cluster architecture).
-- 15: Redis 6.2 Memory Edition (standard architecture).
-- 16: Redis 6.2 Memory Edition (cluster architecture).
-- 17: Redis 7.0 Memory Edition (standard architecture).
-- 18: Redis 7.0 Memory Edition (cluster architecture).
+
+- 2: Redis 2.8 memory edition (standard architecture).
+- 6: Redis 4.0 memory edition (standard architecture).
+- 7: Redis 4.0 memory edition (cluster architecture).
+- 8: Redis 5.0 memory edition (standard architecture).
+- 9: Redis 5.0 memory edition (cluster architecture).
+- 15: Redis 6.2 memory edition (standard architecture).
+- 16: Redis 6.2 memory edition (cluster architecture).
+- 17: Redis 7.0 memory edition (standard architecture).
+- 18: Redis 7.0 memory edition (cluster architecture).
+- 200: Memcached 1.6 memory edition (cluster architecture).
      */
     public $TypeId;
 
@@ -153,15 +159,17 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
 
     /**
      * @param integer $TypeId Instance type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
-- 6: Redis 4.0 Memory Edition (standard architecture).
-- 7: Redis 4.0 Memory Edition (cluster architecture).
-- 8: Redis 5.0 Memory Edition (standard architecture).
-- 9: Redis 5.0 Memory Edition (cluster architecture).
-- 15: Redis 6.2 Memory Edition (standard architecture).
-- 16: Redis 6.2 Memory Edition (cluster architecture).
-- 17: Redis 7.0 Memory Edition (standard architecture).
-- 18: Redis 7.0 Memory Edition (cluster architecture).
+
+- 2: Redis 2.8 memory edition (standard architecture).
+- 6: Redis 4.0 memory edition (standard architecture).
+- 7: Redis 4.0 memory edition (cluster architecture).
+- 8: Redis 5.0 memory edition (standard architecture).
+- 9: Redis 5.0 memory edition (cluster architecture).
+- 15: Redis 6.2 memory edition (standard architecture).
+- 16: Redis 6.2 memory edition (cluster architecture).
+- 17: Redis 7.0 memory edition (standard architecture).
+- 18: Redis 7.0 memory edition (cluster architecture).
+- 200: Memcached 1.6 memory edition (cluster architecture).
      * @param integer $MemSize Memory capacity in MB, which must be a multiple of 1,024. It is subject to the purchasable specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
 If `TypeId` indicates the standard architecture, `MemSize` indicates the total memory capacity of an instance; if `TypeId` indicates the cluster architecture, `MemSize` indicates the memory capacity per shard.
      * @param integer $GoodsNum Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).

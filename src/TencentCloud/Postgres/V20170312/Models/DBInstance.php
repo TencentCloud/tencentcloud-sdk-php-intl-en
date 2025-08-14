@@ -43,15 +43,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDBInstanceClass() Obtain Purchasable specification ID
  * @method void setDBInstanceClass(string $DBInstanceClass) Set Purchasable specification ID
  * @method string getDBMajorVersion() Obtain The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDBMajorVersion(string $DBMajorVersion) Set The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDBVersion() Obtain Number of the major PostgreSQL community version and minor version, such as 12.4, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
  * @method void setDBVersion(string $DBVersion) Set Number of the major PostgreSQL community version and minor version, such as 12.4, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
  * @method string getDBKernelVersion() Obtain PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDBKernelVersion(string $DBKernelVersion) Set PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDBInstanceType() Obtain Instance type, which includes:
 <li>primary: primary instance </li>
 <li>readonly: read-only instance</li>
@@ -103,29 +103,29 @@ Default value: 0
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method array getTagList() Obtain The information of tags associated with instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTagList(array $TagList) Set The information of tags associated with instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMasterDBInstanceId() Obtain Primary instance information, which is returned only when the instance is read-only.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMasterDBInstanceId(string $MasterDBInstanceId) Set Primary instance information, which is returned only when the instance is read-only.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getReadOnlyInstanceNum() Obtain Number of read-only instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReadOnlyInstanceNum(integer $ReadOnlyInstanceNum) Set Number of read-only instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getStatusInReadonlyGroup() Obtain The status of a read-only instance in a read-only group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatusInReadonlyGroup(string $StatusInReadonlyGroup) Set The status of a read-only instance in a read-only group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getOfflineTime() Obtain Offline time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOfflineTime(string $OfflineTime) Set Offline time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getDBNodeSet() Obtain Instance node information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDBNodeSet(array $DBNodeSet) Set Instance node information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getIsSupportTDE() Obtain Whether the instance supports TDE data encryption:
 <li>0: not supported</li>
 <li>1: supported</li>
@@ -236,7 +236,7 @@ class DBInstance extends AbstractModel
 
     /**
      * @var string The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DBMajorVersion;
 
@@ -247,7 +247,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * @var string PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DBKernelVersion;
 
@@ -334,37 +334,37 @@ Default value: 0
 
     /**
      * @var array The information of tags associated with instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TagList;
 
     /**
      * @var string Primary instance information, which is returned only when the instance is read-only.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MasterDBInstanceId;
 
     /**
      * @var integer Number of read-only instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReadOnlyInstanceNum;
 
     /**
      * @var string The status of a read-only instance in a read-only group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StatusInReadonlyGroup;
 
     /**
      * @var string Offline time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OfflineTime;
 
     /**
      * @var array Instance node information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DBNodeSet;
 
@@ -426,10 +426,10 @@ Default value: 0
      * @param integer $DBInstanceCpu Number of assigned CPUs
      * @param string $DBInstanceClass Purchasable specification ID
      * @param string $DBMajorVersion The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DBVersion Number of the major PostgreSQL community version and minor version, such as 12.4, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
      * @param string $DBKernelVersion PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DBInstanceType Instance type, which includes:
 <li>primary: primary instance </li>
 <li>readonly: read-only instance</li>
@@ -456,17 +456,17 @@ Default value: 0
      * @param integer $Uid Instance `Uid`
      * @param integer $ProjectId Project ID
      * @param array $TagList The information of tags associated with instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MasterDBInstanceId Primary instance information, which is returned only when the instance is read-only.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ReadOnlyInstanceNum Number of read-only instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $StatusInReadonlyGroup The status of a read-only instance in a read-only group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OfflineTime Offline time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $DBNodeSet Instance node information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $IsSupportTDE Whether the instance supports TDE data encryption:
 <li>0: not supported</li>
 <li>1: supported</li>

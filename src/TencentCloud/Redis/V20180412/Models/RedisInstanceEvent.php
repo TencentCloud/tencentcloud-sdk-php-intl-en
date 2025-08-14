@@ -21,137 +21,145 @@ use TencentCloud\Common\AbstractModel;
  * Instance event information.
  *
  * @method integer getID() Obtain Event ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setID(integer $ID) Set Event ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Instance ID.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceName() Obtain Instance name.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceName(string $InstanceName) Set Instance name.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getType() Obtain Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGrade() Obtain Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-- High
-- Middle
-- Low
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGrade(string $Grade) Set Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-- High
-- Middle
-- Low
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExecutionDate() Obtain Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExecutionDate(string $ExecutionDate) Set Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStartTime() Obtain Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) Set Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEndTime() Obtain Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(string $EndTime) Set Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLatestExecutionDate() Obtain The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLatestExecutionDate(string $LatestExecutionDate) Set The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
+ * @method string getType() Obtain Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
+ * @method void setType(string $Type) Set Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
+ * @method string getGrade() Obtain Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+ - Critical: critical.
+ - High: important.
+ - Middle: medium.
+ - Low.
+ * @method void setGrade(string $Grade) Set Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+ - Critical: critical.
+ - High: important.
+ - Middle: medium.
+ - Low.
+ * @method string getExecutionDate() Obtain Scheduled event execution date.
+ * @method void setExecutionDate(string $ExecutionDate) Set Scheduled event execution date.
+ * @method string getStartTime() Obtain Start date of scheduled event execution.
+ * @method void setStartTime(string $StartTime) Set Start date of scheduled event execution.
+ * @method string getEndTime() Obtain End date of scheduled event execution.
+ * @method void setEndTime(string $EndTime) Set End date of scheduled event execution.
+ * @method string getLatestExecutionDate() Obtain Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected.
+ * @method void setLatestExecutionDate(string $LatestExecutionDate) Set Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected.
+ * @method string getStatus() Obtain Current event status.
+ - Waiting: event not reached the execution date or not within the maintenance window.
+ - Running: event within the maintenance window and under maintenance execution.
+ - Finished: event with maintenance completed.
+- Canceled: Execution of the event is canceled.
+ * @method void setStatus(string $Status) Set Current event status.
+ - Waiting: event not reached the execution date or not within the maintenance window.
+ - Running: event within the maintenance window and under maintenance execution.
+ - Finished: event with maintenance completed.
+- Canceled: Execution of the event is canceled.
  * @method string getTaskEndTime() Obtain Completion time of the event execution task.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTaskEndTime(string $TaskEndTime) Set Completion time of the event execution task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEffectInfo() Obtain Impact of the event.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEffectInfo(string $EffectInfo) Set Impact of the event.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInitialExecutionDate() Obtain Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInitialExecutionDate(string $InitialExecutionDate) Set Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEffectInfo() Obtain Event impact information.
+ * @method void setEffectInfo(string $EffectInfo) Set Event impact information.
+ * @method string getInitialExecutionDate() Obtain Initial scheduled event execution date.
+ * @method void setInitialExecutionDate(string $InitialExecutionDate) Set Initial scheduled event execution date.
  */
 class RedisInstanceEvent extends AbstractModel
 {
     /**
      * @var integer Event ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ID;
 
     /**
-     * @var string Instance ID.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
-     * @var string Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
      */
     public $Type;
 
     /**
-     * @var string Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-- High
-- Middle
-- Low
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+ - Critical: critical.
+ - High: important.
+ - Middle: medium.
+ - Low.
      */
     public $Grade;
 
     /**
-     * @var string Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Scheduled event execution date.
      */
     public $ExecutionDate;
 
     /**
-     * @var string Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Start date of scheduled event execution.
      */
     public $StartTime;
 
     /**
-     * @var string Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string End date of scheduled event execution.
      */
     public $EndTime;
 
     /**
-     * @var string The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected.
      */
     public $LatestExecutionDate;
 
     /**
-     * @var string Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Current event status.
+ - Waiting: event not reached the execution date or not within the maintenance window.
+ - Running: event within the maintenance window and under maintenance execution.
+ - Finished: event with maintenance completed.
+- Canceled: Execution of the event is canceled.
      */
     public $Status;
 
     /**
      * @var string Completion time of the event execution task.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TaskEndTime;
 
     /**
-     * @var string Impact of the event.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Event impact information.
      */
     public $EffectInfo;
 
     /**
-     * @var string Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Initial scheduled event execution date.
      */
     public $InitialExecutionDate;
 
     /**
      * @param integer $ID Event ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId Instance ID.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceName Instance name.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Type Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Grade Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-- High
-- Middle
-- Low
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExecutionDate Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StartTime Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EndTime Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LatestExecutionDate The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceId Instance ID.
+     * @param string $InstanceName Instance name.
+     * @param string $Type Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
+     * @param string $Grade Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+ - Critical: critical.
+ - High: important.
+ - Middle: medium.
+ - Low.
+     * @param string $ExecutionDate Scheduled event execution date.
+     * @param string $StartTime Start date of scheduled event execution.
+     * @param string $EndTime End date of scheduled event execution.
+     * @param string $LatestExecutionDate Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected.
+     * @param string $Status Current event status.
+ - Waiting: event not reached the execution date or not within the maintenance window.
+ - Running: event within the maintenance window and under maintenance execution.
+ - Finished: event with maintenance completed.
+- Canceled: Execution of the event is canceled.
      * @param string $TaskEndTime Completion time of the event execution task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EffectInfo Impact of the event.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InitialExecutionDate Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EffectInfo Event impact information.
+     * @param string $InitialExecutionDate Initial scheduled event execution date.
      */
     function __construct()
     {

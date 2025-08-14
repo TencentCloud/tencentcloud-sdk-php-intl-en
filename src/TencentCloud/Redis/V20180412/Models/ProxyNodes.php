@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Proxy node information
  *
- * @method string getNodeId() Obtain Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNodeId(string $NodeId) Set Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getZoneId() Obtain AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneId(integer $ZoneId) Set AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNodeId() Obtain Node ID.
+ * @method void setNodeId(string $NodeId) Set Node ID.
+ * @method integer getZoneId() Obtain AZ ID.
+ * @method void setZoneId(integer $ZoneId) Set AZ ID.
  */
 class ProxyNodes extends AbstractModel
 {
     /**
-     * @var string Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Node ID.
      */
     public $NodeId;
 
     /**
-     * @var integer AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer AZ ID.
      */
     public $ZoneId;
 
     /**
-     * @param string $NodeId Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ZoneId AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NodeId Node ID.
+     * @param integer $ZoneId AZ ID.
      */
     function __construct()
     {

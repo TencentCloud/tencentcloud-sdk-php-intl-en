@@ -36,24 +36,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRedisShardNum(integer $RedisShardNum) Set Number of shards
  * @method integer getRedisShardSize() Obtain Shard memory size.
  * @method void setRedisShardSize(integer $RedisShardSize) Set Shard memory size.
- * @method integer getDiskSize() Obtain Instance disk size
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskSize(integer $DiskSize) Set Instance disk size
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDiskSize() Obtain Instance disk size.
+ * @method void setDiskSize(integer $DiskSize) Set Instance disk size.
  * @method string getEngine() Obtain Engine: Redis Community Edition, Tencent Cloud CKV.
  * @method void setEngine(string $Engine) Set Engine: Redis Community Edition, Tencent Cloud CKV.
  * @method string getRole() Obtain Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
  * @method void setRole(string $Role) Set Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
  * @method string getVip() Obtain Instance VIP
  * @method void setVip(string $Vip) Set Instance VIP
- * @method string getVip6() Obtain Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVip6(string $Vip6) Set Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIPv6() Obtain Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIPv6(string $IPv6) Set Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVip6() Obtain This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
+ * @method void setVip6(string $Vip6) Set This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
+ * @method string getIPv6() Obtain Internal parameter, which can be ignored.
+ * @method void setIPv6(string $IPv6) Set Internal parameter, which can be ignored.
  * @method integer getVpcID() Obtain VPC ID, such as `75101`.
  * @method void setVpcID(integer $VpcID) Set VPC ID, such as `75101`.
  * @method integer getVPort() Obtain Instance port
@@ -132,8 +126,7 @@ class Instances extends AbstractModel
     public $RedisShardSize;
 
     /**
-     * @var integer Instance disk size
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Instance disk size.
      */
     public $DiskSize;
 
@@ -153,14 +146,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Vip;
 
     /**
-     * @var string Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
      */
     public $Vip6;
 
     /**
-     * @var string Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Internal parameter, which can be ignored.
      */
     public $IPv6;
 
@@ -218,15 +209,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $RedisReplicasNum Number of replicas
      * @param integer $RedisShardNum Number of shards
      * @param integer $RedisShardSize Shard memory size.
-     * @param integer $DiskSize Instance disk size
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DiskSize Instance disk size.
      * @param string $Engine Engine: Redis Community Edition, Tencent Cloud CKV.
      * @param string $Role Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
      * @param string $Vip Instance VIP
-     * @param string $Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IPv6 Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Vip6 This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
+     * @param string $IPv6 Internal parameter, which can be ignored.
      * @param integer $VpcID VPC ID, such as `75101`.
      * @param integer $VPort Instance port
      * @param integer $Status Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>

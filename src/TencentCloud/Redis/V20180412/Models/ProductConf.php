@@ -78,14 +78,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableRepicaReadOnly(boolean $EnableRepicaReadOnly) Set Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
 - true: Supported.
 - false: Not supported.
- * @method boolean getEnableReplicaReadOnly() Obtain Whether the Read-Only Replica is supported.
-- true: Supported.
-- false: Not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setEnableReplicaReadOnly(boolean $EnableReplicaReadOnly) Set Whether the Read-Only Replica is supported.
-- true: Supported.
-- false: Not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method boolean getEnableReplicaReadOnly() Obtain Whether read-only replica is supported.
+ - true: read-only replica supported.
+ - false: not supported.
+ * @method void setEnableReplicaReadOnly(boolean $EnableReplicaReadOnly) Set Whether read-only replica is supported.
+ - true: read-only replica supported.
+ - false: not supported.
  */
 class ProductConf extends AbstractModel
 {
@@ -172,10 +170,9 @@ class ProductConf extends AbstractModel
     public $EnableRepicaReadOnly;
 
     /**
-     * @var boolean Whether the Read-Only Replica is supported.
-- true: Supported.
-- false: Not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var boolean Whether read-only replica is supported.
+ - true: read-only replica supported.
+ - false: not supported.
      */
     public $EnableReplicaReadOnly;
 
@@ -209,10 +206,9 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param boolean $EnableRepicaReadOnly Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
 - true: Supported.
 - false: Not supported.
-     * @param boolean $EnableReplicaReadOnly Whether the Read-Only Replica is supported.
-- true: Supported.
-- false: Not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param boolean $EnableReplicaReadOnly Whether read-only replica is supported.
+ - true: read-only replica supported.
+ - false: not supported.
      */
     function __construct()
     {

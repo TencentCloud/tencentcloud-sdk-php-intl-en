@@ -140,6 +140,8 @@ For more information on creating `KeyId`, see [Enabling TDE](https://www.tencent
 For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tencent.com/document/product/409/71749?from_cn_redirect=1).
  * @method void setKMSRegion(string $KMSRegion) Set The region where the KMS service is enabled. When `KMSRegion` is left empty, the current region will be selected by default.  If the current region does not support KMS, you must select another region that does.
 For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tencent.com/document/product/409/71749?from_cn_redirect=1).
+ * @method string getKMSClusterId() Obtain 
+ * @method void setKMSClusterId(string $KMSClusterId) Set 
  * @method string getDBEngine() Obtain Database engine, which supports:
 <li>`postgresql`: TencentDB for PostgreSQL</li>
 <li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
@@ -350,6 +352,11 @@ For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tence
     public $KMSRegion;
 
     /**
+     * @var string 
+     */
+    public $KMSClusterId;
+
+    /**
      * @var string Database engine, which supports:
 <li>`postgresql`: TencentDB for PostgreSQL</li>
 <li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
@@ -447,6 +454,7 @@ Default value: 0See [Overview of Data Transparent Encryption](https://intl.cloud
 For more information on creating `KeyId`, see [Enabling TDE](https://www.tencentcloud.com/document/product/409/47762).
      * @param string $KMSRegion The region where the KMS service is enabled. When `KMSRegion` is left empty, the current region will be selected by default.  If the current region does not support KMS, you must select another region that does.
 For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tencent.com/document/product/409/71749?from_cn_redirect=1).
+     * @param string $KMSClusterId 
      * @param string $DBEngine Database engine, which supports:
 <li>`postgresql`: TencentDB for PostgreSQL</li>
 <li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
@@ -594,6 +602,10 @@ Default value: 0
 
         if (array_key_exists("KMSRegion",$param) and $param["KMSRegion"] !== null) {
             $this->KMSRegion = $param["KMSRegion"];
+        }
+
+        if (array_key_exists("KMSClusterId",$param) and $param["KMSClusterId"] !== null) {
+            $this->KMSClusterId = $param["KMSClusterId"];
         }
 
         if (array_key_exists("DBEngine",$param) and $param["DBEngine"] !== null) {

@@ -18,28 +18,28 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Available region information.
+ * Timestamp range within which second-level backup is missing
  *
- * @method string getRegion() Obtain Region
- * @method void setRegion(string $Region) Set Region
- * @method array getAvailableZones() Obtain AZ information
- * @method void setAvailableZones(array $AvailableZones) Set AZ information
+ * @method integer getStartTimeStamp() Obtain Start timestamp.
+ * @method void setStartTimeStamp(integer $StartTimeStamp) Set Start timestamp.
+ * @method integer getEndTimeStamp() Obtain End timestamp.
+ * @method void setEndTimeStamp(integer $EndTimeStamp) Set End timestamp.
  */
-class AvailableRegion extends AbstractModel
+class SecondLevelBackupMissingTimestamps extends AbstractModel
 {
     /**
-     * @var string Region
+     * @var integer Start timestamp.
      */
-    public $Region;
+    public $StartTimeStamp;
 
     /**
-     * @var array AZ information
+     * @var integer End timestamp.
      */
-    public $AvailableZones;
+    public $EndTimeStamp;
 
     /**
-     * @param string $Region Region
-     * @param array $AvailableZones AZ information
+     * @param integer $StartTimeStamp Start timestamp.
+     * @param integer $EndTimeStamp End timestamp.
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class AvailableRegion extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists("StartTimeStamp",$param) and $param["StartTimeStamp"] !== null) {
+            $this->StartTimeStamp = $param["StartTimeStamp"];
         }
 
-        if (array_key_exists("AvailableZones",$param) and $param["AvailableZones"] !== null) {
-            $this->AvailableZones = $param["AvailableZones"];
+        if (array_key_exists("EndTimeStamp",$param) and $param["EndTimeStamp"] !== null) {
+            $this->EndTimeStamp = $param["EndTimeStamp"];
         }
     }
 }

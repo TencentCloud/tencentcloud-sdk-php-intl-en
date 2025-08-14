@@ -21,121 +21,101 @@ use TencentCloud\Common\AbstractModel;
  * Sub-account information
  *
  * @method string getInstanceId() Obtain Instance ID.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getAccountName() Obtain Account name.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setAccountName(string $AccountName) Set Account name.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getRemark() Obtain Account description.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setRemark(string $Remark) Set Account description.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getPrivilege() Obtain Read/write permission policy.
+ * @method string getPrivilege() Obtain Read/Write permission policy.
 - r: read-only.
-- w: write-only.
+
+ - w: write-only.
 - rw: read/write.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setPrivilege(string $Privilege) Set Read/write permission policy.
+ * @method void setPrivilege(string $Privilege) Set Read/Write permission policy.
 - r: read-only.
-- w: write-only.
+
+ - w: write-only.
 - rw: read/write.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method array getReadonlyPolicy() Obtain Read-only routing policy.
-- master: primary node.
-- replication: secondary node.
-Note: This field may return null, indicating that no valid value can be obtained.
+ - master: primary node.
+ - replication: replica node.
  * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Read-only routing policy.
-- master: primary node.
-- replication: secondary node.
-Note: This field may return null, indicating that no valid value can be obtained.
+ - master: primary node.
+ - replication: replica node.
  * @method integer getStatus() Obtain Sub-account status.
-- 1: changing.
-- 2: valid.
-- 4: deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+ - 1: account under modification.
+ - 2: valid account.
+ - 4: account deleted.
  * @method void setStatus(integer $Status) Set Sub-account status.
-- 1: changing.
-- 2: valid.
-- 4: deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getCreateTime() Obtain Creation time.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Creation time.Note: This field may return null, indicating that no valid values can be obtained.
+ - 1: account under modification.
+ - 2: valid account.
+ - 4: account deleted.
+ * @method string getCreateTime() Obtain Creation time
+ * @method void setCreateTime(string $CreateTime) Set Creation time
  */
 class Account extends AbstractModel
 {
     /**
      * @var string Instance ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $InstanceId;
 
     /**
      * @var string Account name.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $AccountName;
 
     /**
      * @var string Account description.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Remark;
 
     /**
-     * @var string Read/write permission policy.
+     * @var string Read/Write permission policy.
 - r: read-only.
-- w: write-only.
+
+ - w: write-only.
 - rw: read/write.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Privilege;
 
     /**
      * @var array Read-only routing policy.
-- master: primary node.
-- replication: secondary node.
-Note: This field may return null, indicating that no valid value can be obtained.
+ - master: primary node.
+ - replication: replica node.
      */
     public $ReadonlyPolicy;
 
     /**
      * @var integer Sub-account status.
-- 1: changing.
-- 2: valid.
-- 4: deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+ - 1: account under modification.
+ - 2: valid account.
+ - 4: account deleted.
      */
     public $Status;
 
     /**
-     * @var string Creation time.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Creation time
      */
     public $CreateTime;
 
     /**
      * @param string $InstanceId Instance ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $AccountName Account name.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $Remark Account description.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Privilege Read/write permission policy.
+     * @param string $Privilege Read/Write permission policy.
 - r: read-only.
-- w: write-only.
+
+ - w: write-only.
 - rw: read/write.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param array $ReadonlyPolicy Read-only routing policy.
-- master: primary node.
-- replication: secondary node.
-Note: This field may return null, indicating that no valid value can be obtained.
+ - master: primary node.
+ - replication: replica node.
      * @param integer $Status Sub-account status.
-- 1: changing.
-- 2: valid.
-- 4: deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $CreateTime Creation time.Note: This field may return null, indicating that no valid values can be obtained.
+ - 1: account under modification.
+ - 2: valid account.
+ - 4: account deleted.
+     * @param string $CreateTime Creation time
      */
     function __construct()
     {

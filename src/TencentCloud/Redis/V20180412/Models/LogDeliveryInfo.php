@@ -20,62 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Log shipping information.
  *
- * @method boolean getEnabled() Obtain Whether log shipping is enabled. true: enabled; false: disabled.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setEnabled(boolean $Enabled) Set Whether log shipping is enabled. true: enabled; false: disabled.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getLogsetId() Obtain Logset ID.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setLogsetId(string $LogsetId) Set Logset ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method boolean getEnabled() Obtain Enabling status of log shipping. true: enabled; false: disabled.
+ * @method void setEnabled(boolean $Enabled) Set Enabling status of log shipping. true: enabled; false: disabled.
+ * @method string getLogsetId() Obtain Log set ID.
+ * @method void setLogsetId(string $LogsetId) Set Log set ID.
  * @method string getTopicId() Obtain Log topic ID.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setTopicId(string $TopicId) Set Log topic ID.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getLogRegion() Obtain Logset region
-
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setLogRegion(string $LogRegion) Set Logset region
-
-Note: This field may return null, indicating that no valid value can be obtained.
  */
 class LogDeliveryInfo extends AbstractModel
 {
     /**
-     * @var boolean Whether log shipping is enabled. true: enabled; false: disabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var boolean Enabling status of log shipping. true: enabled; false: disabled.
      */
     public $Enabled;
 
     /**
-     * @var string Logset ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Log set ID.
      */
     public $LogsetId;
 
     /**
      * @var string Log topic ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $TopicId;
 
     /**
      * @var string Logset region
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $LogRegion;
 
     /**
-     * @param boolean $Enabled Whether log shipping is enabled. true: enabled; false: disabled.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $LogsetId Logset ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param boolean $Enabled Enabling status of log shipping. true: enabled; false: disabled.
+     * @param string $LogsetId Log set ID.
      * @param string $TopicId Log topic ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $LogRegion Logset region
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

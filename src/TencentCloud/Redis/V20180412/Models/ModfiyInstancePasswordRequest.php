@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
  * @method string getOldPassword() Obtain Old password of an instance
  * @method void setOldPassword(string $OldPassword) Set Old password of an instance
- * @method string getPassword() Obtain New instance password, which has the following requirements:
-- It must contain 8-30 characters, preferably 12 or more.
-- It cannot start with a slash (/)
-- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
- * @method void setPassword(string $Password) Set New instance password, which has the following requirements:
-- It must contain 8-30 characters, preferably 12 or more.
-- It cannot start with a slash (/)
-- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
+ * @method string getPassword() Obtain New instance password. The password complexity requirements are as follows:
+ - It should contain 8 to 64 characters. 12 or more characters are recommended.
+ - It cannot start with a forward slash (/).
+ - It should contain at least two of the following types: lowercase letters (a–z), uppercase letters (A–Z), digits (0–9), and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
+ * @method void setPassword(string $Password) Set New instance password. The password complexity requirements are as follows:
+ - It should contain 8 to 64 characters. 12 or more characters are recommended.
+ - It cannot start with a forward slash (/).
+ - It should contain at least two of the following types: lowercase letters (a–z), uppercase letters (A–Z), digits (0–9), and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
  */
 class ModfiyInstancePasswordRequest extends AbstractModel
 {
@@ -46,20 +46,20 @@ class ModfiyInstancePasswordRequest extends AbstractModel
     public $OldPassword;
 
     /**
-     * @var string New instance password, which has the following requirements:
-- It must contain 8-30 characters, preferably 12 or more.
-- It cannot start with a slash (/)
-- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
+     * @var string New instance password. The password complexity requirements are as follows:
+ - It should contain 8 to 64 characters. 12 or more characters are recommended.
+ - It cannot start with a forward slash (/).
+ - It should contain at least two of the following types: lowercase letters (a–z), uppercase letters (A–Z), digits (0–9), and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
      */
     public $Password;
 
     /**
      * @param string $InstanceId Instance ID, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      * @param string $OldPassword Old password of an instance
-     * @param string $Password New instance password, which has the following requirements:
-- It must contain 8-30 characters, preferably 12 or more.
-- It cannot start with a slash (/)
-- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
+     * @param string $Password New instance password. The password complexity requirements are as follows:
+ - It should contain 8 to 64 characters. 12 or more characters are recommended.
+ - It cannot start with a forward slash (/).
+ - It should contain at least two of the following types: lowercase letters (a–z), uppercase letters (A–Z), digits (0–9), and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
      */
     function __construct()
     {

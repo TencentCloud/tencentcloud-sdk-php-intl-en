@@ -33,17 +33,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLocked() Obtain Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
  * @method void setLocked(integer $Locked) Set Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
  * @method integer getBackupSize() Obtain Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBackupSize(integer $BackupSize) Set Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getFullBackup() Obtain Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFullBackup(integer $FullBackup) Set Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getInstanceType() Obtain Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceType(integer $InstanceType) Set Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getInstanceName() Obtain Instance name
@@ -91,19 +85,16 @@ class RedisBackupSet extends AbstractModel
 
     /**
      * @var integer Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BackupSize;
 
     /**
      * @var integer Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FullBackup;
 
     /**
      * @var integer Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceType;
 
@@ -145,11 +136,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Remark Backup remarks
      * @param integer $Locked Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
      * @param integer $BackupSize Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $FullBackup Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $InstanceType Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Region The region where the local backup resides.

@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnabled(boolean $Enabled) Set Whether log shopping is enabled.
 - true: enabled.
 - false: disabled.
- * @method string getLogsetId() Obtain ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
- * @method void setLogsetId(string $LogsetId) Set ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
- * @method string getTopicId() Obtain ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
- * @method void setTopicId(string $TopicId) Set ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
- * @method string getLogsetName() Obtain Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name.
- * @method void setLogsetName(string $LogsetName) Set Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name.
- * @method string getTopicName() Obtain Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic.
- * @method void setTopicName(string $TopicName) Set Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic.
+ * @method string getLogsetId() Obtain ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
+ * @method void setLogsetId(string $LogsetId) Set ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
+ * @method string getTopicId() Obtain ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+ * @method string getLogsetName() Obtain Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
+ * @method void setLogsetName(string $LogsetName) Set Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
+ * @method string getTopicName() Obtain Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
+ * @method void setTopicName(string $TopicName) Set Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
  * @method string getLogRegion() Obtain Region where the logset is located. If it is not provided, the region where the instance is located will be used by default.
  * @method void setLogRegion(string $LogRegion) Set Region where the logset is located. If it is not provided, the region where the instance is located will be used by default.
  * @method integer getPeriod() Obtain Log storage duration. Default value: 30 days. Value range: 1 to 3600 days.
@@ -65,22 +65,22 @@ class ModifyInstanceLogDeliveryRequest extends AbstractModel
     public $Enabled;
 
     /**
-     * @var string ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+     * @var string ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
      */
     public $LogsetId;
 
     /**
-     * @var string ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+     * @var string ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
     /**
-     * @var string Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name.
+     * @var string Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
      */
     public $LogsetName;
 
     /**
-     * @var string Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic.
+     * @var string Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
      */
     public $TopicName;
 
@@ -105,10 +105,10 @@ class ModifyInstanceLogDeliveryRequest extends AbstractModel
      * @param boolean $Enabled Whether log shopping is enabled.
 - true: enabled.
 - false: disabled.
-     * @param string $LogsetId ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
-     * @param string $TopicId ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
-     * @param string $LogsetName Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name.
-     * @param string $TopicName Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic.
+     * @param string $LogsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
+     * @param string $TopicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+     * @param string $LogsetName Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
+     * @param string $TopicName Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
      * @param string $LogRegion Region where the logset is located. If it is not provided, the region where the instance is located will be used by default.
      * @param integer $Period Log storage duration. Default value: 30 days. Value range: 1 to 3600 days.
      * @param boolean $CreateIndex Whether to create an index when creating a log topic.

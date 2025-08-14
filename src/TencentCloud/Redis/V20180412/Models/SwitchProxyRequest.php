@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
  * @method string getProxyID() Obtain Proxy ID of an instance, which can be obtained through NodeId of the response parameter **Proxy** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
  * @method void setProxyID(string $ProxyID) Set Proxy ID of an instance, which can be obtained through NodeId of the response parameter **Proxy** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
+ * @method array getProxyIDList() Obtain Instance proxy ID list. Call the API [DescribeInstanceNodeInfo](https://www.tencentcloud.comom/document/product/239/48603?from_cn_redirect=1) to obtain IDs from **NodeId** in the **Proxy** response parameter.
+ * @method void setProxyIDList(array $ProxyIDList) Set Instance proxy ID list. Call the API [DescribeInstanceNodeInfo](https://www.tencentcloud.comom/document/product/239/48603?from_cn_redirect=1) to obtain IDs from **NodeId** in the **Proxy** response parameter.
  */
 class SwitchProxyRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class SwitchProxyRequest extends AbstractModel
     public $ProxyID;
 
     /**
+     * @var array Instance proxy ID list. Call the API [DescribeInstanceNodeInfo](https://www.tencentcloud.comom/document/product/239/48603?from_cn_redirect=1) to obtain IDs from **NodeId** in the **Proxy** response parameter.
+     */
+    public $ProxyIDList;
+
+    /**
      * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      * @param string $ProxyID Proxy ID of an instance, which can be obtained through NodeId of the response parameter **Proxy** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
+     * @param array $ProxyIDList Instance proxy ID list. Call the API [DescribeInstanceNodeInfo](https://www.tencentcloud.comom/document/product/239/48603?from_cn_redirect=1) to obtain IDs from **NodeId** in the **Proxy** response parameter.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class SwitchProxyRequest extends AbstractModel
 
         if (array_key_exists("ProxyID",$param) and $param["ProxyID"] !== null) {
             $this->ProxyID = $param["ProxyID"];
+        }
+
+        if (array_key_exists("ProxyIDList",$param) and $param["ProxyIDList"] !== null) {
+            $this->ProxyIDList = $param["ProxyIDList"];
         }
     }
 }

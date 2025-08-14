@@ -18,28 +18,20 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Available region information.
+ * RemoveReplicationGroup request structure.
  *
- * @method string getRegion() Obtain Region
- * @method void setRegion(string $Region) Set Region
- * @method array getAvailableZones() Obtain AZ information
- * @method void setAvailableZones(array $AvailableZones) Set AZ information
+ * @method string getGroupId() Obtain Replication group ID.
+ * @method void setGroupId(string $GroupId) Set Replication group ID.
  */
-class AvailableRegion extends AbstractModel
+class RemoveReplicationGroupRequest extends AbstractModel
 {
     /**
-     * @var string Region
+     * @var string Replication group ID.
      */
-    public $Region;
+    public $GroupId;
 
     /**
-     * @var array AZ information
-     */
-    public $AvailableZones;
-
-    /**
-     * @param string $Region Region
-     * @param array $AvailableZones AZ information
+     * @param string $GroupId Replication group ID.
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class AvailableRegion extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
-        }
-
-        if (array_key_exists("AvailableZones",$param) and $param["AvailableZones"] !== null) {
-            $this->AvailableZones = $param["AvailableZones"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

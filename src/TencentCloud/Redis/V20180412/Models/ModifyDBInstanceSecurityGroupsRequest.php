@@ -22,12 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() Obtain Database engine name, which is `redis` for this API.
  * @method void setProduct(string $Product) Set Database engine name, which is `redis` for this API.
- * @method array getSecurityGroupIds() Obtain Security group ID list. Replace it with a new one, which is an array of one or more security group IDs.
-- To configure a security group for an instance for the first time, bind the security group through the API [AssociateSecurityGroups](https://intl.cloud.tencent.com/document/product/239/41260?from_cn_redirect=1) first.
+ * @method array getSecurityGroupIds() Obtain Replaces with the new security group ID list, which is an array of one or more security group IDs.
+- To configure a security group for an instance for the first time, call the API [AssociateSecurityGroups](https://www.tencentcloud.comom/document/product/239/41260?from_cn_redirect=1) to bind a security group first.
 - To replace the security group, obtain the security group ID on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID list. Replace it with a new one, which is an array of one or more security group IDs.
-- To configure a security group for an instance for the first time, bind the security group through the API [AssociateSecurityGroups](https://intl.cloud.tencent.com/document/product/239/41260?from_cn_redirect=1) first.
+
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Replaces with the new security group ID list, which is an array of one or more security group IDs.
+- To configure a security group for an instance for the first time, call the API [AssociateSecurityGroups](https://www.tencentcloud.comom/document/product/239/41260?from_cn_redirect=1) to bind a security group first.
 - To replace the security group, obtain the security group ID on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
+
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
  * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
  * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
  */
@@ -39,9 +43,11 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var array Security group ID list. Replace it with a new one, which is an array of one or more security group IDs.
-- To configure a security group for an instance for the first time, bind the security group through the API [AssociateSecurityGroups](https://intl.cloud.tencent.com/document/product/239/41260?from_cn_redirect=1) first.
+     * @var array Replaces with the new security group ID list, which is an array of one or more security group IDs.
+- To configure a security group for an instance for the first time, call the API [AssociateSecurityGroups](https://www.tencentcloud.comom/document/product/239/41260?from_cn_redirect=1) to bind a security group first.
 - To replace the security group, obtain the security group ID on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
+
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
      */
     public $SecurityGroupIds;
 
@@ -52,9 +58,11 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 
     /**
      * @param string $Product Database engine name, which is `redis` for this API.
-     * @param array $SecurityGroupIds Security group ID list. Replace it with a new one, which is an array of one or more security group IDs.
-- To configure a security group for an instance for the first time, bind the security group through the API [AssociateSecurityGroups](https://intl.cloud.tencent.com/document/product/239/41260?from_cn_redirect=1) first.
+     * @param array $SecurityGroupIds Replaces with the new security group ID list, which is an array of one or more security group IDs.
+- To configure a security group for an instance for the first time, call the API [AssociateSecurityGroups](https://www.tencentcloud.comom/document/product/239/41260?from_cn_redirect=1) to bind a security group first.
 - To replace the security group, obtain the security group ID on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
+
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
      * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     function __construct()

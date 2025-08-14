@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method integer getProjectId() Obtain Project ID.
  * @method void setProjectId(integer $ProjectId) Set Project ID.
- * @method integer getRegionId() Obtain Region ID. <ul><li>1: Guangzhou;</li> <li>4: Shanghai;</li> <li>5: Hong Kong (China);</li> <li>7: Shanghai Finance;</li> <li>8: Beijing;</li> <li>9: Singapore;</li> <li>11: Shenzhen Finance;</li> <li>15: Western United States (Silicon Valley);</li> <li>16: Chengdu;</li> <li>17: Frankfurt;</li> <li>18: Seoul;</li> <li>19: Chongqing;</li> <li>21: Mumbai;</li> <li>22: Eastern United States (Virginia);</li> <li>23: Bangkok;</li> <li>25: Tokyo.</li></ul>
- * @method void setRegionId(integer $RegionId) Set Region ID. <ul><li>1: Guangzhou;</li> <li>4: Shanghai;</li> <li>5: Hong Kong (China);</li> <li>7: Shanghai Finance;</li> <li>8: Beijing;</li> <li>9: Singapore;</li> <li>11: Shenzhen Finance;</li> <li>15: Western United States (Silicon Valley);</li> <li>16: Chengdu;</li> <li>17: Frankfurt;</li> <li>18: Seoul;</li> <li>19: Chongqing;</li> <li>21: Mumbai;</li> <li>22: Eastern United States (Virginia);</li> <li>23: Bangkok;</li> <li>25: Tokyo.</li></ul>
+ * @method integer getRegionId() Obtain Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul>
+ * @method void setRegionId(integer $RegionId) Set Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul>
  * @method integer getZoneId() Obtain Zone ID.
  * @method void setZoneId(integer $ZoneId) Set Zone ID.
  * @method integer getVpcId() Obtain VPC ID, for example, 75101.
@@ -51,31 +51,35 @@ use TencentCloud\Common\AbstractModel;
  * @method float getSizeUsed() Obtain This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
  * @method void setSizeUsed(float $SizeUsed) Set This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
  * @method integer getType() Obtain Instance type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
-- 3: CKV 3.2 Memory Edition (standard architecture).
-- 4: CKV 3.2 Memory Edition (cluster architecture).
-- 5: Redis 2.8 Memory Edition (stand-alone).
-- 6: Redis 4.0 Memory Edition (standard architecture).
-- 7: Redis 4.0 Memory Edition (cluster architecture).
-- 8: Redis 5.0 Memory Edition (standard architecture).
-- 9: Redis 5.0 Memory Edition (cluster architecture).
-- 15: Redis 6.2 Memory Edition (standard architecture).
-- 16: Redis 6.2 Memory Edition (cluster architecture).
-- 17: Redis 7.0 Memory Edition (standard architecture).
-- 18: Redis 7.0 Memory Edition (cluster architecture).
+
+- 2: Redis 2.8 memory edition (standard architecture).
+- 3: CKV 3.2 memory edition (standard architecture).
+- 4: CKV 3.2 memory edition (cluster architecture).
+- 5: Redis 2.8 memory edition (standalone).
+- 6: Redis 4.0 memory edition (standard architecture).
+- 7: Redis 4.0 memory edition (cluster architecture).
+- 8: Redis 5.0 memory edition (standard architecture).
+- 9: Redis 5.0 memory edition (cluster architecture).
+- 15: Redis 6.2 memory edition (standard architecture).
+- 16: Redis 6.2 memory edition (cluster architecture).
+- 17: Redis 7.0 memory edition (standard architecture).
+- 18: Redis 7.0 memory edition (cluster architecture).
+- 200: Memcached 1.6 memory edition (cluster architecture).
  * @method void setType(integer $Type) Set Instance type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
-- 3: CKV 3.2 Memory Edition (standard architecture).
-- 4: CKV 3.2 Memory Edition (cluster architecture).
-- 5: Redis 2.8 Memory Edition (stand-alone).
-- 6: Redis 4.0 Memory Edition (standard architecture).
-- 7: Redis 4.0 Memory Edition (cluster architecture).
-- 8: Redis 5.0 Memory Edition (standard architecture).
-- 9: Redis 5.0 Memory Edition (cluster architecture).
-- 15: Redis 6.2 Memory Edition (standard architecture).
-- 16: Redis 6.2 Memory Edition (cluster architecture).
-- 17: Redis 7.0 Memory Edition (standard architecture).
-- 18: Redis 7.0 Memory Edition (cluster architecture).
+
+- 2: Redis 2.8 memory edition (standard architecture).
+- 3: CKV 3.2 memory edition (standard architecture).
+- 4: CKV 3.2 memory edition (cluster architecture).
+- 5: Redis 2.8 memory edition (standalone).
+- 6: Redis 4.0 memory edition (standard architecture).
+- 7: Redis 4.0 memory edition (cluster architecture).
+- 8: Redis 5.0 memory edition (standard architecture).
+- 9: Redis 5.0 memory edition (cluster architecture).
+- 15: Redis 6.2 memory edition (standard architecture).
+- 16: Redis 6.2 memory edition (cluster architecture).
+- 17: Redis 7.0 memory edition (standard architecture).
+- 18: Redis 7.0 memory edition (cluster architecture).
+- 200: Memcached 1.6 memory edition (cluster architecture).
  * @method integer getAutoRenewFlag() Obtain Whether the automatic renewal flag is set for an instance. <ul><li>1: set;</li> <li>0: not set.</li></ul>
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether the automatic renewal flag is set for an instance. <ul><li>1: set;</li> <li>0: not set.</li></ul>
  * @method string getDeadlineTime() Obtain Expiration time of a monthly subscription instance.
@@ -94,8 +98,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceTitle(string $InstanceTitle) Set Description of the instance running status, for example, running.
  * @method string getOfflineTime() Obtain Default termination time of isolated instances, for example, in the format of 2020-02-15 10:20:00. By default, a pay-as-you-go instance will be terminated after 2 hours of isolation, and a monthly subscription instance will be terminated after 7 days.
  * @method void setOfflineTime(string $OfflineTime) Set Default termination time of isolated instances, for example, in the format of 2020-02-15 10:20:00. By default, a pay-as-you-go instance will be terminated after 2 hours of isolation, and a monthly subscription instance will be terminated after 7 days.
- * @method integer getSubStatus() Obtain Sub-status returned for an instance in process.
- * @method void setSubStatus(integer $SubStatus) Set Sub-status returned for an instance in process.
+ * @method integer getSubStatus() Obtain Sub-status returned for the instance in the process.
+ - 0: disk read-write status.
+ - 1: disk read-only status because the upper limit is exceeded.
+ * @method void setSubStatus(integer $SubStatus) Set Sub-status returned for the instance in the process.
+ - 0: disk read-write status.
+ - 1: disk read-only status because the upper limit is exceeded.
  * @method array getTags() Obtain Anti-affinity tag.
  * @method void setTags(array $Tags) Set Anti-affinity tag.
  * @method array getInstanceNode() Obtain Instance node information.
@@ -112,116 +120,64 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCloseTime(string $CloseTime) Set Time when an instance starts to be isolated.
  * @method integer getSlaveReadWeight() Obtain Read weight of a secondary node.
  * @method void setSlaveReadWeight(integer $SlaveReadWeight) Set Read weight of a secondary node.
- * @method array getInstanceTags() Obtain Tag information associated with an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setInstanceTags(array $InstanceTags) Set Tag information associated with an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getInstanceTags() Obtain Information on tags associated with the instance.
+ * @method void setInstanceTags(array $InstanceTags) Set Information on tags associated with the instance.
  * @method string getProjectName() Obtain Project name
-
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setProjectName(string $ProjectName) Set Project name
-
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method boolean getNoAuth() Obtain Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setNoAuth(boolean $NoAuth) Set Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method boolean getNoAuth() Obtain Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul>
+ * @method void setNoAuth(boolean $NoAuth) Set Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul>
  * @method integer getClientLimit() Obtain Number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setClientLimit(integer $ClientLimit) Set Number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getDtsStatus() Obtain DTS status (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setDtsStatus(integer $DtsStatus) Set DTS status (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getNetLimit() Obtain Upper limit of the shard bandwidth. Unit: MB.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setNetLimit(integer $NetLimit) Set Upper limit of the shard bandwidth. Unit: MB.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getPasswordFree() Obtain Password-free instance flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setPasswordFree(integer $PasswordFree) Set Password-free instance flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getVip6() Obtain Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setVip6(string $Vip6) Set Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getDtsStatus() Obtain DTS status. (Internal parameter, which can be ignored.)
+ * @method void setDtsStatus(integer $DtsStatus) Set DTS status. (Internal parameter, which can be ignored.)
+ * @method integer getNetLimit() Obtain Shard bandwidth limit. Unit: MB.
+ * @method void setNetLimit(integer $NetLimit) Set Shard bandwidth limit. Unit: MB.
+ * @method integer getPasswordFree() Obtain Password-free instance flag. (Internal parameter, which can be ignored.)
+ * @method void setPasswordFree(integer $PasswordFree) Set Password-free instance flag. (Internal parameter, which can be ignored.)
+ * @method string getVip6() Obtain This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
+ * @method void setVip6(string $Vip6) Set This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
  * @method string getIPv6() Obtain Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setIPv6(string $IPv6) Set Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getReadOnly() Obtain Instance read-only flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setReadOnly(integer $ReadOnly) Set Instance read-only flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getReadOnly() Obtain Instance read-only flag. (Internal parameter, which can be ignored.)
+ * @method void setReadOnly(integer $ReadOnly) Set Instance read-only flag. (Internal parameter, which can be ignored.)
  * @method string getRemainBandwidthDuration() Obtain Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) Set Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getDiskSize() Obtain For Redis instances, ignore this parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setDiskSize(integer $DiskSize) Set For Redis instances, ignore this parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getMonitorVersion() Obtain Monitoring version. <ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li> <li>5s: 5-second granularity monitoring.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setMonitorVersion(string $MonitorVersion) Set Monitoring version. <ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li> <li>5s: 5-second granularity monitoring.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getDiskSize() Obtain For TencentDB for Redis® instances, ignore this parameter.
+ * @method void setDiskSize(integer $DiskSize) Set For TencentDB for Redis® instances, ignore this parameter.
+ * @method string getMonitorVersion() Obtain Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul>
+ * @method void setMonitorVersion(string $MonitorVersion) Set Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul>
  * @method integer getClientLimitMin() Obtain Minimum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setClientLimitMin(integer $ClientLimitMin) Set Minimum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method integer getClientLimitMax() Obtain Maximum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setClientLimitMax(integer $ClientLimitMax) Set Maximum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getNodeSet() Obtain Detailed node information of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setNodeSet(array $NodeSet) Set Detailed node information of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getRegion() Obtain Region information of an instance, for example, ap-guangzhou.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setRegion(string $Region) Set Region information of an instance, for example, ap-guangzhou.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getNodeSet() Obtain Node details of the instance.
+
+It is returned only for multi-AZ instances.
+ * @method void setNodeSet(array $NodeSet) Set Node details of the instance.
+
+It is returned only for multi-AZ instances.
+ * @method string getRegion() Obtain Region information on the instance. For example, ap-guangzhou.
+ * @method void setRegion(string $Region) Set Region information on the instance. For example, ap-guangzhou.
  * @method string getWanAddress() Obtain Public network address.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setWanAddress(string $WanAddress) Set Public network address.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getPolarisServer() Obtain Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setPolarisServer(string $PolarisServer) Set Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getRedisClusterId() Obtain CDC Redis cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setRedisClusterId(string $RedisClusterId) Set CDC Redis cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getPolarisServer() Obtain Polaris service address for internal use.
+ * @method void setPolarisServer(string $PolarisServer) Set Polaris service address for internal use.
+ * @method string getRedisClusterId() Obtain CDC cluster ID of TencentDB for Redis®.
+ * @method void setRedisClusterId(string $RedisClusterId) Set CDC cluster ID of TencentDB for Redis®.
  * @method string getDedicatedClusterId() Obtain CDC cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setDedicatedClusterId(string $DedicatedClusterId) Set CDC cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getProductVersion() Obtain Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setProductVersion(string $ProductVersion) Set Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getCurrentProxyVersion() Obtain Current Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCurrentProxyVersion(string $CurrentProxyVersion) Set Current Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getCurrentRedisVersion() Obtain Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCurrentRedisVersion(string $CurrentRedisVersion) Set Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getUpgradeProxyVersion() Obtain Upgradable Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setUpgradeProxyVersion(string $UpgradeProxyVersion) Set Upgradable Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getUpgradeRedisVersion() Obtain Upgradable Cache minor version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) Set Upgradable Cache minor version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getBackupMode() Obtain Backup mode. SecondLevelBackup: second-level backup; NormalLevelBackup: normal backup.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setBackupMode(string $BackupMode) Set Backup mode. SecondLevelBackup: second-level backup; NormalLevelBackup: normal backup.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getProductVersion() Obtain Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul>
+ * @method void setProductVersion(string $ProductVersion) Set Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul>
+ * @method string getCurrentProxyVersion() Obtain Current proxy version of the instance.
+ * @method void setCurrentProxyVersion(string $CurrentProxyVersion) Set Current proxy version of the instance.
+ * @method string getCurrentRedisVersion() Obtain Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed.
+ * @method void setCurrentRedisVersion(string $CurrentRedisVersion) Set Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed.
+ * @method string getUpgradeProxyVersion() Obtain Upgradable proxy version for the instance.
+ * @method void setUpgradeProxyVersion(string $UpgradeProxyVersion) Set Upgradable proxy version for the instance.
+ * @method string getUpgradeRedisVersion() Obtain Upgradable cache minor version for the instance.
+ * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) Set Upgradable cache minor version for the instance.
+ * @method string getBackupMode() Obtain Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
+ * @method void setBackupMode(string $BackupMode) Set Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
  */
 class InstanceSet extends AbstractModel
 {
@@ -247,7 +203,7 @@ class InstanceSet extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer Region ID. <ul><li>1: Guangzhou;</li> <li>4: Shanghai;</li> <li>5: Hong Kong (China);</li> <li>7: Shanghai Finance;</li> <li>8: Beijing;</li> <li>9: Singapore;</li> <li>11: Shenzhen Finance;</li> <li>15: Western United States (Silicon Valley);</li> <li>16: Chengdu;</li> <li>17: Frankfurt;</li> <li>18: Seoul;</li> <li>19: Chongqing;</li> <li>21: Mumbai;</li> <li>22: Eastern United States (Virginia);</li> <li>23: Bangkok;</li> <li>25: Tokyo.</li></ul>
+     * @var integer Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul>
      */
     public $RegionId;
 
@@ -299,18 +255,20 @@ class InstanceSet extends AbstractModel
 
     /**
      * @var integer Instance type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
-- 3: CKV 3.2 Memory Edition (standard architecture).
-- 4: CKV 3.2 Memory Edition (cluster architecture).
-- 5: Redis 2.8 Memory Edition (stand-alone).
-- 6: Redis 4.0 Memory Edition (standard architecture).
-- 7: Redis 4.0 Memory Edition (cluster architecture).
-- 8: Redis 5.0 Memory Edition (standard architecture).
-- 9: Redis 5.0 Memory Edition (cluster architecture).
-- 15: Redis 6.2 Memory Edition (standard architecture).
-- 16: Redis 6.2 Memory Edition (cluster architecture).
-- 17: Redis 7.0 Memory Edition (standard architecture).
-- 18: Redis 7.0 Memory Edition (cluster architecture).
+
+- 2: Redis 2.8 memory edition (standard architecture).
+- 3: CKV 3.2 memory edition (standard architecture).
+- 4: CKV 3.2 memory edition (cluster architecture).
+- 5: Redis 2.8 memory edition (standalone).
+- 6: Redis 4.0 memory edition (standard architecture).
+- 7: Redis 4.0 memory edition (cluster architecture).
+- 8: Redis 5.0 memory edition (standard architecture).
+- 9: Redis 5.0 memory edition (cluster architecture).
+- 15: Redis 6.2 memory edition (standard architecture).
+- 16: Redis 6.2 memory edition (cluster architecture).
+- 17: Redis 7.0 memory edition (standard architecture).
+- 18: Redis 7.0 memory edition (cluster architecture).
+- 200: Memcached 1.6 memory edition (cluster architecture).
      */
     public $Type;
 
@@ -360,7 +318,9 @@ class InstanceSet extends AbstractModel
     public $OfflineTime;
 
     /**
-     * @var integer Sub-status returned for an instance in process.
+     * @var integer Sub-status returned for the instance in the process.
+ - 0: disk read-write status.
+ - 1: disk read-only status because the upper limit is exceeded.
      */
     public $SubStatus;
 
@@ -405,165 +365,139 @@ class InstanceSet extends AbstractModel
     public $SlaveReadWeight;
 
     /**
-     * @var array Tag information associated with an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array Information on tags associated with the instance.
      */
     public $InstanceTags;
 
     /**
      * @var string Project name
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ProjectName;
 
     /**
-     * @var boolean Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var boolean Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul>
      */
     public $NoAuth;
 
     /**
      * @var integer Number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ClientLimit;
 
     /**
-     * @var integer DTS status (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer DTS status. (Internal parameter, which can be ignored.)
      */
     public $DtsStatus;
 
     /**
-     * @var integer Upper limit of the shard bandwidth. Unit: MB.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Shard bandwidth limit. Unit: MB.
      */
     public $NetLimit;
 
     /**
-     * @var integer Password-free instance flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Password-free instance flag. (Internal parameter, which can be ignored.)
      */
     public $PasswordFree;
 
     /**
-     * @var string Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
      */
     public $Vip6;
 
     /**
      * @var string Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $IPv6;
 
     /**
-     * @var integer Instance read-only flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Instance read-only flag. (Internal parameter, which can be ignored.)
      */
     public $ReadOnly;
 
     /**
      * @var string Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $RemainBandwidthDuration;
 
     /**
-     * @var integer For Redis instances, ignore this parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer For TencentDB for Redis® instances, ignore this parameter.
      */
     public $DiskSize;
 
     /**
-     * @var string Monitoring version. <ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li> <li>5s: 5-second granularity monitoring.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul>
      */
     public $MonitorVersion;
 
     /**
      * @var integer Minimum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ClientLimitMin;
 
     /**
      * @var integer Maximum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ClientLimitMax;
 
     /**
-     * @var array Detailed node information of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array Node details of the instance.
+
+It is returned only for multi-AZ instances.
      */
     public $NodeSet;
 
     /**
-     * @var string Region information of an instance, for example, ap-guangzhou.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Region information on the instance. For example, ap-guangzhou.
      */
     public $Region;
 
     /**
      * @var string Public network address.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $WanAddress;
 
     /**
-     * @var string Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Polaris service address for internal use.
      */
     public $PolarisServer;
 
     /**
-     * @var string CDC Redis cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string CDC cluster ID of TencentDB for Redis®.
      */
     public $RedisClusterId;
 
     /**
      * @var string CDC cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $DedicatedClusterId;
 
     /**
-     * @var string Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul>
      */
     public $ProductVersion;
 
     /**
-     * @var string Current Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Current proxy version of the instance.
      */
     public $CurrentProxyVersion;
 
     /**
-     * @var string Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed.
      */
     public $CurrentRedisVersion;
 
     /**
-     * @var string Upgradable Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Upgradable proxy version for the instance.
      */
     public $UpgradeProxyVersion;
 
     /**
-     * @var string Upgradable Cache minor version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Upgradable cache minor version for the instance.
      */
     public $UpgradeRedisVersion;
 
     /**
-     * @var string Backup mode. SecondLevelBackup: second-level backup; NormalLevelBackup: normal backup.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
      */
     public $BackupMode;
 
@@ -573,7 +507,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $Appid App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
 
      * @param integer $ProjectId Project ID.
-     * @param integer $RegionId Region ID. <ul><li>1: Guangzhou;</li> <li>4: Shanghai;</li> <li>5: Hong Kong (China);</li> <li>7: Shanghai Finance;</li> <li>8: Beijing;</li> <li>9: Singapore;</li> <li>11: Shenzhen Finance;</li> <li>15: Western United States (Silicon Valley);</li> <li>16: Chengdu;</li> <li>17: Frankfurt;</li> <li>18: Seoul;</li> <li>19: Chongqing;</li> <li>21: Mumbai;</li> <li>22: Eastern United States (Virginia);</li> <li>23: Bangkok;</li> <li>25: Tokyo.</li></ul>
+     * @param integer $RegionId Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul>
      * @param integer $ZoneId Zone ID.
      * @param integer $VpcId VPC ID, for example, 75101.
      * @param integer $SubnetId ID of the subnet under VPC, for example, 46315.
@@ -584,18 +518,20 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param float $Size Instance memory capacity. Unit: MB (1 MB = 1024 KB).
      * @param float $SizeUsed This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
      * @param integer $Type Instance type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
-- 3: CKV 3.2 Memory Edition (standard architecture).
-- 4: CKV 3.2 Memory Edition (cluster architecture).
-- 5: Redis 2.8 Memory Edition (stand-alone).
-- 6: Redis 4.0 Memory Edition (standard architecture).
-- 7: Redis 4.0 Memory Edition (cluster architecture).
-- 8: Redis 5.0 Memory Edition (standard architecture).
-- 9: Redis 5.0 Memory Edition (cluster architecture).
-- 15: Redis 6.2 Memory Edition (standard architecture).
-- 16: Redis 6.2 Memory Edition (cluster architecture).
-- 17: Redis 7.0 Memory Edition (standard architecture).
-- 18: Redis 7.0 Memory Edition (cluster architecture).
+
+- 2: Redis 2.8 memory edition (standard architecture).
+- 3: CKV 3.2 memory edition (standard architecture).
+- 4: CKV 3.2 memory edition (cluster architecture).
+- 5: Redis 2.8 memory edition (standalone).
+- 6: Redis 4.0 memory edition (standard architecture).
+- 7: Redis 4.0 memory edition (cluster architecture).
+- 8: Redis 5.0 memory edition (standard architecture).
+- 9: Redis 5.0 memory edition (cluster architecture).
+- 15: Redis 6.2 memory edition (standard architecture).
+- 16: Redis 6.2 memory edition (cluster architecture).
+- 17: Redis 7.0 memory edition (standard architecture).
+- 18: Redis 7.0 memory edition (cluster architecture).
+- 200: Memcached 1.6 memory edition (cluster architecture).
      * @param integer $AutoRenewFlag Whether the automatic renewal flag is set for an instance. <ul><li>1: set;</li> <li>0: not set.</li></ul>
      * @param string $DeadlineTime Expiration time of a monthly subscription instance.
      * @param string $Engine Engine. Valid values: Redis Community Edition and Tencent Cloud CKV.
@@ -605,7 +541,9 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $BillingMode Billing mode. Only pay-as-you-go billing is supported.
      * @param string $InstanceTitle Description of the instance running status, for example, running.
      * @param string $OfflineTime Default termination time of isolated instances, for example, in the format of 2020-02-15 10:20:00. By default, a pay-as-you-go instance will be terminated after 2 hours of isolation, and a monthly subscription instance will be terminated after 7 days.
-     * @param integer $SubStatus Sub-status returned for an instance in process.
+     * @param integer $SubStatus Sub-status returned for the instance in the process.
+ - 0: disk read-write status.
+ - 1: disk read-only status because the upper limit is exceeded.
      * @param array $Tags Anti-affinity tag.
      * @param array $InstanceNode Instance node information.
      * @param integer $RedisShardSize Shard size.
@@ -614,61 +552,35 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $PriceId Billing ID.
      * @param string $CloseTime Time when an instance starts to be isolated.
      * @param integer $SlaveReadWeight Read weight of a secondary node.
-     * @param array $InstanceTags Tag information associated with an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $InstanceTags Information on tags associated with the instance.
      * @param string $ProjectName Project name
-
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param boolean $NoAuth Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param boolean $NoAuth Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul>
      * @param integer $ClientLimit Number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $DtsStatus DTS status (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $NetLimit Upper limit of the shard bandwidth. Unit: MB.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $PasswordFree Password-free instance flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Vip6 Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $DtsStatus DTS status. (Internal parameter, which can be ignored.)
+     * @param integer $NetLimit Shard bandwidth limit. Unit: MB.
+     * @param integer $PasswordFree Password-free instance flag. (Internal parameter, which can be ignored.)
+     * @param string $Vip6 This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
      * @param string $IPv6 Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $ReadOnly Instance read-only flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $ReadOnly Instance read-only flag. (Internal parameter, which can be ignored.)
      * @param string $RemainBandwidthDuration Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $DiskSize For Redis instances, ignore this parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $MonitorVersion Monitoring version. <ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li> <li>5s: 5-second granularity monitoring.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $DiskSize For TencentDB for Redis® instances, ignore this parameter.
+     * @param string $MonitorVersion Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul>
      * @param integer $ClientLimitMin Minimum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $ClientLimitMax Maximum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $NodeSet Detailed node information of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Region Region information of an instance, for example, ap-guangzhou.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $NodeSet Node details of the instance.
+
+It is returned only for multi-AZ instances.
+     * @param string $Region Region information on the instance. For example, ap-guangzhou.
      * @param string $WanAddress Public network address.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $PolarisServer Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $RedisClusterId CDC Redis cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $PolarisServer Polaris service address for internal use.
+     * @param string $RedisClusterId CDC cluster ID of TencentDB for Redis®.
      * @param string $DedicatedClusterId CDC cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $ProductVersion Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $CurrentProxyVersion Current Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $CurrentRedisVersion Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $UpgradeProxyVersion Upgradable Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $UpgradeRedisVersion Upgradable Cache minor version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $BackupMode Backup mode. SecondLevelBackup: second-level backup; NormalLevelBackup: normal backup.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $ProductVersion Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul>
+     * @param string $CurrentProxyVersion Current proxy version of the instance.
+     * @param string $CurrentRedisVersion Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed.
+     * @param string $UpgradeProxyVersion Upgradable proxy version for the instance.
+     * @param string $UpgradeRedisVersion Upgradable cache minor version for the instance.
+     * @param string $BackupMode Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
      */
     function __construct()
     {

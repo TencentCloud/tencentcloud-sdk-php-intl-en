@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceMonitorTopNCmd request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
  * @method integer getSpanType() Obtain Time range.
 - 1: real-time.
 - 2: last 30 minutes.
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstanceMonitorTopNCmdRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
@@ -50,7 +50,7 @@ class DescribeInstanceMonitorTopNCmdRequest extends AbstractModel
     public $SpanType;
 
     /**
-     * @param string $InstanceId Instance ID.
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      * @param integer $SpanType Time range.
 - 1: real-time.
 - 2: last 30 minutes.

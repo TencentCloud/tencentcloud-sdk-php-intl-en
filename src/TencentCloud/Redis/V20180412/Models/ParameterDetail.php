@@ -36,18 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedReboot(integer $NeedReboot) Set Whether to restart the database for the modified parameters to take effect
 - `0`: No restart.
 - `1`: Restart required.
- * @method string getMax() Obtain Maximum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMax(string $Max) Set Maximum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMin() Obtain Minimum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMin(string $Min) Set Minimum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getEnumValue() Obtain Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnumValue(array $EnumValue) Set Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMax() Obtain Maximum parameter value allowed.
+ * @method void setMax(string $Max) Set Maximum parameter value allowed.
+ * @method string getMin() Obtain Minimum parameter value allowed.
+ * @method void setMin(string $Min) Set Minimum parameter value allowed.
+ * @method array getEnumValue() Obtain Optional enumeration values of a parameter. For non-enumeration parameters, it is empty.
+ * @method void setEnumValue(array $EnumValue) Set Optional enumeration values of a parameter. For non-enumeration parameters, it is empty.
  */
 class ParameterDetail extends AbstractModel
 {
@@ -84,20 +78,17 @@ class ParameterDetail extends AbstractModel
     public $NeedReboot;
 
     /**
-     * @var string Maximum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Maximum parameter value allowed.
      */
     public $Max;
 
     /**
-     * @var string Minimum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Minimum parameter value allowed.
      */
     public $Min;
 
     /**
-     * @var array Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Optional enumeration values of a parameter. For non-enumeration parameters, it is empty.
      */
     public $EnumValue;
 
@@ -110,12 +101,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $NeedReboot Whether to restart the database for the modified parameters to take effect
 - `0`: No restart.
 - `1`: Restart required.
-     * @param string $Max Maximum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Min Minimum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Max Maximum parameter value allowed.
+     * @param string $Min Minimum parameter value allowed.
+     * @param array $EnumValue Optional enumeration values of a parameter. For non-enumeration parameters, it is empty.
      */
     function __construct()
     {

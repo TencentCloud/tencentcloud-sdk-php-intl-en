@@ -38,10 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMax(string $Max) Set Maximum value of the parameter
  * @method integer getStatus() Obtain Parameter status. 1: modifying; 2: modified
  * @method void setStatus(integer $Status) Set Parameter status. 1: modifying; 2: modified
- * @method string getUnit() Obtain Parameter unit
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUnit(string $Unit) Set Parameter unit
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUnit() Obtain Parameter unit.
+ * @method void setUnit(string $Unit) Set Parameter unit.
  */
 class InstanceIntegerParam extends AbstractModel
 {
@@ -91,8 +89,7 @@ class InstanceIntegerParam extends AbstractModel
     public $Status;
 
     /**
-     * @var string Parameter unit
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Parameter unit.
      */
     public $Unit;
 
@@ -106,8 +103,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Min Minimum value of the parameter
      * @param string $Max Maximum value of the parameter
      * @param integer $Status Parameter status. 1: modifying; 2: modified
-     * @param string $Unit Parameter unit
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Unit Parameter unit.
      */
     function __construct()
     {
