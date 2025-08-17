@@ -52,8 +52,6 @@ Parameter value is not allowed to be 7,380,86.
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
  * @method void setVerifyCode(string $VerifyCode) Set VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
- * @method string getExtended() Obtain Extension field, which is left empty by default.
- * @method void setExtended(string $Extended) Set Extension field, which is left empty by default.
  * @method string getTradeOne() Obtain Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
 such as "kghy_01".
  * @method void setTradeOne(string $TradeOne) Set Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
@@ -62,6 +60,8 @@ such as "kghy_01".
 such as "kghy_0101"
  * @method void setTradeTwo(string $TradeTwo) Set Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
 such as "kghy_0101"
+ * @method string getExtended() Obtain Extension field, which is left empty by default.
+ * @method void setExtended(string $Extended) Set Extension field, which is left empty by default.
  */
 class CreateAccountRequest extends AbstractModel
 {
@@ -114,11 +114,6 @@ Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/
     public $VerifyCode;
 
     /**
-     * @var string Extension field, which is left empty by default.
-     */
-    public $Extended;
-
-    /**
      * @var string Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
 such as "kghy_01".
      */
@@ -129,6 +124,11 @@ such as "kghy_01".
 such as "kghy_0101"
      */
     public $TradeTwo;
+
+    /**
+     * @var string Extension field, which is left empty by default.
+     */
+    public $Extended;
 
     /**
      * @param string $AccountType Account type of a new customer.
@@ -147,11 +147,11 @@ Parameter value is not allowed to be 7,380,86.
      * @param string $Area Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
      * @param string $VerifyCode VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
-     * @param string $Extended Extension field, which is left empty by default.
      * @param string $TradeOne Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
 such as "kghy_01".
      * @param string $TradeTwo Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
 such as "kghy_0101"
+     * @param string $Extended Extension field, which is left empty by default.
      */
     function __construct()
     {
@@ -198,16 +198,16 @@ such as "kghy_0101"
             $this->VerifyCode = $param["VerifyCode"];
         }
 
-        if (array_key_exists("Extended",$param) and $param["Extended"] !== null) {
-            $this->Extended = $param["Extended"];
-        }
-
         if (array_key_exists("TradeOne",$param) and $param["TradeOne"] !== null) {
             $this->TradeOne = $param["TradeOne"];
         }
 
         if (array_key_exists("TradeTwo",$param) and $param["TradeTwo"] !== null) {
             $this->TradeTwo = $param["TradeTwo"];
+        }
+
+        if (array_key_exists("Extended",$param) and $param["Extended"] !== null) {
+            $this->Extended = $param["Extended"];
         }
     }
 }
