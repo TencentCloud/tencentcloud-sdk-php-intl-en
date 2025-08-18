@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Configuration options for MiniOS of the CHC deployment network
  *
-
+ * @method string getMiniOsType() Obtain 
+ * @method void setMiniOsType(string $MiniOsType) Set 
+ * @method string getBootType() Obtain 
+ * @method void setBootType(string $BootType) Set 
+ * @method string getBootFile() Obtain 
+ * @method void setBootFile(string $BootFile) Set 
+ * @method string getNextServerAddress() Obtain 
+ * @method void setNextServerAddress(string $NextServerAddress) Set 
  */
 class ChcDeployExtraConfig extends AbstractModel
 {
-
+    /**
+     * @var string 
+     */
+    public $MiniOsType;
 
     /**
+     * @var string 
+     */
+    public $BootType;
 
+    /**
+     * @var string 
+     */
+    public $BootFile;
+
+    /**
+     * @var string 
+     */
+    public $NextServerAddress;
+
+    /**
+     * @param string $MiniOsType 
+     * @param string $BootType 
+     * @param string $BootFile 
+     * @param string $NextServerAddress 
      */
     function __construct()
     {
@@ -42,6 +70,20 @@ class ChcDeployExtraConfig extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MiniOsType",$param) and $param["MiniOsType"] !== null) {
+            $this->MiniOsType = $param["MiniOsType"];
+        }
 
+        if (array_key_exists("BootType",$param) and $param["BootType"] !== null) {
+            $this->BootType = $param["BootType"];
+        }
+
+        if (array_key_exists("BootFile",$param) and $param["BootFile"] !== null) {
+            $this->BootFile = $param["BootFile"];
+        }
+
+        if (array_key_exists("NextServerAddress",$param) and $param["NextServerAddress"] !== null) {
+            $this->NextServerAddress = $param["NextServerAddress"];
+        }
     }
 }
