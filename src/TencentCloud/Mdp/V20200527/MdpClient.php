@@ -33,6 +33,7 @@ use TencentCloud\Mdp\V20200527\Models as Models;
  * @method Models\CreateStreamPackageSSAIChannelResponse CreateStreamPackageSSAIChannel(Models\CreateStreamPackageSSAIChannelRequest $req) CreateStreamPackageSSAIChannel
  * @method Models\CreateStreamPackageSourceResponse CreateStreamPackageSource(Models\CreateStreamPackageSourceRequest $req) Create channel linear assembly Source.
  * @method Models\CreateStreamPackageSourceLocationResponse CreateStreamPackageSourceLocation(Models\CreateStreamPackageSourceLocationRequest $req) Create Linear Assembly SourceLocation.
+ * @method Models\CreateStreamPackageVodRemuxTaskResponse CreateStreamPackageVodRemuxTask(Models\CreateStreamPackageVodRemuxTaskRequest $req) Create VodRemuxTask
  * @method Models\DeleteStreamPackageChannelEndpointsResponse DeleteStreamPackageChannelEndpoints(Models\DeleteStreamPackageChannelEndpointsRequest $req) This API is used to delete endpoints from a StreamPackage channel in batches.
  * @method Models\DeleteStreamPackageChannelsResponse DeleteStreamPackageChannels(Models\DeleteStreamPackageChannelsRequest $req) This API is used to delete StreamPackage channels in batches.
  * @method Models\DeleteStreamPackageHarvestJobResponse DeleteStreamPackageHarvestJob(Models\DeleteStreamPackageHarvestJobRequest $req) Delete HarvestJob.
@@ -44,6 +45,8 @@ use TencentCloud\Mdp\V20200527\Models as Models;
  * @method Models\DeleteStreamPackageSSAIChannelResponse DeleteStreamPackageSSAIChannel(Models\DeleteStreamPackageSSAIChannelRequest $req) DeleteStreamPackageSSAIChannel
  * @method Models\DeleteStreamPackageSourceResponse DeleteStreamPackageSource(Models\DeleteStreamPackageSourceRequest $req) Delete channel linear assembly Source.
  * @method Models\DeleteStreamPackageSourceLocationResponse DeleteStreamPackageSourceLocation(Models\DeleteStreamPackageSourceLocationRequest $req) Batch delete media packaging SourceLocation.
+ * @method Models\DeleteStreamPackageVodRemuxTaskResponse DeleteStreamPackageVodRemuxTask(Models\DeleteStreamPackageVodRemuxTaskRequest $req) Delete Vod remux task.
+ * @method Models\DeleteStreamPackageVodRemuxTasksResponse DeleteStreamPackageVodRemuxTasks(Models\DeleteStreamPackageVodRemuxTasksRequest $req) Delete VOD remux tasks in batches.
  * @method Models\DescribeLinearAssemblyCDNDomainWithChannelResponse DescribeLinearAssemblyCDNDomainWithChannel(Models\DescribeLinearAssemblyCDNDomainWithChannelRequest $req) Query the CDN domain name associated with the LinearAssembly channel.
  * @method Models\DescribeLinearAssemblyCDNDomainWithChannelsResponse DescribeLinearAssemblyCDNDomainWithChannels(Models\DescribeLinearAssemblyCDNDomainWithChannelsRequest $req) Query the CDN domain names associated with all LinearAssembly channels.
  * @method Models\DescribeStreamPackageChannelResponse DescribeStreamPackageChannel(Models\DescribeStreamPackageChannelRequest $req) This API is used to query the information of a StreamPackage channel.
@@ -65,6 +68,8 @@ use TencentCloud\Mdp\V20200527\Models as Models;
  * @method Models\DescribeStreamPackageSourceLocationAlertsResponse DescribeStreamPackageSourceLocationAlerts(Models\DescribeStreamPackageSourceLocationAlertsRequest $req) Query channel linear assembly Location alarm information.
  * @method Models\DescribeStreamPackageSourceLocationsResponse DescribeStreamPackageSourceLocations(Models\DescribeStreamPackageSourceLocationsRequest $req) Query channel linear assembly SourceLocation information list.
  * @method Models\DescribeStreamPackageSourcesResponse DescribeStreamPackageSources(Models\DescribeStreamPackageSourcesRequest $req) Query channel linear assembly Source information list.
+ * @method Models\DescribeStreamPackageVodRemuxTaskResponse DescribeStreamPackageVodRemuxTask(Models\DescribeStreamPackageVodRemuxTaskRequest $req) Query VOD remux task information.
+ * @method Models\DescribeStreamPackageVodRemuxTasksResponse DescribeStreamPackageVodRemuxTasks(Models\DescribeStreamPackageVodRemuxTasksRequest $req) Query VOD remux tasks informations.
  * @method Models\ModifyStreamPackageChannelResponse ModifyStreamPackageChannel(Models\ModifyStreamPackageChannelRequest $req) This API is used to modify a StreamPackage channel.
  * @method Models\ModifyStreamPackageChannelEndpointResponse ModifyStreamPackageChannelEndpoint(Models\ModifyStreamPackageChannelEndpointRequest $req) This API is used to modify an endpoint of a StreamPackage channel.
  * @method Models\ModifyStreamPackageChannelInputAuthInfoResponse ModifyStreamPackageChannelInputAuthInfo(Models\ModifyStreamPackageChannelInputAuthInfoRequest $req) This API is used to modify the input authentication information of a StreamPackage channel.
@@ -74,6 +79,7 @@ use TencentCloud\Mdp\V20200527\Models as Models;
  * @method Models\ModifyStreamPackageSourceResponse ModifyStreamPackageSource(Models\ModifyStreamPackageSourceRequest $req) Modify channel linear assembly Source configuration.
  * @method Models\ModifyStreamPackageSourceLocationResponse ModifyStreamPackageSourceLocation(Models\ModifyStreamPackageSourceLocationRequest $req) Modify channel linear assembly SourceLocation configuration
  * @method Models\StartStreamPackageLinearAssemblyChannelResponse StartStreamPackageLinearAssemblyChannel(Models\StartStreamPackageLinearAssemblyChannelRequest $req) Start Linear Assembly Channel.
+ * @method Models\StartStreamPackageVodRemuxTaskResponse StartStreamPackageVodRemuxTask(Models\StartStreamPackageVodRemuxTaskRequest $req) Start VOD remux task.
  * @method Models\StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannel(Models\StopStreamPackageLinearAssemblyChannelRequest $req) Stop linear assembly channel.
  * @method Models\UnbindCdnDomainWithChannelResponse UnbindCdnDomainWithChannel(Models\UnbindCdnDomainWithChannelRequest $req) This API is used to unbind a CDN playback domain name from a channel.
  * @method Models\UnbindLinearAssemblyCDNDomainWithChannelResponse UnbindLinearAssemblyCDNDomainWithChannel(Models\UnbindLinearAssemblyCDNDomainWithChannelRequest $req) Unbind LinearAssembly channel with CDN domain name.

@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceUpgradeDBInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of mssql-njj2mtpl
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of mssql-njj2mtpl
- * @method integer getMemory() Obtain Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
- * @method void setMemory(integer $Memory) Set Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
- * @method integer getStorage() Obtain Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
- * @method void setStorage(integer $Storage) Set Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+ * @method string getInstanceId() Obtain Instance ID in the format of mssql-njj2mtpl.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of mssql-njj2mtpl.
+ * @method integer getMemory() Obtain Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size.
+ * @method void setMemory(integer $Memory) Set Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size.
+ * @method integer getStorage() Obtain Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity.
+ * @method void setStorage(integer $Storage) Set Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity.
  * @method integer getCpu() Obtain The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
  * @method void setCpu(integer $Cpu) Set The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
  */
 class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of mssql-njj2mtpl
+     * @var string Instance ID in the format of mssql-njj2mtpl.
      */
     public $InstanceId;
 
     /**
-     * @var integer Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
+     * @var integer Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size.
      */
     public $Memory;
 
     /**
-     * @var integer Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+     * @var integer Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity.
      */
     public $Storage;
 
@@ -52,9 +52,9 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @param string $InstanceId Instance ID in the format of mssql-njj2mtpl
-     * @param integer $Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
-     * @param integer $Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+     * @param string $InstanceId Instance ID in the format of mssql-njj2mtpl.
+     * @param integer $Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size.
+     * @param integer $Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity.
      * @param integer $Cpu The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
      */
     function __construct()

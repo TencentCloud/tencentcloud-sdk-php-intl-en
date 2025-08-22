@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMultiZones(string $MultiZones) Set Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
  * @method integer getWaitSwitch() Obtain The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
  * @method void setWaitSwitch(integer $WaitSwitch) Set The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+ * @method array getDrZones() Obtain Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs.
+ * @method void setDrZones(array $DrZones) Set Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs.
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $WaitSwitch;
 
     /**
+     * @var array Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs.
+     */
+    public $DrZones;
+
+    /**
      * @param string $InstanceId Instance ID in the format of mssql-j8kv137v
      * @param integer $Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
      * @param integer $Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
@@ -104,6 +111,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param string $HAType Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
      * @param string $MultiZones Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
      * @param integer $WaitSwitch The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+     * @param array $DrZones Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs.
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("WaitSwitch",$param) and $param["WaitSwitch"] !== null) {
             $this->WaitSwitch = $param["WaitSwitch"];
+        }
+
+        if (array_key_exists("DrZones",$param) and $param["DrZones"] !== null) {
+            $this->DrZones = [];
+            foreach ($param["DrZones"] as $key => $value){
+                $obj = new DrZoneInfo();
+                $obj->deserialize($value);
+                array_push($this->DrZones, $obj);
+            }
         }
     }
 }
