@@ -50,6 +50,10 @@ Default value: 0.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement configuration.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method SubtitleTemplate getSubtitleTemplate() Obtain Subtitle parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set Subtitle parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RawTranscodeParameter extends AbstractModel
 {
@@ -101,6 +105,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $EnhanceConfig;
 
     /**
+     * @var SubtitleTemplate Subtitle parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SubtitleTemplate;
+
+    /**
      * @param string $Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
      * @param integer $RemoveVideo Whether to remove video data. Valid values:
 <li>0: retain;</li>
@@ -116,6 +126,8 @@ Default value: 0.
      * @param string $StdExtInfo Additional parameter, which is a serialized JSON string.
      * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement configuration.
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SubtitleTemplate $SubtitleTemplate Subtitle parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -164,6 +176,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
             $this->EnhanceConfig = new EnhanceConfig();
             $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
+        }
+
+        if (array_key_exists("SubtitleTemplate",$param) and $param["SubtitleTemplate"] !== null) {
+            $this->SubtitleTemplate = new SubtitleTemplate();
+            $this->SubtitleTemplate->deserialize($param["SubtitleTemplate"]);
         }
     }
 }

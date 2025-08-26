@@ -20,27 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Detection policy for media quality inspection.
  *
- * @method integer getCheckDuration() Obtain Duration of each loop detection in the spot check policy, in seconds. Valid values:
+ * @method integer getCheckDuration() Obtain Duration of each loop detection, in seconds. Value range:
 
  - Minimum value: 10.
  - Maximum value: 86400.
 
- * @method void setCheckDuration(integer $CheckDuration) Set Duration of each loop detection in the spot check policy, in seconds. Valid values:
+ * @method void setCheckDuration(integer $CheckDuration) Set Duration of each loop detection, in seconds. Value range:
 
  - Minimum value: 10.
  - Maximum value: 86400.
 
- * @method integer getCheckInterval() Obtain Detection interval of the spot check policy, which indicates how long to wait before conducting the next detection after one detection is completed.
- * @method void setCheckInterval(integer $CheckInterval) Set Detection interval of the spot check policy, which indicates how long to wait before conducting the next detection after one detection is completed.
- * @method integer getSkipDuration() Obtain Duration for which the opening clip is skipped.
- * @method void setSkipDuration(integer $SkipDuration) Set Duration for which the opening clip is skipped.
- * @method integer getCirclesNumber() Obtain Number of loops. When this field is empty or set to 0, the default behavior is to loop until the video ends.
- * @method void setCirclesNumber(integer $CirclesNumber) Set Number of loops. When this field is empty or set to 0, the default behavior is to loop until the video ends.
+ * @method integer getCheckInterval() Obtain Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
+ - Minimum value: 10.
+ - Maximum value: 3600.
+ * @method void setCheckInterval(integer $CheckInterval) Set Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
+ - Minimum value: 10.
+ - Maximum value: 3600.
+ * @method integer getSkipDuration() Obtain Skipped opening duration, in seconds. Value range:
+ - Minimum value: 1.
+ - Maximum value: 1800.
+ * @method void setSkipDuration(integer $SkipDuration) Set Skipped opening duration, in seconds. Value range:
+ - Minimum value: 1.
+ - Maximum value: 1800.
+ * @method integer getCirclesNumber() Obtain Number of loops. Value range:
+ - Minimum value: 0.
+ - Maximum value: 1000.
+
+If the value is 0 or not specified, it indicates that loops are executed until the video ends.
+ * @method void setCirclesNumber(integer $CirclesNumber) Set Number of loops. Value range:
+ - Minimum value: 0.
+ - Maximum value: 1000.
+
+If the value is 0 or not specified, it indicates that loops are executed until the video ends.
  */
 class TimeSpotCheck extends AbstractModel
 {
     /**
-     * @var integer Duration of each loop detection in the spot check policy, in seconds. Valid values:
+     * @var integer Duration of each loop detection, in seconds. Value range:
 
  - Minimum value: 10.
  - Maximum value: 86400.
@@ -49,29 +65,45 @@ class TimeSpotCheck extends AbstractModel
     public $CheckDuration;
 
     /**
-     * @var integer Detection interval of the spot check policy, which indicates how long to wait before conducting the next detection after one detection is completed.
+     * @var integer Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
+ - Minimum value: 10.
+ - Maximum value: 3600.
      */
     public $CheckInterval;
 
     /**
-     * @var integer Duration for which the opening clip is skipped.
+     * @var integer Skipped opening duration, in seconds. Value range:
+ - Minimum value: 1.
+ - Maximum value: 1800.
      */
     public $SkipDuration;
 
     /**
-     * @var integer Number of loops. When this field is empty or set to 0, the default behavior is to loop until the video ends.
+     * @var integer Number of loops. Value range:
+ - Minimum value: 0.
+ - Maximum value: 1000.
+
+If the value is 0 or not specified, it indicates that loops are executed until the video ends.
      */
     public $CirclesNumber;
 
     /**
-     * @param integer $CheckDuration Duration of each loop detection in the spot check policy, in seconds. Valid values:
+     * @param integer $CheckDuration Duration of each loop detection, in seconds. Value range:
 
  - Minimum value: 10.
  - Maximum value: 86400.
 
-     * @param integer $CheckInterval Detection interval of the spot check policy, which indicates how long to wait before conducting the next detection after one detection is completed.
-     * @param integer $SkipDuration Duration for which the opening clip is skipped.
-     * @param integer $CirclesNumber Number of loops. When this field is empty or set to 0, the default behavior is to loop until the video ends.
+     * @param integer $CheckInterval Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
+ - Minimum value: 10.
+ - Maximum value: 3600.
+     * @param integer $SkipDuration Skipped opening duration, in seconds. Value range:
+ - Minimum value: 1.
+ - Maximum value: 1800.
+     * @param integer $CirclesNumber Number of loops. Value range:
+ - Minimum value: 0.
+ - Maximum value: 1000.
+
+If the value is 0 or not specified, it indicates that loops are executed until the video ends.
      */
     function __construct()
     {

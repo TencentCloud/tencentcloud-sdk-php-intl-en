@@ -20,15 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getType() Obtain Result type. Valid values:
+<li>SegmentRecognition: video splitting.</li>
+<li>Highlight: highlight.</li>
+ * @method void setType(string $Type) Set Result type. Valid values:
+<li>SegmentRecognition: video splitting.</li>
+<li>Highlight: highlight.</li>
  * @method array getSegmentResultSet() Obtain 
  * @method void setSegmentResultSet(array $SegmentResultSet) Set 
+ * @method array getHighlightResultSet() Obtain Highlight result. This field is valid when Type is set to Highlight.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHighlightResultSet(array $HighlightResultSet) Set Highlight result. This field is valid when Type is set to Highlight.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LiveStreamAiAnalysisResultItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Result type. Valid values:
+<li>SegmentRecognition: video splitting.</li>
+<li>Highlight: highlight.</li>
      */
     public $Type;
 
@@ -38,8 +48,18 @@ class LiveStreamAiAnalysisResultItem extends AbstractModel
     public $SegmentResultSet;
 
     /**
-     * @param string $Type 
+     * @var array Highlight result. This field is valid when Type is set to Highlight.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HighlightResultSet;
+
+    /**
+     * @param string $Type Result type. Valid values:
+<li>SegmentRecognition: video splitting.</li>
+<li>Highlight: highlight.</li>
      * @param array $SegmentResultSet 
+     * @param array $HighlightResultSet Highlight result. This field is valid when Type is set to Highlight.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -64,6 +84,15 @@ class LiveStreamAiAnalysisResultItem extends AbstractModel
                 $obj = new SegmentRecognitionItem();
                 $obj->deserialize($value);
                 array_push($this->SegmentResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("HighlightResultSet",$param) and $param["HighlightResultSet"] !== null) {
+            $this->HighlightResultSet = [];
+            foreach ($param["HighlightResultSet"] as $key => $value){
+                $obj = new MediaAiAnalysisHighlightItem();
+                $obj->deserialize($value);
+                array_push($this->HighlightResultSet, $obj);
             }
         }
     }

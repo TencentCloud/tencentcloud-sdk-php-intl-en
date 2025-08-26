@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Recording template name. Length limit: 64 characters.
  * @method string getComment() Obtain Template description, with a length limit of 256 characters.
  * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
+ * @method string getRecordType() Obtain Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+ * @method void setRecordType(string $RecordType) Set Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
  */
 class ModifyLiveRecordTemplateRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+     */
+    public $RecordType;
+
+    /**
      * @param integer $Definition Specifies the recording template unique identifier.
      * @param HLSConfigureInfo $HLSConfigure HLS configuration parameter. Either this parameter or MP4Configure should be specified.
      * @param MP4ConfigureInfo $MP4Configure MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
      * @param string $Name Recording template name. Length limit: 64 characters.
      * @param string $Comment Template description, with a length limit of 256 characters.
+     * @param string $RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
      */
     function __construct()
     {
@@ -98,6 +106,10 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("RecordType",$param) and $param["RecordType"] !== null) {
+            $this->RecordType = $param["RecordType"];
         }
     }
 }

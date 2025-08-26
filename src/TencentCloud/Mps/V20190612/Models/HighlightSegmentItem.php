@@ -34,6 +34,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setBeginTime(string $BeginTime) Set Start time of the live streaming segment in ISO date and time format.	
  * @method string getEndTime() Obtain End time of the live streaming segment in ISO date and time format.	
  * @method void setEndTime(string $EndTime) Set End time of the live streaming segment in ISO date and time format.	
+ * @method string getTitle() Obtain Highlight title.
+ * @method void setTitle(string $Title) Set Highlight title.
+ * @method string getSummary() Obtain Highlight overview.
+ * @method void setSummary(string $Summary) Set Highlight overview.
  */
 class HighlightSegmentItem extends AbstractModel
 {
@@ -69,6 +73,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EndTime;
 
     /**
+     * @var string Highlight title.
+     */
+    public $Title;
+
+    /**
+     * @var string Highlight overview.
+     */
+    public $Summary;
+
+    /**
      * @param float $Confidence The confidence score.
      * @param float $StartTimeOffset The start time offset of the segment.
      * @param float $EndTimeOffset The end time offset of the segment.
@@ -76,6 +90,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $BeginTime Start time of the live streaming segment in ISO date and time format.	
      * @param string $EndTime End time of the live streaming segment in ISO date and time format.	
+     * @param string $Title Highlight title.
+     * @param string $Summary Highlight overview.
      */
     function __construct()
     {
@@ -112,6 +128,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
+            $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
+            $this->Summary = $param["Summary"];
         }
     }
 }

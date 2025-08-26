@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginUin(string $LoginUin) Set Log in to user's root account (required in the integrator mode).
  * @method string getLoginSubAccountUin() Obtain Login to user's sub-account (required in integrator mode).
  * @method void setLoginSubAccountUin(string $LoginSubAccountUin) Set Login to user's sub-account (required in integrator mode).
- * @method string getSubBizType() Obtain Sub-business types of Tencent Cloud Agent Development Platform/TCADP: FileParse (document parsing), embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
- * @method void setSubBizType(string $SubBizType) Set Sub-business types of Tencent Cloud Agent Development Platform/TCADP: FileParse (document parsing), embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
+ * @method string getSubBizType() Obtain Sub-business types of Tencent Cloud Agent Development Platform/ADP: FileParse (document parsing), embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
+ * @method void setSubBizType(string $SubBizType) Set Sub-business types of Tencent Cloud Agent Development Platform/ADP: FileParse (document parsing), embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
  * @method string getModelName() Obtain Model identifier.
  * @method void setModelName(string $ModelName) Set Model identifier.
  * @method string getStartTime() Obtain Start timestamp, in seconds (default value: 0).
@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppBizIds(array $AppBizIds) Set Application ID list.
  * @method array getSubScenes() Obtain Filter sub-scenario (used in document parsing scenario).
  * @method void setSubScenes(array $SubScenes) Set Filter sub-scenario (used in document parsing scenario).
+ * @method string getAppType() Obtain 
+ * @method void setAppType(string $AppType) Set 
+ * @method string getSpaceId() Obtain 
+ * @method void setSpaceId(string $SpaceId) Set 
  */
 class DescribeTokenUsageRequest extends AbstractModel
 {
@@ -57,7 +61,7 @@ class DescribeTokenUsageRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @var string Sub-business types of Tencent Cloud Agent Development Platform/TCADP: FileParse (document parsing), embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
+     * @var string Sub-business types of Tencent Cloud Agent Development Platform/ADP: FileParse (document parsing), embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
      */
     public $SubBizType;
 
@@ -87,15 +91,27 @@ class DescribeTokenUsageRequest extends AbstractModel
     public $SubScenes;
 
     /**
+     * @var string 
+     */
+    public $AppType;
+
+    /**
+     * @var string 
+     */
+    public $SpaceId;
+
+    /**
      * @param array $UinAccount Root account of Tencent Cloud.
      * @param string $LoginUin Log in to user's root account (required in the integrator mode).
      * @param string $LoginSubAccountUin Login to user's sub-account (required in integrator mode).
-     * @param string $SubBizType Sub-business types of Tencent Cloud Agent Development Platform/TCADP: FileParse (document parsing), embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
+     * @param string $SubBizType Sub-business types of Tencent Cloud Agent Development Platform/ADP: FileParse (document parsing), embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
      * @param string $ModelName Model identifier.
      * @param string $StartTime Start timestamp, in seconds (default value: 0).
      * @param string $EndTime End timestamp, in seconds (default value: 0, must be greater than the start timestamp).
      * @param array $AppBizIds Application ID list.
      * @param array $SubScenes Filter sub-scenario (used in document parsing scenario).
+     * @param string $AppType 
+     * @param string $SpaceId 
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class DescribeTokenUsageRequest extends AbstractModel
 
         if (array_key_exists("SubScenes",$param) and $param["SubScenes"] !== null) {
             $this->SubScenes = $param["SubScenes"];
+        }
+
+        if (array_key_exists("AppType",$param) and $param["AppType"] !== null) {
+            $this->AppType = $param["AppType"];
+        }
+
+        if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
+            $this->SpaceId = $param["SpaceId"];
         }
     }
 }

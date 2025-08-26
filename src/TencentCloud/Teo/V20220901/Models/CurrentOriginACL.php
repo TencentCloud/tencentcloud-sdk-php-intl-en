@@ -32,11 +32,11 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 Note: This field may return null, which indicates a failure to obtain a valid value.
  * @method void setActiveTime(string $ActiveTime) Set Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
 Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method string getIsPlaned() Obtain This parameter is used to record whether "I've upgraded to the lastest verison" is completed before the origin ACLs version is effective. valid values:.
+ * @method string getIsPlaned() Obtain This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
 - true: specifies that the version is effective and the update to the latest version is confirmed.
 - false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
 Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setIsPlaned(string $IsPlaned) Set This parameter is used to record whether "I've upgraded to the lastest verison" is completed before the origin ACLs version is effective. valid values:.
+ * @method void setIsPlaned(string $IsPlaned) Set This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
 - true: specifies that the version is effective and the update to the latest version is confirmed.
 - false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
 Note: This field may return null, which indicates a failure to obtain a valid value.
@@ -62,7 +62,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     public $ActiveTime;
 
     /**
-     * @var string This parameter is used to record whether "I've upgraded to the lastest verison" is completed before the origin ACLs version is effective. valid values:.
+     * @var string This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
 - true: specifies that the version is effective and the update to the latest version is confirmed.
 - false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
 Note: This field may return null, which indicates a failure to obtain a valid value.
@@ -76,7 +76,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param string $ActiveTime Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
 Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param string $IsPlaned This parameter is used to record whether "I've upgraded to the lastest verison" is completed before the origin ACLs version is effective. valid values:.
+     * @param string $IsPlaned This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
 - true: specifies that the version is effective and the update to the latest version is confirmed.
 - false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
 Note: This field may return null, which indicates a failure to obtain a valid value.

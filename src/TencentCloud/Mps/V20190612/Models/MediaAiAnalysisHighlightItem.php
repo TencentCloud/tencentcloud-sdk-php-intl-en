@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDuration(float $Duration) Set The duration of the highlights.
  * @method array getSegmentSet() Obtain A list of the highlight segments.
  * @method void setSegmentSet(array $SegmentSet) Set A list of the highlight segments.
+ * @method string getHighlightUrl() Obtain Intelligent highlight address.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHighlightUrl(string $HighlightUrl) Set Intelligent highlight address.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCovImgUrl() Obtain Intelligent highlight cover address.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCovImgUrl(string $CovImgUrl) Set Intelligent highlight cover address.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MediaAiAnalysisHighlightItem extends AbstractModel
 {
@@ -59,11 +67,27 @@ class MediaAiAnalysisHighlightItem extends AbstractModel
     public $SegmentSet;
 
     /**
+     * @var string Intelligent highlight address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HighlightUrl;
+
+    /**
+     * @var string Intelligent highlight cover address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CovImgUrl;
+
+    /**
      * @param string $HighlightPath The URL of the highlight segments.
      * @param string $CovImgPath The URL of the thumbnail.
      * @param float $Confidence The confidence score. Value range: 0-100.
      * @param float $Duration The duration of the highlights.
      * @param array $SegmentSet A list of the highlight segments.
+     * @param string $HighlightUrl Intelligent highlight address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CovImgUrl Intelligent highlight cover address.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -101,6 +125,14 @@ class MediaAiAnalysisHighlightItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);
             }
+        }
+
+        if (array_key_exists("HighlightUrl",$param) and $param["HighlightUrl"] !== null) {
+            $this->HighlightUrl = $param["HighlightUrl"];
+        }
+
+        if (array_key_exists("CovImgUrl",$param) and $param["CovImgUrl"] !== null) {
+            $this->CovImgUrl = $param["CovImgUrl"];
         }
     }
 }

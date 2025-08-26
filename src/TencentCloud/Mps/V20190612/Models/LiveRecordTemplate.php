@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method string getUpdateTime() Obtain Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method string getRecordType() Obtain Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+ * @method void setRecordType(string $RecordType) Set Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
  */
 class LiveRecordTemplate extends AbstractModel
 {
@@ -89,6 +91,11 @@ class LiveRecordTemplate extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+     */
+    public $RecordType;
+
+    /**
      * @param integer $Definition Specifies the recording template unique identifier.
      * @param HLSConfigureInfo $HLSConfigure HLS configuration parameters
      * @param MP4ConfigureInfo $MP4Configure MP4 configuration parameter.
@@ -100,6 +107,7 @@ class LiveRecordTemplate extends AbstractModel
 <li>Custom: Custom template.</li>
      * @param string $CreateTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param string $UpdateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @param string $RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
      */
     function __construct()
     {
@@ -146,6 +154,10 @@ class LiveRecordTemplate extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("RecordType",$param) and $param["RecordType"] !== null) {
+            $this->RecordType = $param["RecordType"];
         }
     }
 }

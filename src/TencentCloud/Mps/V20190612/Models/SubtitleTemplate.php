@@ -36,6 +36,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
 
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method MediaInputInfo getSubtitleFileInput() Obtain Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubtitleFileInput(MediaInputInfo $SubtitleFileInput) Set Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFontType() Obtain Font type. valid values:.
 <li>hei.ttf: simhei.</li>.
 <li>song.ttf: simsun.</li>.
@@ -166,6 +170,38 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>1: completely opaque.</li>
 Default value: 0.8.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method float getOutlineWidth() Obtain Stroke width.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOutlineWidth(float $OutlineWidth) Set Stroke width.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOutlineColor() Obtain Stroke color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOutlineColor(string $OutlineColor) Set Stroke color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getOutlineAlpha() Obtain Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOutlineAlpha(float $OutlineAlpha) Set Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getShadowWidth() Obtain Shadow width. The value should be a floating-point number in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setShadowWidth(float $ShadowWidth) Set Shadow width. The value should be a floating-point number in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getShadowColor() Obtain Shadow color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setShadowColor(string $ShadowColor) Set Shadow color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getShadowAlpha() Obtain Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setShadowAlpha(float $ShadowAlpha) Set Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getLineSpacing() Obtain Line spacing. The value should be a positive integer in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLineSpacing(integer $LineSpacing) Set Line spacing. The value should be a positive integer in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAlignment() Obtain Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAlignment(string $Alignment) Set Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SubtitleTemplate extends AbstractModel
 {
@@ -184,6 +220,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $StreamIndex;
+
+    /**
+     * @var MediaInputInfo Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SubtitleFileInput;
 
     /**
      * @var string Font type. valid values:.
@@ -291,6 +333,54 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $BoardAlpha;
 
     /**
+     * @var float Stroke width.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OutlineWidth;
+
+    /**
+     * @var string Stroke color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OutlineColor;
+
+    /**
+     * @var float Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OutlineAlpha;
+
+    /**
+     * @var float Shadow width. The value should be a floating-point number in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ShadowWidth;
+
+    /**
+     * @var string Shadow color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ShadowColor;
+
+    /**
+     * @var float Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ShadowAlpha;
+
+    /**
+     * @var integer Line spacing. The value should be a positive integer in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $LineSpacing;
+
+    /**
+     * @var string Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Alignment;
+
+    /**
      * @param string $Path The URL of the subtitles to add to the video.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $StreamIndex Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
@@ -299,6 +389,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
 
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param MediaInputInfo $SubtitleFileInput Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FontType Font type. valid values:.
 <li>hei.ttf: simhei.</li>.
 <li>song.ttf: simsun.</li>.
@@ -364,6 +456,22 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>1: completely opaque.</li>
 Default value: 0.8.
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param float $OutlineWidth Stroke width.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OutlineColor Stroke color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $OutlineAlpha Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $ShadowWidth Shadow width. The value should be a floating-point number in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ShadowColor Shadow color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $ShadowAlpha Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $LineSpacing Line spacing. The value should be a positive integer in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Alignment Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -384,6 +492,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("StreamIndex",$param) and $param["StreamIndex"] !== null) {
             $this->StreamIndex = $param["StreamIndex"];
+        }
+
+        if (array_key_exists("SubtitleFileInput",$param) and $param["SubtitleFileInput"] !== null) {
+            $this->SubtitleFileInput = new MediaInputInfo();
+            $this->SubtitleFileInput->deserialize($param["SubtitleFileInput"]);
         }
 
         if (array_key_exists("FontType",$param) and $param["FontType"] !== null) {
@@ -424,6 +537,38 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("BoardAlpha",$param) and $param["BoardAlpha"] !== null) {
             $this->BoardAlpha = $param["BoardAlpha"];
+        }
+
+        if (array_key_exists("OutlineWidth",$param) and $param["OutlineWidth"] !== null) {
+            $this->OutlineWidth = $param["OutlineWidth"];
+        }
+
+        if (array_key_exists("OutlineColor",$param) and $param["OutlineColor"] !== null) {
+            $this->OutlineColor = $param["OutlineColor"];
+        }
+
+        if (array_key_exists("OutlineAlpha",$param) and $param["OutlineAlpha"] !== null) {
+            $this->OutlineAlpha = $param["OutlineAlpha"];
+        }
+
+        if (array_key_exists("ShadowWidth",$param) and $param["ShadowWidth"] !== null) {
+            $this->ShadowWidth = $param["ShadowWidth"];
+        }
+
+        if (array_key_exists("ShadowColor",$param) and $param["ShadowColor"] !== null) {
+            $this->ShadowColor = $param["ShadowColor"];
+        }
+
+        if (array_key_exists("ShadowAlpha",$param) and $param["ShadowAlpha"] !== null) {
+            $this->ShadowAlpha = $param["ShadowAlpha"];
+        }
+
+        if (array_key_exists("LineSpacing",$param) and $param["LineSpacing"] !== null) {
+            $this->LineSpacing = $param["LineSpacing"];
+        }
+
+        if (array_key_exists("Alignment",$param) and $param["Alignment"] !== null) {
+            $this->Alignment = $param["Alignment"];
         }
     }
 }

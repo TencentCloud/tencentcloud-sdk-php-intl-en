@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getUinAccount() Obtain Root account of Tencent Cloud.
  * @method void setUinAccount(array $UinAccount) Set Root account of Tencent Cloud.
- * @method string getSubBizType() Obtain Sub-business types of Tencent Cloud Agent Development Platform/TCADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
- * @method void setSubBizType(string $SubBizType) Set Sub-business types of Tencent Cloud Agent Development Platform/TCADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
+ * @method string getSubBizType() Obtain Sub-business types of Tencent Cloud Agent Development Platform/ADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
+ * @method void setSubBizType(string $SubBizType) Set Sub-business types of Tencent Cloud Agent Development Platform/ADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
  * @method string getModelName() Obtain Model identifier.
  * @method void setModelName(string $ModelName) Set Model identifier.
  * @method string getStartTime() Obtain Start timestamp, in seconds.
@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End timestamp, in seconds.
  * @method array getAppBizIds() Obtain Application ID list.
  * @method void setAppBizIds(array $AppBizIds) Set Application ID list.
+ * @method string getAppType() Obtain 
+ * @method void setAppType(string $AppType) Set 
+ * @method array getSubScenes() Obtain 
+ * @method void setSubScenes(array $SubScenes) Set 
  */
 class DescribeTokenUsageGraphRequest extends AbstractModel
 {
@@ -41,7 +45,7 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
     public $UinAccount;
 
     /**
-     * @var string Sub-business types of Tencent Cloud Agent Development Platform/TCADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
+     * @var string Sub-business types of Tencent Cloud Agent Development Platform/ADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
      */
     public $SubBizType;
 
@@ -66,12 +70,24 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
     public $AppBizIds;
 
     /**
+     * @var string 
+     */
+    public $AppType;
+
+    /**
+     * @var array 
+     */
+    public $SubScenes;
+
+    /**
      * @param array $UinAccount Root account of Tencent Cloud.
-     * @param string $SubBizType Sub-business types of Tencent Cloud Agent Development Platform/TCADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
+     * @param string $SubBizType Sub-business types of Tencent Cloud Agent Development Platform/ADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
      * @param string $ModelName Model identifier.
      * @param string $StartTime Start timestamp, in seconds.
      * @param string $EndTime End timestamp, in seconds.
      * @param array $AppBizIds Application ID list.
+     * @param string $AppType 
+     * @param array $SubScenes 
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
 
         if (array_key_exists("AppBizIds",$param) and $param["AppBizIds"] !== null) {
             $this->AppBizIds = $param["AppBizIds"];
+        }
+
+        if (array_key_exists("AppType",$param) and $param["AppType"] !== null) {
+            $this->AppType = $param["AppType"];
+        }
+
+        if (array_key_exists("SubScenes",$param) and $param["SubScenes"] !== null) {
+            $this->SubScenes = $param["SubScenes"];
         }
     }
 }

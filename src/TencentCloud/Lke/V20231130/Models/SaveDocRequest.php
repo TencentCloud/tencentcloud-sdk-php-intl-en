@@ -52,10 +52,18 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
  * @method void setExpireEnd(string $ExpireEnd) Set Effective end time, unix timestamp. 0 indicates permanent validity.
  * @method boolean getIsRefer() Obtain Whether to reference a link.
  * @method void setIsRefer(boolean $IsRefer) Set Whether to reference a link.
- * @method integer getOpt() Obtain Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page.
- * @method void setOpt(integer $Opt) Set Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page.
+ * @method integer getOpt() Obtain Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page.
+ * @method void setOpt(integer $Opt) Set Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page.
  * @method string getCateBizId() Obtain Category ID.
  * @method void setCateBizId(string $CateBizId) Set Category ID.
+ * @method boolean getIsDownload() Obtain 
+ * @method void setIsDownload(boolean $IsDownload) Set 
+ * @method array getDuplicateFileHandles() Obtain 
+ * @method void setDuplicateFileHandles(array $DuplicateFileHandles) Set 
+ * @method string getSplitRule() Obtain 
+ * @method void setSplitRule(string $SplitRule) Set 
+ * @method UpdatePeriodInfo getUpdatePeriodInfo() Obtain 
+ * @method void setUpdatePeriodInfo(UpdatePeriodInfo $UpdatePeriodInfo) Set 
  */
 class SaveDocRequest extends AbstractModel
 {
@@ -136,7 +144,7 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
     public $IsRefer;
 
     /**
-     * @var integer Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page.
+     * @var integer Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page.
      */
     public $Opt;
 
@@ -144,6 +152,26 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
      * @var string Category ID.
      */
     public $CateBizId;
+
+    /**
+     * @var boolean 
+     */
+    public $IsDownload;
+
+    /**
+     * @var array 
+     */
+    public $DuplicateFileHandles;
+
+    /**
+     * @var string 
+     */
+    public $SplitRule;
+
+    /**
+     * @var UpdatePeriodInfo 
+     */
+    public $UpdatePeriodInfo;
 
     /**
      * @param string $BotBizId Application ID.
@@ -162,8 +190,12 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
      * @param string $ExpireStart Effective start time, unix timestamp.
      * @param string $ExpireEnd Effective end time, unix timestamp. 0 indicates permanent validity.
      * @param boolean $IsRefer Whether to reference a link.
-     * @param integer $Opt Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page.
+     * @param integer $Opt Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page.
      * @param string $CateBizId Category ID.
+     * @param boolean $IsDownload 
+     * @param array $DuplicateFileHandles 
+     * @param string $SplitRule 
+     * @param UpdatePeriodInfo $UpdatePeriodInfo 
      */
     function __construct()
     {
@@ -249,6 +281,28 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
 
         if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
             $this->CateBizId = $param["CateBizId"];
+        }
+
+        if (array_key_exists("IsDownload",$param) and $param["IsDownload"] !== null) {
+            $this->IsDownload = $param["IsDownload"];
+        }
+
+        if (array_key_exists("DuplicateFileHandles",$param) and $param["DuplicateFileHandles"] !== null) {
+            $this->DuplicateFileHandles = [];
+            foreach ($param["DuplicateFileHandles"] as $key => $value){
+                $obj = new DuplicateFileHandle();
+                $obj->deserialize($value);
+                array_push($this->DuplicateFileHandles, $obj);
+            }
+        }
+
+        if (array_key_exists("SplitRule",$param) and $param["SplitRule"] !== null) {
+            $this->SplitRule = $param["SplitRule"];
+        }
+
+        if (array_key_exists("UpdatePeriodInfo",$param) and $param["UpdatePeriodInfo"] !== null) {
+            $this->UpdatePeriodInfo = new UpdatePeriodInfo();
+            $this->UpdatePeriodInfo->deserialize($param["UpdatePeriodInfo"]);
         }
     }
 }
