@@ -22,11 +22,11 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCheckMode() Obtain The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Selfie verification.
+`compare`: Selfie Verification(liveness detection and face comparison).
 Default value: `liveness`.
  * @method void setCheckMode(string $CheckMode) Set The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Selfie verification.
+`compare`: Selfie Verification(liveness detection and face comparison).
 Default value: `liveness`.
  * @method string getSecureLevel() Obtain The verification security level. Valid values:
 `1`: Video-based liveness detection.
@@ -64,13 +64,15 @@ You can choose 1-2 actions out of the four.
 Single action example: "blink"
 Multiple action example: "blink,mouth"
 The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+ * @method string getSdkVersion() Obtain ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+ * @method void setSdkVersion(string $SdkVersion) Set ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
  */
 class GetFaceIdTokenIntlRequest extends AbstractModel
 {
     /**
      * @var string The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Selfie verification.
+`compare`: Selfie Verification(liveness detection and face comparison).
 Default value: `liveness`.
      */
     public $CheckMode;
@@ -110,9 +112,14 @@ The default value is blink. The different action types passed in this parameter 
     public $ActionList;
 
     /**
+     * @var string ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+     */
+    public $SdkVersion;
+
+    /**
      * @param string $CheckMode The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Selfie verification.
+`compare`: Selfie Verification(liveness detection and face comparison).
 Default value: `liveness`.
      * @param string $SecureLevel The verification security level. Valid values:
 `1`: Video-based liveness detection.
@@ -132,6 +139,7 @@ You can choose 1-2 actions out of the four.
 Single action example: "blink"
 Multiple action example: "blink,mouth"
 The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+     * @param string $SdkVersion ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
      */
     function __construct()
     {
@@ -164,6 +172,10 @@ The default value is blink. The different action types passed in this parameter 
 
         if (array_key_exists("ActionList",$param) and $param["ActionList"] !== null) {
             $this->ActionList = $param["ActionList"];
+        }
+
+        if (array_key_exists("SdkVersion",$param) and $param["SdkVersion"] !== null) {
+            $this->SdkVersion = $param["SdkVersion"];
         }
     }
 }

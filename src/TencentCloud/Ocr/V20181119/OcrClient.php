@@ -113,7 +113,7 @@ A maximum of 20 requests can be initiated per second for this API.
  * @method Models\PermitOCRResponse PermitOCR(Models\PermitOCRRequest $req) This API is used to recognize the fields on an exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan, including place of issuance, issuing authority, validity period, gender, date of birth, name in English, name in Chinese, and document number.
 
 A maximum of 10 requests can be initiated per second for this API.
- * @method Models\RecognizeBrazilCommonOCRResponse RecognizeBrazilCommonOCR(Models\RecognizeBrazilCommonOCRRequest $req) This API is used to identify Brazil RNE documents.
+ * @method Models\RecognizeBrazilCommonOCRResponse RecognizeBrazilCommonOCR(Models\RecognizeBrazilCommonOCRRequest $req) This API is used to identify Brazil common documents.
 
 This API is used to set the default request rate limit to 5 requests/second.
  * @method Models\RecognizeBrazilDriverLicenseOCRResponse RecognizeBrazilDriverLicenseOCR(Models\RecognizeBrazilDriverLicenseOCRRequest $req) This interface supports identification of the front and back of Brazilian driver's license. The identification fields include name, driver's license category, number, validity period, etc.

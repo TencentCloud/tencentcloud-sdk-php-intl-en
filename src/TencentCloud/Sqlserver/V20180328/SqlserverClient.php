@@ -25,6 +25,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
 /**
  * @method Models\CloneDBResponse CloneDB(Models\CloneDBRequest $req) This API is used to clone and rename databases of an instance. The clones are still in the instance from which they are cloned.
  * @method Models\CloseInterCommunicationResponse CloseInterCommunication(Models\CloseInterCommunicationRequest $req) This API is used to disable instance interconnection.
+ * @method Models\CompleteExpansionResponse CompleteExpansion(Models\CompleteExpansionRequest $req) This API is used to complete the instance upgrade and switch immediately without waiting for the maintenance window when the instance status is "upgrade pending switch" after scale-out is initiated. This API needs to be called during off-peak hours of the instance. Some databases cannot be accessed before the switch is completed.
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) This API is used to create an instance account.
  * @method Models\CreateBackupResponse CreateBackup(Models\CreateBackupRequest $req) This API is used to create a backup.
  * @method Models\CreateBackupMigrationResponse CreateBackupMigration(Models\CreateBackupMigrationRequest $req) This API is used to create a backup import task.
@@ -38,6 +39,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\CreateIncrementalMigrationResponse CreateIncrementalMigration(Models\CreateIncrementalMigrationRequest $req) This API is used to create an incremental backup import task.
  * @method Models\CreateMigrationResponse CreateMigration(Models\CreateMigrationRequest $req) This API is used to create a migration task.
  * @method Models\CreateReadOnlyDBInstancesResponse CreateReadOnlyDBInstances(Models\CreateReadOnlyDBInstancesRequest $req) This API is used to create read-only instances (local disk).
+ * @method Models\CutXEventsResponse CutXEvents(Models\CutXEventsRequest $req) This API is used to manually cut block logs and deadlock logs.
  * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) This API is used to delete an instance account.
  * @method Models\DeleteBackupMigrationResponse DeleteBackupMigration(Models\DeleteBackupMigrationRequest $req) This API is used to delete a backup import task.
  * @method Models\DeleteBusinessIntelligenceFileResponse DeleteBusinessIntelligenceFile(Models\DeleteBusinessIntelligenceFileRequest $req) This API is used to delete a business intelligence service file.
@@ -52,17 +54,21 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeBackupsResponse DescribeBackups(Models\DescribeBackupsRequest $req) This API is used to query the list of backups.
  * @method Models\DescribeBusinessIntelligenceFileResponse DescribeBusinessIntelligenceFile(Models\DescribeBusinessIntelligenceFileRequest $req) This API is used to query the files required by business intelligence service.
  * @method Models\DescribeCollationTimeZoneResponse DescribeCollationTimeZone(Models\DescribeCollationTimeZoneRequest $req) This API is used to query the character set and time zone supported by the instance.
+ * @method Models\DescribeCrossRegionZoneResponse DescribeCrossRegionZone(Models\DescribeCrossRegionZoneRequest $req) This API is used to query the disaster recovery region and AZ of the secondary node based on the primary instance.
  * @method Models\DescribeDBCharsetsResponse DescribeDBCharsets(Models\DescribeDBCharsetsRequest $req) This API is used to query the database character sets supported by an instance.
  * @method Models\DescribeDBInstanceInterResponse DescribeDBInstanceInter(Models\DescribeDBInstanceInterRequest $req) This API is used to query the information of the interconnected instances.
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) This API is used to query the list of instances.
  * @method Models\DescribeDBInstancesAttributeResponse DescribeDBInstancesAttribute(Models\DescribeDBInstancesAttributeRequest $req) This API is used to query the attributes of an instance.
  * @method Models\DescribeDBsResponse DescribeDBs(Models\DescribeDBsRequest $req) This API is used to query the list of databases
  * @method Models\DescribeDBsNormalResponse DescribeDBsNormal(Models\DescribeDBsNormalRequest $req) This API is used to query database configurations. It does not return information of the accounts that have permissions to operate the database.
+ * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) This API is used to query the database list.
  * @method Models\DescribeFlowStatusResponse DescribeFlowStatus(Models\DescribeFlowStatusRequest $req) This API is used to query flow status.
  * @method Models\DescribeIncrementalMigrationResponse DescribeIncrementalMigration(Models\DescribeIncrementalMigrationRequest $req) This API is used to query an incremental backup import task.
  * @method Models\DescribeInstanceByOrdersResponse DescribeInstanceByOrders(Models\DescribeInstanceByOrdersRequest $req) This API is used to query the instance ID by the order number.
  * @method Models\DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(Models\DescribeInstanceParamRecordsRequest $req) This API is used to query the parameter modification records of an instance.
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) This API is used to query the parameter list of an instance.
+ * @method Models\DescribeInstanceTasksResponse DescribeInstanceTasks(Models\DescribeInstanceTasksRequest $req) This API is used to query the list of asynchronous tasks related to an instance.
+ * @method Models\DescribeInstanceTradeParameterResponse DescribeInstanceTradeParameter(Models\DescribeInstanceTradeParameterRequest $req) This API is used to query the instance billing parameters.
  * @method Models\DescribeMaintenanceSpanResponse DescribeMaintenanceSpan(Models\DescribeMaintenanceSpanRequest $req) This API is used to query the maintenance time window of an instance based on its instance ID.
  * @method Models\DescribeMigrationDetailResponse DescribeMigrationDetail(Models\DescribeMigrationDetailRequest $req) This API is used to query migration task details.
  * @method Models\DescribeMigrationsResponse DescribeMigrations(Models\DescribeMigrationsRequest $req) This API is used to query the list of eligible migration tasks based on the entered criteria.
@@ -73,6 +79,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeRollbackTimeResponse DescribeRollbackTime(Models\DescribeRollbackTimeRequest $req) This API is used to query the time range available for instance rollback.
  * @method Models\DescribeSlowlogsResponse DescribeSlowlogs(Models\DescribeSlowlogsRequest $req) This API is used to get file information of slow query logs.
  * @method Models\DescribeSpecSellStatusResponse DescribeSpecSellStatus(Models\DescribeSpecSellStatusRequest $req) This API is used to query the status information on specifications, including the sales status and reference price. (The actual price is subject to the result returned by price querying APIs.)
+ * @method Models\DescribeUpgradeInstanceCheckResponse DescribeUpgradeInstanceCheck(Models\DescribeUpgradeInstanceCheckRequest $req) This API is used to pre-check the impact of the instance configuration adjustment before the adjustment.
  * @method Models\DescribeUploadBackupInfoResponse DescribeUploadBackupInfo(Models\DescribeUploadBackupInfoRequest $req) This API is used to query a backup upload permission.
  * @method Models\DescribeXEventsResponse DescribeXEvents(Models\DescribeXEventsRequest $req) This API is used to query the list of extended events.
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) This API is used to query currently purchasable AZs.
@@ -86,6 +93,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\ModifyDBEncryptAttributesResponse ModifyDBEncryptAttributes(Models\ModifyDBEncryptAttributesRequest $req) This API is used to enable or disable TDE of a database.
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) This API is used to rename an instance.
  * @method Models\ModifyDBInstanceNetworkResponse ModifyDBInstanceNetwork(Models\ModifyDBInstanceNetworkRequest $req) This API is used to switch a running instance from a VPC to another.
+ * @method Models\ModifyDBInstanceNoteResponse ModifyDBInstanceNote(Models\ModifyDBInstanceNoteRequest $req) This API is used to modify the instance remarks.
  * @method Models\ModifyDBInstanceProjectResponse ModifyDBInstanceProject(Models\ModifyDBInstanceProjectRequest $req) This API is used to modify the project to which a database instance belongs.
  * @method Models\ModifyDBNameResponse ModifyDBName(Models\ModifyDBNameRequest $req) This API is used to rename a database.
  * @method Models\ModifyDBRemarkResponse ModifyDBRemark(Models\ModifyDBRemarkRequest $req) This API is used to modify database remarks.
