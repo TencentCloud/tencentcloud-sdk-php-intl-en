@@ -34,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthentication(string $Authentication) Set Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
  * @method string getAccountType() Obtain Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
  * @method void setAccountType(string $AccountType) Set Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
- * @method boolean getIsCam() Obtain Whether CAM authentication is enabled
- * @method void setIsCam(boolean $IsCam) Set Whether CAM authentication is enabled
+ * @method boolean getIsCam() Obtain Whether CAM authentication is enabled.
+ * @method void setIsCam(boolean $IsCam) Set Whether CAM authentication is enabled.
+ * @method integer getEncryptedVersion() Obtain Encryption key version number. 0: disable encryption.
+ * @method void setEncryptedVersion(integer $EncryptedVersion) Set Encryption key version number. 0: disable encryption.
  */
 class AccountCreateInfo extends AbstractModel
 {
@@ -75,9 +77,14 @@ class AccountCreateInfo extends AbstractModel
     public $AccountType;
 
     /**
-     * @var boolean Whether CAM authentication is enabled
+     * @var boolean Whether CAM authentication is enabled.
      */
     public $IsCam;
+
+    /**
+     * @var integer Encryption key version number. 0: disable encryption.
+     */
+    public $EncryptedVersion;
 
     /**
      * @param string $UserName Instance username
@@ -87,7 +94,8 @@ class AccountCreateInfo extends AbstractModel
      * @param boolean $IsAdmin Whether it is an admin account. Valid values: true (it is an admin account when the instance is a single-node type and AccountType is L0; when the instance is a two-node type and AccountType is L1), false (it is a standard account when AccountType is L3)
      * @param string $Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
      * @param string $AccountType Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
-     * @param boolean $IsCam Whether CAM authentication is enabled
+     * @param boolean $IsCam Whether CAM authentication is enabled.
+     * @param integer $EncryptedVersion Encryption key version number. 0: disable encryption.
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class AccountCreateInfo extends AbstractModel
 
         if (array_key_exists("IsCam",$param) and $param["IsCam"] !== null) {
             $this->IsCam = $param["IsCam"];
+        }
+
+        if (array_key_exists("EncryptedVersion",$param) and $param["EncryptedVersion"] !== null) {
+            $this->EncryptedVersion = $param["EncryptedVersion"];
         }
     }
 }

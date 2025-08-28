@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabaseName(string $DatabaseName) Set Filter backups by database name. If the parameter is left empty, this filter criterion will not take effect.
  * @method string getOrderBy() Obtain List items sorting by backup size. Valid values: `desc`(descending order), `asc` (ascending order). Default value: `desc`.
  * @method void setOrderBy(string $OrderBy) Set List items sorting by backup size. Valid values: `desc`(descending order), `asc` (ascending order). Default value: `desc`.
+ * @method string getOrderByType() Obtain Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size.
+ * @method void setOrderByType(string $OrderByType) Set Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size.
  */
 class DescribeBackupFilesRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeBackupFilesRequest extends AbstractModel
     public $OrderBy;
 
     /**
+     * @var string Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size.
+     */
+    public $OrderByType;
+
+    /**
      * @param string $InstanceId Instance ID in the format of mssql-njj2mtpl
      * @param string $GroupId Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
      * @param integer $Limit Number of entries to be returned per page. Value range: 1-100. Default value: `20`
      * @param integer $Offset Page number. Default value: `0`
      * @param string $DatabaseName Filter backups by database name. If the parameter is left empty, this filter criterion will not take effect.
      * @param string $OrderBy List items sorting by backup size. Valid values: `desc`(descending order), `asc` (ascending order). Default value: `desc`.
+     * @param string $OrderByType Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size.
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeBackupFilesRequest extends AbstractModel
 
         if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
             $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
+            $this->OrderByType = $param["OrderByType"];
         }
     }
 }

@@ -18,28 +18,28 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAccount request structure.
+ * RecycleReadOnlyGroup request structure.
  *
- * @method string getInstanceId() Obtain Database instance ID in the format of mssql-njj2mtpl.
- * @method void setInstanceId(string $InstanceId) Set Database instance ID in the format of mssql-njj2mtpl.
- * @method array getAccounts() Obtain Database instance account information.
- * @method void setAccounts(array $Accounts) Set Database instance account information.
+ * @method string getInstanceId() Obtain Primary instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Primary instance ID.
+ * @method string getReadOnlyGroupId() Obtain Read-only group ID.
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set Read-only group ID.
  */
-class CreateAccountRequest extends AbstractModel
+class RecycleReadOnlyGroupRequest extends AbstractModel
 {
     /**
-     * @var string Database instance ID in the format of mssql-njj2mtpl.
+     * @var string Primary instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var array Database instance account information.
+     * @var string Read-only group ID.
      */
-    public $Accounts;
+    public $ReadOnlyGroupId;
 
     /**
-     * @param string $InstanceId Database instance ID in the format of mssql-njj2mtpl.
-     * @param array $Accounts Database instance account information.
+     * @param string $InstanceId Primary instance ID.
+     * @param string $ReadOnlyGroupId Read-only group ID.
      */
     function __construct()
     {
@@ -58,13 +58,8 @@ class CreateAccountRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("Accounts",$param) and $param["Accounts"] !== null) {
-            $this->Accounts = [];
-            foreach ($param["Accounts"] as $key => $value){
-                $obj = new AccountCreateInfo();
-                $obj->deserialize($value);
-                array_push($this->Accounts, $obj);
-            }
+        if (array_key_exists("ReadOnlyGroupId",$param) and $param["ReadOnlyGroupId"] !== null) {
+            $this->ReadOnlyGroupId = $param["ReadOnlyGroupId"];
         }
     }
 }

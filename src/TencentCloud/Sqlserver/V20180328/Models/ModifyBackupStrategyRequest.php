@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupDay(integer $BackupDay) Set Backup interval in days when the `BackupType` is `daily`. Valid value: 1.
  * @method string getBackupModel() Obtain Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
  * @method void setBackupModel(string $BackupModel) Set Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
- * @method array getBackupCycle() Obtain The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
- * @method void setBackupCycle(array $BackupCycle) Set The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+ * @method array getBackupCycle() Obtain The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+ * @method void setBackupCycle(array $BackupCycle) Set The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
  * @method integer getBackupSaveDays() Obtain Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
  * @method void setBackupSaveDays(integer $BackupSaveDays) Set Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
  * @method string getRegularBackupEnable() Obtain Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
  * @method void setRegularBackupEnable(string $RegularBackupEnable) Set Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
- * @method integer getRegularBackupSaveDays() Obtain Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
- * @method void setRegularBackupSaveDays(integer $RegularBackupSaveDays) Set Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+ * @method integer getRegularBackupSaveDays() Obtain Archive backup retention days. Value range: 90-3650 days. Default value: 365 days.
+ * @method void setRegularBackupSaveDays(integer $RegularBackupSaveDays) Set Archive backup retention days. Value range: 90-3650 days. Default value: 365 days.
  * @method string getRegularBackupStrategy() Obtain Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
  * @method void setRegularBackupStrategy(string $RegularBackupStrategy) Set Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
  * @method integer getRegularBackupCounts() Obtain The number of retained archive backups. Default value: `1`.
@@ -73,7 +73,7 @@ class ModifyBackupStrategyRequest extends AbstractModel
     public $BackupModel;
 
     /**
-     * @var array The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+     * @var array The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
      */
     public $BackupCycle;
 
@@ -88,7 +88,7 @@ class ModifyBackupStrategyRequest extends AbstractModel
     public $RegularBackupEnable;
 
     /**
-     * @var integer Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+     * @var integer Archive backup retention days. Value range: 90-3650 days. Default value: 365 days.
      */
     public $RegularBackupSaveDays;
 
@@ -113,10 +113,10 @@ class ModifyBackupStrategyRequest extends AbstractModel
      * @param integer $BackupTime Backup time. Value range: an integer from 0 to 23.
      * @param integer $BackupDay Backup interval in days when the `BackupType` is `daily`. Valid value: 1.
      * @param string $BackupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
-     * @param array $BackupCycle The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+     * @param array $BackupCycle The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
      * @param integer $BackupSaveDays Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
      * @param string $RegularBackupEnable Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
-     * @param integer $RegularBackupSaveDays Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+     * @param integer $RegularBackupSaveDays Archive backup retention days. Value range: 90-3650 days. Default value: 365 days.
      * @param string $RegularBackupStrategy Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
      * @param integer $RegularBackupCounts The number of retained archive backups. Default value: `1`.
      * @param string $RegularBackupStartTime Archive backup start date in YYYY-MM-DD format, which is the current time by default.

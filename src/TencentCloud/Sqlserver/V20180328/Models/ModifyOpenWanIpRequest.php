@@ -18,28 +18,28 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAccount request structure.
+ * ModifyOpenWanIp request structure.
  *
- * @method string getInstanceId() Obtain Database instance ID in the format of mssql-njj2mtpl.
- * @method void setInstanceId(string $InstanceId) Set Database instance ID in the format of mssql-njj2mtpl.
- * @method array getAccounts() Obtain Database instance account information.
- * @method void setAccounts(array $Accounts) Set Database instance account information.
+ * @method string getInstanceId() Obtain Instance resource ID. 
+ * @method void setInstanceId(string $InstanceId) Set Instance resource ID. 
+ * @method string getRoGroupId() Obtain RO group ID.
+ * @method void setRoGroupId(string $RoGroupId) Set RO group ID.
  */
-class CreateAccountRequest extends AbstractModel
+class ModifyOpenWanIpRequest extends AbstractModel
 {
     /**
-     * @var string Database instance ID in the format of mssql-njj2mtpl.
+     * @var string Instance resource ID. 
      */
     public $InstanceId;
 
     /**
-     * @var array Database instance account information.
+     * @var string RO group ID.
      */
-    public $Accounts;
+    public $RoGroupId;
 
     /**
-     * @param string $InstanceId Database instance ID in the format of mssql-njj2mtpl.
-     * @param array $Accounts Database instance account information.
+     * @param string $InstanceId Instance resource ID. 
+     * @param string $RoGroupId RO group ID.
      */
     function __construct()
     {
@@ -58,13 +58,8 @@ class CreateAccountRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("Accounts",$param) and $param["Accounts"] !== null) {
-            $this->Accounts = [];
-            foreach ($param["Accounts"] as $key => $value){
-                $obj = new AccountCreateInfo();
-                $obj->deserialize($value);
-                array_push($this->Accounts, $obj);
-            }
+        if (array_key_exists("RoGroupId",$param) and $param["RoGroupId"] !== null) {
+            $this->RoGroupId = $param["RoGroupId"];
         }
     }
 }

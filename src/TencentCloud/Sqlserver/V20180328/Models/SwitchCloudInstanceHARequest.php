@@ -18,28 +18,28 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAccount request structure.
+ * SwitchCloudInstanceHA request structure.
  *
- * @method string getInstanceId() Obtain Database instance ID in the format of mssql-njj2mtpl.
- * @method void setInstanceId(string $InstanceId) Set Database instance ID in the format of mssql-njj2mtpl.
- * @method array getAccounts() Obtain Database instance account information.
- * @method void setAccounts(array $Accounts) Set Database instance account information.
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method integer getWaitSwitch() Obtain Switch execution method. 0 - execute immediately; 1 - execute within the time window. The default value is 0.
+ * @method void setWaitSwitch(integer $WaitSwitch) Set Switch execution method. 0 - execute immediately; 1 - execute within the time window. The default value is 0.
  */
-class CreateAccountRequest extends AbstractModel
+class SwitchCloudInstanceHARequest extends AbstractModel
 {
     /**
-     * @var string Database instance ID in the format of mssql-njj2mtpl.
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var array Database instance account information.
+     * @var integer Switch execution method. 0 - execute immediately; 1 - execute within the time window. The default value is 0.
      */
-    public $Accounts;
+    public $WaitSwitch;
 
     /**
-     * @param string $InstanceId Database instance ID in the format of mssql-njj2mtpl.
-     * @param array $Accounts Database instance account information.
+     * @param string $InstanceId Instance ID.
+     * @param integer $WaitSwitch Switch execution method. 0 - execute immediately; 1 - execute within the time window. The default value is 0.
      */
     function __construct()
     {
@@ -58,13 +58,8 @@ class CreateAccountRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("Accounts",$param) and $param["Accounts"] !== null) {
-            $this->Accounts = [];
-            foreach ($param["Accounts"] as $key => $value){
-                $obj = new AccountCreateInfo();
-                $obj->deserialize($value);
-                array_push($this->Accounts, $obj);
-            }
+        if (array_key_exists("WaitSwitch",$param) and $param["WaitSwitch"] !== null) {
+            $this->WaitSwitch = $param["WaitSwitch"];
         }
     }
 }
