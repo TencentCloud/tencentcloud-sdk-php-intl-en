@@ -28,6 +28,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\CloneDBResponse CloneDB(Models\CloneDBRequest $req) This API is used to clone and rename databases of an instance. The clones are still in the instance from which they are cloned.
  * @method Models\CloseInterCommunicationResponse CloseInterCommunication(Models\CloseInterCommunicationRequest $req) This API is used to disable instance interconnection.
  * @method Models\CompleteExpansionResponse CompleteExpansion(Models\CompleteExpansionRequest $req) This API is used to complete the instance upgrade and switch immediately without waiting for the maintenance window when the instance status is "upgrade pending switch" after scale-out is initiated. This API needs to be called during off-peak hours of the instance. Some databases cannot be accessed before the switch is completed.
+ * @method Models\CompleteMigrationResponse CompleteMigration(Models\CompleteMigrationRequest $req) This API is used to complete a migration task.
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) This API is used to create an instance account.
  * @method Models\CreateBackupResponse CreateBackup(Models\CreateBackupRequest $req) This API is used to create a backup.
  * @method Models\CreateBackupMigrationResponse CreateBackupMigration(Models\CreateBackupMigrationRequest $req) This API is used to create a backup import task.
@@ -88,6 +89,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeInstanceTasksResponse DescribeInstanceTasks(Models\DescribeInstanceTasksRequest $req) This API is used to query the list of asynchronous tasks related to an instance.
  * @method Models\DescribeInstanceTradeParameterResponse DescribeInstanceTradeParameter(Models\DescribeInstanceTradeParameterRequest $req) This API is used to query the instance billing parameters.
  * @method Models\DescribeMaintenanceSpanResponse DescribeMaintenanceSpan(Models\DescribeMaintenanceSpanRequest $req) This API is used to query the maintenance time window of an instance based on its instance ID.
+ * @method Models\DescribeMigrationDatabasesResponse DescribeMigrationDatabases(Models\DescribeMigrationDatabasesRequest $req) This API is used to query the list of databases to be migrated.
  * @method Models\DescribeMigrationDetailResponse DescribeMigrationDetail(Models\DescribeMigrationDetailRequest $req) This API is used to query migration task details.
  * @method Models\DescribeMigrationsResponse DescribeMigrations(Models\DescribeMigrationsRequest $req) This API is used to query the list of eligible migration tasks based on the entered criteria.
  * @method Models\DescribeOrdersResponse DescribeOrders(Models\DescribeOrdersRequest $req) This API is used to query order information.
