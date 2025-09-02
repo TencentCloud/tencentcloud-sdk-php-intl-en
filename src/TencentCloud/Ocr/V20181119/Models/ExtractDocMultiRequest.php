@@ -54,6 +54,10 @@ Default true.
 -- MultiRealEstateCertificate
 -- MultiRealEstateMaterial
 -- HongKongUtilityBill
+-- OverseasCheques
+-- RegistrationCertificate
+-- GridPhoto
+-- SignaturePage
  * @method void setConfigId(string $ConfigId) Set Configuration ID support: 
 -- General
 -- InvoiceEng
@@ -72,6 +76,10 @@ Default true.
 -- MultiRealEstateCertificate
 -- MultiRealEstateMaterial
 -- HongKongUtilityBill
+-- OverseasCheques
+-- RegistrationCertificate
+-- GridPhoto
+-- SignaturePage
  * @method boolean getEnableCoord() Obtain Whether the full-text field coordinate value recognition is enabled.
  * @method void setEnableCoord(boolean $EnableCoord) Set Whether the full-text field coordinate value recognition is enabled.
  * @method boolean getOutputParentKey() Obtain Whether parent-child key recognition is enabled. the option is selected by default.
@@ -136,6 +144,10 @@ Default true.
 -- MultiRealEstateCertificate
 -- MultiRealEstateMaterial
 -- HongKongUtilityBill
+-- OverseasCheques
+-- RegistrationCertificate
+-- GridPhoto
+-- SignaturePage
      */
     public $ConfigId;
 
@@ -187,6 +199,10 @@ Default true.
 -- MultiRealEstateCertificate
 -- MultiRealEstateMaterial
 -- HongKongUtilityBill
+-- OverseasCheques
+-- RegistrationCertificate
+-- GridPhoto
+-- SignaturePage
      * @param boolean $EnableCoord Whether the full-text field coordinate value recognition is enabled.
      * @param boolean $OutputParentKey Whether parent-child key recognition is enabled. the option is selected by default.
      * @param ConfigAdvanced $ConfigAdvanced Single attribute configuration of a template.
