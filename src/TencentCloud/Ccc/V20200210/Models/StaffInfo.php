@@ -30,20 +30,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNick(string $Nick) Set Agent nickname.
  * @method string getStaffNumber() Obtain Agent id.
  * @method void setStaffNumber(string $StaffNumber) Set Agent id.
- * @method integer getRoleId() Obtain User role id.
-When a user is bound to multiple roles, RoleIdList shall prevail.
- * @method void setRoleId(integer $RoleId) Set User role id.
-When a user is bound to multiple roles, RoleIdList shall prevail.
+ * @method integer getRoleId() Obtain User role ID. if a user is bound to multiple roles, RoleIdList takes precedence.
+ * @method void setRoleId(integer $RoleId) Set User role ID. if a user is bound to multiple roles, RoleIdList takes precedence.
  * @method integer getRoleIdList() Obtain User role id list.
  * @method void setRoleIdList(integer $RoleIdList) Set User role id list.
- * @method array getRoleList() Obtain 
- * @method void setRoleList(array $RoleList) Set 
+ * @method array getRoleList() Obtain Specifies the user role id list.
+ * @method void setRoleList(array $RoleList) Set Specifies the user role id list.
  * @method array getSkillGroupList() Obtain Affiliated skill group list.
  * @method void setSkillGroupList(array $SkillGroupList) Set Affiliated skill group list.
  * @method integer getLastModifyTimestamp() Obtain Last modification time.
  * @method void setLastModifyTimestamp(integer $LastModifyTimestamp) Set Last modification time.
  * @method string getExtensionNumber() Obtain Agent extension number (starting with 1 to 8, 4 - 6 digits).
  * @method void setExtensionNumber(string $ExtensionNumber) Set Agent extension number (starting with 1 to 8, 4 - 6 digits).
+ * @method ForwardingConfig getForwardingConfig() Obtain Call forwarding configuration.
+ * @method void setForwardingConfig(ForwardingConfig $ForwardingConfig) Set Call forwarding configuration.
  */
 class StaffInfo extends AbstractModel
 {
@@ -73,8 +73,7 @@ class StaffInfo extends AbstractModel
     public $StaffNumber;
 
     /**
-     * @var integer User role id.
-When a user is bound to multiple roles, RoleIdList shall prevail.
+     * @var integer User role ID. if a user is bound to multiple roles, RoleIdList takes precedence.
      * @deprecated
      */
     public $RoleId;
@@ -86,7 +85,7 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
     public $RoleIdList;
 
     /**
-     * @var array 
+     * @var array Specifies the user role id list.
      */
     public $RoleList;
 
@@ -106,18 +105,23 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
     public $ExtensionNumber;
 
     /**
+     * @var ForwardingConfig Call forwarding configuration.
+     */
+    public $ForwardingConfig;
+
+    /**
      * @param string $Name Agent name.
      * @param string $Mail Agent email.
      * @param string $Phone Agent phone number.
      * @param string $Nick Agent nickname.
      * @param string $StaffNumber Agent id.
-     * @param integer $RoleId User role id.
-When a user is bound to multiple roles, RoleIdList shall prevail.
+     * @param integer $RoleId User role ID. if a user is bound to multiple roles, RoleIdList takes precedence.
      * @param integer $RoleIdList User role id list.
-     * @param array $RoleList 
+     * @param array $RoleList Specifies the user role id list.
      * @param array $SkillGroupList Affiliated skill group list.
      * @param integer $LastModifyTimestamp Last modification time.
      * @param string $ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
+     * @param ForwardingConfig $ForwardingConfig Call forwarding configuration.
      */
     function __construct()
     {
@@ -179,6 +183,11 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
 
         if (array_key_exists("ExtensionNumber",$param) and $param["ExtensionNumber"] !== null) {
             $this->ExtensionNumber = $param["ExtensionNumber"];
+        }
+
+        if (array_key_exists("ForwardingConfig",$param) and $param["ForwardingConfig"] !== null) {
+            $this->ForwardingConfig = new ForwardingConfig();
+            $this->ForwardingConfig->deserialize($param["ForwardingConfig"]);
         }
     }
 }

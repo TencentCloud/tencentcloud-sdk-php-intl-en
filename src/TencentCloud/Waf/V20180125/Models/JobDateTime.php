@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule execution time structure
  *
- * @method array getTimed() Obtain Time parameters for scheduled execution
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTimed(array $Timed) Set Time parameters for scheduled execution
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getCron() Obtain Time parameters for periodic execution
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCron(array $Cron) Set Time parameters for periodic execution
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTimeTZone() Obtain Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTimeTZone(string $TimeTZone) Set Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTimed() Obtain Time parameter for scheduled execution.
+ * @method void setTimed(array $Timed) Set Time parameter for scheduled execution.
+ * @method array getCron() Obtain Time parameter for periodic execution.
+ * @method void setCron(array $Cron) Set Time parameter for periodic execution.
+ * @method string getTimeTZone() Obtain Specifies the time zone.
+ * @method void setTimeTZone(string $TimeTZone) Set Specifies the time zone.
  */
 class JobDateTime extends AbstractModel
 {
     /**
-     * @var array Time parameters for scheduled execution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Time parameter for scheduled execution.
      */
     public $Timed;
 
     /**
-     * @var array Time parameters for periodic execution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Time parameter for periodic execution.
      */
     public $Cron;
 
     /**
-     * @var string Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the time zone.
      */
     public $TimeTZone;
 
     /**
-     * @param array $Timed Time parameters for scheduled execution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Cron Time parameters for periodic execution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TimeTZone Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Timed Time parameter for scheduled execution.
+     * @param array $Cron Time parameter for periodic execution.
+     * @param string $TimeTZone Specifies the time zone.
      */
     function __construct()
     {

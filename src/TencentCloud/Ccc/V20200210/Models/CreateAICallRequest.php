@@ -232,8 +232,8 @@ HoaiMy
 1:   Use AI to automatically generate welcomeMessage and speak first based on the prompt
  * @method void setWelcomeType(integer $WelcomeType) Set 0: Use welcomeMessage (if empty, the callee speaks first; if not empty, the bot speaks first)
 1:   Use AI to automatically generate welcomeMessage and speak first based on the prompt
- * @method integer getWelcomeMessagePriority() Obtain 0: interruptible by default, 1: high priority and not interruptible.
- * @method void setWelcomeMessagePriority(integer $WelcomeMessagePriority) Set 0: interruptible by default, 1: high priority and not interruptible.
+ * @method integer getWelcomeMessagePriority() Obtain 0: interruptible by default, 2: high priority non-interruptible.
+ * @method void setWelcomeMessagePriority(integer $WelcomeMessagePriority) Set 0: interruptible by default, 2: high priority non-interruptible.
  * @method integer getMaxDuration() Obtain Maximum Waiting Duration (milliseconds), default is 60 seconds, if the user does not speak within this time, the call is automatically terminated
  * @method void setMaxDuration(integer $MaxDuration) Set Maximum Waiting Duration (milliseconds), default is 60 seconds, if the user does not speak within this time, the call is automatically terminated
  * @method array getLanguages() Obtain ASR Supported Languages, default is "zh" Chinese,
@@ -420,6 +420,20 @@ dify-inputs-xxx specifies the inputs variable for dify.
 dify-inputs-xxx specifies the inputs variable for dify.
 2. the dify-inputs-user specifies the user value for dify.
 3. dify-inputs-conversation_id is the conversation_id value of dify.
+ * @method float getTopP() Obtain Specifies the model topP.
+ * @method void setTopP(float $TopP) Set Specifies the model topP.
+ * @method integer getVadLevel() Obtain The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression.
+ * @method void setVadLevel(integer $VadLevel) Set The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression.
+ * @method ToneWordInfo getToneWord() Obtain Transition.
+ * @method void setToneWord(ToneWordInfo $ToneWord) Set Transition.
+ * @method boolean getEnableComplianceAudio() Obtain Compliance prompt sound. 
+This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities.
+ * @method void setEnableComplianceAudio(boolean $EnableComplianceAudio) Set Compliance prompt sound. 
+This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities.
  */
 class CreateAICallRequest extends AbstractModel
 {
@@ -574,7 +588,7 @@ HoaiMy
     public $WelcomeType;
 
     /**
-     * @var integer 0: interruptible by default, 1: high priority and not interruptible.
+     * @var integer 0: interruptible by default, 2: high priority non-interruptible.
      */
     public $WelcomeMessagePriority;
 
@@ -741,6 +755,29 @@ dify-inputs-xxx specifies the inputs variable for dify.
     public $Variables;
 
     /**
+     * @var float Specifies the model topP.
+     */
+    public $TopP;
+
+    /**
+     * @var integer The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression.
+     */
+    public $VadLevel;
+
+    /**
+     * @var ToneWordInfo Transition.
+     */
+    public $ToneWord;
+
+    /**
+     * @var boolean Compliance prompt sound. 
+This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities.
+     */
+    public $EnableComplianceAudio;
+
+    /**
      * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $Callee Called number.
      * @param string $LLMType Model API protocol type. currently compatible with four protocol types:.
@@ -847,7 +884,7 @@ HoaiMy
      * @param string $WelcomeMessage Used to set the AI Agent Welcome Message.
      * @param integer $WelcomeType 0: Use welcomeMessage (if empty, the callee speaks first; if not empty, the bot speaks first)
 1:   Use AI to automatically generate welcomeMessage and speak first based on the prompt
-     * @param integer $WelcomeMessagePriority 0: interruptible by default, 1: high priority and not interruptible.
+     * @param integer $WelcomeMessagePriority 0: interruptible by default, 2: high priority non-interruptible.
      * @param integer $MaxDuration Maximum Waiting Duration (milliseconds), default is 60 seconds, if the user does not speak within this time, the call is automatically terminated
      * @param array $Languages ASR Supported Languages, default is "zh" Chinese,
 Fill in the array with up to 4 languages, the first is the primary language for recognition, followed by optional languages,
@@ -941,6 +978,13 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
 dify-inputs-xxx specifies the inputs variable for dify.
 2. the dify-inputs-user specifies the user value for dify.
 3. dify-inputs-conversation_id is the conversation_id value of dify.
+     * @param float $TopP Specifies the model topP.
+     * @param integer $VadLevel The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression.
+     * @param ToneWordInfo $ToneWord Transition.
+     * @param boolean $EnableComplianceAudio Compliance prompt sound. 
+This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities.
      */
     function __construct()
     {
@@ -1089,6 +1133,23 @@ dify-inputs-xxx specifies the inputs variable for dify.
                 $obj->deserialize($value);
                 array_push($this->Variables, $obj);
             }
+        }
+
+        if (array_key_exists("TopP",$param) and $param["TopP"] !== null) {
+            $this->TopP = $param["TopP"];
+        }
+
+        if (array_key_exists("VadLevel",$param) and $param["VadLevel"] !== null) {
+            $this->VadLevel = $param["VadLevel"];
+        }
+
+        if (array_key_exists("ToneWord",$param) and $param["ToneWord"] !== null) {
+            $this->ToneWord = new ToneWordInfo();
+            $this->ToneWord->deserialize($param["ToneWord"]);
+        }
+
+        if (array_key_exists("EnableComplianceAudio",$param) and $param["EnableComplianceAudio"] !== null) {
+            $this->EnableComplianceAudio = $param["EnableComplianceAudio"];
         }
     }
 }

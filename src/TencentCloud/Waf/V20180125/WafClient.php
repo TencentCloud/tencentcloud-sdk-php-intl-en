@@ -31,6 +31,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\CreateDealsResponse CreateDeals(Models\CreateDealsRequest $req) Billing Resource Purchase, Renewal Order API
  * @method Models\CreateHostResponse CreateHost(Models\CreateHostRequest $req) Add a protection domain in CLB-WAF
  * @method Models\CreateIpAccessControlResponse CreateIpAccessControl(Models\CreateIpAccessControlRequest $req) This API is used to add WAF IP allowlists/blocklists.
+ * @method Models\CreateOwaspWhiteRuleResponse CreateOwaspWhiteRule(Models\CreateOwaspWhiteRuleRequest $req) This API is used to add a rule engine allowlist.
  * @method Models\DeleteAntiFakeUrlResponse DeleteAntiFakeUrl(Models\DeleteAntiFakeUrlRequest $req) Delete tamper-proof URL
  * @method Models\DeleteAntiInfoLeakRuleResponse DeleteAntiInfoLeakRule(Models\DeleteAntiInfoLeakRuleRequest $req) Delete information leakage prevention rule
  * @method Models\DeleteCCRuleResponse DeleteCCRule(Models\DeleteCCRuleRequest $req) WAF CC V2 deletion API
@@ -38,6 +39,8 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DeleteCustomWhiteRuleResponse DeleteCustomWhiteRule(Models\DeleteCustomWhiteRuleRequest $req) Delete precision allowlist rules
  * @method Models\DeleteHostResponse DeleteHost(Models\DeleteHostRequest $req) This API is used to delete a domain name protected by CLB WAF. Batch operation is supported.
  * @method Models\DeleteIpAccessControlV2Response DeleteIpAccessControlV2(Models\DeleteIpAccessControlV2Request $req) This API is used to delete latest versions of WAF IP allowlists/blocklists.
+ * @method Models\DeleteOwaspRuleStatusResponse DeleteOwaspRuleStatus(Models\DeleteOwaspRuleStatusRequest $req) This API is used to unlock the Door God rule status.
+ * @method Models\DeleteOwaspWhiteRuleResponse DeleteOwaspWhiteRule(Models\DeleteOwaspWhiteRuleRequest $req) This API is used to delete a user rule engine allowlist.
  * @method Models\DeleteSessionResponse DeleteSession(Models\DeleteSessionRequest $req) Delete CC attack session settings
  * @method Models\DeleteSpartaProtectionResponse DeleteSpartaProtection(Models\DeleteSpartaProtectionRequest $req) This API is used to delete a domain name protected by SaaS WAF.
  * @method Models\DescribeAntiFakeRulesResponse DescribeAntiFakeRules(Models\DescribeAntiFakeRulesRequest $req) Obtain a tamper-proof URL
@@ -65,6 +68,9 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeIpAccessControlResponse DescribeIpAccessControl(Models\DescribeIpAccessControlRequest $req) WAF IP blocklist/allowlist query
  * @method Models\DescribeModuleStatusResponse DescribeModuleStatus(Models\DescribeModuleStatusRequest $req) Query the switch status of each WAF basic security module, check if each module is enabled
  * @method Models\DescribeObjectsResponse DescribeObjects(Models\DescribeObjectsRequest $req) View protected object list
+ * @method Models\DescribeOwaspRuleTypesResponse DescribeOwaspRuleTypes(Models\DescribeOwaspRuleTypesRequest $req) This API is used to query the rule types of the rule engine.
+ * @method Models\DescribeOwaspRulesResponse DescribeOwaspRules(Models\DescribeOwaspRulesRequest $req) This API is used to query the rule list of the rule engine.
+ * @method Models\DescribeOwaspWhiteRulesResponse DescribeOwaspWhiteRules(Models\DescribeOwaspWhiteRulesRequest $req) This API is used to retrieve the allowlist for the rule engine.
  * @method Models\DescribePeakPointsResponse DescribePeakPoints(Models\DescribePeakPointsRequest $req) Query business and attack summary trends
  * @method Models\DescribePolicyStatusResponse DescribePolicyStatus(Models\DescribePolicyStatusRequest $req) Obtain protection status and the effective instance ID
  * @method Models\DescribePortsResponse DescribePorts(Models\DescribePortsRequest $req) Obtain the SaaS-type WAF protection port list
@@ -109,6 +115,11 @@ Batch operation is supported.
  * @method Models\ModifyIpAccessControlResponse ModifyIpAccessControl(Models\ModifyIpAccessControlRequest $req) This API is used to edit WAF IP allowlists/blocklists.
  * @method Models\ModifyModuleStatusResponse ModifyModuleStatus(Models\ModifyModuleStatusRequest $req) Set the switch for the basic security module under a certain domain
  * @method Models\ModifyObjectResponse ModifyObject(Models\ModifyObjectRequest $req) Modify protection object
+ * @method Models\ModifyOwaspRuleStatusResponse ModifyOwaspRuleStatus(Models\ModifyOwaspRuleStatusRequest $req) This API is used to refresh the rule switch.
+ * @method Models\ModifyOwaspRuleTypeActionResponse ModifyOwaspRuleTypeAction(Models\ModifyOwaspRuleTypeActionRequest $req) This API is used to update the protection mode of the rule type.
+ * @method Models\ModifyOwaspRuleTypeLevelResponse ModifyOwaspRuleTypeLevel(Models\ModifyOwaspRuleTypeLevelRequest $req) This API is used to update the protection level of a rule type.
+ * @method Models\ModifyOwaspRuleTypeStatusResponse ModifyOwaspRuleTypeStatus(Models\ModifyOwaspRuleTypeStatusRequest $req) This API is used to update the rule type switch.
+ * @method Models\ModifyOwaspWhiteRuleResponse ModifyOwaspWhiteRule(Models\ModifyOwaspWhiteRuleRequest $req) This API is used to edit the allowlist for the rule engine.
  * @method Models\ModifyProtectionStatusResponse ModifyProtectionStatus(Models\ModifyProtectionStatusRequest $req) This API is used to obtain the enabling status of the basic security protection module of WAF.
  * @method Models\ModifySpartaProtectionResponse ModifySpartaProtection(Models\ModifySpartaProtectionRequest $req) This API is used to edit the configuration of domain names protected by SaaS WAF.
  * @method Models\ModifySpartaProtectionModeResponse ModifySpartaProtectionMode(Models\ModifySpartaProtectionModeRequest $req) Set WAF protection status

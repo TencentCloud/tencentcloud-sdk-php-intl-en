@@ -20,66 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Data structure of periodic rule execution
  *
- * @method array getDays() Obtain Days in each month for execution
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDays(array $Days) Set Days in each month for execution
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getWDays() Obtain Days of each week for execution
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWDays(array $WDays) Set Days of each week for execution
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStartTime() Obtain Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) Set Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getDays() Obtain Execution day of each month.
+ * @method void setDays(array $Days) Set Execution day of each month.
+ * @method array getWDays() Obtain Execution day of each week.
+ * @method void setWDays(array $WDays) Set Execution day of each week.
+ * @method string getStartTime() Obtain Start time.
+ * @method void setStartTime(string $StartTime) Set Start time.
  * @method string getEndTime() Obtain End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEndTime(string $EndTime) Set End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CronJob extends AbstractModel
 {
     /**
-     * @var array Days in each month for execution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Execution day of each month.
      */
     public $Days;
 
     /**
-     * @var array Days of each week for execution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Execution day of each week.
      */
     public $WDays;
 
     /**
-     * @var string Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Start time.
      */
     public $StartTime;
 
     /**
      * @var string End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EndTime;
 
     /**
-     * @param array $Days Days in each month for execution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $WDays Days of each week for execution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StartTime Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Days Execution day of each month.
+     * @param array $WDays Execution day of each week.
+     * @param string $StartTime Start time.
      * @param string $EndTime End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

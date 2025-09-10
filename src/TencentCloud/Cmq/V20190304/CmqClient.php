@@ -23,23 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cmq\V20190304\Models as Models;
 
 /**
- * @method Models\ClearQueueResponse ClearQueue(Models\ClearQueueRequest $req) This API is used to clear all messages in a queue.
- * @method Models\ClearSubscriptionFilterTagsResponse ClearSubscriptionFilterTags(Models\ClearSubscriptionFilterTagsRequest $req) This API is used to clear the message tags of a subscriber.
- * @method Models\CreateQueueResponse CreateQueue(Models\CreateQueueRequest $req) This API is used to create a queue.
- * @method Models\CreateSubscribeResponse CreateSubscribe(Models\CreateSubscribeRequest $req) This API is used to create a subscription.
- * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) This API is used to create a topic.
- * @method Models\DeleteQueueResponse DeleteQueue(Models\DeleteQueueRequest $req) This API is used to delete a queue.
- * @method Models\DeleteSubscribeResponse DeleteSubscribe(Models\DeleteSubscribeRequest $req) This API is used to delete a subscription.
- * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) This API is used to delete a topic.
- * @method Models\DescribeDeadLetterSourceQueuesResponse DescribeDeadLetterSourceQueues(Models\DescribeDeadLetterSourceQueuesRequest $req) This API is used to enumerate the source queues of a dead letter queue.
  * @method Models\DescribeQueueDetailResponse DescribeQueueDetail(Models\DescribeQueueDetailRequest $req) This API is used to enumerate queues.
- * @method Models\DescribeSubscriptionDetailResponse DescribeSubscriptionDetail(Models\DescribeSubscriptionDetailRequest $req) This API is used to query subscription details.
  * @method Models\DescribeTopicDetailResponse DescribeTopicDetail(Models\DescribeTopicDetailRequest $req) This API is used to query topic details.
- * @method Models\ModifyQueueAttributeResponse ModifyQueueAttribute(Models\ModifyQueueAttributeRequest $req) This API is used to modify queue attributes.
- * @method Models\ModifySubscriptionAttributeResponse ModifySubscriptionAttribute(Models\ModifySubscriptionAttributeRequest $req) This API is used to modify subscription attributes.
- * @method Models\ModifyTopicAttributeResponse ModifyTopicAttribute(Models\ModifyTopicAttributeRequest $req) This API is used to modify topic attributes.
- * @method Models\RewindQueueResponse RewindQueue(Models\RewindQueueRequest $req) This API is used to rewind a queue.
- * @method Models\UnbindDeadLetterResponse UnbindDeadLetter(Models\UnbindDeadLetterRequest $req) This API is used to unbind a dead letter queue.
  */
 
 class CmqClient extends AbstractClient

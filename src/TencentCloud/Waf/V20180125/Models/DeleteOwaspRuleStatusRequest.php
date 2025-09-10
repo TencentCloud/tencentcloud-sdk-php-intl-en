@@ -18,28 +18,28 @@ namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rule-based scheduled task data structure
+ * DeleteOwaspRuleStatus request structure.
  *
- * @method integer getStartDateTime() Obtain Start timestamp, in seconds.
- * @method void setStartDateTime(integer $StartDateTime) Set Start timestamp, in seconds.
- * @method integer getEndDateTime() Obtain End timestamp, in seconds.
- * @method void setEndDateTime(integer $EndDateTime) Set End timestamp, in seconds.
+ * @method string getDomain() Obtain Domain name
+ * @method void setDomain(string $Domain) Set Domain name
+ * @method array getRuleIDs() Obtain Rule ID list
+ * @method void setRuleIDs(array $RuleIDs) Set Rule ID list
  */
-class TimedJob extends AbstractModel
+class DeleteOwaspRuleStatusRequest extends AbstractModel
 {
     /**
-     * @var integer Start timestamp, in seconds.
+     * @var string Domain name
      */
-    public $StartDateTime;
+    public $Domain;
 
     /**
-     * @var integer End timestamp, in seconds.
+     * @var array Rule ID list
      */
-    public $EndDateTime;
+    public $RuleIDs;
 
     /**
-     * @param integer $StartDateTime Start timestamp, in seconds.
-     * @param integer $EndDateTime End timestamp, in seconds.
+     * @param string $Domain Domain name
+     * @param array $RuleIDs Rule ID list
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class TimedJob extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartDateTime",$param) and $param["StartDateTime"] !== null) {
-            $this->StartDateTime = $param["StartDateTime"];
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
 
-        if (array_key_exists("EndDateTime",$param) and $param["EndDateTime"] !== null) {
-            $this->EndDateTime = $param["EndDateTime"];
+        if (array_key_exists("RuleIDs",$param) and $param["RuleIDs"] !== null) {
+            $this->RuleIDs = $param["RuleIDs"];
         }
     }
 }

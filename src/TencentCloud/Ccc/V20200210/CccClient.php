@@ -25,8 +25,10 @@ use TencentCloud\Ccc\V20200210\Models as Models;
 /**
  * @method Models\AbortAgentCruiseDialingCampaignResponse AbortAgentCruiseDialingCampaign(Models\AbortAgentCruiseDialingCampaignRequest $req) Stop Agent Cruise-style Outbound Call Task
  * @method Models\AbortPredictiveDialingCampaignResponse AbortPredictiveDialingCampaign(Models\AbortPredictiveDialingCampaignRequest $req) This API is used to pause the predictive outbound call task.
+ * @method Models\BindNumberCallInInterfaceResponse BindNumberCallInInterface(Models\BindNumberCallInInterfaceRequest $req) This API is used to bind a number to a callback API for incoming calls.
  * @method Models\BindNumberCallOutSkillGroupResponse BindNumberCallOutSkillGroup(Models\BindNumberCallOutSkillGroupRequest $req) This API is used to bind outbound skill group of number.
  * @method Models\BindStaffSkillGroupListResponse BindStaffSkillGroupList(Models\BindStaffSkillGroupListRequest $req) This API is used to bind the agent's skill group.
+ * @method Models\ControlAIConversationResponse ControlAIConversation(Models\ControlAIConversationRequest $req) This API is used to provide server-side robot control feature.
  * @method Models\CreateAIAgentCallResponse CreateAIAgentCall(Models\CreateAIAgentCallRequest $req) This API is used to initiate outbound calls using an AI model, limited to owned phone numbers only. Currently, a limited-time free trial of Advanced Agents is available.
 
 Before initiating a call, please ensure your AI model is compatible with OpenAI, Azure, or Minimax protocols, and visit the model provider's website to obtain relevant authentication information. For detailed feature descriptions, please refer to the documentation [Tencent Cloud Contact Center AI Call Platform](https://www.tencentcloud.com/document/product/1229/70681).
@@ -48,6 +50,7 @@ This API is used to make calls. Currently, the agent side can only call the user
  * @method Models\CreatePredictiveDialingCampaignResponse CreatePredictiveDialingCampaign(Models\CreatePredictiveDialingCampaignRequest $req) This API is used to create the predictive outbound call task.
  * @method Models\CreateSDKLoginTokenResponse CreateSDKLoginToken(Models\CreateSDKLoginTokenRequest $req) This API is used to create the SDK log-in token.
  * @method Models\CreateStaffResponse CreateStaff(Models\CreateStaffRequest $req) This API is used to create the customer service account.
+ * @method Models\CreateUserSigResponse CreateUserSig(Models\CreateUserSigRequest $req) This API is used to create a user data signature.
  * @method Models\DeleteCCCSkillGroupResponse DeleteCCCSkillGroup(Models\DeleteCCCSkillGroupRequest $req) This API is used to delete a skill group.
  * @method Models\DeleteExtensionResponse DeleteExtension(Models\DeleteExtensionRequest $req) This API is used to delete telephone accounts.
  * @method Models\DeletePredictiveDialingCampaignResponse DeletePredictiveDialingCampaign(Models\DeletePredictiveDialingCampaignRequest $req) This API is used to delete the predictive outbound call task.
@@ -68,8 +71,10 @@ This API is used to make calls. Currently, the agent side can only call the user
  * @method Models\DescribePredictiveDialingCampaignsResponse DescribePredictiveDialingCampaigns(Models\DescribePredictiveDialingCampaignsRequest $req) This API is used to query the predictive outbound call task list.
  * @method Models\DescribePredictiveDialingSessionsResponse DescribePredictiveDialingSessions(Models\DescribePredictiveDialingSessionsRequest $req) This API is used to query the predictive outbound call list.
  * @method Models\DescribeProtectedTelCdrResponse DescribeProtectedTelCdr(Models\DescribeProtectedTelCdrRequest $req) This API is used to access protected phone service records and recordings for both inbound and outbound calls.
+ * @method Models\DescribeSessionDetailResponse DescribeSessionDetail(Models\DescribeSessionDetailRequest $req) This API is used to query call detail.
  * @method Models\DescribeSkillGroupInfoListResponse DescribeSkillGroupInfoList(Models\DescribeSkillGroupInfoListRequest $req) This API is used to access the skill group information list.
  * @method Models\DescribeStaffInfoListResponse DescribeStaffInfoList(Models\DescribeStaffInfoListRequest $req) This API is used to access the agent information list.
+ * @method Models\DescribeStaffStatusHistoryResponse DescribeStaffStatusHistory(Models\DescribeStaffStatusHistoryRequest $req) This API is used to query agent status history.
  * @method Models\DescribeStaffStatusMetricsResponse DescribeStaffStatusMetrics(Models\DescribeStaffStatusMetricsRequest $req) This API is used to access the real-time status statistics metrics of the agent.
  * @method Models\DescribeTelCallInfoResponse DescribeTelCallInfo(Models\DescribeTelCallInfoRequest $req) This API is used to access telephone consumption statistics by instance.
  * @method Models\DescribeTelCdrResponse DescribeTelCdr(Models\DescribeTelCdrRequest $req) This API is used to access phone service records and recordings.

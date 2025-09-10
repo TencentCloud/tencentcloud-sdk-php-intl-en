@@ -56,6 +56,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setLastStatusTimestamp(integer $LastStatusTimestamp) Set Last status timestamp.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getClientInfo() Obtain Specifies the endpoint information for customer service logon.
+ * @method void setClientInfo(array $ClientInfo) Set Specifies the endpoint information for customer service logon.
  */
 class StaffStatusMetrics extends AbstractModel
 {
@@ -142,6 +144,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $LastStatusTimestamp;
 
     /**
+     * @var array Specifies the endpoint information for customer service logon.
+     */
+    public $ClientInfo;
+
+    /**
      * @param string $Email Agent email.
      * @param string $Status Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
      * @param StaffStatusExtra $StatusExtra Supplementary information on agent status.
@@ -160,6 +167,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $LastStatusTimestamp Last status timestamp.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $ClientInfo Specifies the endpoint information for customer service logon.
      */
     function __construct()
     {
@@ -237,6 +245,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("LastStatusTimestamp",$param) and $param["LastStatusTimestamp"] !== null) {
             $this->LastStatusTimestamp = $param["LastStatusTimestamp"];
+        }
+
+        if (array_key_exists("ClientInfo",$param) and $param["ClientInfo"] !== null) {
+            $this->ClientInfo = [];
+            foreach ($param["ClientInfo"] as $key => $value){
+                $obj = new ClientInfo();
+                $obj->deserialize($value);
+                array_push($this->ClientInfo, $obj);
+            }
         }
     }
 }

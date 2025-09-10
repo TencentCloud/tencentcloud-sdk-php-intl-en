@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSkillGroupType(integer $SkillGroupType) Set Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
  * @method string getAlias() Obtain Intra-Skill group line number.
  * @method void setAlias(string $Alias) Set Intra-Skill group line number.
+ * @method boolean getRingAll() Obtain Specifies whether to enable simultaneous ring.
+ * @method void setRingAll(boolean $RingAll) Set Specifies whether to enable simultaneous ring.
  */
 class SkillGroupInfoItem extends AbstractModel
 {
@@ -87,6 +89,11 @@ class SkillGroupInfoItem extends AbstractModel
     public $Alias;
 
     /**
+     * @var boolean Specifies whether to enable simultaneous ring.
+     */
+    public $RingAll;
+
+    /**
      * @param integer $SkillGroupId Skill group id.
      * @param string $SkillGroupName Skill group name.
      * @param string $Type (Deprecated) type: im, tel, all (full media).
@@ -96,6 +103,7 @@ class SkillGroupInfoItem extends AbstractModel
      * @param integer $LastModifyTimestamp Last modification time.
      * @param integer $SkillGroupType Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
      * @param string $Alias Intra-Skill group line number.
+     * @param boolean $RingAll Specifies whether to enable simultaneous ring.
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class SkillGroupInfoItem extends AbstractModel
 
         if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
             $this->Alias = $param["Alias"];
+        }
+
+        if (array_key_exists("RingAll",$param) and $param["RingAll"] !== null) {
+            $this->RingAll = $param["RingAll"];
         }
     }
 }

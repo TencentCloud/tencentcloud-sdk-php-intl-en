@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTTSLatency(integer $TTSLatency) Set Specifies the tts delay in milliseconds.
  * @method integer getLLMLatency() Obtain llm latency (ms).
  * @method void setLLMLatency(integer $LLMLatency) Set llm latency (ms).
+ * @method integer getLLMFirstTokenLatency() Obtain llm first token latency (ms).
+ * @method void setLLMFirstTokenLatency(integer $LLMFirstTokenLatency) Set llm first token latency (ms).
  * @method integer getETELatency() Obtain End-To-End delay (ms).
  * @method void setETELatency(integer $ETELatency) Set End-To-End delay (ms).
  */
@@ -54,6 +56,11 @@ class AILatencyDetail extends AbstractModel
     public $LLMLatency;
 
     /**
+     * @var integer llm first token latency (ms).
+     */
+    public $LLMFirstTokenLatency;
+
+    /**
      * @var integer End-To-End delay (ms).
      */
     public $ETELatency;
@@ -63,6 +70,7 @@ class AILatencyDetail extends AbstractModel
      * @param integer $ASRLatency Specifies the asr latency in milliseconds.
      * @param integer $TTSLatency Specifies the tts delay in milliseconds.
      * @param integer $LLMLatency llm latency (ms).
+     * @param integer $LLMFirstTokenLatency llm first token latency (ms).
      * @param integer $ETELatency End-To-End delay (ms).
      */
     function __construct()
@@ -92,6 +100,10 @@ class AILatencyDetail extends AbstractModel
 
         if (array_key_exists("LLMLatency",$param) and $param["LLMLatency"] !== null) {
             $this->LLMLatency = $param["LLMLatency"];
+        }
+
+        if (array_key_exists("LLMFirstTokenLatency",$param) and $param["LLMFirstTokenLatency"] !== null) {
+            $this->LLMFirstTokenLatency = $param["LLMFirstTokenLatency"];
         }
 
         if (array_key_exists("ETELatency",$param) and $param["ETELatency"] !== null) {

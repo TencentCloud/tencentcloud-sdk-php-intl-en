@@ -18,28 +18,28 @@ namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rule-based scheduled task data structure
+ * DeleteOwaspWhiteRule request structure.
  *
- * @method integer getStartDateTime() Obtain Start timestamp, in seconds.
- * @method void setStartDateTime(integer $StartDateTime) Set Start timestamp, in seconds.
- * @method integer getEndDateTime() Obtain End timestamp, in seconds.
- * @method void setEndDateTime(integer $EndDateTime) Set End timestamp, in seconds.
+ * @method array getIds() Obtain ID list of allowlisted rules.
+ * @method void setIds(array $Ids) Set ID list of allowlisted rules.
+ * @method string getDomain() Obtain Domain name
+ * @method void setDomain(string $Domain) Set Domain name
  */
-class TimedJob extends AbstractModel
+class DeleteOwaspWhiteRuleRequest extends AbstractModel
 {
     /**
-     * @var integer Start timestamp, in seconds.
+     * @var array ID list of allowlisted rules.
      */
-    public $StartDateTime;
+    public $Ids;
 
     /**
-     * @var integer End timestamp, in seconds.
+     * @var string Domain name
      */
-    public $EndDateTime;
+    public $Domain;
 
     /**
-     * @param integer $StartDateTime Start timestamp, in seconds.
-     * @param integer $EndDateTime End timestamp, in seconds.
+     * @param array $Ids ID list of allowlisted rules.
+     * @param string $Domain Domain name
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class TimedJob extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartDateTime",$param) and $param["StartDateTime"] !== null) {
-            $this->StartDateTime = $param["StartDateTime"];
+        if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
+            $this->Ids = $param["Ids"];
         }
 
-        if (array_key_exists("EndDateTime",$param) and $param["EndDateTime"] !== null) {
-            $this->EndDateTime = $param["EndDateTime"];
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

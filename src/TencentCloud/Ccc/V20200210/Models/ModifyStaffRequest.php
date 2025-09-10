@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUseMobileAccept(integer $UseMobileAccept) Set Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
  * @method string getExtensionNumber() Obtain Agent extension number (starting with 1 to 8, 4 - 6 digits).
  * @method void setExtensionNumber(string $ExtensionNumber) Set Agent extension number (starting with 1 to 8, 4 - 6 digits).
+ * @method ForwardingConfig getForwardingConfig() Obtain Call forwarding configuration.
+ * @method void setForwardingConfig(ForwardingConfig $ForwardingConfig) Set Call forwarding configuration.
  */
 class ModifyStaffRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ModifyStaffRequest extends AbstractModel
     public $ExtensionNumber;
 
     /**
+     * @var ForwardingConfig Call forwarding configuration.
+     */
+    public $ForwardingConfig;
+
+    /**
      * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $Email Agent account.
      * @param string $Name Agent name.
@@ -104,6 +111,7 @@ class ModifyStaffRequest extends AbstractModel
      * @param boolean $UseMobileCallOut Whether the cell phone outbound call switch is enabled or not.
      * @param integer $UseMobileAccept Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
      * @param string $ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
+     * @param ForwardingConfig $ForwardingConfig Call forwarding configuration.
      */
     function __construct()
     {
@@ -156,6 +164,11 @@ class ModifyStaffRequest extends AbstractModel
 
         if (array_key_exists("ExtensionNumber",$param) and $param["ExtensionNumber"] !== null) {
             $this->ExtensionNumber = $param["ExtensionNumber"];
+        }
+
+        if (array_key_exists("ForwardingConfig",$param) and $param["ForwardingConfig"] !== null) {
+            $this->ForwardingConfig = new ForwardingConfig();
+            $this->ForwardingConfig->deserialize($param["ForwardingConfig"]);
         }
     }
 }

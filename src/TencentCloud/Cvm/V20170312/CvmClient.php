@@ -159,6 +159,8 @@ This API is used to query the renewal price of monthly subscription instances.
 * Batch operations are supported. Each request can modify up to 100 instances.
 * When you modify the security groups associated with an instance is modified, the original security groups are disassociated.
 * You can use the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) to query the instance operation result. If the 'LatestOperationState' in the response is **SUCCESS**, the operation is successful.
+ * @method Models\ModifyInstancesDisasterRecoverGroupResponse ModifyInstancesDisasterRecoverGroup(Models\ModifyInstancesDisasterRecoverGroupRequest $req) This API is used to adjust the placement group of an instance.
+* Currently only basic networks or Virtual Private Cloud (VPC) instances are supported.
  * @method Models\ModifyInstancesProjectResponse ModifyInstancesProject(Models\ModifyInstancesProjectRequest $req) This API is used to change the project to which an instance is assigned.
 
 * Project is a virtual concept. You can create multiple projects under one account, manage different resources in each project, and assign different instances to different projects. You may use the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API to query instances and use the project ID to filter the results.
