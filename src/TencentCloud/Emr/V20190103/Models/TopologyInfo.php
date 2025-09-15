@@ -20,14 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cluster node topology information
  *
- * @method integer getZoneId() Obtain AZ ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setZoneId(integer $ZoneId) Set AZ ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getZone() Obtain AZ information
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setZone(string $Zone) Set AZ information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getZoneId() Obtain Availability zone ID.
+ * @method void setZoneId(integer $ZoneId) Set Availability zone ID.
+ * @method string getZone() Obtain Availability information.
+ * @method void setZone(string $Zone) Set Availability information.
  * @method array getSubnetInfoList() Obtain Subnet information
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSubnetInfoList(array $SubnetInfoList) Set Subnet information
@@ -40,14 +36,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class TopologyInfo extends AbstractModel
 {
     /**
-     * @var integer AZ ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Availability zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var string AZ information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Availability information.
      */
     public $Zone;
 
@@ -64,10 +58,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $NodeInfoList;
 
     /**
-     * @param integer $ZoneId AZ ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $Zone AZ information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $ZoneId Availability zone ID.
+     * @param string $Zone Availability information.
      * @param array $SubnetInfoList Subnet information
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $NodeInfoList Node information

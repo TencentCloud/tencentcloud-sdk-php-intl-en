@@ -21,19 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * InquiryPriceScaleOutInstance response structure.
  *
  * @method string getOriginalCost() Obtain Original price.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOriginalCost(string $OriginalCost) Set Original price.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDiscountCost() Obtain Discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDiscountCost(string $DiscountCost) Set Discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUnit() Obtain Time unit of scale-out. Valid value:
-<li>s: Second.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUnit(string $Unit) Set Time unit of scale-out. Valid value:
-<li>s: Second.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUnit() Obtain Time unit of scale-out. Valid values.
+<li>s: second.</li>
+ * @method void setUnit(string $Unit) Set Time unit of scale-out. Valid values.
+<li>s: second.</li>
  * @method PriceResource getPriceSpec() Obtain Node spec queried for price.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPriceSpec(PriceResource $PriceSpec) Set Node spec queried for price.
@@ -49,20 +43,17 @@ class InquiryPriceScaleOutInstanceResponse extends AbstractModel
 {
     /**
      * @var string Original price.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OriginalCost;
 
     /**
      * @var string Discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DiscountCost;
 
     /**
-     * @var string Time unit of scale-out. Valid value:
-<li>s: Second.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Time unit of scale-out. Valid values.
+<li>s: second.</li>
      */
     public $Unit;
 
@@ -85,12 +76,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $OriginalCost Original price.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DiscountCost Discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Unit Time unit of scale-out. Valid value:
-<li>s: Second.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Unit Time unit of scale-out. Valid values.
+<li>s: second.</li>
      * @param PriceResource $PriceSpec Node spec queried for price.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $MultipleEmrPrice The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.

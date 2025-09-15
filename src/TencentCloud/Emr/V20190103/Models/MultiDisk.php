@@ -20,50 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Multi-cloud disk parameters
  *
- * @method string getDiskType() Obtain Disk type
+ * @method string getDiskType() Obtain Cloud disk type.
 <li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskType(string $DiskType) Set Disk type
+ * @method void setDiskType(string $DiskType) Set Cloud disk type.
 <li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getVolume() Obtain Cloud disk sizeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setVolume(integer $Volume) Set Cloud disk sizeNote: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCount() Obtain Number of cloud disks of this typeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setCount(integer $Count) Set Number of cloud disks of this typeNote: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getVolume() Obtain Cloud disk size.
+ * @method void setVolume(integer $Volume) Set Cloud disk size.
+ * @method integer getCount() Obtain Number of cloud disks of this type.
+ * @method void setCount(integer $Count) Set Number of cloud disks of this type.
  */
 class MultiDisk extends AbstractModel
 {
     /**
-     * @var string Disk type
+     * @var string Cloud disk type.
 <li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DiskType;
 
     /**
-     * @var integer Cloud disk sizeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Cloud disk size.
      */
     public $Volume;
 
     /**
-     * @var integer Number of cloud disks of this typeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of cloud disks of this type.
      */
     public $Count;
 
     /**
-     * @param string $DiskType Disk type
+     * @param string $DiskType Cloud disk type.
 <li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Volume Cloud disk sizeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Count Number of cloud disks of this typeNote: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Volume Cloud disk size.
+     * @param integer $Count Number of cloud disks of this type.
      */
     function __construct()
     {

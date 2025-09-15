@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Node information
  *
- * @method string getNodeType() Obtain Node type: Master/Core/Task/Router/Common
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setNodeType(string $NodeType) Set Node type: Master/Core/Task/Router/Common
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getNodeSize() Obtain Number of nodes
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setNodeSize(integer $NodeSize) Set Number of nodes
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getNodeType() Obtain Node type: Master/Core/Task/Router/Common.
+ * @method void setNodeType(string $NodeType) Set Node type: Master/Core/Task/Router/Common.
+ * @method integer getNodeSize() Obtain Number of nodes.
+ * @method void setNodeSize(integer $NodeSize) Set Number of nodes.
  */
 class ShortNodeInfo extends AbstractModel
 {
     /**
-     * @var string Node type: Master/Core/Task/Router/Common
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Node type: Master/Core/Task/Router/Common.
      */
     public $NodeType;
 
     /**
-     * @var integer Number of nodes
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Number of nodes.
      */
     public $NodeSize;
 
     /**
-     * @param string $NodeType Node type: Master/Core/Task/Router/Common
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $NodeSize Number of nodes
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $NodeType Node type: Master/Core/Task/Router/Common.
+     * @param integer $NodeSize Number of nodes.
      */
     function __construct()
     {

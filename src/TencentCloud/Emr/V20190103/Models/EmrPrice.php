@@ -20,44 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EMR inquiry description
  *
- * @method string getOriginalCost() Obtain The published price.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginalCost(string $OriginalCost) Set The published price.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDiscountCost() Obtain The discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiscountCost(string $DiscountCost) Set The discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUnit() Obtain The unit of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUnit(string $Unit) Set The unit of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOriginalCost() Obtain List price.
+ * @method void setOriginalCost(string $OriginalCost) Set List price.
+ * @method string getDiscountCost() Obtain Discounted price.
+ * @method void setDiscountCost(string $DiscountCost) Set Discounted price.
+ * @method string getUnit() Obtain Unit.
+ * @method void setUnit(string $Unit) Set Unit.
  * @method PriceResource getPriceSpec() Obtain The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPriceSpec(PriceResource $PriceSpec) Set The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getSupportSpotPaid() Obtain Whether spot instances are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSupportSpotPaid(boolean $SupportSpotPaid) Set Whether spot instances are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class EmrPrice extends AbstractModel
 {
     /**
-     * @var string The published price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string List price.
      */
     public $OriginalCost;
 
     /**
-     * @var string The discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Discounted price.
      */
     public $DiscountCost;
 
     /**
-     * @var string The unit of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Unit.
      */
     public $Unit;
 
@@ -69,21 +58,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var boolean Whether spot instances are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SupportSpotPaid;
 
     /**
-     * @param string $OriginalCost The published price.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DiscountCost The discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Unit The unit of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OriginalCost List price.
+     * @param string $DiscountCost Discounted price.
+     * @param string $Unit Unit.
      * @param PriceResource $PriceSpec The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $SupportSpotPaid Whether spot instances are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

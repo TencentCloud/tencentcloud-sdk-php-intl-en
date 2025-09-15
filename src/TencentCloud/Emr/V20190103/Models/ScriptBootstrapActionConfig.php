@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArgs(array $Args) Set The execution script parameter. The parameter format must comply with standard shell specifications.
  * @method string getCosFileName() Obtain The script file name.
  * @method void setCosFileName(string $CosFileName) Set The script file name.
+ * @method string getRemark() Obtain Remarks.
+ * @method void setRemark(string $Remark) Set Remarks.
  */
 class ScriptBootstrapActionConfig extends AbstractModel
 {
@@ -61,6 +63,11 @@ class ScriptBootstrapActionConfig extends AbstractModel
     public $CosFileName;
 
     /**
+     * @var string Remarks.
+     */
+    public $Remark;
+
+    /**
      * @param string $CosFileURI The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
      * @param string $ExecutionMoment The execution time of the bootstrap action script. Valid values:
 <li>`resourceAfter`: After node initialization</li>
@@ -68,6 +75,7 @@ class ScriptBootstrapActionConfig extends AbstractModel
 <li>`clusterBefore`: Before cluster start</li>
      * @param array $Args The execution script parameter. The parameter format must comply with standard shell specifications.
      * @param string $CosFileName The script file name.
+     * @param string $Remark Remarks.
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ScriptBootstrapActionConfig extends AbstractModel
 
         if (array_key_exists("CosFileName",$param) and $param["CosFileName"] !== null) {
             $this->CosFileName = $param["CosFileName"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlacement(Placement $Placement) Set Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method integer getModifyPayMode() Obtain Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
  * @method void setModifyPayMode(integer $ModifyPayMode) Set Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
- * @method boolean getNeedDetail() Obtain 
- * @method void setNeedDetail(boolean $NeedDetail) Set 
- * @method string getInstanceId() Obtain 
- * @method void setInstanceId(string $InstanceId) Set 
+ * @method boolean getNeedDetail() Obtain Whether the renewal price for every node is required.
+ * @method void setNeedDetail(boolean $NeedDetail) Set Whether the renewal price for every node is required.
+ * @method string getInstanceId() Obtain Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
  */
 class InquiryPriceRenewInstanceRequest extends AbstractModel
 {
@@ -77,12 +77,12 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
     public $ModifyPayMode;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the renewal price for every node is required.
      */
     public $NeedDetail;
 
     /**
-     * @var string 
+     * @var string Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
      */
     public $InstanceId;
 
@@ -94,8 +94,8 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
      * @param string $Currency Currency.
      * @param Placement $Placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
      * @param integer $ModifyPayMode Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
-     * @param boolean $NeedDetail 
-     * @param string $InstanceId 
+     * @param boolean $NeedDetail Whether the renewal price for every node is required.
+     * @param string $InstanceId Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
      */
     function __construct()
     {

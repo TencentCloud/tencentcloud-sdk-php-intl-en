@@ -20,46 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Multi-cloud disk parameters
  *
- * @method integer getCount() Obtain Number of cloud disks in this type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCount(integer $Count) Set Number of cloud disks in this type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getType() Obtain Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setType(integer $Type) Set Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getVolume() Obtain Cloud disk size
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVolume(integer $Volume) Set Cloud disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getCount() Obtain Number of cloud disks of this type.
+ * @method void setCount(integer $Count) Set Number of cloud disks of this type.
+ * @method integer getType() Obtain Disk type.
+1: Local Disk.
+2: Cloud Disk.
+3: Local SSD.
+4: Cloud SSD.
+5: Premium Cloud Disk.
+6: Enhanced SSD.
+11: Throughput HDD.
+12: Tremendous SSD.
+13: Balanced SSD.
+14: Big Data Cloud Disk.
+15: High IO Cloud Disk.
+16: Remote SSD.
+ * @method void setType(integer $Type) Set Disk type.
+1: Local Disk.
+2: Cloud Disk.
+3: Local SSD.
+4: Cloud SSD.
+5: Premium Cloud Disk.
+6: Enhanced SSD.
+11: Throughput HDD.
+12: Tremendous SSD.
+13: Balanced SSD.
+14: Big Data Cloud Disk.
+15: High IO Cloud Disk.
+16: Remote SSD.
+ * @method string getSize() Obtain Disk size.
+ * @method void setSize(string $Size) Set Disk size.
+ * @method integer getVolume() Obtain Cloud disk size (bytes).
+ * @method void setVolume(integer $Volume) Set Cloud disk size (bytes).
  */
 class MultiDiskMC extends AbstractModel
 {
     /**
-     * @var integer Number of cloud disks in this type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of cloud disks of this type.
      */
     public $Count;
 
     /**
-     * @var integer Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Disk type.
+1: Local Disk.
+2: Cloud Disk.
+3: Local SSD.
+4: Cloud SSD.
+5: Premium Cloud Disk.
+6: Enhanced SSD.
+11: Throughput HDD.
+12: Tremendous SSD.
+13: Balanced SSD.
+14: Big Data Cloud Disk.
+15: High IO Cloud Disk.
+16: Remote SSD.
      */
     public $Type;
 
     /**
-     * @var integer Cloud disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Disk size.
+     */
+    public $Size;
+
+    /**
+     * @var integer Cloud disk size (bytes).
      */
     public $Volume;
 
     /**
-     * @param integer $Count Number of cloud disks in this type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Type Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Volume Cloud disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Count Number of cloud disks of this type.
+     * @param integer $Type Disk type.
+1: Local Disk.
+2: Cloud Disk.
+3: Local SSD.
+4: Cloud SSD.
+5: Premium Cloud Disk.
+6: Enhanced SSD.
+11: Throughput HDD.
+12: Tremendous SSD.
+13: Balanced SSD.
+14: Big Data Cloud Disk.
+15: High IO Cloud Disk.
+16: Remote SSD.
+     * @param string $Size Disk size.
+     * @param integer $Volume Cloud disk size (bytes).
      */
     function __construct()
     {
@@ -80,6 +124,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
+            $this->Size = $param["Size"];
         }
 
         if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {

@@ -232,7 +232,6 @@ The feature is only supported in the enterprise plan and is currently in closed 
  * @method Models\ModifyFunctionRulePriorityResponse ModifyFunctionRulePriority(Models\ModifyFunctionRulePriorityRequest $req) This API is used to modify the priority of trigger rules for an edge function.
  * @method Models\ModifyHostsCertificateResponse ModifyHostsCertificate(Models\ModifyHostsCertificateRequest $req) This API is used to configure the certificate of a site. You can use your own certificate or [apply for a free certificate](https://intl.cloud.tencent.com/document/product/1552/90437?from_cn_redirect=1).
 To use an external certificate, upload the certificate to [SSL Certificates Console](https://console.cloud.tencent.com/certoview) first, and then input the certificate ID in this API. For details, see [Deploying Own Certificates to EdgeOne Domains](https://intl.cloud.tencent.com/document/product/1552/88874?from_cn_redirect=1).
- 
  * @method Models\ModifyL4ProxyResponse ModifyL4Proxy(Models\ModifyL4ProxyRequest $req) This API is used to modify the configuration of a Layer 4 proxy instance.
  * @method Models\ModifyL4ProxyRulesResponse ModifyL4ProxyRules(Models\ModifyL4ProxyRulesRequest $req) This API is used to modify Layer 4 proxy forwarding rules, supporting both individual and batch modification.
  * @method Models\ModifyL4ProxyRulesStatusResponse ModifyL4ProxyRulesStatus(Models\ModifyL4ProxyRulesStatusRequest $req) This API is used to start or stop Layer 4 proxy forwarding rules, supporting both individual and batch operation.

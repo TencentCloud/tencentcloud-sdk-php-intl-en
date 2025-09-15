@@ -20,61 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Restart, stop, or start of service/monitoring configurations
  *
- * @method integer getRollingRestartSwitch() Obtain `0`: Disable rolling restart
-`1`: Enable rolling restart
+ * @method integer getRollingRestartSwitch() Obtain 0: disable rolling restart.
+1: enable rolling start.
+ * @method void setRollingRestartSwitch(integer $RollingRestartSwitch) Set 0: disable rolling restart.
+1: enable rolling start.
+ * @method integer getBatchSize() Obtain Rolling restart quantity per batch, which is up to 99999.
+ * @method void setBatchSize(integer $BatchSize) Set Rolling restart quantity per batch, which is up to 99999.
+ * @method integer getTimeWait() Obtain Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
+ * @method void setTimeWait(integer $TimeWait) Set Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
+ * @method integer getDealOnFail() Obtain Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+ * @method void setDealOnFail(integer $DealOnFail) Set Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+ * @method array getArgs() Obtain Parameters required in the instruction.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRollingRestartSwitch(integer $RollingRestartSwitch) Set `0`: Disable rolling restart
-`1`: Enable rolling restart
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getBatchSize() Obtain The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBatchSize(integer $BatchSize) Set The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTimeWait() Obtain The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTimeWait(integer $TimeWait) Set The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDealOnFail() Obtain The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDealOnFail(integer $DealOnFail) Set The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
+ * @method void setArgs(array $Args) Set Parameters required in the instruction.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class StrategyConfig extends AbstractModel
 {
     /**
-     * @var integer `0`: Disable rolling restart
-`1`: Enable rolling restart
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 0: disable rolling restart.
+1: enable rolling start.
      */
     public $RollingRestartSwitch;
 
     /**
-     * @var integer The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Rolling restart quantity per batch, which is up to 99999.
      */
     public $BatchSize;
 
     /**
-     * @var integer The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
      */
     public $TimeWait;
 
     /**
-     * @var integer The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
      */
     public $DealOnFail;
 
     /**
-     * @param integer $RollingRestartSwitch `0`: Disable rolling restart
-`1`: Enable rolling restart
+     * @var array Parameters required in the instruction.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $BatchSize The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TimeWait The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DealOnFail The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
+     */
+    public $Args;
+
+    /**
+     * @param integer $RollingRestartSwitch 0: disable rolling restart.
+1: enable rolling start.
+     * @param integer $BatchSize Rolling restart quantity per batch, which is up to 99999.
+     * @param integer $TimeWait Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
+     * @param integer $DealOnFail Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+     * @param array $Args Parameters required in the instruction.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -104,6 +100,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DealOnFail",$param) and $param["DealOnFail"] !== null) {
             $this->DealOnFail = $param["DealOnFail"];
+        }
+
+        if (array_key_exists("Args",$param) and $param["Args"] !== null) {
+            $this->Args = [];
+            foreach ($param["Args"] as $key => $value){
+                $obj = new Arg();
+                $obj->deserialize($value);
+                array_push($this->Args, $obj);
+            }
         }
     }
 }

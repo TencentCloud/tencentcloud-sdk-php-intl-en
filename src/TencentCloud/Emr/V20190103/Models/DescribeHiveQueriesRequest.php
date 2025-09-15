@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Starting offset for pagination. Start value: 0
  * @method integer getLimit() Obtain Page size. Valid range: [1,100]
  * @method void setLimit(integer $Limit) Set Page size. Valid range: [1,100]
+ * @method array getState() Obtain Execution status, for example, ERROR.
+ * @method void setState(array $State) Set Execution status, for example, ERROR.
+ * @method integer getEndTimeGte() Obtain Time point earlier than the end time.
+ * @method void setEndTimeGte(integer $EndTimeGte) Set Time point earlier than the end time.
+ * @method integer getEndTimeLte() Obtain Time point later than the end time.
+ * @method void setEndTimeLte(integer $EndTimeLte) Set Time point later than the end time.
  */
 class DescribeHiveQueriesRequest extends AbstractModel
 {
@@ -59,11 +65,29 @@ class DescribeHiveQueriesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array Execution status, for example, ERROR.
+     */
+    public $State;
+
+    /**
+     * @var integer Time point earlier than the end time.
+     */
+    public $EndTimeGte;
+
+    /**
+     * @var integer Time point later than the end time.
+     */
+    public $EndTimeLte;
+
+    /**
      * @param string $InstanceId The cluster ID.
      * @param integer $StartTime The start time in seconds.
      * @param integer $EndTime The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
      * @param integer $Offset Starting offset for pagination. Start value: 0
      * @param integer $Limit Page size. Valid range: [1,100]
+     * @param array $State Execution status, for example, ERROR.
+     * @param integer $EndTimeGte Time point earlier than the end time.
+     * @param integer $EndTimeLte Time point later than the end time.
      */
     function __construct()
     {
@@ -96,6 +120,18 @@ class DescribeHiveQueriesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
+        }
+
+        if (array_key_exists("EndTimeGte",$param) and $param["EndTimeGte"] !== null) {
+            $this->EndTimeGte = $param["EndTimeGte"];
+        }
+
+        if (array_key_exists("EndTimeLte",$param) and $param["EndTimeLte"] !== null) {
+            $this->EndTimeLte = $param["EndTimeLte"];
         }
     }
 }

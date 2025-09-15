@@ -22,12 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain The instance ID.
  * @method void setInstanceId(string $InstanceId) Set The instance ID.
- * @method array getFilters() Obtain Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05.
- * @method void setFilters(array $Filters) Set Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05.
+ * @method array getFilters() Obtain Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+ScaleAction: 1 (scale out), 2 (scale in).
+
+ * @method void setFilters(array $Filters) Set Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+ScaleAction: 1 (scale out), 2 (scale in).
+
  * @method integer getOffset() Obtain Pagination parameters.
  * @method void setOffset(integer $Offset) Set Pagination parameters.
  * @method integer getLimit() Obtain Pagination parameters. Maximum value: 100
  * @method void setLimit(integer $Limit) Set Pagination parameters. Maximum value: 100
+ * @method integer getRecordSource() Obtain Whether it is automatic scaling (0) or managed scaling (1)
+ * @method void setRecordSource(integer $RecordSource) Set Whether it is automatic scaling (0) or managed scaling (1)
+ * @method integer getAsc() Obtain Ascending or not. 1: ascending, 0: descending.
+ * @method void setAsc(integer $Asc) Set Ascending or not. 1: ascending, 0: descending.
  */
 class DescribeAutoScaleRecordsRequest extends AbstractModel
 {
@@ -37,7 +49,11 @@ class DescribeAutoScaleRecordsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05.
+     * @var array Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+ScaleAction: 1 (scale out), 2 (scale in).
+
      */
     public $Filters;
 
@@ -52,10 +68,26 @@ class DescribeAutoScaleRecordsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var integer Whether it is automatic scaling (0) or managed scaling (1)
+     */
+    public $RecordSource;
+
+    /**
+     * @var integer Ascending or not. 1: ascending, 0: descending.
+     */
+    public $Asc;
+
+    /**
      * @param string $InstanceId The instance ID.
-     * @param array $Filters Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05.
+     * @param array $Filters Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+ScaleAction: 1 (scale out), 2 (scale in).
+
      * @param integer $Offset Pagination parameters.
      * @param integer $Limit Pagination parameters. Maximum value: 100
+     * @param integer $RecordSource Whether it is automatic scaling (0) or managed scaling (1)
+     * @param integer $Asc Ascending or not. 1: ascending, 0: descending.
      */
     function __construct()
     {
@@ -89,6 +121,14 @@ class DescribeAutoScaleRecordsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("RecordSource",$param) and $param["RecordSource"] !== null) {
+            $this->RecordSource = $param["RecordSource"];
+        }
+
+        if (array_key_exists("Asc",$param) and $param["Asc"] !== null) {
+            $this->Asc = $param["Asc"];
         }
     }
 }

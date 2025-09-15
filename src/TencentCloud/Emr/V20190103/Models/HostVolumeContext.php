@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Description of `HostPath` mounting method in the pod
  *
- * @method string getVolumePath() Obtain The directory for mounting the host in the pod, which is the mount point of the host in the resource. A specified mount point corresponds to the host path and is used as the data storage directory in the pod.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVolumePath(string $VolumePath) Set The directory for mounting the host in the pod, which is the mount point of the host in the resource. A specified mount point corresponds to the host path and is used as the data storage directory in the pod.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVolumePath() Obtain Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+ * @method void setVolumePath(string $VolumePath) Set Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod.
  */
 class HostVolumeContext extends AbstractModel
 {
     /**
-     * @var string The directory for mounting the host in the pod, which is the mount point of the host in the resource. A specified mount point corresponds to the host path and is used as the data storage directory in the pod.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod.
      */
     public $VolumePath;
 
     /**
-     * @param string $VolumePath The directory for mounting the host in the pod, which is the mount point of the host in the resource. A specified mount point corresponds to the host path and is used as the data storage directory in the pod.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VolumePath Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod.
      */
     function __construct()
     {

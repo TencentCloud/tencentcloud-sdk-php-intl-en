@@ -20,18 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Price details by node, used for creating the cluster price list
  *
- * @method string getNodeType() Obtain The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNodeType(string $NodeType) Set The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNodeType() Obtain Node type: Master, Core, Task, Common, Router, and MySQL.
+ * @method void setNodeType(string $NodeType) Set Node type: Master, Core, Task, Common, Router, and MySQL.
  * @method array getPartDetailPrice() Obtain Price details by node part
  * @method void setPartDetailPrice(array $PartDetailPrice) Set Price details by node part
  */
 class NodeDetailPriceResult extends AbstractModel
 {
     /**
-     * @var string The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Node type: Master, Core, Task, Common, Router, and MySQL.
      */
     public $NodeType;
 
@@ -41,8 +38,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PartDetailPrice;
 
     /**
-     * @param string $NodeType The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NodeType Node type: Master, Core, Task, Common, Router, and MySQL.
      * @param array $PartDetailPrice Price details by node part
      */
     function __construct()

@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Target processes
  *
- * @method string getComponentName() Obtain The process name (required), such as NameNode.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComponentName(string $ComponentName) Set The process name (required), such as NameNode.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getComponentName() Obtain Process name which is required, such as NameNode.
+ * @method void setComponentName(string $ComponentName) Set Process name which is required, such as NameNode.
  * @method array getIpList() Obtain The target IP list.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIpList(array $IpList) Set The target IP list.
@@ -32,8 +30,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class ComponentBasicRestartInfo extends AbstractModel
 {
     /**
-     * @var string The process name (required), such as NameNode.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Process name which is required, such as NameNode.
      */
     public $ComponentName;
 
@@ -44,8 +41,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IpList;
 
     /**
-     * @param string $ComponentName The process name (required), such as NameNode.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ComponentName Process name which is required, such as NameNode.
      * @param array $IpList The target IP list.
 Note: This field may return null, indicating that no valid values can be obtained.
      */

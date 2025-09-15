@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getStatusDesc() Obtain Status description
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setStatusDesc(string $StatusDesc) Set Status description
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getStatusDesc() Obtain Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
+ * @method void setStatusDesc(string $StatusDesc) Set Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
  * @method string getClusterName() Obtain Cluster name
  * @method void setClusterName(string $ClusterName) Set Cluster name
  * @method integer getZoneId() Obtain Cluster region
@@ -44,82 +42,52 @@ Note: This field may return `null`, indicating that no valid value can be obtain
  * @method void setChargeType(integer $ChargeType) Set Cluster billing mode
  * @method integer getId() Obtain EMR ID
  * @method void setId(integer $Id) Set EMR ID
- * @method integer getProductId() Obtain Product ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setProductId(integer $ProductId) Set Product ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getProjectId() Obtain Project ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setProjectId(integer $ProjectId) Set Project ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getRegionId() Obtain Region
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setRegionId(integer $RegionId) Set Region
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getSubnetId() Obtain Subnet ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSubnetId(integer $SubnetId) Set Subnet ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getVpcId() Obtain VPC ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setVpcId(integer $VpcId) Set VPC ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getZone() Obtain Region
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setZone(string $Zone) Set Region
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getStatus() Obtain Status code
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setStatus(integer $Status) Set Status code
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getProductId() Obtain Product ID.
+ * @method void setProductId(integer $ProductId) Set Product ID.
+ * @method integer getProjectId() Obtain Project ID.
+ * @method void setProjectId(integer $ProjectId) Set Project ID.
+ * @method integer getRegionId() Obtain Region.
+ * @method void setRegionId(integer $RegionId) Set Region.
+ * @method integer getSubnetId() Obtain Subnet ID.
+ * @method void setSubnetId(integer $SubnetId) Set Subnet ID.
+ * @method integer getVpcId() Obtain Network ID.
+ * @method void setVpcId(integer $VpcId) Set Network ID.
+ * @method string getZone() Obtain Region.
+ * @method void setZone(string $Zone) Set Region.
+ * @method integer getStatus() Obtain Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
+ * @method void setStatus(integer $Status) Set Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
  * @method array getTags() Obtain Instance tag
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setTags(array $Tags) Set Instance tag
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getAlarmInfo() Obtain Alarm information
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setAlarmInfo(string $AlarmInfo) Set Alarm information
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getIsWoodpeckerCluster() Obtain Whether it is a Woodpecker cluster
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setIsWoodpeckerCluster(integer $IsWoodpeckerCluster) Set Whether it is a Woodpecker cluster
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getVpcName() Obtain VPC name
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setVpcName(string $VpcName) Set VPC name
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getSubnetName() Obtain Subnet name
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSubnetName(string $SubnetName) Set Subnet name
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getUniqVpcId() Obtain VPC ID string
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID string
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getUniqSubnetId() Obtain Subnet ID string
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet ID string
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getClusterClass() Obtain Cluster type
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setClusterClass(string $ClusterClass) Set Cluster type
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method boolean getIsMultiZoneCluster() Obtain Whether it is a multi-AZ cluster
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) Set Whether it is a multi-AZ cluster
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method boolean getIsHandsCluster() Obtain Whether it is a manually deployed cluster
-Note: This field may return null, indicating that no valid value can be obtained. 
- * @method void setIsHandsCluster(boolean $IsHandsCluster) Set Whether it is a manually deployed cluster
-Note: This field may return null, indicating that no valid value can be obtained. 
+ * @method string getAlarmInfo() Obtain Alarm information.
+ * @method void setAlarmInfo(string $AlarmInfo) Set Alarm information.
+ * @method integer getIsWoodpeckerCluster() Obtain Whether it is a Woodpecker cluster.
+ * @method void setIsWoodpeckerCluster(integer $IsWoodpeckerCluster) Set Whether it is a Woodpecker cluster.
+ * @method string getVpcName() Obtain VPC name in Chinese.
+ * @method void setVpcName(string $VpcName) Set VPC name in Chinese.
+ * @method string getSubnetName() Obtain Subnet in Chinese.
+ * @method void setSubnetName(string $SubnetName) Set Subnet in Chinese.
+ * @method string getUniqVpcId() Obtain String VpcId.
+ * @method void setUniqVpcId(string $UniqVpcId) Set String VpcId.
+ * @method string getUniqSubnetId() Obtain String subnet.
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set String subnet.
+ * @method string getClusterClass() Obtain Cluster type.
+ * @method void setClusterClass(string $ClusterClass) Set Cluster type.
+ * @method boolean getIsMultiZoneCluster() Obtain Whether it is a cross-AZ cluster.
+ * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) Set Whether it is a cross-AZ cluster.
+ * @method boolean getIsHandsCluster() Obtain Whether it is a cluster created by a cluster CVM.
+ * @method void setIsHandsCluster(boolean $IsHandsCluster) Set Whether it is a cluster created by a cluster CVM.
  * @method array getOutSideSoftInfo() Obtain Client component information.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutSideSoftInfo(array $OutSideSoftInfo) Set Client component information.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsSupportOutsideCluster() Obtain Whether the current cluster supports external clients.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsSupportOutsideCluster(boolean $IsSupportOutsideCluster) Set Whether the current cluster supports external clients.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsSupportOutsideCluster() Obtain Whether the current cluster's scenarios support external clients.
+ * @method void setIsSupportOutsideCluster(boolean $IsSupportOutsideCluster) Set Whether the current cluster's scenarios support external clients.
+ * @method boolean getIsDedicatedCluster() Obtain Whether the cluster is used in a dedicated cluster scenario.
+ * @method void setIsDedicatedCluster(boolean $IsDedicatedCluster) Set Whether the cluster is used in a dedicated cluster scenario.
+ * @method boolean getIsSupportClone() Obtain Cluster supports for cloning.
+ * @method void setIsSupportClone(boolean $IsSupportClone) Set Cluster supports for cloning.
  */
 class EmrListInstance extends AbstractModel
 {
@@ -129,8 +97,7 @@ class EmrListInstance extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Status description
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
      */
     public $StatusDesc;
 
@@ -180,44 +147,37 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Id;
 
     /**
-     * @var integer Product ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Product ID.
      */
     public $ProductId;
 
     /**
-     * @var integer Project ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Project ID.
      */
     public $ProjectId;
 
     /**
-     * @var integer Region
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Region.
      */
     public $RegionId;
 
     /**
-     * @var integer Subnet ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Subnet ID.
      */
     public $SubnetId;
 
     /**
-     * @var integer VPC ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Network ID.
      */
     public $VpcId;
 
     /**
-     * @var string Region
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Region.
      */
     public $Zone;
 
     /**
-     * @var integer Status code
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
      */
     public $Status;
 
@@ -228,56 +188,47 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Tags;
 
     /**
-     * @var string Alarm information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Alarm information.
      */
     public $AlarmInfo;
 
     /**
-     * @var integer Whether it is a Woodpecker cluster
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Whether it is a Woodpecker cluster.
      */
     public $IsWoodpeckerCluster;
 
     /**
-     * @var string VPC name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string VPC name in Chinese.
      */
     public $VpcName;
 
     /**
-     * @var string Subnet name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Subnet in Chinese.
      */
     public $SubnetName;
 
     /**
-     * @var string VPC ID string
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string String VpcId.
      */
     public $UniqVpcId;
 
     /**
-     * @var string Subnet ID string
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string String subnet.
      */
     public $UniqSubnetId;
 
     /**
-     * @var string Cluster type
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Cluster type.
      */
     public $ClusterClass;
 
     /**
-     * @var boolean Whether it is a multi-AZ cluster
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var boolean Whether it is a cross-AZ cluster.
      */
     public $IsMultiZoneCluster;
 
     /**
-     * @var boolean Whether it is a manually deployed cluster
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * @var boolean Whether it is a cluster created by a cluster CVM.
      */
     public $IsHandsCluster;
 
@@ -288,15 +239,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OutSideSoftInfo;
 
     /**
-     * @var boolean Whether the current cluster supports external clients.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether the current cluster's scenarios support external clients.
      */
     public $IsSupportOutsideCluster;
 
     /**
+     * @var boolean Whether the cluster is used in a dedicated cluster scenario.
+     */
+    public $IsDedicatedCluster;
+
+    /**
+     * @var boolean Cluster supports for cloning.
+     */
+    public $IsSupportClone;
+
+    /**
      * @param string $ClusterId Cluster ID
-     * @param string $StatusDesc Status description
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $StatusDesc Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
      * @param string $ClusterName Cluster name
      * @param integer $ZoneId Cluster region
      * @param integer $AppId User APPID
@@ -306,44 +265,29 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param string $EmrVersion Cluster version
      * @param integer $ChargeType Cluster billing mode
      * @param integer $Id EMR ID
-     * @param integer $ProductId Product ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $ProjectId Project ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $RegionId Region
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $SubnetId Subnet ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $VpcId VPC ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $Zone Region
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $Status Status code
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $ProductId Product ID.
+     * @param integer $ProjectId Project ID.
+     * @param integer $RegionId Region.
+     * @param integer $SubnetId Subnet ID.
+     * @param integer $VpcId Network ID.
+     * @param string $Zone Region.
+     * @param integer $Status Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
      * @param array $Tags Instance tag
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $AlarmInfo Alarm information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $IsWoodpeckerCluster Whether it is a Woodpecker cluster
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $VpcName VPC name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $SubnetName Subnet name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $UniqVpcId VPC ID string
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $UniqSubnetId Subnet ID string
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $ClusterClass Cluster type
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param boolean $IsMultiZoneCluster Whether it is a multi-AZ cluster
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param boolean $IsHandsCluster Whether it is a manually deployed cluster
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * @param string $AlarmInfo Alarm information.
+     * @param integer $IsWoodpeckerCluster Whether it is a Woodpecker cluster.
+     * @param string $VpcName VPC name in Chinese.
+     * @param string $SubnetName Subnet in Chinese.
+     * @param string $UniqVpcId String VpcId.
+     * @param string $UniqSubnetId String subnet.
+     * @param string $ClusterClass Cluster type.
+     * @param boolean $IsMultiZoneCluster Whether it is a cross-AZ cluster.
+     * @param boolean $IsHandsCluster Whether it is a cluster created by a cluster CVM.
      * @param array $OutSideSoftInfo Client component information.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsSupportOutsideCluster Whether the current cluster supports external clients.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsSupportOutsideCluster Whether the current cluster's scenarios support external clients.
+     * @param boolean $IsDedicatedCluster Whether the cluster is used in a dedicated cluster scenario.
+     * @param boolean $IsSupportClone Cluster supports for cloning.
      */
     function __construct()
     {
@@ -486,6 +430,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IsSupportOutsideCluster",$param) and $param["IsSupportOutsideCluster"] !== null) {
             $this->IsSupportOutsideCluster = $param["IsSupportOutsideCluster"];
+        }
+
+        if (array_key_exists("IsDedicatedCluster",$param) and $param["IsDedicatedCluster"] !== null) {
+            $this->IsDedicatedCluster = $param["IsDedicatedCluster"];
+        }
+
+        if (array_key_exists("IsSupportClone",$param) and $param["IsSupportClone"] !== null) {
+            $this->IsSupportClone = $param["IsSupportClone"];
         }
     }
 }

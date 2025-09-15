@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Resource details
  *
- * @method string getInstanceType() Obtain The spec type, such as `S2.MEDIUM8`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceType(string $InstanceType) Set The spec type, such as `S2.MEDIUM8`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceType() Obtain specifications type, such as S2.MEDIUM8.
+ * @method void setInstanceType(string $InstanceType) Set specifications type, such as S2.MEDIUM8.
  * @method array getSystemDisk() Obtain The system disk, which can be up to 1 PCS.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSystemDisk(array $SystemDisk) Set The system disk, which can be up to 1 PCS.
@@ -44,8 +42,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class NodeResourceSpec extends AbstractModel
 {
     /**
-     * @var string The spec type, such as `S2.MEDIUM8`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string specifications type, such as S2.MEDIUM8.
      */
     public $InstanceType;
 
@@ -74,8 +71,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $LocalDataDisk;
 
     /**
-     * @param string $InstanceType The spec type, such as `S2.MEDIUM8`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceType specifications type, such as S2.MEDIUM8.
      * @param array $SystemDisk The system disk, which can be up to 1 PCS.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Tags The list of tags to be bound.

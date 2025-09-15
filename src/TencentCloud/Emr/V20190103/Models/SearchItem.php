@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Search field
  *
- * @method string getSearchType() Obtain Searchable type
- * @method void setSearchType(string $SearchType) Set Searchable type
- * @method string getSearchValue() Obtain Searchable value
- * @method void setSearchValue(string $SearchValue) Set Searchable value
+ * @method string getSearchType() Obtain Searchable type.
+ * @method void setSearchType(string $SearchType) Set Searchable type.
+ * @method string getSearchValue() Obtain Searchable value.
+ * @method void setSearchValue(string $SearchValue) Set Searchable value.
  */
 class SearchItem extends AbstractModel
 {
     /**
-     * @var string Searchable type
+     * @var string Searchable type.
      */
     public $SearchType;
 
     /**
-     * @var string Searchable value
+     * @var string Searchable value.
      */
     public $SearchValue;
 
     /**
-     * @param string $SearchType Searchable type
-     * @param string $SearchValue Searchable value
+     * @param string $SearchType Searchable type.
+     * @param string $SearchValue Searchable value.
      */
     function __construct()
     {

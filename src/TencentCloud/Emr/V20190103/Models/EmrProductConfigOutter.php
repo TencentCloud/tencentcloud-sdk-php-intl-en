@@ -76,10 +76,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSecurityOn(boolean $SecurityOn) Set Whether secure mode is supported
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSecurityGroup() Obtain Security group name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSecurityGroup(string $SecurityGroup) Set Security group name
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSecurityGroup() Obtain Initial security group ID of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSecurityGroup(string $SecurityGroup) Set Initial security group ID of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getCbsEncrypt() Obtain Whether to enable CBS encryption
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCbsEncrypt(integer $CbsEncrypt) Set Whether to enable CBS encryption
@@ -88,10 +88,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setApplicationRole(string $ApplicationRole) Set Custom application role
 Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method array getSecurityGroups() Obtain Security groups
-Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method void setSecurityGroups(array $SecurityGroups) Set Security groups
-Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method array getSecurityGroups() Obtain Security group ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSecurityGroups(array $SecurityGroups) Set Security group ID.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPublicKeyId() Obtain SSH key ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setPublicKeyId(string $PublicKeyId) Set SSH key ID
@@ -184,8 +184,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SecurityOn;
 
     /**
-     * @var string Security group name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Initial security group ID of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SecurityGroup;
 
@@ -202,8 +202,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $ApplicationRole;
 
     /**
-     * @var array Security groups
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @var array Security group ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SecurityGroups;
 
@@ -242,14 +242,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param boolean $SecurityOn Whether secure mode is supported
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $SecurityGroup Security group name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $SecurityGroup Initial security group ID of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CbsEncrypt Whether to enable CBS encryption
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ApplicationRole Custom application role
 Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param array $SecurityGroups Security groups
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param array $SecurityGroups Security group ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PublicKeyId SSH key ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */

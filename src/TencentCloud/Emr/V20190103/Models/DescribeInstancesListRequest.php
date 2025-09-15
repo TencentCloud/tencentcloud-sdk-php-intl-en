@@ -24,14 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisplayStrategy(string $DisplayStrategy) Set Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
  * @method integer getOffset() Obtain Page number. Default value: `0`, indicating the first page.
  * @method void setOffset(integer $Offset) Set Page number. Default value: `0`, indicating the first page.
- * @method integer getLimit() Obtain Number of returned results per page. Default value: `10`; maximum value: `100`.
- * @method void setLimit(integer $Limit) Set Number of returned results per page. Default value: `10`; maximum value: `100`.
+ * @method integer getLimit() Obtain Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both limit and offset are 0, all records will be queried.
+ * @method void setLimit(integer $Limit) Set Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both limit and offset are 0, all records will be queried.
  * @method string getOrderField() Obtain Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
  * @method void setOrderField(string $OrderField) Set Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
- * @method integer getAsc() Obtain Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
- * @method void setAsc(integer $Asc) Set Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
- * @method array getFilters() Obtain Custom query
- * @method void setFilters(array $Filters) Set Custom query
+ * @method integer getAsc() Obtain Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+ * @method void setAsc(integer $Asc) Set Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+ * @method array getFilters() Obtain Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
+ * @method void setFilters(array $Filters) Set Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
  */
 class DescribeInstancesListRequest extends AbstractModel
 {
@@ -46,7 +48,8 @@ class DescribeInstancesListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of returned results per page. Default value: `10`; maximum value: `100`.
+     * @var integer Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both limit and offset are 0, all records will be queried.
      */
     public $Limit;
 
@@ -56,22 +59,23 @@ class DescribeInstancesListRequest extends AbstractModel
     public $OrderField;
 
     /**
-     * @var integer Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
+     * @var integer Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
      */
     public $Asc;
 
     /**
-     * @var array Custom query
+     * @var array Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
      */
     public $Filters;
 
     /**
      * @param string $DisplayStrategy Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
      * @param integer $Offset Page number. Default value: `0`, indicating the first page.
-     * @param integer $Limit Number of returned results per page. Default value: `10`; maximum value: `100`.
+     * @param integer $Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both limit and offset are 0, all records will be queried.
      * @param string $OrderField Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
-     * @param integer $Asc Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
-     * @param array $Filters Custom query
+     * @param integer $Asc Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+     * @param array $Filters Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
      */
     function __construct()
     {

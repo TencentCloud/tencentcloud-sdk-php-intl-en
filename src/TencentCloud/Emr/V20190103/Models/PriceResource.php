@@ -20,100 +20,73 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Resource queried for price
  *
- * @method string getSpec() Obtain Target specification
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSpec(string $Spec) Set Target specification
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStorageType() Obtain Disk type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStorageType(integer $StorageType) Set Disk type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDiskType() Obtain Disk type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskType(string $DiskType) Set Disk type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRootSize() Obtain System disk size
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRootSize(integer $RootSize) Set System disk size
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSpec() Obtain Required specifications.
+ * @method void setSpec(string $Spec) Set Required specifications.
+ * @method integer getStorageType() Obtain Hard disk type.
+ * @method void setStorageType(integer $StorageType) Set Hard disk type.
+ * @method string getDiskType() Obtain Hard disk type.
+ * @method void setDiskType(string $DiskType) Set Hard disk type.
+ * @method integer getRootSize() Obtain System disk size.
+ * @method void setRootSize(integer $RootSize) Set System disk size.
  * @method integer getMemSize() Obtain Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMemSize(integer $MemSize) Set Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCpu() Obtain Number of CPUs.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCpu(integer $Cpu) Set Number of CPUs.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDiskSize() Obtain Disk size.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskSize(integer $DiskSize) Set Disk size.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCpu() Obtain Number of cores.
+ * @method void setCpu(integer $Cpu) Set Number of cores.
+ * @method integer getDiskSize() Obtain Hard disk size.
+ * @method void setDiskSize(integer $DiskSize) Set Hard disk size.
  * @method array getMultiDisks() Obtain List of cloud disks.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMultiDisks(array $MultiDisks) Set List of cloud disks.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getDiskCnt() Obtain Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDiskCnt(integer $DiskCnt) Set Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceType() Obtain Specification
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceType(string $InstanceType) Set Specification
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceType() Obtain Specifications.
+ * @method void setInstanceType(string $InstanceType) Set Specifications.
  * @method array getTags() Obtain Tag
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getDiskNum() Obtain Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDiskNum(integer $DiskNum) Set Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getLocalDiskNum() Obtain Number of local disks.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLocalDiskNum(integer $LocalDiskNum) Set Number of local disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getGpuDesc() Obtain GPU information.
+ * @method void setGpuDesc(string $GpuDesc) Set GPU information.
  */
 class PriceResource extends AbstractModel
 {
     /**
-     * @var string Target specification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Required specifications.
      */
     public $Spec;
 
     /**
-     * @var integer Disk type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Hard disk type.
      */
     public $StorageType;
 
     /**
-     * @var string Disk type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Hard disk type.
      */
     public $DiskType;
 
     /**
-     * @var integer System disk size
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer System disk size.
      */
     public $RootSize;
 
     /**
      * @var integer Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MemSize;
 
     /**
-     * @var integer Number of CPUs.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of cores.
      */
     public $Cpu;
 
     /**
-     * @var integer Disk size.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Hard disk size.
      */
     public $DiskSize;
 
@@ -125,13 +98,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var integer Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DiskCnt;
 
     /**
-     * @var string Specification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifications.
      */
     public $InstanceType;
 
@@ -143,43 +114,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var integer Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DiskNum;
 
     /**
      * @var integer Number of local disks.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LocalDiskNum;
 
     /**
-     * @param string $Spec Target specification
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $StorageType Disk type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DiskType Disk type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RootSize System disk size
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string GPU information.
+     */
+    public $GpuDesc;
+
+    /**
+     * @param string $Spec Required specifications.
+     * @param integer $StorageType Hard disk type.
+     * @param string $DiskType Hard disk type.
+     * @param integer $RootSize System disk size.
      * @param integer $MemSize Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Cpu Number of CPUs.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DiskSize Disk size.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Cpu Number of cores.
+     * @param integer $DiskSize Hard disk size.
      * @param array $MultiDisks List of cloud disks.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $DiskCnt Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceType Specification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceType Specifications.
      * @param array $Tags Tag
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $DiskNum Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $LocalDiskNum Number of local disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $GpuDesc GPU information.
      */
     function __construct()
     {
@@ -254,6 +218,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("LocalDiskNum",$param) and $param["LocalDiskNum"] !== null) {
             $this->LocalDiskNum = $param["LocalDiskNum"];
+        }
+
+        if (array_key_exists("GpuDesc",$param) and $param["GpuDesc"] !== null) {
+            $this->GpuDesc = $param["GpuDesc"];
         }
     }
 }

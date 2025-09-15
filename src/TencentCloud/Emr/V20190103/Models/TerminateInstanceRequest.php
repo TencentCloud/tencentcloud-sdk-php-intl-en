@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method array getResourceIds() Obtain ID of terminated node. This parameter is reserved and does not need to be configured.
  * @method void setResourceIds(array $ResourceIds) Set ID of terminated node. This parameter is reserved and does not need to be configured.
+ * @method string getResourceBaseType() Obtain The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+ * @method void setResourceBaseType(string $ResourceBaseType) Set The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+ * @method string getComputeResourceId() Obtain Computing resource ID.
+ * @method void setComputeResourceId(string $ComputeResourceId) Set Computing resource ID.
  */
 class TerminateInstanceRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class TerminateInstanceRequest extends AbstractModel
     public $ResourceIds;
 
     /**
+     * @var string The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+     */
+    public $ResourceBaseType;
+
+    /**
+     * @var string Computing resource ID.
+     */
+    public $ComputeResourceId;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param array $ResourceIds ID of terminated node. This parameter is reserved and does not need to be configured.
+     * @param string $ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+     * @param string $ComputeResourceId Computing resource ID.
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class TerminateInstanceRequest extends AbstractModel
 
         if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
             $this->ResourceIds = $param["ResourceIds"];
+        }
+
+        if (array_key_exists("ResourceBaseType",$param) and $param["ResourceBaseType"] !== null) {
+            $this->ResourceBaseType = $param["ResourceBaseType"];
+        }
+
+        if (array_key_exists("ComputeResourceId",$param) and $param["ComputeResourceId"] !== null) {
+            $this->ComputeResourceId = $param["ComputeResourceId"];
         }
     }
 }

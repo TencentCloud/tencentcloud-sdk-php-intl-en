@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Cluster instance ID
  * @method integer getPageNo() Obtain Page number
  * @method void setPageNo(integer $PageNo) Set Page number
- * @method integer getPageSize() Obtain Page size
- * @method void setPageSize(integer $PageSize) Set Page size
+ * @method integer getPageSize() Obtain Pagination size.
+All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
+ * @method void setPageSize(integer $PageSize) Set Pagination size.
+All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
  * @method UserManagerFilter getUserManagerFilter() Obtain User list query filter
  * @method void setUserManagerFilter(UserManagerFilter $UserManagerFilter) Set User list query filter
  * @method boolean getNeedKeytabInfo() Obtain Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
@@ -44,7 +46,8 @@ class DescribeUsersForUserManagerRequest extends AbstractModel
     public $PageNo;
 
     /**
-     * @var integer Page size
+     * @var integer Pagination size.
+All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
      */
     public $PageSize;
 
@@ -61,7 +64,8 @@ class DescribeUsersForUserManagerRequest extends AbstractModel
     /**
      * @param string $InstanceId Cluster instance ID
      * @param integer $PageNo Page number
-     * @param integer $PageSize Page size
+     * @param integer $PageSize Pagination size.
+All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
      * @param UserManagerFilter $UserManagerFilter User list query filter
      * @param boolean $NeedKeytabInfo Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
      */

@@ -20,190 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output parameters
  *
- * @method string getInstanceName() Obtain Database instance
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceName(string $InstanceName) Set Database instance
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getIp() Obtain Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIp(string $Ip) Set Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getPort() Obtain Database port
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPort(integer $Port) Set Database port
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMemSize() Obtain Database memory specification
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMemSize(integer $MemSize) Set Database memory specification
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getVolume() Obtain Database disk specification
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVolume(integer $Volume) Set Database disk specification
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getService() Obtain Service flag
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setService(string $Service) Set Service flag
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getExpireTime() Obtain Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setExpireTime(string $ExpireTime) Set Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getApplyTime() Obtain Application time
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setApplyTime(string $ApplyTime) Set Application time
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getPayType() Obtain Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPayType(integer $PayType) Set Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getExpireFlag() Obtain Expiration flag
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setExpireFlag(boolean $ExpireFlag) Set Expiration flag
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Database status
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Database status
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getIsAutoRenew() Obtain Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsAutoRenew(integer $IsAutoRenew) Set Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSerialNo() Obtain Database string
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSerialNo(string $SerialNo) Set Database string
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceName() Obtain Database instance.
+ * @method void setInstanceName(string $InstanceName) Set Database instance.
+ * @method string getIp() Obtain Database IP address.
+ * @method void setIp(string $Ip) Set Database IP address.
+ * @method integer getPort() Obtain Database port.
+ * @method void setPort(integer $Port) Set Database port.
+ * @method integer getMemSize() Obtain Database memory specifications.
+ * @method void setMemSize(integer $MemSize) Set Database memory specifications.
+ * @method integer getVolume() Obtain Database disk specifications.
+ * @method void setVolume(integer $Volume) Set Database disk specifications.
+ * @method string getService() Obtain Service identifier.
+ * @method void setService(string $Service) Set Service identifier.
+ * @method string getExpireTime() Obtain Expiration time.
+ * @method void setExpireTime(string $ExpireTime) Set Expiration time.
+ * @method string getApplyTime() Obtain Application time.
+ * @method void setApplyTime(string $ApplyTime) Set Application time.
+ * @method integer getPayType() Obtain Billing type.
+ * @method void setPayType(integer $PayType) Set Billing type.
+ * @method boolean getExpireFlag() Obtain Expiration flag.
+ * @method void setExpireFlag(boolean $ExpireFlag) Set Expiration flag.
+ * @method integer getStatus() Obtain Database status.
+ * @method void setStatus(integer $Status) Set Database status.
+ * @method integer getIsAutoRenew() Obtain Renewal flag.
+ * @method void setIsAutoRenew(integer $IsAutoRenew) Set Renewal flag.
+ * @method string getSerialNo() Obtain Database string.
+ * @method void setSerialNo(string $SerialNo) Set Database string.
  * @method integer getZoneId() Obtain ZoneId
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setZoneId(integer $ZoneId) Set ZoneId
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getRegionId() Obtain RegionId
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRegionId(integer $RegionId) Set RegionId
-Note: this field may return null, indicating that no valid values can be obtained.
  */
 class CdbInfo extends AbstractModel
 {
     /**
-     * @var string Database instance
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Database instance.
      */
     public $InstanceName;
 
     /**
-     * @var string Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Database IP address.
      */
     public $Ip;
 
     /**
-     * @var integer Database port
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Database port.
      */
     public $Port;
 
     /**
-     * @var integer Database memory specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Database memory specifications.
      */
     public $MemSize;
 
     /**
-     * @var integer Database disk specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Database disk specifications.
      */
     public $Volume;
 
     /**
-     * @var string Service flag
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Service identifier.
      */
     public $Service;
 
     /**
-     * @var string Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Expiration time.
      */
     public $ExpireTime;
 
     /**
-     * @var string Application time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Application time.
      */
     public $ApplyTime;
 
     /**
-     * @var integer Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Billing type.
      */
     public $PayType;
 
     /**
-     * @var boolean Expiration flag
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean Expiration flag.
      */
     public $ExpireFlag;
 
     /**
-     * @var integer Database status
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Database status.
      */
     public $Status;
 
     /**
-     * @var integer Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Renewal flag.
      */
     public $IsAutoRenew;
 
     /**
-     * @var string Database string
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Database string.
      */
     public $SerialNo;
 
     /**
      * @var integer ZoneId
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ZoneId;
 
     /**
      * @var integer RegionId
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RegionId;
 
     /**
-     * @param string $InstanceName Database instance
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Ip Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Port Database port
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MemSize Database memory specification
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Volume Database disk specification
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Service Service flag
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpireTime Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ApplyTime Application time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $PayType Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $ExpireFlag Expiration flag
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Database status
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsAutoRenew Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $SerialNo Database string
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceName Database instance.
+     * @param string $Ip Database IP address.
+     * @param integer $Port Database port.
+     * @param integer $MemSize Database memory specifications.
+     * @param integer $Volume Database disk specifications.
+     * @param string $Service Service identifier.
+     * @param string $ExpireTime Expiration time.
+     * @param string $ApplyTime Application time.
+     * @param integer $PayType Billing type.
+     * @param boolean $ExpireFlag Expiration flag.
+     * @param integer $Status Database status.
+     * @param integer $IsAutoRenew Renewal flag.
+     * @param string $SerialNo Database string.
      * @param integer $ZoneId ZoneId
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $RegionId RegionId
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

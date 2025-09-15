@@ -18,8 +18,7 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The instance prepayment parameter. It applies only when the billing type is `PREPAID`.
-
+ * Instance prepayment parameter. This parameter is valid only when the payment type is PREPAID.
  *
  * @method integer getPeriod() Obtain The period of monthly subscription, which defaults to 1 and is expressed in month.
 Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.

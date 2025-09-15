@@ -42,18 +42,12 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDynamicPodSpec(DynamicPodSpec $DynamicPodSpec) Set Floating specification
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVpcId() Obtain Unique VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVpcId(string $VpcId) Set Unique VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubnetId() Obtain Unique VPC subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubnetId(string $SubnetId) Set Unique VPC subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVpcId() Obtain Unique ID of VPC network.
+ * @method void setVpcId(string $VpcId) Set Unique ID of VPC network.
+ * @method string getSubnetId() Obtain Unique ID of a VPC subnet.
+ * @method void setSubnetId(string $SubnetId) Set Unique ID of a VPC subnet.
  * @method string getPodName() Obtain pod name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPodName(string $PodName) Set pod name
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PodSpec extends AbstractModel
 {
@@ -109,20 +103,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DynamicPodSpec;
 
     /**
-     * @var string Unique VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Unique ID of VPC network.
      */
     public $VpcId;
 
     /**
-     * @var string Unique VPC subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Unique ID of a VPC subnet.
      */
     public $SubnetId;
 
     /**
      * @var string pod name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PodName;
 
@@ -138,12 +129,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $IsDynamicSpec Whether floating specification is used. `1`: Yes; `0`: No.
      * @param DynamicPodSpec $DynamicPodSpec Floating specification
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VpcId Unique VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SubnetId Unique VPC subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VpcId Unique ID of VPC network.
+     * @param string $SubnetId Unique ID of a VPC subnet.
      * @param string $PodName pod name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

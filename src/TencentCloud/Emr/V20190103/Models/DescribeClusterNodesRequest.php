@@ -40,18 +40,22 @@ Note: only the above values are supported for the time being. Entering other val
 <li>router: gets router node information.</li>
 <li>db: gets TencentDB information in normal status.</li>
 Note: only the above values are supported for the time being. Entering other values will cause errors.
+ * @method boolean getExportDb() Obtain Whether to carry CDB information when all node information is exported in CSV format.
+ * @method void setExportDb(boolean $ExportDb) Set Whether to carry CDB information when all node information is exported in CSV format.
  * @method integer getOffset() Obtain Page number. Default value: 0, indicating the first page.
  * @method void setOffset(integer $Offset) Set Page number. Default value: 0, indicating the first page.
- * @method integer getLimit() Obtain Number of returned results per page. Default value: 100. Maximum value: 100
- * @method void setLimit(integer $Limit) Set Number of returned results per page. Default value: 100. Maximum value: 100
+ * @method integer getLimit() Obtain Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both offset and limit are not set, or both are set to 0, all data will be returned.
+ * @method void setLimit(integer $Limit) Set Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both offset and limit are not set, or both are set to 0, all data will be returned.
  * @method string getHardwareResourceType() Obtain Resource type. Valid values: all, host, pod. Default value: all
  * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type. Valid values: all, host, pod. Default value: all
  * @method array getSearchFields() Obtain Searchable field
  * @method void setSearchFields(array $SearchFields) Set Searchable field
- * @method string getOrderField() Obtain None
- * @method void setOrderField(string $OrderField) Set None
- * @method integer getAsc() Obtain None
- * @method void setAsc(integer $Asc) Set None
+ * @method string getOrderField() Obtain Order field.
+ * @method void setOrderField(string $OrderField) Set Order field.
+ * @method integer getAsc() Obtain Ascending or not. 1: ascending; 0: descending.
+ * @method void setAsc(integer $Asc) Set Ascending or not. 1: ascending; 0: descending.
  */
 class DescribeClusterNodesRequest extends AbstractModel
 {
@@ -74,12 +78,18 @@ Note: only the above values are supported for the time being. Entering other val
     public $NodeFlag;
 
     /**
+     * @var boolean Whether to carry CDB information when all node information is exported in CSV format.
+     */
+    public $ExportDb;
+
+    /**
      * @var integer Page number. Default value: 0, indicating the first page.
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned results per page. Default value: 100. Maximum value: 100
+     * @var integer Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both offset and limit are not set, or both are set to 0, all data will be returned.
      */
     public $Limit;
 
@@ -94,12 +104,12 @@ Note: only the above values are supported for the time being. Entering other val
     public $SearchFields;
 
     /**
-     * @var string None
+     * @var string Order field.
      */
     public $OrderField;
 
     /**
-     * @var integer None
+     * @var integer Ascending or not. 1: ascending; 0: descending.
      */
     public $Asc;
 
@@ -114,12 +124,14 @@ Note: only the above values are supported for the time being. Entering other val
 <li>router: gets router node information.</li>
 <li>db: gets TencentDB information in normal status.</li>
 Note: only the above values are supported for the time being. Entering other values will cause errors.
+     * @param boolean $ExportDb Whether to carry CDB information when all node information is exported in CSV format.
      * @param integer $Offset Page number. Default value: 0, indicating the first page.
-     * @param integer $Limit Number of returned results per page. Default value: 100. Maximum value: 100
+     * @param integer $Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both offset and limit are not set, or both are set to 0, all data will be returned.
      * @param string $HardwareResourceType Resource type. Valid values: all, host, pod. Default value: all
      * @param array $SearchFields Searchable field
-     * @param string $OrderField None
-     * @param integer $Asc None
+     * @param string $OrderField Order field.
+     * @param integer $Asc Ascending or not. 1: ascending; 0: descending.
      */
     function __construct()
     {
@@ -140,6 +152,10 @@ Note: only the above values are supported for the time being. Entering other val
 
         if (array_key_exists("NodeFlag",$param) and $param["NodeFlag"] !== null) {
             $this->NodeFlag = $param["NodeFlag"];
+        }
+
+        if (array_key_exists("ExportDb",$param) and $param["ExportDb"] !== null) {
+            $this->ExportDb = $param["ExportDb"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

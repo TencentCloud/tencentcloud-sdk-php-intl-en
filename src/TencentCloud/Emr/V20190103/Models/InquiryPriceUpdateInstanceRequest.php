@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
 <li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
  * @method void setTimeSpan(integer $TimeSpan) Set Duration of scaling, which needs to be used together with `TimeUnit`.
 <li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
- * @method UpdateInstanceSettings getUpdateSpec() Obtain Target node specification.
- * @method void setUpdateSpec(UpdateInstanceSettings $UpdateSpec) Set Target node specification.
  * @method integer getPayMode() Obtain Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
  * @method void setPayMode(integer $PayMode) Set Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
- * @method Placement getPlacement() Obtain Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
- * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method string getCurrency() Obtain Currency.
  * @method void setCurrency(string $Currency) Set Currency.
+ * @method UpdateInstanceSettings getUpdateSpec() Obtain Target node specification.
+ * @method void setUpdateSpec(UpdateInstanceSettings $UpdateSpec) Set Target node specification.
+ * @method Placement getPlacement() Obtain Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+ * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method array getResourceIdList() Obtain The resource ID list for batch configuration change.
  * @method void setResourceIdList(array $ResourceIdList) Set The resource ID list for batch configuration change.
  */
@@ -56,25 +56,25 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
     public $TimeSpan;
 
     /**
-     * @var UpdateInstanceSettings Target node specification.
-     */
-    public $UpdateSpec;
-
-    /**
      * @var integer Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
      */
     public $PayMode;
 
     /**
-     * @var Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     */
-    public $Placement;
-
-    /**
      * @var string Currency.
      */
     public $Currency;
+
+    /**
+     * @var UpdateInstanceSettings Target node specification.
+     */
+    public $UpdateSpec;
+
+    /**
+     * @var Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     */
+    public $Placement;
 
     /**
      * @var array The resource ID list for batch configuration change.
@@ -86,11 +86,11 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
      * @param integer $TimeSpan Duration of scaling, which needs to be used together with `TimeUnit`.
 <li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
-     * @param UpdateInstanceSettings $UpdateSpec Target node specification.
      * @param integer $PayMode Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
-     * @param Placement $Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
      * @param string $Currency Currency.
+     * @param UpdateInstanceSettings $UpdateSpec Target node specification.
+     * @param Placement $Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
      * @param array $ResourceIdList The resource ID list for batch configuration change.
      */
     function __construct()
@@ -114,22 +114,22 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
             $this->TimeSpan = $param["TimeSpan"];
         }
 
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
+            $this->Currency = $param["Currency"];
+        }
+
         if (array_key_exists("UpdateSpec",$param) and $param["UpdateSpec"] !== null) {
             $this->UpdateSpec = new UpdateInstanceSettings();
             $this->UpdateSpec->deserialize($param["UpdateSpec"]);
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
-        }
-
         if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
             $this->Placement = new Placement();
             $this->Placement->deserialize($param["Placement"]);
-        }
-
-        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
-            $this->Currency = $param["Currency"];
         }
 
         if (array_key_exists("ResourceIdList",$param) and $param["ResourceIdList"] !== null) {

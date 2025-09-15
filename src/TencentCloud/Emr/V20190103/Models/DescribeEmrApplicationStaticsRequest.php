@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAsc(integer $IsAsc) Set Order type. Valid values: `0` (descending) and `1`(ascending).
  * @method integer getOffset() Obtain Page number
  * @method void setOffset(integer $Offset) Set Page number
- * @method integer getLimit() Obtain Page limit
- * @method void setLimit(integer $Limit) Set Page limit
+ * @method integer getLimit() Obtain Page capacity in the range of [10,100].
+ * @method void setLimit(integer $Limit) Set Page capacity in the range of [10,100].
  */
 class DescribeEmrApplicationStaticsRequest extends AbstractModel
 {
@@ -96,7 +96,7 @@ class DescribeEmrApplicationStaticsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Page limit
+     * @var integer Page capacity in the range of [10,100].
      */
     public $Limit;
 
@@ -111,7 +111,7 @@ class DescribeEmrApplicationStaticsRequest extends AbstractModel
      * @param string $OrderBy Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
      * @param integer $IsAsc Order type. Valid values: `0` (descending) and `1`(ascending).
      * @param integer $Offset Page number
-     * @param integer $Limit Page limit
+     * @param integer $Limit Page capacity in the range of [10,100].
      */
     function __construct()
     {

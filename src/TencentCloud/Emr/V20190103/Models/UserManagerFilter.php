@@ -20,22 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * User management list filter
  *
- * @method string getUserName() Obtain Username
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setUserName(string $UserName) Set Username
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getUserName() Obtain Username.
+ * @method void setUserName(string $UserName) Set Username.
+ * @method string getUserType() Obtain User source.
+ * @method void setUserType(string $UserType) Set User source.
+ * @method string getGroups() Obtain Group name.
+ * @method void setGroups(string $Groups) Set Group name.
  */
 class UserManagerFilter extends AbstractModel
 {
     /**
-     * @var string Username
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Username.
      */
     public $UserName;
 
     /**
-     * @param string $UserName Username
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string User source.
+     */
+    public $UserType;
+
+    /**
+     * @var string Group name.
+     */
+    public $Groups;
+
+    /**
+     * @param string $UserName Username.
+     * @param string $UserType User source.
+     * @param string $Groups Group name.
      */
     function __construct()
     {
@@ -52,6 +64,14 @@ Note: This field may return null, indicating that no valid value can be obtained
         }
         if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
             $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
+            $this->UserType = $param["UserType"];
+        }
+
+        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
+            $this->Groups = $param["Groups"];
         }
     }
 }

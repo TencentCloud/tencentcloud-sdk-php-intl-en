@@ -18,52 +18,52 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Node component renewal pricing details.
  *
- * @method string getBillingName() Obtain 
- * @method void setBillingName(string $BillingName) Set 
- * @method float getPolicy() Obtain 
- * @method void setPolicy(float $Policy) Set 
- * @method integer getQuantity() Obtain 
- * @method void setQuantity(integer $Quantity) Set 
- * @method float getOriginalCost() Obtain 
- * @method void setOriginalCost(float $OriginalCost) Set 
- * @method float getDiscountCost() Obtain 
- * @method void setDiscountCost(float $DiscountCost) Set 
+ * @method string getBillingName() Obtain Billing item name.
+ * @method void setBillingName(string $BillingName) Set Billing item name.
+ * @method float getPolicy() Obtain Discount.
+ * @method void setPolicy(float $Policy) Set Discount.
+ * @method integer getQuantity() Obtain Quantity.
+ * @method void setQuantity(integer $Quantity) Set Quantity.
+ * @method float getOriginalCost() Obtain Original price.
+ * @method void setOriginalCost(float $OriginalCost) Set Original price.
+ * @method float getDiscountCost() Obtain Discount price.
+ * @method void setDiscountCost(float $DiscountCost) Set Discount price.
  */
 class RenewPriceDetail extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Billing item name.
      */
     public $BillingName;
 
     /**
-     * @var float 
+     * @var float Discount.
      */
     public $Policy;
 
     /**
-     * @var integer 
+     * @var integer Quantity.
      */
     public $Quantity;
 
     /**
-     * @var float 
+     * @var float Original price.
      */
     public $OriginalCost;
 
     /**
-     * @var float 
+     * @var float Discount price.
      */
     public $DiscountCost;
 
     /**
-     * @param string $BillingName 
-     * @param float $Policy 
-     * @param integer $Quantity 
-     * @param float $OriginalCost 
-     * @param float $DiscountCost 
+     * @param string $BillingName Billing item name.
+     * @param float $Policy Discount.
+     * @param integer $Quantity Quantity.
+     * @param float $OriginalCost Original price.
+     * @param float $DiscountCost Discount price.
      */
     function __construct()
     {

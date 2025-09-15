@@ -20,18 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Price details by AZ, used for creating the cluster price list
  *
- * @method string getZoneId() Obtain AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneId(string $ZoneId) Set AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getZoneId() Obtain Availability zone ID.
+ * @method void setZoneId(string $ZoneId) Set Availability zone ID.
  * @method array getNodeDetailPrice() Obtain Price details by node
  * @method void setNodeDetailPrice(array $NodeDetailPrice) Set Price details by node
  */
 class ZoneDetailPriceResult extends AbstractModel
 {
     /**
-     * @var string AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Availability zone ID.
      */
     public $ZoneId;
 
@@ -41,8 +38,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $NodeDetailPrice;
 
     /**
-     * @param string $ZoneId AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ZoneId Availability zone ID.
      * @param array $NodeDetailPrice Price details by node
      */
     function __construct()

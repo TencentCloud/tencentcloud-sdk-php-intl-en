@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set List of spread placement group IDs. Only one can be specified currently.
  * @method array getTags() Obtain List of tags bound to added nodes.
  * @method void setTags(array $Tags) Set List of tags bound to added nodes.
- * @method string getHardwareResourceType() Obtain Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster).
- * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster).
+ * @method string getHardwareResourceType() Obtain Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+ * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
  * @method PodSpec getPodSpec() Obtain Specified information such as pod specification and source for scale-out with pod resources.
  * @method void setPodSpec(PodSpec $PodSpec) Set Specified information such as pod specification and source for scale-out with pod resources.
  * @method string getClickHouseClusterName() Obtain Server group name selected for ClickHouse cluster scale-out.
@@ -88,6 +88,14 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
  * @method void setScaleOutServiceConfAssign(string $ScaleOutServiceConfAssign) Set Pre-defined configuration set
  * @method integer getAutoRenew() Obtain Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
  * @method void setAutoRenew(integer $AutoRenew) Set Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+ * @method string getResourceBaseType() Obtain The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+ * @method void setResourceBaseType(string $ResourceBaseType) Set The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+ * @method string getComputeResourceId() Obtain Computing resource ID.
+ * @method void setComputeResourceId(string $ComputeResourceId) Set Computing resource ID.
+ * @method ComputeResourceAdvanceParams getComputeResourceAdvanceParams() Obtain Advanced settings of computing resources.
+ * @method void setComputeResourceAdvanceParams(ComputeResourceAdvanceParams $ComputeResourceAdvanceParams) Set Advanced settings of computing resources.
+ * @method NodeMark getNodeMarks() Obtain Node tag information: currently used only in Terraform.
+ * @method void setNodeMarks(NodeMark $NodeMarks) Set Node tag information: currently used only in Terraform.
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -167,7 +175,7 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster).
+     * @var string Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
      */
     public $HardwareResourceType;
 
@@ -230,6 +238,26 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
     public $AutoRenew;
 
     /**
+     * @var string The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+     */
+    public $ResourceBaseType;
+
+    /**
+     * @var string Computing resource ID.
+     */
+    public $ComputeResourceId;
+
+    /**
+     * @var ComputeResourceAdvanceParams Advanced settings of computing resources.
+     */
+    public $ComputeResourceAdvanceParams;
+
+    /**
+     * @var NodeMark Node tag information: currently used only in Terraform.
+     */
+    public $NodeMarks;
+
+    /**
      * @param string $TimeUnit Time unit of scale-out. Valid values:
 <li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
 <li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
@@ -249,7 +277,7 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
      * @param array $ServiceNodeInfo Started process.
      * @param array $DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
      * @param array $Tags List of tags bound to added nodes.
-     * @param string $HardwareResourceType Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster).
+     * @param string $HardwareResourceType Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
      * @param PodSpec $PodSpec Specified information such as pod specification and source for scale-out with pod resources.
      * @param string $ClickHouseClusterName Server group name selected for ClickHouse cluster scale-out.
      * @param string $ClickHouseClusterType Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
@@ -264,6 +292,10 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
      * @param string $SubnetId Subnet, which defaults to the subnet used when the cluster is created.
      * @param string $ScaleOutServiceConfAssign Pre-defined configuration set
      * @param integer $AutoRenew Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+     * @param string $ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+     * @param string $ComputeResourceId Computing resource ID.
+     * @param ComputeResourceAdvanceParams $ComputeResourceAdvanceParams Advanced settings of computing resources.
+     * @param NodeMark $NodeMarks Node tag information: currently used only in Terraform.
      */
     function __construct()
     {
@@ -392,6 +424,24 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
 
         if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
             $this->AutoRenew = $param["AutoRenew"];
+        }
+
+        if (array_key_exists("ResourceBaseType",$param) and $param["ResourceBaseType"] !== null) {
+            $this->ResourceBaseType = $param["ResourceBaseType"];
+        }
+
+        if (array_key_exists("ComputeResourceId",$param) and $param["ComputeResourceId"] !== null) {
+            $this->ComputeResourceId = $param["ComputeResourceId"];
+        }
+
+        if (array_key_exists("ComputeResourceAdvanceParams",$param) and $param["ComputeResourceAdvanceParams"] !== null) {
+            $this->ComputeResourceAdvanceParams = new ComputeResourceAdvanceParams();
+            $this->ComputeResourceAdvanceParams->deserialize($param["ComputeResourceAdvanceParams"]);
+        }
+
+        if (array_key_exists("NodeMarks",$param) and $param["NodeMarks"] !== null) {
+            $this->NodeMarks = new NodeMark();
+            $this->NodeMarks->deserialize($param["NodeMarks"]);
         }
     }
 }

@@ -106,8 +106,8 @@ Enter an instance value: `hive` or `flink`.
  * @method void setAutoRenew(integer $AutoRenew) Set Whether auto-renewal is enabled. Valid values:
 <li>0: auto-renewal not enabled.</li>
 <li>1: auto-renewal enabled.</li>
- * @method string getClientToken() Obtain Client token.
- * @method void setClientToken(string $ClientToken) Set Client token.
+ * @method string getClientToken() Obtain Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
+ * @method void setClientToken(string $ClientToken) Set Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
  * @method string getNeedMasterWan() Obtain Whether to enable public IP access for master node. Valid values:
 <li>NEED_MASTER_WAN: enables public IP for master node.</li>
 <li>NOT_NEED_MASTER_WAN: does not enable.</li>Public IP is enabled for master node by default.
@@ -160,6 +160,12 @@ Hadoop-Hbase
  * @method void setMultiZone(boolean $MultiZone) Set `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
  * @method array getMultiZoneSettings() Obtain Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
  * @method void setMultiZoneSettings(array $MultiZoneSettings) Set Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+ * @method string getCosBucket() Obtain COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+ * @method void setCosBucket(string $CosBucket) Set COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+ * @method array getNodeMarks() Obtain Node identifier information: currently used only in Terraform.
+ * @method void setNodeMarks(array $NodeMarks) Set Node identifier information: currently used only in Terraform.
+ * @method string getLoadBalancerId() Obtain CLB id
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB id
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -267,7 +273,7 @@ Enter an instance value: `hive` or `flink`.
     public $AutoRenew;
 
     /**
-     * @var string Client token.
+     * @var string Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
      */
     public $ClientToken;
 
@@ -362,6 +368,21 @@ Hadoop-Hbase
     public $MultiZoneSettings;
 
     /**
+     * @var string COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+     */
+    public $CosBucket;
+
+    /**
+     * @var array Node identifier information: currently used only in Terraform.
+     */
+    public $NodeMarks;
+
+    /**
+     * @var string CLB id
+     */
+    public $LoadBalancerId;
+
+    /**
      * @param integer $ProductId Product ID. Different product IDs stand for different EMR product versions. Valid range:
 51: STARROCKS-V1.4.0
 54: STARROCKS-V2.0.0
@@ -405,7 +426,7 @@ Enter an instance value: `hive` or `flink`.
      * @param integer $AutoRenew Whether auto-renewal is enabled. Valid values:
 <li>0: auto-renewal not enabled.</li>
 <li>1: auto-renewal enabled.</li>
-     * @param string $ClientToken Client token.
+     * @param string $ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
      * @param string $NeedMasterWan Whether to enable public IP access for master node. Valid values:
 <li>NEED_MASTER_WAN: enables public IP for master node.</li>
 <li>NOT_NEED_MASTER_WAN: does not enable.</li>Public IP is enabled for master node by default.
@@ -432,6 +453,9 @@ Hadoop-Hbase
      * @param integer $VersionID 
      * @param boolean $MultiZone `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
      * @param array $MultiZoneSettings Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+     * @param string $CosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+     * @param array $NodeMarks Node identifier information: currently used only in Terraform.
+     * @param string $LoadBalancerId CLB id
      */
     function __construct()
     {
@@ -598,6 +622,23 @@ Hadoop-Hbase
                 $obj->deserialize($value);
                 array_push($this->MultiZoneSettings, $obj);
             }
+        }
+
+        if (array_key_exists("CosBucket",$param) and $param["CosBucket"] !== null) {
+            $this->CosBucket = $param["CosBucket"];
+        }
+
+        if (array_key_exists("NodeMarks",$param) and $param["NodeMarks"] !== null) {
+            $this->NodeMarks = [];
+            foreach ($param["NodeMarks"] as $key => $value){
+                $obj = new NodeMark();
+                $obj->deserialize($value);
+                array_push($this->NodeMarks, $obj);
+            }
+        }
+
+        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
+            $this->LoadBalancerId = $param["LoadBalancerId"];
         }
     }
 }

@@ -44,6 +44,8 @@ Default value: `none`.
 Default value: `none`.
  * @method MutualTLS getClientCertInfo() Obtain In the mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for the client to authenticate the EO node. By default, it is disabled. If it is left blank, it indicates retaining the original configuration.
  * @method void setClientCertInfo(MutualTLS $ClientCertInfo) Set In the mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for the client to authenticate the EO node. By default, it is disabled. If it is left blank, it indicates retaining the original configuration.
+ * @method UpstreamCertInfo getUpstreamCertInfo() Obtain Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+ * @method void setUpstreamCertInfo(UpstreamCertInfo $UpstreamCertInfo) Set Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
  */
 class ModifyHostsCertificateRequest extends AbstractModel
 {
@@ -85,6 +87,11 @@ Default value: `none`.
     public $ClientCertInfo;
 
     /**
+     * @var UpstreamCertInfo Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+     */
+    public $UpstreamCertInfo;
+
+    /**
      * @param string $ZoneId ID of the site.
      * @param array $Hosts Domain names that you need to modify the certificate configuration
      * @param string $Mode Certificate configuration mode. Values:
@@ -97,6 +104,7 @@ Default value: `none`.
 <li>`apply`: Managed by EdgeOne</li>
 Default value: `none`.
      * @param MutualTLS $ClientCertInfo In the mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for the client to authenticate the EO node. By default, it is disabled. If it is left blank, it indicates retaining the original configuration.
+     * @param UpstreamCertInfo $UpstreamCertInfo Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
      */
     function __construct()
     {
@@ -139,6 +147,11 @@ Default value: `none`.
         if (array_key_exists("ClientCertInfo",$param) and $param["ClientCertInfo"] !== null) {
             $this->ClientCertInfo = new MutualTLS();
             $this->ClientCertInfo->deserialize($param["ClientCertInfo"]);
+        }
+
+        if (array_key_exists("UpstreamCertInfo",$param) and $param["UpstreamCertInfo"] !== null) {
+            $this->UpstreamCertInfo = new UpstreamCertInfo();
+            $this->UpstreamCertInfo->deserialize($param["UpstreamCertInfo"]);
         }
     }
 }

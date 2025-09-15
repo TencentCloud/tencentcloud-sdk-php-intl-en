@@ -22,8 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain Availability zone.
  * @method void setZone(string $Zone) Set Availability zone.
- * @method string getDiskType() Obtain Cloud disk type.
- * @method void setDiskType(string $DiskType) Set Cloud disk type.
+ * @method string getDiskType() Obtain Cloud disk type. valid values are as follows:.
+
+<Li>CLOUD_BASIC: basic cloud disk.</li>.
+<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
+ * @method void setDiskType(string $DiskType) Set Cloud disk type. valid values are as follows:.
+
+<Li>CLOUD_BASIC: basic cloud disk.</li>.
+<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
  * @method string getDiskSalesState() Obtain Cloud disk sale status.
  * @method void setDiskSalesState(string $DiskSalesState) Set Cloud disk sale status.
  * @method integer getMaxDiskSize() Obtain Maximum cloud disk size.
@@ -41,7 +49,11 @@ class DiskConfig extends AbstractModel
     public $Zone;
 
     /**
-     * @var string Cloud disk type.
+     * @var string Cloud disk type. valid values are as follows:.
+
+<Li>CLOUD_BASIC: basic cloud disk.</li>.
+<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
      */
     public $DiskType;
 
@@ -67,7 +79,11 @@ class DiskConfig extends AbstractModel
 
     /**
      * @param string $Zone Availability zone.
-     * @param string $DiskType Cloud disk type.
+     * @param string $DiskType Cloud disk type. valid values are as follows:.
+
+<Li>CLOUD_BASIC: basic cloud disk.</li>.
+<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
      * @param string $DiskSalesState Cloud disk sale status.
      * @param integer $MaxDiskSize Maximum cloud disk size.
      * @param integer $MinDiskSize Minimum cloud disk size.

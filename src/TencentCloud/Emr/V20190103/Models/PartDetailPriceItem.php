@@ -20,82 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Price details by node part, used for creating the cluster price list
  *
- * @method string getInstanceType() Obtain The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceType(string $InstanceType) Set The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getPrice() Obtain Rate (original)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrice(float $Price) Set Rate (original)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getRealCost() Obtain Rate (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealCost(float $RealCost) Set Rate (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getRealTotalCost() Obtain Total price (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealTotalCost(float $RealTotalCost) Set Total price (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getPolicy() Obtain Discount
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPolicy(float $Policy) Set Discount
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getGoodsNum() Obtain Quantity
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGoodsNum(integer $GoodsNum) Set Quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceType() Obtain Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+ * @method void setInstanceType(string $InstanceType) Set Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+ * @method float getPrice() Obtain Unit price (original price).
+ * @method void setPrice(float $Price) Set Unit price (original price).
+ * @method float getRealCost() Obtain Unit price (discounted price).
+ * @method void setRealCost(float $RealCost) Set Unit price (discounted price).
+ * @method float getRealTotalCost() Obtain Total price (discounted price).
+ * @method void setRealTotalCost(float $RealTotalCost) Set Total price (discounted price).
+ * @method float getPolicy() Obtain Discount.
+ * @method void setPolicy(float $Policy) Set Discount.
+ * @method integer getGoodsNum() Obtain Quantity.
+ * @method void setGoodsNum(integer $GoodsNum) Set Quantity.
  */
 class PartDetailPriceItem extends AbstractModel
 {
     /**
-     * @var string The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
      */
     public $InstanceType;
 
     /**
-     * @var float Rate (original)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Unit price (original price).
      */
     public $Price;
 
     /**
-     * @var float Rate (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Unit price (discounted price).
      */
     public $RealCost;
 
     /**
-     * @var float Total price (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Total price (discounted price).
      */
     public $RealTotalCost;
 
     /**
-     * @var float Discount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Discount.
      */
     public $Policy;
 
     /**
-     * @var integer Quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Quantity.
      */
     public $GoodsNum;
 
     /**
-     * @param string $InstanceType The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Price Rate (original)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $RealCost Rate (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $RealTotalCost Total price (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Policy Discount
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $GoodsNum Quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceType Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+     * @param float $Price Unit price (original price).
+     * @param float $RealCost Unit price (discounted price).
+     * @param float $RealTotalCost Total price (discounted price).
+     * @param float $Policy Discount.
+     * @param integer $GoodsNum Quantity.
      */
     function __construct()
     {

@@ -29,10 +29,10 @@ use TencentCloud\Common\AbstractModel;
 <li>`true`: Enable</li>
 <li>`false`: Disable</li>
  * @method string getInstanceName() Obtain The instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
  * @method void setInstanceName(string $InstanceName) Set The instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
  * @method string getInstanceChargeType() Obtain The instance billing mode. Valid values:
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
  * @method array getScriptBootstrapActionConfig() Obtain The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
  * @method void setScriptBootstrapActionConfig(array $ScriptBootstrapActionConfig) Set The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
- * @method string getClientToken() Obtain A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
- * @method void setClientToken(string $ClientToken) Set A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
+ * @method string getClientToken() Obtain Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
+ * @method void setClientToken(string $ClientToken) Set Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
  * @method string getNeedMasterWan() Obtain Whether to enable public IP access for master nodes. Valid values:
 <li>`NEED_MASTER_WAN`: Enable public IP for master nodes.</li>
 <li>`NOT_NEED_MASTER_WAN`: Disable.</li>The public IP is enabled for master nodes by default.
@@ -96,6 +96,12 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
  * @method void setDependService(array $DependService) Set The shared component information.
  * @method array getZoneResourceConfiguration() Obtain The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
  * @method void setZoneResourceConfiguration(array $ZoneResourceConfiguration) Set The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
+ * @method string getCosBucket() Obtain COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+ * @method void setCosBucket(string $CosBucket) Set COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+ * @method array getNodeMarks() Obtain Node identifier information: currently used only in Terraform.
+ * @method void setNodeMarks(array $NodeMarks) Set Node identifier information: currently used only in Terraform.
+ * @method string getLoadBalancerId() Obtain clb id
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set clb id
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -113,7 +119,7 @@ class CreateClusterRequest extends AbstractModel
 
     /**
      * @var string The instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
      */
     public $InstanceName;
@@ -152,7 +158,7 @@ class CreateClusterRequest extends AbstractModel
     public $ScriptBootstrapActionConfig;
 
     /**
-     * @var string A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
+     * @var string Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
      */
     public $ClientToken;
 
@@ -218,12 +224,27 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
     public $ZoneResourceConfiguration;
 
     /**
+     * @var string COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+     */
+    public $CosBucket;
+
+    /**
+     * @var array Node identifier information: currently used only in Terraform.
+     */
+    public $NodeMarks;
+
+    /**
+     * @var string clb id
+     */
+    public $LoadBalancerId;
+
+    /**
      * @param string $ProductVersion The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
      * @param boolean $EnableSupportHAFlag Whether to enable high availability for nodes. Valid values:
 <li>`true`: Enable</li>
 <li>`false`: Disable</li>
      * @param string $InstanceName The instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
      * @param string $InstanceChargeType The instance billing mode. Valid values:
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
@@ -234,7 +255,7 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
      * @param InstanceChargePrepaid $InstanceChargePrepaid The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`.
      * @param array $SecurityGroupIds The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
      * @param array $ScriptBootstrapActionConfig The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
-     * @param string $ClientToken A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
+     * @param string $ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
      * @param string $NeedMasterWan Whether to enable public IP access for master nodes. Valid values:
 <li>`NEED_MASTER_WAN`: Enable public IP for master nodes.</li>
 <li>`NOT_NEED_MASTER_WAN`: Disable.</li>The public IP is enabled for master nodes by default.
@@ -256,6 +277,9 @@ If `MetaType` is `EMR_EXIT_META`, `UnifyMetaInstanceId` is required.
 If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `MetaDataPass` are required.
      * @param array $DependService The shared component information.
      * @param array $ZoneResourceConfiguration The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
+     * @param string $CosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+     * @param array $NodeMarks Node identifier information: currently used only in Terraform.
+     * @param string $LoadBalancerId clb id
      */
     function __construct()
     {
@@ -372,6 +396,23 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
                 $obj->deserialize($value);
                 array_push($this->ZoneResourceConfiguration, $obj);
             }
+        }
+
+        if (array_key_exists("CosBucket",$param) and $param["CosBucket"] !== null) {
+            $this->CosBucket = $param["CosBucket"];
+        }
+
+        if (array_key_exists("NodeMarks",$param) and $param["NodeMarks"] !== null) {
+            $this->NodeMarks = [];
+            foreach ($param["NodeMarks"] as $key => $value){
+                $obj = new NodeMark();
+                $obj->deserialize($value);
+                array_push($this->NodeMarks, $obj);
+            }
+        }
+
+        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
+            $this->LoadBalancerId = $param["LoadBalancerId"];
         }
     }
 }

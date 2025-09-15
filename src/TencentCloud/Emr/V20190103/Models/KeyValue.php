@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Key-value pair, primarily used for filtering
  *
- * @method string getKey() Obtain Key
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKey(string $Key) Set Key
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getValue() Obtain ValueNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setValue(string $Value) Set ValueNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getKey() Obtain Key.
+ * @method void setKey(string $Key) Set Key.
+ * @method string getValue() Obtain Value.
+ * @method void setValue(string $Value) Set Value.
  */
 class KeyValue extends AbstractModel
 {
     /**
-     * @var string Key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Key.
      */
     public $Key;
 
     /**
-     * @var string ValueNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Value.
      */
     public $Value;
 
     /**
-     * @param string $Key Key
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Value ValueNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Key Key.
+     * @param string $Value Value.
      */
     function __construct()
     {

@@ -36,22 +36,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCommonResourceSpec(NodeResourceSpec $CommonResourceSpec) Set The description of common nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMasterCount() Obtain The number of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMasterCount(integer $MasterCount) Set The number of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCoreCount() Obtain The number of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCoreCount(integer $CoreCount) Set The number of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTaskCount() Obtain The number of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskCount(integer $TaskCount) Set The number of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCommonCount() Obtain The number of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCommonCount(integer $CommonCount) Set The number of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMasterCount() Obtain Number of Master nodes.
+ * @method void setMasterCount(integer $MasterCount) Set Number of Master nodes.
+ * @method integer getCoreCount() Obtain Number of core nodes.
+ * @method void setCoreCount(integer $CoreCount) Set Number of core nodes.
+ * @method integer getTaskCount() Obtain Number of task nodes.
+ * @method void setTaskCount(integer $TaskCount) Set Number of task nodes.
+ * @method integer getCommonCount() Obtain Number of common nodes.
+ * @method void setCommonCount(integer $CommonCount) Set Number of common nodes.
  */
 class AllNodeResourceSpec extends AbstractModel
 {
@@ -80,26 +72,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CommonResourceSpec;
 
     /**
-     * @var integer The number of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of Master nodes.
      */
     public $MasterCount;
 
     /**
-     * @var integer The number of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of core nodes.
      */
     public $CoreCount;
 
     /**
-     * @var integer The number of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of task nodes.
      */
     public $TaskCount;
 
     /**
-     * @var integer The number of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of common nodes.
      */
     public $CommonCount;
 
@@ -112,14 +100,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param NodeResourceSpec $CommonResourceSpec The description of common nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MasterCount The number of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CoreCount The number of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TaskCount The number of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CommonCount The number of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MasterCount Number of Master nodes.
+     * @param integer $CoreCount Number of core nodes.
+     * @param integer $TaskCount Number of task nodes.
+     * @param integer $CommonCount Number of common nodes.
      */
     function __construct()
     {

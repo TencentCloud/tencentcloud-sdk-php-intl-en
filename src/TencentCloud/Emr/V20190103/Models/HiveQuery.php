@@ -20,69 +20,56 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Hive query details
  *
- * @method string getStatement() Obtain Query statementNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatement(string $Statement) Set Query statementNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getDuration() Obtain Execution Duration
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDuration(string $Duration) Set Execution Duration
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStartTime() Obtain Start Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(integer $StartTime) Set Start Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getEndTime() Obtain End Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(integer $EndTime) Set End Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getState() Obtain StatusNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setState(string $State) Set StatusNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getUser() Obtain UserNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setUser(string $User) Set UserNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStatement() Obtain Query statement.
+ * @method void setStatement(string $Statement) Set Query statement.
+ * @method string getDuration() Obtain Execution duration.
+ * @method void setDuration(string $Duration) Set Execution duration.
+ * @method integer getStartTime() Obtain Start time in milliseconds.
+ * @method void setStartTime(integer $StartTime) Set Start time in milliseconds.
+ * @method integer getEndTime() Obtain End time in milliseconds.
+ * @method void setEndTime(integer $EndTime) Set End time in milliseconds.
+ * @method string getState() Obtain Status.
+ * @method void setState(string $State) Set Status.
+ * @method string getUser() Obtain User.
+ * @method void setUser(string $User) Set User.
  * @method array getJobIds() Obtain AppId List
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setJobIds(array $JobIds) Set AppId List
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExecutionEngine() Obtain Execution Engine
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExecutionEngine(string $ExecutionEngine) Set Execution Engine
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getId() Obtain Query ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setId(string $Id) Set Query ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExecutionEngine() Obtain Execution engine.
+ * @method void setExecutionEngine(string $ExecutionEngine) Set Execution engine.
+ * @method string getId() Obtain Query ID.
+ * @method void setId(string $Id) Set Query ID.
  */
 class HiveQuery extends AbstractModel
 {
     /**
-     * @var string Query statementNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Query statement.
      */
     public $Statement;
 
     /**
-     * @var string Execution Duration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Execution duration.
      */
     public $Duration;
 
     /**
-     * @var integer Start Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Start time in milliseconds.
      */
     public $StartTime;
 
     /**
-     * @var integer End Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer End time in milliseconds.
      */
     public $EndTime;
 
     /**
-     * @var string StatusNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Status.
      */
     public $State;
 
     /**
-     * @var string UserNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string User.
      */
     public $User;
 
@@ -93,33 +80,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $JobIds;
 
     /**
-     * @var string Execution Engine
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Execution engine.
      */
     public $ExecutionEngine;
 
     /**
-     * @var string Query ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Query ID.
      */
     public $Id;
 
     /**
-     * @param string $Statement Query statementNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Duration Execution Duration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $StartTime Start Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $EndTime End Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $State StatusNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $User UserNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Statement Query statement.
+     * @param string $Duration Execution duration.
+     * @param integer $StartTime Start time in milliseconds.
+     * @param integer $EndTime End time in milliseconds.
+     * @param string $State Status.
+     * @param string $User User.
      * @param array $JobIds AppId List
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExecutionEngine Execution Engine
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Id Query ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ExecutionEngine Execution engine.
+     * @param string $Id Query ID.
      */
     function __construct()
     {

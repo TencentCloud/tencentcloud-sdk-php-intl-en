@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Mapping of cluster ID and process ID
  *
- * @method string getClusterId() Obtain Cluster IDNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setClusterId(string $ClusterId) Set Cluster IDNote: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFlowId() Obtain Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFlowId(integer $FlowId) Set Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method integer getFlowId() Obtain Flow ID.
+ * @method void setFlowId(integer $FlowId) Set Flow ID.
  */
 class ClusterIDToFlowID extends AbstractModel
 {
     /**
-     * @var string Cluster IDNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var integer Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Flow ID.
      */
     public $FlowId;
 
     /**
-     * @param string $ClusterId Cluster IDNote: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FlowId Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ClusterId Cluster ID.
+     * @param integer $FlowId Flow ID.
      */
     function __construct()
     {

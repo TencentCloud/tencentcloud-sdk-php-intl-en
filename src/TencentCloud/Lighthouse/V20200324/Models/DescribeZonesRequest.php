@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeZones request structure.
  *
- * @method string getOrderField() Obtain Sorting field. Valid values:
-<li>`ZONE`: Sort by the availability zone.
-<li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-The default value is `ZONE`.
- * @method void setOrderField(string $OrderField) Set Sorting field. Valid values:
-<li>`ZONE`: Sort by the availability zone.
-<li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-The default value is `ZONE`.
- * @method string getOrder() Obtain Specifies how availability zones are listed. Valid values:
-<li>ASC: Ascending sort. 
-<li>DESC: Descending sort.
-The default value is `ASC`.
- * @method void setOrder(string $Order) Set Specifies how availability zones are listed. Valid values:
-<li>ASC: Ascending sort. 
-<li>DESC: Descending sort.
-The default value is `ASC`.
+ * @method string getOrderField() Obtain Field on which the AZ list is sorted. value range:.
+<Li>ZONE: sorted based on availability zone.</li>.
+INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+Specifies the default sorting order by availability zone.
+ * @method void setOrderField(string $OrderField) Set Field on which the AZ list is sorted. value range:.
+<Li>ZONE: sorted based on availability zone.</li>.
+INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+Specifies the default sorting order by availability zone.
+ * @method string getOrder() Obtain Outputs the sorting order of the availability zone list. value range:.
+<Li>ASC: ascending order.</li>.
+<Li>DESC: sort in descending order.</li>.
+Specifies the default ascending order.
+ * @method void setOrder(string $Order) Set Outputs the sorting order of the availability zone list. value range:.
+<Li>ASC: ascending order.</li>.
+<Li>DESC: sort in descending order.</li>.
+Specifies the default ascending order.
  */
 class DescribeZonesRequest extends AbstractModel
 {
     /**
-     * @var string Sorting field. Valid values:
-<li>`ZONE`: Sort by the availability zone.
-<li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-The default value is `ZONE`.
+     * @var string Field on which the AZ list is sorted. value range:.
+<Li>ZONE: sorted based on availability zone.</li>.
+INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+Specifies the default sorting order by availability zone.
      */
     public $OrderField;
 
     /**
-     * @var string Specifies how availability zones are listed. Valid values:
-<li>ASC: Ascending sort. 
-<li>DESC: Descending sort.
-The default value is `ASC`.
+     * @var string Outputs the sorting order of the availability zone list. value range:.
+<Li>ASC: ascending order.</li>.
+<Li>DESC: sort in descending order.</li>.
+Specifies the default ascending order.
      */
     public $Order;
 
     /**
-     * @param string $OrderField Sorting field. Valid values:
-<li>`ZONE`: Sort by the availability zone.
-<li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-The default value is `ZONE`.
-     * @param string $Order Specifies how availability zones are listed. Valid values:
-<li>ASC: Ascending sort. 
-<li>DESC: Descending sort.
-The default value is `ASC`.
+     * @param string $OrderField Field on which the AZ list is sorted. value range:.
+<Li>ZONE: sorted based on availability zone.</li>.
+INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+Specifies the default sorting order by availability zone.
+     * @param string $Order Outputs the sorting order of the availability zone list. value range:.
+<Li>ASC: ascending order.</li>.
+<Li>DESC: sort in descending order.</li>.
+Specifies the default ascending order.
      */
     function __construct()
     {

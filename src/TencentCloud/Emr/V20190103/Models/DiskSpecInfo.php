@@ -20,106 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Node disk information
  *
- * @method integer getCount() Obtain The number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCount(integer $Count) Set The number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDiskType() Obtain The system disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
+ * @method integer getCount() Obtain Number of disks.
+ * @method void setCount(integer $Count) Set Number of disks.
+ * @method string getDiskType() Obtain Valid values of the system disk type:
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
 
-The data disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
-<li>`CLOUD_THROUGHPUT`: Throughput HDD</li>
-<li>CLOUD_TSSD: ulTra SSD</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskType(string $DiskType) Set The system disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
+Valid values of the data disk type.
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
+<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
+<li>CLOUD_BSSD: Balanced SSD.</li>
+<li>REMOTE_SSD: Remote SSD.</li>
 
-The data disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
-<li>`CLOUD_THROUGHPUT`: Throughput HDD</li>
-<li>CLOUD_TSSD: ulTra SSD</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDiskSize() Obtain The disk capacity in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskSize(integer $DiskSize) Set The disk capacity in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDiskType(string $DiskType) Set Valid values of the system disk type:
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+
+Valid values of the data disk type.
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
+<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
+<li>CLOUD_BSSD: Balanced SSD.</li>
+<li>REMOTE_SSD: Remote SSD.</li>
+
+ * @method integer getDiskSize() Obtain Data capacity in GB.
+ * @method void setDiskSize(integer $DiskSize) Set Data capacity in GB.
+ * @method integer getExtraPerformance() Obtain Additional performance.
+ * @method void setExtraPerformance(integer $ExtraPerformance) Set Additional performance.
  */
 class DiskSpecInfo extends AbstractModel
 {
     /**
-     * @var integer The number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of disks.
      */
     public $Count;
 
     /**
-     * @var string The system disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
+     * @var string Valid values of the system disk type:
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
 
-The data disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
-<li>`CLOUD_THROUGHPUT`: Throughput HDD</li>
-<li>CLOUD_TSSD: ulTra SSD</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Valid values of the data disk type.
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
+<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
+<li>CLOUD_BSSD: Balanced SSD.</li>
+<li>REMOTE_SSD: Remote SSD.</li>
+
      */
     public $DiskType;
 
     /**
-     * @var integer The disk capacity in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Data capacity in GB.
      */
     public $DiskSize;
 
     /**
-     * @param integer $Count The number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DiskType The system disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
+     * @var integer Additional performance.
+     */
+    public $ExtraPerformance;
 
-The data disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
-<li>`CLOUD_THROUGHPUT`: Throughput HDD</li>
-<li>CLOUD_TSSD: ulTra SSD</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DiskSize The disk capacity in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
+    /**
+     * @param integer $Count Number of disks.
+     * @param string $DiskType Valid values of the system disk type:
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+
+Valid values of the data disk type.
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
+<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
+<li>CLOUD_BSSD: Balanced SSD.</li>
+<li>REMOTE_SSD: Remote SSD.</li>
+
+     * @param integer $DiskSize Data capacity in GB.
+     * @param integer $ExtraPerformance Additional performance.
      */
     function __construct()
     {
@@ -144,6 +160,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("ExtraPerformance",$param) and $param["ExtraPerformance"] !== null) {
+            $this->ExtraPerformance = $param["ExtraPerformance"];
         }
     }
 }

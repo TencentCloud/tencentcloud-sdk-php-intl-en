@@ -21,45 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Description of Pod `PVC` storage method
  *
  * @method integer getDiskSize() Obtain Disk size in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDiskSize(integer $DiskSize) Set Disk size in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDiskType() Obtain Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskType(string $DiskType) Set Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDiskType() Obtain Disk type, CLOUD_PREMIUM or CLOUD_SSD.
+ * @method void setDiskType(string $DiskType) Set Disk type, CLOUD_PREMIUM or CLOUD_SSD.
  * @method integer getDiskNum() Obtain Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDiskNum(integer $DiskNum) Set Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getExtraPerformance() Obtain Additional performance of cloud disks.
+ * @method void setExtraPerformance(integer $ExtraPerformance) Set Additional performance of cloud disks.
  */
 class PersistentVolumeContext extends AbstractModel
 {
     /**
      * @var integer Disk size in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DiskSize;
 
     /**
-     * @var string Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Disk type, CLOUD_PREMIUM or CLOUD_SSD.
      */
     public $DiskType;
 
     /**
      * @var integer Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DiskNum;
 
     /**
+     * @var integer Additional performance of cloud disks.
+     */
+    public $ExtraPerformance;
+
+    /**
      * @param integer $DiskSize Disk size in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DiskType Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DiskType Disk type, CLOUD_PREMIUM or CLOUD_SSD.
      * @param integer $DiskNum Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ExtraPerformance Additional performance of cloud disks.
      */
     function __construct()
     {
@@ -84,6 +80,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DiskNum",$param) and $param["DiskNum"] !== null) {
             $this->DiskNum = $param["DiskNum"];
+        }
+
+        if (array_key_exists("ExtraPerformance",$param) and $param["ExtraPerformance"] !== null) {
+            $this->ExtraPerformance = $param["ExtraPerformance"];
         }
     }
 }

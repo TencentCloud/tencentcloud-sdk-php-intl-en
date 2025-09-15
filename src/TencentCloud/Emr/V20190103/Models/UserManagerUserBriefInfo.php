@@ -26,16 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserGroup(string $UserGroup) Set The group to which the user belongs
  * @method string getUserType() Obtain `Manager` represents an admin, and `NormalUser` represents a general user.
  * @method void setUserType(string $UserType) Set `Manager` represents an admin, and `NormalUser` represents a general user.
- * @method string getCreateTime() Obtain Account creation time
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Account creation time
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getCreateTime() Obtain User creation time.
+ * @method void setCreateTime(string $CreateTime) Set User creation time.
  * @method boolean getSupportDownLoadKeyTab() Obtain Whether the corresponding Keytab file of the user is available for download. This parameter applies only to a Kerberos-enabled cluster.
  * @method void setSupportDownLoadKeyTab(boolean $SupportDownLoadKeyTab) Set Whether the corresponding Keytab file of the user is available for download. This parameter applies only to a Kerberos-enabled cluster.
- * @method string getDownLoadKeyTabUrl() Obtain Download link of the Keytab file
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setDownLoadKeyTabUrl(string $DownLoadKeyTabUrl) Set Download link of the Keytab file
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getDownLoadKeyTabUrl() Obtain Download address of the keytab file.
+ * @method void setDownLoadKeyTabUrl(string $DownLoadKeyTabUrl) Set Download address of the keytab file.
  */
 class UserManagerUserBriefInfo extends AbstractModel
 {
@@ -55,8 +51,7 @@ class UserManagerUserBriefInfo extends AbstractModel
     public $UserType;
 
     /**
-     * @var string Account creation time
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string User creation time.
      */
     public $CreateTime;
 
@@ -66,8 +61,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $SupportDownLoadKeyTab;
 
     /**
-     * @var string Download link of the Keytab file
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Download address of the keytab file.
      */
     public $DownLoadKeyTabUrl;
 
@@ -75,11 +69,9 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $UserName Username
      * @param string $UserGroup The group to which the user belongs
      * @param string $UserType `Manager` represents an admin, and `NormalUser` represents a general user.
-     * @param string $CreateTime Account creation time
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $CreateTime User creation time.
      * @param boolean $SupportDownLoadKeyTab Whether the corresponding Keytab file of the user is available for download. This parameter applies only to a Kerberos-enabled cluster.
-     * @param string $DownLoadKeyTabUrl Download link of the Keytab file
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $DownLoadKeyTabUrl Download address of the keytab file.
      */
     function __construct()
     {

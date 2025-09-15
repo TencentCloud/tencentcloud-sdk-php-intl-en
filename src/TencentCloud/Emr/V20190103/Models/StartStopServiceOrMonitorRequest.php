@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpScope(OpScope $OpScope) Set The operation scope.
  * @method StrategyConfig getStrategyConfig() Obtain The operation policy.
  * @method void setStrategyConfig(StrategyConfig $StrategyConfig) Set The operation policy.
+ * @method StopParams getStopParams() Obtain Parameters used for suspending services.
+ * @method void setStopParams(StopParams $StopParams) Set Parameters used for suspending services.
+ * @method boolean getKeepMonitorButNotRecoverProcess() Obtain This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+ * @method void setKeepMonitorButNotRecoverProcess(boolean $KeepMonitorButNotRecoverProcess) Set This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
  */
 class StartStopServiceOrMonitorRequest extends AbstractModel
 {
@@ -67,6 +71,16 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
     public $StrategyConfig;
 
     /**
+     * @var StopParams Parameters used for suspending services.
+     */
+    public $StopParams;
+
+    /**
+     * @var boolean This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+     */
+    public $KeepMonitorButNotRecoverProcess;
+
+    /**
      * @param string $InstanceId The cluster ID.
      * @param string $OpType The operation type. Valid values:
 <li>StartService: Start service</li>
@@ -76,6 +90,8 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
 <li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
      * @param OpScope $OpScope The operation scope.
      * @param StrategyConfig $StrategyConfig The operation policy.
+     * @param StopParams $StopParams Parameters used for suspending services.
+     * @param boolean $KeepMonitorButNotRecoverProcess This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
      */
     function __construct()
     {
@@ -106,6 +122,15 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
         if (array_key_exists("StrategyConfig",$param) and $param["StrategyConfig"] !== null) {
             $this->StrategyConfig = new StrategyConfig();
             $this->StrategyConfig->deserialize($param["StrategyConfig"]);
+        }
+
+        if (array_key_exists("StopParams",$param) and $param["StopParams"] !== null) {
+            $this->StopParams = new StopParams();
+            $this->StopParams->deserialize($param["StopParams"]);
+        }
+
+        if (array_key_exists("KeepMonitorButNotRecoverProcess",$param) and $param["KeepMonitorButNotRecoverProcess"] !== null) {
+            $this->KeepMonitorButNotRecoverProcess = $param["KeepMonitorButNotRecoverProcess"];
         }
     }
 }

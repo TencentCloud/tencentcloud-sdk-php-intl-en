@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameter information of each AZ
  *
- * @method string getZoneTag() Obtain "master", "standby", "third-party"
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setZoneTag(string $ZoneTag) Set "master", "standby", "third-party"
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getZoneTag() Obtain "master", "standby" or "third-party".
+ * @method void setZoneTag(string $ZoneTag) Set "master", "standby" or "third-party".
  * @method VPCSettings getVPCSettings() Obtain None
  * @method void setVPCSettings(VPCSettings $VPCSettings) Set None
  * @method Placement getPlacement() Obtain None
@@ -34,8 +32,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class MultiZoneSetting extends AbstractModel
 {
     /**
-     * @var string "master", "standby", "third-party"
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string "master", "standby" or "third-party".
      */
     public $ZoneTag;
 
@@ -55,8 +52,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $ResourceSpec;
 
     /**
-     * @param string $ZoneTag "master", "standby", "third-party"
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $ZoneTag "master", "standby" or "third-party".
      * @param VPCSettings $VPCSettings None
      * @param Placement $Placement None
      * @param NewResourceSpec $ResourceSpec None

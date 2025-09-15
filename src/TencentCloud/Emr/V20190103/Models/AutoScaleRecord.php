@@ -38,18 +38,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategyType(integer $StrategyType) Set Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
  * @method string getSpecInfo() Obtain Specification information used during scale-out.
  * @method void setSpecInfo(string $SpecInfo) Set Specification information used during scale-out.
- * @method integer getCompensateFlag() Obtain Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCompensateFlag(integer $CompensateFlag) Set Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCompensateCount() Obtain Number of compensations
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCompensateCount(integer $CompensateCount) Set Number of compensations
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRetryCount() Obtain 
- * @method void setRetryCount(integer $RetryCount) Set 
- * @method string getRetryInfo() Obtain 
- * @method void setRetryInfo(string $RetryInfo) Set 
+ * @method integer getCompensateFlag() Obtain Compensatory scale-out. 0: disable, 1: enable.
+ * @method void setCompensateFlag(integer $CompensateFlag) Set Compensatory scale-out. 0: disable, 1: enable.
+ * @method integer getCompensateCount() Obtain Number of compensations.
+ * @method void setCompensateCount(integer $CompensateCount) Set Number of compensations.
+ * @method integer getRetryCount() Obtain Number of retries.
+ * @method void setRetryCount(integer $RetryCount) Set Number of retries.
+ * @method string getRetryInfo() Obtain Retry information.
+ * @method void setRetryInfo(string $RetryInfo) Set Retry information.
+ * @method string getRetryEnReason() Obtain Retry description in English.
+ * @method void setRetryEnReason(string $RetryEnReason) Set Retry description in English.
+ * @method string getRetryReason() Obtain Retry description.
+ * @method void setRetryReason(string $RetryReason) Set Retry description.
  */
 class AutoScaleRecord extends AbstractModel
 {
@@ -99,26 +99,34 @@ class AutoScaleRecord extends AbstractModel
     public $SpecInfo;
 
     /**
-     * @var integer Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Compensatory scale-out. 0: disable, 1: enable.
      */
     public $CompensateFlag;
 
     /**
-     * @var integer Number of compensations
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of compensations.
      */
     public $CompensateCount;
 
     /**
-     * @var integer 
+     * @var integer Number of retries.
      */
     public $RetryCount;
 
     /**
-     * @var string 
+     * @var string Retry information.
      */
     public $RetryInfo;
+
+    /**
+     * @var string Retry description in English.
+     */
+    public $RetryEnReason;
+
+    /**
+     * @var string Retry description.
+     */
+    public $RetryReason;
 
     /**
      * @param string $StrategyName Name of the scale-in or scale-out rule.
@@ -130,12 +138,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $EndTime Process termination time.
      * @param integer $StrategyType Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
      * @param string $SpecInfo Specification information used during scale-out.
-     * @param integer $CompensateFlag Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CompensateCount Number of compensations
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RetryCount 
-     * @param string $RetryInfo 
+     * @param integer $CompensateFlag Compensatory scale-out. 0: disable, 1: enable.
+     * @param integer $CompensateCount Number of compensations.
+     * @param integer $RetryCount Number of retries.
+     * @param string $RetryInfo Retry information.
+     * @param string $RetryEnReason Retry description in English.
+     * @param string $RetryReason Retry description.
      */
     function __construct()
     {
@@ -200,6 +208,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RetryInfo",$param) and $param["RetryInfo"] !== null) {
             $this->RetryInfo = $param["RetryInfo"];
+        }
+
+        if (array_key_exists("RetryEnReason",$param) and $param["RetryEnReason"] !== null) {
+            $this->RetryEnReason = $param["RetryEnReason"];
+        }
+
+        if (array_key_exists("RetryReason",$param) and $param["RetryReason"] !== null) {
+            $this->RetryReason = $param["RetryReason"];
         }
     }
 }

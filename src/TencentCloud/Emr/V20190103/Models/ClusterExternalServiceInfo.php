@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Relationship between shared components and the current cluster
  *
- * @method integer getDependType() Obtain Dependency. `0`: Other clusters depend on the current cluster. `1`: The current cluster depends on other clusters.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setDependType(integer $DependType) Set Dependency. `0`: Other clusters depend on the current cluster. `1`: The current cluster depends on other clusters.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getService() Obtain Shared component
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setService(string $Service) Set Shared component
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getClusterId() Obtain Sharing cluster
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setClusterId(string $ClusterId) Set Sharing cluster
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getClusterStatus() Obtain Sharing cluster status
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setClusterStatus(integer $ClusterStatus) Set Sharing cluster status
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getDependType() Obtain Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
+ * @method void setDependType(integer $DependType) Set Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
+ * @method string getService() Obtain Shared component.
+ * @method void setService(string $Service) Set Shared component.
+ * @method string getClusterId() Obtain Shared cluster.
+ * @method void setClusterId(string $ClusterId) Set Shared cluster.
+ * @method integer getClusterStatus() Obtain Shared cluster status.
+ * @method void setClusterStatus(integer $ClusterStatus) Set Shared cluster status.
  */
 class ClusterExternalServiceInfo extends AbstractModel
 {
     /**
-     * @var integer Dependency. `0`: Other clusters depend on the current cluster. `1`: The current cluster depends on other clusters.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
      */
     public $DependType;
 
     /**
-     * @var string Shared component
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Shared component.
      */
     public $Service;
 
     /**
-     * @var string Sharing cluster
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Shared cluster.
      */
     public $ClusterId;
 
     /**
-     * @var integer Sharing cluster status
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Shared cluster status.
      */
     public $ClusterStatus;
 
     /**
-     * @param integer $DependType Dependency. `0`: Other clusters depend on the current cluster. `1`: The current cluster depends on other clusters.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Service Shared component
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ClusterId Sharing cluster
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $ClusterStatus Sharing cluster status
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $DependType Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
+     * @param string $Service Shared component.
+     * @param string $ClusterId Shared cluster.
+     * @param integer $ClusterStatus Shared cluster status.
      */
     function __construct()
     {

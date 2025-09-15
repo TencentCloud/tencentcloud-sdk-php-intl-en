@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Description of Pod storage.
  *
- * @method string getVolumeType() Obtain Storage type. Valid values: `pvc` and `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVolumeType(string $VolumeType) Set Storage type. Valid values: `pvc` and `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVolumeType() Obtain Storage type, which can be "pvc" or "hostpath".
+ * @method void setVolumeType(string $VolumeType) Set Storage type, which can be "pvc" or "hostpath".
  * @method PersistentVolumeContext getPVCVolume() Obtain This field will take effect if `VolumeType` is `pvc`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPVCVolume(PersistentVolumeContext $PVCVolume) Set This field will take effect if `VolumeType` is `pvc`.
@@ -36,8 +34,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class PodVolume extends AbstractModel
 {
     /**
-     * @var string Storage type. Valid values: `pvc` and `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Storage type, which can be "pvc" or "hostpath".
      */
     public $VolumeType;
 
@@ -54,8 +51,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HostVolume;
 
     /**
-     * @param string $VolumeType Storage type. Valid values: `pvc` and `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VolumeType Storage type, which can be "pvc" or "hostpath".
      * @param PersistentVolumeContext $PVCVolume This field will take effect if `VolumeType` is `pvc`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostVolumeContext $HostVolume This field will take effect if `VolumeType` is `hostpath`.

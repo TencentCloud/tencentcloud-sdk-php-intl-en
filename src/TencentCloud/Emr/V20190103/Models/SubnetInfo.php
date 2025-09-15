@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Subnet information
  *
- * @method string getSubnetName() Obtain Subnet information (name)
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSubnetName(string $SubnetName) Set Subnet information (name)
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getSubnetId() Obtain Subnet information (ID)
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSubnetId(string $SubnetId) Set Subnet information (ID)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSubnetName() Obtain Subnet information (name).
+ * @method void setSubnetName(string $SubnetName) Set Subnet information (name).
+ * @method string getSubnetId() Obtain Subnet information (ID).
+ * @method void setSubnetId(string $SubnetId) Set Subnet information (ID).
  */
 class SubnetInfo extends AbstractModel
 {
     /**
-     * @var string Subnet information (name)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Subnet information (name).
      */
     public $SubnetName;
 
     /**
-     * @var string Subnet information (ID)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Subnet information (ID).
      */
     public $SubnetId;
 
     /**
-     * @param string $SubnetName Subnet information (name)
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $SubnetId Subnet information (ID)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $SubnetName Subnet information (name).
+     * @param string $SubnetId Subnet information (ID).
      */
     function __construct()
     {

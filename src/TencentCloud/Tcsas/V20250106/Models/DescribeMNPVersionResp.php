@@ -21,57 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * Result of the task to create a mini program version
  *
  * @method string getMNPId() Obtain Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPId(string $MNPId) Set Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTaskId() Obtain Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTaskId(string $TaskId) Set Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTaskStatus() Obtain 1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskStatus(integer $TaskStatus) Set 1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTaskStatus() Obtain 1: Pending; 20: Running; 30: Failed; 60: Succeeded
+ * @method void setTaskStatus(integer $TaskStatus) Set 1: Pending; 20: Running; 30: Failed; 60: Succeeded
  * @method string getTaskMsg() Obtain Task status message
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTaskMsg(string $TaskMsg) Set Task status message
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMNPVersionId() Obtain Mini program version ID (returned when compilation succeeds)
+ * @method void setMNPVersionId(integer $MNPVersionId) Set Mini program version ID (returned when compilation succeeds)
  */
 class DescribeMNPVersionResp extends AbstractModel
 {
     /**
      * @var string Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPId;
 
     /**
      * @var string Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TaskId;
 
     /**
-     * @var integer 1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 1: Pending; 20: Running; 30: Failed; 60: Succeeded
      */
     public $TaskStatus;
 
     /**
      * @var string Task status message
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TaskMsg;
 
     /**
+     * @var integer Mini program version ID (returned when compilation succeeds)
+     */
+    public $MNPVersionId;
+
+    /**
      * @param string $MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TaskStatus 1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TaskStatus 1: Pending; 20: Running; 30: Failed; 60: Succeeded
      * @param string $TaskMsg Task status message
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MNPVersionId Mini program version ID (returned when compilation succeeds)
      */
     function __construct()
     {
@@ -100,6 +92,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TaskMsg",$param) and $param["TaskMsg"] !== null) {
             $this->TaskMsg = $param["TaskMsg"];
+        }
+
+        if (array_key_exists("MNPVersionId",$param) and $param["MNPVersionId"] !== null) {
+            $this->MNPVersionId = $param["MNPVersionId"];
         }
     }
 }
