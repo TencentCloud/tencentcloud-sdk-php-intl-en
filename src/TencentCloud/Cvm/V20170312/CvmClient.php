@@ -119,6 +119,10 @@ This API is used to create an instance launch template. After the initial creati
 * You need to specify the names of the key pairs and the content of the public keys.
 * If you only have private keys, you can convert them to public keys with the `SSL` tool before importing them.
  * @method Models\InquirePricePurchaseReservedInstancesOfferingResponse InquirePricePurchaseReservedInstancesOffering(Models\InquirePricePurchaseReservedInstancesOfferingRequest $req) This API is used to query the price of reserved instances. It only supports querying purchasable reserved instance offerings. Currently, RIs are only offered to beta users.
+ * @method Models\InquiryPriceModifyInstancesChargeTypeResponse InquiryPriceModifyInstancesChargeType(Models\InquiryPriceModifyInstancesChargeTypeRequest $req) This API is used to inquire about the price for switching billing modes of instance.
+
+
+This API is used to indicate that instances with no charge when shut down, instances of the model families Batch Computing BC1 and Batch Computing BS1, instances of scheduled termination, and spot instances do not support this operation.
  * @method Models\InquiryPriceRenewInstancesResponse InquiryPriceRenewInstances(Models\InquiryPriceRenewInstancesRequest $req) This API is used to inquire about the price for renewing a monthly subscription instance.
 
 This API is used to query the renewal price of monthly subscription instances.
@@ -159,6 +163,10 @@ This API is used to query the renewal price of monthly subscription instances.
 * Batch operations are supported. Each request can modify up to 100 instances.
 * When you modify the security groups associated with an instance is modified, the original security groups are disassociated.
 * You can use the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) to query the instance operation result. If the 'LatestOperationState' in the response is **SUCCESS**, the operation is successful.
+ * @method Models\ModifyInstancesChargeTypeResponse ModifyInstancesChargeType(Models\ModifyInstancesChargeTypeRequest $req) This API is used to switch the billing mode of an instance.
+
+This API is used to perform operations that do not support instances with no charge when shut down, instances of the model families Batch Compute BC1 and Batch Compute BS1, or instances of scheduled termination.
+* You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
  * @method Models\ModifyInstancesDisasterRecoverGroupResponse ModifyInstancesDisasterRecoverGroup(Models\ModifyInstancesDisasterRecoverGroupRequest $req) This API is used to adjust the placement group of an instance.
 * Currently only basic networks or Virtual Private Cloud (VPC) instances are supported.
  * @method Models\ModifyInstancesProjectResponse ModifyInstancesProject(Models\ModifyInstancesProjectRequest $req) This API is used to change the project to which an instance is assigned.

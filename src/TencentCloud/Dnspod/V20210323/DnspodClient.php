@@ -34,6 +34,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) This API is used to delete a domain.
  * @method Models\DeleteDomainAliasResponse DeleteDomainAlias(Models\DeleteDomainAliasRequest $req) This API is used to delete a domain alias.
  * @method Models\DeleteDomainBatchResponse DeleteDomainBatch(Models\DeleteDomainBatchRequest $req) This API is used to batch delete domains.
+ * @method Models\DeletePackageOrderResponse DeletePackageOrder(Models\DeletePackageOrderRequest $req) This API is used to disable the paid plan on the international website.
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) This API is used to delete a record.
  * @method Models\DeleteRecordGroupResponse DeleteRecordGroup(Models\DeleteRecordGroupRequest $req) This API is used to delete a record group.
  * @method Models\DeleteShareDomainResponse DeleteShareDomain(Models\DeleteShareDomainRequest $req) This API is used to unshare a domain.
@@ -46,6 +47,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeDomainShareInfoResponse DescribeDomainShareInfo(Models\DescribeDomainShareInfoRequest $req) This API is used to get the domain sharing information.
  * @method Models\DescribeRecordResponse DescribeRecord(Models\DescribeRecordRequest $req) This API is used to get the information of a record.
  * @method Models\DescribeRecordGroupListResponse DescribeRecordGroupList(Models\DescribeRecordGroupListRequest $req) This API is used to query the list of DNS record groups.
+ * @method Models\DescribeRecordLineCategoryListResponse DescribeRecordLineCategoryList(Models\DescribeRecordLineCategoryListRequest $req) This API is used to return a line list by category.
  * @method Models\DescribeRecordLineListResponse DescribeRecordLineList(Models\DescribeRecordLineListRequest $req) This API is used to get the split zones allowed by the domain level.
  * @method Models\DescribeRecordListResponse DescribeRecordList(Models\DescribeRecordListRequest $req) This API is used to get the DNS records of a domain.
  * @method Models\DescribeRecordTypeResponse DescribeRecordType(Models\DescribeRecordTypeRequest $req) This API is used to get the record type allowed by the domain level.
