@@ -26,6 +26,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getSubtitlePath() Obtain Subtitle file path.
  * @method void setSubtitlePath(string $SubtitlePath) Set Subtitle file path.
+ * @method TaskOutputStorage getOutputStorage() Obtain Subtitle file storage location.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Subtitle file storage location.
  */
 class SmartSubtitleTaskTransTextResultOutput extends AbstractModel
 {
@@ -41,9 +43,15 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $SubtitlePath;
 
     /**
+     * @var TaskOutputStorage Subtitle file storage location.
+     */
+    public $OutputStorage;
+
+    /**
      * @param array $SegmentSet List of segments for translation.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $SubtitlePath Subtitle file path.
+     * @param TaskOutputStorage $OutputStorage Subtitle file storage location.
      */
     function __construct()
     {
@@ -69,6 +77,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("SubtitlePath",$param) and $param["SubtitlePath"] !== null) {
             $this->SubtitlePath = $param["SubtitlePath"];
+        }
+
+        if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
+            $this->OutputStorage = new TaskOutputStorage();
+            $this->OutputStorage->deserialize($param["OutputStorage"]);
         }
     }
 }

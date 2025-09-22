@@ -58,6 +58,10 @@ Note 3: The trigger configured for an orchestration is for automatically startin
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Type parameter of a video content recognition task.
  * @method AiQualityControlTaskInput getAiQualityControlTask() Obtain Media quality inspection type task parameters.
  * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) Set Media quality inspection type task parameters.
+ * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain Smart subtitle task.
+ * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) Set Smart subtitle task.
+ * @method SmartEraseTaskInput getSmartEraseTask() Obtain Smart erase task parameter.
+ * @method void setSmartEraseTask(SmartEraseTaskInput $SmartEraseTask) Set Smart erase task parameter.
  * @method TaskNotifyConfig getTaskNotifyConfig() Obtain Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
  * @method integer getTasksPriority() Obtain Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
@@ -74,8 +78,6 @@ Note 3: The trigger configured for an orchestration is for automatically startin
 <li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
  * @method string getResourceId() Obtain Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
  * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
- * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain Smart subtitle task.
- * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) Set Smart subtitle task.
  * @method integer getSkipMateData() Obtain Whether to skip metadata acquisition. Valid values:
 0: do not skip
 1: skip
@@ -143,6 +145,16 @@ Note 3: The trigger configured for an orchestration is for automatically startin
     public $AiQualityControlTask;
 
     /**
+     * @var SmartSubtitlesTaskInput Smart subtitle task.
+     */
+    public $SmartSubtitlesTask;
+
+    /**
+     * @var SmartEraseTaskInput Smart erase task parameter.
+     */
+    public $SmartEraseTask;
+
+    /**
      * @var TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
      */
     public $TaskNotifyConfig;
@@ -175,11 +187,6 @@ Note 3: The trigger configured for an orchestration is for automatically startin
     public $ResourceId;
 
     /**
-     * @var SmartSubtitlesTaskInput Smart subtitle task.
-     */
-    public $SmartSubtitlesTask;
-
-    /**
      * @var integer Whether to skip metadata acquisition. Valid values:
 0: do not skip
 1: skip
@@ -207,6 +214,8 @@ Note 3: The trigger configured for an orchestration is for automatically startin
      * @param AiAnalysisTaskInput $AiAnalysisTask Video content analysis task parameter.
      * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of a video content recognition task.
      * @param AiQualityControlTaskInput $AiQualityControlTask Media quality inspection type task parameters.
+     * @param SmartSubtitlesTaskInput $SmartSubtitlesTask Smart subtitle task.
+     * @param SmartEraseTaskInput $SmartEraseTask Smart erase task parameter.
      * @param TaskNotifyConfig $TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
      * @param integer $TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
      * @param string $SessionId Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
@@ -215,7 +224,6 @@ Note 3: The trigger configured for an orchestration is for automatically startin
 <li> `Online` (default): A task that is executed immediately.</li>
 <li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
      * @param string $ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
-     * @param SmartSubtitlesTaskInput $SmartSubtitlesTask Smart subtitle task.
      * @param integer $SkipMateData Whether to skip metadata acquisition. Valid values:
 0: do not skip
 1: skip
@@ -277,6 +285,16 @@ Default value: 0
             $this->AiQualityControlTask->deserialize($param["AiQualityControlTask"]);
         }
 
+        if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
+            $this->SmartSubtitlesTask = new SmartSubtitlesTaskInput();
+            $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
+        }
+
+        if (array_key_exists("SmartEraseTask",$param) and $param["SmartEraseTask"] !== null) {
+            $this->SmartEraseTask = new SmartEraseTaskInput();
+            $this->SmartEraseTask->deserialize($param["SmartEraseTask"]);
+        }
+
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {
             $this->TaskNotifyConfig = new TaskNotifyConfig();
             $this->TaskNotifyConfig->deserialize($param["TaskNotifyConfig"]);
@@ -300,11 +318,6 @@ Default value: 0
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
-        }
-
-        if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
-            $this->SmartSubtitlesTask = new SmartSubtitlesTaskInput();
-            $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
         }
 
         if (array_key_exists("SkipMateData",$param) and $param["SkipMateData"] !== null) {

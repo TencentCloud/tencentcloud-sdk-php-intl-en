@@ -68,6 +68,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask) Set Smart subtitle task output.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method SmartEraseTaskResult getSmartEraseTask() Obtain Smart erase task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSmartEraseTask(SmartEraseTaskResult $SmartEraseTask) Set Smart erase task output.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class ActivityResItem extends AbstractModel
 {
@@ -144,6 +148,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $SmartSubtitlesTask;
 
     /**
+     * @var SmartEraseTaskResult Smart erase task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $SmartEraseTask;
+
+    /**
      * @param MediaProcessTaskTranscodeResult $TranscodeTask The result of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask The result of an animated image generating task.
@@ -167,6 +177,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param ScheduleExecRuleTaskResult $ExecRuleTask Conditional judgment task output.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SmartEraseTaskResult $SmartEraseTask Smart erase task output.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -240,6 +252,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
             $this->SmartSubtitlesTask = new ScheduleSmartSubtitleTaskResult();
             $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
+        }
+
+        if (array_key_exists("SmartEraseTask",$param) and $param["SmartEraseTask"] !== null) {
+            $this->SmartEraseTask = new SmartEraseTaskResult();
+            $this->SmartEraseTask->deserialize($param["SmartEraseTask"]);
         }
     }
 }

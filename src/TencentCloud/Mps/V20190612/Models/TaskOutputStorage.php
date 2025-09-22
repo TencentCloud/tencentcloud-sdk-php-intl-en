@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The information of the media processing output object.
  *
- * @method string getType() Obtain The storage type for a media processing output file. Valid values:
-<li>`COS`: Tencent Cloud COS</li>
-<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
- * @method void setType(string $Type) Set The storage type for a media processing output file. Valid values:
-<li>`COS`: Tencent Cloud COS</li>
-<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+ * @method string getType() Obtain Specifies the type of storage location for the media processing service output object. valid values:.
+<Li>COS: cos storage.</li>.
+<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
+<Li>VOD: video-on-demand (vod) pro edition</li>.
+ * @method void setType(string $Type) Set Specifies the type of storage location for the media processing service output object. valid values:.
+<Li>COS: cos storage.</li>.
+<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
+<Li>VOD: video-on-demand (vod) pro edition</li>.
  * @method CosOutputStorage getCosOutputStorage() Obtain The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setCosOutputStorage(CosOutputStorage $CosOutputStorage) Set The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
@@ -34,13 +36,18 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setS3OutputStorage(S3OutputStorage $S3OutputStorage) Set The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method VODOutputStorage getVODOutputStorage() Obtain The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setVODOutputStorage(VODOutputStorage $VODOutputStorage) Set The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class TaskOutputStorage extends AbstractModel
 {
     /**
-     * @var string The storage type for a media processing output file. Valid values:
-<li>`COS`: Tencent Cloud COS</li>
-<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+     * @var string Specifies the type of storage location for the media processing service output object. valid values:.
+<Li>COS: cos storage.</li>.
+<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
+<Li>VOD: video-on-demand (vod) pro edition</li>.
      */
     public $Type;
 
@@ -57,12 +64,21 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $S3OutputStorage;
 
     /**
-     * @param string $Type The storage type for a media processing output file. Valid values:
-<li>`COS`: Tencent Cloud COS</li>
-<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+     * @var VODOutputStorage The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $VODOutputStorage;
+
+    /**
+     * @param string $Type Specifies the type of storage location for the media processing service output object. valid values:.
+<Li>COS: cos storage.</li>.
+<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
+<Li>VOD: video-on-demand (vod) pro edition</li>.
      * @param CosOutputStorage $CosOutputStorage The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param S3OutputStorage $S3OutputStorage The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param VODOutputStorage $VODOutputStorage The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -90,6 +106,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("S3OutputStorage",$param) and $param["S3OutputStorage"] !== null) {
             $this->S3OutputStorage = new S3OutputStorage();
             $this->S3OutputStorage->deserialize($param["S3OutputStorage"]);
+        }
+
+        if (array_key_exists("VODOutputStorage",$param) and $param["VODOutputStorage"] !== null) {
+            $this->VODOutputStorage = new VODOutputStorage();
+            $this->VODOutputStorage->deserialize($param["VODOutputStorage"]);
         }
     }
 }

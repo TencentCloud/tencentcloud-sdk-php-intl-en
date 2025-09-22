@@ -30,58 +30,62 @@ The value can only be 0 when TranslateSwitch is set to OFF. The value can only b
 1: target language
 2: source language + target language
 The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
- * @method string getVideoSrcLanguage() Obtain Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+ * @method string getVideoSrcLanguage() Obtain Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
- * @method void setVideoSrcLanguage(string $VideoSrcLanguage) Set Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
+ * @method void setVideoSrcLanguage(string $VideoSrcLanguage) Set Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
- * @method string getSubtitleFormat() Obtain Smart subtitle file format.
-vtt: WebVTT format
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
+ * @method string getSubtitleFormat() Obtain Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSubtitleFormat(string $SubtitleFormat) Set Smart subtitle file format.
-vtt: WebVTT format
+ * @method void setSubtitleFormat(string $SubtitleFormat) Set Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getTranslateSwitch() Obtain Subtitle translation switch.
 ON: enable translation
 OFF: disable translation
@@ -151,36 +155,38 @@ The value can only be 0 when TranslateSwitch is set to OFF. The value can only b
     public $SubtitleType;
 
     /**
-     * @var string Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+     * @var string Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
      */
     public $VideoSrcLanguage;
 
     /**
-     * @var string Smart subtitle file format.
-vtt: WebVTT format
+     * @var string Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SubtitleFormat;
 
@@ -234,32 +240,34 @@ Note: This field may return null, indicating that no valid value can be obtained
 1: target language
 2: source language + target language
 The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
-     * @param string $VideoSrcLanguage Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+     * @param string $VideoSrcLanguage Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
-     * @param string $SubtitleFormat Smart subtitle file format.
-vtt: WebVTT format
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
+     * @param string $SubtitleFormat Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $TranslateSwitch Subtitle translation switch.
 ON: enable translation
 OFF: disable translation

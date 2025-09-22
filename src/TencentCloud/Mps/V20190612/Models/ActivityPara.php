@@ -50,6 +50,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) Set Smart subtitle task.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method SmartEraseTaskInput getSmartEraseTask() Obtain Smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSmartEraseTask(SmartEraseTaskInput $SmartEraseTask) Set Smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class ActivityPara extends AbstractModel
 {
@@ -117,6 +121,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $SmartSubtitlesTask;
 
     /**
+     * @var SmartEraseTaskInput Smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $SmartEraseTask;
+
+    /**
      * @param TranscodeTaskInput $TranscodeTask A transcoding task.
      * @param AnimatedGraphicTaskInput $AnimatedGraphicTask An animated screenshot generation task.
      * @param SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask A time point screenshot task.
@@ -131,6 +141,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param ExecRulesTask $ExecRulesTask Conditional judgment of the task.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param SmartSubtitlesTaskInput $SmartSubtitlesTask Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SmartEraseTaskInput $SmartEraseTask Smart erasure task.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -204,6 +216,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
             $this->SmartSubtitlesTask = new SmartSubtitlesTaskInput();
             $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
+        }
+
+        if (array_key_exists("SmartEraseTask",$param) and $param["SmartEraseTask"] !== null) {
+            $this->SmartEraseTask = new SmartEraseTaskInput();
+            $this->SmartEraseTask->deserialize($param["SmartEraseTask"]);
         }
     }
 }

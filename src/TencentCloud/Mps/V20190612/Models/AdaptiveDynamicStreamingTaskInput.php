@@ -48,21 +48,23 @@ If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicS
  * @method void setSubStreamObjectName(string $SubStreamObjectName) Set After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
  * @method string getSegmentObjectName() Obtain After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
  * @method void setSegmentObjectName(string $SegmentObjectName) Set After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
- * @method array getAddOnSubtitles() Obtain Subtitle file to be inserted.
+ * @method array getAddOnSubtitles() Obtain External subtitle feature specifies the subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setAddOnSubtitles(array $AddOnSubtitles) Set Subtitle file to be inserted.
+ * @method void setAddOnSubtitles(array $AddOnSubtitles) Set External subtitle feature specifies the subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method DrmInfo getDrmInfo() Obtain Drm information.
- * @method void setDrmInfo(DrmInfo $DrmInfo) Set Drm information.
+ * @method DrmInfo getDrmInfo() Obtain Specifies the Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setDrmInfo(DrmInfo $DrmInfo) Set Specifies the Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getDefinitionType() Obtain Adaptive transcoding template type.
 Common: audio/video type.
 PureAudio: audio-only.
  * @method void setDefinitionType(string $DefinitionType) Set Adaptive transcoding template type.
 Common: audio/video type.
 PureAudio: audio-only.
- * @method SubtitleTemplate getSubtitleTemplate() Obtain Specifies the subtitle parameter.
+ * @method SubtitleTemplate getSubtitleTemplate() Obtain Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set Specifies the subtitle parameter.
+ * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getStdExtInfo() Obtain Transcoding parameter extension field.
  * @method void setStdExtInfo(string $StdExtInfo) Set Transcoding parameter extension field.
@@ -108,13 +110,14 @@ If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicS
     public $SegmentObjectName;
 
     /**
-     * @var array Subtitle file to be inserted.
+     * @var array External subtitle feature specifies the subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $AddOnSubtitles;
 
     /**
-     * @var DrmInfo Drm information.
+     * @var DrmInfo Specifies the Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $DrmInfo;
 
@@ -126,7 +129,7 @@ PureAudio: audio-only.
     public $DefinitionType;
 
     /**
-     * @var SubtitleTemplate Specifies the subtitle parameter.
+     * @var SubtitleTemplate Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SubtitleTemplate;
@@ -151,13 +154,14 @@ Example of absolute path:
 If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
      * @param string $SubStreamObjectName After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
      * @param string $SegmentObjectName After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
-     * @param array $AddOnSubtitles Subtitle file to be inserted.
+     * @param array $AddOnSubtitles External subtitle feature specifies the subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param DrmInfo $DrmInfo Drm information.
+     * @param DrmInfo $DrmInfo Specifies the Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $DefinitionType Adaptive transcoding template type.
 Common: audio/video type.
 PureAudio: audio-only.
-     * @param SubtitleTemplate $SubtitleTemplate Specifies the subtitle parameter.
+     * @param SubtitleTemplate $SubtitleTemplate Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $StdExtInfo Transcoding parameter extension field.
      */

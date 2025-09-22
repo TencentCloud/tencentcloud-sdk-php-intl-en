@@ -36,64 +36,74 @@ Length limit: 64 characters.
 Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Smart subtitle template description.
 Length limit: 256 characters.
- * @method string getVideoSrcLanguage() Obtain Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+ * @method string getVideoSrcLanguage() Obtain Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
- * @method void setVideoSrcLanguage(string $VideoSrcLanguage) Set Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
+
+ * @method void setVideoSrcLanguage(string $VideoSrcLanguage) Set Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
- * @method string getSubtitleFormat() Obtain Smart subtitle file format.
-vtt: WebVTT format
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
+
+ * @method string getSubtitleFormat() Obtain Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
- * @method void setSubtitleFormat(string $SubtitleFormat) Set Smart subtitle file format.
-vtt: WebVTT format
+ * @method void setSubtitleFormat(string $SubtitleFormat) Set Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
  * @method integer getSubtitleType() Obtain Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
  * @method void setSubtitleType(integer $SubtitleType) Set Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
  * @method AsrHotWordsConfigure getAsrHotWordsConfigure() Obtain ASR hotword lexicon parameter.
  * @method void setAsrHotWordsConfigure(AsrHotWordsConfigure $AsrHotWordsConfigure) Set ASR hotword lexicon parameter.
  * @method string getTranslateDstLanguage() Obtain Target language for subtitle translation.
@@ -164,43 +174,48 @@ Length limit: 256 characters.
     public $Comment;
 
     /**
-     * @var string Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+     * @var string Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
+
      */
     public $VideoSrcLanguage;
 
     /**
-     * @var string Smart subtitle file format.
-vtt: WebVTT format
+     * @var string Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
      */
     public $SubtitleFormat;
 
     /**
      * @var integer Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
      */
     public $SubtitleType;
 
@@ -242,35 +257,40 @@ OFF: disable translation
 Length limit: 64 characters.
      * @param string $Comment Smart subtitle template description.
 Length limit: 256 characters.
-     * @param string $VideoSrcLanguage Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+     * @param string $VideoSrcLanguage Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
-     * @param string $SubtitleFormat Smart subtitle file format.
-vtt: WebVTT format
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
+
+     * @param string $SubtitleFormat Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
      * @param integer $SubtitleType Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
      * @param AsrHotWordsConfigure $AsrHotWordsConfigure ASR hotword lexicon parameter.
      * @param string $TranslateDstLanguage Target language for subtitle translation.
 This field takes effect when TranslateSwitch is set to ON.
