@@ -32,10 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadNum(integer $ReadNum) Set The number of reads
  * @method integer getWriteNum() Obtain The number of writes
  * @method void setWriteNum(integer $WriteNum) Set The number of writes
- * @method string getVersion() Obtain Version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVersion(string $Version) Set Version
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVersion() Obtain Version.
+ * @method void setVersion(string $Version) Set Version.
  */
 class ServerDetailInfo extends AbstractModel
 {
@@ -70,8 +68,7 @@ class ServerDetailInfo extends AbstractModel
     public $WriteNum;
 
     /**
-     * @var string Version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Version.
      */
     public $Version;
 
@@ -82,8 +79,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $DiskRate Disk utilization
      * @param integer $ReadNum The number of reads
      * @param integer $WriteNum The number of writes
-     * @param string $Version Version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Version Version.
      */
     function __construct()
     {

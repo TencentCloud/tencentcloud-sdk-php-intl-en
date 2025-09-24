@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CKafka address
  *
- * @method string getAddress() Obtain CKafka address
- * @method void setAddress(string $Address) Set CKafka address
- * @method string getTopic() Obtain CKafka topic
- * @method void setTopic(string $Topic) Set CKafka topic
+ * @method string getAddress() Obtain Kafka address
+ * @method void setAddress(string $Address) Set Kafka address
+ * @method string getTopic() Obtain Kafka topic
+ * @method void setTopic(string $Topic) Set Kafka topic
  * @method string getUser() Obtain CKafka username
  * @method void setUser(string $User) Set CKafka username
  * @method string getPassword() Obtain CKafka password
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class KafkaInfo extends AbstractModel
 {
     /**
-     * @var string CKafka address
+     * @var string Kafka address
      */
     public $Address;
 
     /**
-     * @var string CKafka topic
+     * @var string Kafka topic
      */
     public $Topic;
 
@@ -66,8 +66,8 @@ class KafkaInfo extends AbstractModel
     public $IsVpc;
 
     /**
-     * @param string $Address CKafka address
-     * @param string $Topic CKafka topic
+     * @param string $Address Kafka address
+     * @param string $Topic Kafka topic
      * @param string $User CKafka username
      * @param string $Password CKafka password
      * @param string $Instance CKafka instance

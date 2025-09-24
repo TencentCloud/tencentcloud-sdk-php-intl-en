@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAverageProcessDelay(integer $AverageProcessDelay) Set Request packet delay
  * @method integer getSlowProcessSpeed() Obtain The speed of processing delayed request packets
  * @method void setSlowProcessSpeed(integer $SlowProcessSpeed) Set The speed of processing delayed request packets
- * @method string getVersion() Obtain Version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVersion(string $Version) Set Version
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVersion() Obtain Version.
+ * @method void setVersion(string $Version) Set Version.
  */
 class ProxyDetailInfo extends AbstractModel
 {
@@ -63,8 +61,7 @@ class ProxyDetailInfo extends AbstractModel
     public $SlowProcessSpeed;
 
     /**
-     * @var string Version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Version.
      */
     public $Version;
 
@@ -74,8 +71,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ProcessSpeed The speed of processing request packets
      * @param integer $AverageProcessDelay Request packet delay
      * @param integer $SlowProcessSpeed The speed of processing delayed request packets
-     * @param string $Version Version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Version Version.
      */
     function __construct()
     {

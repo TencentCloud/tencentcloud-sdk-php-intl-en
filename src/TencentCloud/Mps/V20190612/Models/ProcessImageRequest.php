@@ -26,6 +26,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage for image processing output files. If left blank, it inherits the storage location in InputInfo.
  * @method string getOutputDir() Obtain Output file path for image processing. If left blank, it is the directory of the file in InputInfo. If it is a directory, such as `/image/201907/`, it means inheriting the original filename and outputting to this directory.
  * @method void setOutputDir(string $OutputDir) Set Output file path for image processing. If left blank, it is the directory of the file in InputInfo. If it is a directory, such as `/image/201907/`, it means inheriting the original filename and outputting to this directory.
+ * @method string getOutputPath() Obtain Output path, which can be a relative or an absolute path.
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+**Relative path example:**
+<Li>`Filename_{Variablename}.{format}`.</li>
+<Li>`Filename.{format}`.</li>
+
+**Absolute path example:**
+<Li>`/Path/Filename_{Variablename}.{format}`.</li>
+
+If not filled in, default relative path: `{inputName}.{format}`.
+ * @method void setOutputPath(string $OutputPath) Set Output path, which can be a relative or an absolute path.
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+**Relative path example:**
+<Li>`Filename_{Variablename}.{format}`.</li>
+<Li>`Filename.{format}`.</li>
+
+**Absolute path example:**
+<Li>`/Path/Filename_{Variablename}.{format}`.</li>
+
+If not filled in, default relative path: `{inputName}.{format}`.
  * @method ImageTaskInput getImageTask() Obtain Image processing parameter.
  * @method void setImageTask(ImageTaskInput $ImageTask) Set Image processing parameter.
  */
@@ -47,6 +67,20 @@ class ProcessImageRequest extends AbstractModel
     public $OutputDir;
 
     /**
+     * @var string Output path, which can be a relative or an absolute path.
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+**Relative path example:**
+<Li>`Filename_{Variablename}.{format}`.</li>
+<Li>`Filename.{format}`.</li>
+
+**Absolute path example:**
+<Li>`/Path/Filename_{Variablename}.{format}`.</li>
+
+If not filled in, default relative path: `{inputName}.{format}`.
+     */
+    public $OutputPath;
+
+    /**
      * @var ImageTaskInput Image processing parameter.
      */
     public $ImageTask;
@@ -55,6 +89,16 @@ class ProcessImageRequest extends AbstractModel
      * @param MediaInputInfo $InputInfo File input information for image processing.
      * @param TaskOutputStorage $OutputStorage Target storage for image processing output files. If left blank, it inherits the storage location in InputInfo.
      * @param string $OutputDir Output file path for image processing. If left blank, it is the directory of the file in InputInfo. If it is a directory, such as `/image/201907/`, it means inheriting the original filename and outputting to this directory.
+     * @param string $OutputPath Output path, which can be a relative or an absolute path.
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+**Relative path example:**
+<Li>`Filename_{Variablename}.{format}`.</li>
+<Li>`Filename.{format}`.</li>
+
+**Absolute path example:**
+<Li>`/Path/Filename_{Variablename}.{format}`.</li>
+
+If not filled in, default relative path: `{inputName}.{format}`.
      * @param ImageTaskInput $ImageTask Image processing parameter.
      */
     function __construct()
@@ -82,6 +126,10 @@ class ProcessImageRequest extends AbstractModel
 
         if (array_key_exists("OutputDir",$param) and $param["OutputDir"] !== null) {
             $this->OutputDir = $param["OutputDir"];
+        }
+
+        if (array_key_exists("OutputPath",$param) and $param["OutputPath"] !== null) {
+            $this->OutputPath = $param["OutputPath"];
         }
 
         if (array_key_exists("ImageTask",$param) and $param["ImageTask"] !== null) {

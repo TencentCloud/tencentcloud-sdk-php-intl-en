@@ -46,72 +46,44 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApiAccessIp(string $ApiAccessIp) Set TcaplusDB SDK connection parameter: access address
  * @method integer getApiAccessPort() Obtain TcaplusDB SDK connection parameter: access port
  * @method void setApiAccessPort(integer $ApiAccessPort) Set TcaplusDB SDK connection parameter: access port
- * @method string getOldPasswordExpireTime() Obtain If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOldPasswordExpireTime(string $OldPasswordExpireTime) Set If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getApiAccessIpv6() Obtain TcaplusDB SDK connection parameter for accessing IPv6 addresses
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setApiAccessIpv6(string $ApiAccessIpv6) Set TcaplusDB SDK connection parameter for accessing IPv6 addresses
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getClusterType() Obtain Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClusterType(integer $ClusterType) Set Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getClusterStatus() Obtain Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClusterStatus(integer $ClusterStatus) Set Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getReadCapacityUnit() Obtain Read CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setReadCapacityUnit(integer $ReadCapacityUnit) Set Read CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getWriteCapacityUnit() Obtain Write CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setWriteCapacityUnit(integer $WriteCapacityUnit) Set Write CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getDiskVolume() Obtain Disk capacity
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setDiskVolume(integer $DiskVolume) Set Disk capacity
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getServerList() Obtain Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setServerList(array $ServerList) Set Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getProxyList() Obtain Information of the machine at the access layer (tcaproxy) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setProxyList(array $ProxyList) Set Information of the machine at the access layer (tcaproxy) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getOldPasswordExpireTime() Obtain If the value of PasswordStatus is unmodifiable, it indicates that the old password has not expired. This field will display the expiration time of the old password; otherwise, the value is null.
+ * @method void setOldPasswordExpireTime(string $OldPasswordExpireTime) Set If the value of PasswordStatus is unmodifiable, it indicates that the old password has not expired. This field will display the expiration time of the old password; otherwise, the value is null.
+ * @method string getApiAccessIpv6() Obtain TencentDB for TcaplusDB (TcaplusDB) SDK connection parameters, which are used to access the IPv6 address.
+ * @method void setApiAccessIpv6(string $ApiAccessIpv6) Set TencentDB for TcaplusDB (TcaplusDB) SDK connection parameters, which are used to access the IPv6 address.
+ * @method integer getClusterType() Obtain Cluster type. 0,1: shared cluster; 2: independent cluster.
+ * @method void setClusterType(integer $ClusterType) Set Cluster type. 0,1: shared cluster; 2: independent cluster.
+ * @method integer getClusterStatus() Obtain Cluster status. 0: indicates normal operation; 1: indicates frozen isolation (usually due to arrears); 2: indicates to be recycled (usually when the user proactively triggers deletion); 3: pending release (indicating that resources occupied by this table can be released); 4: changing.
+ * @method void setClusterStatus(integer $ClusterStatus) Set Cluster status. 0: indicates normal operation; 1: indicates frozen isolation (usually due to arrears); 2: indicates to be recycled (usually when the user proactively triggers deletion); 3: pending release (indicating that resources occupied by this table can be released); 4: changing.
+ * @method integer getReadCapacityUnit() Obtain Read CU.
+ * @method void setReadCapacityUnit(integer $ReadCapacityUnit) Set Read CU.
+ * @method integer getWriteCapacityUnit() Obtain Write CU.
+ * @method void setWriteCapacityUnit(integer $WriteCapacityUnit) Set Write CU.
+ * @method integer getDiskVolume() Obtain Disk capacity.
+ * @method void setDiskVolume(integer $DiskVolume) Set Disk capacity.
+ * @method array getServerList() Obtain Information about the dedicated server.
+ * @method void setServerList(array $ServerList) Set Information about the dedicated server.
+ * @method array getProxyList() Obtain Information about the dedicated proxy server.
+ * @method void setProxyList(array $ProxyList) Set Information about the dedicated proxy server.
  * @method integer getCensorship() Obtain Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
  * @method void setCensorship(integer $Censorship) Set Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
- * @method array getDbaUins() Obtain Approver UIN list
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setDbaUins(array $DbaUins) Set Approver UIN list
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getDataFlowStatus() Obtain Whether data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setDataFlowStatus(integer $DataFlowStatus) Set Whether data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method KafkaInfo getKafkaInfo() Obtain CKafka information when data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setKafkaInfo(KafkaInfo $KafkaInfo) Set CKafka information when data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getTxhBackupExpireDay() Obtain The number of days after which the cluster Txh backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setTxhBackupExpireDay(integer $TxhBackupExpireDay) Set The number of days after which the cluster Txh backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getUlogBackupExpireDay() Obtain The number of days after which the cluster Ulog backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setUlogBackupExpireDay(integer $UlogBackupExpireDay) Set The number of days after which the cluster Ulog backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getIsReadOnlyUlogBackupExpireDay() Obtain Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setIsReadOnlyUlogBackupExpireDay(integer $IsReadOnlyUlogBackupExpireDay) Set Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getRestProxyStatus() Obtain restproxy Status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRestProxyStatus(integer $RestProxyStatus) Set restproxy Status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getDbaUins() Obtain Approver UIN list.
+ * @method void setDbaUins(array $DbaUins) Set Approver UIN list.
+ * @method integer getDataFlowStatus() Obtain Whether data subscription is enabled.
+ * @method void setDataFlowStatus(integer $DataFlowStatus) Set Whether data subscription is enabled.
+ * @method KafkaInfo getKafkaInfo() Obtain Kafka information for data subscription.
+ * @method void setKafkaInfo(KafkaInfo $KafkaInfo) Set Kafka information for data subscription.
+ * @method integer getTxhBackupExpireDay() Obtain Retention period for the Txh backup file of the cluster before expiration and deletion.
+ * @method void setTxhBackupExpireDay(integer $TxhBackupExpireDay) Set Retention period for the Txh backup file of the cluster before expiration and deletion.
+ * @method integer getUlogBackupExpireDay() Obtain Retention period for the Ulog backup file of the cluster before expiration and deletion.
+ * @method void setUlogBackupExpireDay(integer $UlogBackupExpireDay) Set Retention period for the Ulog backup file of the cluster before expiration and deletion.
+ * @method integer getIsReadOnlyUlogBackupExpireDay() Obtain Whether the expiration policy for the Ulog backup file of the cluster is read-only. 0: UlogBackupExpire is read-only and cannot be modified; 1: UlogBackupExpire can be modified.
+ * @method void setIsReadOnlyUlogBackupExpireDay(integer $IsReadOnlyUlogBackupExpireDay) Set Whether the expiration policy for the Ulog backup file of the cluster is read-only. 0: UlogBackupExpire is read-only and cannot be modified; 1: UlogBackupExpire can be modified.
+ * @method integer getRestProxyStatus() Obtain restproxy status.
+ * @method void setRestProxyStatus(integer $RestProxyStatus) Set restproxy status.
+ * @method integer getShardTotalNum() Obtain Total number of shards in the cluster.
+ * @method void setShardTotalNum(integer $ShardTotalNum) Set Total number of shards in the cluster.
+ * @method integer getShardUsedNum() Obtain Total number of used shards.
+ * @method void setShardUsedNum(integer $ShardUsedNum) Set Total number of used shards.
  */
 class ClusterInfo extends AbstractModel
 {
@@ -181,56 +153,47 @@ class ClusterInfo extends AbstractModel
     public $ApiAccessPort;
 
     /**
-     * @var string If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string If the value of PasswordStatus is unmodifiable, it indicates that the old password has not expired. This field will display the expiration time of the old password; otherwise, the value is null.
      */
     public $OldPasswordExpireTime;
 
     /**
-     * @var string TcaplusDB SDK connection parameter for accessing IPv6 addresses
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string TencentDB for TcaplusDB (TcaplusDB) SDK connection parameters, which are used to access the IPv6 address.
      */
     public $ApiAccessIpv6;
 
     /**
-     * @var integer Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Cluster type. 0,1: shared cluster; 2: independent cluster.
      */
     public $ClusterType;
 
     /**
-     * @var integer Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Cluster status. 0: indicates normal operation; 1: indicates frozen isolation (usually due to arrears); 2: indicates to be recycled (usually when the user proactively triggers deletion); 3: pending release (indicating that resources occupied by this table can be released); 4: changing.
      */
     public $ClusterStatus;
 
     /**
-     * @var integer Read CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Read CU.
      */
     public $ReadCapacityUnit;
 
     /**
-     * @var integer Write CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Write CU.
      */
     public $WriteCapacityUnit;
 
     /**
-     * @var integer Disk capacity
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Disk capacity.
      */
     public $DiskVolume;
 
     /**
-     * @var array Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Information about the dedicated server.
      */
     public $ServerList;
 
     /**
-     * @var array Information of the machine at the access layer (tcaproxy) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Information about the dedicated proxy server.
      */
     public $ProxyList;
 
@@ -240,46 +203,49 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Censorship;
 
     /**
-     * @var array Approver UIN list
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var array Approver UIN list.
      */
     public $DbaUins;
 
     /**
-     * @var integer Whether data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Whether data subscription is enabled.
      */
     public $DataFlowStatus;
 
     /**
-     * @var KafkaInfo CKafka information when data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var KafkaInfo Kafka information for data subscription.
      */
     public $KafkaInfo;
 
     /**
-     * @var integer The number of days after which the cluster Txh backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Retention period for the Txh backup file of the cluster before expiration and deletion.
      */
     public $TxhBackupExpireDay;
 
     /**
-     * @var integer The number of days after which the cluster Ulog backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Retention period for the Ulog backup file of the cluster before expiration and deletion.
      */
     public $UlogBackupExpireDay;
 
     /**
-     * @var integer Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Whether the expiration policy for the Ulog backup file of the cluster is read-only. 0: UlogBackupExpire is read-only and cannot be modified; 1: UlogBackupExpire can be modified.
      */
     public $IsReadOnlyUlogBackupExpireDay;
 
     /**
-     * @var integer restproxy Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer restproxy status.
      */
     public $RestProxyStatus;
+
+    /**
+     * @var integer Total number of shards in the cluster.
+     */
+    public $ShardTotalNum;
+
+    /**
+     * @var integer Total number of used shards.
+     */
+    public $ShardUsedNum;
 
     /**
      * @param string $ClusterName Cluster name
@@ -295,39 +261,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ApiAccessId TcaplusDB SDK connection parameter: access ID
      * @param string $ApiAccessIp TcaplusDB SDK connection parameter: access address
      * @param integer $ApiAccessPort TcaplusDB SDK connection parameter: access port
-     * @param string $OldPasswordExpireTime If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ApiAccessIpv6 TcaplusDB SDK connection parameter for accessing IPv6 addresses
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ClusterType Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ClusterStatus Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ReadCapacityUnit Read CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $WriteCapacityUnit Write CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $DiskVolume Disk capacity
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $OldPasswordExpireTime If the value of PasswordStatus is unmodifiable, it indicates that the old password has not expired. This field will display the expiration time of the old password; otherwise, the value is null.
+     * @param string $ApiAccessIpv6 TencentDB for TcaplusDB (TcaplusDB) SDK connection parameters, which are used to access the IPv6 address.
+     * @param integer $ClusterType Cluster type. 0,1: shared cluster; 2: independent cluster.
+     * @param integer $ClusterStatus Cluster status. 0: indicates normal operation; 1: indicates frozen isolation (usually due to arrears); 2: indicates to be recycled (usually when the user proactively triggers deletion); 3: pending release (indicating that resources occupied by this table can be released); 4: changing.
+     * @param integer $ReadCapacityUnit Read CU.
+     * @param integer $WriteCapacityUnit Write CU.
+     * @param integer $DiskVolume Disk capacity.
+     * @param array $ServerList Information about the dedicated server.
+     * @param array $ProxyList Information about the dedicated proxy server.
      * @param integer $Censorship Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
-     * @param array $DbaUins Approver UIN list
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $DataFlowStatus Whether data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param KafkaInfo $KafkaInfo CKafka information when data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $TxhBackupExpireDay The number of days after which the cluster Txh backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $UlogBackupExpireDay The number of days after which the cluster Ulog backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $IsReadOnlyUlogBackupExpireDay Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $RestProxyStatus restproxy Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $DbaUins Approver UIN list.
+     * @param integer $DataFlowStatus Whether data subscription is enabled.
+     * @param KafkaInfo $KafkaInfo Kafka information for data subscription.
+     * @param integer $TxhBackupExpireDay Retention period for the Txh backup file of the cluster before expiration and deletion.
+     * @param integer $UlogBackupExpireDay Retention period for the Ulog backup file of the cluster before expiration and deletion.
+     * @param integer $IsReadOnlyUlogBackupExpireDay Whether the expiration policy for the Ulog backup file of the cluster is read-only. 0: UlogBackupExpire is read-only and cannot be modified; 1: UlogBackupExpire can be modified.
+     * @param integer $RestProxyStatus restproxy status.
+     * @param integer $ShardTotalNum Total number of shards in the cluster.
+     * @param integer $ShardUsedNum Total number of used shards.
      */
     function __construct()
     {
@@ -471,6 +423,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RestProxyStatus",$param) and $param["RestProxyStatus"] !== null) {
             $this->RestProxyStatus = $param["RestProxyStatus"];
+        }
+
+        if (array_key_exists("ShardTotalNum",$param) and $param["ShardTotalNum"] !== null) {
+            $this->ShardTotalNum = $param["ShardTotalNum"];
+        }
+
+        if (array_key_exists("ShardUsedNum",$param) and $param["ShardUsedNum"] !== null) {
+            $this->ShardUsedNum = $param["ShardUsedNum"];
         }
     }
 }

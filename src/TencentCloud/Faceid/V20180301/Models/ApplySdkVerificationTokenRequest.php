@@ -42,34 +42,36 @@ Default value: 4
 3: Reflection-based liveness detection
 4: Motion- and reflection-based liveness detection
 Default value: 4
- * @method string getIdCardType() Obtain Card Types Supported for Authentication: Currently supported types are as follows:
-1.HK (Default): Hong Kong (China) Identity Card
-2.ML: Malaysia Identity Card
-3.IndonesiaIDCard: Indonesia Identity Card
-4.PhilippinesVoteID: Philippines Voter ID
-5.PhilippinesDrivingLicense: Philippines Driving License
-6.PhilippinesTinID: Philippines Tin ID
-7.PhilippinesSSSID: Philippines SSS ID
-8.PhilippinesUMID: Philippines UMID
-9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
-10.ThailandIDCard: Thailand Identity Card
-11.MainlandIDCard: Mainland China Identity Card
-12.SingaporeIDCard: Singapore Identity Card
-13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
- * @method void setIdCardType(string $IdCardType) Set Card Types Supported for Authentication: Currently supported types are as follows:
-1.HK (Default): Hong Kong (China) Identity Card
-2.ML: Malaysia Identity Card
-3.IndonesiaIDCard: Indonesia Identity Card
-4.PhilippinesVoteID: Philippines Voter ID
-5.PhilippinesDrivingLicense: Philippines Driving License
-6.PhilippinesTinID: Philippines Tin ID
-7.PhilippinesSSSID: Philippines SSS ID
-8.PhilippinesUMID: Philippines UMID
-9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
-10.ThailandIDCard: Thailand Identity Card
-11.MainlandIDCard: Mainland China Identity Card
-12.SingaporeIDCard: Singapore Identity Card
-13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
+ * @method string getIdCardType() Obtain Specifies the identity document type used for authentication. valid values:.  
+
+HK (default): hong kong (china) identity card.
+2. ML: malaysian identity card.
+Indonesian identity card.
+4. PhilippinesVoteID: specifies the voter card in the philippines.
+5. PhilippinesDrivingLicense: specifies the driving license in philippines.
+6. PhilippinesTinID: specifies the philippines tin id.
+7. PhilippinesSSSID: specifies the SSSID in the philippines.
+8. philippines UMID: specifies the philippines UMID.
+9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
+ThailandIDCard: specifies the thai identity card.
+Mainland id card.
+12. SingaporeIDCard: specifies the Singapore id card.
+13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
+ * @method void setIdCardType(string $IdCardType) Set Specifies the identity document type used for authentication. valid values:.  
+
+HK (default): hong kong (china) identity card.
+2. ML: malaysian identity card.
+Indonesian identity card.
+4. PhilippinesVoteID: specifies the voter card in the philippines.
+5. PhilippinesDrivingLicense: specifies the driving license in philippines.
+6. PhilippinesTinID: specifies the philippines tin id.
+7. PhilippinesSSSID: specifies the SSSID in the philippines.
+8. philippines UMID: specifies the philippines UMID.
+9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
+ThailandIDCard: specifies the thai identity card.
+Mainland id card.
+12. SingaporeIDCard: specifies the Singapore id card.
+13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
  * @method string getCompareImage() Obtain The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
  * @method void setCompareImage(string $CompareImage) Set The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
  * @method boolean getNeedVerifyIdCard() Obtain Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
@@ -80,10 +82,16 @@ Default value: 4
 This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
  * @method void setDisableCheckOcrWarnings(boolean $DisableCheckOcrWarnings) Set Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
 This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
+ * @method array getSelectedWarningCodes() Obtain Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+ * @method void setSelectedWarningCodes(array $SelectedWarningCodes) Set Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
  * @method string getExtra() Obtain A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
  * @method void setExtra(string $Extra) Set A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
- * @method string getSdkVersion() Obtain ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
- * @method void setSdkVersion(string $SdkVersion) Set ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+ * @method string getSdkVersion() Obtain ENHANCED: enhanced.
+BASIC: basic version (default).
+ * @method void setSdkVersion(string $SdkVersion) Set ENHANCED: enhanced.
+BASIC: basic version (default).
  * @method string getActionList() Obtain This interface is used to control th action sequences.
 Action types are as follows:
 "blink"
@@ -127,20 +135,21 @@ Default value: 4
     public $SecurityLevel;
 
     /**
-     * @var string Card Types Supported for Authentication: Currently supported types are as follows:
-1.HK (Default): Hong Kong (China) Identity Card
-2.ML: Malaysia Identity Card
-3.IndonesiaIDCard: Indonesia Identity Card
-4.PhilippinesVoteID: Philippines Voter ID
-5.PhilippinesDrivingLicense: Philippines Driving License
-6.PhilippinesTinID: Philippines Tin ID
-7.PhilippinesSSSID: Philippines SSS ID
-8.PhilippinesUMID: Philippines UMID
-9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
-10.ThailandIDCard: Thailand Identity Card
-11.MainlandIDCard: Mainland China Identity Card
-12.SingaporeIDCard: Singapore Identity Card
-13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
+     * @var string Specifies the identity document type used for authentication. valid values:.  
+
+HK (default): hong kong (china) identity card.
+2. ML: malaysian identity card.
+Indonesian identity card.
+4. PhilippinesVoteID: specifies the voter card in the philippines.
+5. PhilippinesDrivingLicense: specifies the driving license in philippines.
+6. PhilippinesTinID: specifies the philippines tin id.
+7. PhilippinesSSSID: specifies the SSSID in the philippines.
+8. philippines UMID: specifies the philippines UMID.
+9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
+ThailandIDCard: specifies the thai identity card.
+Mainland id card.
+12. SingaporeIDCard: specifies the Singapore id card.
+13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
      */
     public $IdCardType;
 
@@ -167,12 +176,19 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
     public $DisableCheckOcrWarnings;
 
     /**
+     * @var array Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+     */
+    public $SelectedWarningCodes;
+
+    /**
      * @var string A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
      */
     public $Extra;
 
     /**
-     * @var string ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+     * @var string ENHANCED: enhanced.
+BASIC: basic version (default).
      */
     public $SdkVersion;
 
@@ -202,27 +218,31 @@ Default value: 1
 3: Reflection-based liveness detection
 4: Motion- and reflection-based liveness detection
 Default value: 4
-     * @param string $IdCardType Card Types Supported for Authentication: Currently supported types are as follows:
-1.HK (Default): Hong Kong (China) Identity Card
-2.ML: Malaysia Identity Card
-3.IndonesiaIDCard: Indonesia Identity Card
-4.PhilippinesVoteID: Philippines Voter ID
-5.PhilippinesDrivingLicense: Philippines Driving License
-6.PhilippinesTinID: Philippines Tin ID
-7.PhilippinesSSSID: Philippines SSS ID
-8.PhilippinesUMID: Philippines UMID
-9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
-10.ThailandIDCard: Thailand Identity Card
-11.MainlandIDCard: Mainland China Identity Card
-12.SingaporeIDCard: Singapore Identity Card
-13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
+     * @param string $IdCardType Specifies the identity document type used for authentication. valid values:.  
+
+HK (default): hong kong (china) identity card.
+2. ML: malaysian identity card.
+Indonesian identity card.
+4. PhilippinesVoteID: specifies the voter card in the philippines.
+5. PhilippinesDrivingLicense: specifies the driving license in philippines.
+6. PhilippinesTinID: specifies the philippines tin id.
+7. PhilippinesSSSID: specifies the SSSID in the philippines.
+8. philippines UMID: specifies the philippines UMID.
+9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
+ThailandIDCard: specifies the thai identity card.
+Mainland id card.
+12. SingaporeIDCard: specifies the Singapore id card.
+13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
      * @param string $CompareImage The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
      * @param boolean $NeedVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
      * @param boolean $DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
      * @param boolean $DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
 This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
+     * @param array $SelectedWarningCodes Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
      * @param string $Extra A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
-     * @param string $SdkVersion ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+     * @param string $SdkVersion ENHANCED: enhanced.
+BASIC: basic version (default).
      * @param string $ActionList This interface is used to control th action sequences.
 Action types are as follows:
 "blink"
@@ -273,6 +293,10 @@ The default value is blink. The different action types passed in this parameter 
 
         if (array_key_exists("DisableCheckOcrWarnings",$param) and $param["DisableCheckOcrWarnings"] !== null) {
             $this->DisableCheckOcrWarnings = $param["DisableCheckOcrWarnings"];
+        }
+
+        if (array_key_exists("SelectedWarningCodes",$param) and $param["SelectedWarningCodes"] !== null) {
+            $this->SelectedWarningCodes = $param["SelectedWarningCodes"];
         }
 
         if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
