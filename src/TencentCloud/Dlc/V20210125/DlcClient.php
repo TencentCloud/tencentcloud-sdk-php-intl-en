@@ -75,6 +75,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeOtherCHDFSBindingListResponse DescribeOtherCHDFSBindingList(Models\DescribeOtherCHDFSBindingListRequest $req) This API is used to query the list of metadata acceleration buckets bound to other products.
  * @method Models\DescribeQueryResponse DescribeQuery(Models\DescribeQueryRequest $req) This API is used to obtain the query results.
  * @method Models\DescribeResultDownloadResponse DescribeResultDownload(Models\DescribeResultDownloadRequest $req) This API is used to get a query result download task.
+ * @method Models\DescribeSessionImageVersionResponse DescribeSessionImageVersion(Models\DescribeSessionImageVersionRequest $req) This API is used to retrieve all built-in images of all minor versions under a specified major version.
  * @method Models\DescribeSparkAppJobResponse DescribeSparkAppJob(Models\DescribeSparkAppJobRequest $req) u200cThis API is used to query the information of a Spark job.
  * @method Models\DescribeSparkAppJobsResponse DescribeSparkAppJobs(Models\DescribeSparkAppJobsRequest $req) This API is used to query the list of Spark jobs.
  * @method Models\DescribeSparkAppTasksResponse DescribeSparkAppTasks(Models\DescribeSparkAppTasksRequest $req) This API is used to query the list of running task instances of a Spark job.

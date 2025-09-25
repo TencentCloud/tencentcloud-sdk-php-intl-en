@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomIdType(integer $RoomIdType) Set The type of TRTC room number. 0 represents a numeric room number, and 1 represents a string room number. If not filled in, the default is a numeric room number.
  * @method RecognizeConfig getRecognizeConfig() Obtain Speech recognition configuration.
  * @method void setRecognizeConfig(RecognizeConfig $RecognizeConfig) Set Speech recognition configuration.
+ * @method TranslationConfig getTranslationConfig() Obtain Translation config.
+ * @method void setTranslationConfig(TranslationConfig $TranslationConfig) Set Translation config.
  */
 class StartAITranscriptionRequest extends AbstractModel
 {
@@ -72,6 +74,11 @@ class StartAITranscriptionRequest extends AbstractModel
     public $RecognizeConfig;
 
     /**
+     * @var TranslationConfig Translation config.
+     */
+    public $TranslationConfig;
+
+    /**
      * @param integer $SdkAppId TRTC's [SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid) is the same as the SdkAppId used by the room that starts the transcription task.
      * @param string $RoomId TRTC's [RoomId](https://cloud.tencent.com/document/product/647/46351#roomid), which indicates the room number where the transcription task is started.
      * @param TranscriptionParams $TranscriptionParams Parameters of the transcription robot.
@@ -80,6 +87,7 @@ class StartAITranscriptionRequest extends AbstractModel
 - If the TranscriptionMode field is 1, only one task can be opened in a TargetUserId
      * @param integer $RoomIdType The type of TRTC room number. 0 represents a numeric room number, and 1 represents a string room number. If not filled in, the default is a numeric room number.
      * @param RecognizeConfig $RecognizeConfig Speech recognition configuration.
+     * @param TranslationConfig $TranslationConfig Translation config.
      */
     function __construct()
     {
@@ -118,6 +126,11 @@ class StartAITranscriptionRequest extends AbstractModel
         if (array_key_exists("RecognizeConfig",$param) and $param["RecognizeConfig"] !== null) {
             $this->RecognizeConfig = new RecognizeConfig();
             $this->RecognizeConfig->deserialize($param["RecognizeConfig"]);
+        }
+
+        if (array_key_exists("TranslationConfig",$param) and $param["TranslationConfig"] !== null) {
+            $this->TranslationConfig = new TranslationConfig();
+            $this->TranslationConfig->deserialize($param["TranslationConfig"]);
         }
     }
 }
