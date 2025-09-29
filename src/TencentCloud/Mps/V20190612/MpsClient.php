@@ -53,6 +53,7 @@ This API is used to perform intelligent content identification (human face, full
 This API is used to perform intelligent erasure (watermark removal, subtitle removal, privacy protection).
 
 This API is used to create an orchestration, which is in disable status by default and requires manual enablement.
+ * @method Models\CreateSmartEraseTemplateResponse CreateSmartEraseTemplate(Models\CreateSmartEraseTemplateRequest $req) This API is used to create a custom smart erasing template.
  * @method Models\CreateSmartSubtitleTemplateResponse CreateSmartSubtitleTemplate(Models\CreateSmartSubtitleTemplateRequest $req) This API is used to create a custom smart subtitle template.
  * @method Models\CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(Models\CreateSnapshotByTimeOffsetTemplateRequest $req) This API is used to create a custom time point screencapturing template. Up to 16 templates can be created.
  * @method Models\CreateTranscodeTemplateResponse CreateTranscodeTemplate(Models\CreateTranscodeTemplateRequest $req) This API is used to create a custom transcoding template. Up to 1,000 templates can be created.
@@ -84,6 +85,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DeleteQualityControlTemplateResponse DeleteQualityControlTemplate(Models\DeleteQualityControlTemplateRequest $req) This API is used to delete a media quality inspection template.
  * @method Models\DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(Models\DeleteSampleSnapshotTemplateRequest $req) This API is used to delete a custom sampled screencapturing template.
  * @method Models\DeleteScheduleResponse DeleteSchedule(Models\DeleteScheduleRequest $req) This API is used to delete a scheme.
+ * @method Models\DeleteSmartEraseTemplateResponse DeleteSmartEraseTemplate(Models\DeleteSmartEraseTemplateRequest $req) This API is used to delete a user-defined smart erasing template.
  * @method Models\DeleteSmartSubtitleTemplateResponse DeleteSmartSubtitleTemplate(Models\DeleteSmartSubtitleTemplateRequest $req) This API is used to delete a user-defined smart subtitle template.
  * @method Models\DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplate(Models\DeleteSnapshotByTimeOffsetTemplateRequest $req) This API is used to delete a custom time point screencapturing template.
  * @method Models\DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(Models\DeleteTranscodeTemplateRequest $req) This API is used to delete a custom transcoding template.
@@ -106,6 +108,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DescribeQualityControlTemplatesResponse DescribeQualityControlTemplates(Models\DescribeQualityControlTemplatesRequest $req) This API is used to query custom media quality inspection templates, supporting paged queries by conditions.
  * @method Models\DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(Models\DescribeSampleSnapshotTemplatesRequest $req) This API is used to query the list of sampled screencapturing templates and supports paged queries by filters.
  * @method Models\DescribeSchedulesResponse DescribeSchedules(Models\DescribeSchedulesRequest $req) This API is used to query a scheme.
+ * @method Models\DescribeSmartEraseTemplatesResponse DescribeSmartEraseTemplates(Models\DescribeSmartEraseTemplatesRequest $req) This API is used to obtain the list of smart erasing template details based on the unique identifier of the template. The returned result includes all matching user-defined smart erasing templates and system preset smart erasing templates.
  * @method Models\DescribeSmartSubtitleTemplatesResponse DescribeSmartSubtitleTemplates(Models\DescribeSmartSubtitleTemplatesRequest $req) This API is used to obtain the list of smart subtitle templates based on template unique identifier. The returned result includes all matching user-defined smart subtitle templates and system preset smart subtitle templates.
  * @method Models\DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(Models\DescribeSnapshotByTimeOffsetTemplatesRequest $req) This API is used to query the list of time point screencapturing templates and supports paged queries by filters.
  * @method Models\DescribeStreamLinkSecurityGroupResponse DescribeStreamLinkSecurityGroup(Models\DescribeStreamLinkSecurityGroupRequest $req) This API is used to query a security group.
@@ -150,6 +153,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
  * @method Models\ModifyQualityControlTemplateResponse ModifyQualityControlTemplate(Models\ModifyQualityControlTemplateRequest $req) This API is used to modify a media quality inspection template.
  * @method Models\ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(Models\ModifySampleSnapshotTemplateRequest $req) This API is used to modify a custom sampled screencapturing template.
  * @method Models\ModifyScheduleResponse ModifySchedule(Models\ModifyScheduleRequest $req) This API is used to modify a scheme.
+ * @method Models\ModifySmartEraseTemplateResponse ModifySmartEraseTemplate(Models\ModifySmartEraseTemplateRequest $req) This API is used to modify a user-defined smart erasing template.
  * @method Models\ModifySmartSubtitleTemplateResponse ModifySmartSubtitleTemplate(Models\ModifySmartSubtitleTemplateRequest $req) This API is used to modify a user-defined smart subtitle template.
  * @method Models\ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(Models\ModifySnapshotByTimeOffsetTemplateRequest $req) This API is used to modify a custom time point screencapturing template.
  * @method Models\ModifyTranscodeTemplateResponse ModifyTranscodeTemplate(Models\ModifyTranscodeTemplateRequest $req) This API is used to modify a custom transcoding template.
