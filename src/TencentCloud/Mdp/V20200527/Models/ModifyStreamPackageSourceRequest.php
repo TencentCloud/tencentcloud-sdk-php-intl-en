@@ -30,6 +30,8 @@ Optional values: Live, VOD (on demand)
 Optional values: Live, VOD (on demand)
  * @method array getPackageConfs() Obtain source configuration.
  * @method void setPackageConfs(array $PackageConfs) Set source configuration.
+ * @method array getSourceTags() Obtain ADS can return more precise advertisements based on Source Tag information.
+ * @method void setSourceTags(array $SourceTags) Set ADS can return more precise advertisements based on Source Tag information.
  */
 class ModifyStreamPackageSourceRequest extends AbstractModel
 {
@@ -55,11 +57,17 @@ Optional values: Live, VOD (on demand)
     public $PackageConfs;
 
     /**
+     * @var array ADS can return more precise advertisements based on Source Tag information.
+     */
+    public $SourceTags;
+
+    /**
      * @param string $Id Source Id.
      * @param string $Name Modified name.
      * @param string $Type Distinguish between live broadcast and on-demand VOD source types.
 Optional values: Live, VOD (on demand)
      * @param array $PackageConfs source configuration.
+     * @param array $SourceTags ADS can return more precise advertisements based on Source Tag information.
      */
     function __construct()
     {
@@ -92,6 +100,15 @@ Optional values: Live, VOD (on demand)
                 $obj = new SourcePackageConf();
                 $obj->deserialize($value);
                 array_push($this->PackageConfs, $obj);
+            }
+        }
+
+        if (array_key_exists("SourceTags",$param) and $param["SourceTags"] !== null) {
+            $this->SourceTags = [];
+            foreach ($param["SourceTags"] as $key => $value){
+                $obj = new SourceTag();
+                $obj->deserialize($value);
+                array_push($this->SourceTags, $obj);
             }
         }
     }

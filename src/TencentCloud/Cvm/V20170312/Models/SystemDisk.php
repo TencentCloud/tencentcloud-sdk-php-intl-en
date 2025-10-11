@@ -40,14 +40,16 @@ Default value: Current disk types with inventory available.
 <li>CLOUD_HSSD: Enhanced SSD</li>
 <li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
- * @method string getDiskId() Obtain Specifies the system disk ID.
-This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
- * @method void setDiskId(string $DiskId) Set Specifies the system disk ID.
-This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
+ * @method string getDiskId() Obtain System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+ * @method void setDiskId(string $DiskId) Set System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
  * @method integer getDiskSize() Obtain System disk size; unit: GiB; default value: 50 GiB.
  * @method void setDiskSize(integer $DiskSize) Set System disk size; unit: GiB; default value: 50 GiB.
- * @method string getCdcId() Obtain Specifies the exclusive cluster ID it belongs to.
- * @method void setCdcId(string $CdcId) Set Specifies the exclusive cluster ID it belongs to.
+ * @method string getCdcId() Obtain Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
+ * @method void setCdcId(string $CdcId) Set Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
  * @method string getDiskName() Obtain Disk name, which specifies a length not exceeding 128 characters.
  * @method void setDiskName(string $DiskName) Set Disk name, which specifies a length not exceeding 128 characters.
  */
@@ -68,8 +70,8 @@ Default value: Current disk types with inventory available.
     public $DiskType;
 
     /**
-     * @var string Specifies the system disk ID.
-This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
+     * @var string System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
      */
     public $DiskId;
 
@@ -79,7 +81,8 @@ This parameter currently only serves as a response parameter for query apis such
     public $DiskSize;
 
     /**
-     * @var string Specifies the exclusive cluster ID it belongs to.
+     * @var string Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
      */
     public $CdcId;
 
@@ -99,10 +102,11 @@ This parameter currently only serves as a response parameter for query apis such
 <li>CLOUD_HSSD: Enhanced SSD</li>
 <li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
-     * @param string $DiskId Specifies the system disk ID.
-This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
+     * @param string $DiskId System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
      * @param integer $DiskSize System disk size; unit: GiB; default value: 50 GiB.
-     * @param string $CdcId Specifies the exclusive cluster ID it belongs to.
+     * @param string $CdcId Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
      * @param string $DiskName Disk name, which specifies a length not exceeding 128 characters.
      */
     function __construct()

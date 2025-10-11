@@ -20,31 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Permission objects
  *
- * @method string getDatabase() Obtain The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database.
- * @method void setDatabase(string $Database) Set The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database.
- * @method string getCatalog() Obtain The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console.
- * @method void setCatalog(string $Catalog) Set The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console.
- * @method string getTable() Obtain The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table.
- * @method void setTable(string $Table) Set The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table.
+ * @method string getDatabase() Obtain The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed.
+ * @method void setDatabase(string $Database) Set The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed.
+ * @method string getCatalog() Obtain Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source.
+ * @method void setCatalog(string $Catalog) Set Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source.
+ * @method string getTable() Obtain Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified.
+ * @method void setTable(string $Table) Set Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified.
  * @method string getOperation() Obtain The target permissions, which vary by permission level. Admin: `ALL` (default); data connection: `CREATE`; database: `ALL`, `CREATE`, `ALTER`, and `DROP`; table: `ALL`, `SELECT`, `INSERT`, `ALTER`, `DELETE`, `DROP`, and `UPDATE`. Note: For table permissions, if a data source other than `COSDataCatalog` is specified, only the `SELECT` permission can be granted here.
  * @method void setOperation(string $Operation) Set The target permissions, which vary by permission level. Admin: `ALL` (default); data connection: `CREATE`; database: `ALL`, `CREATE`, `ALTER`, and `DROP`; table: `ALL`, `SELECT`, `INSERT`, `ALTER`, `DELETE`, `DROP`, and `UPDATE`. Note: For table permissions, if a data source other than `COSDataCatalog` is specified, only the `SELECT` permission can be granted here.
  * @method string getPolicyType() Obtain The permission type. Valid values: `ADMIN`, `DATASOURCE`, `DATABASE`, `TABLE`, `VIEW`, `FUNCTION`, `COLUMN`, and `ENGINE`. Note: If it is left empty, `ADMIN` is used.
  * @method void setPolicyType(string $PolicyType) Set The permission type. Valid values: `ADMIN`, `DATASOURCE`, `DATABASE`, `TABLE`, `VIEW`, `FUNCTION`, `COLUMN`, and `ENGINE`. Note: If it is left empty, `ADMIN` is used.
- * @method string getFunction() Obtain The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+ * @method string getFunction() Obtain Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFunction(string $Function) Set The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+ * @method void setFunction(string $Function) Set Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getView() Obtain The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+ * @method string getView() Obtain Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setView(string $View) Set The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+ * @method void setView(string $View) Set Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getColumn() Obtain The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+ * @method string getColumn() Obtain Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setColumn(string $Column) Set The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+ * @method void setColumn(string $Column) Set Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDataEngine() Obtain The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+ * @method string getDataEngine() Obtain The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataEngine(string $DataEngine) Set The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+ * @method void setDataEngine(string $DataEngine) Set The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getReAuth() Obtain Whether the grantee is allowed to further grant the permissions. Valid values: `false` (default) and `true` (the grantee can grant permissions gained here to other sub-users).
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -78,21 +78,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setId(integer $Id) Set The policy ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEngineGeneration() Obtain Specifies the engine type.
+
+ * @method void setEngineGeneration(string $EngineGeneration) Set Specifies the engine type.
  */
 class Policy extends AbstractModel
 {
     /**
-     * @var string The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database.
+     * @var string The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed.
      */
     public $Database;
 
     /**
-     * @var string The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console.
+     * @var string Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source.
      */
     public $Catalog;
 
     /**
-     * @var string The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table.
+     * @var string Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified.
      */
     public $Table;
 
@@ -107,25 +110,25 @@ class Policy extends AbstractModel
     public $PolicyType;
 
     /**
-     * @var string The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+     * @var string Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Function;
 
     /**
-     * @var string The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+     * @var string Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $View;
 
     /**
-     * @var string The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+     * @var string Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Column;
 
     /**
-     * @var string The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+     * @var string The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataEngine;
@@ -179,18 +182,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Id;
 
     /**
-     * @param string $Database The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database.
-     * @param string $Catalog The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console.
-     * @param string $Table The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table.
+     * @var string Specifies the engine type.
+
+     */
+    public $EngineGeneration;
+
+    /**
+     * @param string $Database The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed.
+     * @param string $Catalog Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source.
+     * @param string $Table Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified.
      * @param string $Operation The target permissions, which vary by permission level. Admin: `ALL` (default); data connection: `CREATE`; database: `ALL`, `CREATE`, `ALTER`, and `DROP`; table: `ALL`, `SELECT`, `INSERT`, `ALTER`, `DELETE`, `DROP`, and `UPDATE`. Note: For table permissions, if a data source other than `COSDataCatalog` is specified, only the `SELECT` permission can be granted here.
      * @param string $PolicyType The permission type. Valid values: `ADMIN`, `DATASOURCE`, `DATABASE`, `TABLE`, `VIEW`, `FUNCTION`, `COLUMN`, and `ENGINE`. Note: If it is left empty, `ADMIN` is used.
-     * @param string $Function The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+     * @param string $Function Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $View The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+     * @param string $View Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Column The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+     * @param string $Column Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DataEngine The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+     * @param string $DataEngine The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $ReAuth Whether the grantee is allowed to further grant the permissions. Valid values: `false` (default) and `true` (the grantee can grant permissions gained here to other sub-users).
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -208,6 +217,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Id The policy ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EngineGeneration Specifies the engine type.
      */
     function __construct()
     {
@@ -288,6 +298,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("EngineGeneration",$param) and $param["EngineGeneration"] !== null) {
+            $this->EngineGeneration = $param["EngineGeneration"];
         }
     }
 }

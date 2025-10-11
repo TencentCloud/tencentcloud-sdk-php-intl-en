@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Distinguish between live broadcast and on-demand VOD source types. Optional values: Live, VOD.
  * @method array getPackageConfs() Obtain source specific configuration.
  * @method void setPackageConfs(array $PackageConfs) Set source specific configuration.
+ * @method array getSourceTags() Obtain The sourcetag allows ADS to deliver more precise ads based on the Source Tag information
+ * @method void setSourceTags(array $SourceTags) Set The sourcetag allows ADS to deliver more precise ads based on the Source Tag information
  */
 class CreateStreamPackageSourceRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateStreamPackageSourceRequest extends AbstractModel
     public $PackageConfs;
 
     /**
+     * @var array The sourcetag allows ADS to deliver more precise ads based on the Source Tag information
+     */
+    public $SourceTags;
+
+    /**
      * @param string $AttachedLocation The location id to which this source belongs is required and uniquely bound to one location.
      * @param string $Name Source name, globally unique under location.
      * @param string $Type Distinguish between live broadcast and on-demand VOD source types. Optional values: Live, VOD.
      * @param array $PackageConfs source specific configuration.
+     * @param array $SourceTags The sourcetag allows ADS to deliver more precise ads based on the Source Tag information
      */
     function __construct()
     {
@@ -88,6 +96,15 @@ class CreateStreamPackageSourceRequest extends AbstractModel
                 $obj = new SourcePackageConf();
                 $obj->deserialize($value);
                 array_push($this->PackageConfs, $obj);
+            }
+        }
+
+        if (array_key_exists("SourceTags",$param) and $param["SourceTags"] !== null) {
+            $this->SourceTags = [];
+            foreach ($param["SourceTags"] as $key => $value){
+                $obj = new SourceTag();
+                $obj->deserialize($value);
+                array_push($this->SourceTags, $obj);
             }
         }
     }

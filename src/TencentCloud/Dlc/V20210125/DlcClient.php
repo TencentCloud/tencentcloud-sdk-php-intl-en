@@ -25,6 +25,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
 /**
  * @method Models\AddUsersToWorkGroupResponse AddUsersToWorkGroup(Models\AddUsersToWorkGroupRequest $req) This API is used to add users to working groups.
  * @method Models\AlterDMSDatabaseResponse AlterDMSDatabase(Models\AlterDMSDatabaseRequest $req) This API is used to update databases in the DMS metadata module.
+ * @method Models\AttachDataMaskPolicyResponse AttachDataMaskPolicy(Models\AttachDataMaskPolicyRequest $req) This API is used to bind a DMask policy.
  * @method Models\AttachUserPolicyResponse AttachUserPolicy(Models\AttachUserPolicyRequest $req) This API is used to bind the authentication policy to the user.
  * @method Models\AttachWorkGroupPolicyResponse AttachWorkGroupPolicy(Models\AttachWorkGroupPolicyRequest $req) This API is used to bind an authentication policy to a working group.
  * @method Models\BindWorkGroupsToUserResponse BindWorkGroupsToUser(Models\BindWorkGroupsToUserRequest $req) This API is used to bind working groups to users.
@@ -39,6 +40,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateDLCTableResponse CreateDLCTable(Models\CreateDLCTableRequest $req) This API is used to create a table.
  * @method Models\CreateDMSDatabaseResponse CreateDMSDatabase(Models\CreateDMSDatabaseRequest $req) This API is used to create databases in the DMS metadata module.
  * @method Models\CreateDataEngineResponse CreateDataEngine(Models\CreateDataEngineRequest $req) This API is used to create a data engine.
+ * @method Models\CreateDataMaskStrategyResponse CreateDataMaskStrategy(Models\CreateDataMaskStrategyRequest $req) This API is used to create a DMask policy.
  * @method Models\CreateInternalTableResponse CreateInternalTable(Models\CreateInternalTableRequest $req) This API is used to create a managed internal table. It has been disused.
  * @method Models\CreateResultDownloadResponse CreateResultDownload(Models\CreateResultDownloadRequest $req) This API is used to create a query result download task.
  * @method Models\CreateSparkAppResponse CreateSparkApp(Models\CreateSparkAppRequest $req) This API is used to create a Spark job.

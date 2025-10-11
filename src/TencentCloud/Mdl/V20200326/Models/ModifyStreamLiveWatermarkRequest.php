@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageSettings(CreateImageSettings $ImageSettings) Set Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
  * @method CreateTextSettings getTextSettings() Obtain Watermark text settings. This parameter is valid if `Type` is `TEXT`.
  * @method void setTextSettings(CreateTextSettings $TextSettings) Set Watermark text settings. This parameter is valid if `Type` is `TEXT`.
+ * @method AbWatermarkSettingsReq getAbWatermarkSettings() Obtain 
+ * @method void setAbWatermarkSettings(AbWatermarkSettingsReq $AbWatermarkSettings) Set 
  */
 class ModifyStreamLiveWatermarkRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyStreamLiveWatermarkRequest extends AbstractModel
     public $TextSettings;
 
     /**
+     * @var AbWatermarkSettingsReq 
+     */
+    public $AbWatermarkSettings;
+
+    /**
      * @param string $Id Watermark ID
      * @param string $Name Watermark name
      * @param CreateImageSettings $ImageSettings Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
      * @param CreateTextSettings $TextSettings Watermark text settings. This parameter is valid if `Type` is `TEXT`.
+     * @param AbWatermarkSettingsReq $AbWatermarkSettings 
      */
     function __construct()
     {
@@ -86,6 +94,11 @@ class ModifyStreamLiveWatermarkRequest extends AbstractModel
         if (array_key_exists("TextSettings",$param) and $param["TextSettings"] !== null) {
             $this->TextSettings = new CreateTextSettings();
             $this->TextSettings->deserialize($param["TextSettings"]);
+        }
+
+        if (array_key_exists("AbWatermarkSettings",$param) and $param["AbWatermarkSettings"] !== null) {
+            $this->AbWatermarkSettings = new AbWatermarkSettingsReq();
+            $this->AbWatermarkSettings->deserialize($param["AbWatermarkSettings"]);
         }
     }
 }

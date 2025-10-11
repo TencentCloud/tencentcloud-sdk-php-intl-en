@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(string $InstanceType) Set Instance model
  * @method integer getCPU() Obtain Number of CPU cores of the instance; unit: core
  * @method void setCPU(integer $CPU) Set Number of CPU cores of the instance; unit: core
- * @method integer getMemory() Obtain Memory capacity; unit: `GB`.
- * @method void setMemory(integer $Memory) Set Memory capacity; unit: `GB`.
- * @method string getRestrictState() Obtain Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
- * @method void setRestrictState(string $RestrictState) Set Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
+ * @method integer getMemory() Obtain Instance memory capacity. unit: GiB.
+ * @method void setMemory(integer $Memory) Set Instance memory capacity. unit: GiB.
+ * @method string getRestrictState() Obtain Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>.
+ * @method void setRestrictState(string $RestrictState) Set Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>.
  * @method string getInstanceName() Obtain Instance name
  * @method void setInstanceName(string $InstanceName) Set Instance name
  * @method string getInstanceChargeType() Obtain Instance billing plan. Valid values:<br><li>`POSTPAID_BY_HOUR`: pay after use. You are billed by the hour, by traffic.<br><li>`CDHPAID`: `CDH` billing plan. Applicable to `CDH` only, not the instances on the host.<br>
@@ -52,10 +52,10 @@ Note: This field may return null, indicating that no valid value is found.
  * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) Set Information on the VPC where the instance resides.
  * @method string getImageId() Obtain `ID` of the image used to create the instance.
  * @method void setImageId(string $ImageId) Set `ID` of the image used to create the instance.
- * @method string getRenewFlag() Obtain Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-<br><li>Note: this parameter is `null` for postpaid instances.
- * @method void setRenewFlag(string $RenewFlag) Set Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-<br><li>Note: this parameter is `null` for postpaid instances.
+ * @method string getRenewFlag() Obtain AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+Note: this field is null in postpaid mode.
+ * @method void setRenewFlag(string $RenewFlag) Set AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+Note: this field is null in postpaid mode.
  * @method string getCreatedTime() Obtain Creation time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
  * @method void setCreatedTime(string $CreatedTime) Set Creation time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
  * @method string getExpiredTime() Obtain Expiration time in UTC format following the `ISO8601` standard: `YYYY-MM-DDThh:mm:ssZ`. Note: this parameter is `null` for postpaid instances.
@@ -66,26 +66,28 @@ Note: This field may return null, indicating that no valid value is found.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security groups to which the instance belongs. To obtain the security group IDs, you can call [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) and look for the `sgld` fields in the response.
  * @method LoginSettings getLoginSettings() Obtain Login settings of the instance. Currently only the key associated with the instance is returned.
  * @method void setLoginSettings(LoginSettings $LoginSettings) Set Login settings of the instance. Currently only the key associated with the instance is returned.
- * @method string getInstanceState() Obtain Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
- * @method void setInstanceState(string $InstanceState) Set Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
+ * @method string getInstanceState() Obtain Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
+ * @method void setInstanceState(string $InstanceState) Set Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
  * @method array getTags() Obtain List of tags associated with the instance.
  * @method void setTags(array $Tags) Set List of tags associated with the instance.
- * @method string getStopChargingMode() Obtain Instance billing method after shutdown.
-Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
- * @method void setStopChargingMode(string $StopChargingMode) Set Instance billing method after shutdown.
-Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
+ * @method string getStopChargingMode() Obtain Shutdown billing mode of an instance.
+
+Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>.
+ * @method void setStopChargingMode(string $StopChargingMode) Set Shutdown billing mode of an instance.
+
+Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>.
  * @method string getUuid() Obtain Globally unique ID of the instance.
  * @method void setUuid(string $Uuid) Set Globally unique ID of the instance.
  * @method string getLatestOperation() Obtain Last operation of the instance, such as StopInstances or ResetInstance.
  * @method void setLatestOperation(string $LatestOperation) Set Last operation of the instance, such as StopInstances or ResetInstance.
- * @method string getLatestOperationState() Obtain The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
- * @method void setLatestOperationState(string $LatestOperationState) Set The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+ * @method string getLatestOperationState() Obtain The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+Note: This field may return null, indicating that no valid value is found.
+ * @method void setLatestOperationState(string $LatestOperationState) Set The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+Note: This field may return null, indicating that no valid value is found.
  * @method string getLatestOperationRequestId() Obtain Unique request ID for the last operation of the instance.
  * @method void setLatestOperationRequestId(string $LatestOperationRequestId) Set Unique request ID for the last operation of the instance.
- * @method string getDisasterRecoverGroupId() Obtain ID of a spread placement group.
-Note: this field may return null, indicating that no valid value is obtained.
- * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) Set ID of a spread placement group.
-Note: this field may return null, indicating that no valid value is obtained.
+ * @method string getDisasterRecoverGroupId() Obtain Spread placement group ID.
+ * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) Set Spread placement group ID.
  * @method array getIPv6Addresses() Obtain IPv6 address of the instance.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setIPv6Addresses(array $IPv6Addresses) Set IPv6 address of the instance.
@@ -94,28 +96,22 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setCamRoleName(string $CamRoleName) Set CAM role name.
 Note: this field may return null, indicating that no valid value is obtained.
- * @method string getHpcClusterId() Obtain HPC cluster ID.
-Note: this field may return null, indicating that no valid value was found.
- * @method void setHpcClusterId(string $HpcClusterId) Set HPC cluster ID.
-Note: this field may return null, indicating that no valid value was found.
+ * @method string getHpcClusterId() Obtain High-performance computing cluster ID.
+ * @method void setHpcClusterId(string $HpcClusterId) Set High-performance computing cluster ID.
  * @method array getRdmaIpAddresses() Obtain IP list of HPC cluster.
 Note: this field may return null, indicating that no valid value was found.
  * @method void setRdmaIpAddresses(array $RdmaIpAddresses) Set IP list of HPC cluster.
 Note: this field may return null, indicating that no valid value was found.
- * @method string getDedicatedClusterId() Obtain 
- * @method void setDedicatedClusterId(string $DedicatedClusterId) Set 
- * @method string getIsolatedSource() Obtain The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-Note: this field may return null, indicating that no valid value was found.
- * @method void setIsolatedSource(string $IsolatedSource) Set The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-Note: this field may return null, indicating that no valid value was found.
- * @method GPUInfo getGPUInfo() Obtain GPU information. This field is only returned for GPU instances.
-Note: this field may return null, indicating that no valid value was found.
- * @method void setGPUInfo(GPUInfo $GPUInfo) Set GPU information. This field is only returned for GPU instances.
-Note: this field may return null, indicating that no valid value was found.
+ * @method string getDedicatedClusterId() Obtain Dedicated cluster ID where the instance is located.
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set Dedicated cluster ID where the instance is located.
+ * @method string getIsolatedSource() Obtain Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>.
+ * @method void setIsolatedSource(string $IsolatedSource) Set Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>.
+ * @method GPUInfo getGPUInfo() Obtain GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return.
+ * @method void setGPUInfo(GPUInfo $GPUInfo) Set GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return.
  * @method string getLicenseType() Obtain Instance OS license type. Default value: `TencentCloud`
  * @method void setLicenseType(string $LicenseType) Set Instance OS license type. Default value: `TencentCloud`
- * @method boolean getDisableApiTermination() Obtain Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
- * @method void setDisableApiTermination(boolean $DisableApiTermination) Set Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+ * @method boolean getDisableApiTermination() Obtain Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false.
+ * @method void setDisableApiTermination(boolean $DisableApiTermination) Set Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false.
  * @method string getDefaultLoginUser() Obtain Default login user
  * @method void setDefaultLoginUser(string $DefaultLoginUser) Set Default login user
  * @method integer getDefaultLoginPort() Obtain Default login port
@@ -124,10 +120,10 @@ Note: this field may return null, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setLatestOperationErrorMsg(string $LatestOperationErrorMsg) Set Latest operation errors of the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method array getPublicIPv6Addresses() Obtain Public IPv6 address of the instance.
-Note: this field may return null, indicating that no valid value was found.
- * @method void setPublicIPv6Addresses(array $PublicIPv6Addresses) Set Public IPv6 address of the instance.
-Note: this field may return null, indicating that no valid value was found.
+ * @method Metadata getMetadata() Obtain Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**.
+ * @method void setMetadata(Metadata $Metadata) Set Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**.
+ * @method array getPublicIPv6Addresses() Obtain Specifies the public IPv6 address bound to the instance.
+ * @method void setPublicIPv6Addresses(array $PublicIPv6Addresses) Set Specifies the public IPv6 address bound to the instance.
  */
 class Instance extends AbstractModel
 {
@@ -152,12 +148,12 @@ class Instance extends AbstractModel
     public $CPU;
 
     /**
-     * @var integer Memory capacity; unit: `GB`.
+     * @var integer Instance memory capacity. unit: GiB.
      */
     public $Memory;
 
     /**
-     * @var string Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
+     * @var string Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>.
      */
     public $RestrictState;
 
@@ -208,8 +204,8 @@ Note: This field may return null, indicating that no valid value is found.
     public $ImageId;
 
     /**
-     * @var string Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-<br><li>Note: this parameter is `null` for postpaid instances.
+     * @var string AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+Note: this field is null in postpaid mode.
      */
     public $RenewFlag;
 
@@ -239,7 +235,7 @@ Note: This field may return null, indicating that no valid value is found.
     public $LoginSettings;
 
     /**
-     * @var string Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
+     * @var string Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
      */
     public $InstanceState;
 
@@ -249,8 +245,9 @@ Note: This field may return null, indicating that no valid value is found.
     public $Tags;
 
     /**
-     * @var string Instance billing method after shutdown.
-Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
+     * @var string Shutdown billing mode of an instance.
+
+Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>.
      */
     public $StopChargingMode;
 
@@ -265,7 +262,8 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
     public $LatestOperation;
 
     /**
-     * @var string The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+     * @var string The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+Note: This field may return null, indicating that no valid value is found.
      */
     public $LatestOperationState;
 
@@ -275,8 +273,7 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
     public $LatestOperationRequestId;
 
     /**
-     * @var string ID of a spread placement group.
-Note: this field may return null, indicating that no valid value is obtained.
+     * @var string Spread placement group ID.
      */
     public $DisasterRecoverGroupId;
 
@@ -293,8 +290,7 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $CamRoleName;
 
     /**
-     * @var string HPC cluster ID.
-Note: this field may return null, indicating that no valid value was found.
+     * @var string High-performance computing cluster ID.
      */
     public $HpcClusterId;
 
@@ -305,19 +301,17 @@ Note: this field may return null, indicating that no valid value was found.
     public $RdmaIpAddresses;
 
     /**
-     * @var string 
+     * @var string Dedicated cluster ID where the instance is located.
      */
     public $DedicatedClusterId;
 
     /**
-     * @var string The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-Note: this field may return null, indicating that no valid value was found.
+     * @var string Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>.
      */
     public $IsolatedSource;
 
     /**
-     * @var GPUInfo GPU information. This field is only returned for GPU instances.
-Note: this field may return null, indicating that no valid value was found.
+     * @var GPUInfo GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return.
      */
     public $GPUInfo;
 
@@ -327,7 +321,7 @@ Note: this field may return null, indicating that no valid value was found.
     public $LicenseType;
 
     /**
-     * @var boolean Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+     * @var boolean Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false.
      */
     public $DisableApiTermination;
 
@@ -348,8 +342,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $LatestOperationErrorMsg;
 
     /**
-     * @var array Public IPv6 address of the instance.
-Note: this field may return null, indicating that no valid value was found.
+     * @var Metadata Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**.
+     */
+    public $Metadata;
+
+    /**
+     * @var array Specifies the public IPv6 address bound to the instance.
      */
     public $PublicIPv6Addresses;
 
@@ -358,8 +356,8 @@ Note: this field may return null, indicating that no valid value was found.
      * @param string $InstanceId Instance `ID`
      * @param string $InstanceType Instance model
      * @param integer $CPU Number of CPU cores of the instance; unit: core
-     * @param integer $Memory Memory capacity; unit: `GB`.
-     * @param string $RestrictState Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
+     * @param integer $Memory Instance memory capacity. unit: GiB.
+     * @param string $RestrictState Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>.
      * @param string $InstanceName Instance name
      * @param string $InstanceChargeType Instance billing plan. Valid values:<br><li>`POSTPAID_BY_HOUR`: pay after use. You are billed by the hour, by traffic.<br><li>`CDHPAID`: `CDH` billing plan. Applicable to `CDH` only, not the instances on the host.<br>
      * @param SystemDisk $SystemDisk Information on the system disk of the instance
@@ -370,44 +368,42 @@ Note: This field may return null, indicating that no valid value is found.
      * @param InternetAccessible $InternetAccessible Information on instance bandwidth.
      * @param VirtualPrivateCloud $VirtualPrivateCloud Information on the VPC where the instance resides.
      * @param string $ImageId `ID` of the image used to create the instance.
-     * @param string $RenewFlag Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-<br><li>Note: this parameter is `null` for postpaid instances.
+     * @param string $RenewFlag AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+Note: this field is null in postpaid mode.
      * @param string $CreatedTime Creation time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
      * @param string $ExpiredTime Expiration time in UTC format following the `ISO8601` standard: `YYYY-MM-DDThh:mm:ssZ`. Note: this parameter is `null` for postpaid instances.
      * @param string $OsName Operating system name.
      * @param array $SecurityGroupIds Security groups to which the instance belongs. To obtain the security group IDs, you can call [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) and look for the `sgld` fields in the response.
      * @param LoginSettings $LoginSettings Login settings of the instance. Currently only the key associated with the instance is returned.
-     * @param string $InstanceState Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
+     * @param string $InstanceState Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
      * @param array $Tags List of tags associated with the instance.
-     * @param string $StopChargingMode Instance billing method after shutdown.
-Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
+     * @param string $StopChargingMode Shutdown billing mode of an instance.
+
+Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>.
      * @param string $Uuid Globally unique ID of the instance.
      * @param string $LatestOperation Last operation of the instance, such as StopInstances or ResetInstance.
-     * @param string $LatestOperationState The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+     * @param string $LatestOperationState The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+Note: This field may return null, indicating that no valid value is found.
      * @param string $LatestOperationRequestId Unique request ID for the last operation of the instance.
-     * @param string $DisasterRecoverGroupId ID of a spread placement group.
-Note: this field may return null, indicating that no valid value is obtained.
+     * @param string $DisasterRecoverGroupId Spread placement group ID.
      * @param array $IPv6Addresses IPv6 address of the instance.
 Note: this field may return null, indicating that no valid value is obtained.
      * @param string $CamRoleName CAM role name.
 Note: this field may return null, indicating that no valid value is obtained.
-     * @param string $HpcClusterId HPC cluster ID.
-Note: this field may return null, indicating that no valid value was found.
+     * @param string $HpcClusterId High-performance computing cluster ID.
      * @param array $RdmaIpAddresses IP list of HPC cluster.
 Note: this field may return null, indicating that no valid value was found.
-     * @param string $DedicatedClusterId 
-     * @param string $IsolatedSource The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-Note: this field may return null, indicating that no valid value was found.
-     * @param GPUInfo $GPUInfo GPU information. This field is only returned for GPU instances.
-Note: this field may return null, indicating that no valid value was found.
+     * @param string $DedicatedClusterId Dedicated cluster ID where the instance is located.
+     * @param string $IsolatedSource Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>.
+     * @param GPUInfo $GPUInfo GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return.
      * @param string $LicenseType Instance OS license type. Default value: `TencentCloud`
-     * @param boolean $DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+     * @param boolean $DisableApiTermination Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false.
      * @param string $DefaultLoginUser Default login user
      * @param integer $DefaultLoginPort Default login port
      * @param string $LatestOperationErrorMsg Latest operation errors of the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param array $PublicIPv6Addresses Public IPv6 address of the instance.
-Note: this field may return null, indicating that no valid value was found.
+     * @param Metadata $Metadata Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**.
+     * @param array $PublicIPv6Addresses Specifies the public IPv6 address bound to the instance.
      */
     function __construct()
     {
@@ -600,6 +596,11 @@ Note: this field may return null, indicating that no valid value was found.
 
         if (array_key_exists("LatestOperationErrorMsg",$param) and $param["LatestOperationErrorMsg"] !== null) {
             $this->LatestOperationErrorMsg = $param["LatestOperationErrorMsg"];
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = new Metadata();
+            $this->Metadata->deserialize($param["Metadata"]);
         }
 
         if (array_key_exists("PublicIPv6Addresses",$param) and $param["PublicIPv6Addresses"] !== null) {

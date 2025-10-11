@@ -34,6 +34,7 @@ class ClipRangeInfo extends AbstractModel
 
     /**
      * @var integer Offset, valid when Type is SpecifyTimeRange.
+     * @deprecated
      */
     public $Offset;
 

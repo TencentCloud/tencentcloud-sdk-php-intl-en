@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Custom metadata key and value.
  *
- * @method string getKey() Obtain Custom metadata key. it must comply with the regular expression ^[a-zA-Z0-9_-]+$. the length is less than or equal to 128 bytes (case-sensitive).
-
- * @method void setKey(string $Key) Set Custom metadata key. it must comply with the regular expression ^[a-zA-Z0-9_-]+$. the length is less than or equal to 128 bytes (case-sensitive).
-
- * @method string getValue() Obtain Specifies a custom metadata value. it supports any data . The size is &le; 256 KB. it is case-sensitive.
- * @method void setValue(string $Value) Set Specifies a custom metadata value. it supports any data . The size is &le; 256 KB. it is case-sensitive.
+ * @method string getKey() Obtain Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes.
+ * @method void setKey(string $Key) Set Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes.
+ * @method string getValue() Obtain Custom metadata value. The upper limit of message size is 256 KB.
+ * @method void setValue(string $Value) Set Custom metadata value. The upper limit of message size is 256 KB.
  */
 class MetadataItem extends AbstractModel
 {
     /**
-     * @var string Custom metadata key. it must comply with the regular expression ^[a-zA-Z0-9_-]+$. the length is less than or equal to 128 bytes (case-sensitive).
-
+     * @var string Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes.
      */
     public $Key;
 
     /**
-     * @var string Specifies a custom metadata value. it supports any data . The size is &le; 256 KB. it is case-sensitive.
+     * @var string Custom metadata value. The upper limit of message size is 256 KB.
      */
     public $Value;
 
     /**
-     * @param string $Key Custom metadata key. it must comply with the regular expression ^[a-zA-Z0-9_-]+$. the length is less than or equal to 128 bytes (case-sensitive).
-
-     * @param string $Value Specifies a custom metadata value. it supports any data . The size is &le; 256 KB. it is case-sensitive.
+     * @param string $Key Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes.
+     * @param string $Value Custom metadata value. The upper limit of message size is 256 KB.
      */
     function __construct()
     {

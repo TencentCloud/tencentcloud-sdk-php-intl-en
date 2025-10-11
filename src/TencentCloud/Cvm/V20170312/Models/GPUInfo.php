@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GPU information of the instance
  *
- * @method float getGPUCount() Obtain Number of GPUs. 
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method void setGPUCount(float $GPUCount) Set Number of GPUs. 
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method array getGPUId() Obtain GPU address
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method void setGPUId(array $GPUId) Set GPU address
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method string getGPUType() Obtain GPU type of the instance.
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method void setGPUType(string $GPUType) Set GPU type of the instance.
-Note: this field may return `null`, indicating that no valid value can be found.
+ * @method float getGPUCount() Obtain Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
+ * @method void setGPUCount(float $GPUCount) Set Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
+ * @method array getGPUId() Obtain Specifies the GPU address of the instance.
+ * @method void setGPUId(array $GPUId) Set Specifies the GPU address of the instance.
+ * @method string getGPUType() Obtain Specifies the GPU type of the instance.
+ * @method void setGPUType(string $GPUType) Set Specifies the GPU type of the instance.
  */
 class GPUInfo extends AbstractModel
 {
     /**
-     * @var float Number of GPUs. 
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @var float Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
      */
     public $GPUCount;
 
     /**
-     * @var array GPU address
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @var array Specifies the GPU address of the instance.
      */
     public $GPUId;
 
     /**
-     * @var string GPU type of the instance.
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @var string Specifies the GPU type of the instance.
      */
     public $GPUType;
 
     /**
-     * @param float $GPUCount Number of GPUs. 
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param array $GPUId GPU address
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param string $GPUType GPU type of the instance.
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @param float $GPUCount Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
+     * @param array $GPUId Specifies the GPU address of the instance.
+     * @param string $GPUType Specifies the GPU type of the instance.
      */
     function __construct()
     {
