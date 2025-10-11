@@ -182,9 +182,9 @@ abstract class AbstractClient
                     break;
             }
             if ($responseData->getStatusCode() !== AbstractClient::$HTTP_RSP_OK) {
-                throw new TencentCloudSDKException($responseData->getReasonPhrase(), $responseData->getBody());
+                throw new TencentCloudSDKException($responseData->getReasonPhrase(), $responseData->getBody()->getContents());
             }
-            $tmpResp = json_decode($responseData->getBody(), true)["Response"];
+            $tmpResp = json_decode($responseData->getBody()->getContents(), true)["Response"];
             if (array_key_exists("Error", $tmpResp)) {
                 throw new TencentCloudSDKException($tmpResp["Error"]["Code"], $tmpResp["Error"]["Message"], $tmpResp["RequestId"]);
             }
