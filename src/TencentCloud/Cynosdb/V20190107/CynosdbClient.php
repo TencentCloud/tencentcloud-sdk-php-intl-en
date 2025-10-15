@@ -39,6 +39,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\CreateBackupResponse CreateBackup(Models\CreateBackupRequest $req) This API is used to create a manual backup for a cluster.
  * @method Models\CreateClusterDatabaseResponse CreateClusterDatabase(Models\CreateClusterDatabaseRequest $req) This API is used to create a database.
  * @method Models\CreateClustersResponse CreateClusters(Models\CreateClustersRequest $req) This API is used to purchase new clusters.
+ * @method Models\CreateIntegrateClusterResponse CreateIntegrateCluster(Models\CreateIntegrateClusterRequest $req) This API is used to create a newly purchased cluster.
  * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) This API is used to create parameter templates.
  * @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) This API is used to enable the database proxy of a cluster.
  * @method Models\CreateProxyEndPointResponse CreateProxyEndPoint(Models\CreateProxyEndPointRequest $req) This API is used to create a database proxy connection point.
@@ -79,6 +80,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeInstanceSpecsResponse DescribeInstanceSpecs(Models\DescribeInstanceSpecsRequest $req) This interface (DescribeInstanceSpecs) is used to query the instance specifications available for purchase on the query purchase page.
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to query the list of instances.
  * @method Models\DescribeInstancesWithinSameClusterResponse DescribeInstancesWithinSameCluster(Models\DescribeInstancesWithinSameClusterRequest $req) This API is used to query the instance list under the same cluster.
+ * @method Models\DescribeIntegrateTaskResponse DescribeIntegrateTask(Models\DescribeIntegrateTaskRequest $req) This API is used to query cluster tasks.
  * @method Models\DescribeIsolatedInstancesResponse DescribeIsolatedInstances(Models\DescribeIsolatedInstancesRequest $req) This interface is used for querying the recycle bin instance list.
  * @method Models\DescribeMaintainPeriodResponse DescribeMaintainPeriod(Models\DescribeMaintainPeriodRequest $req) This interface (DescribeMaintainPeriod) is used to query the instance maintenance window.
  * @method Models\DescribeParamTemplateDetailResponse DescribeParamTemplateDetail(Models\DescribeParamTemplateDetailRequest $req) This API is used to query user parameter template details.

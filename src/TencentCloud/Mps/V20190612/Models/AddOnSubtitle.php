@@ -40,6 +40,14 @@ Note: This field may return null, indicating that no valid value can be obtained
  * @method void setSubtitleName(string $SubtitleName) Set Subtitle name.
 Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getOutputFormat() Obtain Output format of the subtitle. valid values: "WebVTT", "TTML".
+Default value: "WebVTT".
+ * @method void setOutputFormat(string $OutputFormat) Set Output format of the subtitle. valid values: "WebVTT", "TTML".
+Default value: "WebVTT".
+ * @method boolean getDefaultTrack() Obtain Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+Default value: `false`.
+ * @method void setDefaultTrack(boolean $DefaultTrack) Set Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+Default value: `false`.
  */
 class AddOnSubtitle extends AbstractModel
 {
@@ -66,6 +74,18 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $SubtitleName;
 
     /**
+     * @var string Output format of the subtitle. valid values: "WebVTT", "TTML".
+Default value: "WebVTT".
+     */
+    public $OutputFormat;
+
+    /**
+     * @var boolean Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+Default value: `false`.
+     */
+    public $DefaultTrack;
+
+    /**
      * @param string $Type The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
@@ -76,6 +96,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SubtitleName Subtitle name.
 Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $OutputFormat Output format of the subtitle. valid values: "WebVTT", "TTML".
+Default value: "WebVTT".
+     * @param boolean $DefaultTrack Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+Default value: `false`.
      */
     function __construct()
     {
@@ -101,6 +125,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("SubtitleName",$param) and $param["SubtitleName"] !== null) {
             $this->SubtitleName = $param["SubtitleName"];
+        }
+
+        if (array_key_exists("OutputFormat",$param) and $param["OutputFormat"] !== null) {
+            $this->OutputFormat = $param["OutputFormat"];
+        }
+
+        if (array_key_exists("DefaultTrack",$param) and $param["DefaultTrack"] !== null) {
+            $this->DefaultTrack = $param["DefaultTrack"];
         }
     }
 }

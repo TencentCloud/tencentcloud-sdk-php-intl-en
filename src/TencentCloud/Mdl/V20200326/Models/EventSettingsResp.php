@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStaticImageActivateSetting(StaticImageActivateSetting $StaticImageActivateSetting) Set Static image activate setting.
  * @method StaticImageDeactivateSetting getStaticImageDeactivateSetting() Obtain Static image deactivate setting.
  * @method void setStaticImageDeactivateSetting(StaticImageDeactivateSetting $StaticImageDeactivateSetting) Set Static image deactivate setting.
+ * @method MotionGraphicsActivateSetting getMotionGraphicsActivateSetting() Obtain Dynamic graphic overlay activate configuration.
+ * @method void setMotionGraphicsActivateSetting(MotionGraphicsActivateSetting $MotionGraphicsActivateSetting) Set Dynamic graphic overlay activate configuration.
  */
 class EventSettingsResp extends AbstractModel
 {
@@ -101,6 +103,11 @@ class EventSettingsResp extends AbstractModel
     public $StaticImageDeactivateSetting;
 
     /**
+     * @var MotionGraphicsActivateSetting Dynamic graphic overlay activate configuration.
+     */
+    public $MotionGraphicsActivateSetting;
+
+    /**
      * @param string $EventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`, `STATIC_IMAGE_ACTIVATE`, `STATIC_IMAGE_DEACTIVATE`.
      * @param string $InputAttachment ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
      * @param string $OutputGroupName Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
@@ -112,6 +119,7 @@ class EventSettingsResp extends AbstractModel
      * @param TimedMetadataInfo $TimedMetadataSetting Meta information plan configuration.
      * @param StaticImageActivateSetting $StaticImageActivateSetting Static image activate setting.
      * @param StaticImageDeactivateSetting $StaticImageDeactivateSetting Static image deactivate setting.
+     * @param MotionGraphicsActivateSetting $MotionGraphicsActivateSetting Dynamic graphic overlay activate configuration.
      */
     function __construct()
     {
@@ -181,6 +189,11 @@ class EventSettingsResp extends AbstractModel
         if (array_key_exists("StaticImageDeactivateSetting",$param) and $param["StaticImageDeactivateSetting"] !== null) {
             $this->StaticImageDeactivateSetting = new StaticImageDeactivateSetting();
             $this->StaticImageDeactivateSetting->deserialize($param["StaticImageDeactivateSetting"]);
+        }
+
+        if (array_key_exists("MotionGraphicsActivateSetting",$param) and $param["MotionGraphicsActivateSetting"] !== null) {
+            $this->MotionGraphicsActivateSetting = new MotionGraphicsActivateSetting();
+            $this->MotionGraphicsActivateSetting->deserialize($param["MotionGraphicsActivateSetting"]);
         }
     }
 }

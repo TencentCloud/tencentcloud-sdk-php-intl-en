@@ -28,8 +28,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Recording template name. Length limit: 64 characters.
  * @method string getComment() Obtain Template description, with a length limit of 256 characters.
  * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
- * @method string getRecordType() Obtain Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
- * @method void setRecordType(string $RecordType) Set Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+ * @method string getRecordType() Obtain Recording type. Valid values: 
+
+- video: audio and video recording; 
+- audio: audio recording; 
+- auto: automatic detection;
+
+If it is left blank, "video" will be used as the default value.
+ * @method void setRecordType(string $RecordType) Set Recording type. Valid values: 
+
+- video: audio and video recording; 
+- audio: audio recording; 
+- auto: automatic detection;
+
+If it is left blank, "video" will be used as the default value.
  */
 class CreateLiveRecordTemplateRequest extends AbstractModel
 {
@@ -54,7 +66,13 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @var string Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+     * @var string Recording type. Valid values: 
+
+- video: audio and video recording; 
+- audio: audio recording; 
+- auto: automatic detection;
+
+If it is left blank, "video" will be used as the default value.
      */
     public $RecordType;
 
@@ -63,7 +81,13 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
      * @param MP4ConfigureInfo $MP4Configure MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
      * @param string $Name Recording template name. Length limit: 64 characters.
      * @param string $Comment Template description, with a length limit of 256 characters.
-     * @param string $RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+     * @param string $RecordType Recording type. Valid values: 
+
+- video: audio and video recording; 
+- audio: audio recording; 
+- auto: automatic detection;
+
+If it is left blank, "video" will be used as the default value.
      */
     function __construct()
     {

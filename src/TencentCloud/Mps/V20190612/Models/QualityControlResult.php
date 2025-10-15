@@ -20,63 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The issues detected by quality control.
  *
- * @method string getType() Obtain The issue type. Valid values:
-`Jitter`
-`Blur`
-`LowLighting`
-`HighLighting` (overexposure)
-`CrashScreen` (video corruption)
-`BlackWhiteEdge`
-`SolidColorScreen` (blank screen)
-`Noise`
-`Mosaic` (pixelation)
-`QRCode`
-`AppletCode` (Weixin Mini Program code)
-`BarCode`
-`LowVoice`
-`HighVoice`
-`NoVoice`
-`LowEvaluation` (low no-reference video quality score)
- * @method void setType(string $Type) Set The issue type. Valid values:
-`Jitter`
-`Blur`
-`LowLighting`
-`HighLighting` (overexposure)
-`CrashScreen` (video corruption)
-`BlackWhiteEdge`
-`SolidColorScreen` (blank screen)
-`Noise`
-`Mosaic` (pixelation)
-`QRCode`
-`AppletCode` (Weixin Mini Program code)
-`BarCode`
-`LowVoice`
-`HighVoice`
-`NoVoice`
-`LowEvaluation` (low no-reference video quality score)
+ * @method string getType() Obtain Exception type. valid values:.
+Jitter: jitter.
+Blur: specifies the blur effect.
+LowLighting: specifies low light.
+HighLighting: overexposure.
+CrashScreen: specifies screen glitch.
+BlackWhiteEdge: specifies the black and white edges.
+SolidColorScreen: specifies the solid color screen.
+Noise: specifies the noise.
+Mosaic: mosaic.
+QRCode: specifies the qr code.
+AppletCode: specifies the mini program code.
+BarCode: specifies the barcode.
+LowVoice: specifies the bass.
+HighVoice: specifies high voice detection.
+NoVoice: specifies mute.
+LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: specifies the audio noise.
+ * @method void setType(string $Type) Set Exception type. valid values:.
+Jitter: jitter.
+Blur: specifies the blur effect.
+LowLighting: specifies low light.
+HighLighting: overexposure.
+CrashScreen: specifies screen glitch.
+BlackWhiteEdge: specifies the black and white edges.
+SolidColorScreen: specifies the solid color screen.
+Noise: specifies the noise.
+Mosaic: mosaic.
+QRCode: specifies the qr code.
+AppletCode: specifies the mini program code.
+BarCode: specifies the barcode.
+LowVoice: specifies the bass.
+HighVoice: specifies high voice detection.
+NoVoice: specifies mute.
+LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: specifies the audio noise.
  * @method array getQualityControlItems() Obtain The information of a checked segment in quality control.
  * @method void setQualityControlItems(array $QualityControlItems) Set The information of a checked segment in quality control.
  */
 class QualityControlResult extends AbstractModel
 {
     /**
-     * @var string The issue type. Valid values:
-`Jitter`
-`Blur`
-`LowLighting`
-`HighLighting` (overexposure)
-`CrashScreen` (video corruption)
-`BlackWhiteEdge`
-`SolidColorScreen` (blank screen)
-`Noise`
-`Mosaic` (pixelation)
-`QRCode`
-`AppletCode` (Weixin Mini Program code)
-`BarCode`
-`LowVoice`
-`HighVoice`
-`NoVoice`
-`LowEvaluation` (low no-reference video quality score)
+     * @var string Exception type. valid values:.
+Jitter: jitter.
+Blur: specifies the blur effect.
+LowLighting: specifies low light.
+HighLighting: overexposure.
+CrashScreen: specifies screen glitch.
+BlackWhiteEdge: specifies the black and white edges.
+SolidColorScreen: specifies the solid color screen.
+Noise: specifies the noise.
+Mosaic: mosaic.
+QRCode: specifies the qr code.
+AppletCode: specifies the mini program code.
+BarCode: specifies the barcode.
+LowVoice: specifies the bass.
+HighVoice: specifies high voice detection.
+NoVoice: specifies mute.
+LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: specifies the audio noise.
      */
     public $Type;
 
@@ -86,23 +92,25 @@ class QualityControlResult extends AbstractModel
     public $QualityControlItems;
 
     /**
-     * @param string $Type The issue type. Valid values:
-`Jitter`
-`Blur`
-`LowLighting`
-`HighLighting` (overexposure)
-`CrashScreen` (video corruption)
-`BlackWhiteEdge`
-`SolidColorScreen` (blank screen)
-`Noise`
-`Mosaic` (pixelation)
-`QRCode`
-`AppletCode` (Weixin Mini Program code)
-`BarCode`
-`LowVoice`
-`HighVoice`
-`NoVoice`
-`LowEvaluation` (low no-reference video quality score)
+     * @param string $Type Exception type. valid values:.
+Jitter: jitter.
+Blur: specifies the blur effect.
+LowLighting: specifies low light.
+HighLighting: overexposure.
+CrashScreen: specifies screen glitch.
+BlackWhiteEdge: specifies the black and white edges.
+SolidColorScreen: specifies the solid color screen.
+Noise: specifies the noise.
+Mosaic: mosaic.
+QRCode: specifies the qr code.
+AppletCode: specifies the mini program code.
+BarCode: specifies the barcode.
+LowVoice: specifies the bass.
+HighVoice: specifies high voice detection.
+NoVoice: specifies mute.
+LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: specifies the audio noise.
      * @param array $QualityControlItems The information of a checked segment in quality control.
      */
     function __construct()

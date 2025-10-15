@@ -48,16 +48,18 @@ Advanced edition: better effectiveness, suitable for mini-drama and reality styl
 **Supported values**:
 - basic
 - advanced
- * @method array getAutoAreas() Obtain Specifies automatic removal of a custom region.
-Specifies the use of an AI model to automatically detect and erase existing targets in the specified region.
-Note that this parameter will not take effect when the removal method is custom.
- * @method void setAutoAreas(array $AutoAreas) Set Specifies automatic removal of a custom region.
-Specifies the use of an AI model to automatically detect and erase existing targets in the specified region.
-Note that this parameter will not take effect when the removal method is custom.
- * @method array getCustomAreas() Obtain Specifies erasure of a custom region.
-Detects and directly performs removal within a specified time range for the selected region.
- * @method void setCustomAreas(array $CustomAreas) Set Specifies erasure of a custom region.
-Detects and directly performs removal within a specified time range for the selected region.
+ * @method array getAutoAreas() Obtain Automatically erase the custom region.
+Automatically detects and erases the targeted removal in the specified region using the AI model.
+Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
+ * @method void setAutoAreas(array $AutoAreas) Set Automatically erase the custom region.
+Automatically detects and erases the targeted removal in the specified region using the AI model.
+Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
+ * @method array getCustomAreas() Obtain Specifies the removal of a custom region.
+Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
+Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
+ * @method void setCustomAreas(array $CustomAreas) Set Specifies the removal of a custom region.
+Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
+Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
  */
 class SmartEraseWatermarkConfig extends AbstractModel
 {
@@ -84,15 +86,16 @@ Advanced edition: better effectiveness, suitable for mini-drama and reality styl
     public $WatermarkModel;
 
     /**
-     * @var array Specifies automatic removal of a custom region.
-Specifies the use of an AI model to automatically detect and erase existing targets in the specified region.
-Note that this parameter will not take effect when the removal method is custom.
+     * @var array Automatically erase the custom region.
+Automatically detects and erases the targeted removal in the specified region using the AI model.
+Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
      */
     public $AutoAreas;
 
     /**
-     * @var array Specifies erasure of a custom region.
-Detects and directly performs removal within a specified time range for the selected region.
+     * @var array Specifies the removal of a custom region.
+Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
+Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
      */
     public $CustomAreas;
 
@@ -111,11 +114,12 @@ Advanced edition: better effectiveness, suitable for mini-drama and reality styl
 **Supported values**:
 - basic
 - advanced
-     * @param array $AutoAreas Specifies automatic removal of a custom region.
-Specifies the use of an AI model to automatically detect and erase existing targets in the specified region.
-Note that this parameter will not take effect when the removal method is custom.
-     * @param array $CustomAreas Specifies erasure of a custom region.
-Detects and directly performs removal within a specified time range for the selected region.
+     * @param array $AutoAreas Automatically erase the custom region.
+Automatically detects and erases the targeted removal in the specified region using the AI model.
+Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
+     * @param array $CustomAreas Specifies the removal of a custom region.
+Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
+Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
      */
     function __construct()
     {

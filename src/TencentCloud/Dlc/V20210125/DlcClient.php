@@ -53,6 +53,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateWorkGroupResponse CreateWorkGroup(Models\CreateWorkGroupRequest $req) This API is used to create working groups.
  * @method Models\DeleteCHDFSBindingProductResponse DeleteCHDFSBindingProduct(Models\DeleteCHDFSBindingProductRequest $req) This API is used to delete the binding relationship between metadata acceleration buckets and products.
  * @method Models\DeleteDataEngineResponse DeleteDataEngine(Models\DeleteDataEngineRequest $req) This API is used to delete the data engine.
+ * @method Models\DeleteDataMaskStrategyResponse DeleteDataMaskStrategy(Models\DeleteDataMaskStrategyRequest $req) This API is used to delete a data masking policy.
  * @method Models\DeleteSparkAppResponse DeleteSparkApp(Models\DeleteSparkAppRequest $req) This API is used to delete a Spark job.
  * @method Models\DeleteThirdPartyAccessUserResponse DeleteThirdPartyAccessUser(Models\DeleteThirdPartyAccessUserRequest $req) This API is used to remove visits through the third-party platform.
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) This API is used to delete users.
@@ -68,6 +69,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeDataEngineImageVersionsResponse DescribeDataEngineImageVersions(Models\DescribeDataEngineImageVersionsRequest $req) This API is used to obtain the major version image list of exclusive clusters.
  * @method Models\DescribeDataEnginePythonSparkImagesResponse DescribeDataEnginePythonSparkImages(Models\DescribeDataEnginePythonSparkImagesRequest $req) This API is used to obtain the PYSPARK image list.
  * @method Models\DescribeDataEnginesScaleDetailResponse DescribeDataEnginesScaleDetail(Models\DescribeDataEnginesScaleDetailRequest $req) This API is used to query engine specification details.
+ * @method Models\DescribeDataMaskStrategiesResponse DescribeDataMaskStrategies(Models\DescribeDataMaskStrategiesRequest $req) This API is used to query the DMask list.
  * @method Models\DescribeEngineUsageInfoResponse DescribeEngineUsageInfo(Models\DescribeEngineUsageInfoRequest $req) This API is used to query the resource usage of a data engine based on its ID.
  * @method Models\DescribeForbiddenTableProResponse DescribeForbiddenTablePro(Models\DescribeForbiddenTableProRequest $req) This API is used to get the list of disabled table attributes (new).
  * @method Models\DescribeJobResponse DescribeJob(Models\DescribeJobRequest $req) This API is used to obtain the job information.
@@ -126,6 +128,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\UnbindWorkGroupsFromUserResponse UnbindWorkGroupsFromUser(Models\UnbindWorkGroupsFromUserRequest $req) This API is used to unbind a user group from a user.
  * @method Models\UpdateDataEngineResponse UpdateDataEngine(Models\UpdateDataEngineRequest $req) This API is used to upgrade data engine configuration.
  * @method Models\UpdateDataEngineConfigResponse UpdateDataEngineConfig(Models\UpdateDataEngineConfigRequest $req) This API is used to trigger the modification of the engine configuration by the user through a certain operation.
+ * @method Models\UpdateDataMaskStrategyResponse UpdateDataMaskStrategy(Models\UpdateDataMaskStrategyRequest $req) This API is used to update the DMask policy.
  * @method Models\UpdateRowFilterResponse UpdateRowFilter(Models\UpdateRowFilterRequest $req) This API is used to update row filters. Please note that it updates filters only but not catalogs, databases, or tables.
  * @method Models\UpdateUserDataEngineConfigResponse UpdateUserDataEngineConfig(Models\UpdateUserDataEngineConfigRequest $req) This API is used to modify the custom configuration of the user's engine.
  * @method Models\UpgradeDataEngineImageResponse UpgradeDataEngineImage(Models\UpgradeDataEngineImageRequest $req) This API is used to upgrade the engine image.

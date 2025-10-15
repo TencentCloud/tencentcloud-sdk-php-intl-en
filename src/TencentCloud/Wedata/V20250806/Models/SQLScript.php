@@ -1,0 +1,236 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Wedata\V20250806\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * Explore data script business processing entity.
+ *
+ * @method string getScriptId() Obtain Script id.
+
+ * @method void setScriptId(string $ScriptId) Set Script id.
+
+ * @method string getScriptName() Obtain Script name.
+
+ * @method void setScriptName(string $ScriptName) Set Script name.
+
+ * @method string getOwnerUin() Obtain Specifies the script owner uin.
+
+ * @method void setOwnerUin(string $OwnerUin) Set Specifies the script owner uin.
+
+ * @method string getParentFolderPath() Obtain Parent folder path, /aaa/bbb/ccc.
+
+ * @method void setParentFolderPath(string $ParentFolderPath) Set Parent folder path, /aaa/bbb/ccc.
+
+ * @method SQLScriptConfig getScriptConfig() Obtain Specifies the script configuration.
+
+ * @method void setScriptConfig(SQLScriptConfig $ScriptConfig) Set Specifies the script configuration.
+
+ * @method string getScriptContent() Obtain Specifies the script content.
+
+ * @method void setScriptContent(string $ScriptContent) Set Specifies the script content.
+
+ * @method string getUpdateUserUin() Obtain Latest operator.
+
+ * @method void setUpdateUserUin(string $UpdateUserUin) Set Latest operator.
+
+ * @method string getProjectId() Obtain Project ID.
+
+
+ * @method void setProjectId(string $ProjectId) Set Project ID.
+
+
+ * @method string getUpdateTime() Obtain Update time. format: yyyy-MM-dd hh:MM:ss.
+
+ * @method void setUpdateTime(string $UpdateTime) Set Update time. format: yyyy-MM-dd hh:MM:ss.
+
+ * @method string getCreateTime() Obtain Creation time. format: yyyy-MM-dd hh:MM:ss.
+
+ * @method void setCreateTime(string $CreateTime) Set Creation time. format: yyyy-MM-dd hh:MM:ss.
+
+ * @method string getAccessScope() Obtain Access permission: SHARED, PRIVATE.
+
+ * @method void setAccessScope(string $AccessScope) Set Access permission: SHARED, PRIVATE.
+
+ * @method string getPath() Obtain Full path of the node, /aaa/bbb/ccc.ipynb, consists of the name of each node.
+
+ * @method void setPath(string $Path) Set Full path of the node, /aaa/bbb/ccc.ipynb, consists of the name of each node.
+ */
+class SQLScript extends AbstractModel
+{
+    /**
+     * @var string Script id.
+
+     */
+    public $ScriptId;
+
+    /**
+     * @var string Script name.
+
+     */
+    public $ScriptName;
+
+    /**
+     * @var string Specifies the script owner uin.
+
+     */
+    public $OwnerUin;
+
+    /**
+     * @var string Parent folder path, /aaa/bbb/ccc.
+
+     */
+    public $ParentFolderPath;
+
+    /**
+     * @var SQLScriptConfig Specifies the script configuration.
+
+     */
+    public $ScriptConfig;
+
+    /**
+     * @var string Specifies the script content.
+
+     */
+    public $ScriptContent;
+
+    /**
+     * @var string Latest operator.
+
+     */
+    public $UpdateUserUin;
+
+    /**
+     * @var string Project ID.
+
+
+     */
+    public $ProjectId;
+
+    /**
+     * @var string Update time. format: yyyy-MM-dd hh:MM:ss.
+
+     */
+    public $UpdateTime;
+
+    /**
+     * @var string Creation time. format: yyyy-MM-dd hh:MM:ss.
+
+     */
+    public $CreateTime;
+
+    /**
+     * @var string Access permission: SHARED, PRIVATE.
+
+     */
+    public $AccessScope;
+
+    /**
+     * @var string Full path of the node, /aaa/bbb/ccc.ipynb, consists of the name of each node.
+
+     */
+    public $Path;
+
+    /**
+     * @param string $ScriptId Script id.
+
+     * @param string $ScriptName Script name.
+
+     * @param string $OwnerUin Specifies the script owner uin.
+
+     * @param string $ParentFolderPath Parent folder path, /aaa/bbb/ccc.
+
+     * @param SQLScriptConfig $ScriptConfig Specifies the script configuration.
+
+     * @param string $ScriptContent Specifies the script content.
+
+     * @param string $UpdateUserUin Latest operator.
+
+     * @param string $ProjectId Project ID.
+
+
+     * @param string $UpdateTime Update time. format: yyyy-MM-dd hh:MM:ss.
+
+     * @param string $CreateTime Creation time. format: yyyy-MM-dd hh:MM:ss.
+
+     * @param string $AccessScope Access permission: SHARED, PRIVATE.
+
+     * @param string $Path Full path of the node, /aaa/bbb/ccc.ipynb, consists of the name of each node.
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("ScriptId",$param) and $param["ScriptId"] !== null) {
+            $this->ScriptId = $param["ScriptId"];
+        }
+
+        if (array_key_exists("ScriptName",$param) and $param["ScriptName"] !== null) {
+            $this->ScriptName = $param["ScriptName"];
+        }
+
+        if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
+            $this->OwnerUin = $param["OwnerUin"];
+        }
+
+        if (array_key_exists("ParentFolderPath",$param) and $param["ParentFolderPath"] !== null) {
+            $this->ParentFolderPath = $param["ParentFolderPath"];
+        }
+
+        if (array_key_exists("ScriptConfig",$param) and $param["ScriptConfig"] !== null) {
+            $this->ScriptConfig = new SQLScriptConfig();
+            $this->ScriptConfig->deserialize($param["ScriptConfig"]);
+        }
+
+        if (array_key_exists("ScriptContent",$param) and $param["ScriptContent"] !== null) {
+            $this->ScriptContent = $param["ScriptContent"];
+        }
+
+        if (array_key_exists("UpdateUserUin",$param) and $param["UpdateUserUin"] !== null) {
+            $this->UpdateUserUin = $param["UpdateUserUin"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("AccessScope",$param) and $param["AccessScope"] !== null) {
+            $this->AccessScope = $param["AccessScope"];
+        }
+
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
+        }
+    }
+}

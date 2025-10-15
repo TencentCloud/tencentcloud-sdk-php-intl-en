@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method StaticImageSettings getStaticImageSettings() Obtain Static graphic overlay configuration.
  * @method void setStaticImageSettings(StaticImageSettings $StaticImageSettings) Set Static graphic overlay configuration.
+ * @method MotionGraphicsSetting getMotionGraphicsSettings() Obtain Dynamic graphic overlay configuration.
+ * @method void setMotionGraphicsSettings(MotionGraphicsSetting $MotionGraphicsSettings) Set Dynamic graphic overlay configuration.
+ * @method ThumbnailSettings getThumbnailSettings() Obtain Thumbnail Configuration.
+ * @method void setThumbnailSettings(ThumbnailSettings $ThumbnailSettings) Set Thumbnail Configuration.
  */
 class GeneralSetting extends AbstractModel
 {
@@ -31,7 +35,19 @@ class GeneralSetting extends AbstractModel
     public $StaticImageSettings;
 
     /**
+     * @var MotionGraphicsSetting Dynamic graphic overlay configuration.
+     */
+    public $MotionGraphicsSettings;
+
+    /**
+     * @var ThumbnailSettings Thumbnail Configuration.
+     */
+    public $ThumbnailSettings;
+
+    /**
      * @param StaticImageSettings $StaticImageSettings Static graphic overlay configuration.
+     * @param MotionGraphicsSetting $MotionGraphicsSettings Dynamic graphic overlay configuration.
+     * @param ThumbnailSettings $ThumbnailSettings Thumbnail Configuration.
      */
     function __construct()
     {
@@ -49,6 +65,16 @@ class GeneralSetting extends AbstractModel
         if (array_key_exists("StaticImageSettings",$param) and $param["StaticImageSettings"] !== null) {
             $this->StaticImageSettings = new StaticImageSettings();
             $this->StaticImageSettings->deserialize($param["StaticImageSettings"]);
+        }
+
+        if (array_key_exists("MotionGraphicsSettings",$param) and $param["MotionGraphicsSettings"] !== null) {
+            $this->MotionGraphicsSettings = new MotionGraphicsSetting();
+            $this->MotionGraphicsSettings->deserialize($param["MotionGraphicsSettings"]);
+        }
+
+        if (array_key_exists("ThumbnailSettings",$param) and $param["ThumbnailSettings"] !== null) {
+            $this->ThumbnailSettings = new ThumbnailSettings();
+            $this->ThumbnailSettings->deserialize($param["ThumbnailSettings"]);
         }
     }
 }

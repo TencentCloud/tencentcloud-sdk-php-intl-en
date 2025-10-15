@@ -30,8 +30,8 @@ Note: different DRM manufacturers have different limitations on the number of su
  * @method void setKeyServerUrl(string $KeyServerUrl) Set DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
 Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
- * @method string getVector() Obtain Encryption initialization vector (32-byte string). the field content is user-customized.
- * @method void setVector(string $Vector) Set Encryption initialization vector (32-byte string). the field content is user-customized.
+ * @method string getVector() Obtain Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
+ * @method void setVector(string $Vector) Set Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
  * @method string getEncryptionMethod() Obtain Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
 
 cbcs: supported by PlayReady, Widevine, and FairPlay
@@ -64,7 +64,7 @@ Note: different DRM manufacturers have different limitations on the number of su
     public $KeyServerUrl;
 
     /**
-     * @var string Encryption initialization vector (32-byte string). the field content is user-customized.
+     * @var string Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
      */
     public $Vector;
 
@@ -90,7 +90,7 @@ It supports 1 to 128 characters consisting of digits, letters, underscores (_), 
      * @param string $KeyServerUrl DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
 Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
-     * @param string $Vector Encryption initialization vector (32-byte string). the field content is user-customized.
+     * @param string $Vector Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
      * @param string $EncryptionMethod Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
 
 cbcs: supported by PlayReady, Widevine, and FairPlay
