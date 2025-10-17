@@ -26,10 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecutionEndDate(string $ExecutionEndDate) Set End date for querying the event execution plan, with a maximum query span of 30 days.
  * @method string getInstanceId() Obtain Specifies the instance ID. Example: crs-xjhsdj****. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
  * @method void setInstanceId(string $InstanceId) Set Specifies the instance ID. Example: crs-xjhsdj****. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
- * @method integer getPageSize() Obtain Number of events displayed per page. Default value: 10. Maximum value: 100.
- * @method void setPageSize(integer $PageSize) Set Number of events displayed per page. Default value: 10. Maximum value: 100.
- * @method integer getPageNo() Obtain Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1.
- * @method void setPageNo(integer $PageNo) Set Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1.
+ * @method integer getPageSize() Obtain Outputs the number of events displayed per page.
+- Default value: 10.
+- Value range: [1, 100].
+ * @method void setPageSize(integer $PageSize) Set Outputs the number of events displayed per page.
+- Default value: 10.
+- Value range: [1, 100].
+ * @method integer getPageNo() Obtain Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+- Default value: 1.
+- Value range: positive integers greater than 0.
+ * @method void setPageNo(integer $PageNo) Set Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+- Default value: 1.
+- Value range: positive integers greater than 0.
  * @method array getStatus() Obtain Current status of the event.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event is completed.- Canceled: Execution of the event is canceled.
  * @method void setStatus(array $Status) Set Current status of the event.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event is completed.- Canceled: Execution of the event is canceled.
  * @method array getEventTypes() Obtain Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
@@ -55,12 +63,16 @@ class DescribeInstanceEventsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Number of events displayed per page. Default value: 10. Maximum value: 100.
+     * @var integer Outputs the number of events displayed per page.
+- Default value: 10.
+- Value range: [1, 100].
      */
     public $PageSize;
 
     /**
-     * @var integer Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1.
+     * @var integer Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+- Default value: 1.
+- Value range: positive integers greater than 0.
      */
     public $PageNo;
 
@@ -83,8 +95,12 @@ class DescribeInstanceEventsRequest extends AbstractModel
      * @param string $ExecutionStartDate Start date for querying the event execution plan, with a maximum query span of 30 days.
      * @param string $ExecutionEndDate End date for querying the event execution plan, with a maximum query span of 30 days.
      * @param string $InstanceId Specifies the instance ID. Example: crs-xjhsdj****. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-     * @param integer $PageSize Number of events displayed per page. Default value: 10. Maximum value: 100.
-     * @param integer $PageNo Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1.
+     * @param integer $PageSize Outputs the number of events displayed per page.
+- Default value: 10.
+- Value range: [1, 100].
+     * @param integer $PageNo Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+- Default value: 1.
+- Value range: positive integers greater than 0.
      * @param array $Status Current status of the event.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event is completed.- Canceled: Execution of the event is canceled.
      * @param array $EventTypes Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
      * @param array $Grades Configures the level of the queried event. Events are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical- High- Medium- Low

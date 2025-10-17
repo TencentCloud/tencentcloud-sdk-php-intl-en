@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) Set Start time of a slow query, with a maximum query span of 30 days.
  * @method string getEndTime() Obtain End time of a slow query, with a maximum query span of 30 days.
  * @method void setEndTime(string $EndTime) Set End time of a slow query, with a maximum query span of 30 days.
- * @method integer getMinQueryTime() Obtain Slow query threshold  in milliseconds
- * @method void setMinQueryTime(integer $MinQueryTime) Set Slow query threshold  in milliseconds
- * @method integer getLimit() Obtain Number of tasks output on each page. Default value: 20. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of tasks output on each page. Default value: 20. Maximum value: 100.
- * @method integer getOffset() Obtain Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
- * @method void setOffset(integer $Offset) Set Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+ * @method integer getMinQueryTime() Obtain Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
+ * @method void setMinQueryTime(integer $MinQueryTime) Set Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
+ * @method integer getLimit() Obtain Size of the output task list per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
+ * @method void setLimit(integer $Limit) Set Size of the output task list per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
+ * @method integer getOffset() Obtain Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
  */
 class DescribeProxySlowLogRequest extends AbstractModel
 {
@@ -54,17 +54,17 @@ class DescribeProxySlowLogRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer Slow query threshold  in milliseconds
+     * @var integer Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
      */
     public $MinQueryTime;
 
     /**
-     * @var integer Number of tasks output on each page. Default value: 20. Maximum value: 100.
+     * @var integer Size of the output task list per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
      */
     public $Limit;
 
     /**
-     * @var integer Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+     * @var integer Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
      */
     public $Offset;
 
@@ -73,9 +73,9 @@ class DescribeProxySlowLogRequest extends AbstractModel
 
      * @param string $BeginTime Start time of a slow query, with a maximum query span of 30 days.
      * @param string $EndTime End time of a slow query, with a maximum query span of 30 days.
-     * @param integer $MinQueryTime Slow query threshold  in milliseconds
-     * @param integer $Limit Number of tasks output on each page. Default value: 20. Maximum value: 100.
-     * @param integer $Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+     * @param integer $MinQueryTime Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
+     * @param integer $Limit Size of the output task list per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
+     * @param integer $Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
      */
     function __construct()
     {

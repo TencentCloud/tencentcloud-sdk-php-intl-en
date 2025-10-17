@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Specifies the instance ID. Example: crs-xjhsdj****. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis#/) and copy the instance ID in the instance list.
  * @method void setInstanceId(string $InstanceId) Set Specifies the instance ID. Example: crs-xjhsdj****. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis#/) and copy the instance ID in the instance list.
- * @method integer getEventId() Obtain Event ID. Obtain the ID of the event to be modified using DescribeInstanceEvents.
- * @method void setEventId(integer $EventId) Set Event ID. Obtain the ID of the event to be modified using DescribeInstanceEvents.
+ * @method integer getEventId() Obtain Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
+ * @method void setEventId(integer $EventId) Set Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
  * @method string getStartTime() Obtain Modifies the scheduled start time of event execution.
  * @method void setStartTime(string $StartTime) Set Modifies the scheduled start time of event execution.
  * @method string getEndTime() Obtain Modifies the scheduled end time of event execution. After the start time is configured, the end time can only be 30 minutes, 1 hour, 1.5 hours, 2 hours, or 3 hours later than the start time.
@@ -41,7 +41,7 @@ class ModifyInstanceEventRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Event ID. Obtain the ID of the event to be modified using DescribeInstanceEvents.
+     * @var integer Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
      */
     public $EventId;
 
@@ -67,7 +67,7 @@ class ModifyInstanceEventRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Specifies the instance ID. Example: crs-xjhsdj****. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis#/) and copy the instance ID in the instance list.
-     * @param integer $EventId Event ID. Obtain the ID of the event to be modified using DescribeInstanceEvents.
+     * @param integer $EventId Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
      * @param string $StartTime Modifies the scheduled start time of event execution.
      * @param string $EndTime Modifies the scheduled end time of event execution. After the start time is configured, the end time can only be 30 minutes, 1 hour, 1.5 hours, 2 hours, or 3 hours later than the start time.
      * @param string $ExecutionDate Modifies the start date of the event execution schedule.

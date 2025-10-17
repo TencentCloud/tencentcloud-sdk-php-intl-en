@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceSecurityGroup request structure.
  *
- * @method array getInstanceIds() Obtain Instance ID list, with the array length ranging from 0 to 100, for example, ["crs-f2ho5rsz\n"].
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID list, with the array length ranging from 0 to 100, for example, ["crs-f2ho5rsz\n"].
+ * @method array getInstanceIds() Obtain Instance ID list. The array length limit is [0, 100]. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the instance ID from the instance list.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID list. The array length limit is [0, 100]. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the instance ID from the instance list.
  */
 class DescribeInstanceSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var array Instance ID list, with the array length ranging from 0 to 100, for example, ["crs-f2ho5rsz\n"].
+     * @var array Instance ID list. The array length limit is [0, 100]. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the instance ID from the instance list.
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds Instance ID list, with the array length ranging from 0 to 100, for example, ["crs-f2ho5rsz\n"].
+     * @param array $InstanceIds Instance ID list. The array length limit is [0, 100]. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the instance ID from the instance list.
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
  * @method void setInstanceId(string $InstanceId) Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
- * @method integer getLimit() Obtain Number of entries per page
- * @method void setLimit(integer $Limit) Set Number of entries per page
+ * @method integer getLimit() Obtain Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
+ * @method void setLimit(integer $Limit) Set Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
  * @method integer getOffset() Obtain Pagination offset,  which is an integral multiple of `Limit`.  Calculation formula:  `offset` = `limit` * (page number - 1).
  * @method void setOffset(integer $Offset) Set Pagination offset,  which is an integral multiple of `Limit`.  Calculation formula:  `offset` = `limit` * (page number - 1).
  */
@@ -35,7 +35,7 @@ class DescribeInstanceAccountRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Number of entries per page
+     * @var integer Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
      */
     public $Limit;
 
@@ -46,7 +46,7 @@ class DescribeInstanceAccountRequest extends AbstractModel
 
     /**
      * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-     * @param integer $Limit Number of entries per page
+     * @param integer $Limit Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
      * @param integer $Offset Pagination offset,  which is an integral multiple of `Limit`.  Calculation formula:  `offset` = `limit` * (page number - 1).
      */
     function __construct()

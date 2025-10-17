@@ -22,14 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
  * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
- * @method string getPassword() Obtain Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
- * @method void setPassword(string $Password) Set Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
+ * @method string getPassword() Obtain Reset password. This parameter can be left unspecified when a password-free instance is used.
+- It should contain 8 to 32 characters. 12 or more characters are recommended.
+- It cannot start with a forward slash (/).
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
+ * @method void setPassword(string $Password) Set Reset password. This parameter can be left unspecified when a password-free instance is used.
+- It should contain 8 to 32 characters. 12 or more characters are recommended.
+- It cannot start with a forward slash (/).
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
  * @method boolean getNoAuth() Obtain Whether to switch to a password-free instance.
-- false: Switch to a non-password-free instance.
-- true: Switch to a password-free instance. Default value: false.
+- false: switch to an instance that requires a password. The default value is false.
+- true: switch to a password-free instance.
  * @method void setNoAuth(boolean $NoAuth) Set Whether to switch to a password-free instance.
-- false: Switch to a non-password-free instance.
-- true: Switch to a password-free instance. Default value: false.
+- false: switch to an instance that requires a password. The default value is false.
+- true: switch to a password-free instance.
+ * @method boolean getEncryptPassword() Obtain Whether to encrypt the password.
+- false: non-encrypted password. The default value is false.
+- true: encrypted password.
+ * @method void setEncryptPassword(boolean $EncryptPassword) Set Whether to encrypt the password.
+- false: non-encrypted password. The default value is false.
+- true: encrypted password.
  */
 class ResetPasswordRequest extends AbstractModel
 {
@@ -39,23 +51,39 @@ class ResetPasswordRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
+     * @var string Reset password. This parameter can be left unspecified when a password-free instance is used.
+- It should contain 8 to 32 characters. 12 or more characters are recommended.
+- It cannot start with a forward slash (/).
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
      */
     public $Password;
 
     /**
      * @var boolean Whether to switch to a password-free instance.
-- false: Switch to a non-password-free instance.
-- true: Switch to a password-free instance. Default value: false.
+- false: switch to an instance that requires a password. The default value is false.
+- true: switch to a password-free instance.
      */
     public $NoAuth;
 
     /**
+     * @var boolean Whether to encrypt the password.
+- false: non-encrypted password. The default value is false.
+- true: encrypted password.
+     */
+    public $EncryptPassword;
+
+    /**
      * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
-     * @param string $Password Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
+     * @param string $Password Reset password. This parameter can be left unspecified when a password-free instance is used.
+- It should contain 8 to 32 characters. 12 or more characters are recommended.
+- It cannot start with a forward slash (/).
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
      * @param boolean $NoAuth Whether to switch to a password-free instance.
-- false: Switch to a non-password-free instance.
-- true: Switch to a password-free instance. Default value: false.
+- false: switch to an instance that requires a password. The default value is false.
+- true: switch to a password-free instance.
+     * @param boolean $EncryptPassword Whether to encrypt the password.
+- false: non-encrypted password. The default value is false.
+- true: encrypted password.
      */
     function __construct()
     {
@@ -80,6 +108,10 @@ class ResetPasswordRequest extends AbstractModel
 
         if (array_key_exists("NoAuth",$param) and $param["NoAuth"] !== null) {
             $this->NoAuth = $param["NoAuth"];
+        }
+
+        if (array_key_exists("EncryptPassword",$param) and $param["EncryptPassword"] !== null) {
+            $this->EncryptPassword = $param["EncryptPassword"];
         }
     }
 }

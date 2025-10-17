@@ -20,12 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateParamTemplate request structure.
  *
- * @method string getName() Obtain Parameter template name.
- * @method void setName(string $Name) Set Parameter template name.
+ * @method string getName() Obtain Parameter template name, which can contain [2, 64] characters.
+ * @method void setName(string $Name) Set Parameter template name, which can contain [2, 64] characters.
  * @method string getDescription() Obtain Parameter template description.
  * @method void setDescription(string $Description) Set Parameter template description.
  * @method integer getProductType() Obtain Product type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
 - 6: Redis 4.0 Memory Edition (standard architecture).
 - 7: Redis 4.0 Memory Edition (cluster architecture).
 - 8: Redis 5.0 Memory Edition (standard architecture).
@@ -35,7 +34,6 @@ use TencentCloud\Common\AbstractModel;
 - 17: Redis 7.0 Memory Edition (standard architecture).
 - 18: Redis 7.0 Memory Edition (cluster architecture).
  * @method void setProductType(integer $ProductType) Set Product type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
 - 6: Redis 4.0 Memory Edition (standard architecture).
 - 7: Redis 4.0 Memory Edition (cluster architecture).
 - 8: Redis 5.0 Memory Edition (standard architecture).
@@ -52,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Parameter template name.
+     * @var string Parameter template name, which can contain [2, 64] characters.
      */
     public $Name;
 
@@ -63,7 +61,6 @@ class CreateParamTemplateRequest extends AbstractModel
 
     /**
      * @var integer Product type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
 - 6: Redis 4.0 Memory Edition (standard architecture).
 - 7: Redis 4.0 Memory Edition (cluster architecture).
 - 8: Redis 5.0 Memory Edition (standard architecture).
@@ -86,10 +83,9 @@ class CreateParamTemplateRequest extends AbstractModel
     public $ParamList;
 
     /**
-     * @param string $Name Parameter template name.
+     * @param string $Name Parameter template name, which can contain [2, 64] characters.
      * @param string $Description Parameter template description.
      * @param integer $ProductType Product type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
 - 6: Redis 4.0 Memory Edition (standard architecture).
 - 7: Redis 4.0 Memory Edition (cluster architecture).
 - 8: Redis 5.0 Memory Edition (standard architecture).

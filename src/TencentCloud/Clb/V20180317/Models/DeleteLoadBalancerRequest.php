@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLoadBalancer request structure.
  *
- * @method array getLoadBalancerIds() Obtain CLB instance ID array to be deleted, which can be obtained by calling the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API. The array can include up to 20 elements.
- * @method void setLoadBalancerIds(array $LoadBalancerIds) Set CLB instance ID array to be deleted, which can be obtained by calling the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API. The array can include up to 20 elements.
+ * @method array getLoadBalancerIds() Obtain CLB instance ID array to be deleted, which can be obtained by calling the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API. The array can include up to 20 elements.
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set CLB instance ID array to be deleted, which can be obtained by calling the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API. The array can include up to 20 elements.
  * @method boolean getForceDelete() Obtain Whether to forcibly delete the CLB instance. True indicates forced deletion; False indicates non-forced deletion, and blocking verification is required.
 The default value is False.
 The deletion operation is blocked by default in the following cases. If you confirm forced deletion, the value of the forced verification parameter ForceDelete should be set to True.
@@ -38,7 +38,7 @@ The deletion operation is blocked by default in the following cases. If you conf
 class DeleteLoadBalancerRequest extends AbstractModel
 {
     /**
-     * @var array CLB instance ID array to be deleted, which can be obtained by calling the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API. The array can include up to 20 elements.
+     * @var array CLB instance ID array to be deleted, which can be obtained by calling the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API. The array can include up to 20 elements.
      */
     public $LoadBalancerIds;
 
@@ -53,7 +53,7 @@ The deletion operation is blocked by default in the following cases. If you conf
     public $ForceDelete;
 
     /**
-     * @param array $LoadBalancerIds CLB instance ID array to be deleted, which can be obtained by calling the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API. The array can include up to 20 elements.
+     * @param array $LoadBalancerIds CLB instance ID array to be deleted, which can be obtained by calling the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API. The array can include up to 20 elements.
      * @param boolean $ForceDelete Whether to forcibly delete the CLB instance. True indicates forced deletion; False indicates non-forced deletion, and blocking verification is required.
 The default value is False.
 The deletion operation is blocked by default in the following cases. If you confirm forced deletion, the value of the forced verification parameter ForceDelete should be set to True.

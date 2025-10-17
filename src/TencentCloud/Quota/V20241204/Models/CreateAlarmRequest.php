@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setThreshold(integer $Threshold) Set Specifies the Alarm threshold. value range: 0-100.
  * @method integer getFrequency() Obtain Alarm frequency.
  * @method void setFrequency(integer $Frequency) Set Alarm frequency.
- * @method integer getMemberUin() Obtain   Member UIN
- * @method void setMemberUin(integer $MemberUin) Set   Member UIN
+ * @method integer getMemberUin() Obtain   Member UIN.
+ * @method void setMemberUin(integer $MemberUin) Set   Member UIN.
  */
 class CreateAlarmRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class CreateAlarmRequest extends AbstractModel
     public $Frequency;
 
     /**
-     * @var integer   Member UIN
+     * @var integer   Member UIN.
      */
     public $MemberUin;
 
@@ -79,7 +79,7 @@ class CreateAlarmRequest extends AbstractModel
      * @param integer $Metrics Alert metrics 1: quota usage 2: quota usage rate 3: remaining quota 4: remaining quota rate.
      * @param integer $Threshold Specifies the Alarm threshold. value range: 0-100.
      * @param integer $Frequency Alarm frequency.
-     * @param integer $MemberUin   Member UIN
+     * @param integer $MemberUin   Member UIN.
      */
     function __construct()
     {

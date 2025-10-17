@@ -49,7 +49,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeCommonDBInstancesResponse DescribeCommonDBInstances(Models\DescribeCommonDBInstancesRequest $req) This API is used to query the list of Redis instances. It is now deprecated.
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) This API is used to query the security group details of an instance.
  * @method Models\DescribeGlobalReplicationAreaResponse DescribeGlobalReplicationArea(Models\DescribeGlobalReplicationAreaRequest $req) This API is used to query the information on regions supported for global replication.
- * @method Models\DescribeInstanceAccountResponse DescribeInstanceAccount(Models\DescribeInstanceAccountRequest $req) This API is used to query the information of an instance sub-account.
+ * @method Models\DescribeInstanceAccountResponse DescribeInstanceAccount(Models\DescribeInstanceAccountRequest $req) This API is used to view instance account information.
  * @method Models\DescribeInstanceBackupsResponse DescribeInstanceBackups(Models\DescribeInstanceBackupsRequest $req) This API is used to query the backup list of an instance.
  * @method Models\DescribeInstanceDTSInfoResponse DescribeInstanceDTSInfo(Models\DescribeInstanceDTSInfoRequest $req) This API is used to query instance DTS information.
  * @method Models\DescribeInstanceDealDetailResponse DescribeInstanceDealDetail(Models\DescribeInstanceDealDetailRequest $req) This API is used to query the order information.
@@ -84,7 +84,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeReplicationGroupResponse DescribeReplicationGroup(Models\DescribeReplicationGroupRequest $req) This API is used to query a replication group.
  * @method Models\DescribeReplicationGroupInstanceResponse DescribeReplicationGroupInstance(Models\DescribeReplicationGroupInstanceRequest $req) This API is used to query replication group information.
  * @method Models\DescribeSSLStatusResponse DescribeSSLStatus(Models\DescribeSSLStatusRequest $req) This API is used to query the SSL authentication information of an instance, such as enablement status, configuration status, and certificate address.
- * @method Models\DescribeSecondLevelBackupInfoResponse DescribeSecondLevelBackupInfo(Models\DescribeSecondLevelBackupInfoRequest $req) This API is used to query the second-level backup information on an instance.
+ * @method Models\DescribeSecondLevelBackupInfoResponse DescribeSecondLevelBackupInfo(Models\DescribeSecondLevelBackupInfoRequest $req) This API is used to query second-level backup information for the instance.
  * @method Models\DescribeSlowLogResponse DescribeSlowLog(Models\DescribeSlowLogRequest $req) This API is used to query the records of slow query.
  * @method Models\DescribeTaskInfoResponse DescribeTaskInfo(Models\DescribeTaskInfoRequest $req) This API is used to get the execution of a specified task.
  * @method Models\DescribeTaskListResponse DescribeTaskList(Models\DescribeTaskListRequest $req) This API is used to query the task list data for the last 30 days.
@@ -104,9 +104,9 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ModifyConnectionConfigResponse ModifyConnectionConfig(Models\ModifyConnectionConfigRequest $req) This API is used to modify the connection configuration of an instance, including the bandwidth and maximum number of connections.
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) This API is used to modify the original security group list of an instance.
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) This API is used to modify instance information.
- * @method Models\ModifyInstanceAccountResponse ModifyInstanceAccount(Models\ModifyInstanceAccountRequest $req) This API is used to modify the instance sub-account.
+ * @method Models\ModifyInstanceAccountResponse ModifyInstanceAccount(Models\ModifyInstanceAccountRequest $req) This API is used to modify an instance account.
  * @method Models\ModifyInstanceAvailabilityZonesResponse ModifyInstanceAvailabilityZones(Models\ModifyInstanceAvailabilityZonesRequest $req) This API is used to change the availability zone of the instance.
- * @method Models\ModifyInstanceBackupModeResponse ModifyInstanceBackupMode(Models\ModifyInstanceBackupModeRequest $req) This API is used to modify the instance backup mode.
+ * @method Models\ModifyInstanceBackupModeResponse ModifyInstanceBackupMode(Models\ModifyInstanceBackupModeRequest $req) This API is used to modify the backup mode of an instance.
  * @method Models\ModifyInstanceEventResponse ModifyInstanceEvent(Models\ModifyInstanceEventRequest $req) This API is used to modify the operations event execution schedule of an instance.
  * @method Models\ModifyInstanceLogDeliveryResponse ModifyInstanceLogDelivery(Models\ModifyInstanceLogDeliveryRequest $req) This API is used to enable or disable the shipping of instance logs to CLS.
  * @method Models\ModifyInstanceParamsResponse ModifyInstanceParams(Models\ModifyInstanceParamsRequest $req) This API is used to modify the parameter configuration of a Redis instance.

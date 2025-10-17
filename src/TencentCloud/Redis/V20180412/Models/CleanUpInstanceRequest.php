@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CleanUpInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
- * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console recycle bin](https://console.cloud.tencent.com/redis/recycle), and copy it from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console recycle bin](https://console.cloud.tencent.com/redis/recycle), and copy it from the instance list.
  */
 class CleanUpInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @var string Instance ID. Log in to the [Redis console recycle bin](https://console.cloud.tencent.com/redis/recycle), and copy it from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param string $InstanceId Instance ID. Log in to the [Redis console recycle bin](https://console.cloud.tencent.com/redis/recycle), and copy it from the instance list.
      */
     function __construct()
     {

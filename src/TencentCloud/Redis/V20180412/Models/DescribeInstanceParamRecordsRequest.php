@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceParamRecords request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getLimit() Obtain Maximum number of results returned per page
- * @method void setLimit(integer $Limit) Set Maximum number of results returned per page
- * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`.
- * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+ * @method integer getLimit() Obtain Pagination size. The default value is 100, and the maximum value is 200.
+ * @method void setLimit(integer $Limit) Set Pagination size. The default value is 100, and the maximum value is 200.
+ * @method integer getOffset() Obtain Offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
+ * @method void setOffset(integer $Offset) Set Offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
  */
 class DescribeInstanceParamRecordsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var integer Maximum number of results returned per page
+     * @var integer Pagination size. The default value is 100, and the maximum value is 200.
      */
     public $Limit;
 
     /**
-     * @var integer Offset, which is an integral multiple of `Limit`.
+     * @var integer Offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
      */
     public $Offset;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param integer $Limit Maximum number of results returned per page
-     * @param integer $Offset Offset, which is an integral multiple of `Limit`.
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+     * @param integer $Limit Pagination size. The default value is 100, and the maximum value is 200.
+     * @param integer $Offset Offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
      */
     function __construct()
     {

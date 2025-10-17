@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceBackupMode request structure.
  *
- * @method string getInstanceId() Obtain Instance ID, which can contain 12 to 36 characters.
- * @method void setInstanceId(string $InstanceId) Set Instance ID, which can contain 12 to 36 characters.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
  * @method string getBackupMode() Obtain Backup mode:
- - SecondLevelBackup: second-level backup.
- - NormalLevelBackup: ordinary backup.
+- SecondLevelBackup: second-level backup.
+- NormalLevelBackup: ordinary backup.
  * @method void setBackupMode(string $BackupMode) Set Backup mode:
- - SecondLevelBackup: second-level backup.
- - NormalLevelBackup: ordinary backup.
+- SecondLevelBackup: second-level backup.
+- NormalLevelBackup: ordinary backup.
  */
 class ModifyInstanceBackupModeRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID, which can contain 12 to 36 characters.
+     * @var string Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
      */
     public $InstanceId;
 
     /**
      * @var string Backup mode:
- - SecondLevelBackup: second-level backup.
- - NormalLevelBackup: ordinary backup.
+- SecondLevelBackup: second-level backup.
+- NormalLevelBackup: ordinary backup.
      */
     public $BackupMode;
 
     /**
-     * @param string $InstanceId Instance ID, which can contain 12 to 36 characters.
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
      * @param string $BackupMode Backup mode:
- - SecondLevelBackup: second-level backup.
- - NormalLevelBackup: ordinary backup.
+- SecondLevelBackup: second-level backup.
+- NormalLevelBackup: ordinary backup.
      */
     function __construct()
     {

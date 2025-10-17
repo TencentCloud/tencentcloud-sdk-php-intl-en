@@ -21,17 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * ModifyInstance request structure.
  *
  * @method string getOperation() Obtain Instance modification operation. Valid values:
-- rename: Rename the instance.
-- modifyProject: Modify the project to which the instance belongs.
-- modifyAutoRenew: Modify the instance renewal flag.
+- rename: rename an instance.
+- modifyProject: modify the project to which the instance belongs.
+- modifyAutoRenew: modify the instance renewal flag.
+- modifyDeleteProtectionSwitch: modify the instance deletion protection switch status.
  * @method void setOperation(string $Operation) Set Instance modification operation. Valid values:
-- rename: Rename the instance.
-- modifyProject: Modify the project to which the instance belongs.
-- modifyAutoRenew: Modify the instance renewal flag.
+- rename: rename an instance.
+- modifyProject: modify the project to which the instance belongs.
+- modifyAutoRenew: modify the instance renewal flag.
+- modifyDeleteProtectionSwitch: modify the instance deletion protection switch status.
  * @method array getInstanceIds() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. The maximum number of instances per request is 10.
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. The maximum number of instances per request is 10.
- * @method array getInstanceNames() Obtain New name of the instance.
- * @method void setInstanceNames(array $InstanceNames) Set New name of the instance.
+ * @method array getInstanceNames() Obtain New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
+ * @method void setInstanceNames(array $InstanceNames) Set New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
  * @method integer getProjectId() Obtain Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
  * @method void setProjectId(integer $ProjectId) Set Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
  * @method array getAutoRenews() Obtain Auto-renewal flag.
@@ -44,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 - 0: default status (manual renewal).
 - 1: automatic renewal.
 - 2: no automatic renewal.
+ * @method array getDeleteProtectionSwitches() Obtain Deletion protection switch. - 0: disabled by default; - 1: enabled.
+ * @method void setDeleteProtectionSwitches(array $DeleteProtectionSwitches) Set Deletion protection switch. - 0: disabled by default; - 1: enabled.
  * @method string getInstanceId() Obtain This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
  * @method void setInstanceId(string $InstanceId) Set This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
  * @method string getInstanceName() Obtain Disused
@@ -55,9 +59,10 @@ class ModifyInstanceRequest extends AbstractModel
 {
     /**
      * @var string Instance modification operation. Valid values:
-- rename: Rename the instance.
-- modifyProject: Modify the project to which the instance belongs.
-- modifyAutoRenew: Modify the instance renewal flag.
+- rename: rename an instance.
+- modifyProject: modify the project to which the instance belongs.
+- modifyAutoRenew: modify the instance renewal flag.
+- modifyDeleteProtectionSwitch: modify the instance deletion protection switch status.
      */
     public $Operation;
 
@@ -67,7 +72,7 @@ class ModifyInstanceRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var array New name of the instance.
+     * @var array New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
      */
     public $InstanceNames;
 
@@ -84,6 +89,11 @@ class ModifyInstanceRequest extends AbstractModel
 - 2: no automatic renewal.
      */
     public $AutoRenews;
+
+    /**
+     * @var array Deletion protection switch. - 0: disabled by default; - 1: enabled.
+     */
+    public $DeleteProtectionSwitches;
 
     /**
      * @var string This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
@@ -105,17 +115,19 @@ class ModifyInstanceRequest extends AbstractModel
 
     /**
      * @param string $Operation Instance modification operation. Valid values:
-- rename: Rename the instance.
-- modifyProject: Modify the project to which the instance belongs.
-- modifyAutoRenew: Modify the instance renewal flag.
+- rename: rename an instance.
+- modifyProject: modify the project to which the instance belongs.
+- modifyAutoRenew: modify the instance renewal flag.
+- modifyDeleteProtectionSwitch: modify the instance deletion protection switch status.
      * @param array $InstanceIds Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. The maximum number of instances per request is 10.
-     * @param array $InstanceNames New name of the instance.
+     * @param array $InstanceNames New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
      * @param integer $ProjectId Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
      * @param array $AutoRenews Auto-renewal flag.
 
 - 0: default status (manual renewal).
 - 1: automatic renewal.
 - 2: no automatic renewal.
+     * @param array $DeleteProtectionSwitches Deletion protection switch. - 0: disabled by default; - 1: enabled.
      * @param string $InstanceId This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
      * @param string $InstanceName Disused
      * @param integer $AutoRenew This parameter has been deprecated.
@@ -151,6 +163,10 @@ class ModifyInstanceRequest extends AbstractModel
 
         if (array_key_exists("AutoRenews",$param) and $param["AutoRenews"] !== null) {
             $this->AutoRenews = $param["AutoRenews"];
+        }
+
+        if (array_key_exists("DeleteProtectionSwitches",$param) and $param["DeleteProtectionSwitches"] !== null) {
+            $this->DeleteProtectionSwitches = $param["DeleteProtectionSwitches"];
         }
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {

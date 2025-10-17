@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStartTime() Obtain Start time of the maintenance window, for example, 17:00.
  * @method void setStartTime(string $StartTime) Set Start time of the maintenance window, for example, 17:00.
  * @method string getEndTime() Obtain End time of the maintenance window, for example, 19:00.
+**Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours.
  * @method void setEndTime(string $EndTime) Set End time of the maintenance window, for example, 19:00.
+**Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours.
  */
 class ModifyMaintenanceWindowRequest extends AbstractModel
 {
@@ -41,6 +43,7 @@ class ModifyMaintenanceWindowRequest extends AbstractModel
 
     /**
      * @var string End time of the maintenance window, for example, 19:00.
+**Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours.
      */
     public $EndTime;
 
@@ -48,6 +51,7 @@ class ModifyMaintenanceWindowRequest extends AbstractModel
      * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      * @param string $StartTime Start time of the maintenance window, for example, 17:00.
      * @param string $EndTime End time of the maintenance window, for example, 19:00.
+**Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours.
      */
     function __construct()
     {

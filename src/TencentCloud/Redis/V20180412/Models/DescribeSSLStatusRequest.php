@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSSLStatus request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
  */
 class DescribeSSLStatusRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
      */
     function __construct()
     {

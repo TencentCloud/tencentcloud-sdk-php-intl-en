@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveReplicationGroup request structure.
  *
- * @method string getGroupId() Obtain Replication group ID.
- * @method void setGroupId(string $GroupId) Set Replication group ID.
+ * @method string getGroupId() Obtain Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID.
+ * @method void setGroupId(string $GroupId) Set Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID.
  */
 class RemoveReplicationGroupRequest extends AbstractModel
 {
     /**
-     * @var string Replication group ID.
+     * @var string Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID.
      */
     public $GroupId;
 
     /**
-     * @param string $GroupId Replication group ID.
+     * @param string $GroupId Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID.
      */
     function __construct()
     {

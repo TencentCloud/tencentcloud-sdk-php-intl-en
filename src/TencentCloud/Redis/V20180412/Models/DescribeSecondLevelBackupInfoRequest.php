@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecondLevelBackupInfo request structure.
  *
- * @method string getInstanceId() Obtain Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list.
- * @method void setInstanceId(string $InstanceId) Set Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list.
- * @method integer getBackupTimestamp() Obtain Second-level backup timestamp. The corresponding time should be within the last 7 days.
- * @method void setBackupTimestamp(integer $BackupTimestamp) Set Second-level backup timestamp. The corresponding time should be within the last 7 days.
+ * @method string getInstanceId() Obtain Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+ * @method integer getBackupTimestamp() Obtain Second-level backup timestamp.
+- Setting range: support any second-level time point within 7 days.
+- Timestamp format: UNIX timestamp.
+ * @method void setBackupTimestamp(integer $BackupTimestamp) Set Second-level backup timestamp.
+- Setting range: support any second-level time point within 7 days.
+- Timestamp format: UNIX timestamp.
  */
 class DescribeSecondLevelBackupInfoRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list.
+     * @var string Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var integer Second-level backup timestamp. The corresponding time should be within the last 7 days.
+     * @var integer Second-level backup timestamp.
+- Setting range: support any second-level time point within 7 days.
+- Timestamp format: UNIX timestamp.
      */
     public $BackupTimestamp;
 
     /**
-     * @param string $InstanceId Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list.
-     * @param integer $BackupTimestamp Second-level backup timestamp. The corresponding time should be within the last 7 days.
+     * @param string $InstanceId Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+     * @param integer $BackupTimestamp Second-level backup timestamp.
+- Setting range: support any second-level time point within 7 days.
+- Timestamp format: UNIX timestamp.
      */
     function __construct()
     {

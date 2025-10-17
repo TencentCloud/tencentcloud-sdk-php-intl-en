@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceSupportFeature request structure.
  *
- * @method string getInstanceId() Obtain Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-Sample value: crs-asdasdas.
- * @method void setInstanceId(string $InstanceId) Set Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-Sample value: crs-asdasdas.
- * @method string getFeatureName() Obtain Feature names.
-- Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature.
- * @method void setFeatureName(string $FeatureName) Set Feature names.
-- Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature.
+ * @method string getInstanceId() Obtain Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list.
+ * @method string getFeatureName() Obtain The features that support queries are as follows.
+- read-local-node-only: nearby access.
+- multi-account: multi-account management.
+- auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node.
+ * @method void setFeatureName(string $FeatureName) Set The features that support queries are as follows.
+- read-local-node-only: nearby access.
+- multi-account: multi-account management.
+- auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node.
  */
 class DescribeInstanceSupportFeatureRequest extends AbstractModel
 {
     /**
-     * @var string Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-Sample value: crs-asdasdas.
+     * @var string Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string Feature names.
-- Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature.
+     * @var string The features that support queries are as follows.
+- read-local-node-only: nearby access.
+- multi-account: multi-account management.
+- auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node.
      */
     public $FeatureName;
 
     /**
-     * @param string $InstanceId Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-Sample value: crs-asdasdas.
-     * @param string $FeatureName Feature names.
-- Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature.
+     * @param string $InstanceId Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list.
+     * @param string $FeatureName The features that support queries are as follows.
+- read-local-node-only: nearby access.
+- multi-account: multi-account management.
+- auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node.
      */
     function __construct()
     {

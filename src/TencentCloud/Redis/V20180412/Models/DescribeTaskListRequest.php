@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
  * @method void setInstanceId(string $InstanceId) Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method string getInstanceName() Obtain Instance name. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+ * @method void setInstanceName(string $InstanceName) Set Instance name. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
  * @method integer getLimit() Obtain Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
  * @method void setLimit(integer $Limit) Set Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
- * @method integer getOffset() Obtain Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
- * @method void setOffset(integer $Offset) Set Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+ * @method integer getOffset() Obtain Pagination offset, which is an integer multiple of Limit. Offset = Limit x (Page number – 1). The default value is 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset, which is an integer multiple of Limit. Offset = Limit x (Page number – 1). The default value is 0.
  * @method array getProjectIds() Obtain Project ID. This field has been deprecated. Please ignore it.
  * @method void setProjectIds(array $ProjectIds) Set Project ID. This field has been deprecated. Please ignore it.
  * @method array getTaskTypes() Obtain Task type.
@@ -171,7 +171,7 @@ class DescribeTaskListRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string Instance name. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
      */
     public $InstanceName;
 
@@ -181,7 +181,7 @@ class DescribeTaskListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+     * @var integer Pagination offset, which is an integer multiple of Limit. Offset = Limit x (Page number – 1). The default value is 0.
      */
     public $Offset;
 
@@ -288,9 +288,9 @@ class DescribeTaskListRequest extends AbstractModel
 
     /**
      * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-     * @param string $InstanceName Instance name
+     * @param string $InstanceName Instance name. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
      * @param integer $Limit Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
-     * @param integer $Offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+     * @param integer $Offset Pagination offset, which is an integer multiple of Limit. Offset = Limit x (Page number – 1). The default value is 0.
      * @param array $ProjectIds Project ID. This field has been deprecated. Please ignore it.
      * @param array $TaskTypes Task type.
 

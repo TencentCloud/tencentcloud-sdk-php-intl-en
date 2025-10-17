@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) Set Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
  * @method string getEndTime() Obtain End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
  * @method void setEndTime(string $EndTime) Set End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
- * @method integer getMinQueryTime() Obtain Slow query threshold in ms
- * @method void setMinQueryTime(integer $MinQueryTime) Set Slow query threshold in ms
- * @method integer getLimit() Obtain Page size. Default value 20. Maximum value 100.
- * @method void setLimit(integer $Limit) Set Page size. Default value 20. Maximum value 100.
- * @method integer getOffset() Obtain Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
- * @method void setOffset(integer $Offset) Set Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+ * @method integer getMinQueryTime() Obtain Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
+ * @method void setMinQueryTime(integer $MinQueryTime) Set Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
+ * @method integer getLimit() Obtain Page size. The default value is 20, the minimum value is 1, and the maximum value is 100.
+ * @method void setLimit(integer $Limit) Set Page size. The default value is 20, the minimum value is 1, and the maximum value is 100.
+ * @method integer getOffset() Obtain Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
  */
 class DescribeTendisSlowLogRequest extends AbstractModel
 {
@@ -51,17 +51,17 @@ class DescribeTendisSlowLogRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer Slow query threshold in ms
+     * @var integer Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
      */
     public $MinQueryTime;
 
     /**
-     * @var integer Page size. Default value 20. Maximum value 100.
+     * @var integer Page size. The default value is 20, the minimum value is 1, and the maximum value is 100.
      */
     public $Limit;
 
     /**
-     * @var integer Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+     * @var integer Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
      */
     public $Offset;
 
@@ -69,9 +69,9 @@ class DescribeTendisSlowLogRequest extends AbstractModel
      * @param string $InstanceId Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list.
      * @param string $BeginTime Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
      * @param string $EndTime End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
-     * @param integer $MinQueryTime Slow query threshold in ms
-     * @param integer $Limit Page size. Default value 20. Maximum value 100.
-     * @param integer $Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+     * @param integer $MinQueryTime Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
+     * @param integer $Limit Page size. The default value is 20, the minimum value is 1, and the maximum value is 100.
+     * @param integer $Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
      */
     function __construct()
     {

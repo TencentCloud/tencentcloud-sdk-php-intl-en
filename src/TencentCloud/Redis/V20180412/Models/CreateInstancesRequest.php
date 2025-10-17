@@ -134,6 +134,8 @@ Node information of an instance. Currently, information about the node type (mas
  * @method void setRedisClusterId(string $RedisClusterId) Set Exclusive cluster ID. When `ProductVersion` is set to `cdc`, this parameter is required.
  * @method array getAlarmPolicyList() Obtain Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
  * @method void setAlarmPolicyList(array $AlarmPolicyList) Set Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
+ * @method boolean getEncryptPassword() Obtain Whether to encrypt the password.
+ * @method void setEncryptPassword(boolean $EncryptPassword) Set Whether to encrypt the password.
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -299,6 +301,11 @@ Node information of an instance. Currently, information about the node type (mas
     public $AlarmPolicyList;
 
     /**
+     * @var boolean Whether to encrypt the password.
+     */
+    public $EncryptPassword;
+
+    /**
      * @param integer $TypeId Instance type.
 
 <ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li>Note: CKV editions are currently used by some users and are temporarily retained.</ul>
@@ -356,6 +363,7 @@ Node information of an instance. Currently, information about the node type (mas
  - cloud: cloud native. Currently, this mode is unavailable.
      * @param string $RedisClusterId Exclusive cluster ID. When `ProductVersion` is set to `cdc`, this parameter is required.
      * @param array $AlarmPolicyList Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
+     * @param boolean $EncryptPassword Whether to encrypt the password.
      */
     function __construct()
     {
@@ -482,6 +490,10 @@ Node information of an instance. Currently, information about the node type (mas
 
         if (array_key_exists("AlarmPolicyList",$param) and $param["AlarmPolicyList"] !== null) {
             $this->AlarmPolicyList = $param["AlarmPolicyList"];
+        }
+
+        if (array_key_exists("EncryptPassword",$param) and $param["EncryptPassword"] !== null) {
+            $this->EncryptPassword = $param["EncryptPassword"];
         }
     }
 }

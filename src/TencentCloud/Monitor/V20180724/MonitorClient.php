@@ -38,6 +38,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
  * @method Models\CreateGrafanaNotificationChannelResponse CreateGrafanaNotificationChannel(Models\CreateGrafanaNotificationChannelRequest $req) This API is used to create a Grafana notification channel.
  * @method Models\CreatePolicyGroupResponse CreatePolicyGroup(Models\CreatePolicyGroupRequest $req) This API is used to add a policy group.
  * @method Models\CreatePrometheusAgentResponse CreatePrometheusAgent(Models\CreatePrometheusAgentRequest $req) This API is used to create a Prometheus CVM agent.
+ * @method Models\CreatePrometheusAlertGroupResponse CreatePrometheusAlertGroup(Models\CreatePrometheusAlertGroupRequest $req) This API is used to create a Prometheus alert rule groups.
+
+This API is used to group alert rules, which can include multiple alert rules. Alert messages within the group are sent via the alert group's notification template.
+This API is used to enable individually creating enabled/disabled alert rules under an alert group.
  * @method Models\CreatePrometheusAlertPolicyResponse CreatePrometheusAlertPolicy(Models\CreatePrometheusAlertPolicyRequest $req) This API is used to create an alerting rule.
  * @method Models\CreatePrometheusClusterAgentResponse CreatePrometheusClusterAgent(Models\CreatePrometheusClusterAgentRequest $req) This API is used to associate a cluster with a Cloud Monitor (CM)-integrated Tencent Managed Service for Prometheus (TMP) 2.0 instance.
  * @method Models\CreatePrometheusConfigResponse CreatePrometheusConfig(Models\CreatePrometheusConfigRequest $req) This API is used to create Prometheus configurations.
@@ -59,6 +63,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
  * @method Models\DeleteGrafanaIntegrationResponse DeleteGrafanaIntegration(Models\DeleteGrafanaIntegrationRequest $req) This API is used to delete a Grafana integration configuration.
  * @method Models\DeleteGrafanaNotificationChannelResponse DeleteGrafanaNotificationChannel(Models\DeleteGrafanaNotificationChannelRequest $req) This API is used to delete a Grafana notification channel.
  * @method Models\DeletePolicyGroupResponse DeletePolicyGroup(Models\DeletePolicyGroupRequest $req) This API is used to delete an alarm policy group.
+ * @method Models\DeletePrometheusAlertGroupsResponse DeletePrometheusAlertGroups(Models\DeletePrometheusAlertGroupsRequest $req) This API is used to delete Prometheus alert rule groups.
  * @method Models\DeletePrometheusAlertPolicyResponse DeletePrometheusAlertPolicy(Models\DeletePrometheusAlertPolicyRequest $req) This API is used to delete a TMP 2.0 instance alerting rule.
  * @method Models\DeletePrometheusClusterAgentResponse DeletePrometheusClusterAgent(Models\DeletePrometheusClusterAgentRequest $req) This API is used to disassociate a TMP instance from a cluster.
  * @method Models\DeletePrometheusConfigResponse DeletePrometheusConfig(Models\DeletePrometheusConfigRequest $req) This API is used to delete Prometheus configurations. If the target cluster does not exist, a result indicating success will be returned.
@@ -103,6 +108,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
  * @method Models\DescribeProductEventListResponse DescribeProductEventList(Models\DescribeProductEventListRequest $req) This API is used to get the list of product events by page.
  * @method Models\DescribePrometheusAgentInstancesResponse DescribePrometheusAgentInstances(Models\DescribePrometheusAgentInstancesRequest $req) This API is used to get the list of instances associated with the target cluster.
  * @method Models\DescribePrometheusAgentsResponse DescribePrometheusAgents(Models\DescribePrometheusAgentsRequest $req) This API is used to list Prometheus CVM agents.
+ * @method Models\DescribePrometheusAlertGroupsResponse DescribePrometheusAlertGroups(Models\DescribePrometheusAlertGroupsRequest $req) This API is used to query alarm groups under a given prometheus.
  * @method Models\DescribePrometheusAlertPolicyResponse DescribePrometheusAlertPolicy(Models\DescribePrometheusAlertPolicyRequest $req) This API is used to get the list of v2.0 instance alerting rules.
  * @method Models\DescribePrometheusClusterAgentsResponse DescribePrometheusClusterAgents(Models\DescribePrometheusClusterAgentsRequest $req) This API is used to get the list of clusters associated with the TMP instance.
  * @method Models\DescribePrometheusConfigResponse DescribePrometheusConfig(Models\DescribePrometheusConfigRequest $req) This API is used to get the Prometheus configuration.
@@ -181,6 +187,8 @@ Note that alert object and alert message are special fields of Prometheus Rule A
  * @method Models\UpdateGrafanaNotificationChannelResponse UpdateGrafanaNotificationChannel(Models\UpdateGrafanaNotificationChannelRequest $req) This API is used to update the Grafana notification channel.
  * @method Models\UpdateGrafanaWhiteListResponse UpdateGrafanaWhiteList(Models\UpdateGrafanaWhiteListRequest $req) This API is used to update the Grafana allowlist.
  * @method Models\UpdatePrometheusAgentStatusResponse UpdatePrometheusAgentStatus(Models\UpdatePrometheusAgentStatusRequest $req) This API is used to update the status of a Prometheus CVM agent.
+ * @method Models\UpdatePrometheusAlertGroupResponse UpdatePrometheusAlertGroup(Models\UpdatePrometheusAlertGroupRequest $req) This API is used to update Prometheus alert rule groups.
+ * @method Models\UpdatePrometheusAlertGroupStateResponse UpdatePrometheusAlertGroupState(Models\UpdatePrometheusAlertGroupStateRequest $req) This API is used to batch update the status of alarm groups and set all rules grouped in them to the target status.
  * @method Models\UpdatePrometheusScrapeJobResponse UpdatePrometheusScrapeJob(Models\UpdatePrometheusScrapeJobRequest $req) This API is used to update a Prometheus scrape task.
  * @method Models\UpdateRecordingRuleResponse UpdateRecordingRule(Models\UpdateRecordingRuleRequest $req) This API is used to update a Prometheus recording rule.
  * @method Models\UpdateSSOAccountResponse UpdateSSOAccount(Models\UpdateSSOAccountRequest $req) This API is used to update the remarks and permission information of an authorized account in an overwriting manner.

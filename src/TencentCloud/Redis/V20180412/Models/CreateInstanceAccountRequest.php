@@ -42,14 +42,16 @@ use TencentCloud\Common\AbstractModel;
 - master: Master node.- replication: Replica node.
  * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
 - master: Master node.- replication: Replica node.
- * @method string getPrivilege() Obtain The read/write permission of the account supports the selection of read-only and read/write permissions.
-- r: read-only
-- rw: Read/Write permission.
- * @method void setPrivilege(string $Privilege) Set The read/write permission of the account supports the selection of read-only and read/write permissions.
-- r: read-only
-- rw: Read/Write permission.
- * @method string getRemark() Obtain Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
- * @method void setRemark(string $Remark) Set Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
+ * @method string getPrivilege() Obtain Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+- r: read-only.
+- rw: read-write.
+ * @method void setPrivilege(string $Privilege) Set Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+- r: read-only.
+- rw: read-write.
+ * @method string getRemark() Obtain Description information about account remarks, with a length of [0, 64] bytes.
+ * @method void setRemark(string $Remark) Set Description information about account remarks, with a length of [0, 64] bytes.
+ * @method boolean getEncryptPassword() Obtain Whether to encrypt the password.
+ * @method void setEncryptPassword(boolean $EncryptPassword) Set Whether to encrypt the password.
  */
 class CreateInstanceAccountRequest extends AbstractModel
 {
@@ -81,16 +83,21 @@ class CreateInstanceAccountRequest extends AbstractModel
     public $ReadonlyPolicy;
 
     /**
-     * @var string The read/write permission of the account supports the selection of read-only and read/write permissions.
-- r: read-only
-- rw: Read/Write permission.
+     * @var string Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+- r: read-only.
+- rw: read-write.
      */
     public $Privilege;
 
     /**
-     * @var string Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
+     * @var string Description information about account remarks, with a length of [0, 64] bytes.
      */
     public $Remark;
+
+    /**
+     * @var boolean Whether to encrypt the password.
+     */
+    public $EncryptPassword;
 
     /**
      * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
@@ -104,10 +111,11 @@ class CreateInstanceAccountRequest extends AbstractModel
 
      * @param array $ReadonlyPolicy The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
 - master: Master node.- replication: Replica node.
-     * @param string $Privilege The read/write permission of the account supports the selection of read-only and read/write permissions.
-- r: read-only
-- rw: Read/Write permission.
-     * @param string $Remark Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
+     * @param string $Privilege Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+- r: read-only.
+- rw: read-write.
+     * @param string $Remark Description information about account remarks, with a length of [0, 64] bytes.
+     * @param boolean $EncryptPassword Whether to encrypt the password.
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class CreateInstanceAccountRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("EncryptPassword",$param) and $param["EncryptPassword"] !== null) {
+            $this->EncryptPassword = $param["EncryptPassword"];
         }
     }
 }

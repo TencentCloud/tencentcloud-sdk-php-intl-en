@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) Set Instance access password.
 - Password-free access: No configuration is required.
 - Password authentication: The password is required. It cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+ * @method boolean getEncryptPassword() Obtain Whether to encrypt the password.
+ * @method void setEncryptPassword(boolean $EncryptPassword) Set Whether to encrypt the password.
  */
 class ClearInstanceRequest extends AbstractModel
 {
@@ -44,10 +46,16 @@ class ClearInstanceRequest extends AbstractModel
     public $Password;
 
     /**
+     * @var boolean Whether to encrypt the password.
+     */
+    public $EncryptPassword;
+
+    /**
      * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      * @param string $Password Instance access password.
 - Password-free access: No configuration is required.
 - Password authentication: The password is required. It cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+     * @param boolean $EncryptPassword Whether to encrypt the password.
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ class ClearInstanceRequest extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("EncryptPassword",$param) and $param["EncryptPassword"] !== null) {
+            $this->EncryptPassword = $param["EncryptPassword"];
         }
     }
 }

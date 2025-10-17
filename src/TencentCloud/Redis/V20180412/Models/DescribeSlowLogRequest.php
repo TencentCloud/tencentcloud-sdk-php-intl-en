@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) Set Start time for pre-querying slow query logs, with a maximum query span of 30 days.
  * @method string getEndTime() Obtain End time for pre-querying slow query logs, with a maximum query span of 30 days.
  * @method void setEndTime(string $EndTime) Set End time for pre-querying slow query logs, with a maximum query span of 30 days.
- * @method integer getMinQueryTime() Obtain The average execution time threshold of slow query  in microseconds
- * @method void setMinQueryTime(integer $MinQueryTime) Set The average execution time threshold of slow query  in microseconds
- * @method integer getLimit() Obtain Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
- * @method integer getOffset() Obtain Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
- * @method void setOffset(integer $Offset) Set Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+ * @method integer getMinQueryTime() Obtain Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0
+ * @method void setMinQueryTime(integer $MinQueryTime) Set Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0
+ * @method integer getLimit() Obtain Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
+ * @method void setLimit(integer $Limit) Set Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
+ * @method integer getOffset() Obtain Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
+ * @method void setOffset(integer $Offset) Set Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
  * @method string getRole() Obtain Node role.
 - master: Master node.- slave: Replica node.
  * @method void setRole(string $Role) Set Node role.
@@ -58,17 +58,17 @@ class DescribeSlowLogRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer The average execution time threshold of slow query  in microseconds
+     * @var integer Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0
      */
     public $MinQueryTime;
 
     /**
-     * @var integer Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
+     * @var integer Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
      */
     public $Limit;
 
     /**
-     * @var integer Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+     * @var integer Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
      */
     public $Offset;
 
@@ -83,9 +83,9 @@ class DescribeSlowLogRequest extends AbstractModel
 
      * @param string $BeginTime Start time for pre-querying slow query logs, with a maximum query span of 30 days.
      * @param string $EndTime End time for pre-querying slow query logs, with a maximum query span of 30 days.
-     * @param integer $MinQueryTime The average execution time threshold of slow query  in microseconds
-     * @param integer $Limit Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
-     * @param integer $Offset Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+     * @param integer $MinQueryTime Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0
+     * @param integer $Limit Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
+     * @param integer $Offset Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
      * @param string $Role Node role.
 - master: Master node.- slave: Replica node.
      */

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DestroyPostpaidInstance request structure.
+ * DeletePrometheusAlertGroups request structure.
  *
- * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the pay-as-you-go instance ID from the instance list.
- * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the pay-as-you-go instance ID from the instance list.
+ * @method string getInstanceId() Obtain prometheus instance id.
+ * @method void setInstanceId(string $InstanceId) Set prometheus instance id.
+ * @method array getGroupIds() Obtain Alert group IDs that needs to be deleted, such as alert-xxxxx.
+ * @method void setGroupIds(array $GroupIds) Set Alert group IDs that needs to be deleted, such as alert-xxxxx.
  */
-class DestroyPostpaidInstanceRequest extends AbstractModel
+class DeletePrometheusAlertGroupsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the pay-as-you-go instance ID from the instance list.
+     * @var string prometheus instance id.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the pay-as-you-go instance ID from the instance list.
+     * @var array Alert group IDs that needs to be deleted, such as alert-xxxxx.
+     */
+    public $GroupIds;
+
+    /**
+     * @param string $InstanceId prometheus instance id.
+     * @param array $GroupIds Alert group IDs that needs to be deleted, such as alert-xxxxx.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DestroyPostpaidInstanceRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
+            $this->GroupIds = $param["GroupIds"];
         }
     }
 }

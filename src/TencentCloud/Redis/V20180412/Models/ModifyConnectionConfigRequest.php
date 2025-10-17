@@ -22,14 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
  * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
- * @method integer getBandwidth() Obtain Additional bandwidth in MB, which should be greater than 0.
- * @method void setBandwidth(integer $Bandwidth) Set Additional bandwidth in MB, which should be greater than 0.
+ * @method integer getBandwidth() Obtain Additional bandwidth, in MB, which should be greater than 0.
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
+ * @method void setBandwidth(integer $Bandwidth) Set Additional bandwidth, in MB, which should be greater than 0.
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
  * @method integer getClientLimit() Obtain Total number of connections per shard.
 - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
 - When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
  * @method void setClientLimit(integer $ClientLimit) Set Total number of connections per shard.
 - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
 - When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
  */
 class ModifyConnectionConfigRequest extends AbstractModel
 {
@@ -39,7 +43,8 @@ class ModifyConnectionConfigRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Additional bandwidth in MB, which should be greater than 0.
+     * @var integer Additional bandwidth, in MB, which should be greater than 0.
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
      */
     public $Bandwidth;
 
@@ -47,15 +52,18 @@ class ModifyConnectionConfigRequest extends AbstractModel
      * @var integer Total number of connections per shard.
 - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
 - When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
      */
     public $ClientLimit;
 
     /**
      * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
-     * @param integer $Bandwidth Additional bandwidth in MB, which should be greater than 0.
+     * @param integer $Bandwidth Additional bandwidth, in MB, which should be greater than 0.
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
      * @param integer $ClientLimit Total number of connections per shard.
 - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
 - When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
      */
     function __construct()
     {

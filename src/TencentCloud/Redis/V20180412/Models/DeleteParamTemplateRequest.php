@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteParamTemplate request structure.
  *
- * @method string getTemplateId() Obtain Parameter template ID.
- * @method void setTemplateId(string $TemplateId) Set Parameter template ID.
+ * @method string getTemplateId() Obtain Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID.
+ * @method void setTemplateId(string $TemplateId) Set Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID.
  */
 class DeleteParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Parameter template ID.
+     * @var string Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID.
      */
     public $TemplateId;
 
     /**
-     * @param string $TemplateId Parameter template ID.
+     * @param string $TemplateId Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID.
      */
     function __construct()
     {

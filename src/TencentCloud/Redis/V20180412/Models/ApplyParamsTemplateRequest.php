@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() Obtain Instance ID list. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy the instance ID in the instance list.
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID list. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy the instance ID in the instance list.
- * @method string getTemplateId() Obtain ID of the applied parameter template, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
- * @method void setTemplateId(string $TemplateId) Set ID of the applied parameter template, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
+ * @method string getTemplateId() Obtain ID of the applied parameter template.
+- The parameter template ID can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://www.tencentcloud.comom/document/product/239/58748?from_cn_redirect=1).
+- The operation can only be successfully performed when the parameter template version matches the architecture version of the target instance. A version mismatch will trigger an execution error.
+ * @method void setTemplateId(string $TemplateId) Set ID of the applied parameter template.
+- The parameter template ID can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://www.tencentcloud.comom/document/product/239/58748?from_cn_redirect=1).
+- The operation can only be successfully performed when the parameter template version matches the architecture version of the target instance. A version mismatch will trigger an execution error.
  */
 class ApplyParamsTemplateRequest extends AbstractModel
 {
@@ -33,13 +37,17 @@ class ApplyParamsTemplateRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var string ID of the applied parameter template, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
+     * @var string ID of the applied parameter template.
+- The parameter template ID can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://www.tencentcloud.comom/document/product/239/58748?from_cn_redirect=1).
+- The operation can only be successfully performed when the parameter template version matches the architecture version of the target instance. A version mismatch will trigger an execution error.
      */
     public $TemplateId;
 
     /**
      * @param array $InstanceIds Instance ID list. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy the instance ID in the instance list.
-     * @param string $TemplateId ID of the applied parameter template, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
+     * @param string $TemplateId ID of the applied parameter template.
+- The parameter template ID can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://www.tencentcloud.comom/document/product/239/58748?from_cn_redirect=1).
+- The operation can only be successfully performed when the parameter template version matches the architecture version of the target instance. A version mismatch will trigger an execution error.
      */
     function __construct()
     {

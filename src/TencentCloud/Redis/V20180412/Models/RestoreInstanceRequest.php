@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RestoreInstance request structure.
  *
- * @method string getInstanceId() Obtain ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
- * @method void setInstanceId(string $InstanceId) Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
- * @method string getBackupId() Obtain Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
- * @method void setBackupId(string $BackupId) Set Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
+ * @method string getInstanceId() Obtain ID of the instance to be operated, which can be obtained through the response parameter InstanceId of the [DescribeInstances](https://www.tencentcloud.comom/document/product/239/20018?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set ID of the instance to be operated, which can be obtained through the response parameter InstanceId of the [DescribeInstances](https://www.tencentcloud.comom/document/product/239/20018?from_cn_redirect=1) API.
+ * @method string getBackupId() Obtain Backup ID, which can be obtained through the response parameter RedisBackupSet of the [DescribeInstanceBackups](https://www.tencentcloud.comom/document/product/239/20011?from_cn_redirect=1) API.
+ * @method void setBackupId(string $BackupId) Set Backup ID, which can be obtained through the response parameter RedisBackupSet of the [DescribeInstanceBackups](https://www.tencentcloud.comom/document/product/239/20011?from_cn_redirect=1) API.
  * @method string getPassword() Obtain Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
  * @method void setPassword(string $Password) Set Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
  */
 class RestoreInstanceRequest extends AbstractModel
 {
     /**
-     * @var string ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
+     * @var string ID of the instance to be operated, which can be obtained through the response parameter InstanceId of the [DescribeInstances](https://www.tencentcloud.comom/document/product/239/20018?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
     /**
-     * @var string Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
+     * @var string Backup ID, which can be obtained through the response parameter RedisBackupSet of the [DescribeInstanceBackups](https://www.tencentcloud.comom/document/product/239/20011?from_cn_redirect=1) API.
      */
     public $BackupId;
 
@@ -45,8 +45,8 @@ class RestoreInstanceRequest extends AbstractModel
     public $Password;
 
     /**
-     * @param string $InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
-     * @param string $BackupId Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
+     * @param string $InstanceId ID of the instance to be operated, which can be obtained through the response parameter InstanceId of the [DescribeInstances](https://www.tencentcloud.comom/document/product/239/20018?from_cn_redirect=1) API.
+     * @param string $BackupId Backup ID, which can be obtained through the response parameter RedisBackupSet of the [DescribeInstanceBackups](https://www.tencentcloud.comom/document/product/239/20011?from_cn_redirect=1) API.
      * @param string $Password Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
      */
     function __construct()

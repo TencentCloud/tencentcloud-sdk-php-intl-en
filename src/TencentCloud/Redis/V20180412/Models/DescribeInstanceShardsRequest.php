@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
  * @method void setInstanceId(string $InstanceId) Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
- * @method boolean getFilterSlave() Obtain Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
- * @method void setFilterSlave(boolean $FilterSlave) Set Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
+ * @method boolean getFilterSlave() Obtain Specifies whether to filter out secondary node information.
+- true: filter out secondary nodes.
+- false: filtering not required. The default value is false.
+ * @method void setFilterSlave(boolean $FilterSlave) Set Specifies whether to filter out secondary node information.
+- true: filter out secondary nodes.
+- false: filtering not required. The default value is false.
  */
 class DescribeInstanceShardsRequest extends AbstractModel
 {
@@ -33,13 +37,17 @@ class DescribeInstanceShardsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var boolean Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
+     * @var boolean Specifies whether to filter out secondary node information.
+- true: filter out secondary nodes.
+- false: filtering not required. The default value is false.
      */
     public $FilterSlave;
 
     /**
      * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-     * @param boolean $FilterSlave Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
+     * @param boolean $FilterSlave Specifies whether to filter out secondary node information.
+- true: filter out secondary nodes.
+- false: filtering not required. The default value is false.
      */
     function __construct()
     {

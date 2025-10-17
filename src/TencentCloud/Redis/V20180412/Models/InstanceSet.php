@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set Instance name.
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method integer getAppid() Obtain App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+ * @method integer getAppid() Obtain App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
 
- * @method void setAppid(integer $Appid) Set App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+ * @method void setAppid(integer $Appid) Set App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
 
  * @method integer getProjectId() Obtain Project ID.
  * @method void setProjectId(integer $ProjectId) Set Project ID.
@@ -119,7 +119,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCloseTime() Obtain Time when an instance starts to be isolated.
  * @method void setCloseTime(string $CloseTime) Set Time when an instance starts to be isolated.
  * @method integer getSlaveReadWeight() Obtain Read weight of a secondary node.
+- 0: disable read-only replicas.
+- 100: enable read-only replicas.
  * @method void setSlaveReadWeight(integer $SlaveReadWeight) Set Read weight of a secondary node.
+- 0: disable read-only replicas.
+- 100: enable read-only replicas.
  * @method array getInstanceTags() Obtain Information on tags associated with the instance.
  * @method void setInstanceTags(array $InstanceTags) Set Information on tags associated with the instance.
  * @method string getProjectName() Obtain Project name
@@ -178,6 +182,8 @@ It is returned only for multi-AZ instances.
  * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) Set Upgradable cache minor version for the instance.
  * @method string getBackupMode() Obtain Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
  * @method void setBackupMode(string $BackupMode) Set Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
+ * @method integer getDeleteProtectionSwitch() Obtain Deletion protection switch. 0: disabled; 1: enabled.
+ * @method void setDeleteProtectionSwitch(integer $DeleteProtectionSwitch) Set Deletion protection switch. 0: disabled; 1: enabled.
  */
 class InstanceSet extends AbstractModel
 {
@@ -192,7 +198,7 @@ class InstanceSet extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+     * @var integer App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
 
      */
     public $Appid;
@@ -361,6 +367,8 @@ class InstanceSet extends AbstractModel
 
     /**
      * @var integer Read weight of a secondary node.
+- 0: disable read-only replicas.
+- 100: enable read-only replicas.
      */
     public $SlaveReadWeight;
 
@@ -502,9 +510,14 @@ It is returned only for multi-AZ instances.
     public $BackupMode;
 
     /**
+     * @var integer Deletion protection switch. 0: disabled; 1: enabled.
+     */
+    public $DeleteProtectionSwitch;
+
+    /**
      * @param string $InstanceName Instance name.
      * @param string $InstanceId Instance ID.
-     * @param integer $Appid App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+     * @param integer $Appid App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
 
      * @param integer $ProjectId Project ID.
      * @param integer $RegionId Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul>
@@ -552,6 +565,8 @@ It is returned only for multi-AZ instances.
      * @param integer $PriceId Billing ID.
      * @param string $CloseTime Time when an instance starts to be isolated.
      * @param integer $SlaveReadWeight Read weight of a secondary node.
+- 0: disable read-only replicas.
+- 100: enable read-only replicas.
      * @param array $InstanceTags Information on tags associated with the instance.
      * @param string $ProjectName Project name
      * @param boolean $NoAuth Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul>
@@ -581,6 +596,7 @@ It is returned only for multi-AZ instances.
      * @param string $UpgradeProxyVersion Upgradable proxy version for the instance.
      * @param string $UpgradeRedisVersion Upgradable cache minor version for the instance.
      * @param string $BackupMode Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
+     * @param integer $DeleteProtectionSwitch Deletion protection switch. 0: disabled; 1: enabled.
      */
     function __construct()
     {
@@ -848,6 +864,10 @@ It is returned only for multi-AZ instances.
 
         if (array_key_exists("BackupMode",$param) and $param["BackupMode"] !== null) {
             $this->BackupMode = $param["BackupMode"];
+        }
+
+        if (array_key_exists("DeleteProtectionSwitch",$param) and $param["DeleteProtectionSwitch"] !== null) {
+            $this->DeleteProtectionSwitch = $param["DeleteProtectionSwitch"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceLogDelivery request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance), and copy it from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance), and copy it from the instance list.
  */
 class DescribeInstanceLogDeliveryRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance), and copy it from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID.
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance), and copy it from the instance list.
      */
     function __construct()
     {

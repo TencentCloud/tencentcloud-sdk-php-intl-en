@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
  * @method integer getMemSize() Obtain Shard size. Unit: MB.
  * @method void setMemSize(integer $MemSize) Set Shard size. Unit: MB.
- * @method integer getRedisShardNum() Obtain Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
- * @method void setRedisShardNum(integer $RedisShardNum) Set Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
+ * @method integer getRedisShardNum() Obtain Number of shards.
+- The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+- This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
+ * @method void setRedisShardNum(integer $RedisShardNum) Set Number of shards.
+- The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+- This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
  * @method integer getRedisReplicasNum() Obtain Number of replicas. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
  * @method void setRedisReplicasNum(integer $RedisReplicasNum) Set Number of replicas. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
  */
@@ -42,7 +46,9 @@ class InquiryPriceUpgradeInstanceRequest extends AbstractModel
     public $MemSize;
 
     /**
-     * @var integer Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
+     * @var integer Number of shards.
+- The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+- This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
      */
     public $RedisShardNum;
 
@@ -54,7 +60,9 @@ class InquiryPriceUpgradeInstanceRequest extends AbstractModel
     /**
      * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      * @param integer $MemSize Shard size. Unit: MB.
-     * @param integer $RedisShardNum Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
+     * @param integer $RedisShardNum Number of shards.
+- The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+- This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
      * @param integer $RedisReplicasNum Number of replicas. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
      */
     function __construct()

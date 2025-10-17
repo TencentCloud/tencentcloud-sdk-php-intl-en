@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReplicationGroup request structure.
  *
- * @method integer getLimit() Obtain Number of instances returned per page. Default value: `20`.
- * @method void setLimit(integer $Limit) Set Number of instances returned per page. Default value: `20`.
+ * @method integer getLimit() Obtain Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20.
+ * @method void setLimit(integer $Limit) Set Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20.
  * @method integer getOffset() Obtain Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
  * @method void setOffset(integer $Offset) Set Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
  * @method string getGroupId() Obtain ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeReplicationGroupRequest extends AbstractModel
 {
     /**
-     * @var integer Number of instances returned per page. Default value: `20`.
+     * @var integer Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20.
      */
     public $Limit;
 
@@ -52,7 +52,7 @@ class DescribeReplicationGroupRequest extends AbstractModel
     public $SearchKey;
 
     /**
-     * @param integer $Limit Number of instances returned per page. Default value: `20`.
+     * @param integer $Limit Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20.
      * @param integer $Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
      * @param string $GroupId ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
      * @param string $SearchKey Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get them in the global replication group list.

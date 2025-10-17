@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartupInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
- * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the ID of the instance to be deisolated from the recycle bin.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the ID of the instance to be deisolated from the recycle bin.
  */
 class StartupInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @var string Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the ID of the instance to be deisolated from the recycle bin.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the ID of the instance to be deisolated from the recycle bin.
      */
     function __construct()
     {

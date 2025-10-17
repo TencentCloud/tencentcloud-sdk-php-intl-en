@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommandLine(string $CommandLine) Set Detailed command line information of slow query
  * @method string getExecuteTime() Obtain Execution time
  * @method void setExecuteTime(string $ExecuteTime) Set Execution time
+ * @method integer getRecvClientEnd() Obtain Duration of receiving client requests (ms).
+ * @method void setRecvClientEnd(integer $RecvClientEnd) Set Duration of receiving client requests (ms).
+ * @method integer getSendClientEnd() Obtain Duration of sending client requests (ms).
+ * @method void setSendClientEnd(integer $SendClientEnd) Set Duration of sending client requests (ms).
  */
 class InstanceProxySlowlogDetail extends AbstractModel
 {
@@ -59,11 +63,23 @@ class InstanceProxySlowlogDetail extends AbstractModel
     public $ExecuteTime;
 
     /**
+     * @var integer Duration of receiving client requests (ms).
+     */
+    public $RecvClientEnd;
+
+    /**
+     * @var integer Duration of sending client requests (ms).
+     */
+    public $SendClientEnd;
+
+    /**
      * @param integer $Duration Slow query duration in milliseconds
      * @param string $Client Client address
      * @param string $Command Slow query command
      * @param string $CommandLine Detailed command line information of slow query
      * @param string $ExecuteTime Execution time
+     * @param integer $RecvClientEnd Duration of receiving client requests (ms).
+     * @param integer $SendClientEnd Duration of sending client requests (ms).
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class InstanceProxySlowlogDetail extends AbstractModel
 
         if (array_key_exists("ExecuteTime",$param) and $param["ExecuteTime"] !== null) {
             $this->ExecuteTime = $param["ExecuteTime"];
+        }
+
+        if (array_key_exists("RecvClientEnd",$param) and $param["RecvClientEnd"] !== null) {
+            $this->RecvClientEnd = $param["RecvClientEnd"];
+        }
+
+        if (array_key_exists("SendClientEnd",$param) and $param["SendClientEnd"] !== null) {
+            $this->SendClientEnd = $param["SendClientEnd"];
         }
     }
 }

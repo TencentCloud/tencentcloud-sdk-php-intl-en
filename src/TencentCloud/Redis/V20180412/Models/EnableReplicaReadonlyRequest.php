@@ -24,12 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
  * @method array getReadonlyPolicy() Obtain Read-only routing policy.
 - master: read-only routing to the primary node.
-- replication: read-only routing to the secondary node.
-- Default policy: writing to the primary node and reading from the secondary node.
+- replication: read-only routing to the secondary node. The default value is replication.
  * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Read-only routing policy.
 - master: read-only routing to the primary node.
-- replication: read-only routing to the secondary node.
-- Default policy: writing to the primary node and reading from the secondary node.
+- replication: read-only routing to the secondary node. The default value is replication.
  */
 class EnableReplicaReadonlyRequest extends AbstractModel
 {
@@ -41,8 +39,7 @@ class EnableReplicaReadonlyRequest extends AbstractModel
     /**
      * @var array Read-only routing policy.
 - master: read-only routing to the primary node.
-- replication: read-only routing to the secondary node.
-- Default policy: writing to the primary node and reading from the secondary node.
+- replication: read-only routing to the secondary node. The default value is replication.
      */
     public $ReadonlyPolicy;
 
@@ -50,8 +47,7 @@ class EnableReplicaReadonlyRequest extends AbstractModel
      * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      * @param array $ReadonlyPolicy Read-only routing policy.
 - master: read-only routing to the primary node.
-- replication: read-only routing to the secondary node.
-- Default policy: writing to the primary node and reading from the secondary node.
+- replication: read-only routing to the secondary node. The default value is replication.
      */
     function __construct()
     {
