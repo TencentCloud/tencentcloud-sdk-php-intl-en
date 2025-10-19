@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IsolateDBInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the ID of the instance to be isolated from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the ID of the instance to be isolated from the instance list.
  */
 class IsolateDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * @var string Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the ID of the instance to be isolated from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * @param string $InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the ID of the instance to be isolated from the instance list.
      */
     function __construct()
     {

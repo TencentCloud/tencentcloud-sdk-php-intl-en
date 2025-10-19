@@ -20,14 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstances request structure.
  *
- * @method array getInstanceIds() Obtain Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
- * @method integer getInstanceType() Obtain Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
- * @method void setInstanceType(integer $InstanceType) Set Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
- * @method integer getClusterType() Obtain Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
- * @method void setClusterType(integer $ClusterType) Set Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
- * @method array getStatus() Obtain Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
- * @method void setStatus(array $Status) Set Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
+ * @method array getInstanceIds() Obtain Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+ * @method integer getInstanceType() Obtain Specifies the instance type for querying. Valid values:
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously.
+ * @method void setInstanceType(integer $InstanceType) Set Specifies the instance type for querying. Valid values:
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously.
+ * @method integer getClusterType() Obtain Specifies the cluster type of the instance to be queried. Valid values:
+- 0: replica set instance.
+- 1: sharded cluster instance.
+- -1: replica set and sharded cluster instance.
+ * @method void setClusterType(integer $ClusterType) Set Specifies the cluster type of the instance to be queried. Valid values:
+- 0: replica set instance.
+- 1: sharded cluster instance.
+- -1: replica set and sharded cluster instance.
+ * @method array getStatus() Obtain Specifies the current status of the instance to be queried. Valid values:
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
+ * @method void setStatus(array $Status) Set Specifies the current status of the instance to be queried. Valid values:
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
  * @method string getVpcId() Obtain VPC ID.
  - You do not need to specify this parameter for basic networks.
  - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB), click a VPC name in the instance list, and obtain the ID on the **VPC** page.
@@ -42,8 +68,8 @@ use TencentCloud\Common\AbstractModel;
  - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB), click a VPC name in the instance list, and obtain the subnet ID on the **VPC** page.
  * @method integer getPayMode() Obtain Billing type. Valid value: 0 (pay-as-you-go)
  * @method void setPayMode(integer $PayMode) Set Billing type. Valid value: 0 (pay-as-you-go)
- * @method integer getLimit() Obtain Number of results returned per request. Default value: `20`. Value range: [1,100].
- * @method void setLimit(integer $Limit) Set Number of results returned per request. Default value: `20`. Value range: [1,100].
+ * @method integer getLimit() Obtain Number of entries returned per request. The default value is 20, and the value range is (1, 100].
+ * @method void setLimit(integer $Limit) Set Number of entries returned per request. The default value is 20, and the value range is (1, 100].
  * @method integer getOffset() Obtain Offset. Default value: `0`.
  * @method void setOffset(integer $Offset) Set Offset. Default value: `0`.
  * @method string getOrderBy() Obtain Configures the field for sorting returned results. Currently, "ProjectId", "InstanceName", and "CreateTime" are supported for sorting.
@@ -64,22 +90,35 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+     * @var array Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public $InstanceIds;
 
     /**
-     * @var integer Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
+     * @var integer Specifies the instance type for querying. Valid values:
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously.
      */
     public $InstanceType;
 
     /**
-     * @var integer Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
+     * @var integer Specifies the cluster type of the instance to be queried. Valid values:
+- 0: replica set instance.
+- 1: sharded cluster instance.
+- -1: replica set and sharded cluster instance.
      */
     public $ClusterType;
 
     /**
-     * @var array Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
+     * @var array Specifies the current status of the instance to be queried. Valid values:
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
      */
     public $Status;
 
@@ -103,7 +142,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var integer Number of results returned per request. Default value: `20`. Value range: [1,100].
+     * @var integer Number of entries returned per request. The default value is 20, and the value range is (1, 100].
      */
     public $Limit;
 
@@ -140,10 +179,23 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param array $InstanceIds Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
-     * @param integer $InstanceType Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
-     * @param integer $ClusterType Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
-     * @param array $Status Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
+     * @param array $InstanceIds Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+     * @param integer $InstanceType Specifies the instance type for querying. Valid values:
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously.
+     * @param integer $ClusterType Specifies the cluster type of the instance to be queried. Valid values:
+- 0: replica set instance.
+- 1: sharded cluster instance.
+- -1: replica set and sharded cluster instance.
+     * @param array $Status Specifies the current status of the instance to be queried. Valid values:
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
      * @param string $VpcId VPC ID.
  - You do not need to specify this parameter for basic networks.
  - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB), click a VPC name in the instance list, and obtain the ID on the **VPC** page.
@@ -151,7 +203,7 @@ class DescribeDBInstancesRequest extends AbstractModel
  - You do not need to specify this parameter for basic networks.
  - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB), click a VPC name in the instance list, and obtain the subnet ID on the **VPC** page.
      * @param integer $PayMode Billing type. Valid value: 0 (pay-as-you-go)
-     * @param integer $Limit Number of results returned per request. Default value: `20`. Value range: [1,100].
+     * @param integer $Limit Number of entries returned per request. The default value is 20, and the value range is (1, 100].
      * @param integer $Offset Offset. Default value: `0`.
      * @param string $OrderBy Configures the field for sorting returned results. Currently, "ProjectId", "InstanceName", and "CreateTime" are supported for sorting.
      * @param string $OrderByType Configures the method for sorting returned results.

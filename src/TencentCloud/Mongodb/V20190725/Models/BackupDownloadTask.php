@@ -20,26 +20,48 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Backup download task information
  *
- * @method string getCreateTime() Obtain Task creation time
- * @method void setCreateTime(string $CreateTime) Set Task creation time
- * @method string getBackupName() Obtain Backup name
- * @method void setBackupName(string $BackupName) Set Backup name
- * @method string getReplicaSetId() Obtain Shard name
- * @method void setReplicaSetId(string $ReplicaSetId) Set Shard name
- * @method integer getBackupSize() Obtain Backup size in bytes
- * @method void setBackupSize(integer $BackupSize) Set Backup size in bytes
- * @method integer getStatus() Obtain Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
- * @method void setStatus(integer $Status) Set Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
- * @method integer getPercent() Obtain Task progress in percentage
- * @method void setPercent(integer $Percent) Set Task progress in percentage
- * @method integer getTimeSpend() Obtain Task duration in seconds
- * @method void setTimeSpend(integer $TimeSpend) Set Task duration in seconds
- * @method string getUrl() Obtain Backup download address
- * @method void setUrl(string $Url) Set Backup download address
- * @method integer getBackupMethod() Obtain Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
- * @method void setBackupMethod(integer $BackupMethod) Set Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
- * @method string getBackupDesc() Obtain Specifies the remarks for backup.
- * @method void setBackupDesc(string $BackupDesc) Set Specifies the remarks for backup.
+ * @method string getCreateTime() Obtain Task creation time.
+ * @method void setCreateTime(string $CreateTime) Set Task creation time.
+ * @method string getBackupName() Obtain Backup file name.
+ * @method void setBackupName(string $BackupName) Set Backup file name.
+ * @method string getReplicaSetId() Obtain Shard name.
+ * @method void setReplicaSetId(string $ReplicaSetId) Set Shard name.
+ * @method integer getBackupSize() Obtain Backup data size, in bytes.
+ * @method void setBackupSize(integer $BackupSize) Set Backup data size, in bytes.
+ * @method integer getStatus() Obtain Task status.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
+ * @method void setStatus(integer $Status) Set Task status.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
+ * @method integer getPercent() Obtain Task progress percentage.
+ * @method void setPercent(integer $Percent) Set Task progress percentage.
+ * @method integer getTimeSpend() Obtain Duration, in seconds.
+ * @method void setTimeSpend(integer $TimeSpend) Set Duration, in seconds.
+ * @method string getUrl() Obtain Download link for backup data.
+ * @method void setUrl(string $Url) Set Download link for backup data.
+ * @method integer getBackupMethod() Obtain Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
+ * @method void setBackupMethod(integer $BackupMethod) Set Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
+ * @method string getBackupDesc() Obtain Specified remarks for initiating backup tasks.
+ * @method void setBackupDesc(string $BackupDesc) Set Specified remarks for initiating backup tasks.
  * @method string getRegion() Obtain Region information.
  * @method void setRegion(string $Region) Set Region information.
  * @method string getBucket() Obtain Bucket information.
@@ -48,52 +70,63 @@ use TencentCloud\Common\AbstractModel;
 class BackupDownloadTask extends AbstractModel
 {
     /**
-     * @var string Task creation time
+     * @var string Task creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Backup name
+     * @var string Backup file name.
      */
     public $BackupName;
 
     /**
-     * @var string Shard name
+     * @var string Shard name.
      */
     public $ReplicaSetId;
 
     /**
-     * @var integer Backup size in bytes
+     * @var integer Backup data size, in bytes.
      */
     public $BackupSize;
 
     /**
-     * @var integer Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+     * @var integer Task status.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
      */
     public $Status;
 
     /**
-     * @var integer Task progress in percentage
+     * @var integer Task progress percentage.
      */
     public $Percent;
 
     /**
-     * @var integer Task duration in seconds
+     * @var integer Duration, in seconds.
      */
     public $TimeSpend;
 
     /**
-     * @var string Backup download address
+     * @var string Download link for backup data.
      */
     public $Url;
 
     /**
-     * @var integer Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+     * @var integer Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
      */
     public $BackupMethod;
 
     /**
-     * @var string Specifies the remarks for backup.
+     * @var string Specified remarks for initiating backup tasks.
      */
     public $BackupDesc;
 
@@ -108,16 +141,27 @@ class BackupDownloadTask extends AbstractModel
     public $Bucket;
 
     /**
-     * @param string $CreateTime Task creation time
-     * @param string $BackupName Backup name
-     * @param string $ReplicaSetId Shard name
-     * @param integer $BackupSize Backup size in bytes
-     * @param integer $Status Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
-     * @param integer $Percent Task progress in percentage
-     * @param integer $TimeSpend Task duration in seconds
-     * @param string $Url Backup download address
-     * @param integer $BackupMethod Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
-     * @param string $BackupDesc Specifies the remarks for backup.
+     * @param string $CreateTime Task creation time.
+     * @param string $BackupName Backup file name.
+     * @param string $ReplicaSetId Shard name.
+     * @param integer $BackupSize Backup data size, in bytes.
+     * @param integer $Status Task status.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
+     * @param integer $Percent Task progress percentage.
+     * @param integer $TimeSpend Duration, in seconds.
+     * @param string $Url Download link for backup data.
+     * @param integer $BackupMethod Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
+     * @param string $BackupDesc Specified remarks for initiating backup tasks.
      * @param string $Region Region information.
      * @param string $Bucket Bucket information.
      */

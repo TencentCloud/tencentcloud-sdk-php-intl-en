@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() Obtain Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
- * @method integer getProjectId() Obtain Unique ID of an existing project (instead of a new project).
- * @method void setProjectId(integer $ProjectId) Set Unique ID of an existing project (instead of a new project).
+ * @method integer getProjectId() Obtain Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
+ * @method void setProjectId(integer $ProjectId) Set Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
  */
 class AssignProjectRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AssignProjectRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var integer Unique ID of an existing project (instead of a new project).
+     * @var integer Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
      */
     public $ProjectId;
 
     /**
      * @param array $InstanceIds Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
-     * @param integer $ProjectId Unique ID of an existing project (instead of a new project).
+     * @param integer $ProjectId Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
      */
     function __construct()
     {

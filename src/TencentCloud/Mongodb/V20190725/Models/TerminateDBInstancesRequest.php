@@ -18,20 +18,20 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSecurityGroup request structure.
+ * TerminateDBInstances request structure.
  *
- * @method string getInstanceId() Obtain Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
- * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+ * @method string getInstanceId() Obtain Specifies the ID of the pre-isolated instance. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Specifies the ID of the pre-isolated instance. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
  */
-class DescribeSecurityGroupRequest extends AbstractModel
+class TerminateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+     * @var string Specifies the ID of the pre-isolated instance. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+     * @param string $InstanceId Specifies the ID of the pre-isolated instance. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     function __construct()
     {

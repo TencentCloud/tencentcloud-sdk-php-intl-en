@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance price
  *
- * @method float getUnitPrice() Obtain Unit price.
- * @method void setUnitPrice(float $UnitPrice) Set Unit price.
- * @method float getOriginalPrice() Obtain Original price.
- * @method void setOriginalPrice(float $OriginalPrice) Set Original price.
- * @method float getDiscountPrice() Obtain Discount price.
- * @method void setDiscountPrice(float $DiscountPrice) Set Discount price.
+ * @method float getUnitPrice() Obtain Unit price of the instance, in USD.
+ * @method void setUnitPrice(float $UnitPrice) Set Unit price of the instance, in USD.
+ * @method float getOriginalPrice() Obtain Original price of the instance, in USD.
+ * @method void setOriginalPrice(float $OriginalPrice) Set Original price of the instance, in USD.
+ * @method float getDiscountPrice() Obtain Discount price of the instance, in USD.
+ * @method void setDiscountPrice(float $DiscountPrice) Set Discount price of the instance, in USD.
  */
 class DBInstancePrice extends AbstractModel
 {
     /**
-     * @var float Unit price.
+     * @var float Unit price of the instance, in USD.
      */
     public $UnitPrice;
 
     /**
-     * @var float Original price.
+     * @var float Original price of the instance, in USD.
      */
     public $OriginalPrice;
 
     /**
-     * @var float Discount price.
+     * @var float Discount price of the instance, in USD.
      */
     public $DiscountPrice;
 
     /**
-     * @param float $UnitPrice Unit price.
-     * @param float $OriginalPrice Original price.
-     * @param float $DiscountPrice Discount price.
+     * @param float $UnitPrice Unit price of the instance, in USD.
+     * @param float $OriginalPrice Original price of the instance, in USD.
+     * @param float $DiscountPrice Discount price of the instance, in USD.
      */
     function __construct()
     {

@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceSecurityGroup request structure.
  *
- * @method string getInstanceId() Obtain Instance ID. For example, cmgo-7pje****.
- * @method void setInstanceId(string $InstanceId) Set Instance ID. For example, cmgo-7pje****.
- * @method array getSecurityGroupIds() Obtain IDs of target security groups. Call the [DescribeSecurityGroup](https://intl.cloud.tencent.com/document/product/240/55675?from_cn_redirect=1) API to view IDs of specific security groups.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set IDs of target security groups. Call the [DescribeSecurityGroup](https://intl.cloud.tencent.com/document/product/240/55675?from_cn_redirect=1) API to view IDs of specific security groups.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+ * @method array getSecurityGroupIds() Obtain Target security group ID. Log in to the [security group console](https://console.cloud.tencent.com/vpc/security-group) page to copy the target security group ID.
+**Note**: This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Target security group ID. Log in to the [security group console](https://console.cloud.tencent.com/vpc/security-group) page to copy the target security group ID.
+**Note**: This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
  */
 class ModifyDBInstanceSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID. For example, cmgo-7pje****.
+     * @var string Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var array IDs of target security groups. Call the [DescribeSecurityGroup](https://intl.cloud.tencent.com/document/product/240/55675?from_cn_redirect=1) API to view IDs of specific security groups.
+     * @var array Target security group ID. Log in to the [security group console](https://console.cloud.tencent.com/vpc/security-group) page to copy the target security group ID.
+**Note**: This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
      */
     public $SecurityGroupIds;
 
     /**
-     * @param string $InstanceId Instance ID. For example, cmgo-7pje****.
-     * @param array $SecurityGroupIds IDs of target security groups. Call the [DescribeSecurityGroup](https://intl.cloud.tencent.com/document/product/240/55675?from_cn_redirect=1) API to view IDs of specific security groups.
+     * @param string $InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+     * @param array $SecurityGroupIds Target security group ID. Log in to the [security group console](https://console.cloud.tencent.com/vpc/security-group) page to copy the target security group ID.
+**Note**: This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
      */
     function __construct()
     {

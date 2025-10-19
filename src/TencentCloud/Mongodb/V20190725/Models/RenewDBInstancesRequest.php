@@ -21,11 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * RenewDBInstances request structure.
  *
  * @method array getInstanceIds() Obtain Specifies the ID or IDs of one or multiple instances to be renewed.
- - You can obtain the IDs from **InstanceIds** in the return values of the [DescribeDBInstances](https://intl.cloud.tencent.com/document/product/240/38568?from_cn_redirect=1) API.
- - The maximum number of instances for each renewal request is 100.
+- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+- The maximum number of instances for each renewal request is 100.
  * @method void setInstanceIds(array $InstanceIds) Set Specifies the ID or IDs of one or multiple instances to be renewed.
- - You can obtain the IDs from **InstanceIds** in the return values of the [DescribeDBInstances](https://intl.cloud.tencent.com/document/product/240/38568?from_cn_redirect=1) API.
- - The maximum number of instances for each renewal request is 100.
+- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+- The maximum number of instances for each renewal request is 100.
  * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain The parameter setting for the prepaid mode (monthly subscription mode). This parameter can specify the renewal period, whether to set automatic renewal, and other attributes of the monthly subscription instance. This parameter is mandatory in monthly subscription.
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set The parameter setting for the prepaid mode (monthly subscription mode). This parameter can specify the renewal period, whether to set automatic renewal, and other attributes of the monthly subscription instance. This parameter is mandatory in monthly subscription.
  */
@@ -33,8 +33,8 @@ class RenewDBInstancesRequest extends AbstractModel
 {
     /**
      * @var array Specifies the ID or IDs of one or multiple instances to be renewed.
- - You can obtain the IDs from **InstanceIds** in the return values of the [DescribeDBInstances](https://intl.cloud.tencent.com/document/product/240/38568?from_cn_redirect=1) API.
- - The maximum number of instances for each renewal request is 100.
+- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+- The maximum number of instances for each renewal request is 100.
      */
     public $InstanceIds;
 
@@ -45,8 +45,8 @@ class RenewDBInstancesRequest extends AbstractModel
 
     /**
      * @param array $InstanceIds Specifies the ID or IDs of one or multiple instances to be renewed.
- - You can obtain the IDs from **InstanceIds** in the return values of the [DescribeDBInstances](https://intl.cloud.tencent.com/document/product/240/38568?from_cn_redirect=1) API.
- - The maximum number of instances for each renewal request is 100.
+- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+- The maximum number of instances for each renewal request is 100.
      * @param InstanceChargePrepaid $InstanceChargePrepaid The parameter setting for the prepaid mode (monthly subscription mode). This parameter can specify the renewal period, whether to set automatic renewal, and other attributes of the monthly subscription instance. This parameter is mandatory in monthly subscription.
      */
     function __construct()

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceSpec request structure.
  *
- * @method string getInstanceId() Obtain Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
-
- * @method void setInstanceId(string $InstanceId) Set Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
-
- * @method integer getMemory() Obtain Memory size after instance configuration modification. - Unit: GB. The current instance memory size is used by default if this parameter is left blank.<br>Note: Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
- * @method void setMemory(integer $Memory) Set Memory size after instance configuration modification. - Unit: GB. The current instance memory size is used by default if this parameter is left blank.<br>Note: Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
- * @method integer getVolume() Obtain Disk capacity after instance configuration modification. Unit: GB. The current instance disk capacity is used by default if this parameter is left blank.
- - Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
- - During configuration downgrading, the disk capacity after modification should be greater than 1.2 times the used disk capacity.
- * @method void setVolume(integer $Volume) Set Disk capacity after instance configuration modification. Unit: GB. The current instance disk capacity is used by default if this parameter is left blank.
- - Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
- - During configuration downgrading, the disk capacity after modification should be greater than 1.2 times the used disk capacity.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+ * @method integer getMemory() Obtain Memory size after instance configuration changes, in GB. If this parameter is left blank, the default value is the current memory size of the instance. For the currently supported memory specifications, see [Product Specifications](https://www.tencentcloud.comom/document/product/240/64125?from_cn_redirect=1).
+**Note**: Memory and disk configurations should be upgraded or downgraded simultaneously, meaning that Memory and Volume should be modified at the same time.
+ * @method void setMemory(integer $Memory) Set Memory size after instance configuration changes, in GB. If this parameter is left blank, the default value is the current memory size of the instance. For the currently supported memory specifications, see [Product Specifications](https://www.tencentcloud.comom/document/product/240/64125?from_cn_redirect=1).
+**Note**: Memory and disk configurations should be upgraded or downgraded simultaneously, meaning that Memory and Volume should be modified at the same time.
+ * @method integer getVolume() Obtain Hard disk size after instance configuration changes, in GB. If this parameter is left blank, the default value is the current disk size of the instance. For the currently supported disk capacity, see [Product Specifications](https://www.tencentcloud.comom/document/product/240/64125?from_cn_redirect=1).
+- Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
+- During configuration downgrade, the disk capacity after changes should be greater than 1.2 times the used disk capacity.
+ * @method void setVolume(integer $Volume) Set Hard disk size after instance configuration changes, in GB. If this parameter is left blank, the default value is the current disk size of the instance. For the currently supported disk capacity, see [Product Specifications](https://www.tencentcloud.comom/document/product/240/64125?from_cn_redirect=1).
+- Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
+- During configuration downgrade, the disk capacity after changes should be greater than 1.2 times the used disk capacity.
  * @method integer getOplogSize() Obtain (Deprecated) Use the independent API ResizeOplog.
 
 Oplog size after instance configuration modification.
@@ -42,22 +42,20 @@ Oplog size after instance configuration modification.
 Oplog size after instance configuration modification.
  - Unit: GB.
  - By default, the capacity occupied by Oplog is 10% of the disk capacity. The range of capacity occupied by Oplog supported by the system is [10%,90%] of the disk capacity.
- * @method integer getNodeNum() Obtain Number of Mongod nodes after instance modification (excluding read-only nodes).
- - When the CPU and memory specifications of Mongod nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
- - When the CPU and memory specifications of Mongos nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
- - During node modification (all types), this parameter can be left blank or set to the number of Mongod nodes (excluding read-only nodes) after modification.
- - Number of replica set nodes: Confirm the range of the number of nodes based on the MinNodeNum and MaxNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
- - Number of nodes for each shard in a sharded cluster: Confirm the range of the number of nodes based on the MinReplicateSetNodeNum and MaxReplicateSetNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
- * @method void setNodeNum(integer $NodeNum) Set Number of Mongod nodes after instance modification (excluding read-only nodes).
- - When the CPU and memory specifications of Mongod nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
- - When the CPU and memory specifications of Mongos nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
- - During node modification (all types), this parameter can be left blank or set to the number of Mongod nodes (excluding read-only nodes) after modification.
- - Number of replica set nodes: Confirm the range of the number of nodes based on the MinNodeNum and MaxNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
- - Number of nodes for each shard in a sharded cluster: Confirm the range of the number of nodes based on the MinReplicateSetNodeNum and MaxReplicateSetNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
- * @method integer getReplicateSetNum() Obtain Number of shards after instance modification.
- - The value range can be obtained from the **MinReplicateSetNum** and **MaxReplicateSetNum** parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API for querying saleable TencentDB for MongoDB specifications. - The value of this parameter can only be increased but not decreased.
- * @method void setReplicateSetNum(integer $ReplicateSetNum) Set Number of shards after instance modification.
- - The value range can be obtained from the **MinReplicateSetNum** and **MaxReplicateSetNum** parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API for querying saleable TencentDB for MongoDB specifications. - The value of this parameter can only be increased but not decreased.
+ * @method integer getNodeNum() Obtain Number of Mongod nodes after instance changes (excluding read-only nodes).
+- Number of replica set nodes. The value range of the number of nodes can be obtained through the response parameters MinNodeNum and MaxNodeNum of the [DescribeSpecInfo ](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API.
+- Number of nodes per shard in a sharded cluster. The value range of the number of nodes can be obtained through the response parameters MinReplicateSetNodeNum and MaxReplicateSetNodeNum of the [DescribeSpecInfo ](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API.
+**Note**: When the CPU and memory specifications of Mongod or Mongos nodes are changed, this parameter is not required, or enter the current number of Mongod or Mongos nodes (excluding read-only nodes).
+ * @method void setNodeNum(integer $NodeNum) Set Number of Mongod nodes after instance changes (excluding read-only nodes).
+- Number of replica set nodes. The value range of the number of nodes can be obtained through the response parameters MinNodeNum and MaxNodeNum of the [DescribeSpecInfo ](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API.
+- Number of nodes per shard in a sharded cluster. The value range of the number of nodes can be obtained through the response parameters MinReplicateSetNodeNum and MaxReplicateSetNodeNum of the [DescribeSpecInfo ](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API.
+**Note**: When the CPU and memory specifications of Mongod or Mongos nodes are changed, this parameter is not required, or enter the current number of Mongod or Mongos nodes (excluding read-only nodes).
+ * @method integer getReplicateSetNum() Obtain Number of shards after instance changes.
+- The value range for the number of instance shards can be obtained through the response parameters **MinReplicateSetNum** and **MaxReplicateSetNum** of the [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API.
+- The number of instance shards can only be increased and cannot be decreased.
+ * @method void setReplicateSetNum(integer $ReplicateSetNum) Set Number of shards after instance changes.
+- The value range for the number of instance shards can be obtained through the response parameters **MinReplicateSetNum** and **MaxReplicateSetNum** of the [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API.
+- The number of instance shards can only be increased and cannot be decreased.
  * @method integer getInMaintenance() Obtain Switch time for instance configuration modification.
  - 0: Execute the configuration modification task immediately after the adjustment is completed. Default value: 0.
  - 1: Execute the configuration modification task within the maintenance window.
@@ -66,30 +64,32 @@ Oplog size after instance configuration modification.
  - 0: Execute the configuration modification task immediately after the adjustment is completed. Default value: 0.
  - 1: Execute the configuration modification task within the maintenance window.
 **Note**: Adjusting the number of nodes and shards is unsupported <b>within the maintenance window</b>.
- * @method string getMongosMemory() Obtain Mongos node memory size after the sharded cluster instance configuration is modified. Unit: GB.
- * @method void setMongosMemory(string $MongosMemory) Set Mongos node memory size after the sharded cluster instance configuration is modified. Unit: GB.
+ * @method string getMongosMemory() Obtain Memory size of the Mongos node after sharded cluster instance configuration changes, in GB. For the specifications supported by the instance, see [Product Specifications](https://www.tencentcloud.comom/document/product/240/64125?from_cn_redirect=1).
+ * @method void setMongosMemory(string $MongosMemory) Set Memory size of the Mongos node after sharded cluster instance configuration changes, in GB. For the specifications supported by the instance, see [Product Specifications](https://www.tencentcloud.comom/document/product/240/64125?from_cn_redirect=1).
  * @method array getAddNodeList() Obtain List of nodes to be added, containing the node type and AZ information.
  * @method void setAddNodeList(array $AddNodeList) Set List of nodes to be added, containing the node type and AZ information.
- * @method array getRemoveNodeList() Obtain List of nodes to be deleted. Note: According to the consistency principle for nodes of each shard on a sharded cluster instance, specify the nodes on shard 0 for node deletion from the sharded cluster instance. For example, cmgo-9nl1czif_0-node-readonly0 will delete the first read-only node of each shard.
- * @method void setRemoveNodeList(array $RemoveNodeList) Set List of nodes to be deleted. Note: According to the consistency principle for nodes of each shard on a sharded cluster instance, specify the nodes on shard 0 for node deletion from the sharded cluster instance. For example, cmgo-9nl1czif_0-node-readonly0 will delete the first read-only node of each shard.
+ * @method array getRemoveNodeList() Obtain Deletes the node list.
+**Note**: According to the consistency principle for nodes of each shard on a sharded cluster instance, specify the nodes on shard 0 for node deletion from the sharded cluster instance. For example, cmgo-9nl1czif_0-node-readonly0 will delete the first read-only node of each shard.
+ * @method void setRemoveNodeList(array $RemoveNodeList) Set Deletes the node list.
+**Note**: According to the consistency principle for nodes of each shard on a sharded cluster instance, specify the nodes on shard 0 for node deletion from the sharded cluster instance. For example, cmgo-9nl1czif_0-node-readonly0 will delete the first read-only node of each shard.
  */
 class ModifyDBInstanceSpecRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
-
+     * @var string Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var integer Memory size after instance configuration modification. - Unit: GB. The current instance memory size is used by default if this parameter is left blank.<br>Note: Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
+     * @var integer Memory size after instance configuration changes, in GB. If this parameter is left blank, the default value is the current memory size of the instance. For the currently supported memory specifications, see [Product Specifications](https://www.tencentcloud.comom/document/product/240/64125?from_cn_redirect=1).
+**Note**: Memory and disk configurations should be upgraded or downgraded simultaneously, meaning that Memory and Volume should be modified at the same time.
      */
     public $Memory;
 
     /**
-     * @var integer Disk capacity after instance configuration modification. Unit: GB. The current instance disk capacity is used by default if this parameter is left blank.
- - Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
- - During configuration downgrading, the disk capacity after modification should be greater than 1.2 times the used disk capacity.
+     * @var integer Hard disk size after instance configuration changes, in GB. If this parameter is left blank, the default value is the current disk size of the instance. For the currently supported disk capacity, see [Product Specifications](https://www.tencentcloud.comom/document/product/240/64125?from_cn_redirect=1).
+- Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
+- During configuration downgrade, the disk capacity after changes should be greater than 1.2 times the used disk capacity.
      */
     public $Volume;
 
@@ -104,18 +104,17 @@ Oplog size after instance configuration modification.
     public $OplogSize;
 
     /**
-     * @var integer Number of Mongod nodes after instance modification (excluding read-only nodes).
- - When the CPU and memory specifications of Mongod nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
- - When the CPU and memory specifications of Mongos nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
- - During node modification (all types), this parameter can be left blank or set to the number of Mongod nodes (excluding read-only nodes) after modification.
- - Number of replica set nodes: Confirm the range of the number of nodes based on the MinNodeNum and MaxNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
- - Number of nodes for each shard in a sharded cluster: Confirm the range of the number of nodes based on the MinReplicateSetNodeNum and MaxReplicateSetNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
+     * @var integer Number of Mongod nodes after instance changes (excluding read-only nodes).
+- Number of replica set nodes. The value range of the number of nodes can be obtained through the response parameters MinNodeNum and MaxNodeNum of the [DescribeSpecInfo ](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API.
+- Number of nodes per shard in a sharded cluster. The value range of the number of nodes can be obtained through the response parameters MinReplicateSetNodeNum and MaxReplicateSetNodeNum of the [DescribeSpecInfo ](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API.
+**Note**: When the CPU and memory specifications of Mongod or Mongos nodes are changed, this parameter is not required, or enter the current number of Mongod or Mongos nodes (excluding read-only nodes).
      */
     public $NodeNum;
 
     /**
-     * @var integer Number of shards after instance modification.
- - The value range can be obtained from the **MinReplicateSetNum** and **MaxReplicateSetNum** parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API for querying saleable TencentDB for MongoDB specifications. - The value of this parameter can only be increased but not decreased.
+     * @var integer Number of shards after instance changes.
+- The value range for the number of instance shards can be obtained through the response parameters **MinReplicateSetNum** and **MaxReplicateSetNum** of the [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API.
+- The number of instance shards can only be increased and cannot be decreased.
      */
     public $ReplicateSetNum;
 
@@ -128,7 +127,7 @@ Oplog size after instance configuration modification.
     public $InMaintenance;
 
     /**
-     * @var string Mongos node memory size after the sharded cluster instance configuration is modified. Unit: GB.
+     * @var string Memory size of the Mongos node after sharded cluster instance configuration changes, in GB. For the specifications supported by the instance, see [Product Specifications](https://www.tencentcloud.comom/document/product/240/64125?from_cn_redirect=1).
      */
     public $MongosMemory;
 
@@ -138,37 +137,38 @@ Oplog size after instance configuration modification.
     public $AddNodeList;
 
     /**
-     * @var array List of nodes to be deleted. Note: According to the consistency principle for nodes of each shard on a sharded cluster instance, specify the nodes on shard 0 for node deletion from the sharded cluster instance. For example, cmgo-9nl1czif_0-node-readonly0 will delete the first read-only node of each shard.
+     * @var array Deletes the node list.
+**Note**: According to the consistency principle for nodes of each shard on a sharded cluster instance, specify the nodes on shard 0 for node deletion from the sharded cluster instance. For example, cmgo-9nl1czif_0-node-readonly0 will delete the first read-only node of each shard.
      */
     public $RemoveNodeList;
 
     /**
-     * @param string $InstanceId Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
-
-     * @param integer $Memory Memory size after instance configuration modification. - Unit: GB. The current instance memory size is used by default if this parameter is left blank.<br>Note: Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
-     * @param integer $Volume Disk capacity after instance configuration modification. Unit: GB. The current instance disk capacity is used by default if this parameter is left blank.
- - Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
- - During configuration downgrading, the disk capacity after modification should be greater than 1.2 times the used disk capacity.
+     * @param string $InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+     * @param integer $Memory Memory size after instance configuration changes, in GB. If this parameter is left blank, the default value is the current memory size of the instance. For the currently supported memory specifications, see [Product Specifications](https://www.tencentcloud.comom/document/product/240/64125?from_cn_redirect=1).
+**Note**: Memory and disk configurations should be upgraded or downgraded simultaneously, meaning that Memory and Volume should be modified at the same time.
+     * @param integer $Volume Hard disk size after instance configuration changes, in GB. If this parameter is left blank, the default value is the current disk size of the instance. For the currently supported disk capacity, see [Product Specifications](https://www.tencentcloud.comom/document/product/240/64125?from_cn_redirect=1).
+- Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
+- During configuration downgrade, the disk capacity after changes should be greater than 1.2 times the used disk capacity.
      * @param integer $OplogSize (Deprecated) Use the independent API ResizeOplog.
 
 Oplog size after instance configuration modification.
  - Unit: GB.
  - By default, the capacity occupied by Oplog is 10% of the disk capacity. The range of capacity occupied by Oplog supported by the system is [10%,90%] of the disk capacity.
-     * @param integer $NodeNum Number of Mongod nodes after instance modification (excluding read-only nodes).
- - When the CPU and memory specifications of Mongod nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
- - When the CPU and memory specifications of Mongos nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
- - During node modification (all types), this parameter can be left blank or set to the number of Mongod nodes (excluding read-only nodes) after modification.
- - Number of replica set nodes: Confirm the range of the number of nodes based on the MinNodeNum and MaxNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
- - Number of nodes for each shard in a sharded cluster: Confirm the range of the number of nodes based on the MinReplicateSetNodeNum and MaxReplicateSetNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
-     * @param integer $ReplicateSetNum Number of shards after instance modification.
- - The value range can be obtained from the **MinReplicateSetNum** and **MaxReplicateSetNum** parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API for querying saleable TencentDB for MongoDB specifications. - The value of this parameter can only be increased but not decreased.
+     * @param integer $NodeNum Number of Mongod nodes after instance changes (excluding read-only nodes).
+- Number of replica set nodes. The value range of the number of nodes can be obtained through the response parameters MinNodeNum and MaxNodeNum of the [DescribeSpecInfo ](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API.
+- Number of nodes per shard in a sharded cluster. The value range of the number of nodes can be obtained through the response parameters MinReplicateSetNodeNum and MaxReplicateSetNodeNum of the [DescribeSpecInfo ](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API.
+**Note**: When the CPU and memory specifications of Mongod or Mongos nodes are changed, this parameter is not required, or enter the current number of Mongod or Mongos nodes (excluding read-only nodes).
+     * @param integer $ReplicateSetNum Number of shards after instance changes.
+- The value range for the number of instance shards can be obtained through the response parameters **MinReplicateSetNum** and **MaxReplicateSetNum** of the [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API.
+- The number of instance shards can only be increased and cannot be decreased.
      * @param integer $InMaintenance Switch time for instance configuration modification.
  - 0: Execute the configuration modification task immediately after the adjustment is completed. Default value: 0.
  - 1: Execute the configuration modification task within the maintenance window.
 **Note**: Adjusting the number of nodes and shards is unsupported <b>within the maintenance window</b>.
-     * @param string $MongosMemory Mongos node memory size after the sharded cluster instance configuration is modified. Unit: GB.
+     * @param string $MongosMemory Memory size of the Mongos node after sharded cluster instance configuration changes, in GB. For the specifications supported by the instance, see [Product Specifications](https://www.tencentcloud.comom/document/product/240/64125?from_cn_redirect=1).
      * @param array $AddNodeList List of nodes to be added, containing the node type and AZ information.
-     * @param array $RemoveNodeList List of nodes to be deleted. Note: According to the consistency principle for nodes of each shard on a sharded cluster instance, specify the nodes on shard 0 for node deletion from the sharded cluster instance. For example, cmgo-9nl1czif_0-node-readonly0 will delete the first read-only node of each shard.
+     * @param array $RemoveNodeList Deletes the node list.
+**Note**: According to the consistency principle for nodes of each shard on a sharded cluster instance, specify the nodes on shard 0 for node deletion from the sharded cluster instance. For example, cmgo-9nl1czif_0-node-readonly0 will delete the first read-only node of each shard.
      */
     function __construct()
     {

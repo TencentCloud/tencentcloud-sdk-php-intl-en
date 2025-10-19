@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAsyncRequestInfo request structure.
  *
- * @method string getAsyncRequestId() Obtain Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
- * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+ * @method string getAsyncRequestId() Obtain Specifies the ID of the asynchronous request to be queried. When an asynchronous process is involved in the API operation (such as [CreateBackupDBInstance](https://www.tencentcloud.comom/document/product/240/46599?from_cn_redirect=1)), the response value of AsyncRequestId is the ID to be filled in for this parameter.
+ * @method void setAsyncRequestId(string $AsyncRequestId) Set Specifies the ID of the asynchronous request to be queried. When an asynchronous process is involved in the API operation (such as [CreateBackupDBInstance](https://www.tencentcloud.comom/document/product/240/46599?from_cn_redirect=1)), the response value of AsyncRequestId is the ID to be filled in for this parameter.
  */
 class DescribeAsyncRequestInfoRequest extends AbstractModel
 {
     /**
-     * @var string Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+     * @var string Specifies the ID of the asynchronous request to be queried. When an asynchronous process is involved in the API operation (such as [CreateBackupDBInstance](https://www.tencentcloud.comom/document/product/240/46599?from_cn_redirect=1)), the response value of AsyncRequestId is the ID to be filled in for this parameter.
      */
     public $AsyncRequestId;
 
     /**
-     * @param string $AsyncRequestId Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+     * @param string $AsyncRequestId Specifies the ID of the asynchronous request to be queried. When an asynchronous process is involved in the API operation (such as [CreateBackupDBInstance](https://www.tencentcloud.comom/document/product/240/46599?from_cn_redirect=1)), the response value of AsyncRequestId is the ID to be filled in for this parameter.
      */
     function __construct()
     {

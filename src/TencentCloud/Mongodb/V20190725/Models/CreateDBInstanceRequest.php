@@ -28,32 +28,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) Set Instance memory size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain specific saleable memory specifications.
  * @method integer getVolume() Obtain Instance disk size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
  * @method void setVolume(integer $Volume) Set Instance disk size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
- * @method string getMongoVersion() Obtain Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
- * @method void setMongoVersion(string $MongoVersion) Set Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
- * @method integer getGoodsNum() Obtain Number of instances. Minimum value: 1. Maximum value: 10.
- * @method void setGoodsNum(integer $GoodsNum) Set Number of instances. Minimum value: 1. Maximum value: 10.
+ * @method string getMongoVersion() Obtain Refers to version information. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain detailed information about the supported versions.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+ * @method void setMongoVersion(string $MongoVersion) Set Refers to version information. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain detailed information about the supported versions.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+ * @method integer getGoodsNum() Obtain Number of instances. The minimum value is 1, and the maximum value is 30.
+ * @method void setGoodsNum(integer $GoodsNum) Set Number of instances. The minimum value is 1, and the maximum value is 30.
  * @method string getZone() Obtain AZ information. Format: ap-guangzhou-2.
  - Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the specific information.
  - This parameter indicates the primary AZ. If multi-AZ deployment is adopted, the value of Zone should be one of the values of AvailabilityZoneList.
  * @method void setZone(string $Zone) Set AZ information. Format: ap-guangzhou-2.
  - Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the specific information.
  - This parameter indicates the primary AZ. If multi-AZ deployment is adopted, the value of Zone should be one of the values of AvailabilityZoneList.
- * @method integer getPeriod() Obtain Specifies the purchase duration during instance purchase. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Unit: months.
-
- * @method void setPeriod(integer $Period) Set Specifies the purchase duration during instance purchase. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Unit: months.
-
+ * @method integer getPeriod() Obtain Specifies the purchase duration during the instance purchase, in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.
+ * @method void setPeriod(integer $Period) Set Specifies the purchase duration during the instance purchase, in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.
  * @method string getMachineCode() Obtain Product specification type.
  - HIO10G: general high-I/O 10GE type.
  - HCD: cloud disk type.
@@ -74,10 +72,18 @@ use TencentCloud\Common\AbstractModel;
  - The project ID can be obtained on the [project management page in the TencentDB for MongoDB console](https://console.cloud.tencent.com/project).
  * @method void setProjectId(integer $ProjectId) Set Project ID.  - The default project is used if this parameter is not specified.
  - The project ID can be obtained on the [project management page in the TencentDB for MongoDB console](https://console.cloud.tencent.com/project).
- * @method string getVpcId() Obtain VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
- * @method void setVpcId(string $VpcId) Set VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
- * @method string getSubnetId() Obtain VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
- * @method void setSubnetId(string $SubnetId) Set VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
+ * @method string getVpcId() Obtain VPC ID.
+- Only VPC configuration is supported, and a VPC in the same region as the instance should be selected. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to obtain the available VPC ID.
+- After successful instance creation, VPCs can be changed. For detailed operations, see [Changing the Network](https://www.tencentcloud.comom/document/product/239/30910?from_cn_redirect=1).
+ * @method void setVpcId(string $VpcId) Set VPC ID.
+- Only VPC configuration is supported, and a VPC in the same region as the instance should be selected. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to obtain the available VPC ID.
+- After successful instance creation, VPCs can be changed. For detailed operations, see [Changing the Network](https://www.tencentcloud.comom/document/product/239/30910?from_cn_redirect=1).
+ * @method string getSubnetId() Obtain Subnet ID of the VPC.
+- A subnet should be specified within the selected VPC. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to obtain the available subnet ID.
+- After successful instance creation, VPCs and subnets can be changed. For detailed operations, see [Changing the Network](https://www.tencentcloud.comom/document/product/239/30910?from_cn_redirect=1).
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID of the VPC.
+- A subnet should be specified within the selected VPC. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to obtain the available subnet ID.
+- After successful instance creation, VPCs and subnets can be changed. For detailed operations, see [Changing the Network](https://www.tencentcloud.comom/document/product/239/30910?from_cn_redirect=1).
  * @method string getPassword() Obtain Instance password. The requirements are as follows:
  - The number of characters should be in the range of [8, 32].
  - Characters within the ranges [A,Z], [a,z], and [0,9] are allowed.
@@ -102,16 +108,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select a voucher.
  - 1: yes.
  - 0: no. Default value: 0.
- * @method integer getClone() Obtain Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: instance cloned from a complete instance. Note: For a cloned instance, RestoreTime is required.
- * @method void setClone(integer $Clone) Set Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: instance cloned from a complete instance. Note: For a cloned instance, RestoreTime is required.
- * @method string getFather() Obtain Parent instance ID. This parameter is required when the **Clone** parameter is set to 3 or 4, indicating a read-only or disaster recovery instance.
- * @method void setFather(string $Father) Set Parent instance ID. This parameter is required when the **Clone** parameter is set to 3 or 4, indicating a read-only or disaster recovery instance.
- * @method array getSecurityGroup() Obtain Security group ID.  
- * @method void setSecurityGroup(array $SecurityGroup) Set Security group ID.  
+ * @method integer getClone() Obtain Instance type.
+- 1: formal instance.
+- 3: read-only instance.
+- 4: disaster recovery instance.
+- 5: cloned instance. Note: For a cloned instance, RestoreTime is required.
+ * @method void setClone(integer $Clone) Set Instance type.
+- 1: formal instance.
+- 3: read-only instance.
+- 4: disaster recovery instance.
+- 5: cloned instance. Note: For a cloned instance, RestoreTime is required.
+ * @method string getFather() Obtain Parent instance ID.
+- This parameter is required when the value of the **Clone** parameter is set to 3 or 4, indicating a read-only or disaster recovery instance.
+- Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the parent instance ID from the instance list.
+ * @method void setFather(string $Father) Set Parent instance ID.
+- This parameter is required when the value of the **Clone** parameter is set to 3 or 4, indicating a read-only or disaster recovery instance.
+- Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the parent instance ID from the instance list.
+ * @method array getSecurityGroup() Obtain Security group ID. Log in to the [security group console](https://console.cloud.tencent.com/vpc/security-group) to obtain the ID of the security group in the same region as the database instance.
+ * @method void setSecurityGroup(array $SecurityGroup) Set Security group ID. Log in to the [security group console](https://console.cloud.tencent.com/vpc/security-group) to obtain the ID of the security group in the same region as the database instance.
  * @method string getRestoreTime() Obtain Rollback time of the cloned instance. It is required when the Clone value is 5 or 6. - This parameter is required for cloned instances. Format: 2021-08-13 16:30:00. - Rollback time range: Only data within the last 7 days can be rolled back.
  * @method void setRestoreTime(string $RestoreTime) Set Rollback time of the cloned instance. It is required when the Clone value is 5 or 6. - This parameter is required for cloned instances. Format: 2021-08-13 16:30:00. - Rollback time range: Only data within the last 7 days can be rolled back.
- * @method string getInstanceName() Obtain Instance name. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
- * @method void setInstanceName(string $InstanceName) Set Instance name. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
+ * @method string getInstanceName() Obtain Instance name. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported, with a length of 128 characters. When database instances are purchased in batches, the automatic ascending feature is supported through the custom naming pattern string and numeric suffix to set instance names efficiently.
+- Basic mode: prefix + automatic ascending number (starting from 1 by default). Only a custom instance name prefix is required for **lnstanceName**. For example, it can be set to cmgo. If the purchase quantity is set to 5, after purchase, the instances will be sequentially named cmgo1, cmgo2, cmgo3, cmgo4, and cmgo5, respectively.
+- Custom starting number mode: prefix + {R:x} (x is the custom starting number). Prefix{R:x} is required for **InstanceName**. For example, cmgo{R:3}. If the purchase quantity is set to 5, the instance names will be sequentially named cmgo3, cmgo4, cmgo5, cmgo6, and cmgo7.
+- Composite pattern string: prefix 1{R:x} + prefix 2{R:y}+ ⋯ + fixed suffix, where x and y are the starting numbers of each prefix. A composite pattern string is required for **instanceName**. For example, cmgo{R:10}\_node{R:12}\_db. If the batch purchase quantity is set to 5, the instances will be sequentially named cmgo10\_node12\_db, cmgo11\_node13\_db, cmgo12\_node14\_db, cmgo13\_node15\_db, and cmgo14\_node16\_db.
+ * @method void setInstanceName(string $InstanceName) Set Instance name. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported, with a length of 128 characters. When database instances are purchased in batches, the automatic ascending feature is supported through the custom naming pattern string and numeric suffix to set instance names efficiently.
+- Basic mode: prefix + automatic ascending number (starting from 1 by default). Only a custom instance name prefix is required for **lnstanceName**. For example, it can be set to cmgo. If the purchase quantity is set to 5, after purchase, the instances will be sequentially named cmgo1, cmgo2, cmgo3, cmgo4, and cmgo5, respectively.
+- Custom starting number mode: prefix + {R:x} (x is the custom starting number). Prefix{R:x} is required for **InstanceName**. For example, cmgo{R:3}. If the purchase quantity is set to 5, the instance names will be sequentially named cmgo3, cmgo4, cmgo5, cmgo6, and cmgo7.
+- Composite pattern string: prefix 1{R:x} + prefix 2{R:y}+ ⋯ + fixed suffix, where x and y are the starting numbers of each prefix. A composite pattern string is required for **instanceName**. For example, cmgo{R:10}\_node{R:12}\_db. If the batch purchase quantity is set to 5, the instances will be sequentially named cmgo10\_node12\_db, cmgo11\_node13\_db, cmgo12\_node14\_db, cmgo13\_node15\_db, and cmgo14\_node16\_db.
  * @method array getAvailabilityZoneList() Obtain Specifies the list of AZs during multi-AZ deployment of TencentDB for MongoDB instances.
  - For instances in multi-AZ deployment mode, the **Zone** parameter specifies the primary AZ, and **AvailabilityZoneList** specifies all AZs, including the primary AZ. Format: [ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4].
  - The [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain AZs planned for TencentDB for MongoDB instances in different regions, helping you specify valid AZs.
@@ -140,8 +164,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadonlyNodeAvailabilityZoneList(array $ReadonlyNodeAvailabilityZoneList) Set Array of AZs of read-only nodes. This parameter is required for instances in multi-AZ deployment mode when **ReadonlyNodeNum** is not set to **0**.
  * @method string getHiddenZone() Obtain AZ of the hidden node. This parameter is required for instances in multi-AZ deployment mode.
  * @method void setHiddenZone(string $HiddenZone) Set AZ of the hidden node. This parameter is required for instances in multi-AZ deployment mode.
- * @method string getParamTemplateId() Obtain Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions and instance types supported by templates.
- * @method void setParamTemplateId(string $ParamTemplateId) Set Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions and instance types supported by templates.
+ * @method string getParamTemplateId() Obtain Parameter template ID.
+- A parameter template is a collection of predefined parameter values that can be used to quickly configure new MongoDB instances. Proper use of parameter templates can significantly enhance the deployment efficiency and operational performance of the database.
+- The [DescribeDBInstanceParamTpl](https://www.tencentcloud.comom/document/product/240/109155?from_cn_redirect=1) API can be called to obtain the parameter template ID. Select the parameter template ID corresponding to the instance version and architecture.
+ * @method void setParamTemplateId(string $ParamTemplateId) Set Parameter template ID.
+- A parameter template is a collection of predefined parameter values that can be used to quickly configure new MongoDB instances. Proper use of parameter templates can significantly enhance the deployment efficiency and operational performance of the database.
+- The [DescribeDBInstanceParamTpl](https://www.tencentcloud.comom/document/product/240/109155?from_cn_redirect=1) API can be called to obtain the parameter template ID. Select the parameter template ID corresponding to the instance version and architecture.
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -162,18 +190,18 @@ class CreateDBInstanceRequest extends AbstractModel
     public $Volume;
 
     /**
-     * @var string Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+     * @var string Refers to version information. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain detailed information about the supported versions.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
      */
     public $MongoVersion;
 
     /**
-     * @var integer Number of instances. Minimum value: 1. Maximum value: 10.
+     * @var integer Number of instances. The minimum value is 1, and the maximum value is 30.
      */
     public $GoodsNum;
 
@@ -185,8 +213,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer Specifies the purchase duration during instance purchase. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Unit: months.
-
+     * @var integer Specifies the purchase duration during the instance purchase, in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.
      */
     public $Period;
 
@@ -217,12 +244,16 @@ class CreateDBInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
+     * @var string VPC ID.
+- Only VPC configuration is supported, and a VPC in the same region as the instance should be selected. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to obtain the available VPC ID.
+- After successful instance creation, VPCs can be changed. For detailed operations, see [Changing the Network](https://www.tencentcloud.comom/document/product/239/30910?from_cn_redirect=1).
      */
     public $VpcId;
 
     /**
-     * @var string VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
+     * @var string Subnet ID of the VPC.
+- A subnet should be specified within the selected VPC. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to obtain the available subnet ID.
+- After successful instance creation, VPCs and subnets can be changed. For detailed operations, see [Changing the Network](https://www.tencentcloud.comom/document/product/239/30910?from_cn_redirect=1).
      */
     public $SubnetId;
 
@@ -255,17 +286,23 @@ class CreateDBInstanceRequest extends AbstractModel
     public $AutoVoucher;
 
     /**
-     * @var integer Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: instance cloned from a complete instance. Note: For a cloned instance, RestoreTime is required.
+     * @var integer Instance type.
+- 1: formal instance.
+- 3: read-only instance.
+- 4: disaster recovery instance.
+- 5: cloned instance. Note: For a cloned instance, RestoreTime is required.
      */
     public $Clone;
 
     /**
-     * @var string Parent instance ID. This parameter is required when the **Clone** parameter is set to 3 or 4, indicating a read-only or disaster recovery instance.
+     * @var string Parent instance ID.
+- This parameter is required when the value of the **Clone** parameter is set to 3 or 4, indicating a read-only or disaster recovery instance.
+- Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the parent instance ID from the instance list.
      */
     public $Father;
 
     /**
-     * @var array Security group ID.  
+     * @var array Security group ID. Log in to the [security group console](https://console.cloud.tencent.com/vpc/security-group) to obtain the ID of the security group in the same region as the database instance.
      */
     public $SecurityGroup;
 
@@ -275,7 +312,10 @@ class CreateDBInstanceRequest extends AbstractModel
     public $RestoreTime;
 
     /**
-     * @var string Instance name. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
+     * @var string Instance name. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported, with a length of 128 characters. When database instances are purchased in batches, the automatic ascending feature is supported through the custom naming pattern string and numeric suffix to set instance names efficiently.
+- Basic mode: prefix + automatic ascending number (starting from 1 by default). Only a custom instance name prefix is required for **lnstanceName**. For example, it can be set to cmgo. If the purchase quantity is set to 5, after purchase, the instances will be sequentially named cmgo1, cmgo2, cmgo3, cmgo4, and cmgo5, respectively.
+- Custom starting number mode: prefix + {R:x} (x is the custom starting number). Prefix{R:x} is required for **InstanceName**. For example, cmgo{R:3}. If the purchase quantity is set to 5, the instance names will be sequentially named cmgo3, cmgo4, cmgo5, cmgo6, and cmgo7.
+- Composite pattern string: prefix 1{R:x} + prefix 2{R:y}+ ⋯ + fixed suffix, where x and y are the starting numbers of each prefix. A composite pattern string is required for **instanceName**. For example, cmgo{R:10}\_node{R:12}\_db. If the batch purchase quantity is set to 5, the instances will be sequentially named cmgo10\_node12\_db, cmgo11\_node13\_db, cmgo12\_node14\_db, cmgo13\_node15\_db, and cmgo14\_node16\_db.
      */
     public $InstanceName;
 
@@ -322,7 +362,9 @@ class CreateDBInstanceRequest extends AbstractModel
     public $HiddenZone;
 
     /**
-     * @var string Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions and instance types supported by templates.
+     * @var string Parameter template ID.
+- A parameter template is a collection of predefined parameter values that can be used to quickly configure new MongoDB instances. Proper use of parameter templates can significantly enhance the deployment efficiency and operational performance of the database.
+- The [DescribeDBInstanceParamTpl](https://www.tencentcloud.comom/document/product/240/109155?from_cn_redirect=1) API can be called to obtain the parameter template ID. Select the parameter template ID corresponding to the instance version and architecture.
      */
     public $ParamTemplateId;
 
@@ -331,19 +373,18 @@ class CreateDBInstanceRequest extends AbstractModel
  - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
      * @param integer $Memory Instance memory size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain specific saleable memory specifications.
      * @param integer $Volume Instance disk size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
-     * @param string $MongoVersion Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
-     * @param integer $GoodsNum Number of instances. Minimum value: 1. Maximum value: 10.
+     * @param string $MongoVersion Refers to version information. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain detailed information about the supported versions.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+     * @param integer $GoodsNum Number of instances. The minimum value is 1, and the maximum value is 30.
      * @param string $Zone AZ information. Format: ap-guangzhou-2.
  - Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the specific information.
  - This parameter indicates the primary AZ. If multi-AZ deployment is adopted, the value of Zone should be one of the values of AvailabilityZoneList.
-     * @param integer $Period Specifies the purchase duration during instance purchase. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Unit: months.
-
+     * @param integer $Period Specifies the purchase duration during the instance purchase, in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.
      * @param string $MachineCode Product specification type.
  - HIO10G: general high-I/O 10GE type.
  - HCD: cloud disk type.
@@ -354,8 +395,12 @@ class CreateDBInstanceRequest extends AbstractModel
  - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
      * @param integer $ProjectId Project ID.  - The default project is used if this parameter is not specified.
  - The project ID can be obtained on the [project management page in the TencentDB for MongoDB console](https://console.cloud.tencent.com/project).
-     * @param string $VpcId VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
-     * @param string $SubnetId VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
+     * @param string $VpcId VPC ID.
+- Only VPC configuration is supported, and a VPC in the same region as the instance should be selected. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to obtain the available VPC ID.
+- After successful instance creation, VPCs can be changed. For detailed operations, see [Changing the Network](https://www.tencentcloud.comom/document/product/239/30910?from_cn_redirect=1).
+     * @param string $SubnetId Subnet ID of the VPC.
+- A subnet should be specified within the selected VPC. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to obtain the available subnet ID.
+- After successful instance creation, VPCs and subnets can be changed. For detailed operations, see [Changing the Network](https://www.tencentcloud.comom/document/product/239/30910?from_cn_redirect=1).
      * @param string $Password Instance password. The requirements are as follows:
  - The number of characters should be in the range of [8, 32].
  - Characters within the ranges [A,Z], [a,z], and [0,9] are allowed.
@@ -368,11 +413,20 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $AutoVoucher Whether to automatically select a voucher.
  - 1: yes.
  - 0: no. Default value: 0.
-     * @param integer $Clone Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: instance cloned from a complete instance. Note: For a cloned instance, RestoreTime is required.
-     * @param string $Father Parent instance ID. This parameter is required when the **Clone** parameter is set to 3 or 4, indicating a read-only or disaster recovery instance.
-     * @param array $SecurityGroup Security group ID.  
+     * @param integer $Clone Instance type.
+- 1: formal instance.
+- 3: read-only instance.
+- 4: disaster recovery instance.
+- 5: cloned instance. Note: For a cloned instance, RestoreTime is required.
+     * @param string $Father Parent instance ID.
+- This parameter is required when the value of the **Clone** parameter is set to 3 or 4, indicating a read-only or disaster recovery instance.
+- Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the parent instance ID from the instance list.
+     * @param array $SecurityGroup Security group ID. Log in to the [security group console](https://console.cloud.tencent.com/vpc/security-group) to obtain the ID of the security group in the same region as the database instance.
      * @param string $RestoreTime Rollback time of the cloned instance. It is required when the Clone value is 5 or 6. - This parameter is required for cloned instances. Format: 2021-08-13 16:30:00. - Rollback time range: Only data within the last 7 days can be rolled back.
-     * @param string $InstanceName Instance name. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
+     * @param string $InstanceName Instance name. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported, with a length of 128 characters. When database instances are purchased in batches, the automatic ascending feature is supported through the custom naming pattern string and numeric suffix to set instance names efficiently.
+- Basic mode: prefix + automatic ascending number (starting from 1 by default). Only a custom instance name prefix is required for **lnstanceName**. For example, it can be set to cmgo. If the purchase quantity is set to 5, after purchase, the instances will be sequentially named cmgo1, cmgo2, cmgo3, cmgo4, and cmgo5, respectively.
+- Custom starting number mode: prefix + {R:x} (x is the custom starting number). Prefix{R:x} is required for **InstanceName**. For example, cmgo{R:3}. If the purchase quantity is set to 5, the instance names will be sequentially named cmgo3, cmgo4, cmgo5, cmgo6, and cmgo7.
+- Composite pattern string: prefix 1{R:x} + prefix 2{R:y}+ ⋯ + fixed suffix, where x and y are the starting numbers of each prefix. A composite pattern string is required for **instanceName**. For example, cmgo{R:10}\_node{R:12}\_db. If the batch purchase quantity is set to 5, the instances will be sequentially named cmgo10\_node12\_db, cmgo11\_node13\_db, cmgo12\_node14\_db, cmgo13\_node15\_db, and cmgo14\_node16\_db.
      * @param array $AvailabilityZoneList Specifies the list of AZs during multi-AZ deployment of TencentDB for MongoDB instances.
  - For instances in multi-AZ deployment mode, the **Zone** parameter specifies the primary AZ, and **AvailabilityZoneList** specifies all AZs, including the primary AZ. Format: [ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4].
  - The [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain AZs planned for TencentDB for MongoDB instances in different regions, helping you specify valid AZs.
@@ -387,7 +441,9 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $ReadonlyNodeNum Number of read-only nodes. Value ranges: [0,5].
      * @param array $ReadonlyNodeAvailabilityZoneList Array of AZs of read-only nodes. This parameter is required for instances in multi-AZ deployment mode when **ReadonlyNodeNum** is not set to **0**.
      * @param string $HiddenZone AZ of the hidden node. This parameter is required for instances in multi-AZ deployment mode.
-     * @param string $ParamTemplateId Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions and instance types supported by templates.
+     * @param string $ParamTemplateId Parameter template ID.
+- A parameter template is a collection of predefined parameter values that can be used to quickly configure new MongoDB instances. Proper use of parameter templates can significantly enhance the deployment efficiency and operational performance of the database.
+- The [DescribeDBInstanceParamTpl](https://www.tencentcloud.comom/document/product/240/109155?from_cn_redirect=1) API can be called to obtain the parameter template ID. Select the parameter template ID corresponding to the instance version and architecture.
      */
     function __construct()
     {

@@ -18,28 +18,48 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The result of the created backup download task
+ * Result of creating a backup download task.
  *
- * @method string getReplicaSetId() Obtain Shard name
- * @method void setReplicaSetId(string $ReplicaSetId) Set Shard name
- * @method integer getStatus() Obtain Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
- * @method void setStatus(integer $Status) Set Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+ * @method string getReplicaSetId() Obtain Shard name.
+ * @method void setReplicaSetId(string $ReplicaSetId) Set Shard name.
+ * @method integer getStatus() Obtain Current status of the task.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
+ * @method void setStatus(integer $Status) Set Current status of the task.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
  */
 class BackupDownloadTaskStatus extends AbstractModel
 {
     /**
-     * @var string Shard name
+     * @var string Shard name.
      */
     public $ReplicaSetId;
 
     /**
-     * @var integer Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+     * @var integer Current status of the task.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
      */
     public $Status;
 
     /**
-     * @param string $ReplicaSetId Shard name
-     * @param integer $Status Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+     * @param string $ReplicaSetId Shard name.
+     * @param integer $Status Current status of the task.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
      */
     function __construct()
     {

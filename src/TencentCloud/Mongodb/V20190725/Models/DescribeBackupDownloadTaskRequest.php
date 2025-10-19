@@ -20,82 +20,118 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupDownloadTask request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
- * @method string getBackupName() Obtain The name of a backup file with download tasks to be queried
- * @method void setBackupName(string $BackupName) Set The name of a backup file with download tasks to be queried
- * @method string getStartTime() Obtain The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
- * @method void setStartTime(string $StartTime) Set The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
- * @method string getEndTime() Obtain The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
- * @method void setEndTime(string $EndTime) Set The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
- * @method integer getLimit() Obtain The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
- * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
- * @method integer getOffset() Obtain Offset for pagination. Default value: `0`.
- * @method void setOffset(integer $Offset) Set Offset for pagination. Default value: `0`.
- * @method string getOrderBy() Obtain The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
- * @method void setOrderBy(string $OrderBy) Set The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
- * @method string getOrderByType() Obtain Sort order. Valid values: `asc`, `desc` (default).
- * @method void setOrderByType(string $OrderByType) Set Sort order. Valid values: `asc`, `desc` (default).
- * @method array getStatus() Obtain The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
- * @method void setStatus(array $Status) Set The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+ * @method string getBackupName() Obtain Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
+ * @method void setBackupName(string $BackupName) Set Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
+ * @method string getStartTime() Obtain Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
+ * @method void setStartTime(string $StartTime) Set Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
+ * @method string getEndTime() Obtain Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
+ * @method void setEndTime(string $EndTime) Set Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
+ * @method integer getLimit() Obtain Number of entries returned for this query. Value range: 1–100. The default value is 20.
+ * @method void setLimit(integer $Limit) Set Number of entries returned for this query. Value range: 1–100. The default value is 20.
+ * @method integer getOffset() Obtain Specifies the number of pages returned for this query. The default value is 0.
+ * @method void setOffset(integer $Offset) Set Specifies the number of pages returned for this query. The default value is 0.
+ * @method string getOrderBy() Obtain Sorting field.
+- createTime: sort by the creation time of the backup download task. The default value is createTime.
+- finishTime: sort by the completion time of the backup download task.
+ * @method void setOrderBy(string $OrderBy) Set Sorting field.
+- createTime: sort by the creation time of the backup download task. The default value is createTime.
+- finishTime: sort by the completion time of the backup download task.
+ * @method string getOrderByType() Obtain Sorting method.
+- asc: ascending order.
+- desc: descending order. The default value is desc.
+ * @method void setOrderByType(string $OrderByType) Set Sorting method.
+- asc: ascending order.
+- desc: descending order. The default value is desc.
+ * @method array getStatus() Obtain Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
+ * @method void setStatus(array $Status) Set Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
  */
 class DescribeBackupDownloadTaskRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
+     * @var string Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string The name of a backup file with download tasks to be queried
+     * @var string Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
      */
     public $BackupName;
 
     /**
-     * @var string The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
+     * @var string Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
      */
     public $StartTime;
 
     /**
-     * @var string The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
+     * @var string Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
      */
     public $EndTime;
 
     /**
-     * @var integer The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
+     * @var integer Number of entries returned for this query. Value range: 1–100. The default value is 20.
      */
     public $Limit;
 
     /**
-     * @var integer Offset for pagination. Default value: `0`.
+     * @var integer Specifies the number of pages returned for this query. The default value is 0.
      */
     public $Offset;
 
     /**
-     * @var string The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
+     * @var string Sorting field.
+- createTime: sort by the creation time of the backup download task. The default value is createTime.
+- finishTime: sort by the completion time of the backup download task.
      */
     public $OrderBy;
 
     /**
-     * @var string Sort order. Valid values: `asc`, `desc` (default).
+     * @var string Sorting method.
+- asc: ascending order.
+- desc: descending order. The default value is desc.
      */
     public $OrderByType;
 
     /**
-     * @var array The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
+     * @var array Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
      */
     public $Status;
 
     /**
-     * @param string $InstanceId Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
-     * @param string $BackupName The name of a backup file with download tasks to be queried
-     * @param string $StartTime The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
-     * @param string $EndTime The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
-     * @param integer $Limit The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
-     * @param integer $Offset Offset for pagination. Default value: `0`.
-     * @param string $OrderBy The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
-     * @param string $OrderByType Sort order. Valid values: `asc`, `desc` (default).
-     * @param array $Status The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
+     * @param string $InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+     * @param string $BackupName Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
+     * @param string $StartTime Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
+     * @param string $EndTime Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
+     * @param integer $Limit Number of entries returned for this query. Value range: 1–100. The default value is 20.
+     * @param integer $Offset Specifies the number of pages returned for this query. The default value is 0.
+     * @param string $OrderBy Sorting field.
+- createTime: sort by the creation time of the backup download task. The default value is createTime.
+- finishTime: sort by the completion time of the backup download task.
+     * @param string $OrderByType Sorting method.
+- asc: ascending order.
+- desc: descending order. The default value is desc.
+     * @param array $Status Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
      */
     function __construct()
     {

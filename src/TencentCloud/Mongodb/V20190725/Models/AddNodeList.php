@@ -18,7 +18,7 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Node details of an instance to be modified.
+ * Node details of the instance to be modified.
  *
  * @method string getRole() Obtain Roles of nodes to be added.
  - SECONDARY: Mongod node.
@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  - SECONDARY: Mongod node.
  - READONLY: read-only node.
  - MONGOS: Mongos node.
- * @method string getZone() Obtain AZs corresponding to the nodes.
- - Single AZ: All nodes are in the same AZ.
- - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any two AZs should be larger than that in the third AZ.
- * @method void setZone(string $Zone) Set AZs corresponding to the nodes.
- - Single AZ: All nodes are in the same AZ.
- - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any two AZs should be larger than that in the third AZ.
+ * @method string getZone() Obtain AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+- Single AZ: All nodes are in the same AZ.
+- Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any 2 AZs should be greater than that in the third AZ.
+ * @method void setZone(string $Zone) Set AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+- Single AZ: All nodes are in the same AZ.
+- Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any 2 AZs should be greater than that in the third AZ.
  */
 class AddNodeList extends AbstractModel
 {
@@ -46,9 +46,9 @@ class AddNodeList extends AbstractModel
     public $Role;
 
     /**
-     * @var string AZs corresponding to the nodes.
- - Single AZ: All nodes are in the same AZ.
- - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any two AZs should be larger than that in the third AZ.
+     * @var string AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+- Single AZ: All nodes are in the same AZ.
+- Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any 2 AZs should be greater than that in the third AZ.
      */
     public $Zone;
 
@@ -57,9 +57,9 @@ class AddNodeList extends AbstractModel
  - SECONDARY: Mongod node.
  - READONLY: read-only node.
  - MONGOS: Mongos node.
-     * @param string $Zone AZs corresponding to the nodes.
- - Single AZ: All nodes are in the same AZ.
- - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any two AZs should be larger than that in the third AZ.
+     * @param string $Zone AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+- Single AZ: All nodes are in the same AZ.
+- Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any 2 AZs should be greater than that in the third AZ.
      */
     function __construct()
     {

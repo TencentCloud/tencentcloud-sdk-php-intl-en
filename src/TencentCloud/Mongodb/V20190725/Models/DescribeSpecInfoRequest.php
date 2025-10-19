@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSpecInfo request structure.
  *
- * @method string getZone() Obtain AZ to be queried
- * @method void setZone(string $Zone) Set AZ to be queried
+ * @method string getZone() Obtain AZ to be queried. For currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+ * @method void setZone(string $Zone) Set AZ to be queried. For currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
  */
 class DescribeSpecInfoRequest extends AbstractModel
 {
     /**
-     * @var string AZ to be queried
+     * @var string AZ to be queried. For currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
      */
     public $Zone;
 
     /**
-     * @param string $Zone AZ to be queried
+     * @param string $Zone AZ to be queried. For currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
      */
     function __construct()
     {

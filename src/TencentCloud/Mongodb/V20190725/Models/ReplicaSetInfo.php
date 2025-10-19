@@ -18,20 +18,20 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Shard information
+ * Shard information.
  *
- * @method string getReplicaSetId() Obtain Replica set ID
- * @method void setReplicaSetId(string $ReplicaSetId) Set Replica set ID
+ * @method string getReplicaSetId() Obtain Replica set ID.
+ * @method void setReplicaSetId(string $ReplicaSetId) Set Replica set ID.
  */
 class ReplicaSetInfo extends AbstractModel
 {
     /**
-     * @var string Replica set ID
+     * @var string Replica set ID.
      */
     public $ReplicaSetId;
 
     /**
-     * @param string $ReplicaSetId Replica set ID
+     * @param string $ReplicaSetId Replica set ID.
      */
     function __construct()
     {

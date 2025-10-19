@@ -18,30 +18,16 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specifications of purchasable MongoDB instances
+ * TencentDB for MongoDB instance sales specification.
  *
  * @method string getSpecCode() Obtain Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
- - Node types are as follows:
- - mongo: Mongod node.
- - mongos: Mongos node.
- - cfgstr: ConfigServer node.
- - Specification types are as follows:
- - HIO10G: general high-I/O 10GE type.
- - HCD: cloud disk type.
- - Memory specifications are as follows:
- - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
- - Unit: g, indicating GB. 128g means 128 GB.
+- Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+- Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+- Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
  * @method void setSpecCode(string $SpecCode) Set Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
- - Node types are as follows:
- - mongo: Mongod node.
- - mongos: Mongos node.
- - cfgstr: ConfigServer node.
- - Specification types are as follows:
- - HIO10G: general high-I/O 10GE type.
- - HCD: cloud disk type.
- - Memory specifications are as follows:
- - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
- - Unit: g, indicating GB. 128g means 128 GB.
+- Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+- Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+- Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
  * @method integer getStatus() Obtain Saleable specification status flag. Valid values are as follows:
  - 0: selling stopped.
  - 1: available for sale.
@@ -63,25 +49,23 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getConns() Obtain Maximum number of connections supported for the specification.
  * @method void setConns(integer $Conns) Set Maximum number of connections supported for the specification.
  * @method string getMongoVersionCode() Obtain Storage engine version information on instances.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
  * @method void setMongoVersionCode(string $MongoVersionCode) Set Storage engine version information on instances.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
  * @method integer getMongoVersionValue() Obtain Digital version corresponding to the instance version.
  * @method void setMongoVersionValue(integer $MongoVersionValue) Set Digital version corresponding to the instance version.
- * @method string getVersion() Obtain Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
-
- * @method void setVersion(string $Version) Set Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
-
+ * @method string getVersion() Obtain Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
+ * @method void setVersion(string $Version) Set Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
  * @method string getEngineName() Obtain Storage engine.
  * @method void setEngineName(string $EngineName) Set Storage engine.
  * @method integer getClusterType() Obtain Cluster type. Valid values are as follows:
@@ -113,16 +97,9 @@ class SpecItem extends AbstractModel
 {
     /**
      * @var string Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
- - Node types are as follows:
- - mongo: Mongod node.
- - mongos: Mongos node.
- - cfgstr: ConfigServer node.
- - Specification types are as follows:
- - HIO10G: general high-I/O 10GE type.
- - HCD: cloud disk type.
- - Memory specifications are as follows:
- - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
- - Unit: g, indicating GB. 128g means 128 GB.
+- Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+- Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+- Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
      */
     public $SpecCode;
 
@@ -170,12 +147,12 @@ class SpecItem extends AbstractModel
 
     /**
      * @var string Storage engine version information on instances.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
      */
     public $MongoVersionCode;
 
@@ -185,8 +162,7 @@ class SpecItem extends AbstractModel
     public $MongoVersionValue;
 
     /**
-     * @var string Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
-
+     * @var string Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
      */
     public $Version;
 
@@ -241,16 +217,9 @@ class SpecItem extends AbstractModel
 
     /**
      * @param string $SpecCode Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
- - Node types are as follows:
- - mongo: Mongod node.
- - mongos: Mongos node.
- - cfgstr: ConfigServer node.
- - Specification types are as follows:
- - HIO10G: general high-I/O 10GE type.
- - HCD: cloud disk type.
- - Memory specifications are as follows:
- - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
- - Unit: g, indicating GB. 128g means 128 GB.
+- Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+- Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+- Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
      * @param integer $Status Saleable specification status flag. Valid values are as follows:
  - 0: selling stopped.
  - 1: available for sale.
@@ -262,15 +231,14 @@ class SpecItem extends AbstractModel
      * @param integer $Qps Maximum number of requests per second. Unit: requests/second.
      * @param integer $Conns Maximum number of connections supported for the specification.
      * @param string $MongoVersionCode Storage engine version information on instances.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
      * @param integer $MongoVersionValue Digital version corresponding to the instance version.
-     * @param string $Version Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
-
+     * @param string $Version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
      * @param string $EngineName Storage engine.
      * @param integer $ClusterType Cluster type. Valid values are as follows:
  - 1: sharded cluster.

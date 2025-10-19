@@ -20,10 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBBackups request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
- * @method integer getBackupMethod() Obtain Backup mode. Valid values: `0` (logical backup), `1` (physical backup), `2` (both modes). Default value: `0`.
- * @method void setBackupMethod(integer $BackupMethod) Set Backup mode. Valid values: `0` (logical backup), `1` (physical backup), `2` (both modes). Default value: `0`.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+ * @method integer getBackupMethod() Obtain Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
+ * @method void setBackupMethod(integer $BackupMethod) Set Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
  * @method integer getLimit() Obtain Number of entries per page. Maximum value: `100`. If this parameter is left empty, all entries will be returned.
  * @method void setLimit(integer $Limit) Set Number of entries per page. Maximum value: `100`. If this parameter is left empty, all entries will be returned.
  * @method integer getOffset() Obtain Pagination offset, starting from `0`. Default value: `0`.
@@ -32,12 +44,18 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBBackupsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * @var string Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var integer Backup mode. Valid values: `0` (logical backup), `1` (physical backup), `2` (both modes). Default value: `0`.
+     * @var integer Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
      */
     public $BackupMethod;
 
@@ -52,8 +70,14 @@ class DescribeDBBackupsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-     * @param integer $BackupMethod Backup mode. Valid values: `0` (logical backup), `1` (physical backup), `2` (both modes). Default value: `0`.
+     * @param string $InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+     * @param integer $BackupMethod Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
      * @param integer $Limit Number of entries per page. Maximum value: `100`. If this parameter is left empty, all entries will be returned.
      * @param integer $Offset Pagination offset, starting from `0`. Default value: `0`.
      */

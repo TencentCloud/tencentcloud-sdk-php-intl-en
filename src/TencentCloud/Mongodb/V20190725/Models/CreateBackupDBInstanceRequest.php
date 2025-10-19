@@ -23,11 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() Obtain Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
  * @method void setInstanceId(string $InstanceId) Set Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
  * @method integer getBackupMethod() Obtain Sets the backup method.
- - 0: logical backup.
- - 1: physical backup.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
  * @method void setBackupMethod(integer $BackupMethod) Set Sets the backup method.
- - 0: logical backup.
- - 1: physical backup.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
  * @method string getBackupRemark() Obtain Backup remarks information.
  * @method void setBackupRemark(string $BackupRemark) Set Backup remarks information.
  */
@@ -40,8 +48,12 @@ class CreateBackupDBInstanceRequest extends AbstractModel
 
     /**
      * @var integer Sets the backup method.
- - 0: logical backup.
- - 1: physical backup.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
      */
     public $BackupMethod;
 
@@ -53,8 +65,12 @@ class CreateBackupDBInstanceRequest extends AbstractModel
     /**
      * @param string $InstanceId Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
      * @param integer $BackupMethod Sets the backup method.
- - 0: logical backup.
- - 1: physical backup.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
      * @param string $BackupRemark Backup remarks information.
      */
     function __construct()

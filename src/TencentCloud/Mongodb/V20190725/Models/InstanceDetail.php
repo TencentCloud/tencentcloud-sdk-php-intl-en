@@ -18,30 +18,48 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance details
+ * Instance details.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method string getInstanceName() Obtain Instance name
  * @method void setInstanceName(string $InstanceName) Set Instance name
  * @method integer getPayMode() Obtain Billing type. Valid value: 0 (pay-as-you-go)
  * @method void setPayMode(integer $PayMode) Set Billing type. Valid value: 0 (pay-as-you-go)
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method integer getClusterType() Obtain Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
- * @method void setClusterType(integer $ClusterType) Set Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+ * @method integer getProjectId() Obtain Project ID.
+ * @method void setProjectId(integer $ProjectId) Set Project ID.
+ * @method integer getClusterType() Obtain Cluster type.
+- 0: replica set instance.
+- 1: sharded cluster instance.
+ * @method void setClusterType(integer $ClusterType) Set Cluster type.
+- 0: replica set instance.
+- 1: sharded cluster instance.
  * @method string getRegion() Obtain Region information
  * @method void setRegion(string $Region) Set Region information
  * @method string getZone() Obtain AZ information
  * @method void setZone(string $Zone) Set AZ information
- * @method integer getNetType() Obtain Network type. Valid values: 0 (basic network), 1 (VPC)
- * @method void setNetType(integer $NetType) Set Network type. Valid values: 0 (basic network), 1 (VPC)
+ * @method integer getNetType() Obtain Network type.
+- 0: basic network.
+- 1: VPC.
+ * @method void setNetType(integer $NetType) Set Network type.
+- 0: basic network.
+- 1: VPC.
  * @method string getVpcId() Obtain VPC ID
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getSubnetId() Obtain Subnet ID of VPC
  * @method void setSubnetId(string $SubnetId) Set Subnet ID of VPC
- * @method integer getStatus() Obtain Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
- * @method void setStatus(integer $Status) Set Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
+ * @method integer getStatus() Obtain Instance status.
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
+ * @method void setStatus(integer $Status) Set Instance status.
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
  * @method string getVip() Obtain Instance IP
  * @method void setVip(string $Vip) Set Instance IP
  * @method integer getVport() Obtain Port number
@@ -50,24 +68,48 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Instance creation time
  * @method string getDeadLine() Obtain Instance expiration time
  * @method void setDeadLine(string $DeadLine) Set Instance expiration time
- * @method string getMongoVersion() Obtain Instance version information
- * @method void setMongoVersion(string $MongoVersion) Set Instance version information
- * @method integer getMemory() Obtain Instance memory size in MB
- * @method void setMemory(integer $Memory) Set Instance memory size in MB
- * @method integer getVolume() Obtain Instance disk size in MB
- * @method void setVolume(integer $Volume) Set Instance disk size in MB
- * @method integer getCpuNum() Obtain Number of CPU cores of an instance
- * @method void setCpuNum(integer $CpuNum) Set Number of CPU cores of an instance
- * @method string getMachineType() Obtain Instance machine type
- * @method void setMachineType(string $MachineType) Set Instance machine type
+ * @method string getMongoVersion() Obtain Storage engine version information on instances.
+- MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+ * @method void setMongoVersion(string $MongoVersion) Set Storage engine version information on instances.
+- MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+ * @method integer getMemory() Obtain Instance memory specification, in MB.
+ * @method void setMemory(integer $Memory) Set Instance memory specification, in MB.
+ * @method integer getVolume() Obtain Instance disk specification, in MB.
+ * @method void setVolume(integer $Volume) Set Instance disk specification, in MB.
+ * @method integer getCpuNum() Obtain Number of the instance CPU cores.
+ * @method void setCpuNum(integer $CpuNum) Set Number of the instance CPU cores.
+ * @method string getMachineType() Obtain Instance machine type.
+- HIO10G: general HIO 10GE type.
+- HCD: Cloud Disk Edition type.
+ * @method void setMachineType(string $MachineType) Set Instance machine type.
+- HIO10G: general HIO 10GE type.
+- HCD: Cloud Disk Edition type.
  * @method integer getSecondaryNum() Obtain Number of secondary nodes of an instance
  * @method void setSecondaryNum(integer $SecondaryNum) Set Number of secondary nodes of an instance
  * @method integer getReplicationSetNum() Obtain Number of instance shards
  * @method void setReplicationSetNum(integer $ReplicationSetNum) Set Number of instance shards
- * @method integer getAutoRenewFlag() Obtain Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
- * @method integer getUsedVolume() Obtain Used capacity in MB
- * @method void setUsedVolume(integer $UsedVolume) Set Used capacity in MB
+ * @method integer getAutoRenewFlag() Obtain Automatic renewal flag for the instance.
+- 0: manual renewal.
+- 1: automatic renewal.
+- 2: no renewal after confirmation.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Automatic renewal flag for the instance.
+- 0: manual renewal.
+- 1: automatic renewal.
+- 2: no renewal after confirmation.
+ * @method integer getUsedVolume() Obtain Used capacity, in MB.
+ * @method void setUsedVolume(integer $UsedVolume) Set Used capacity, in MB.
  * @method string getMaintenanceStart() Obtain Start time of the maintenance time
  * @method void setMaintenanceStart(string $MaintenanceStart) Set Start time of the maintenance time
  * @method string getMaintenanceEnd() Obtain End time of the maintenance time
@@ -88,26 +130,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceVer(integer $InstanceVer) Set Instance version
  * @method integer getClusterVer() Obtain Instance version
  * @method void setClusterVer(integer $ClusterVer) Set Instance version
- * @method integer getProtocol() Obtain Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
- * @method void setProtocol(integer $Protocol) Set Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
- * @method integer getInstanceType() Obtain Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
- * @method void setInstanceType(integer $InstanceType) Set Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
- * @method string getInstanceStatusDesc() Obtain Instance status description
- * @method void setInstanceStatusDesc(string $InstanceStatusDesc) Set Instance status description
- * @method string getRealInstanceId() Obtain Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
- * @method void setRealInstanceId(string $RealInstanceId) Set Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
+ * @method integer getProtocol() Obtain Protocol information: mongodb.
+ * @method void setProtocol(integer $Protocol) Set Protocol information: mongodb.
+ * @method integer getInstanceType() Obtain Instance type.
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: include the formal, read-only, and disaster recovery instance simultaneously.
+ * @method void setInstanceType(integer $InstanceType) Set Instance type.
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: include the formal, read-only, and disaster recovery instance simultaneously.
+ * @method string getInstanceStatusDesc() Obtain Instance status description.
+ * @method void setInstanceStatusDesc(string $InstanceStatusDesc) Set Instance status description.
+ * @method string getRealInstanceId() Obtain Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad.
+ * @method void setRealInstanceId(string $RealInstanceId) Set Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad.
  * @method integer getMongosNodeNum() Obtain Number of Mongos nodes.
  * @method void setMongosNodeNum(integer $MongosNodeNum) Set Number of Mongos nodes.
- * @method integer getMongosMemory() Obtain Mongos node memory.
- * @method void setMongosMemory(integer $MongosMemory) Set Mongos node memory.
+ * @method integer getMongosMemory() Obtain Mongos node memory, in MB.
+ * @method void setMongosMemory(integer $MongosMemory) Set Mongos node memory, in MB.
  * @method integer getMongosCpuNum() Obtain Number of Mongos node CPU cores.
  * @method void setMongosCpuNum(integer $MongosCpuNum) Set Number of Mongos node CPU cores.
  * @method integer getConfigServerNodeNum() Obtain Number of ConfigServer nodes.
  * @method void setConfigServerNodeNum(integer $ConfigServerNodeNum) Set Number of ConfigServer nodes.
- * @method integer getConfigServerMemory() Obtain ConfigServer node memory.
- * @method void setConfigServerMemory(integer $ConfigServerMemory) Set ConfigServer node memory.
- * @method integer getConfigServerVolume() Obtain ConfigServer node disk size.
- * @method void setConfigServerVolume(integer $ConfigServerVolume) Set ConfigServer node disk size.
+ * @method integer getConfigServerMemory() Obtain Config Server node memory, in MB.
+ * @method void setConfigServerMemory(integer $ConfigServerMemory) Set Config Server node memory, in MB.
+ * @method integer getConfigServerVolume() Obtain Config Server node disk size, in MB.
+ * @method void setConfigServerVolume(integer $ConfigServerVolume) Set Config Server node disk size, in MB.
  * @method integer getConfigServerCpuNum() Obtain Number of ConfigServer node CPU cores.
  * @method void setConfigServerCpuNum(integer $ConfigServerCpuNum) Set Number of ConfigServer node CPU cores.
  * @method integer getReadonlyNodeNum() Obtain Number of read-only nodes.
@@ -116,7 +168,7 @@ use TencentCloud\Common\AbstractModel;
 class InstanceDetail extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
@@ -131,12 +183,14 @@ class InstanceDetail extends AbstractModel
     public $PayMode;
 
     /**
-     * @var integer Project ID
+     * @var integer Project ID.
      */
     public $ProjectId;
 
     /**
-     * @var integer Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+     * @var integer Cluster type.
+- 0: replica set instance.
+- 1: sharded cluster instance.
      */
     public $ClusterType;
 
@@ -151,7 +205,9 @@ class InstanceDetail extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer Network type. Valid values: 0 (basic network), 1 (VPC)
+     * @var integer Network type.
+- 0: basic network.
+- 1: VPC.
      */
     public $NetType;
 
@@ -166,7 +222,12 @@ class InstanceDetail extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
+     * @var integer Instance status.
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
      */
     public $Status;
 
@@ -191,27 +252,36 @@ class InstanceDetail extends AbstractModel
     public $DeadLine;
 
     /**
-     * @var string Instance version information
+     * @var string Storage engine version information on instances.
+- MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
      */
     public $MongoVersion;
 
     /**
-     * @var integer Instance memory size in MB
+     * @var integer Instance memory specification, in MB.
      */
     public $Memory;
 
     /**
-     * @var integer Instance disk size in MB
+     * @var integer Instance disk specification, in MB.
      */
     public $Volume;
 
     /**
-     * @var integer Number of CPU cores of an instance
+     * @var integer Number of the instance CPU cores.
      */
     public $CpuNum;
 
     /**
-     * @var string Instance machine type
+     * @var string Instance machine type.
+- HIO10G: general HIO 10GE type.
+- HCD: Cloud Disk Edition type.
      */
     public $MachineType;
 
@@ -226,12 +296,15 @@ class InstanceDetail extends AbstractModel
     public $ReplicationSetNum;
 
     /**
-     * @var integer Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
+     * @var integer Automatic renewal flag for the instance.
+- 0: manual renewal.
+- 1: automatic renewal.
+- 2: no renewal after confirmation.
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer Used capacity in MB
+     * @var integer Used capacity, in MB.
      */
     public $UsedVolume;
 
@@ -286,22 +359,27 @@ class InstanceDetail extends AbstractModel
     public $ClusterVer;
 
     /**
-     * @var integer Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
+     * @var integer Protocol information: mongodb.
      */
     public $Protocol;
 
     /**
-     * @var integer Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
+     * @var integer Instance type.
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: include the formal, read-only, and disaster recovery instance simultaneously.
      */
     public $InstanceType;
 
     /**
-     * @var string Instance status description
+     * @var string Instance status description.
      */
     public $InstanceStatusDesc;
 
     /**
-     * @var string Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
+     * @var string Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad.
      */
     public $RealInstanceId;
 
@@ -311,7 +389,7 @@ class InstanceDetail extends AbstractModel
     public $MongosNodeNum;
 
     /**
-     * @var integer Mongos node memory.
+     * @var integer Mongos node memory, in MB.
      */
     public $MongosMemory;
 
@@ -326,12 +404,12 @@ class InstanceDetail extends AbstractModel
     public $ConfigServerNodeNum;
 
     /**
-     * @var integer ConfigServer node memory.
+     * @var integer Config Server node memory, in MB.
      */
     public $ConfigServerMemory;
 
     /**
-     * @var integer ConfigServer node disk size.
+     * @var integer Config Server node disk size, in MB.
      */
     public $ConfigServerVolume;
 
@@ -346,30 +424,51 @@ class InstanceDetail extends AbstractModel
     public $ReadonlyNodeNum;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId Instance ID.
      * @param string $InstanceName Instance name
      * @param integer $PayMode Billing type. Valid value: 0 (pay-as-you-go)
-     * @param integer $ProjectId Project ID
-     * @param integer $ClusterType Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+     * @param integer $ProjectId Project ID.
+     * @param integer $ClusterType Cluster type.
+- 0: replica set instance.
+- 1: sharded cluster instance.
      * @param string $Region Region information
      * @param string $Zone AZ information
-     * @param integer $NetType Network type. Valid values: 0 (basic network), 1 (VPC)
+     * @param integer $NetType Network type.
+- 0: basic network.
+- 1: VPC.
      * @param string $VpcId VPC ID
      * @param string $SubnetId Subnet ID of VPC
-     * @param integer $Status Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
+     * @param integer $Status Instance status.
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
      * @param string $Vip Instance IP
      * @param integer $Vport Port number
      * @param string $CreateTime Instance creation time
      * @param string $DeadLine Instance expiration time
-     * @param string $MongoVersion Instance version information
-     * @param integer $Memory Instance memory size in MB
-     * @param integer $Volume Instance disk size in MB
-     * @param integer $CpuNum Number of CPU cores of an instance
-     * @param string $MachineType Instance machine type
+     * @param string $MongoVersion Storage engine version information on instances.
+- MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+     * @param integer $Memory Instance memory specification, in MB.
+     * @param integer $Volume Instance disk specification, in MB.
+     * @param integer $CpuNum Number of the instance CPU cores.
+     * @param string $MachineType Instance machine type.
+- HIO10G: general HIO 10GE type.
+- HCD: Cloud Disk Edition type.
      * @param integer $SecondaryNum Number of secondary nodes of an instance
      * @param integer $ReplicationSetNum Number of instance shards
-     * @param integer $AutoRenewFlag Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
-     * @param integer $UsedVolume Used capacity in MB
+     * @param integer $AutoRenewFlag Automatic renewal flag for the instance.
+- 0: manual renewal.
+- 1: automatic renewal.
+- 2: no renewal after confirmation.
+     * @param integer $UsedVolume Used capacity, in MB.
      * @param string $MaintenanceStart Start time of the maintenance time
      * @param string $MaintenanceEnd End time of the maintenance time
      * @param array $ReplicaSets Shard information
@@ -380,16 +479,21 @@ class InstanceDetail extends AbstractModel
      * @param array $Tags Instance tag information set
      * @param integer $InstanceVer Instance version
      * @param integer $ClusterVer Instance version
-     * @param integer $Protocol Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
-     * @param integer $InstanceType Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
-     * @param string $InstanceStatusDesc Instance status description
-     * @param string $RealInstanceId Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
+     * @param integer $Protocol Protocol information: mongodb.
+     * @param integer $InstanceType Instance type.
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: include the formal, read-only, and disaster recovery instance simultaneously.
+     * @param string $InstanceStatusDesc Instance status description.
+     * @param string $RealInstanceId Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad.
      * @param integer $MongosNodeNum Number of Mongos nodes.
-     * @param integer $MongosMemory Mongos node memory.
+     * @param integer $MongosMemory Mongos node memory, in MB.
      * @param integer $MongosCpuNum Number of Mongos node CPU cores.
      * @param integer $ConfigServerNodeNum Number of ConfigServer nodes.
-     * @param integer $ConfigServerMemory ConfigServer node memory.
-     * @param integer $ConfigServerVolume ConfigServer node disk size.
+     * @param integer $ConfigServerMemory Config Server node memory, in MB.
+     * @param integer $ConfigServerVolume Config Server node disk size, in MB.
      * @param integer $ConfigServerCpuNum Number of ConfigServer node CPU cores.
      * @param integer $ReadonlyNodeNum Number of read-only nodes.
      */

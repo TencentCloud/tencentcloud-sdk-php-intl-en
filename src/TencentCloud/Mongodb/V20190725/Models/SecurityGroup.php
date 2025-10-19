@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Security group information
  *
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method array getInbound() Obtain Inbound rule
- * @method void setInbound(array $Inbound) Set Inbound rule
- * @method array getOutbound() Obtain Outbound rule
- * @method void setOutbound(array $Outbound) Set Outbound rule
- * @method string getSecurityGroupId() Obtain Security group ID
- * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID
- * @method string getSecurityGroupName() Obtain Security group name
- * @method void setSecurityGroupName(string $SecurityGroupName) Set Security group name
- * @method string getSecurityGroupRemark() Obtain Security group remarks
- * @method void setSecurityGroupRemark(string $SecurityGroupRemark) Set Security group remarks
+ * @method integer getProjectId() Obtain Associated project ID.
+ * @method void setProjectId(integer $ProjectId) Set Associated project ID.
+ * @method string getCreateTime() Obtain Security group creation time.
+ * @method void setCreateTime(string $CreateTime) Set Security group creation time.
+ * @method array getInbound() Obtain Security group inbound rule.
+ * @method void setInbound(array $Inbound) Set Security group inbound rule.
+ * @method array getOutbound() Obtain Security group outbound rule.
+ * @method void setOutbound(array $Outbound) Set Security group outbound rule.
+ * @method string getSecurityGroupId() Obtain Security group ID.
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID.
+ * @method string getSecurityGroupName() Obtain Security group name.
+ * @method void setSecurityGroupName(string $SecurityGroupName) Set Security group name.
+ * @method string getSecurityGroupRemark() Obtain Security group remarks.
+ * @method void setSecurityGroupRemark(string $SecurityGroupRemark) Set Security group remarks.
  */
 class SecurityGroup extends AbstractModel
 {
     /**
-     * @var integer Project ID
+     * @var integer Associated project ID.
      */
     public $ProjectId;
 
     /**
-     * @var string Creation time
+     * @var string Security group creation time.
      */
     public $CreateTime;
 
     /**
-     * @var array Inbound rule
+     * @var array Security group inbound rule.
      */
     public $Inbound;
 
     /**
-     * @var array Outbound rule
+     * @var array Security group outbound rule.
      */
     public $Outbound;
 
     /**
-     * @var string Security group ID
+     * @var string Security group ID.
      */
     public $SecurityGroupId;
 
     /**
-     * @var string Security group name
+     * @var string Security group name.
      */
     public $SecurityGroupName;
 
     /**
-     * @var string Security group remarks
+     * @var string Security group remarks.
      */
     public $SecurityGroupRemark;
 
     /**
-     * @param integer $ProjectId Project ID
-     * @param string $CreateTime Creation time
-     * @param array $Inbound Inbound rule
-     * @param array $Outbound Outbound rule
-     * @param string $SecurityGroupId Security group ID
-     * @param string $SecurityGroupName Security group name
-     * @param string $SecurityGroupRemark Security group remarks
+     * @param integer $ProjectId Associated project ID.
+     * @param string $CreateTime Security group creation time.
+     * @param array $Inbound Security group inbound rule.
+     * @param array $Outbound Security group outbound rule.
+     * @param string $SecurityGroupId Security group ID.
+     * @param string $SecurityGroupName Security group name.
+     * @param string $SecurityGroupRemark Security group remarks.
      */
     function __construct()
     {

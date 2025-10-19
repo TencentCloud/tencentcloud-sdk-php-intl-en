@@ -18,44 +18,52 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance specification information
+ * Instance specification information.
  *
- * @method string getRegion() Obtain Region information
- * @method void setRegion(string $Region) Set Region information
- * @method string getZone() Obtain AZ information
- * @method void setZone(string $Zone) Set AZ information
- * @method array getSpecItems() Obtain Purchasable specification information
- * @method void setSpecItems(array $SpecItems) Set Purchasable specification information
- * @method integer getSupportMultiAZ() Obtain Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
- * @method void setSupportMultiAZ(integer $SupportMultiAZ) Set Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+ * @method string getRegion() Obtain Region information.
+ * @method void setRegion(string $Region) Set Region information.
+ * @method string getZone() Obtain AZ information.
+ * @method void setZone(string $Zone) Set AZ information.
+ * @method array getSpecItems() Obtain Sales specification information.
+ * @method void setSpecItems(array $SpecItems) Set Sales specification information.
+ * @method integer getSupportMultiAZ() Obtain Whether cross-AZ deployment is supported.
+- 1: supported.
+- 0: not supported.
+ * @method void setSupportMultiAZ(integer $SupportMultiAZ) Set Whether cross-AZ deployment is supported.
+- 1: supported.
+- 0: not supported.
  */
 class SpecificationInfo extends AbstractModel
 {
     /**
-     * @var string Region information
+     * @var string Region information.
      */
     public $Region;
 
     /**
-     * @var string AZ information
+     * @var string AZ information.
      */
     public $Zone;
 
     /**
-     * @var array Purchasable specification information
+     * @var array Sales specification information.
      */
     public $SpecItems;
 
     /**
-     * @var integer Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+     * @var integer Whether cross-AZ deployment is supported.
+- 1: supported.
+- 0: not supported.
      */
     public $SupportMultiAZ;
 
     /**
-     * @param string $Region Region information
-     * @param string $Zone AZ information
-     * @param array $SpecItems Purchasable specification information
-     * @param integer $SupportMultiAZ Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+     * @param string $Region Region information.
+     * @param string $Zone AZ information.
+     * @param array $SpecItems Sales specification information.
+     * @param integer $SupportMultiAZ Whether cross-AZ deployment is supported.
+- 1: supported.
+- 0: not supported.
      */
     function __construct()
     {

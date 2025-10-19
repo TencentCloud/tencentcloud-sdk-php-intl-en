@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Client connection information, including client IP and number of connections
  *
- * @method string getIP() Obtain Client IP of a connection
- * @method void setIP(string $IP) Set Client IP of a connection
- * @method integer getCount() Obtain Number of connections corresponding to a client IP
- * @method void setCount(integer $Count) Set Number of connections corresponding to a client IP
- * @method boolean getInternalService() Obtain Whether it is the Tencent Cloud IP for automated testing
- * @method void setInternalService(boolean $InternalService) Set Whether it is the Tencent Cloud IP for automated testing
+ * @method string getIP() Obtain IP address of the connected client.
+ * @method void setIP(string $IP) Set IP address of the connected client.
+ * @method integer getCount() Obtain Number of connections corresponding to the client IP address.
+ * @method void setCount(integer $Count) Set Number of connections corresponding to the client IP address.
+ * @method boolean getInternalService() Obtain Whether it is an internal IP address.
+ * @method void setInternalService(boolean $InternalService) Set Whether it is an internal IP address.
  */
 class ClientConnection extends AbstractModel
 {
     /**
-     * @var string Client IP of a connection
+     * @var string IP address of the connected client.
      */
     public $IP;
 
     /**
-     * @var integer Number of connections corresponding to a client IP
+     * @var integer Number of connections corresponding to the client IP address.
      */
     public $Count;
 
     /**
-     * @var boolean Whether it is the Tencent Cloud IP for automated testing
+     * @var boolean Whether it is an internal IP address.
      */
     public $InternalService;
 
     /**
-     * @param string $IP Client IP of a connection
-     * @param integer $Count Number of connections corresponding to a client IP
-     * @param boolean $InternalService Whether it is the Tencent Cloud IP for automated testing
+     * @param string $IP IP address of the connected client.
+     * @param integer $Count Number of connections corresponding to the client IP address.
+     * @param boolean $InternalService Whether it is an internal IP address.
      */
     function __construct()
     {

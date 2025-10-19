@@ -20,12 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSlowLogs request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page
- * @method string getStartTime() Obtain Start time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-01 10:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
- * @method void setStartTime(string $StartTime) Set Start time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-01 10:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
- * @method string getEndTime() Obtain End time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-02 12:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
- * @method void setEndTime(string $EndTime) Set End time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-02 12:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+ * @method string getStartTime() Obtain Slow log start time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-01 10:00:00.
+- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
+ * @method void setStartTime(string $StartTime) Set Slow log start time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-01 10:00:00.
+- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
+ * @method string getEndTime() Obtain Slow log end time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-02 12:00:00.- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
+ * @method void setEndTime(string $EndTime) Set Slow log end time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-02 12:00:00.- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
  * @method integer getSlowMS() Obtain Threshold of slow log execution time in milliseconds. Minimum value: 100. Slow logs whose execution time exceeds the threshold will be returned.
  * @method void setSlowMS(integer $SlowMS) Set Threshold of slow log execution time in milliseconds. Minimum value: 100. Slow logs whose execution time exceeds the threshold will be returned.
  * @method integer getOffset() Obtain Offset. Minimum value: 0. Maximum value: 10000. Default value: 0.
@@ -38,17 +44,20 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSlowLogsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page
+     * @var string Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string Start time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-01 10:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+     * @var string Slow log start time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-01 10:00:00.
+- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
      */
     public $StartTime;
 
     /**
-     * @var string End time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-02 12:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+     * @var string Slow log end time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-02 12:00:00.- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
      */
     public $EndTime;
 
@@ -73,9 +82,12 @@ class DescribeSlowLogsRequest extends AbstractModel
     public $Format;
 
     /**
-     * @param string $InstanceId Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page
-     * @param string $StartTime Start time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-01 10:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
-     * @param string $EndTime End time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-02 12:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+     * @param string $InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+     * @param string $StartTime Slow log start time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-01 10:00:00.
+- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
+     * @param string $EndTime Slow log end time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-02 12:00:00.- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
      * @param integer $SlowMS Threshold of slow log execution time in milliseconds. Minimum value: 100. Slow logs whose execution time exceeds the threshold will be returned.
      * @param integer $Offset Offset. Minimum value: 0. Maximum value: 10000. Default value: 0.
      * @param integer $Limit Number of entries per page. Minimum value: 1. Maximum value: 100. Default value: 20.

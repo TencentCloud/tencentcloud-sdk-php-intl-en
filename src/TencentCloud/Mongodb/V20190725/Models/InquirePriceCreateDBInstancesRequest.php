@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceCreateDBInstances request structure.
  *
- * @method string getZone() Obtain Instance region name in the format of ap-guangzhou-2.
- * @method void setZone(string $Zone) Set Instance region name in the format of ap-guangzhou-2.
- * @method integer getNodeNum() Obtain  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
- - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
- * @method void setNodeNum(integer $NodeNum) Set  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
- - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
+ * @method string getZone() Obtain Region and AZ information of the instance. For details, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+ * @method void setZone(string $Zone) Set Region and AZ information of the instance. For details, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+ * @method integer getNodeNum() Obtain -Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. call the [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+- Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
+ * @method void setNodeNum(integer $NodeNum) Set -Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. call the [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+- Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
  * @method integer getMemory() Obtain Instance memory size.
 
  - Unit: GB.
@@ -40,20 +40,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolume(integer $Volume) Set Instance disk size.
  - Unit: GB.
  - For the value range, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The MinStorage and MaxStorage parameters in the returned data structure SpecItems correspond to the minimum and maximum disk specifications, respectively.
- * @method string getMongoVersion() Obtain Instance version information. For specific supported versions, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The MongoVersionCode parameter in the returned data structure SpecItems indicates the information on versions supported for instances. The correspondence between version information and version number is as follows:
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
- * @method void setMongoVersion(string $MongoVersion) Set Instance version information. For specific supported versions, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The MongoVersionCode parameter in the returned data structure SpecItems indicates the information on versions supported for instances. The correspondence between version information and version number is as follows:
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+ * @method string getMongoVersion() Obtain Instance version information. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain specific supported versions. The MongoVersionCode parameter in the returned data structure SpecItems indicates the information on versions supported by instances. The corresponding relationship between version information and version number is as follows:
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+ * @method void setMongoVersion(string $MongoVersion) Set Instance version information. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain specific supported versions. The MongoVersionCode parameter in the returned data structure SpecItems indicates the information on versions supported by instances. The corresponding relationship between version information and version number is as follows:
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
  * @method string getMachineCode() Obtain Product specification type.
  - HIO10G: general high-I/O 10GE type.
  - HCD: cloud disk.
@@ -100,13 +100,13 @@ use TencentCloud\Common\AbstractModel;
 class InquirePriceCreateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var string Instance region name in the format of ap-guangzhou-2.
+     * @var string Region and AZ information of the instance. For details, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
      */
     public $Zone;
 
     /**
-     * @var integer  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
- - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
+     * @var integer -Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. call the [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+- Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
      */
     public $NodeNum;
 
@@ -126,13 +126,13 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
     public $Volume;
 
     /**
-     * @var string Instance version information. For specific supported versions, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The MongoVersionCode parameter in the returned data structure SpecItems indicates the information on versions supported for instances. The correspondence between version information and version number is as follows:
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+     * @var string Instance version information. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain specific supported versions. The MongoVersionCode parameter in the returned data structure SpecItems indicates the information on versions supported by instances. The corresponding relationship between version information and version number is as follows:
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
      */
     public $MongoVersion;
 
@@ -206,9 +206,9 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
     public $ConfigServerVolume;
 
     /**
-     * @param string $Zone Instance region name in the format of ap-guangzhou-2.
-     * @param integer $NodeNum  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
- - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
+     * @param string $Zone Region and AZ information of the instance. For details, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+     * @param integer $NodeNum -Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. call the [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+- Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
      * @param integer $Memory Instance memory size.
 
  - Unit: GB.
@@ -216,13 +216,13 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
      * @param integer $Volume Instance disk size.
  - Unit: GB.
  - For the value range, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The MinStorage and MaxStorage parameters in the returned data structure SpecItems correspond to the minimum and maximum disk specifications, respectively.
-     * @param string $MongoVersion Instance version information. For specific supported versions, call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API. The MongoVersionCode parameter in the returned data structure SpecItems indicates the information on versions supported for instances. The correspondence between version information and version number is as follows:
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+     * @param string $MongoVersion Instance version information. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain specific supported versions. The MongoVersionCode parameter in the returned data structure SpecItems indicates the information on versions supported by instances. The corresponding relationship between version information and version number is as follows:
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
      * @param string $MachineCode Product specification type.
  - HIO10G: general high-I/O 10GE type.
  - HCD: cloud disk.

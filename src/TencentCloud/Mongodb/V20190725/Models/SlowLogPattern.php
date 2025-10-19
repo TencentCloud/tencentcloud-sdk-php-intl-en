@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Slow log statistics of MongoDB database
  *
- * @method string getPattern() Obtain Slow log pattern
- * @method void setPattern(string $Pattern) Set Slow log pattern
- * @method integer getMaxTime() Obtain Maximum execution time
- * @method void setMaxTime(integer $MaxTime) Set Maximum execution time
- * @method integer getAverageTime() Obtain Average execution time
- * @method void setAverageTime(integer $AverageTime) Set Average execution time
- * @method integer getTotal() Obtain Number of slow logs in this pattern
- * @method void setTotal(integer $Total) Set Number of slow logs in this pattern
+ * @method string getPattern() Obtain Slow log output format: database name.table name.command.
+ * @method void setPattern(string $Pattern) Set Slow log output format: database name.table name.command.
+ * @method string getQueryHash() Obtain queryHash value carried during slow log recording. It can be used to identify a query type.
+ * @method void setQueryHash(string $QueryHash) Set queryHash value carried during slow log recording. It can be used to identify a query type.
+ * @method integer getMaxTime() Obtain Maximum execution time, in milliseconds.
+ * @method void setMaxTime(integer $MaxTime) Set Maximum execution time, in milliseconds.
+ * @method integer getAverageTime() Obtain Average execution time, in milliseconds.
+ * @method void setAverageTime(integer $AverageTime) Set Average execution time, in milliseconds.
+ * @method integer getTotal() Obtain Number of slow logs.
+ * @method void setTotal(integer $Total) Set Number of slow logs.
  */
 class SlowLogPattern extends AbstractModel
 {
     /**
-     * @var string Slow log pattern
+     * @var string Slow log output format: database name.table name.command.
      */
     public $Pattern;
 
     /**
-     * @var integer Maximum execution time
+     * @var string queryHash value carried during slow log recording. It can be used to identify a query type.
+     */
+    public $QueryHash;
+
+    /**
+     * @var integer Maximum execution time, in milliseconds.
      */
     public $MaxTime;
 
     /**
-     * @var integer Average execution time
+     * @var integer Average execution time, in milliseconds.
      */
     public $AverageTime;
 
     /**
-     * @var integer Number of slow logs in this pattern
+     * @var integer Number of slow logs.
      */
     public $Total;
 
     /**
-     * @param string $Pattern Slow log pattern
-     * @param integer $MaxTime Maximum execution time
-     * @param integer $AverageTime Average execution time
-     * @param integer $Total Number of slow logs in this pattern
+     * @param string $Pattern Slow log output format: database name.table name.command.
+     * @param string $QueryHash queryHash value carried during slow log recording. It can be used to identify a query type.
+     * @param integer $MaxTime Maximum execution time, in milliseconds.
+     * @param integer $AverageTime Average execution time, in milliseconds.
+     * @param integer $Total Number of slow logs.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class SlowLogPattern extends AbstractModel
         }
         if (array_key_exists("Pattern",$param) and $param["Pattern"] !== null) {
             $this->Pattern = $param["Pattern"];
+        }
+
+        if (array_key_exists("QueryHash",$param) and $param["QueryHash"] !== null) {
+            $this->QueryHash = $param["QueryHash"];
         }
 
         if (array_key_exists("MaxTime",$param) and $param["MaxTime"] !== null) {
