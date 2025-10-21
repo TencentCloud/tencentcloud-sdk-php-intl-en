@@ -18,28 +18,20 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Tag key-value pair
+ * DeleteRoutePolicy request structure.
  *
- * @method string getKey() Obtain Tag key
- * @method void setKey(string $Key) Set Tag key
- * @method string getValue() Obtain Tag value
- * @method void setValue(string $Value) Set Tag value
+ * @method string getRoutePolicyId() Obtain Specifies the unique ID of the route reception policy.
+ * @method void setRoutePolicyId(string $RoutePolicyId) Set Specifies the unique ID of the route reception policy.
  */
-class Tag extends AbstractModel
+class DeleteRoutePolicyRequest extends AbstractModel
 {
     /**
-     * @var string Tag key
+     * @var string Specifies the unique ID of the route reception policy.
      */
-    public $Key;
+    public $RoutePolicyId;
 
     /**
-     * @var string Tag value
-     */
-    public $Value;
-
-    /**
-     * @param string $Key Tag key
-     * @param string $Value Tag value
+     * @param string $RoutePolicyId Specifies the unique ID of the route reception policy.
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class Tag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("RoutePolicyId",$param) and $param["RoutePolicyId"] !== null) {
+            $this->RoutePolicyId = $param["RoutePolicyId"];
         }
     }
 }

@@ -145,6 +145,9 @@ Before taking actions on a NAT gateway, ensure that it has been successfully cre
 >?This API is async. You can call the [`DescribeVpcTaskResult`](https://intl.cloud.tencent.com/document/api/215/59037?from_cn_redirect=1) API to query the task result. When the task is completed, you can continue other tasks.
 >
  * @method Models\CreateReserveIpAddressesResponse CreateReserveIpAddresses(Models\CreateReserveIpAddressesRequest $req) This API is used to create a reserved private IP address.
+ * @method Models\CreateRoutePolicyResponse CreateRoutePolicy(Models\CreateRoutePolicyRequest $req) This API is used to create a VPC route reception policy, including name, description and policy entries.
+ * @method Models\CreateRoutePolicyAssociationsResponse CreateRoutePolicyAssociations(Models\CreateRoutePolicyAssociationsRequest $req) This API is used to create route reception policy bindings (the binding relationship between policy instances and route table instances as well as set priorities).
+ * @method Models\CreateRoutePolicyEntriesResponse CreateRoutePolicyEntries(Models\CreateRoutePolicyEntriesRequest $req) This API is used to create route reception policy entries.
  * @method Models\CreateRouteTableResponse CreateRouteTable(Models\CreateRouteTableRequest $req) This API is used to create a route table.
 * After the VPC instance has been created, the system creates a default route table with which all newly created subnets will be associated. By default, you can use this route table to manage your routing policies. If you have multiple routing policies, you can call the API for creating route tables to create more route tables to manage these routing policies.
 * You can bind a tag when creating a route table. The tag list in the response indicates the tags that have been successfully added.
@@ -244,6 +247,9 @@ When a NAT gateway is deleted, all routes containing this gateway are deleted au
 
 This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
  * @method Models\DeleteReserveIpAddressesResponse DeleteReserveIpAddresses(Models\DeleteReserveIpAddressesRequest $req) This API is used to delete a reserved private IP address.
+ * @method Models\DeleteRoutePolicyResponse DeleteRoutePolicy(Models\DeleteRoutePolicyRequest $req) This API is used to delete a route reception policy and entries.
+ * @method Models\DeleteRoutePolicyAssociationsResponse DeleteRoutePolicyAssociations(Models\DeleteRoutePolicyAssociationsRequest $req) This API is used to delete route reception policy bindings (the binding relationship between route reception policy objects and route tables).
+ * @method Models\DeleteRoutePolicyEntriesResponse DeleteRoutePolicyEntries(Models\DeleteRoutePolicyEntriesRequest $req) This API is used to delete route reception policy entries.
  * @method Models\DeleteRouteTableResponse DeleteRouteTable(Models\DeleteRouteTableRequest $req) This API is used to delete a route table.
  * @method Models\DeleteRoutesResponse DeleteRoutes(Models\DeleteRoutesRequest $req) This API (DeleteRoutes) is used to delete routing policies in batches from a route table.
  * @method Models\DeleteSecurityGroupResponse DeleteSecurityGroup(Models\DeleteSecurityGroupRequest $req) This API (DeleteSecurityGroup) is used to delete security groups (SecurityGroup).
@@ -325,6 +331,7 @@ This API is used to check the jumbo frame status before and after instance migra
  * @method Models\DescribeNetworkInterfaceLimitResponse DescribeNetworkInterfaceLimit(Models\DescribeNetworkInterfaceLimitRequest $req) This API (DescribeNetworkInterfaceLimit) is used to query the ENI quota based on the ID of CVM instance or ENI. It returns the ENI quota to which the CVM instance can be bound and the IP address quota that can be allocated to the ENI.
  * @method Models\DescribeNetworkInterfacesResponse DescribeNetworkInterfaces(Models\DescribeNetworkInterfacesRequest $req) This API (DescribeNetworkInterfaces) is used to query the ENI list.
  * @method Models\DescribeReserveIpAddressesResponse DescribeReserveIpAddresses(Models\DescribeReserveIpAddressesRequest $req) This API is used to query reserved private IP addresses.
+ * @method Models\DescribeRoutePolicyEntriesResponse DescribeRoutePolicyEntries(Models\DescribeRoutePolicyEntriesRequest $req) This API is used to query the route reception policy entry list.
  * @method Models\DescribeRouteTablesResponse DescribeRouteTables(Models\DescribeRouteTablesRequest $req) This API is used to query route tables.
  * @method Models\DescribeSecurityGroupAssociationStatisticsResponse DescribeSecurityGroupAssociationStatistics(Models\DescribeSecurityGroupAssociationStatisticsRequest $req) This API (DescribeSecurityGroupAssociationStatistics) is used to query statistics on the instances associated with a security group.
  * @method Models\DescribeSecurityGroupPoliciesResponse DescribeSecurityGroupPolicies(Models\DescribeSecurityGroupPoliciesRequest $req) This API (DescribeSecurityGroupPolicies) is used to query security group policies.
@@ -454,6 +461,7 @@ This API is completed asynchronously. If you need to query the execution result 
  * @method Models\ModifyNetworkInterfaceAttributeResponse ModifyNetworkInterfaceAttribute(Models\ModifyNetworkInterfaceAttributeRequest $req) This API (ModifyNetworkInterfaceAttribute) is used to modify ENI attributes.
  * @method Models\ModifyPrivateIpAddressesAttributeResponse ModifyPrivateIpAddressesAttribute(Models\ModifyPrivateIpAddressesAttributeRequest $req) This API (ModifyPrivateIpAddressesAttribute) is used to modify the private IP attributes of an ENI.
  * @method Models\ModifyReserveIpAddressResponse ModifyReserveIpAddress(Models\ModifyReserveIpAddressRequest $req) This API is used to modify a reserved private IP address.
+ * @method Models\ModifyRoutePolicyAttributeResponse ModifyRoutePolicyAttribute(Models\ModifyRoutePolicyAttributeRequest $req) This API is used to modify the route reception policy attribute.
  * @method Models\ModifyRouteTableAttributeResponse ModifyRouteTableAttribute(Models\ModifyRouteTableAttributeRequest $req) This API (ModifyRouteTableAttribute) is used to modify the attributes of a route table.
  * @method Models\ModifySecurityGroupAttributeResponse ModifySecurityGroupAttribute(Models\ModifySecurityGroupAttributeRequest $req) This API (ModifySecurityGroupAttribute) is used to modify the attributes of a security group (SecurityGroupPolicy).
  * @method Models\ModifySecurityGroupPoliciesResponse ModifySecurityGroupPolicies(Models\ModifySecurityGroupPoliciesRequest $req) This API is used to reset the `Egress` and `Ingress` rules (SecurityGroupPolicy) of a security group.
@@ -505,6 +513,8 @@ This API is completed asynchronously. If you need to query the execution result 
  * @method Models\RemoveBandwidthPackageResourcesResponse RemoveBandwidthPackageResources(Models\RemoveBandwidthPackageResourcesRequest $req) This API is used to delete a bandwidth package resource, including [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1), [Cloud Load Balancer](https://intl.cloud.tencent.com/document/product/214/517?from_cn_redirect=1), and so on.
  * @method Models\RenewVpnGatewayResponse RenewVpnGateway(Models\RenewVpnGatewayRequest $req) This API (RenewVpnGateway) is used to renew prepaid (monthly subscription) VPN gateways. Currently, only IPSEC gateways are supported.
  * @method Models\ReplaceDirectConnectGatewayCcnRoutesResponse ReplaceDirectConnectGatewayCcnRoutes(Models\ReplaceDirectConnectGatewayCcnRoutesRequest $req) This API (ReplaceDirectConnectGatewayCcnRoutes) is used to modify the specified route according to the route ID. Batch modification is supported.
+ * @method Models\ReplaceRoutePolicyAssociationsResponse ReplaceRoutePolicyAssociations(Models\ReplaceRoutePolicyAssociationsRequest $req) This API is used to modify the binding Priority (Priority) based on the route reception policy instance ID (RoutePolicyId) and route table instance ID (RouteTableId), supporting batch modification.
+ * @method Models\ReplaceRoutePolicyEntriesResponse ReplaceRoutePolicyEntries(Models\ReplaceRoutePolicyEntriesRequest $req) This API is used to modify specified routing policy entries based on route reception policy rule ID and supports batch modification.
  * @method Models\ReplaceRouteTableAssociationResponse ReplaceRouteTableAssociation(Models\ReplaceRouteTableAssociationRequest $req) This API (ReplaceRouteTableAssociation) is used to modify the route table associated with a subnet.
 * A subnet can only be associated with one route table.
  * @method Models\ReplaceRoutesResponse ReplaceRoutes(Models\ReplaceRoutesRequest $req) This API (ReplaceRoutes) is used to modify a specified routing policy by its ID (RouteId). Batch modification is supported.
@@ -514,6 +524,8 @@ Policies to modify must be in the same direction. `PolicyIndex` must be specifie
 Only one policy in a single direction can be replaced in each request, and the PolicyIndex parameter must be specified.
  * @method Models\ResetAttachCcnInstancesResponse ResetAttachCcnInstances(Models\ResetAttachCcnInstancesRequest $req) This API (ResetAttachCcnInstances) is used to re-apply for the association operation when the application for cross-account instance association expires.
  * @method Models\ResetNatGatewayConnectionResponse ResetNatGatewayConnection(Models\ResetNatGatewayConnectionRequest $req) This API is used to adjust concurrent connection cap for the NAT gateway.
+ * @method Models\ResetRoutePolicyAssociationsResponse ResetRoutePolicyAssociations(Models\ResetRoutePolicyAssociationsRequest $req) This API is used to unbind the routing policy instance already bound to a specific route table instance, set up alarms for the new binding routing policy and priority.
+ * @method Models\ResetRoutePolicyEntriesResponse ResetRoutePolicyEntries(Models\ResetRoutePolicyEntriesRequest $req) This API is used to reset the designated route reception policy entry based on the rule ID and supports batch modification.
  * @method Models\ResetRoutesResponse ResetRoutes(Models\ResetRoutesRequest $req) This API (ResetRoutes) is used to reset the name of a route table and all its routing policies.<br />
 Note: When this API is called, all routing policies in the current route table are deleted before new routing policies are saved, which may incur network interruption.
  * @method Models\ResetVpnConnectionResponse ResetVpnConnection(Models\ResetVpnConnectionRequest $req) The API is used to reset a VPN tunnel.

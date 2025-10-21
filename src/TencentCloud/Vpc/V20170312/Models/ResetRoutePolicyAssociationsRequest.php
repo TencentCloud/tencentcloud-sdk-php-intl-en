@@ -1,0 +1,70 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Vpc\V20170312\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * ResetRoutePolicyAssociations request structure.
+ *
+ * @method string getRouteTableId() Obtain Routing table instance ID, e.g., rtb-azd4dt1c.
+ * @method void setRouteTableId(string $RouteTableId) Set Routing table instance ID, e.g., rtb-azd4dt1c.
+ * @method array getRoutePolicyAssociationSet() Obtain The list of routing policy binding objects (RoutePolicyAssociation). note: the route table instance ID (RouteTableId) in the binding must match the RouteTableId parameter of this API (that is, this API only supports modifying the strategy binding relationship and priority within the same route table instance).
+ * @method void setRoutePolicyAssociationSet(array $RoutePolicyAssociationSet) Set The list of routing policy binding objects (RoutePolicyAssociation). note: the route table instance ID (RouteTableId) in the binding must match the RouteTableId parameter of this API (that is, this API only supports modifying the strategy binding relationship and priority within the same route table instance).
+ */
+class ResetRoutePolicyAssociationsRequest extends AbstractModel
+{
+    /**
+     * @var string Routing table instance ID, e.g., rtb-azd4dt1c.
+     */
+    public $RouteTableId;
+
+    /**
+     * @var array The list of routing policy binding objects (RoutePolicyAssociation). note: the route table instance ID (RouteTableId) in the binding must match the RouteTableId parameter of this API (that is, this API only supports modifying the strategy binding relationship and priority within the same route table instance).
+     */
+    public $RoutePolicyAssociationSet;
+
+    /**
+     * @param string $RouteTableId Routing table instance ID, e.g., rtb-azd4dt1c.
+     * @param array $RoutePolicyAssociationSet The list of routing policy binding objects (RoutePolicyAssociation). note: the route table instance ID (RouteTableId) in the binding must match the RouteTableId parameter of this API (that is, this API only supports modifying the strategy binding relationship and priority within the same route table instance).
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
+            $this->RouteTableId = $param["RouteTableId"];
+        }
+
+        if (array_key_exists("RoutePolicyAssociationSet",$param) and $param["RoutePolicyAssociationSet"] !== null) {
+            $this->RoutePolicyAssociationSet = [];
+            foreach ($param["RoutePolicyAssociationSet"] as $key => $value){
+                $obj = new RoutePolicyAssociation();
+                $obj->deserialize($value);
+                array_push($this->RoutePolicyAssociationSet, $obj);
+            }
+        }
+    }
+}

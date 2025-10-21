@@ -18,28 +18,20 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Tag key-value pair
+ * CreateRoutePolicyAssociations request structure.
  *
- * @method string getKey() Obtain Tag key
- * @method void setKey(string $Key) Set Tag key
- * @method string getValue() Obtain Tag value
- * @method void setValue(string $Value) Set Tag value
+ * @method array getRoutePolicyAssociationSet() Obtain Route reception policy binding object list.
+ * @method void setRoutePolicyAssociationSet(array $RoutePolicyAssociationSet) Set Route reception policy binding object list.
  */
-class Tag extends AbstractModel
+class CreateRoutePolicyAssociationsRequest extends AbstractModel
 {
     /**
-     * @var string Tag key
+     * @var array Route reception policy binding object list.
      */
-    public $Key;
+    public $RoutePolicyAssociationSet;
 
     /**
-     * @var string Tag value
-     */
-    public $Value;
-
-    /**
-     * @param string $Key Tag key
-     * @param string $Value Tag value
+     * @param array $RoutePolicyAssociationSet Route reception policy binding object list.
      */
     function __construct()
     {
@@ -54,12 +46,13 @@ class Tag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("RoutePolicyAssociationSet",$param) and $param["RoutePolicyAssociationSet"] !== null) {
+            $this->RoutePolicyAssociationSet = [];
+            foreach ($param["RoutePolicyAssociationSet"] as $key => $value){
+                $obj = new RoutePolicyAssociation();
+                $obj->deserialize($value);
+                array_push($this->RoutePolicyAssociationSet, $obj);
+            }
         }
     }
 }
