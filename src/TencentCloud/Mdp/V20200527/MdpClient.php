@@ -25,7 +25,7 @@ use TencentCloud\Mdp\V20200527\Models as Models;
 /**
  * @method Models\BindLinearAssemblyCDNDomainWithChannelResponse BindLinearAssemblyCDNDomainWithChannel(Models\BindLinearAssemblyCDNDomainWithChannelRequest $req) Linear Assembly channel is bound to CDN playback domain name.
  * @method Models\BindNewLVBDomainWithChannelResponse BindNewLVBDomainWithChannel(Models\BindNewLVBDomainWithChannelRequest $req) This API is used to bind an LVB domain name to a channel.
- * @method Models\BindSSAICDNDomainWithChannelResponse BindSSAICDNDomainWithChannel(Models\BindSSAICDNDomainWithChannelRequest $req) BindSSAICDNDomainWithChannel
+ * @method Models\BindSSAICDNDomainWithChannelResponse BindSSAICDNDomainWithChannel(Models\BindSSAICDNDomainWithChannelRequest $req) This API is used to bind a CDN playback domain to a channel.
  * @method Models\CreateStreamPackageChannelResponse CreateStreamPackageChannel(Models\CreateStreamPackageChannelRequest $req) This API is used to create a StreamPackage channel.
  * @method Models\CreateStreamPackageChannelEndpointResponse CreateStreamPackageChannelEndpoint(Models\CreateStreamPackageChannelEndpointRequest $req) This API is used to create an endpoint on a StreamPackage channel.
  * @method Models\CreateStreamPackageHarvestJobResponse CreateStreamPackageHarvestJob(Models\CreateStreamPackageHarvestJobRequest $req) Create HarvestJob.
@@ -84,7 +84,7 @@ use TencentCloud\Mdp\V20200527\Models as Models;
  * @method Models\StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannel(Models\StopStreamPackageLinearAssemblyChannelRequest $req) Stop linear assembly channel.
  * @method Models\UnbindCdnDomainWithChannelResponse UnbindCdnDomainWithChannel(Models\UnbindCdnDomainWithChannelRequest $req) This API is used to unbind a CDN playback domain name from a channel.
  * @method Models\UnbindLinearAssemblyCDNDomainWithChannelResponse UnbindLinearAssemblyCDNDomainWithChannel(Models\UnbindLinearAssemblyCDNDomainWithChannelRequest $req) Unbind LinearAssembly channel with CDN domain name.
- * @method Models\UnbindSSAICDNDomainWithChannelResponse UnbindSSAICDNDomainWithChannel(Models\UnbindSSAICDNDomainWithChannelRequest $req) UnbindSSAICDNDomainWithChannel
+ * @method Models\UnbindSSAICDNDomainWithChannelResponse UnbindSSAICDNDomainWithChannel(Models\UnbindSSAICDNDomainWithChannelRequest $req) This API is used to cancel the correlation between a channel and a CDN playback domain.
  */
 
 class MdpClient extends AbstractClient

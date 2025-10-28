@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set The start time.
  * @method string getEndTime() Obtain The end time.
  * @method void setEndTime(string $EndTime) Set The end time.
- * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
- * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
+ * @method array getZoneIds() Obtain ZoneId set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).
+ * @method void setZoneIds(array $ZoneIds) Set ZoneId set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).
  * @method array getDomains() Obtain List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
  * @method void setDomains(array $Domains) Set List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 300.
@@ -46,7 +46,7 @@ class DownloadL7LogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array ZoneId set. This parameter is required.
+     * @var array ZoneId set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).
      */
     public $ZoneIds;
 
@@ -68,7 +68,7 @@ class DownloadL7LogsRequest extends AbstractModel
     /**
      * @param string $StartTime The start time.
      * @param string $EndTime The end time.
-     * @param array $ZoneIds ZoneId set. This parameter is required.
+     * @param array $ZoneIds ZoneId set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).
      * @param array $Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
      * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 300.
      * @param integer $Offset The page offset. Default value: 0.

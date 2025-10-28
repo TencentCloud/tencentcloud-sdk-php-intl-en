@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Team list
  *
- * @method integer getTotalCount() Obtain Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain Total count
+ * @method void setTotalCount(integer $TotalCount) Set Total count
  * @method array getDataList() Obtain List information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDataList(array $DataList) Set List information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DescribeTeamPageResp extends AbstractModel
 {
     /**
-     * @var integer Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Total count
      */
     public $TotalCount;
 
     /**
      * @var array List information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataList;
 
     /**
-     * @param integer $TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalCount Total count
      * @param array $DataList List information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

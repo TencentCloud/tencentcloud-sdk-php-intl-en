@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
  * @method array getPolicyIds() Obtain List of DDoS policy IDs. All policies are selected if this field is not specified.
  * @method void setPolicyIds(array $PolicyIds) Set List of DDoS policy IDs. All policies are selected if this field is not specified.
- * @method array getZoneIds() Obtain Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
- * @method void setZoneIds(array $ZoneIds) Set Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
+ * @method array getZoneIds() Obtain Site ID set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). A maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
+ * @method void setZoneIds(array $ZoneIds) Set Site ID set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). A maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 1000.
  * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 1000.
  * @method integer getOffset() Obtain The page offset. Default value: 0.
@@ -73,7 +73,7 @@ class DescribeDDoSAttackEventRequest extends AbstractModel
     public $PolicyIds;
 
     /**
-     * @var array Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
+     * @var array Site ID set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). A maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
      */
     public $ZoneIds;
 
@@ -118,7 +118,7 @@ class DescribeDDoSAttackEventRequest extends AbstractModel
      * @param string $StartTime The start time.
      * @param string $EndTime End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      * @param array $PolicyIds List of DDoS policy IDs. All policies are selected if this field is not specified.
-     * @param array $ZoneIds Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
+     * @param array $ZoneIds Site ID set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). A maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
      * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
      * @param integer $Offset The page offset. Default value: 0.
      * @param boolean $ShowDetail Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.

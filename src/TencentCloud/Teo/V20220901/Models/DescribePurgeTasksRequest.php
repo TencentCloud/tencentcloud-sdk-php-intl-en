@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePurgeTasks request structure.
  *
- * @method string getZoneId() Obtain Site ID. This parameter is required.
- * @method void setZoneId(string $ZoneId) Set Site ID. This parameter is required.
+ * @method string getZoneId() Obtain Site ID. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980)
+ * @method void setZoneId(string $ZoneId) Set Site ID. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980)
  * @method string getStartTime() Obtain Start time of the query. Either time or job-id is required.
  * @method void setStartTime(string $StartTime) Set Start time of the query. Either time or job-id is required.
  * @method string getEndTime() Obtain End time of the query. Either time or job-id is required.
@@ -34,19 +34,19 @@ use TencentCloud\Common\AbstractModel;
 <li>job-id: Filter by task ID in the format like 1379afjk91u32h. Multiple values and fuzzy queries are not supported.</li>
 <li>target: Filter by target resource information in the format like http://www.qq.com/1.txt or tag1. Multiple values are not supported yet. Fuzzy queries are supported.</li>
 <li>domains: Filter by domain name in the format like www.qq.com. Fuzzy queries are not supported.</li>
-<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>?? processing: processing<br>?? success: successful<br>?? failed: failed<br>?? timeout: timed out</li>
-<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>?? purge_url: URL<br>?? purge_prefix: prefix<br>?? purge_all: all cached content<br>?? purge_host: Hostname<br>?? purge_cache_tag: CacheTag</li>
+<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>processing: processing<br>success: successful<br>failed: failed<br>timeout: timed out<br>canceled: Canceled</li>
+<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>purge_url: URL<br>purge_prefix: prefix<br>purge_all: all cached content<br>purge_host: Hostname<br>purge_cache_tag: CacheTag</li>
  * @method void setFilters(array $Filters) Set Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
 <li>job-id: Filter by task ID in the format like 1379afjk91u32h. Multiple values and fuzzy queries are not supported.</li>
 <li>target: Filter by target resource information in the format like http://www.qq.com/1.txt or tag1. Multiple values are not supported yet. Fuzzy queries are supported.</li>
 <li>domains: Filter by domain name in the format like www.qq.com. Fuzzy queries are not supported.</li>
-<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>?? processing: processing<br>?? success: successful<br>?? failed: failed<br>?? timeout: timed out</li>
-<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>?? purge_url: URL<br>?? purge_prefix: prefix<br>?? purge_all: all cached content<br>?? purge_host: Hostname<br>?? purge_cache_tag: CacheTag</li>
+<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>processing: processing<br>success: successful<br>failed: failed<br>timeout: timed out<br>canceled: Canceled</li>
+<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>purge_url: URL<br>purge_prefix: prefix<br>purge_all: all cached content<br>purge_host: Hostname<br>purge_cache_tag: CacheTag</li>
  */
 class DescribePurgeTasksRequest extends AbstractModel
 {
     /**
-     * @var string Site ID. This parameter is required.
+     * @var string Site ID. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980)
      */
     public $ZoneId;
 
@@ -75,13 +75,13 @@ class DescribePurgeTasksRequest extends AbstractModel
 <li>job-id: Filter by task ID in the format like 1379afjk91u32h. Multiple values and fuzzy queries are not supported.</li>
 <li>target: Filter by target resource information in the format like http://www.qq.com/1.txt or tag1. Multiple values are not supported yet. Fuzzy queries are supported.</li>
 <li>domains: Filter by domain name in the format like www.qq.com. Fuzzy queries are not supported.</li>
-<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>?? processing: processing<br>?? success: successful<br>?? failed: failed<br>?? timeout: timed out</li>
-<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>?? purge_url: URL<br>?? purge_prefix: prefix<br>?? purge_all: all cached content<br>?? purge_host: Hostname<br>?? purge_cache_tag: CacheTag</li>
+<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>processing: processing<br>success: successful<br>failed: failed<br>timeout: timed out<br>canceled: Canceled</li>
+<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>purge_url: URL<br>purge_prefix: prefix<br>purge_all: all cached content<br>purge_host: Hostname<br>purge_cache_tag: CacheTag</li>
      */
     public $Filters;
 
     /**
-     * @param string $ZoneId Site ID. This parameter is required.
+     * @param string $ZoneId Site ID. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980)
      * @param string $StartTime Start time of the query. Either time or job-id is required.
      * @param string $EndTime End time of the query. Either time or job-id is required.
      * @param integer $Offset Offset of paginated query. Default value: 0.
@@ -90,8 +90,8 @@ class DescribePurgeTasksRequest extends AbstractModel
 <li>job-id: Filter by task ID in the format like 1379afjk91u32h. Multiple values and fuzzy queries are not supported.</li>
 <li>target: Filter by target resource information in the format like http://www.qq.com/1.txt or tag1. Multiple values are not supported yet. Fuzzy queries are supported.</li>
 <li>domains: Filter by domain name in the format like www.qq.com. Fuzzy queries are not supported.</li>
-<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>?? processing: processing<br>?? success: successful<br>?? failed: failed<br>?? timeout: timed out</li>
-<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>?? purge_url: URL<br>?? purge_prefix: prefix<br>?? purge_all: all cached content<br>?? purge_host: Hostname<br>?? purge_cache_tag: CacheTag</li>
+<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>processing: processing<br>success: successful<br>failed: failed<br>timeout: timed out<br>canceled: Canceled</li>
+<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>purge_url: URL<br>purge_prefix: prefix<br>purge_all: all cached content<br>purge_host: Hostname<br>purge_cache_tag: CacheTag</li>
      */
     function __construct()
     {

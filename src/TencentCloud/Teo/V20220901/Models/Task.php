@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
 <li>downloadManifestFailed: specifies the file failed to download.</li>.
 <li>accessDenied: specifies access denied.</li>.
 <li>originPullFailed: specifies the origin-pull failure.</li>.
- * @method string getFailMessage() Obtain Failure description for refresh and preheating.
- * @method void setFailMessage(string $FailMessage) Set Failure description for refresh and preheating.
+ * @method string getFailMessage() Obtain Description of the reason for cache purge or warm cache failure.
+ * @method void setFailMessage(string $FailMessage) Set Description of the reason for cache purge or warm cache failure.
  */
 class Task extends AbstractModel
 {
@@ -118,7 +118,7 @@ class Task extends AbstractModel
     public $FailType;
 
     /**
-     * @var string Failure description for refresh and preheating.
+     * @var string Description of the reason for cache purge or warm cache failure.
      */
     public $FailMessage;
 
@@ -143,7 +143,7 @@ class Task extends AbstractModel
 <li>downloadManifestFailed: specifies the file failed to download.</li>.
 <li>accessDenied: specifies access denied.</li>.
 <li>originPullFailed: specifies the origin-pull failure.</li>.
-     * @param string $FailMessage Failure description for refresh and preheating.
+     * @param string $FailMessage Description of the reason for cache purge or warm cache failure.
      */
     function __construct()
     {

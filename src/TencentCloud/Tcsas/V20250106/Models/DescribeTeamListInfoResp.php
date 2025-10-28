@@ -21,73 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * Team list information
  *
  * @method string getTeamId() Obtain Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTeamId(string $TeamId) Set Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTeamName() Obtain Team name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTeamName(string $TeamName) Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAdminUserId() Obtain Admin ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAdminUserId(string $AdminUserId) Set Admin ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAdminUserAccount() Obtain Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAdminUserAccount(string $AdminUserAccount) Set Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAdminUserName() Obtain Admin username
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAdminUserName(string $AdminUserName) Set Admin username
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAdminUserId() Obtain Administrator user ID
+ * @method void setAdminUserId(string $AdminUserId) Set Administrator user ID
+ * @method string getAdminUserAccount() Obtain Administrator account
+ * @method void setAdminUserAccount(string $AdminUserAccount) Set Administrator account
+ * @method string getAdminUserName() Obtain Administrator username
+ * @method void setAdminUserName(string $AdminUserName) Set Administrator username
  * @method integer getMemberCount() Obtain Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMemberCount(integer $MemberCount) Set Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRegisterLink() Obtain Team registration link
  * @method void setRegisterLink(string $RegisterLink) Set Team registration link
  * @method array getTeamRoleTypeList() Obtain Team permission type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTeamRoleTypeList(array $TeamRoleTypeList) Set Team permission type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRelatedTeamId() Obtain Associated team ID
  * @method void setRelatedTeamId(integer $RelatedTeamId) Set Associated team ID
+ * @method integer getExpireTime() Obtain Team expiration time. 0 means never expire.
+ * @method void setExpireTime(integer $ExpireTime) Set Team expiration time. 0 means never expire.
+ * @method integer getStatus() Obtain Team status. valid values: 1: normal; 2: disabled; 3: expired.
+ * @method void setStatus(integer $Status) Set Team status. valid values: 1: normal; 2: disabled; 3: expired.
  */
 class DescribeTeamListInfoResp extends AbstractModel
 {
     /**
      * @var string Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeamId;
 
     /**
      * @var string Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeamName;
 
     /**
-     * @var string Admin ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Administrator user ID
      */
     public $AdminUserId;
 
     /**
-     * @var string Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Administrator account
      */
     public $AdminUserAccount;
 
     /**
-     * @var string Admin username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Administrator username
      */
     public $AdminUserName;
 
     /**
      * @var integer Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MemberCount;
 
@@ -98,7 +82,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var array Team permission type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeamRoleTypeList;
 
@@ -108,22 +91,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RelatedTeamId;
 
     /**
+     * @var integer Team expiration time. 0 means never expire.
+     */
+    public $ExpireTime;
+
+    /**
+     * @var integer Team status. valid values: 1: normal; 2: disabled; 3: expired.
+     */
+    public $Status;
+
+    /**
      * @param string $TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AdminUserId Admin ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AdminUserAccount Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AdminUserName Admin username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AdminUserId Administrator user ID
+     * @param string $AdminUserAccount Administrator account
+     * @param string $AdminUserName Administrator username
      * @param integer $MemberCount Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RegisterLink Team registration link
      * @param array $TeamRoleTypeList Team permission type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RelatedTeamId Associated team ID
+     * @param integer $ExpireTime Team expiration time. 0 means never expire.
+     * @param integer $Status Team status. valid values: 1: normal; 2: disabled; 3: expired.
      */
     function __construct()
     {
@@ -172,6 +160,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RelatedTeamId",$param) and $param["RelatedTeamId"] !== null) {
             $this->RelatedTeamId = $param["RelatedTeamId"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

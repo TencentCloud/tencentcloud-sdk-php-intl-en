@@ -104,6 +104,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ExportResourcePackageDeductDetailsResponse ExportResourcePackageDeductDetails(Models\ExportResourcePackageDeductDetailsRequest $req) This API is used to export the usage details of a resource package.
  * @method Models\InquirePriceCreateResponse InquirePriceCreate(Models\InquirePriceCreateRequest $req) This interface (InquirePriceCreate) is used for price inquiry of newly purchased clusters.
  * @method Models\InquirePriceModifyResponse InquirePriceModify(Models\InquirePriceModifyRequest $req) This API is used to query the price for modifying the specifications of a prepaid cluster.
+ * @method Models\InquirePriceMultiSpecResponse InquirePriceMultiSpec(Models\InquirePriceMultiSpecRequest $req) This API is used to inquire prices in batch.
  * @method Models\InquirePriceRenewResponse InquirePriceRenew(Models\InquirePriceRenewRequest $req) This API is used to query the renewal price of a cluster.
  * @method Models\IsolateClusterResponse IsolateCluster(Models\IsolateClusterRequest $req) This interface (IsolateCluster) is used to isolate a cluster.
  * @method Models\IsolateInstanceResponse IsolateInstance(Models\IsolateInstanceRequest $req) This API is used to isolate an instance.

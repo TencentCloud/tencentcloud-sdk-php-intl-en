@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindSSAICDNDomainWithChannel request structure.
  *
- * @method string getChannelId() Obtain Channel Id
- * @method void setChannelId(string $ChannelId) Set Channel Id
- * @method string getCdnDomain() Obtain The domain name for CDN playback.
- * @method void setCdnDomain(string $CdnDomain) Set The domain name for CDN playback.
+ * @method string getChannelId() Obtain Channel Id.
+ * @method void setChannelId(string $ChannelId) Set Channel Id.
+ * @method string getCdnDomain() Obtain Specifies the playback domain of CDN.
+ * @method void setCdnDomain(string $CdnDomain) Set Specifies the playback domain of CDN.
  */
 class BindSSAICDNDomainWithChannelRequest extends AbstractModel
 {
     /**
-     * @var string Channel Id
+     * @var string Channel Id.
      */
     public $ChannelId;
 
     /**
-     * @var string The domain name for CDN playback.
+     * @var string Specifies the playback domain of CDN.
      */
     public $CdnDomain;
 
     /**
-     * @param string $ChannelId Channel Id
-     * @param string $CdnDomain The domain name for CDN playback.
+     * @param string $ChannelId Channel Id.
+     * @param string $CdnDomain Specifies the playback domain of CDN.
      */
     function __construct()
     {

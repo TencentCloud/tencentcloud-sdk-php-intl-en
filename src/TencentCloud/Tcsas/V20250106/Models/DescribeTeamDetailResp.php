@@ -21,81 +21,64 @@ use TencentCloud\Common\AbstractModel;
  * Team details
  *
  * @method string getTeamName() Obtain Team name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTeamName(string $TeamName) Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTeamRoleType() Obtain Team role type 1-Mini program team 2-Application team
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTeamRoleType(integer $TeamRoleType) Set Team role type 1-Mini program team 2-Application team
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAdminUserAccount() Obtain Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAdminUserAccount(string $AdminUserAccount) Set Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTeamRoleType() Obtain Team role type 1-mini program team 2-application team
+ * @method void setTeamRoleType(integer $TeamRoleType) Set Team role type 1-mini program team 2-application team
+ * @method string getAdminUserAccount() Obtain Administrator account
+ * @method void setAdminUserAccount(string $AdminUserAccount) Set Administrator account
  * @method string getCreateUser() Obtain Creator
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateUser(string $CreateUser) Set Creator
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getMemberCount() Obtain Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMemberCount(integer $MemberCount) Set Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getBindMiniTeamCount() Obtain Number of bound mini program teams
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBindMiniTeamCount(integer $BindMiniTeamCount) Set Number of bound mini program teams
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getBindTeamName() Obtain Name of the bound team
  * @method void setBindTeamName(string $BindTeamName) Set Name of the bound team
  * @method string getRegisterLink() Obtain Team registration link
  * @method void setRegisterLink(string $RegisterLink) Set Team registration link
- * @method string getApplicationName() Obtain Application name. It’s required when querying details of a mini program team.
- * @method void setApplicationName(string $ApplicationName) Set Application name. It’s required when querying details of a mini program team.
+ * @method string getApplicationName() Obtain Application name. It Is required when querying details of a mini program team.
+ * @method void setApplicationName(string $ApplicationName) Set Application name. It Is required when querying details of a mini program team.
+ * @method integer getExpireTime() Obtain Team expiration time. 0 means never expire.
+ * @method void setExpireTime(integer $ExpireTime) Set Team expiration time. 0 means never expire.
+ * @method integer getStatus() Obtain Team status. valid values: 1: normal; 2: disabled; 3: expired.
+ * @method void setStatus(integer $Status) Set Team status. valid values: 1: normal; 2: disabled; 3: expired.
  */
 class DescribeTeamDetailResp extends AbstractModel
 {
     /**
      * @var string Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeamName;
 
     /**
-     * @var integer Team role type 1-Mini program team 2-Application team
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Team role type 1-mini program team 2-application team
      */
     public $TeamRoleType;
 
     /**
-     * @var string Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Administrator account
      */
     public $AdminUserAccount;
 
     /**
      * @var string Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateUser;
 
     /**
      * @var string Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
      * @var integer Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MemberCount;
 
     /**
      * @var integer Number of bound mini program teams
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BindMiniTeamCount;
 
@@ -110,28 +93,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RegisterLink;
 
     /**
-     * @var string Application name. It’s required when querying details of a mini program team.
+     * @var string Application name. It Is required when querying details of a mini program team.
      */
     public $ApplicationName;
 
     /**
+     * @var integer Team expiration time. 0 means never expire.
+     */
+    public $ExpireTime;
+
+    /**
+     * @var integer Team status. valid values: 1: normal; 2: disabled; 3: expired.
+     */
+    public $Status;
+
+    /**
      * @param string $TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TeamRoleType Team role type 1-Mini program team 2-Application team
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AdminUserAccount Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TeamRoleType Team role type 1-mini program team 2-application team
+     * @param string $AdminUserAccount Administrator account
      * @param string $CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MemberCount Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $BindMiniTeamCount Number of bound mini program teams
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $BindTeamName Name of the bound team
      * @param string $RegisterLink Team registration link
-     * @param string $ApplicationName Application name. It’s required when querying details of a mini program team.
+     * @param string $ApplicationName Application name. It Is required when querying details of a mini program team.
+     * @param integer $ExpireTime Team expiration time. 0 means never expire.
+     * @param integer $Status Team status. valid values: 1: normal; 2: disabled; 3: expired.
      */
     function __construct()
     {
@@ -184,6 +172,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
             $this->ApplicationName = $param["ApplicationName"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

@@ -38,14 +38,14 @@ use TencentCloud\Common\AbstractModel;
 <li>off: Disable.</li>
  * @method array getTlsVersion() Obtain Tls version settings, valid values:.
 <Li>`TLSv1`: tlsv1 version;</li>.
-<li>`TLSV1.1`: TLSV1.1 version;</li>.
-<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
-<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
+<li>`TLSv1.1`: TLSv1.1 version;</li>.
+<li>TLSv1.2: specifies the TLSv1.2 version.</li>.
+<Li>TLSv1.3: specifies the TLSv1.3 version. consecutive versions must be enabled when modifying.</li>.
  * @method void setTlsVersion(array $TlsVersion) Set Tls version settings, valid values:.
 <Li>`TLSv1`: tlsv1 version;</li>.
-<li>`TLSV1.1`: TLSV1.1 version;</li>.
-<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
-<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
+<li>`TLSv1.1`: TLSv1.1 version;</li>.
+<li>TLSv1.2: specifies the TLSv1.2 version.</li>.
+<Li>TLSv1.3: specifies the TLSv1.3 version. consecutive versions must be enabled when modifying.</li>.
  * @method Hsts getHsts() Obtain HSTS Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHsts(Hsts $Hsts) Set HSTS Configuration
@@ -90,9 +90,9 @@ class Https extends AbstractModel
     /**
      * @var array Tls version settings, valid values:.
 <Li>`TLSv1`: tlsv1 version;</li>.
-<li>`TLSV1.1`: TLSV1.1 version;</li>.
-<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
-<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
+<li>`TLSv1.1`: TLSv1.1 version;</li>.
+<li>TLSv1.2: specifies the TLSv1.2 version.</li>.
+<Li>TLSv1.3: specifies the TLSv1.3 version. consecutive versions must be enabled when modifying.</li>.
      */
     public $TlsVersion;
 
@@ -134,9 +134,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>off: Disable.</li>
      * @param array $TlsVersion Tls version settings, valid values:.
 <Li>`TLSv1`: tlsv1 version;</li>.
-<li>`TLSV1.1`: TLSV1.1 version;</li>.
-<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
-<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
+<li>`TLSv1.1`: TLSv1.1 version;</li>.
+<li>TLSv1.2: specifies the TLSv1.2 version.</li>.
+<Li>TLSv1.3: specifies the TLSv1.3 version. consecutive versions must be enabled when modifying.</li>.
      * @param Hsts $Hsts HSTS Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $CertInfo The certificate configuration.

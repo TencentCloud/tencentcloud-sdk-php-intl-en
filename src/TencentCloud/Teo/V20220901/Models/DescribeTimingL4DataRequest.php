@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <Li>l4Flow_outFlux: outbound traffic.</li>
 <Li>l4Flow_inBandwidth: inbound peak bandwidth.</li>
 <Li>l4Flow_outBandwidth: outbound peak bandwidth.</li>
- * @method array getZoneIds() Obtain Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
- * @method void setZoneIds(array $ZoneIds) Set Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
+ * @method array getZoneIds() Obtain Site ID set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
+ * @method void setZoneIds(array $ZoneIds) Set Site ID set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
  * @method array getProxyIds() Obtain List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
  * @method void setProxyIds(array $ProxyIds) Set List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
  * @method string getInterval() Obtain The query granularity. Values:
@@ -87,7 +87,7 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
+     * @var array Site ID set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
      */
     public $ZoneIds;
 
@@ -128,7 +128,7 @@ class DescribeTimingL4DataRequest extends AbstractModel
 <Li>l4Flow_outFlux: outbound traffic.</li>
 <Li>l4Flow_inBandwidth: inbound peak bandwidth.</li>
 <Li>l4Flow_outBandwidth: outbound peak bandwidth.</li>
-     * @param array $ZoneIds Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
+     * @param array $ZoneIds Site ID set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
      * @param array $ProxyIds List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
      * @param string $Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>

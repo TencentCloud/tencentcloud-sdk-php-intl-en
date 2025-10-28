@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`ddos_attackMaxPackageRate`: Peak attack packet rate;</li>
 <li>`ddos_attackBandwidth`: Time-series data of attack bandwidth;</li>
 <li>`ddos_attackPackageRate`: Time-series data of attack packet rate.</li>
- * @method array getZoneIds() Obtain Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
- * @method void setZoneIds(array $ZoneIds) Set Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
+ * @method array getZoneIds() Obtain Site ID set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). A maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
+ * @method void setZoneIds(array $ZoneIds) Set Site ID set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). A maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
  * @method array getPolicyIds() Obtain IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
  * @method void setPolicyIds(array $PolicyIds) Set IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
  * @method string getInterval() Obtain Query period granularity. Valid values:
@@ -79,7 +79,7 @@ class DescribeDDoSAttackDataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
+     * @var array Site ID set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). A maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
      */
     public $ZoneIds;
 
@@ -113,7 +113,7 @@ class DescribeDDoSAttackDataRequest extends AbstractModel
 <li>`ddos_attackMaxPackageRate`: Peak attack packet rate;</li>
 <li>`ddos_attackBandwidth`: Time-series data of attack bandwidth;</li>
 <li>`ddos_attackPackageRate`: Time-series data of attack packet rate.</li>
-     * @param array $ZoneIds Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
+     * @param array $ZoneIds Site ID set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). A maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
      * @param array $PolicyIds IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
      * @param string $Interval Query period granularity. Valid values:
 <li>min: 1 minute;</li>

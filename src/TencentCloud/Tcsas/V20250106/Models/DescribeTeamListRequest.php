@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOffset() Obtain Pagination offset
  * @method void setOffset(integer $Offset) Set Pagination offset
- * @method integer getLimit() Obtain Number of results per page
- * @method void setLimit(integer $Limit) Set Number of results per page
+ * @method integer getLimit() Obtain Page size
+ * @method void setLimit(integer $Limit) Set Page size
  * @method string getPlatformId() Obtain Platform ID
  * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getKeyword() Obtain Name of the team to be queried
- * @method void setKeyword(string $Keyword) Set Name of the team to be queried
+ * @method string getKeyword() Obtain Team name to be queried
+ * @method void setKeyword(string $Keyword) Set Team name to be queried
  */
 class DescribeTeamListRequest extends AbstractModel
 {
@@ -37,7 +37,7 @@ class DescribeTeamListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of results per page
+     * @var integer Page size
      */
     public $Limit;
 
@@ -47,15 +47,15 @@ class DescribeTeamListRequest extends AbstractModel
     public $PlatformId;
 
     /**
-     * @var string Name of the team to be queried
+     * @var string Team name to be queried
      */
     public $Keyword;
 
     /**
      * @param integer $Offset Pagination offset
-     * @param integer $Limit Number of results per page
+     * @param integer $Limit Page size
      * @param string $PlatformId Platform ID
-     * @param string $Keyword Name of the team to be queried
+     * @param string $Keyword Team name to be queried
      */
     function __construct()
     {

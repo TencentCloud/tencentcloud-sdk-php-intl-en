@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFollowOrigin(string $FollowOrigin) Set Whether to follow the origin server. Values:
 <li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
 <li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
- * @method integer getMaxAgeTime() Obtain Specifies the maximum amount of time (in seconds). The maximum value is 365 days.
+ * @method integer getMaxAgeTime() Obtain Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
 Note: The value `0` means not to cache.
- * @method void setMaxAgeTime(integer $MaxAgeTime) Set Specifies the maximum amount of time (in seconds). The maximum value is 365 days.
+ * @method void setMaxAgeTime(integer $MaxAgeTime) Set Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
 Note: The value `0` means not to cache.
  */
 class MaxAge extends AbstractModel
@@ -41,7 +41,7 @@ class MaxAge extends AbstractModel
     public $FollowOrigin;
 
     /**
-     * @var integer Specifies the maximum amount of time (in seconds). The maximum value is 365 days.
+     * @var integer Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
 Note: The value `0` means not to cache.
      */
     public $MaxAgeTime;
@@ -50,7 +50,7 @@ Note: The value `0` means not to cache.
      * @param string $FollowOrigin Whether to follow the origin server. Values:
 <li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
 <li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
-     * @param integer $MaxAgeTime Specifies the maximum amount of time (in seconds). The maximum value is 365 days.
+     * @param integer $MaxAgeTime Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
 Note: The value `0` means not to cache.
      */
     function __construct()
