@@ -158,6 +158,8 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setForceRedirectHTTPSParameters(ForceRedirectHTTPSParameters $ForceRedirectHTTPSParameters) Set Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
 Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method OriginPullProtocolParameters getOriginPullProtocolParameters() Obtain 
+ * @method void setOriginPullProtocolParameters(OriginPullProtocolParameters $OriginPullProtocolParameters) Set 
  * @method CompressionParameters getCompressionParameters() Obtain Intelligent compression configuration. this parameter is required when name is set to compression.
 Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setCompressionParameters(CompressionParameters $CompressionParameters) Set Intelligent compression configuration. this parameter is required when name is set to compression.
@@ -375,6 +377,11 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     public $ForceRedirectHTTPSParameters;
 
     /**
+     * @var OriginPullProtocolParameters 
+     */
+    public $OriginPullProtocolParameters;
+
+    /**
      * @var CompressionParameters Intelligent compression configuration. this parameter is required when name is set to compression.
 Note: this field may return null, which indicates a failure to obtain a valid value.
      */
@@ -558,6 +565,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param ForceRedirectHTTPSParameters $ForceRedirectHTTPSParameters Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
 Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param OriginPullProtocolParameters $OriginPullProtocolParameters 
      * @param CompressionParameters $CompressionParameters Intelligent compression configuration. this parameter is required when name is set to compression.
 Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param HSTSParameters $HSTSParameters HSTS configuration parameter. this parameter is required when name is hsts.
@@ -692,6 +700,11 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         if (array_key_exists("ForceRedirectHTTPSParameters",$param) and $param["ForceRedirectHTTPSParameters"] !== null) {
             $this->ForceRedirectHTTPSParameters = new ForceRedirectHTTPSParameters();
             $this->ForceRedirectHTTPSParameters->deserialize($param["ForceRedirectHTTPSParameters"]);
+        }
+
+        if (array_key_exists("OriginPullProtocolParameters",$param) and $param["OriginPullProtocolParameters"] !== null) {
+            $this->OriginPullProtocolParameters = new OriginPullProtocolParameters();
+            $this->OriginPullProtocolParameters->deserialize($param["OriginPullProtocolParameters"]);
         }
 
         if (array_key_exists("CompressionParameters",$param) and $param["CompressionParameters"] !== null) {

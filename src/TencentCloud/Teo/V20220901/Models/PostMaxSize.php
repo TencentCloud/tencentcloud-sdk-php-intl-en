@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
 <li>`on`: Enable;</li>
 <li>`off`: Disable.</li>
- * @method integer getMaxSize() Obtain Maximum limit. value range between 1MB and 500MB. byte.
- * @method void setMaxSize(integer $MaxSize) Set Maximum limit. value range between 1MB and 500MB. byte.
+ * @method integer getMaxSize() Obtain Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
+ * @method void setMaxSize(integer $MaxSize) Set Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
  */
 class PostMaxSize extends AbstractModel
 {
@@ -39,7 +39,7 @@ class PostMaxSize extends AbstractModel
     public $Switch;
 
     /**
-     * @var integer Maximum limit. value range between 1MB and 500MB. byte.
+     * @var integer Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
      */
     public $MaxSize;
 
@@ -47,7 +47,7 @@ class PostMaxSize extends AbstractModel
      * @param string $Switch Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
 <li>`on`: Enable;</li>
 <li>`off`: Disable.</li>
-     * @param integer $MaxSize Maximum limit. value range between 1MB and 500MB. byte.
+     * @param integer $MaxSize Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
      */
     function __construct()
     {

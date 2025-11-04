@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) Set Domain name of DHCP
  * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+ * @method boolean getEnableRouteVpcPublish() Obtain Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+ * @method void setEnableRouteVpcPublish(boolean $EnableRouteVpcPublish) Set Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
  */
 class CreateVpcRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateVpcRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var boolean Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+     */
+    public $EnableRouteVpcPublish;
+
+    /**
      * @param string $VpcName The VPC name. The maximum length is 60 bytes.
      * @param string $CidrBlock VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16.
      * @param string $EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
      * @param array $DnsServers DNS address. A maximum of 4 addresses is supported.
      * @param string $DomainName Domain name of DHCP
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+     * @param boolean $EnableRouteVpcPublish Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class CreateVpcRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("EnableRouteVpcPublish",$param) and $param["EnableRouteVpcPublish"] !== null) {
+            $this->EnableRouteVpcPublish = $param["EnableRouteVpcPublish"];
         }
     }
 }

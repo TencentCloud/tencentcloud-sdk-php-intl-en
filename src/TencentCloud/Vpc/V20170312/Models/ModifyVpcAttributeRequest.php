@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVpcAttribute request structure.
  *
- * @method string getVpcId() Obtain Security group can be named freely, but cannot exceed 60 characters.
- * @method void setVpcId(string $VpcId) Set Security group can be named freely, but cannot exceed 60 characters.
+ * @method string getVpcId() Obtain VPC instance ID, in the format of vpc-f49l6u0z.
+ * @method void setVpcId(string $VpcId) Set VPC instance ID, in the format of vpc-f49l6u0z.
  * @method string getVpcName() Obtain VPC can be named freely, but the maximum length is 60 characters.
  * @method void setVpcName(string $VpcName) Set VPC can be named freely, but the maximum length is 60 characters.
  * @method string getEnableMulticast() Obtain Whether multicast is enabled. `true`: Enabled. `false`: Off.
@@ -30,13 +30,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDnsServers(array $DnsServers) Set DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
  * @method string getDomainName() Obtain Domain name
  * @method void setDomainName(string $DomainName) Set Domain name
+ * @method boolean getEnableRouteVpcPublish() Obtain Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist.
+ * @method void setEnableRouteVpcPublish(boolean $EnableRouteVpcPublish) Set Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist.
  * @method boolean getEnableCdcPublish() Obtain Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish
  * @method void setEnableCdcPublish(boolean $EnableCdcPublish) Set Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish
  */
 class ModifyVpcAttributeRequest extends AbstractModel
 {
     /**
-     * @var string Security group can be named freely, but cannot exceed 60 characters.
+     * @var string VPC instance ID, in the format of vpc-f49l6u0z.
      */
     public $VpcId;
 
@@ -61,16 +63,22 @@ class ModifyVpcAttributeRequest extends AbstractModel
     public $DomainName;
 
     /**
+     * @var boolean Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist.
+     */
+    public $EnableRouteVpcPublish;
+
+    /**
      * @var boolean Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish
      */
     public $EnableCdcPublish;
 
     /**
-     * @param string $VpcId Security group can be named freely, but cannot exceed 60 characters.
+     * @param string $VpcId VPC instance ID, in the format of vpc-f49l6u0z.
      * @param string $VpcName VPC can be named freely, but the maximum length is 60 characters.
      * @param string $EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Off.
      * @param array $DnsServers DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
      * @param string $DomainName Domain name
+     * @param boolean $EnableRouteVpcPublish Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist.
      * @param boolean $EnableCdcPublish Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish
      */
     function __construct()
@@ -104,6 +112,10 @@ class ModifyVpcAttributeRequest extends AbstractModel
 
         if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
             $this->DomainName = $param["DomainName"];
+        }
+
+        if (array_key_exists("EnableRouteVpcPublish",$param) and $param["EnableRouteVpcPublish"] !== null) {
+            $this->EnableRouteVpcPublish = $param["EnableRouteVpcPublish"];
         }
 
         if (array_key_exists("EnableCdcPublish",$param) and $param["EnableCdcPublish"] !== null) {

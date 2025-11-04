@@ -44,10 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) Set The `IPv6` `CIDR` of the `VPC`.
  * @method array getTagSet() Obtain Tag key-value pair
  * @method void setTagSet(array $TagSet) Set Tag key-value pair
- * @method array getAssistantCidrSet() Obtain The secondary CIDR block.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAssistantCidrSet(array $AssistantCidrSet) Set The secondary CIDR block.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAssistantCidrSet() Obtain Auxiliary CIDR
+ * @method void setAssistantCidrSet(array $AssistantCidrSet) Set Auxiliary CIDR
+ * @method boolean getEnableRouteVpcPublish() Obtain Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+ * @method void setEnableRouteVpcPublish(boolean $EnableRouteVpcPublish) Set Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+ * @method array getIpv6CidrBlockSet() Obtain Returns the multi-operator IPv6 Cidr Block.
+ * @method void setIpv6CidrBlockSet(array $Ipv6CidrBlockSet) Set Returns the multi-operator IPv6 Cidr Block.
  */
 class Vpc extends AbstractModel
 {
@@ -112,10 +114,19 @@ class Vpc extends AbstractModel
     public $TagSet;
 
     /**
-     * @var array The secondary CIDR block.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Auxiliary CIDR
      */
     public $AssistantCidrSet;
+
+    /**
+     * @var boolean Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+     */
+    public $EnableRouteVpcPublish;
+
+    /**
+     * @var array Returns the multi-operator IPv6 Cidr Block.
+     */
+    public $Ipv6CidrBlockSet;
 
     /**
      * @param string $VpcName `VPC` name.
@@ -130,8 +141,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param boolean $EnableDhcp Whether `DHCP` is enabled.
      * @param string $Ipv6CidrBlock The `IPv6` `CIDR` of the `VPC`.
      * @param array $TagSet Tag key-value pair
-     * @param array $AssistantCidrSet The secondary CIDR block.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $AssistantCidrSet Auxiliary CIDR
+     * @param boolean $EnableRouteVpcPublish Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+     * @param array $Ipv6CidrBlockSet Returns the multi-operator IPv6 Cidr Block.
      */
     function __construct()
     {
@@ -205,6 +217,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj = new AssistantCidr();
                 $obj->deserialize($value);
                 array_push($this->AssistantCidrSet, $obj);
+            }
+        }
+
+        if (array_key_exists("EnableRouteVpcPublish",$param) and $param["EnableRouteVpcPublish"] !== null) {
+            $this->EnableRouteVpcPublish = $param["EnableRouteVpcPublish"];
+        }
+
+        if (array_key_exists("Ipv6CidrBlockSet",$param) and $param["Ipv6CidrBlockSet"] !== null) {
+            $this->Ipv6CidrBlockSet = [];
+            foreach ($param["Ipv6CidrBlockSet"] as $key => $value){
+                $obj = new ISPIPv6CidrBlock();
+                $obj->deserialize($value);
+                array_push($this->Ipv6CidrBlockSet, $obj);
             }
         }
     }

@@ -50,14 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalIpAddressCount(integer $TotalIpAddressCount) Set The total number of IPv4 addresses in the subnet.
  * @method array getTagSet() Obtain Tag key-value pairs
  * @method void setTagSet(array $TagSet) Set Tag key-value pairs
- * @method string getCdcId() Obtain CDC instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setCdcId(string $CdcId) Set CDC instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getIsCdcSubnet() Obtain Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setIsCdcSubnet(integer $IsCdcSubnet) Set Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getCdcId() Obtain CDC instance ID.
+ * @method void setCdcId(string $CdcId) Set CDC instance ID.
+ * @method integer getIsCdcSubnet() Obtain Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes).
+ * @method void setIsCdcSubnet(integer $IsCdcSubnet) Set Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes).
  */
 class Subnet extends AbstractModel
 {
@@ -137,14 +133,12 @@ class Subnet extends AbstractModel
     public $TagSet;
 
     /**
-     * @var string CDC instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string CDC instance ID.
      */
     public $CdcId;
 
     /**
-     * @var integer Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes).
      */
     public $IsCdcSubnet;
 
@@ -164,10 +158,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param boolean $IsRemoteVpcSnat Whether it is a `SNAT` address pool subnet.
      * @param integer $TotalIpAddressCount The total number of IPv4 addresses in the subnet.
      * @param array $TagSet Tag key-value pairs
-     * @param string $CdcId CDC instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $IsCdcSubnet Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $CdcId CDC instance ID.
+     * @param integer $IsCdcSubnet Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes).
      */
     function __construct()
     {

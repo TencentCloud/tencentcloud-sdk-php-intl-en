@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Description of tags associated with resource instances during instance creation.
  *
- * @method string getResourceType() Obtain Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
- * @method void setResourceType(string $ResourceType) Set Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+ * @method string getResourceType() Obtain Specifies the resource type for Tag binding. valid values: "instance" (cloud virtual machine), "host" (cdh), "image" (mirror), "keypair" (key), "ps" (placement group), "hpc" (hyper computing cluster).
+ * @method void setResourceType(string $ResourceType) Set Specifies the resource type for Tag binding. valid values: "instance" (cloud virtual machine), "host" (cdh), "image" (mirror), "keypair" (key), "ps" (placement group), "hpc" (hyper computing cluster).
  * @method array getTags() Obtain Tag pair list
  * @method void setTags(array $Tags) Set Tag pair list
  */
 class TagSpecification extends AbstractModel
 {
     /**
-     * @var string Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+     * @var string Specifies the resource type for Tag binding. valid values: "instance" (cloud virtual machine), "host" (cdh), "image" (mirror), "keypair" (key), "ps" (placement group), "hpc" (hyper computing cluster).
      */
     public $ResourceType;
 
@@ -38,7 +38,7 @@ class TagSpecification extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $ResourceType Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+     * @param string $ResourceType Specifies the resource type for Tag binding. valid values: "instance" (cloud virtual machine), "host" (cdh), "image" (mirror), "keypair" (key), "ps" (placement group), "hpc" (hyper computing cluster).
      * @param array $Tags Tag pair list
      */
     function __construct()

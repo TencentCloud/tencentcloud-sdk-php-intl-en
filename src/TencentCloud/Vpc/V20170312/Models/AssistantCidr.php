@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCidrBlock(string $CidrBlock) Set The secondary CIDR, such as `172.16.0.0/16`.
  * @method integer getAssistantType() Obtain The secondary CIDR block type. 0: common secondary CIDR block. 1: container secondary CIDR block. Default: 0.
  * @method void setAssistantType(integer $AssistantType) Set The secondary CIDR block type. 0: common secondary CIDR block. 1: container secondary CIDR block. Default: 0.
- * @method array getSubnetSet() Obtain Subnets divided by the secondary CIDR.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubnetSet(array $SubnetSet) Set Subnets divided by the secondary CIDR.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getSubnetSet() Obtain Subnet Split by Auxiliary CIDR
+ * @method void setSubnetSet(array $SubnetSet) Set Subnet Split by Auxiliary CIDR
  */
 class AssistantCidr extends AbstractModel
 {
@@ -49,8 +47,7 @@ class AssistantCidr extends AbstractModel
     public $AssistantType;
 
     /**
-     * @var array Subnets divided by the secondary CIDR.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Subnet Split by Auxiliary CIDR
      */
     public $SubnetSet;
 
@@ -58,8 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $VpcId The `ID` of a `VPC` instance, such as `vpc-6v2ht8q5`.
      * @param string $CidrBlock The secondary CIDR, such as `172.16.0.0/16`.
      * @param integer $AssistantType The secondary CIDR block type. 0: common secondary CIDR block. 1: container secondary CIDR block. Default: 0.
-     * @param array $SubnetSet Subnets divided by the secondary CIDR.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $SubnetSet Subnet Split by Auxiliary CIDR
      */
     function __construct()
     {
