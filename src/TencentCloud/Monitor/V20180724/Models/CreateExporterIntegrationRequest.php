@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getKind() Obtain Type
- * @method void setKind(string $Kind) Set Type
+ * @method string getKind() Obtain Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item).
+ * @method void setKind(string $Kind) Set Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item).
  * @method string getContent() Obtain Integrated configuration
  * @method void setContent(string $Content) Set Integrated configuration
- * @method integer getKubeType() Obtain Kubernetes cluster type. Valid values:
-<li> 1 = TKE </li>
-<li> 2 = EKS </li>
-<li> 3 = MEKS </li>
- * @method void setKubeType(integer $KubeType) Set Kubernetes cluster type. Valid values:
-<li> 1 = TKE </li>
-<li> 2 = EKS </li>
-<li> 3 = MEKS </li>
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method integer getKubeType() Obtain Kubernetes cluster type, optional, valid values are as follows:.
+<li>1 = TKE</li>
+<li>2 = EKS</li>
+<li>3 = MEKS</li>
+ * @method void setKubeType(integer $KubeType) Set Kubernetes cluster type, optional, valid values are as follows:.
+<li>1 = TKE</li>
+<li>2 = EKS</li>
+<li>3 = MEKS</li>
+ * @method string getClusterId() Obtain Cluster ID, optional.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID, optional.
  */
 class CreateExporterIntegrationRequest extends AbstractModel
 {
@@ -45,7 +45,7 @@ class CreateExporterIntegrationRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Type
+     * @var string Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item).
      */
     public $Kind;
 
@@ -55,27 +55,27 @@ class CreateExporterIntegrationRequest extends AbstractModel
     public $Content;
 
     /**
-     * @var integer Kubernetes cluster type. Valid values:
-<li> 1 = TKE </li>
-<li> 2 = EKS </li>
-<li> 3 = MEKS </li>
+     * @var integer Kubernetes cluster type, optional, valid values are as follows:.
+<li>1 = TKE</li>
+<li>2 = EKS</li>
+<li>3 = MEKS</li>
      */
     public $KubeType;
 
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID, optional.
      */
     public $ClusterId;
 
     /**
      * @param string $InstanceId Instance ID
-     * @param string $Kind Type
+     * @param string $Kind Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item).
      * @param string $Content Integrated configuration
-     * @param integer $KubeType Kubernetes cluster type. Valid values:
-<li> 1 = TKE </li>
-<li> 2 = EKS </li>
-<li> 3 = MEKS </li>
-     * @param string $ClusterId Cluster ID
+     * @param integer $KubeType Kubernetes cluster type, optional, valid values are as follows:.
+<li>1 = TKE</li>
+<li>2 = EKS</li>
+<li>3 = MEKS</li>
+     * @param string $ClusterId Cluster ID, optional.
      */
     function __construct()
     {
