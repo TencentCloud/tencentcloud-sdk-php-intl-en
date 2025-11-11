@@ -24,14 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) Set Total number
  * @method string getStatusCountInfo() Obtain Number of consumer group status
  * @method void setStatusCountInfo(string $StatusCountInfo) Set Number of consumer group status
- * @method array getGroupsInfo() Obtain Consumer group information
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setGroupsInfo(array $GroupsInfo) Set Consumer group information
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Whether a request is asynchronous. If there are fewer consumer groups in the instances, the result will be returned directly, and status code is 1. When there are many consumer groups in the instances, cache will be updated asynchronously. When status code is 0, grouping information will not be returned until cache update is completed and status code becomes 1.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Whether a request is asynchronous. If there are fewer consumer groups in the instances, the result will be returned directly, and status code is 1. When there are many consumer groups in the instances, cache will be updated asynchronously. When status code is 0, grouping information will not be returned until cache update is completed and status code becomes 1.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getGroupsInfo() Obtain Consumer group information.
+ * @method void setGroupsInfo(array $GroupsInfo) Set Consumer group information.
+ * @method integer getStatus() Obtain Indicates whether the request is asynchronous. instances with fewer groups will return results directly with Status as 1. when there are more groups, the cache will be updated asynchronously. no group information will be returned when Status is 0 until the update is complete and results are returned with Status as 1.
+ * @method void setStatus(integer $Status) Set Indicates whether the request is asynchronous. instances with fewer groups will return results directly with Status as 1. when there are more groups, the cache will be updated asynchronously. no group information will be returned when Status is 0 until the update is complete and results are returned with Status as 1.
  */
 class TopicSubscribeGroup extends AbstractModel
 {
@@ -46,24 +42,20 @@ class TopicSubscribeGroup extends AbstractModel
     public $StatusCountInfo;
 
     /**
-     * @var array Consumer group information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Consumer group information.
      */
     public $GroupsInfo;
 
     /**
-     * @var integer Whether a request is asynchronous. If there are fewer consumer groups in the instances, the result will be returned directly, and status code is 1. When there are many consumer groups in the instances, cache will be updated asynchronously. When status code is 0, grouping information will not be returned until cache update is completed and status code becomes 1.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Indicates whether the request is asynchronous. instances with fewer groups will return results directly with Status as 1. when there are more groups, the cache will be updated asynchronously. no group information will be returned when Status is 0 until the update is complete and results are returned with Status as 1.
      */
     public $Status;
 
     /**
      * @param integer $TotalCount Total number
      * @param string $StatusCountInfo Number of consumer group status
-     * @param array $GroupsInfo Consumer group information
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $Status Whether a request is asynchronous. If there are fewer consumer groups in the instances, the result will be returned directly, and status code is 1. When there are many consumer groups in the instances, cache will be updated asynchronously. When status code is 0, grouping information will not be returned until cache update is completed and status code becomes 1.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $GroupsInfo Consumer group information.
+     * @param integer $Status Indicates whether the request is asynchronous. instances with fewer groups will return results directly with Status as 1. when there are more groups, the cache will be updated asynchronously. no group information will be returned when Status is 0 until the update is complete and results are returned with Status as 1.
      */
     function __construct()
     {

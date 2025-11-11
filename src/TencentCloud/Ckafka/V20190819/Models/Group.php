@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Group entity
  *
- * @method string getGroupName() Obtain Group name
- * @method void setGroupName(string $GroupName) Set Group name
+ * @method string getGroupName() Obtain Consumer group name.
+ * @method void setGroupName(string $GroupName) Set Consumer group name.
  */
 class Group extends AbstractModel
 {
     /**
-     * @var string Group name
+     * @var string Consumer group name.
      */
     public $GroupName;
 
     /**
-     * @param string $GroupName Group name
+     * @param string $GroupName Consumer group name.
      */
     function __construct()
     {

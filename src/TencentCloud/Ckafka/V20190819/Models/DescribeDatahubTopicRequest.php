@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatahubTopic request structure.
  *
- * @method string getName() Obtain Name
- * @method void setName(string $Name) Set Name
+ * @method string getName() Obtain Elastic topic name.
+ * @method void setName(string $Name) Set Elastic topic name.
  */
 class DescribeDatahubTopicRequest extends AbstractModel
 {
     /**
-     * @var string Name
+     * @var string Elastic topic name.
      */
     public $Name;
 
     /**
-     * @param string $Name Name
+     * @param string $Name Elastic topic name.
      */
     function __construct()
     {

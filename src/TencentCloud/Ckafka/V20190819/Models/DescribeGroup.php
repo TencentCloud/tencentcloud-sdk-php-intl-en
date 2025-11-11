@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * `DescribeGroup` response entity
  *
- * @method string getGroup() Obtain groupId
- * @method void setGroup(string $Group) Set groupId
+ * @method string getGroup() Obtain Consumer group name.
+ * @method void setGroup(string $Group) Set Consumer group name.
  * @method string getProtocol() Obtain Protocol used by the group.
  * @method void setProtocol(string $Protocol) Set Protocol used by the group.
  */
 class DescribeGroup extends AbstractModel
 {
     /**
-     * @var string groupId
+     * @var string Consumer group name.
      */
     public $Group;
 
@@ -38,7 +38,7 @@ class DescribeGroup extends AbstractModel
     public $Protocol;
 
     /**
-     * @param string $Group groupId
+     * @param string $Group Consumer group name.
      * @param string $Protocol Protocol used by the group.
      */
     function __construct()

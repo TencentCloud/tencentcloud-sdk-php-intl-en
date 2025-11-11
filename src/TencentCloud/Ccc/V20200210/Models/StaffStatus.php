@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Agent status free | busy | rest | notReady | afterCallWork | offline.
  * @method string getSessionId() Obtain Specifies the session Id for status association.
  * @method void setSessionId(string $SessionId) Set Specifies the session Id for status association.
+ * @method string getReason() Obtain Reason for break.
+ * @method void setReason(string $Reason) Set Reason for break.
+ * @method string getStaffEmail() Obtain Agent email.
+ * @method void setStaffEmail(string $StaffEmail) Set Agent email.
+ * @method string getStaffNo() Obtain Agent id.
+ * @method void setStaffNo(string $StaffNo) Set Agent id.
  */
 class StaffStatus extends AbstractModel
 {
@@ -52,10 +58,28 @@ class StaffStatus extends AbstractModel
     public $SessionId;
 
     /**
+     * @var string Reason for break.
+     */
+    public $Reason;
+
+    /**
+     * @var string Agent email.
+     */
+    public $StaffEmail;
+
+    /**
+     * @var string Agent id.
+     */
+    public $StaffNo;
+
+    /**
      * @param string $Cursor Specifies the cursor used for querying in pagination scenarios.
      * @param integer $Timestamp Status timestamp. Unix second-level timestamp.
      * @param string $Status Agent status free | busy | rest | notReady | afterCallWork | offline.
      * @param string $SessionId Specifies the session Id for status association.
+     * @param string $Reason Reason for break.
+     * @param string $StaffEmail Agent email.
+     * @param string $StaffNo Agent id.
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class StaffStatus extends AbstractModel
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
+        }
+
+        if (array_key_exists("StaffEmail",$param) and $param["StaffEmail"] !== null) {
+            $this->StaffEmail = $param["StaffEmail"];
+        }
+
+        if (array_key_exists("StaffNo",$param) and $param["StaffNo"] !== null) {
+            $this->StaffNo = $param["StaffNo"];
         }
     }
 }

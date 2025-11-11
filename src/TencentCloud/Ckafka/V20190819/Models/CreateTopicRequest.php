@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTopic request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getTopicName() Obtain Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
- * @method void setTopicName(string $TopicName) Set Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+ * @method string getInstanceId() Obtain Instance Id. you can obtain it by calling the DescribeInstances api.
+ * @method void setInstanceId(string $InstanceId) Set Instance Id. you can obtain it by calling the DescribeInstances api.
+ * @method string getTopicName() Obtain Can only contain letters, digits, underscores, "-", or ".".
+ * @method void setTopicName(string $TopicName) Set Can only contain letters, digits, underscores, "-", or ".".
  * @method integer getPartitionNum() Obtain Number of partitions, which should be greater than 0
  * @method void setPartitionNum(integer $PartitionNum) Set Number of partitions, which should be greater than 0
  * @method integer getReplicaNum() Obtain Number of replicas, which cannot be higher than the number of brokers. Maximum value: 3
@@ -34,36 +34,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpWhiteList(array $IpWhiteList) Set IP allowlist list for quota limit, which is required if `enableWhileList` is 1
  * @method string getCleanUpPolicy() Obtain Log cleanup policy, which is `delete` by default. `delete`: logs will be deleted by save time; `compact`: logs will be compressed by key; `compact, delete`: logs will be compressed by key and deleted by save time.
  * @method void setCleanUpPolicy(string $CleanUpPolicy) Set Log cleanup policy, which is `delete` by default. `delete`: logs will be deleted by save time; `compact`: logs will be compressed by key; `compact, delete`: logs will be compressed by key and deleted by save time.
- * @method string getNote() Obtain Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
- * @method void setNote(string $Note) Set Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
- * @method integer getMinInsyncReplicas() Obtain Default value: 1
- * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) Set Default value: 1
- * @method integer getUncleanLeaderElectionEnable() Obtain Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
- * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
- * @method integer getRetentionMs() Obtain Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
- * @method void setRetentionMs(integer $RetentionMs) Set Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
- * @method integer getSegmentMs() Obtain Segment rolling duration in ms. The current minimum value is 3,600,000 ms
- * @method void setSegmentMs(integer $SegmentMs) Set Segment rolling duration in ms. The current minimum value is 3,600,000 ms
- * @method integer getMaxMessageBytes() Obtain Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
- * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+ * @method string getNote() Obtain Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
+ * @method void setNote(string $Note) Set Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
+ * @method integer getMinInsyncReplicas() Obtain Minimum number of synchronous replicas, defaults to 1.
+ * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) Set Minimum number of synchronous replicas, defaults to 1.
+ * @method integer getUncleanLeaderElectionEnable() Obtain Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
+ * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
+ * @method integer getRetentionMs() Obtain Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
+ * @method void setRetentionMs(integer $RetentionMs) Set Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
+ * @method integer getSegmentMs() Obtain Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
+ * @method void setSegmentMs(integer $SegmentMs) Set Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
+ * @method integer getMaxMessageBytes() Obtain Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
+ * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
  * @method integer getEnableAclRule() Obtain Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
  * @method void setEnableAclRule(integer $EnableAclRule) Set Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
  * @method string getAclRuleName() Obtain Name of the preset ACL rule.
  * @method void setAclRuleName(string $AclRuleName) Set Name of the preset ACL rule.
- * @method integer getRetentionBytes() Obtain Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
- * @method void setRetentionBytes(integer $RetentionBytes) Set Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+ * @method integer getRetentionBytes() Obtain Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
+ * @method void setRetentionBytes(integer $RetentionBytes) Set Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
  * @method array getTags() Obtain Tag list.
  * @method void setTags(array $Tags) Set Tag list.
  */
 class CreateTopicRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance Id. you can obtain it by calling the DescribeInstances api.
      */
     public $InstanceId;
 
     /**
-     * @var string Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * @var string Can only contain letters, digits, underscores, "-", or ".".
      */
     public $TopicName;
 
@@ -93,32 +93,32 @@ class CreateTopicRequest extends AbstractModel
     public $CleanUpPolicy;
 
     /**
-     * @var string Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+     * @var string Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
      */
     public $Note;
 
     /**
-     * @var integer Default value: 1
+     * @var integer Minimum number of synchronous replicas, defaults to 1.
      */
     public $MinInsyncReplicas;
 
     /**
-     * @var integer Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
+     * @var integer Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
      */
     public $UncleanLeaderElectionEnable;
 
     /**
-     * @var integer Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
+     * @var integer Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
      */
     public $RetentionMs;
 
     /**
-     * @var integer Segment rolling duration in ms. The current minimum value is 3,600,000 ms
+     * @var integer Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
      */
     public $SegmentMs;
 
     /**
-     * @var integer Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+     * @var integer Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
      */
     public $MaxMessageBytes;
 
@@ -133,7 +133,7 @@ class CreateTopicRequest extends AbstractModel
     public $AclRuleName;
 
     /**
-     * @var integer Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+     * @var integer Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
      */
     public $RetentionBytes;
 
@@ -143,22 +143,22 @@ class CreateTopicRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $TopicName Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * @param string $InstanceId Instance Id. you can obtain it by calling the DescribeInstances api.
+     * @param string $TopicName Can only contain letters, digits, underscores, "-", or ".".
      * @param integer $PartitionNum Number of partitions, which should be greater than 0
      * @param integer $ReplicaNum Number of replicas, which cannot be higher than the number of brokers. Maximum value: 3
      * @param integer $EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
      * @param array $IpWhiteList IP allowlist list for quota limit, which is required if `enableWhileList` is 1
      * @param string $CleanUpPolicy Log cleanup policy, which is `delete` by default. `delete`: logs will be deleted by save time; `compact`: logs will be compressed by key; `compact, delete`: logs will be compressed by key and deleted by save time.
-     * @param string $Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
-     * @param integer $MinInsyncReplicas Default value: 1
-     * @param integer $UncleanLeaderElectionEnable Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
-     * @param integer $RetentionMs Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
-     * @param integer $SegmentMs Segment rolling duration in ms. The current minimum value is 3,600,000 ms
-     * @param integer $MaxMessageBytes Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+     * @param string $Note Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
+     * @param integer $MinInsyncReplicas Minimum number of synchronous replicas, defaults to 1.
+     * @param integer $UncleanLeaderElectionEnable Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
+     * @param integer $RetentionMs Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
+     * @param integer $SegmentMs Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
+     * @param integer $MaxMessageBytes Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
      * @param integer $EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
      * @param string $AclRuleName Name of the preset ACL rule.
-     * @param integer $RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+     * @param integer $RetentionBytes Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
      * @param array $Tags Tag list.
      */
     function __construct()

@@ -20,27 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAclRule request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
  * @method string getResourceType() Obtain ACL resource type. Currently, the only valid value is `Topic`.
  * @method void setResourceType(string $ResourceType) Set ACL resource type. Currently, the only valid value is `Topic`.
- * @method string getPatternType() Obtain Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy).
- * @method void setPatternType(string $PatternType) Set Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy).
+ * @method string getPatternType() Obtain ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
+ * @method void setPatternType(string $PatternType) Set ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
  * @method string getRuleName() Obtain Rule name
  * @method void setRuleName(string $RuleName) Set Rule name
  * @method array getRuleList() Obtain ACL rule list
  * @method void setRuleList(array $RuleList) Set ACL rule list
- * @method string getPattern() Obtain Prefix value for prefix match
- * @method void setPattern(string $Pattern) Set Prefix value for prefix match
- * @method integer getIsApplied() Obtain A parameter used to specify whether the preset ACL rule is applied to new topics
- * @method void setIsApplied(integer $IsApplied) Set A parameter used to specify whether the preset ACL rule is applied to new topics
+ * @method string getPattern() Obtain Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED.
+ * @method void setPattern(string $Pattern) Set Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED.
+ * @method integer getIsApplied() Obtain Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes.
+ * @method void setIsApplied(integer $IsApplied) Set Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes.
  * @method string getComment() Obtain Remarks for ACL rules
  * @method void setComment(string $Comment) Set Remarks for ACL rules
  */
 class CreateAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
@@ -50,7 +50,7 @@ class CreateAclRuleRequest extends AbstractModel
     public $ResourceType;
 
     /**
-     * @var string Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy).
+     * @var string ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
      */
     public $PatternType;
 
@@ -65,12 +65,12 @@ class CreateAclRuleRequest extends AbstractModel
     public $RuleList;
 
     /**
-     * @var string Prefix value for prefix match
+     * @var string Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED.
      */
     public $Pattern;
 
     /**
-     * @var integer A parameter used to specify whether the preset ACL rule is applied to new topics
+     * @var integer Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes.
      */
     public $IsApplied;
 
@@ -80,13 +80,13 @@ class CreateAclRuleRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      * @param string $ResourceType ACL resource type. Currently, the only valid value is `Topic`.
-     * @param string $PatternType Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy).
+     * @param string $PatternType ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
      * @param string $RuleName Rule name
      * @param array $RuleList ACL rule list
-     * @param string $Pattern Prefix value for prefix match
-     * @param integer $IsApplied A parameter used to specify whether the preset ACL rule is applied to new topics
+     * @param string $Pattern Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED.
+     * @param integer $IsApplied Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes.
      * @param string $Comment Remarks for ACL rules
      */
     function __construct()

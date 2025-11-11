@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConsumerGroup request structure.
  *
- * @method string getInstanceId() Obtain CKafka instance ID.
- * @method void setInstanceId(string $InstanceId) Set CKafka instance ID.
- * @method string getGroupName() Obtain Name of the group to be queried, which is optional.
- * @method void setGroupName(string $GroupName) Set Name of the group to be queried, which is optional.
- * @method string getTopicName() Obtain Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
- * @method void setTopicName(string $TopicName) Set Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
- * @method integer getLimit() Obtain Number of results to be returned in this request
- * @method void setLimit(integer $Limit) Set Number of results to be returned in this request
- * @method integer getOffset() Obtain Offset position
- * @method void setOffset(integer $Offset) Set Offset position
+ * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+ * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+ * @method string getGroupName() Obtain Specifies the group name you want to query.
+ * @method void setGroupName(string $GroupName) Set Specifies the group name you want to query.
+ * @method string getTopicName() Obtain Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter.
+ * @method void setTopicName(string $TopicName) Set Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter.
+ * @method integer getLimit() Obtain Returns the limit quantity of the consumption group. supports a maximum of 50.
+ * @method void setLimit(integer $Limit) Set Returns the limit quantity of the consumption group. supports a maximum of 50.
+ * @method integer getOffset() Obtain Specifies the starting offset amount of the consumer group list.
+ * @method void setOffset(integer $Offset) Set Specifies the starting offset amount of the consumer group list.
  */
 class DescribeConsumerGroupRequest extends AbstractModel
 {
     /**
-     * @var string CKafka instance ID.
+     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
      */
     public $InstanceId;
 
     /**
-     * @var string Name of the group to be queried, which is optional.
+     * @var string Specifies the group name you want to query.
      */
     public $GroupName;
 
     /**
-     * @var string Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
+     * @var string Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter.
      */
     public $TopicName;
 
     /**
-     * @var integer Number of results to be returned in this request
+     * @var integer Returns the limit quantity of the consumption group. supports a maximum of 50.
      */
     public $Limit;
 
     /**
-     * @var integer Offset position
+     * @var integer Specifies the starting offset amount of the consumer group list.
      */
     public $Offset;
 
     /**
-     * @param string $InstanceId CKafka instance ID.
-     * @param string $GroupName Name of the group to be queried, which is optional.
-     * @param string $TopicName Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
-     * @param integer $Limit Number of results to be returned in this request
-     * @param integer $Offset Offset position
+     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @param string $GroupName Specifies the group name you want to query.
+     * @param string $TopicName Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter.
+     * @param integer $Limit Returns the limit quantity of the consumption group. supports a maximum of 50.
+     * @param integer $Offset Specifies the starting offset amount of the consumer group list.
      */
     function __construct()
     {

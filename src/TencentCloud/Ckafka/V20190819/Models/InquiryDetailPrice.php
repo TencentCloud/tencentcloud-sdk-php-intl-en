@@ -36,10 +36,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTopicPrice(InquiryBasePrice $TopicPrice) Set Price of additional topics
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method InquiryBasePrice getInstanceTypePrice() Obtain Instance package price
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceTypePrice(InquiryBasePrice $InstanceTypePrice) Set Instance package price
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method InquiryBasePrice getInstanceTypePrice() Obtain Instance package price.
+ * @method void setInstanceTypePrice(InquiryBasePrice $InstanceTypePrice) Set Instance package price.
  */
 class InquiryDetailPrice extends AbstractModel
 {
@@ -68,8 +66,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TopicPrice;
 
     /**
-     * @var InquiryBasePrice Instance package price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var InquiryBasePrice Instance package price.
      */
     public $InstanceTypePrice;
 
@@ -82,8 +79,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param InquiryBasePrice $TopicPrice Price of additional topics
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InquiryBasePrice $InstanceTypePrice Instance package price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InquiryBasePrice $InstanceTypePrice Instance package price.
      */
     function __construct()
     {

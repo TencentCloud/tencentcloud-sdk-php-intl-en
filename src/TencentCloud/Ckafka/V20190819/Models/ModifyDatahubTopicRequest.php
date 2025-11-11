@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDatahubTopic request structure.
  *
- * @method string getName() Obtain Name
- * @method void setName(string $Name) Set Name
+ * @method string getName() Obtain Elastic topic name.
+ * @method void setName(string $Name) Set Elastic topic name.
  * @method integer getRetentionMs() Obtain Message retention period in ms. The current minimum value is 60,000 ms.
  * @method void setRetentionMs(integer $RetentionMs) Set Message retention period in ms. The current minimum value is 60,000 ms.
  * @method string getNote() Obtain Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDatahubTopicRequest extends AbstractModel
 {
     /**
-     * @var string Name
+     * @var string Elastic topic name.
      */
     public $Name;
 
@@ -52,7 +52,7 @@ class ModifyDatahubTopicRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $Name Name
+     * @param string $Name Elastic topic name.
      * @param integer $RetentionMs Message retention period in ms. The current minimum value is 60,000 ms.
      * @param string $Note Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
      * @param array $Tags Tag list

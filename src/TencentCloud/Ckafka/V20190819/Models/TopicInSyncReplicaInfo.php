@@ -28,22 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplica(string $Replica) Set Replica set
  * @method string getInSyncReplica() Obtain ISR
  * @method void setInSyncReplica(string $InSyncReplica) Set ISR
- * @method integer getBeginOffset() Obtain Starting offset
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setBeginOffset(integer $BeginOffset) Set Starting offset
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getEndOffset() Obtain Ending offset
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEndOffset(integer $EndOffset) Set Ending offset
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMessageCount() Obtain Number of messages
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMessageCount(integer $MessageCount) Set Number of messages
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOutOfSyncReplica() Obtain Unsynced replica set
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutOfSyncReplica(string $OutOfSyncReplica) Set Unsynced replica set
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getBeginOffset() Obtain Start Offset.
+ * @method void setBeginOffset(integer $BeginOffset) Set Start Offset.
+ * @method integer getEndOffset() Obtain End Offset.
+ * @method void setEndOffset(integer $EndOffset) Set End Offset.
+ * @method integer getMessageCount() Obtain Message count.
+ * @method void setMessageCount(integer $MessageCount) Set Message count.
+ * @method string getOutOfSyncReplica() Obtain Unsynced replica.
+ * @method void setOutOfSyncReplica(string $OutOfSyncReplica) Set Unsynced replica.
  */
 class TopicInSyncReplicaInfo extends AbstractModel
 {
@@ -68,26 +60,22 @@ class TopicInSyncReplicaInfo extends AbstractModel
     public $InSyncReplica;
 
     /**
-     * @var integer Starting offset
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Start Offset.
      */
     public $BeginOffset;
 
     /**
-     * @var integer Ending offset
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer End Offset.
      */
     public $EndOffset;
 
     /**
-     * @var integer Number of messages
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Message count.
      */
     public $MessageCount;
 
     /**
-     * @var string Unsynced replica set
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Unsynced replica.
      */
     public $OutOfSyncReplica;
 
@@ -96,14 +84,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Leader Leader ID
      * @param string $Replica Replica set
      * @param string $InSyncReplica ISR
-     * @param integer $BeginOffset Starting offset
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $EndOffset Ending offset
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MessageCount Number of messages
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $OutOfSyncReplica Unsynced replica set
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $BeginOffset Start Offset.
+     * @param integer $EndOffset End Offset.
+     * @param integer $MessageCount Message count.
+     * @param string $OutOfSyncReplica Unsynced replica.
      */
     function __construct()
     {

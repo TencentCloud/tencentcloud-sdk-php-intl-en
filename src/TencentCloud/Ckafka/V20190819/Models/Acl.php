@@ -24,14 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceType(integer $ResourceType) Set ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available,
  * @method string getResourceName() Obtain Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
  * @method void setResourceName(string $ResourceName) Set Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
- * @method string getPrincipal() Obtain User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPrincipal(string $Principal) Set User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getHost() Obtain The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setHost(string $Host) Set The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getPrincipal() Obtain List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
+ * @method void setPrincipal(string $Principal) Set List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
+ * @method string getHost() Obtain Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it.
+ * @method void setHost(string $Host) Set Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it.
  * @method integer getOperation() Obtain ACL operation mode. 0: UNKNOWN, 1: ANY, 2: ALL, 3: READ, 4: WRITE, 5: CREATE, 6: DELETE, 7: ALTER, 8: DESCRIBE, 9: CLUSTER_ACTION, 10: DESCRIBE_CONFIGS, 11: ALTER_CONFIGS, 12: IDEMPOTEN_WRITE
  * @method void setOperation(integer $Operation) Set ACL operation mode. 0: UNKNOWN, 1: ANY, 2: ALL, 3: READ, 4: WRITE, 5: CREATE, 6: DELETE, 7: ALTER, 8: DESCRIBE, 9: CLUSTER_ACTION, 10: DESCRIBE_CONFIGS, 11: ALTER_CONFIGS, 12: IDEMPOTEN_WRITE
  * @method integer getPermissionType() Obtain Permission type. 0: UNKNOWN, 1: ANY, 2: DENY, 3: ALLOW
@@ -50,14 +46,12 @@ class Acl extends AbstractModel
     public $ResourceName;
 
     /**
-     * @var string User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
      */
     public $Principal;
 
     /**
-     * @var string The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it.
      */
     public $Host;
 
@@ -74,10 +68,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param integer $ResourceType ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available,
      * @param string $ResourceName Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
-     * @param string $Principal User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Host The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Principal List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
+     * @param string $Host Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it.
      * @param integer $Operation ACL operation mode. 0: UNKNOWN, 1: ANY, 2: ALL, 3: READ, 4: WRITE, 5: CREATE, 6: DELETE, 7: ALTER, 8: DESCRIBE, 9: CLUSTER_ACTION, 10: DESCRIBE_CONFIGS, 11: ALTER_CONFIGS, 12: IDEMPOTEN_WRITE
      * @param integer $PermissionType Permission type. 0: UNKNOWN, 1: ANY, 2: DENY, 3: ALLOW
      */

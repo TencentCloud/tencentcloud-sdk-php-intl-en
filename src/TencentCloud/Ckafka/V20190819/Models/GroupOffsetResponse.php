@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain Total number of eligible results
  * @method void setTotalCount(integer $TotalCount) Set Total number of eligible results
- * @method array getTopicList() Obtain Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTopicList(array $TopicList) Set Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTopicList() Obtain The topic partition array, where each element is a json object.
+ * @method void setTopicList(array $TopicList) Set The topic partition array, where each element is a json object.
  */
 class GroupOffsetResponse extends AbstractModel
 {
@@ -35,15 +33,13 @@ class GroupOffsetResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array The topic partition array, where each element is a json object.
      */
     public $TopicList;
 
     /**
      * @param integer $TotalCount Total number of eligible results
-     * @param array $TopicList Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $TopicList The topic partition array, where each element is a json object.
      */
     function __construct()
     {

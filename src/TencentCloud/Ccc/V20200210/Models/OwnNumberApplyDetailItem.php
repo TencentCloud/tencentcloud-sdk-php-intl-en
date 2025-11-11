@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxCallPSec(integer $MaxCallPSec) Set Maximum number of concurrencies per second.
  * @method string getOutboundCalleeFormat() Obtain Outbound called number format, use {+e.164} or {e.164}. 
  * @method void setOutboundCalleeFormat(string $OutboundCalleeFormat) Set Outbound called number format, use {+e.164} or {e.164}. 
+ * @method string getCarrierPhoneNumber() Obtain Specifies the carrier number.
+ * @method void setCarrierPhoneNumber(string $CarrierPhoneNumber) Set Specifies the carrier number.
  */
 class OwnNumberApplyDetailItem extends AbstractModel
 {
@@ -59,11 +61,17 @@ class OwnNumberApplyDetailItem extends AbstractModel
     public $OutboundCalleeFormat;
 
     /**
+     * @var string Specifies the carrier number.
+     */
+    public $CarrierPhoneNumber;
+
+    /**
      * @param integer $CallType Number type: 0 - inbound | 1 - outbound | 2 - inbound and outbound.
      * @param string $PhoneNumber Line number.
      * @param integer $MaxCallCount Maximum concurrent call number.
      * @param integer $MaxCallPSec Maximum number of concurrencies per second.
      * @param string $OutboundCalleeFormat Outbound called number format, use {+e.164} or {e.164}. 
+     * @param string $CarrierPhoneNumber Specifies the carrier number.
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class OwnNumberApplyDetailItem extends AbstractModel
 
         if (array_key_exists("OutboundCalleeFormat",$param) and $param["OutboundCalleeFormat"] !== null) {
             $this->OutboundCalleeFormat = $param["OutboundCalleeFormat"];
+        }
+
+        if (array_key_exists("CarrierPhoneNumber",$param) and $param["CarrierPhoneNumber"] !== null) {
+            $this->CarrierPhoneNumber = $param["CarrierPhoneNumber"];
         }
     }
 }

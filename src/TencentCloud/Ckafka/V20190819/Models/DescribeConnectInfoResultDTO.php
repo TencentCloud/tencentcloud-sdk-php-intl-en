@@ -28,10 +28,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTime(string $Time) Set Connection time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsUnSupportVersion() Obtain Whether it is a supported version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsUnSupportVersion(boolean $IsUnSupportVersion) Set Whether it is a supported version
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsUnSupportVersion() Obtain Specifies whether supported versions are required or not.
+ * @method void setIsUnSupportVersion(boolean $IsUnSupportVersion) Set Specifies whether supported versions are required or not.
  */
 class DescribeConnectInfoResultDTO extends AbstractModel
 {
@@ -48,8 +46,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Time;
 
     /**
-     * @var boolean Whether it is a supported version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Specifies whether supported versions are required or not.
      */
     public $IsUnSupportVersion;
 
@@ -58,8 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Time Connection time
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsUnSupportVersion Whether it is a supported version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsUnSupportVersion Specifies whether supported versions are required or not.
      */
     function __construct()
     {

@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain Number of eligible data entries
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible data entries
- * @method array getAclList() Obtain ACL list
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAclList(array $AclList) Set ACL list
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getAclList() Obtain ACL list.
+ * @method void setAclList(array $AclList) Set ACL list.
  */
 class AclResponse extends AbstractModel
 {
@@ -35,15 +33,13 @@ class AclResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array ACL list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array ACL list.
      */
     public $AclList;
 
     /**
      * @param integer $TotalCount Number of eligible data entries
-     * @param array $AclList ACL list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $AclList ACL list.
      */
     function __construct()
     {

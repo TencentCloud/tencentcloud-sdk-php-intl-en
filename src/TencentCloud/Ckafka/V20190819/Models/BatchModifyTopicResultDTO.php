@@ -20,54 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Results of the batch modified topic attributes
  *
- * @method string getInstanceId() Obtain Instance ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getTopicName() Obtain Topic name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTopicName(string $TopicName) Set Topic name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getReturnCode() Obtain Status code.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setReturnCode(string $ReturnCode) Set Status code.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getMessage() Obtain Message status.
- * @method void setMessage(string $Message) Set Message status.
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
+ * @method string getTopicName() Obtain Topic name
+ * @method void setTopicName(string $TopicName) Set Topic name
+ * @method string getReturnCode() Obtain Operation return code.
+ * @method void setReturnCode(string $ReturnCode) Set Operation return code.
+ * @method string getMessage() Obtain Returned information.
+ * @method void setMessage(string $Message) Set Returned information.
  */
 class BatchModifyTopicResultDTO extends AbstractModel
 {
     /**
-     * @var string Instance ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string The ckafka cluster instance Id.
      */
     public $InstanceId;
 
     /**
-     * @var string Topic name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Topic name
      */
     public $TopicName;
 
     /**
-     * @var string Status code.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Operation return code.
      */
     public $ReturnCode;
 
     /**
-     * @var string Message status.
+     * @var string Returned information.
      */
     public $Message;
 
     /**
-     * @param string $InstanceId Instance ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $TopicName Topic name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ReturnCode Status code.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Message Message status.
+     * @param string $InstanceId The ckafka cluster instance Id.
+     * @param string $TopicName Topic name
+     * @param string $ReturnCode Operation return code.
+     * @param string $Message Returned information.
      */
     function __construct()
     {

@@ -22,18 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicName() Obtain Subscribed topic name
  * @method void setTopicName(string $TopicName) Set Subscribed topic name
- * @method array getPartition() Obtain Subscribed partition
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPartition(array $Partition) Set Subscribed partition
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getPartitionOffset() Obtain Partition offset information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPartitionOffset(array $PartitionOffset) Set Partition offset information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getTopicId() Obtain ID of the subscribed topic. 
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTopicId(string $TopicId) Set ID of the subscribed topic. 
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getPartition() Obtain Specifies the subscription partition.
+ * @method void setPartition(array $Partition) Set Specifies the subscription partition.
+ * @method array getPartitionOffset() Obtain Specifies the partition offset information.
+ * @method void setPartitionOffset(array $PartitionOffset) Set Specifies the partition offset information.
+ * @method string getTopicId() Obtain Subscribed topic ID.
+ * @method void setTopicId(string $TopicId) Set Subscribed topic ID.
  */
 class SubscribedInfo extends AbstractModel
 {
@@ -43,31 +37,25 @@ class SubscribedInfo extends AbstractModel
     public $TopicName;
 
     /**
-     * @var array Subscribed partition
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the subscription partition.
      */
     public $Partition;
 
     /**
-     * @var array Partition offset information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the partition offset information.
      */
     public $PartitionOffset;
 
     /**
-     * @var string ID of the subscribed topic. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Subscribed topic ID.
      */
     public $TopicId;
 
     /**
      * @param string $TopicName Subscribed topic name
-     * @param array $Partition Subscribed partition
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $PartitionOffset Partition offset information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $TopicId ID of the subscribed topic. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Partition Specifies the subscription partition.
+     * @param array $PartitionOffset Specifies the partition offset information.
+     * @param string $TopicId Subscribed topic ID.
      */
     function __construct()
     {

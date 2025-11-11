@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConsumer request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getGroupName() Obtain Group name.
- * @method void setGroupName(string $GroupName) Set Group name.
- * @method string getTopicName() Obtain Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`.
- * @method void setTopicName(string $TopicName) Set Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`.
- * @method array getTopicNameList() Obtain Topic name array.
- * @method void setTopicNameList(array $TopicNameList) Set Topic name array.
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method string getGroupName() Obtain Consumer group name.
+ * @method void setGroupName(string $GroupName) Set Consumer group name.
+ * @method string getTopicName() Obtain Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
+ * @method void setTopicName(string $TopicName) Set Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
+ * @method array getTopicNameList() Obtain Topic name list.
+ * @method void setTopicNameList(array $TopicNameList) Set Topic name list.
  */
 class CreateConsumerRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
     /**
-     * @var string Group name.
+     * @var string Consumer group name.
      */
     public $GroupName;
 
     /**
-     * @var string Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`.
+     * @var string Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
      */
     public $TopicName;
 
     /**
-     * @var array Topic name array.
+     * @var array Topic name list.
      */
     public $TopicNameList;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param string $GroupName Group name.
-     * @param string $TopicName Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`.
-     * @param array $TopicNameList Topic name array.
+     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param string $GroupName Consumer group name.
+     * @param string $TopicName Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
+     * @param array $TopicNameList Topic name list.
      */
     function __construct()
     {

@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroup request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
  * @method string getSearchWord() Obtain Search keyword
  * @method void setSearchWord(string $SearchWord) Set Search keyword
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Maximum number of results to be returned
  * @method void setLimit(integer $Limit) Set Maximum number of results to be returned
+ * @method array getFilters() Obtain Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
+ * @method void setFilters(array $Filters) Set Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
  */
 class DescribeGroupRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string The ckafka cluster instance Id.
      */
     public $InstanceId;
 
@@ -52,10 +54,16 @@ class DescribeGroupRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @var array Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
+     */
+    public $Filters;
+
+    /**
+     * @param string $InstanceId The ckafka cluster instance Id.
      * @param string $SearchWord Search keyword
      * @param integer $Offset Offset
      * @param integer $Limit Maximum number of results to be returned
+     * @param array $Filters Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class DescribeGroupRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

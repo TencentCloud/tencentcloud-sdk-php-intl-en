@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartition(integer $Partition) Set Topic `partitionId`
  * @method integer getOffset() Obtain Offset position submitted by consumer
  * @method void setOffset(integer $Offset) Set Offset position submitted by consumer
- * @method string getMetadata() Obtain Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMetadata(string $Metadata) Set Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getMetadata() Obtain Supports consumers to submit messages with imported metadata for other purposes, currently an empty string.
+ * @method void setMetadata(string $Metadata) Set Supports consumers to submit messages with imported metadata for other purposes, currently an empty string.
  * @method integer getErrorCode() Obtain Error code
  * @method void setErrorCode(integer $ErrorCode) Set Error code
  * @method integer getLogEndOffset() Obtain Latest offset of current partition
@@ -48,8 +46,7 @@ class GroupOffsetPartition extends AbstractModel
     public $Offset;
 
     /**
-     * @var string Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Supports consumers to submit messages with imported metadata for other purposes, currently an empty string.
      */
     public $Metadata;
 
@@ -71,8 +68,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param integer $Partition Topic `partitionId`
      * @param integer $Offset Offset position submitted by consumer
-     * @param string $Metadata Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Metadata Supports consumers to submit messages with imported metadata for other purposes, currently an empty string.
      * @param integer $ErrorCode Error code
      * @param integer $LogEndOffset Latest offset of current partition
      * @param integer $Lag Number of unconsumed messages

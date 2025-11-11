@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RouteDTO
  *
- * @method integer getRouteId() Obtain RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRouteId(integer $RouteId) Set RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRouteId() Obtain Route ID
+ * @method void setRouteId(integer $RouteId) Set Route ID
  */
 class RouteDTO extends AbstractModel
 {
     /**
-     * @var integer RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Route ID
      */
     public $RouteId;
 
     /**
-     * @param integer $RouteId RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RouteId Route ID
      */
     function __construct()
     {

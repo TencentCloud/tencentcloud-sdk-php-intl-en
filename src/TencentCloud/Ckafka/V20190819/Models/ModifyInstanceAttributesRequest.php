@@ -20,39 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceAttributes request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getMsgRetentionTime() Obtain Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
- * @method void setMsgRetentionTime(integer $MsgRetentionTime) Set Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
- * @method string getInstanceName() Obtain Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
- * @method void setInstanceName(string $InstanceName) Set Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+ * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+ * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+ * @method integer getMsgRetentionTime() Obtain Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
+ * @method void setMsgRetentionTime(integer $MsgRetentionTime) Set Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
+ * @method string getInstanceName() Obtain Specifies the Name of the ckafka cluster instance.
+ * @method void setInstanceName(string $InstanceName) Set Specifies the Name of the ckafka cluster instance.
  * @method ModifyInstanceAttributesConfig getConfig() Obtain Instance configuration
  * @method void setConfig(ModifyInstanceAttributesConfig $Config) Set Instance configuration
  * @method DynamicRetentionTime getDynamicRetentionConfig() Obtain Dynamic message retention policy configuration
  * @method void setDynamicRetentionConfig(DynamicRetentionTime $DynamicRetentionConfig) Set Dynamic message retention policy configuration
- * @method integer getRebalanceTime() Obtain Modification of the rebalancing time after upgrade
- * @method void setRebalanceTime(integer $RebalanceTime) Set Modification of the rebalancing time after upgrade
- * @method integer getPublicNetwork() Obtain Public network bandwidth
- * @method void setPublicNetwork(integer $PublicNetwork) Set Public network bandwidth
+ * @method integer getRebalanceTime() Obtain Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
+ * @method void setRebalanceTime(integer $RebalanceTime) Set Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
+ * @method integer getPublicNetwork() Obtain Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
+ * @method void setPublicNetwork(integer $PublicNetwork) Set Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
  * @method DynamicDiskConfig getDynamicDiskConfig() Obtain Dynamic disk expansion policy configuration.
  * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) Set Dynamic disk expansion policy configuration.
- * @method integer getMaxMessageByte() Obtain The size of a single message in bytes at the instance level.
- * @method void setMaxMessageByte(integer $MaxMessageByte) Set The size of a single message in bytes at the instance level.
+ * @method integer getMaxMessageByte() Obtain Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
+ * @method void setMaxMessageByte(integer $MaxMessageByte) Set Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
+ * @method integer getUncleanLeaderElectionEnable() Obtain Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+ * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+ * @method integer getDeleteProtectionEnable() Obtain Instance deletion protection switch. 1: enabled; 0: disabled.
+ * @method void setDeleteProtectionEnable(integer $DeleteProtectionEnable) Set Instance deletion protection switch. 1: enabled; 0: disabled.
  */
 class ModifyInstanceAttributesRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
      */
     public $InstanceId;
 
     /**
-     * @var integer Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
+     * @var integer Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
      */
     public $MsgRetentionTime;
 
     /**
-     * @var string Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+     * @var string Specifies the Name of the ckafka cluster instance.
      */
     public $InstanceName;
 
@@ -67,35 +71,48 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $DynamicRetentionConfig;
 
     /**
-     * @var integer Modification of the rebalancing time after upgrade
+     * @var integer Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
      */
     public $RebalanceTime;
 
     /**
-     * @var integer Public network bandwidth
+     * @var integer Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
      */
     public $PublicNetwork;
 
     /**
      * @var DynamicDiskConfig Dynamic disk expansion policy configuration.
+     * @deprecated
      */
     public $DynamicDiskConfig;
 
     /**
-     * @var integer The size of a single message in bytes at the instance level.
+     * @var integer Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
      */
     public $MaxMessageByte;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param integer $MsgRetentionTime Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
-     * @param string $InstanceName Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+     * @var integer Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+     */
+    public $UncleanLeaderElectionEnable;
+
+    /**
+     * @var integer Instance deletion protection switch. 1: enabled; 0: disabled.
+     */
+    public $DeleteProtectionEnable;
+
+    /**
+     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @param integer $MsgRetentionTime Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
+     * @param string $InstanceName Specifies the Name of the ckafka cluster instance.
      * @param ModifyInstanceAttributesConfig $Config Instance configuration
      * @param DynamicRetentionTime $DynamicRetentionConfig Dynamic message retention policy configuration
-     * @param integer $RebalanceTime Modification of the rebalancing time after upgrade
-     * @param integer $PublicNetwork Public network bandwidth
+     * @param integer $RebalanceTime Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
+     * @param integer $PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
      * @param DynamicDiskConfig $DynamicDiskConfig Dynamic disk expansion policy configuration.
-     * @param integer $MaxMessageByte The size of a single message in bytes at the instance level.
+     * @param integer $MaxMessageByte Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
+     * @param integer $UncleanLeaderElectionEnable Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+     * @param integer $DeleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
      */
     function __construct()
     {
@@ -147,6 +164,14 @@ class ModifyInstanceAttributesRequest extends AbstractModel
 
         if (array_key_exists("MaxMessageByte",$param) and $param["MaxMessageByte"] !== null) {
             $this->MaxMessageByte = $param["MaxMessageByte"];
+        }
+
+        if (array_key_exists("UncleanLeaderElectionEnable",$param) and $param["UncleanLeaderElectionEnable"] !== null) {
+            $this->UncleanLeaderElectionEnable = $param["UncleanLeaderElectionEnable"];
+        }
+
+        if (array_key_exists("DeleteProtectionEnable",$param) and $param["DeleteProtectionEnable"] !== null) {
+            $this->DeleteProtectionEnable = $param["DeleteProtectionEnable"];
         }
     }
 }

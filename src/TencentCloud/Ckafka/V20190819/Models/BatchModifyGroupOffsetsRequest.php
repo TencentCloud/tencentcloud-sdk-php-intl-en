@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupName() Obtain Consumer group name.
  * @method void setGroupName(string $GroupName) Set Consumer group name.
- * @method string getInstanceId() Obtain Instance name.
- * @method void setInstanceId(string $InstanceId) Set Instance name.
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
  * @method array getPartitions() Obtain Partition information.
  * @method void setPartitions(array $Partitions) Set Partition information.
  * @method array getTopicName() Obtain Name of the specified topic. Default value: names of all topics.
@@ -37,7 +37,7 @@ class BatchModifyGroupOffsetsRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var string Instance name.
+     * @var string The ckafka cluster instance Id.
      */
     public $InstanceId;
 
@@ -53,7 +53,7 @@ class BatchModifyGroupOffsetsRequest extends AbstractModel
 
     /**
      * @param string $GroupName Consumer group name.
-     * @param string $InstanceId Instance name.
+     * @param string $InstanceId The ckafka cluster instance Id.
      * @param array $Partitions Partition information.
      * @param array $TopicName Name of the specified topic. Default value: names of all topics.
      */

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPublicNetworkChargeType() Obtain Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
  * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) Set Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
- * @method integer getPublicNetworkMonthly() Obtain Public network bandwidth in MB
- * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) Set Public network bandwidth in MB
+ * @method integer getPublicNetworkMonthly() Obtain Public network bandwidth, in MB. value must be 0 or a multiple of 3.
+ * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) Set Public network bandwidth, in MB. value must be 0 or a multiple of 3.
  */
 class InquiryPublicNetworkParam extends AbstractModel
 {
@@ -33,13 +33,13 @@ class InquiryPublicNetworkParam extends AbstractModel
     public $PublicNetworkChargeType;
 
     /**
-     * @var integer Public network bandwidth in MB
+     * @var integer Public network bandwidth, in MB. value must be 0 or a multiple of 3.
      */
     public $PublicNetworkMonthly;
 
     /**
      * @param string $PublicNetworkChargeType Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
-     * @param integer $PublicNetworkMonthly Public network bandwidth in MB
+     * @param integer $PublicNetworkMonthly Public network bandwidth, in MB. value must be 0 or a multiple of 3.
      */
     function __construct()
     {

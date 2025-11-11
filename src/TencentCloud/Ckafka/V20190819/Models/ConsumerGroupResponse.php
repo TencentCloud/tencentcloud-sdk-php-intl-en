@@ -22,34 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain Number of eligible consumer groups
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible consumer groups
- * @method array getTopicList() Obtain Topic list
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTopicList(array $TopicList) Set Topic list
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getGroupList() Obtain Consumer group list
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setGroupList(array $GroupList) Set Consumer group list
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getTotalPartition() Obtain Total number of partitions
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotalPartition(integer $TotalPartition) Set Total number of partitions
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getPartitionListForMonitor() Obtain List of monitored partitions
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPartitionListForMonitor(array $PartitionListForMonitor) Set List of monitored partitions
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getTotalTopic() Obtain Total number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotalTopic(integer $TotalTopic) Set Total number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getTopicListForMonitor() Obtain List of monitored topics
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTopicListForMonitor(array $TopicListForMonitor) Set List of monitored topics
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getGroupListForMonitor() Obtain List of monitored groups
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setGroupListForMonitor(array $GroupListForMonitor) Set List of monitored groups
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTopicList() Obtain Topic list.
+ * @method void setTopicList(array $TopicList) Set Topic list.
+ * @method array getGroupList() Obtain Specifies the consumption group List.
+ * @method void setGroupList(array $GroupList) Set Specifies the consumption group List.
+ * @method integer getTotalPartition() Obtain Total number of partitions.
+ * @method void setTotalPartition(integer $TotalPartition) Set Total number of partitions.
+ * @method array getPartitionListForMonitor() Obtain Monitored partition list.
+ * @method void setPartitionListForMonitor(array $PartitionListForMonitor) Set Monitored partition list.
+ * @method integer getTotalTopic() Obtain Total number of topics.
+ * @method void setTotalTopic(integer $TotalTopic) Set Total number of topics.
+ * @method array getTopicListForMonitor() Obtain Monitored topic list.
+ * @method void setTopicListForMonitor(array $TopicListForMonitor) Set Monitored topic list.
+ * @method array getGroupListForMonitor() Obtain Monitored group list.
+ * @method void setGroupListForMonitor(array $GroupListForMonitor) Set Monitored group list.
  */
 class ConsumerGroupResponse extends AbstractModel
 {
@@ -59,63 +45,49 @@ class ConsumerGroupResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array Topic list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Topic list.
      */
     public $TopicList;
 
     /**
-     * @var array Consumer group list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the consumption group List.
      */
     public $GroupList;
 
     /**
-     * @var integer Total number of partitions
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Total number of partitions.
      */
     public $TotalPartition;
 
     /**
-     * @var array List of monitored partitions
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Monitored partition list.
      */
     public $PartitionListForMonitor;
 
     /**
-     * @var integer Total number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Total number of topics.
      */
     public $TotalTopic;
 
     /**
-     * @var array List of monitored topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Monitored topic list.
      */
     public $TopicListForMonitor;
 
     /**
-     * @var array List of monitored groups
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Monitored group list.
      */
     public $GroupListForMonitor;
 
     /**
      * @param integer $TotalCount Number of eligible consumer groups
-     * @param array $TopicList Topic list
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $GroupList Consumer group list
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $TotalPartition Total number of partitions
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $PartitionListForMonitor List of monitored partitions
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $TotalTopic Total number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $TopicListForMonitor List of monitored topics
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $GroupListForMonitor List of monitored groups
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $TopicList Topic list.
+     * @param array $GroupList Specifies the consumption group List.
+     * @param integer $TotalPartition Total number of partitions.
+     * @param array $PartitionListForMonitor Monitored partition list.
+     * @param integer $TotalTopic Total number of topics.
+     * @param array $TopicListForMonitor Monitored topic list.
+     * @param array $GroupListForMonitor Monitored group list.
      */
     function __construct()
     {

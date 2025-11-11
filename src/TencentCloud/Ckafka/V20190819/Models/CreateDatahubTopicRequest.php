@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDatahubTopic request structure.
  *
- * @method string getName() Obtain Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
- * @method void setName(string $Name) Set Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+ * @method string getName() Obtain Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
+ * @method void setName(string $Name) Set Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
  * @method integer getPartitionNum() Obtain Number of partitions, which should be greater than 0.
  * @method void setPartitionNum(integer $PartitionNum) Set Number of partitions, which should be greater than 0.
  * @method integer getRetentionMs() Obtain Message retention period in milliseconds. The current minimum value is 60,000 ms.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDatahubTopicRequest extends AbstractModel
 {
     /**
-     * @var string Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * @var string Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
      */
     public $Name;
 
@@ -59,7 +59,7 @@ class CreateDatahubTopicRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $Name Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * @param string $Name Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
      * @param integer $PartitionNum Number of partitions, which should be greater than 0.
      * @param integer $RetentionMs Message retention period in milliseconds. The current minimum value is 60,000 ms.
      * @param string $Note Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.

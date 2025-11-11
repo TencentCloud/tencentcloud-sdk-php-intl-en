@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Advanced configuration object
  *
- * @method integer getRetention() Obtain Message retention period
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRetention(integer $Retention) Set Message retention period
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getRetention() Obtain Message retention period in milliseconds.
+ * @method void setRetention(integer $Retention) Set Message retention period in milliseconds.
  * @method integer getMinInsyncReplicas() Obtain Minimum number of sync replications
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) Set Minimum number of sync replications
@@ -34,32 +32,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setCleanUpPolicy(string $CleanUpPolicy) Set Log cleanup mode. Default value: delete.
 delete: logs will be deleted by save time; compact: logs will be compressed by key; compact, delete: logs will be compressed by key and deleted by save time.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getSegmentMs() Obtain Segment rolling duration
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSegmentMs(integer $SegmentMs) Set Segment rolling duration
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getSegmentMs() Obtain Duration of Segment shard scrolling in milliseconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSegmentMs(integer $SegmentMs) Set Duration of Segment shard scrolling in milliseconds.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getUncleanLeaderElectionEnable() Obtain 0: false, 1: true.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set 0: false, 1: true.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getSegmentBytes() Obtain Number of bytes for segment rolling
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSegmentBytes(integer $SegmentBytes) Set Number of bytes for segment rolling
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxMessageBytes() Obtain Maximum number of message bytes
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set Maximum number of message bytes
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getRetentionBytes() Obtain Message retention file size.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setRetentionBytes(integer $RetentionBytes) Set Message retention file size.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getSegmentBytes() Obtain Segment specifies the number of bytes for sharding scroll. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSegmentBytes(integer $SegmentBytes) Set Segment specifies the number of bytes for sharding scroll. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxMessageBytes() Obtain Maximum message byte size. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set Maximum message byte size. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRetentionBytes() Obtain Specifies the message retention file size in Bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRetentionBytes(integer $RetentionBytes) Set Specifies the message retention file size in Bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLogMsgTimestampType() Obtain The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLogMsgTimestampType(string $LogMsgTimestampType) Set The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Config extends AbstractModel
 {
     /**
-     * @var integer Message retention period
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Message retention period in milliseconds.
      */
     public $Retention;
 
@@ -77,8 +78,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CleanUpPolicy;
 
     /**
-     * @var integer Segment rolling duration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Duration of Segment shard scrolling in milliseconds.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SegmentMs;
 
@@ -89,41 +90,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $UncleanLeaderElectionEnable;
 
     /**
-     * @var integer Number of bytes for segment rolling
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Segment specifies the number of bytes for sharding scroll. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SegmentBytes;
 
     /**
-     * @var integer Maximum number of message bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum message byte size. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MaxMessageBytes;
 
     /**
-     * @var integer Message retention file size.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Specifies the message retention file size in Bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RetentionBytes;
 
     /**
-     * @param integer $Retention Message retention period
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $LogMsgTimestampType;
+
+    /**
+     * @param integer $Retention Message retention period in milliseconds.
      * @param integer $MinInsyncReplicas Minimum number of sync replications
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $CleanUpPolicy Log cleanup mode. Default value: delete.
 delete: logs will be deleted by save time; compact: logs will be compressed by key; compact, delete: logs will be compressed by key and deleted by save time.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $SegmentMs Segment rolling duration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $SegmentMs Duration of Segment shard scrolling in milliseconds.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $UncleanLeaderElectionEnable 0: false, 1: true.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $SegmentBytes Number of bytes for segment rolling
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxMessageBytes Maximum number of message bytes
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $RetentionBytes Message retention file size.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $SegmentBytes Segment specifies the number of bytes for sharding scroll. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxMessageBytes Maximum message byte size. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RetentionBytes Specifies the message retention file size in Bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LogMsgTimestampType The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("RetentionBytes",$param) and $param["RetentionBytes"] !== null) {
             $this->RetentionBytes = $param["RetentionBytes"];
+        }
+
+        if (array_key_exists("LogMsgTimestampType",$param) and $param["LogMsgTimestampType"] !== null) {
+            $this->LogMsgTimestampType = $param["LogMsgTimestampType"];
         }
     }
 }

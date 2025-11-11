@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Values returned by the `InquireCkafkaPrice` API
  *
- * @method InquiryPrice getInstancePrice() Obtain Instance price
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstancePrice(InquiryPrice $InstancePrice) Set Instance price
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method InquiryPrice getInstancePrice() Obtain Specifies the instance price.
+ * @method void setInstancePrice(InquiryPrice $InstancePrice) Set Specifies the instance price.
  * @method InquiryPrice getPublicNetworkBandwidthPrice() Obtain Public network bandwidth price
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPublicNetworkBandwidthPrice(InquiryPrice $PublicNetworkBandwidthPrice) Set Public network bandwidth price
@@ -32,8 +30,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class InquireCkafkaPriceResp extends AbstractModel
 {
     /**
-     * @var InquiryPrice Instance price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var InquiryPrice Specifies the instance price.
      */
     public $InstancePrice;
 
@@ -44,8 +41,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PublicNetworkBandwidthPrice;
 
     /**
-     * @param InquiryPrice $InstancePrice Instance price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InquiryPrice $InstancePrice Specifies the instance price.
      * @param InquiryPrice $PublicNetworkBandwidthPrice Public network bandwidth price
 Note: This field may return null, indicating that no valid values can be obtained.
      */

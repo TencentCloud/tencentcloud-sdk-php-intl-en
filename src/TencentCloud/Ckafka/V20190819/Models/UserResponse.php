@@ -20,18 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Returned user entity
  *
- * @method array getUsers() Obtain List of eligible users
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUsers(array $Users) Set List of eligible users
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getUsers() Obtain Specifies the eligible users list.
+ * @method void setUsers(array $Users) Set Specifies the eligible users list.
  * @method integer getTotalCount() Obtain Total number of eligible users
  * @method void setTotalCount(integer $TotalCount) Set Total number of eligible users
  */
 class UserResponse extends AbstractModel
 {
     /**
-     * @var array List of eligible users
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the eligible users list.
      */
     public $Users;
 
@@ -41,8 +38,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TotalCount;
 
     /**
-     * @param array $Users List of eligible users
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Users Specifies the eligible users list.
      * @param integer $TotalCount Total number of eligible users
      */
     function __construct()

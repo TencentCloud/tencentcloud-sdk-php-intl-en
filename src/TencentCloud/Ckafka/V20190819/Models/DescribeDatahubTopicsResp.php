@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain Total count
  * @method void setTotalCount(integer $TotalCount) Set Total count
- * @method array getTopicList() Obtain Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTopicList(array $TopicList) Set Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTopicList() Obtain Topic list.
+ * @method void setTopicList(array $TopicList) Set Topic list.
  */
 class DescribeDatahubTopicsResp extends AbstractModel
 {
@@ -35,15 +33,13 @@ class DescribeDatahubTopicsResp extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Topic list.
      */
     public $TopicList;
 
     /**
      * @param integer $TotalCount Total count
-     * @param array $TopicList Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $TopicList Topic list.
      */
     function __construct()
     {

@@ -20,18 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Returned topic details entity
  *
- * @method array getTopicList() Obtain List of returned topic details
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTopicList(array $TopicList) Set List of returned topic details
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTopicList() Obtain List of returned topic details.
+ * @method void setTopicList(array $TopicList) Set List of returned topic details.
  * @method integer getTotalCount() Obtain Number of all eligible topic details
  * @method void setTotalCount(integer $TotalCount) Set Number of all eligible topic details
  */
 class TopicDetailResponse extends AbstractModel
 {
     /**
-     * @var array List of returned topic details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array List of returned topic details.
      */
     public $TopicList;
 
@@ -41,8 +38,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TotalCount;
 
     /**
-     * @param array $TopicList List of returned topic details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $TopicList List of returned topic details.
      * @param integer $TotalCount Number of all eligible topic details
      */
     function __construct()

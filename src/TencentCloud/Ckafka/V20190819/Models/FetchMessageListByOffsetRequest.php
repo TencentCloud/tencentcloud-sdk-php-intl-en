@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FetchMessageListByOffset request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
  * @method string getTopic() Obtain Topic name
  * @method void setTopic(string $Topic) Set Topic name
  * @method integer getPartition() Obtain Partition ID
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class FetchMessageListByOffsetRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string The ckafka cluster instance Id.
      */
     public $InstanceId;
 
@@ -59,7 +59,7 @@ class FetchMessageListByOffsetRequest extends AbstractModel
     public $SinglePartitionRecordNumber;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId The ckafka cluster instance Id.
      * @param string $Topic Topic name
      * @param integer $Partition Partition ID
      * @param integer $Offset Offset information

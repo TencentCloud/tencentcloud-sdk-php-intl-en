@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReturnCode(string $ReturnCode) Set Returned code. `0` indicates normal status while other codes indicate errors.
  * @method string getReturnMessage() Obtain Message returned by the API. An error message will be returned if the API reports an error. 
  * @method void setReturnMessage(string $ReturnMessage) Set Message returned by the API. An error message will be returned if the API reports an error. 
- * @method CreateInstancePostData getData() Obtain Returned data.  Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setData(CreateInstancePostData $Data) Set Returned data.  Note: This field may return null, indicating that no valid values can be obtained.
+ * @method CreateInstancePostData getData() Obtain Specifies the Data returned.
+ * @method void setData(CreateInstancePostData $Data) Set Specifies the Data returned.
  */
 class CreateInstancePostResp extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateInstancePostResp extends AbstractModel
     public $ReturnMessage;
 
     /**
-     * @var CreateInstancePostData Returned data.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @var CreateInstancePostData Specifies the Data returned.
      */
     public $Data;
 
     /**
      * @param string $ReturnCode Returned code. `0` indicates normal status while other codes indicate errors.
      * @param string $ReturnMessage Message returned by the API. An error message will be returned if the API reports an error. 
-     * @param CreateInstancePostData $Data Returned data.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CreateInstancePostData $Data Specifies the Data returned.
      */
     function __construct()
     {

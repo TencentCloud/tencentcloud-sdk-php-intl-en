@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Topic parameters that can be modified in batches
  *
- * @method string getTopicName() Obtain Topic name.
- * @method void setTopicName(string $TopicName) Set Topic name.
+ * @method string getTopicName() Obtain Topic name
+ * @method void setTopicName(string $TopicName) Set Topic name
  * @method integer getPartitionNum() Obtain The number of partitions.
  * @method void setPartitionNum(integer $PartitionNum) Set The number of partitions.
  * @method string getNote() Obtain Remarks.
@@ -36,17 +36,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUncleanLeaderElectionEnable(boolean $UncleanLeaderElectionEnable) Set Whether to allow a non-ISR replica to be the leader.
  * @method integer getRetentionMs() Obtain Message retention period in topic dimension in milliseconds. Value range: 1 minute to 90 days.
  * @method void setRetentionMs(integer $RetentionMs) Set Message retention period in topic dimension in milliseconds. Value range: 1 minute to 90 days.
- * @method integer getRetentionBytes() Obtain Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
- * @method void setRetentionBytes(integer $RetentionBytes) Set Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
- * @method integer getSegmentMs() Obtain Segment rolling duration in milliseconds. Value range: 1-90 days.
- * @method void setSegmentMs(integer $SegmentMs) Set Segment rolling duration in milliseconds. Value range: 1-90 days.
+ * @method integer getRetentionBytes() Obtain Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB.
+ * @method void setRetentionBytes(integer $RetentionBytes) Set Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB.
+ * @method integer getSegmentMs() Obtain Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days.
+ * @method void setSegmentMs(integer $SegmentMs) Set Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days.
  * @method integer getMaxMessageBytes() Obtain Message size per batch. Value range: 1 KB - 12 MB.
  * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set Message size per batch. Value range: 1 KB - 12 MB.
+ * @method string getLogMsgTimestampType() Obtain Specifies the time type for message storage: CreateTime/LogAppendTime.
+ * @method void setLogMsgTimestampType(string $LogMsgTimestampType) Set Specifies the time type for message storage: CreateTime/LogAppendTime.
  */
 class BatchModifyTopicInfo extends AbstractModel
 {
     /**
-     * @var string Topic name.
+     * @var string Topic name
      */
     public $TopicName;
 
@@ -86,12 +88,12 @@ class BatchModifyTopicInfo extends AbstractModel
     public $RetentionMs;
 
     /**
-     * @var integer Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
+     * @var integer Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB.
      */
     public $RetentionBytes;
 
     /**
-     * @var integer Segment rolling duration in milliseconds. Value range: 1-90 days.
+     * @var integer Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days.
      */
     public $SegmentMs;
 
@@ -101,7 +103,12 @@ class BatchModifyTopicInfo extends AbstractModel
     public $MaxMessageBytes;
 
     /**
-     * @param string $TopicName Topic name.
+     * @var string Specifies the time type for message storage: CreateTime/LogAppendTime.
+     */
+    public $LogMsgTimestampType;
+
+    /**
+     * @param string $TopicName Topic name
      * @param integer $PartitionNum The number of partitions.
      * @param string $Note Remarks.
      * @param integer $ReplicaNum Number of replicas.
@@ -109,9 +116,10 @@ class BatchModifyTopicInfo extends AbstractModel
      * @param integer $MinInsyncReplicas The minimum number of replicas specified by `min.insync.replicas` when the producer sets `request.required.acks` to `-1`.
      * @param boolean $UncleanLeaderElectionEnable Whether to allow a non-ISR replica to be the leader.
      * @param integer $RetentionMs Message retention period in topic dimension in milliseconds. Value range: 1 minute to 90 days.
-     * @param integer $RetentionBytes Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
-     * @param integer $SegmentMs Segment rolling duration in milliseconds. Value range: 1-90 days.
+     * @param integer $RetentionBytes Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB.
+     * @param integer $SegmentMs Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days.
      * @param integer $MaxMessageBytes Message size per batch. Value range: 1 KB - 12 MB.
+     * @param string $LogMsgTimestampType Specifies the time type for message storage: CreateTime/LogAppendTime.
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class BatchModifyTopicInfo extends AbstractModel
 
         if (array_key_exists("MaxMessageBytes",$param) and $param["MaxMessageBytes"] !== null) {
             $this->MaxMessageBytes = $param["MaxMessageBytes"];
+        }
+
+        if (array_key_exists("LogMsgTimestampType",$param) and $param["LogMsgTimestampType"] !== null) {
+            $this->LogMsgTimestampType = $param["LogMsgTimestampType"];
         }
     }
 }

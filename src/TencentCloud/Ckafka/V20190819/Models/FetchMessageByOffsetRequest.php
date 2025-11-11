@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FetchMessageByOffset request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getTopic() Obtain Topic name
- * @method void setTopic(string $Topic) Set Topic name
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method string getTopic() Obtain Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
+ * @method void setTopic(string $Topic) Set Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
  * @method integer getPartition() Obtain Partition ID
  * @method void setPartition(integer $Partition) Set Partition ID
- * @method integer getOffset() Obtain Offset information, which is required.
- * @method void setOffset(integer $Offset) Set Offset information, which is required.
+ * @method integer getOffset() Obtain Specifies the position information.
+ * @method void setOffset(integer $Offset) Set Specifies the position information.
  */
 class FetchMessageByOffsetRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
     /**
-     * @var string Topic name
+     * @var string Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
      */
     public $Topic;
 
@@ -47,15 +47,15 @@ class FetchMessageByOffsetRequest extends AbstractModel
     public $Partition;
 
     /**
-     * @var integer Offset information, which is required.
+     * @var integer Specifies the position information.
      */
     public $Offset;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param string $Topic Topic name
+     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param string $Topic Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
      * @param integer $Partition Partition ID
-     * @param integer $Offset Offset information, which is required.
+     * @param integer $Offset Specifies the position information.
      */
     function __construct()
     {

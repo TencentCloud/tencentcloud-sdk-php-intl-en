@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroupInfo request structure.
  *
- * @method string getInstanceId() Obtain (Filter) filter by instance ID.
- * @method void setInstanceId(string $InstanceId) Set (Filter) filter by instance ID.
- * @method array getGroupList() Obtain Kafka consumer group (`Consumer-group`), which is an array in the format of `GroupList.0=xxx&GroupList.1=yyy`.
- * @method void setGroupList(array $GroupList) Set Kafka consumer group (`Consumer-group`), which is an array in the format of `GroupList.0=xxx&GroupList.1=yyy`.
+ * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+ * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+ * @method array getGroupList() Obtain Kafka group list. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
+ * @method void setGroupList(array $GroupList) Set Kafka group list. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
  */
 class DescribeGroupInfoRequest extends AbstractModel
 {
     /**
-     * @var string (Filter) filter by instance ID.
+     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
      */
     public $InstanceId;
 
     /**
-     * @var array Kafka consumer group (`Consumer-group`), which is an array in the format of `GroupList.0=xxx&GroupList.1=yyy`.
+     * @var array Kafka group list. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
      */
     public $GroupList;
 
     /**
-     * @param string $InstanceId (Filter) filter by instance ID.
-     * @param array $GroupList Kafka consumer group (`Consumer-group`), which is an array in the format of `GroupList.0=xxx&GroupList.1=yyy`.
+     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @param array $GroupList Kafka group list. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
      */
     function __construct()
     {

@@ -31,6 +31,7 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
  * @method Models\GetSplitDocumentResultResponse GetSplitDocumentResult(Models\GetSplitDocumentResultRequest $req) This API is used to query the results of document splitting tasks.
  * @method Models\QueryRewriteResponse QueryRewrite(Models\QueryRewriteRequest $req) QueryRewrite is mainly used in multi-round conversations for reference resolution and ellipsis completion. Using this API, you don't need to input prompt descriptions. A more accurate user query can be generated based on the conversation history. In terms of application scenarios, this API can be applied to various scenarios such as intelligent Q&A and conversational search.
 There is a call limit for single-account for this API. If you need to increase the concurrency limit, please contact us (https://cloud.tencent.com/act/event/Online_service).
+ * @method Models\ReconstructDocumentSSEResponse ReconstructDocumentSSE(Models\ReconstructDocumentSSERequest $req) This API is used for quasi-real-time document parsing, using HTTP SSE protocol for communication.
  * @method Models\RunRerankResponse RunRerank(Models\RunRerankRequest $req) This API is used to reorder the results of multi-channel recall based on the rerank model of knowledge engine fine-tuning model technology, sort the segments according to the relevance between the query and the segment content from high to low score, and output the corresponding scoring results.
  */
 

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getAutoCreateTopicEnable() Obtain Automatic creation. true: enabled, false: not enabled
  * @method void setAutoCreateTopicEnable(boolean $AutoCreateTopicEnable) Set Automatic creation. true: enabled, false: not enabled
- * @method integer getDefaultNumPartitions() Obtain Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
- * @method void setDefaultNumPartitions(integer $DefaultNumPartitions) Set Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
- * @method integer getDefaultReplicationFactor() Obtain If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
- * @method void setDefaultReplicationFactor(integer $DefaultReplicationFactor) Set If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
+ * @method integer getDefaultNumPartitions() Obtain Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3.
+ * @method void setDefaultNumPartitions(integer $DefaultNumPartitions) Set Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3.
+ * @method integer getDefaultReplicationFactor() Obtain Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2.
+ * @method void setDefaultReplicationFactor(integer $DefaultReplicationFactor) Set Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2.
  */
 class ModifyInstanceAttributesConfig extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyInstanceAttributesConfig extends AbstractModel
     public $AutoCreateTopicEnable;
 
     /**
-     * @var integer Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
+     * @var integer Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3.
      */
     public $DefaultNumPartitions;
 
     /**
-     * @var integer If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
+     * @var integer Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2.
      */
     public $DefaultReplicationFactor;
 
     /**
      * @param boolean $AutoCreateTopicEnable Automatic creation. true: enabled, false: not enabled
-     * @param integer $DefaultNumPartitions Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
-     * @param integer $DefaultReplicationFactor If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
+     * @param integer $DefaultNumPartitions Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3.
+     * @param integer $DefaultReplicationFactor Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2.
      */
     function __construct()
     {

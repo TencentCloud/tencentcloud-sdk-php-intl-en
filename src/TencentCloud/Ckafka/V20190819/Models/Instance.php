@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance object
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method integer getStatus() Obtain Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
- * @method void setStatus(integer $Status) Set Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
- * @method boolean getIfCommunity() Obtain Whether it is an open-source instance. true: yes, false: no
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIfCommunity(boolean $IfCommunity) Set Whether it is an open-source instance. true: yes, false: no
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
+ * @method string getInstanceName() Obtain Specifies the Name of the ckafka cluster instance.
+ * @method void setInstanceName(string $InstanceName) Set Specifies the Name of the ckafka cluster instance.
+ * @method integer getStatus() Obtain Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+ * @method void setStatus(integer $Status) Set Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+ * @method boolean getIfCommunity() Obtain Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source).
+ * @method void setIfCommunity(boolean $IfCommunity) Set Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source).
  */
 class Instance extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string The ckafka cluster instance Id.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string Specifies the Name of the ckafka cluster instance.
      */
     public $InstanceName;
 
     /**
-     * @var integer Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+     * @var integer Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
      */
     public $Status;
 
     /**
-     * @var boolean Whether it is an open-source instance. true: yes, false: no
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source).
      */
     public $IfCommunity;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
-     * @param integer $Status Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
-     * @param boolean $IfCommunity Whether it is an open-source instance. true: yes, false: no
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceId The ckafka cluster instance Id.
+     * @param string $InstanceName Specifies the Name of the ckafka cluster instance.
+     * @param integer $Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+     * @param boolean $IfCommunity Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source).
      */
     function __construct()
     {

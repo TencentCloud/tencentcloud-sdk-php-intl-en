@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain Number of eligible `AppId`
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible `AppId`
- * @method array getAppIdList() Obtain List of eligible `AppId`
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAppIdList(array $AppIdList) Set List of eligible `AppId`
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getAppIdList() Obtain Specifies the App Id list that meets the requirements.
+ * @method void setAppIdList(array $AppIdList) Set Specifies the App Id list that meets the requirements.
  */
 class AppIdResponse extends AbstractModel
 {
@@ -35,15 +33,13 @@ class AppIdResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array List of eligible `AppId`
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the App Id list that meets the requirements.
      */
     public $AppIdList;
 
     /**
      * @param integer $TotalCount Number of eligible `AppId`
-     * @param array $AppIdList List of eligible `AppId`
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $AppIdList Specifies the App Id list that meets the requirements.
      */
     function __construct()
     {

@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopic() Obtain Name of assigned topics
  * @method void setTopic(string $Topic) Set Name of assigned topics
- * @method array getPartitions() Obtain Information of assigned partition
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPartitions(array $Partitions) Set Information of assigned partition
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getPartitions() Obtain Allocates partition info.
+ * @method void setPartitions(array $Partitions) Set Allocates partition info.
  */
 class GroupInfoTopics extends AbstractModel
 {
@@ -35,15 +33,13 @@ class GroupInfoTopics extends AbstractModel
     public $Topic;
 
     /**
-     * @var array Information of assigned partition
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Allocates partition info.
      */
     public $Partitions;
 
     /**
      * @param string $Topic Name of assigned topics
-     * @param array $Partitions Information of assigned partition
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Partitions Allocates partition info.
      */
     function __construct()
     {

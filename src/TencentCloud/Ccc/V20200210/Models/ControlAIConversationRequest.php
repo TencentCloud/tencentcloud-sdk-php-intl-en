@@ -24,14 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) Set Specifies the session ID.
  * @method integer getSdkAppId() Obtain App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
  * @method void setSdkAppId(integer $SdkAppId) Set App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
- * @method string getCommand() Obtain Control command. currently supports the following commands:.
+ * @method string getCommand() Obtain Control command. currently supported commands are as follows:.
 
--ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text.
- * @method void setCommand(string $Command) Set Control command. currently supports the following commands:.
+-ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+-InvokeLLM. specifies the server sends text to the large model to trigger a dialogue.
+ * @method void setCommand(string $Command) Set Control command. currently supported commands are as follows:.
 
--ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text.
+-ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+-InvokeLLM. specifies the server sends text to the large model to trigger a dialogue.
  * @method ServerPushText getServerPushText() Obtain Specifies the server-sent broadcast text Command. required when Command is ServerPushText.
  * @method void setServerPushText(ServerPushText $ServerPushText) Set Specifies the server-sent broadcast text Command. required when Command is ServerPushText.
+ * @method InvokeLLM getInvokeLLM() Obtain The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header.
+ * @method void setInvokeLLM(InvokeLLM $InvokeLLM) Set The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header.
  */
 class ControlAIConversationRequest extends AbstractModel
 {
@@ -46,9 +50,10 @@ class ControlAIConversationRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var string Control command. currently supports the following commands:.
+     * @var string Control command. currently supported commands are as follows:.
 
--ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text.
+-ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+-InvokeLLM. specifies the server sends text to the large model to trigger a dialogue.
      */
     public $Command;
 
@@ -58,12 +63,19 @@ class ControlAIConversationRequest extends AbstractModel
     public $ServerPushText;
 
     /**
+     * @var InvokeLLM The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header.
+     */
+    public $InvokeLLM;
+
+    /**
      * @param string $SessionId Specifies the session ID.
      * @param integer $SdkAppId App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
-     * @param string $Command Control command. currently supports the following commands:.
+     * @param string $Command Control command. currently supported commands are as follows:.
 
--ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text.
+-ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+-InvokeLLM. specifies the server sends text to the large model to trigger a dialogue.
      * @param ServerPushText $ServerPushText Specifies the server-sent broadcast text Command. required when Command is ServerPushText.
+     * @param InvokeLLM $InvokeLLM The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header.
      */
     function __construct()
     {
@@ -93,6 +105,11 @@ class ControlAIConversationRequest extends AbstractModel
         if (array_key_exists("ServerPushText",$param) and $param["ServerPushText"] !== null) {
             $this->ServerPushText = new ServerPushText();
             $this->ServerPushText->deserialize($param["ServerPushText"]);
+        }
+
+        if (array_key_exists("InvokeLLM",$param) and $param["InvokeLLM"] !== null) {
+            $this->InvokeLLM = new InvokeLLM();
+            $this->InvokeLLM->deserialize($param["InvokeLLM"]);
         }
     }
 }

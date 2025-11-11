@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
  * @method integer getRouteId() Obtain Route ID
  * @method void setRouteId(integer $RouteId) Set Route ID
- * @method integer getVipType() Obtain VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
- * @method void setVipType(integer $VipType) Set VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
+ * @method integer getVipType() Obtain Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
+ * @method void setVipType(integer $VipType) Set Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
  * @method array getVipList() Obtain Virtual IP list
  * @method void setVipList(array $VipList) Set Virtual IP list
  * @method string getDomain() Obtain Domain name
@@ -44,10 +44,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDomainPort(integer $DomainPort) Set Domain name port
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDeleteTimestamp() Obtain Timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDeleteTimestamp(string $DeleteTimestamp) Set Timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDeleteTimestamp() Obtain Timestamp.
+ * @method void setDeleteTimestamp(string $DeleteTimestamp) Set Timestamp.
+ * @method string getSubnet() Obtain Specifies the subnet Id.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubnet(string $Subnet) Set Specifies the subnet Id.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getBrokerVipList() Obtain Virtual IP list (1:1 broker node).
+ * @method void setBrokerVipList(array $BrokerVipList) Set Virtual IP list (1:1 broker node).
+ * @method string getVpcId() Obtain VPC Id. specifies the Id of the vpc.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVpcId(string $VpcId) Set VPC Id. specifies the Id of the vpc.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNote() Obtain Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNote(string $Note) Set Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(integer $Status) Set Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Route extends AbstractModel
 {
@@ -66,7 +82,7 @@ class Route extends AbstractModel
     public $RouteId;
 
     /**
-     * @var integer VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
+     * @var integer Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
      */
     public $VipType;
 
@@ -88,10 +104,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DomainPort;
 
     /**
-     * @var string Timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Timestamp.
      */
     public $DeleteTimestamp;
+
+    /**
+     * @var string Specifies the subnet Id.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Subnet;
+
+    /**
+     * @var array Virtual IP list (1:1 broker node).
+     */
+    public $BrokerVipList;
+
+    /**
+     * @var string VPC Id. specifies the Id of the vpc.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $VpcId;
+
+    /**
+     * @var string Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Note;
+
+    /**
+     * @var integer Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Status;
 
     /**
      * @param integer $AccessType Instance connection method
@@ -100,14 +144,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
 2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
 3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
      * @param integer $RouteId Route ID
-     * @param integer $VipType VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
+     * @param integer $VipType Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
      * @param array $VipList Virtual IP list
      * @param string $Domain Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $DomainPort Domain name port
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DeleteTimestamp Timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $DeleteTimestamp Timestamp.
+     * @param string $Subnet Specifies the subnet Id.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $BrokerVipList Virtual IP list (1:1 broker node).
+     * @param string $VpcId VPC Id. specifies the Id of the vpc.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Note Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -153,6 +205,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DeleteTimestamp",$param) and $param["DeleteTimestamp"] !== null) {
             $this->DeleteTimestamp = $param["DeleteTimestamp"];
+        }
+
+        if (array_key_exists("Subnet",$param) and $param["Subnet"] !== null) {
+            $this->Subnet = $param["Subnet"];
+        }
+
+        if (array_key_exists("BrokerVipList",$param) and $param["BrokerVipList"] !== null) {
+            $this->BrokerVipList = [];
+            foreach ($param["BrokerVipList"] as $key => $value){
+                $obj = new VipEntity();
+                $obj->deserialize($value);
+                array_push($this->BrokerVipList, $obj);
+            }
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("Note",$param) and $param["Note"] !== null) {
+            $this->Note = $param["Note"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

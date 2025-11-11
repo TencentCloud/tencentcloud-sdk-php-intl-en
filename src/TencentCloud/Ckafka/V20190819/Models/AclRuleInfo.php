@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOperation() Obtain ACL operation types. Enumerated values: `All` (all operations), `Read` (read), `Write` (write).
  * @method void setOperation(string $Operation) Set ACL operation types. Enumerated values: `All` (all operations), `Read` (read), `Write` (write).
- * @method string getPermissionType() Obtain Permission types: `Deny`, `Allow`.
- * @method void setPermissionType(string $PermissionType) Set Permission types: `Deny`, `Allow`.
- * @method string getHost() Obtain The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
- * @method void setHost(string $Host) Set The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
- * @method string getPrincipal() Obtain The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
- * @method void setPrincipal(string $Principal) Set The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
+ * @method string getPermissionType() Obtain Permission type. Deny: Deny. Allow: permission.
+ * @method void setPermissionType(string $PermissionType) Set Permission type. Deny: Deny. Allow: permission.
+ * @method string getHost() Obtain Indicates any host is accessible in the entire region.
+ * @method void setHost(string $Host) Set Indicates any host is accessible in the entire region.
+ * @method string getPrincipal() Obtain The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A.
+ * @method void setPrincipal(string $Principal) Set The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A.
  */
 class AclRuleInfo extends AbstractModel
 {
@@ -37,25 +37,25 @@ class AclRuleInfo extends AbstractModel
     public $Operation;
 
     /**
-     * @var string Permission types: `Deny`, `Allow`.
+     * @var string Permission type. Deny: Deny. Allow: permission.
      */
     public $PermissionType;
 
     /**
-     * @var string The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
+     * @var string Indicates any host is accessible in the entire region.
      */
     public $Host;
 
     /**
-     * @var string The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
+     * @var string The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A.
      */
     public $Principal;
 
     /**
      * @param string $Operation ACL operation types. Enumerated values: `All` (all operations), `Read` (read), `Write` (write).
-     * @param string $PermissionType Permission types: `Deny`, `Allow`.
-     * @param string $Host The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
-     * @param string $Principal The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
+     * @param string $PermissionType Permission type. Deny: Deny. Allow: permission.
+     * @param string $Host Indicates any host is accessible in the entire region.
+     * @param string $Principal The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A.
      */
     function __construct()
     {

@@ -34,10 +34,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setValue(string $Value) Set Message value
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getTimestamp() Obtain Message timestamp
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTimestamp(integer $Timestamp) Set Message timestamp
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getTimestamp() Obtain Message timestamp.
+ * @method void setTimestamp(integer $Timestamp) Set Message timestamp.
  * @method string getHeaders() Obtain Message headers
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHeaders(string $Headers) Set Message headers
@@ -73,8 +71,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Value;
 
     /**
-     * @var integer Message timestamp
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Message timestamp.
      */
     public $Timestamp;
 
@@ -92,8 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Value Message value
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $Timestamp Message timestamp
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $Timestamp Message timestamp.
      * @param string $Headers Message headers
 Note: This field may return null, indicating that no valid values can be obtained.
      */

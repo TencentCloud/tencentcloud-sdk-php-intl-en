@@ -22,42 +22,32 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicName() Obtain Topic name
  * @method void setTopicName(string $TopicName) Set Topic name
- * @method string getTopicId() Obtain Topic ID
- * @method void setTopicId(string $TopicId) Set Topic ID
+ * @method string getTopicId() Obtain Topic Id.
+ * @method void setTopicId(string $TopicId) Set Topic Id.
  * @method integer getPartitionNum() Obtain Number of partitions
  * @method void setPartitionNum(integer $PartitionNum) Set Number of partitions
- * @method integer getReplicaNum() Obtain Number of replicas
- * @method void setReplicaNum(integer $ReplicaNum) Set Number of replicas
- * @method string getNote() Obtain Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setNote(string $Note) Set Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getReplicaNum() Obtain Number of topic replicas. valid values: 1, 3.
+ * @method void setReplicaNum(integer $ReplicaNum) Set Number of topic replicas. valid values: 1, 3.
+ * @method string getNote() Obtain Remarks.
+ * @method void setNote(string $Note) Set Remarks.
  * @method integer getCreateTime() Obtain Creation time
  * @method void setCreateTime(integer $CreateTime) Set Creation time
  * @method boolean getEnableWhiteList() Obtain Whether to enable IP authentication allowlist. true: yes, false: no
  * @method void setEnableWhiteList(boolean $EnableWhiteList) Set Whether to enable IP authentication allowlist. true: yes, false: no
  * @method integer getIpWhiteListCount() Obtain Number of IPs in IP allowlist
  * @method void setIpWhiteListCount(integer $IpWhiteListCount) Set Number of IPs in IP allowlist
- * @method string getForwardCosBucket() Obtain COS bucket for data backup: address of the destination COS bucket
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setForwardCosBucket(string $ForwardCosBucket) Set COS bucket for data backup: address of the destination COS bucket
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getForwardCosBucket() Obtain Data backup cos bucket. specifies the bucket address for archiving to cos.
+ * @method void setForwardCosBucket(string $ForwardCosBucket) Set Data backup cos bucket. specifies the bucket address for archiving to cos.
  * @method integer getForwardStatus() Obtain Status of data backup to COS. 1: not enabled, 0: enabled
  * @method void setForwardStatus(integer $ForwardStatus) Set Status of data backup to COS. 1: not enabled, 0: enabled
  * @method integer getForwardInterval() Obtain Frequency of data backup to COS
  * @method void setForwardInterval(integer $ForwardInterval) Set Frequency of data backup to COS
- * @method Config getConfig() Obtain Advanced configuration
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setConfig(Config $Config) Set Advanced configuration
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method TopicRetentionTimeConfigRsp getRetentionTimeConfig() Obtain Message retention time configuration (for recording the latest retention time)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setRetentionTimeConfig(TopicRetentionTimeConfigRsp $RetentionTimeConfig) Set Message retention time configuration (for recording the latest retention time)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain `0`: normal, `1`: deleted, `2`: deleting
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set `0`: normal, `1`: deleted, `2`: deleting
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method Config getConfig() Obtain Advanced configuration.
+ * @method void setConfig(Config $Config) Set Advanced configuration.
+ * @method TopicRetentionTimeConfigRsp getRetentionTimeConfig() Obtain Message retention period configuration (used for dynamic configuration change records).
+ * @method void setRetentionTimeConfig(TopicRetentionTimeConfigRsp $RetentionTimeConfig) Set Message retention period configuration (used for dynamic configuration change records).
+ * @method integer getStatus() Obtain 0: normal. 1: deleted. 2: deleting.
+ * @method void setStatus(integer $Status) Set 0: normal. 1: deleted. 2: deleting.
  * @method array getTags() Obtain Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag list
@@ -71,7 +61,7 @@ class TopicDetail extends AbstractModel
     public $TopicName;
 
     /**
-     * @var string Topic ID
+     * @var string Topic Id.
      */
     public $TopicId;
 
@@ -81,13 +71,12 @@ class TopicDetail extends AbstractModel
     public $PartitionNum;
 
     /**
-     * @var integer Number of replicas
+     * @var integer Number of topic replicas. valid values: 1, 3.
      */
     public $ReplicaNum;
 
     /**
-     * @var string Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Remarks.
      */
     public $Note;
 
@@ -107,8 +96,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $IpWhiteListCount;
 
     /**
-     * @var string COS bucket for data backup: address of the destination COS bucket
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Data backup cos bucket. specifies the bucket address for archiving to cos.
      */
     public $ForwardCosBucket;
 
@@ -123,20 +111,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ForwardInterval;
 
     /**
-     * @var Config Advanced configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var Config Advanced configuration.
      */
     public $Config;
 
     /**
-     * @var TopicRetentionTimeConfigRsp Message retention time configuration (for recording the latest retention time)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var TopicRetentionTimeConfigRsp Message retention period configuration (used for dynamic configuration change records).
      */
     public $RetentionTimeConfig;
 
     /**
-     * @var integer `0`: normal, `1`: deleted, `2`: deleting
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer 0: normal. 1: deleted. 2: deleting.
      */
     public $Status;
 
@@ -148,24 +133,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $TopicName Topic name
-     * @param string $TopicId Topic ID
+     * @param string $TopicId Topic Id.
      * @param integer $PartitionNum Number of partitions
-     * @param integer $ReplicaNum Number of replicas
-     * @param string $Note Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ReplicaNum Number of topic replicas. valid values: 1, 3.
+     * @param string $Note Remarks.
      * @param integer $CreateTime Creation time
      * @param boolean $EnableWhiteList Whether to enable IP authentication allowlist. true: yes, false: no
      * @param integer $IpWhiteListCount Number of IPs in IP allowlist
-     * @param string $ForwardCosBucket COS bucket for data backup: address of the destination COS bucket
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ForwardCosBucket Data backup cos bucket. specifies the bucket address for archiving to cos.
      * @param integer $ForwardStatus Status of data backup to COS. 1: not enabled, 0: enabled
      * @param integer $ForwardInterval Frequency of data backup to COS
-     * @param Config $Config Advanced configuration
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TopicRetentionTimeConfigRsp $RetentionTimeConfig Message retention time configuration (for recording the latest retention time)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $Status `0`: normal, `1`: deleted, `2`: deleting
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param Config $Config Advanced configuration.
+     * @param TopicRetentionTimeConfigRsp $RetentionTimeConfig Message retention period configuration (used for dynamic configuration change records).
+     * @param integer $Status 0: normal. 1: deleted. 2: deleting.
      * @param array $Tags Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
      */

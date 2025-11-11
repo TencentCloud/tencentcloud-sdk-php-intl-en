@@ -20,21 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicDetail request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
  * @method string getSearchWord() Obtain (Filter) filter by `topicName`. Fuzzy search is supported
  * @method void setSearchWord(string $SearchWord) Set (Filter) filter by `topicName`. Fuzzy search is supported
  * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default
  * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default
- * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
- * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
+ * @method integer getLimit() Obtain Number of returned results. default: 20. value must be above 0.
+ * @method void setLimit(integer $Limit) Set Number of returned results. default: 20. value must be above 0.
  * @method string getAclRuleName() Obtain Name of the preset ACL rule.
  * @method void setAclRuleName(string $AclRuleName) Set Name of the preset ACL rule.
+ * @method string getOrderBy() Obtain Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+ * @method void setOrderBy(string $OrderBy) Set Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+ * @method integer getOrderType() Obtain 0 - sequential, 1 - reverse order. default value: 0.
+ * @method void setOrderType(integer $OrderType) Set 0 - sequential, 1 - reverse order. default value: 0.
+ * @method array getFilters() Obtain Currently supports ReplicaNum (number of replicas) filter criteria.
+ * @method void setFilters(array $Filters) Set Currently supports ReplicaNum (number of replicas) filter criteria.
  */
 class DescribeTopicDetailRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
@@ -49,7 +55,7 @@ class DescribeTopicDetailRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
+     * @var integer Number of returned results. default: 20. value must be above 0.
      */
     public $Limit;
 
@@ -59,11 +65,29 @@ class DescribeTopicDetailRequest extends AbstractModel
     public $AclRuleName;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @var string Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+     */
+    public $OrderBy;
+
+    /**
+     * @var integer 0 - sequential, 1 - reverse order. default value: 0.
+     */
+    public $OrderType;
+
+    /**
+     * @var array Currently supports ReplicaNum (number of replicas) filter criteria.
+     */
+    public $Filters;
+
+    /**
+     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      * @param string $SearchWord (Filter) filter by `topicName`. Fuzzy search is supported
      * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default
-     * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
+     * @param integer $Limit Number of returned results. default: 20. value must be above 0.
      * @param string $AclRuleName Name of the preset ACL rule.
+     * @param string $OrderBy Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+     * @param integer $OrderType 0 - sequential, 1 - reverse order. default value: 0.
+     * @param array $Filters Currently supports ReplicaNum (number of replicas) filter criteria.
      */
     function __construct()
     {
@@ -96,6 +120,23 @@ class DescribeTopicDetailRequest extends AbstractModel
 
         if (array_key_exists("AclRuleName",$param) and $param["AclRuleName"] !== null) {
             $this->AclRuleName = $param["AclRuleName"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
+            $this->OrderType = $param["OrderType"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

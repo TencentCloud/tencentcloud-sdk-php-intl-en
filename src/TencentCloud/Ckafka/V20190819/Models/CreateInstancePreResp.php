@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReturnCode(string $ReturnCode) Set Returned code. 0: Normal; other values: Error.
  * @method string getReturnMessage() Obtain The message indicating whether the operation is successful.
  * @method void setReturnMessage(string $ReturnMessage) Set The message indicating whether the operation is successful.
- * @method CreateInstancePreData getData() Obtain Data returned by the operation.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setData(CreateInstancePreData $Data) Set Data returned by the operation.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method CreateInstancePreData getData() Obtain Specifies the Data returned by the operation.
+ * @method void setData(CreateInstancePreData $Data) Set Specifies the Data returned by the operation.
  * @method string getDeleteRouteTimestamp() Obtain Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) Set Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
  */
@@ -44,8 +42,7 @@ class CreateInstancePreResp extends AbstractModel
     public $ReturnMessage;
 
     /**
-     * @var CreateInstancePreData Data returned by the operation.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var CreateInstancePreData Specifies the Data returned by the operation.
      */
     public $Data;
 
@@ -58,8 +55,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     /**
      * @param string $ReturnCode Returned code. 0: Normal; other values: Error.
      * @param string $ReturnMessage The message indicating whether the operation is successful.
-     * @param CreateInstancePreData $Data Data returned by the operation.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param CreateInstancePreData $Data Specifies the Data returned by the operation.
      * @param string $DeleteRouteTimestamp Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

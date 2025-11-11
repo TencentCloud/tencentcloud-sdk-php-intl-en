@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotAfter(integer $NotAfter) Set Task stop timestamp. unix second-level timestamp.
  * @method integer getTries() Obtain Maximum attempts, 1-3 times.
  * @method void setTries(integer $Tries) Set Maximum attempts, 1-3 times.
- * @method array getVariables() Obtain Custom variables (supported only in advanced versions).
- * @method void setVariables(array $Variables) Set Custom variables (supported only in advanced versions).
- * @method string getUUI() Obtain UUI
- * @method void setUUI(string $UUI) Set UUI
+ * @method array getVariables() Obtain Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here.
+ * @method void setVariables(array $Variables) Set Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here.
+ * @method string getUUI() Obtain User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here.
+ * @method void setUUI(string $UUI) Set User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here.
  * @method array getCalleeAttributes() Obtain Property of the called.
  * @method void setCalleeAttributes(array $CalleeAttributes) Set Property of the called.
  * @method string getTimeZone() Obtain IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
@@ -99,12 +99,12 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $Tries;
 
     /**
-     * @var array Custom variables (supported only in advanced versions).
+     * @var array Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here.
      */
     public $Variables;
 
     /**
-     * @var string UUI
+     * @var string User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here.
      */
     public $UUI;
 
@@ -138,8 +138,8 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
      * @param string $Description <Task description>.
      * @param integer $NotAfter Task stop timestamp. unix second-level timestamp.
      * @param integer $Tries Maximum attempts, 1-3 times.
-     * @param array $Variables Custom variables (supported only in advanced versions).
-     * @param string $UUI UUI
+     * @param array $Variables Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here.
+     * @param string $UUI User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here.
      * @param array $CalleeAttributes Property of the called.
      * @param string $TimeZone IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
      * @param array $AvailableTime Available time period.

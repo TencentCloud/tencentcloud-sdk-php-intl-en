@@ -80,6 +80,7 @@ class DescribeInstancesDetailRequest extends AbstractModel
 
     /**
      * @var string This parameter has been deprecated and replaced with `InstanceIdList`.
+     * @deprecated
      */
     public $InstanceIds;
 

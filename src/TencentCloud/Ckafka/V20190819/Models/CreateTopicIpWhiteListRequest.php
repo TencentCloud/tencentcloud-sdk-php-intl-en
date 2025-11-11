@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTopicIpWhiteList request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getTopicName() Obtain Topic name
- * @method void setTopicName(string $TopicName) Set Topic name
- * @method array getIpWhiteList() Obtain IP allowlist list
- * @method void setIpWhiteList(array $IpWhiteList) Set IP allowlist list
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method string getTopicName() Obtain Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
+ * @method void setTopicName(string $TopicName) Set Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
+ * @method array getIpWhiteList() Obtain Allowlist list. maximum value is 512. upper limit for incoming ips is 512.
+ * @method void setIpWhiteList(array $IpWhiteList) Set Allowlist list. maximum value is 512. upper limit for incoming ips is 512.
  */
 class CreateTopicIpWhiteListRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
     /**
-     * @var string Topic name
+     * @var string Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
      */
     public $TopicName;
 
     /**
-     * @var array IP allowlist list
+     * @var array Allowlist list. maximum value is 512. upper limit for incoming ips is 512.
      */
     public $IpWhiteList;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $TopicName Topic name
-     * @param array $IpWhiteList IP allowlist list
+     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param string $TopicName Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
+     * @param array $IpWhiteList Allowlist list. maximum value is 512. upper limit for incoming ips is 512.
      */
     function __construct()
     {

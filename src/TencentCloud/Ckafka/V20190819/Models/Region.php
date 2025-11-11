@@ -26,26 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionName(string $RegionName) Set Region name
  * @method string getAreaName() Obtain Area name
  * @method void setAreaName(string $AreaName) Set Area name
- * @method string getRegionCode() Obtain Region code
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setRegionCode(string $RegionCode) Set Region code
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getRegionCodeV3() Obtain Region code (v3)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setRegionCodeV3(string $RegionCodeV3) Set Region code (v3)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getSupport() Obtain NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setSupport(string $Support) Set NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getIpv6() Obtain Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setIpv6(integer $Ipv6) Set Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getMultiZone() Obtain Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setMultiZone(integer $MultiZone) Set Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method string getRegionCode() Obtain Region code.
+ * @method void setRegionCode(string $RegionCode) Set Region code.
+ * @method string getRegionCodeV3() Obtain Region code (V3 version).
+ * @method void setRegionCodeV3(string $RegionCodeV3) Set Region code (V3 version).
+ * @method string getSupport() Obtain Specifies the default value does not support any special type instance type.
+ * @method void setSupport(string $Support) Set Specifies the default value does not support any special type instance type.
+ * @method integer getIpv6() Obtain Whether ipv6 is supported. 0: indicates no support. 1: indicates support.
+ * @method void setIpv6(integer $Ipv6) Set Whether ipv6 is supported. 0: indicates no support. 1: indicates support.
+ * @method integer getMultiZone() Obtain Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported).
+ * @method void setMultiZone(integer $MultiZone) Set Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported).
  */
 class Region extends AbstractModel
 {
@@ -65,32 +55,27 @@ class Region extends AbstractModel
     public $AreaName;
 
     /**
-     * @var string Region code
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Region code.
      */
     public $RegionCode;
 
     /**
-     * @var string Region code (v3)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Region code (V3 version).
      */
     public $RegionCodeV3;
 
     /**
-     * @var string NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Specifies the default value does not support any special type instance type.
      */
     public $Support;
 
     /**
-     * @var integer Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Whether ipv6 is supported. 0: indicates no support. 1: indicates support.
      */
     public $Ipv6;
 
     /**
-     * @var integer Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported).
      */
     public $MultiZone;
 
@@ -98,16 +83,11 @@ Note: `null` may be returned for this field, indicating that no valid values can
      * @param integer $RegionId Region ID
      * @param string $RegionName Region name
      * @param string $AreaName Area name
-     * @param string $RegionCode Region code
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $RegionCodeV3 Region code (v3)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $Support NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $Ipv6 Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $MultiZone Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param string $RegionCode Region code.
+     * @param string $RegionCodeV3 Region code (V3 version).
+     * @param string $Support Specifies the default value does not support any special type instance type.
+     * @param integer $Ipv6 Whether ipv6 is supported. 0: indicates no support. 1: indicates support.
+     * @param integer $MultiZone Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported).
      */
     function __construct()
     {

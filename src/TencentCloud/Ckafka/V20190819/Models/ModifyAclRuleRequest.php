@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAclRule request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getRuleName() Obtain ACL policy name
- * @method void setRuleName(string $RuleName) Set ACL policy name
- * @method integer getIsApplied() Obtain Whether to be applied to new topics
- * @method void setIsApplied(integer $IsApplied) Set Whether to be applied to new topics
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
+ * @method string getRuleName() Obtain ACL rule name.
+ * @method void setRuleName(string $RuleName) Set ACL rule name.
+ * @method integer getIsApplied() Obtain Specifies whether to apply to newly-added topics when importing predefined rule modifications.
+ * @method void setIsApplied(integer $IsApplied) Set Specifies whether to apply to newly-added topics when importing predefined rule modifications.
  */
 class ModifyAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string The ckafka cluster instance Id.
      */
     public $InstanceId;
 
     /**
-     * @var string ACL policy name
+     * @var string ACL rule name.
      */
     public $RuleName;
 
     /**
-     * @var integer Whether to be applied to new topics
+     * @var integer Specifies whether to apply to newly-added topics when importing predefined rule modifications.
      */
     public $IsApplied;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $RuleName ACL policy name
-     * @param integer $IsApplied Whether to be applied to new topics
+     * @param string $InstanceId The ckafka cluster instance Id.
+     * @param string $RuleName ACL rule name.
+     * @param integer $IsApplied Specifies whether to apply to newly-added topics when importing predefined rule modifications.
      */
     function __construct()
     {

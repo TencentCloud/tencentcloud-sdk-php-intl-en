@@ -20,17 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatahubTopics request structure.
  *
- * @method string getSearchWord() Obtain Keyword for query
- * @method void setSearchWord(string $SearchWord) Set Keyword for query
+ * @method string getSearchWord() Obtain Search term.
+ * @method void setSearchWord(string $SearchWord) Set Search term.
  * @method integer getOffset() Obtain Query offset, which defaults to `0`.
  * @method void setOffset(integer $Offset) Set Query offset, which defaults to `0`.
  * @method integer getLimit() Obtain Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
  * @method void setLimit(integer $Limit) Set Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
+ * @method boolean getQueryFromConnectResource() Obtain Specifies whether to query the topic list from the connection.
+ * @method void setQueryFromConnectResource(boolean $QueryFromConnectResource) Set Specifies whether to query the topic list from the connection.
+ * @method string getConnectResourceId() Obtain Connection ID.
+ * @method void setConnectResourceId(string $ConnectResourceId) Set Connection ID.
+ * @method string getTopicRegularExpression() Obtain topic resource expression.
+ * @method void setTopicRegularExpression(string $TopicRegularExpression) Set topic resource expression.
  */
 class DescribeDatahubTopicsRequest extends AbstractModel
 {
     /**
-     * @var string Keyword for query
+     * @var string Search term.
      */
     public $SearchWord;
 
@@ -45,9 +51,27 @@ class DescribeDatahubTopicsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $SearchWord Keyword for query
+     * @var boolean Specifies whether to query the topic list from the connection.
+     */
+    public $QueryFromConnectResource;
+
+    /**
+     * @var string Connection ID.
+     */
+    public $ConnectResourceId;
+
+    /**
+     * @var string topic resource expression.
+     */
+    public $TopicRegularExpression;
+
+    /**
+     * @param string $SearchWord Search term.
      * @param integer $Offset Query offset, which defaults to `0`.
      * @param integer $Limit Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
+     * @param boolean $QueryFromConnectResource Specifies whether to query the topic list from the connection.
+     * @param string $ConnectResourceId Connection ID.
+     * @param string $TopicRegularExpression topic resource expression.
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class DescribeDatahubTopicsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("QueryFromConnectResource",$param) and $param["QueryFromConnectResource"] !== null) {
+            $this->QueryFromConnectResource = $param["QueryFromConnectResource"];
+        }
+
+        if (array_key_exists("ConnectResourceId",$param) and $param["ConnectResourceId"] !== null) {
+            $this->ConnectResourceId = $param["ConnectResourceId"];
+        }
+
+        if (array_key_exists("TopicRegularExpression",$param) and $param["TopicRegularExpression"] !== null) {
+            $this->TopicRegularExpression = $param["TopicRegularExpression"];
         }
     }
 }

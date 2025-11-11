@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchModifyTopicAttributes request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method array getTopic() Obtain Topic attribute list
- * @method void setTopic(array $Topic) Set Topic attribute list
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method array getTopic() Obtain Specifies the topic attribute list (a maximum of 10 per batch), which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
+ * @method void setTopic(array $Topic) Set Specifies the topic attribute list (a maximum of 10 per batch), which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
  */
 class BatchModifyTopicAttributesRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
     /**
-     * @var array Topic attribute list
+     * @var array Specifies the topic attribute list (a maximum of 10 per batch), which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
      */
     public $Topic;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param array $Topic Topic attribute list
+     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param array $Topic Specifies the topic attribute list (a maximum of 10 per batch), which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
      */
     function __construct()
     {

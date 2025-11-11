@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getVersion() Obtain Assignment version information
  * @method void setVersion(integer $Version) Set Assignment version information
- * @method array getTopics() Obtain Topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTopics(array $Topics) Set Topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTopics() Obtain topic information list.
+ * @method void setTopics(array $Topics) Set topic information list.
  */
 class Assignment extends AbstractModel
 {
@@ -35,15 +33,13 @@ class Assignment extends AbstractModel
     public $Version;
 
     /**
-     * @var array Topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array topic information list.
      */
     public $Topics;
 
     /**
      * @param integer $Version Assignment version information
-     * @param array $Topics Topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Topics topic information list.
      */
     function __construct()
     {

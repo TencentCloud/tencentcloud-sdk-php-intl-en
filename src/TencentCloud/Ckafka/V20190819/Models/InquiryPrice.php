@@ -20,46 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Response parameters for instance price query
  *
- * @method float getUnitPrice() Obtain Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUnitPrice(float $UnitPrice) Set Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getUnitPriceDiscount() Obtain Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUnitPriceDiscount(float $UnitPriceDiscount) Set Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getOriginalPrice() Obtain Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginalPrice(float $OriginalPrice) Set Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getDiscountPrice() Obtain Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiscountPrice(float $DiscountPrice) Set Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getDiscount() Obtain Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiscount(float $Discount) Set Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getGoodsNum() Obtain Number of purchased items
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGoodsNum(integer $GoodsNum) Set Number of purchased items
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCurrency() Obtain Currency for payment
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCurrency(string $Currency) Set Currency for payment
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getUnitPrice() Obtain Original price unit.
+ * @method void setUnitPrice(float $UnitPrice) Set Original price unit.
+ * @method float getUnitPriceDiscount() Obtain Discount unit price.
+ * @method void setUnitPriceDiscount(float $UnitPriceDiscount) Set Discount unit price.
+ * @method float getOriginalPrice() Obtain Total original price.
+ * @method void setOriginalPrice(float $OriginalPrice) Set Total original price.
+ * @method float getDiscountPrice() Obtain Total discount price.
+ * @method void setDiscountPrice(float $DiscountPrice) Set Total discount price.
+ * @method float getDiscount() Obtain Discount (unit: %).
+ * @method void setDiscount(float $Discount) Set Discount (unit: %).
+ * @method integer getGoodsNum() Obtain Number of products
+ * @method void setGoodsNum(integer $GoodsNum) Set Number of products
+ * @method string getCurrency() Obtain Specifies the payment currency.
+ * @method void setCurrency(string $Currency) Set Specifies the payment currency.
  * @method string getDiskType() Obtain Dedicated disk response parameter
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDiskType(string $DiskType) Set Dedicated disk response parameter
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTimeSpan() Obtain Validity period
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTimeSpan(integer $TimeSpan) Set Validity period
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTimeUnit() Obtain Unit of the validity period (`m`: Month; `h`: Hour)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTimeUnit(string $TimeUnit) Set Unit of the validity period (`m`: Month; `h`: Hour)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTimeSpan() Obtain Purchase duration.
+ * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration.
+ * @method string getTimeUnit() Obtain Specifies the purchase duration unit ("m" for monthly, "h" for hourly).
+ * @method void setTimeUnit(string $TimeUnit) Set Specifies the purchase duration unit ("m" for monthly, "h" for hourly).
  * @method integer getValue() Obtain Purchase quantity
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setValue(integer $Value) Set Purchase quantity
@@ -72,44 +54,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class InquiryPrice extends AbstractModel
 {
     /**
-     * @var float Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Original price unit.
      */
     public $UnitPrice;
 
     /**
-     * @var float Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Discount unit price.
      */
     public $UnitPriceDiscount;
 
     /**
-     * @var float Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Total original price.
      */
     public $OriginalPrice;
 
     /**
-     * @var float Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Total discount price.
      */
     public $DiscountPrice;
 
     /**
-     * @var float Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Discount (unit: %).
      */
     public $Discount;
 
     /**
-     * @var integer Number of purchased items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of products
      */
     public $GoodsNum;
 
     /**
-     * @var string Currency for payment
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the payment currency.
      */
     public $Currency;
 
@@ -120,14 +95,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DiskType;
 
     /**
-     * @var integer Validity period
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Purchase duration.
      */
     public $TimeSpan;
 
     /**
-     * @var string Unit of the validity period (`m`: Month; `h`: Hour)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the purchase duration unit ("m" for monthly, "h" for hourly).
      */
     public $TimeUnit;
 
@@ -144,26 +117,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DetailPrices;
 
     /**
-     * @param float $UnitPrice Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $UnitPriceDiscount Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $OriginalPrice Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $DiscountPrice Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Discount Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $GoodsNum Number of purchased items
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Currency Currency for payment
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $UnitPrice Original price unit.
+     * @param float $UnitPriceDiscount Discount unit price.
+     * @param float $OriginalPrice Total original price.
+     * @param float $DiscountPrice Total discount price.
+     * @param float $Discount Discount (unit: %).
+     * @param integer $GoodsNum Number of products
+     * @param string $Currency Specifies the payment currency.
      * @param string $DiskType Dedicated disk response parameter
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TimeSpan Validity period
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TimeUnit Unit of the validity period (`m`: Month; `h`: Hour)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TimeSpan Purchase duration.
+     * @param string $TimeUnit Specifies the purchase duration unit ("m" for monthly, "h" for hourly).
      * @param integer $Value Purchase quantity
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param InquiryDetailPrice $DetailPrices Prices of different purchased items

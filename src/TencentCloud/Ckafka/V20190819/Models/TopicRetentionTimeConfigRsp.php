@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information returned for topic message retention time configuration
  *
- * @method integer getExpect() Obtain Expected value, i.e., the topic message retention time (min) configured
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setExpect(integer $Expect) Set Expected value, i.e., the topic message retention time (min) configured
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getCurrent() Obtain Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setCurrent(integer $Current) Set Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getModTimeStamp() Obtain Last modified time
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setModTimeStamp(integer $ModTimeStamp) Set Last modified time
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method integer getExpect() Obtain Expected value, the message retention period (in minutes) set by user configuration.
+ * @method void setExpect(integer $Expect) Set Expected value, the message retention period (in minutes) set by user configuration.
+ * @method integer getCurrent() Obtain Current value, which is the current effective value (may contain dynamic adjustment in minutes).
+ * @method void setCurrent(integer $Current) Set Current value, which is the current effective value (may contain dynamic adjustment in minutes).
+ * @method integer getModTimeStamp() Obtain Last modified time.
+ * @method void setModTimeStamp(integer $ModTimeStamp) Set Last modified time.
  */
 class TopicRetentionTimeConfigRsp extends AbstractModel
 {
     /**
-     * @var integer Expected value, i.e., the topic message retention time (min) configured
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Expected value, the message retention period (in minutes) set by user configuration.
      */
     public $Expect;
 
     /**
-     * @var integer Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Current value, which is the current effective value (may contain dynamic adjustment in minutes).
      */
     public $Current;
 
     /**
-     * @var integer Last modified time
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Last modified time.
      */
     public $ModTimeStamp;
 
     /**
-     * @param integer $Expect Expected value, i.e., the topic message retention time (min) configured
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $Current Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $ModTimeStamp Last modified time
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param integer $Expect Expected value, the message retention period (in minutes) set by user configuration.
+     * @param integer $Current Current value, which is the current effective value (may contain dynamic adjustment in minutes).
+     * @param integer $ModTimeStamp Last modified time.
      */
     function __construct()
     {

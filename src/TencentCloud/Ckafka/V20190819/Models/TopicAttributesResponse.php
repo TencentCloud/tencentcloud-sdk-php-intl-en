@@ -22,12 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() Obtain Topic ID
  * @method void setTopicId(string $TopicId) Set Topic ID
- * @method integer getCreateTime() Obtain Creation time
- * @method void setCreateTime(integer $CreateTime) Set Creation time
- * @method string getNote() Obtain Topic remarks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setNote(string $Note) Set Topic remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getCreateTime() Obtain Specifies the unix second-level timestamp of the creation time.
+ * @method void setCreateTime(integer $CreateTime) Set Specifies the unix second-level timestamp of the creation time.
+ * @method string getNote() Obtain Describes the topic remark.
+ * @method void setNote(string $Note) Set Describes the topic remark.
  * @method integer getPartitionNum() Obtain Number of partitions
  * @method void setPartitionNum(integer $PartitionNum) Set Number of partitions
  * @method integer getEnableWhiteList() Obtain IP allowlist switch. 1: enabled, 0: disabled
@@ -38,22 +36,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setConfig(Config $Config) Set Topic configuration array
  * @method array getPartitions() Obtain Partition details
  * @method void setPartitions(array $Partitions) Set Partition details
- * @method integer getEnableAclRule() Obtain Switch of the preset ACL rule. `1`: enable, `0`: disable.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setEnableAclRule(integer $EnableAclRule) Set Switch of the preset ACL rule. `1`: enable, `0`: disable.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method array getAclRuleList() Obtain Preset ACL rule list.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setAclRuleList(array $AclRuleList) Set Preset ACL rule list.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method InstanceQuotaConfigResp getQuotaConfig() Obtain Traffic throttling policy in topic dimension.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setQuotaConfig(InstanceQuotaConfigResp $QuotaConfig) Set Traffic throttling policy in topic dimension.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getEnableAclRule() Obtain ACL preset policy switch. valid values: 1 (on); 0 (off).
+ * @method void setEnableAclRule(integer $EnableAclRule) Set ACL preset policy switch. valid values: 1 (on); 0 (off).
+ * @method array getAclRuleList() Obtain Preset policy list.
+ * @method void setAclRuleList(array $AclRuleList) Set Preset policy list.
+ * @method InstanceQuotaConfigResp getQuotaConfig() Obtain topic throttling policy.
+ * @method void setQuotaConfig(InstanceQuotaConfigResp $QuotaConfig) Set topic throttling policy.
  * @method integer getReplicaNum() Obtain Number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReplicaNum(integer $ReplicaNum) Set Number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TopicAttributesResponse extends AbstractModel
 {
@@ -63,13 +53,12 @@ class TopicAttributesResponse extends AbstractModel
     public $TopicId;
 
     /**
-     * @var integer Creation time
+     * @var integer Specifies the unix second-level timestamp of the creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Topic remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Describes the topic remark.
      */
     public $Note;
 
@@ -99,47 +88,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Partitions;
 
     /**
-     * @var integer Switch of the preset ACL rule. `1`: enable, `0`: disable.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer ACL preset policy switch. valid values: 1 (on); 0 (off).
      */
     public $EnableAclRule;
 
     /**
-     * @var array Preset ACL rule list.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var array Preset policy list.
      */
     public $AclRuleList;
 
     /**
-     * @var InstanceQuotaConfigResp Traffic throttling policy in topic dimension.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var InstanceQuotaConfigResp topic throttling policy.
      */
     public $QuotaConfig;
 
     /**
      * @var integer Number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReplicaNum;
 
     /**
      * @param string $TopicId Topic ID
-     * @param integer $CreateTime Creation time
-     * @param string $Note Topic remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $CreateTime Specifies the unix second-level timestamp of the creation time.
+     * @param string $Note Describes the topic remark.
      * @param integer $PartitionNum Number of partitions
      * @param integer $EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled
      * @param array $IpWhiteList IP allowlist list
      * @param Config $Config Topic configuration array
      * @param array $Partitions Partition details
-     * @param integer $EnableAclRule Switch of the preset ACL rule. `1`: enable, `0`: disable.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param array $AclRuleList Preset ACL rule list.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param InstanceQuotaConfigResp $QuotaConfig Traffic throttling policy in topic dimension.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $EnableAclRule ACL preset policy switch. valid values: 1 (on); 0 (off).
+     * @param array $AclRuleList Preset policy list.
+     * @param InstanceQuotaConfigResp $QuotaConfig topic throttling policy.
      * @param integer $ReplicaNum Number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

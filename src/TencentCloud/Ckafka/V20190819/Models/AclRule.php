@@ -21,165 +21,113 @@ use TencentCloud\Common\AbstractModel;
  * Output parameters of ACL rule list APIs
  *
  * @method string getRuleName() Obtain ACL rule name.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setRuleName(string $RuleName) Set ACL rule name.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Instance ID.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getPatternType() Obtain Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setPatternType(string $PatternType) Set Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getPattern() Obtain Prefix value for prefix match.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setPattern(string $Pattern) Set Prefix value for prefix match.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getResourceType() Obtain ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setResourceType(string $ResourceType) Set ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getAclList() Obtain ACL information contained in the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setAclList(string $AclList) Set ACL information contained in the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getCreateTimeStamp() Obtain Creation time of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setCreateTimeStamp(string $CreateTimeStamp) Set Creation time of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getIsApplied() Obtain A parameter used to specify whether the preset ACL rule is applied to new topics.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setIsApplied(integer $IsApplied) Set A parameter used to specify whether the preset ACL rule is applied to new topics.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
+ * @method string getPatternType() Obtain ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED.
+ * @method void setPatternType(string $PatternType) Set ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED.
+ * @method string getPattern() Obtain Indicates the prefix value for prefix match.
+ * @method void setPattern(string $Pattern) Set Indicates the prefix value for prefix match.
+ * @method string getResourceType() Obtain Acl resource type, currently only support Topic. valid values: Topic.
+ * @method void setResourceType(string $ResourceType) Set Acl resource type, currently only support Topic. valid values: Topic.
+ * @method string getAclList() Obtain Specifies the ACL information contained in the rule.
+ * @method void setAclList(string $AclList) Set Specifies the ACL information contained in the rule.
+ * @method string getCreateTimeStamp() Obtain Specifies the time when the rule was created.
+ * @method void setCreateTimeStamp(string $CreateTimeStamp) Set Specifies the time when the rule was created.
+ * @method integer getIsApplied() Obtain Specifies whether to apply the preset ACL rule to newly-added topics.
+ * @method void setIsApplied(integer $IsApplied) Set Specifies whether to apply the preset ACL rule to newly-added topics.
  * @method string getUpdateTimeStamp() Obtain Rule update time.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setUpdateTimeStamp(string $UpdateTimeStamp) Set Rule update time.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getComment() Obtain Remarks of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setComment(string $Comment) Set Remarks of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getTopicName() Obtain One of the corresponding topic names that is displayed.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setTopicName(string $TopicName) Set One of the corresponding topic names that is displayed.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getTopicCount() Obtain The number of topics that apply this ACL rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setTopicCount(integer $TopicCount) Set The number of topics that apply this ACL rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getPatternTypeTitle() Obtain Name of rule type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setPatternTypeTitle(string $PatternTypeTitle) Set Name of rule type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getComment() Obtain Specifies the remark of the rule.
+ * @method void setComment(string $Comment) Set Specifies the remark of the rule.
+ * @method string getTopicName() Obtain One of the displayed corresponding TopicName.
+ * @method void setTopicName(string $TopicName) Set One of the displayed corresponding TopicName.
+ * @method integer getTopicCount() Obtain Number of topics to which the ACL rule is applied.
+ * @method void setTopicCount(integer $TopicCount) Set Number of topics to which the ACL rule is applied.
+ * @method string getPatternTypeTitle() Obtain Specifies the pattern type.
+ * @method void setPatternTypeTitle(string $PatternTypeTitle) Set Specifies the pattern type.
  */
 class AclRule extends AbstractModel
 {
     /**
      * @var string ACL rule name.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public $RuleName;
 
     /**
-     * @var string Instance ID.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string The ckafka cluster instance Id.
      */
     public $InstanceId;
 
     /**
-     * @var string Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED.
      */
     public $PatternType;
 
     /**
-     * @var string Prefix value for prefix match.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Indicates the prefix value for prefix match.
      */
     public $Pattern;
 
     /**
-     * @var string ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Acl resource type, currently only support Topic. valid values: Topic.
      */
     public $ResourceType;
 
     /**
-     * @var string ACL information contained in the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Specifies the ACL information contained in the rule.
      */
     public $AclList;
 
     /**
-     * @var string Creation time of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Specifies the time when the rule was created.
      */
     public $CreateTimeStamp;
 
     /**
-     * @var integer A parameter used to specify whether the preset ACL rule is applied to new topics.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Specifies whether to apply the preset ACL rule to newly-added topics.
      */
     public $IsApplied;
 
     /**
      * @var string Rule update time.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public $UpdateTimeStamp;
 
     /**
-     * @var string Remarks of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Specifies the remark of the rule.
      */
     public $Comment;
 
     /**
-     * @var string One of the corresponding topic names that is displayed.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string One of the displayed corresponding TopicName.
      */
     public $TopicName;
 
     /**
-     * @var integer The number of topics that apply this ACL rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Number of topics to which the ACL rule is applied.
      */
     public $TopicCount;
 
     /**
-     * @var string Name of rule type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Specifies the pattern type.
      */
     public $PatternTypeTitle;
 
     /**
      * @param string $RuleName ACL rule name.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $InstanceId Instance ID.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $PatternType Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $Pattern Prefix value for prefix match.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $ResourceType ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $AclList ACL information contained in the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $CreateTimeStamp Creation time of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $IsApplied A parameter used to specify whether the preset ACL rule is applied to new topics.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param string $InstanceId The ckafka cluster instance Id.
+     * @param string $PatternType ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED.
+     * @param string $Pattern Indicates the prefix value for prefix match.
+     * @param string $ResourceType Acl resource type, currently only support Topic. valid values: Topic.
+     * @param string $AclList Specifies the ACL information contained in the rule.
+     * @param string $CreateTimeStamp Specifies the time when the rule was created.
+     * @param integer $IsApplied Specifies whether to apply the preset ACL rule to newly-added topics.
      * @param string $UpdateTimeStamp Rule update time.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $Comment Remarks of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $TopicName One of the corresponding topic names that is displayed.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $TopicCount The number of topics that apply this ACL rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $PatternTypeTitle Name of rule type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Comment Specifies the remark of the rule.
+     * @param string $TopicName One of the displayed corresponding TopicName.
+     * @param integer $TopicCount Number of topics to which the ACL rule is applied.
+     * @param string $PatternTypeTitle Specifies the pattern type.
      */
     function __construct()
     {

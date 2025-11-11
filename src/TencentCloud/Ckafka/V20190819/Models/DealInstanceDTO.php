@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Mapping between orders and CKafka instances for monthly subscribed and pay-as-you-go instance APIs.
  *
- * @method string getDealName() Obtain Order list.  Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDealName(string $DealName) Set Order list.  Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getInstanceIdList() Obtain ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceIdList(array $InstanceIdList) Set ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDealName() Obtain Order transaction.
+ * @method void setDealName(string $DealName) Set Order transaction.
+ * @method array getInstanceIdList() Obtain Order transaction corresponds to the list of purchased CKafka instance ids.
+ * @method void setInstanceIdList(array $InstanceIdList) Set Order transaction corresponds to the list of purchased CKafka instance ids.
  */
 class DealInstanceDTO extends AbstractModel
 {
     /**
-     * @var string Order list.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Order transaction.
      */
     public $DealName;
 
     /**
-     * @var array ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Order transaction corresponds to the list of purchased CKafka instance ids.
      */
     public $InstanceIdList;
 
     /**
-     * @param string $DealName Order list.  Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $InstanceIdList ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DealName Order transaction.
+     * @param array $InstanceIdList Order transaction corresponds to the list of purchased CKafka instance ids.
      */
     function __construct()
     {

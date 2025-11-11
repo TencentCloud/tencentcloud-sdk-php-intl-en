@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRouteTriggerTime request structure.
  *
- * @method string getDelayTime() Obtain Modification time.
- * @method void setDelayTime(string $DelayTime) Set Modification time.
+ * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+ * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+ * @method string getDelayTime() Obtain Modifies the scheduled time for deleting routes.
+ * @method void setDelayTime(string $DelayTime) Set Modifies the scheduled time for deleting routes.
  */
 class DeleteRouteTriggerTimeRequest extends AbstractModel
 {
     /**
-     * @var string Modification time.
+     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     */
+    public $InstanceId;
+
+    /**
+     * @var string Modifies the scheduled time for deleting routes.
      */
     public $DelayTime;
 
     /**
-     * @param string $DelayTime Modification time.
+     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @param string $DelayTime Modifies the scheduled time for deleting routes.
      */
     function __construct()
     {
@@ -46,6 +54,10 @@ class DeleteRouteTriggerTimeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("DelayTime",$param) and $param["DelayTime"] !== null) {
             $this->DelayTime = $param["DelayTime"];
         }

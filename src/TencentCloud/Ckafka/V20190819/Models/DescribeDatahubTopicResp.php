@@ -28,22 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) Set Topic ID
  * @method integer getPartitionNum() Obtain The number of partitions
  * @method void setPartitionNum(integer $PartitionNum) Set The number of partitions
- * @method integer getRetentionMs() Obtain Expiration time
- * @method void setRetentionMs(integer $RetentionMs) Set Expiration time
- * @method string getNote() Obtain Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNote(string $Note) Set Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRetentionMs() Obtain Expiration time in milliseconds.
+ * @method void setRetentionMs(integer $RetentionMs) Set Expiration time in milliseconds.
+ * @method string getNote() Obtain Remarks.
+ * @method void setNote(string $Note) Set Remarks.
  * @method string getUserName() Obtain Username
  * @method void setUserName(string $UserName) Set Username
  * @method string getPassword() Obtain Password
  * @method void setPassword(string $Password) Set Password
  * @method integer getStatus() Obtain Status (`1`: In use; `2`: Deleting)
  * @method void setStatus(integer $Status) Set Status (`1`: In use; `2`: Deleting)
- * @method string getAddress() Obtain Service routing address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddress(string $Address) Set Service routing address
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAddress() Obtain Specifies the service routing address.
+ * @method void setAddress(string $Address) Set Specifies the service routing address.
  */
 class DescribeDatahubTopicResp extends AbstractModel
 {
@@ -68,13 +64,12 @@ class DescribeDatahubTopicResp extends AbstractModel
     public $PartitionNum;
 
     /**
-     * @var integer Expiration time
+     * @var integer Expiration time in milliseconds.
      */
     public $RetentionMs;
 
     /**
-     * @var string Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Remarks.
      */
     public $Note;
 
@@ -94,8 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Status;
 
     /**
-     * @var string Service routing address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the service routing address.
      */
     public $Address;
 
@@ -104,14 +98,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $TopicName Topic name
      * @param string $TopicId Topic ID
      * @param integer $PartitionNum The number of partitions
-     * @param integer $RetentionMs Expiration time
-     * @param string $Note Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RetentionMs Expiration time in milliseconds.
+     * @param string $Note Remarks.
      * @param string $UserName Username
      * @param string $Password Password
      * @param integer $Status Status (`1`: In use; `2`: Deleting)
-     * @param string $Address Service routing address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Address Specifies the service routing address.
      */
     function __construct()
     {

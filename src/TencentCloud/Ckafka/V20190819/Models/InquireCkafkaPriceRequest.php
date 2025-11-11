@@ -20,37 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquireCkafkaPrice request structure.
  *
- * @method string getInstanceType() Obtain `standard`: Standard Edition; `profession`: Pro Edition
- * @method void setInstanceType(string $InstanceType) Set `standard`: Standard Edition; `profession`: Pro Edition
+ * @method string getInstanceType() Obtain Chinese site standard version fill in standards2 international site standard version fill in standard pro edition fill in profession advanced edition fill in premium.
+ * @method void setInstanceType(string $InstanceType) Set Chinese site standard version fill in standards2 international site standard version fill in standard pro edition fill in profession advanced edition fill in premium.
  * @method InstanceChargeParam getInstanceChargeParam() Obtain Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
  * @method void setInstanceChargeParam(InstanceChargeParam $InstanceChargeParam) Set Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
  * @method integer getInstanceNum() Obtain The number of instances to be purchased or renewed. If this parameter is left empty, the default value is `1`.
  * @method void setInstanceNum(integer $InstanceNum) Set The number of instances to be purchased or renewed. If this parameter is left empty, the default value is `1`.
- * @method integer getBandwidth() Obtain Private network bandwidth in MB/sec, which is required when you purchase an instance.
- * @method void setBandwidth(integer $Bandwidth) Set Private network bandwidth in MB/sec, which is required when you purchase an instance.
- * @method InquiryDiskParam getInquiryDiskParam() Obtain Disk type and size, which is required when you purchase an instance.
- * @method void setInquiryDiskParam(InquiryDiskParam $InquiryDiskParam) Set Disk type and size, which is required when you purchase an instance.
+ * @method integer getBandwidth() Obtain Specifies the internal network bandwidth size of the instance, in MB/s (required when purchased; bandwidth information is required for pro edition/advanced edition inquiries).
+ * @method void setBandwidth(integer $Bandwidth) Set Specifies the internal network bandwidth size of the instance, in MB/s (required when purchased; bandwidth information is required for pro edition/advanced edition inquiries).
+ * @method InquiryDiskParam getInquiryDiskParam() Obtain Specifies the purchase type and size of the hard disk of the instance. required when purchased. disk information is required for pro edition or advanced edition inquiries.
+
+ * @method void setInquiryDiskParam(InquiryDiskParam $InquiryDiskParam) Set Specifies the purchase type and size of the hard disk of the instance. required when purchased. disk information is required for pro edition or advanced edition inquiries.
+
  * @method integer getMessageRetention() Obtain Message retention period in hours, which is required when you purchase an instance.
  * @method void setMessageRetention(integer $MessageRetention) Set Message retention period in hours, which is required when you purchase an instance.
  * @method integer getTopic() Obtain The number of instance topics to be purchased, which is required when you purchase an instance.
  * @method void setTopic(integer $Topic) Set The number of instance topics to be purchased, which is required when you purchase an instance.
- * @method integer getPartition() Obtain The number of instance partitions to be purchased, which is required when you purchase an instance.
- * @method void setPartition(integer $Partition) Set The number of instance partitions to be purchased, which is required when you purchase an instance.
+ * @method integer getPartition() Obtain Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
+Partition upper limit. maximum value of 40000. step length of 100.
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+
+ * @method void setPartition(integer $Partition) Set Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
+Partition upper limit. maximum value of 40000. step length of 100.
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+
  * @method array getZoneIds() Obtain The region for instance purchase, which can be obtained via the `DescribeCkafkaZone` API.
  * @method void setZoneIds(array $ZoneIds) Set The region for instance purchase, which can be obtained via the `DescribeCkafkaZone` API.
  * @method string getCategoryAction() Obtain Operation type flag. `purchase`: Making new purchases; `renew`: Renewing an instance. The default value is `purchase` if this parameter is left empty.
  * @method void setCategoryAction(string $CategoryAction) Set Operation type flag. `purchase`: Making new purchases; `renew`: Renewing an instance. The default value is `purchase` if this parameter is left empty.
  * @method string getBillType() Obtain This field is not required.
  * @method void setBillType(string $BillType) Set This field is not required.
- * @method InquiryPublicNetworkParam getPublicNetworkParam() Obtain Billing mode for public network bandwidth, which is required when you purchase public network bandwidth. Currently, public network bandwidth is only supported for Pro Edition.
- * @method void setPublicNetworkParam(InquiryPublicNetworkParam $PublicNetworkParam) Set Billing mode for public network bandwidth, which is required when you purchase public network bandwidth. Currently, public network bandwidth is only supported for Pro Edition.
+ * @method InquiryPublicNetworkParam getPublicNetworkParam() Obtain Public network bandwidth billing mode. currently only the pro edition supports public network bandwidth. required when purchasing public network bandwidth. value must be a multiple of 3.
+ * @method void setPublicNetworkParam(InquiryPublicNetworkParam $PublicNetworkParam) Set Public network bandwidth billing mode. currently only the pro edition supports public network bandwidth. required when purchasing public network bandwidth. value must be a multiple of 3.
  * @method string getInstanceId() Obtain ID of the instance to be renewed, which is required when you renew an instance.
  * @method void setInstanceId(string $InstanceId) Set ID of the instance to be renewed, which is required when you renew an instance.
  */
 class InquireCkafkaPriceRequest extends AbstractModel
 {
     /**
-     * @var string `standard`: Standard Edition; `profession`: Pro Edition
+     * @var string Chinese site standard version fill in standards2 international site standard version fill in standard pro edition fill in profession advanced edition fill in premium.
      */
     public $InstanceType;
 
@@ -65,12 +73,13 @@ class InquireCkafkaPriceRequest extends AbstractModel
     public $InstanceNum;
 
     /**
-     * @var integer Private network bandwidth in MB/sec, which is required when you purchase an instance.
+     * @var integer Specifies the internal network bandwidth size of the instance, in MB/s (required when purchased; bandwidth information is required for pro edition/advanced edition inquiries).
      */
     public $Bandwidth;
 
     /**
-     * @var InquiryDiskParam Disk type and size, which is required when you purchase an instance.
+     * @var InquiryDiskParam Specifies the purchase type and size of the hard disk of the instance. required when purchased. disk information is required for pro edition or advanced edition inquiries.
+
      */
     public $InquiryDiskParam;
 
@@ -85,7 +94,10 @@ class InquireCkafkaPriceRequest extends AbstractModel
     public $Topic;
 
     /**
-     * @var integer The number of instance partitions to be purchased, which is required when you purchase an instance.
+     * @var integer Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
+Partition upper limit. maximum value of 40000. step length of 100.
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+
      */
     public $Partition;
 
@@ -105,7 +117,7 @@ class InquireCkafkaPriceRequest extends AbstractModel
     public $BillType;
 
     /**
-     * @var InquiryPublicNetworkParam Billing mode for public network bandwidth, which is required when you purchase public network bandwidth. Currently, public network bandwidth is only supported for Pro Edition.
+     * @var InquiryPublicNetworkParam Public network bandwidth billing mode. currently only the pro edition supports public network bandwidth. required when purchasing public network bandwidth. value must be a multiple of 3.
      */
     public $PublicNetworkParam;
 
@@ -115,18 +127,22 @@ class InquireCkafkaPriceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param string $InstanceType `standard`: Standard Edition; `profession`: Pro Edition
+     * @param string $InstanceType Chinese site standard version fill in standards2 international site standard version fill in standard pro edition fill in profession advanced edition fill in premium.
      * @param InstanceChargeParam $InstanceChargeParam Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
      * @param integer $InstanceNum The number of instances to be purchased or renewed. If this parameter is left empty, the default value is `1`.
-     * @param integer $Bandwidth Private network bandwidth in MB/sec, which is required when you purchase an instance.
-     * @param InquiryDiskParam $InquiryDiskParam Disk type and size, which is required when you purchase an instance.
+     * @param integer $Bandwidth Specifies the internal network bandwidth size of the instance, in MB/s (required when purchased; bandwidth information is required for pro edition/advanced edition inquiries).
+     * @param InquiryDiskParam $InquiryDiskParam Specifies the purchase type and size of the hard disk of the instance. required when purchased. disk information is required for pro edition or advanced edition inquiries.
+
      * @param integer $MessageRetention Message retention period in hours, which is required when you purchase an instance.
      * @param integer $Topic The number of instance topics to be purchased, which is required when you purchase an instance.
-     * @param integer $Partition The number of instance partitions to be purchased, which is required when you purchase an instance.
+     * @param integer $Partition Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
+Partition upper limit. maximum value of 40000. step length of 100.
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+
      * @param array $ZoneIds The region for instance purchase, which can be obtained via the `DescribeCkafkaZone` API.
      * @param string $CategoryAction Operation type flag. `purchase`: Making new purchases; `renew`: Renewing an instance. The default value is `purchase` if this parameter is left empty.
      * @param string $BillType This field is not required.
-     * @param InquiryPublicNetworkParam $PublicNetworkParam Billing mode for public network bandwidth, which is required when you purchase public network bandwidth. Currently, public network bandwidth is only supported for Pro Edition.
+     * @param InquiryPublicNetworkParam $PublicNetworkParam Public network bandwidth billing mode. currently only the pro edition supports public network bandwidth. required when purchasing public network bandwidth. value must be a multiple of 3.
      * @param string $InstanceId ID of the instance to be renewed, which is required when you renew an instance.
      */
     function __construct()

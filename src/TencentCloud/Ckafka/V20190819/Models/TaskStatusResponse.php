@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStatus() Obtain Task status. `0` (Successful), `1` (Failed), `2` ( Running)
  * @method void setStatus(integer $Status) Set Task status. `0` (Successful), `1` (Failed), `2` ( Running)
- * @method string getOutput() Obtain Output information Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(string $Output) Set Output information Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOutput() Obtain Output information.
+ * @method void setOutput(string $Output) Set Output information.
  */
 class TaskStatusResponse extends AbstractModel
 {
@@ -33,13 +33,13 @@ class TaskStatusResponse extends AbstractModel
     public $Status;
 
     /**
-     * @var string Output information Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Output information.
      */
     public $Output;
 
     /**
      * @param integer $Status Task status. `0` (Successful), `1` (Failed), `2` ( Running)
-     * @param string $Output Output information Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Output Output information.
      */
     function __construct()
     {

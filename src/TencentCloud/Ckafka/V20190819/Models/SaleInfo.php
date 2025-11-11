@@ -18,60 +18,44 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Sales information of Standard Edition
+ * Sales information of versions.
  *
- * @method boolean getFlag() Obtain Manually set flag.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setFlag(boolean $Flag) Set Manually set flag.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getVersion() Obtain CKafka version (v1.1.1/2.4.2/0.10.2）
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setVersion(string $Version) Set CKafka version (v1.1.1/2.4.2/0.10.2）
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getPlatform() Obtain Whether it is Pro Edition or Standard Edition.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setPlatform(string $Platform) Set Whether it is Pro Edition or Standard Edition.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getSoldOut() Obtain Whether it has been sold out. `true`: sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSoldOut(boolean $SoldOut) Set Whether it has been sold out. `true`: sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getFlag() Obtain The manually configured flag. valid values: true (sold-out), false (available).
+ * @method void setFlag(boolean $Flag) Set The manually configured flag. valid values: true (sold-out), false (available).
+ * @method string getVersion() Obtain Specifies the ckafka version number (1.1.1/2.4.2/0.10.2).
+ * @method void setVersion(string $Version) Set Specifies the ckafka version number (1.1.1/2.4.2/0.10.2).
+ * @method string getPlatform() Obtain Pro edition, standard version flag.
+ * @method void setPlatform(string $Platform) Set Pro edition, standard version flag.
+ * @method boolean getSoldOut() Obtain Specifies whether the item is sold-out. valid values: true (sold-out).
+ * @method void setSoldOut(boolean $SoldOut) Set Specifies whether the item is sold-out. valid values: true (sold-out).
  */
 class SaleInfo extends AbstractModel
 {
     /**
-     * @var boolean Manually set flag.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var boolean The manually configured flag. valid values: true (sold-out), false (available).
      */
     public $Flag;
 
     /**
-     * @var string CKafka version (v1.1.1/2.4.2/0.10.2）
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Specifies the ckafka version number (1.1.1/2.4.2/0.10.2).
      */
     public $Version;
 
     /**
-     * @var string Whether it is Pro Edition or Standard Edition.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Pro edition, standard version flag.
      */
     public $Platform;
 
     /**
-     * @var boolean Whether it has been sold out. `true`: sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var boolean Specifies whether the item is sold-out. valid values: true (sold-out).
      */
     public $SoldOut;
 
     /**
-     * @param boolean $Flag Manually set flag.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Version CKafka version (v1.1.1/2.4.2/0.10.2）
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Platform Whether it is Pro Edition or Standard Edition.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $SoldOut Whether it has been sold out. `true`: sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $Flag The manually configured flag. valid values: true (sold-out), false (available).
+     * @param string $Version Specifies the ckafka version number (1.1.1/2.4.2/0.10.2).
+     * @param string $Platform Pro edition, standard version flag.
+     * @param boolean $SoldOut Specifies whether the item is sold-out. valid values: true (sold-out).
      */
     function __construct()
     {

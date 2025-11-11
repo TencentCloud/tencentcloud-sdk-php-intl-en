@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Aggregated returned result of instance status
  *
- * @method array getInstanceList() Obtain List of eligible instances
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceList(array $InstanceList) Set List of eligible instances
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getTotalCount() Obtain Total number of eligible results
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Total number of eligible results
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getInstanceList() Obtain Specifies the list of instances meeting the conditions.
+ * @method void setInstanceList(array $InstanceList) Set Specifies the list of instances meeting the conditions.
+ * @method integer getTotalCount() Obtain Total results that meet the conditions.
+ * @method void setTotalCount(integer $TotalCount) Set Total results that meet the conditions.
  */
 class InstanceResponse extends AbstractModel
 {
     /**
-     * @var array List of eligible instances
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the list of instances meeting the conditions.
      */
     public $InstanceList;
 
     /**
-     * @var integer Total number of eligible results
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Total results that meet the conditions.
      */
     public $TotalCount;
 
     /**
-     * @param array $InstanceList List of eligible instances
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $TotalCount Total number of eligible results
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $InstanceList Specifies the list of instances meeting the conditions.
+     * @param integer $TotalCount Total results that meet the conditions.
      */
     function __construct()
     {

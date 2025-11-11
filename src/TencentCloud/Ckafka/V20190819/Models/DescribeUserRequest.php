@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUser request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
  * @method string getSearchWord() Obtain Filter by name
  * @method void setSearchWord(string $SearchWord) Set Filter by name
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
- * @method integer getLimit() Obtain Number of results to be returned in this request
- * @method void setLimit(integer $Limit) Set Number of results to be returned in this request
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
+ * @method integer getLimit() Obtain The number of returns.
+ * @method void setLimit(integer $Limit) Set The number of returns.
  */
 class DescribeUserRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string The ckafka cluster instance Id.
      */
     public $InstanceId;
 
@@ -42,20 +42,20 @@ class DescribeUserRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var integer Offset
+     * @var integer Offset.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned in this request
+     * @var integer The number of returns.
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId The ckafka cluster instance Id.
      * @param string $SearchWord Filter by name
-     * @param integer $Offset Offset
-     * @param integer $Limit Number of results to be returned in this request
+     * @param integer $Offset Offset.
+     * @param integer $Limit The number of returns.
      */
     function __construct()
     {

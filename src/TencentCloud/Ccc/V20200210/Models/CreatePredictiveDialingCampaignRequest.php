@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSkillGroupId(integer $SkillGroupId) Set ID of the used skill group of agents.
  * @method integer getPriority() Obtain Running priority of multiple tasks in the same application, from high to low 1 - 5.
  * @method void setPriority(integer $Priority) Set Running priority of multiple tasks in the same application, from high to low 1 - 5.
- * @method integer getExpectedAbandonRate() Obtain Expected call drop rate, percentage, 5 - 50.
- * @method void setExpectedAbandonRate(integer $ExpectedAbandonRate) Set Expected call drop rate, percentage, 5 - 50.
+ * @method integer getExpectedAbandonRate() Obtain Expected call drop rate. value range: 0-50%.
+ * @method void setExpectedAbandonRate(integer $ExpectedAbandonRate) Set Expected call drop rate. value range: 0-50%.
  * @method integer getRetryInterval() Obtain Call retry interval, in seconds, [60 - 86,400].
  * @method void setRetryInterval(integer $RetryInterval) Set Call retry interval, in seconds, [60 - 86,400].
  * @method integer getStartTime() Obtain Task start time. unix timestamp. the task will automatically start after this time.
@@ -95,7 +95,7 @@ class CreatePredictiveDialingCampaignRequest extends AbstractModel
     public $Priority;
 
     /**
-     * @var integer Expected call drop rate, percentage, 5 - 50.
+     * @var integer Expected call drop rate. value range: 0-50%.
      */
     public $ExpectedAbandonRate;
 
@@ -157,7 +157,7 @@ class CreatePredictiveDialingCampaignRequest extends AbstractModel
      * @param integer $CallOrder Being called sequence: 0 for random 1 for in order.
      * @param integer $SkillGroupId ID of the used skill group of agents.
      * @param integer $Priority Running priority of multiple tasks in the same application, from high to low 1 - 5.
-     * @param integer $ExpectedAbandonRate Expected call drop rate, percentage, 5 - 50.
+     * @param integer $ExpectedAbandonRate Expected call drop rate. value range: 0-50%.
      * @param integer $RetryInterval Call retry interval, in seconds, [60 - 86,400].
      * @param integer $StartTime Task start time. unix timestamp. the task will automatically start after this time.
      * @param integer $EndTime Task termination time. unix timestamp. the task will automatically terminate after this time.

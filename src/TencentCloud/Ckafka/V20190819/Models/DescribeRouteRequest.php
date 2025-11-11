@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoute request structure.
  *
- * @method string getInstanceId() Obtain Unique instance ID
- * @method void setInstanceId(string $InstanceId) Set Unique instance ID
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
  * @method integer getRouteId() Obtain Route ID
  * @method void setRouteId(integer $RouteId) Set Route ID
  */
 class DescribeRouteRequest extends AbstractModel
 {
     /**
-     * @var string Unique instance ID
+     * @var string The ckafka cluster instance Id.
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class DescribeRouteRequest extends AbstractModel
     public $RouteId;
 
     /**
-     * @param string $InstanceId Unique instance ID
+     * @param string $InstanceId The ckafka cluster instance Id.
      * @param integer $RouteId Route ID
      */
     function __construct()

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) Set Topic ID
  * @method integer getPartitionNum() Obtain The number of partitions
  * @method void setPartitionNum(integer $PartitionNum) Set The number of partitions
- * @method integer getRetentionMs() Obtain Expiration time
- * @method void setRetentionMs(integer $RetentionMs) Set Expiration time
+ * @method integer getRetentionMs() Obtain Expiration time in milliseconds.
+ * @method void setRetentionMs(integer $RetentionMs) Set Expiration time in milliseconds.
  * @method string getNote() Obtain Remarks
  * @method void setNote(string $Note) Set Remarks
  * @method integer getStatus() Obtain Status (`1`: In use; `2`: Deleting)
@@ -58,7 +58,7 @@ class DatahubTopicDTO extends AbstractModel
     public $PartitionNum;
 
     /**
-     * @var integer Expiration time
+     * @var integer Expiration time in milliseconds.
      */
     public $RetentionMs;
 
@@ -77,7 +77,7 @@ class DatahubTopicDTO extends AbstractModel
      * @param string $TopicName Topic name
      * @param string $TopicId Topic ID
      * @param integer $PartitionNum The number of partitions
-     * @param integer $RetentionMs Expiration time
+     * @param integer $RetentionMs Expiration time in milliseconds.
      * @param string $Note Remarks
      * @param integer $Status Status (`1`: In use; `2`: Deleting)
      */

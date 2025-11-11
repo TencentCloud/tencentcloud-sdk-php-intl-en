@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNumber(string $Number) Set Number to be bound.
  * @method Interface getCallInInterface() Obtain Specifies the callback url to be bound.
  * @method void setCallInInterface(Interface $CallInInterface) Set Specifies the callback url to be bound.
+ * @method string getNumberType() Obtain Bind number type. specifies the type of the bind number. inner: internal number | number: line number.
+ * @method void setNumberType(string $NumberType) Set Bind number type. specifies the type of the bind number. inner: internal number | number: line number.
  */
 class BindNumberCallInInterfaceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class BindNumberCallInInterfaceRequest extends AbstractModel
     public $CallInInterface;
 
     /**
+     * @var string Bind number type. specifies the type of the bind number. inner: internal number | number: line number.
+     */
+    public $NumberType;
+
+    /**
      * @param integer $SdkAppId App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
      * @param string $Number Number to be bound.
      * @param Interface $CallInInterface Specifies the callback url to be bound.
+     * @param string $NumberType Bind number type. specifies the type of the bind number. inner: internal number | number: line number.
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class BindNumberCallInInterfaceRequest extends AbstractModel
         if (array_key_exists("CallInInterface",$param) and $param["CallInInterface"] !== null) {
             $this->CallInInterface = new Interface();
             $this->CallInInterface->deserialize($param["CallInInterface"]);
+        }
+
+        if (array_key_exists("NumberType",$param) and $param["NumberType"] !== null) {
+            $this->NumberType = $param["NumberType"];
         }
     }
 }

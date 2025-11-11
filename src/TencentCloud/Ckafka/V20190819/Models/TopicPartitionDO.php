@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Partition details
  *
- * @method integer getPartition() Obtain Partition ID
- * @method void setPartition(integer $Partition) Set Partition ID
- * @method integer getLeaderStatus() Obtain Leader running status
- * @method void setLeaderStatus(integer $LeaderStatus) Set Leader running status
+ * @method integer getPartition() Obtain Partition ID. specifies the Partition ID.
+ * @method void setPartition(integer $Partition) Set Partition ID. specifies the Partition ID.
+ * @method integer getLeaderStatus() Obtain Leader running status. 0 means running normally.
+ * @method void setLeaderStatus(integer $LeaderStatus) Set Leader running status. 0 means running normally.
  * @method integer getIsrNum() Obtain ISR quantity
  * @method void setIsrNum(integer $IsrNum) Set ISR quantity
  * @method integer getReplicaNum() Obtain Number of replicas
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class TopicPartitionDO extends AbstractModel
 {
     /**
-     * @var integer Partition ID
+     * @var integer Partition ID. specifies the Partition ID.
      */
     public $Partition;
 
     /**
-     * @var integer Leader running status
+     * @var integer Leader running status. 0 means running normally.
      */
     public $LeaderStatus;
 
@@ -52,8 +52,8 @@ class TopicPartitionDO extends AbstractModel
     public $ReplicaNum;
 
     /**
-     * @param integer $Partition Partition ID
-     * @param integer $LeaderStatus Leader running status
+     * @param integer $Partition Partition ID. specifies the Partition ID.
+     * @param integer $LeaderStatus Leader running status. 0 means running normally.
      * @param integer $IsrNum ISR quantity
      * @param integer $ReplicaNum Number of replicas
      */

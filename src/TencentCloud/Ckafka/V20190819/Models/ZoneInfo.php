@@ -20,31 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Zone information entity
  *
- * @method string getZoneId() Obtain Zone ID
- * @method void setZoneId(string $ZoneId) Set Zone ID
+ * @method string getZoneId() Obtain Availability zone
+ * @method void setZoneId(string $ZoneId) Set Availability zone
  * @method integer getIsInternalApp() Obtain Whether it is an internal application.
  * @method void setIsInternalApp(integer $IsInternalApp) Set Whether it is an internal application.
- * @method integer getAppId() Obtain Application ID
- * @method void setAppId(integer $AppId) Set Application ID
- * @method boolean getFlag() Obtain Flag
- * @method void setFlag(boolean $Flag) Set Flag
- * @method string getZoneName() Obtain Zone name
- * @method void setZoneName(string $ZoneName) Set Zone name
- * @method integer getZoneStatus() Obtain Zone status
- * @method void setZoneStatus(integer $ZoneStatus) Set Zone status
+ * @method integer getAppId() Obtain Application identifier
+ * @method void setAppId(integer $AppId) Set Application identifier
+ * @method boolean getFlag() Obtain Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
+ * @method void setFlag(boolean $Flag) Set Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
+ * @method string getZoneName() Obtain Availability zone name.
+ * @method void setZoneName(string $ZoneName) Set Availability zone name.
+ * @method integer getZoneStatus() Obtain Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
+ * @method void setZoneStatus(integer $ZoneStatus) Set Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
  * @method string getExflag() Obtain Extra flag
  * @method void setExflag(string $Exflag) Set Extra flag
- * @method string getSoldOut() Obtain JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
- * @method void setSoldOut(string $SoldOut) Set JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
- * @method array getSalesInfo() Obtain Information on whether Standard Edition has been sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSalesInfo(array $SalesInfo) Set Information on whether Standard Edition has been sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getSoldOut() Obtain Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
+ * @method void setSoldOut(string $SoldOut) Set Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
+ * @method array getSalesInfo() Obtain Specifies the sell-out information of the standard version.
+ * @method void setSalesInfo(array $SalesInfo) Set Specifies the sell-out information of the standard version.
+ * @method string getExtraFlag() Obtain Additional flag.
+ * @method void setExtraFlag(string $ExtraFlag) Set Additional flag.
  */
 class ZoneInfo extends AbstractModel
 {
     /**
-     * @var string Zone ID
+     * @var string Availability zone
      */
     public $ZoneId;
 
@@ -54,52 +54,57 @@ class ZoneInfo extends AbstractModel
     public $IsInternalApp;
 
     /**
-     * @var integer Application ID
+     * @var integer Application identifier
      */
     public $AppId;
 
     /**
-     * @var boolean Flag
+     * @var boolean Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
      */
     public $Flag;
 
     /**
-     * @var string Zone name
+     * @var string Availability zone name.
      */
     public $ZoneName;
 
     /**
-     * @var integer Zone status
+     * @var integer Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
      */
     public $ZoneStatus;
 
     /**
      * @var string Extra flag
+     * @deprecated
      */
     public $Exflag;
 
     /**
-     * @var string JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
+     * @var string Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
      */
     public $SoldOut;
 
     /**
-     * @var array Information on whether Standard Edition has been sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Specifies the sell-out information of the standard version.
      */
     public $SalesInfo;
 
     /**
-     * @param string $ZoneId Zone ID
+     * @var string Additional flag.
+     */
+    public $ExtraFlag;
+
+    /**
+     * @param string $ZoneId Availability zone
      * @param integer $IsInternalApp Whether it is an internal application.
-     * @param integer $AppId Application ID
-     * @param boolean $Flag Flag
-     * @param string $ZoneName Zone name
-     * @param integer $ZoneStatus Zone status
+     * @param integer $AppId Application identifier
+     * @param boolean $Flag Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
+     * @param string $ZoneName Availability zone name.
+     * @param integer $ZoneStatus Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
      * @param string $Exflag Extra flag
-     * @param string $SoldOut JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
-     * @param array $SalesInfo Information on whether Standard Edition has been sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $SoldOut Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
+     * @param array $SalesInfo Specifies the sell-out information of the standard version.
+     * @param string $ExtraFlag Additional flag.
      */
     function __construct()
     {
@@ -153,6 +158,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->SalesInfo, $obj);
             }
+        }
+
+        if (array_key_exists("ExtraFlag",$param) and $param["ExtraFlag"] !== null) {
+            $this->ExtraFlag = $param["ExtraFlag"];
         }
     }
 }

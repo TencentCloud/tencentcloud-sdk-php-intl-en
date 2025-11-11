@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance details
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
+ * @method string getInstanceName() Obtain CKafka cluster instance name.
+ * @method void setInstanceName(string $InstanceName) Set CKafka cluster instance name.
  * @method string getVip() Obtain Instance VIP information
  * @method void setVip(string $Vip) Set Instance VIP information
  * @method string getVport() Obtain Instance port information
  * @method void setVport(string $Vport) Set Instance port information
  * @method array getVipList() Obtain Virtual IP list
  * @method void setVipList(array $VipList) Set Virtual IP list
- * @method integer getStatus() Obtain Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
- * @method void setStatus(integer $Status) Set Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+ * @method integer getStatus() Obtain Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+ * @method void setStatus(integer $Status) Set Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
  * @method integer getBandwidth() Obtain Instance bandwidth in Mbps
  * @method void setBandwidth(integer $Bandwidth) Set Instance bandwidth in Mbps
- * @method integer getDiskSize() Obtain Instance storage capacity in GB
- * @method void setDiskSize(integer $DiskSize) Set Instance storage capacity in GB
+ * @method integer getDiskSize() Obtain Specifies the ckafka cluster instance disk size in gb.
+ * @method void setDiskSize(integer $DiskSize) Set Specifies the ckafka cluster instance disk size in gb.
  * @method integer getZoneId() Obtain AZ ID
  * @method void setZoneId(integer $ZoneId) Set AZ ID
  * @method string getVpcId() Obtain vpcId. If this parameter is empty, it means the basic network
@@ -58,68 +58,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicNum(integer $TopicNum) Set Number of topics
  * @method array getTags() Obtain Tag
  * @method void setTags(array $Tags) Set Tag
- * @method string getVersion() Obtain Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVersion(string $Version) Set Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getZoneIds() Obtain Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setZoneIds(array $ZoneIds) Set Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getCvm() Obtain CKafka sale type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCvm(integer $Cvm) Set CKafka sale type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceType() Obtain CKafka instance type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setInstanceType(string $InstanceType) Set CKafka instance type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getDiskType() Obtain Disk type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setDiskType(string $DiskType) Set Disk type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getMaxTopicNumber() Obtain Maximum number of topics for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setMaxTopicNumber(integer $MaxTopicNumber) Set Maximum number of topics for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getMaxPartitionNumber() Obtain Maximum number of partitions for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setMaxPartitionNumber(integer $MaxPartitionNumber) Set Maximum number of partitions for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getRebalanceTime() Obtain Time of scheduled upgrade
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setRebalanceTime(string $RebalanceTime) Set Time of scheduled upgrade
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getPartitionNumber() Obtain Number of partitions in the current instance.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setPartitionNumber(integer $PartitionNumber) Set Number of partitions in the current instance.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getPublicNetworkChargeType() Obtain Public network bandwidth type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) Set Public network bandwidth type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getPublicNetwork() Obtain Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setPublicNetwork(integer $PublicNetwork) Set Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getClusterType() Obtain Instance type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClusterType(string $ClusterType) Set Instance type.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVersion() Obtain kafka version information.
+ * @method void setVersion(string $Version) Set kafka version information.
+ * @method array getZoneIds() Obtain Cross-Availability zone.
+ * @method void setZoneIds(array $ZoneIds) Set Cross-Availability zone.
+ * @method integer getCvm() Obtain ckafka sales type.
+ * @method void setCvm(integer $Cvm) Set ckafka sales type.
+ * @method string getInstanceType() Obtain Specifies the cluster instance type of ckafka.
+ * @method void setInstanceType(string $InstanceType) Set Specifies the cluster instance type of ckafka.
+ * @method string getDiskType() Obtain Specifies the ckafka cluster instance disk type.
+ * @method void setDiskType(string $DiskType) Set Specifies the ckafka cluster instance disk type.
+ * @method integer getMaxTopicNumber() Obtain Maximum number of topics for current specifications.
+ * @method void setMaxTopicNumber(integer $MaxTopicNumber) Set Maximum number of topics for current specifications.
+ * @method integer getMaxPartitionNumber() Obtain Maximum number of partitions for current specifications.
+ * @method void setMaxPartitionNumber(integer $MaxPartitionNumber) Set Maximum number of partitions for current specifications.
+ * @method string getRebalanceTime() Obtain Scheduled configuration upgrade time.
+ * @method void setRebalanceTime(string $RebalanceTime) Set Scheduled configuration upgrade time.
+ * @method integer getPartitionNumber() Obtain Specifies the number of partitions in the current instance.
+ * @method void setPartitionNumber(integer $PartitionNumber) Set Specifies the number of partitions in the current instance.
+ * @method string getPublicNetworkChargeType() Obtain Specifies the public network bandwidth type of the ckafka cluster instance.
+ * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) Set Specifies the public network bandwidth type of the ckafka cluster instance.
+ * @method integer getPublicNetwork() Obtain Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
+ * @method void setPublicNetwork(integer $PublicNetwork) Set Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
+ * @method string getClusterType() Obtain Specifies the underlying cluster type of the ckafka cluster instance.
+ * @method void setClusterType(string $ClusterType) Set Specifies the underlying cluster type of the ckafka cluster instance.
  * @method array getFeatures() Obtain Instance feature list.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFeatures(array $Features) Set Instance feature list.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceDetail extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string The ckafka cluster instance Id.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string CKafka cluster instance name.
      */
     public $InstanceName;
 
@@ -139,7 +113,7 @@ class InstanceDetail extends AbstractModel
     public $VipList;
 
     /**
-     * @var integer Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+     * @var integer Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
      */
     public $Status;
 
@@ -149,7 +123,7 @@ class InstanceDetail extends AbstractModel
     public $Bandwidth;
 
     /**
-     * @var integer Instance storage capacity in GB
+     * @var integer Specifies the ckafka cluster instance disk size in gb.
      */
     public $DiskSize;
 
@@ -209,92 +183,79 @@ class InstanceDetail extends AbstractModel
     public $Tags;
 
     /**
-     * @var string Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string kafka version information.
      */
     public $Version;
 
     /**
-     * @var array Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Cross-Availability zone.
      */
     public $ZoneIds;
 
     /**
-     * @var integer CKafka sale type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer ckafka sales type.
      */
     public $Cvm;
 
     /**
-     * @var string CKafka instance type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Specifies the cluster instance type of ckafka.
      */
     public $InstanceType;
 
     /**
-     * @var string Disk type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Specifies the ckafka cluster instance disk type.
      */
     public $DiskType;
 
     /**
-     * @var integer Maximum number of topics for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Maximum number of topics for current specifications.
      */
     public $MaxTopicNumber;
 
     /**
-     * @var integer Maximum number of partitions for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Maximum number of partitions for current specifications.
      */
     public $MaxPartitionNumber;
 
     /**
-     * @var string Time of scheduled upgrade
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Scheduled configuration upgrade time.
      */
     public $RebalanceTime;
 
     /**
-     * @var integer Number of partitions in the current instance.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Specifies the number of partitions in the current instance.
      */
     public $PartitionNumber;
 
     /**
-     * @var string Public network bandwidth type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Specifies the public network bandwidth type of the ckafka cluster instance.
      */
     public $PublicNetworkChargeType;
 
     /**
-     * @var integer Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
      */
     public $PublicNetwork;
 
     /**
-     * @var string Instance type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the underlying cluster type of the ckafka cluster instance.
      */
     public $ClusterType;
 
     /**
      * @var array Instance feature list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Features;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
+     * @param string $InstanceId The ckafka cluster instance Id.
+     * @param string $InstanceName CKafka cluster instance name.
      * @param string $Vip Instance VIP information
      * @param string $Vport Instance port information
      * @param array $VipList Virtual IP list
-     * @param integer $Status Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+     * @param integer $Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
      * @param integer $Bandwidth Instance bandwidth in Mbps
-     * @param integer $DiskSize Instance storage capacity in GB
+     * @param integer $DiskSize Specifies the ckafka cluster instance disk size in gb.
      * @param integer $ZoneId AZ ID
      * @param string $VpcId vpcId. If this parameter is empty, it means the basic network
      * @param string $SubnetId Subnet ID
@@ -306,32 +267,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $IsInternal Whether it is an internal customer. 1: yes
      * @param integer $TopicNum Number of topics
      * @param array $Tags Tag
-     * @param string $Version Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $ZoneIds Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Cvm CKafka sale type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceType CKafka instance type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $DiskType Disk type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $MaxTopicNumber Maximum number of topics for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $MaxPartitionNumber Maximum number of partitions for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $RebalanceTime Time of scheduled upgrade
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $PartitionNumber Number of partitions in the current instance.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $PublicNetworkChargeType Public network bandwidth type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $PublicNetwork Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ClusterType Instance type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Version kafka version information.
+     * @param array $ZoneIds Cross-Availability zone.
+     * @param integer $Cvm ckafka sales type.
+     * @param string $InstanceType Specifies the cluster instance type of ckafka.
+     * @param string $DiskType Specifies the ckafka cluster instance disk type.
+     * @param integer $MaxTopicNumber Maximum number of topics for current specifications.
+     * @param integer $MaxPartitionNumber Maximum number of partitions for current specifications.
+     * @param string $RebalanceTime Scheduled configuration upgrade time.
+     * @param integer $PartitionNumber Specifies the number of partitions in the current instance.
+     * @param string $PublicNetworkChargeType Specifies the public network bandwidth type of the ckafka cluster instance.
+     * @param integer $PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
+     * @param string $ClusterType Specifies the underlying cluster type of the ckafka cluster instance.
      * @param array $Features Instance feature list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

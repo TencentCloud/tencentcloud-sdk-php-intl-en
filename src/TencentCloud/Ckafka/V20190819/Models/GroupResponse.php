@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * `DescribeGroup` response
  *
- * @method integer getTotalCount() Obtain Count
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Count
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain Counting.
+ * @method void setTotalCount(integer $TotalCount) Set Counting.
  * @method array getGroupList() Obtain GroupList
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setGroupList(array $GroupList) Set GroupList
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getGroupCountQuota() Obtain Consumer group quota
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupCountQuota(integer $GroupCountQuota) Set Consumer group quota
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getGroupCountQuota() Obtain Specifies the consumer group quota.
+ * @method void setGroupCountQuota(integer $GroupCountQuota) Set Specifies the consumer group quota.
  */
 class GroupResponse extends AbstractModel
 {
     /**
-     * @var integer Count
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Counting.
      */
     public $TotalCount;
 
     /**
      * @var array GroupList
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $GroupList;
 
     /**
-     * @var integer Consumer group quota
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the consumer group quota.
      */
     public $GroupCountQuota;
 
     /**
-     * @param integer $TotalCount Count
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalCount Counting.
      * @param array $GroupList GroupList
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $GroupCountQuota Consumer group quota
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $GroupCountQuota Specifies the consumer group quota.
      */
     function __construct()
     {

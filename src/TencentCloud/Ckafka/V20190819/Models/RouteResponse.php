@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Returned object for route information
  *
- * @method array getRouters() Obtain Route information list
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRouters(array $Routers) Set Route information list
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getRouters() Obtain Route Information List
+ * @method void setRouters(array $Routers) Set Route Information List
  */
 class RouteResponse extends AbstractModel
 {
     /**
-     * @var array Route information list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Route Information List
      */
     public $Routers;
 
     /**
-     * @param array $Routers Route information list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Routers Route Information List
      */
     function __construct()
     {

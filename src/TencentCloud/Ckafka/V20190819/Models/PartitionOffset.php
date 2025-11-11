@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Partition and offset
  *
- * @method string getPartition() Obtain Partition, such as "0" or "1"
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPartition(string $Partition) Set Partition, such as "0" or "1"
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getOffset() Obtain Offset, such as 100
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOffset(integer $Offset) Set Offset, such as 100
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getPartition() Obtain Partition
+ * @method void setPartition(string $Partition) Set Partition
+ * @method integer getOffset() Obtain Specifies the offset.
+ * @method void setOffset(integer $Offset) Set Specifies the offset.
  */
 class PartitionOffset extends AbstractModel
 {
     /**
-     * @var string Partition, such as "0" or "1"
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Partition
      */
     public $Partition;
 
     /**
-     * @var integer Offset, such as 100
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the offset.
      */
     public $Offset;
 
     /**
-     * @param string $Partition Partition, such as "0" or "1"
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Offset Offset, such as 100
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Partition Partition
+     * @param integer $Offset Specifies the offset.
      */
     function __construct()
     {

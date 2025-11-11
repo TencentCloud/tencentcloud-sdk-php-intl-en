@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroupOffsets request structure.
  *
- * @method string getInstanceId() Obtain (Filter) filter by instance ID
- * @method void setInstanceId(string $InstanceId) Set (Filter) filter by instance ID
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
  * @method string getGroup() Obtain Kafka consumer group
  * @method void setGroup(string $Group) Set Kafka consumer group
  * @method array getTopics() Obtain Array of the names of topics subscribed to by a group. If there is no such array, this parameter means the information of all topics in the specified group
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeGroupOffsetsRequest extends AbstractModel
 {
     /**
-     * @var string (Filter) filter by instance ID
+     * @var string The ckafka cluster instance Id.
      */
     public $InstanceId;
 
@@ -66,7 +66,7 @@ class DescribeGroupOffsetsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $InstanceId (Filter) filter by instance ID
+     * @param string $InstanceId The ckafka cluster instance Id.
      * @param string $Group Kafka consumer group
      * @param array $Topics Array of the names of topics subscribed to by a group. If there is no such array, this parameter means the information of all topics in the specified group
      * @param string $SearchWord Fuzzy match by `topicName`

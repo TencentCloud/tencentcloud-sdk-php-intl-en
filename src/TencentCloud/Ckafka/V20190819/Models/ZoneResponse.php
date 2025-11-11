@@ -30,34 +30,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnitPrice(Price $UnitPrice) Set Pay-as-you-go unit price
  * @method Price getMessagePrice() Obtain Pay-as-you-go unit message price
  * @method void setMessagePrice(Price $MessagePrice) Set Pay-as-you-go unit message price
- * @method array getClusterInfo() Obtain Cluster information dedicated to a user
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setClusterInfo(array $ClusterInfo) Set Cluster information dedicated to a user
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getStandard() Obtain Purchase of Standard Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setStandard(string $Standard) Set Purchase of Standard Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getStandardS2() Obtain Purchase of Standard S2 Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setStandardS2(string $StandardS2) Set Purchase of Standard S2 Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getProfession() Obtain Purchase of Pro Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setProfession(string $Profession) Set Purchase of Pro Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getPhysical() Obtain Purchase of Physical Dedicated Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setPhysical(string $Physical) Set Purchase of Physical Dedicated Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getPublicNetwork() Obtain Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setPublicNetwork(string $PublicNetwork) Set Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getPublicNetworkLimit() Obtain Public network bandwidth configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setPublicNetworkLimit(string $PublicNetworkLimit) Set Public network bandwidth configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getClusterInfo() Obtain Specifies the user-exclusive cluster info.
+ * @method void setClusterInfo(array $ClusterInfo) Set Specifies the user-exclusive cluster info.
+ * @method string getStandard() Obtain Purchase the standard version configuration.
+ * @method void setStandard(string $Standard) Set Purchase the standard version configuration.
+ * @method string getStandardS2() Obtain Purchase the standard version S2 configuration.
+ * @method void setStandardS2(string $StandardS2) Set Purchase the standard version S2 configuration.
+ * @method string getProfession() Obtain Specifies the configuration for purchasing the professional edition.
+ * @method void setProfession(string $Profession) Set Specifies the configuration for purchasing the professional edition.
+ * @method string getPhysical() Obtain Purchase physical dedicated edition configuration.
+ * @method void setPhysical(string $Physical) Set Purchase physical dedicated edition configuration.
+ * @method string getPublicNetwork() Obtain Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
+ * @method void setPublicNetwork(string $PublicNetwork) Set Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
+ * @method string getPublicNetworkLimit() Obtain Configures the public network bandwidth.
+ * @method void setPublicNetworkLimit(string $PublicNetworkLimit) Set Configures the public network bandwidth.
+ * @method string getRequestId() Obtain Request ID.
+ * @method void setRequestId(string $RequestId) Set Request ID.
+ * @method integer getOffset() Obtain Pagination Offset
+ * @method void setOffset(integer $Offset) Set Pagination Offset
+ * @method integer getLimit() Obtain Pagination Limit
+ * @method void setLimit(integer $Limit) Set Pagination Limit
+ * @method boolean getForceCheckTag() Obtain Mandatory. input tag.
+ * @method void setForceCheckTag(boolean $ForceCheckTag) Set Mandatory. input tag.
  */
 class ZoneResponse extends AbstractModel
 {
@@ -87,46 +81,59 @@ class ZoneResponse extends AbstractModel
     public $MessagePrice;
 
     /**
-     * @var array Cluster information dedicated to a user
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var array Specifies the user-exclusive cluster info.
      */
     public $ClusterInfo;
 
     /**
-     * @var string Purchase of Standard Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Purchase the standard version configuration.
      */
     public $Standard;
 
     /**
-     * @var string Purchase of Standard S2 Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Purchase the standard version S2 configuration.
      */
     public $StandardS2;
 
     /**
-     * @var string Purchase of Pro Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Specifies the configuration for purchasing the professional edition.
      */
     public $Profession;
 
     /**
-     * @var string Purchase of Physical Dedicated Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Purchase physical dedicated edition configuration.
      */
     public $Physical;
 
     /**
-     * @var string Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
      */
     public $PublicNetwork;
 
     /**
-     * @var string Public network bandwidth configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Configures the public network bandwidth.
      */
     public $PublicNetworkLimit;
+
+    /**
+     * @var string Request ID.
+     */
+    public $RequestId;
+
+    /**
+     * @var integer Pagination Offset
+     */
+    public $Offset;
+
+    /**
+     * @var integer Pagination Limit
+     */
+    public $Limit;
+
+    /**
+     * @var boolean Mandatory. input tag.
+     */
+    public $ForceCheckTag;
 
     /**
      * @param array $ZoneList Zone list
@@ -134,20 +141,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param integer $MaxBandwidth Maximum bandwidth in MB/S
      * @param Price $UnitPrice Pay-as-you-go unit price
      * @param Price $MessagePrice Pay-as-you-go unit message price
-     * @param array $ClusterInfo Cluster information dedicated to a user
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $Standard Purchase of Standard Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $StandardS2 Purchase of Standard S2 Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $Profession Purchase of Pro Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $Physical Purchase of Physical Dedicated Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $PublicNetwork Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $PublicNetworkLimit Public network bandwidth configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $ClusterInfo Specifies the user-exclusive cluster info.
+     * @param string $Standard Purchase the standard version configuration.
+     * @param string $StandardS2 Purchase the standard version S2 configuration.
+     * @param string $Profession Specifies the configuration for purchasing the professional edition.
+     * @param string $Physical Purchase physical dedicated edition configuration.
+     * @param string $PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
+     * @param string $PublicNetworkLimit Configures the public network bandwidth.
+     * @param string $RequestId Request ID.
+     * @param integer $Offset Pagination Offset
+     * @param integer $Limit Pagination Limit
+     * @param boolean $ForceCheckTag Mandatory. input tag.
      */
     function __construct()
     {
@@ -220,6 +224,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("PublicNetworkLimit",$param) and $param["PublicNetworkLimit"] !== null) {
             $this->PublicNetworkLimit = $param["PublicNetworkLimit"];
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("ForceCheckTag",$param) and $param["ForceCheckTag"] !== null) {
+            $this->ForceCheckTag = $param["ForceCheckTag"];
         }
     }
 }

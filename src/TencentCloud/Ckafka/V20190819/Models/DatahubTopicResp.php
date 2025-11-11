@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicName() Obtain Topic name
  * @method void setTopicName(string $TopicName) Set Topic name
- * @method string getTopicId() Obtain TopicId
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTopicId(string $TopicId) Set TopicId
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTopicId() Obtain Topic Id.
+ * @method void setTopicId(string $TopicId) Set Topic Id.
  */
 class DatahubTopicResp extends AbstractModel
 {
@@ -35,15 +33,13 @@ class DatahubTopicResp extends AbstractModel
     public $TopicName;
 
     /**
-     * @var string TopicId
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Topic Id.
      */
     public $TopicId;
 
     /**
      * @param string $TopicName Topic name
-     * @param string $TopicId TopicId
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TopicId Topic Id.
      */
     function __construct()
     {

@@ -24,30 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(integer $ClusterId) Set Cluster ID
  * @method string getClusterName() Obtain Cluster name
  * @method void setClusterName(string $ClusterName) Set Cluster name
- * @method integer getMaxDiskSize() Obtain The cluster’s maximum disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setMaxDiskSize(integer $MaxDiskSize) Set The cluster’s maximum disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getMaxBandWidth() Obtain The cluster’s maximum bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setMaxBandWidth(integer $MaxBandWidth) Set The cluster’s maximum bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getAvailableDiskSize() Obtain The cluster’s available disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setAvailableDiskSize(integer $AvailableDiskSize) Set The cluster’s available disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getAvailableBandWidth() Obtain The cluster’s available bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setAvailableBandWidth(integer $AvailableBandWidth) Set The cluster’s available bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getZoneId() Obtain The AZ where the cluster resides
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setZoneId(integer $ZoneId) Set The AZ where the cluster resides
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method array getZoneIds() Obtain The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setZoneIds(array $ZoneIds) Set The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method integer getMaxDiskSize() Obtain Maximum disk of the cluster (unit: GB).
+ * @method void setMaxDiskSize(integer $MaxDiskSize) Set Maximum disk of the cluster (unit: GB).
+ * @method integer getMaxBandWidth() Obtain Maximum bandwidth of the cluster. unit: MB/s.
+ * @method void setMaxBandWidth(integer $MaxBandWidth) Set Maximum bandwidth of the cluster. unit: MB/s.
+ * @method integer getAvailableDiskSize() Obtain Current availability of cluster disk (unit: GB).
+ * @method void setAvailableDiskSize(integer $AvailableDiskSize) Set Current availability of cluster disk (unit: GB).
+ * @method integer getAvailableBandWidth() Obtain Available bandwidth of the cluster. unit: MB/s.
+ * @method void setAvailableBandWidth(integer $AvailableBandWidth) Set Available bandwidth of the cluster. unit: MB/s.
+ * @method integer getZoneId() Obtain Indicates the AZ to which the cluster belongs.
+ * @method void setZoneId(integer $ZoneId) Set Indicates the AZ to which the cluster belongs.
+ * @method array getZoneIds() Obtain The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
+ * @method void setZoneIds(array $ZoneIds) Set The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
  */
 class ClusterInfo extends AbstractModel
 {
@@ -62,56 +50,44 @@ class ClusterInfo extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var integer The cluster’s maximum disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Maximum disk of the cluster (unit: GB).
      */
     public $MaxDiskSize;
 
     /**
-     * @var integer The cluster’s maximum bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Maximum bandwidth of the cluster. unit: MB/s.
      */
     public $MaxBandWidth;
 
     /**
-     * @var integer The cluster’s available disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Current availability of cluster disk (unit: GB).
      */
     public $AvailableDiskSize;
 
     /**
-     * @var integer The cluster’s available bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Available bandwidth of the cluster. unit: MB/s.
      */
     public $AvailableBandWidth;
 
     /**
-     * @var integer The AZ where the cluster resides
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Indicates the AZ to which the cluster belongs.
      */
     public $ZoneId;
 
     /**
-     * @var array The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var array The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
      */
     public $ZoneIds;
 
     /**
      * @param integer $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
-     * @param integer $MaxDiskSize The cluster’s maximum disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $MaxBandWidth The cluster’s maximum bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $AvailableDiskSize The cluster’s available disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $AvailableBandWidth The cluster’s available bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $ZoneId The AZ where the cluster resides
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param array $ZoneIds The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param integer $MaxDiskSize Maximum disk of the cluster (unit: GB).
+     * @param integer $MaxBandWidth Maximum bandwidth of the cluster. unit: MB/s.
+     * @param integer $AvailableDiskSize Current availability of cluster disk (unit: GB).
+     * @param integer $AvailableBandWidth Available bandwidth of the cluster. unit: MB/s.
+     * @param integer $ZoneId Indicates the AZ to which the cluster belongs.
+     * @param array $ZoneIds The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
      */
     function __construct()
     {

@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Data structure returned by the pay-as-you-go instance creation API
  *
- * @method integer getFlowId() Obtain This parameter has a fixed value of 0 returned by `CreateInstancePre`. It is only used for backend data alignment  and cannot be used as the query condition for `CheckTaskStatus`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setFlowId(integer $FlowId) Set This parameter has a fixed value of 0 returned by `CreateInstancePre`. It is only used for backend data alignment  and cannot be used as the query condition for `CheckTaskStatus`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method array getDealNames() Obtain List of order IDs Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDealNames(array $DealNames) Set List of order IDs Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDealNameInstanceIdMapping() Obtain Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDealNameInstanceIdMapping(array $DealNameInstanceIdMapping) Set Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getFlowId() Obtain CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
+ * @method void setFlowId(integer $FlowId) Set CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
+ * @method array getDealNames() Obtain Order ID list
+ * @method void setDealNames(array $DealNames) Set Order ID list
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
+ * @method array getDealNameInstanceIdMapping() Obtain Order and purchase mapping list corresponding to the instance.
+ * @method void setDealNameInstanceIdMapping(array $DealNameInstanceIdMapping) Set Order and purchase mapping list corresponding to the instance.
  */
 class CreateInstancePostData extends AbstractModel
 {
     /**
-     * @var integer This parameter has a fixed value of 0 returned by `CreateInstancePre`. It is only used for backend data alignment  and cannot be used as the query condition for `CheckTaskStatus`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var integer CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
      */
     public $FlowId;
 
     /**
-     * @var array List of order IDs Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Order ID list
      */
     public $DealNames;
 
     /**
-     * @var string Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
      */
     public $InstanceId;
 
     /**
-     * @var array Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Order and purchase mapping list corresponding to the instance.
      */
     public $DealNameInstanceIdMapping;
 
     /**
-     * @param integer $FlowId This parameter has a fixed value of 0 returned by `CreateInstancePre`. It is only used for backend data alignment  and cannot be used as the query condition for `CheckTaskStatus`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param array $DealNames List of order IDs Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $DealNameInstanceIdMapping Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $FlowId CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
+     * @param array $DealNames Order ID list
+     * @param string $InstanceId The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
+     * @param array $DealNameInstanceIdMapping Order and purchase mapping list corresponding to the instance.
      */
     function __construct()
     {

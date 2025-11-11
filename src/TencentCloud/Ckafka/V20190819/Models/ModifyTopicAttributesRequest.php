@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTopicAttributes request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getTopicName() Obtain Topic name.
- * @method void setTopicName(string $TopicName) Set Topic name.
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
+ * @method string getTopicName() Obtain Topic name
+ * @method void setTopicName(string $TopicName) Set Topic name
  * @method string getNote() Obtain Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
  * @method void setNote(string $Note) Set Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
  * @method integer getEnableWhiteList() Obtain IP allowlist switch. 1: enabled, 0: disabled.
@@ -34,38 +34,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set 0: false, 1: true. Default value: 0.
  * @method integer getRetentionMs() Obtain Message retention period in ms. The current minimum value is 60,000 ms.
  * @method void setRetentionMs(integer $RetentionMs) Set Message retention period in ms. The current minimum value is 60,000 ms.
- * @method integer getSegmentMs() Obtain Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
- * @method void setSegmentMs(integer $SegmentMs) Set Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
  * @method integer getMaxMessageBytes() Obtain Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
  * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
+ * @method integer getSegmentMs() Obtain Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+ * @method void setSegmentMs(integer $SegmentMs) Set Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
  * @method string getCleanUpPolicy() Obtain Message deletion policy. Valid values: delete, compact
  * @method void setCleanUpPolicy(string $CleanUpPolicy) Set Message deletion policy. Valid values: delete, compact
  * @method array getIpWhiteList() Obtain IP allowlist, which is required if the value of `enableWhileList` is 1.
  * @method void setIpWhiteList(array $IpWhiteList) Set IP allowlist, which is required if the value of `enableWhileList` is 1.
  * @method integer getEnableAclRule() Obtain Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
  * @method void setEnableAclRule(integer $EnableAclRule) Set Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
- * @method string getAclRuleName() Obtain Name of the preset ACL rule.
- * @method void setAclRuleName(string $AclRuleName) Set Name of the preset ACL rule.
+ * @method string getAclRuleName() Obtain ACL rule name.
+ * @method void setAclRuleName(string $AclRuleName) Set ACL rule name.
  * @method integer getRetentionBytes() Obtain Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
  * @method void setRetentionBytes(integer $RetentionBytes) Set Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
  * @method array getTags() Obtain Tag list.
  * @method void setTags(array $Tags) Set Tag list.
- * @method integer getQuotaProducerByteRate() Obtain Production throttling in MB/sec.
- * @method void setQuotaProducerByteRate(integer $QuotaProducerByteRate) Set Production throttling in MB/sec.
- * @method integer getQuotaConsumerByteRate() Obtain Consumption throttling in MB/sec.
- * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) Set Consumption throttling in MB/sec.
- * @method integer getReplicaNum() Obtain The number of topic replicas.
- * @method void setReplicaNum(integer $ReplicaNum) Set The number of topic replicas.
+ * @method integer getQuotaProducerByteRate() Obtain Production traffic throttling in MB/s. set to -1 to disable throttling.
+ * @method void setQuotaProducerByteRate(integer $QuotaProducerByteRate) Set Production traffic throttling in MB/s. set to -1 to disable throttling.
+ * @method integer getQuotaConsumerByteRate() Obtain Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
+ * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) Set Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
+ * @method integer getReplicaNum() Obtain Number of topic replicas. valid values: 1, 3.
+ * @method void setReplicaNum(integer $ReplicaNum) Set Number of topic replicas. valid values: 1, 3.
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string The ckafka cluster instance Id.
      */
     public $InstanceId;
 
     /**
-     * @var string Topic name.
+     * @var string Topic name
      */
     public $TopicName;
 
@@ -95,14 +95,14 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $RetentionMs;
 
     /**
-     * @var integer Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
-     */
-    public $SegmentMs;
-
-    /**
      * @var integer Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
      */
     public $MaxMessageBytes;
+
+    /**
+     * @var integer Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+     */
+    public $SegmentMs;
 
     /**
      * @var string Message deletion policy. Valid values: delete, compact
@@ -120,7 +120,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $EnableAclRule;
 
     /**
-     * @var string Name of the preset ACL rule.
+     * @var string ACL rule name.
      */
     public $AclRuleName;
 
@@ -135,39 +135,39 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer Production throttling in MB/sec.
+     * @var integer Production traffic throttling in MB/s. set to -1 to disable throttling.
      */
     public $QuotaProducerByteRate;
 
     /**
-     * @var integer Consumption throttling in MB/sec.
+     * @var integer Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
      */
     public $QuotaConsumerByteRate;
 
     /**
-     * @var integer The number of topic replicas.
+     * @var integer Number of topic replicas. valid values: 1, 3.
      */
     public $ReplicaNum;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param string $TopicName Topic name.
+     * @param string $InstanceId The ckafka cluster instance Id.
+     * @param string $TopicName Topic name
      * @param string $Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
      * @param integer $EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled.
      * @param integer $MinInsyncReplicas Default value: 1.
      * @param integer $UncleanLeaderElectionEnable 0: false, 1: true. Default value: 0.
      * @param integer $RetentionMs Message retention period in ms. The current minimum value is 60,000 ms.
-     * @param integer $SegmentMs Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
      * @param integer $MaxMessageBytes Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
+     * @param integer $SegmentMs Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
      * @param string $CleanUpPolicy Message deletion policy. Valid values: delete, compact
      * @param array $IpWhiteList IP allowlist, which is required if the value of `enableWhileList` is 1.
      * @param integer $EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
-     * @param string $AclRuleName Name of the preset ACL rule.
+     * @param string $AclRuleName ACL rule name.
      * @param integer $RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
      * @param array $Tags Tag list.
-     * @param integer $QuotaProducerByteRate Production throttling in MB/sec.
-     * @param integer $QuotaConsumerByteRate Consumption throttling in MB/sec.
-     * @param integer $ReplicaNum The number of topic replicas.
+     * @param integer $QuotaProducerByteRate Production traffic throttling in MB/s. set to -1 to disable throttling.
+     * @param integer $QuotaConsumerByteRate Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
+     * @param integer $ReplicaNum Number of topic replicas. valid values: 1, 3.
      */
     function __construct()
     {
@@ -210,12 +210,12 @@ class ModifyTopicAttributesRequest extends AbstractModel
             $this->RetentionMs = $param["RetentionMs"];
         }
 
-        if (array_key_exists("SegmentMs",$param) and $param["SegmentMs"] !== null) {
-            $this->SegmentMs = $param["SegmentMs"];
-        }
-
         if (array_key_exists("MaxMessageBytes",$param) and $param["MaxMessageBytes"] !== null) {
             $this->MaxMessageBytes = $param["MaxMessageBytes"];
+        }
+
+        if (array_key_exists("SegmentMs",$param) and $param["SegmentMs"] !== null) {
+            $this->SegmentMs = $param["SegmentMs"];
         }
 
         if (array_key_exists("CleanUpPolicy",$param) and $param["CleanUpPolicy"] !== null) {

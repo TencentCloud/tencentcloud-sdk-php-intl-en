@@ -18,12 +18,11 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Query filter
->Key-value pair filters for conditional filtering queries, such as filter ID, name, and status
-> * If there are multiple `Filter`, the relationship among them is logical `AND`.
-> * If there are multiple `Values` in the same `Filter`, the relationship among them is logical `OR`.
+ * Query filter.
+Describes the key-value pair filter, which is used for conditional filtering queries. for example, filter by ID, name, and status.
+If there are multiple filters, the logical relationship between them is AND.
+If the same Filter contains multiple Values, the relationship between Values under the same Filter is logical OR.
 >
-
  *
  * @method string getName() Obtain Field to be filtered.
  * @method void setName(string $Name) Set Field to be filtered.

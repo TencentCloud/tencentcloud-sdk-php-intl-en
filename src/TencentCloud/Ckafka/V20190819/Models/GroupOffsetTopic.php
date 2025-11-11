@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopic() Obtain Topic name
  * @method void setTopic(string $Topic) Set Topic name
- * @method array getPartitions() Obtain Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPartitions(array $Partitions) Set Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getPartitions() Obtain The topic partition array, where each element is a json object.
+ * @method void setPartitions(array $Partitions) Set The topic partition array, where each element is a json object.
  */
 class GroupOffsetTopic extends AbstractModel
 {
@@ -35,15 +33,13 @@ class GroupOffsetTopic extends AbstractModel
     public $Topic;
 
     /**
-     * @var array Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array The topic partition array, where each element is a json object.
      */
     public $Partitions;
 
     /**
      * @param string $Topic Topic name
-     * @param array $Partitions Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Partitions The topic partition array, where each element is a json object.
      */
     function __construct()
     {

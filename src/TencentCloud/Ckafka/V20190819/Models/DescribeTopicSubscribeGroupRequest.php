@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicSubscribeGroup request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
  * @method string getTopicName() Obtain Topic name
  * @method void setTopicName(string $TopicName) Set Topic name
  * @method integer getOffset() Obtain Starting position of paging
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTopicSubscribeGroupRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string The ckafka cluster instance Id.
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class DescribeTopicSubscribeGroupRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId The ckafka cluster instance Id.
      * @param string $TopicName Topic name
      * @param integer $Offset Starting position of paging
      * @param integer $Limit Number of results per page

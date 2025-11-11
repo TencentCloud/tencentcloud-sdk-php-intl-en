@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicName(string $TopicName) Set Topic name
  * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default.
  * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default.
- * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
- * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+ * @method integer getLimit() Obtain Number of returned results. default value: 20. must be greater than 0.
+ * @method void setLimit(integer $Limit) Set Number of returned results. default value: 20. must be greater than 0.
  * @method boolean getOutOfSyncReplicaOnly() Obtain Filters unsynced replicas only
  * @method void setOutOfSyncReplicaOnly(boolean $OutOfSyncReplicaOnly) Set Filters unsynced replicas only
  */
@@ -49,7 +49,7 @@ class DescribeTopicSyncReplicaRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * @var integer Number of returned results. default value: 20. must be greater than 0.
      */
     public $Limit;
 
@@ -62,7 +62,7 @@ class DescribeTopicSyncReplicaRequest extends AbstractModel
      * @param string $InstanceId Instance ID
      * @param string $TopicName Topic name
      * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default.
-     * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * @param integer $Limit Number of returned results. default value: 20. must be greater than 0.
      * @param boolean $OutOfSyncReplicaOnly Filters unsynced replicas only
      */
     function __construct()

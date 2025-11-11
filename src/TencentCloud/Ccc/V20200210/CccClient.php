@@ -55,6 +55,7 @@ This API is used to make calls. Currently, the agent side can only call the user
  * @method Models\DeleteExtensionResponse DeleteExtension(Models\DeleteExtensionRequest $req) This API is used to delete telephone accounts.
  * @method Models\DeletePredictiveDialingCampaignResponse DeletePredictiveDialingCampaign(Models\DeletePredictiveDialingCampaignRequest $req) This API is used to delete the predictive outbound call task.
  * @method Models\DeleteStaffResponse DeleteStaff(Models\DeleteStaffRequest $req) This API is used to delete the agent information.
+ * @method Models\DescribeAIAgentInfoListResponse DescribeAIAgentInfoList(Models\DescribeAIAgentInfoListRequest $req) This API is used to get the list of Intelligent Agents.
  * @method Models\DescribeAIAnalysisResultResponse DescribeAIAnalysisResult(Models\DescribeAIAnalysisResultRequest $req) This API is used to obtain AI Conversation Analytics results.
  * @method Models\DescribeAICallExtractResultResponse DescribeAICallExtractResult(Models\DescribeAICallExtractResultRequest $req) Obtain AI call content extraction result
  * @method Models\DescribeAILatencyResponse DescribeAILatency(Models\DescribeAILatencyRequest $req) This API is used to obtain AI latency information.
@@ -92,6 +93,7 @@ This API is used to make calls. Currently, the agent side can only call the user
  * @method Models\ResetExtensionPasswordResponse ResetExtensionPassword(Models\ResetExtensionPasswordRequest $req) This API is used to reset the telephone register password.
  * @method Models\RestoreMemberOnlineResponse RestoreMemberOnline(Models\RestoreMemberOnlineRequest $req) This API is used to restore customer service to go live.
  * @method Models\ResumePredictiveDialingCampaignResponse ResumePredictiveDialingCampaign(Models\ResumePredictiveDialingCampaignRequest $req) This API is used to resume the predictive outbound call task.
+ * @method Models\SetStaffStatusResponse SetStaffStatus(Models\SetStaffStatusRequest $req) This API is used to set staff status.
  * @method Models\StopAutoCalloutTaskResponse StopAutoCalloutTask(Models\StopAutoCalloutTaskRequest $req) This API is used to stop the automatic outbound call task.
  * @method Models\TransferToManualResponse TransferToManual(Models\TransferToManualRequest $req) This API is used to transfer a session to an agent in specific scenarios.
  * @method Models\UnbindNumberCallOutSkillGroupResponse UnbindNumberCallOutSkillGroup(Models\UnbindNumberCallOutSkillGroupRequest $req) This API is used to unbind the number from the outbound call skill group.

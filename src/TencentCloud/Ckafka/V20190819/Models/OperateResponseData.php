@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Data structure returned by operation
  *
- * @method integer getFlowId() Obtain FlowId11
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFlowId(integer $FlowId) Set FlowId11
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method RouteDTO getRouteDTO() Obtain RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRouteDTO(RouteDTO $RouteDTO) Set RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getFlowId() Obtain Flow ID.
+ * @method void setFlowId(integer $FlowId) Set Flow ID.
+ * @method RouteDTO getRouteDTO() Obtain RouteIdDto
+ * @method void setRouteDTO(RouteDTO $RouteDTO) Set RouteIdDto
  */
 class OperateResponseData extends AbstractModel
 {
     /**
-     * @var integer FlowId11
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Flow ID.
      */
     public $FlowId;
 
     /**
-     * @var RouteDTO RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RouteDTO RouteIdDto
      */
     public $RouteDTO;
 
     /**
-     * @param integer $FlowId FlowId11
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RouteDTO $RouteDTO RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $FlowId Flow ID.
+     * @param RouteDTO $RouteDTO RouteIdDto
      */
     function __construct()
     {

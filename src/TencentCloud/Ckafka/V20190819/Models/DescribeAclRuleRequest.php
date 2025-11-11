@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAclRule request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
  * @method string getRuleName() Obtain ACL rule name
  * @method void setRuleName(string $RuleName) Set ACL rule name
- * @method string getPatternType() Obtain ACL rule matching type
- * @method void setPatternType(string $PatternType) Set ACL rule matching type
- * @method boolean getIsSimplified() Obtain Whether to read simplified ACL rules
- * @method void setIsSimplified(boolean $IsSimplified) Set Whether to read simplified ACL rules
+ * @method string getPatternType() Obtain ACL rule-based matching type (PREFIXED: prefix match, PRESET: PRESET policy).
+ * @method void setPatternType(string $PatternType) Set ACL rule-based matching type (PREFIXED: prefix match, PRESET: PRESET policy).
+ * @method boolean getIsSimplified() Obtain Specifies whether to read the simplified ACL rule. default value is false, which means not to read the simplified ACL rule.
+ * @method void setIsSimplified(boolean $IsSimplified) Set Specifies whether to read the simplified ACL rule. default value is false, which means not to read the simplified ACL rule.
  */
 class DescribeAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
@@ -42,20 +42,20 @@ class DescribeAclRuleRequest extends AbstractModel
     public $RuleName;
 
     /**
-     * @var string ACL rule matching type
+     * @var string ACL rule-based matching type (PREFIXED: prefix match, PRESET: PRESET policy).
      */
     public $PatternType;
 
     /**
-     * @var boolean Whether to read simplified ACL rules
+     * @var boolean Specifies whether to read the simplified ACL rule. default value is false, which means not to read the simplified ACL rule.
      */
     public $IsSimplified;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      * @param string $RuleName ACL rule name
-     * @param string $PatternType ACL rule matching type
-     * @param boolean $IsSimplified Whether to read simplified ACL rules
+     * @param string $PatternType ACL rule-based matching type (PREFIXED: prefix match, PRESET: PRESET policy).
+     * @param boolean $IsSimplified Specifies whether to read the simplified ACL rule. default value is false, which means not to read the simplified ACL rule.
      */
     function __construct()
     {

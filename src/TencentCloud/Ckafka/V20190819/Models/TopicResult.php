@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * `TopicResponse` returned uniformly
  *
- * @method array getTopicList() Obtain List of returned topic information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTopicList(array $TopicList) Set List of returned topic information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getTotalCount() Obtain Number of eligible topics
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Number of eligible topics
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTopicList() Obtain List of returned topic information.
+ * @method void setTopicList(array $TopicList) Set List of returned topic information.
+ * @method integer getTotalCount() Obtain Number of eligible topics.
+ * @method void setTotalCount(integer $TotalCount) Set Number of eligible topics.
  */
 class TopicResult extends AbstractModel
 {
     /**
-     * @var array List of returned topic information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array List of returned topic information.
      */
     public $TopicList;
 
     /**
-     * @var integer Number of eligible topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of eligible topics.
      */
     public $TotalCount;
 
     /**
-     * @param array $TopicList List of returned topic information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $TotalCount Number of eligible topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $TopicList List of returned topic information.
+     * @param integer $TotalCount Number of eligible topics.
      */
     function __construct()
     {

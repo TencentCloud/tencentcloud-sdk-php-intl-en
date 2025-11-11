@@ -40,8 +40,8 @@ Stable: each consumer in the consumer group has joined and is in stable state
  * @method void setProtocol(string $Protocol) Set Consumer partition assignment algorithm, such as `range` (which is the default value for the Kafka consumer SDK), `roundrobin`, and `sticky`
  * @method array getMembers() Obtain This array contains information only if `state` is `Stable` and `protocol_type` is `consumer`
  * @method void setMembers(array $Members) Set This array contains information only if `state` is `Stable` and `protocol_type` is `consumer`
- * @method string getGroup() Obtain Kafka consumer group
- * @method void setGroup(string $Group) Set Kafka consumer group
+ * @method string getGroup() Obtain Consumer group name.
+ * @method void setGroup(string $Group) Set Consumer group name.
  */
 class GroupInfoResponse extends AbstractModel
 {
@@ -76,7 +76,7 @@ Stable: each consumer in the consumer group has joined and is in stable state
     public $Members;
 
     /**
-     * @var string Kafka consumer group
+     * @var string Consumer group name.
      */
     public $Group;
 
@@ -91,7 +91,7 @@ Stable: each consumer in the consumer group has joined and is in stable state
      * @param string $ProtocolType The type of protocol selected by the consumer group, which is `consumer` for common consumers. However, some systems use their own protocols; for example, the protocol used by kafka-connect is `connect`. Only with the standard `consumer` protocol can this API get to know the specific assigning method and parse the specific partition assignment
      * @param string $Protocol Consumer partition assignment algorithm, such as `range` (which is the default value for the Kafka consumer SDK), `roundrobin`, and `sticky`
      * @param array $Members This array contains information only if `state` is `Stable` and `protocol_type` is `consumer`
-     * @param string $Group Kafka consumer group
+     * @param string $Group Consumer group name.
      */
     function __construct()
     {

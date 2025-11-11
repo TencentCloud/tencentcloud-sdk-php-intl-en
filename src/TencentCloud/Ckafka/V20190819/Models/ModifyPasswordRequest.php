@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPassword request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getName() Obtain Username
- * @method void setName(string $Name) Set Username
+ * @method string getInstanceId() Obtain Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method string getName() Obtain Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.comom/document/product/597/40855?from_cn_redirect=1) api.
+ * @method void setName(string $Name) Set Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.comom/document/product/597/40855?from_cn_redirect=1) api.
  * @method string getPassword() Obtain Current user password
  * @method void setPassword(string $Password) Set Current user password
  * @method string getPasswordNew() Obtain New user password
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyPasswordRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
     /**
-     * @var string Username
+     * @var string Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.comom/document/product/597/40855?from_cn_redirect=1) api.
      */
     public $Name;
 
@@ -52,8 +52,8 @@ class ModifyPasswordRequest extends AbstractModel
     public $PasswordNew;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $Name Username
+     * @param string $InstanceId Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param string $Name Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.comom/document/product/597/40855?from_cn_redirect=1) api.
      * @param string $Password Current user password
      * @param string $PasswordNew New user password
      */

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Returned result object of instance attributes
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
+ * @method string getInstanceName() Obtain Specifies the Name of the ckafka cluster instance.
+ * @method void setInstanceName(string $InstanceName) Set Specifies the Name of the ckafka cluster instance.
  * @method array getVipList() Obtain VIP list information of access point
  * @method void setVipList(array $VipList) Set VIP list information of access point
  * @method string getVip() Obtain Virtual IP
  * @method void setVip(string $Vip) Set Virtual IP
  * @method string getVport() Obtain Virtual port
  * @method void setVport(string $Vport) Set Virtual port
- * @method integer getStatus() Obtain Instance status. 0: creating, 1: running, 2: deleting
- * @method void setStatus(integer $Status) Set Instance status. 0: creating, 1: running, 2: deleting
+ * @method integer getStatus() Obtain Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+ * @method void setStatus(integer $Status) Set Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
  * @method integer getBandwidth() Obtain Instance bandwidth in Mbps
  * @method void setBandwidth(integer $Bandwidth) Set Instance bandwidth in Mbps
  * @method integer getDiskSize() Obtain Instance storage capacity in GB
@@ -61,75 +61,101 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCreatedTopics() Obtain Number of topics already created
  * @method void setCreatedTopics(integer $CreatedTopics) Set Number of topics already created
  * @method array getTags() Obtain Tag array
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag array
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getExpireTime() Obtain Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setExpireTime(integer $ExpireTime) Set Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getZoneIds() Obtain Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setZoneIds(array $ZoneIds) Set Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getVersion() Obtain Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVersion(string $Version) Set Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxGroupNum() Obtain Maximum number of groups
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMaxGroupNum(integer $MaxGroupNum) Set Maximum number of groups
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getCvm() Obtain Offering type. `0`: Standard Edition; `1`: Professional Edition
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setCvm(integer $Cvm) Set Offering type. `0`: Standard Edition; `1`: Professional Edition
-Note: this field may return `null`, indicating that no valid value was found.
- * @method string getInstanceType() Obtain Type.
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setInstanceType(string $InstanceType) Set Type.
-Note: this field may return `null`, indicating that no valid value was found.
- * @method array getFeatures() Obtain Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFeatures(array $Features) Set Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method DynamicRetentionTime getRetentionTimeConfig() Obtain Dynamic message retention policy
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setRetentionTimeConfig(DynamicRetentionTime $RetentionTimeConfig) Set Dynamic message retention policy
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getMaxConnection() Obtain Maximum number of connections
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMaxConnection(integer $MaxConnection) Set Maximum number of connections
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getZoneIds() Obtain Availability Zone List
+ * @method void setZoneIds(array $ZoneIds) Set Availability Zone List
+ * @method string getVersion() Obtain Specifies the ckafka cluster instance version.
+ * @method void setVersion(string $Version) Set Specifies the ckafka cluster instance version.
+ * @method integer getMaxGroupNum() Obtain Maximum number of groups.
+ * @method void setMaxGroupNum(integer $MaxGroupNum) Set Maximum number of groups.
+ * @method integer getCvm() Obtain Sale type. valid values: 0 (standard version), 1 (pro edition).
+ * @method void setCvm(integer $Cvm) Set Sale type. valid values: 0 (standard version), 1 (pro edition).
+ * @method string getInstanceType() Obtain Instance type. valid values:. 
+Specifies the pro edition.    
+Standard version.
+premium. specifies the advanced edition.
+Specifies the serverless version.
+ * @method void setInstanceType(string $InstanceType) Set Instance type. valid values:. 
+Specifies the pro edition.    
+Standard version.
+premium. specifies the advanced edition.
+Specifies the serverless version.
+ * @method array getFeatures() Obtain Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
+ * @method void setFeatures(array $Features) Set Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
+ * @method DynamicRetentionTime getRetentionTimeConfig() Obtain Dynamic message retention policy.
+ * @method void setRetentionTimeConfig(DynamicRetentionTime $RetentionTimeConfig) Set Dynamic message retention policy.
+ * @method integer getMaxConnection() Obtain Maximum number of connections.
+ * @method void setMaxConnection(integer $MaxConnection) Set Maximum number of connections.
  * @method integer getPublicNetwork() Obtain Public network bandwidth
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPublicNetwork(integer $PublicNetwork) Set Public network bandwidth
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDeleteRouteTimestamp() Obtain Time
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) Set Time
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getRemainingPartitions() Obtain Number of remaining creatable partitions
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setRemainingPartitions(integer $RemainingPartitions) Set Number of remaining creatable partitions
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getRemainingTopics() Obtain Number of remaining creatable topics
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setRemainingTopics(integer $RemainingTopics) Set Number of remaining creatable topics
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method DynamicDiskConfig getDynamicDiskConfig() Obtain Dynamic disk expansion policy.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) Set Dynamic disk expansion policy.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDeleteRouteTimestamp() Obtain Specifies the deprecated field with no actual meaning.
+ * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) Set Specifies the deprecated field with no actual meaning.
+ * @method integer getRemainingPartitions() Obtain Number of remaining creatable partitions.
+ * @method void setRemainingPartitions(integer $RemainingPartitions) Set Number of remaining creatable partitions.
+ * @method integer getRemainingTopics() Obtain Number of remaining creatable topics.
+ * @method void setRemainingTopics(integer $RemainingTopics) Set Number of remaining creatable topics.
+ * @method DynamicDiskConfig getDynamicDiskConfig() Obtain Scaling policy for dynamic disk.
+ * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) Set Scaling policy for dynamic disk.
+ * @method string getInstanceChargeType() Obtain Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+ * @method integer getElasticBandwidthSwitch() Obtain Whether to enable the elastic bandwidth allowlist.   
+Indicates the allowlist feature with elastic bandwidth enabled.
+0: elastic bandwidth allowlist feature is disabled.
+ * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) Set Whether to enable the elastic bandwidth allowlist.   
+Indicates the allowlist feature with elastic bandwidth enabled.
+0: elastic bandwidth allowlist feature is disabled.
+ * @method integer getElasticBandwidthOpenStatus() Obtain Indicates the elastic bandwidth activation status.
+1: indicates elastic bandwidth is disabled.
+Enable elastic bandwidth.
+Enable elastic bandwidth successfully.
+33: disabling elastic bandwidth.
+Indicates that the elastic bandwidth is successfully disabled.
+Enable elastic bandwidth failed.
+Bandwidth failure.
+ * @method void setElasticBandwidthOpenStatus(integer $ElasticBandwidthOpenStatus) Set Indicates the elastic bandwidth activation status.
+1: indicates elastic bandwidth is disabled.
+Enable elastic bandwidth.
+Enable elastic bandwidth successfully.
+33: disabling elastic bandwidth.
+Indicates that the elastic bandwidth is successfully disabled.
+Enable elastic bandwidth failed.
+Bandwidth failure.
+ * @method string getClusterType() Obtain Cluster type.  
+CLOUD_IDC idc cluster.
+CLOUD_CVM_SHARE shared cluster.
+CLOUD_CVM_YUNTI yunti cvm cluster.
+CLOUD_CVM. specifies the cvm cluster.
+CLOUD_CDC cdc cluster.
+CLOUD_EKS_TSE eks cluster.
+ * @method void setClusterType(string $ClusterType) Set Cluster type.  
+CLOUD_IDC idc cluster.
+CLOUD_CVM_SHARE shared cluster.
+CLOUD_CVM_YUNTI yunti cvm cluster.
+CLOUD_CVM. specifies the cvm cluster.
+CLOUD_CDC cdc cluster.
+CLOUD_EKS_TSE eks cluster.
+ * @method integer getFreePartitionNumber() Obtain Number of free partitions.
+ * @method void setFreePartitionNumber(integer $FreePartitionNumber) Set Number of free partitions.
+ * @method integer getElasticFloatBandwidth() Obtain Specifies the elastic bandwidth upper limit.
+ * @method void setElasticFloatBandwidth(integer $ElasticFloatBandwidth) Set Specifies the elastic bandwidth upper limit.
+ * @method string getCustomCertId() Obtain ssl custom certificate id. only returned for instance clusters with custom certificates.
+ * @method void setCustomCertId(string $CustomCertId) Set ssl custom certificate id. only returned for instance clusters with custom certificates.
+ * @method integer getUncleanLeaderElectionEnable() Obtain Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+ * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+ * @method integer getDeleteProtectionEnable() Obtain Instance deletion protection switch. 1: enabled; 0: disabled.
+ * @method void setDeleteProtectionEnable(integer $DeleteProtectionEnable) Set Instance deletion protection switch. 1: enabled; 0: disabled.
  */
 class InstanceAttributesResponse extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string The ckafka cluster instance Id.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string Specifies the Name of the ckafka cluster instance.
      */
     public $InstanceName;
 
@@ -149,7 +175,7 @@ class InstanceAttributesResponse extends AbstractModel
     public $Vport;
 
     /**
-     * @var integer Instance status. 0: creating, 1: running, 2: deleting
+     * @var integer Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
      */
     public $Status;
 
@@ -225,101 +251,150 @@ class InstanceAttributesResponse extends AbstractModel
 
     /**
      * @var array Tag array
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
     /**
      * @var integer Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ExpireTime;
 
     /**
-     * @var array Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Availability Zone List
      */
     public $ZoneIds;
 
     /**
-     * @var string Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the ckafka cluster instance version.
      */
     public $Version;
 
     /**
-     * @var integer Maximum number of groups
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum number of groups.
      */
     public $MaxGroupNum;
 
     /**
-     * @var integer Offering type. `0`: Standard Edition; `1`: Professional Edition
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var integer Sale type. valid values: 0 (standard version), 1 (pro edition).
      */
     public $Cvm;
 
     /**
-     * @var string Type.
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var string Instance type. valid values:. 
+Specifies the pro edition.    
+Standard version.
+premium. specifies the advanced edition.
+Specifies the serverless version.
      */
     public $InstanceType;
 
     /**
-     * @var array Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
      */
     public $Features;
 
     /**
-     * @var DynamicRetentionTime Dynamic message retention policy
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var DynamicRetentionTime Dynamic message retention policy.
      */
     public $RetentionTimeConfig;
 
     /**
-     * @var integer Maximum number of connections
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum number of connections.
      */
     public $MaxConnection;
 
     /**
      * @var integer Public network bandwidth
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PublicNetwork;
 
     /**
-     * @var string Time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the deprecated field with no actual meaning.
      */
     public $DeleteRouteTimestamp;
 
     /**
-     * @var integer Number of remaining creatable partitions
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Number of remaining creatable partitions.
      */
     public $RemainingPartitions;
 
     /**
-     * @var integer Number of remaining creatable topics
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Number of remaining creatable topics.
      */
     public $RemainingTopics;
 
     /**
-     * @var DynamicDiskConfig Dynamic disk expansion policy.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var DynamicDiskConfig Scaling policy for dynamic disk.
      */
     public $DynamicDiskConfig;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
+     * @var string Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+     */
+    public $InstanceChargeType;
+
+    /**
+     * @var integer Whether to enable the elastic bandwidth allowlist.   
+Indicates the allowlist feature with elastic bandwidth enabled.
+0: elastic bandwidth allowlist feature is disabled.
+     */
+    public $ElasticBandwidthSwitch;
+
+    /**
+     * @var integer Indicates the elastic bandwidth activation status.
+1: indicates elastic bandwidth is disabled.
+Enable elastic bandwidth.
+Enable elastic bandwidth successfully.
+33: disabling elastic bandwidth.
+Indicates that the elastic bandwidth is successfully disabled.
+Enable elastic bandwidth failed.
+Bandwidth failure.
+     */
+    public $ElasticBandwidthOpenStatus;
+
+    /**
+     * @var string Cluster type.  
+CLOUD_IDC idc cluster.
+CLOUD_CVM_SHARE shared cluster.
+CLOUD_CVM_YUNTI yunti cvm cluster.
+CLOUD_CVM. specifies the cvm cluster.
+CLOUD_CDC cdc cluster.
+CLOUD_EKS_TSE eks cluster.
+     */
+    public $ClusterType;
+
+    /**
+     * @var integer Number of free partitions.
+     */
+    public $FreePartitionNumber;
+
+    /**
+     * @var integer Specifies the elastic bandwidth upper limit.
+     */
+    public $ElasticFloatBandwidth;
+
+    /**
+     * @var string ssl custom certificate id. only returned for instance clusters with custom certificates.
+     */
+    public $CustomCertId;
+
+    /**
+     * @var integer Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+     */
+    public $UncleanLeaderElectionEnable;
+
+    /**
+     * @var integer Instance deletion protection switch. 1: enabled; 0: disabled.
+     */
+    public $DeleteProtectionEnable;
+
+    /**
+     * @param string $InstanceId The ckafka cluster instance Id.
+     * @param string $InstanceName Specifies the Name of the ckafka cluster instance.
      * @param array $VipList VIP list information of access point
      * @param string $Vip Virtual IP
      * @param string $Vport Virtual port
-     * @param integer $Status Instance status. 0: creating, 1: running, 2: deleting
+     * @param integer $Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
      * @param integer $Bandwidth Instance bandwidth in Mbps
      * @param integer $DiskSize Instance storage capacity in GB
      * @param integer $ZoneId AZ
@@ -335,35 +410,48 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param integer $CreatedPartitions Number of partitions already created
      * @param integer $CreatedTopics Number of topics already created
      * @param array $Tags Tag array
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ExpireTime Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $ZoneIds Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Version Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxGroupNum Maximum number of groups
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Cvm Offering type. `0`: Standard Edition; `1`: Professional Edition
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param string $InstanceType Type.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param array $Features Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DynamicRetentionTime $RetentionTimeConfig Dynamic message retention policy
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $MaxConnection Maximum number of connections
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $ZoneIds Availability Zone List
+     * @param string $Version Specifies the ckafka cluster instance version.
+     * @param integer $MaxGroupNum Maximum number of groups.
+     * @param integer $Cvm Sale type. valid values: 0 (standard version), 1 (pro edition).
+     * @param string $InstanceType Instance type. valid values:. 
+Specifies the pro edition.    
+Standard version.
+premium. specifies the advanced edition.
+Specifies the serverless version.
+     * @param array $Features Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
+     * @param DynamicRetentionTime $RetentionTimeConfig Dynamic message retention policy.
+     * @param integer $MaxConnection Maximum number of connections.
      * @param integer $PublicNetwork Public network bandwidth
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DeleteRouteTimestamp Time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $RemainingPartitions Number of remaining creatable partitions
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $RemainingTopics Number of remaining creatable topics
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DynamicDiskConfig $DynamicDiskConfig Dynamic disk expansion policy.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $DeleteRouteTimestamp Specifies the deprecated field with no actual meaning.
+     * @param integer $RemainingPartitions Number of remaining creatable partitions.
+     * @param integer $RemainingTopics Number of remaining creatable topics.
+     * @param DynamicDiskConfig $DynamicDiskConfig Scaling policy for dynamic disk.
+     * @param string $InstanceChargeType Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+     * @param integer $ElasticBandwidthSwitch Whether to enable the elastic bandwidth allowlist.   
+Indicates the allowlist feature with elastic bandwidth enabled.
+0: elastic bandwidth allowlist feature is disabled.
+     * @param integer $ElasticBandwidthOpenStatus Indicates the elastic bandwidth activation status.
+1: indicates elastic bandwidth is disabled.
+Enable elastic bandwidth.
+Enable elastic bandwidth successfully.
+33: disabling elastic bandwidth.
+Indicates that the elastic bandwidth is successfully disabled.
+Enable elastic bandwidth failed.
+Bandwidth failure.
+     * @param string $ClusterType Cluster type.  
+CLOUD_IDC idc cluster.
+CLOUD_CVM_SHARE shared cluster.
+CLOUD_CVM_YUNTI yunti cvm cluster.
+CLOUD_CVM. specifies the cvm cluster.
+CLOUD_CDC cdc cluster.
+CLOUD_EKS_TSE eks cluster.
+     * @param integer $FreePartitionNumber Number of free partitions.
+     * @param integer $ElasticFloatBandwidth Specifies the elastic bandwidth upper limit.
+     * @param string $CustomCertId ssl custom certificate id. only returned for instance clusters with custom certificates.
+     * @param integer $UncleanLeaderElectionEnable Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+     * @param integer $DeleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
      */
     function __construct()
     {
@@ -529,6 +617,42 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("DynamicDiskConfig",$param) and $param["DynamicDiskConfig"] !== null) {
             $this->DynamicDiskConfig = new DynamicDiskConfig();
             $this->DynamicDiskConfig->deserialize($param["DynamicDiskConfig"]);
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("ElasticBandwidthSwitch",$param) and $param["ElasticBandwidthSwitch"] !== null) {
+            $this->ElasticBandwidthSwitch = $param["ElasticBandwidthSwitch"];
+        }
+
+        if (array_key_exists("ElasticBandwidthOpenStatus",$param) and $param["ElasticBandwidthOpenStatus"] !== null) {
+            $this->ElasticBandwidthOpenStatus = $param["ElasticBandwidthOpenStatus"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("FreePartitionNumber",$param) and $param["FreePartitionNumber"] !== null) {
+            $this->FreePartitionNumber = $param["FreePartitionNumber"];
+        }
+
+        if (array_key_exists("ElasticFloatBandwidth",$param) and $param["ElasticFloatBandwidth"] !== null) {
+            $this->ElasticFloatBandwidth = $param["ElasticFloatBandwidth"];
+        }
+
+        if (array_key_exists("CustomCertId",$param) and $param["CustomCertId"] !== null) {
+            $this->CustomCertId = $param["CustomCertId"];
+        }
+
+        if (array_key_exists("UncleanLeaderElectionEnable",$param) and $param["UncleanLeaderElectionEnable"] !== null) {
+            $this->UncleanLeaderElectionEnable = $param["UncleanLeaderElectionEnable"];
+        }
+
+        if (array_key_exists("DeleteProtectionEnable",$param) and $param["DeleteProtectionEnable"] !== null) {
+            $this->DeleteProtectionEnable = $param["DeleteProtectionEnable"];
         }
     }
 }

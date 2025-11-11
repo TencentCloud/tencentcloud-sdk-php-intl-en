@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplyId(integer $ApplyId) Set Approval id.
  * @method string getPrefix() Obtain Prefix for sending numbers.
  * @method void setPrefix(string $Prefix) Set Prefix for sending numbers.
+ * @method string getMobileNddPrefix() Obtain Domestic long-distance mobile phone prefix.
+ * @method void setMobileNddPrefix(string $MobileNddPrefix) Set Domestic long-distance mobile phone prefix.
+ * @method boolean getLocalNumberTrimAC() Obtain Removes the area code for local calls.
+ * @method void setLocalNumberTrimAC(boolean $LocalNumberTrimAC) Set Removes the area code for local calls.
  */
 class ModifyOwnNumberApplyRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class ModifyOwnNumberApplyRequest extends AbstractModel
     public $Prefix;
 
     /**
+     * @var string Domestic long-distance mobile phone prefix.
+     */
+    public $MobileNddPrefix;
+
+    /**
+     * @var boolean Removes the area code for local calls.
+     */
+    public $LocalNumberTrimAC;
+
+    /**
      * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param array $DetailList Circuit-Related parameters.
      * @param integer $ApplyId Approval id.
      * @param string $Prefix Prefix for sending numbers.
+     * @param string $MobileNddPrefix Domestic long-distance mobile phone prefix.
+     * @param boolean $LocalNumberTrimAC Removes the area code for local calls.
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ class ModifyOwnNumberApplyRequest extends AbstractModel
 
         if (array_key_exists("Prefix",$param) and $param["Prefix"] !== null) {
             $this->Prefix = $param["Prefix"];
+        }
+
+        if (array_key_exists("MobileNddPrefix",$param) and $param["MobileNddPrefix"] !== null) {
+            $this->MobileNddPrefix = $param["MobileNddPrefix"];
+        }
+
+        if (array_key_exists("LocalNumberTrimAC",$param) and $param["LocalNumberTrimAC"] !== null) {
+            $this->LocalNumberTrimAC = $param["LocalNumberTrimAC"];
         }
     }
 }
