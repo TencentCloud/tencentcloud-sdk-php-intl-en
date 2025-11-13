@@ -58,14 +58,16 @@ When the outer parameter Container is hls, valid values are:
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getBitrate() Obtain Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
  * @method void setBitrate(integer $Bitrate) Set Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
- * @method integer getSampleRate() Obtain The sampling rate of the audio stream. the sampling rate options supported by different encoding standards are different. for details, see the audio sample rate support scope document (https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
+ * @method integer getSampleRate() Obtain Sampling rate of the audio stream. Different encoding standards support different sampling rate options. The value of 0 indicates using the sampling rate value of the source audio.
+For details, see [Supported Range of Audio Sampling Rate](https://www.tencentcloud.comom/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
 Unit: Hz.
-Please ensure that the sampling rate of the source audio stream is within the scope of the above options. otherwise, transcoding failure may occur.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSampleRate(integer $SampleRate) Set The sampling rate of the audio stream. the sampling rate options supported by different encoding standards are different. for details, see the audio sample rate support scope document (https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
+Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSampleRate(integer $SampleRate) Set Sampling rate of the audio stream. Different encoding standards support different sampling rate options. The value of 0 indicates using the sampling rate value of the source audio.
+For details, see [Supported Range of Audio Sampling Rate](https://www.tencentcloud.comom/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
 Unit: Hz.
-Please ensure that the sampling rate of the source audio stream is within the scope of the above options. otherwise, transcoding failure may occur.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getAudioChannel() Obtain Audio channel mode. Valid values:
 <li>1: mono-channel.</li>
 <li>2: dual-channel.</li>
@@ -113,10 +115,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Bitrate;
 
     /**
-     * @var integer The sampling rate of the audio stream. the sampling rate options supported by different encoding standards are different. for details, see the audio sample rate support scope document (https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
+     * @var integer Sampling rate of the audio stream. Different encoding standards support different sampling rate options. The value of 0 indicates using the sampling rate value of the source audio.
+For details, see [Supported Range of Audio Sampling Rate](https://www.tencentcloud.comom/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
 Unit: Hz.
-Please ensure that the sampling rate of the source audio stream is within the scope of the above options. otherwise, transcoding failure may occur.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SampleRate;
 
@@ -156,10 +159,11 @@ When the outer parameter Container is hls, valid values are:
 <li>mp3.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
-     * @param integer $SampleRate The sampling rate of the audio stream. the sampling rate options supported by different encoding standards are different. for details, see the audio sample rate support scope document (https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
+     * @param integer $SampleRate Sampling rate of the audio stream. Different encoding standards support different sampling rate options. The value of 0 indicates using the sampling rate value of the source audio.
+For details, see [Supported Range of Audio Sampling Rate](https://www.tencentcloud.comom/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
 Unit: Hz.
-Please ensure that the sampling rate of the source audio stream is within the scope of the above options. otherwise, transcoding failure may occur.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $AudioChannel Audio channel mode. Valid values:
 <li>1: mono-channel.</li>
 <li>2: dual-channel.</li>

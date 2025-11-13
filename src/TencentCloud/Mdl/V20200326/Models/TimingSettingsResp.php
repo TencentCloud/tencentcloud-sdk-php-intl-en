@@ -34,6 +34,8 @@ It indicates the start time for recording in UTC format (e.g., `2020-01-01T12:00
 It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the start time for recording.
  * @method void setEndTime(string $EndTime) Set This parameter cannot be empty if `EventType` is `TIMED_RECORD`.
 It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the start time for recording.
+ * @method integer getPTS() Obtain Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+ * @method void setPTS(integer $PTS) Set Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
  */
 class TimingSettingsResp extends AbstractModel
 {
@@ -61,6 +63,11 @@ It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:0
     public $EndTime;
 
     /**
+     * @var integer Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+     */
+    public $PTS;
+
+    /**
      * @param string $StartType Event trigger type
      * @param string $Time Not empty if `StartType` is `FIXED_TIME`
 UTC time, such as `2020-01-01T12:00:00Z`
@@ -68,6 +75,7 @@ UTC time, such as `2020-01-01T12:00:00Z`
 It indicates the start time for recording in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
      * @param string $EndTime This parameter cannot be empty if `EventType` is `TIMED_RECORD`.
 It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the start time for recording.
+     * @param integer $PTS Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:0
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("PTS",$param) and $param["PTS"] !== null) {
+            $this->PTS = $param["PTS"];
         }
     }
 }

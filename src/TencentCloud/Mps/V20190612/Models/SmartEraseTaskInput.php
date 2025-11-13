@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setRawParameter(RawSmartEraseParameter $RawParameter) Set Intelligent erasure custom parameter. valid when Definition is 0. this parameter is used for highly custom scenarios. we recommend you prioritize using Definition to specify intelligent erasure parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method OverrideEraseParameter getOverrideParameter() Obtain Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+ * @method void setOverrideParameter(OverrideEraseParameter $OverrideParameter) Set Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
  * @method TaskOutputStorage getOutputStorage() Obtain Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
@@ -65,6 +67,11 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $RawParameter;
 
     /**
+     * @var OverrideEraseParameter Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+     */
+    public $OverrideParameter;
+
+    /**
      * @var TaskOutputStorage Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -88,6 +95,7 @@ Specifies the output path must end with `.{format}`. variable names, please refe
      * @param integer $Definition Smart erasure template id.
      * @param RawSmartEraseParameter $RawParameter Intelligent erasure custom parameter. valid when Definition is 0. this parameter is used for highly custom scenarios. we recommend you prioritize using Definition to specify intelligent erasure parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param OverrideEraseParameter $OverrideParameter Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
      * @param TaskOutputStorage $OutputStorage Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $OutputObjectPath Output path of the file, which can be a relative or absolute path.
@@ -121,6 +129,11 @@ Specifies the output path must end with `.{format}`. variable names, please refe
         if (array_key_exists("RawParameter",$param) and $param["RawParameter"] !== null) {
             $this->RawParameter = new RawSmartEraseParameter();
             $this->RawParameter->deserialize($param["RawParameter"]);
+        }
+
+        if (array_key_exists("OverrideParameter",$param) and $param["OverrideParameter"] !== null) {
+            $this->OverrideParameter = new OverrideEraseParameter();
+            $this->OverrideParameter->deserialize($param["OverrideParameter"]);
         }
 
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {

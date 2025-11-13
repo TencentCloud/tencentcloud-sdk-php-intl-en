@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIpAssigned(boolean $PublicIpAssigned) Set Whether to allocate a public IP address. Valid values:<br><li>true: Allocate a public IP address.</li><li>false: Do not allocate a public IP address.</li><br>When the public network bandwidth is greater than 0 Mbps, you can choose whether to enable the public IP address. The public IP address is enabled by default. When the public network bandwidth is 0, allocating the public IP address is not supported. This parameter is only used as an input parameter in the RunInstances API.
  * @method string getBandwidthPackageId() Obtain Bandwidth package ID. it can be obtained through the `BandwidthPackageId` in the return value from the DescribeBandwidthPackages api. this parameter is used as an input parameter only in the RunInstances api.
  * @method void setBandwidthPackageId(string $BandwidthPackageId) Set Bandwidth package ID. it can be obtained through the `BandwidthPackageId` in the return value from the DescribeBandwidthPackages api. this parameter is used as an input parameter only in the RunInstances api.
- * @method string getInternetServiceProvider() Obtain Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1). default value: BGP.
+ * @method string getInternetServiceProvider() Obtain Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://cloud.tencent.com/document/product/1199/41646). default value: BGP.
 <Li>BGP: specifies the general bgp line.</li>.
 For a user with static single-line IP allowlist enabled, valid values include:.
 <Li>CMCC: china mobile.</li>.
@@ -43,7 +43,7 @@ For a user with static single-line IP allowlist enabled, valid values include:.
 Note: The static single-line IP is only supported in some regions.
 
 
- * @method void setInternetServiceProvider(string $InternetServiceProvider) Set Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1). default value: BGP.
+ * @method void setInternetServiceProvider(string $InternetServiceProvider) Set Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://cloud.tencent.com/document/product/1199/41646). default value: BGP.
 <Li>BGP: specifies the general bgp line.</li>.
 For a user with static single-line IP allowlist enabled, valid values include:.
 <Li>CMCC: china mobile.</li>.
@@ -110,7 +110,7 @@ class InternetAccessible extends AbstractModel
     public $BandwidthPackageId;
 
     /**
-     * @var string Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1). default value: BGP.
+     * @var string Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://cloud.tencent.com/document/product/1199/41646). default value: BGP.
 <Li>BGP: specifies the general bgp line.</li>.
 For a user with static single-line IP allowlist enabled, valid values include:.
 <Li>CMCC: china mobile.</li>.
@@ -158,7 +158,7 @@ This feature is in beta test in selected regions. submit a ticket for consultati
      * @param integer $InternetMaxBandwidthOut The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
      * @param boolean $PublicIpAssigned Whether to allocate a public IP address. Valid values:<br><li>true: Allocate a public IP address.</li><li>false: Do not allocate a public IP address.</li><br>When the public network bandwidth is greater than 0 Mbps, you can choose whether to enable the public IP address. The public IP address is enabled by default. When the public network bandwidth is 0, allocating the public IP address is not supported. This parameter is only used as an input parameter in the RunInstances API.
      * @param string $BandwidthPackageId Bandwidth package ID. it can be obtained through the `BandwidthPackageId` in the return value from the DescribeBandwidthPackages api. this parameter is used as an input parameter only in the RunInstances api.
-     * @param string $InternetServiceProvider Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1). default value: BGP.
+     * @param string $InternetServiceProvider Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://cloud.tencent.com/document/product/1199/41646). default value: BGP.
 <Li>BGP: specifies the general bgp line.</li>.
 For a user with static single-line IP allowlist enabled, valid values include:.
 <Li>CMCC: china mobile.</li>.

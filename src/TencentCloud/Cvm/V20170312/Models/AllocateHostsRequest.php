@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
  * @method string getClientToken() Obtain A string used to ensure the idempotency of the request.
  * @method void setClientToken(string $ClientToken) Set A string used to ensure the idempotency of the request.
- * @method ChargePrepaid getHostChargePrepaid() Obtain Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
- * @method void setHostChargePrepaid(ChargePrepaid $HostChargePrepaid) Set Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
- * @method string getHostChargeType() Obtain Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
- * @method void setHostChargeType(string $HostChargeType) Set Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+ * @method ChargePrepaid getHostChargePrepaid() Obtain Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+ * @method void setHostChargePrepaid(ChargePrepaid $HostChargePrepaid) Set Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+ * @method string getHostChargeType() Obtain Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br>
+ * @method void setHostChargeType(string $HostChargeType) Set Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br>
  * @method string getHostType() Obtain CDH instance model. Default value: `HS1`.
  * @method void setHostType(string $HostType) Set CDH instance model. Default value: `HS1`.
  * @method integer getHostCount() Obtain Quantity of CDH instances purchased. Default value: 1.
@@ -48,12 +48,12 @@ class AllocateHostsRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @var ChargePrepaid Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+     * @var ChargePrepaid Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
      */
     public $HostChargePrepaid;
 
     /**
-     * @var string Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+     * @var string Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br>
      */
     public $HostChargeType;
 
@@ -75,8 +75,8 @@ class AllocateHostsRequest extends AbstractModel
     /**
      * @param Placement $Placement Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
      * @param string $ClientToken A string used to ensure the idempotency of the request.
-     * @param ChargePrepaid $HostChargePrepaid Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
-     * @param string $HostChargeType Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+     * @param ChargePrepaid $HostChargePrepaid Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+     * @param string $HostChargeType Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br>
      * @param string $HostType CDH instance model. Default value: `HS1`.
      * @param integer $HostCount Quantity of CDH instances purchased. Default value: 1.
      * @param array $TagSpecification Tag description. You can specify the parameter to associate a tag with an instance.

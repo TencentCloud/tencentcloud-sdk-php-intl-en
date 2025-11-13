@@ -55,29 +55,29 @@ When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
+
 When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
 
 Note:
-
 This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
  * @method void setPureAudio(integer $PureAudio) Set Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
 When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
+
 When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
 
 Note:
-
 This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
- * @method string getSegmentType() Obtain HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
-Note: The HLS segment format for adaptive bitrate streaming is based on this field.
- * @method void setSegmentType(string $SegmentType) Set HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
-Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+ * @method string getSegmentType() Obtain Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
+Note: the shard format of the adaptive bitrate stream is based on this field.
+ * @method void setSegmentType(string $SegmentType) Set Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
+Note: the shard format of the adaptive bitrate stream is based on this field.
  */
 class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -126,19 +126,19 @@ When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
+
 When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
 
 Note:
-
 This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
      */
     public $PureAudio;
 
     /**
-     * @var string HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
-Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+     * @var string Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
+Note: the shard format of the adaptive bitrate stream is based on this field.
      */
     public $SegmentType;
 
@@ -163,15 +163,15 @@ When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
+
 When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
 
 Note:
-
 This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
-     * @param string $SegmentType HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
-Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+     * @param string $SegmentType Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
+Note: the shard format of the adaptive bitrate stream is based on this field.
      */
     function __construct()
     {

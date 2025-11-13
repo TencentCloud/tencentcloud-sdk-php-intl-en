@@ -28,6 +28,10 @@ Note: This field may return null, indicating that no valid value can be obtained
  * @method void setSubtitlePath(string $SubtitlePath) Set Subtitle file path.
  * @method TaskOutputStorage getOutputStorage() Obtain Subtitle file storage location.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Subtitle file storage location.
+ * @method string getPath() Obtain Subtitle file URL.
+ * @method void setPath(string $Path) Set Subtitle file URL.
+ * @method array getSubtitleResults() Obtain Returned translation result during multilingual translation.	
+ * @method void setSubtitleResults(array $SubtitleResults) Set Returned translation result during multilingual translation.	
  */
 class SmartSubtitleTaskTransTextResultOutput extends AbstractModel
 {
@@ -48,10 +52,22 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $OutputStorage;
 
     /**
+     * @var string Subtitle file URL.
+     */
+    public $Path;
+
+    /**
+     * @var array Returned translation result during multilingual translation.	
+     */
+    public $SubtitleResults;
+
+    /**
      * @param array $SegmentSet List of segments for translation.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $SubtitlePath Subtitle file path.
      * @param TaskOutputStorage $OutputStorage Subtitle file storage location.
+     * @param string $Path Subtitle file URL.
+     * @param array $SubtitleResults Returned translation result during multilingual translation.	
      */
     function __construct()
     {
@@ -82,6 +98,19 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
             $this->OutputStorage->deserialize($param["OutputStorage"]);
+        }
+
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("SubtitleResults",$param) and $param["SubtitleResults"] !== null) {
+            $this->SubtitleResults = [];
+            foreach ($param["SubtitleResults"] as $key => $value){
+                $obj = new SubtitleTransResultItem();
+                $obj->deserialize($value);
+                array_push($this->SubtitleResults, $obj);
+            }
         }
     }
 }

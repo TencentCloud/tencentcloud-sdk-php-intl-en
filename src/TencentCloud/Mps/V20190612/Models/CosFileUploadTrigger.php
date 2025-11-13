@@ -26,8 +26,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Region of the COS bucket bound to a workflow, such as `ap-chongiqng`.
  * @method string getDir() Obtain Input path directory bound to a workflow, such as `/movie/201907/`. If this parameter is left empty, the `/` root directory will be used.
  * @method void setDir(string $Dir) Set Input path directory bound to a workflow, such as `/movie/201907/`. If this parameter is left empty, the `/` root directory will be used.
- * @method array getFormats() Obtain Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
- * @method void setFormats(array $Formats) Set Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
+ * @method array getFormats() Obtain All supported formats are as follows:
+- Video file extension. The following 15 options are supported:
+`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, and `.m4v`.
+- Audio file extension. The following 7 options are supported:
+`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, and `.amr`.
+- Subtitle file extension. The following 2 options are supported:
+`.vtt` and `.srt`.
+- `*`: any file format is supported.
+- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).
+**Note**:
+1. If the input format list includes `*`, it indicates that any file format is supported.
+2. File extensions can be provided with or without `.`, such as `.mp4` or `mp4`, both are supported.
+3. Custom file extensions should consist of digits, letters, and characters, and have a length between 1 and 64 characters.
+ * @method void setFormats(array $Formats) Set All supported formats are as follows:
+- Video file extension. The following 15 options are supported:
+`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, and `.m4v`.
+- Audio file extension. The following 7 options are supported:
+`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, and `.amr`.
+- Subtitle file extension. The following 2 options are supported:
+`.vtt` and `.srt`.
+- `*`: any file format is supported.
+- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).
+**Note**:
+1. If the input format list includes `*`, it indicates that any file format is supported.
+2. File extensions can be provided with or without `.`, such as `.mp4` or `mp4`, both are supported.
+3. Custom file extensions should consist of digits, letters, and characters, and have a length between 1 and 64 characters.
  */
 class CosFileUploadTrigger extends AbstractModel
 {
@@ -47,7 +71,19 @@ class CosFileUploadTrigger extends AbstractModel
     public $Dir;
 
     /**
-     * @var array Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
+     * @var array All supported formats are as follows:
+- Video file extension. The following 15 options are supported:
+`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, and `.m4v`.
+- Audio file extension. The following 7 options are supported:
+`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, and `.amr`.
+- Subtitle file extension. The following 2 options are supported:
+`.vtt` and `.srt`.
+- `*`: any file format is supported.
+- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).
+**Note**:
+1. If the input format list includes `*`, it indicates that any file format is supported.
+2. File extensions can be provided with or without `.`, such as `.mp4` or `mp4`, both are supported.
+3. Custom file extensions should consist of digits, letters, and characters, and have a length between 1 and 64 characters.
      */
     public $Formats;
 
@@ -55,7 +91,19 @@ class CosFileUploadTrigger extends AbstractModel
      * @param string $Bucket Name of the COS bucket bound to a workflow, such as `TopRankVideo-125xxx88`.
      * @param string $Region Region of the COS bucket bound to a workflow, such as `ap-chongiqng`.
      * @param string $Dir Input path directory bound to a workflow, such as `/movie/201907/`. If this parameter is left empty, the `/` root directory will be used.
-     * @param array $Formats Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
+     * @param array $Formats All supported formats are as follows:
+- Video file extension. The following 15 options are supported:
+`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, and `.m4v`.
+- Audio file extension. The following 7 options are supported:
+`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, and `.amr`.
+- Subtitle file extension. The following 2 options are supported:
+`.vtt` and `.srt`.
+- `*`: any file format is supported.
+- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).
+**Note**:
+1. If the input format list includes `*`, it indicates that any file format is supported.
+2. File extensions can be provided with or without `.`, such as `.mp4` or `mp4`, both are supported.
+3. Custom file extensions should consist of digits, letters, and characters, and have a length between 1 and 64 characters.
      */
     function __construct()
     {

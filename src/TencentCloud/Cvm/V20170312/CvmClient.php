@@ -24,7 +24,6 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 
 /**
  * @method Models\AllocateHostsResponse AllocateHosts(Models\AllocateHostsRequest $req) This API is used to create CDH instances with specified configuration.
-* When HostChargeType is PREPAID, the HostChargePrepaid parameter must be specified.
  * @method Models\AssociateInstancesKeyPairsResponse AssociateInstancesKeyPairs(Models\AssociateInstancesKeyPairsRequest $req) This API is used to associate key pairs with instances.
 
 * If the public key of a key pair is written to the `SSH` configuration of the instance, users will be able to log in to the instance with the private key of the key pair.

@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBandwidthPackageId() Obtain Unique ID of the bandwidth package in the form of `bwp-11112222`.
  * @method void setBandwidthPackageId(string $BandwidthPackageId) Set Unique ID of the bandwidth package in the form of `bwp-11112222`.
- * @method array getFilters() Obtain Each request can have up to 10 `Filters` and 5 `Filter.Values`. `AddressIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-<li>resource-id - String - Required: no -  (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
+ * @method array getFilters() Obtain Each request can have up to 10 `Filters` and 5 `Filter.Values`. The specific filter conditions are as follows:
+<li>resource-id - String - Required: no - (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
 <li>resource-type - String - Required: no - (Filter condition) Filters by the type of resources in a bandwidth package. It now supports only EIP (`Address`) and load balancer (`LoadBalance`).</li>
- * @method void setFilters(array $Filters) Set Each request can have up to 10 `Filters` and 5 `Filter.Values`. `AddressIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-<li>resource-id - String - Required: no -  (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
+ * @method void setFilters(array $Filters) Set Each request can have up to 10 `Filters` and 5 `Filter.Values`. The specific filter conditions are as follows:
+<li>resource-id - String - Required: no - (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
 <li>resource-type - String - Required: no - (Filter condition) Filters by the type of resources in a bandwidth package. It now supports only EIP (`Address`) and load balancer (`LoadBalance`).</li>
- * @method integer getOffset() Obtain The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
- * @method void setOffset(integer $Offset) Set The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
- * @method integer getLimit() Obtain The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
- * @method void setLimit(integer $Limit) Set The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+ * @method integer getOffset() Obtain The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+ * @method void setOffset(integer $Offset) Set The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+ * @method integer getLimit() Obtain The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+ * @method void setLimit(integer $Limit) Set The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
  */
 class DescribeBandwidthPackageResourcesRequest extends AbstractModel
 {
@@ -41,29 +41,29 @@ class DescribeBandwidthPackageResourcesRequest extends AbstractModel
     public $BandwidthPackageId;
 
     /**
-     * @var array Each request can have up to 10 `Filters` and 5 `Filter.Values`. `AddressIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-<li>resource-id - String - Required: no -  (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
+     * @var array Each request can have up to 10 `Filters` and 5 `Filter.Values`. The specific filter conditions are as follows:
+<li>resource-id - String - Required: no - (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
 <li>resource-type - String - Required: no - (Filter condition) Filters by the type of resources in a bandwidth package. It now supports only EIP (`Address`) and load balancer (`LoadBalance`).</li>
      */
     public $Filters;
 
     /**
-     * @var integer The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+     * @var integer The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
      */
     public $Offset;
 
     /**
-     * @var integer The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+     * @var integer The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
      */
     public $Limit;
 
     /**
      * @param string $BandwidthPackageId Unique ID of the bandwidth package in the form of `bwp-11112222`.
-     * @param array $Filters Each request can have up to 10 `Filters` and 5 `Filter.Values`. `AddressIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-<li>resource-id - String - Required: no -  (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
+     * @param array $Filters Each request can have up to 10 `Filters` and 5 `Filter.Values`. The specific filter conditions are as follows:
+<li>resource-id - String - Required: no - (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
 <li>resource-type - String - Required: no - (Filter condition) Filters by the type of resources in a bandwidth package. It now supports only EIP (`Address`) and load balancer (`LoadBalance`).</li>
-     * @param integer $Offset The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
-     * @param integer $Limit The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+     * @param integer $Offset The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+     * @param integer $Limit The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
      */
     function __construct()
     {

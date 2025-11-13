@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent analysis results
  *
- * @method string getType() Obtain Task type. valid values:.
-<Li>Classification: intelligent classification.</li>.
-<Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tagging.</li>.
-<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
-<Li>Highlight: intelligent highlights</li>.
-<Li>DeLogo: intelligent removal.</li>.
-<li>Description: large model summarization.</li>
-
-<Li>Dubbing: intelligent dubbing.</li>.
-<Li>VideoRemake: specifies video deduplication.</li>.
- * @method void setType(string $Type) Set Task type. valid values:.
-<Li>Classification: intelligent classification.</li>.
-<Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tagging.</li>.
-<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
-<Li>Highlight: intelligent highlights</li>.
-<Li>DeLogo: intelligent removal.</li>.
-<li>Description: large model summarization.</li>
-
-<Li>Dubbing: intelligent dubbing.</li>.
-<Li>VideoRemake: specifies video deduplication.</li>.
+ * @method string getType() Obtain Task type. Valid values:
+<li>Classification: smart classification.</li>
+<li>Cover: smart cover.</li>
+<li>Tag: smart tag.</li>
+<li>FrameTag: smart frame tag.</li>
+<li>Highlight: smart highlights.</li>
+<li>DeLogo: smart erasing.</li>
+<li>Description: LLM summary.</li>
+<li>Dubbing: smart dubbing.</li>
+<li>VideoRemake: video deduplication.</li>
+<li>VideoComprehension: video (audio) recognition.</li>
+ * @method void setType(string $Type) Set Task type. Valid values:
+<li>Classification: smart classification.</li>
+<li>Cover: smart cover.</li>
+<li>Tag: smart tag.</li>
+<li>FrameTag: smart frame tag.</li>
+<li>Highlight: smart highlights.</li>
+<li>DeLogo: smart erasing.</li>
+<li>Description: LLM summary.</li>
+<li>Dubbing: smart dubbing.</li>
+<li>VideoRemake: video deduplication.</li>
+<li>VideoComprehension: video (audio) recognition.</li>
  * @method AiAnalysisTaskClassificationResult getClassificationTask() Obtain Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
  * @method void setClassificationTask(AiAnalysisTaskClassificationResult $ClassificationTask) Set Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
  * @method AiAnalysisTaskCoverResult getCoverTask() Obtain Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
@@ -82,21 +82,25 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setVideoRemakeTask(AiAnalysisTaskVideoRemakeResult $VideoRemakeTask) Set The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method AiAnalysisTaskVideoComprehensionResult getVideoComprehensionTask() Obtain Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVideoComprehensionTask(AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask) Set Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AiAnalysisResult extends AbstractModel
 {
     /**
-     * @var string Task type. valid values:.
-<Li>Classification: intelligent classification.</li>.
-<Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tagging.</li>.
-<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
-<Li>Highlight: intelligent highlights</li>.
-<Li>DeLogo: intelligent removal.</li>.
-<li>Description: large model summarization.</li>
-
-<Li>Dubbing: intelligent dubbing.</li>.
-<Li>VideoRemake: specifies video deduplication.</li>.
+     * @var string Task type. Valid values:
+<li>Classification: smart classification.</li>
+<li>Cover: smart cover.</li>
+<li>Tag: smart tag.</li>
+<li>FrameTag: smart frame tag.</li>
+<li>Highlight: smart highlights.</li>
+<li>DeLogo: smart erasing.</li>
+<li>Description: LLM summary.</li>
+<li>Dubbing: smart dubbing.</li>
+<li>VideoRemake: video deduplication.</li>
+<li>VideoComprehension: video (audio) recognition.</li>
      */
     public $Type;
 
@@ -169,17 +173,23 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $VideoRemakeTask;
 
     /**
-     * @param string $Type Task type. valid values:.
-<Li>Classification: intelligent classification.</li>.
-<Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tagging.</li>.
-<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
-<Li>Highlight: intelligent highlights</li>.
-<Li>DeLogo: intelligent removal.</li>.
-<li>Description: large model summarization.</li>
+     * @var AiAnalysisTaskVideoComprehensionResult Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $VideoComprehensionTask;
 
-<Li>Dubbing: intelligent dubbing.</li>.
-<Li>VideoRemake: specifies video deduplication.</li>.
+    /**
+     * @param string $Type Task type. Valid values:
+<li>Classification: smart classification.</li>
+<li>Cover: smart cover.</li>
+<li>Tag: smart tag.</li>
+<li>FrameTag: smart frame tag.</li>
+<li>Highlight: smart highlights.</li>
+<li>DeLogo: smart erasing.</li>
+<li>Description: LLM summary.</li>
+<li>Dubbing: smart dubbing.</li>
+<li>VideoRemake: video deduplication.</li>
+<li>VideoComprehension: video (audio) recognition.</li>
      * @param AiAnalysisTaskClassificationResult $ClassificationTask Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
      * @param AiAnalysisTaskCoverResult $CoverTask Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
      * @param AiAnalysisTaskTagResult $TagTask Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
@@ -200,6 +210,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param AiAnalysisTaskVideoRemakeResult $VideoRemakeTask The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -276,6 +288,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("VideoRemakeTask",$param) and $param["VideoRemakeTask"] !== null) {
             $this->VideoRemakeTask = new AiAnalysisTaskVideoRemakeResult();
             $this->VideoRemakeTask->deserialize($param["VideoRemakeTask"]);
+        }
+
+        if (array_key_exists("VideoComprehensionTask",$param) and $param["VideoComprehensionTask"] !== null) {
+            $this->VideoComprehensionTask = new AiAnalysisTaskVideoComprehensionResult();
+            $this->VideoComprehensionTask->deserialize($param["VideoComprehensionTask"]);
         }
     }
 }

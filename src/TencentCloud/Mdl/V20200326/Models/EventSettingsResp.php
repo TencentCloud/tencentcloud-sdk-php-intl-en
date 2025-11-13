@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventType(string $EventType) Set Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`, `STATIC_IMAGE_ACTIVATE`, `STATIC_IMAGE_DEACTIVATE`.
  * @method string getInputAttachment() Obtain ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
  * @method void setInputAttachment(string $InputAttachment) Set ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
+ * @method integer getPipelineId() Obtain When the type is FIXED_PTS, it is mandatory and defaults to 0
+ * @method void setPipelineId(integer $PipelineId) Set When the type is FIXED_PTS, it is mandatory and defaults to 0
  * @method string getOutputGroupName() Obtain Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
  * @method void setOutputGroupName(string $OutputGroupName) Set Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
  * @method string getManifestName() Obtain Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
@@ -56,6 +58,11 @@ class EventSettingsResp extends AbstractModel
      * @var string ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
      */
     public $InputAttachment;
+
+    /**
+     * @var integer When the type is FIXED_PTS, it is mandatory and defaults to 0
+     */
+    public $PipelineId;
 
     /**
      * @var string Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
@@ -110,6 +117,7 @@ class EventSettingsResp extends AbstractModel
     /**
      * @param string $EventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`, `STATIC_IMAGE_ACTIVATE`, `STATIC_IMAGE_DEACTIVATE`.
      * @param string $InputAttachment ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
+     * @param integer $PipelineId When the type is FIXED_PTS, it is mandatory and defaults to 0
      * @param string $OutputGroupName Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
      * @param string $ManifestName Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
      * @param array $Destinations URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
@@ -140,6 +148,10 @@ class EventSettingsResp extends AbstractModel
 
         if (array_key_exists("InputAttachment",$param) and $param["InputAttachment"] !== null) {
             $this->InputAttachment = $param["InputAttachment"];
+        }
+
+        if (array_key_exists("PipelineId",$param) and $param["PipelineId"] !== null) {
+            $this->PipelineId = $param["PipelineId"];
         }
 
         if (array_key_exists("OutputGroupName",$param) and $param["OutputGroupName"] !== null) {

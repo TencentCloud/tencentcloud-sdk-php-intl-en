@@ -22,10 +22,34 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBandwidthPackageId() Obtain The unique ID of the bandwidth package.
  * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of the bandwidth package.
- * @method string getNetworkType() Obtain Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
- * @method void setNetworkType(string $NetworkType) Set Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
- * @method string getChargeType() Obtain The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
- * @method void setChargeType(string $ChargeType) Set The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+ * @method string getNetworkType() Obtain Bandwidth package type, includes:
+<li>BGP: General BGP bandwidth package</li>
+<li>HIGH_QUALITY_BGP: Dedicated BGP bandwidth package</li>
+<li>ANYCAST: AIA BGP bandwidth package</li>
+<li>SINGLEISP_CMCC: CMCC bandwidth package</li>
+<li>SINGLEISP_CTCC: CTCC bandwidth package</li>
+<li>SINGLEISP_CUCC: CUCC bandwidth package</li>
+ * @method void setNetworkType(string $NetworkType) Set Bandwidth package type, includes:
+<li>BGP: General BGP bandwidth package</li>
+<li>HIGH_QUALITY_BGP: Dedicated BGP bandwidth package</li>
+<li>ANYCAST: AIA BGP bandwidth package</li>
+<li>SINGLEISP_CMCC: CMCC bandwidth package</li>
+<li>SINGLEISP_CTCC: CTCC bandwidth package</li>
+<li>SINGLEISP_CUCC: CUCC bandwidth package</li>
+ * @method string getChargeType() Obtain Bandwidth package billing type, includes:
+<li>ENHANCED95_POSTPAID_BY_MONTH: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: Postpaid - Main Traffic Billing</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>TOP5_POSTPAID_BY_MONTH: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket</li>
+
+ * @method void setChargeType(string $ChargeType) Set Bandwidth package billing type, includes:
+<li>ENHANCED95_POSTPAID_BY_MONTH: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: Postpaid - Main Traffic Billing</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>TOP5_POSTPAID_BY_MONTH: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket</li>
+
  * @method string getBandwidthPackageName() Obtain The name of the bandwidth package.
  * @method void setBandwidthPackageName(string $BandwidthPackageName) Set The name of the bandwidth package.
  * @method string getCreatedTime() Obtain The creation time of the bandwidth package, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
@@ -36,8 +60,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceSet(array $ResourceSet) Set The resource information of the bandwidth package.
  * @method integer getBandwidth() Obtain The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
  * @method void setBandwidth(integer $Bandwidth) Set The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
- * @method string getEgress() Obtain 
- * @method void setEgress(string $Egress) Set 
+ * @method string getEgress() Obtain Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+ * @method void setEgress(string $Egress) Set Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
  */
 class BandwidthPackage extends AbstractModel
 {
@@ -47,12 +74,24 @@ class BandwidthPackage extends AbstractModel
     public $BandwidthPackageId;
 
     /**
-     * @var string Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
+     * @var string Bandwidth package type, includes:
+<li>BGP: General BGP bandwidth package</li>
+<li>HIGH_QUALITY_BGP: Dedicated BGP bandwidth package</li>
+<li>ANYCAST: AIA BGP bandwidth package</li>
+<li>SINGLEISP_CMCC: CMCC bandwidth package</li>
+<li>SINGLEISP_CTCC: CTCC bandwidth package</li>
+<li>SINGLEISP_CUCC: CUCC bandwidth package</li>
      */
     public $NetworkType;
 
     /**
-     * @var string The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+     * @var string Bandwidth package billing type, includes:
+<li>ENHANCED95_POSTPAID_BY_MONTH: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: Postpaid - Main Traffic Billing</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>TOP5_POSTPAID_BY_MONTH: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket</li>
+
      */
     public $ChargeType;
 
@@ -82,20 +121,35 @@ class BandwidthPackage extends AbstractModel
     public $Bandwidth;
 
     /**
-     * @var string 
+     * @var string Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
      */
     public $Egress;
 
     /**
      * @param string $BandwidthPackageId The unique ID of the bandwidth package.
-     * @param string $NetworkType Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
-     * @param string $ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+     * @param string $NetworkType Bandwidth package type, includes:
+<li>BGP: General BGP bandwidth package</li>
+<li>HIGH_QUALITY_BGP: Dedicated BGP bandwidth package</li>
+<li>ANYCAST: AIA BGP bandwidth package</li>
+<li>SINGLEISP_CMCC: CMCC bandwidth package</li>
+<li>SINGLEISP_CTCC: CTCC bandwidth package</li>
+<li>SINGLEISP_CUCC: CUCC bandwidth package</li>
+     * @param string $ChargeType Bandwidth package billing type, includes:
+<li>ENHANCED95_POSTPAID_BY_MONTH: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: Postpaid - Main Traffic Billing</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>TOP5_POSTPAID_BY_MONTH: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket</li>
+
      * @param string $BandwidthPackageName The name of the bandwidth package.
      * @param string $CreatedTime The creation time of the bandwidth package, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
      * @param string $Status The status of the bandwidth package. Valid values: 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
      * @param array $ResourceSet The resource information of the bandwidth package.
      * @param integer $Bandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
-     * @param string $Egress 
+     * @param string $Egress Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
      */
     function __construct()
     {

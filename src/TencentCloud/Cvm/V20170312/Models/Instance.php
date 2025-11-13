@@ -66,8 +66,8 @@ Note: this field is null in postpaid mode.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security groups to which the instance belongs. To obtain the security group IDs, you can call [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) and look for the `sgld` fields in the response.
  * @method LoginSettings getLoginSettings() Obtain Login settings of the instance. Currently only the key associated with the instance is returned.
  * @method void setLoginSettings(LoginSettings $LoginSettings) Set Login settings of the instance. Currently only the key associated with the instance is returned.
- * @method string getInstanceState() Obtain Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
- * @method void setInstanceState(string $InstanceState) Set Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
+ * @method string getInstanceState() Obtain Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus)
+ * @method void setInstanceState(string $InstanceState) Set Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus)
  * @method array getTags() Obtain List of tags associated with the instance.
  * @method void setTags(array $Tags) Set List of tags associated with the instance.
  * @method string getStopChargingMode() Obtain Shutdown billing mode of an instance.
@@ -235,7 +235,7 @@ Note: this field is null in postpaid mode.
     public $LoginSettings;
 
     /**
-     * @var string Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
+     * @var string Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus)
      */
     public $InstanceState;
 
@@ -375,7 +375,7 @@ Note: this field is null in postpaid mode.
      * @param string $OsName Operating system name.
      * @param array $SecurityGroupIds Security groups to which the instance belongs. To obtain the security group IDs, you can call [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) and look for the `sgld` fields in the response.
      * @param LoginSettings $LoginSettings Login settings of the instance. Currently only the key associated with the instance is returned.
-     * @param string $InstanceState Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
+     * @param string $InstanceState Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus)
      * @param array $Tags List of tags associated with the instance.
      * @param string $StopChargingMode Shutdown billing mode of an instance.
 

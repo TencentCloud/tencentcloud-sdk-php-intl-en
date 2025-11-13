@@ -21,13 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeImageTaskDetail response structure.
  *
  * @method string getTaskType() Obtain Task type. Currently, the valid values include:
-<Li>WorkflowTask: workflow processing task.</li>
-
-Note: This field may return null, indicating that no valid value can be obtained.
+<li>WorkflowTask: workflow processing task.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTaskType(string $TaskType) Set Task type. Currently, the valid values include:
-<Li>WorkflowTask: workflow processing task.</li>
-
-Note: This field may return null, indicating that no valid value can be obtained.
+<li>WorkflowTask: workflow processing task.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getStatus() Obtain Task status. Valid values:
 <Li>WAITING: waiting.</li>
 <Li>PROCESSING: processing.</li>
@@ -38,6 +36,12 @@ Note: This field may return null, indicating that no valid value can be obtained
 <Li>PROCESSING: processing.</li>
 <li>FINISH: completed.</li>
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getErrCode() Obtain Error code when the task fails.
+ * @method void setErrCode(integer $ErrCode) Set Error code when the task fails.
+ * @method string getErrMsg() Obtain Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrMsg(string $ErrMsg) Set Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method string getMessage() Obtain Task exception message.
+ * @method void setMessage(string $Message) Set Task exception message.
  * @method array getImageProcessTaskResultSet() Obtain Execution status and results of the image processing task.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setImageProcessTaskResultSet(array $ImageProcessTaskResultSet) Set Execution status and results of the image processing task.
@@ -57,9 +61,8 @@ class DescribeImageTaskDetailResponse extends AbstractModel
 {
     /**
      * @var string Task type. Currently, the valid values include:
-<Li>WorkflowTask: workflow processing task.</li>
-
-Note: This field may return null, indicating that no valid value can be obtained.
+<li>WorkflowTask: workflow processing task.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TaskType;
 
@@ -71,6 +74,21 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Status;
+
+    /**
+     * @var integer Error code when the task fails.
+     */
+    public $ErrCode;
+
+    /**
+     * @var string Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     */
+    public $ErrMsg;
+
+    /**
+     * @var string Task exception message.
+     */
+    public $Message;
 
     /**
      * @var array Execution status and results of the image processing task.
@@ -97,14 +115,16 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * @param string $TaskType Task type. Currently, the valid values include:
-<Li>WorkflowTask: workflow processing task.</li>
-
-Note: This field may return null, indicating that no valid value can be obtained.
+<li>WorkflowTask: workflow processing task.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Status Task status. Valid values:
 <Li>WAITING: waiting.</li>
 <Li>PROCESSING: processing.</li>
 <li>FINISH: completed.</li>
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $ErrCode Error code when the task fails.
+     * @param string $ErrMsg Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param string $Message Task exception message.
      * @param array $ImageProcessTaskResultSet Execution status and results of the image processing task.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $CreateTime Task creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
@@ -132,6 +152,18 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
+            $this->ErrCode = $param["ErrCode"];
+        }
+
+        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
+            $this->ErrMsg = $param["ErrMsg"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
 
         if (array_key_exists("ImageProcessTaskResultSet",$param) and $param["ImageProcessTaskResultSet"] !== null) {

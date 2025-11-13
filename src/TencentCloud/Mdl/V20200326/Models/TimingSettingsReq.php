@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Event trigger time settings
  *
- * @method string getStartType() Obtain Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
- * @method void setStartType(string $StartType) Set Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+ * @method string getStartType() Obtain Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`,`FIXED_PTS `. This parameter is required if `EventType` is `INPUT_SWITCH`.
+ * @method void setStartType(string $StartType) Set Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`,`FIXED_PTS `. This parameter is required if `EventType` is `INPUT_SWITCH`.
  * @method string getTime() Obtain This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
 It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
  * @method void setTime(string $Time) Set This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
@@ -34,11 +34,13 @@ It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z
 It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
  * @method void setEndTime(string $EndTime) Set This parameter is required if `EventType` is `TIMED_RECORD`.
 It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
+ * @method integer getPTS() Obtain Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+ * @method void setPTS(integer $PTS) Set Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
  */
 class TimingSettingsReq extends AbstractModel
 {
     /**
-     * @var string Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+     * @var string Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`,`FIXED_PTS `. This parameter is required if `EventType` is `INPUT_SWITCH`.
      */
     public $StartType;
 
@@ -61,13 +63,19 @@ It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`)
     public $EndTime;
 
     /**
-     * @param string $StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+     * @var integer Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+     */
+    public $PTS;
+
+    /**
+     * @param string $StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`,`FIXED_PTS `. This parameter is required if `EventType` is `INPUT_SWITCH`.
      * @param string $Time This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
 It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
      * @param string $StartTime This parameter is required if `EventType` is `TIMED_RECORD`.
 It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
      * @param string $EndTime This parameter is required if `EventType` is `TIMED_RECORD`.
 It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
+     * @param integer $PTS Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`)
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("PTS",$param) and $param["PTS"] !== null) {
+            $this->PTS = $param["PTS"];
         }
     }
 }

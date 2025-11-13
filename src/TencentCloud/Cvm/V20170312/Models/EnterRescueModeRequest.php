@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsername(string $Username) Set System Username in Rescue Mode
  * @method boolean getForceStop() Obtain Whether to perform forced shutdown.
  * @method void setForceStop(boolean $ForceStop) Set Whether to perform forced shutdown.
+ * @method string getStopType() Obtain 
+ * @method void setStopType(string $StopType) Set 
  */
 class EnterRescueModeRequest extends AbstractModel
 {
@@ -48,14 +50,21 @@ class EnterRescueModeRequest extends AbstractModel
 
     /**
      * @var boolean Whether to perform forced shutdown.
+     * @deprecated
      */
     public $ForceStop;
+
+    /**
+     * @var string 
+     */
+    public $StopType;
 
     /**
      * @param string $InstanceId Instance ID Needs to Enter Rescue Mode
      * @param string $Password System Password in Rescue Mode
      * @param string $Username System Username in Rescue Mode
      * @param boolean $ForceStop Whether to perform forced shutdown.
+     * @param string $StopType 
      */
     function __construct()
     {
@@ -84,6 +93,10 @@ class EnterRescueModeRequest extends AbstractModel
 
         if (array_key_exists("ForceStop",$param) and $param["ForceStop"] !== null) {
             $this->ForceStop = $param["ForceStop"];
+        }
+
+        if (array_key_exists("StopType",$param) and $param["StopType"] !== null) {
+            $this->StopType = $param["StopType"];
         }
     }
 }

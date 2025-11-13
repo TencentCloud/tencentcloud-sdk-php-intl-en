@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setSuperResolution(SuperResolutionConfig $SuperResolution) Set Super-resolution configuration.
 
+ * @method AdvancedSuperResolutionConfig getAdvancedSuperResolutionConfig() Obtain Advanced super-resolution configuration.
+ * @method void setAdvancedSuperResolutionConfig(AdvancedSuperResolutionConfig $AdvancedSuperResolutionConfig) Set Advanced super-resolution configuration.
  * @method ImageDenoiseConfig getDenoise() Obtain Denoising configuration.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setDenoise(ImageDenoiseConfig $Denoise) Set Denoising configuration.
@@ -56,6 +58,11 @@ class ImageEnhanceConfig extends AbstractModel
 
      */
     public $SuperResolution;
+
+    /**
+     * @var AdvancedSuperResolutionConfig Advanced super-resolution configuration.
+     */
+    public $AdvancedSuperResolutionConfig;
 
     /**
      * @var ImageDenoiseConfig Denoising configuration.
@@ -96,6 +103,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * @param SuperResolutionConfig $SuperResolution Super-resolution configuration.
 
+     * @param AdvancedSuperResolutionConfig $AdvancedSuperResolutionConfig Advanced super-resolution configuration.
      * @param ImageDenoiseConfig $Denoise Denoising configuration.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param ImageQualityEnhanceConfig $ImageQualityEnhance Comprehensive enhancement configuration.
@@ -125,6 +133,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("SuperResolution",$param) and $param["SuperResolution"] !== null) {
             $this->SuperResolution = new SuperResolutionConfig();
             $this->SuperResolution->deserialize($param["SuperResolution"]);
+        }
+
+        if (array_key_exists("AdvancedSuperResolutionConfig",$param) and $param["AdvancedSuperResolutionConfig"] !== null) {
+            $this->AdvancedSuperResolutionConfig = new AdvancedSuperResolutionConfig();
+            $this->AdvancedSuperResolutionConfig->deserialize($param["AdvancedSuperResolutionConfig"]);
         }
 
         if (array_key_exists("Denoise",$param) and $param["Denoise"] !== null) {

@@ -20,7 +20,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Describes information on the block device where the operating system is stored, i.e., the system disk.
  *
- * @method string getDiskType() Obtain Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+ * @method string getDiskType() Obtain Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
 <li>LOCAL_BASIC: Local SATA disk</li>
 <li>LOCAL_SSD: Local NVMe SSD</li>
 <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 <li>CLOUD_HSSD: Enhanced SSD</li>
 <li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
- * @method void setDiskType(string $DiskType) Set Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+ * @method void setDiskType(string $DiskType) Set Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
 <li>LOCAL_BASIC: Local SATA disk</li>
 <li>LOCAL_SSD: Local NVMe SSD</li>
 <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -41,9 +41,9 @@ Default value: Current disk types with inventory available.
 <li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
  * @method string getDiskId() Obtain System disk ID.
-Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
  * @method void setDiskId(string $DiskId) Set System disk ID.
-Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
  * @method integer getDiskSize() Obtain System disk size; unit: GiB; default value: 50 GiB.
  * @method void setDiskSize(integer $DiskSize) Set System disk size; unit: GiB; default value: 50 GiB.
  * @method string getCdcId() Obtain Specifies the dedicated cluster ID belonging to.
@@ -56,7 +56,7 @@ Note: This field may return null, indicating that no valid value is found.
 class SystemDisk extends AbstractModel
 {
     /**
-     * @var string Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+     * @var string Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
 <li>LOCAL_BASIC: Local SATA disk</li>
 <li>LOCAL_SSD: Local NVMe SSD</li>
 <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -71,7 +71,7 @@ Default value: Current disk types with inventory available.
 
     /**
      * @var string System disk ID.
-Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
      */
     public $DiskId;
 
@@ -92,7 +92,7 @@ Note: This field may return null, indicating that no valid value is found.
     public $DiskName;
 
     /**
-     * @param string $DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+     * @param string $DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
 <li>LOCAL_BASIC: Local SATA disk</li>
 <li>LOCAL_SSD: Local NVMe SSD</li>
 <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -103,7 +103,7 @@ Note: This field may return null, indicating that no valid value is found.
 <li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
      * @param string $DiskId System disk ID.
-Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
      * @param integer $DiskSize System disk size; unit: GiB; default value: 50 GiB.
      * @param string $CdcId Specifies the dedicated cluster ID belonging to.
 Note: This field may return null, indicating that no valid value is found.

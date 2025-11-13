@@ -66,10 +66,10 @@ Note: `IPv6AddressIds` and `Filters` cannot be specified at the same time.
 - tag:tag-key - String - Required: No - (Filter condition) Filter by the tag-key - value pair. Replace tag-key with a specific tag key.
  * @method boolean getTraditional() Obtain Indicates whether to query the traditional IPv6 address information.
  * @method void setTraditional(boolean $Traditional) Set Indicates whether to query the traditional IPv6 address information.
- * @method integer getOffset() Obtain Offset. Default: 0. For more information on Offset, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
- * @method void setOffset(integer $Offset) Set Offset. Default: 0. For more information on Offset, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
- * @method integer getLimit() Obtain Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
- * @method void setLimit(integer $Limit) Set Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+ * @method integer getOffset() Obtain Offset. Default: 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+ * @method void setOffset(integer $Offset) Set Offset. Default: 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+ * @method integer getLimit() Obtain Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
  */
 class DescribeIPv6AddressesRequest extends AbstractModel
 {
@@ -109,12 +109,12 @@ Note: `IPv6AddressIds` and `Filters` cannot be specified at the same time.
     public $Traditional;
 
     /**
-     * @var integer Offset. Default: 0. For more information on Offset, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+     * @var integer Offset. Default: 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+     * @var integer Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
      */
     public $Limit;
 
@@ -142,8 +142,8 @@ Note: `IPv6AddressIds` and `Filters` cannot be specified at the same time.
 - tag-value - String - Required: No - (Filter condition) Filter by the tag value.
 - tag:tag-key - String - Required: No - (Filter condition) Filter by the tag-key - value pair. Replace tag-key with a specific tag key.
      * @param boolean $Traditional Indicates whether to query the traditional IPv6 address information.
-     * @param integer $Offset Offset. Default: 0. For more information on Offset, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
-     * @param integer $Limit Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+     * @param integer $Offset Offset. Default: 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+     * @param integer $Limit Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
      */
     function __construct()
     {

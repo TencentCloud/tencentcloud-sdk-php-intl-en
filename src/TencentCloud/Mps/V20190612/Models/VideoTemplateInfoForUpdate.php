@@ -20,44 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Video stream configuration parameter
  *
- * @method string getCodec() Obtain Encoding format for video streams. Optional values:
-<li>h264: H.264 encoding</li>
-<li>h265: H.265 encoding</li>
-<li>h266: H.266 encoding</li>
-<li>av1: AOMedia Video 1 encoding</li>
-<li>vp8: VP8 encoding</li>
-<li>vp9: VP9 encoding</li>
-<li>mpeg2: MPEG2 encoding</li>
-<li>dnxhd: DNxHD encoding</li>
-<li>mv-hevc: MV-HEVC encoding</li>
+ * @method string getCodec() Obtain Encoding format for video streams. valid values:.
+<Li>H264: h.264 encoding.</li>.
+<Li>H265: h.265 encoding.</li>.
+<Li>H266: h.266 encoding.</li>.
+<li>av1: AOMedia Video 1 encoding</li>.
+<li>vp8: vp8 encoding.</li>.
+<li>vp9: vp9 encoding.</li>.
+<li>mpeg2: mpeg2 encoding.</li>.
+<li>dnxhd: specifies dnxhd encoding.</li>.
+<li>mv-hevc: mv-hevc encoding.</li>.
 
-Note: 
-AV1 encoding containers currently only support mp4, webm, and mkv.
-H.266 encoding containers currently only support mp4, hls, ts, and mov. 
-VP8 and VP9 encoding containers currently only support webm and mkv.
-MPEG2 and DNxHD encoding containers currently only support mxf.
-MV-HEVC encoding containers only support mp4, hls, and mov. Also, the hls format only supports mp4 segmentation format.
+Note: the av1 encoding container currently only supports mp4, webm, and mkv.
+Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+Note: MPEG2 and dnxhd encoding containers currently only support mxf.
+Note: MV-HEVC encoding containers currently only support mp4, hls, and mov. among them, the hls format supports only mp4 segmentation format and requires the input source to be a panoramic video (with multi-perspective).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCodec(string $Codec) Set Encoding format for video streams. valid values:.
+<Li>H264: h.264 encoding.</li>.
+<Li>H265: h.265 encoding.</li>.
+<Li>H266: h.266 encoding.</li>.
+<li>av1: AOMedia Video 1 encoding</li>.
+<li>vp8: vp8 encoding.</li>.
+<li>vp9: vp9 encoding.</li>.
+<li>mpeg2: mpeg2 encoding.</li>.
+<li>dnxhd: specifies dnxhd encoding.</li>.
+<li>mv-hevc: mv-hevc encoding.</li>.
 
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCodec(string $Codec) Set Encoding format for video streams. Optional values:
-<li>h264: H.264 encoding</li>
-<li>h265: H.265 encoding</li>
-<li>h266: H.266 encoding</li>
-<li>av1: AOMedia Video 1 encoding</li>
-<li>vp8: VP8 encoding</li>
-<li>vp9: VP9 encoding</li>
-<li>mpeg2: MPEG2 encoding</li>
-<li>dnxhd: DNxHD encoding</li>
-<li>mv-hevc: MV-HEVC encoding</li>
-
-Note: 
-AV1 encoding containers currently only support mp4, webm, and mkv.
-H.266 encoding containers currently only support mp4, hls, ts, and mov. 
-VP8 and VP9 encoding containers currently only support webm and mkv.
-MPEG2 and DNxHD encoding containers currently only support mxf.
-MV-HEVC encoding containers only support mp4, hls, and mov. Also, the hls format only supports mp4 segmentation format.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: the av1 encoding container currently only supports mp4, webm, and mkv.
+Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+Note: MPEG2 and dnxhd encoding containers currently only support mxf.
+Note: MV-HEVC encoding containers currently only support mp4, hls, and mov. among them, the hls format supports only mp4 segmentation format and requires the input source to be a panoramic video (with multi-perspective).
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getFps() Obtain Video frame rate. Value range:
 When FpsDenominator is empty, the range is [0, 120], in Hz.
 When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
@@ -305,37 +301,43 @@ Default value: 0
 Note: This value takes effect only when the value of this field is 1.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getSceneType() Obtain Video scenario. Valid values: 
-normal: General transcoding scenario: General transcoding and compression scenario. pgc: PGC HD film and television: Emphasis is placed on the viewing experience of films and TV shows during compression, with ROI encoding based on the characteristics of films and TV shows, while maintaining high-quality video and audio content. 
-materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
-ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
-e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
-educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed.
+- normal: General transcoding scenario. General transcoding and compression scenario.
+- pgc: PGC HD TV shows and movies. At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+- materials_video: HD materials. Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+- ugc: UGC content. It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+- e-commerce_video. Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+- educational_video. Education. At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+
 Default value: normal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSceneType(string $SceneType) Set Video scenario. Valid values: 
-normal: General transcoding scenario: General transcoding and compression scenario. pgc: PGC HD film and television: Emphasis is placed on the viewing experience of films and TV shows during compression, with ROI encoding based on the characteristics of films and TV shows, while maintaining high-quality video and audio content. 
-materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
-ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
-e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
-educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed.
+- normal: General transcoding scenario. General transcoding and compression scenario.
+- pgc: PGC HD TV shows and movies. At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+- materials_video: HD materials. Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+- ugc: UGC content. It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+- e-commerce_video. Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+- educational_video. Education. At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+
 Default value: normal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getCompressType() Obtain Transcoding policy. Valid values: 
-ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. This policy only charges audio and video TSC transcoding fees. 
-high_compress: Bitrate priority: Prioritizes reducing file size, which may result in some image quality loss. This policy only charges audio and video TSC transcoding fees. 
-low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. This policy only charges audio and video TSC transcoding fees. 
+- ultra_compress: Extreme compression. Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+- standard_compress: Comprehensively optimal. Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+- high_compress: Bitrate priority. Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+- low_compress: Image quality priority. Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+
 Default value: standard_compress. 
 Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setCompressType(string $CompressType) Set Transcoding policy. Valid values: 
-ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. This policy only charges audio and video TSC transcoding fees. 
-high_compress: Bitrate priority: Prioritizes reducing file size, which may result in some image quality loss. This policy only charges audio and video TSC transcoding fees. 
-low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. This policy only charges audio and video TSC transcoding fees. 
+- ultra_compress: Extreme compression. Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+- standard_compress: Comprehensively optimal. Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+- high_compress: Bitrate priority. Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+- low_compress: Image quality priority. Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+
 Default value: standard_compress. 
 Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
@@ -344,25 +346,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Encoding format for video streams. Optional values:
-<li>h264: H.264 encoding</li>
-<li>h265: H.265 encoding</li>
-<li>h266: H.266 encoding</li>
-<li>av1: AOMedia Video 1 encoding</li>
-<li>vp8: VP8 encoding</li>
-<li>vp9: VP9 encoding</li>
-<li>mpeg2: MPEG2 encoding</li>
-<li>dnxhd: DNxHD encoding</li>
-<li>mv-hevc: MV-HEVC encoding</li>
+     * @var string Encoding format for video streams. valid values:.
+<Li>H264: h.264 encoding.</li>.
+<Li>H265: h.265 encoding.</li>.
+<Li>H266: h.266 encoding.</li>.
+<li>av1: AOMedia Video 1 encoding</li>.
+<li>vp8: vp8 encoding.</li>.
+<li>vp9: vp9 encoding.</li>.
+<li>mpeg2: mpeg2 encoding.</li>.
+<li>dnxhd: specifies dnxhd encoding.</li>.
+<li>mv-hevc: mv-hevc encoding.</li>.
 
-Note: 
-AV1 encoding containers currently only support mp4, webm, and mkv.
-H.266 encoding containers currently only support mp4, hls, ts, and mov. 
-VP8 and VP9 encoding containers currently only support webm and mkv.
-MPEG2 and DNxHD encoding containers currently only support mxf.
-MV-HEVC encoding containers only support mp4, hls, and mov. Also, the hls format only supports mp4 segmentation format.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: the av1 encoding container currently only supports mp4, webm, and mkv.
+Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+Note: MPEG2 and dnxhd encoding containers currently only support mxf.
+Note: MV-HEVC encoding containers currently only support mp4, hls, and mov. among them, the hls format supports only mp4 segmentation format and requires the input source to be a panoramic video (with multi-perspective).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Codec;
 
@@ -591,11 +591,13 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * @var string Video scenario. Valid values: 
-normal: General transcoding scenario: General transcoding and compression scenario. pgc: PGC HD film and television: Emphasis is placed on the viewing experience of films and TV shows during compression, with ROI encoding based on the characteristics of films and TV shows, while maintaining high-quality video and audio content. 
-materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
-ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
-e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
-educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed.
+- normal: General transcoding scenario. General transcoding and compression scenario.
+- pgc: PGC HD TV shows and movies. At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+- materials_video: HD materials. Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+- ugc: UGC content. It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+- e-commerce_video. Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+- educational_video. Education. At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+
 Default value: normal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -604,10 +606,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * @var string Transcoding policy. Valid values: 
-ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. This policy only charges audio and video TSC transcoding fees. 
-high_compress: Bitrate priority: Prioritizes reducing file size, which may result in some image quality loss. This policy only charges audio and video TSC transcoding fees. 
-low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. This policy only charges audio and video TSC transcoding fees. 
+- ultra_compress: Extreme compression. Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+- standard_compress: Comprehensively optimal. Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+- high_compress: Bitrate priority. Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+- low_compress: Image quality priority. Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+
 Default value: standard_compress. 
 Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
@@ -616,25 +619,23 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $CompressType;
 
     /**
-     * @param string $Codec Encoding format for video streams. Optional values:
-<li>h264: H.264 encoding</li>
-<li>h265: H.265 encoding</li>
-<li>h266: H.266 encoding</li>
-<li>av1: AOMedia Video 1 encoding</li>
-<li>vp8: VP8 encoding</li>
-<li>vp9: VP9 encoding</li>
-<li>mpeg2: MPEG2 encoding</li>
-<li>dnxhd: DNxHD encoding</li>
-<li>mv-hevc: MV-HEVC encoding</li>
+     * @param string $Codec Encoding format for video streams. valid values:.
+<Li>H264: h.264 encoding.</li>.
+<Li>H265: h.265 encoding.</li>.
+<Li>H266: h.266 encoding.</li>.
+<li>av1: AOMedia Video 1 encoding</li>.
+<li>vp8: vp8 encoding.</li>.
+<li>vp9: vp9 encoding.</li>.
+<li>mpeg2: mpeg2 encoding.</li>.
+<li>dnxhd: specifies dnxhd encoding.</li>.
+<li>mv-hevc: mv-hevc encoding.</li>.
 
-Note: 
-AV1 encoding containers currently only support mp4, webm, and mkv.
-H.266 encoding containers currently only support mp4, hls, ts, and mov. 
-VP8 and VP9 encoding containers currently only support webm and mkv.
-MPEG2 and DNxHD encoding containers currently only support mxf.
-MV-HEVC encoding containers only support mp4, hls, and mov. Also, the hls format only supports mp4 segmentation format.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: the av1 encoding container currently only supports mp4, webm, and mkv.
+Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+Note: MPEG2 and dnxhd encoding containers currently only support mxf.
+Note: MV-HEVC encoding containers currently only support mp4, hls, and mov. among them, the hls format supports only mp4 segmentation format and requires the input source to be a panoramic video (with multi-perspective).
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Fps Video frame rate. Value range:
 When FpsDenominator is empty, the range is [0, 120], in Hz.
 When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
@@ -759,19 +760,22 @@ Default value: 0
 Note: This value takes effect only when the value of this field is 1.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $SceneType Video scenario. Valid values: 
-normal: General transcoding scenario: General transcoding and compression scenario. pgc: PGC HD film and television: Emphasis is placed on the viewing experience of films and TV shows during compression, with ROI encoding based on the characteristics of films and TV shows, while maintaining high-quality video and audio content. 
-materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
-ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
-e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
-educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed.
+- normal: General transcoding scenario. General transcoding and compression scenario.
+- pgc: PGC HD TV shows and movies. At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+- materials_video: HD materials. Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+- ugc: UGC content. It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+- e-commerce_video. Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+- educational_video. Education. At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+
 Default value: normal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $CompressType Transcoding policy. Valid values: 
-ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. This policy only charges audio and video TSC transcoding fees. 
-high_compress: Bitrate priority: Prioritizes reducing file size, which may result in some image quality loss. This policy only charges audio and video TSC transcoding fees. 
-low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. This policy only charges audio and video TSC transcoding fees. 
+- ultra_compress: Extreme compression. Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+- standard_compress: Comprehensively optimal. Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+- high_compress: Bitrate priority. Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+- low_compress: Image quality priority. Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+
 Default value: standard_compress. 
 Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.

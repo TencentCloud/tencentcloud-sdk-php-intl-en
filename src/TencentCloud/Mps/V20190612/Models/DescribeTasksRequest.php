@@ -28,8 +28,12 @@ use TencentCloud\Common\AbstractModel;
 -WAITING.
 -PROCESSING (processing).
 -FINISH (completed).
- * @method boolean getSubTaskHasFailed() Obtain Indicates whether there is a subtask failure when the task is complete.
- * @method void setSubTaskHasFailed(boolean $SubTaskHasFailed) Set Indicates whether there is a subtask failure when the task is complete.
+ * @method boolean getSubTaskHasFailed() Obtain Whether there is a failed subtask when the task ends. If this parameter is left unspecified, ignore it.
+<li>false: filter the main tasks to identify those that have no failed subtasks.</li>
+<li>true: filter the main tasks to identify those that have failed subtasks.</li>
+ * @method void setSubTaskHasFailed(boolean $SubTaskHasFailed) Set Whether there is a failed subtask when the task ends. If this parameter is left unspecified, ignore it.
+<li>false: filter the main tasks to identify those that have no failed subtasks.</li>
+<li>true: filter the main tasks to identify those that have failed subtasks.</li>
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  * @method string getScrollToken() Obtain Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
@@ -50,7 +54,9 @@ class DescribeTasksRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var boolean Indicates whether there is a subtask failure when the task is complete.
+     * @var boolean Whether there is a failed subtask when the task ends. If this parameter is left unspecified, ignore it.
+<li>false: filter the main tasks to identify those that have no failed subtasks.</li>
+<li>true: filter the main tasks to identify those that have failed subtasks.</li>
      */
     public $SubTaskHasFailed;
 
@@ -79,7 +85,9 @@ class DescribeTasksRequest extends AbstractModel
 -WAITING.
 -PROCESSING (processing).
 -FINISH (completed).
-     * @param boolean $SubTaskHasFailed Indicates whether there is a subtask failure when the task is complete.
+     * @param boolean $SubTaskHasFailed Whether there is a failed subtask when the task ends. If this parameter is left unspecified, ignore it.
+<li>false: filter the main tasks to identify those that have no failed subtasks.</li>
+<li>true: filter the main tasks to identify those that have failed subtasks.</li>
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param string $ScrollToken Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
      * @param string $StartTime Query task start time.

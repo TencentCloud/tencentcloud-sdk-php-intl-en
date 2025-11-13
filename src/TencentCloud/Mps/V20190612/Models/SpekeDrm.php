@@ -20,10 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FairPlay, WideVine, PlayReady, and other DRM encryption technologies.
  *
- * @method string getResourceId() Obtain Resource tagging. the field content is user-customized.
+ * @method string getResourceId() Obtain Resource ID. The field content is user-defined.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
- * @method void setResourceId(string $ResourceId) Set Resource tagging. the field content is user-customized.
+This field corresponds to the cid field in the Speke request.
+Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
+ * @method void setResourceId(string $ResourceId) Set Resource ID. The field content is user-defined.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+This field corresponds to the cid field in the Speke request.
+Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
  * @method string getKeyServerUrl() Obtain DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
 Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
@@ -32,14 +36,24 @@ Note: different DRM manufacturers have different limitations on the number of su
 Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
  * @method string getVector() Obtain Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
  * @method void setVector(string $Vector) Set Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
- * @method string getEncryptionMethod() Obtain Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+ * @method string getEncryptionMethod() Obtain Encryption method. Options:  
+- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
 
-cbcs: supported by PlayReady, Widevine, and FairPlay
-cenc: supported by PlayReady and Widevine
- * @method void setEncryptionMethod(string $EncryptionMethod) Set Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+If not specified:  
+- FairPlay defaults to **cbcs**.  
+- PlayReady and Widevine default to **cenc**.  
+- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+- Widevine+PlayReady defaults to **cenc**.
+ * @method void setEncryptionMethod(string $EncryptionMethod) Set Encryption method. Options:  
+- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
 
-cbcs: supported by PlayReady, Widevine, and FairPlay
-cenc: supported by PlayReady and Widevine
+If not specified:  
+- FairPlay defaults to **cbcs**.  
+- PlayReady and Widevine default to **cenc**.  
+- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+- Widevine+PlayReady defaults to **cenc**.
  * @method string getEncryptionPreset() Obtain Substream encryption rule. Default value: preset0.
 preset 0: use the same key to encrypt all substreams
 preset1: use different keys for each substream
@@ -51,8 +65,10 @@ preset1: use different keys for each substream
 class SpekeDrm extends AbstractModel
 {
     /**
-     * @var string Resource tagging. the field content is user-customized.
+     * @var string Resource ID. The field content is user-defined.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+This field corresponds to the cid field in the Speke request.
+Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
      */
     public $ResourceId;
 
@@ -69,10 +85,15 @@ Note: different DRM manufacturers have different limitations on the number of su
     public $Vector;
 
     /**
-     * @var string Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+     * @var string Encryption method. Options:  
+- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
 
-cbcs: supported by PlayReady, Widevine, and FairPlay
-cenc: supported by PlayReady and Widevine
+If not specified:  
+- FairPlay defaults to **cbcs**.  
+- PlayReady and Widevine default to **cenc**.  
+- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+- Widevine+PlayReady defaults to **cenc**.
      */
     public $EncryptionMethod;
 
@@ -85,16 +106,23 @@ preset1: use different keys for each substream
     public $EncryptionPreset;
 
     /**
-     * @param string $ResourceId Resource tagging. the field content is user-customized.
+     * @param string $ResourceId Resource ID. The field content is user-defined.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+This field corresponds to the cid field in the Speke request.
+Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
      * @param string $KeyServerUrl DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
 Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
      * @param string $Vector Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
-     * @param string $EncryptionMethod Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+     * @param string $EncryptionMethod Encryption method. Options:  
+- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
 
-cbcs: supported by PlayReady, Widevine, and FairPlay
-cenc: supported by PlayReady and Widevine
+If not specified:  
+- FairPlay defaults to **cbcs**.  
+- PlayReady and Widevine default to **cenc**.  
+- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+- Widevine+PlayReady defaults to **cenc**.
      * @param string $EncryptionPreset Substream encryption rule. Default value: preset0.
 preset 0: use the same key to encrypt all substreams
 preset1: use different keys for each substream

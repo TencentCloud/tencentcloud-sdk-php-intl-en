@@ -68,6 +68,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getStdExtInfo() Obtain Transcoding parameter extension field.
  * @method void setStdExtInfo(string $StdExtInfo) Set Transcoding parameter extension field.
+ * @method array getKeyPTSList() Obtain Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setKeyPTSList(array $KeyPTSList) Set Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -140,6 +144,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $StdExtInfo;
 
     /**
+     * @var array Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $KeyPTSList;
+
+    /**
      * @param integer $Definition Adaptive dynamic streaming template ID.
      * @param array $WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      * @param TaskOutputStorage $OutputStorage Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
@@ -164,6 +174,8 @@ PureAudio: audio-only.
      * @param SubtitleTemplate $SubtitleTemplate Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $StdExtInfo Transcoding parameter extension field.
+     * @param array $KeyPTSList Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -233,6 +245,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
             $this->StdExtInfo = $param["StdExtInfo"];
+        }
+
+        if (array_key_exists("KeyPTSList",$param) and $param["KeyPTSList"] !== null) {
+            $this->KeyPTSList = $param["KeyPTSList"];
         }
     }
 }

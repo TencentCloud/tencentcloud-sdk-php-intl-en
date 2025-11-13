@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSegmentSet(array $SegmentSet) Set List of segments for full speech recognition.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getPath() Obtain Subtitle file path.
+ * @method void setPath(string $Path) Set Subtitle file path.
  * @method string getSubtitlePath() Obtain Subtitle file path.
  * @method void setSubtitlePath(string $SubtitlePath) Set Subtitle file path.
  * @method TaskOutputStorage getOutputStorage() Obtain Subtitle file storage location.
@@ -40,6 +42,11 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * @var string Subtitle file path.
      */
+    public $Path;
+
+    /**
+     * @var string Subtitle file path.
+     */
     public $SubtitlePath;
 
     /**
@@ -50,6 +57,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * @param array $SegmentSet List of segments for full speech recognition.
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Path Subtitle file path.
      * @param string $SubtitlePath Subtitle file path.
      * @param TaskOutputStorage $OutputStorage Subtitle file storage location.
      */
@@ -73,6 +81,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);
             }
+        }
+
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
         }
 
         if (array_key_exists("SubtitlePath",$param) and $param["SubtitlePath"] !== null) {

@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
 * Custom: user-defined template
  * @method string getName() Obtain Condition for filtering smart subtitle templates by ID. Length limit: 64 characters.
  * @method void setName(string $Name) Set Condition for filtering smart subtitle templates by ID. Length limit: 64 characters.
+ * @method integer getProcessType() Obtain Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+ * @method void setProcessType(integer $ProcessType) Set Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
  */
 class DescribeSmartSubtitleTemplatesRequest extends AbstractModel
 {
@@ -65,6 +71,13 @@ class DescribeSmartSubtitleTemplatesRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var integer Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+     */
+    public $ProcessType;
+
+    /**
      * @param array $Definitions Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
      * @param integer $Offset Paging offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
@@ -72,6 +85,9 @@ class DescribeSmartSubtitleTemplatesRequest extends AbstractModel
 * Preset: system preset template
 * Custom: user-defined template
      * @param string $Name Condition for filtering smart subtitle templates by ID. Length limit: 64 characters.
+     * @param integer $ProcessType Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
      */
     function __construct()
     {
@@ -104,6 +120,10 @@ class DescribeSmartSubtitleTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("ProcessType",$param) and $param["ProcessType"] !== null) {
+            $this->ProcessType = $param["ProcessType"];
         }
     }
 }
