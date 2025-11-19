@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployVirtualPrivateCloud(VirtualPrivateCloud $DeployVirtualPrivateCloud) Set Deployment network information
  * @method array getDeploySecurityGroupIds() Obtain Deployment network security group list
  * @method void setDeploySecurityGroupIds(array $DeploySecurityGroupIds) Set Deployment network security group list
+ * @method ChcDeployExtraConfig getChcDeployExtraConfig() Obtain 
+ * @method void setChcDeployExtraConfig(ChcDeployExtraConfig $ChcDeployExtraConfig) Set 
  */
 class ConfigureChcAssistVpcRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ConfigureChcAssistVpcRequest extends AbstractModel
     public $DeploySecurityGroupIds;
 
     /**
+     * @var ChcDeployExtraConfig 
+     */
+    public $ChcDeployExtraConfig;
+
+    /**
      * @param array $ChcIds CHC host IDs
      * @param VirtualPrivateCloud $BmcVirtualPrivateCloud Out-of-band network information
      * @param array $BmcSecurityGroupIds Out-of-band network security group list
      * @param VirtualPrivateCloud $DeployVirtualPrivateCloud Deployment network information
      * @param array $DeploySecurityGroupIds Deployment network security group list
+     * @param ChcDeployExtraConfig $ChcDeployExtraConfig 
      */
     function __construct()
     {
@@ -98,6 +106,11 @@ class ConfigureChcAssistVpcRequest extends AbstractModel
 
         if (array_key_exists("DeploySecurityGroupIds",$param) and $param["DeploySecurityGroupIds"] !== null) {
             $this->DeploySecurityGroupIds = $param["DeploySecurityGroupIds"];
+        }
+
+        if (array_key_exists("ChcDeployExtraConfig",$param) and $param["ChcDeployExtraConfig"] !== null) {
+            $this->ChcDeployExtraConfig = new ChcDeployExtraConfig();
+            $this->ChcDeployExtraConfig->deserialize($param["ChcDeployExtraConfig"]);
         }
     }
 }

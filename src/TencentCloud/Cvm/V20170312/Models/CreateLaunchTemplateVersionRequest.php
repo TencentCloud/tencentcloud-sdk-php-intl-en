@@ -88,6 +88,8 @@ If the dry run succeeds, the RequestId will be returned.
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
  * @method boolean getDisableApiTermination() Obtain Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>TRUE: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>FALSE: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: FALSE.
  * @method void setDisableApiTermination(boolean $DisableApiTermination) Set Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>TRUE: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>FALSE: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: FALSE.
+ * @method boolean getEnableJumboFrame() Obtain 
+ * @method void setEnableJumboFrame(boolean $EnableJumboFrame) Set 
  * @method Metadata getMetadata() Obtain Custom metadata. specifies that custom metadata key-value pairs can be added when creating a CVM.
 Note: this field is in beta test.
  * @method void setMetadata(Metadata $Metadata) Set Custom metadata. specifies that custom metadata key-value pairs can be added when creating a CVM.
@@ -252,6 +254,11 @@ If the dry run succeeds, the RequestId will be returned.
     public $DisableApiTermination;
 
     /**
+     * @var boolean 
+     */
+    public $EnableJumboFrame;
+
+    /**
      * @var Metadata Custom metadata. specifies that custom metadata key-value pairs can be added when creating a CVM.
 Note: this field is in beta test.
      */
@@ -301,6 +308,7 @@ If the dry run succeeds, the RequestId will be returned.
      * @param string $InstanceChargeType Instance [billing mode](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1).<br><li>PREPAID: prepaid, that is, monthly subscription.</li><li>POSTPAID_BY_HOUR: pay-as-you-go by hour.</li><li>CDHPAID: CDH instance (created based on CDH; the resources of the host are free of charge).</li><li>SPOTPAID: spot payment.</li>Default value: POSTPAID_BY_HOUR.
      * @param InstanceChargePrepaid $InstanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
      * @param boolean $DisableApiTermination Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>TRUE: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>FALSE: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: FALSE.
+     * @param boolean $EnableJumboFrame 
      * @param Metadata $Metadata Custom metadata. specifies that custom metadata key-value pairs can be added when creating a CVM.
 Note: this field is in beta test.
      * @param string $TemplateDataModifyAction Specifies that only the Update and Replace parameters are allowed. this parameter is valid only when custom Metadata is used in the template and Metadata is also transmitted in RunInstances. defaults to Replace.
@@ -451,6 +459,10 @@ Note: this field is in beta test.
 
         if (array_key_exists("DisableApiTermination",$param) and $param["DisableApiTermination"] !== null) {
             $this->DisableApiTermination = $param["DisableApiTermination"];
+        }
+
+        if (array_key_exists("EnableJumboFrame",$param) and $param["EnableJumboFrame"] !== null) {
+            $this->EnableJumboFrame = $param["EnableJumboFrame"];
         }
 
         if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {

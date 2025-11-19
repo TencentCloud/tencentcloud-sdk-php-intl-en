@@ -68,6 +68,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSqlInjectionAnalysis(integer $IsSqlInjectionAnalysis) Set SQL injection detection switch (0: off, 1: on).
  * @method integer getIsInstrumentationVulnerabilityScan() Obtain Whether to enable component vulnerability detection (0 = no, 1 = yes).
  * @method void setIsInstrumentationVulnerabilityScan(integer $IsInstrumentationVulnerabilityScan) Set Whether to enable component vulnerability detection (0 = no, 1 = yes).
+ * @method integer getIsRemoteCommandExecutionAnalysis() Obtain Whether to enable detection of the remote command attack.
+ * @method void setIsRemoteCommandExecutionAnalysis(integer $IsRemoteCommandExecutionAnalysis) Set Whether to enable detection of the remote command attack.
+ * @method integer getIsMemoryHijackingAnalysis() Obtain Whether to enable detection of Java webshell.
+ * @method void setIsMemoryHijackingAnalysis(integer $IsMemoryHijackingAnalysis) Set Whether to enable detection of Java webshell.
+ * @method integer getLogIndexType() Obtain CLS index type. (0 = full-text index; 1 = key-value index).
+ * @method void setLogIndexType(integer $LogIndexType) Set CLS index type. (0 = full-text index; 1 = key-value index).
+ * @method string getLogTraceIdKey() Obtain Index key of traceId. It is valid when the CLS index type is key-value index.
+ * @method void setLogTraceIdKey(string $LogTraceIdKey) Set Index key of traceId. It is valid when the CLS index type is key-value index.
+ * @method integer getIsDeleteAnyFileAnalysis() Obtain Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+ * @method void setIsDeleteAnyFileAnalysis(integer $IsDeleteAnyFileAnalysis) Set Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+ * @method integer getIsReadAnyFileAnalysis() Obtain Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+ * @method void setIsReadAnyFileAnalysis(integer $IsReadAnyFileAnalysis) Set Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+ * @method integer getIsUploadAnyFileAnalysis() Obtain Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+ * @method void setIsUploadAnyFileAnalysis(integer $IsUploadAnyFileAnalysis) Set Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+ * @method integer getIsIncludeAnyFileAnalysis() Obtain Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+ * @method void setIsIncludeAnyFileAnalysis(integer $IsIncludeAnyFileAnalysis) Set Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+ * @method integer getIsDirectoryTraversalAnalysis() Obtain Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+ * @method void setIsDirectoryTraversalAnalysis(integer $IsDirectoryTraversalAnalysis) Set Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+ * @method integer getIsTemplateEngineInjectionAnalysis() Obtain Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+ * @method void setIsTemplateEngineInjectionAnalysis(integer $IsTemplateEngineInjectionAnalysis) Set Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+ * @method integer getIsScriptEngineInjectionAnalysis() Obtain Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+ * @method void setIsScriptEngineInjectionAnalysis(integer $IsScriptEngineInjectionAnalysis) Set Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+ * @method integer getIsExpressionInjectionAnalysis() Obtain Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+ * @method void setIsExpressionInjectionAnalysis(integer $IsExpressionInjectionAnalysis) Set Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+ * @method integer getIsJNDIInjectionAnalysis() Obtain Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+ * @method void setIsJNDIInjectionAnalysis(integer $IsJNDIInjectionAnalysis) Set Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+ * @method integer getIsJNIInjectionAnalysis() Obtain Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+ * @method void setIsJNIInjectionAnalysis(integer $IsJNIInjectionAnalysis) Set Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+ * @method integer getIsWebshellBackdoorAnalysis() Obtain Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+ * @method void setIsWebshellBackdoorAnalysis(integer $IsWebshellBackdoorAnalysis) Set Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+ * @method integer getIsDeserializationAnalysis() Obtain Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+ * @method void setIsDeserializationAnalysis(integer $IsDeserializationAnalysis) Set Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+ * @method integer getUrlLongSegmentThreshold() Obtain Convergence threshold for URL long segments.
+ * @method void setUrlLongSegmentThreshold(integer $UrlLongSegmentThreshold) Set Convergence threshold for URL long segments.
+ * @method integer getUrlNumberSegmentThreshold() Obtain Convergence threshold for URL numerical segments.
+ * @method void setUrlNumberSegmentThreshold(integer $UrlNumberSegmentThreshold) Set Convergence threshold for URL numerical segments.
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
@@ -192,6 +228,96 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $IsInstrumentationVulnerabilityScan;
 
     /**
+     * @var integer Whether to enable detection of the remote command attack.
+     */
+    public $IsRemoteCommandExecutionAnalysis;
+
+    /**
+     * @var integer Whether to enable detection of Java webshell.
+     */
+    public $IsMemoryHijackingAnalysis;
+
+    /**
+     * @var integer CLS index type. (0 = full-text index; 1 = key-value index).
+     */
+    public $LogIndexType;
+
+    /**
+     * @var string Index key of traceId. It is valid when the CLS index type is key-value index.
+     */
+    public $LogTraceIdKey;
+
+    /**
+     * @var integer Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+     */
+    public $IsDeleteAnyFileAnalysis;
+
+    /**
+     * @var integer Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+     */
+    public $IsReadAnyFileAnalysis;
+
+    /**
+     * @var integer Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+     */
+    public $IsUploadAnyFileAnalysis;
+
+    /**
+     * @var integer Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+     */
+    public $IsIncludeAnyFileAnalysis;
+
+    /**
+     * @var integer Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+     */
+    public $IsDirectoryTraversalAnalysis;
+
+    /**
+     * @var integer Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+     */
+    public $IsTemplateEngineInjectionAnalysis;
+
+    /**
+     * @var integer Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+     */
+    public $IsScriptEngineInjectionAnalysis;
+
+    /**
+     * @var integer Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+     */
+    public $IsExpressionInjectionAnalysis;
+
+    /**
+     * @var integer Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+     */
+    public $IsJNDIInjectionAnalysis;
+
+    /**
+     * @var integer Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+     */
+    public $IsJNIInjectionAnalysis;
+
+    /**
+     * @var integer Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+     */
+    public $IsWebshellBackdoorAnalysis;
+
+    /**
+     * @var integer Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+     */
+    public $IsDeserializationAnalysis;
+
+    /**
+     * @var integer Convergence threshold for URL long segments.
+     */
+    public $UrlLongSegmentThreshold;
+
+    /**
+     * @var integer Convergence threshold for URL numerical segments.
+     */
+    public $UrlNumberSegmentThreshold;
+
+    /**
      * @param string $InstanceId Business system id.
      * @param string $Name Business system name.
      * @param array $Tags Tag list.
@@ -216,6 +342,24 @@ class ModifyApmInstanceRequest extends AbstractModel
      * @param string $DashboardTopicID Associated dashboard id, which takes effect after the associated dashboard is enabled.
      * @param integer $IsSqlInjectionAnalysis SQL injection detection switch (0: off, 1: on).
      * @param integer $IsInstrumentationVulnerabilityScan Whether to enable component vulnerability detection (0 = no, 1 = yes).
+     * @param integer $IsRemoteCommandExecutionAnalysis Whether to enable detection of the remote command attack.
+     * @param integer $IsMemoryHijackingAnalysis Whether to enable detection of Java webshell.
+     * @param integer $LogIndexType CLS index type. (0 = full-text index; 1 = key-value index).
+     * @param string $LogTraceIdKey Index key of traceId. It is valid when the CLS index type is key-value index.
+     * @param integer $IsDeleteAnyFileAnalysis Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+     * @param integer $IsReadAnyFileAnalysis Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+     * @param integer $IsUploadAnyFileAnalysis Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+     * @param integer $IsIncludeAnyFileAnalysis Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+     * @param integer $IsDirectoryTraversalAnalysis Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+     * @param integer $IsTemplateEngineInjectionAnalysis Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+     * @param integer $IsScriptEngineInjectionAnalysis Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+     * @param integer $IsExpressionInjectionAnalysis Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+     * @param integer $IsJNDIInjectionAnalysis Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+     * @param integer $IsJNIInjectionAnalysis Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+     * @param integer $IsWebshellBackdoorAnalysis Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+     * @param integer $IsDeserializationAnalysis Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+     * @param integer $UrlLongSegmentThreshold Convergence threshold for URL long segments.
+     * @param integer $UrlNumberSegmentThreshold Convergence threshold for URL numerical segments.
      */
     function __construct()
     {
@@ -329,6 +473,78 @@ class ModifyApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("IsInstrumentationVulnerabilityScan",$param) and $param["IsInstrumentationVulnerabilityScan"] !== null) {
             $this->IsInstrumentationVulnerabilityScan = $param["IsInstrumentationVulnerabilityScan"];
+        }
+
+        if (array_key_exists("IsRemoteCommandExecutionAnalysis",$param) and $param["IsRemoteCommandExecutionAnalysis"] !== null) {
+            $this->IsRemoteCommandExecutionAnalysis = $param["IsRemoteCommandExecutionAnalysis"];
+        }
+
+        if (array_key_exists("IsMemoryHijackingAnalysis",$param) and $param["IsMemoryHijackingAnalysis"] !== null) {
+            $this->IsMemoryHijackingAnalysis = $param["IsMemoryHijackingAnalysis"];
+        }
+
+        if (array_key_exists("LogIndexType",$param) and $param["LogIndexType"] !== null) {
+            $this->LogIndexType = $param["LogIndexType"];
+        }
+
+        if (array_key_exists("LogTraceIdKey",$param) and $param["LogTraceIdKey"] !== null) {
+            $this->LogTraceIdKey = $param["LogTraceIdKey"];
+        }
+
+        if (array_key_exists("IsDeleteAnyFileAnalysis",$param) and $param["IsDeleteAnyFileAnalysis"] !== null) {
+            $this->IsDeleteAnyFileAnalysis = $param["IsDeleteAnyFileAnalysis"];
+        }
+
+        if (array_key_exists("IsReadAnyFileAnalysis",$param) and $param["IsReadAnyFileAnalysis"] !== null) {
+            $this->IsReadAnyFileAnalysis = $param["IsReadAnyFileAnalysis"];
+        }
+
+        if (array_key_exists("IsUploadAnyFileAnalysis",$param) and $param["IsUploadAnyFileAnalysis"] !== null) {
+            $this->IsUploadAnyFileAnalysis = $param["IsUploadAnyFileAnalysis"];
+        }
+
+        if (array_key_exists("IsIncludeAnyFileAnalysis",$param) and $param["IsIncludeAnyFileAnalysis"] !== null) {
+            $this->IsIncludeAnyFileAnalysis = $param["IsIncludeAnyFileAnalysis"];
+        }
+
+        if (array_key_exists("IsDirectoryTraversalAnalysis",$param) and $param["IsDirectoryTraversalAnalysis"] !== null) {
+            $this->IsDirectoryTraversalAnalysis = $param["IsDirectoryTraversalAnalysis"];
+        }
+
+        if (array_key_exists("IsTemplateEngineInjectionAnalysis",$param) and $param["IsTemplateEngineInjectionAnalysis"] !== null) {
+            $this->IsTemplateEngineInjectionAnalysis = $param["IsTemplateEngineInjectionAnalysis"];
+        }
+
+        if (array_key_exists("IsScriptEngineInjectionAnalysis",$param) and $param["IsScriptEngineInjectionAnalysis"] !== null) {
+            $this->IsScriptEngineInjectionAnalysis = $param["IsScriptEngineInjectionAnalysis"];
+        }
+
+        if (array_key_exists("IsExpressionInjectionAnalysis",$param) and $param["IsExpressionInjectionAnalysis"] !== null) {
+            $this->IsExpressionInjectionAnalysis = $param["IsExpressionInjectionAnalysis"];
+        }
+
+        if (array_key_exists("IsJNDIInjectionAnalysis",$param) and $param["IsJNDIInjectionAnalysis"] !== null) {
+            $this->IsJNDIInjectionAnalysis = $param["IsJNDIInjectionAnalysis"];
+        }
+
+        if (array_key_exists("IsJNIInjectionAnalysis",$param) and $param["IsJNIInjectionAnalysis"] !== null) {
+            $this->IsJNIInjectionAnalysis = $param["IsJNIInjectionAnalysis"];
+        }
+
+        if (array_key_exists("IsWebshellBackdoorAnalysis",$param) and $param["IsWebshellBackdoorAnalysis"] !== null) {
+            $this->IsWebshellBackdoorAnalysis = $param["IsWebshellBackdoorAnalysis"];
+        }
+
+        if (array_key_exists("IsDeserializationAnalysis",$param) and $param["IsDeserializationAnalysis"] !== null) {
+            $this->IsDeserializationAnalysis = $param["IsDeserializationAnalysis"];
+        }
+
+        if (array_key_exists("UrlLongSegmentThreshold",$param) and $param["UrlLongSegmentThreshold"] !== null) {
+            $this->UrlLongSegmentThreshold = $param["UrlLongSegmentThreshold"];
+        }
+
+        if (array_key_exists("UrlNumberSegmentThreshold",$param) and $param["UrlNumberSegmentThreshold"] !== null) {
+            $this->UrlNumberSegmentThreshold = $param["UrlNumberSegmentThreshold"];
         }
     }
 }

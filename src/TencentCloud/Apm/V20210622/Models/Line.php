@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataSerial(array $DataSerial) Set Data sequence.
  * @method array getTags() Obtain Dimension list.
  * @method void setTags(array $Tags) Set Dimension list.
+ * @method string getMetricUnit() Obtain Metric data unit
+ * @method void setMetricUnit(string $MetricUnit) Set Metric data unit
  */
 class Line extends AbstractModel
 {
@@ -59,11 +61,17 @@ class Line extends AbstractModel
     public $Tags;
 
     /**
+     * @var string Metric data unit
+     */
+    public $MetricUnit;
+
+    /**
      * @param string $MetricName Metric name.
      * @param string $MetricNameCN Metric chinese name.
      * @param array $TimeSerial Time series.
      * @param array $DataSerial Data sequence.
      * @param array $Tags Dimension list.
+     * @param string $MetricUnit Metric data unit
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class Line extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("MetricUnit",$param) and $param["MetricUnit"] !== null) {
+            $this->MetricUnit = $param["MetricUnit"];
         }
     }
 }

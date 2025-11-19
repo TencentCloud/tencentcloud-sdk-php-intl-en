@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetrics(array $Metrics) Set Metric list.
  * @method string getInstanceId() Obtain Business system id.
  * @method void setInstanceId(string $InstanceId) Set Business system id.
- * @method array getFilters() Obtain Filter criteria.
- * @method void setFilters(array $Filters) Set Filter criteria.
  * @method array getGroupBy() Obtain Aggregation dimension.
  * @method void setGroupBy(array $GroupBy) Set Aggregation dimension.
  * @method integer getStartTime() Obtain Start time (unit: sec).
  * @method void setStartTime(integer $StartTime) Set Start time (unit: sec).
  * @method integer getEndTime() Obtain End time (unit: seconds).
  * @method void setEndTime(integer $EndTime) Set End time (unit: seconds).
+ * @method array getFilters() Obtain Filter criteria.
+ * @method void setFilters(array $Filters) Set Filter criteria.
  * @method OrderBy getOrderBy() Obtain Sorting method
 .
 Value: fill in.
@@ -60,11 +60,6 @@ class DescribeServiceOverviewRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array Filter criteria.
-     */
-    public $Filters;
-
-    /**
      * @var array Aggregation dimension.
      */
     public $GroupBy;
@@ -78,6 +73,11 @@ class DescribeServiceOverviewRequest extends AbstractModel
      * @var integer End time (unit: seconds).
      */
     public $EndTime;
+
+    /**
+     * @var array Filter criteria.
+     */
+    public $Filters;
 
     /**
      * @var OrderBy Sorting method
@@ -101,10 +101,10 @@ Value: fill in.
     /**
      * @param array $Metrics Metric list.
      * @param string $InstanceId Business system id.
-     * @param array $Filters Filter criteria.
      * @param array $GroupBy Aggregation dimension.
      * @param integer $StartTime Start time (unit: sec).
      * @param integer $EndTime End time (unit: seconds).
+     * @param array $Filters Filter criteria.
      * @param OrderBy $OrderBy Sorting method
 .
 Value: fill in.
@@ -139,15 +139,6 @@ Value: fill in.
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
-                $obj = new Filter();
-                $obj->deserialize($value);
-                array_push($this->Filters, $obj);
-            }
-        }
-
         if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
             $this->GroupBy = $param["GroupBy"];
         }
@@ -158,6 +149,15 @@ Value: fill in.
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
 
         if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {

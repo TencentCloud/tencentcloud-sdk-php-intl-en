@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstrumentList(array $InstrumentList) Set Component list switch (deprecated).
  * @method boolean getTraceSquash() Obtain Link compression switch (deprecated).
  * @method void setTraceSquash(boolean $TraceSquash) Set Link compression switch (deprecated).
+ * @method integer getDisableMemoryUsed() Obtain Specifies the memory threshold for probe fusing.
+ * @method void setDisableMemoryUsed(integer $DisableMemoryUsed) Set Specifies the memory threshold for probe fusing.
+ * @method integer getDisableCpuUsed() Obtain Specifies the CPU threshold for probe fusing.
+ * @method void setDisableCpuUsed(integer $DisableCpuUsed) Set Specifies the CPU threshold for probe fusing.
  */
 class ApmApplicationConfigView extends AbstractModel
 {
@@ -157,6 +161,16 @@ class ApmApplicationConfigView extends AbstractModel
     public $TraceSquash;
 
     /**
+     * @var integer Specifies the memory threshold for probe fusing.
+     */
+    public $DisableMemoryUsed;
+
+    /**
+     * @var integer Specifies the CPU threshold for probe fusing.
+     */
+    public $DisableCpuUsed;
+
+    /**
      * @param string $InstanceKey Business system id.
      * @param string $ServiceName Application name	.	
      * @param string $OperationNameFilter API filtering.
@@ -176,6 +190,8 @@ class ApmApplicationConfigView extends AbstractModel
      * @param boolean $AgentEnable Probe master switch.
      * @param array $InstrumentList Component list switch (deprecated).
      * @param boolean $TraceSquash Link compression switch (deprecated).
+     * @param integer $DisableMemoryUsed Specifies the memory threshold for probe fusing.
+     * @param integer $DisableCpuUsed Specifies the CPU threshold for probe fusing.
      */
     function __construct()
     {
@@ -269,6 +285,14 @@ class ApmApplicationConfigView extends AbstractModel
 
         if (array_key_exists("TraceSquash",$param) and $param["TraceSquash"] !== null) {
             $this->TraceSquash = $param["TraceSquash"];
+        }
+
+        if (array_key_exists("DisableMemoryUsed",$param) and $param["DisableMemoryUsed"] !== null) {
+            $this->DisableMemoryUsed = $param["DisableMemoryUsed"];
+        }
+
+        if (array_key_exists("DisableCpuUsed",$param) and $param["DisableCpuUsed"] !== null) {
+            $this->DisableCpuUsed = $param["DisableCpuUsed"];
         }
     }
 }

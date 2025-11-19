@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKey(string $TagKey) Set Dimension name.
  * @method string getInstanceId() Obtain Business system id.
  * @method void setInstanceId(string $InstanceId) Set Business system id.
- * @method array getFilters() Obtain Filter criteria.
- * @method void setFilters(array $Filters) Set Filter criteria.
  * @method integer getStartTime() Obtain Start time (unit: sec).
  * @method void setStartTime(integer $StartTime) Set Start time (unit: sec).
  * @method integer getEndTime() Obtain End time (unit: seconds).
  * @method void setEndTime(integer $EndTime) Set End time (unit: seconds).
+ * @method array getFilters() Obtain Filter criteria.
+ * @method void setFilters(array $Filters) Set Filter criteria.
  * @method array getOrFilters() Obtain Or filter criteria.
  * @method void setOrFilters(array $OrFilters) Set Or filter criteria.
  * @method string getType() Obtain Usage type.
@@ -48,11 +48,6 @@ class DescribeTagValuesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array Filter criteria.
-     */
-    public $Filters;
-
-    /**
      * @var integer Start time (unit: sec).
      */
     public $StartTime;
@@ -61,6 +56,11 @@ class DescribeTagValuesRequest extends AbstractModel
      * @var integer End time (unit: seconds).
      */
     public $EndTime;
+
+    /**
+     * @var array Filter criteria.
+     */
+    public $Filters;
 
     /**
      * @var array Or filter criteria.
@@ -75,9 +75,9 @@ class DescribeTagValuesRequest extends AbstractModel
     /**
      * @param string $TagKey Dimension name.
      * @param string $InstanceId Business system id.
-     * @param array $Filters Filter criteria.
      * @param integer $StartTime Start time (unit: sec).
      * @param integer $EndTime End time (unit: seconds).
+     * @param array $Filters Filter criteria.
      * @param array $OrFilters Or filter criteria.
      * @param string $Type Usage type.
      */
@@ -102,6 +102,14 @@ class DescribeTagValuesRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -109,14 +117,6 @@ class DescribeTagValuesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
-        }
-
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
-        }
-
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
         }
 
         if (array_key_exists("OrFilters",$param) and $param["OrFilters"] !== null) {

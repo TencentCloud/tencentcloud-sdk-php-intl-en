@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) Set Start time (unit: sec).
  * @method integer getEndTime() Obtain End time (unit: seconds).
  * @method void setEndTime(integer $EndTime) Set End time (unit: seconds).
+ * @method array getGroupBy() Obtain Aggregation dimension.
+ * @method void setGroupBy(array $GroupBy) Set Aggregation dimension.
  * @method array getFilters() Obtain Filter criteria.
  * @method void setFilters(array $Filters) Set Filter criteria.
  * @method array getOrFilters() Obtain Or filter criteria.
  * @method void setOrFilters(array $OrFilters) Set Or filter criteria.
- * @method array getGroupBy() Obtain Aggregation dimension.
- * @method void setGroupBy(array $GroupBy) Set Aggregation dimension.
  * @method OrderBy getOrderBy() Obtain Sort
 .
 The currently supported keys are:.
@@ -94,6 +94,11 @@ class DescribeMetricRecordsRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var array Aggregation dimension.
+     */
+    public $GroupBy;
+
+    /**
      * @var array Filter criteria.
      */
     public $Filters;
@@ -102,11 +107,6 @@ class DescribeMetricRecordsRequest extends AbstractModel
      * @var array Or filter criteria.
      */
     public $OrFilters;
-
-    /**
-     * @var array Aggregation dimension.
-     */
-    public $GroupBy;
 
     /**
      * @var OrderBy Sort
@@ -159,9 +159,9 @@ The currently supported values are:.
      * @param string $InstanceId Business system id.
      * @param integer $StartTime Start time (unit: sec).
      * @param integer $EndTime End time (unit: seconds).
+     * @param array $GroupBy Aggregation dimension.
      * @param array $Filters Filter criteria.
      * @param array $OrFilters Or filter criteria.
-     * @param array $GroupBy Aggregation dimension.
      * @param OrderBy $OrderBy Sort
 .
 The currently supported keys are:.
@@ -215,6 +215,10 @@ The currently supported values are:.
             $this->EndTime = $param["EndTime"];
         }
 
+        if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
+            $this->GroupBy = $param["GroupBy"];
+        }
+
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -231,10 +235,6 @@ The currently supported values are:.
                 $obj->deserialize($value);
                 array_push($this->OrFilters, $obj);
             }
-        }
-
-        if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
-            $this->GroupBy = $param["GroupBy"];
         }
 
         if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {

@@ -74,13 +74,13 @@ use TencentCloud\Common\AbstractModel;
 <li> l7Flow_request_ua_browser: specifies the l7 access request count metric by browser type dimension.</li>.
 <li> l7Flow_request_ua_os: specifies the l7 access request count metric counted by the operating system type dimension.</li>.
 <li> l7Flow_request_ua: l7 access request count metric counted by the User-Agent dimension.</li>.
- * @method array getZoneIds() Obtain Site ID list. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).  A maximum of 100 site IDs can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. To query account-level data, you must have resource permissions for all sites in this API.
- * @method void setZoneIds(array $ZoneIds) Set Site ID list. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).  A maximum of 100 site IDs can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. To query account-level data, you must have resource permissions for all sites in this API.
+ * @method array getZoneIds() Obtain Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+ * @method void setZoneIds(array $ZoneIds) Set Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
  * @method integer getLimit() Obtain Indicates the top N data to be queried. The maximum value is 1000. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
  * @method void setLimit(integer $Limit) Set Indicates the top N data to be queried. The maximum value is 1000. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
- * @method array getFilters() Obtain Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.comom/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945).
+ * @method array getFilters() Obtain Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.com/document/product/1145/56985).
 If needed, limit the site or content identifier by importing the corresponding value in the `ZoneIds.N` parameter.
- * @method void setFilters(array $Filters) Set Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.comom/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945).
+ * @method void setFilters(array $Filters) Set Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.com/document/product/1145/56985).
 If needed, limit the site or content identifier by importing the corresponding value in the `ZoneIds.N` parameter.
  * @method string getInterval() Obtain Query time granularity. this parameter is invalid. to be deprecated.
  * @method void setInterval(string $Interval) Set Query time granularity. this parameter is invalid. to be deprecated.
@@ -129,7 +129,7 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
     public $MetricName;
 
     /**
-     * @var array Site ID list. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).  A maximum of 100 site IDs can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. To query account-level data, you must have resource permissions for all sites in this API.
+     * @var array Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
      */
     public $ZoneIds;
 
@@ -139,7 +139,7 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.comom/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945).
+     * @var array Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.com/document/product/1145/56985).
 If needed, limit the site or content identifier by importing the corresponding value in the `ZoneIds.N` parameter.
      */
     public $Filters;
@@ -182,9 +182,9 @@ If needed, limit the site or content identifier by importing the corresponding v
 <li> l7Flow_request_ua_browser: specifies the l7 access request count metric by browser type dimension.</li>.
 <li> l7Flow_request_ua_os: specifies the l7 access request count metric counted by the operating system type dimension.</li>.
 <li> l7Flow_request_ua: l7 access request count metric counted by the User-Agent dimension.</li>.
-     * @param array $ZoneIds Site ID list. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).  A maximum of 100 site IDs can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. To query account-level data, you must have resource permissions for all sites in this API.
+     * @param array $ZoneIds Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
      * @param integer $Limit Indicates the top N data to be queried. The maximum value is 1000. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
-     * @param array $Filters Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.comom/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945).
+     * @param array $Filters Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.com/document/product/1145/56985).
 If needed, limit the site or content identifier by importing the corresponding value in the `ZoneIds.N` parameter.
      * @param string $Interval Query time granularity. this parameter is invalid. to be deprecated.
      * @param string $Area Data ownership region. this parameter is deprecated. please filter data by client region in `Filters.country`.

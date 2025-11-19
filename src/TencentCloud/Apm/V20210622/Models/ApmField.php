@@ -36,6 +36,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getCompareVal() Obtain Year-On-Year metric value. deprecated, not recommended for use.
  * @method void setCompareVal(string $CompareVal) Set Year-On-Year metric value. deprecated, not recommended for use.
+ * @method string getNameCN() Obtain Metric Chinese Name
+ * @method void setNameCN(string $NameCN) Set Metric Chinese Name
+ * @method string getNameEN() Obtain Metric English name
+ * @method void setNameEN(string $NameEN) Set Metric English name
  */
 class ApmField extends AbstractModel
 {
@@ -72,6 +76,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CompareVal;
 
     /**
+     * @var string Metric Chinese Name
+     */
+    public $NameCN;
+
+    /**
+     * @var string Metric English name
+     */
+    public $NameEN;
+
+    /**
      * @param string $Key Metric name.
      * @param float $Value Indicator numerical value.
      * @param string $Unit Units corresponding to the metric.
@@ -80,6 +94,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $LastPeriodValue Indicator numerical value of the previous period in year-over-year comparison.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $CompareVal Year-On-Year metric value. deprecated, not recommended for use.
+     * @param string $NameCN Metric Chinese Name
+     * @param string $NameEN Metric English name
      */
     function __construct()
     {
@@ -126,6 +142,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CompareVal",$param) and $param["CompareVal"] !== null) {
             $this->CompareVal = $param["CompareVal"];
+        }
+
+        if (array_key_exists("NameCN",$param) and $param["NameCN"] !== null) {
+            $this->NameCN = $param["NameCN"];
+        }
+
+        if (array_key_exists("NameEN",$param) and $param["NameEN"] !== null) {
+            $this->NameEN = $param["NameEN"];
         }
     }
 }

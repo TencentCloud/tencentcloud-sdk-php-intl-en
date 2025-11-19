@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTags() Obtain Tag list.
  * @method void setTags(array $Tags) Set Tag list.
- * @method string getInstanceName() Obtain Filter by business system name.
- * @method void setInstanceName(string $InstanceName) Set Filter by business system name.
+ * @method string getInstanceName() Obtain Filters by business system name, and fuzzy search is supported.
+ * @method void setInstanceName(string $InstanceName) Set Filters by business system name, and fuzzy search is supported.
+ * @method string getInstanceId() Obtain Filters by business system ID, and fuzzy search is supported.
+ * @method void setInstanceId(string $InstanceId) Set Filters by business system ID, and fuzzy search is supported.
  * @method array getInstanceIds() Obtain Filter by business system id.
  * @method void setInstanceIds(array $InstanceIds) Set Filter by business system id.
  * @method integer getDemoInstanceFlag() Obtain Whether to query the official demo business system (0 = non-demo business system, 1 = demo business system, default is 0).
@@ -39,9 +41,14 @@ class DescribeApmInstancesRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string Filter by business system name.
+     * @var string Filters by business system name, and fuzzy search is supported.
      */
     public $InstanceName;
+
+    /**
+     * @var string Filters by business system ID, and fuzzy search is supported.
+     */
+    public $InstanceId;
 
     /**
      * @var array Filter by business system id.
@@ -60,7 +67,8 @@ class DescribeApmInstancesRequest extends AbstractModel
 
     /**
      * @param array $Tags Tag list.
-     * @param string $InstanceName Filter by business system name.
+     * @param string $InstanceName Filters by business system name, and fuzzy search is supported.
+     * @param string $InstanceId Filters by business system ID, and fuzzy search is supported.
      * @param array $InstanceIds Filter by business system id.
      * @param integer $DemoInstanceFlag Whether to query the official demo business system (0 = non-demo business system, 1 = demo business system, default is 0).
      * @param integer $AllRegionsFlag Whether to query all regional business systems (0 = do not query all regions, 1 = query all regions, default is 0).
@@ -89,6 +97,10 @@ class DescribeApmInstancesRequest extends AbstractModel
 
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
