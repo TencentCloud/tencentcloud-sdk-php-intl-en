@@ -164,6 +164,7 @@ MCU stream mixing and transcoding fees: [See Cloud Stream Mixing and Transcoding
  * @method Models\StopAIConversationResponse StopAIConversation(Models\StopAIConversationRequest $req) Stop AI conversation task
  * @method Models\StopAITranscriptionResponse StopAITranscription(Models\StopAITranscriptionRequest $req) Stop AI Transcription task
  * @method Models\StopPublishCdnStreamResponse StopPublishCdnStream(Models\StopPublishCdnStreamRequest $req) This API is used to stop a relaying task.
+You can create a relay task before the anchor enters the room. When the relay task is finished, you need to call the stop interface actively. If you do not call the Stop Relay Task Interface, Tencent Cloud will automatically stop the mix relay task when all users participating in the mix have no data uploaded for a period of time exceeding the timeout (AgentParams.MaxIdleTime) set when starting the relay task.
  * @method Models\StopStreamIngestResponse StopStreamIngest(Models\StopStreamIngestRequest $req) Stop a Pull stream Relay task.
  * @method Models\StopWebRecordResponse StopWebRecord(Models\StopWebRecordRequest $req) Stop an web-page recording task
  * @method Models\UpdateAIConversationResponse UpdateAIConversation(Models\UpdateAIConversationRequest $req) Update AI conversation task parameters
