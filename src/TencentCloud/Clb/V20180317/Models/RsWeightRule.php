@@ -52,11 +52,13 @@ class RsWeightRule extends AbstractModel
 
     /**
      * @var string Target rule domain name. This parameter does not take effect if LocationId is specified
+     * @deprecated
      */
     public $Domain;
 
     /**
      * @var string Target rule URL. This parameter does not take effect if LocationId is specified
+     * @deprecated
      */
     public $Url;
 

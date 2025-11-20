@@ -36,6 +36,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setUpdatedTime(string $UpdatedTime) Set Target group modification time
  * @method array getAssociatedRule() Obtain Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAssociatedRule(array $AssociatedRule) Set Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProtocol() Obtain 
+ * @method void setProtocol(string $Protocol) Set 
+ * @method string getScheduleAlgorithm() Obtain 
+ * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) Set 
+ * @method TargetGroupHealthCheck getHealthCheck() Obtain 
+ * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) Set 
  */
 class TargetGroupInfo extends AbstractModel
 {
@@ -76,6 +82,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AssociatedRule;
 
     /**
+     * @var string 
+     */
+    public $Protocol;
+
+    /**
+     * @var string 
+     */
+    public $ScheduleAlgorithm;
+
+    /**
+     * @var TargetGroupHealthCheck 
+     */
+    public $HealthCheck;
+
+    /**
      * @param string $TargetGroupId Target group ID
      * @param string $VpcId `vpcid` of target group
      * @param string $TargetGroupName Target group name
@@ -84,6 +105,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $CreatedTime Target group creation time
      * @param string $UpdatedTime Target group modification time
      * @param array $AssociatedRule Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Protocol 
+     * @param string $ScheduleAlgorithm 
+     * @param TargetGroupHealthCheck $HealthCheck 
      */
     function __construct()
     {
@@ -129,6 +153,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->AssociatedRule, $obj);
             }
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("ScheduleAlgorithm",$param) and $param["ScheduleAlgorithm"] !== null) {
+            $this->ScheduleAlgorithm = $param["ScheduleAlgorithm"];
+        }
+
+        if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
+            $this->HealthCheck = new TargetGroupHealthCheck();
+            $this->HealthCheck->deserialize($param["HealthCheck"]);
         }
     }
 }

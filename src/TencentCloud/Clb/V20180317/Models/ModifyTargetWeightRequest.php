@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getListenerId() Obtain CLB listener ID
  * @method void setListenerId(string $ListenerId) Set CLB listener ID
+ * @method array getTargets() Obtain List of real servers for which to modify the weights
+ * @method void setTargets(array $Targets) Set List of real servers for which to modify the weights
  * @method string getLocationId() Obtain Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
  * @method void setLocationId(string $LocationId) Set Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
  * @method string getDomain() Obtain Target rule domain name. This parameter does not take effect if LocationId is specified.
  * @method void setDomain(string $Domain) Set Target rule domain name. This parameter does not take effect if LocationId is specified.
  * @method string getUrl() Obtain Target rule URL. This parameter does not take effect if LocationId is specified.
  * @method void setUrl(string $Url) Set Target rule URL. This parameter does not take effect if LocationId is specified.
- * @method array getTargets() Obtain List of real servers for which to modify the weights
- * @method void setTargets(array $Targets) Set List of real servers for which to modify the weights
  * @method integer getWeight() Obtain New forwarding weight of a real server. Value range: 0-100. Default value: 10. If the Targets.Weight parameter is set, this parameter will not take effect.
  * @method void setWeight(integer $Weight) Set New forwarding weight of a real server. Value range: 0-100. Default value: 10. If the Targets.Weight parameter is set, this parameter will not take effect.
  */
@@ -46,6 +46,11 @@ class ModifyTargetWeightRequest extends AbstractModel
      * @var string CLB listener ID
      */
     public $ListenerId;
+
+    /**
+     * @var array List of real servers for which to modify the weights
+     */
+    public $Targets;
 
     /**
      * @var string Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
@@ -63,11 +68,6 @@ class ModifyTargetWeightRequest extends AbstractModel
     public $Url;
 
     /**
-     * @var array List of real servers for which to modify the weights
-     */
-    public $Targets;
-
-    /**
      * @var integer New forwarding weight of a real server. Value range: 0-100. Default value: 10. If the Targets.Weight parameter is set, this parameter will not take effect.
      */
     public $Weight;
@@ -75,10 +75,10 @@ class ModifyTargetWeightRequest extends AbstractModel
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
+     * @param array $Targets List of real servers for which to modify the weights
      * @param string $LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
      * @param string $Domain Target rule domain name. This parameter does not take effect if LocationId is specified.
      * @param string $Url Target rule URL. This parameter does not take effect if LocationId is specified.
-     * @param array $Targets List of real servers for which to modify the weights
      * @param integer $Weight New forwarding weight of a real server. Value range: 0-100. Default value: 10. If the Targets.Weight parameter is set, this parameter will not take effect.
      */
     function __construct()
@@ -102,6 +102,15 @@ class ModifyTargetWeightRequest extends AbstractModel
             $this->ListenerId = $param["ListenerId"];
         }
 
+        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
+            $this->Targets = [];
+            foreach ($param["Targets"] as $key => $value){
+                $obj = new Target();
+                $obj->deserialize($value);
+                array_push($this->Targets, $obj);
+            }
+        }
+
         if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
             $this->LocationId = $param["LocationId"];
         }
@@ -112,15 +121,6 @@ class ModifyTargetWeightRequest extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
-        }
-
-        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
-            $this->Targets = [];
-            foreach ($param["Targets"] as $key => $value){
-                $obj = new Target();
-                $obj->deserialize($value);
-                array_push($this->Targets, $obj);
-            }
         }
 
         if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {

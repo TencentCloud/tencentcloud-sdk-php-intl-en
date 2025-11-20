@@ -36,6 +36,7 @@ class CreateClsLogSetRequest extends AbstractModel
 
     /**
      * @var integer Logset retention period (in days)
+     * @deprecated
      */
     public $Period;
 

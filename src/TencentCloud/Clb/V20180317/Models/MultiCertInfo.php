@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSSLMode(string $SSLMode) Set Authentication type. Values: `UNIDIRECTIONAL` (one-way authentication), `MUTUAL` (two-way authentication)
  * @method array getCertList() Obtain List of listener or rule certificates. One-way and two-way authentication are supported. Only one certificate can be specified for one algorithm. If `SSLMode` is `MUTUAL` (two-way authentication), at least one CA certificate is required. 
  * @method void setCertList(array $CertList) Set List of listener or rule certificates. One-way and two-way authentication are supported. Only one certificate can be specified for one algorithm. If `SSLMode` is `MUTUAL` (two-way authentication), at least one CA certificate is required. 
+ * @method string getSSLVerifyClient() Obtain Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+ * @method void setSSLVerifyClient(string $SSLVerifyClient) Set Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
  */
 class MultiCertInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class MultiCertInfo extends AbstractModel
     public $CertList;
 
     /**
+     * @var string Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+     */
+    public $SSLVerifyClient;
+
+    /**
      * @param string $SSLMode Authentication type. Values: `UNIDIRECTIONAL` (one-way authentication), `MUTUAL` (two-way authentication)
      * @param array $CertList List of listener or rule certificates. One-way and two-way authentication are supported. Only one certificate can be specified for one algorithm. If `SSLMode` is `MUTUAL` (two-way authentication), at least one CA certificate is required. 
+     * @param string $SSLVerifyClient Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class MultiCertInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CertList, $obj);
             }
+        }
+
+        if (array_key_exists("SSLVerifyClient",$param) and $param["SSLVerifyClient"] !== null) {
+            $this->SSLVerifyClient = $param["SSLVerifyClient"];
         }
     }
 }

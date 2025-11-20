@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) Set Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
  * @method array getTargetGroupInstances() Obtain Real server bound to a target group
  * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Real server bound to a target group
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getProtocol() Obtain 
+ * @method void setProtocol(string $Protocol) Set 
+ * @method TargetGroupHealthCheck getHealthCheck() Obtain 
+ * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) Set 
+ * @method string getScheduleAlgorithm() Obtain 
+ * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) Set 
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
@@ -52,10 +60,34 @@ class CreateTargetGroupRequest extends AbstractModel
     public $TargetGroupInstances;
 
     /**
+     * @var string 
+     */
+    public $Type;
+
+    /**
+     * @var string 
+     */
+    public $Protocol;
+
+    /**
+     * @var TargetGroupHealthCheck 
+     */
+    public $HealthCheck;
+
+    /**
+     * @var string 
+     */
+    public $ScheduleAlgorithm;
+
+    /**
      * @param string $TargetGroupName Target group name (up to 50 characters)
      * @param string $VpcId `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
      * @param integer $Port Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
      * @param array $TargetGroupInstances Real server bound to a target group
+     * @param string $Type 
+     * @param string $Protocol 
+     * @param TargetGroupHealthCheck $HealthCheck 
+     * @param string $ScheduleAlgorithm 
      */
     function __construct()
     {
@@ -89,6 +121,23 @@ class CreateTargetGroupRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TargetGroupInstances, $obj);
             }
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
+            $this->HealthCheck = new TargetGroupHealthCheck();
+            $this->HealthCheck->deserialize($param["HealthCheck"]);
+        }
+
+        if (array_key_exists("ScheduleAlgorithm",$param) and $param["ScheduleAlgorithm"] !== null) {
+            $this->ScheduleAlgorithm = $param["ScheduleAlgorithm"];
         }
     }
 }

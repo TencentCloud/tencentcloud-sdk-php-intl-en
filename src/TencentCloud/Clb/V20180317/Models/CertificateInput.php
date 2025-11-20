@@ -20,10 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Certificate information
  *
- * @method string getSSLMode() Obtain Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
- * @method void setSSLMode(string $SSLMode) Set Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
- * @method string getCertId() Obtain ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
- * @method void setCertId(string $CertId) Set ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
+ * @method string getSSLMode() Obtain Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+Default value: UNIDIRECTIONAL.
+ * @method void setSSLMode(string $SSLMode) Set Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+Default value: UNIDIRECTIONAL.
+ * @method string getSSLVerifyClient() Obtain Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+ * @method void setSSLVerifyClient(string $SSLVerifyClient) Set Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+ * @method string getCertId() Obtain Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name).
+ * @method void setCertId(string $CertId) Set Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name).
  * @method string getCertCaId() Obtain ID of a client certificate. When the listener adopts mutual authentication (i.e., SSLMode = mutual), if you leave this parameter empty, you must upload the client certificate, including CertCaContent and CertCaName.
  * @method void setCertCaId(string $CertCaId) Set ID of a client certificate. When the listener adopts mutual authentication (i.e., SSLMode = mutual), if you leave this parameter empty, you must upload the client certificate, including CertCaContent and CertCaName.
  * @method string getCertName() Obtain Name of the uploaded server certificate. If there is no CertId, this parameter is required.
@@ -40,12 +44,18 @@ use TencentCloud\Common\AbstractModel;
 class CertificateInput extends AbstractModel
 {
     /**
-     * @var string Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+     * @var string Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+Default value: UNIDIRECTIONAL.
      */
     public $SSLMode;
 
     /**
-     * @var string ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
+     * @var string Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+     */
+    public $SSLVerifyClient;
+
+    /**
+     * @var string Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name).
      */
     public $CertId;
 
@@ -80,8 +90,10 @@ class CertificateInput extends AbstractModel
     public $CertCaContent;
 
     /**
-     * @param string $SSLMode Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
-     * @param string $CertId ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
+     * @param string $SSLMode Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+Default value: UNIDIRECTIONAL.
+     * @param string $SSLVerifyClient Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+     * @param string $CertId Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name).
      * @param string $CertCaId ID of a client certificate. When the listener adopts mutual authentication (i.e., SSLMode = mutual), if you leave this parameter empty, you must upload the client certificate, including CertCaContent and CertCaName.
      * @param string $CertName Name of the uploaded server certificate. If there is no CertId, this parameter is required.
      * @param string $CertKey Key of the uploaded server certificate. If there is no CertId, this parameter is required.
@@ -104,6 +116,10 @@ class CertificateInput extends AbstractModel
         }
         if (array_key_exists("SSLMode",$param) and $param["SSLMode"] !== null) {
             $this->SSLMode = $param["SSLMode"];
+        }
+
+        if (array_key_exists("SSLVerifyClient",$param) and $param["SSLVerifyClient"] !== null) {
+            $this->SSLVerifyClient = $param["SSLVerifyClient"];
         }
 
         if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
