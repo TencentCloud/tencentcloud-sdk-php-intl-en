@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionBytes(integer $RetentionBytes) Set Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
  * @method array getTags() Obtain Tag list.
  * @method void setTags(array $Tags) Set Tag list.
+ * @method string getLogMsgTimestampType() Obtain Time type for message saving. valid values: CreateTime/LogAppendTime.
+ * @method void setLogMsgTimestampType(string $LogMsgTimestampType) Set Time type for message saving. valid values: CreateTime/LogAppendTime.
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class CreateTopicRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string Time type for message saving. valid values: CreateTime/LogAppendTime.
+     */
+    public $LogMsgTimestampType;
+
+    /**
      * @param string $InstanceId Instance Id. you can obtain it by calling the DescribeInstances api.
      * @param string $TopicName Can only contain letters, digits, underscores, "-", or ".".
      * @param integer $PartitionNum Number of partitions, which should be greater than 0
@@ -160,6 +167,7 @@ class CreateTopicRequest extends AbstractModel
      * @param string $AclRuleName Name of the preset ACL rule.
      * @param integer $RetentionBytes Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
      * @param array $Tags Tag list.
+     * @param string $LogMsgTimestampType Time type for message saving. valid values: CreateTime/LogAppendTime.
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class CreateTopicRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("LogMsgTimestampType",$param) and $param["LogMsgTimestampType"] !== null) {
+            $this->LogMsgTimestampType = $param["LogMsgTimestampType"];
         }
     }
 }

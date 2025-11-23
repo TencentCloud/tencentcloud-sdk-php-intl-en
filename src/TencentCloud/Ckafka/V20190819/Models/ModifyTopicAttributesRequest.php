@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) Set Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
  * @method integer getReplicaNum() Obtain Number of topic replicas. valid values: 1, 3.
  * @method void setReplicaNum(integer $ReplicaNum) Set Number of topic replicas. valid values: 1, 3.
+ * @method string getLogMsgTimestampType() Obtain Specifies the time type for message saving: CreateTime/LogAppendTime.
+ * @method void setLogMsgTimestampType(string $LogMsgTimestampType) Set Specifies the time type for message saving: CreateTime/LogAppendTime.
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $ReplicaNum;
 
     /**
+     * @var string Specifies the time type for message saving: CreateTime/LogAppendTime.
+     */
+    public $LogMsgTimestampType;
+
+    /**
      * @param string $InstanceId The ckafka cluster instance Id.
      * @param string $TopicName Topic name
      * @param string $Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
@@ -168,6 +175,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param integer $QuotaProducerByteRate Production traffic throttling in MB/s. set to -1 to disable throttling.
      * @param integer $QuotaConsumerByteRate Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
      * @param integer $ReplicaNum Number of topic replicas. valid values: 1, 3.
+     * @param string $LogMsgTimestampType Specifies the time type for message saving: CreateTime/LogAppendTime.
      */
     function __construct()
     {
@@ -257,6 +265,10 @@ class ModifyTopicAttributesRequest extends AbstractModel
 
         if (array_key_exists("ReplicaNum",$param) and $param["ReplicaNum"] !== null) {
             $this->ReplicaNum = $param["ReplicaNum"];
+        }
+
+        if (array_key_exists("LogMsgTimestampType",$param) and $param["LogMsgTimestampType"] !== null) {
+            $this->LogMsgTimestampType = $param["LogMsgTimestampType"];
         }
     }
 }

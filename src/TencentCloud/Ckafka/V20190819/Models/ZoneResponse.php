@@ -20,138 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The entity returned for the query of Kafka’s zone information
  *
- * @method array getZoneList() Obtain Zone list
- * @method void setZoneList(array $ZoneList) Set Zone list
- * @method integer getMaxBuyInstanceNum() Obtain Maximum number of instances to be purchased
- * @method void setMaxBuyInstanceNum(integer $MaxBuyInstanceNum) Set Maximum number of instances to be purchased
- * @method integer getMaxBandwidth() Obtain Maximum bandwidth in MB/S
- * @method void setMaxBandwidth(integer $MaxBandwidth) Set Maximum bandwidth in MB/S
- * @method Price getUnitPrice() Obtain Pay-as-you-go unit price
- * @method void setUnitPrice(Price $UnitPrice) Set Pay-as-you-go unit price
- * @method Price getMessagePrice() Obtain Pay-as-you-go unit message price
- * @method void setMessagePrice(Price $MessagePrice) Set Pay-as-you-go unit message price
- * @method array getClusterInfo() Obtain Specifies the user-exclusive cluster info.
- * @method void setClusterInfo(array $ClusterInfo) Set Specifies the user-exclusive cluster info.
- * @method string getStandard() Obtain Purchase the standard version configuration.
- * @method void setStandard(string $Standard) Set Purchase the standard version configuration.
- * @method string getStandardS2() Obtain Purchase the standard version S2 configuration.
- * @method void setStandardS2(string $StandardS2) Set Purchase the standard version S2 configuration.
- * @method string getProfession() Obtain Specifies the configuration for purchasing the professional edition.
- * @method void setProfession(string $Profession) Set Specifies the configuration for purchasing the professional edition.
- * @method string getPhysical() Obtain Purchase physical dedicated edition configuration.
- * @method void setPhysical(string $Physical) Set Purchase physical dedicated edition configuration.
- * @method string getPublicNetwork() Obtain Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
- * @method void setPublicNetwork(string $PublicNetwork) Set Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
- * @method string getPublicNetworkLimit() Obtain Configures the public network bandwidth.
- * @method void setPublicNetworkLimit(string $PublicNetworkLimit) Set Configures the public network bandwidth.
- * @method string getRequestId() Obtain Request ID.
- * @method void setRequestId(string $RequestId) Set Request ID.
- * @method integer getOffset() Obtain Pagination Offset
- * @method void setOffset(integer $Offset) Set Pagination Offset
- * @method integer getLimit() Obtain Pagination Limit
- * @method void setLimit(integer $Limit) Set Pagination Limit
- * @method boolean getForceCheckTag() Obtain Mandatory. input tag.
- * @method void setForceCheckTag(boolean $ForceCheckTag) Set Mandatory. input tag.
+ * @method array getZoneList() Obtain <P>Specifies the zone list.</p>.
+ * @method void setZoneList(array $ZoneList) Set <P>Specifies the zone list.</p>.
+ * @method integer getMaxBuyInstanceNum() Obtain <P>Maximum number of instances that can be purchased.</p>.
+ * @method void setMaxBuyInstanceNum(integer $MaxBuyInstanceNum) Set <P>Maximum number of instances that can be purchased.</p>.
+ * @method integer getMaxBandwidth() Obtain <p>Maximum purchase bandwidth in Mb/s.</p>.
+ * @method void setMaxBandwidth(integer $MaxBandwidth) Set <p>Maximum purchase bandwidth in Mb/s.</p>.
+ * @method Price getUnitPrice() Obtain <P>Unit price for postpayment.</p>.
+ * @method void setUnitPrice(Price $UnitPrice) Set <P>Unit price for postpayment.</p>.
+ * @method Price getMessagePrice() Obtain <P>Message unit price for postpayment.</p>.
+ * @method void setMessagePrice(Price $MessagePrice) Set <P>Message unit price for postpayment.</p>.
+ * @method array getClusterInfo() Obtain <P>User-Exclusive cluster information.</p>.
+ * @method void setClusterInfo(array $ClusterInfo) Set <P>User-Exclusive cluster information.</p>.
+ * @method string getStandard() Obtain <P>Specifies the standard version configuration to purchase.</p>.
+ * @method void setStandard(string $Standard) Set <P>Specifies the standard version configuration to purchase.</p>.
+ * @method string getStandardS2() Obtain <P>Specifies the purchase of standard version s2 configuration.</p>.
+ * @method void setStandardS2(string $StandardS2) Set <P>Specifies the purchase of standard version s2 configuration.</p>.
+ * @method string getProfession() Obtain <P>Specifies the configuration for purchasing professional edition.</p>.
+ * @method void setProfession(string $Profession) Set <P>Specifies the configuration for purchasing professional edition.</p>.
+ * @method string getPhysical() Obtain <P>Purchase physical dedicated edition configuration.</p>.
+ * @method void setPhysical(string $Physical) Set <P>Purchase physical dedicated edition configuration.</p>.
+ * @method string getPublicNetwork() Obtain <p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>.
+ * @method void setPublicNetwork(string $PublicNetwork) Set <p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>.
+ * @method string getPublicNetworkLimit() Obtain <P>Public network bandwidth configuration.</p>.
+ * @method void setPublicNetworkLimit(string $PublicNetworkLimit) Set <P>Public network bandwidth configuration.</p>.
+ * @method string getRequestId() Obtain <p>Request Id.</p>.
+ * @method void setRequestId(string $RequestId) Set <p>Request Id.</p>.
+ * @method integer getOffset() Obtain <P>Specifies the pagination offset.</p>.
+ * @method void setOffset(integer $Offset) Set <P>Specifies the pagination offset.</p>.
+ * @method integer getLimit() Obtain <P>Specifies the pagination limit.</p>.
+ * @method void setLimit(integer $Limit) Set <P>Specifies the pagination limit.</p>.
+ * @method boolean getForceCheckTag() Obtain <P>Specifies whether the tag is mandatory.</p>.
+ * @method void setForceCheckTag(boolean $ForceCheckTag) Set <P>Specifies whether the tag is mandatory.</p>.
  */
 class ZoneResponse extends AbstractModel
 {
     /**
-     * @var array Zone list
+     * @var array <P>Specifies the zone list.</p>.
      */
     public $ZoneList;
 
     /**
-     * @var integer Maximum number of instances to be purchased
+     * @var integer <P>Maximum number of instances that can be purchased.</p>.
      */
     public $MaxBuyInstanceNum;
 
     /**
-     * @var integer Maximum bandwidth in MB/S
+     * @var integer <p>Maximum purchase bandwidth in Mb/s.</p>.
      */
     public $MaxBandwidth;
 
     /**
-     * @var Price Pay-as-you-go unit price
+     * @var Price <P>Unit price for postpayment.</p>.
      */
     public $UnitPrice;
 
     /**
-     * @var Price Pay-as-you-go unit message price
+     * @var Price <P>Message unit price for postpayment.</p>.
      */
     public $MessagePrice;
 
     /**
-     * @var array Specifies the user-exclusive cluster info.
+     * @var array <P>User-Exclusive cluster information.</p>.
      */
     public $ClusterInfo;
 
     /**
-     * @var string Purchase the standard version configuration.
+     * @var string <P>Specifies the standard version configuration to purchase.</p>.
      */
     public $Standard;
 
     /**
-     * @var string Purchase the standard version S2 configuration.
+     * @var string <P>Specifies the purchase of standard version s2 configuration.</p>.
      */
     public $StandardS2;
 
     /**
-     * @var string Specifies the configuration for purchasing the professional edition.
+     * @var string <P>Specifies the configuration for purchasing professional edition.</p>.
      */
     public $Profession;
 
     /**
-     * @var string Purchase physical dedicated edition configuration.
+     * @var string <P>Purchase physical dedicated edition configuration.</p>.
      */
     public $Physical;
 
     /**
-     * @var string Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
+     * @var string <p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>.
      */
     public $PublicNetwork;
 
     /**
-     * @var string Configures the public network bandwidth.
+     * @var string <P>Public network bandwidth configuration.</p>.
      */
     public $PublicNetworkLimit;
 
     /**
-     * @var string Request ID.
+     * @var string <p>Request Id.</p>.
      */
     public $RequestId;
 
     /**
-     * @var integer Pagination Offset
+     * @var integer <P>Specifies the pagination offset.</p>.
      */
     public $Offset;
 
     /**
-     * @var integer Pagination Limit
+     * @var integer <P>Specifies the pagination limit.</p>.
      */
     public $Limit;
 
     /**
-     * @var boolean Mandatory. input tag.
+     * @var boolean <P>Specifies whether the tag is mandatory.</p>.
      */
     public $ForceCheckTag;
 
     /**
-     * @param array $ZoneList Zone list
-     * @param integer $MaxBuyInstanceNum Maximum number of instances to be purchased
-     * @param integer $MaxBandwidth Maximum bandwidth in MB/S
-     * @param Price $UnitPrice Pay-as-you-go unit price
-     * @param Price $MessagePrice Pay-as-you-go unit message price
-     * @param array $ClusterInfo Specifies the user-exclusive cluster info.
-     * @param string $Standard Purchase the standard version configuration.
-     * @param string $StandardS2 Purchase the standard version S2 configuration.
-     * @param string $Profession Specifies the configuration for purchasing the professional edition.
-     * @param string $Physical Purchase physical dedicated edition configuration.
-     * @param string $PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
-     * @param string $PublicNetworkLimit Configures the public network bandwidth.
-     * @param string $RequestId Request ID.
-     * @param integer $Offset Pagination Offset
-     * @param integer $Limit Pagination Limit
-     * @param boolean $ForceCheckTag Mandatory. input tag.
+     * @param array $ZoneList <P>Specifies the zone list.</p>.
+     * @param integer $MaxBuyInstanceNum <P>Maximum number of instances that can be purchased.</p>.
+     * @param integer $MaxBandwidth <p>Maximum purchase bandwidth in Mb/s.</p>.
+     * @param Price $UnitPrice <P>Unit price for postpayment.</p>.
+     * @param Price $MessagePrice <P>Message unit price for postpayment.</p>.
+     * @param array $ClusterInfo <P>User-Exclusive cluster information.</p>.
+     * @param string $Standard <P>Specifies the standard version configuration to purchase.</p>.
+     * @param string $StandardS2 <P>Specifies the purchase of standard version s2 configuration.</p>.
+     * @param string $Profession <P>Specifies the configuration for purchasing professional edition.</p>.
+     * @param string $Physical <P>Purchase physical dedicated edition configuration.</p>.
+     * @param string $PublicNetwork <p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>.
+     * @param string $PublicNetworkLimit <P>Public network bandwidth configuration.</p>.
+     * @param string $RequestId <p>Request Id.</p>.
+     * @param integer $Offset <P>Specifies the pagination offset.</p>.
+     * @param integer $Limit <P>Specifies the pagination limit.</p>.
+     * @param boolean $ForceCheckTag <P>Specifies whether the tag is mandatory.</p>.
      */
     function __construct()
     {

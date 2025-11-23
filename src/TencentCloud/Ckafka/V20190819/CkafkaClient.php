@@ -38,6 +38,8 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\CreateTopicIpWhiteListResponse CreateTopicIpWhiteList(Models\CreateTopicIpWhiteListRequest $req) This API is used to create a topic IP allowlist.
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) This API is used to add a user.
  * @method Models\DeleteAclResponse DeleteAcl(Models\DeleteAclRequest $req) This API is used to delete an ACL.
+ * @method Models\DeleteAclRuleResponse DeleteAclRule(Models\DeleteAclRuleRequest $req) This API is used to delete an ACL rule.
+ * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) Delete consumer groups.
  * @method Models\DeleteInstancePostResponse DeleteInstancePost(Models\DeleteInstancePostRequest $req) This API is used to delete post-payment instances. It directly performs instance termination by calling API deletion without associating connectors and tasks in pre-check.
  * @method Models\DeleteInstancePreResponse DeleteInstancePre(Models\DeleteInstancePreRequest $req) This API is used to delete prepaid instances. It performs isolation and deletion actions on the instance. After successful execution, the instance will be directly deleted and terminated. By calling API deletion, it directly performs instance termination without associating connectors and tasks in pre-check.
  * @method Models\DeleteRouteResponse DeleteRoute(Models\DeleteRouteRequest $req) This API is used to delete a route.
@@ -47,7 +49,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) This API is used to delete a user.
  * @method Models\DescribeACLResponse DescribeACL(Models\DescribeACLRequest $req) This API is used to enumerate ACLs.
  * @method Models\DescribeAclRuleResponse DescribeAclRule(Models\DescribeAclRuleRequest $req) This API is used to query the ACL rule list.
- * @method Models\DescribeAppInfoResponse DescribeAppInfo(Models\DescribeAppInfoRequest $req) This API is used to query the user list.
+ * @method Models\DescribeCkafkaVersionResponse DescribeCkafkaVersion(Models\DescribeCkafkaVersionRequest $req) This API is used to query instance version information.
  * @method Models\DescribeCkafkaZoneResponse DescribeCkafkaZone(Models\DescribeCkafkaZoneRequest $req) This API is used to view the AZ list of Ckafka.
  * @method Models\DescribeConsumerGroupResponse DescribeConsumerGroup(Models\DescribeConsumerGroupRequest $req) This API is used to query consumer group information.
  * @method Models\DescribeCvmInfoResponse DescribeCvmInfo(Models\DescribeCvmInfoRequest $req) This API is used to get instance information corresponding to backend CVM, including cvmId and ip. It is for Pro Edition, while Standard Edition returns empty data.
@@ -76,14 +78,17 @@ This API is used to get the list of topics in a CKafka instance of a user.
  * @method Models\FetchMessageListByOffsetResponse FetchMessageListByOffset(Models\FetchMessageListByOffsetRequest $req) This API is used to query the message list based on an offset.
  * @method Models\FetchMessageListByTimestampResponse FetchMessageListByTimestamp(Models\FetchMessageListByTimestampRequest $req) This API is used to query a message list by timestamp.
  * @method Models\InquireCkafkaPriceResponse InquireCkafkaPrice(Models\InquireCkafkaPriceRequest $req) This API is used to purchase a CKafka instance or query the instance renewal price.
+ * @method Models\InstanceScalingDownResponse InstanceScalingDown(Models\InstanceScalingDownRequest $req) This API is used to perform downsizing on a pay-as-you-go instance.
  * @method Models\ModifyAclRuleResponse ModifyAclRule(Models\ModifyAclRuleRequest $req) This API is used to modify ACL policy, currently only support whether to apply preset rules to newly-added topics.
  * @method Models\ModifyDatahubTopicResponse ModifyDatahubTopic(Models\ModifyDatahubTopicRequest $req) This API is used to modify DIP topic attributes.
  * @method Models\ModifyGroupOffsetsResponse ModifyGroupOffsets(Models\ModifyGroupOffsetsRequest $req) This API is used to set the consumer group (Groups) offset.
  * @method Models\ModifyInstanceAttributesResponse ModifyInstanceAttributes(Models\ModifyInstanceAttributesRequest $req) This API is used to set instance attributes.
  * @method Models\ModifyInstancePreResponse ModifyInstancePre(Models\ModifyInstancePreRequest $req) This API is used to change the configuration of prepaid instances, adjust disks, modify bandwidth, and manage partitions.
  * @method Models\ModifyPasswordResponse ModifyPassword(Models\ModifyPasswordRequest $req) This API is used to change the password.
+ * @method Models\ModifyRoutineMaintenanceTaskResponse ModifyRoutineMaintenanceTask(Models\ModifyRoutineMaintenanceTaskRequest $req) This API is used to set automated ops attributes.
  * @method Models\ModifyTopicAttributesResponse ModifyTopicAttributes(Models\ModifyTopicAttributesRequest $req) This API is used to modify topic attributes.
  * @method Models\SendMessageResponse SendMessage(Models\SendMessageRequest $req) This API is used to send messages through the HTTP access layer.
+ * @method Models\UpgradeBrokerVersionResponse UpgradeBrokerVersion(Models\UpgradeBrokerVersionRequest $req) This API is used to upgrade the broker version.
  */
 
 class CkafkaClient extends AbstractClient

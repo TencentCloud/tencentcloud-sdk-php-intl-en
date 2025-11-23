@@ -98,6 +98,10 @@ Specifies the serverless version.
  * @method void setRemainingTopics(integer $RemainingTopics) Set Number of remaining creatable topics.
  * @method DynamicDiskConfig getDynamicDiskConfig() Obtain Scaling policy for dynamic disk.
  * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) Set Scaling policy for dynamic disk.
+ * @method string getSystemMaintenanceTime() Obtain Specifies the system maintenance time.
+ * @method void setSystemMaintenanceTime(string $SystemMaintenanceTime) Set Specifies the system maintenance time.
+ * @method integer getMaxMessageByte() Obtain Specifies the maximum size of messages at the instance level.
+ * @method void setMaxMessageByte(integer $MaxMessageByte) Set Specifies the maximum size of messages at the instance level.
  * @method string getInstanceChargeType() Obtain Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
  * @method integer getElasticBandwidthSwitch() Obtain Whether to enable the elastic bandwidth allowlist.   
@@ -329,6 +333,16 @@ Specifies the serverless version.
     public $DynamicDiskConfig;
 
     /**
+     * @var string Specifies the system maintenance time.
+     */
+    public $SystemMaintenanceTime;
+
+    /**
+     * @var integer Specifies the maximum size of messages at the instance level.
+     */
+    public $MaxMessageByte;
+
+    /**
      * @var string Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
      */
     public $InstanceChargeType;
@@ -428,6 +442,8 @@ Specifies the serverless version.
      * @param integer $RemainingPartitions Number of remaining creatable partitions.
      * @param integer $RemainingTopics Number of remaining creatable topics.
      * @param DynamicDiskConfig $DynamicDiskConfig Scaling policy for dynamic disk.
+     * @param string $SystemMaintenanceTime Specifies the system maintenance time.
+     * @param integer $MaxMessageByte Specifies the maximum size of messages at the instance level.
      * @param string $InstanceChargeType Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
      * @param integer $ElasticBandwidthSwitch Whether to enable the elastic bandwidth allowlist.   
 Indicates the allowlist feature with elastic bandwidth enabled.
@@ -617,6 +633,14 @@ CLOUD_EKS_TSE eks cluster.
         if (array_key_exists("DynamicDiskConfig",$param) and $param["DynamicDiskConfig"] !== null) {
             $this->DynamicDiskConfig = new DynamicDiskConfig();
             $this->DynamicDiskConfig->deserialize($param["DynamicDiskConfig"]);
+        }
+
+        if (array_key_exists("SystemMaintenanceTime",$param) and $param["SystemMaintenanceTime"] !== null) {
+            $this->SystemMaintenanceTime = $param["SystemMaintenanceTime"];
+        }
+
+        if (array_key_exists("MaxMessageByte",$param) and $param["MaxMessageByte"] !== null) {
+            $this->MaxMessageByte = $param["MaxMessageByte"];
         }
 
         if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {

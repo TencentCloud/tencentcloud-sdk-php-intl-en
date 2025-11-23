@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
  * @method integer getRouteId() Obtain Route ID
  * @method void setRouteId(integer $RouteId) Set Route ID
+ * @method boolean getMainRouteFlag() Obtain Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+ * @method void setMainRouteFlag(boolean $MainRouteFlag) Set Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
  */
 class DescribeRouteRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeRouteRequest extends AbstractModel
     public $RouteId;
 
     /**
+     * @var boolean Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+     */
+    public $MainRouteFlag;
+
+    /**
      * @param string $InstanceId The ckafka cluster instance Id.
      * @param integer $RouteId Route ID
+     * @param boolean $MainRouteFlag Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeRouteRequest extends AbstractModel
 
         if (array_key_exists("RouteId",$param) and $param["RouteId"] !== null) {
             $this->RouteId = $param["RouteId"];
+        }
+
+        if (array_key_exists("MainRouteFlag",$param) and $param["MainRouteFlag"] !== null) {
+            $this->MainRouteFlag = $param["MainRouteFlag"];
         }
     }
 }
