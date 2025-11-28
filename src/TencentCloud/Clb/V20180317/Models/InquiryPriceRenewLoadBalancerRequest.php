@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceRenewLoadBalancer request structure.
  *
- * @method string getLoadBalancerId() Obtain CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
+ * @method string getLoadBalancerId() Obtain ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
  * @method LBChargePrepaid getLoadBalancerChargePrepaid() Obtain Renewal period
  * @method void setLoadBalancerChargePrepaid(LBChargePrepaid $LoadBalancerChargePrepaid) Set Renewal period
  */
 class InquiryPriceRenewLoadBalancerRequest extends AbstractModel
 {
     /**
-     * @var string CLB instance ID
+     * @var string ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
      */
     public $LoadBalancerId;
 
@@ -38,7 +38,7 @@ class InquiryPriceRenewLoadBalancerRequest extends AbstractModel
     public $LoadBalancerChargePrepaid;
 
     /**
-     * @param string $LoadBalancerId CLB instance ID
+     * @param string $LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
      * @param LBChargePrepaid $LoadBalancerChargePrepaid Renewal period
      */
     function __construct()

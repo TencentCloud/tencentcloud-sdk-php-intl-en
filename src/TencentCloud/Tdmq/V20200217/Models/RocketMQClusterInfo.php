@@ -69,13 +69,77 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setHttpVpcEndpoint(string $HttpVpcEndpoint) Set HTTP-based VPC access address
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInternalEndpoint() Obtain Internal TCP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInternalEndpoint(string $InternalEndpoint) Set Internal TCP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getHttpInternalEndpoint() Obtain Internal HTTP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHttpInternalEndpoint(string $HttpInternalEndpoint) Set Internal HTTP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getAclEnabled() Obtain Whether to enable ACL authentication. For Exclusive Edition instances, ACL authentication can be disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAclEnabled(boolean $AclEnabled) Set Whether to enable ACL authentication. For Exclusive Edition instances, ACL authentication can be disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPublicClbId() Obtain Public network CLB instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPublicClbId(string $PublicClbId) Set Public network CLB instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVip() Obtain vip
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVip(string $Vip) Set vip
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVpcId() Obtain Specifies the VPC it belongs to.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVpcId(string $VpcId) Set Specifies the VPC it belongs to.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getSupportMigration() Obtain Whether migration is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSupportMigration(boolean $SupportMigration) Set Whether migration is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getInstanceStatus() Obtain Instance status:
+0: Creating
+1: Normal
+2: Isolating
+3: Destroyed
+4: Abnormal
+5: Deliver failed
+6: Changing the configuration
+7: Configuration change failed
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceStatus(integer $InstanceStatus) Set Instance status:
+0: Creating
+1: Normal
+2: Isolating
+3: Destroyed
+4: Abnormal
+5: Deliver failed
+6: Changing the configuration
+7: Configuration change failed
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getZoneId() Obtain Indicates the AZ to which the cluster belongs.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setZoneId(integer $ZoneId) Set Indicates the AZ to which the cluster belongs.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getZoneIds() Obtain The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setZoneIds(array $ZoneIds) Set The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsFrozen() Obtain Whether it is frozen.
+ * @method void setIsFrozen(boolean $IsFrozen) Set Whether it is frozen.
+ * @method boolean getAutoCreateTopicEnabled() Obtain Whether to enable automatic topic creation.
+ * @method void setAutoCreateTopicEnabled(boolean $AutoCreateTopicEnabled) Set Whether to enable automatic topic creation.
+ * @method boolean getAdminFeatureEnabled() Obtain Whether to enable the admin feature of the cluster.
+ * @method void setAdminFeatureEnabled(boolean $AdminFeatureEnabled) Set Whether to enable the admin feature of the cluster.
+ * @method string getAdminAccessKey() Obtain Admin AK
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAdminAccessKey(string $AdminAccessKey) Set Admin AK
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAdminSecretKey() Obtain Admin SK
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAdminSecretKey(string $AdminSecretKey) Set Admin SK
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getEnableDeletionProtection() Obtain Whether to enable deletion protection
+ * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) Set Whether to enable deletion protection
  */
 class RocketMQClusterInfo extends AbstractModel
 {
@@ -165,15 +229,103 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Internal TCP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InternalEndpoint;
 
     /**
      * @var string Internal HTTP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HttpInternalEndpoint;
+
+    /**
+     * @var boolean Whether to enable ACL authentication. For Exclusive Edition instances, ACL authentication can be disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AclEnabled;
+
+    /**
+     * @var string Public network CLB instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PublicClbId;
+
+    /**
+     * @var string vip
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Vip;
+
+    /**
+     * @var string Specifies the VPC it belongs to.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $VpcId;
+
+    /**
+     * @var boolean Whether migration is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SupportMigration;
+
+    /**
+     * @var integer Instance status:
+0: Creating
+1: Normal
+2: Isolating
+3: Destroyed
+4: Abnormal
+5: Deliver failed
+6: Changing the configuration
+7: Configuration change failed
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $InstanceStatus;
+
+    /**
+     * @var integer Indicates the AZ to which the cluster belongs.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ZoneId;
+
+    /**
+     * @var array The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ZoneIds;
+
+    /**
+     * @var boolean Whether it is frozen.
+     */
+    public $IsFrozen;
+
+    /**
+     * @var boolean Whether to enable automatic topic creation.
+     */
+    public $AutoCreateTopicEnabled;
+
+    /**
+     * @var boolean Whether to enable the admin feature of the cluster.
+     */
+    public $AdminFeatureEnabled;
+
+    /**
+     * @var string Admin AK
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AdminAccessKey;
+
+    /**
+     * @var string Admin SK
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AdminSecretKey;
+
+    /**
+     * @var boolean Whether to enable deletion protection
+     */
+    public $EnableDeletionProtection;
 
     /**
      * @param string $ClusterId Cluster ID
@@ -201,9 +353,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $HttpVpcEndpoint HTTP-based VPC access address
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InternalEndpoint Internal TCP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HttpInternalEndpoint Internal HTTP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $AclEnabled Whether to enable ACL authentication. For Exclusive Edition instances, ACL authentication can be disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PublicClbId Public network CLB instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Vip vip
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VpcId Specifies the VPC it belongs to.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $SupportMigration Whether migration is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $InstanceStatus Instance status:
+0: Creating
+1: Normal
+2: Isolating
+3: Destroyed
+4: Abnormal
+5: Deliver failed
+6: Changing the configuration
+7: Configuration change failed
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ZoneId Indicates the AZ to which the cluster belongs.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ZoneIds The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsFrozen Whether it is frozen.
+     * @param boolean $AutoCreateTopicEnabled Whether to enable automatic topic creation.
+     * @param boolean $AdminFeatureEnabled Whether to enable the admin feature of the cluster.
+     * @param string $AdminAccessKey Admin AK
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AdminSecretKey Admin SK
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $EnableDeletionProtection Whether to enable deletion protection
      */
     function __construct()
     {
@@ -289,6 +473,62 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
         if (array_key_exists("HttpInternalEndpoint",$param) and $param["HttpInternalEndpoint"] !== null) {
             $this->HttpInternalEndpoint = $param["HttpInternalEndpoint"];
+        }
+
+        if (array_key_exists("AclEnabled",$param) and $param["AclEnabled"] !== null) {
+            $this->AclEnabled = $param["AclEnabled"];
+        }
+
+        if (array_key_exists("PublicClbId",$param) and $param["PublicClbId"] !== null) {
+            $this->PublicClbId = $param["PublicClbId"];
+        }
+
+        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
+            $this->Vip = $param["Vip"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SupportMigration",$param) and $param["SupportMigration"] !== null) {
+            $this->SupportMigration = $param["SupportMigration"];
+        }
+
+        if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
+            $this->InstanceStatus = $param["InstanceStatus"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
+            $this->ZoneIds = $param["ZoneIds"];
+        }
+
+        if (array_key_exists("IsFrozen",$param) and $param["IsFrozen"] !== null) {
+            $this->IsFrozen = $param["IsFrozen"];
+        }
+
+        if (array_key_exists("AutoCreateTopicEnabled",$param) and $param["AutoCreateTopicEnabled"] !== null) {
+            $this->AutoCreateTopicEnabled = $param["AutoCreateTopicEnabled"];
+        }
+
+        if (array_key_exists("AdminFeatureEnabled",$param) and $param["AdminFeatureEnabled"] !== null) {
+            $this->AdminFeatureEnabled = $param["AdminFeatureEnabled"];
+        }
+
+        if (array_key_exists("AdminAccessKey",$param) and $param["AdminAccessKey"] !== null) {
+            $this->AdminAccessKey = $param["AdminAccessKey"];
+        }
+
+        if (array_key_exists("AdminSecretKey",$param) and $param["AdminSecretKey"] !== null) {
+            $this->AdminSecretKey = $param["AdminSecretKey"];
+        }
+
+        if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
+            $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
         }
     }
 }

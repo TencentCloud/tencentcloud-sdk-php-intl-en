@@ -36,10 +36,10 @@ Default value: UNIDIRECTIONAL.
  * @method void setCertKey(string $CertKey) Set Key of the uploaded server certificate. If there is no CertId, this parameter is required.
  * @method string getCertContent() Obtain Content of the uploaded server certificate. If there is no CertId, this parameter is required.
  * @method void setCertContent(string $CertContent) Set Content of the uploaded server certificate. If there is no CertId, this parameter is required.
- * @method string getCertCaName() Obtain Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
- * @method void setCertCaName(string $CertCaName) Set Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
- * @method string getCertCaContent() Obtain Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
- * @method void setCertCaContent(string $CertCaContent) Set Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+ * @method string getCertCaName() Obtain Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required.
+ * @method void setCertCaName(string $CertCaName) Set Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required.
+ * @method string getCertCaContent() Obtain Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required.
+ * @method void setCertCaContent(string $CertCaContent) Set Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required.
  */
 class CertificateInput extends AbstractModel
 {
@@ -80,12 +80,12 @@ Default value: UNIDIRECTIONAL.
     public $CertContent;
 
     /**
-     * @var string Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+     * @var string Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required.
      */
     public $CertCaName;
 
     /**
-     * @var string Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+     * @var string Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required.
      */
     public $CertCaContent;
 
@@ -98,8 +98,8 @@ Default value: UNIDIRECTIONAL.
      * @param string $CertName Name of the uploaded server certificate. If there is no CertId, this parameter is required.
      * @param string $CertKey Key of the uploaded server certificate. If there is no CertId, this parameter is required.
      * @param string $CertContent Content of the uploaded server certificate. If there is no CertId, this parameter is required.
-     * @param string $CertCaName Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
-     * @param string $CertCaContent Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+     * @param string $CertCaName Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required.
+     * @param string $CertCaContent Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required.
      */
     function __construct()
     {

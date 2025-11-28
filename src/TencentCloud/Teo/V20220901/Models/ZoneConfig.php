@@ -108,6 +108,10 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setGrpc(GrpcParameters $Grpc) Set Configuration of grpc support.
 Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method NetworkErrorLoggingParameters getNetworkErrorLogging() Obtain Network Error Logging configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setNetworkErrorLogging(NetworkErrorLoggingParameters $NetworkErrorLogging) Set Network Error Logging configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
  * @method AccelerateMainlandParameters getAccelerateMainland() Obtain Accelerate optimization and configuration in mainland china.
 Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setAccelerateMainland(AccelerateMainlandParameters $AccelerateMainland) Set Accelerate optimization and configuration in mainland china.
@@ -246,6 +250,12 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     public $Grpc;
 
     /**
+     * @var NetworkErrorLoggingParameters Network Error Logging configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     */
+    public $NetworkErrorLogging;
+
+    /**
      * @var AccelerateMainlandParameters Accelerate optimization and configuration in mainland china.
 Note: this field may return null, which indicates a failure to obtain a valid value.
      */
@@ -303,6 +313,8 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param GrpcParameters $Grpc Configuration of grpc support.
 Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param NetworkErrorLoggingParameters $NetworkErrorLogging Network Error Logging configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param AccelerateMainlandParameters $AccelerateMainland Accelerate optimization and configuration in mainland china.
 Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param StandardDebugParameters $StandardDebug Standard debugging configuration.
@@ -420,6 +432,11 @@ Note: this field may return null, which indicates a failure to obtain a valid va
         if (array_key_exists("Grpc",$param) and $param["Grpc"] !== null) {
             $this->Grpc = new GrpcParameters();
             $this->Grpc->deserialize($param["Grpc"]);
+        }
+
+        if (array_key_exists("NetworkErrorLogging",$param) and $param["NetworkErrorLogging"] !== null) {
+            $this->NetworkErrorLogging = new NetworkErrorLoggingParameters();
+            $this->NetworkErrorLogging->deserialize($param["NetworkErrorLogging"]);
         }
 
         if (array_key_exists("AccelerateMainland",$param) and $param["AccelerateMainland"] !== null) {

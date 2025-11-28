@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTargetGroupId() Obtain Target group ID
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
- * @method array getTargetGroupInstances() Obtain Server instance array
- * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Server instance array
+ * @method array getTargetGroupInstances() Obtain Server instance array. the VPC of the server and target group must be the same.
+ * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Server instance array. the VPC of the server and target group must be the same.
  */
 class RegisterTargetGroupInstancesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class RegisterTargetGroupInstancesRequest extends AbstractModel
     public $TargetGroupId;
 
     /**
-     * @var array Server instance array
+     * @var array Server instance array. the VPC of the server and target group must be the same.
      */
     public $TargetGroupInstances;
 
     /**
      * @param string $TargetGroupId Target group ID
-     * @param array $TargetGroupInstances Server instance array
+     * @param array $TargetGroupInstances Server instance array. the VPC of the server and target group must be the same.
      */
     function __construct()
     {

@@ -20,52 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Redirect target, i.e., the real server bound to a CLB
  *
- * @method integer getPort() Obtain Listening port of a real server
-Note: this parameter is required when binding a CVM or ENI.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setPort(integer $Port) Set Listening port of a real server
-Note: this parameter is required when binding a CVM or ENI.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getType() Obtain Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: Either `InstanceId` or `EniIp` can be passed in.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: Either `InstanceId` or `EniIp` can be passed in.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getPort() Obtain Specifies the listening port of the backend service.
+Note: this parameter must be specified when binding to CVM (cloud virtual machine) or ENI (elastic network interface).
+ * @method void setPort(integer $Port) Set Specifies the listening port of the backend service.
+Note: this parameter must be specified when binding to CVM (cloud virtual machine) or ENI (elastic network interface).
+ * @method string getType() Obtain Specifies the backend service type. valid values: CVM (cloud virtual machine), ENI (elastic network interface). as an input parameter, this parameter does not take effect currently.
+ * @method void setType(string $Type) Set Specifies the backend service type. valid values: CVM (cloud virtual machine), ENI (elastic network interface). as an input parameter, this parameter does not take effect currently.
+ * @method string getInstanceId() Obtain This parameter must be passed in when binding to CVM. it represents the unique ID of the CVM and can be obtained from the InstanceId field in the response of the DescribeInstances api. indicates binding the primary IPv4 address of the primary network interface. the InstanceId cannot be specified in the following scenarios: binding to non-CVM resources, binding to auxiliary network interface ips on CVM, binding to CVM through cross-domain 2.0, and binding to IPv6 addresses of CVM.
+Note: you can only input one of the InstanceId parameter or the EniIp parameter.
+ * @method void setInstanceId(string $InstanceId) Set This parameter must be passed in when binding to CVM. it represents the unique ID of the CVM and can be obtained from the InstanceId field in the response of the DescribeInstances api. indicates binding the primary IPv4 address of the primary network interface. the InstanceId cannot be specified in the following scenarios: binding to non-CVM resources, binding to auxiliary network interface ips on CVM, binding to CVM through cross-domain 2.0, and binding to IPv6 addresses of CVM.
+Note: you can only input one of the InstanceId parameter or the EniIp parameter.
  * @method integer getWeight() Obtain The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
  * @method void setWeight(integer $Weight) Set The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
- * @method string getEniIp() Obtain It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setEniIp(string $EniIp) Set It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getTag() Obtain Tag.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTag(string $Tag) Set Tag.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEniIp() Obtain This parameter must be passed in for IP binding. it supports eni ips and other private IP addresses. if it is an eni, it must first be bound to a CVM before binding to a cloud load balancer instance.
+Note: only one of the InstanceId parameter and EniIp parameter can be passed. if binding a dual-stack IPV6 instance, this parameter must be passed. if it is a cross-region binding, the parameter must be passed and the InstanceId parameter is not supported.
+ * @method void setEniIp(string $EniIp) Set This parameter must be passed in for IP binding. it supports eni ips and other private IP addresses. if it is an eni, it must first be bound to a CVM before binding to a cloud load balancer instance.
+Note: only one of the InstanceId parameter and EniIp parameter can be passed. if binding a dual-stack IPV6 instance, this parameter must be passed. if it is a cross-region binding, the parameter must be passed and the InstanceId parameter is not supported.
+ * @method string getTag() Obtain Tag.
+ * @method void setTag(string $Tag) Set Tag.
  */
 class Target extends AbstractModel
 {
     /**
-     * @var integer Listening port of a real server
-Note: this parameter is required when binding a CVM or ENI.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Specifies the listening port of the backend service.
+Note: this parameter must be specified when binding to CVM (cloud virtual machine) or ENI (elastic network interface).
      */
     public $Port;
 
     /**
-     * @var string Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the backend service type. valid values: CVM (cloud virtual machine), ENI (elastic network interface). as an input parameter, this parameter does not take effect currently.
      */
     public $Type;
 
     /**
-     * @var string Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: Either `InstanceId` or `EniIp` can be passed in.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string This parameter must be passed in when binding to CVM. it represents the unique ID of the CVM and can be obtained from the InstanceId field in the response of the DescribeInstances api. indicates binding the primary IPv4 address of the primary network interface. the InstanceId cannot be specified in the following scenarios: binding to non-CVM resources, binding to auxiliary network interface ips on CVM, binding to CVM through cross-domain 2.0, and binding to IPv6 addresses of CVM.
+Note: you can only input one of the InstanceId parameter or the EniIp parameter.
      */
     public $InstanceId;
 
@@ -75,31 +64,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Weight;
 
     /**
-     * @var string It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string This parameter must be passed in for IP binding. it supports eni ips and other private IP addresses. if it is an eni, it must first be bound to a CVM before binding to a cloud load balancer instance.
+Note: only one of the InstanceId parameter and EniIp parameter can be passed. if binding a dual-stack IPV6 instance, this parameter must be passed. if it is a cross-region binding, the parameter must be passed and the InstanceId parameter is not supported.
      */
     public $EniIp;
 
     /**
-     * @var string Tag.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Tag.
      */
     public $Tag;
 
     /**
-     * @param integer $Port Listening port of a real server
-Note: this parameter is required when binding a CVM or ENI.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Type Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: Either `InstanceId` or `EniIp` can be passed in.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $Port Specifies the listening port of the backend service.
+Note: this parameter must be specified when binding to CVM (cloud virtual machine) or ENI (elastic network interface).
+     * @param string $Type Specifies the backend service type. valid values: CVM (cloud virtual machine), ENI (elastic network interface). as an input parameter, this parameter does not take effect currently.
+     * @param string $InstanceId This parameter must be passed in when binding to CVM. it represents the unique ID of the CVM and can be obtained from the InstanceId field in the response of the DescribeInstances api. indicates binding the primary IPv4 address of the primary network interface. the InstanceId cannot be specified in the following scenarios: binding to non-CVM resources, binding to auxiliary network interface ips on CVM, binding to CVM through cross-domain 2.0, and binding to IPv6 addresses of CVM.
+Note: you can only input one of the InstanceId parameter or the EniIp parameter.
      * @param integer $Weight The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
-     * @param string $EniIp It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EniIp This parameter must be passed in for IP binding. it supports eni ips and other private IP addresses. if it is an eni, it must first be bound to a CVM before binding to a cloud load balancer instance.
+Note: only one of the InstanceId parameter and EniIp parameter can be passed. if binding a dual-stack IPV6 instance, this parameter must be passed. if it is a cross-region binding, the parameter must be passed and the InstanceId parameter is not supported.
+     * @param string $Tag Tag.
      */
     function __construct()
     {

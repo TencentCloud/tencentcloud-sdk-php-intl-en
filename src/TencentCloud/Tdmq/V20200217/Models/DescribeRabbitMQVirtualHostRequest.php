@@ -30,10 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Pagination limit
  * @method Filter getFilters() Obtain Fuzzy query by vhost name
  * @method void setFilters(Filter $Filters) Set Fuzzy query by vhost name
- * @method string getSortElement() Obtain 
- * @method void setSortElement(string $SortElement) Set 
- * @method string getSortOrder() Obtain 
- * @method void setSortOrder(string $SortOrder) Set 
+ * @method string getSortElement() Obtain Specifies the sorting field.
+MessageHeapCount - specifies the message backlog count.
+MessageRateInOut - total production and consumption rate.
+MessageRateIn - production rate.
+MessageRateOut - consumption rate.
+ * @method void setSortElement(string $SortElement) Set Specifies the sorting field.
+MessageHeapCount - specifies the message backlog count.
+MessageRateInOut - total production and consumption rate.
+MessageRateIn - production rate.
+MessageRateOut - consumption rate.
+ * @method string getSortOrder() Obtain Sorting order. Valid values: ascend and descend.
+ * @method void setSortOrder(string $SortOrder) Set Sorting order. Valid values: ascend and descend.
  */
 class DescribeRabbitMQVirtualHostRequest extends AbstractModel
 {
@@ -63,12 +71,16 @@ class DescribeRabbitMQVirtualHostRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 
+     * @var string Specifies the sorting field.
+MessageHeapCount - specifies the message backlog count.
+MessageRateInOut - total production and consumption rate.
+MessageRateIn - production rate.
+MessageRateOut - consumption rate.
      */
     public $SortElement;
 
     /**
-     * @var string 
+     * @var string Sorting order. Valid values: ascend and descend.
      */
     public $SortOrder;
 
@@ -78,8 +90,12 @@ class DescribeRabbitMQVirtualHostRequest extends AbstractModel
      * @param integer $Offset Pagination offset
      * @param integer $Limit Pagination limit
      * @param Filter $Filters Fuzzy query by vhost name
-     * @param string $SortElement 
-     * @param string $SortOrder 
+     * @param string $SortElement Specifies the sorting field.
+MessageHeapCount - specifies the message backlog count.
+MessageRateInOut - total production and consumption rate.
+MessageRateIn - production rate.
+MessageRateOut - consumption rate.
+     * @param string $SortOrder Sorting order. Valid values: ascend and descend.
      */
     function __construct()
     {

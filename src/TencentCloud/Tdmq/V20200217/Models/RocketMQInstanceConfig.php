@@ -44,6 +44,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicDistribution(array $TopicDistribution) Set Topic distribution
  * @method integer getMaxQueuesPerTopic() Obtain 
  * @method void setMaxQueuesPerTopic(integer $MaxQueuesPerTopic) Set 
+ * @method integer getMaxRetention() Obtain Maximum configurable message retention time, in hours	
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMaxRetention(integer $MaxRetention) Set Maximum configurable message retention time, in hours	
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMinRetention() Obtain Minimum configurable message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMinRetention(integer $MinRetention) Set Minimum configurable message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRetention() Obtain Instance message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRetention(integer $Retention) Set Instance message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTopicNumLowerLimit() Obtain Minimum quota for the number of topics, which is the free quota. The default number is the minimum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTopicNumLowerLimit(integer $TopicNumLowerLimit) Set Minimum quota for the number of topics, which is the free quota. The default number is the minimum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTopicNumUpperLimit() Obtain Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTopicNumUpperLimit(integer $TopicNumUpperLimit) Set Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getSendReceiveRatio() Obtain Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
+ * @method void setSendReceiveRatio(float $SendReceiveRatio) Set Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
  */
 class RocketMQInstanceConfig extends AbstractModel
 {
@@ -108,6 +130,41 @@ class RocketMQInstanceConfig extends AbstractModel
     public $MaxQueuesPerTopic;
 
     /**
+     * @var integer Maximum configurable message retention time, in hours	
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MaxRetention;
+
+    /**
+     * @var integer Minimum configurable message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MinRetention;
+
+    /**
+     * @var integer Instance message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Retention;
+
+    /**
+     * @var integer Minimum quota for the number of topics, which is the free quota. The default number is the minimum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TopicNumLowerLimit;
+
+    /**
+     * @var integer Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TopicNumUpperLimit;
+
+    /**
+     * @var float Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
+     */
+    public $SendReceiveRatio;
+
+    /**
      * @param integer $MaxTpsPerNamespace Maximum TPS per namespace
      * @param integer $MaxNamespaceNum Maximum number of namespaces
      * @param integer $UsedNamespaceNum Number of used namespaces
@@ -120,6 +177,17 @@ class RocketMQInstanceConfig extends AbstractModel
      * @param array $NodeDistribution Node distribution
      * @param array $TopicDistribution Topic distribution
      * @param integer $MaxQueuesPerTopic 
+     * @param integer $MaxRetention Maximum configurable message retention time, in hours	
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MinRetention Minimum configurable message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Retention Instance message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TopicNumLowerLimit Minimum quota for the number of topics, which is the free quota. The default number is the minimum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TopicNumUpperLimit Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $SendReceiveRatio Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
      */
     function __construct()
     {
@@ -190,6 +258,30 @@ class RocketMQInstanceConfig extends AbstractModel
 
         if (array_key_exists("MaxQueuesPerTopic",$param) and $param["MaxQueuesPerTopic"] !== null) {
             $this->MaxQueuesPerTopic = $param["MaxQueuesPerTopic"];
+        }
+
+        if (array_key_exists("MaxRetention",$param) and $param["MaxRetention"] !== null) {
+            $this->MaxRetention = $param["MaxRetention"];
+        }
+
+        if (array_key_exists("MinRetention",$param) and $param["MinRetention"] !== null) {
+            $this->MinRetention = $param["MinRetention"];
+        }
+
+        if (array_key_exists("Retention",$param) and $param["Retention"] !== null) {
+            $this->Retention = $param["Retention"];
+        }
+
+        if (array_key_exists("TopicNumLowerLimit",$param) and $param["TopicNumLowerLimit"] !== null) {
+            $this->TopicNumLowerLimit = $param["TopicNumLowerLimit"];
+        }
+
+        if (array_key_exists("TopicNumUpperLimit",$param) and $param["TopicNumUpperLimit"] !== null) {
+            $this->TopicNumUpperLimit = $param["TopicNumUpperLimit"];
+        }
+
+        if (array_key_exists("SendReceiveRatio",$param) and $param["SendReceiveRatio"] !== null) {
+            $this->SendReceiveRatio = $param["SendReceiveRatio"];
         }
     }
 }

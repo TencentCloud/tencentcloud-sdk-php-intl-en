@@ -21,37 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * Relationship between the namespaces that are bound in batches and role permissions
  *
  * @method string getEnvironmentId() Obtain The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEnvironmentId(string $EnvironmentId) Set The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getPermissions() Obtain Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
 
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPermissions(array $Permissions) Set Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
 
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class EnvironmentRoleSet extends AbstractModel
 {
     /**
      * @var string The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EnvironmentId;
 
     /**
      * @var array Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
 
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Permissions;
 
     /**
      * @param string $EnvironmentId The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Permissions Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
 
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

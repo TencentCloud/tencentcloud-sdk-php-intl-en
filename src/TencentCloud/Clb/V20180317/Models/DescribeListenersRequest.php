@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeListeners request structure.
  *
- * @method string getLoadBalancerId() Obtain CLB instance ID.
- * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID.
- * @method array getListenerIds() Obtain Array of CLB listener IDs to query (100 IDs at most).
- * @method void setListenerIds(array $ListenerIds) Set Array of CLB listener IDs to query (100 IDs at most).
+ * @method string getLoadBalancerId() Obtain ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/api/214/30685?from_cn_redirect=1) api to obtain the ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/api/214/30685?from_cn_redirect=1) api to obtain the ID.
+ * @method array getListenerIds() Obtain Specifies the array of clb listener ids to query, with a maximum of 100. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/api/214/30686?from_cn_redirect=1) api to obtain the ids.
+ * @method void setListenerIds(array $ListenerIds) Set Specifies the array of clb listener ids to query, with a maximum of 100. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/api/214/30686?from_cn_redirect=1) api to obtain the ids.
  * @method string getProtocol() Obtain Type of the listener protocols to be queried. Values: TCP`, `UDP`, `HTTP`, `HTTPS`, `TCP_SSL` and `QUIC`.
  * @method void setProtocol(string $Protocol) Set Type of the listener protocols to be queried. Values: TCP`, `UDP`, `HTTP`, `HTTPS`, `TCP_SSL` and `QUIC`.
- * @method integer getPort() Obtain Port of the listeners to be queried
- * @method void setPort(integer $Port) Set Port of the listeners to be queried
+ * @method integer getPort() Obtain Port of listener to query. value range: 1-65535.
+ * @method void setPort(integer $Port) Set Port of listener to query. value range: 1-65535.
  */
 class DescribeListenersRequest extends AbstractModel
 {
     /**
-     * @var string CLB instance ID.
+     * @var string ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/api/214/30685?from_cn_redirect=1) api to obtain the ID.
      */
     public $LoadBalancerId;
 
     /**
-     * @var array Array of CLB listener IDs to query (100 IDs at most).
+     * @var array Specifies the array of clb listener ids to query, with a maximum of 100. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/api/214/30686?from_cn_redirect=1) api to obtain the ids.
      */
     public $ListenerIds;
 
@@ -47,15 +47,15 @@ class DescribeListenersRequest extends AbstractModel
     public $Protocol;
 
     /**
-     * @var integer Port of the listeners to be queried
+     * @var integer Port of listener to query. value range: 1-65535.
      */
     public $Port;
 
     /**
-     * @param string $LoadBalancerId CLB instance ID.
-     * @param array $ListenerIds Array of CLB listener IDs to query (100 IDs at most).
+     * @param string $LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/api/214/30685?from_cn_redirect=1) api to obtain the ID.
+     * @param array $ListenerIds Specifies the array of clb listener ids to query, with a maximum of 100. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/api/214/30686?from_cn_redirect=1) api to obtain the ids.
      * @param string $Protocol Type of the listener protocols to be queried. Values: TCP`, `UDP`, `HTTP`, `HTTPS`, `TCP_SSL` and `QUIC`.
-     * @param integer $Port Port of the listeners to be queried
+     * @param integer $Port Port of listener to query. value range: 1-65535.
      */
     function __construct()
     {

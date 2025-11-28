@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFollowOrigin(string $FollowOrigin) Set Whether to follow the origin server. Values:
 <li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
 <li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
- * @method integer getMaxAgeTime() Obtain Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-Note: The value `0` means not to cache.
- * @method void setMaxAgeTime(integer $MaxAgeTime) Set Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-Note: The value `0` means not to cache.
+ * @method integer getMaxAgeTime() Obtain MaxAge specifies the time setting in seconds. value range: 0–315360000.
+Specifies the time when the cache is disabled if set to 0.
+ * @method void setMaxAgeTime(integer $MaxAgeTime) Set MaxAge specifies the time setting in seconds. value range: 0–315360000.
+Specifies the time when the cache is disabled if set to 0.
  */
 class MaxAge extends AbstractModel
 {
@@ -41,8 +41,8 @@ class MaxAge extends AbstractModel
     public $FollowOrigin;
 
     /**
-     * @var integer Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-Note: The value `0` means not to cache.
+     * @var integer MaxAge specifies the time setting in seconds. value range: 0–315360000.
+Specifies the time when the cache is disabled if set to 0.
      */
     public $MaxAgeTime;
 
@@ -50,8 +50,8 @@ Note: The value `0` means not to cache.
      * @param string $FollowOrigin Whether to follow the origin server. Values:
 <li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
 <li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
-     * @param integer $MaxAgeTime Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-Note: The value `0` means not to cache.
+     * @param integer $MaxAgeTime MaxAge specifies the time setting in seconds. value range: 0–315360000.
+Specifies the time when the cache is disabled if set to 0.
      */
     function __construct()
     {

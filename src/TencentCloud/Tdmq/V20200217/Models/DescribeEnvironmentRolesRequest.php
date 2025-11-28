@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEnvironmentRoles request structure.
  *
- * @method string getEnvironmentId() Obtain Environment/namespace name (required).
- * @method void setEnvironmentId(string $EnvironmentId) Set Environment/namespace name (required).
+ * @method string getClusterId() Obtain Pulsar cluster ID
+ * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID
+ * @method string getEnvironmentId() Obtain Environment (namespace) name.
+ * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
  * @method integer getOffset() Obtain Offset, which defaults to 0 if left empty.
  * @method void setOffset(integer $Offset) Set Offset, which defaults to 0 if left empty.
  * @method integer getLimit() Obtain The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
  * @method void setLimit(integer $Limit) Set The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
- * @method string getClusterId() Obtain Pulsar cluster ID (required).
- * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID (required).
  * @method string getRoleName() Obtain Role name.
  * @method void setRoleName(string $RoleName) Set Role name.
  * @method array getFilters() Obtain * RoleName
@@ -42,7 +42,12 @@ Required: No
 class DescribeEnvironmentRolesRequest extends AbstractModel
 {
     /**
-     * @var string Environment/namespace name (required).
+     * @var string Pulsar cluster ID
+     */
+    public $ClusterId;
+
+    /**
+     * @var string Environment (namespace) name.
      */
     public $EnvironmentId;
 
@@ -55,11 +60,6 @@ class DescribeEnvironmentRolesRequest extends AbstractModel
      * @var integer The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      */
     public $Limit;
-
-    /**
-     * @var string Pulsar cluster ID (required).
-     */
-    public $ClusterId;
 
     /**
      * @var string Role name.
@@ -75,10 +75,10 @@ Required: No
     public $Filters;
 
     /**
-     * @param string $EnvironmentId Environment/namespace name (required).
+     * @param string $ClusterId Pulsar cluster ID
+     * @param string $EnvironmentId Environment (namespace) name.
      * @param integer $Offset Offset, which defaults to 0 if left empty.
      * @param integer $Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
-     * @param string $ClusterId Pulsar cluster ID (required).
      * @param string $RoleName Role name.
      * @param array $Filters * RoleName
 Filter by role name for exact query.
@@ -98,6 +98,10 @@ Required: No
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
         if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
             $this->EnvironmentId = $param["EnvironmentId"];
         }
@@ -108,10 +112,6 @@ Required: No
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCmqQueueAttribute request structure.
  *
- * @method string getQueueName() Obtain Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
- * @method void setQueueName(string $QueueName) Set Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+ * @method string getQueueName() Obtain Queue name, which must be unique under the same account in the same region. A queue name is a string of up to 64 characters, starting with a letter, and the remaining part can include letters, digits, and hyphens (-).
+ * @method void setQueueName(string $QueueName) Set Queue name, which must be unique under the same account in the same region. A queue name is a string of up to 64 characters, starting with a letter, and the remaining part can include letters, digits, and hyphens (-).
  * @method integer getMaxMsgHeapNum() Obtain Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
  * @method void setMaxMsgHeapNum(integer $MaxMsgHeapNum) Set Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
  * @method integer getPollingWaitSeconds() Obtain Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxQueryCount(integer $MaxQueryCount) Set Maximum number of queries
  * @method string getDeadLetterQueueName() Obtain Dead letter queue name
  * @method void setDeadLetterQueueName(string $DeadLetterQueueName) Set Dead letter queue name
- * @method integer getMaxTimeToLive() Obtain Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
- * @method void setMaxTimeToLive(integer $MaxTimeToLive) Set Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+ * @method integer getMaxTimeToLive() Obtain Specifies the essential parameter when policy is 1. maximum unconsumed expiration time. value range: 300-43200 in seconds, must be less than the maximum message retention time MsgRetentionSeconds.
+ * @method void setMaxTimeToLive(integer $MaxTimeToLive) Set Specifies the essential parameter when policy is 1. maximum unconsumed expiration time. value range: 300-43200 in seconds, must be less than the maximum message retention time MsgRetentionSeconds.
  * @method integer getMaxReceiveCount() Obtain Maximum number of receipts
  * @method void setMaxReceiveCount(integer $MaxReceiveCount) Set Maximum number of receipts
  * @method integer getPolicy() Obtain Dead letter queue policy
@@ -56,7 +56,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyCmqQueueAttributeRequest extends AbstractModel
 {
     /**
-     * @var string Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+     * @var string Queue name, which must be unique under the same account in the same region. A queue name is a string of up to 64 characters, starting with a letter, and the remaining part can include letters, digits, and hyphens (-).
      */
     public $QueueName;
 
@@ -106,7 +106,7 @@ class ModifyCmqQueueAttributeRequest extends AbstractModel
     public $DeadLetterQueueName;
 
     /**
-     * @var integer Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+     * @var integer Specifies the essential parameter when policy is 1. maximum unconsumed expiration time. value range: 300-43200 in seconds, must be less than the maximum message retention time MsgRetentionSeconds.
      */
     public $MaxTimeToLive;
 
@@ -136,7 +136,7 @@ class ModifyCmqQueueAttributeRequest extends AbstractModel
     public $RetentionSizeInMB;
 
     /**
-     * @param string $QueueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+     * @param string $QueueName Queue name, which must be unique under the same account in the same region. A queue name is a string of up to 64 characters, starting with a letter, and the remaining part can include letters, digits, and hyphens (-).
      * @param integer $MaxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
      * @param integer $PollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
      * @param integer $VisibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
@@ -146,7 +146,7 @@ class ModifyCmqQueueAttributeRequest extends AbstractModel
      * @param integer $FirstQueryInterval First query time
      * @param integer $MaxQueryCount Maximum number of queries
      * @param string $DeadLetterQueueName Dead letter queue name
-     * @param integer $MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+     * @param integer $MaxTimeToLive Specifies the essential parameter when policy is 1. maximum unconsumed expiration time. value range: 300-43200 in seconds, must be less than the maximum message retention time MsgRetentionSeconds.
      * @param integer $MaxReceiveCount Maximum number of receipts
      * @param integer $Policy Dead letter queue policy
      * @param boolean $Trace Whether to enable message trace. true: yes; false: no. If this field is left empty, the feature will not be enabled.

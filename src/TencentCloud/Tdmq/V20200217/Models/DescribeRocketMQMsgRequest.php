@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPulsarMsgId(string $PulsarMsgId) Set ID of a TDMQ for Pulsar message
  * @method boolean getQueryDlqMsg() Obtain The value of this parameter is `true` when you query a dead letter queue. It only applies to TDMQ for RocketMQ.
  * @method void setQueryDlqMsg(boolean $QueryDlqMsg) Set The value of this parameter is `true` when you query a dead letter queue. It only applies to TDMQ for RocketMQ.
+ * @method boolean getQueryDeadLetterMessage() Obtain The value is true when querying dead letters, and only valid for RocketMQ.
+ * @method void setQueryDeadLetterMessage(boolean $QueryDeadLetterMessage) Set The value is true when querying dead letters, and only valid for RocketMQ.
+ * @method integer getOffset() Obtain Pagination offset
+ * @method void setOffset(integer $Offset) Set Pagination offset
+ * @method integer getLimit() Obtain Pagination limit
+ * @method void setLimit(integer $Limit) Set Pagination limit
+ * @method string getFilterTrackGroup() Obtain Filters consumption details based on the consumer group name.
+ * @method void setFilterTrackGroup(string $FilterTrackGroup) Set Filters consumption details based on the consumer group name.
  */
 class DescribeRocketMQMsgRequest extends AbstractModel
 {
@@ -62,8 +70,29 @@ class DescribeRocketMQMsgRequest extends AbstractModel
 
     /**
      * @var boolean The value of this parameter is `true` when you query a dead letter queue. It only applies to TDMQ for RocketMQ.
+     * @deprecated
      */
     public $QueryDlqMsg;
+
+    /**
+     * @var boolean The value is true when querying dead letters, and only valid for RocketMQ.
+     */
+    public $QueryDeadLetterMessage;
+
+    /**
+     * @var integer Pagination offset
+     */
+    public $Offset;
+
+    /**
+     * @var integer Pagination limit
+     */
+    public $Limit;
+
+    /**
+     * @var string Filters consumption details based on the consumer group name.
+     */
+    public $FilterTrackGroup;
 
     /**
      * @param string $ClusterId Cluster ID
@@ -72,6 +101,10 @@ class DescribeRocketMQMsgRequest extends AbstractModel
      * @param string $MsgId Message ID
      * @param string $PulsarMsgId ID of a TDMQ for Pulsar message
      * @param boolean $QueryDlqMsg The value of this parameter is `true` when you query a dead letter queue. It only applies to TDMQ for RocketMQ.
+     * @param boolean $QueryDeadLetterMessage The value is true when querying dead letters, and only valid for RocketMQ.
+     * @param integer $Offset Pagination offset
+     * @param integer $Limit Pagination limit
+     * @param string $FilterTrackGroup Filters consumption details based on the consumer group name.
      */
     function __construct()
     {
@@ -108,6 +141,22 @@ class DescribeRocketMQMsgRequest extends AbstractModel
 
         if (array_key_exists("QueryDlqMsg",$param) and $param["QueryDlqMsg"] !== null) {
             $this->QueryDlqMsg = $param["QueryDlqMsg"];
+        }
+
+        if (array_key_exists("QueryDeadLetterMessage",$param) and $param["QueryDeadLetterMessage"] !== null) {
+            $this->QueryDeadLetterMessage = $param["QueryDeadLetterMessage"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("FilterTrackGroup",$param) and $param["FilterTrackGroup"] !== null) {
+            $this->FilterTrackGroup = $param["FilterTrackGroup"];
         }
     }
 }

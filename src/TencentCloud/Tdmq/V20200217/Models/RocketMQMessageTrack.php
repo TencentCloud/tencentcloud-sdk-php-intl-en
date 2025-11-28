@@ -22,14 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroup() Obtain Consumer group
  * @method void setGroup(string $Group) Set Consumer group
- * @method string getConsumeStatus() Obtain Consumption status
- * @method void setConsumeStatus(string $ConsumeStatus) Set Consumption status
+ * @method string getConsumeStatus() Obtain Consumption status.
+CONSUMED.
+CONSUMED BUT FILTERED.
+NOT_CONSUME: specifies unconsumed.
+ENTER_RETRY: specifies whether to enter the retry queue.
+ENTER_DLQ: specifies whether the message enters the dead letter queue.
+Consumption status UNKNOWN.
+ * @method void setConsumeStatus(string $ConsumeStatus) Set Consumption status.
+CONSUMED.
+CONSUMED BUT FILTERED.
+NOT_CONSUME: specifies unconsumed.
+ENTER_RETRY: specifies whether to enter the retry queue.
+ENTER_DLQ: specifies whether the message enters the dead letter queue.
+Consumption status UNKNOWN.
  * @method string getTrackType() Obtain Message trace type
  * @method void setTrackType(string $TrackType) Set Message trace type
  * @method string getExceptionDesc() Obtain Exception information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExceptionDesc(string $ExceptionDesc) Set Exception information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RocketMQMessageTrack extends AbstractModel
 {
@@ -39,7 +51,13 @@ class RocketMQMessageTrack extends AbstractModel
     public $Group;
 
     /**
-     * @var string Consumption status
+     * @var string Consumption status.
+CONSUMED.
+CONSUMED BUT FILTERED.
+NOT_CONSUME: specifies unconsumed.
+ENTER_RETRY: specifies whether to enter the retry queue.
+ENTER_DLQ: specifies whether the message enters the dead letter queue.
+Consumption status UNKNOWN.
      */
     public $ConsumeStatus;
 
@@ -50,16 +68,22 @@ class RocketMQMessageTrack extends AbstractModel
 
     /**
      * @var string Exception information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExceptionDesc;
 
     /**
      * @param string $Group Consumer group
-     * @param string $ConsumeStatus Consumption status
+     * @param string $ConsumeStatus Consumption status.
+CONSUMED.
+CONSUMED BUT FILTERED.
+NOT_CONSUME: specifies unconsumed.
+ENTER_RETRY: specifies whether to enter the retry queue.
+ENTER_DLQ: specifies whether the message enters the dead letter queue.
+Consumption status UNKNOWN.
      * @param string $TrackType Message trace type
      * @param string $ExceptionDesc Exception information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

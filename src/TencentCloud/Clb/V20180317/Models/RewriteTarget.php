@@ -20,78 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Redirect target information
  *
- * @method string getTargetListenerId() Obtain Listener ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+ * @method string getTargetListenerId() Obtain Listener ID of the redirection target. this field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetListenerId(string $TargetListenerId) Set Listener ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+ * @method void setTargetListenerId(string $TargetListenerId) Set Listener ID of the redirection target. this field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTargetLocationId() Obtain Forwarding rule ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+ * @method string getTargetLocationId() Obtain Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetLocationId(string $TargetLocationId) Set Forwarding rule ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+ * @method void setTargetLocationId(string $TargetLocationId) Set Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRewriteCode() Obtain Redirection status code
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setRewriteCode(integer $RewriteCode) Set Redirection status code
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getTakeUrl() Obtain Whether the matched URL is carried in redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTakeUrl(boolean $TakeUrl) Set Whether the matched URL is carried in redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getRewriteType() Obtain Redirection type. Manual: manual redirection; Auto: automatic redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setRewriteType(string $RewriteType) Set Redirection type. Manual: manual redirection; Auto: automatic redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getRewriteCode() Obtain Specifies the redirection status code.
+ * @method void setRewriteCode(integer $RewriteCode) Set Specifies the redirection status code.
+ * @method boolean getTakeUrl() Obtain Whether the matched URL is carried in redirection
+ * @method void setTakeUrl(boolean $TakeUrl) Set Whether the matched URL is carried in redirection
+ * @method string getRewriteType() Obtain Redirection type. Manual: Manual redirection; Auto: Automatic redirection
+ * @method void setRewriteType(string $RewriteType) Set Redirection type. Manual: Manual redirection; Auto: Automatic redirection
  */
 class RewriteTarget extends AbstractModel
 {
     /**
-     * @var string Listener ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+     * @var string Listener ID of the redirection target. this field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TargetListenerId;
 
     /**
-     * @var string Forwarding rule ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+     * @var string Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TargetLocationId;
 
     /**
-     * @var integer Redirection status code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Specifies the redirection status code.
      */
     public $RewriteCode;
 
     /**
-     * @var boolean Whether the matched URL is carried in redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var boolean Whether the matched URL is carried in redirection
      */
     public $TakeUrl;
 
     /**
-     * @var string Redirection type. Manual: manual redirection; Auto: automatic redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Redirection type. Manual: Manual redirection; Auto: Automatic redirection
      */
     public $RewriteType;
 
     /**
-     * @param string $TargetListenerId Listener ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+     * @param string $TargetListenerId Listener ID of the redirection target. this field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TargetLocationId Forwarding rule ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+     * @param string $TargetLocationId Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RewriteCode Redirection status code
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $TakeUrl Whether the matched URL is carried in redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $RewriteType Redirection type. Manual: manual redirection; Auto: automatic redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $RewriteCode Specifies the redirection status code.
+     * @param boolean $TakeUrl Whether the matched URL is carried in redirection
+     * @param string $RewriteType Redirection type. Manual: Manual redirection; Auto: Automatic redirection
      */
     function __construct()
     {

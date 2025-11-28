@@ -22,18 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
- * @method string getListenerName() Obtain Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setListenerName(string $ListenerName) Set Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getListenerName() Obtain Listener name.
+ * @method void setListenerName(string $ListenerName) Set Listener name.
  * @method string getProtocol() Obtain Listener protocol
  * @method void setProtocol(string $Protocol) Set Listener protocol
  * @method integer getPort() Obtain Listener port
  * @method void setPort(integer $Port) Set Listener port
  * @method array getRules() Obtain List of forwarding rules of the listener
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRules(array $Rules) Set List of forwarding rules of the listener
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ListenerHealth extends AbstractModel
 {
@@ -43,8 +39,7 @@ class ListenerHealth extends AbstractModel
     public $ListenerId;
 
     /**
-     * @var string Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Listener name.
      */
     public $ListenerName;
 
@@ -60,18 +55,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var array List of forwarding rules of the listener
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Rules;
 
     /**
      * @param string $ListenerId Listener ID
-     * @param string $ListenerName Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ListenerName Listener name.
      * @param string $Protocol Listener protocol
      * @param integer $Port Listener port
      * @param array $Rules List of forwarding rules of the listener
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

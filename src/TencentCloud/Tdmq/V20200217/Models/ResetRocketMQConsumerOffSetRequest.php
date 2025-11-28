@@ -26,12 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceId(string $NamespaceId) Set Namespace name.
  * @method string getGroupId() Obtain Consumer group name.
  * @method void setGroupId(string $GroupId) Set Consumer group name.
- * @method string getTopic() Obtain Topic name.
- * @method void setTopic(string $Topic) Set Topic name.
  * @method integer getType() Obtain Reset method. 0: Start from the latest offset; 1: Start from specified time point.
  * @method void setType(integer $Type) Set Reset method. 0: Start from the latest offset; 1: Start from specified time point.
+ * @method string getTopic() Obtain Topic name.
+ * @method void setTopic(string $Topic) Set Topic name.
  * @method integer getResetTimestamp() Obtain The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
  * @method void setResetTimestamp(integer $ResetTimestamp) Set The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
+ * @method boolean getRetryFlag() Obtain Whether the reset flag is retry topic.
+ * @method void setRetryFlag(boolean $RetryFlag) Set Whether the reset flag is retry topic.
  */
 class ResetRocketMQConsumerOffSetRequest extends AbstractModel
 {
@@ -51,14 +53,14 @@ class ResetRocketMQConsumerOffSetRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string Topic name.
-     */
-    public $Topic;
-
-    /**
      * @var integer Reset method. 0: Start from the latest offset; 1: Start from specified time point.
      */
     public $Type;
+
+    /**
+     * @var string Topic name.
+     */
+    public $Topic;
 
     /**
      * @var integer The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
@@ -66,12 +68,18 @@ class ResetRocketMQConsumerOffSetRequest extends AbstractModel
     public $ResetTimestamp;
 
     /**
+     * @var boolean Whether the reset flag is retry topic.
+     */
+    public $RetryFlag;
+
+    /**
      * @param string $ClusterId Cluster ID.
      * @param string $NamespaceId Namespace name.
      * @param string $GroupId Consumer group name.
-     * @param string $Topic Topic name.
      * @param integer $Type Reset method. 0: Start from the latest offset; 1: Start from specified time point.
+     * @param string $Topic Topic name.
      * @param integer $ResetTimestamp The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
+     * @param boolean $RetryFlag Whether the reset flag is retry topic.
      */
     function __construct()
     {
@@ -98,16 +106,20 @@ class ResetRocketMQConsumerOffSetRequest extends AbstractModel
             $this->GroupId = $param["GroupId"];
         }
 
-        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
-            $this->Topic = $param["Topic"];
-        }
-
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
         }
 
+        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
+            $this->Topic = $param["Topic"];
+        }
+
         if (array_key_exists("ResetTimestamp",$param) and $param["ResetTimestamp"] !== null) {
             $this->ResetTimestamp = $param["ResetTimestamp"];
+        }
+
+        if (array_key_exists("RetryFlag",$param) and $param["RetryFlag"] !== null) {
+            $this->RetryFlag = $param["RetryFlag"];
         }
     }
 }

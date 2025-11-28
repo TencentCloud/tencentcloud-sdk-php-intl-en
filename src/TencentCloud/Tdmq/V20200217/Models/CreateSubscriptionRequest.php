@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubscriptionName(string $SubscriptionName) Set Subscriber name, which can contain up to 128 characters.
  * @method boolean getIsIdempotent() Obtain Whether the creation is idempotent; if not, you cannot create subscriptions with the same name.
  * @method void setIsIdempotent(boolean $IsIdempotent) Set Whether the creation is idempotent; if not, you cannot create subscriptions with the same name.
- * @method string getRemark() Obtain Remarks (up to 128 characters).
- * @method void setRemark(string $Remark) Set Remarks (up to 128 characters).
  * @method string getClusterId() Obtain Pulsar cluster ID
  * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID
+ * @method string getRemark() Obtain Remarks (up to 128 characters).
+ * @method void setRemark(string $Remark) Set Remarks (up to 128 characters).
  * @method boolean getAutoCreatePolicyTopic() Obtain Whether to automatically create a dead letter topic and a retry letter topic. true: yes (default value); false: no.
  * @method void setAutoCreatePolicyTopic(boolean $AutoCreatePolicyTopic) Set Whether to automatically create a dead letter topic and a retry letter topic. true: yes (default value); false: no.
  * @method string getPostFixPattern() Obtain Naming convention for dead letter and retry letter topics. `LEGACY` indicates to use the legacy naming convention, and `COMMUNITY` indicates to use the naming convention in the Pulsar community.
@@ -60,14 +60,14 @@ class CreateSubscriptionRequest extends AbstractModel
     public $IsIdempotent;
 
     /**
-     * @var string Remarks (up to 128 characters).
-     */
-    public $Remark;
-
-    /**
      * @var string Pulsar cluster ID
      */
     public $ClusterId;
+
+    /**
+     * @var string Remarks (up to 128 characters).
+     */
+    public $Remark;
 
     /**
      * @var boolean Whether to automatically create a dead letter topic and a retry letter topic. true: yes (default value); false: no.
@@ -84,8 +84,8 @@ class CreateSubscriptionRequest extends AbstractModel
      * @param string $TopicName Topic name.
      * @param string $SubscriptionName Subscriber name, which can contain up to 128 characters.
      * @param boolean $IsIdempotent Whether the creation is idempotent; if not, you cannot create subscriptions with the same name.
-     * @param string $Remark Remarks (up to 128 characters).
      * @param string $ClusterId Pulsar cluster ID
+     * @param string $Remark Remarks (up to 128 characters).
      * @param boolean $AutoCreatePolicyTopic Whether to automatically create a dead letter topic and a retry letter topic. true: yes (default value); false: no.
      * @param string $PostFixPattern Naming convention for dead letter and retry letter topics. `LEGACY` indicates to use the legacy naming convention, and `COMMUNITY` indicates to use the naming convention in the Pulsar community.
      */
@@ -118,12 +118,12 @@ class CreateSubscriptionRequest extends AbstractModel
             $this->IsIdempotent = $param["IsIdempotent"];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
-        }
-
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
 
         if (array_key_exists("AutoCreatePolicyTopic",$param) and $param["AutoCreatePolicyTopic"] !== null) {

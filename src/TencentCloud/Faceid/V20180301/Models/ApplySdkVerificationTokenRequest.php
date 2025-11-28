@@ -112,6 +112,12 @@ You can choose 1-2 actions out of the four.
 Single action example: "blink"
 Multiple action example: "blink,mouth"
 The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+ * @method boolean getAllowExpiredDocument() Obtain Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
+ * @method void setAllowExpiredDocument(boolean $AllowExpiredDocument) Set Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
  */
 class ApplySdkVerificationTokenRequest extends AbstractModel
 {
@@ -207,6 +213,13 @@ The default value is blink. The different action types passed in this parameter 
     public $ActionList;
 
     /**
+     * @var boolean Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
+     */
+    public $AllowExpiredDocument;
+
+    /**
      * @param integer $CheckMode The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
@@ -253,6 +266,9 @@ You can choose 1-2 actions out of the four.
 Single action example: "blink"
 Multiple action example: "blink,mouth"
 The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+     * @param boolean $AllowExpiredDocument Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
      */
     function __construct()
     {
@@ -309,6 +325,10 @@ The default value is blink. The different action types passed in this parameter 
 
         if (array_key_exists("ActionList",$param) and $param["ActionList"] !== null) {
             $this->ActionList = $param["ActionList"];
+        }
+
+        if (array_key_exists("AllowExpiredDocument",$param) and $param["AllowExpiredDocument"] !== null) {
+            $this->AllowExpiredDocument = $param["AllowExpiredDocument"];
         }
     }
 }

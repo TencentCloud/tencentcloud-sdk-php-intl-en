@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMasterZone() Obtain Primary AZ, such as "ap-guangzhou-1".
  * @method void setMasterZone(string $MasterZone) Set Primary AZ, such as "ap-guangzhou-1".
- * @method array getResourceSet() Obtain List of resources
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResourceSet(array $ResourceSet) Set List of resources
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getResourceSet() Obtain Resource list.
+ * @method void setResourceSet(array $ResourceSet) Set Resource list.
  * @method string getSlaveZone() Obtain Secondary AZ, such as "ap-guangzhou-2". 
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSlaveZone(string $SlaveZone) Set Secondary AZ, such as "ap-guangzhou-2". 
@@ -40,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setZoneResourceType(string $ZoneResourceType) Set Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
  * @method boolean getEdgeZone() Obtain Whether the AZ is an edge zone. Values: `true`, `false`.
  * @method void setEdgeZone(boolean $EdgeZone) Set Whether the AZ is an edge zone. Values: `true`, `false`.
- * @method string getEgress() Obtain Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setEgress(string $Egress) Set Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getEgress() Obtain Specifies the network outbound.
+ * @method void setEgress(string $Egress) Set Specifies the network outbound.
  */
 class ZoneResource extends AbstractModel
 {
@@ -53,8 +49,7 @@ class ZoneResource extends AbstractModel
     public $MasterZone;
 
     /**
-     * @var array List of resources
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Resource list.
      */
     public $ResourceSet;
 
@@ -90,15 +85,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EdgeZone;
 
     /**
-     * @var string Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Specifies the network outbound.
      */
     public $Egress;
 
     /**
      * @param string $MasterZone Primary AZ, such as "ap-guangzhou-1".
-     * @param array $ResourceSet List of resources
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ResourceSet Resource list.
      * @param string $SlaveZone Secondary AZ, such as "ap-guangzhou-2". 
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IPVersion IP version. Values: `IPv4`, `IPv6`, and `IPv6_Nat`.
@@ -106,8 +99,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param boolean $LocalZone Whether the AZ is a `LocalZone`. Values: `true`, `false`.
      * @param string $ZoneResourceType Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
      * @param boolean $EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
-     * @param string $Egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Egress Specifies the network outbound.
      */
     function __construct()
     {

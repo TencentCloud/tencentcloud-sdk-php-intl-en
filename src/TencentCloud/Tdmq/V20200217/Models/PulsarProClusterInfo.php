@@ -39,9 +39,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method integer getMaxStorage() Obtain Max storage capacity in MB
  * @method void setMaxStorage(integer $MaxStorage) Set Max storage capacity in MB
  * @method boolean getCanEditRoute() Obtain Whether the route can be modified
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCanEditRoute(boolean $CanEditRoute) Set Whether the route can be modified
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBillingLabelVersion() Obtain Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBillingLabelVersion(string $BillingLabelVersion) Set Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getExpireTime() Obtain Instance expiration timestamp, accurate to the millisecond level.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExpireTime(integer $ExpireTime) Set Instance expiration timestamp, accurate to the millisecond level.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getAutoCreateTopicStatus() Obtain Whether to enable automatic topic creation.
+true indicates enabled. false indicates disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAutoCreateTopicStatus(boolean $AutoCreateTopicStatus) Set Whether to enable automatic topic creation.
+true indicates enabled. false indicates disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDefaultPartitionNumber() Obtain Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDefaultPartitionNumber(integer $DefaultPartitionNumber) Set Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTenant() Obtain User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+
+ * @method void setTenant(string $Tenant) Set User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+
+ * @method integer getDeleteProtection() Obtain Deletion protection switch flag.
+ * @method void setDeleteProtection(integer $DeleteProtection) Set Deletion protection switch flag.
  */
 class PulsarProClusterInfo extends AbstractModel
 {
@@ -88,9 +112,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var boolean Whether the route can be modified
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CanEditRoute;
+
+    /**
+     * @var string Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BillingLabelVersion;
+
+    /**
+     * @var integer Instance expiration timestamp, accurate to the millisecond level.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ExpireTime;
+
+    /**
+     * @var boolean Whether to enable automatic topic creation.
+true indicates enabled. false indicates disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AutoCreateTopicStatus;
+
+    /**
+     * @var integer Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DefaultPartitionNumber;
+
+    /**
+     * @var string User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+
+     */
+    public $Tenant;
+
+    /**
+     * @var integer Deletion protection switch flag.
+     */
+    public $DeleteProtection;
 
     /**
      * @param string $ClusterId Cluster ID
@@ -103,7 +163,19 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MaxStorage Max storage capacity in MB
      * @param boolean $CanEditRoute Whether the route can be modified
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BillingLabelVersion Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ExpireTime Instance expiration timestamp, accurate to the millisecond level.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $AutoCreateTopicStatus Whether to enable automatic topic creation.
+true indicates enabled. false indicates disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DefaultPartitionNumber Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Tenant User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+
+     * @param integer $DeleteProtection Deletion protection switch flag.
      */
     function __construct()
     {
@@ -157,6 +229,30 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
         if (array_key_exists("CanEditRoute",$param) and $param["CanEditRoute"] !== null) {
             $this->CanEditRoute = $param["CanEditRoute"];
+        }
+
+        if (array_key_exists("BillingLabelVersion",$param) and $param["BillingLabelVersion"] !== null) {
+            $this->BillingLabelVersion = $param["BillingLabelVersion"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("AutoCreateTopicStatus",$param) and $param["AutoCreateTopicStatus"] !== null) {
+            $this->AutoCreateTopicStatus = $param["AutoCreateTopicStatus"];
+        }
+
+        if (array_key_exists("DefaultPartitionNumber",$param) and $param["DefaultPartitionNumber"] !== null) {
+            $this->DefaultPartitionNumber = $param["DefaultPartitionNumber"];
+        }
+
+        if (array_key_exists("Tenant",$param) and $param["Tenant"] !== null) {
+            $this->Tenant = $param["Tenant"];
+        }
+
+        if (array_key_exists("DeleteProtection",$param) and $param["DeleteProtection"] !== null) {
+            $this->DeleteProtection = $param["DeleteProtection"];
         }
     }
 }

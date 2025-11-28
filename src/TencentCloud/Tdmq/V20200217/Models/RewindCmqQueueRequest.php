@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RewindCmqQueue request structure.
  *
- * @method string getQueueName() Obtain Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
- * @method void setQueueName(string $QueueName) Set Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+ * @method string getQueueName() Obtain Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the rest may contain letters, digits, and hyphens (-).
+ * @method void setQueueName(string $QueueName) Set Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the rest may contain letters, digits, and hyphens (-).
  * @method integer getStartConsumeTime() Obtain After this time is configured, the `(Batch)receiveMessage` API will consume the messages received after this timestamp in the order in which they are produced.
  * @method void setStartConsumeTime(integer $StartConsumeTime) Set After this time is configured, the `(Batch)receiveMessage` API will consume the messages received after this timestamp in the order in which they are produced.
  */
 class RewindCmqQueueRequest extends AbstractModel
 {
     /**
-     * @var string Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+     * @var string Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the rest may contain letters, digits, and hyphens (-).
      */
     public $QueueName;
 
@@ -38,7 +38,7 @@ class RewindCmqQueueRequest extends AbstractModel
     public $StartConsumeTime;
 
     /**
-     * @param string $QueueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+     * @param string $QueueName Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the rest may contain letters, digits, and hyphens (-).
      * @param integer $StartConsumeTime After this time is configured, the `(Batch)receiveMessage` API will consume the messages received after this timestamp in the order in which they are produced.
      */
     function __construct()

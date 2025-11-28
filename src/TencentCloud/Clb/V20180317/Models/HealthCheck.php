@@ -59,11 +59,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setHttpCheckMethod(string $HttpCheckMethod) Set Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCheckPort() Obtain A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-
+ * @method integer getCheckPort() Obtain Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckPort(integer $CheckPort) Set A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-
+ * @method void setCheckPort(integer $CheckPort) Set Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getContextType() Obtain A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the input format of the health check. Valid values: HEX and TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
 
@@ -154,8 +152,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HttpCheckMethod;
 
     /**
-     * @var integer A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-
+     * @var integer Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CheckPort;
@@ -223,8 +220,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $HttpCheckMethod Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CheckPort A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-
+     * @param integer $CheckPort Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ContextType A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the input format of the health check. Valid values: HEX and TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
 

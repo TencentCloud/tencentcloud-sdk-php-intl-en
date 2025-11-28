@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Price of CLB instances.
  *
- * @method ItemPrice getInstancePrice() Obtain Instance price.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setInstancePrice(ItemPrice $InstancePrice) Set Instance price.
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method ItemPrice getInstancePrice() Obtain Describes the instance pricing.
+ * @method void setInstancePrice(ItemPrice $InstancePrice) Set Describes the instance pricing.
  * @method ItemPrice getBandwidthPrice() Obtain Network price.
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setBandwidthPrice(ItemPrice $BandwidthPrice) Set Network price.
@@ -36,8 +34,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 class Price extends AbstractModel
 {
     /**
-     * @var ItemPrice Instance price.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var ItemPrice Describes the instance pricing.
      */
     public $InstancePrice;
 
@@ -54,8 +51,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $LcuPrice;
 
     /**
-     * @param ItemPrice $InstancePrice Instance price.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param ItemPrice $InstancePrice Describes the instance pricing.
      * @param ItemPrice $BandwidthPrice Network price.
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param ItemPrice $LcuPrice LCU price.

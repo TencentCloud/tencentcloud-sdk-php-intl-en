@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoles request structure.
  *
+ * @method string getClusterId() Obtain Cluster ID (required)
+ * @method void setClusterId(string $ClusterId) Set Cluster ID (required)
  * @method string getRoleName() Obtain Fuzzy query by role name
  * @method void setRoleName(string $RoleName) Set Fuzzy query by role name
  * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default.
  * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default.
  * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
  * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
- * @method string getClusterId() Obtain Cluster ID (required)
- * @method void setClusterId(string $ClusterId) Set Cluster ID (required)
  * @method array getFilters() Obtain * RoleName
 Filter by role name for exact query.
 Type: String
@@ -39,6 +39,11 @@ Required: no
  */
 class DescribeRolesRequest extends AbstractModel
 {
+    /**
+     * @var string Cluster ID (required)
+     */
+    public $ClusterId;
+
     /**
      * @var string Fuzzy query by role name
      */
@@ -55,11 +60,6 @@ class DescribeRolesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Cluster ID (required)
-     */
-    public $ClusterId;
-
-    /**
      * @var array * RoleName
 Filter by role name for exact query.
 Type: String
@@ -68,10 +68,10 @@ Required: no
     public $Filters;
 
     /**
+     * @param string $ClusterId Cluster ID (required)
      * @param string $RoleName Fuzzy query by role name
      * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default.
      * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
-     * @param string $ClusterId Cluster ID (required)
      * @param array $Filters * RoleName
 Filter by role name for exact query.
 Type: String
@@ -90,6 +90,10 @@ Required: no
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
         if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
             $this->RoleName = $param["RoleName"];
         }
@@ -100,10 +104,6 @@ Required: no
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

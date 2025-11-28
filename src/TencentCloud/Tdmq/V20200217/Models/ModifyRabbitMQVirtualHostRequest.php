@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRabbitMQVirtualHost request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID
- * @method string getVirtualHost() Obtain Vhost name
- * @method void setVirtualHost(string $VirtualHost) Set Vhost name
- * @method string getDescription() Obtain Description
- * @method void setDescription(string $Description) Set Description
+ * @method string getInstanceId() Obtain Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+ * @method string getVirtualHost() Obtain VirtualHost name, such as testvhost. effective VirtualHost names can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking Vhost in the left sidebar, and finding the Vhost name in the Vhost list.
+ * @method void setVirtualHost(string $VirtualHost) Set VirtualHost name, such as testvhost. effective VirtualHost names can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking Vhost in the left sidebar, and finding the Vhost name in the Vhost list.
+ * @method string getDescription() Obtain Describes the Virtual Host.
+ * @method void setDescription(string $Description) Set Describes the Virtual Host.
  * @method boolean getTraceFlag() Obtain Message trace flag. Valid values: `true` (Enabled), `false` (Disabled).
  * @method void setTraceFlag(boolean $TraceFlag) Set Message trace flag. Valid values: `true` (Enabled), `false` (Disabled).
  */
 class ModifyRabbitMQVirtualHostRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID
+     * @var string Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public $InstanceId;
 
     /**
-     * @var string Vhost name
+     * @var string VirtualHost name, such as testvhost. effective VirtualHost names can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking Vhost in the left sidebar, and finding the Vhost name in the Vhost list.
      */
     public $VirtualHost;
 
     /**
-     * @var string Description
+     * @var string Describes the Virtual Host.
      */
     public $Description;
 
@@ -52,9 +52,9 @@ class ModifyRabbitMQVirtualHostRequest extends AbstractModel
     public $TraceFlag;
 
     /**
-     * @param string $InstanceId Cluster instance ID
-     * @param string $VirtualHost Vhost name
-     * @param string $Description Description
+     * @param string $InstanceId Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * @param string $VirtualHost VirtualHost name, such as testvhost. effective VirtualHost names can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking Vhost in the left sidebar, and finding the Vhost name in the Vhost list.
+     * @param string $Description Describes the Virtual Host.
      * @param boolean $TraceFlag Message trace flag. Valid values: `true` (Enabled), `false` (Disabled).
      */
     function __construct()

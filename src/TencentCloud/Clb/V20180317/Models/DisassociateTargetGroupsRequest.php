@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisassociateTargetGroups request structure.
  *
- * @method array getAssociations() Obtain Array of rules to be unbound
- * @method void setAssociations(array $Associations) Set Array of rules to be unbound
+ * @method array getAssociations() Obtain Specifies the relationship array of rules to be unbound, supports batch operations for multiple listeners with a maximum of 20 per bulk removal.
+ * @method void setAssociations(array $Associations) Set Specifies the relationship array of rules to be unbound, supports batch operations for multiple listeners with a maximum of 20 per bulk removal.
  */
 class DisassociateTargetGroupsRequest extends AbstractModel
 {
     /**
-     * @var array Array of rules to be unbound
+     * @var array Specifies the relationship array of rules to be unbound, supports batch operations for multiple listeners with a maximum of 20 per bulk removal.
      */
     public $Associations;
 
     /**
-     * @param array $Associations Array of rules to be unbound
+     * @param array $Associations Specifies the relationship array of rules to be unbound, supports batch operations for multiple listeners with a maximum of 20 per bulk removal.
      */
     function __construct()
     {

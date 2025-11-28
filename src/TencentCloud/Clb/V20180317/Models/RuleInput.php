@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
  * @method void setScheduler(string $Scheduler) Set Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
- * @method string getForwardType() Obtain Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
- * @method void setForwardType(string $ForwardType) Set Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
+ * @method string getForwardType() Obtain Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP.
+ * @method void setForwardType(string $ForwardType) Set Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP.
  * @method boolean getDefaultServer() Obtain Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
  * @method void setDefaultServer(boolean $DefaultServer) Set Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
  * @method boolean getHttp2() Obtain Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
@@ -52,6 +52,8 @@ They represent weighted round robin, least connections, and IP hash, respectivel
  * @method void setDomains(array $Domains) Set The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
  * @method MultiCertInfo getMultiCertInfo() Obtain Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
  * @method void setMultiCertInfo(MultiCertInfo $MultiCertInfo) Set Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+ * @method string getCookieName() Obtain Specifies the custom cookie name.
+ * @method void setCookieName(string $CookieName) Set Specifies the custom cookie name.
  */
 class RuleInput extends AbstractModel
 {
@@ -87,7 +89,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $Scheduler;
 
     /**
-     * @var string Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
+     * @var string Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP.
      */
     public $ForwardType;
 
@@ -132,6 +134,11 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $MultiCertInfo;
 
     /**
+     * @var string Specifies the custom cookie name.
+     */
+    public $CookieName;
+
+    /**
      * @param string $Url Forwarding rule path. Length: 1-200.
      * @param string $Domain The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
      * @param integer $SessionExpireTime Session persistence duration, in seconds. 0 indicates that session persistence is disabled, and a value ranging from 30 to 86400 indicates that session persistence is enabled.
@@ -139,7 +146,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      * @param CertificateInput $Certificate Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      * @param string $Scheduler Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
-     * @param string $ForwardType Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
+     * @param string $ForwardType Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP.
      * @param boolean $DefaultServer Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
      * @param boolean $Http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
      * @param string $TargetType Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
@@ -148,6 +155,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      * @param boolean $Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
      * @param array $Domains The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
      * @param MultiCertInfo $MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     * @param string $CookieName Specifies the custom cookie name.
      */
     function __construct()
     {
@@ -223,6 +231,10 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         if (array_key_exists("MultiCertInfo",$param) and $param["MultiCertInfo"] !== null) {
             $this->MultiCertInfo = new MultiCertInfo();
             $this->MultiCertInfo->deserialize($param["MultiCertInfo"]);
+        }
+
+        if (array_key_exists("CookieName",$param) and $param["CookieName"] !== null) {
+            $this->CookieName = $param["CookieName"];
         }
     }
 }

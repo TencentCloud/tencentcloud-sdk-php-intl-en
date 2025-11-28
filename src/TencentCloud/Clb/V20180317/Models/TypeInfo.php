@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ISP Type
  *
- * @method string getType() Obtain ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getSpecAvailabilitySet() Obtain Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSpecAvailabilitySet(array $SpecAvailabilitySet) Set Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain Operator type.
+ * @method void setType(string $Type) Set Operator type.
+ * @method array getSpecAvailabilitySet() Obtain Specification availability.
+ * @method void setSpecAvailabilitySet(array $SpecAvailabilitySet) Set Specification availability.
  */
 class TypeInfo extends AbstractModel
 {
     /**
-     * @var string ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Operator type.
      */
     public $Type;
 
     /**
-     * @var array Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Specification availability.
      */
     public $SpecAvailabilitySet;
 
     /**
-     * @param string $Type ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $SpecAvailabilitySet Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Type Operator type.
+     * @param array $SpecAvailabilitySet Specification availability.
      */
     function __construct()
     {

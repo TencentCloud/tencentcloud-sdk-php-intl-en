@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopic(string $Topic) Set Topic name, which can contain 3–64 letters, digits, hyphens, and underscores
  * @method array getNamespaces() Obtain Topic namespace. Currently, you can create topics only in one single namespace.
  * @method void setNamespaces(array $Namespaces) Set Topic namespace. Currently, you can create topics only in one single namespace.
- * @method string getType() Obtain Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
- * @method void setType(string $Type) Set Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
+ * @method string getType() Obtain Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction, and DelayScheduled. Transaction is only supported in the Exclusive Edition.
+ * @method void setType(string $Type) Set Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction, and DelayScheduled. Transaction is only supported in the Exclusive Edition.
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getRemark() Obtain Topic remarks (up to 128 characters)
@@ -46,7 +46,7 @@ class CreateRocketMQTopicRequest extends AbstractModel
     public $Namespaces;
 
     /**
-     * @var string Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
+     * @var string Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction, and DelayScheduled. Transaction is only supported in the Exclusive Edition.
      */
     public $Type;
 
@@ -68,7 +68,7 @@ class CreateRocketMQTopicRequest extends AbstractModel
     /**
      * @param string $Topic Topic name, which can contain 3–64 letters, digits, hyphens, and underscores
      * @param array $Namespaces Topic namespace. Currently, you can create topics only in one single namespace.
-     * @param string $Type Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
+     * @param string $Type Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction, and DelayScheduled. Transaction is only supported in the Exclusive Edition.
      * @param string $ClusterId Cluster ID
      * @param string $Remark Topic remarks (up to 128 characters)
      * @param integer $PartitionNum Number of partitions, which doesn't take effect for globally sequential messages

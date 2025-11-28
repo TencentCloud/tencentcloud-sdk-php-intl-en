@@ -22,14 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method string getLoadBalancerName() Obtain CLB instance name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getListeners() Obtain List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setListeners(array $Listeners) Set List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLoadBalancerName() Obtain Specifies the name of the load balancing instance.
+ * @method void setLoadBalancerName(string $LoadBalancerName) Set Specifies the name of the load balancing instance.
+ * @method array getListeners() Obtain Listener list
+ * @method void setListeners(array $Listeners) Set Listener list
  */
 class LoadBalancerHealth extends AbstractModel
 {
@@ -39,23 +35,19 @@ class LoadBalancerHealth extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string CLB instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the name of the load balancing instance.
      */
     public $LoadBalancerName;
 
     /**
-     * @var array List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Listener list
      */
     public $Listeners;
 
     /**
      * @param string $LoadBalancerId CLB instance ID
-     * @param string $LoadBalancerName CLB instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Listeners List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LoadBalancerName Specifies the name of the load balancing instance.
+     * @param array $Listeners Listener list
      */
     function __construct()
     {

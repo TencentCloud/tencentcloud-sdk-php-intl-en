@@ -32,14 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterTopic(string $FilterTopic) Set Topic name, which can be used to query all subscription groups under the topic
  * @method string getFilterGroup() Obtain Consumer group query by consumer group name. Fuzzy query is supported
  * @method void setFilterGroup(string $FilterGroup) Set Consumer group query by consumer group name. Fuzzy query is supported
- * @method string getSortedBy() Obtain Sort by specified field. Valid values: `tps`, `accumulative`.
- * @method void setSortedBy(string $SortedBy) Set Sort by specified field. Valid values: `tps`, `accumulative`.
+ * @method string getSortedBy() Obtain Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics.
+ * @method void setSortedBy(string $SortedBy) Set Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics.
  * @method string getSortOrder() Obtain Sort in ascending or descending order. Valid values: `asc`, `desc`.
  * @method void setSortOrder(string $SortOrder) Set Sort in ascending or descending order. Valid values: `asc`, `desc`.
  * @method string getFilterOneGroup() Obtain Subscription group name. After it is specified, the information of only this subscription group will be returned.
  * @method void setFilterOneGroup(string $FilterOneGroup) Set Subscription group name. After it is specified, the information of only this subscription group will be returned.
  * @method array getTypes() Obtain Group type
  * @method void setTypes(array $Types) Set Group type
+ * @method array getTagFilters() Obtain Tag filter
+ * @method void setTagFilters(array $TagFilters) Set Tag filter
  */
 class DescribeRocketMQGroupsRequest extends AbstractModel
 {
@@ -74,7 +76,7 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
     public $FilterGroup;
 
     /**
-     * @var string Sort by specified field. Valid values: `tps`, `accumulative`.
+     * @var string Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics.
      */
     public $SortedBy;
 
@@ -94,16 +96,22 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
     public $Types;
 
     /**
+     * @var array Tag filter
+     */
+    public $TagFilters;
+
+    /**
      * @param string $ClusterId Cluster ID.
      * @param string $NamespaceId Namespace.
      * @param integer $Offset Offset.
      * @param integer $Limit The max number of returned results.
      * @param string $FilterTopic Topic name, which can be used to query all subscription groups under the topic
      * @param string $FilterGroup Consumer group query by consumer group name. Fuzzy query is supported
-     * @param string $SortedBy Sort by specified field. Valid values: `tps`, `accumulative`.
+     * @param string $SortedBy Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics.
      * @param string $SortOrder Sort in ascending or descending order. Valid values: `asc`, `desc`.
      * @param string $FilterOneGroup Subscription group name. After it is specified, the information of only this subscription group will be returned.
      * @param array $Types Group type
+     * @param array $TagFilters Tag filter
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
 
         if (array_key_exists("Types",$param) and $param["Types"] !== null) {
             $this->Types = $param["Types"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

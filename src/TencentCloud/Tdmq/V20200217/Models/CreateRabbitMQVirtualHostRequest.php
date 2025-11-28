@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRabbitMQVirtualHost request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID
+ * @method string getInstanceId() Obtain Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
  * @method string getVirtualHost() Obtain Vhost name
  * @method void setVirtualHost(string $VirtualHost) Set Vhost name
  * @method string getDescription() Obtain Description
  * @method void setDescription(string $Description) Set Description
  * @method boolean getTraceFlag() Obtain Message trace flag. Valid values: `true` (Enabled), `false` (Disabled, which is the default value).
  * @method void setTraceFlag(boolean $TraceFlag) Set Message trace flag. Valid values: `true` (Enabled), `false` (Disabled, which is the default value).
+ * @method boolean getMirrorQueuePolicyFlag() Obtain Whether to create an image queue policy. Default value: true.
+ * @method void setMirrorQueuePolicyFlag(boolean $MirrorQueuePolicyFlag) Set Whether to create an image queue policy. Default value: true.
  */
 class CreateRabbitMQVirtualHostRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID
+     * @var string Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public $InstanceId;
 
@@ -52,10 +54,16 @@ class CreateRabbitMQVirtualHostRequest extends AbstractModel
     public $TraceFlag;
 
     /**
-     * @param string $InstanceId Cluster instance ID
+     * @var boolean Whether to create an image queue policy. Default value: true.
+     */
+    public $MirrorQueuePolicyFlag;
+
+    /**
+     * @param string $InstanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      * @param string $VirtualHost Vhost name
      * @param string $Description Description
      * @param boolean $TraceFlag Message trace flag. Valid values: `true` (Enabled), `false` (Disabled, which is the default value).
+     * @param boolean $MirrorQueuePolicyFlag Whether to create an image queue policy. Default value: true.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateRabbitMQVirtualHostRequest extends AbstractModel
 
         if (array_key_exists("TraceFlag",$param) and $param["TraceFlag"] !== null) {
             $this->TraceFlag = $param["TraceFlag"];
+        }
+
+        if (array_key_exists("MirrorQueuePolicyFlag",$param) and $param["MirrorQueuePolicyFlag"] !== null) {
+            $this->MirrorQueuePolicyFlag = $param["MirrorQueuePolicyFlag"];
         }
     }
 }

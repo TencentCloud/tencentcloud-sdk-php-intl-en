@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLoadBalancersProject request structure.
  *
- * @method array getLoadBalancerIds() Obtain IDs of CLB instances ID(s).
- * @method void setLoadBalancerIds(array $LoadBalancerIds) Set IDs of CLB instances ID(s).
+ * @method array getLoadBalancerIds() Obtain One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+Specifies the maximum length supported by the list is 20.
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+Specifies the maximum length supported by the list is 20.
  * @method integer getProjectId() Obtain Project ID. You can obtain it through the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API.
  * @method void setProjectId(integer $ProjectId) Set Project ID. You can obtain it through the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API.
  */
 class ModifyLoadBalancersProjectRequest extends AbstractModel
 {
     /**
-     * @var array IDs of CLB instances ID(s).
+     * @var array One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+Specifies the maximum length supported by the list is 20.
      */
     public $LoadBalancerIds;
 
@@ -38,7 +41,8 @@ class ModifyLoadBalancersProjectRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @param array $LoadBalancerIds IDs of CLB instances ID(s).
+     * @param array $LoadBalancerIds One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+Specifies the maximum length supported by the list is 20.
      * @param integer $ProjectId Project ID. You can obtain it through the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API.
      */
     function __construct()

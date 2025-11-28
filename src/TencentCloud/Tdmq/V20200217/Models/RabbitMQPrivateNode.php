@@ -18,16 +18,16 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TDMQ for RabbitMQ node information
+ * RabbitMQ node information.
  *
  * @method string getNodeName() Obtain Node name
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setNodeName(string $NodeName) Set Node name
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getNodeStatus() Obtain Node status
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setNodeStatus(string $NodeStatus) Set Node status
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getNodeStatus() Obtain Node status. running indicates the node is active. down indicates an exception.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNodeStatus(string $NodeStatus) Set Node status. running indicates the node is active. down indicates an exception.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCPUUsage() Obtain CPU utilization
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCPUUsage(string $CPUUsage) Set CPU utilization
@@ -54,8 +54,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $NodeName;
 
     /**
-     * @var string Node status
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Node status. running indicates the node is active. down indicates an exception.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NodeStatus;
 
@@ -86,8 +86,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $NodeName Node name
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $NodeStatus Node status
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $NodeStatus Node status. running indicates the node is active. down indicates an exception.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CPUUsage CPU utilization
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Memory Memory usage in MB

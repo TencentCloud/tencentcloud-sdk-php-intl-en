@@ -30,8 +30,24 @@ use TencentCloud\Common\AbstractModel;
 - The range of the maximum outbound bandwidth for public network shared and exclusive CLB instances is 1 Mbps to 2,048 Mbps.
 - The range of the maximum outbound bandwidth for public network and private network LCU-supported CLB instances is 1 Mbps to 61,440 Mbps.
 (If this parameter is not specified when CreateLoadBalancer is called to create a CLB instance, the default value of 10 Mbps is used. This value can be modified.)
- * @method string getBandwidthpkgSubType() Obtain Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBandwidthpkgSubType(string $BandwidthpkgSubType) Set Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBandwidthpkgSubType() Obtain Bandwidth package type, for example BGP (multi-line).
+Type as follows:.
+SINGLEISP: single isp.
+BGP: multi-line.
+HIGH_QUALITY_BGP: specifies a dedicated bgp bandwidth package.
+SINGLEISP_CMCC: specifies a cmcc bandwidth package.
+SINGLEISP_CTCC: specifies the ctcc bandwidth package.
+SINGLEISP_CUCC: specifies the china unicom bandwidth package.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBandwidthpkgSubType(string $BandwidthpkgSubType) Set Bandwidth package type, for example BGP (multi-line).
+Type as follows:.
+SINGLEISP: single isp.
+BGP: multi-line.
+HIGH_QUALITY_BGP: specifies a dedicated bgp bandwidth package.
+SINGLEISP_CMCC: specifies a cmcc bandwidth package.
+SINGLEISP_CTCC: specifies the ctcc bandwidth package.
+SINGLEISP_CUCC: specifies the china unicom bandwidth package.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InternetAccessible extends AbstractModel
 {
@@ -49,7 +65,15 @@ class InternetAccessible extends AbstractModel
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var string Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Bandwidth package type, for example BGP (multi-line).
+Type as follows:.
+SINGLEISP: single isp.
+BGP: multi-line.
+HIGH_QUALITY_BGP: specifies a dedicated bgp bandwidth package.
+SINGLEISP_CMCC: specifies a cmcc bandwidth package.
+SINGLEISP_CTCC: specifies the ctcc bandwidth package.
+SINGLEISP_CUCC: specifies the china unicom bandwidth package.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BandwidthpkgSubType;
 
@@ -59,7 +83,15 @@ class InternetAccessible extends AbstractModel
 - The range of the maximum outbound bandwidth for public network shared and exclusive CLB instances is 1 Mbps to 2,048 Mbps.
 - The range of the maximum outbound bandwidth for public network and private network LCU-supported CLB instances is 1 Mbps to 61,440 Mbps.
 (If this parameter is not specified when CreateLoadBalancer is called to create a CLB instance, the default value of 10 Mbps is used. This value can be modified.)
-     * @param string $BandwidthpkgSubType Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BandwidthpkgSubType Bandwidth package type, for example BGP (multi-line).
+Type as follows:.
+SINGLEISP: single isp.
+BGP: multi-line.
+HIGH_QUALITY_BGP: specifies a dedicated bgp bandwidth package.
+SINGLEISP_CMCC: specifies a cmcc bandwidth package.
+SINGLEISP_CTCC: specifies the ctcc bandwidth package.
+SINGLEISP_CUCC: specifies the china unicom bandwidth package.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

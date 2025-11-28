@@ -60,6 +60,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRetryMaxTimes(integer $RetryMaxTimes) Set The number of retries
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceId() Obtain Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNamespace() Obtain Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNamespace(string $Namespace) Set Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSubscribeTopicNum() Obtain Number of subscribed topics.
+ * @method void setSubscribeTopicNum(integer $SubscribeTopicNum) Set Number of subscribed topics.
+ * @method array getTagList() Obtain List of bound tags
+ * @method void setTagList(array $TagList) Set List of bound tags
  */
 class RocketMQGroup extends AbstractModel
 {
@@ -75,11 +87,13 @@ class RocketMQGroup extends AbstractModel
 
     /**
      * @var integer Consumption TPS.
+     * @deprecated
      */
     public $TPS;
 
     /**
      * @var integer The total number of heaped messages.
+     * @deprecated
      */
     public $TotalAccumulative;
 
@@ -144,6 +158,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RetryMaxTimes;
 
     /**
+     * @var string Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $InstanceId;
+
+    /**
+     * @var string Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Namespace;
+
+    /**
+     * @var integer Number of subscribed topics.
+     */
+    public $SubscribeTopicNum;
+
+    /**
+     * @var array List of bound tags
+     */
+    public $TagList;
+
+    /**
      * @param string $Name Consumer group name.
      * @param integer $ConsumerNum The number of online consumers.
      * @param integer $TPS Consumption TPS.
@@ -164,6 +200,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RetryMaxTimes The number of retries
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceId Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Namespace Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SubscribeTopicNum Number of subscribed topics.
+     * @param array $TagList List of bound tags
      */
     function __construct()
     {
@@ -236,6 +278,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RetryMaxTimes",$param) and $param["RetryMaxTimes"] !== null) {
             $this->RetryMaxTimes = $param["RetryMaxTimes"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("SubscribeTopicNum",$param) and $param["SubscribeTopicNum"] !== null) {
+            $this->SubscribeTopicNum = $param["SubscribeTopicNum"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

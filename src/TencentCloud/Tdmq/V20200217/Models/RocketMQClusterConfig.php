@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RocketMQ cluster configuration
  *
- * @method integer getMaxTpsPerNamespace() Obtain Maximum TPS per namespace
- * @method void setMaxTpsPerNamespace(integer $MaxTpsPerNamespace) Set Maximum TPS per namespace
+ * @method integer getMaxTpsPerNamespace() Obtain Upper limit of TPS per single namespace.
+ * @method void setMaxTpsPerNamespace(integer $MaxTpsPerNamespace) Set Upper limit of TPS per single namespace.
  * @method integer getMaxNamespaceNum() Obtain Maximum number of namespaces
  * @method void setMaxNamespaceNum(integer $MaxNamespaceNum) Set Maximum number of namespaces
  * @method integer getUsedNamespaceNum() Obtain Number of used namespaces
@@ -42,11 +42,20 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMaxQueuesPerTopic(integer $MaxQueuesPerTopic) Set The maximum number of queues in a single topic
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTopicDistribution() Obtain Topic distribution.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTopicDistribution(array $TopicDistribution) Set Topic distribution.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxRoleNum() Obtain Maximum number of roles.
+ * @method void setMaxRoleNum(integer $MaxRoleNum) Set Maximum number of roles.
+ * @method integer getMaxTpsLimit() Obtain TPS quota.
+ * @method void setMaxTpsLimit(integer $MaxTpsLimit) Set TPS quota.
  */
 class RocketMQClusterConfig extends AbstractModel
 {
     /**
-     * @var integer Maximum TPS per namespace
+     * @var integer Upper limit of TPS per single namespace.
+     * @deprecated
      */
     public $MaxTpsPerNamespace;
 
@@ -97,7 +106,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MaxQueuesPerTopic;
 
     /**
-     * @param integer $MaxTpsPerNamespace Maximum TPS per namespace
+     * @var array Topic distribution.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TopicDistribution;
+
+    /**
+     * @var integer Maximum number of roles.
+     */
+    public $MaxRoleNum;
+
+    /**
+     * @var integer TPS quota.
+     */
+    public $MaxTpsLimit;
+
+    /**
+     * @param integer $MaxTpsPerNamespace Upper limit of TPS per single namespace.
      * @param integer $MaxNamespaceNum Maximum number of namespaces
      * @param integer $UsedNamespaceNum Number of used namespaces
      * @param integer $MaxTopicNum Maximum number of topics
@@ -108,6 +133,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $MaxLatencyTime Maximum message delay in milliseconds
      * @param integer $MaxQueuesPerTopic The maximum number of queues in a single topic
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $TopicDistribution Topic distribution.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxRoleNum Maximum number of roles.
+     * @param integer $MaxTpsLimit TPS quota.
      */
     function __construct()
     {
@@ -160,6 +189,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MaxQueuesPerTopic",$param) and $param["MaxQueuesPerTopic"] !== null) {
             $this->MaxQueuesPerTopic = $param["MaxQueuesPerTopic"];
+        }
+
+        if (array_key_exists("TopicDistribution",$param) and $param["TopicDistribution"] !== null) {
+            $this->TopicDistribution = [];
+            foreach ($param["TopicDistribution"] as $key => $value){
+                $obj = new RocketMQTopicDistribution();
+                $obj->deserialize($value);
+                array_push($this->TopicDistribution, $obj);
+            }
+        }
+
+        if (array_key_exists("MaxRoleNum",$param) and $param["MaxRoleNum"] !== null) {
+            $this->MaxRoleNum = $param["MaxRoleNum"];
+        }
+
+        if (array_key_exists("MaxTpsLimit",$param) and $param["MaxTpsLimit"] !== null) {
+            $this->MaxTpsLimit = $param["MaxTpsLimit"];
         }
     }
 }

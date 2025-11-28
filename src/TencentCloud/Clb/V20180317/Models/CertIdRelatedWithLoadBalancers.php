@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCertId() Obtain Certificate ID
  * @method void setCertId(string $CertId) Set Certificate ID
- * @method array getLoadBalancers() Obtain List of CLB instances associated with certificate
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLoadBalancers(array $LoadBalancers) Set List of CLB instances associated with certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getLoadBalancers() Obtain List of CLB instances associated with the certificate
+ * @method void setLoadBalancers(array $LoadBalancers) Set List of CLB instances associated with the certificate
  */
 class CertIdRelatedWithLoadBalancers extends AbstractModel
 {
@@ -35,15 +33,13 @@ class CertIdRelatedWithLoadBalancers extends AbstractModel
     public $CertId;
 
     /**
-     * @var array List of CLB instances associated with certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array List of CLB instances associated with the certificate
      */
     public $LoadBalancers;
 
     /**
      * @param string $CertId Certificate ID
-     * @param array $LoadBalancers List of CLB instances associated with certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $LoadBalancers List of CLB instances associated with the certificate
      */
     function __construct()
     {

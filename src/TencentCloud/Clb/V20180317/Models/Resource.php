@@ -24,14 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(array $Type) Set Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
  * @method string getIsp() Obtain ISP information, such as `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
  * @method void setIsp(string $Isp) Set ISP information, such as `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
- * @method array getAvailabilitySet() Obtain Available resources
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setAvailabilitySet(array $AvailabilitySet) Set Available resources
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method array getTypeSet() Obtain ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTypeSet(array $TypeSet) Set ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAvailabilitySet() Obtain Available resources.
+ * @method void setAvailabilitySet(array $AvailabilitySet) Set Available resources.
+ * @method array getTypeSet() Obtain Operator type info.
+ * @method void setTypeSet(array $TypeSet) Set Operator type info.
  */
 class Resource extends AbstractModel
 {
@@ -46,24 +42,20 @@ class Resource extends AbstractModel
     public $Isp;
 
     /**
-     * @var array Available resources
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array Available resources.
      */
     public $AvailabilitySet;
 
     /**
-     * @var array ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Operator type info.
      */
     public $TypeSet;
 
     /**
      * @param array $Type Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
      * @param string $Isp ISP information, such as `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
-     * @param array $AvailabilitySet Available resources
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param array $TypeSet ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $AvailabilitySet Available resources.
+     * @param array $TypeSet Operator type info.
      */
     function __construct()
     {

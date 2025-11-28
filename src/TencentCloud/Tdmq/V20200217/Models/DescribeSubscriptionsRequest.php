@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
  * @method string getTopicName() Obtain Topic name.
  * @method void setTopicName(string $TopicName) Set Topic name.
+ * @method string getClusterId() Obtain Pulsar cluster ID
+ * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID
  * @method integer getOffset() Obtain Offset, which defaults to 0 if left empty.
  * @method void setOffset(integer $Offset) Set Offset, which defaults to 0 if left empty.
  * @method integer getLimit() Obtain The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
@@ -32,8 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubscriptionName(string $SubscriptionName) Set Fuzzy match by subscriber name.
  * @method array getFilters() Obtain Data filter.
  * @method void setFilters(array $Filters) Set Data filter.
- * @method string getClusterId() Obtain Pulsar cluster ID
- * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID
  */
 class DescribeSubscriptionsRequest extends AbstractModel
 {
@@ -46,6 +46,11 @@ class DescribeSubscriptionsRequest extends AbstractModel
      * @var string Topic name.
      */
     public $TopicName;
+
+    /**
+     * @var string Pulsar cluster ID
+     */
+    public $ClusterId;
 
     /**
      * @var integer Offset, which defaults to 0 if left empty.
@@ -68,18 +73,13 @@ class DescribeSubscriptionsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string Pulsar cluster ID
-     */
-    public $ClusterId;
-
-    /**
      * @param string $EnvironmentId Environment (namespace) name.
      * @param string $TopicName Topic name.
+     * @param string $ClusterId Pulsar cluster ID
      * @param integer $Offset Offset, which defaults to 0 if left empty.
      * @param integer $Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      * @param string $SubscriptionName Fuzzy match by subscriber name.
      * @param array $Filters Data filter.
-     * @param string $ClusterId Pulsar cluster ID
      */
     function __construct()
     {
@@ -102,6 +102,10 @@ class DescribeSubscriptionsRequest extends AbstractModel
             $this->TopicName = $param["TopicName"];
         }
 
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
         }
@@ -121,10 +125,6 @@ class DescribeSubscriptionsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
-        }
-
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

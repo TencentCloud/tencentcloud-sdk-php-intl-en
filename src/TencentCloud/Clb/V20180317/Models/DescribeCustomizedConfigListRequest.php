@@ -22,20 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getConfigType() Obtain Configuration type. Valid values: `CLB` (CLB-specific configs), `SERVER` (domain name-specific configs), and `LOCATION` (forwarding rule-specific configs).
  * @method void setConfigType(string $ConfigType) Set Configuration type. Valid values: `CLB` (CLB-specific configs), `SERVER` (domain name-specific configs), and `LOCATION` (forwarding rule-specific configs).
- * @method integer getOffset() Obtain Pagination offset. Default: 0.
- * @method void setOffset(integer $Offset) Set Pagination offset. Default: 0.
- * @method integer getLimit() Obtain Number of results per page. Default: 20.
- * @method void setLimit(integer $Limit) Set Number of results per page. Default: 20.
+ * @method integer getOffset() Obtain Pagination offset. defaults to 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. defaults to 0.
+ * @method integer getLimit() Obtain Number of results. default value: 20.
+ * @method void setLimit(integer $Limit) Set Number of results. default value: 20.
  * @method string getConfigName() Obtain Specifies the name of configs to query. Fuzzy match is supported.
  * @method void setConfigName(string $ConfigName) Set Specifies the name of configs to query. Fuzzy match is supported.
- * @method array getUconfigIds() Obtain Configuration ID.
- * @method void setUconfigIds(array $UconfigIds) Set Configuration ID.
- * @method array getFilters() Obtain The filters are:
-<li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-<li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
- * @method void setFilters(array $Filters) Set The filters are:
-<li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-<li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
+ * @method array getUconfigIds() Obtain Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
+ * @method void setUconfigIds(array $UconfigIds) Set Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
+ * @method array getFilters() Obtain Filter criteria as follows:.
+- loadbalancer-id
+Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- vip
+Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+ * @method void setFilters(array $Filters) Set Filter criteria as follows:.
+- loadbalancer-id
+Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- vip
+Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
  */
 class DescribeCustomizedConfigListRequest extends AbstractModel
 {
@@ -45,12 +61,12 @@ class DescribeCustomizedConfigListRequest extends AbstractModel
     public $ConfigType;
 
     /**
-     * @var integer Pagination offset. Default: 0.
+     * @var integer Pagination offset. defaults to 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results per page. Default: 20.
+     * @var integer Number of results. default value: 20.
      */
     public $Limit;
 
@@ -60,26 +76,42 @@ class DescribeCustomizedConfigListRequest extends AbstractModel
     public $ConfigName;
 
     /**
-     * @var array Configuration ID.
+     * @var array Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
      */
     public $UconfigIds;
 
     /**
-     * @var array The filters are:
-<li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-<li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
+     * @var array Filter criteria as follows:.
+- loadbalancer-id
+Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- vip
+Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
      */
     public $Filters;
 
     /**
      * @param string $ConfigType Configuration type. Valid values: `CLB` (CLB-specific configs), `SERVER` (domain name-specific configs), and `LOCATION` (forwarding rule-specific configs).
-     * @param integer $Offset Pagination offset. Default: 0.
-     * @param integer $Limit Number of results per page. Default: 20.
+     * @param integer $Offset Pagination offset. defaults to 0.
+     * @param integer $Limit Number of results. default value: 20.
      * @param string $ConfigName Specifies the name of configs to query. Fuzzy match is supported.
-     * @param array $UconfigIds Configuration ID.
-     * @param array $Filters The filters are:
-<li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-<li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
+     * @param array $UconfigIds Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
+     * @param array $Filters Filter criteria as follows:.
+- loadbalancer-id
+Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- vip
+Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
      */
     function __construct()
     {

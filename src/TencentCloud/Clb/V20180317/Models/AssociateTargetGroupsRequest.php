@@ -20,18 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssociateTargetGroups request structure.
  *
- * @method array getAssociations() Obtain Binding relationship array. A single request supports up to 20 items.
- * @method void setAssociations(array $Associations) Set Binding relationship array. A single request supports up to 20 items.
+ * @method array getAssociations() Obtain Specifies the binding relationship array. the target group type should be the same.
+Specifies the maximum number of requests supported in a single request is 20.
+
+ * @method void setAssociations(array $Associations) Set Specifies the binding relationship array. the target group type should be the same.
+Specifies the maximum number of requests supported in a single request is 20.
  */
 class AssociateTargetGroupsRequest extends AbstractModel
 {
     /**
-     * @var array Binding relationship array. A single request supports up to 20 items.
+     * @var array Specifies the binding relationship array. the target group type should be the same.
+Specifies the maximum number of requests supported in a single request is 20.
+
      */
     public $Associations;
 
     /**
-     * @param array $Associations Binding relationship array. A single request supports up to 20 items.
+     * @param array $Associations Specifies the binding relationship array. the target group type should be the same.
+Specifies the maximum number of requests supported in a single request is 20.
      */
     function __construct()
     {

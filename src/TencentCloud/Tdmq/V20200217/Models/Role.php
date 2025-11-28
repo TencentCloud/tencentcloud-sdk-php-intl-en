@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time.
  * @method string getUpdateTime() Obtain Update time.
  * @method void setUpdateTime(string $UpdateTime) Set Update time.
+ * @method string getPermType() Obtain Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+ * @method void setPermType(string $PermType) Set Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
  */
 class Role extends AbstractModel
 {
@@ -59,11 +61,17 @@ class Role extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+     */
+    public $PermType;
+
+    /**
      * @param string $RoleName Role name.
      * @param string $Token Value of the role token.
      * @param string $Remark Remarks.
      * @param string $CreateTime Creation time.
      * @param string $UpdateTime Update time.
+     * @param string $PermType Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class Role extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("PermType",$param) and $param["PermType"] !== null) {
+            $this->PermType = $param["PermType"];
         }
     }
 }

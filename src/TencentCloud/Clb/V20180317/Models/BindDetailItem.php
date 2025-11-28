@@ -22,38 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() Obtain Specifies the ID of CLB to be bound
  * @method void setLoadBalancerId(string $LoadBalancerId) Set Specifies the ID of CLB to be bound
- * @method string getListenerId() Obtain Specifies the ID of listener to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setListenerId(string $ListenerId) Set Specifies the ID of listener to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getDomain() Obtain Specifies the domain name to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) Set Specifies the domain name to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getLocationId() Obtain Sets the bound rule.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setLocationId(string $LocationId) Set Sets the bound rule.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getListenerName() Obtain Listener name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setListenerName(string $ListenerName) Set Listener name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getProtocol() Obtain Listener protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setProtocol(string $Protocol) Set Listener protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getVport() Obtain Listener port.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setVport(integer $Vport) Set Listener port.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getListenerId() Obtain ID of the listener bound to the configuration
+ * @method void setListenerId(string $ListenerId) Set ID of the listener bound to the configuration
+ * @method string getDomain() Obtain Domain name bound to the configuration
+ * @method void setDomain(string $Domain) Set Domain name bound to the configuration
+ * @method string getLocationId() Obtain Rule bound to the configuration
+ * @method void setLocationId(string $LocationId) Set Rule bound to the configuration
+ * @method string getListenerName() Obtain Listener name
+ * @method void setListenerName(string $ListenerName) Set Listener name
+ * @method string getProtocol() Obtain Listener protocol
+ * @method void setProtocol(string $Protocol) Set Listener protocol
+ * @method integer getVport() Obtain Listener port
+ * @method void setVport(integer $Vport) Set Listener port
  * @method string getUrl() Obtain URL of the location.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setUrl(string $Url) Set URL of the location.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getUconfigId() Obtain Configuration ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setUconfigId(string $UconfigId) Set Configuration ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class BindDetailItem extends AbstractModel
 {
@@ -63,38 +49,32 @@ class BindDetailItem extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string Specifies the ID of listener to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string ID of the listener bound to the configuration
      */
     public $ListenerId;
 
     /**
-     * @var string Specifies the domain name to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Domain name bound to the configuration
      */
     public $Domain;
 
     /**
-     * @var string Sets the bound rule.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Rule bound to the configuration
      */
     public $LocationId;
 
     /**
-     * @var string Listener name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Listener name
      */
     public $ListenerName;
 
     /**
-     * @var string Listener protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Listener protocol
      */
     public $Protocol;
 
     /**
-     * @var integer Listener port.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Listener port
      */
     public $Vport;
 
@@ -106,28 +86,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @var string Configuration ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $UconfigId;
 
     /**
      * @param string $LoadBalancerId Specifies the ID of CLB to be bound
-     * @param string $ListenerId Specifies the ID of listener to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Domain Specifies the domain name to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $LocationId Sets the bound rule.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ListenerName Listener name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Protocol Listener protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $Vport Listener port.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ListenerId ID of the listener bound to the configuration
+     * @param string $Domain Domain name bound to the configuration
+     * @param string $LocationId Rule bound to the configuration
+     * @param string $ListenerName Listener name
+     * @param string $Protocol Listener protocol
+     * @param integer $Vport Listener port
      * @param string $Url URL of the location.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $UconfigId Configuration ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

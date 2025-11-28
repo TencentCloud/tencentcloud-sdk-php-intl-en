@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getLoadBalancerIds() Obtain List of IDs of CLB instances to be queried
  * @method void setLoadBalancerIds(array $LoadBalancerIds) Set List of IDs of CLB instances to be queried
+ * @method array getListenerIds() Obtain Specifies the listener ID list to query.
+ * @method void setListenerIds(array $ListenerIds) Set Specifies the listener ID list to query.
+ * @method array getLocationIds() Obtain Specifies the list of rule ids to be queried.
+ * @method void setLocationIds(array $LocationIds) Set Specifies the list of rule ids to be queried.
  */
 class DescribeTargetHealthRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeTargetHealthRequest extends AbstractModel
     public $LoadBalancerIds;
 
     /**
+     * @var array Specifies the listener ID list to query.
+     */
+    public $ListenerIds;
+
+    /**
+     * @var array Specifies the list of rule ids to be queried.
+     */
+    public $LocationIds;
+
+    /**
      * @param array $LoadBalancerIds List of IDs of CLB instances to be queried
+     * @param array $ListenerIds Specifies the listener ID list to query.
+     * @param array $LocationIds Specifies the list of rule ids to be queried.
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeTargetHealthRequest extends AbstractModel
         }
         if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
             $this->LoadBalancerIds = $param["LoadBalancerIds"];
+        }
+
+        if (array_key_exists("ListenerIds",$param) and $param["ListenerIds"] !== null) {
+            $this->ListenerIds = $param["ListenerIds"];
+        }
+
+        if (array_key_exists("LocationIds",$param) and $param["LocationIds"] !== null) {
+            $this->LocationIds = $param["LocationIds"];
         }
     }
 }

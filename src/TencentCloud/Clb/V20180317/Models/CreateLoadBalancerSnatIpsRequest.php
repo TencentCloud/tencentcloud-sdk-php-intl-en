@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLoadBalancerSnatIps request structure.
  *
- * @method string getLoadBalancerId() Obtain Unique ID of a CLB instance, e.g., lb-12345678.
- * @method void setLoadBalancerId(string $LoadBalancerId) Set Unique ID of a CLB instance, e.g., lb-12345678.
- * @method array getSnatIps() Obtain Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
- * @method void setSnatIps(array $SnatIps) Set Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
+ * @method string getLoadBalancerId() Obtain Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID, such as lb-12345678.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID, such as lb-12345678.
+ * @method array getSnatIps() Obtain Added SnatIp information. specify IP for request or designated subnet for automatic application. can be accessed through [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) to query and retrieve. the default upper limit for one CLB instance is 10.
+ * @method void setSnatIps(array $SnatIps) Set Added SnatIp information. specify IP for request or designated subnet for automatic application. can be accessed through [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) to query and retrieve. the default upper limit for one CLB instance is 10.
  * @method integer getNumber() Obtain Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
  * @method void setNumber(integer $Number) Set Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
  */
 class CreateLoadBalancerSnatIpsRequest extends AbstractModel
 {
     /**
-     * @var string Unique ID of a CLB instance, e.g., lb-12345678.
+     * @var string Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID, such as lb-12345678.
      */
     public $LoadBalancerId;
 
     /**
-     * @var array Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
+     * @var array Added SnatIp information. specify IP for request or designated subnet for automatic application. can be accessed through [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) to query and retrieve. the default upper limit for one CLB instance is 10.
      */
     public $SnatIps;
 
@@ -45,8 +45,8 @@ class CreateLoadBalancerSnatIpsRequest extends AbstractModel
     public $Number;
 
     /**
-     * @param string $LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
-     * @param array $SnatIps Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
+     * @param string $LoadBalancerId Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID, such as lb-12345678.
+     * @param array $SnatIps Added SnatIp information. specify IP for request or designated subnet for automatic application. can be accessed through [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) to query and retrieve. the default upper limit for one CLB instance is 10.
      * @param integer $Number Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
      */
     function __construct()

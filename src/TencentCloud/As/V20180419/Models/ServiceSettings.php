@@ -48,6 +48,8 @@ Default value: RECREATE.
  * @method void setDesiredCapacitySyncWithMaxMinSize(boolean $DesiredCapacitySyncWithMaxMinSize) Set Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
 <Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
 <Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
+ * @method boolean getPriorityScaleInUnhealthy() Obtain Scaling in unhealthy instances first. If enabled, preferentially selects unhealthy instances during scale in. Default value: False.
+ * @method void setPriorityScaleInUnhealthy(boolean $PriorityScaleInUnhealthy) Set Scaling in unhealthy instances first. If enabled, preferentially selects unhealthy instances during scale in. Default value: False.
  */
 class ServiceSettings extends AbstractModel
 {
@@ -90,6 +92,11 @@ Default value: RECREATE.
     public $DesiredCapacitySyncWithMaxMinSize;
 
     /**
+     * @var boolean Scaling in unhealthy instances first. If enabled, preferentially selects unhealthy instances during scale in. Default value: False.
+     */
+    public $PriorityScaleInUnhealthy;
+
+    /**
      * @param boolean $ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
      * @param string $ScalingMode Valid values: 
 CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
@@ -104,6 +111,7 @@ Default value: RECREATE.
      * @param boolean $DesiredCapacitySyncWithMaxMinSize Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
 <Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
 <Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
+     * @param boolean $PriorityScaleInUnhealthy Scaling in unhealthy instances first. If enabled, preferentially selects unhealthy instances during scale in. Default value: False.
      */
     function __construct()
     {
@@ -140,6 +148,10 @@ Default value: RECREATE.
 
         if (array_key_exists("DesiredCapacitySyncWithMaxMinSize",$param) and $param["DesiredCapacitySyncWithMaxMinSize"] !== null) {
             $this->DesiredCapacitySyncWithMaxMinSize = $param["DesiredCapacitySyncWithMaxMinSize"];
+        }
+
+        if (array_key_exists("PriorityScaleInUnhealthy",$param) and $param["PriorityScaleInUnhealthy"] !== null) {
+            $this->PriorityScaleInUnhealthy = $param["PriorityScaleInUnhealthy"];
         }
     }
 }

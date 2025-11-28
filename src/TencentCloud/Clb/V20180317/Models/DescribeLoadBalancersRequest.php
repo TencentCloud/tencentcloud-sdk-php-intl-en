@@ -28,10 +28,10 @@ OPEN: public network; INTERNAL: private network.
 OPEN: public network; INTERNAL: private network.
  * @method integer getForward() Obtain CLB instance type. 1: generic CLB instance; 0: classic CLB instance
  * @method void setForward(integer $Forward) Set CLB instance type. 1: generic CLB instance; 0: classic CLB instance
- * @method string getLoadBalancerName() Obtain CLB instance name.
- * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name.
- * @method string getDomain() Obtain The domain name that Tencent Cloud assigned for the CLB instance.
- * @method void setDomain(string $Domain) Set The domain name that Tencent Cloud assigned for the CLB instance.
+ * @method string getLoadBalancerName() Obtain Specifies the name of the clb instance. fuzzy query is supported.
+ * @method void setLoadBalancerName(string $LoadBalancerName) Set Specifies the name of the clb instance. fuzzy query is supported.
+ * @method string getDomain() Obtain Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported.
+ * @method void setDomain(string $Domain) Set Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported.
  * @method array getLoadBalancerVips() Obtain VIP address of a CLB instance (there can be multiple addresses)
  * @method void setLoadBalancerVips(array $LoadBalancerVips) Set VIP address of a CLB instance (there can be multiple addresses)
  * @method array getBackendPublicIps() Obtain Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
@@ -42,28 +42,46 @@ OPEN: public network; INTERNAL: private network.
  * @method void setOffset(integer $Offset) Set Data offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned CLB instances. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned CLB instances. Default value: 20. Maximum value: 100.
- * @method string getOrderBy() Obtain Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
- * @method void setOrderBy(string $OrderBy) Set Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
- * @method integer getOrderType() Obtain 1: reverse; 0: sequential. Default value: reverse by creation time |
- * @method void setOrderType(integer $OrderType) Set 1: reverse; 0: sequential. Default value: reverse by creation time |
- * @method string getSearchKey() Obtain Search field which fuzzy matches name, domain name, or VIP.
- * @method void setSearchKey(string $SearchKey) Set Search field which fuzzy matches name, domain name, or VIP.
- * @method integer getProjectId() Obtain ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
- * @method void setProjectId(integer $ProjectId) Set ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+ * @method string getOrderBy() Obtain Sorting parameter. supports the following fields:.
+- LoadBalancerName
+- CreateTime
+- Domain
+- LoadBalancerType
+
+Defaults to CreateTime.
+
+ * @method void setOrderBy(string $OrderBy) Set Sorting parameter. supports the following fields:.
+- LoadBalancerName
+- CreateTime
+- Domain
+- LoadBalancerType
+
+Defaults to CreateTime.
+
+ * @method integer getOrderType() Obtain 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
+ * @method void setOrderType(integer $OrderType) Set 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
+ * @method string getSearchKey() Obtain Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
+ * @method void setSearchKey(string $SearchKey) Set Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
+ * @method integer getProjectId() Obtain Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
+ * @method void setProjectId(integer $ProjectId) Set Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
  * @method integer getWithRs() Obtain Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
  * @method void setWithRs(integer $WithRs) Set Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
- * @method string getVpcId() Obtain VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-Basic network does not support queries by VpcId.
- * @method void setVpcId(string $VpcId) Set VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-Basic network does not support queries by VpcId.
- * @method string getSecurityGroup() Obtain Security group ID, e.g., `sg-m1cc****`.
- * @method void setSecurityGroup(string $SecurityGroup) Set Security group ID, e.g., `sg-m1cc****`.
+ * @method string getVpcId() Obtain Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+Searches for cloud load balancer of basic network type. allows input '0'.
+ * @method void setVpcId(string $VpcId) Set Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+Searches for cloud load balancer of basic network type. allows input '0'.
+ * @method string getSecurityGroup() Obtain Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+ * @method void setSecurityGroup(string $SecurityGroup) Set Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
  * @method string getMasterZone() Obtain Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
  * @method void setMasterZone(string $MasterZone) Set Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
  * @method array getFilters() Obtain Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
 <li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
  * @method void setFilters(array $Filters) Set Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
 <li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
+ * @method array getAdditionalFields() Obtain Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+<Li>TargetCount: specifies the number of real servers bound to it.</li>.
+ * @method void setAdditionalFields(array $AdditionalFields) Set Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+<Li>TargetCount: specifies the number of real servers bound to it.</li>.
  */
 class DescribeLoadBalancersRequest extends AbstractModel
 {
@@ -84,12 +102,12 @@ OPEN: public network; INTERNAL: private network.
     public $Forward;
 
     /**
-     * @var string CLB instance name.
+     * @var string Specifies the name of the clb instance. fuzzy query is supported.
      */
     public $LoadBalancerName;
 
     /**
-     * @var string The domain name that Tencent Cloud assigned for the CLB instance.
+     * @var string Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported.
      */
     public $Domain;
 
@@ -119,22 +137,29 @@ OPEN: public network; INTERNAL: private network.
     public $Limit;
 
     /**
-     * @var string Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
+     * @var string Sorting parameter. supports the following fields:.
+- LoadBalancerName
+- CreateTime
+- Domain
+- LoadBalancerType
+
+Defaults to CreateTime.
+
      */
     public $OrderBy;
 
     /**
-     * @var integer 1: reverse; 0: sequential. Default value: reverse by creation time |
+     * @var integer 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
      */
     public $OrderType;
 
     /**
-     * @var string Search field which fuzzy matches name, domain name, or VIP.
+     * @var string Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
      */
     public $SearchKey;
 
     /**
-     * @var integer ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+     * @var integer Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
      */
     public $ProjectId;
 
@@ -144,13 +169,13 @@ OPEN: public network; INTERNAL: private network.
     public $WithRs;
 
     /**
-     * @var string VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-Basic network does not support queries by VpcId.
+     * @var string Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+Searches for cloud load balancer of basic network type. allows input '0'.
      */
     public $VpcId;
 
     /**
-     * @var string Security group ID, e.g., `sg-m1cc****`.
+     * @var string Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
      */
     public $SecurityGroup;
 
@@ -166,28 +191,43 @@ Basic network does not support queries by VpcId.
     public $Filters;
 
     /**
+     * @var array Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+<Li>TargetCount: specifies the number of real servers bound to it.</li>.
+     */
+    public $AdditionalFields;
+
+    /**
      * @param array $LoadBalancerIds CLB instance IDs. There can be up to 20 IDs.
      * @param string $LoadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
      * @param integer $Forward CLB instance type. 1: generic CLB instance; 0: classic CLB instance
-     * @param string $LoadBalancerName CLB instance name.
-     * @param string $Domain The domain name that Tencent Cloud assigned for the CLB instance.
+     * @param string $LoadBalancerName Specifies the name of the clb instance. fuzzy query is supported.
+     * @param string $Domain Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported.
      * @param array $LoadBalancerVips VIP address of a CLB instance (there can be multiple addresses)
      * @param array $BackendPublicIps Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
      * @param array $BackendPrivateIps Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
      * @param integer $Offset Data offset. Default value: 0.
      * @param integer $Limit Number of returned CLB instances. Default value: 20. Maximum value: 100.
-     * @param string $OrderBy Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
-     * @param integer $OrderType 1: reverse; 0: sequential. Default value: reverse by creation time |
-     * @param string $SearchKey Search field which fuzzy matches name, domain name, or VIP.
-     * @param integer $ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+     * @param string $OrderBy Sorting parameter. supports the following fields:.
+- LoadBalancerName
+- CreateTime
+- Domain
+- LoadBalancerType
+
+Defaults to CreateTime.
+
+     * @param integer $OrderType 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
+     * @param string $SearchKey Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
+     * @param integer $ProjectId Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
      * @param integer $WithRs Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
-     * @param string $VpcId VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-Basic network does not support queries by VpcId.
-     * @param string $SecurityGroup Security group ID, e.g., `sg-m1cc****`.
+     * @param string $VpcId Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+Searches for cloud load balancer of basic network type. allows input '0'.
+     * @param string $SecurityGroup Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
      * @param string $MasterZone Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
      * @param array $Filters Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
 <li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
+     * @param array $AdditionalFields Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+<Li>TargetCount: specifies the number of real servers bound to it.</li>.
      */
     function __construct()
     {
@@ -281,6 +321,10 @@ Basic network does not support queries by VpcId.
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("AdditionalFields",$param) and $param["AdditionalFields"] !== null) {
+            $this->AdditionalFields = $param["AdditionalFields"];
         }
     }
 }

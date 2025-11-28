@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRoleName() Obtain Role name, which can contain up to 32 letters, digits, hyphens, and underscores.
  * @method void setRoleName(string $RoleName) Set Role name, which can contain up to 32 letters, digits, hyphens, and underscores.
- * @method string getRemark() Obtain Remarks (up to 128 characters).
- * @method void setRemark(string $Remark) Set Remarks (up to 128 characters).
  * @method string getClusterId() Obtain Cluster ID (required)
  * @method void setClusterId(string $ClusterId) Set Cluster ID (required)
+ * @method string getRemark() Obtain Remarks (up to 128 characters).
+ * @method void setRemark(string $Remark) Set Remarks (up to 128 characters).
+ * @method array getEnvironmentRoleSets() Obtain Batch binds namespace information.
+ * @method void setEnvironmentRoleSets(array $EnvironmentRoleSets) Set Batch binds namespace information.
+ * @method boolean getUnbindAllEnvironment() Obtain Unbinds all namespaces. set to true.
+ * @method void setUnbindAllEnvironment(boolean $UnbindAllEnvironment) Set Unbinds all namespaces. set to true.
  */
 class ModifyRoleRequest extends AbstractModel
 {
@@ -35,19 +39,31 @@ class ModifyRoleRequest extends AbstractModel
     public $RoleName;
 
     /**
-     * @var string Remarks (up to 128 characters).
-     */
-    public $Remark;
-
-    /**
      * @var string Cluster ID (required)
      */
     public $ClusterId;
 
     /**
+     * @var string Remarks (up to 128 characters).
+     */
+    public $Remark;
+
+    /**
+     * @var array Batch binds namespace information.
+     */
+    public $EnvironmentRoleSets;
+
+    /**
+     * @var boolean Unbinds all namespaces. set to true.
+     */
+    public $UnbindAllEnvironment;
+
+    /**
      * @param string $RoleName Role name, which can contain up to 32 letters, digits, hyphens, and underscores.
-     * @param string $Remark Remarks (up to 128 characters).
      * @param string $ClusterId Cluster ID (required)
+     * @param string $Remark Remarks (up to 128 characters).
+     * @param array $EnvironmentRoleSets Batch binds namespace information.
+     * @param boolean $UnbindAllEnvironment Unbinds all namespaces. set to true.
      */
     function __construct()
     {
@@ -66,12 +82,25 @@ class ModifyRoleRequest extends AbstractModel
             $this->RoleName = $param["RoleName"];
         }
 
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("EnvironmentRoleSets",$param) and $param["EnvironmentRoleSets"] !== null) {
+            $this->EnvironmentRoleSets = [];
+            foreach ($param["EnvironmentRoleSets"] as $key => $value){
+                $obj = new EnvironmentRoleSet();
+                $obj->deserialize($value);
+                array_push($this->EnvironmentRoleSets, $obj);
+            }
+        }
+
+        if (array_key_exists("UnbindAllEnvironment",$param) and $param["UnbindAllEnvironment"] !== null) {
+            $this->UnbindAllEnvironment = $param["UnbindAllEnvironment"];
         }
     }
 }

@@ -36,6 +36,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setCreateTime(integer $CreateTime) Set Creation time in milliseconds.
  * @method integer getUpdateTime() Obtain Creation time in milliseconds.
  * @method void setUpdateTime(integer $UpdateTime) Set Creation time in milliseconds.
+ * @method string getInstanceId() Obtain Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNamespace() Obtain Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNamespace(string $Namespace) Set Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getLastUpdateTime() Obtain Last write time, in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLastUpdateTime(integer $LastUpdateTime) Set Last write time, in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSubscriptionCount() Obtain Number of Subscriptions
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubscriptionCount(integer $SubscriptionCount) Set Number of Subscriptions
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getSubscriptionData() Obtain Subscribe to the relationship list.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubscriptionData(array $SubscriptionData) Set Subscribe to the relationship list.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTagList() Obtain List of bound tags
+ * @method void setTagList(array $TagList) Set List of bound tags
  */
 class RocketMQTopic extends AbstractModel
 {
@@ -76,6 +98,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UpdateTime;
 
     /**
+     * @var string Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $InstanceId;
+
+    /**
+     * @var string Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Namespace;
+
+    /**
+     * @var integer Last write time, in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $LastUpdateTime;
+
+    /**
+     * @var integer Number of Subscriptions
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SubscriptionCount;
+
+    /**
+     * @var array Subscribe to the relationship list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SubscriptionData;
+
+    /**
+     * @var array List of bound tags
+     */
+    public $TagList;
+
+    /**
      * @param string $Name Topic name.
      * @param string $Type Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
      * @param integer $GroupNum The number of subscription groups
@@ -84,6 +141,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $PartitionNum The number of read/write partitions.
      * @param integer $CreateTime Creation time in milliseconds.
      * @param integer $UpdateTime Creation time in milliseconds.
+     * @param string $InstanceId Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Namespace Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $LastUpdateTime Last write time, in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SubscriptionCount Number of Subscriptions
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $SubscriptionData Subscribe to the relationship list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $TagList List of bound tags
      */
     function __construct()
     {
@@ -124,6 +192,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("LastUpdateTime",$param) and $param["LastUpdateTime"] !== null) {
+            $this->LastUpdateTime = $param["LastUpdateTime"];
+        }
+
+        if (array_key_exists("SubscriptionCount",$param) and $param["SubscriptionCount"] !== null) {
+            $this->SubscriptionCount = $param["SubscriptionCount"];
+        }
+
+        if (array_key_exists("SubscriptionData",$param) and $param["SubscriptionData"] !== null) {
+            $this->SubscriptionData = [];
+            foreach ($param["SubscriptionData"] as $key => $value){
+                $obj = new RocketMQSubscription();
+                $obj->deserialize($value);
+                array_push($this->SubscriptionData, $obj);
+            }
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

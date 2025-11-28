@@ -24,8 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
  * @method string getTargetGroupName() Obtain New name of target group
  * @method void setTargetGroupName(string $TargetGroupName) Set New name of target group
- * @method integer getPort() Obtain New default port of target group
- * @method void setPort(integer $Port) Set New default port of target group
+ * @method integer getPort() Obtain The new default port of the target group. this parameter is not supported for full listen target groups.
+ * @method void setPort(integer $Port) Set The new default port of the target group. this parameter is not supported for full listen target groups.
+ * @method string getScheduleAlgorithm() Obtain Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
+ * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) Set Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
+ * @method TargetGroupHealthCheck getHealthCheck() Obtain Health check details.
+ * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) Set Health check details.
+ * @method integer getWeight() Obtain Default Weight for backend service. among them: <ul><li>value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
+ * @method void setWeight(integer $Weight) Set Default Weight for backend service. among them: <ul><li>value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
+ * @method boolean getKeepaliveEnable() Obtain Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. true: disable; false: enable. this feature is off by default.
+ * @method void setKeepaliveEnable(boolean $KeepaliveEnable) Set Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. true: disable; false: enable. this feature is off by default.
+ * @method integer getSessionExpireTime() Obtain Specifies the session persistence time in seconds. value range: 30-3600. default: 0 (disabled). this parameter is unsupported for TCP/UDP target groups.
+ * @method void setSessionExpireTime(integer $SessionExpireTime) Set Specifies the session persistence time in seconds. value range: 30-3600. default: 0 (disabled). this parameter is unsupported for TCP/UDP target groups.
  */
 class ModifyTargetGroupAttributeRequest extends AbstractModel
 {
@@ -40,14 +52,46 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
     public $TargetGroupName;
 
     /**
-     * @var integer New default port of target group
+     * @var integer The new default port of the target group. this parameter is not supported for full listen target groups.
      */
     public $Port;
 
     /**
+     * @var string Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
+     */
+    public $ScheduleAlgorithm;
+
+    /**
+     * @var TargetGroupHealthCheck Health check details.
+     */
+    public $HealthCheck;
+
+    /**
+     * @var integer Default Weight for backend service. among them: <ul><li>value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
+     */
+    public $Weight;
+
+    /**
+     * @var boolean Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. true: disable; false: enable. this feature is off by default.
+     */
+    public $KeepaliveEnable;
+
+    /**
+     * @var integer Specifies the session persistence time in seconds. value range: 30-3600. default: 0 (disabled). this parameter is unsupported for TCP/UDP target groups.
+     */
+    public $SessionExpireTime;
+
+    /**
      * @param string $TargetGroupId Target group ID
      * @param string $TargetGroupName New name of target group
-     * @param integer $Port New default port of target group
+     * @param integer $Port The new default port of the target group. this parameter is not supported for full listen target groups.
+     * @param string $ScheduleAlgorithm Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
+     * @param TargetGroupHealthCheck $HealthCheck Health check details.
+     * @param integer $Weight Default Weight for backend service. among them: <ul><li>value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
+     * @param boolean $KeepaliveEnable Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. true: disable; false: enable. this feature is off by default.
+     * @param integer $SessionExpireTime Specifies the session persistence time in seconds. value range: 30-3600. default: 0 (disabled). this parameter is unsupported for TCP/UDP target groups.
      */
     function __construct()
     {
@@ -72,6 +116,27 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("ScheduleAlgorithm",$param) and $param["ScheduleAlgorithm"] !== null) {
+            $this->ScheduleAlgorithm = $param["ScheduleAlgorithm"];
+        }
+
+        if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
+            $this->HealthCheck = new TargetGroupHealthCheck();
+            $this->HealthCheck->deserialize($param["HealthCheck"]);
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("KeepaliveEnable",$param) and $param["KeepaliveEnable"] !== null) {
+            $this->KeepaliveEnable = $param["KeepaliveEnable"];
+        }
+
+        if (array_key_exists("SessionExpireTime",$param) and $param["SessionExpireTime"] !== null) {
+            $this->SessionExpireTime = $param["SessionExpireTime"];
         }
     }
 }

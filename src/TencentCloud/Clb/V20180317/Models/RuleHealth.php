@@ -30,10 +30,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUrl(string $Url) Set Forwarding rule Url
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTargets() Obtain Health status of the real server bound to this rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTargets(array $Targets) Set Health status of the real server bound to this rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getRuleId() Obtain Advanced routing rule ID.
+ * @method void setRuleId(string $RuleId) Set Advanced routing rule ID.
+ * @method array getTargets() Obtain Indicates the health check status of the backend service bound to this rule.
+ * @method void setTargets(array $Targets) Set Indicates the health check status of the backend service bound to this rule.
  */
 class RuleHealth extends AbstractModel
 {
@@ -55,8 +55,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Url;
 
     /**
-     * @var array Health status of the real server bound to this rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Advanced routing rule ID.
+     */
+    public $RuleId;
+
+    /**
+     * @var array Indicates the health check status of the backend service bound to this rule.
      */
     public $Targets;
 
@@ -66,8 +70,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Url Forwarding rule Url
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Targets Health status of the real server bound to this rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $RuleId Advanced routing rule ID.
+     * @param array $Targets Indicates the health check status of the backend service bound to this rule.
      */
     function __construct()
     {
@@ -92,6 +96,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
 
         if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {

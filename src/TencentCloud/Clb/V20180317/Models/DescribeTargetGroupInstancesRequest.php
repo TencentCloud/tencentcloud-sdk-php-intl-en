@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTargetGroupInstances request structure.
  *
- * @method array getFilters() Obtain Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
- * @method void setFilters(array $Filters) Set Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+ * @method array getFilters() Obtain Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId.
+ * @method void setFilters(array $Filters) Set Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId.
  * @method integer getLimit() Obtain Number of displayed results. Default value: 20
  * @method void setLimit(integer $Limit) Set Number of displayed results. Default value: 20
  * @method integer getOffset() Obtain Display offset. Default value: 0
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTargetGroupInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+     * @var array Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId.
      */
     public $Filters;
 
@@ -45,7 +45,7 @@ class DescribeTargetGroupInstancesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param array $Filters Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+     * @param array $Filters Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId.
      * @param integer $Limit Number of displayed results. Default value: 20
      * @param integer $Offset Display offset. Default value: 0
      */

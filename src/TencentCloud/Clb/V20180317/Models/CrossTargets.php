@@ -30,14 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcName(string $VpcName) Set VPC name of the CVM or ENI instance
  * @method string getEniId() Obtain ENI ID of the CVM instance
  * @method void setEniId(string $EniId) Set ENI ID of the CVM instance
- * @method string getInstanceId() Obtain ID of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setInstanceId(string $InstanceId) Set ID of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getInstanceName() Obtain Name of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setInstanceName(string $InstanceName) Set Name of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getInstanceId() Obtain Submachine instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Submachine instance ID.
+ * @method string getInstanceName() Obtain Submachine instance name.
+ * @method void setInstanceName(string $InstanceName) Set Submachine instance name.
  * @method string getRegion() Obtain Region of the CVM or ENI instance
  * @method void setRegion(string $Region) Set Region of the CVM or ENI instance
  */
@@ -69,14 +65,12 @@ class CrossTargets extends AbstractModel
     public $EniId;
 
     /**
-     * @var string ID of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string Submachine instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Name of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string Submachine instance name.
      */
     public $InstanceName;
 
@@ -91,10 +85,8 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $IP IP address of the CVM or ENI instance
      * @param string $VpcName VPC name of the CVM or ENI instance
      * @param string $EniId ENI ID of the CVM instance
-     * @param string $InstanceId ID of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $InstanceName Name of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $InstanceId Submachine instance ID.
+     * @param string $InstanceName Submachine instance name.
      * @param string $Region Region of the CVM or ENI instance
      */
     function __construct()

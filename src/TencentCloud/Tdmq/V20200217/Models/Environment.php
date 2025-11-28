@@ -43,9 +43,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) Set Message retention policy.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getAutoSubscriptionCreation() Obtain Whether to enable "Auto-Create Subscription"
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAutoSubscriptionCreation(boolean $AutoSubscriptionCreation) Set Whether to enable "Auto-Create Subscription"
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Environment extends AbstractModel
 {
@@ -98,7 +98,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var boolean Whether to enable "Auto-Create Subscription"
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AutoSubscriptionCreation;
 
@@ -115,7 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param RetentionPolicy $RetentionPolicy Message retention policy.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

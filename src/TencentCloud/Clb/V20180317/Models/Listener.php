@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getListenerId() Obtain CLB listener ID
  * @method void setListenerId(string $ListenerId) Set CLB listener ID
- * @method string getProtocol() Obtain Listener protocol
- * @method void setProtocol(string $Protocol) Set Listener protocol
- * @method integer getPort() Obtain Listener port
- * @method void setPort(integer $Port) Set Listener port
+ * @method string getProtocol() Obtain Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
+ * @method void setProtocol(string $Protocol) Set Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
+ * @method integer getPort() Obtain Listener port. value range: 1-65535.
+ * @method void setPort(integer $Port) Set Listener port. value range: 1-65535.
  * @method CertificateOutput getCertificate() Obtain Information of certificates bound to the listener
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCertificate(CertificateOutput $Certificate) Set Information of certificates bound to the listener
@@ -36,76 +36,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getScheduler() Obtain Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScheduler(string $Scheduler) Set Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSessionExpireTime() Obtain Session persistence time
+ * @method integer getSessionExpireTime() Obtain Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time
+ * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSniSwitch() Obtain Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getSniSwitch() Obtain Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
+ * @method void setSniSwitch(integer $SniSwitch) Set Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
  * @method array getRules() Obtain All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRules(array $Rules) Set All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getListenerName() Obtain Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setListenerName(string $ListenerName) Set Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Listener creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Listener creation time
+ * @method integer getEndPort() Obtain End port of the port range. value range: 2-65535.
+ * @method void setEndPort(integer $EndPort) Set End port of the port range. value range: 2-65535.
+ * @method string getTargetType() Obtain Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getEndPort() Obtain End port of a port range
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndPort(integer $EndPort) Set End port of a port range
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTargetType() Obtain Real server type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetType(string $TargetType) Set Real server type
+ * @method void setTargetType(string $TargetType) Set Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method BasicTargetGroupInfo getTargetGroup() Obtain Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) Set Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSessionType() Obtain Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSessionType(string $SessionType) Set Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSessionType() Obtain Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
+ * @method void setSessionType(string $SessionType) Set Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
  * @method integer getKeepaliveEnable() Obtain Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setKeepaliveEnable(integer $KeepaliveEnable) Set Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getToa() Obtain Only the NAT64 CLB TCP listeners are supported.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setToa(boolean $Toa) Set Only the NAT64 CLB TCP listeners are supported.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getDeregisterTargetRst() Obtain Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) Set Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getAttrFlags() Obtain Attribute of listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setAttrFlags(array $AttrFlags) Set Attribute of listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getToa() Obtain Supports Nat64 CLB TCP listeners only
+ * @method void setToa(boolean $Toa) Set Supports Nat64 CLB TCP listeners only
+ * @method boolean getDeregisterTargetRst() Obtain Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+ * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) Set Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+ * @method array getAttrFlags() Obtain Describes the attributes of the listener.
+ * @method void setAttrFlags(array $AttrFlags) Set Describes the attributes of the listener.
  * @method array getTargetGroupList() Obtain List of bound target groups
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setTargetGroupList(array $TargetGroupList) Set List of bound target groups
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getMaxConn() Obtain Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setMaxConn(integer $MaxConn) Set Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getMaxCps() Obtain Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setMaxCps(integer $MaxCps) Set Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getMaxConn() Obtain Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
+ * @method void setMaxConn(integer $MaxConn) Set Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
+ * @method integer getMaxCps() Obtain Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
+ * @method void setMaxCps(integer $MaxCps) Set Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
  * @method integer getIdleConnectTimeout() Obtain Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) Set Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getRescheduleInterval() Obtain Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRescheduleInterval(integer $RescheduleInterval) Set Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRescheduleInterval() Obtain Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
+ * @method void setRescheduleInterval(integer $RescheduleInterval) Set Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
+ * @method string getDataCompressMode() Obtain Data compression mode.
+ * @method void setDataCompressMode(string $DataCompressMode) Set Data compression mode.
+ * @method integer getRescheduleStartTime() Obtain Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
+ * @method void setRescheduleStartTime(integer $RescheduleStartTime) Set Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
  */
 class Listener extends AbstractModel
 {
@@ -115,12 +99,12 @@ class Listener extends AbstractModel
     public $ListenerId;
 
     /**
-     * @var string Listener protocol
+     * @var string Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
      */
     public $Protocol;
 
     /**
-     * @var integer Listener port
+     * @var integer Listener port. value range: 1-65535.
      */
     public $Port;
 
@@ -142,14 +126,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Scheduler;
 
     /**
-     * @var integer Session persistence time
+     * @var integer Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SessionExpireTime;
 
     /**
-     * @var integer Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
      */
     public $SniSwitch;
 
@@ -161,24 +144,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ListenerName;
 
     /**
      * @var string Listener creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var integer End port of a port range
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer End port of the port range. value range: 2-65535.
      */
     public $EndPort;
 
     /**
-     * @var string Real server type
+     * @var string Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TargetType;
@@ -190,8 +170,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TargetGroup;
 
     /**
-     * @var string Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
      */
     public $SessionType;
 
@@ -202,20 +181,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $KeepaliveEnable;
 
     /**
-     * @var boolean Only the NAT64 CLB TCP listeners are supported.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var boolean Supports Nat64 CLB TCP listeners only
      */
     public $Toa;
 
     /**
-     * @var boolean Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var boolean Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
      */
     public $DeregisterTargetRst;
 
     /**
-     * @var array Attribute of listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array Describes the attributes of the listener.
      */
     public $AttrFlags;
 
@@ -226,14 +202,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $TargetGroupList;
 
     /**
-     * @var integer Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
      */
     public $MaxConn;
 
     /**
-     * @var integer Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
      */
     public $MaxCps;
 
@@ -244,54 +218,56 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $IdleConnectTimeout;
 
     /**
-     * @var integer Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
      */
     public $RescheduleInterval;
 
     /**
+     * @var string Data compression mode.
+     */
+    public $DataCompressMode;
+
+    /**
+     * @var integer Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
+     */
+    public $RescheduleStartTime;
+
+    /**
      * @param string $ListenerId CLB listener ID
-     * @param string $Protocol Listener protocol
-     * @param integer $Port Listener port
+     * @param string $Protocol Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
+     * @param integer $Port Listener port. value range: 1-65535.
      * @param CertificateOutput $Certificate Information of certificates bound to the listener
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param HealthCheck $HealthCheck Health check information of the listener
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Scheduler Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SessionExpireTime Session persistence time
+     * @param integer $SessionExpireTime Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $SniSwitch Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
      * @param array $Rules All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ListenerName Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Listener creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $EndPort End port of a port range
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TargetType Real server type
+     * @param integer $EndPort End port of the port range. value range: 2-65535.
+     * @param string $TargetType Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param BasicTargetGroupInfo $TargetGroup Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SessionType Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $SessionType Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
      * @param integer $KeepaliveEnable Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $Toa Only the NAT64 CLB TCP listeners are supported.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $AttrFlags Attribute of listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $Toa Supports Nat64 CLB TCP listeners only
+     * @param boolean $DeregisterTargetRst Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     * @param array $AttrFlags Describes the attributes of the listener.
      * @param array $TargetGroupList List of bound target groups
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $MaxConn Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $MaxCps Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $MaxConn Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
+     * @param integer $MaxCps Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
      * @param integer $IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $RescheduleInterval Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RescheduleInterval Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
+     * @param string $DataCompressMode Data compression mode.
+     * @param integer $RescheduleStartTime Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
      */
     function __construct()
     {
@@ -413,6 +389,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("RescheduleInterval",$param) and $param["RescheduleInterval"] !== null) {
             $this->RescheduleInterval = $param["RescheduleInterval"];
+        }
+
+        if (array_key_exists("DataCompressMode",$param) and $param["DataCompressMode"] !== null) {
+            $this->DataCompressMode = $param["DataCompressMode"];
+        }
+
+        if (array_key_exists("RescheduleStartTime",$param) and $param["RescheduleStartTime"] !== null) {
+            $this->RescheduleStartTime = $param["RescheduleStartTime"];
         }
     }
 }

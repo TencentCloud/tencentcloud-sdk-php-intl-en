@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * cmq DeadLetterPolicy
  *
  * @method string getDeadLetterQueue() Obtain Dead letter queue.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeadLetterQueue(string $DeadLetterQueue) Set Dead letter queue.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getPolicy() Obtain Dead letter queue policy.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPolicy(integer $Policy) Set Dead letter queue policy.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxTimeToLive() Obtain Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMaxTimeToLive(integer $MaxTimeToLive) Set Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxReceiveCount() Obtain Maximum number of receipts.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMaxReceiveCount(integer $MaxReceiveCount) Set Maximum number of receipts.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getPolicy() Obtain Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time.
+ * @method void setPolicy(integer $Policy) Set Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time.
+ * @method integer getMaxTimeToLive() Obtain Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds.
+ * @method void setMaxTimeToLive(integer $MaxTimeToLive) Set Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds.
+ * @method integer getMaxReceiveCount() Obtain Maximum number of receipt. required when Policy is 0. value range: 1 to 1000.
+ * @method void setMaxReceiveCount(integer $MaxReceiveCount) Set Maximum number of receipt. required when Policy is 0. value range: 1 to 1000.
  */
 class CmqDeadLetterPolicy extends AbstractModel
 {
     /**
      * @var string Dead letter queue.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DeadLetterQueue;
 
     /**
-     * @var integer Dead letter queue policy.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time.
      */
     public $Policy;
 
     /**
-     * @var integer Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds.
      */
     public $MaxTimeToLive;
 
     /**
-     * @var integer Maximum number of receipts.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum number of receipt. required when Policy is 0. value range: 1 to 1000.
      */
     public $MaxReceiveCount;
 
     /**
      * @param string $DeadLetterQueue Dead letter queue.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Policy Dead letter queue policy.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxReceiveCount Maximum number of receipts.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Policy Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time.
+     * @param integer $MaxTimeToLive Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds.
+     * @param integer $MaxReceiveCount Maximum number of receipt. required when Policy is 0. value range: 1 to 1000.
      */
     function __construct()
     {

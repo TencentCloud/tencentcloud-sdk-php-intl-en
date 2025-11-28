@@ -126,6 +126,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `2`: Persistent and non-partitioned
 `3`: Persistent and partitioned
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMsgTTL() Obtain Retention period for unconsumed messages in seconds.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMsgTTL(integer $MsgTTL) Set Retention period for unconsumed messages in seconds.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getTenant() Obtain Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+
+ * @method void setTenant(string $Tenant) Set Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+
+ * @method boolean getIsolateConsumerEnable() Obtain Whether exception consumer isolation is enabled.
+ * @method void setIsolateConsumerEnable(boolean $IsolateConsumerEnable) Set Whether exception consumer isolation is enabled.
+ * @method integer getAckTimeOut() Obtain Specifies the consumer Ack timeout period in seconds.
+ * @method void setAckTimeOut(integer $AckTimeOut) Set Specifies the consumer Ack timeout period in seconds.
  */
 class Topic extends AbstractModel
 {
@@ -271,6 +287,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PulsarTopicType;
 
     /**
+     * @var integer Retention period for unconsumed messages in seconds.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MsgTTL;
+
+    /**
+     * @var string Cluster ID
+     */
+    public $ClusterId;
+
+    /**
+     * @var string Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+
+     */
+    public $Tenant;
+
+    /**
+     * @var boolean Whether exception consumer isolation is enabled.
+     */
+    public $IsolateConsumerEnable;
+
+    /**
+     * @var integer Specifies the consumer Ack timeout period in seconds.
+     */
+    public $AckTimeOut;
+
+    /**
      * @param string $AverageMsgSize Average size of the messages published in the last interval in bytes.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $ConsumerCount The number of consumers.
@@ -324,6 +368,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `2`: Persistent and non-partitioned
 `3`: Persistent and partitioned
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MsgTTL Retention period for unconsumed messages in seconds.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ClusterId Cluster ID
+     * @param string $Tenant Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+
+     * @param boolean $IsolateConsumerEnable Whether exception consumer isolation is enabled.
+     * @param integer $AckTimeOut Specifies the consumer Ack timeout period in seconds.
      */
     function __construct()
     {
@@ -429,6 +481,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("PulsarTopicType",$param) and $param["PulsarTopicType"] !== null) {
             $this->PulsarTopicType = $param["PulsarTopicType"];
+        }
+
+        if (array_key_exists("MsgTTL",$param) and $param["MsgTTL"] !== null) {
+            $this->MsgTTL = $param["MsgTTL"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Tenant",$param) and $param["Tenant"] !== null) {
+            $this->Tenant = $param["Tenant"];
+        }
+
+        if (array_key_exists("IsolateConsumerEnable",$param) and $param["IsolateConsumerEnable"] !== null) {
+            $this->IsolateConsumerEnable = $param["IsolateConsumerEnable"];
+        }
+
+        if (array_key_exists("AckTimeOut",$param) and $param["AckTimeOut"] !== null) {
+            $this->AckTimeOut = $param["AckTimeOut"];
         }
     }
 }

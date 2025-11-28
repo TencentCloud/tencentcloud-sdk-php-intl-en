@@ -20,50 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetCustomizedConfigForLoadBalancer request structure.
  *
- * @method string getOperationType() Obtain Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
- * @method void setOperationType(string $OperationType) Set Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
- * @method string getUconfigId() Obtain This field is required except for creating custom configurations, such as "pz-1234abcd".
- * @method void setUconfigId(string $UconfigId) Set This field is required except for creating custom configurations, such as "pz-1234abcd".
- * @method string getConfigContent() Obtain This field is required when creating or modifying custom configurations.
- * @method void setConfigContent(string $ConfigContent) Set This field is required when creating or modifying custom configurations.
- * @method string getConfigName() Obtain This field is required when creating or renaming custom configurations.
- * @method void setConfigName(string $ConfigName) Set This field is required when creating or renaming custom configurations.
- * @method array getLoadBalancerIds() Obtain This field is required when binding/unbinding resources.
- * @method void setLoadBalancerIds(array $LoadBalancerIds) Set This field is required when binding/unbinding resources.
+ * @method string getOperationType() Obtain Operation type.
+-ADD. specifies the creation.
+- DELETE: DELETE.
+-UPDATE: modify.
+-BIND: specifies the binding status.
+-UNBIND: unbind.
+ * @method void setOperationType(string $OperationType) Set Operation type.
+-ADD. specifies the creation.
+- DELETE: DELETE.
+-UPDATE: modify.
+-BIND: specifies the binding status.
+-UNBIND: unbind.
+ * @method string getUconfigId() Obtain Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
+ * @method void setUconfigId(string $UconfigId) Set Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
+ * @method string getConfigContent() Obtain Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+ * @method void setConfigContent(string $ConfigContent) Set Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+ * @method string getConfigName() Obtain Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
+ * @method void setConfigName(string $ConfigName) Set Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
+ * @method array getLoadBalancerIds() Obtain CLB instance ID. this field is required for bind/unbind operations.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set CLB instance ID. this field is required for bind/unbind operations.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
  */
 class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel
 {
     /**
-     * @var string Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
+     * @var string Operation type.
+-ADD. specifies the creation.
+- DELETE: DELETE.
+-UPDATE: modify.
+-BIND: specifies the binding status.
+-UNBIND: unbind.
      */
     public $OperationType;
 
     /**
-     * @var string This field is required except for creating custom configurations, such as "pz-1234abcd".
+     * @var string Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
      */
     public $UconfigId;
 
     /**
-     * @var string This field is required when creating or modifying custom configurations.
+     * @var string Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
      */
     public $ConfigContent;
 
     /**
-     * @var string This field is required when creating or renaming custom configurations.
+     * @var string Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
      */
     public $ConfigName;
 
     /**
-     * @var array This field is required when binding/unbinding resources.
+     * @var array CLB instance ID. this field is required for bind/unbind operations.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
      */
     public $LoadBalancerIds;
 
     /**
-     * @param string $OperationType Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
-     * @param string $UconfigId This field is required except for creating custom configurations, such as "pz-1234abcd".
-     * @param string $ConfigContent This field is required when creating or modifying custom configurations.
-     * @param string $ConfigName This field is required when creating or renaming custom configurations.
-     * @param array $LoadBalancerIds This field is required when binding/unbinding resources.
+     * @param string $OperationType Operation type.
+-ADD. specifies the creation.
+- DELETE: DELETE.
+-UPDATE: modify.
+-BIND: specifies the binding status.
+-UNBIND: unbind.
+     * @param string $UconfigId Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
+     * @param string $ConfigContent Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+     * @param string $ConfigName Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
+     * @param array $LoadBalancerIds CLB instance ID. this field is required for bind/unbind operations.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
      */
     function __construct()
     {

@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoadBalancerListByCertId request structure.
  *
- * @method array getCertIds() Obtain Server or client certificate ID
- * @method void setCertIds(array $CertIds) Set Server or client certificate ID
+ * @method array getCertIds() Obtain Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+Specifies the maximum length of the array is 20.
+ * @method void setCertIds(array $CertIds) Set Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+Specifies the maximum length of the array is 20.
  */
 class DescribeLoadBalancerListByCertIdRequest extends AbstractModel
 {
     /**
-     * @var array Server or client certificate ID
+     * @var array Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+Specifies the maximum length of the array is 20.
      */
     public $CertIds;
 
     /**
-     * @param array $CertIds Server or client certificate ID
+     * @param array $CertIds Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+Specifies the maximum length of the array is 20.
      */
     function __construct()
     {

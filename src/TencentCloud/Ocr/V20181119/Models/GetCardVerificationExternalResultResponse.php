@@ -22,9 +22,11 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() Obtain Indicates the status. valid values: 
 PASSED
+PROCESSING
 WARNING
  * @method void setStatus(string $Status) Set Indicates the status. valid values: 
 PASSED
+PROCESSING
 WARNING
  * @method array getWarnInfo() Obtain Indicates the anti-counterfeiting information.
 -ScreenshotSuspected: The image is a screenshot.
@@ -58,6 +60,7 @@ class GetCardVerificationExternalResultResponse extends AbstractModel
     /**
      * @var string Indicates the status. valid values: 
 PASSED
+PROCESSING
 WARNING
      */
     public $Status;
@@ -98,6 +101,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $Status Indicates the status. valid values: 
 PASSED
+PROCESSING
 WARNING
      * @param array $WarnInfo Indicates the anti-counterfeiting information.
 -ScreenshotSuspected: The image is a screenshot.

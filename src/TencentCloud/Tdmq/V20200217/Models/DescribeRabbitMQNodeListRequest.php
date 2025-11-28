@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQNodeList request structure.
  *
- * @method string getInstanceId() Obtain TDMQ for RabbitMQ cluster ID
- * @method void setInstanceId(string $InstanceId) Set TDMQ for RabbitMQ cluster ID
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
- * @method integer getLimit() Obtain The maximum entries per page
- * @method void setLimit(integer $Limit) Set The maximum entries per page
+ * @method string getInstanceId() Obtain Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+ * @method integer getOffset() Obtain Offset, default value 0.
+ * @method void setOffset(integer $Offset) Set Offset, default value 0.
+ * @method integer getLimit() Obtain Page limit. default value: 20.
+ * @method void setLimit(integer $Limit) Set Page limit. default value: 20.
  * @method string getNodeName() Obtain Node name for fuzzy search
  * @method void setNodeName(string $NodeName) Set Node name for fuzzy search
- * @method array getFilters() Obtain Name and value of a filter.
-Currently, only the `nodeStatus` filter is supported.
-Valid values: `running`, `down`.
-It is an array type and can contain multiple filters.
+ * @method array getFilters() Obtain Filter parameter name and value. currently only support filtering based on node status.
+"Name": "nodeStatus"
+"Value": running or down
 
- * @method void setFilters(array $Filters) Set Name and value of a filter.
-Currently, only the `nodeStatus` filter is supported.
-Valid values: `running`, `down`.
-It is an array type and can contain multiple filters.
+ * @method void setFilters(array $Filters) Set Filter parameter name and value. currently only support filtering based on node status.
+"Name": "nodeStatus"
+"Value": running or down
 
- * @method string getSortElement() Obtain Sorting by a specified element.
-Valid values: `cpuUsage`, `diskUsage`.
- * @method void setSortElement(string $SortElement) Set Sorting by a specified element.
-Valid values: `cpuUsage`, `diskUsage`.
+ * @method string getSortElement() Obtain Sorts by the specified element. only 2 are present.
+CPU usage: specifies the CPU utilization of the node.
+diskUsage: specifies the node disk utilization.
+ * @method void setSortElement(string $SortElement) Set Sorts by the specified element. only 2 are present.
+CPU usage: specifies the CPU utilization of the node.
+diskUsage: specifies the node disk utilization.
  * @method string getSortOrder() Obtain Sorting order.
 Valid values: `ascend`, `descend`.
  * @method void setSortOrder(string $SortOrder) Set Sorting order.
@@ -50,17 +50,17 @@ Valid values: `ascend`, `descend`.
 class DescribeRabbitMQNodeListRequest extends AbstractModel
 {
     /**
-     * @var string TDMQ for RabbitMQ cluster ID
+     * @var string Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public $InstanceId;
 
     /**
-     * @var integer Offset
+     * @var integer Offset, default value 0.
      */
     public $Offset;
 
     /**
-     * @var integer The maximum entries per page
+     * @var integer Page limit. default value: 20.
      */
     public $Limit;
 
@@ -70,17 +70,17 @@ class DescribeRabbitMQNodeListRequest extends AbstractModel
     public $NodeName;
 
     /**
-     * @var array Name and value of a filter.
-Currently, only the `nodeStatus` filter is supported.
-Valid values: `running`, `down`.
-It is an array type and can contain multiple filters.
+     * @var array Filter parameter name and value. currently only support filtering based on node status.
+"Name": "nodeStatus"
+"Value": running or down
 
      */
     public $Filters;
 
     /**
-     * @var string Sorting by a specified element.
-Valid values: `cpuUsage`, `diskUsage`.
+     * @var string Sorts by the specified element. only 2 are present.
+CPU usage: specifies the CPU utilization of the node.
+diskUsage: specifies the node disk utilization.
      */
     public $SortElement;
 
@@ -91,17 +91,17 @@ Valid values: `ascend`, `descend`.
     public $SortOrder;
 
     /**
-     * @param string $InstanceId TDMQ for RabbitMQ cluster ID
-     * @param integer $Offset Offset
-     * @param integer $Limit The maximum entries per page
+     * @param string $InstanceId Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * @param integer $Offset Offset, default value 0.
+     * @param integer $Limit Page limit. default value: 20.
      * @param string $NodeName Node name for fuzzy search
-     * @param array $Filters Name and value of a filter.
-Currently, only the `nodeStatus` filter is supported.
-Valid values: `running`, `down`.
-It is an array type and can contain multiple filters.
+     * @param array $Filters Filter parameter name and value. currently only support filtering based on node status.
+"Name": "nodeStatus"
+"Value": running or down
 
-     * @param string $SortElement Sorting by a specified element.
-Valid values: `cpuUsage`, `diskUsage`.
+     * @param string $SortElement Sorts by the specified element. only 2 are present.
+CPU usage: specifies the CPU utilization of the node.
+diskUsage: specifies the node disk utilization.
      * @param string $SortOrder Sorting order.
 Valid values: `ascend`, `descend`.
      */

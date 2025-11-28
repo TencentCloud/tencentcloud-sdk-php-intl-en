@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) Set CLB instance VIP
  * @method float getOutBandwidth() Obtain Maximum outbound bandwidth in Mbps
  * @method void setOutBandwidth(float $OutBandwidth) Set Maximum outbound bandwidth in Mbps
- * @method string getDomain() Obtain CLB domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) Set CLB domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDomain() Obtain Specifies the CLB domain name.
+ * @method void setDomain(string $Domain) Set Specifies the CLB domain name.
  */
 class LoadBalancerTraffic extends AbstractModel
 {
@@ -63,8 +61,7 @@ class LoadBalancerTraffic extends AbstractModel
     public $OutBandwidth;
 
     /**
-     * @var string CLB domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Specifies the CLB domain name.
      */
     public $Domain;
 
@@ -74,8 +71,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $Region CLB instance region
      * @param string $Vip CLB instance VIP
      * @param float $OutBandwidth Maximum outbound bandwidth in Mbps
-     * @param string $Domain CLB domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Domain Specifies the CLB domain name.
      */
     function __construct()
     {

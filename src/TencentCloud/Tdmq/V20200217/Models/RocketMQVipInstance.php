@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getInstanceName() Obtain Instance name
  * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getInstanceVersion() Obtain Instance version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceVersion(string $InstanceVersion) Set Instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceVersion() Obtain Instance version.
+ * @method void setInstanceVersion(string $InstanceVersion) Set Instance version.
  * @method integer getStatus() Obtain Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
  * @method void setStatus(integer $Status) Set Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
  * @method integer getNodeCount() Obtain Number of nodes
@@ -47,23 +45,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method integer getPayMode() Obtain Payment mode. 0: Postpaid; 1: Prepaid.
  * @method void setPayMode(integer $PayMode) Set Payment mode. 0: Postpaid; 1: Prepaid.
  * @method string getRemark() Obtain Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRemark(string $Remark) Set Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSpecName() Obtain Instance specification ID
  * @method void setSpecName(string $SpecName) Set Instance specification ID
- * @method integer getMaxRetention() Obtain The maximum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method void setMaxRetention(integer $MaxRetention) Set The maximum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method integer getMinRetention() Obtain The minimum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method void setMinRetention(integer $MinRetention) Set The minimum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method integer getRetention() Obtain Instance message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method void setRetention(integer $Retention) Set Instance message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxRetention() Obtain Maximum configurable message retention time, in hours
+ * @method void setMaxRetention(integer $MaxRetention) Set Maximum configurable message retention time, in hours
+ * @method integer getMinRetention() Obtain Minimum configurable message retention time, in hours
+ * @method void setMinRetention(integer $MinRetention) Set Minimum configurable message retention time, in hours
+ * @method integer getRetention() Obtain Instance message retention time, in hours
+ * @method void setRetention(integer $Retention) Set Instance message retention time, in hours
+ * @method boolean getAclEnabled() Obtain Whether to enable ACL authentication.
+ * @method void setAclEnabled(boolean $AclEnabled) Set Whether to enable ACL authentication.
+ * @method integer getDestroyTime() Obtain Destruction time.
+ * @method void setDestroyTime(integer $DestroyTime) Set Destruction time.
  */
 class RocketMQVipInstance extends AbstractModel
 {
@@ -78,8 +72,7 @@ class RocketMQVipInstance extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string Instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance version.
      */
     public $InstanceVersion;
 
@@ -130,7 +123,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Remark;
 
@@ -140,28 +132,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SpecName;
 
     /**
-     * @var integer The maximum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum configurable message retention time, in hours
      */
     public $MaxRetention;
 
     /**
-     * @var integer The minimum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @var integer Minimum configurable message retention time, in hours
      */
     public $MinRetention;
 
     /**
-     * @var integer Instance message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @var integer Instance message retention time, in hours
      */
     public $Retention;
 
     /**
+     * @var boolean Whether to enable ACL authentication.
+     */
+    public $AclEnabled;
+
+    /**
+     * @var integer Destruction time.
+     */
+    public $DestroyTime;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
-     * @param string $InstanceVersion Instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceVersion Instance version.
      * @param integer $Status Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
      * @param integer $NodeCount Number of nodes
      * @param string $ConfigDisplay Instance specification name
@@ -172,14 +170,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $AutoRenewFlag Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
      * @param integer $PayMode Payment mode. 0: Postpaid; 1: Prepaid.
      * @param string $Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SpecName Instance specification ID
-     * @param integer $MaxRetention The maximum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param integer $MinRetention The minimum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param integer $Retention Instance message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxRetention Maximum configurable message retention time, in hours
+     * @param integer $MinRetention Minimum configurable message retention time, in hours
+     * @param integer $Retention Instance message retention time, in hours
+     * @param boolean $AclEnabled Whether to enable ACL authentication.
+     * @param integer $DestroyTime Destruction time.
      */
     function __construct()
     {
@@ -260,6 +256,14 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
         if (array_key_exists("Retention",$param) and $param["Retention"] !== null) {
             $this->Retention = $param["Retention"];
+        }
+
+        if (array_key_exists("AclEnabled",$param) and $param["AclEnabled"] !== null) {
+            $this->AclEnabled = $param["AclEnabled"];
+        }
+
+        if (array_key_exists("DestroyTime",$param) and $param["DestroyTime"] !== null) {
+            $this->DestroyTime = $param["DestroyTime"];
         }
     }
 }

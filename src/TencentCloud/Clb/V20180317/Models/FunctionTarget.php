@@ -20,18 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Whether to use SCF (Serverless Cloud Function) as the backend service
  *
- * @method FunctionInfo getFunction() Obtain SCF related information
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setFunction(FunctionInfo $Function) Set SCF related information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method FunctionInfo getFunction() Obtain SCF information
+ * @method void setFunction(FunctionInfo $Function) Set SCF information
  * @method integer getWeight() Obtain Weight
  * @method void setWeight(integer $Weight) Set Weight
  */
 class FunctionTarget extends AbstractModel
 {
     /**
-     * @var FunctionInfo SCF related information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var FunctionInfo SCF information
      */
     public $Function;
 
@@ -41,8 +38,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Weight;
 
     /**
-     * @param FunctionInfo $Function SCF related information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param FunctionInfo $Function SCF information
      * @param integer $Weight Weight
      */
     function __construct()

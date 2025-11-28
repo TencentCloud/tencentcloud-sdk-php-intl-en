@@ -108,6 +108,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 `0`: Pay-as-you-go
 `1`: Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getProjectId() Obtain Project ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProjectId(integer $ProjectId) Set Project ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProjectName() Obtain Project name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProjectName(string $ProjectName) Set Project name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getUpgradeProInstance() Obtain Specifies whether the pro edition instance can be upgraded.
+ * @method void setUpgradeProInstance(boolean $UpgradeProInstance) Set Specifies whether the pro edition instance can be upgraded.
  */
 class Cluster extends AbstractModel
 {
@@ -264,6 +274,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $PayMode;
 
     /**
+     * @var integer Project ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProjectId;
+
+    /**
+     * @var string Project name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProjectName;
+
+    /**
+     * @var boolean Specifies whether the pro edition instance can be upgraded.
+     */
+    public $UpgradeProInstance;
+
+    /**
      * @param string $ClusterId Cluster ID.
      * @param string $ClusterName Cluster name.
      * @param string $Remark Remarks.
@@ -308,6 +335,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 `0`: Pay-as-you-go
 `1`: Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $ProjectId Project ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProjectName Project name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $UpgradeProInstance Specifies whether the pro edition instance can be upgraded.
      */
     function __construct()
     {
@@ -433,6 +465,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
+            $this->ProjectName = $param["ProjectName"];
+        }
+
+        if (array_key_exists("UpgradeProInstance",$param) and $param["UpgradeProInstance"] !== null) {
+            $this->UpgradeProInstance = $param["UpgradeProInstance"];
         }
     }
 }

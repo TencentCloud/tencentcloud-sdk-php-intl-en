@@ -24,12 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
  * @method string getTopicName() Obtain Topic name.
  * @method void setTopicName(string $TopicName) Set Topic name.
- * @method integer getPartitions() Obtain Number of partitions, which must be equal to or greater than the original number of partitions. To maintain the original number of partitions, enter the original number. Modifying the number of partitions will take effect only for non-globally sequential messages. There can be up to 128 partitions.
- * @method void setPartitions(integer $Partitions) Set Number of partitions, which must be equal to or greater than the original number of partitions. To maintain the original number of partitions, enter the original number. Modifying the number of partitions will take effect only for non-globally sequential messages. There can be up to 128 partitions.
- * @method string getRemark() Obtain Remarks (up to 128 characters).
- * @method void setRemark(string $Remark) Set Remarks (up to 128 characters).
+ * @method integer getPartitions() Obtain Specifies the number of partitions, which must be greater than or equal to the original partition count. if you want to maintain the original number of partitions, please enter the original number. changing the number of partitions is only effective for non-global sequential messages and cannot exceed 32 partitions.
+ * @method void setPartitions(integer $Partitions) Set Specifies the number of partitions, which must be greater than or equal to the original partition count. if you want to maintain the original number of partitions, please enter the original number. changing the number of partitions is only effective for non-global sequential messages and cannot exceed 32 partitions.
  * @method string getClusterId() Obtain Pulsar cluster ID
  * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID
+ * @method string getRemark() Obtain Remarks (up to 128 characters).
+ * @method void setRemark(string $Remark) Set Remarks (up to 128 characters).
+ * @method integer getMsgTTL() Obtain Unconsumed message expiration time. measurement unit: seconds. value range: 60 seconds to 15 days.
+
+ * @method void setMsgTTL(integer $MsgTTL) Set Unconsumed message expiration time. measurement unit: seconds. value range: 60 seconds to 15 days.
+
+ * @method string getUnackPolicy() Obtain Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy refers to dynamically adjusting the maximum unacknowledged messages under the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
+ * @method void setUnackPolicy(string $UnackPolicy) Set Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy refers to dynamically adjusting the maximum unacknowledged messages under the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
+ * @method boolean getIsolateConsumerEnable() Obtain Whether exception consumer isolation is enabled.
+ * @method void setIsolateConsumerEnable(boolean $IsolateConsumerEnable) Set Whether exception consumer isolation is enabled.
+ * @method integer getAckTimeOut() Obtain Consumer Ack timeout period in seconds. value range: 60-(3600*24).
+ * @method void setAckTimeOut(integer $AckTimeOut) Set Consumer Ack timeout period in seconds. value range: 60-(3600*24).
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -44,14 +54,9 @@ class ModifyTopicRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var integer Number of partitions, which must be equal to or greater than the original number of partitions. To maintain the original number of partitions, enter the original number. Modifying the number of partitions will take effect only for non-globally sequential messages. There can be up to 128 partitions.
+     * @var integer Specifies the number of partitions, which must be greater than or equal to the original partition count. if you want to maintain the original number of partitions, please enter the original number. changing the number of partitions is only effective for non-global sequential messages and cannot exceed 32 partitions.
      */
     public $Partitions;
-
-    /**
-     * @var string Remarks (up to 128 characters).
-     */
-    public $Remark;
 
     /**
      * @var string Pulsar cluster ID
@@ -59,11 +64,42 @@ class ModifyTopicRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var string Remarks (up to 128 characters).
+     */
+    public $Remark;
+
+    /**
+     * @var integer Unconsumed message expiration time. measurement unit: seconds. value range: 60 seconds to 15 days.
+
+     */
+    public $MsgTTL;
+
+    /**
+     * @var string Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy refers to dynamically adjusting the maximum unacknowledged messages under the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
+     */
+    public $UnackPolicy;
+
+    /**
+     * @var boolean Whether exception consumer isolation is enabled.
+     */
+    public $IsolateConsumerEnable;
+
+    /**
+     * @var integer Consumer Ack timeout period in seconds. value range: 60-(3600*24).
+     */
+    public $AckTimeOut;
+
+    /**
      * @param string $EnvironmentId Environment (namespace) name.
      * @param string $TopicName Topic name.
-     * @param integer $Partitions Number of partitions, which must be equal to or greater than the original number of partitions. To maintain the original number of partitions, enter the original number. Modifying the number of partitions will take effect only for non-globally sequential messages. There can be up to 128 partitions.
-     * @param string $Remark Remarks (up to 128 characters).
+     * @param integer $Partitions Specifies the number of partitions, which must be greater than or equal to the original partition count. if you want to maintain the original number of partitions, please enter the original number. changing the number of partitions is only effective for non-global sequential messages and cannot exceed 32 partitions.
      * @param string $ClusterId Pulsar cluster ID
+     * @param string $Remark Remarks (up to 128 characters).
+     * @param integer $MsgTTL Unconsumed message expiration time. measurement unit: seconds. value range: 60 seconds to 15 days.
+
+     * @param string $UnackPolicy Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy refers to dynamically adjusting the maximum unacknowledged messages under the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
+     * @param boolean $IsolateConsumerEnable Whether exception consumer isolation is enabled.
+     * @param integer $AckTimeOut Consumer Ack timeout period in seconds. value range: 60-(3600*24).
      */
     function __construct()
     {
@@ -90,12 +126,28 @@ class ModifyTopicRequest extends AbstractModel
             $this->Partitions = $param["Partitions"];
         }
 
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("MsgTTL",$param) and $param["MsgTTL"] !== null) {
+            $this->MsgTTL = $param["MsgTTL"];
+        }
+
+        if (array_key_exists("UnackPolicy",$param) and $param["UnackPolicy"] !== null) {
+            $this->UnackPolicy = $param["UnackPolicy"];
+        }
+
+        if (array_key_exists("IsolateConsumerEnable",$param) and $param["IsolateConsumerEnable"] !== null) {
+            $this->IsolateConsumerEnable = $param["IsolateConsumerEnable"];
+        }
+
+        if (array_key_exists("AckTimeOut",$param) and $param["AckTimeOut"] !== null) {
+            $this->AckTimeOut = $param["AckTimeOut"];
         }
     }
 }

@@ -100,6 +100,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setGrpc(Grpc $Grpc) Set Configuration of gRPC support
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method NetworkErrorLogging getNetworkErrorLogging() Obtain Network Error Logging configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setNetworkErrorLogging(NetworkErrorLogging $NetworkErrorLogging) Set Network Error Logging configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method ImageOptimize getImageOptimize() Obtain Image optimization configuration. 
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setImageOptimize(ImageOptimize $ImageOptimize) Set Image optimization configuration. 
@@ -240,6 +244,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Grpc;
 
     /**
+     * @var NetworkErrorLogging Network Error Logging configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $NetworkErrorLogging;
+
+    /**
      * @var ImageOptimize Image optimization configuration. 
 Note: This field may return `null`, indicating that no valid value was found.
      */
@@ -303,6 +313,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param ClientIpCountry $ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Grpc $Grpc Configuration of gRPC support
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param NetworkErrorLogging $NetworkErrorLogging Network Error Logging configuration.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param ImageOptimize $ImageOptimize Image optimization configuration. 
 Note: This field may return `null`, indicating that no valid value was found.
@@ -422,6 +434,11 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         if (array_key_exists("Grpc",$param) and $param["Grpc"] !== null) {
             $this->Grpc = new Grpc();
             $this->Grpc->deserialize($param["Grpc"]);
+        }
+
+        if (array_key_exists("NetworkErrorLogging",$param) and $param["NetworkErrorLogging"] !== null) {
+            $this->NetworkErrorLogging = new NetworkErrorLogging();
+            $this->NetworkErrorLogging->deserialize($param["NetworkErrorLogging"]);
         }
 
         if (array_key_exists("ImageOptimize",$param) and $param["ImageOptimize"] !== null) {

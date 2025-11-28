@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvironmentId() Obtain Environment (namespace) name.
  * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
+ * @method string getClusterId() Obtain Pulsar cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID.
  * @method string getTopicName() Obtain Fuzzy match by topic name.
  * @method void setTopicName(string $TopicName) Set Fuzzy match by topic name.
  * @method integer getOffset() Obtain Offset, which defaults to 0 if left empty.
@@ -38,8 +40,6 @@ use TencentCloud\Common\AbstractModel;
 1: Non-persistent and partitioned topic;
 2: Persistent and non-partitioned topic;
 3: Persistent and partitioned topic.
- * @method string getClusterId() Obtain Pulsar cluster ID.
- * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID.
  * @method array getFilters() Obtain * TopicName
 Query by topic name for exact search.
 Type: String
@@ -61,6 +61,11 @@ class DescribeTopicsRequest extends AbstractModel
      * @var string Environment (namespace) name.
      */
     public $EnvironmentId;
+
+    /**
+     * @var string Pulsar cluster ID.
+     */
+    public $ClusterId;
 
     /**
      * @var string Fuzzy match by topic name.
@@ -87,11 +92,6 @@ class DescribeTopicsRequest extends AbstractModel
     public $TopicType;
 
     /**
-     * @var string Pulsar cluster ID.
-     */
-    public $ClusterId;
-
-    /**
      * @var array * TopicName
 Query by topic name for exact search.
 Type: String
@@ -108,6 +108,7 @@ Required: No
 
     /**
      * @param string $EnvironmentId Environment (namespace) name.
+     * @param string $ClusterId Pulsar cluster ID.
      * @param string $TopicName Fuzzy match by topic name.
      * @param integer $Offset Offset, which defaults to 0 if left empty.
      * @param integer $Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
@@ -116,7 +117,6 @@ Required: No
 1: Non-persistent and partitioned topic;
 2: Persistent and non-partitioned topic;
 3: Persistent and partitioned topic.
-     * @param string $ClusterId Pulsar cluster ID.
      * @param array $Filters * TopicName
 Query by topic name for exact search.
 Type: String
@@ -142,6 +142,10 @@ Required: No
             $this->EnvironmentId = $param["EnvironmentId"];
         }
 
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
         if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
             $this->TopicName = $param["TopicName"];
         }
@@ -156,10 +160,6 @@ Required: No
 
         if (array_key_exists("TopicType",$param) and $param["TopicType"] !== null) {
             $this->TopicType = $param["TopicType"];
-        }
-
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

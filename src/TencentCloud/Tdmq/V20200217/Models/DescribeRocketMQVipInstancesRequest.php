@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRocketMQVipInstances request structure.
  *
- * @method array getFilters() Obtain Query condition filter
- * @method void setFilters(array $Filters) Set Query condition filter
+ * @method array getFilters() Obtain Query condition filter. supported query conditions are as follows:.
+Instance ids - specifies the instance ids.
+Instance name - specifies the instance name.
+Status - specifies the instance status.
+ * @method void setFilters(array $Filters) Set Query condition filter. supported query conditions are as follows:.
+Instance ids - specifies the instance ids.
+Instance name - specifies the instance name.
+Status - specifies the instance status.
  * @method integer getLimit() Obtain The maximum number of queried items, which defaults to 20.
  * @method void setLimit(integer $Limit) Set The maximum number of queried items, which defaults to 20.
  * @method integer getOffset() Obtain Start offset for query
@@ -30,7 +36,10 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRocketMQVipInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Query condition filter
+     * @var array Query condition filter. supported query conditions are as follows:.
+Instance ids - specifies the instance ids.
+Instance name - specifies the instance name.
+Status - specifies the instance status.
      */
     public $Filters;
 
@@ -45,7 +54,10 @@ class DescribeRocketMQVipInstancesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param array $Filters Query condition filter
+     * @param array $Filters Query condition filter. supported query conditions are as follows:.
+Instance ids - specifies the instance ids.
+Instance name - specifies the instance name.
+Status - specifies the instance status.
      * @param integer $Limit The maximum number of queried items, which defaults to 20.
      * @param integer $Offset Start offset for query
      */

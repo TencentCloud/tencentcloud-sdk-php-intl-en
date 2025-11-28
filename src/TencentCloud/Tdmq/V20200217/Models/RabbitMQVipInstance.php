@@ -18,16 +18,14 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TDMQ for RabbitMQ exclusive instance information
+ * RabbitMQ managed instance information.
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getInstanceName() Obtain Instance name
  * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getInstanceVersion() Obtain Instance version
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setInstanceVersion(string $InstanceVersion) Set Instance version
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getInstanceVersion() Obtain Instance version.
+ * @method void setInstanceVersion(string $InstanceVersion) Set Instance version.
  * @method integer getStatus() Obtain Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
  * @method void setStatus(integer $Status) Set Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
  * @method integer getNodeCount() Obtain Number of nodes
@@ -40,26 +38,58 @@ Note: This field may return null, indicating that no valid value can be obtained
  * @method void setMaxBandWidth(integer $MaxBandWidth) Set Peak bandwidth in Mbps
  * @method integer getMaxStorage() Obtain Storage capacity in GB
  * @method void setMaxStorage(integer $MaxStorage) Set Storage capacity in GB
- * @method integer getExpireTime() Obtain Instance expiration time in milliseconds
- * @method void setExpireTime(integer $ExpireTime) Set Instance expiration time in milliseconds
+ * @method integer getExpireTime() Obtain Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
+ * @method void setExpireTime(integer $ExpireTime) Set Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
  * @method integer getAutoRenewFlag() Obtain Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
- * @method integer getPayMode() Obtain Payment mode. `0`: Postpaid; `1`: Prepaid.
- * @method void setPayMode(integer $PayMode) Set Payment mode. `0`: Postpaid; `1`: Prepaid.
+ * @method integer getPayMode() Obtain 1 indicates prepaid mode, 0 indicates postpaid.
+ * @method void setPayMode(integer $PayMode) Set 1 indicates prepaid mode, 0 indicates postpaid.
  * @method string getRemark() Obtain Remarks
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setRemark(string $Remark) Set Remarks
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getSpecName() Obtain Instance specification ID
- * @method void setSpecName(string $SpecName) Set Instance specification ID
- * @method string getExceptionInformation() Obtain Cluster exception
+ * @method string getSpecName() Obtain Node specification of the cluster. specifies the corresponding flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
+ * @method void setSpecName(string $SpecName) Set Node specification of the cluster. specifies the corresponding flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
+ * @method string getExceptionInformation() Obtain Cluster exception information.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExceptionInformation(string $ExceptionInformation) Set Cluster exception
+ * @method void setExceptionInformation(string $ExceptionInformation) Set Cluster exception information.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getClusterStatus() Obtain Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
 This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
  * @method void setClusterStatus(integer $ClusterStatus) Set Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
 This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+ * @method string getPublicAccessEndpoint() Obtain Public network access point.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) Set Public network access point.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getVpcs() Obtain VPC access point list.
+ * @method void setVpcs(array $Vpcs) Set VPC access point list.
+ * @method integer getCreateTime() Obtain Creation time in milliseconds. unix timestamp.
+ * @method void setCreateTime(integer $CreateTime) Set Creation time in milliseconds. unix timestamp.
+ * @method integer getInstanceType() Obtain Instance type. valid values: 0 (managed), 1 (Serverless).
+ * @method void setInstanceType(integer $InstanceType) Set Instance type. valid values: 0 (managed), 1 (Serverless).
+ * @method integer getIsolatedTime() Obtain Isolation time, in milliseconds. unix timestamp.
+ * @method void setIsolatedTime(integer $IsolatedTime) Set Isolation time, in milliseconds. unix timestamp.
+ * @method boolean getEnableDeletionProtection() Obtain Whether deletion protection is enabled.
+ * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) Set Whether deletion protection is enabled.
+ * @method array getTags() Obtain Tag list
+ * @method void setTags(array $Tags) Set Tag list
  */
 class RabbitMQVipInstance extends AbstractModel
 {
@@ -74,8 +104,7 @@ class RabbitMQVipInstance extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string Instance version
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Instance version.
      */
     public $InstanceVersion;
 
@@ -110,7 +139,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $MaxStorage;
 
     /**
-     * @var integer Instance expiration time in milliseconds
+     * @var integer Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
      */
     public $ExpireTime;
 
@@ -120,23 +149,31 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $AutoRenewFlag;
 
     /**
-     * @var integer Payment mode. `0`: Postpaid; `1`: Prepaid.
+     * @var integer 1 indicates prepaid mode, 0 indicates postpaid.
      */
     public $PayMode;
 
     /**
      * @var string Remarks
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Remark;
 
     /**
-     * @var string Instance specification ID
+     * @var string Node specification of the cluster. specifies the corresponding flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
      */
     public $SpecName;
 
     /**
-     * @var string Cluster exception
+     * @var string Cluster exception information.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExceptionInformation;
@@ -148,26 +185,77 @@ This parameter is used to display the instance status additionally and distingui
     public $ClusterStatus;
 
     /**
+     * @var string Public network access point.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PublicAccessEndpoint;
+
+    /**
+     * @var array VPC access point list.
+     */
+    public $Vpcs;
+
+    /**
+     * @var integer Creation time in milliseconds. unix timestamp.
+     */
+    public $CreateTime;
+
+    /**
+     * @var integer Instance type. valid values: 0 (managed), 1 (Serverless).
+     */
+    public $InstanceType;
+
+    /**
+     * @var integer Isolation time, in milliseconds. unix timestamp.
+     */
+    public $IsolatedTime;
+
+    /**
+     * @var boolean Whether deletion protection is enabled.
+     */
+    public $EnableDeletionProtection;
+
+    /**
+     * @var array Tag list
+     */
+    public $Tags;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
-     * @param string $InstanceVersion Instance version
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $InstanceVersion Instance version.
      * @param integer $Status Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
      * @param integer $NodeCount Number of nodes
      * @param string $ConfigDisplay Instance specification name
      * @param integer $MaxTps Peak TPS
      * @param integer $MaxBandWidth Peak bandwidth in Mbps
      * @param integer $MaxStorage Storage capacity in GB
-     * @param integer $ExpireTime Instance expiration time in milliseconds
+     * @param integer $ExpireTime Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
      * @param integer $AutoRenewFlag Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
-     * @param integer $PayMode Payment mode. `0`: Postpaid; `1`: Prepaid.
+     * @param integer $PayMode 1 indicates prepaid mode, 0 indicates postpaid.
      * @param string $Remark Remarks
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $SpecName Instance specification ID
-     * @param string $ExceptionInformation Cluster exception
+     * @param string $SpecName Node specification of the cluster. specifies the corresponding flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
+     * @param string $ExceptionInformation Cluster exception information.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ClusterStatus Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
 This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+     * @param string $PublicAccessEndpoint Public network access point.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Vpcs VPC access point list.
+     * @param integer $CreateTime Creation time in milliseconds. unix timestamp.
+     * @param integer $InstanceType Instance type. valid values: 0 (managed), 1 (Serverless).
+     * @param integer $IsolatedTime Isolation time, in milliseconds. unix timestamp.
+     * @param boolean $EnableDeletionProtection Whether deletion protection is enabled.
+     * @param array $Tags Tag list
      */
     function __construct()
     {
@@ -244,6 +332,44 @@ This parameter is used to display the instance status additionally and distingui
 
         if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
             $this->ClusterStatus = $param["ClusterStatus"];
+        }
+
+        if (array_key_exists("PublicAccessEndpoint",$param) and $param["PublicAccessEndpoint"] !== null) {
+            $this->PublicAccessEndpoint = $param["PublicAccessEndpoint"];
+        }
+
+        if (array_key_exists("Vpcs",$param) and $param["Vpcs"] !== null) {
+            $this->Vpcs = [];
+            foreach ($param["Vpcs"] as $key => $value){
+                $obj = new VpcEndpointInfo();
+                $obj->deserialize($value);
+                array_push($this->Vpcs, $obj);
+            }
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
+            $this->IsolatedTime = $param["IsolatedTime"];
+        }
+
+        if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
+            $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

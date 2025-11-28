@@ -27,17 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPort() Obtain Listener port
  * @method void setPort(integer $Port) Set Listener port
  * @method array getRules() Obtain Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRules(array $Rules) Set Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTargets() Obtain List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargets(array $Targets) Set List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getEndPort() Obtain Ending port in port range if port range is supported; 0 if port range is not supported
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEndPort(integer $EndPort) Set Ending port in port range if port range is supported; 0 if port range is not supported
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTargets() Obtain List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener)
+ * @method void setTargets(array $Targets) Set List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener)
+ * @method integer getEndPort() Obtain End port in a port range if port range is supported, or 0 if port range is not supported
+ * @method void setEndPort(integer $EndPort) Set End port in a port range if port range is supported, or 0 if port range is not supported
  */
 class ListenerBackend extends AbstractModel
 {
@@ -58,19 +52,16 @@ class ListenerBackend extends AbstractModel
 
     /**
      * @var array Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Rules;
 
     /**
-     * @var array List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener)
      */
     public $Targets;
 
     /**
-     * @var integer Ending port in port range if port range is supported; 0 if port range is not supported
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer End port in a port range if port range is supported, or 0 if port range is not supported
      */
     public $EndPort;
 
@@ -79,11 +70,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Protocol Listener protocol
      * @param integer $Port Listener port
      * @param array $Rules Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Targets List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $EndPort Ending port in port range if port range is supported; 0 if port range is not supported
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Targets List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener)
+     * @param integer $EndPort End port in a port range if port range is supported, or 0 if port range is not supported
      */
     function __construct()
     {

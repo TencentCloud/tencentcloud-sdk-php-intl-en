@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Limit of the number of displayed results. Default value: 20.
  * @method integer getOffset() Obtain Starting display offset
  * @method void setOffset(integer $Offset) Set Starting display offset
- * @method array getFilters() Obtain Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
- * @method void setFilters(array $Filters) Set Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
+ * @method array getFilters() Obtain Filter condition array, mutually exclusive with TargetGroupIds, supports TargetGroupVpcId (vpc ID), TargetGroupName (target group name), and Tag.
+ * @method void setFilters(array $Filters) Set Filter condition array, mutually exclusive with TargetGroupIds, supports TargetGroupVpcId (vpc ID), TargetGroupName (target group name), and Tag.
  */
 class DescribeTargetGroupsRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeTargetGroupsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
+     * @var array Filter condition array, mutually exclusive with TargetGroupIds, supports TargetGroupVpcId (vpc ID), TargetGroupName (target group name), and Tag.
      */
     public $Filters;
 
@@ -55,7 +55,7 @@ class DescribeTargetGroupsRequest extends AbstractModel
      * @param array $TargetGroupIds Target group ID, which is exclusive of `Filters`.
      * @param integer $Limit Limit of the number of displayed results. Default value: 20.
      * @param integer $Offset Starting display offset
-     * @param array $Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
+     * @param array $Filters Filter condition array, mutually exclusive with TargetGroupIds, supports TargetGroupVpcId (vpc ID), TargetGroupName (target group name), and Tag.
      */
     function __construct()
     {

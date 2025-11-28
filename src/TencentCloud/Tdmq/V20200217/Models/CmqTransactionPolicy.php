@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * cmq TransactionPolicy
  *
- * @method integer getFirstQueryInterval() Obtain First lookback time.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFirstQueryInterval(integer $FirstQueryInterval) Set First lookback time.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxQueryCount() Obtain Maximum number of queries.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMaxQueryCount(integer $MaxQueryCount) Set Maximum number of queries.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getFirstQueryInterval() Obtain First recheck time.
+ * @method void setFirstQueryInterval(integer $FirstQueryInterval) Set First recheck time.
+ * @method integer getMaxQueryCount() Obtain Maximum query times.
+ * @method void setMaxQueryCount(integer $MaxQueryCount) Set Maximum query times.
  */
 class CmqTransactionPolicy extends AbstractModel
 {
     /**
-     * @var integer First lookback time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer First recheck time.
      */
     public $FirstQueryInterval;
 
     /**
-     * @var integer Maximum number of queries.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum query times.
      */
     public $MaxQueryCount;
 
     /**
-     * @param integer $FirstQueryInterval First lookback time.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxQueryCount Maximum number of queries.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $FirstQueryInterval First recheck time.
+     * @param integer $MaxQueryCount Maximum query times.
      */
     function __construct()
     {

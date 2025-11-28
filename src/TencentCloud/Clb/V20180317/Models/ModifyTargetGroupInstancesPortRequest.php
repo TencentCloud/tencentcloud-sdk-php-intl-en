@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTargetGroupId() Obtain Target group ID
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
- * @method array getTargetGroupInstances() Obtain Array of servers for which to modify ports
- * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Array of servers for which to modify ports
+ * @method array getTargetGroupInstances() Obtain Array of servers whose Port is to be modified. NewPort and Port are required items in this api.
+ * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Array of servers whose Port is to be modified. NewPort and Port are required items in this api.
  */
 class ModifyTargetGroupInstancesPortRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyTargetGroupInstancesPortRequest extends AbstractModel
     public $TargetGroupId;
 
     /**
-     * @var array Array of servers for which to modify ports
+     * @var array Array of servers whose Port is to be modified. NewPort and Port are required items in this api.
      */
     public $TargetGroupInstances;
 
     /**
      * @param string $TargetGroupId Target group ID
-     * @param array $TargetGroupInstances Array of servers for which to modify ports
+     * @param array $TargetGroupInstances Array of servers whose Port is to be modified. NewPort and Port are required items in this api.
      */
     function __construct()
     {

@@ -26,24 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
  * @method integer getWeight() Obtain Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
  * @method void setWeight(integer $Weight) Set Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
- * @method array getPublicIpAddresses() Obtain Public IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPublicIpAddresses(array $PublicIpAddresses) Set Public IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getPrivateIpAddresses() Obtain Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceName() Obtain Real server instance names
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceName(string $InstanceName) Set Real server instance names
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRunFlag() Obtain Real server status
-1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRunFlag(integer $RunFlag) Set Real server status
-1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getPublicIpAddresses() Obtain Public network IP of the real server
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) Set Public network IP of the real server
+ * @method array getPrivateIpAddresses() Obtain Private network IP of the real server
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set Private network IP of the real server
+ * @method string getInstanceName() Obtain Instance name of the real server
+ * @method void setInstanceName(string $InstanceName) Set Instance name of the real server
+ * @method integer getRunFlag() Obtain Backend service status.
+1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating.
+ * @method void setRunFlag(integer $RunFlag) Set Backend service status.
+1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating.
  */
 class ClassicalTarget extends AbstractModel
 {
@@ -63,27 +55,23 @@ class ClassicalTarget extends AbstractModel
     public $Weight;
 
     /**
-     * @var array Public IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Public network IP of the real server
      */
     public $PublicIpAddresses;
 
     /**
-     * @var array Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Private network IP of the real server
      */
     public $PrivateIpAddresses;
 
     /**
-     * @var string Real server instance names
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance name of the real server
      */
     public $InstanceName;
 
     /**
-     * @var integer Real server status
-1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Backend service status.
+1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating.
      */
     public $RunFlag;
 
@@ -91,15 +79,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Type Real server type. Value range: CVM, ENI (coming soon)
      * @param string $InstanceId Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
      * @param integer $Weight Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
-     * @param array $PublicIpAddresses Public IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $PrivateIpAddresses Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceName Real server instance names
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RunFlag Real server status
-1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $PublicIpAddresses Public network IP of the real server
+     * @param array $PrivateIpAddresses Private network IP of the real server
+     * @param string $InstanceName Instance name of the real server
+     * @param integer $RunFlag Backend service status.
+1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating.
      */
     function __construct()
     {

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRule request structure.
  *
- * @method string getLoadBalancerId() Obtain CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method string getListenerId() Obtain Listener ID
- * @method void setListenerId(string $ListenerId) Set Listener ID
+ * @method string getLoadBalancerId() Obtain ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+ * @method string getListenerId() Obtain Specifies the listener ID, which can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+ * @method void setListenerId(string $ListenerId) Set Specifies the listener ID, which can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
  * @method array getRules() Obtain Information of the new forwarding rule
  * @method void setRules(array $Rules) Set Information of the new forwarding rule
  */
 class CreateRuleRequest extends AbstractModel
 {
     /**
-     * @var string CLB instance ID
+     * @var string ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
      */
     public $LoadBalancerId;
 
     /**
-     * @var string Listener ID
+     * @var string Specifies the listener ID, which can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      */
     public $ListenerId;
 
@@ -45,8 +45,8 @@ class CreateRuleRequest extends AbstractModel
     public $Rules;
 
     /**
-     * @param string $LoadBalancerId CLB instance ID
-     * @param string $ListenerId Listener ID
+     * @param string $LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+     * @param string $ListenerId Specifies the listener ID, which can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      * @param array $Rules Information of the new forwarding rule
      */
     function __construct()

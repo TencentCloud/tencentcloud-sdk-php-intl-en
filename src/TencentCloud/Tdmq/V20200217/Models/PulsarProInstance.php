@@ -60,6 +60,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getMaxBandWidth() Obtain Peak bandwidth in Mbps
  * @method void setMaxBandWidth(integer $MaxBandWidth) Set Peak bandwidth in Mbps
+ * @method array getTags() Obtain Tag list of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Tag list of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreateTime() Obtain Cluster Creation Time
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCreateTime(string $CreateTime) Set Cluster Creation Time
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBillingLabelVersion() Obtain Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBillingLabelVersion(string $BillingLabelVersion) Set Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTenant() Obtain Custom tenant.
+ * @method void setTenant(string $Tenant) Set Custom tenant.
+ * @method array getCertificateList() Obtain Certificate list of the cluster.
+ * @method void setCertificateList(array $CertificateList) Set Certificate list of the cluster.
  */
 class PulsarProInstance extends AbstractModel
 {
@@ -148,6 +164,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MaxBandWidth;
 
     /**
+     * @var array Tag list of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
+     * @var string Cluster Creation Time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CreateTime;
+
+    /**
+     * @var string Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BillingLabelVersion;
+
+    /**
+     * @var string Custom tenant.
+     */
+    public $Tenant;
+
+    /**
+     * @var array Certificate list of the cluster.
+     */
+    public $CertificateList;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $InstanceVersion Instance version
@@ -168,6 +212,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SubnetId Subnet ID
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MaxBandWidth Peak bandwidth in Mbps
+     * @param array $Tags Tag list of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreateTime Cluster Creation Time
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BillingLabelVersion Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Tenant Custom tenant.
+     * @param array $CertificateList Certificate list of the cluster.
      */
     function __construct()
     {
@@ -244,6 +296,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MaxBandWidth",$param) and $param["MaxBandWidth"] !== null) {
             $this->MaxBandWidth = $param["MaxBandWidth"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("BillingLabelVersion",$param) and $param["BillingLabelVersion"] !== null) {
+            $this->BillingLabelVersion = $param["BillingLabelVersion"];
+        }
+
+        if (array_key_exists("Tenant",$param) and $param["Tenant"] !== null) {
+            $this->Tenant = $param["Tenant"];
+        }
+
+        if (array_key_exists("CertificateList",$param) and $param["CertificateList"] !== null) {
+            $this->CertificateList = [];
+            foreach ($param["CertificateList"] as $key => $value){
+                $obj = new CertificateInfo();
+                $obj->deserialize($value);
+                array_push($this->CertificateList, $obj);
+            }
         }
     }
 }

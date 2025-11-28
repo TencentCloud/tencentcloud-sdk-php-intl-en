@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) Set Namespace name.
  * @method integer getMsgTTL() Obtain Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
  * @method void setMsgTTL(integer $MsgTTL) Set Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
- * @method string getRemark() Obtain Remarks (up to 128 characters).
- * @method void setRemark(string $Remark) Set Remarks (up to 128 characters).
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getRemark() Obtain Remarks (up to 128 characters).
+ * @method void setRemark(string $Remark) Set Remarks (up to 128 characters).
  * @method RetentionPolicy getRetentionPolicy() Obtain Message retention policy
  * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) Set Message retention policy
  * @method boolean getAutoSubscriptionCreation() Obtain Whether to enable "Auto-Create Subscription"
@@ -46,14 +46,14 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
     public $MsgTTL;
 
     /**
-     * @var string Remarks (up to 128 characters).
-     */
-    public $Remark;
-
-    /**
      * @var string Cluster ID
      */
     public $ClusterId;
+
+    /**
+     * @var string Remarks (up to 128 characters).
+     */
+    public $Remark;
 
     /**
      * @var RetentionPolicy Message retention policy
@@ -68,8 +68,8 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
     /**
      * @param string $EnvironmentId Namespace name.
      * @param integer $MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
-     * @param string $Remark Remarks (up to 128 characters).
      * @param string $ClusterId Cluster ID
+     * @param string $Remark Remarks (up to 128 characters).
      * @param RetentionPolicy $RetentionPolicy Message retention policy
      * @param boolean $AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
      */
@@ -94,12 +94,12 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
             $this->MsgTTL = $param["MsgTTL"];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
-        }
-
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
 
         if (array_key_exists("RetentionPolicy",$param) and $param["RetentionPolicy"] !== null) {

@@ -20,22 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDomainAttributes request structure.
  *
- * @method string getLoadBalancerId() Obtain CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method string getListenerId() Obtain CLB listener ID
- * @method void setListenerId(string $ListenerId) Set CLB listener ID
- * @method string getDomain() Obtain The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
- * @method void setDomain(string $Domain) Set The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+ * @method string getLoadBalancerId() Obtain ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+ * @method string getListenerId() Obtain ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+ * @method void setListenerId(string $ListenerId) Set ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+ * @method string getDomain() Obtain Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+ * @method void setDomain(string $Domain) Set Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
  * @method string getNewDomain() Obtain The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
  * @method void setNewDomain(string $NewDomain) Set The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
  * @method CertificateInput getCertificate() Obtain Certificate information of the domain name. It is only applicable to listeners with SNI enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
  * @method void setCertificate(CertificateInput $Certificate) Set Certificate information of the domain name. It is only applicable to listeners with SNI enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
- * @method boolean getHttp2() Obtain Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
- * @method void setHttp2(boolean $Http2) Set Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
- * @method boolean getDefaultServer() Obtain Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
- * @method void setDefaultServer(boolean $DefaultServer) Set Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
- * @method boolean getQuic() Obtain Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
- * @method void setQuic(boolean $Quic) Set Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+ * @method boolean getHttp2() Obtain Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+True: enable HTTP2. false: disable HTTP2.
+ * @method void setHttp2(boolean $Http2) Set Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+True: enable HTTP2. false: disable HTTP2.
+ * @method boolean getDefaultServer() Obtain Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+True: set as default domain name. false: do not set as default domain name.
+ * @method void setDefaultServer(boolean $DefaultServer) Set Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+True: set as default domain name. false: do not set as default domain name.
+ * @method boolean getQuic() Obtain Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+True: enable QUIC. False: disable.
+ * @method void setQuic(boolean $Quic) Set Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+True: enable QUIC. False: disable.
  * @method string getNewDefaultServerDomain() Obtain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
  * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) Set Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
  * @method array getNewDomains() Obtain The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
@@ -46,17 +52,17 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDomainAttributesRequest extends AbstractModel
 {
     /**
-     * @var string CLB instance ID
+     * @var string ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
      */
     public $LoadBalancerId;
 
     /**
-     * @var string CLB listener ID
+     * @var string ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
      */
     public $ListenerId;
 
     /**
-     * @var string The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+     * @var string Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      */
     public $Domain;
 
@@ -71,17 +77,20 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $Certificate;
 
     /**
-     * @var boolean Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+     * @var boolean Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+True: enable HTTP2. false: disable HTTP2.
      */
     public $Http2;
 
     /**
-     * @var boolean Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+     * @var boolean Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+True: set as default domain name. false: do not set as default domain name.
      */
     public $DefaultServer;
 
     /**
-     * @var boolean Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+     * @var boolean Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+True: enable QUIC. False: disable.
      */
     public $Quic;
 
@@ -101,14 +110,17 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $MultiCertInfo;
 
     /**
-     * @param string $LoadBalancerId CLB instance ID
-     * @param string $ListenerId CLB listener ID
-     * @param string $Domain The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+     * @param string $LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+     * @param string $ListenerId ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+     * @param string $Domain Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      * @param string $NewDomain The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
      * @param CertificateInput $Certificate Certificate information of the domain name. It is only applicable to listeners with SNI enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
-     * @param boolean $Http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
-     * @param boolean $DefaultServer Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
-     * @param boolean $Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+     * @param boolean $Http2 Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+True: enable HTTP2. false: disable HTTP2.
+     * @param boolean $DefaultServer Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+True: set as default domain name. false: do not set as default domain name.
+     * @param boolean $Quic Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+True: enable QUIC. False: disable.
      * @param string $NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
      * @param array $NewDomains The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
      * @param MultiCertInfo $MultiCertInfo Certificate information related to the domain name. Note: This applies only to listeners with SNI enabled. Multiple server certificates with different algorithm types can be input simultaneously, but this parameter cannot be input together with the Certificate.

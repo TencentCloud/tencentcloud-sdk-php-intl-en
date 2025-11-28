@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
  * @method string getTargetGroupName() Obtain Target group name
  * @method void setTargetGroupName(string $TargetGroupName) Set Target group name
+ * @method integer getWeight() Obtain Specifies the weight of the target group.
+ * @method void setWeight(integer $Weight) Set Specifies the weight of the target group.
  */
 class BasicTargetGroupInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class BasicTargetGroupInfo extends AbstractModel
     public $TargetGroupName;
 
     /**
+     * @var integer Specifies the weight of the target group.
+     */
+    public $Weight;
+
+    /**
      * @param string $TargetGroupId Target group ID
      * @param string $TargetGroupName Target group name
+     * @param integer $Weight Specifies the weight of the target group.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class BasicTargetGroupInfo extends AbstractModel
 
         if (array_key_exists("TargetGroupName",$param) and $param["TargetGroupName"] !== null) {
             $this->TargetGroupName = $param["TargetGroupName"];
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
         }
     }
 }

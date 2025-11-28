@@ -20,23 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQUser request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID
+ * @method string getInstanceId() Obtain Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
  * @method string getSearchUser() Obtain Username search by prefix or suffix
  * @method void setSearchUser(string $SearchUser) Set Username search by prefix or suffix
- * @method integer getOffset() Obtain Pagination offset
- * @method void setOffset(integer $Offset) Set Pagination offset
- * @method integer getLimit() Obtain Pagination limit
- * @method void setLimit(integer $Limit) Set Pagination limit
+ * @method integer getOffset() Obtain Specifies the page Offset. default is 0.
+ * @method void setOffset(integer $Offset) Set Specifies the page Offset. default is 0.
+ * @method integer getLimit() Obtain Page Limit. default value: 20.
+ * @method void setLimit(integer $Limit) Set Page Limit. default value: 20.
  * @method string getUser() Obtain Username, which is queried by exact match.
  * @method void setUser(string $User) Set Username, which is queried by exact match.
- * @method array getTags() Obtain User tag, which is used to filter users.
- * @method void setTags(array $Tags) Set User tag, which is used to filter users.
+ * @method array getTags() Obtain User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
+ * @method void setTags(array $Tags) Set User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
  */
 class DescribeRabbitMQUserRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID
+     * @var string Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public $InstanceId;
 
@@ -46,12 +48,12 @@ class DescribeRabbitMQUserRequest extends AbstractModel
     public $SearchUser;
 
     /**
-     * @var integer Pagination offset
+     * @var integer Specifies the page Offset. default is 0.
      */
     public $Offset;
 
     /**
-     * @var integer Pagination limit
+     * @var integer Page Limit. default value: 20.
      */
     public $Limit;
 
@@ -61,17 +63,19 @@ class DescribeRabbitMQUserRequest extends AbstractModel
     public $User;
 
     /**
-     * @var array User tag, which is used to filter users.
+     * @var array User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
      */
     public $Tags;
 
     /**
-     * @param string $InstanceId Cluster instance ID
+     * @param string $InstanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      * @param string $SearchUser Username search by prefix or suffix
-     * @param integer $Offset Pagination offset
-     * @param integer $Limit Pagination limit
+     * @param integer $Offset Specifies the page Offset. default is 0.
+     * @param integer $Limit Page Limit. default value: 20.
      * @param string $User Username, which is queried by exact match.
-     * @param array $Tags User tag, which is used to filter users.
+     * @param array $Tags User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
      */
     function __construct()
     {

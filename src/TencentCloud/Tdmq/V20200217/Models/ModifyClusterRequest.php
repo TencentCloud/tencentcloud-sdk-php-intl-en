@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set ID of the Pulsar cluster to be updated.
  * @method string getClusterName() Obtain Updated cluster name.
  * @method void setClusterName(string $ClusterName) Set Updated cluster name.
- * @method string getRemark() Obtain Remarks.
- * @method void setRemark(string $Remark) Set Remarks.
+ * @method string getRemark() Obtain Description information. length limit is 128 bytes.
+ * @method void setRemark(string $Remark) Set Description information. length limit is 128 bytes.
  * @method boolean getPublicAccessEnabled() Obtain Enables public network access, which can only be `true`.
  * @method void setPublicAccessEnabled(boolean $PublicAccessEnabled) Set Enables public network access, which can only be `true`.
  */
@@ -42,7 +42,7 @@ class ModifyClusterRequest extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string Remarks.
+     * @var string Description information. length limit is 128 bytes.
      */
     public $Remark;
 
@@ -54,7 +54,7 @@ class ModifyClusterRequest extends AbstractModel
     /**
      * @param string $ClusterId ID of the Pulsar cluster to be updated.
      * @param string $ClusterName Updated cluster name.
-     * @param string $Remark Remarks.
+     * @param string $Remark Description information. length limit is 128 bytes.
      * @param boolean $PublicAccessEnabled Enables public network access, which can only be `true`.
      */
     function __construct()

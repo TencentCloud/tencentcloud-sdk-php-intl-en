@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCmqQueue request structure.
  *
- * @method string getQueueName() Obtain Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
- * @method void setQueueName(string $QueueName) Set Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+ * @method string getQueueName() Obtain Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the remainder can contain letters, digits, and hyphens (-).
+ * @method void setQueueName(string $QueueName) Set Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the remainder can contain letters, digits, and hyphens (-).
  */
 class DeleteCmqQueueRequest extends AbstractModel
 {
     /**
-     * @var string Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+     * @var string Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the remainder can contain letters, digits, and hyphens (-).
      */
     public $QueueName;
 
     /**
-     * @param string $QueueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+     * @param string $QueueName Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the remainder can contain letters, digits, and hyphens (-).
      */
     function __construct()
     {

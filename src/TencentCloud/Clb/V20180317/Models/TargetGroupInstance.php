@@ -22,12 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBindIP() Obtain Private IP of target group instance
  * @method void setBindIP(string $BindIP) Set Private IP of target group instance
- * @method integer getPort() Obtain Port of target group instance
- * @method void setPort(integer $Port) Set Port of target group instance
- * @method integer getWeight() Obtain Weight of target group instance
- * @method void setWeight(integer $Weight) Set Weight of target group instance
- * @method integer getNewPort() Obtain New port of target group instance
- * @method void setNewPort(integer $NewPort) Set New port of target group instance
+ * @method integer getPort() Obtain Port of target group instance. this field is not supported for full listen target groups.
+ * @method void setPort(integer $Port) Set Port of target group instance. this field is not supported for full listen target groups.
+ * @method integer getWeight() Obtain Weight of a target group instance
+Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+Valid values: 0-100.
+ * @method void setWeight(integer $Weight) Set Weight of a target group instance
+Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+Valid values: 0-100.
+ * @method integer getNewPort() Obtain The new port of the target group instance. this field is not supported for full listen target groups.
+ * @method void setNewPort(integer $NewPort) Set The new port of the target group instance. this field is not supported for full listen target groups.
  */
 class TargetGroupInstance extends AbstractModel
 {
@@ -37,25 +41,29 @@ class TargetGroupInstance extends AbstractModel
     public $BindIP;
 
     /**
-     * @var integer Port of target group instance
+     * @var integer Port of target group instance. this field is not supported for full listen target groups.
      */
     public $Port;
 
     /**
-     * @var integer Weight of target group instance
+     * @var integer Weight of a target group instance
+Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+Valid values: 0-100.
      */
     public $Weight;
 
     /**
-     * @var integer New port of target group instance
+     * @var integer The new port of the target group instance. this field is not supported for full listen target groups.
      */
     public $NewPort;
 
     /**
      * @param string $BindIP Private IP of target group instance
-     * @param integer $Port Port of target group instance
-     * @param integer $Weight Weight of target group instance
-     * @param integer $NewPort New port of target group instance
+     * @param integer $Port Port of target group instance. this field is not supported for full listen target groups.
+     * @param integer $Weight Weight of a target group instance
+Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+Valid values: 0-100.
+     * @param integer $NewPort The new port of the target group instance. this field is not supported for full listen target groups.
      */
     function __construct()
     {

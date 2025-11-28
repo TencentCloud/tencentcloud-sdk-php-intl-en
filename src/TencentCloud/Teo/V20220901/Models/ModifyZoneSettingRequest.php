@@ -94,6 +94,8 @@ The original configuration will apply if it is not specified.
 The original configuration will apply if it is not specified.
  * @method void setGrpc(Grpc $Grpc) Set Configuration of gRPC support. 
 The original configuration will apply if it is not specified.
+ * @method NetworkErrorLogging getNetworkErrorLogging() Obtain Network Error Logging configuration. The original configuration will apply if it is not specified.
+ * @method void setNetworkErrorLogging(NetworkErrorLogging $NetworkErrorLogging) Set Network Error Logging configuration. The original configuration will apply if it is not specified.
  * @method ImageOptimize getImageOptimize() Obtain Image optimization. 
 It is disabled if this parameter is not specified.
  * @method void setImageOptimize(ImageOptimize $ImageOptimize) Set Image optimization. 
@@ -219,6 +221,11 @@ The original configuration will apply if it is not specified.
     public $Grpc;
 
     /**
+     * @var NetworkErrorLogging Network Error Logging configuration. The original configuration will apply if it is not specified.
+     */
+    public $NetworkErrorLogging;
+
+    /**
      * @var ImageOptimize Image optimization. 
 It is disabled if this parameter is not specified.
      */
@@ -272,6 +279,7 @@ The original configuration will apply if it is not specified.
 The original configuration will apply if it is not specified.
      * @param Grpc $Grpc Configuration of gRPC support. 
 The original configuration will apply if it is not specified.
+     * @param NetworkErrorLogging $NetworkErrorLogging Network Error Logging configuration. The original configuration will apply if it is not specified.
      * @param ImageOptimize $ImageOptimize Image optimization. 
 It is disabled if this parameter is not specified.
      * @param StandardDebug $StandardDebug Standard debugging configuration.
@@ -382,6 +390,11 @@ It is disabled if this parameter is not specified.
         if (array_key_exists("Grpc",$param) and $param["Grpc"] !== null) {
             $this->Grpc = new Grpc();
             $this->Grpc->deserialize($param["Grpc"]);
+        }
+
+        if (array_key_exists("NetworkErrorLogging",$param) and $param["NetworkErrorLogging"] !== null) {
+            $this->NetworkErrorLogging = new NetworkErrorLogging();
+            $this->NetworkErrorLogging->deserialize($param["NetworkErrorLogging"]);
         }
 
         if (array_key_exists("ImageOptimize",$param) and $param["ImageOptimize"] !== null) {

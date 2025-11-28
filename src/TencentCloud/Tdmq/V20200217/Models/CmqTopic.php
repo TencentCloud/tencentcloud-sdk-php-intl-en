@@ -21,45 +21,27 @@ use TencentCloud\Common\AbstractModel;
  * Display field of the returned CMQ topic information
  *
  * @method string getTopicId() Obtain Topic ID.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTopicId(string $TopicId) Set Topic ID.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getTopicName() Obtain Topic name.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTopicName(string $TopicName) Set Topic name.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMsgRetentionSeconds() Obtain Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) Set Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxMsgSize() Obtain Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMaxMsgSize(integer $MaxMsgSize) Set Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getMsgRetentionSeconds() Obtain Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified.
+ * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) Set Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified.
+ * @method integer getMaxMsgSize() Obtain Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576.
+ * @method void setMaxMsgSize(integer $MaxMsgSize) Set Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576.
  * @method integer getQps() Obtain Number of messages published per second.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setQps(integer $Qps) Set Number of messages published per second.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getFilterType() Obtain Filtering policy selected when a subscription is created:
-If `filterType` is 1, `FilterTag` will be used for filtering.
-If `filterType` is 2, `BindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFilterType(integer $FilterType) Set Filtering policy selected when a subscription is created:
-If `filterType` is 1, `FilterTag` will be used for filtering.
-If `filterType` is 2, `BindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getCreateTime() Obtain Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(integer $CreateTime) Set Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getLastModifyTime() Obtain Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLastModifyTime(integer $LastModifyTime) Set Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMsgCount() Obtain Number of current messages in the topic (number of retained messages).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMsgCount(integer $MsgCount) Set Number of current messages in the topic (number of retained messages).
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getFilterType() Obtain Describes the filtering policy selected by users when creating subscriptions.
+FilterType = 1 means when users use Tag filtering with FilterTag.
+FilterType = 2 indicates user use BindingKey for filtering.
+ * @method void setFilterType(integer $FilterType) Set Describes the filtering policy selected by users when creating subscriptions.
+FilterType = 1 means when users use Tag filtering with FilterTag.
+FilterType = 2 indicates user use BindingKey for filtering.
+ * @method integer getCreateTime() Obtain Topic creation time. Returns a Unix timestamp, accurate to milliseconds.
+ * @method void setCreateTime(integer $CreateTime) Set Topic creation time. Returns a Unix timestamp, accurate to milliseconds.
+ * @method integer getLastModifyTime() Obtain The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
+ * @method void setLastModifyTime(integer $LastModifyTime) Set The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
+ * @method integer getMsgCount() Obtain Number of messages in the current topic (message backlog).
+ * @method void setMsgCount(integer $MsgCount) Set Number of messages in the current topic (message backlog).
  * @method integer getCreateUin() Obtain Creator `Uin`. The `resource` field for CAM authentication is composed of this field.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCreateUin(integer $CreateUin) Set Creator `Uin`. The `resource` field for CAM authentication is composed of this field.
@@ -73,77 +55,62 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setTrace(boolean $Trace) Set Message trace. true: enabled; false: not enabled
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getTenantId() Obtain Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTenantId(string $TenantId) Set Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getNamespaceName() Obtain Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setNamespaceName(string $NamespaceName) Set Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getBrokerType() Obtain Valid values: `0` (Pulsar), `1` (RocketMQ).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBrokerType(integer $BrokerType) Set Valid values: `0` (Pulsar), `1` (RocketMQ).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNamespaceName() Obtain Specifies the namespace name.
+ * @method void setNamespaceName(string $NamespaceName) Set Specifies the namespace name.
+ * @method integer getStatus() Obtain Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
+ * @method void setStatus(integer $Status) Set Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
+ * @method integer getBrokerType() Obtain 0: Pulsar, 1: RocketMQ
+ * @method void setBrokerType(integer $BrokerType) Set 0: Pulsar, 1: RocketMQ
+ * @method integer getSubscriptionCount() Obtain Number of Subscriptions
+ * @method void setSubscriptionCount(integer $SubscriptionCount) Set Number of Subscriptions
  */
 class CmqTopic extends AbstractModel
 {
     /**
      * @var string Topic ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TopicId;
 
     /**
      * @var string Topic name.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TopicName;
 
     /**
-     * @var integer Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified.
      */
     public $MsgRetentionSeconds;
 
     /**
-     * @var integer Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576.
      */
     public $MaxMsgSize;
 
     /**
      * @var integer Number of messages published per second.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Qps;
 
     /**
-     * @var integer Filtering policy selected when a subscription is created:
-If `filterType` is 1, `FilterTag` will be used for filtering.
-If `filterType` is 2, `BindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Describes the filtering policy selected by users when creating subscriptions.
+FilterType = 1 means when users use Tag filtering with FilterTag.
+FilterType = 2 indicates user use BindingKey for filtering.
      */
     public $FilterType;
 
     /**
-     * @var integer Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Topic creation time. Returns a Unix timestamp, accurate to milliseconds.
      */
     public $CreateTime;
 
     /**
-     * @var integer Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
      */
     public $LastModifyTime;
 
     /**
-     * @var integer Number of current messages in the topic (number of retained messages).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of messages in the current topic (message backlog).
      */
     public $MsgCount;
 
@@ -167,49 +134,41 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TenantId;
 
     /**
-     * @var string Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the namespace name.
      */
     public $NamespaceName;
 
     /**
-     * @var integer Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
      */
     public $Status;
 
     /**
-     * @var integer Valid values: `0` (Pulsar), `1` (RocketMQ).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 0: Pulsar, 1: RocketMQ
      */
     public $BrokerType;
 
     /**
+     * @var integer Number of Subscriptions
+     */
+    public $SubscriptionCount;
+
+    /**
      * @param string $TopicId Topic ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $TopicName Topic name.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MsgRetentionSeconds Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxMsgSize Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $MsgRetentionSeconds Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified.
+     * @param integer $MaxMsgSize Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576.
      * @param integer $Qps Number of messages published per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $FilterType Filtering policy selected when a subscription is created:
-If `filterType` is 1, `FilterTag` will be used for filtering.
-If `filterType` is 2, `BindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $CreateTime Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $LastModifyTime Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MsgCount Number of current messages in the topic (number of retained messages).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $FilterType Describes the filtering policy selected by users when creating subscriptions.
+FilterType = 1 means when users use Tag filtering with FilterTag.
+FilterType = 2 indicates user use BindingKey for filtering.
+     * @param integer $CreateTime Topic creation time. Returns a Unix timestamp, accurate to milliseconds.
+     * @param integer $LastModifyTime The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
+     * @param integer $MsgCount Number of messages in the current topic (message backlog).
      * @param integer $CreateUin Creator `Uin`. The `resource` field for CAM authentication is composed of this field.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Associated tag.
@@ -217,13 +176,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param boolean $Trace Message trace. true: enabled; false: not enabled
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $TenantId Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $NamespaceName Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $BrokerType Valid values: `0` (Pulsar), `1` (RocketMQ).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NamespaceName Specifies the namespace name.
+     * @param integer $Status Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
+     * @param integer $BrokerType 0: Pulsar, 1: RocketMQ
+     * @param integer $SubscriptionCount Number of Subscriptions
      */
     function __construct()
     {
@@ -305,6 +261,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BrokerType",$param) and $param["BrokerType"] !== null) {
             $this->BrokerType = $param["BrokerType"];
+        }
+
+        if (array_key_exists("SubscriptionCount",$param) and $param["SubscriptionCount"] !== null) {
+            $this->SubscriptionCount = $param["SubscriptionCount"];
         }
     }
 }

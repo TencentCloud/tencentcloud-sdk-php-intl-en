@@ -36,10 +36,8 @@ use TencentCloud\Common\AbstractModel;
 `0`: Creating; `1`: Running.
  * @method integer getForward() Obtain CLB type. Value range: `1` (CLB); `0` (classic CLB).
  * @method void setForward(integer $Forward) Set CLB type. Value range: `1` (CLB); `0` (classic CLB).
- * @method string getDomain() Obtain The load balancing hostname.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) Set The load balancing hostname.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDomain() Obtain Specifies the clb domain name.
+ * @method void setDomain(string $Domain) Set Specifies the clb domain name.
  */
 class IdleLoadBalancer extends AbstractModel
 {
@@ -80,8 +78,7 @@ class IdleLoadBalancer extends AbstractModel
     public $Forward;
 
     /**
-     * @var string The load balancing hostname.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Specifies the clb domain name.
      */
     public $Domain;
 
@@ -94,8 +91,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param integer $Status CLB instance status, including:
 `0`: Creating; `1`: Running.
      * @param integer $Forward CLB type. Value range: `1` (CLB); `0` (classic CLB).
-     * @param string $Domain The load balancing hostname.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Domain Specifies the clb domain name.
      */
     function __construct()
     {

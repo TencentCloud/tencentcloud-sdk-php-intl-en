@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Data offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned CLB instances. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned CLB instances. Default value: 20. Maximum value: 100.
- * @method string getLoadBalancerRegion() Obtain CLB instance region
- * @method void setLoadBalancerRegion(string $LoadBalancerRegion) Set CLB instance region
+ * @method string getLoadBalancerRegion() Obtain The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1).
+ * @method void setLoadBalancerRegion(string $LoadBalancerRegion) Set The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1).
  */
 class DescribeIdleLoadBalancersRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeIdleLoadBalancersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string CLB instance region
+     * @var string The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1).
      */
     public $LoadBalancerRegion;
 
     /**
      * @param integer $Offset Data offset. Default value: 0.
      * @param integer $Limit Number of returned CLB instances. Default value: 20. Maximum value: 100.
-     * @param string $LoadBalancerRegion CLB instance region
+     * @param string $LoadBalancerRegion The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1).
      */
     function __construct()
     {

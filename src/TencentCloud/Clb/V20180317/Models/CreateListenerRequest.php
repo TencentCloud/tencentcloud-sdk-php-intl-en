@@ -40,9 +40,9 @@ Port range: 1–65535.
 <li>Either this parameter or the MultiCertInfo parameter should be specified when you create a TCP_SSL listener or an HTTPS listener with the SNI feature disabled. You cannot specify them at the same time.</li>
  * @method integer getSessionExpireTime() Obtain Session persistence duration, in seconds. Value range: 30–3600. Default value: 0, indicating that session persistence is not enabled by default. This parameter applies only to TCP and UDP listeners.
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence duration, in seconds. Value range: 30–3600. Default value: 0, indicating that session persistence is not enabled by default. This parameter applies only to TCP and UDP listeners.
- * @method string getScheduler() Obtain Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+ * @method string getScheduler() Obtain Listener forwarding mode. valid values: WRR (weighted round-robin), LEAST_CONN (LEAST connections).
 Default value: WRR. This parameter applies only to TCP, UDP, TCP_SSL, and QUIC listeners.
- * @method void setScheduler(string $Scheduler) Set Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+ * @method void setScheduler(string $Scheduler) Set Listener forwarding mode. valid values: WRR (weighted round-robin), LEAST_CONN (LEAST connections).
 Default value: WRR. This parameter applies only to TCP, UDP, TCP_SSL, and QUIC listeners.
  * @method integer getSniSwitch() Obtain Whether to enable the SNI feature. This parameter applies only to HTTPS listeners. 0: disable; 1: enable.
  * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable the SNI feature. This parameter applies only to HTTPS listeners. 0: disable; 1: enable.
@@ -56,8 +56,8 @@ Enable this feature with caution if the maximum number of connections is limited
 Enable this feature with caution if the maximum number of connections is limited for real servers. This feature is in beta testing. To use it, submit a [beta testing application](https://intl.cloud.tencent.com/apply/p/tsodp6qm21?from_cn_redirect=1).
  * @method integer getEndPort() Obtain End port. This parameter is required for creating a listener with a port range. In this case, the input parameter Ports allows only one value to indicate the start port. To experience the port range feature, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
  * @method void setEndPort(integer $EndPort) Set End port. This parameter is required for creating a listener with a port range. In this case, the input parameter Ports allows only one value to indicate the start port. To experience the port range feature, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
- * @method boolean getDeregisterTargetRst() Obtain Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
- * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) Set Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+ * @method boolean getDeregisterTargetRst() Obtain Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+ * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) Set Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
  * @method MultiCertInfo getMultiCertInfo() Obtain Certificate information. You can import multiple server certificates with different algorithms at the same time. The parameter limitations are as follows:
 <li>This parameter applies only to TCP_SSL listeners and HTTPS listeners with the SNI feature disabled.</li>
 <li>Either this parameter or the Certificate parameter should be specified when you create a TCP_SSL listener or an HTTPS listener with the SNI feature disabled. You cannot specify them at the same time.</li>
@@ -68,20 +68,34 @@ Enable this feature with caution if the maximum number of connections is limited
  * @method void setMaxConn(integer $MaxConn) Set Maximum number of connections to a listener. Currently, this parameter applies only to TCP, UDP, TCP_SSL, and QUIC listeners of LCU-supported instances. If this parameter is not specified or the value is set to -1, the maximum number of connections is not limited. This parameter is not supported for classic network-based instances.
  * @method integer getMaxCps() Obtain Maximum number of new connections to a listener. Currently, this parameter applies only to TCP, UDP, TCP_SSL, and QUIC listeners of LCU-supported instances. If this parameter is not specified or the value is set to -1, the maximum number of new connections is not limited. This parameter is not supported for classic network-based instances.
  * @method void setMaxCps(integer $MaxCps) Set Maximum number of new connections to a listener. Currently, this parameter applies only to TCP, UDP, TCP_SSL, and QUIC listeners of LCU-supported instances. If this parameter is not specified or the value is set to -1, the maximum number of new connections is not limited. This parameter is not supported for classic network-based instances.
- * @method integer getIdleConnectTimeout() Obtain Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
- * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) Set Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
- * @method boolean getProxyProtocol() Obtain 
- * @method void setProxyProtocol(boolean $ProxyProtocol) Set 
- * @method boolean getSnatEnable() Obtain Whether to enable SNAT. True: enable; False: disable.
- * @method void setSnatEnable(boolean $SnatEnable) Set Whether to enable SNAT. True: enable; False: disable.
+ * @method integer getIdleConnectTimeout() Obtain Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding the permissible range, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
+ * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) Set Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding the permissible range, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
+ * @method boolean getProxyProtocol() Obtain Specifies whether PP is supported for TCP_SSL and QUIC.
+ * @method void setProxyProtocol(boolean $ProxyProtocol) Set Specifies whether PP is supported for TCP_SSL and QUIC.
+ * @method boolean getSnatEnable() Obtain Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
+ * @method void setSnatEnable(boolean $SnatEnable) Set Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
  * @method array getFullEndPorts() Obtain End port of a listener with a port range. Range of the port: 2–65535.
  * @method void setFullEndPorts(array $FullEndPorts) Set End port of a listener with a port range. Range of the port: 2–65535.
- * @method boolean getH2cSwitch() Obtain Whether to enable H2C for a private network HTTP listener. True: enable; False: disable.
- * @method void setH2cSwitch(boolean $H2cSwitch) Set Whether to enable H2C for a private network HTTP listener. True: enable; False: disable.
- * @method boolean getSslCloseSwitch() Obtain Whether to disable SSL for TCP_SSL listeners. Dual-stack binding is still supported after SSL is disabled. True: disable; False: enable.
- * @method void setSslCloseSwitch(boolean $SslCloseSwitch) Set Whether to disable SSL for TCP_SSL listeners. Dual-stack binding is still supported after SSL is disabled. True: disable; False: enable.
+ * @method boolean getH2cSwitch() Obtain Enable private network http listener h2c switch. valid values: True (enable), False (disable).
+Disabled by default.
+ * @method void setH2cSwitch(boolean $H2cSwitch) Set Enable private network http listener h2c switch. valid values: True (enable), False (disable).
+Disabled by default.
+ * @method boolean getSslCloseSwitch() Obtain Whether to disable SSL for TCP_SSL listeners. dual-stack binding is still supported after SSL is disabled. valid values: True (disable), False (enable).
+Disabled by default.
+ * @method void setSslCloseSwitch(boolean $SslCloseSwitch) Set Whether to disable SSL for TCP_SSL listeners. dual-stack binding is still supported after SSL is disabled. valid values: True (disable), False (enable).
+Disabled by default.
  * @method string getDataCompressMode() Obtain Data compression mode. Valid values: transparent (passthrough mode) and compatibility (compatibility mode).
  * @method void setDataCompressMode(string $DataCompressMode) Set Data compression mode. Valid values: transparent (passthrough mode) and compatibility (compatibility mode).
+ * @method boolean getRescheduleTargetZeroWeight() Obtain Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+ * @method void setRescheduleTargetZeroWeight(boolean $RescheduleTargetZeroWeight) Set Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+ * @method boolean getRescheduleUnhealthy() Obtain Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+ * @method void setRescheduleUnhealthy(boolean $RescheduleUnhealthy) Set Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+ * @method boolean getRescheduleExpandTarget() Obtain Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+ * @method void setRescheduleExpandTarget(boolean $RescheduleExpandTarget) Set Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+ * @method integer getRescheduleStartTime() Obtain Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+ * @method void setRescheduleStartTime(integer $RescheduleStartTime) Set Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+ * @method integer getRescheduleInterval() Obtain Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+ * @method void setRescheduleInterval(integer $RescheduleInterval) Set Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -124,7 +138,7 @@ Port range: 1–65535.
     public $SessionExpireTime;
 
     /**
-     * @var string Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+     * @var string Listener forwarding mode. valid values: WRR (weighted round-robin), LEAST_CONN (LEAST connections).
 Default value: WRR. This parameter applies only to TCP, UDP, TCP_SSL, and QUIC listeners.
      */
     public $Scheduler;
@@ -156,7 +170,7 @@ Enable this feature with caution if the maximum number of connections is limited
     public $EndPort;
 
     /**
-     * @var boolean Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+     * @var boolean Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
      */
     public $DeregisterTargetRst;
 
@@ -178,17 +192,17 @@ Enable this feature with caution if the maximum number of connections is limited
     public $MaxCps;
 
     /**
-     * @var integer Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
+     * @var integer Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding the permissible range, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
      */
     public $IdleConnectTimeout;
 
     /**
-     * @var boolean 
+     * @var boolean Specifies whether PP is supported for TCP_SSL and QUIC.
      */
     public $ProxyProtocol;
 
     /**
-     * @var boolean Whether to enable SNAT. True: enable; False: disable.
+     * @var boolean Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
      */
     public $SnatEnable;
 
@@ -198,12 +212,14 @@ Enable this feature with caution if the maximum number of connections is limited
     public $FullEndPorts;
 
     /**
-     * @var boolean Whether to enable H2C for a private network HTTP listener. True: enable; False: disable.
+     * @var boolean Enable private network http listener h2c switch. valid values: True (enable), False (disable).
+Disabled by default.
      */
     public $H2cSwitch;
 
     /**
-     * @var boolean Whether to disable SSL for TCP_SSL listeners. Dual-stack binding is still supported after SSL is disabled. True: disable; False: enable.
+     * @var boolean Whether to disable SSL for TCP_SSL listeners. dual-stack binding is still supported after SSL is disabled. valid values: True (disable), False (enable).
+Disabled by default.
      */
     public $SslCloseSwitch;
 
@@ -211,6 +227,31 @@ Enable this feature with caution if the maximum number of connections is limited
      * @var string Data compression mode. Valid values: transparent (passthrough mode) and compatibility (compatibility mode).
      */
     public $DataCompressMode;
+
+    /**
+     * @var boolean Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public $RescheduleTargetZeroWeight;
+
+    /**
+     * @var boolean Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public $RescheduleUnhealthy;
+
+    /**
+     * @var boolean Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public $RescheduleExpandTarget;
+
+    /**
+     * @var integer Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+     */
+    public $RescheduleStartTime;
+
+    /**
+     * @var integer Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+     */
+    public $RescheduleInterval;
 
     /**
      * @param string $LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
@@ -223,7 +264,7 @@ Port range: 1–65535.
 <li>This parameter applies only to TCP_SSL listeners and HTTPS listeners with the SNI feature disabled.</li>
 <li>Either this parameter or the MultiCertInfo parameter should be specified when you create a TCP_SSL listener or an HTTPS listener with the SNI feature disabled. You cannot specify them at the same time.</li>
      * @param integer $SessionExpireTime Session persistence duration, in seconds. Value range: 30–3600. Default value: 0, indicating that session persistence is not enabled by default. This parameter applies only to TCP and UDP listeners.
-     * @param string $Scheduler Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+     * @param string $Scheduler Listener forwarding mode. valid values: WRR (weighted round-robin), LEAST_CONN (LEAST connections).
 Default value: WRR. This parameter applies only to TCP, UDP, TCP_SSL, and QUIC listeners.
      * @param integer $SniSwitch Whether to enable the SNI feature. This parameter applies only to HTTPS listeners. 0: disable; 1: enable.
      * @param string $TargetType Real server type. NODE: ordinary node; TARGETGROUP: real server group. This parameter applies only to TCP and UDP listeners. For layer-7 listeners, set the type in forwarding rules.
@@ -231,19 +272,26 @@ Default value: WRR. This parameter applies only to TCP, UDP, TCP_SSL, and QUIC l
      * @param integer $KeepaliveEnable Whether to enable the persistent connection feature. This parameter applies only to HTTP and HTTPS listeners. 0: disable; 1: enable. This feature is disabled by default.
 Enable this feature with caution if the maximum number of connections is limited for real servers. This feature is in beta testing. To use it, submit a [beta testing application](https://intl.cloud.tencent.com/apply/p/tsodp6qm21?from_cn_redirect=1).
      * @param integer $EndPort End port. This parameter is required for creating a listener with a port range. In this case, the input parameter Ports allows only one value to indicate the start port. To experience the port range feature, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
-     * @param boolean $DeregisterTargetRst Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+     * @param boolean $DeregisterTargetRst Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
      * @param MultiCertInfo $MultiCertInfo Certificate information. You can import multiple server certificates with different algorithms at the same time. The parameter limitations are as follows:
 <li>This parameter applies only to TCP_SSL listeners and HTTPS listeners with the SNI feature disabled.</li>
 <li>Either this parameter or the Certificate parameter should be specified when you create a TCP_SSL listener or an HTTPS listener with the SNI feature disabled. You cannot specify them at the same time.</li>
      * @param integer $MaxConn Maximum number of connections to a listener. Currently, this parameter applies only to TCP, UDP, TCP_SSL, and QUIC listeners of LCU-supported instances. If this parameter is not specified or the value is set to -1, the maximum number of connections is not limited. This parameter is not supported for classic network-based instances.
      * @param integer $MaxCps Maximum number of new connections to a listener. Currently, this parameter applies only to TCP, UDP, TCP_SSL, and QUIC listeners of LCU-supported instances. If this parameter is not specified or the value is set to -1, the maximum number of new connections is not limited. This parameter is not supported for classic network-based instances.
-     * @param integer $IdleConnectTimeout Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
-     * @param boolean $ProxyProtocol 
-     * @param boolean $SnatEnable Whether to enable SNAT. True: enable; False: disable.
+     * @param integer $IdleConnectTimeout Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding the permissible range, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
+     * @param boolean $ProxyProtocol Specifies whether PP is supported for TCP_SSL and QUIC.
+     * @param boolean $SnatEnable Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
      * @param array $FullEndPorts End port of a listener with a port range. Range of the port: 2–65535.
-     * @param boolean $H2cSwitch Whether to enable H2C for a private network HTTP listener. True: enable; False: disable.
-     * @param boolean $SslCloseSwitch Whether to disable SSL for TCP_SSL listeners. Dual-stack binding is still supported after SSL is disabled. True: disable; False: enable.
+     * @param boolean $H2cSwitch Enable private network http listener h2c switch. valid values: True (enable), False (disable).
+Disabled by default.
+     * @param boolean $SslCloseSwitch Whether to disable SSL for TCP_SSL listeners. dual-stack binding is still supported after SSL is disabled. valid values: True (disable), False (enable).
+Disabled by default.
      * @param string $DataCompressMode Data compression mode. Valid values: transparent (passthrough mode) and compatibility (compatibility mode).
+     * @param boolean $RescheduleTargetZeroWeight Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     * @param boolean $RescheduleUnhealthy Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     * @param boolean $RescheduleExpandTarget Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     * @param integer $RescheduleStartTime Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+     * @param integer $RescheduleInterval Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
      */
     function __construct()
     {
@@ -355,6 +403,26 @@ Enable this feature with caution if the maximum number of connections is limited
 
         if (array_key_exists("DataCompressMode",$param) and $param["DataCompressMode"] !== null) {
             $this->DataCompressMode = $param["DataCompressMode"];
+        }
+
+        if (array_key_exists("RescheduleTargetZeroWeight",$param) and $param["RescheduleTargetZeroWeight"] !== null) {
+            $this->RescheduleTargetZeroWeight = $param["RescheduleTargetZeroWeight"];
+        }
+
+        if (array_key_exists("RescheduleUnhealthy",$param) and $param["RescheduleUnhealthy"] !== null) {
+            $this->RescheduleUnhealthy = $param["RescheduleUnhealthy"];
+        }
+
+        if (array_key_exists("RescheduleExpandTarget",$param) and $param["RescheduleExpandTarget"] !== null) {
+            $this->RescheduleExpandTarget = $param["RescheduleExpandTarget"];
+        }
+
+        if (array_key_exists("RescheduleStartTime",$param) and $param["RescheduleStartTime"] !== null) {
+            $this->RescheduleStartTime = $param["RescheduleStartTime"];
+        }
+
+        if (array_key_exists("RescheduleInterval",$param) and $param["RescheduleInterval"] !== null) {
+            $this->RescheduleInterval = $param["RescheduleInterval"];
         }
     }
 }

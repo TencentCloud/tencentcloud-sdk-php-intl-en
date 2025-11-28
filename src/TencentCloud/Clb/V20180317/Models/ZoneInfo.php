@@ -20,82 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AZ information
  *
- * @method integer getZoneId() Obtain Unique AZ ID in a numeric form, such as 100001
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneId(integer $ZoneId) Set Unique AZ ID in a numeric form, such as 100001
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getZone() Obtain Unique AZ ID in a string form, such as ap-guangzhou-1
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZone(string $Zone) Set Unique AZ ID in a string form, such as ap-guangzhou-1
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getZoneName() Obtain AZ name, such as Guangzhou Zone 1
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneName(string $ZoneName) Set AZ name, such as Guangzhou Zone 1
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getZoneRegion() Obtain AZ region, e.g., ap-guangzhou.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setZoneRegion(string $ZoneRegion) Set AZ region, e.g., ap-guangzhou.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getLocalZone() Obtain Whether the AZ is the `LocalZone`, e.g., false.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setLocalZone(boolean $LocalZone) Set Whether the AZ is the `LocalZone`, e.g., false.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getEdgeZone() Obtain Whether the AZ is an edge zone. Values: `true`, `false`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setEdgeZone(boolean $EdgeZone) Set Whether the AZ is an edge zone. Values: `true`, `false`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getZoneId() Obtain Unique ID of the AZ in numeric form, such as 100001
+ * @method void setZoneId(integer $ZoneId) Set Unique ID of the AZ in numeric form, such as 100001
+ * @method string getZone() Obtain Unique ID of the AZ in string format, such as ap-guangzhou-1
+ * @method void setZone(string $Zone) Set Unique ID of the AZ in string format, such as ap-guangzhou-1
+ * @method string getZoneName() Obtain AZ name, such as Guangzhou 1
+ * @method void setZoneName(string $ZoneName) Set AZ name, such as Guangzhou 1
+ * @method string getZoneRegion() Obtain Specifies the region of the availability zone, for example: ap-guangzhou.
+ * @method void setZoneRegion(string $ZoneRegion) Set Specifies the region of the availability zone, for example: ap-guangzhou.
+ * @method boolean getLocalZone() Obtain Indicates whether the AZ is a LocalZone az, for example: false.
+ * @method void setLocalZone(boolean $LocalZone) Set Indicates whether the AZ is a LocalZone az, for example: false.
+ * @method boolean getEdgeZone() Obtain Indicates whether the AZ is an EdgeZone az, for example: false.
+ * @method void setEdgeZone(boolean $EdgeZone) Set Indicates whether the AZ is an EdgeZone az, for example: false.
  */
 class ZoneInfo extends AbstractModel
 {
     /**
-     * @var integer Unique AZ ID in a numeric form, such as 100001
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Unique ID of the AZ in numeric form, such as 100001
      */
     public $ZoneId;
 
     /**
-     * @var string Unique AZ ID in a string form, such as ap-guangzhou-1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Unique ID of the AZ in string format, such as ap-guangzhou-1
      */
     public $Zone;
 
     /**
-     * @var string AZ name, such as Guangzhou Zone 1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string AZ name, such as Guangzhou 1
      */
     public $ZoneName;
 
     /**
-     * @var string AZ region, e.g., ap-guangzhou.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Specifies the region of the availability zone, for example: ap-guangzhou.
      */
     public $ZoneRegion;
 
     /**
-     * @var boolean Whether the AZ is the `LocalZone`, e.g., false.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var boolean Indicates whether the AZ is a LocalZone az, for example: false.
      */
     public $LocalZone;
 
     /**
-     * @var boolean Whether the AZ is an edge zone. Values: `true`, `false`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var boolean Indicates whether the AZ is an EdgeZone az, for example: false.
      */
     public $EdgeZone;
 
     /**
-     * @param integer $ZoneId Unique AZ ID in a numeric form, such as 100001
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Zone Unique AZ ID in a string form, such as ap-guangzhou-1
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ZoneName AZ name, such as Guangzhou Zone 1
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ZoneRegion AZ region, e.g., ap-guangzhou.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $LocalZone Whether the AZ is the `LocalZone`, e.g., false.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $ZoneId Unique ID of the AZ in numeric form, such as 100001
+     * @param string $Zone Unique ID of the AZ in string format, such as ap-guangzhou-1
+     * @param string $ZoneName AZ name, such as Guangzhou 1
+     * @param string $ZoneRegion Specifies the region of the availability zone, for example: ap-guangzhou.
+     * @param boolean $LocalZone Indicates whether the AZ is a LocalZone az, for example: false.
+     * @param boolean $EdgeZone Indicates whether the AZ is an EdgeZone az, for example: false.
      */
     function __construct()
     {

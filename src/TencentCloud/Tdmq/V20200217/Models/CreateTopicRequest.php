@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
  * @method string getTopicName() Obtain Topic name, which can contain up to 64 letters, digits, hyphens, and underscores.
  * @method void setTopicName(string $TopicName) Set Topic name, which can contain up to 64 letters, digits, hyphens, and underscores.
- * @method integer getPartitions() Obtain The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
- * @method void setPartitions(integer $Partitions) Set The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
+ * @method integer getPartitions() Obtain The input parameter is 1, which means creating a non-partitioned topic with no partition. if the input parameter is greater than 1, it indicates the number of partitions for a partitioned topic, and the maximum cannot exceed 32.
+ * @method void setPartitions(integer $Partitions) Set The input parameter is 1, which means creating a non-partitioned topic with no partition. if the input parameter is greater than 1, it indicates the number of partitions for a partitioned topic, and the maximum cannot exceed 32.
+ * @method string getClusterId() Obtain Pulsar cluster ID
+ * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID
  * @method string getRemark() Obtain Remarks (up to 128 characters).
  * @method void setRemark(string $Remark) Set Remarks (up to 128 characters).
  * @method integer getTopicType() Obtain This input parameter will be disused soon. You can use `PulsarTopicType` instead.
@@ -40,8 +42,6 @@ use TencentCloud\Common\AbstractModel;
 2: Partitionally sequential message;
 3: Retry letter topic;
 4: Dead letter topic.
- * @method string getClusterId() Obtain Pulsar cluster ID
- * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID
  * @method integer getPulsarTopicType() Obtain Pulsar topic type.
 `0`: Non-persistent and non-partitioned
 `1`: Non-persistent and partitioned
@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 `1`: Non-persistent and partitioned
 `2`: Persistent and non-partitioned
 `3`: Persistent and partitioned
+ * @method integer getMsgTTL() Obtain Retention period for unconsumed messages in seconds. value ranges from 60 seconds to 15 days.
+ * @method void setMsgTTL(integer $MsgTTL) Set Retention period for unconsumed messages in seconds. value ranges from 60 seconds to 15 days.
+ * @method string getUnackPolicy() Obtain Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy means dynamically adjust the maximum unacknowledged messages of the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
+ * @method void setUnackPolicy(string $UnackPolicy) Set Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy means dynamically adjust the maximum unacknowledged messages of the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
+ * @method boolean getIsolateConsumerEnable() Obtain Whether exception consumer isolation is enabled.
+ * @method void setIsolateConsumerEnable(boolean $IsolateConsumerEnable) Set Whether exception consumer isolation is enabled.
+ * @method integer getAckTimeOut() Obtain Specifies the consumer Ack timeout period in seconds. value range: 60-(3600*24).
+ * @method void setAckTimeOut(integer $AckTimeOut) Set Specifies the consumer Ack timeout period in seconds. value range: 60-(3600*24).
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -66,9 +74,14 @@ class CreateTopicRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var integer The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
+     * @var integer The input parameter is 1, which means creating a non-partitioned topic with no partition. if the input parameter is greater than 1, it indicates the number of partitions for a partitioned topic, and the maximum cannot exceed 32.
      */
     public $Partitions;
+
+    /**
+     * @var string Pulsar cluster ID
+     */
+    public $ClusterId;
 
     /**
      * @var string Remarks (up to 128 characters).
@@ -86,11 +99,6 @@ class CreateTopicRequest extends AbstractModel
     public $TopicType;
 
     /**
-     * @var string Pulsar cluster ID
-     */
-    public $ClusterId;
-
-    /**
      * @var integer Pulsar topic type.
 `0`: Non-persistent and non-partitioned
 `1`: Non-persistent and partitioned
@@ -100,9 +108,30 @@ class CreateTopicRequest extends AbstractModel
     public $PulsarTopicType;
 
     /**
+     * @var integer Retention period for unconsumed messages in seconds. value ranges from 60 seconds to 15 days.
+     */
+    public $MsgTTL;
+
+    /**
+     * @var string Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy means dynamically adjust the maximum unacknowledged messages of the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
+     */
+    public $UnackPolicy;
+
+    /**
+     * @var boolean Whether exception consumer isolation is enabled.
+     */
+    public $IsolateConsumerEnable;
+
+    /**
+     * @var integer Specifies the consumer Ack timeout period in seconds. value range: 60-(3600*24).
+     */
+    public $AckTimeOut;
+
+    /**
      * @param string $EnvironmentId Environment (namespace) name.
      * @param string $TopicName Topic name, which can contain up to 64 letters, digits, hyphens, and underscores.
-     * @param integer $Partitions The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
+     * @param integer $Partitions The input parameter is 1, which means creating a non-partitioned topic with no partition. if the input parameter is greater than 1, it indicates the number of partitions for a partitioned topic, and the maximum cannot exceed 32.
+     * @param string $ClusterId Pulsar cluster ID
      * @param string $Remark Remarks (up to 128 characters).
      * @param integer $TopicType This input parameter will be disused soon. You can use `PulsarTopicType` instead.
 0: General message;
@@ -110,12 +139,15 @@ class CreateTopicRequest extends AbstractModel
 2: Partitionally sequential message;
 3: Retry letter topic;
 4: Dead letter topic.
-     * @param string $ClusterId Pulsar cluster ID
      * @param integer $PulsarTopicType Pulsar topic type.
 `0`: Non-persistent and non-partitioned
 `1`: Non-persistent and partitioned
 `2`: Persistent and non-partitioned
 `3`: Persistent and partitioned
+     * @param integer $MsgTTL Retention period for unconsumed messages in seconds. value ranges from 60 seconds to 15 days.
+     * @param string $UnackPolicy Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy means dynamically adjust the maximum unacknowledged messages of the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
+     * @param boolean $IsolateConsumerEnable Whether exception consumer isolation is enabled.
+     * @param integer $AckTimeOut Specifies the consumer Ack timeout period in seconds. value range: 60-(3600*24).
      */
     function __construct()
     {
@@ -142,6 +174,10 @@ class CreateTopicRequest extends AbstractModel
             $this->Partitions = $param["Partitions"];
         }
 
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
         }
@@ -150,12 +186,24 @@ class CreateTopicRequest extends AbstractModel
             $this->TopicType = $param["TopicType"];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
-        }
-
         if (array_key_exists("PulsarTopicType",$param) and $param["PulsarTopicType"] !== null) {
             $this->PulsarTopicType = $param["PulsarTopicType"];
+        }
+
+        if (array_key_exists("MsgTTL",$param) and $param["MsgTTL"] !== null) {
+            $this->MsgTTL = $param["MsgTTL"];
+        }
+
+        if (array_key_exists("UnackPolicy",$param) and $param["UnackPolicy"] !== null) {
+            $this->UnackPolicy = $param["UnackPolicy"];
+        }
+
+        if (array_key_exists("IsolateConsumerEnable",$param) and $param["IsolateConsumerEnable"] !== null) {
+            $this->IsolateConsumerEnable = $param["IsolateConsumerEnable"];
+        }
+
+        if (array_key_exists("AckTimeOut",$param) and $param["AckTimeOut"] !== null) {
+            $this->AckTimeOut = $param["AckTimeOut"];
         }
     }
 }

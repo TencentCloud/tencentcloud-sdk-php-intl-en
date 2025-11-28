@@ -44,6 +44,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name
  * @method string getListenerName() Obtain Listener name
  * @method void setListenerName(string $ListenerName) Set Listener name
+ * @method integer getWeight() Obtain Weight associated with the target group. this parameter takes effect only for the new version v2 target group.
+ * @method void setWeight(integer $Weight) Set Weight associated with the target group. this parameter takes effect only for the new version v2 target group.
+ * @method string getRuleId() Obtain Advanced routing rule ID.
+ * @method void setRuleId(string $RuleId) Set Advanced routing rule ID.
  */
 class AssociationItem extends AbstractModel
 {
@@ -96,6 +100,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ListenerName;
 
     /**
+     * @var integer Weight associated with the target group. this parameter takes effect only for the new version v2 target group.
+     */
+    public $Weight;
+
+    /**
+     * @var string Advanced routing rule ID.
+     */
+    public $RuleId;
+
+    /**
      * @param string $LoadBalancerId ID of associated CLB instance
      * @param string $ListenerId ID of associated listener
      * @param string $LocationId ID of associated forwarding rule
@@ -108,6 +122,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $LoadBalancerName CLB instance name
      * @param string $ListenerName Listener name
+     * @param integer $Weight Weight associated with the target group. this parameter takes effect only for the new version v2 target group.
+     * @param string $RuleId Advanced routing rule ID.
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ListenerName",$param) and $param["ListenerName"] !== null) {
             $this->ListenerName = $param["ListenerName"];
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
     }
 }

@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRabbitMQUser request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID
+ * @method string getInstanceId() Obtain Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
  * @method string getUser() Obtain Username, which is used for login.
  * @method void setUser(string $User) Set Username, which is used for login.
- * @method string getPassword() Obtain Password, which is used for login.
- * @method void setPassword(string $Password) Set Password, which is used for login.
+ * @method string getPassword() Obtain Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
+ * @method void setPassword(string $Password) Set Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
  * @method string getDescription() Obtain Description
  * @method void setDescription(string $Description) Set Description
- * @method array getTags() Obtain User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
+ * @method array getTags() Obtain User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
 Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
- * @method void setTags(array $Tags) Set User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
+ * @method void setTags(array $Tags) Set User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
 Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
  * @method integer getMaxConnections() Obtain The maximum number of connections for the user. If this parameter is left empty, there's no limit for the number.
  * @method void setMaxConnections(integer $MaxConnections) Set The maximum number of connections for the user. If this parameter is left empty, there's no limit for the number.
@@ -40,7 +40,7 @@ Valid values: `management` (Common console user), monitoring` (Console admin use
 class CreateRabbitMQUserRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID
+     * @var string Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public $InstanceId;
 
@@ -50,7 +50,7 @@ class CreateRabbitMQUserRequest extends AbstractModel
     public $User;
 
     /**
-     * @var string Password, which is used for login.
+     * @var string Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
      */
     public $Password;
 
@@ -60,7 +60,7 @@ class CreateRabbitMQUserRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var array User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
+     * @var array User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
 Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
      */
     public $Tags;
@@ -76,11 +76,11 @@ Valid values: `management` (Common console user), monitoring` (Console admin use
     public $MaxChannels;
 
     /**
-     * @param string $InstanceId Cluster instance ID
+     * @param string $InstanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      * @param string $User Username, which is used for login.
-     * @param string $Password Password, which is used for login.
+     * @param string $Password Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
      * @param string $Description Description
-     * @param array $Tags User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
+     * @param array $Tags User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
 Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
      * @param integer $MaxConnections The maximum number of connections for the user. If this parameter is left empty, there's no limit for the number.
      * @param integer $MaxChannels The maximum number of channels for the user. If this parameter is left empty, there's no limit for the number.

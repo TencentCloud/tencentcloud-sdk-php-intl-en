@@ -22,18 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUconfigId() Obtain Configuration ID.
  * @method void setUconfigId(string $UconfigId) Set Configuration ID.
- * @method string getConfigType() Obtain Configuration type.
- * @method void setConfigType(string $ConfigType) Set Configuration type.
- * @method string getConfigName() Obtain Configuration name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setConfigName(string $ConfigName) Set Configuration name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getConfigType() Obtain Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration).
+ * @method void setConfigType(string $ConfigType) Set Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration).
+ * @method string getConfigName() Obtain Configuration name
+ * @method void setConfigName(string $ConfigName) Set Configuration name
  * @method string getConfigContent() Obtain Configuration content.
  * @method void setConfigContent(string $ConfigContent) Set Configuration content.
- * @method string getCreateTimestamp() Obtain Creates configuration time.
- * @method void setCreateTimestamp(string $CreateTimestamp) Set Creates configuration time.
- * @method string getUpdateTimestamp() Obtain Modifies configuration time.
- * @method void setUpdateTimestamp(string $UpdateTimestamp) Set Modifies configuration time.
+ * @method string getCreateTimestamp() Obtain Specifies the configured creation time.
+Format: YYYY-MM-DD HH:MM:ss.
+ * @method void setCreateTimestamp(string $CreateTimestamp) Set Specifies the configured creation time.
+Format: YYYY-MM-DD HH:MM:ss.
+ * @method string getUpdateTimestamp() Obtain Specifies the modification time of the configuration.
+Format: YYYY-MM-DD HH:MM:ss.
+ * @method void setUpdateTimestamp(string $UpdateTimestamp) Set Specifies the modification time of the configuration.
+Format: YYYY-MM-DD HH:MM:ss.
  */
 class ConfigListItem extends AbstractModel
 {
@@ -43,13 +45,12 @@ class ConfigListItem extends AbstractModel
     public $UconfigId;
 
     /**
-     * @var string Configuration type.
+     * @var string Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration).
      */
     public $ConfigType;
 
     /**
-     * @var string Configuration name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Configuration name
      */
     public $ConfigName;
 
@@ -59,23 +60,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ConfigContent;
 
     /**
-     * @var string Creates configuration time.
+     * @var string Specifies the configured creation time.
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public $CreateTimestamp;
 
     /**
-     * @var string Modifies configuration time.
+     * @var string Specifies the modification time of the configuration.
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public $UpdateTimestamp;
 
     /**
      * @param string $UconfigId Configuration ID.
-     * @param string $ConfigType Configuration type.
-     * @param string $ConfigName Configuration name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ConfigType Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration).
+     * @param string $ConfigName Configuration name
      * @param string $ConfigContent Configuration content.
-     * @param string $CreateTimestamp Creates configuration time.
-     * @param string $UpdateTimestamp Modifies configuration time.
+     * @param string $CreateTimestamp Specifies the configured creation time.
+Format: YYYY-MM-DD HH:MM:ss.
+     * @param string $UpdateTimestamp Specifies the modification time of the configuration.
+Format: YYYY-MM-DD HH:MM:ss.
      */
     function __construct()
     {

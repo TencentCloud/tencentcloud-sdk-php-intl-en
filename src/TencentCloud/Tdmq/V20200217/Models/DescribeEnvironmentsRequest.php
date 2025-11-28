@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEnvironments request structure.
  *
+ * @method string getClusterId() Obtain Pulsar cluster ID
+ * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID
  * @method string getEnvironmentId() Obtain Fuzzy search by namespace name.
  * @method void setEnvironmentId(string $EnvironmentId) Set Fuzzy search by namespace name.
  * @method integer getOffset() Obtain Offset, which defaults to 0 if left empty.
  * @method void setOffset(integer $Offset) Set Offset, which defaults to 0 if left empty.
  * @method integer getLimit() Obtain The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
  * @method void setLimit(integer $Limit) Set The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
- * @method string getClusterId() Obtain Pulsar cluster ID
- * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID
  * @method array getFilters() Obtain * EnvironmentId
 Filter by namespace for exact query.
 Type: String
@@ -39,6 +39,11 @@ Required: No
  */
 class DescribeEnvironmentsRequest extends AbstractModel
 {
+    /**
+     * @var string Pulsar cluster ID
+     */
+    public $ClusterId;
+
     /**
      * @var string Fuzzy search by namespace name.
      */
@@ -55,11 +60,6 @@ class DescribeEnvironmentsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Pulsar cluster ID
-     */
-    public $ClusterId;
-
-    /**
      * @var array * EnvironmentId
 Filter by namespace for exact query.
 Type: String
@@ -68,10 +68,10 @@ Required: No
     public $Filters;
 
     /**
+     * @param string $ClusterId Pulsar cluster ID
      * @param string $EnvironmentId Fuzzy search by namespace name.
      * @param integer $Offset Offset, which defaults to 0 if left empty.
      * @param integer $Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
-     * @param string $ClusterId Pulsar cluster ID
      * @param array $Filters * EnvironmentId
 Filter by namespace for exact query.
 Type: String
@@ -90,6 +90,10 @@ Required: No
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
         if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
             $this->EnvironmentId = $param["EnvironmentId"];
         }
@@ -100,10 +104,6 @@ Required: No
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

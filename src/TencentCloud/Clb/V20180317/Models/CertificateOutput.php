@@ -22,16 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSSLMode() Obtain Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
  * @method void setSSLMode(string $SSLMode) Set Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+ * @method string getSSLVerifyClient() Obtain Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled.
+ * @method void setSSLVerifyClient(string $SSLVerifyClient) Set Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled.
  * @method string getCertId() Obtain Server certificate ID.
  * @method void setCertId(string $CertId) Set Server certificate ID.
  * @method string getCertCaId() Obtain Client certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCertCaId(string $CertCaId) Set Client certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getExtCertIds() Obtain IDs of extra server certificates
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setExtCertIds(array $ExtCertIds) Set IDs of extra server certificates
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getExtCertIds() Obtain Specifies the server certificate ID for multi-server certificate scenario expansion.
+ * @method void setExtCertIds(array $ExtCertIds) Set Specifies the server certificate ID for multi-server certificate scenario expansion.
  */
 class CertificateOutput extends AbstractModel
 {
@@ -41,29 +39,31 @@ class CertificateOutput extends AbstractModel
     public $SSLMode;
 
     /**
+     * @var string Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled.
+     */
+    public $SSLVerifyClient;
+
+    /**
      * @var string Server certificate ID.
      */
     public $CertId;
 
     /**
      * @var string Client certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CertCaId;
 
     /**
-     * @var array IDs of extra server certificates
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array Specifies the server certificate ID for multi-server certificate scenario expansion.
      */
     public $ExtCertIds;
 
     /**
      * @param string $SSLMode Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+     * @param string $SSLVerifyClient Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled.
      * @param string $CertId Server certificate ID.
      * @param string $CertCaId Client certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ExtCertIds IDs of extra server certificates
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $ExtCertIds Specifies the server certificate ID for multi-server certificate scenario expansion.
      */
     function __construct()
     {
@@ -80,6 +80,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         }
         if (array_key_exists("SSLMode",$param) and $param["SSLMode"] !== null) {
             $this->SSLMode = $param["SSLMode"];
+        }
+
+        if (array_key_exists("SSLVerifyClient",$param) and $param["SSLVerifyClient"] !== null) {
+            $this->SSLVerifyClient = $param["SSLVerifyClient"];
         }
 
         if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFilters() Obtain Query condition filter
  * @method void setFilters(array $Filters) Set Query condition filter
- * @method integer getLimit() Obtain The maximum number of queried items, which defaults to 20.
- * @method void setLimit(integer $Limit) Set The maximum number of queried items, which defaults to 20.
- * @method integer getOffset() Obtain Start offset for query
- * @method void setOffset(integer $Offset) Set Start offset for query
+ * @method integer getLimit() Obtain Maximum number of items for query. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Maximum number of items for query. Default value: 20.
+ * @method integer getOffset() Obtain Starting position of the query. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Starting position of the query. Default value: 0.
  */
 class DescribeRabbitMQVipInstancesRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeRabbitMQVipInstancesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer The maximum number of queried items, which defaults to 20.
+     * @var integer Maximum number of items for query. Default value: 20.
      */
     public $Limit;
 
     /**
-     * @var integer Start offset for query
+     * @var integer Starting position of the query. Default value: 0.
      */
     public $Offset;
 
     /**
      * @param array $Filters Query condition filter
-     * @param integer $Limit The maximum number of queried items, which defaults to 20.
-     * @param integer $Offset Start offset for query
+     * @param integer $Limit Maximum number of items for query. Default value: 20.
+     * @param integer $Offset Starting position of the query. Default value: 0.
      */
     function __construct()
     {

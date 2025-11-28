@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Cluster name, which can contain 3–64 letters, digits, hyphens, and underscores
  * @method string getRemark() Obtain Cluster description (up to 128 characters)
  * @method void setRemark(string $Remark) Set Cluster description (up to 128 characters)
+ * @method array getTagList() Obtain Tag list
+ * @method void setTagList(array $TagList) Set Tag list
  */
 class CreateRocketMQClusterRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateRocketMQClusterRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var array Tag list
+     */
+    public $TagList;
+
+    /**
      * @param string $Name Cluster name, which can contain 3–64 letters, digits, hyphens, and underscores
      * @param string $Remark Cluster description (up to 128 characters)
+     * @param array $TagList Tag list
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class CreateRocketMQClusterRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

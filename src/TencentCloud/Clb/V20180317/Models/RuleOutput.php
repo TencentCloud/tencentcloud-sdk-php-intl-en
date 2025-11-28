@@ -22,20 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLocationId() Obtain Forwarding rule ID
  * @method void setLocationId(string $LocationId) Set Forwarding rule ID
- * @method string getDomain() Obtain Domain name of the forwarding rule.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) Set Domain name of the forwarding rule.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUrl() Obtain Forwarding rule path.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUrl(string $Url) Set Forwarding rule path.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDomain() Obtain Domain name of the forwarding rule
+ * @method void setDomain(string $Domain) Set Domain name of the forwarding rule
+ * @method string getUrl() Obtain Path of forwarding rules.
+ * @method void setUrl(string $Url) Set Path of forwarding rules.
  * @method integer getSessionExpireTime() Obtain Session persistence time
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time
- * @method HealthCheck getHealthCheck() Obtain Health check information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check information
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method HealthCheck getHealthCheck() Obtain Health Check Information
+ * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health Check Information
  * @method CertificateOutput getCertificate() Obtain Certificate information
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCertificate(CertificateOutput $Certificate) Set Certificate information
@@ -44,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setScheduler(string $Scheduler) Set Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
  * @method string getListenerId() Obtain ID of the listener to which the forwarding rule belongs
  * @method void setListenerId(string $ListenerId) Set ID of the listener to which the forwarding rule belongs
- * @method RewriteTarget getRewriteTarget() Obtain Redirect target information of a forwarding rule
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRewriteTarget(RewriteTarget $RewriteTarget) Set Redirect target information of a forwarding rule
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method RewriteTarget getRewriteTarget() Obtain Redirection target information of the forwarding rule
+ * @method void setRewriteTarget(RewriteTarget $RewriteTarget) Set Redirection target information of the forwarding rule
  * @method boolean getHttpGzip() Obtain Whether to enable gzip
  * @method void setHttpGzip(boolean $HttpGzip) Set Whether to enable gzip
  * @method boolean getBeAutoCreated() Obtain Whether the forwarding rule is automatically created
@@ -66,30 +58,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) Set Basic information of a bound target group. This field will be returned if a target group is bound to a rule.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getWafDomainId() Obtain WAF instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWafDomainId(string $WafDomainId) Set WAF instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTrpcCallee() Obtain TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTrpcCallee(string $TrpcCallee) Set TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTrpcFunc() Obtain TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getQuicStatus() Obtain QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQuicStatus(string $QuicStatus) Set QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDomains() Obtain List of domain names associated with the forwarding rule
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setDomains(array $Domains) Set List of domain names associated with the forwarding rule
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getWafDomainId() Obtain WAF instance ID.
+ * @method void setWafDomainId(string $WafDomainId) Set WAF instance ID.
+ * @method string getTrpcCallee() Obtain Called server routing. valid when ForwardType is TRPC. currently not yet available.
+ * @method void setTrpcCallee(string $TrpcCallee) Set Called server routing. valid when ForwardType is TRPC. currently not yet available.
+ * @method string getTrpcFunc() Obtain TRPC calling service api. valid when ForwardType is TRPC. currently not yet available.
+ * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service api. valid when ForwardType is TRPC. currently not yet available.
+ * @method string getQuicStatus() Obtain QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC.
+ * @method void setQuicStatus(string $QuicStatus) Set QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC.
+ * @method array getDomains() Obtain Specifies the domain name list of the forwarding rule.
+ * @method void setDomains(array $Domains) Set Specifies the domain name list of the forwarding rule.
  * @method array getTargetGroupList() Obtain List of bound target groups
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setTargetGroupList(array $TargetGroupList) Set List of bound target groups
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method OAuth getOAuth() Obtain OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOAuth(OAuth $OAuth) Set OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method OAuth getOAuth() Obtain OAuth configuration status.
+ * @method void setOAuth(OAuth $OAuth) Set OAuth configuration status.
+ * @method string getCookieName() Obtain Specifies the custom cookie name.
+ * @method void setCookieName(string $CookieName) Set Specifies the custom cookie name.
  */
 class RuleOutput extends AbstractModel
 {
@@ -99,14 +85,12 @@ class RuleOutput extends AbstractModel
     public $LocationId;
 
     /**
-     * @var string Domain name of the forwarding rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Domain name of the forwarding rule
      */
     public $Domain;
 
     /**
-     * @var string Forwarding rule path.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Path of forwarding rules.
      */
     public $Url;
 
@@ -116,8 +100,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SessionExpireTime;
 
     /**
-     * @var HealthCheck Health check information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var HealthCheck Health Check Information
      */
     public $HealthCheck;
 
@@ -138,8 +121,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ListenerId;
 
     /**
-     * @var RewriteTarget Redirect target information of a forwarding rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RewriteTarget Redirection target information of the forwarding rule
      */
     public $RewriteTarget;
 
@@ -185,31 +167,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TargetGroup;
 
     /**
-     * @var string WAF instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string WAF instance ID.
      */
     public $WafDomainId;
 
     /**
-     * @var string TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Called server routing. valid when ForwardType is TRPC. currently not yet available.
      */
     public $TrpcCallee;
 
     /**
-     * @var string TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string TRPC calling service api. valid when ForwardType is TRPC. currently not yet available.
      */
     public $TrpcFunc;
 
     /**
-     * @var string QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC.
      */
     public $QuicStatus;
 
     /**
-     * @var array List of domain names associated with the forwarding rule
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array Specifies the domain name list of the forwarding rule.
      */
     public $Domains;
 
@@ -220,25 +198,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $TargetGroupList;
 
     /**
-     * @var OAuth OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var OAuth OAuth configuration status.
      */
     public $OAuth;
 
     /**
+     * @var string Specifies the custom cookie name.
+     */
+    public $CookieName;
+
+    /**
      * @param string $LocationId Forwarding rule ID
-     * @param string $Domain Domain name of the forwarding rule.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Url Forwarding rule path.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Domain Domain name of the forwarding rule
+     * @param string $Url Path of forwarding rules.
      * @param integer $SessionExpireTime Session persistence time
-     * @param HealthCheck $HealthCheck Health check information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HealthCheck $HealthCheck Health Check Information
      * @param CertificateOutput $Certificate Certificate information
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Scheduler Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
      * @param string $ListenerId ID of the listener to which the forwarding rule belongs
-     * @param RewriteTarget $RewriteTarget Redirect target information of a forwarding rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RewriteTarget $RewriteTarget Redirection target information of the forwarding rule
      * @param boolean $HttpGzip Whether to enable gzip
      * @param boolean $BeAutoCreated Whether the forwarding rule is automatically created
      * @param boolean $DefaultServer Whether to use as the default domain name
@@ -248,18 +227,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $TargetType Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
      * @param BasicTargetGroupInfo $TargetGroup Basic information of a bound target group. This field will be returned if a target group is bound to a rule.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $WafDomainId WAF instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TrpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TrpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $QuicStatus QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Domains List of domain names associated with the forwarding rule
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $WafDomainId WAF instance ID.
+     * @param string $TrpcCallee Called server routing. valid when ForwardType is TRPC. currently not yet available.
+     * @param string $TrpcFunc TRPC calling service api. valid when ForwardType is TRPC. currently not yet available.
+     * @param string $QuicStatus QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC.
+     * @param array $Domains Specifies the domain name list of the forwarding rule.
      * @param array $TargetGroupList List of bound target groups
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param OAuth $OAuth OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OAuth $OAuth OAuth configuration status.
+     * @param string $CookieName Specifies the custom cookie name.
      */
     function __construct()
     {
@@ -378,6 +354,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("OAuth",$param) and $param["OAuth"] !== null) {
             $this->OAuth = new OAuth();
             $this->OAuth->deserialize($param["OAuth"]);
+        }
+
+        if (array_key_exists("CookieName",$param) and $param["CookieName"] !== null) {
+            $this->CookieName = $param["CookieName"];
         }
     }
 }

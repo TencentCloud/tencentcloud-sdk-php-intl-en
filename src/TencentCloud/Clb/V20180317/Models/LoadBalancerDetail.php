@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID.
  * @method string getLoadBalancerName() Obtain CLB instance name.
  * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name.
- * @method string getLoadBalancerType() Obtain CLB instance network type:
-Public: public network; Private: private network.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerType(string $LoadBalancerType) Set CLB instance network type:
-Public: public network; Private: private network.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getLoadBalancerType() Obtain Network type of the load balancing instance.
+Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLoadBalancerType(string $LoadBalancerType) Set Network type of the load balancing instance.
+Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getStatus() Obtain CLB instance status, including:
 0: creating; 1: running.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -162,20 +162,24 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getLoadBalancerDomain() Obtain Domain name of the CLB instance.
+ * @method string getLoadBalancerDomain() Obtain Specifies the domain name of the load balancing instance.
+ * @method void setLoadBalancerDomain(string $LoadBalancerDomain) Set Specifies the domain name of the load balancing instance.
+ * @method string getEgress() Obtain Specifies the network outbound.
+ * @method void setEgress(string $Egress) Set Specifies the network outbound.
+ * @method array getAttributeFlags() Obtain Specifies the attributes of cloud load balancer.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerDomain(string $LoadBalancerDomain) Set Domain name of the CLB instance.
+ * @method void setAttributeFlags(array $AttributeFlags) Set Specifies the attributes of cloud load balancer.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEgress() Obtain Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setEgress(string $Egress) Set Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getAttributeFlags() Obtain 
- * @method void setAttributeFlags(array $AttributeFlags) Set 
- * @method string getSlaType() Obtain 
- * @method void setSlaType(string $SlaType) Set 
- * @method integer getExclusive() Obtain 
- * @method void setExclusive(integer $Exclusive) Set 
+ * @method string getSlaType() Obtain Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSlaType(string $SlaType) Set Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getExclusive() Obtain 0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExclusive(integer $Exclusive) Set 0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LoadBalancerDetail extends AbstractModel
 {
@@ -190,9 +194,9 @@ class LoadBalancerDetail extends AbstractModel
     public $LoadBalancerName;
 
     /**
-     * @var string CLB instance network type:
-Public: public network; Private: private network.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Network type of the load balancing instance.
+Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LoadBalancerType;
 
@@ -399,38 +403,40 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $SniSwitch;
 
     /**
-     * @var string Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the domain name of the load balancing instance.
      */
     public $LoadBalancerDomain;
 
     /**
-     * @var string Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Specifies the network outbound.
      */
     public $Egress;
 
     /**
-     * @var array 
+     * @var array Specifies the attributes of cloud load balancer.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AttributeFlags;
 
     /**
-     * @var string 
+     * @var string Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SlaType;
 
     /**
-     * @var integer 
+     * @var integer 0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Exclusive;
 
     /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
-     * @param string $LoadBalancerType CLB instance network type:
-Public: public network; Private: private network.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $LoadBalancerType Network type of the load balancing instance.
+Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Status CLB instance status, including:
 0: creating; 1: running.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -497,13 +503,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $SniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $LoadBalancerDomain Domain name of the CLB instance.
+     * @param string $LoadBalancerDomain Specifies the domain name of the load balancing instance.
+     * @param string $Egress Specifies the network outbound.
+     * @param array $AttributeFlags Specifies the attributes of cloud load balancer.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $AttributeFlags 
-     * @param string $SlaType 
-     * @param integer $Exclusive 
+     * @param string $SlaType Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Exclusive 0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

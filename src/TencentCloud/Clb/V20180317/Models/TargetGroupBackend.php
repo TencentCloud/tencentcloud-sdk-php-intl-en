@@ -26,34 +26,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Real server type. Valid values: CVM, ENI (coming soon)
  * @method string getInstanceId() Obtain Unique real server ID
  * @method void setInstanceId(string $InstanceId) Set Unique real server ID
- * @method integer getPort() Obtain Listening port of real server
- * @method void setPort(integer $Port) Set Listening port of real server
+ * @method integer getPort() Obtain Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported.
+ * @method void setPort(integer $Port) Set Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported.
  * @method integer getWeight() Obtain Forwarding weight of real server. Value range: [0, 100]. Default value: 10.
  * @method void setWeight(integer $Weight) Set Forwarding weight of real server. Value range: [0, 100]. Default value: 10.
- * @method array getPublicIpAddresses() Obtain Public IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPublicIpAddresses(array $PublicIpAddresses) Set Public IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getPrivateIpAddresses() Obtain Private IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set Private IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceName() Obtain Real server instance name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceName(string $InstanceName) Set Real server instance name
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getPublicIpAddresses() Obtain Public network IP of the real server
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) Set Public network IP of the real server
+ * @method array getPrivateIpAddresses() Obtain Private network IP of the real server
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set Private network IP of the real server
+ * @method string getInstanceName() Obtain Instance name of the real server
+ * @method void setInstanceName(string $InstanceName) Set Instance name of the real server
  * @method string getRegisteredTime() Obtain Real server binding time
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRegisteredTime(string $RegisteredTime) Set Real server binding time
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getEniId() Obtain Unique ENI ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEniId(string $EniId) Set Unique ENI ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getZoneId() Obtain AZ ID of the real server
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setZoneId(integer $ZoneId) Set AZ ID of the real server
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getEniId() Obtain Unique ID of the ENI
+ * @method void setEniId(string $EniId) Set Unique ID of the ENI
+ * @method integer getZoneId() Obtain Specifies the availability zone ID of the backend service.
+ * @method void setZoneId(integer $ZoneId) Set Specifies the availability zone ID of the backend service.
  */
 class TargetGroupBackend extends AbstractModel
 {
@@ -73,7 +63,7 @@ class TargetGroupBackend extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Listening port of real server
+     * @var integer Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported.
      */
     public $Port;
 
@@ -83,20 +73,17 @@ class TargetGroupBackend extends AbstractModel
     public $Weight;
 
     /**
-     * @var array Public IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Public network IP of the real server
      */
     public $PublicIpAddresses;
 
     /**
-     * @var array Private IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Private network IP of the real server
      */
     public $PrivateIpAddresses;
 
     /**
-     * @var string Real server instance name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Instance name of the real server
      */
     public $InstanceName;
 
@@ -107,14 +94,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RegisteredTime;
 
     /**
-     * @var string Unique ENI ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Unique ID of the ENI
      */
     public $EniId;
 
     /**
-     * @var integer AZ ID of the real server
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Specifies the availability zone ID of the backend service.
      */
     public $ZoneId;
 
@@ -122,20 +107,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $TargetGroupId Target group ID
      * @param string $Type Real server type. Valid values: CVM, ENI (coming soon)
      * @param string $InstanceId Unique real server ID
-     * @param integer $Port Listening port of real server
+     * @param integer $Port Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported.
      * @param integer $Weight Forwarding weight of real server. Value range: [0, 100]. Default value: 10.
-     * @param array $PublicIpAddresses Public IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $PrivateIpAddresses Private IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceName Real server instance name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $PublicIpAddresses Public network IP of the real server
+     * @param array $PrivateIpAddresses Private network IP of the real server
+     * @param string $InstanceName Instance name of the real server
      * @param string $RegisteredTime Real server binding time
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $EniId Unique ENI ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ZoneId AZ ID of the real server
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $EniId Unique ID of the ENI
+     * @param integer $ZoneId Specifies the availability zone ID of the backend service.
      */
     function __construct()
     {

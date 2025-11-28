@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Querying the input data types
  *
- * @method string getVpcId() Obtain VPC ID
- * @method void setVpcId(string $VpcId) Set VPC ID
- * @method string getPrivateIp() Obtain Private network IP to be queried, which can be of the CVM or ENI.
- * @method void setPrivateIp(string $PrivateIp) Set Private network IP to be queried, which can be of the CVM or ENI.
+ * @method string getVpcId() Obtain VPC ID in string format. Only string format is supported.
+Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api.
+ * @method void setVpcId(string $VpcId) Set VPC ID in string format. Only string format is supported.
+Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api.
+ * @method string getPrivateIp() Obtain Specifies the private IP address for backend querying, which can be CVM or eni.
+Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api.
+ * @method void setPrivateIp(string $PrivateIp) Set Specifies the private IP address for backend querying, which can be CVM or eni.
+Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api.
  */
 class LbRsItem extends AbstractModel
 {
     /**
-     * @var string VPC ID
+     * @var string VPC ID in string format. Only string format is supported.
+Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api.
      */
     public $VpcId;
 
     /**
-     * @var string Private network IP to be queried, which can be of the CVM or ENI.
+     * @var string Specifies the private IP address for backend querying, which can be CVM or eni.
+Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api.
      */
     public $PrivateIp;
 
     /**
-     * @param string $VpcId VPC ID
-     * @param string $PrivateIp Private network IP to be queried, which can be of the CVM or ENI.
+     * @param string $VpcId VPC ID in string format. Only string format is supported.
+Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api.
+     * @param string $PrivateIp Specifies the private IP address for backend querying, which can be CVM or eni.
+Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api.
      */
     function __construct()
     {

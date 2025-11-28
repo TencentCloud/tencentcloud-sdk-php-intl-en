@@ -26,14 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIp(string $PrivateIp) Set Private network IP of the real server.
  * @method integer getPort() Obtain Port bound to the real server.
  * @method void setPort(integer $Port) Set Port bound to the real server.
- * @method integer getVpcId() Obtain VPC ID of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setVpcId(integer $VpcId) Set VPC ID of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getWeight() Obtain Weight of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setWeight(integer $Weight) Set Weight of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getVpcId() Obtain vpcId of RS
+ * @method void setVpcId(integer $VpcId) Set vpcId of RS
+ * @method integer getWeight() Obtain RS weight
+ * @method void setWeight(integer $Weight) Set RS weight
  */
 class LbRsTargets extends AbstractModel
 {
@@ -53,14 +49,12 @@ class LbRsTargets extends AbstractModel
     public $Port;
 
     /**
-     * @var integer VPC ID of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer vpcId of RS
      */
     public $VpcId;
 
     /**
-     * @var integer Weight of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer RS weight
      */
     public $Weight;
 
@@ -68,10 +62,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $Type Private network IP type, which can be `cvm` or `eni`.
      * @param string $PrivateIp Private network IP of the real server.
      * @param integer $Port Port bound to the real server.
-     * @param integer $VpcId VPC ID of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $Weight Weight of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $VpcId vpcId of RS
+     * @param integer $Weight RS weight
      */
     function __construct()
     {

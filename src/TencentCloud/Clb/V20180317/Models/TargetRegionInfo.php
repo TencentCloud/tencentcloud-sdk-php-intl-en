@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Region of the target, such as ap-guangzhou
  * @method string getVpcId() Obtain Network of the target, which is in the format of vpc-abcd1234 for VPC or 0 for basic network
  * @method void setVpcId(string $VpcId) Set Network of the target, which is in the format of vpc-abcd1234 for VPC or 0 for basic network
+ * @method integer getNumericalVpcId() Obtain Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network.
+ * @method void setNumericalVpcId(integer $NumericalVpcId) Set Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network.
  */
 class TargetRegionInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class TargetRegionInfo extends AbstractModel
     public $VpcId;
 
     /**
+     * @var integer Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network.
+     */
+    public $NumericalVpcId;
+
+    /**
      * @param string $Region Region of the target, such as ap-guangzhou
      * @param string $VpcId Network of the target, which is in the format of vpc-abcd1234 for VPC or 0 for basic network
+     * @param integer $NumericalVpcId Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class TargetRegionInfo extends AbstractModel
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("NumericalVpcId",$param) and $param["NumericalVpcId"] !== null) {
+            $this->NumericalVpcId = $param["NumericalVpcId"];
         }
     }
 }

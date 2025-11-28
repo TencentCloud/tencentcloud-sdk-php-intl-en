@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueName(string $QueueName) Set Queue name
  * @method string getMsgContent() Obtain Message content
  * @method void setMsgContent(string $MsgContent) Set Message content
- * @method integer getDelaySeconds() Obtain Delay time
- * @method void setDelaySeconds(integer $DelaySeconds) Set Delay time
+ * @method integer getDelaySeconds() Obtain Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration.
+ * @method void setDelaySeconds(integer $DelaySeconds) Set Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration.
  */
 class SendCmqMsgRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class SendCmqMsgRequest extends AbstractModel
     public $MsgContent;
 
     /**
-     * @var integer Delay time
+     * @var integer Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration.
      */
     public $DelaySeconds;
 
     /**
      * @param string $QueueName Queue name
      * @param string $MsgContent Message content
-     * @param integer $DelaySeconds Delay time
+     * @param integer $DelaySeconds Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration.
      */
     function __construct()
     {

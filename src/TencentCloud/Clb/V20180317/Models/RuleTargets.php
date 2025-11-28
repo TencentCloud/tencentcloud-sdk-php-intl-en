@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUrl() Obtain Forwarding rule path.
  * @method void setUrl(string $Url) Set Forwarding rule path.
  * @method array getTargets() Obtain Real server information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTargets(array $Targets) Set Real server information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getFunctionTargets() Obtain Information about backend SCF functions.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFunctionTargets(array $FunctionTargets) Set Information about backend SCF functions.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getFunctionTargets() Obtain Describes the backend cloud function info.
+ * @method void setFunctionTargets(array $FunctionTargets) Set Describes the backend cloud function info.
  */
 class RuleTargets extends AbstractModel
 {
@@ -54,13 +50,11 @@ class RuleTargets extends AbstractModel
 
     /**
      * @var array Real server information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Targets;
 
     /**
-     * @var array Information about backend SCF functions.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Describes the backend cloud function info.
      */
     public $FunctionTargets;
 
@@ -69,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Domain Domain name of the forwarding rule
      * @param string $Url Forwarding rule path.
      * @param array $Targets Real server information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $FunctionTargets Information about backend SCF functions.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $FunctionTargets Describes the backend cloud function info.
      */
     function __construct()
     {

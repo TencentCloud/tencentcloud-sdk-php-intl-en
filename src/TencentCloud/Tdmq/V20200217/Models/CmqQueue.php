@@ -24,56 +24,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueId(string $QueueId) Set Message queue ID.
  * @method string getQueueName() Obtain Message queue name.
  * @method void setQueueName(string $QueueName) Set Message queue name.
- * @method integer getQps() Obtain Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setQps(integer $Qps) Set Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getQps() Obtain Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value.
+ * @method void setQps(integer $Qps) Set Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value.
  * @method integer getBps() Obtain Bandwidth limit.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setBps(integer $Bps) Set Bandwidth limit.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxDelaySeconds() Obtain Maximum retention period for inflight messages.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMaxDelaySeconds(integer $MaxDelaySeconds) Set Maximum retention period for inflight messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxDelaySeconds() Obtain Specifies the maximum retention time for in-flight messages, which must be less than the message retention period.
+ * @method void setMaxDelaySeconds(integer $MaxDelaySeconds) Set Specifies the maximum retention time for in-flight messages, which must be less than the message retention period.
  * @method integer getMaxMsgHeapNum() Obtain Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
  * @method void setMaxMsgHeapNum(integer $MaxMsgHeapNum) Set Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
- * @method integer getPollingWaitSeconds() Obtain Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPollingWaitSeconds(integer $PollingWaitSeconds) Set Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMsgRetentionSeconds() Obtain Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) Set Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getVisibilityTimeout() Obtain Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVisibilityTimeout(integer $VisibilityTimeout) Set Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxMsgSize() Obtain Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMaxMsgSize(integer $MaxMsgSize) Set Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getRewindSeconds() Obtain Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRewindSeconds(integer $RewindSeconds) Set Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getCreateTime() Obtain Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(integer $CreateTime) Set Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getLastModifyTime() Obtain Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLastModifyTime(integer $LastModifyTime) Set Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getActiveMsgNum() Obtain Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setActiveMsgNum(integer $ActiveMsgNum) Set Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getInactiveMsgNum() Obtain Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setInactiveMsgNum(integer $InactiveMsgNum) Set Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getPollingWaitSeconds() Obtain Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0.
+ * @method void setPollingWaitSeconds(integer $PollingWaitSeconds) Set Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0.
+ * @method integer getMsgRetentionSeconds() Obtain Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days).
+ * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) Set Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days).
+ * @method integer getVisibilityTimeout() Obtain Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30.
+ * @method void setVisibilityTimeout(integer $VisibilityTimeout) Set Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30.
+ * @method integer getMaxMsgSize() Obtain Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536.
+ * @method void setMaxMsgSize(integer $MaxMsgSize) Set Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536.
+ * @method integer getRewindSeconds() Obtain Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled.
+ * @method void setRewindSeconds(integer $RewindSeconds) Set Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled.
+ * @method integer getCreateTime() Obtain Creation time of queues. Returns a Unix timestamp, accurate to milliseconds.
+ * @method void setCreateTime(integer $CreateTime) Set Creation time of queues. Returns a Unix timestamp, accurate to milliseconds.
+ * @method integer getLastModifyTime() Obtain The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
+ * @method void setLastModifyTime(integer $LastModifyTime) Set The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
+ * @method integer getActiveMsgNum() Obtain Total number of active messages (not being consumed) in queue, an approximate value.
+ * @method void setActiveMsgNum(integer $ActiveMsgNum) Set Total number of active messages (not being consumed) in queue, an approximate value.
+ * @method integer getInactiveMsgNum() Obtain Total number of inactive messages (being consumed) in queue, an approximate value.
+ * @method void setInactiveMsgNum(integer $InactiveMsgNum) Set Total number of inactive messages (being consumed) in queue, an approximate value.
  * @method integer getDelayMsgNum() Obtain Number of delayed messages.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDelayMsgNum(integer $DelayMsgNum) Set Number of delayed messages.
@@ -115,29 +91,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setTrace(boolean $Trace) Set Message trace. true: enabled; false: not enabled
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getTenantId() Obtain Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTenantId(string $TenantId) Set Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getNamespaceName() Obtain Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setNamespaceName(string $NamespaceName) Set Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getMaxUnackedMsgNum() Obtain The maximum number of unacknowledged messages.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setMaxUnackedMsgNum(integer $MaxUnackedMsgNum) Set The maximum number of unacknowledged messages.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getMaxMsgBacklogSize() Obtain Maximum size of heaped messages in bytes.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setMaxMsgBacklogSize(integer $MaxMsgBacklogSize) Set Maximum size of heaped messages in bytes.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getRetentionSizeInMB() Obtain Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setRetentionSizeInMB(integer $RetentionSizeInMB) Set Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getNamespaceName() Obtain Specifies the namespace name.
+ * @method void setNamespaceName(string $NamespaceName) Set Specifies the namespace name.
+ * @method integer getStatus() Obtain Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
+ * @method void setStatus(integer $Status) Set Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
+ * @method integer getMaxUnackedMsgNum() Obtain Maximum Number of Unacknowledged Messages
+ * @method void setMaxUnackedMsgNum(integer $MaxUnackedMsgNum) Set Maximum Number of Unacknowledged Messages
+ * @method integer getMaxMsgBacklogSize() Obtain Maximum Message Backlog Size (bytes)
+ * @method void setMaxMsgBacklogSize(integer $MaxMsgBacklogSize) Set Maximum Message Backlog Size (bytes)
+ * @method integer getRetentionSizeInMB() Obtain Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled.
+ * @method void setRetentionSizeInMB(integer $RetentionSizeInMB) Set Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled.
  */
 class CmqQueue extends AbstractModel
 {
@@ -152,20 +116,17 @@ class CmqQueue extends AbstractModel
     public $QueueName;
 
     /**
-     * @var integer Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value.
      */
     public $Qps;
 
     /**
      * @var integer Bandwidth limit.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Bps;
 
     /**
-     * @var integer Maximum retention period for inflight messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the maximum retention time for in-flight messages, which must be less than the message retention period.
      */
     public $MaxDelaySeconds;
 
@@ -175,56 +136,47 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MaxMsgHeapNum;
 
     /**
-     * @var integer Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0.
      */
     public $PollingWaitSeconds;
 
     /**
-     * @var integer Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days).
      */
     public $MsgRetentionSeconds;
 
     /**
-     * @var integer Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30.
      */
     public $VisibilityTimeout;
 
     /**
-     * @var integer Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536.
      */
     public $MaxMsgSize;
 
     /**
-     * @var integer Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled.
      */
     public $RewindSeconds;
 
     /**
-     * @var integer Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Creation time of queues. Returns a Unix timestamp, accurate to milliseconds.
      */
     public $CreateTime;
 
     /**
-     * @var integer Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
      */
     public $LastModifyTime;
 
     /**
-     * @var integer Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Total number of active messages (not being consumed) in queue, an approximate value.
      */
     public $ActiveMsgNum;
 
     /**
-     * @var integer Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Total number of inactive messages (being consumed) in queue, an approximate value.
      */
     public $InactiveMsgNum;
 
@@ -290,68 +242,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TenantId;
 
     /**
-     * @var string Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the namespace name.
      */
     public $NamespaceName;
 
     /**
-     * @var integer Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
      */
     public $Status;
 
     /**
-     * @var integer The maximum number of unacknowledged messages.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Maximum Number of Unacknowledged Messages
      */
     public $MaxUnackedMsgNum;
 
     /**
-     * @var integer Maximum size of heaped messages in bytes.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Maximum Message Backlog Size (bytes)
      */
     public $MaxMsgBacklogSize;
 
     /**
-     * @var integer Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled.
      */
     public $RetentionSizeInMB;
 
     /**
      * @param string $QueueId Message queue ID.
      * @param string $QueueName Message queue name.
-     * @param integer $Qps Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Qps Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value.
      * @param integer $Bps Bandwidth limit.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxDelaySeconds Maximum retention period for inflight messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxDelaySeconds Specifies the maximum retention time for in-flight messages, which must be less than the message retention period.
      * @param integer $MaxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
-     * @param integer $PollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MsgRetentionSeconds Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $VisibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxMsgSize Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $RewindSeconds Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $CreateTime Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $LastModifyTime Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ActiveMsgNum Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $InactiveMsgNum Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $PollingWaitSeconds Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0.
+     * @param integer $MsgRetentionSeconds Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days).
+     * @param integer $VisibilityTimeout Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30.
+     * @param integer $MaxMsgSize Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536.
+     * @param integer $RewindSeconds Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled.
+     * @param integer $CreateTime Creation time of queues. Returns a Unix timestamp, accurate to milliseconds.
+     * @param integer $LastModifyTime The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
+     * @param integer $ActiveMsgNum Total number of active messages (not being consumed) in queue, an approximate value.
+     * @param integer $InactiveMsgNum Total number of inactive messages (being consumed) in queue, an approximate value.
      * @param integer $DelayMsgNum Number of delayed messages.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $RewindMsgNum Number of retained messages which have been deleted by the `DelMsg` API but are still within their rewind time range.
@@ -373,17 +307,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param boolean $Trace Message trace. true: enabled; false: not enabled
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $TenantId Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $NamespaceName Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $MaxUnackedMsgNum The maximum number of unacknowledged messages.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $MaxMsgBacklogSize Maximum size of heaped messages in bytes.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $NamespaceName Specifies the namespace name.
+     * @param integer $Status Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
+     * @param integer $MaxUnackedMsgNum Maximum Number of Unacknowledged Messages
+     * @param integer $MaxMsgBacklogSize Maximum Message Backlog Size (bytes)
+     * @param integer $RetentionSizeInMB Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled.
      */
     function __construct()
     {

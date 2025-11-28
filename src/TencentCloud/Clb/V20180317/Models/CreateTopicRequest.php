@@ -26,8 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitionCount(integer $PartitionCount) Set The number of topic partitions, which changes as partitions are split or merged. Each log topic can have up to 50 partitions. If this parameter is not passed in, 1 partition will be created by default and up to 10 partitions are allowed to be created.
  * @method string getTopicType() Obtain Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
  * @method void setTopicType(string $TopicType) Set Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
- * @method integer getPeriod() Obtain Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
- * @method void setPeriod(integer $Period) Set Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
+ * @method integer getPeriod() Obtain Storage time in days, defaults to 30.
+-Log access to standard storage supports 1 to 3600 days. a value of 3640 indicates permanent retention.
+-Log access to infrequent storage supports 7 to 3600 days. a value of 3640 indicates permanent retention.
+ * @method void setPeriod(integer $Period) Set Storage time in days, defaults to 30.
+-Log access to standard storage supports 1 to 3600 days. a value of 3640 indicates permanent retention.
+-Log access to infrequent storage supports 7 to 3600 days. a value of 3640 indicates permanent retention.
  * @method string getStorageType() Obtain Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
  * @method void setStorageType(string $StorageType) Set Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
  */
@@ -49,7 +53,9 @@ class CreateTopicRequest extends AbstractModel
     public $TopicType;
 
     /**
-     * @var integer Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
+     * @var integer Storage time in days, defaults to 30.
+-Log access to standard storage supports 1 to 3600 days. a value of 3640 indicates permanent retention.
+-Log access to infrequent storage supports 7 to 3600 days. a value of 3640 indicates permanent retention.
      */
     public $Period;
 
@@ -62,7 +68,9 @@ class CreateTopicRequest extends AbstractModel
      * @param string $TopicName Log topic name
      * @param integer $PartitionCount The number of topic partitions, which changes as partitions are split or merged. Each log topic can have up to 50 partitions. If this parameter is not passed in, 1 partition will be created by default and up to 10 partitions are allowed to be created.
      * @param string $TopicType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
-     * @param integer $Period Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
+     * @param integer $Period Storage time in days, defaults to 30.
+-Log access to standard storage supports 1 to 3600 days. a value of 3640 indicates permanent retention.
+-Log access to infrequent storage supports 7 to 3600 days. a value of 3640 indicates permanent retention.
      * @param string $StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
      */
     function __construct()

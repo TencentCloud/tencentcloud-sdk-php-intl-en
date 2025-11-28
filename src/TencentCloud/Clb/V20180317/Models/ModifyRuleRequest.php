@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRule request structure.
  *
- * @method string getLoadBalancerId() Obtain CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method string getListenerId() Obtain CLB listener ID
- * @method void setListenerId(string $ListenerId) Set CLB listener ID
- * @method string getLocationId() Obtain ID of the forwarding rule to be modified.
- * @method void setLocationId(string $LocationId) Set ID of the forwarding rule to be modified.
+ * @method string getLoadBalancerId() Obtain ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+ * @method string getListenerId() Obtain ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+ * @method void setListenerId(string $ListenerId) Set ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+ * @method string getLocationId() Obtain Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
+ * @method void setLocationId(string $LocationId) Set Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
  * @method string getUrl() Obtain New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
  * @method void setUrl(string $Url) Set New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
  * @method HealthCheck getHealthCheck() Obtain Health check information
@@ -35,7 +35,9 @@ They represent weighted round robin, least connections, and IP hash, respectivel
  * @method void setScheduler(string $Scheduler) Set Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
  * @method integer getSessionExpireTime() Obtain Session persistence duration, in seconds. Value range: 0 or 30-86400.
+Defaults to 0.
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence duration, in seconds. Value range: 0 or 30-86400.
+Defaults to 0.
  * @method string getForwardType() Obtain Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
  * @method void setForwardType(string $ForwardType) Set Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
  * @method string getTrpcCallee() Obtain TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
@@ -44,21 +46,23 @@ They represent weighted round robin, least connections, and IP hash, respectivel
  * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
  * @method OAuth getOAuth() Obtain OAuth configuration information.
  * @method void setOAuth(OAuth $OAuth) Set OAuth configuration information.
+ * @method string getCookieName() Obtain Specifies the custom cookie name.
+ * @method void setCookieName(string $CookieName) Set Specifies the custom cookie name.
  */
 class ModifyRuleRequest extends AbstractModel
 {
     /**
-     * @var string CLB instance ID
+     * @var string ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
      */
     public $LoadBalancerId;
 
     /**
-     * @var string CLB listener ID
+     * @var string ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      */
     public $ListenerId;
 
     /**
-     * @var string ID of the forwarding rule to be modified.
+     * @var string Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
      */
     public $LocationId;
 
@@ -80,6 +84,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 
     /**
      * @var integer Session persistence duration, in seconds. Value range: 0 or 30-86400.
+Defaults to 0.
      */
     public $SessionExpireTime;
 
@@ -104,18 +109,25 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $OAuth;
 
     /**
-     * @param string $LoadBalancerId CLB instance ID
-     * @param string $ListenerId CLB listener ID
-     * @param string $LocationId ID of the forwarding rule to be modified.
+     * @var string Specifies the custom cookie name.
+     */
+    public $CookieName;
+
+    /**
+     * @param string $LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+     * @param string $ListenerId ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+     * @param string $LocationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
      * @param string $Url New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
      * @param HealthCheck $HealthCheck Health check information
      * @param string $Scheduler Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
      * @param integer $SessionExpireTime Session persistence duration, in seconds. Value range: 0 or 30-86400.
+Defaults to 0.
      * @param string $ForwardType Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
      * @param string $TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
      * @param string $TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
      * @param OAuth $OAuth OAuth configuration information.
+     * @param string $CookieName Specifies the custom cookie name.
      */
     function __construct()
     {
@@ -174,6 +186,10 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         if (array_key_exists("OAuth",$param) and $param["OAuth"] !== null) {
             $this->OAuth = new OAuth();
             $this->OAuth->deserialize($param["OAuth"]);
+        }
+
+        if (array_key_exists("CookieName",$param) and $param["CookieName"] !== null) {
+            $this->CookieName = $param["CookieName"];
         }
     }
 }

@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRabbitMQVipInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+ * @method boolean getIsIntl() Obtain Whether the request is from the international website. Default value: false.
+ * @method void setIsIntl(boolean $IsIntl) Set Whether the request is from the international website. Default value: false.
  */
 class DeleteRabbitMQVipInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @var boolean Whether the request is from the international website. Default value: false.
+     */
+    public $IsIntl;
+
+    /**
+     * @param string $InstanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * @param boolean $IsIntl Whether the request is from the international website. Default value: false.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteRabbitMQVipInstanceRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("IsIntl",$param) and $param["IsIntl"] !== null) {
+            $this->IsIntl = $param["IsIntl"];
         }
     }
 }

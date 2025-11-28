@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTargetGroupId() Obtain Target group ID
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
- * @method array getTargetGroupInstances() Obtain Information of server to be unbound
- * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Information of server to be unbound
+ * @method array getTargetGroupInstances() Obtain Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+Port is a required item in this api.
+ * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+Port is a required item in this api.
  */
 class DeregisterTargetGroupInstancesRequest extends AbstractModel
 {
@@ -33,13 +35,15 @@ class DeregisterTargetGroupInstancesRequest extends AbstractModel
     public $TargetGroupId;
 
     /**
-     * @var array Information of server to be unbound
+     * @var array Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+Port is a required item in this api.
      */
     public $TargetGroupInstances;
 
     /**
      * @param string $TargetGroupId Target group ID
-     * @param array $TargetGroupInstances Information of server to be unbound
+     * @param array $TargetGroupInstances Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+Port is a required item in this api.
      */
     function __construct()
     {

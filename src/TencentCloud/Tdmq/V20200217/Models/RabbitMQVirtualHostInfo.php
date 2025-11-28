@@ -24,34 +24,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Cluster instance ID
  * @method string getVirtualHost() Obtain Vhost name
  * @method void setVirtualHost(string $VirtualHost) Set Vhost name
- * @method string getDescription() Obtain Vhost description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method void setDescription(string $Description) Set Vhost description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method array getTags() Obtain Vhost tag
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Vhost tag
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method string getModifyTime() Obtain Modification time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method void setModifyTime(string $ModifyTime) Set Modification time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method RabbitMQVirtualHostStatistics getVirtualHostStatistics() Obtain Statistics of vhost overview
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method void setVirtualHostStatistics(RabbitMQVirtualHostStatistics $VirtualHostStatistics) Set Statistics of vhost overview
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getMessageHeapCount() Obtain 
- * @method void setMessageHeapCount(integer $MessageHeapCount) Set 
- * @method float getMessageRateIn() Obtain 
- * @method void setMessageRateIn(float $MessageRateIn) Set 
- * @method float getMessageRateOut() Obtain 
- * @method void setMessageRateOut(float $MessageRateOut) Set 
+ * @method string getDescription() Obtain Vhost description information.
+ * @method void setDescription(string $Description) Set Vhost description information.
+ * @method array getTags() Obtain Vhost tags.
+ * @method void setTags(array $Tags) Set Vhost tags.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method string getModifyTime() Obtain Modification time.
+ * @method void setModifyTime(string $ModifyTime) Set Modification time.
+ * @method RabbitMQVirtualHostStatistics getVirtualHostStatistics() Obtain Vhost overview statistics information.
+ * @method void setVirtualHostStatistics(RabbitMQVirtualHostStatistics $VirtualHostStatistics) Set Vhost overview statistics information.
+ * @method boolean getTraceFlag() Obtain Message trace enabling status. true: enabled; false: disabled.
+ * @method void setTraceFlag(boolean $TraceFlag) Set Message trace enabling status. true: enabled; false: disabled.
+ * @method string getStatus() Obtain Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown.
+ * @method void setStatus(string $Status) Set Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown.
+ * @method integer getMessageHeapCount() Obtain Message backlog count.
+ * @method void setMessageHeapCount(integer $MessageHeapCount) Set Message backlog count.
+ * @method float getMessageRateIn() Obtain Message input rate.
+ * @method void setMessageRateIn(float $MessageRateIn) Set Message input rate.
+ * @method float getMessageRateOut() Obtain Message output rate.
+ * @method void setMessageRateOut(float $MessageRateOut) Set Message output rate.
+ * @method boolean getMirrorQueuePolicyFlag() Obtain Whether an image queue policy exists. true: Exists; false: Does not exist.
+ * @method void setMirrorQueuePolicyFlag(boolean $MirrorQueuePolicyFlag) Set Whether an image queue policy exists. true: Exists; false: Does not exist.
+ * @method integer getCreateTs() Obtain Creation timestamp.
+ * @method void setCreateTs(integer $CreateTs) Set Creation timestamp.
+ * @method integer getModifyTs() Obtain Modification timestamp.
+ * @method void setModifyTs(integer $ModifyTs) Set Modification timestamp.
  */
 class RabbitMQVirtualHostInfo extends AbstractModel
 {
@@ -66,72 +64,86 @@ class RabbitMQVirtualHostInfo extends AbstractModel
     public $VirtualHost;
 
     /**
-     * @var string Vhost description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @var string Vhost description information.
      */
     public $Description;
 
     /**
-     * @var array Vhost tag
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @var array Vhost tags.
      */
     public $Tags;
 
     /**
-     * @var string Creation time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Modification time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @var string Modification time.
      */
     public $ModifyTime;
 
     /**
-     * @var RabbitMQVirtualHostStatistics Statistics of vhost overview
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @var RabbitMQVirtualHostStatistics Vhost overview statistics information.
      */
     public $VirtualHostStatistics;
 
     /**
-     * @var string 
+     * @var boolean Message trace enabling status. true: enabled; false: disabled.
+     */
+    public $TraceFlag;
+
+    /**
+     * @var string Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown.
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Message backlog count.
      */
     public $MessageHeapCount;
 
     /**
-     * @var float 
+     * @var float Message input rate.
      */
     public $MessageRateIn;
 
     /**
-     * @var float 
+     * @var float Message output rate.
      */
     public $MessageRateOut;
 
     /**
+     * @var boolean Whether an image queue policy exists. true: Exists; false: Does not exist.
+     */
+    public $MirrorQueuePolicyFlag;
+
+    /**
+     * @var integer Creation timestamp.
+     */
+    public $CreateTs;
+
+    /**
+     * @var integer Modification timestamp.
+     */
+    public $ModifyTs;
+
+    /**
      * @param string $InstanceId Cluster instance ID
      * @param string $VirtualHost Vhost name
-     * @param string $Description Vhost description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param array $Tags Vhost tag
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param string $ModifyTime Modification time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param RabbitMQVirtualHostStatistics $VirtualHostStatistics Statistics of vhost overview
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param string $Status 
-     * @param integer $MessageHeapCount 
-     * @param float $MessageRateIn 
-     * @param float $MessageRateOut 
+     * @param string $Description Vhost description information.
+     * @param array $Tags Vhost tags.
+     * @param string $CreateTime Creation time.
+     * @param string $ModifyTime Modification time.
+     * @param RabbitMQVirtualHostStatistics $VirtualHostStatistics Vhost overview statistics information.
+     * @param boolean $TraceFlag Message trace enabling status. true: enabled; false: disabled.
+     * @param string $Status Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown.
+     * @param integer $MessageHeapCount Message backlog count.
+     * @param float $MessageRateIn Message input rate.
+     * @param float $MessageRateOut Message output rate.
+     * @param boolean $MirrorQueuePolicyFlag Whether an image queue policy exists. true: Exists; false: Does not exist.
+     * @param integer $CreateTs Creation timestamp.
+     * @param integer $ModifyTs Modification timestamp.
      */
     function __construct()
     {
@@ -175,6 +187,10 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
             $this->VirtualHostStatistics->deserialize($param["VirtualHostStatistics"]);
         }
 
+        if (array_key_exists("TraceFlag",$param) and $param["TraceFlag"] !== null) {
+            $this->TraceFlag = $param["TraceFlag"];
+        }
+
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
         }
@@ -189,6 +205,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
         if (array_key_exists("MessageRateOut",$param) and $param["MessageRateOut"] !== null) {
             $this->MessageRateOut = $param["MessageRateOut"];
+        }
+
+        if (array_key_exists("MirrorQueuePolicyFlag",$param) and $param["MirrorQueuePolicyFlag"] !== null) {
+            $this->MirrorQueuePolicyFlag = $param["MirrorQueuePolicyFlag"];
+        }
+
+        if (array_key_exists("CreateTs",$param) and $param["CreateTs"] !== null) {
+            $this->CreateTs = $param["CreateTs"];
+        }
+
+        if (array_key_exists("ModifyTs",$param) and $param["ModifyTs"] !== null) {
+            $this->ModifyTs = $param["ModifyTs"];
         }
     }
 }

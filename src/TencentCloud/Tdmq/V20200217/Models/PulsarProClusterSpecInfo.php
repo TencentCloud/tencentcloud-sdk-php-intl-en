@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScalableTps(integer $ScalableTps) Set Elastic TPS beyond the specification
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxPartitions() Obtain 32 or 128.
+Maximum number of partitions for topics in the current cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMaxPartitions(integer $MaxPartitions) Set 32 or 128.
+Maximum number of partitions for topics in the current cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxDelayedMessages() Obtain Maximum delayed message count for the product. 0 indicates no limit.	
+ * @method void setMaxDelayedMessages(integer $MaxDelayedMessages) Set Maximum delayed message count for the product. 0 indicates no limit.	
  */
 class PulsarProClusterSpecInfo extends AbstractModel
 {
@@ -69,6 +77,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ScalableTps;
 
     /**
+     * @var integer 32 or 128.
+Maximum number of partitions for topics in the current cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MaxPartitions;
+
+    /**
+     * @var integer Maximum delayed message count for the product. 0 indicates no limit.	
+     */
+    public $MaxDelayedMessages;
+
+    /**
      * @param string $SpecName Cluster specification name
      * @param integer $MaxTps Peak TPS
      * @param integer $MaxBandWidth Peak bandwidth in Mbps
@@ -76,6 +96,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $MaxTopics Maximum number of topic partitions
      * @param integer $ScalableTps Elastic TPS beyond the specification
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxPartitions 32 or 128.
+Maximum number of partitions for topics in the current cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxDelayedMessages Maximum delayed message count for the product. 0 indicates no limit.	
      */
     function __construct()
     {
@@ -112,6 +136,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ScalableTps",$param) and $param["ScalableTps"] !== null) {
             $this->ScalableTps = $param["ScalableTps"];
+        }
+
+        if (array_key_exists("MaxPartitions",$param) and $param["MaxPartitions"] !== null) {
+            $this->MaxPartitions = $param["MaxPartitions"];
+        }
+
+        if (array_key_exists("MaxDelayedMessages",$param) and $param["MaxDelayedMessages"] !== null) {
+            $this->MaxDelayedMessages = $param["MaxDelayedMessages"];
         }
     }
 }

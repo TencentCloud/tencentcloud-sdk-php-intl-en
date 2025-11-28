@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCluster request structure.
  *
- * @method string getClusterName() Obtain Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
- * @method void setClusterName(string $ClusterName) Set Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
+ * @method string getClusterName() Obtain Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
+ * @method void setClusterName(string $ClusterName) Set Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
  * @method integer getBindClusterId() Obtain ID of your dedicated physical cluster. If it is not passed in, cluster resources will be created in a public cluster by default.
  * @method void setBindClusterId(integer $BindClusterId) Set ID of your dedicated physical cluster. If it is not passed in, cluster resources will be created in a public cluster by default.
  * @method string getRemark() Obtain Remarks (up to 128 characters).
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateClusterRequest extends AbstractModel
 {
     /**
-     * @var string Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
+     * @var string Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
      */
     public $ClusterName;
 
@@ -59,7 +59,7 @@ class CreateClusterRequest extends AbstractModel
     public $PublicAccessEnabled;
 
     /**
-     * @param string $ClusterName Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
+     * @param string $ClusterName Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
      * @param integer $BindClusterId ID of your dedicated physical cluster. If it is not passed in, cluster resources will be created in a public cluster by default.
      * @param string $Remark Remarks (up to 128 characters).
      * @param array $Tags Cluster tag list (deprecated).

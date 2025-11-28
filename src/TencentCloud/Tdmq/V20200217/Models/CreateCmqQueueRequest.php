@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPollingWaitSeconds(integer $PollingWaitSeconds) Set Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
  * @method integer getVisibilityTimeout() Obtain Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
  * @method void setVisibilityTimeout(integer $VisibilityTimeout) Set Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
- * @method integer getMaxMsgSize() Obtain Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
- * @method void setMaxMsgSize(integer $MaxMsgSize) Set Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+ * @method integer getMaxMsgSize() Obtain Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576.
+ * @method void setMaxMsgSize(integer $MaxMsgSize) Set Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576.
  * @method integer getMsgRetentionSeconds() Obtain The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
  * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) Set The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
  * @method integer getRewindSeconds() Obtain Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
@@ -78,7 +78,7 @@ class CreateCmqQueueRequest extends AbstractModel
     public $VisibilityTimeout;
 
     /**
-     * @var integer Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+     * @var integer Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576.
      */
     public $MaxMsgSize;
 
@@ -147,7 +147,7 @@ class CreateCmqQueueRequest extends AbstractModel
      * @param integer $MaxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
      * @param integer $PollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
      * @param integer $VisibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-     * @param integer $MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+     * @param integer $MaxMsgSize Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576.
      * @param integer $MsgRetentionSeconds The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
      * @param integer $RewindSeconds Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
      * @param integer $Transaction 1: transaction queue; 0: general queue

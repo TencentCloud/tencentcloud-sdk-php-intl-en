@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Real server ID
  * @method void setInstanceId(string $InstanceId) Set Real server ID
- * @method array getLoadBalancerIds() Obtain List of CLB instance IDs
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerIds(array $LoadBalancerIds) Set List of CLB instance IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getLoadBalancerIds() Obtain CLB instance ID list
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set CLB instance ID list
  */
 class ClassicalLoadBalancerInfo extends AbstractModel
 {
@@ -35,15 +33,13 @@ class ClassicalLoadBalancerInfo extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array List of CLB instance IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array CLB instance ID list
      */
     public $LoadBalancerIds;
 
     /**
      * @param string $InstanceId Real server ID
-     * @param array $LoadBalancerIds List of CLB instance IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $LoadBalancerIds CLB instance ID list
      */
     function __construct()
     {

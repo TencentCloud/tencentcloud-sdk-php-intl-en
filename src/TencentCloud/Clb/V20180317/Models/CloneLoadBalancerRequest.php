@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloneLoadBalancer request structure.
  *
- * @method string getLoadBalancerId() Obtain CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method string getLoadBalancerName() Obtain Clones the name of the CLB instance. The name must be 1-60 characters containing letters, numbers, "-" or "_".
-Note: if the name of a new CLB instance already exists, a default name will be generated automatically.
- * @method void setLoadBalancerName(string $LoadBalancerName) Set Clones the name of the CLB instance. The name must be 1-60 characters containing letters, numbers, "-" or "_".
-Note: if the name of a new CLB instance already exists, a default name will be generated automatically.
+ * @method string getLoadBalancerId() Obtain Specifies the clb ID. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set Specifies the clb ID. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+ * @method string getLoadBalancerName() Obtain Specifies the name of the cloned load balancing instance. rule: 1-60 english letters, chinese characters, digits, connecting lines "-", or underscores "_".
+Note: if the name is identical to that of an existing load balancing instance in the system, the system will automatically generate a name for the created cloud load balancer instance.
+ * @method void setLoadBalancerName(string $LoadBalancerName) Set Specifies the name of the cloned load balancing instance. rule: 1-60 english letters, chinese characters, digits, connecting lines "-", or underscores "_".
+Note: if the name is identical to that of an existing load balancing instance in the system, the system will automatically generate a name for the created cloud load balancer instance.
  * @method integer getProjectId() Obtain ID of the project to which a CLB instance belongs, which can be obtained through the `DescribeProject` API. If this parameter is not passed in, the default project will be used.
  * @method void setProjectId(integer $ProjectId) Set ID of the project to which a CLB instance belongs, which can be obtained through the `DescribeProject` API. If this parameter is not passed in, the default project will be used.
  * @method string getMasterZoneId() Obtain Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
@@ -36,45 +36,45 @@ Note: A primary AZ loads traffic, while a secondary AZ does not load traffic by 
 Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use the `DescribeMasterZones` API to query the primary and secondary AZ list of a region.
  * @method void setSlaveZoneId(string $SlaveZoneId) Set Specifies the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`. It is applicable only to public network CLB.
 Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use the `DescribeMasterZones` API to query the primary and secondary AZ list of a region.
- * @method string getZoneId() Obtain Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
- * @method void setZoneId(string $ZoneId) Set Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
- * @method InternetAccessible getInternetAccessible() Obtain CLB network billing mode. This parameter is applicable only to public network CLB instances.
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set CLB network billing mode. This parameter is applicable only to public network CLB instances.
- * @method string getVipIsp() Obtain ISP of VIP. Values: `CMCC` (China Mobile), `CUCC` (China Unicom) and `CTCC` (China Telecom). You need to activate static single-line IPs. This feature is in beta and is only available in Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu and Chongqing regions. To try it out, please contact your sales rep. If it's specified, the network billing mode must be `BANDWIDTH_PACKAGE`. If it's not specified, BGP is used by default. To query ISPs supported in a region, please use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). 
- * @method void setVipIsp(string $VipIsp) Set ISP of VIP. Values: `CMCC` (China Mobile), `CUCC` (China Unicom) and `CTCC` (China Telecom). You need to activate static single-line IPs. This feature is in beta and is only available in Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu and Chongqing regions. To try it out, please contact your sales rep. If it's specified, the network billing mode must be `BANDWIDTH_PACKAGE`. If it's not specified, BGP is used by default. To query ISPs supported in a region, please use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). 
- * @method string getVip() Obtain Applies for CLB instances for a specified VIP
- * @method void setVip(string $Vip) Set Applies for CLB instances for a specified VIP
- * @method array getTags() Obtain Tags a CLB instance when purchasing it
- * @method void setTags(array $Tags) Set Tags a CLB instance when purchasing it
- * @method ExclusiveCluster getExclusiveCluster() Obtain Dedicated cluster information
- * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) Set Dedicated cluster information
- * @method string getBandwidthPackageId() Obtain Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
- * @method void setBandwidthPackageId(string $BandwidthPackageId) Set Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
- * @method boolean getSnatPro() Obtain Whether to support binding cross-VPC IPs or cross-region IPs
- * @method void setSnatPro(boolean $SnatPro) Set Whether to support binding cross-VPC IPs or cross-region IPs
- * @method array getSnatIps() Obtain Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
- * @method void setSnatIps(array $SnatIps) Set Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
- * @method array getClusterIds() Obtain ID of the public network CLB dedicated cluster
- * @method void setClusterIds(array $ClusterIds) Set ID of the public network CLB dedicated cluster
- * @method string getSlaType() Obtain Specification of the LCU-supported instance.
- * @method void setSlaType(string $SlaType) Set Specification of the LCU-supported instance.
- * @method string getClusterTag() Obtain Tag of the STGW dedicated cluster
- * @method void setClusterTag(string $ClusterTag) Set Tag of the STGW dedicated cluster
- * @method array getZones() Obtain Availability zones for nearby access of private network CLB instances to distribute traffic
- * @method void setZones(array $Zones) Set Availability zones for nearby access of private network CLB instances to distribute traffic
- * @method string getEipAddressId() Obtain Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance (e.g., `eip-11112222`)
- * @method void setEipAddressId(string $EipAddressId) Set Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance (e.g., `eip-11112222`)
+ * @method string getZoneId() Obtain Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
+ * @method void setZoneId(string $ZoneId) Set Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
+ * @method InternetAccessible getInternetAccessible() Obtain CLB network billing mode, applicable only to public network CLB instances.
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set CLB network billing mode, applicable only to public network CLB instances.
+ * @method string getVipIsp() Obtain It only applies to public CLB. Currently, the static single-line IP type is supported only for the regions of Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu, and Chongqing. If you need to experience it, contact your business manager. After approval, you can select the ISP type as China Mobile (CMCC), China Unicom (CUCC), or China Telecom (CTCC). The network billing mode should be selected as billing by bandwidth package (BANDWIDTH_PACKAGE). If this parameter is not specified, BGP is used by default. You can use the DescribeResources API to query ISPs supported for a region.
+ * @method void setVipIsp(string $VipIsp) Set It only applies to public CLB. Currently, the static single-line IP type is supported only for the regions of Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu, and Chongqing. If you need to experience it, contact your business manager. After approval, you can select the ISP type as China Mobile (CMCC), China Unicom (CUCC), or China Telecom (CTCC). The network billing mode should be selected as billing by bandwidth package (BANDWIDTH_PACKAGE). If this parameter is not specified, BGP is used by default. You can use the DescribeResources API to query ISPs supported for a region.
+ * @method string getVip() Obtain Specifies the Vip to apply for cloud load balancer.
+ * @method void setVip(string $Vip) Set Specifies the Vip to apply for cloud load balancer.
+ * @method array getTags() Obtain Proceed to purchase cloud load balancer and Tag it at the same time.
+ * @method void setTags(array $Tags) Set Proceed to purchase cloud load balancer and Tag it at the same time.
+ * @method ExclusiveCluster getExclusiveCluster() Obtain Exclusive cluster information.
+ * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) Set Exclusive cluster information.
+ * @method string getBandwidthPackageId() Obtain BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies this parameter indicates the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE).
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) Set BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies this parameter indicates the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE).
+ * @method boolean getSnatPro() Obtain Specifies whether the cross-regional or cross-Vpc IP binding feature is supported.
+ * @method void setSnatPro(boolean $SnatPro) Set Specifies whether the cross-regional or cross-Vpc IP binding feature is supported.
+ * @method array getSnatIps() Obtain Enables cross-regional or cross-Vpc IP binding and creates a SnatIp.
+ * @method void setSnatIps(array $SnatIps) Set Enables cross-regional or cross-Vpc IP binding and creates a SnatIp.
+ * @method array getClusterIds() Obtain Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.comom/document/product/214/49278?from_cn_redirect=1) api.
+ * @method void setClusterIds(array $ClusterIds) Set Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.comom/document/product/214/49278?from_cn_redirect=1) api.
+ * @method string getSlaType() Obtain Performance capacity specification. <li>clb.c2.medium (standard type)</li> <li>clb.c3.small (advanced type 1)</li> <li>clb.c3.medium (advanced type 2)</li> <li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li>.
+ * @method void setSlaType(string $SlaType) Set Performance capacity specification. <li>clb.c2.medium (standard type)</li> <li>clb.c3.small (advanced type 1)</li> <li>clb.c3.medium (advanced type 2)</li> <li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li>.
+ * @method string getClusterTag() Obtain Specifies the Tag of the Stgw exclusive cluster.
+ * @method void setClusterTag(string $ClusterTag) Set Specifies the Tag of the Stgw exclusive cluster.
+ * @method array getZones() Obtain Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
+ * @method void setZones(array $Zones) Set Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
+ * @method string getEipAddressId() Obtain The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1).
+ * @method void setEipAddressId(string $EipAddressId) Set The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1).
  */
 class CloneLoadBalancerRequest extends AbstractModel
 {
     /**
-     * @var string CLB instance ID
+     * @var string Specifies the clb ID. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
      */
     public $LoadBalancerId;
 
     /**
-     * @var string Clones the name of the CLB instance. The name must be 1-60 characters containing letters, numbers, "-" or "_".
-Note: if the name of a new CLB instance already exists, a default name will be generated automatically.
+     * @var string Specifies the name of the cloned load balancing instance. rule: 1-60 english letters, chinese characters, digits, connecting lines "-", or underscores "_".
+Note: if the name is identical to that of an existing load balancing instance in the system, the system will automatically generate a name for the created cloud load balancer instance.
      */
     public $LoadBalancerName;
 
@@ -96,98 +96,98 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
     public $SlaveZoneId;
 
     /**
-     * @var string Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+     * @var string Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
      */
     public $ZoneId;
 
     /**
-     * @var InternetAccessible CLB network billing mode. This parameter is applicable only to public network CLB instances.
+     * @var InternetAccessible CLB network billing mode, applicable only to public network CLB instances.
      */
     public $InternetAccessible;
 
     /**
-     * @var string ISP of VIP. Values: `CMCC` (China Mobile), `CUCC` (China Unicom) and `CTCC` (China Telecom). You need to activate static single-line IPs. This feature is in beta and is only available in Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu and Chongqing regions. To try it out, please contact your sales rep. If it's specified, the network billing mode must be `BANDWIDTH_PACKAGE`. If it's not specified, BGP is used by default. To query ISPs supported in a region, please use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). 
+     * @var string It only applies to public CLB. Currently, the static single-line IP type is supported only for the regions of Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu, and Chongqing. If you need to experience it, contact your business manager. After approval, you can select the ISP type as China Mobile (CMCC), China Unicom (CUCC), or China Telecom (CTCC). The network billing mode should be selected as billing by bandwidth package (BANDWIDTH_PACKAGE). If this parameter is not specified, BGP is used by default. You can use the DescribeResources API to query ISPs supported for a region.
      */
     public $VipIsp;
 
     /**
-     * @var string Applies for CLB instances for a specified VIP
+     * @var string Specifies the Vip to apply for cloud load balancer.
      */
     public $Vip;
 
     /**
-     * @var array Tags a CLB instance when purchasing it
+     * @var array Proceed to purchase cloud load balancer and Tag it at the same time.
      */
     public $Tags;
 
     /**
-     * @var ExclusiveCluster Dedicated cluster information
+     * @var ExclusiveCluster Exclusive cluster information.
      */
     public $ExclusiveCluster;
 
     /**
-     * @var string Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
+     * @var string BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies this parameter indicates the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE).
      */
     public $BandwidthPackageId;
 
     /**
-     * @var boolean Whether to support binding cross-VPC IPs or cross-region IPs
+     * @var boolean Specifies whether the cross-regional or cross-Vpc IP binding feature is supported.
      */
     public $SnatPro;
 
     /**
-     * @var array Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+     * @var array Enables cross-regional or cross-Vpc IP binding and creates a SnatIp.
      */
     public $SnatIps;
 
     /**
-     * @var array ID of the public network CLB dedicated cluster
+     * @var array Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.comom/document/product/214/49278?from_cn_redirect=1) api.
      */
     public $ClusterIds;
 
     /**
-     * @var string Specification of the LCU-supported instance.
+     * @var string Performance capacity specification. <li>clb.c2.medium (standard type)</li> <li>clb.c3.small (advanced type 1)</li> <li>clb.c3.medium (advanced type 2)</li> <li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li>.
      */
     public $SlaType;
 
     /**
-     * @var string Tag of the STGW dedicated cluster
+     * @var string Specifies the Tag of the Stgw exclusive cluster.
      */
     public $ClusterTag;
 
     /**
-     * @var array Availability zones for nearby access of private network CLB instances to distribute traffic
+     * @var array Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
      */
     public $Zones;
 
     /**
-     * @var string Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance (e.g., `eip-11112222`)
+     * @var string The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1).
      */
     public $EipAddressId;
 
     /**
-     * @param string $LoadBalancerId CLB instance ID
-     * @param string $LoadBalancerName Clones the name of the CLB instance. The name must be 1-60 characters containing letters, numbers, "-" or "_".
-Note: if the name of a new CLB instance already exists, a default name will be generated automatically.
+     * @param string $LoadBalancerId Specifies the clb ID. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+     * @param string $LoadBalancerName Specifies the name of the cloned load balancing instance. rule: 1-60 english letters, chinese characters, digits, connecting lines "-", or underscores "_".
+Note: if the name is identical to that of an existing load balancing instance in the system, the system will automatically generate a name for the created cloud load balancer instance.
      * @param integer $ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the `DescribeProject` API. If this parameter is not passed in, the default project will be used.
      * @param string $MasterZoneId Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
 Note: A primary AZ loads traffic, while a secondary AZ does not load traffic by default and will be used only if the primary AZ becomes unavailable. The platform will automatically select the optimal secondary AZ. You can use the `DescribeResource` API to query the primary AZ list of a region.
      * @param string $SlaveZoneId Specifies the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`. It is applicable only to public network CLB.
 Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use the `DescribeMasterZones` API to query the primary and secondary AZ list of a region.
-     * @param string $ZoneId Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
-     * @param InternetAccessible $InternetAccessible CLB network billing mode. This parameter is applicable only to public network CLB instances.
-     * @param string $VipIsp ISP of VIP. Values: `CMCC` (China Mobile), `CUCC` (China Unicom) and `CTCC` (China Telecom). You need to activate static single-line IPs. This feature is in beta and is only available in Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu and Chongqing regions. To try it out, please contact your sales rep. If it's specified, the network billing mode must be `BANDWIDTH_PACKAGE`. If it's not specified, BGP is used by default. To query ISPs supported in a region, please use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). 
-     * @param string $Vip Applies for CLB instances for a specified VIP
-     * @param array $Tags Tags a CLB instance when purchasing it
-     * @param ExclusiveCluster $ExclusiveCluster Dedicated cluster information
-     * @param string $BandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
-     * @param boolean $SnatPro Whether to support binding cross-VPC IPs or cross-region IPs
-     * @param array $SnatIps Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
-     * @param array $ClusterIds ID of the public network CLB dedicated cluster
-     * @param string $SlaType Specification of the LCU-supported instance.
-     * @param string $ClusterTag Tag of the STGW dedicated cluster
-     * @param array $Zones Availability zones for nearby access of private network CLB instances to distribute traffic
-     * @param string $EipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance (e.g., `eip-11112222`)
+     * @param string $ZoneId Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
+     * @param InternetAccessible $InternetAccessible CLB network billing mode, applicable only to public network CLB instances.
+     * @param string $VipIsp It only applies to public CLB. Currently, the static single-line IP type is supported only for the regions of Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu, and Chongqing. If you need to experience it, contact your business manager. After approval, you can select the ISP type as China Mobile (CMCC), China Unicom (CUCC), or China Telecom (CTCC). The network billing mode should be selected as billing by bandwidth package (BANDWIDTH_PACKAGE). If this parameter is not specified, BGP is used by default. You can use the DescribeResources API to query ISPs supported for a region.
+     * @param string $Vip Specifies the Vip to apply for cloud load balancer.
+     * @param array $Tags Proceed to purchase cloud load balancer and Tag it at the same time.
+     * @param ExclusiveCluster $ExclusiveCluster Exclusive cluster information.
+     * @param string $BandwidthPackageId BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies this parameter indicates the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE).
+     * @param boolean $SnatPro Specifies whether the cross-regional or cross-Vpc IP binding feature is supported.
+     * @param array $SnatIps Enables cross-regional or cross-Vpc IP binding and creates a SnatIp.
+     * @param array $ClusterIds Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.comom/document/product/214/49278?from_cn_redirect=1) api.
+     * @param string $SlaType Performance capacity specification. <li>clb.c2.medium (standard type)</li> <li>clb.c3.small (advanced type 1)</li> <li>clb.c3.medium (advanced type 2)</li> <li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li>.
+     * @param string $ClusterTag Specifies the Tag of the Stgw exclusive cluster.
+     * @param array $Zones Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
+     * @param string $EipAddressId The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1).
      */
     function __construct()
     {

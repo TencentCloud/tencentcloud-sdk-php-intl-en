@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterType(array $FilterType) Set Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
  * @method string getFilterName() Obtain Search by topic name. Fuzzy query is supported.
  * @method void setFilterName(string $FilterName) Set Search by topic name. Fuzzy query is supported.
+ * @method string getFilterGroup() Obtain Filters by subscription consumer group name.
+ * @method void setFilterGroup(string $FilterGroup) Set Filters by subscription consumer group name.
+ * @method array getTagFilters() Obtain Tag filter
+ * @method void setTagFilters(array $TagFilters) Set Tag filter
  */
 class DescribeRocketMQTopicsRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class DescribeRocketMQTopicsRequest extends AbstractModel
     public $FilterName;
 
     /**
+     * @var string Filters by subscription consumer group name.
+     */
+    public $FilterGroup;
+
+    /**
+     * @var array Tag filter
+     */
+    public $TagFilters;
+
+    /**
      * @param integer $Offset Offset for query.
      * @param integer $Limit Query limit.
      * @param string $ClusterId Cluster ID.
      * @param string $NamespaceId Namespace.
      * @param array $FilterType Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
      * @param string $FilterName Search by topic name. Fuzzy query is supported.
+     * @param string $FilterGroup Filters by subscription consumer group name.
+     * @param array $TagFilters Tag filter
      */
     function __construct()
     {
@@ -108,6 +124,19 @@ class DescribeRocketMQTopicsRequest extends AbstractModel
 
         if (array_key_exists("FilterName",$param) and $param["FilterName"] !== null) {
             $this->FilterName = $param["FilterName"];
+        }
+
+        if (array_key_exists("FilterGroup",$param) and $param["FilterGroup"] !== null) {
+            $this->FilterGroup = $param["FilterGroup"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

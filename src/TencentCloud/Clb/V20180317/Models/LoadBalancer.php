@@ -24,84 +24,70 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID.
  * @method string getLoadBalancerName() Obtain CLB instance name.
  * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name.
- * @method string getLoadBalancerType() Obtain CLB instance network type:
-OPEN: public network; INTERNAL: private network.
- * @method void setLoadBalancerType(string $LoadBalancerType) Set CLB instance network type:
-OPEN: public network; INTERNAL: private network.
+ * @method string getLoadBalancerType() Obtain Network type of the load balancing instance.
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
+ * @method void setLoadBalancerType(string $LoadBalancerType) Set Network type of the load balancing instance.
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
  * @method integer getForward() Obtain CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
  * @method void setForward(integer $Forward) Set CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
- * @method string getDomain() Obtain Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) Set Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDomain() Obtain The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
+ * @method void setDomain(string $Domain) Set The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
  * @method array getLoadBalancerVips() Obtain List of VIPs of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLoadBalancerVips(array $LoadBalancerVips) Set List of VIPs of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain CLB instance status, including:
-0: creating; 1: running.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set CLB instance status, including:
-0: creating; 1: running.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain CLB instance creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set CLB instance creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatusTime() Obtain Last status change time of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatusTime(string $StatusTime) Set Last status change time of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Specifies the state of the load balancing instance, including.
+0: creating. 1: normal operation.
+ * @method void setStatus(integer $Status) Set Specifies the state of the load balancing instance, including.
+0: creating. 1: normal operation.
+ * @method string getCreateTime() Obtain CLB instance creation time
+Format: YYYY-MM-DD HH:MM:ss.
+ * @method void setCreateTime(string $CreateTime) Set CLB instance creation time
+Format: YYYY-MM-DD HH:MM:ss.
+ * @method string getStatusTime() Obtain Last status transition time of the CLB instance.
+Format: YYYY-MM-DD HH:MM:ss.
+ * @method void setStatusTime(string $StatusTime) Set Last status transition time of the CLB instance.
+Format: YYYY-MM-DD HH:MM:ss.
  * @method integer getProjectId() Obtain ID of the project to which a CLB instance belongs. 0: default project.
  * @method void setProjectId(integer $ProjectId) Set ID of the project to which a CLB instance belongs. 0: default project.
  * @method string getVpcId() Obtain VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVpcId(string $VpcId) Set VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getOpenBgp() Obtain Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOpenBgp(integer $OpenBgp) Set Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getSnat() Obtain SNAT is enabled for all private network classic CLB created before December 2016.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSnat(boolean $Snat) Set SNAT is enabled for all private network classic CLB created before December 2016.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsolation() Obtain 0: not isolated; 1: isolated.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsolation(integer $Isolation) Set 0: not isolated; 1: isolated.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getOpenBgp() Obtain Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
+ * @method void setOpenBgp(integer $OpenBgp) Set Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
+ * @method boolean getSnat() Obtain Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled.
+ * @method void setSnat(boolean $Snat) Set Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled.
+ * @method integer getIsolation() Obtain Whether isolated. 0 means not isolated. 1 means isolated.
+ * @method void setIsolation(integer $Isolation) Set Whether isolated. 0 means not isolated. 1 means isolated.
  * @method string getLog() Obtain Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLog(string $Log) Set Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubnetId() Obtain Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubnetId(string $SubnetId) Set Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSubnetId() Obtain Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
+ * @method void setSubnetId(string $SubnetId) Set Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
  * @method array getTags() Obtain CLB instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set CLB instance tag information
+ * @method array getSecureGroups() Obtain Security group of the CLB instance
+ * @method void setSecureGroups(array $SecureGroups) Set Security group of the CLB instance
+ * @method TargetRegionInfo getTargetRegionInfo() Obtain Basic information of real servers bound to the CLB instance
+ * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) Set Basic information of real servers bound to the CLB instance
+ * @method string getAnycastZone() Obtain Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
+ * @method void setAnycastZone(string $AnycastZone) Set Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
+ * @method string getAddressIPVersion() Obtain IP Version, ipv4 | ipv6
+ * @method void setAddressIPVersion(string $AddressIPVersion) Set IP Version, ipv4 | ipv6
+ * @method integer getNumericalVpcId() Obtain Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+ * @method void setNumericalVpcId(integer $NumericalVpcId) Set Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+ * @method string getVipIsp() Obtain Specifies the ISP of the load balancer IP address.
+
+-BGP (multi-line).
+- CMCC: CMCC single line network.
+-CTCC: ctcc single-line.
+- CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getSecureGroups() Obtain Security group of a CLB instance
+ * @method void setVipIsp(string $VipIsp) Set Specifies the ISP of the load balancer IP address.
+
+-BGP (multi-line).
+- CMCC: CMCC single line network.
+-CTCC: ctcc single-line.
+- CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSecureGroups(array $SecureGroups) Set Security group of a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method TargetRegionInfo getTargetRegionInfo() Obtain Basic information of a backend server bound to a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) Set Basic information of a backend server bound to a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAnycastZone() Obtain Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAnycastZone(string $AnycastZone) Set Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddressIPVersion() Obtain IP version. Valid values: ipv4, ipv6
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAddressIPVersion(string $AddressIPVersion) Set IP version. Valid values: ipv4, ipv6
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getNumericalVpcId() Obtain VPC ID in a numeric form
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNumericalVpcId(integer $NumericalVpcId) Set VPC ID in a numeric form
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVipIsp() Obtain ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVipIsp(string $VipIsp) Set ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
  * @method ZoneInfo getMasterZone() Obtain Primary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMasterZone(ZoneInfo $MasterZone) Set Primary AZ
@@ -110,9 +96,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBackupZoneSet(array $BackupZoneSet) Set Secondary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIsolatedTime() Obtain CLB instance isolation time
+ * @method string getIsolatedTime() Obtain Specifies the isolation time of the cloud load balancer instance.
+Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsolatedTime(string $IsolatedTime) Set CLB instance isolation time
+ * @method void setIsolatedTime(string $IsolatedTime) Set Specifies the isolation time of the cloud load balancer instance.
+Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getExpireTime() Obtain CLB instance expiration time, which takes effect only for prepaid instances
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -130,14 +118,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPrepaidAttributes(LBChargePrepaid $PrepaidAttributes) Set Prepaid billing attributes of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLogSetId() Obtain Logset ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLogSetId(string $LogSetId) Set Logset ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLogTopicId() Obtain Log topic ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLogTopicId(string $LogTopicId) Set Log topic ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLogSetId() Obtain Log set ID of Cloud Log Service (CLS) for CLB
+ * @method void setLogSetId(string $LogSetId) Set Log set ID of Cloud Log Service (CLS) for CLB
+ * @method string getLogTopicId() Obtain Log topic ID of Cloud Log Service (CLS) for CLB
+ * @method void setLogTopicId(string $LogTopicId) Set Log topic ID of Cloud Log Service (CLS) for CLB
  * @method string getAddressIPv6() Obtain IPv6 address of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAddressIPv6(string $AddressIPv6) Set IPv6 address of a CLB instance
@@ -147,53 +131,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setExtraInfo(ExtraInfo $ExtraInfo) Set Reserved field which can be ignored generally.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getIsDDos() Obtain Whether an Anti-DDoS Pro instance can be bound
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsDDos(boolean $IsDDos) Set Whether an Anti-DDoS Pro instance can be bound
+ * @method string getConfigId() Obtain Custom configuration IDs of CLB instances
+ * @method void setConfigId(string $ConfigId) Set Custom configuration IDs of CLB instances
+ * @method boolean getLoadBalancerPassToTarget() Obtain Whether the real server allows traffic from CLB
+ * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) Set Whether the real server allows traffic from CLB
+ * @method ExclusiveCluster getExclusiveCluster() Obtain Exclusive cluster on the private network
+ * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) Set Exclusive cluster on the private network
+ * @method string getIPv6Mode() Obtain Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getConfigId() Obtain Custom configuration ID at the CLB instance level
+ * @method void setIPv6Mode(string $IPv6Mode) Set Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConfigId(string $ConfigId) Set Custom configuration ID at the CLB instance level
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getLoadBalancerPassToTarget() Obtain Whether a real server opens the traffic from a CLB instance to the internet
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) Set Whether a real server opens the traffic from a CLB instance to the internet
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method ExclusiveCluster getExclusiveCluster() Obtain Private network dedicated cluster
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) Set Private network dedicated cluster
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getIPv6Mode() Obtain This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIPv6Mode(string $IPv6Mode) Set This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getSnatPro() Obtain Whether to enable SnatPro.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSnatPro(boolean $SnatPro) Set Whether to enable SnatPro.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getSnatIps() Obtain `SnatIp` list after SnatPro load balancing is enabled.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSnatIps(array $SnatIps) Set `SnatIp` list after SnatPro load balancing is enabled.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSlaType() Obtain Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSlaType(string $SlaType) Set Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getSnatPro() Obtain Specifies whether SnatPro is enabled.
+ * @method void setSnatPro(boolean $SnatPro) Set Specifies whether SnatPro is enabled.
+ * @method array getSnatIps() Obtain Enables the SnatIp list after turning on SnatPro load balancing.
+ * @method void setSnatIps(array $SnatIps) Set Enables the SnatIp list after turning on SnatPro load balancing.
+ * @method string getSlaType() Obtain Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>.
+ * @method void setSlaType(string $SlaType) Set Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>.
  * @method boolean getIsBlock() Obtain Whether VIP is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIsBlock(boolean $IsBlock) Set Whether VIP is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getIsBlockTime() Obtain Time blocked or unblocked
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsBlockTime(string $IsBlockTime) Set Time blocked or unblocked
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getLocalBgp() Obtain Whether the IP type is the local BGP
- * @method void setLocalBgp(boolean $LocalBgp) Set Whether the IP type is the local BGP
+ * @method string getIsBlockTime() Obtain Specifies the blocking or unblocking time.
+Format: YYYY-MM-DD HH:MM:ss.
+ * @method void setIsBlockTime(string $IsBlockTime) Set Specifies the blocking or unblocking time.
+Format: YYYY-MM-DD HH:MM:ss.
+ * @method boolean getLocalBgp() Obtain Whether the IP type is Local BGP
+ * @method void setLocalBgp(boolean $LocalBgp) Set Whether the IP type is Local BGP
  * @method string getClusterTag() Obtain Dedicated layer-7 tag.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setClusterTag(string $ClusterTag) Set Dedicated layer-7 tag.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getMixIpTarget() Obtain If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMixIpTarget(boolean $MixIpTarget) Set If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method boolean getMixIpTarget() Obtain If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
+ * @method void setMixIpTarget(boolean $MixIpTarget) Set If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
  * @method array getZones() Obtain Availability zone of a VPC-based private network CLB instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setZones(array $Zones) Set Availability zone of a VPC-based private network CLB instance
@@ -202,32 +174,72 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setNfvInfo(string $NfvInfo) Set Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getHealthLogSetId() Obtain Health check logset ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setHealthLogSetId(string $HealthLogSetId) Set Health check logset ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getHealthLogTopicId() Obtain Health check log topic ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setHealthLogTopicId(string $HealthLogTopicId) Set Health check log topic ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getHealthLogSetId() Obtain Health check log set ID of Cloud Log Service (CLS) for CLB
+ * @method void setHealthLogSetId(string $HealthLogSetId) Set Health check log set ID of Cloud Log Service (CLS) for CLB
+ * @method string getHealthLogTopicId() Obtain Health check log topic ID of Cloud Log Service (CLS) for CLB
+ * @method void setHealthLogTopicId(string $HealthLogTopicId) Set Health check log topic ID of Cloud Log Service (CLS) for CLB
  * @method array getClusterIds() Obtain Cluster ID.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setClusterIds(array $ClusterIds) Set Cluster ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAttributeFlags() Obtain CLB attribute
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setAttributeFlags(array $AttributeFlags) Set CLB attribute
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getLoadBalancerDomain() Obtain Domain name of the CLB instance.
+ * @method array getAttributeFlags() Obtain Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+UserInVisible: invisible to users, controls load balancing visibility to users. 
+BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+BgpPro: specifies BGP Pro support. 
+ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
+
+ * @method void setAttributeFlags(array $AttributeFlags) Set Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+UserInVisible: invisible to users, controls load balancing visibility to users. 
+BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+BgpPro: specifies BGP Pro support. 
+ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
+
+ * @method string getLoadBalancerDomain() Obtain Specifies the domain name of the load balancing instance.
+ * @method void setLoadBalancerDomain(string $LoadBalancerDomain) Set Specifies the domain name of the load balancing instance.
+ * @method string getEgress() Obtain Specifies the network outbound.
+ * @method void setEgress(string $Egress) Set Specifies the network outbound.
+ * @method integer getExclusive() Obtain Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerDomain(string $LoadBalancerDomain) Set Domain name of the CLB instance.
+ * @method void setExclusive(integer $Exclusive) Set Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEgress() Obtain Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setEgress(string $Egress) Set Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getExclusive() Obtain 
- * @method void setExclusive(integer $Exclusive) Set 
+ * @method integer getTargetCount() Obtain Specifies the number of bound backend services.
+ * @method void setTargetCount(integer $TargetCount) Set Specifies the number of bound backend services.
+ * @method string getAssociateEndpoint() Obtain Specifies the Endpoint id associated with the clb instance.
+ * @method void setAssociateEndpoint(string $AssociateEndpoint) Set Specifies the Endpoint id associated with the clb instance.
  */
 class LoadBalancer extends AbstractModel
 {
@@ -242,8 +254,8 @@ class LoadBalancer extends AbstractModel
     public $LoadBalancerName;
 
     /**
-     * @var string CLB instance network type:
-OPEN: public network; INTERNAL: private network.
+     * @var string Network type of the load balancing instance.
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
      */
     public $LoadBalancerType;
 
@@ -253,32 +265,30 @@ OPEN: public network; INTERNAL: private network.
     public $Forward;
 
     /**
-     * @var string Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
      */
     public $Domain;
 
     /**
      * @var array List of VIPs of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LoadBalancerVips;
 
     /**
-     * @var integer CLB instance status, including:
-0: creating; 1: running.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the state of the load balancing instance, including.
+0: creating. 1: normal operation.
      */
     public $Status;
 
     /**
-     * @var string CLB instance creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CLB instance creation time
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public $CreateTime;
 
     /**
-     * @var string Last status change time of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Last status transition time of the CLB instance.
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public $StatusTime;
 
@@ -289,25 +299,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VpcId;
 
     /**
-     * @var integer Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
      */
     public $OpenBgp;
 
     /**
-     * @var boolean SNAT is enabled for all private network classic CLB created before December 2016.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled.
      */
     public $Snat;
 
     /**
-     * @var integer 0: not isolated; 1: isolated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether isolated. 0 means not isolated. 1 means isolated.
      */
     public $Isolation;
 
@@ -319,49 +325,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Log;
 
     /**
-     * @var string Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
      */
     public $SubnetId;
 
     /**
      * @var array CLB instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
     /**
-     * @var array Security group of a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Security group of the CLB instance
      */
     public $SecureGroups;
 
     /**
-     * @var TargetRegionInfo Basic information of a backend server bound to a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TargetRegionInfo Basic information of real servers bound to the CLB instance
      */
     public $TargetRegionInfo;
 
     /**
-     * @var string Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
      */
     public $AnycastZone;
 
     /**
-     * @var string IP version. Valid values: ipv4, ipv6
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string IP Version, ipv4 | ipv6
      */
     public $AddressIPVersion;
 
     /**
-     * @var integer VPC ID in a numeric form
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
      */
     public $NumericalVpcId;
 
     /**
-     * @var string ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the ISP of the load balancer IP address.
+
+-BGP (multi-line).
+- CMCC: CMCC single line network.
+-CTCC: ctcc single-line.
+- CUCC: china unicom single-line.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VipIsp;
 
@@ -378,7 +383,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $BackupZoneSet;
 
     /**
-     * @var string CLB instance isolation time
+     * @var string Specifies the isolation time of the cloud load balancer instance.
+Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsolatedTime;
@@ -408,14 +414,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PrepaidAttributes;
 
     /**
-     * @var string Logset ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Log set ID of Cloud Log Service (CLS) for CLB
      */
     public $LogSetId;
 
     /**
-     * @var string Log topic ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Log topic ID of Cloud Log Service (CLS) for CLB
      */
     public $LogTopicId;
 
@@ -433,65 +437,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var boolean Whether an Anti-DDoS Pro instance can be bound
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsDDos;
 
     /**
-     * @var string Custom configuration ID at the CLB instance level
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Custom configuration IDs of CLB instances
      */
     public $ConfigId;
 
     /**
-     * @var boolean Whether a real server opens the traffic from a CLB instance to the internet
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether the real server allows traffic from CLB
      */
     public $LoadBalancerPassToTarget;
 
     /**
-     * @var ExclusiveCluster Private network dedicated cluster
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ExclusiveCluster Exclusive cluster on the private network
      */
     public $ExclusiveCluster;
 
     /**
-     * @var string This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IPv6Mode;
 
     /**
-     * @var boolean Whether to enable SnatPro.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean Specifies whether SnatPro is enabled.
      */
     public $SnatPro;
 
     /**
-     * @var array `SnatIp` list after SnatPro load balancing is enabled.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Enables the SnatIp list after turning on SnatPro load balancing.
      */
     public $SnatIps;
 
     /**
-     * @var string Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>.
      */
     public $SlaType;
 
     /**
      * @var boolean Whether VIP is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsBlock;
 
     /**
-     * @var string Time blocked or unblocked
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the blocking or unblocking time.
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public $IsBlockTime;
 
     /**
-     * @var boolean Whether the IP type is the local BGP
+     * @var boolean Whether the IP type is Local BGP
      */
     public $LocalBgp;
 
@@ -502,8 +501,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ClusterTag;
 
     /**
-     * @var boolean If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
      */
     public $MixIpTarget;
 
@@ -520,14 +518,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $NfvInfo;
 
     /**
-     * @var string Health check logset ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Health check log set ID of Cloud Log Service (CLS) for CLB
      */
     public $HealthLogSetId;
 
     /**
-     * @var string Health check log topic ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Health check log topic ID of Cloud Log Service (CLS) for CLB
      */
     public $HealthLogTopicId;
 
@@ -538,75 +534,99 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ClusterIds;
 
     /**
-     * @var array CLB attribute
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+UserInVisible: invisible to users, controls load balancing visibility to users. 
+BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+BgpPro: specifies BGP Pro support. 
+ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
+
      */
     public $AttributeFlags;
 
     /**
-     * @var string Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the domain name of the load balancing instance.
      */
     public $LoadBalancerDomain;
 
     /**
-     * @var string Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Specifies the network outbound.
      */
     public $Egress;
 
     /**
-     * @var integer 
+     * @var integer Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Exclusive;
 
     /**
+     * @var integer Specifies the number of bound backend services.
+     */
+    public $TargetCount;
+
+    /**
+     * @var string Specifies the Endpoint id associated with the clb instance.
+     */
+    public $AssociateEndpoint;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
-     * @param string $LoadBalancerType CLB instance network type:
-OPEN: public network; INTERNAL: private network.
+     * @param string $LoadBalancerType Network type of the load balancing instance.
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
      * @param integer $Forward CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
-     * @param string $Domain Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Domain The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
      * @param array $LoadBalancerVips List of VIPs of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status CLB instance status, including:
-0: creating; 1: running.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime CLB instance creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StatusTime Last status change time of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Specifies the state of the load balancing instance, including.
+0: creating. 1: normal operation.
+     * @param string $CreateTime CLB instance creation time
+Format: YYYY-MM-DD HH:MM:ss.
+     * @param string $StatusTime Last status transition time of the CLB instance.
+Format: YYYY-MM-DD HH:MM:ss.
      * @param integer $ProjectId ID of the project to which a CLB instance belongs. 0: default project.
      * @param string $VpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $OpenBgp Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $Snat SNAT is enabled for all private network classic CLB created before December 2016.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Isolation 0: not isolated; 1: isolated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $OpenBgp Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
+     * @param boolean $Snat Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled.
+     * @param integer $Isolation Whether isolated. 0 means not isolated. 1 means isolated.
      * @param string $Log Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SubnetId Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SubnetId Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
      * @param array $Tags CLB instance tag information
+     * @param array $SecureGroups Security group of the CLB instance
+     * @param TargetRegionInfo $TargetRegionInfo Basic information of real servers bound to the CLB instance
+     * @param string $AnycastZone Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
+     * @param string $AddressIPVersion IP Version, ipv4 | ipv6
+     * @param integer $NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+     * @param string $VipIsp Specifies the ISP of the load balancer IP address.
+
+-BGP (multi-line).
+- CMCC: CMCC single line network.
+-CTCC: ctcc single-line.
+- CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $SecureGroups Security group of a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TargetRegionInfo $TargetRegionInfo Basic information of a backend server bound to a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AnycastZone Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AddressIPVersion IP version. Valid values: ipv4, ipv6
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $NumericalVpcId VPC ID in a numeric form
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VipIsp ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
      * @param ZoneInfo $MasterZone Primary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $BackupZoneSet Secondary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IsolatedTime CLB instance isolation time
+     * @param string $IsolatedTime Specifies the isolation time of the cloud load balancer instance.
+Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ExpireTime CLB instance expiration time, which takes effect only for prepaid instances
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -616,55 +636,67 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param LBChargePrepaid $PrepaidAttributes Prepaid billing attributes of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LogSetId Logset ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LogTopicId Log topic ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LogSetId Log set ID of Cloud Log Service (CLS) for CLB
+     * @param string $LogTopicId Log topic ID of Cloud Log Service (CLS) for CLB
      * @param string $AddressIPv6 IPv6 address of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param ExtraInfo $ExtraInfo Reserved field which can be ignored generally.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $IsDDos Whether an Anti-DDoS Pro instance can be bound
+     * @param string $ConfigId Custom configuration IDs of CLB instances
+     * @param boolean $LoadBalancerPassToTarget Whether the real server allows traffic from CLB
+     * @param ExclusiveCluster $ExclusiveCluster Exclusive cluster on the private network
+     * @param string $IPv6Mode Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ConfigId Custom configuration ID at the CLB instance level
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $LoadBalancerPassToTarget Whether a real server opens the traffic from a CLB instance to the internet
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ExclusiveCluster $ExclusiveCluster Private network dedicated cluster
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $IPv6Mode This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $SnatPro Whether to enable SnatPro.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $SnatIps `SnatIp` list after SnatPro load balancing is enabled.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $SlaType Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $SnatPro Specifies whether SnatPro is enabled.
+     * @param array $SnatIps Enables the SnatIp list after turning on SnatPro load balancing.
+     * @param string $SlaType Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>.
      * @param boolean $IsBlock Whether VIP is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $IsBlockTime Time blocked or unblocked
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $LocalBgp Whether the IP type is the local BGP
+     * @param string $IsBlockTime Specifies the blocking or unblocking time.
+Format: YYYY-MM-DD HH:MM:ss.
+     * @param boolean $LocalBgp Whether the IP type is Local BGP
      * @param string $ClusterTag Dedicated layer-7 tag.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param boolean $MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
      * @param array $Zones Availability zone of a VPC-based private network CLB instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $NfvInfo Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $HealthLogSetId Health check logset ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $HealthLogTopicId Health check log topic ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $HealthLogSetId Health check log set ID of Cloud Log Service (CLS) for CLB
+     * @param string $HealthLogTopicId Health check log topic ID of Cloud Log Service (CLS) for CLB
      * @param array $ClusterIds Cluster ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $AttributeFlags CLB attribute
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $LoadBalancerDomain Domain name of the CLB instance.
+     * @param array $AttributeFlags Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+UserInVisible: invisible to users, controls load balancing visibility to users. 
+BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+BgpPro: specifies BGP Pro support. 
+ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
+
+     * @param string $LoadBalancerDomain Specifies the domain name of the load balancing instance.
+     * @param string $Egress Specifies the network outbound.
+     * @param integer $Exclusive Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Exclusive 
+     * @param integer $TargetCount Specifies the number of bound backend services.
+     * @param string $AssociateEndpoint Specifies the Endpoint id associated with the clb instance.
      */
     function __construct()
     {
@@ -922,6 +954,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
         if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
             $this->Exclusive = $param["Exclusive"];
+        }
+
+        if (array_key_exists("TargetCount",$param) and $param["TargetCount"] !== null) {
+            $this->TargetCount = $param["TargetCount"];
+        }
+
+        if (array_key_exists("AssociateEndpoint",$param) and $param["AssociateEndpoint"] !== null) {
+            $this->AssociateEndpoint = $param["AssociateEndpoint"];
         }
     }
 }

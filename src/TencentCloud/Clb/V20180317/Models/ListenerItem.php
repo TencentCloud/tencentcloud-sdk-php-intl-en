@@ -34,10 +34,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTargets(array $Targets) Set Object bound to the layer-4 listener.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getEndPort() Obtain End port of the listener.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setEndPort(integer $EndPort) Set End port of the listener.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getEndPort() Obtain End port of a port range for a listener
+ * @method void setEndPort(integer $EndPort) Set End port of a port range for a listener
  */
 class ListenerItem extends AbstractModel
 {
@@ -69,8 +67,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Targets;
 
     /**
-     * @var integer End port of the listener.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer End port of a port range for a listener
      */
     public $EndPort;
 
@@ -82,8 +79,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $Targets Object bound to the layer-4 listener.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $EndPort End port of the listener.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $EndPort End port of a port range for a listener
      */
     function __construct()
     {

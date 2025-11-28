@@ -20,26 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OAuth configuration information.
  *
- * @method boolean getOAuthEnable() Obtain Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOAuthEnable(boolean $OAuthEnable) Set Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOAuthFailureStatus() Obtain Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOAuthFailureStatus(string $OAuthFailureStatus) Set Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getOAuthEnable() Obtain Specifies whether to turn on or off authentication.
+True: enable.
+False: disabled.
+Disabled by default.
+ * @method void setOAuthEnable(boolean $OAuthEnable) Set Specifies whether to turn on or off authentication.
+True: enable.
+False: disabled.
+Disabled by default.
+ * @method string getOAuthFailureStatus() Obtain Deny requests or allow when all iaps fail.
+BYPASS: specifies the bypass.
+REJECT.
+Defaults to BYPASS.
+ * @method void setOAuthFailureStatus(string $OAuthFailureStatus) Set Deny requests or allow when all iaps fail.
+BYPASS: specifies the bypass.
+REJECT.
+Defaults to BYPASS.
  */
 class OAuth extends AbstractModel
 {
     /**
-     * @var boolean Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Specifies whether to turn on or off authentication.
+True: enable.
+False: disabled.
+Disabled by default.
      */
     public $OAuthEnable;
 
     /**
-     * @var string Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Deny requests or allow when all iaps fail.
+BYPASS: specifies the bypass.
+REJECT.
+Defaults to BYPASS.
      */
     public $OAuthFailureStatus;
 
     /**
-     * @param boolean $OAuthEnable Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OAuthFailureStatus Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $OAuthEnable Specifies whether to turn on or off authentication.
+True: enable.
+False: disabled.
+Disabled by default.
+     * @param string $OAuthFailureStatus Deny requests or allow when all iaps fail.
+BYPASS: specifies the bypass.
+REJECT.
+Defaults to BYPASS.
      */
     function __construct()
     {

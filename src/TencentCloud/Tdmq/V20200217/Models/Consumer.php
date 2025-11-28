@@ -18,7 +18,7 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  Consumer
+ * Consumer.
  *
  * @method string getConnectedSince() Obtain The time when the consumer started connecting.
 Note: This field may return null, indicating that no valid values can be obtained.

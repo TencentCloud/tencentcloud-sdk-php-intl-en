@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getListenerId() Obtain CLB listener ID
  * @method void setListenerId(string $ListenerId) Set CLB listener ID
- * @method array getFunctionTargets() Obtain The backend cloud functions to modify
- * @method void setFunctionTargets(array $FunctionTargets) Set The backend cloud functions to modify
+ * @method array getFunctionTargets() Obtain Specifies the backend SCF service list to modify. only Event function type is supported.
+ * @method void setFunctionTargets(array $FunctionTargets) Set Specifies the backend SCF service list to modify. only Event function type is supported.
  * @method string getLocationId() Obtain Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or `Domain`+`Url`.
  * @method void setLocationId(string $LocationId) Set Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or `Domain`+`Url`.
  * @method string getDomain() Obtain Target rule domain name. This parameter does not take effect if `LocationId` is specified.
@@ -46,7 +46,7 @@ class ModifyFunctionTargetsRequest extends AbstractModel
     public $ListenerId;
 
     /**
-     * @var array The backend cloud functions to modify
+     * @var array Specifies the backend SCF service list to modify. only Event function type is supported.
      */
     public $FunctionTargets;
 
@@ -68,7 +68,7 @@ class ModifyFunctionTargetsRequest extends AbstractModel
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
-     * @param array $FunctionTargets The backend cloud functions to modify
+     * @param array $FunctionTargets Specifies the backend SCF service list to modify. only Event function type is supported.
      * @param string $LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or `Domain`+`Url`.
      * @param string $Domain Target rule domain name. This parameter does not take effect if `LocationId` is specified.
      * @param string $Url Target rule URL. This parameter does not take effect if `LocationId` is specified.

@@ -25,9 +25,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setQueueId(string $QueueId) Set Message queue ID.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getQueueName() Obtain Message queue name.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setQueueName(string $QueueName) Set Message queue name.
-Note: this field may return null, indicating that no valid values can be obtained.
  */
 class CmqDeadLetterSource extends AbstractModel
 {
@@ -39,7 +37,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Message queue name.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $QueueName;
 
@@ -47,7 +44,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $QueueId Message queue ID.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $QueueName Message queue name.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
