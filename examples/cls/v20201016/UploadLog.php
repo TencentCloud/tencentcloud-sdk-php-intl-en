@@ -1,13 +1,13 @@
 <?php
 require_once __DIR__.'/../../../vendor/autoload.php';
-// import cls client
+// Import the client for the corresponding product module
 use TencentCloud\Cls\V20201016\ClsClient;
-// import UploadLogRequest
+// Import the Request class for the interface to be requested
 use TencentCloud\Cls\V20201016\Models\UploadLogRequest;
 
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
-// import configuration
+// Import the optional configuration class
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Profile\HttpProfile;
 
@@ -36,30 +36,30 @@ $logGroupList ->setLogGroupList([$logGroup]);
 $pb_str = $logGroupList->serializeToString();
 
 try {
-    // Instantiate an authentication object. The Tencent Cloud account key pair `secretId` and `secretKey` need to be passed in as the input parameters
-    // $cred = new Credential("secretId", "secretKey");
+    // Create a credential object. You need to pass in the Tencent Cloud account secretId and secretKey.
+    // $cred = new Credential("【secretId】", "【secretKey】");
     $cred = new Credential(getenv("TENCENTCLOUD_SECRET_ID"),
                            getenv("TENCENTCLOUD_SECRET_KEY"));
 
-    // Instantiate an HTTP option (optional; skip if there are no special requirements)
+    // Create an HTTP option. This is optional. You can skip it if you have no special needs.
     $httpProfile = new HttpProfile();
     $httpProfile->setReqMethod("POST");  // POST request (default is POST)
-    $httpProfile->setReqTimeout(60);    // Request timeout in seconds (default 60 seconds)
-    $httpProfile->setEndpoint("cls.tencentcloudapi.com");  // Specify the access region domain name (default is nearest access)
+    $httpProfile->setReqTimeout(60);    // Request timeout in seconds (default is 60 seconds)
+    $httpProfile->setEndpoint("cls.tencentcloudapi.com");  // Specify the regional domain (default is nearest access)
 
-    // Instantiate an client option (optional; skip if there are no special requirements)
+    // Create a client option. This is optional. You can skip it if you have no special needs.
     $clientProfile = new ClientProfile();
     $clientProfile->setSignMethod("TC3-HMAC-SHA256");  // Specify the signature algorithm (default is HmacSHA256)
     $clientProfile->setHttpProfile($httpProfile);
 
-    // Instantiate the client object for the product to be requested (taking cls as an example). clientProfile is optional
+    // Create the client object for the product to be requested (CLS in this case). The clientProfile is optional.
     $client = new ClsClient($cred, "ap-guangzhou", $clientProfile);
 
     $resp = $client->call_octet_stream("UploadLog", array(
         "X-CLS-TopicId" => "[TopicID]",
     ), $pb_str);
 
-    // A string return packet in JSON format is output
+    // Output the response as a JSON string
     print_r($resp->toJsonString());
 }
 catch(TencentCloudSDKException $e) {

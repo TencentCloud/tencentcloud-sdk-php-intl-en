@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 Tencent. All Rights Reserved.
+ * Copyright (c) 2017 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,58 +18,97 @@
 
 namespace TencentCloud\Common\Profile;
 
+use TencentCloud\Common\Exception\TencentCloudSDKException;
+
 /**
+ * Client optional parameters class
  * Class ClientProfile
  * @package TencentCloud\Common\Profile
  */
 class ClientProfile
 {
+
     /**
-     * @var string
+     * @var string  HMAC SHA1 algorithm
      */
     public static $SIGN_HMAC_SHA1 = "HmacSHA1";
 
     /**
-     * @var string
+     * @var string HMAC SHA256 algorithm
      */
     public static $SIGN_HMAC_SHA256 = "HmacSHA256";
 
     /**
-     * @var string
+     * @var string Signature V3
      */
     public static $SIGN_TC3_SHA256 = "TC3-HMAC-SHA256";
 
     /**
-     * @var HttpProfile
+     * @var string Chinese simplified
+     */
+    public static $ZH_CN = "zh-CN";
+
+    /**
+     * @var string English
+     */
+    public static $EN_US = "en-US";
+
+    /**
+     * @var boolean Enable region breaker
+     */
+    public $enableRegionBreaker;
+
+    /**
+     * @var HttpProfile HTTP related parameters
      */
     private $httpProfile;
 
     /**
-     * @var string
+     * @var string Signature method
      */
     private $signMethod;
 
     /**
-     * @var string
+     * @var string Unsigned payload
      */
     private $unsignedPayload;
 
+    /**
+     * @var boolean
+     */
+    private $checkPHPVersion;
+
+    /**
+     * @var string
+     */
+    private $language;
+
+    /**
+     * @var RegionBreakerProfile Region breaker related parameters
+     */
+    private $regionBreakerProfile;
 
     /**
      * ClientProfile constructor.
-     * @param string $signMethod
-     * @param HttpProfile $httpProfile
+     * @param string $signMethod  Signature algorithm, currently supports SHA256, SHA1
+     * @param HttpProfile $httpProfile HTTP parameters class
+     * @param boolean $enableRegionBreaker  Enable region breaker
+     * @param RegionBreakerProfile $regionBreakerProfile  Region breaker related parameters
      */
-    public function __construct($signMethod = null, $httpProfile = null)
+    public function __construct($signMethod = null, $httpProfile = null, $enableRegionBreaker = false, $regionBreakerProfile = null)
     {
         $this->signMethod = $signMethod ? $signMethod : ClientProfile::$SIGN_TC3_SHA256;
         $this->httpProfile = $httpProfile ? $httpProfile : new HttpProfile();
         $this->unsignedPayload = false;
+	    $this->checkPHPVersion = true;
+        $this->enableRegionBreaker = $enableRegionBreaker;
+        $this->regionBreakerProfile = $regionBreakerProfile;
+	//$this->language = ClientProfile::$ZH_CN;
     }
 
     /**
-     * Set signature method.
-     * @param string $signMethod
+     * Set signature algorithm
+     * @param string $signMethod Signature method, currently supports SHA256, SHA1, TC3
      */
     public function setSignMethod($signMethod)
     {
@@ -77,7 +116,8 @@ class ClientProfile
     }
 
     /**
-     * @param HttpProfile $httpProfile
+     * Set HTTP related parameters
+     * @param HttpProfile $httpProfile HTTP related parameters
      */
     public function setHttpProfile($httpProfile)
     {
@@ -85,8 +125,8 @@ class ClientProfile
     }
 
     /**
-     * Get signature method.
-     * @return null|string
+     * Get signature method
+     * @return null|string Signature method
      */
     public function getSignMethod()
     {
@@ -94,8 +134,8 @@ class ClientProfile
     }
 
     /**
-     * Set signature process without request payload.
-     * @param bool $flag true means ignore request payload.
+     * Set whether to ignore content signature
+     * @param bool $flag true means ignore signature
      */
     public function setUnsignedPayload($flag)
     {
@@ -103,7 +143,7 @@ class ClientProfile
     }
 
     /**
-     * Get flag of request payload is signed or not.
+     * Get whether to ignore content signature flag
      * @return bool
      */
     public function getUnsignedPayload()
@@ -111,12 +151,77 @@ class ClientProfile
         return $this->unsignedPayload;
     }
 
+    public function getCheckPHPVersion()
+    {
+        return $this->checkPHPVersion;
+    }
+
+    public function setCheckPHPVersion($flag)
+    {
+        $this->checkPHPVersion = $flag;
+    }
+
+    public function getLanguage()
+    {
+	return $this->language;
+    }
+
     /**
-     * Get http profile settings
-     * @return null|HttpProfile http
+     * @param string $language Valid values: zh-CN, en-US
+     */
+    public function setLanguage($language)
+    {
+	$this->language = $language;
+    }
+
+    public function getRegionBreakerProfile()
+    {
+        return $this->regionBreakerProfile;
+    }
+
+    /**
+     * Set region breaker related parameters
+     * @param RegionBreakerProfile $regionBreakerProfile Region breaker related parameters
+     */
+    public function setRegionBreakerProfile($regionBreakerProfile)
+    {
+        $this->regionBreakerProfile = $regionBreakerProfile;
+    }
+
+    /**
+     * Get HTTP profile instance
+     * @return null|HttpProfile HTTP profile instance
      */
     public function getHttpProfile()
     {
         return $this->httpProfile;
+    }
+}
+
+class RegionBreakerProfile {
+
+    public function __construct($masterEndpoint,
+                                $slaveEndpoint,
+                                $maxFailNum = 5,
+                                $maxFailPercent = 0.75,
+                                $windowInterval = 60*5,
+                                $timeout = 60,
+                                $maxRequests = 5) {
+        if (empty($masterEndpoint) || !(substr($masterEndpoint, -20) === '.tencentcloudapi.com')) {
+            throw new TencentCloudSDKException("", 'masterEndpoint must be provided and end with ".tencentcloudapi.com"');
+        }
+        if (empty($slaveEndpoint) || !(substr($slaveEndpoint, -20) === '.tencentcloudapi.com')) {
+            throw new TencentCloudSDKException("", 'slaveEndpoint must be provided and end with ".tencentcloudapi.com"');
+        }
+        $this->masterEndpoint = $masterEndpoint;
+        $this->slaveEndpoint = $slaveEndpoint;
+        $this->maxFailNum = $maxFailNum;
+        $this->maxFailPercent = $maxFailPercent;
+        if ($this->maxFailPercent < 0 || $this->maxFailPercent > 1) {
+            throw new TencentCloudSDKException("", "ClientError: max fail percent must be set between 0 and 1");
+        }
+        $this->windowInterval = $windowInterval;
+        $this->timeout = $timeout;
+        $this->maxRequests = $maxRequests;
     }
 }

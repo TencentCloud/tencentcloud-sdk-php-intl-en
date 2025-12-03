@@ -20,18 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ParseLiveStreamProcessNotification response structure.
  *
- * @method string getNotificationType() Obtain Live stream processing result type, including:
-<li>AiReviewResult: content auditing result.</li>
+ * @method string getNotificationType() Obtain Live stream processing result type. Valid values:
+<li>AiReviewResult: content review result.</li>
 <li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live recording result.</li>
-<li>AiQualityControlResult: media quality inspection result.</li>
-<li>ProcessEof: live stream processing result.</li>
- * @method void setNotificationType(string $NotificationType) Set Live stream processing result type, including:
-<li>AiReviewResult: content auditing result.</li>
+<li>LiveRecordResult: live streaming recording result.</li>
+<li>AiQualityControlResult: media live quality control result.</li>
+<li>AiAnalysisResult: content analysis result.</li>
+<li>ProcessEof: end of live stream processing.</li>
+ * @method void setNotificationType(string $NotificationType) Set Live stream processing result type. Valid values:
+<li>AiReviewResult: content review result.</li>
 <li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live recording result.</li>
-<li>AiQualityControlResult: media quality inspection result.</li>
-<li>ProcessEof: live stream processing result.</li>
+<li>LiveRecordResult: live streaming recording result.</li>
+<li>AiQualityControlResult: media live quality control result.</li>
+<li>AiAnalysisResult: content analysis result.</li>
+<li>ProcessEof: end of live stream processing.</li>
  * @method string getTaskId() Obtain Video processing task ID.
  * @method void setTaskId(string $TaskId) Set Video processing task ID.
  * @method LiveStreamProcessErrorInfo getProcessEofInfo() Obtain Information of a live stream processing error, which is valid when `NotificationType` is `ProcessEof`.
@@ -66,12 +68,13 @@ Note: when this field return null, means no valid values can be obtained.
 class ParseLiveStreamProcessNotificationResponse extends AbstractModel
 {
     /**
-     * @var string Live stream processing result type, including:
-<li>AiReviewResult: content auditing result.</li>
+     * @var string Live stream processing result type. Valid values:
+<li>AiReviewResult: content review result.</li>
 <li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live recording result.</li>
-<li>AiQualityControlResult: media quality inspection result.</li>
-<li>ProcessEof: live stream processing result.</li>
+<li>LiveRecordResult: live streaming recording result.</li>
+<li>AiQualityControlResult: media live quality control result.</li>
+<li>AiAnalysisResult: content analysis result.</li>
+<li>ProcessEof: end of live stream processing.</li>
      */
     public $NotificationType;
 
@@ -139,12 +142,13 @@ Note: when this field return null, means no valid values can be obtained.
     public $RequestId;
 
     /**
-     * @param string $NotificationType Live stream processing result type, including:
-<li>AiReviewResult: content auditing result.</li>
+     * @param string $NotificationType Live stream processing result type. Valid values:
+<li>AiReviewResult: content review result.</li>
 <li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live recording result.</li>
-<li>AiQualityControlResult: media quality inspection result.</li>
-<li>ProcessEof: live stream processing result.</li>
+<li>LiveRecordResult: live streaming recording result.</li>
+<li>AiQualityControlResult: media live quality control result.</li>
+<li>AiAnalysisResult: content analysis result.</li>
+<li>ProcessEof: end of live stream processing.</li>
      * @param string $TaskId Video processing task ID.
      * @param LiveStreamProcessErrorInfo $ProcessEofInfo Information of a live stream processing error, which is valid when `NotificationType` is `ProcessEof`.
 Note: when this field return null, means no valid values can be obtained.

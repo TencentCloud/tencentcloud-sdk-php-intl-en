@@ -36,6 +36,10 @@ This parameter is used in highly customized scenarios. We recommend you only use
 Note: this field may return `null`, indicating that no valid value was found.
  * @method array getWatermarkSet() Obtain Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
  * @method void setWatermarkSet(array $WatermarkSet) Set Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+ * @method BlindWatermarkInput getBlindWatermark() Obtain Digital watermark parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set Digital watermark parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getMosaicSet() Obtain List of blurs. Up to 10 ones can be supported.
  * @method void setMosaicSet(array $MosaicSet) Set List of blurs. Up to 10 ones can be supported.
  * @method float getStartTimeOffset() Obtain Start time offset of a transcoded video, in seconds.
@@ -110,6 +114,12 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $WatermarkSet;
 
     /**
+     * @var BlindWatermarkInput Digital watermark parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BlindWatermark;
+
+    /**
      * @var array List of blurs. Up to 10 ones can be supported.
      */
     public $MosaicSet;
@@ -173,6 +183,8 @@ When any parameters in this structure are entered, they will be used to override
 This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param array $WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+     * @param BlindWatermarkInput $BlindWatermark Digital watermark parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $MosaicSet List of blurs. Up to 10 ones can be supported.
      * @param float $StartTimeOffset Start time offset of a transcoded video, in seconds.
 <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
@@ -231,6 +243,11 @@ Note: this field may return `null`, indicating that no valid value was found.
                 $obj->deserialize($value);
                 array_push($this->WatermarkSet, $obj);
             }
+        }
+
+        if (array_key_exists("BlindWatermark",$param) and $param["BlindWatermark"] !== null) {
+            $this->BlindWatermark = new BlindWatermarkInput();
+            $this->BlindWatermark->deserialize($param["BlindWatermark"]);
         }
 
         if (array_key_exists("MosaicSet",$param) and $param["MosaicSet"] !== null) {

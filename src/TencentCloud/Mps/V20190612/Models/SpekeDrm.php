@@ -36,24 +36,22 @@ Note: different DRM manufacturers have different limitations on the number of su
 Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
  * @method string getVector() Obtain Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
  * @method void setVector(string $Vector) Set Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
- * @method string getEncryptionMethod() Obtain Encryption method. Options:  
-- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
-- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
-
-If not specified:  
-- FairPlay defaults to **cbcs**.  
-- PlayReady and Widevine default to **cenc**.  
-- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
-- Widevine+PlayReady defaults to **cenc**.
- * @method void setEncryptionMethod(string $EncryptionMethod) Set Encryption method. Options:  
-- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
-- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
-
-If not specified:  
-- FairPlay defaults to **cbcs**.  
-- PlayReady and Widevine default to **cenc**.  
-- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
-- Widevine+PlayReady defaults to **cenc**.
+ * @method string getEncryptionMethod() Obtain Encryption method. Valid values:
+cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
+cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+If it is left unspecified:
+Use cbcs for FairPlay by default.
+Use cenc for PlayReady and Widevine by default.
+Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+Use cenc for Widevine+PlayReady by default.
+ * @method void setEncryptionMethod(string $EncryptionMethod) Set Encryption method. Valid values:
+cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
+cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+If it is left unspecified:
+Use cbcs for FairPlay by default.
+Use cenc for PlayReady and Widevine by default.
+Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+Use cenc for Widevine+PlayReady by default.
  * @method string getEncryptionPreset() Obtain Substream encryption rule. Default value: preset0.
 preset 0: use the same key to encrypt all substreams
 preset1: use different keys for each substream
@@ -85,15 +83,14 @@ Note: different DRM manufacturers have different limitations on the number of su
     public $Vector;
 
     /**
-     * @var string Encryption method. Options:  
-- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
-- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
-
-If not specified:  
-- FairPlay defaults to **cbcs**.  
-- PlayReady and Widevine default to **cenc**.  
-- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
-- Widevine+PlayReady defaults to **cenc**.
+     * @var string Encryption method. Valid values:
+cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
+cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+If it is left unspecified:
+Use cbcs for FairPlay by default.
+Use cenc for PlayReady and Widevine by default.
+Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+Use cenc for Widevine+PlayReady by default.
      */
     public $EncryptionMethod;
 
@@ -114,15 +111,14 @@ Note: Different DRM vendors have different restrictions on this field (for examp
 
 Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
      * @param string $Vector Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
-     * @param string $EncryptionMethod Encryption method. Options:  
-- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
-- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
-
-If not specified:  
-- FairPlay defaults to **cbcs**.  
-- PlayReady and Widevine default to **cenc**.  
-- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
-- Widevine+PlayReady defaults to **cenc**.
+     * @param string $EncryptionMethod Encryption method. Valid values:
+cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
+cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+If it is left unspecified:
+Use cbcs for FairPlay by default.
+Use cenc for PlayReady and Widevine by default.
+Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+Use cenc for Widevine+PlayReady by default.
      * @param string $EncryptionPreset Substream encryption rule. Default value: preset0.
 preset 0: use the same key to encrypt all substreams
 preset1: use different keys for each substream

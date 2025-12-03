@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Filtering conditions for template type. If this parameter is not specified, all templates are returned. Valid values:
 * Preset: system preset template.
 * Custom: user-defined template.
+ * @method string getEraseType() Obtain Erasing type filtering conditions for the smart erasing template.
+- subtitle: subtitle removal.
+- watermark: watermark removal.
+- privacy: privacy protection.
+ * @method void setEraseType(string $EraseType) Set Erasing type filtering conditions for the smart erasing template.
+- subtitle: subtitle removal.
+- watermark: watermark removal.
+- privacy: privacy protection.
  * @method string getName() Obtain Filtering condition for the smart erasing template name. Length limit: 64 characters.
  * @method void setName(string $Name) Set Filtering condition for the smart erasing template name. Length limit: 64 characters.
  */
@@ -60,6 +68,14 @@ class DescribeSmartEraseTemplatesRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var string Erasing type filtering conditions for the smart erasing template.
+- subtitle: subtitle removal.
+- watermark: watermark removal.
+- privacy: privacy protection.
+     */
+    public $EraseType;
+
+    /**
      * @var string Filtering condition for the smart erasing template name. Length limit: 64 characters.
      */
     public $Name;
@@ -71,6 +87,10 @@ class DescribeSmartEraseTemplatesRequest extends AbstractModel
      * @param string $Type Filtering conditions for template type. If this parameter is not specified, all templates are returned. Valid values:
 * Preset: system preset template.
 * Custom: user-defined template.
+     * @param string $EraseType Erasing type filtering conditions for the smart erasing template.
+- subtitle: subtitle removal.
+- watermark: watermark removal.
+- privacy: privacy protection.
      * @param string $Name Filtering condition for the smart erasing template name. Length limit: 64 characters.
      */
     function __construct()
@@ -100,6 +120,10 @@ class DescribeSmartEraseTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("EraseType",$param) and $param["EraseType"] !== null) {
+            $this->EraseType = $param["EraseType"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {

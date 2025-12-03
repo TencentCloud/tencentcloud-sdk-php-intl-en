@@ -108,6 +108,12 @@ The default value is blink. The different action types passed in this parameter 
  * @method void setLivenessTimeout(integer $LivenessTimeout) Set Specifies the liveness detection timeout period in seconds. value range: (0,600].
  * @method string getSelectedWarningCodes() Obtain Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
  * @method void setSelectedWarningCodes(string $SelectedWarningCodes) Set Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+ * @method boolean getAllowExpiredDocument() Obtain Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
+ * @method void setAllowExpiredDocument(boolean $AllowExpiredDocument) Set Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
  */
 class WebVerificationConfigIntl extends AbstractModel
 {
@@ -216,6 +222,13 @@ The default value is blink. The different action types passed in this parameter 
     public $SelectedWarningCodes;
 
     /**
+     * @var boolean Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
+     */
+    public $AllowExpiredDocument;
+
+    /**
      * @param boolean $AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
      * @param boolean $AutoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
 Example value: false
@@ -260,6 +273,9 @@ The default value is blink. The different action types passed in this parameter 
      * @param integer $LivenessRetryLimit Control liveness retry number.The value range is 1-99.
      * @param integer $LivenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
      * @param string $SelectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+     * @param boolean $AllowExpiredDocument Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
      */
     function __construct()
     {
@@ -332,6 +348,10 @@ The default value is blink. The different action types passed in this parameter 
 
         if (array_key_exists("SelectedWarningCodes",$param) and $param["SelectedWarningCodes"] !== null) {
             $this->SelectedWarningCodes = $param["SelectedWarningCodes"];
+        }
+
+        if (array_key_exists("AllowExpiredDocument",$param) and $param["AllowExpiredDocument"] !== null) {
+            $this->AllowExpiredDocument = $param["AllowExpiredDocument"];
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 Tencent. All Rights Reserved.
+ * Copyright (c) 2017 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@ namespace TencentCloud\Common;
 
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 /**
+ * Signing class, do not use directly by client
  * @package TencentCloud\Common
  * @throws TencentCloudSDKException
  */

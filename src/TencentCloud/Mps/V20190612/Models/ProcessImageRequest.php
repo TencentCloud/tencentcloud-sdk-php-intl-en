@@ -27,7 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOutputDir() Obtain Output file path for image processing. If left blank, it is the directory of the file in InputInfo. If it is a directory, such as `/image/201907/`, it means inheriting the original filename and outputting to this directory.
  * @method void setOutputDir(string $OutputDir) Set Output file path for image processing. If left blank, it is the directory of the file in InputInfo. If it is a directory, such as `/image/201907/`, it means inheriting the original filename and outputting to this directory.
  * @method string getOutputPath() Obtain Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
 **Relative path example:**
 <Li>`Filename_{Variablename}.{format}`.</li>
 <Li>`Filename.{format}`.</li>
@@ -37,7 +37,7 @@ The path must end with `.{format}`. For details, please refer to the [Filename V
 
 If not filled in, default relative path: `{inputName}.{format}`.
  * @method void setOutputPath(string $OutputPath) Set Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
 **Relative path example:**
 <Li>`Filename_{Variablename}.{format}`.</li>
 <Li>`Filename.{format}`.</li>
@@ -46,6 +46,10 @@ The path must end with `.{format}`. For details, please refer to the [Filename V
 <Li>`/Path/Filename_{Variablename}.{format}`.</li>
 
 If not filled in, default relative path: `{inputName}.{format}`.
+ * @method integer getDefinition() Obtain Unique identifier of the image processing template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the image processing template.
+ * @method string getResourceId() Obtain Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+ * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
  * @method ImageTaskInput getImageTask() Obtain Image processing parameter.
  * @method void setImageTask(ImageTaskInput $ImageTask) Set Image processing parameter.
  */
@@ -68,7 +72,7 @@ class ProcessImageRequest extends AbstractModel
 
     /**
      * @var string Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
 **Relative path example:**
 <Li>`Filename_{Variablename}.{format}`.</li>
 <Li>`Filename.{format}`.</li>
@@ -81,6 +85,16 @@ If not filled in, default relative path: `{inputName}.{format}`.
     public $OutputPath;
 
     /**
+     * @var integer Unique identifier of the image processing template.
+     */
+    public $Definition;
+
+    /**
+     * @var string Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+     */
+    public $ResourceId;
+
+    /**
      * @var ImageTaskInput Image processing parameter.
      */
     public $ImageTask;
@@ -90,7 +104,7 @@ If not filled in, default relative path: `{inputName}.{format}`.
      * @param TaskOutputStorage $OutputStorage Target storage for image processing output files. If left blank, it inherits the storage location in InputInfo.
      * @param string $OutputDir Output file path for image processing. If left blank, it is the directory of the file in InputInfo. If it is a directory, such as `/image/201907/`, it means inheriting the original filename and outputting to this directory.
      * @param string $OutputPath Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
 **Relative path example:**
 <Li>`Filename_{Variablename}.{format}`.</li>
 <Li>`Filename.{format}`.</li>
@@ -99,6 +113,8 @@ The path must end with `.{format}`. For details, please refer to the [Filename V
 <Li>`/Path/Filename_{Variablename}.{format}`.</li>
 
 If not filled in, default relative path: `{inputName}.{format}`.
+     * @param integer $Definition Unique identifier of the image processing template.
+     * @param string $ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
      * @param ImageTaskInput $ImageTask Image processing parameter.
      */
     function __construct()
@@ -130,6 +146,14 @@ If not filled in, default relative path: `{inputName}.{format}`.
 
         if (array_key_exists("OutputPath",$param) and $param["OutputPath"] !== null) {
             $this->OutputPath = $param["OutputPath"];
+        }
+
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
 
         if (array_key_exists("ImageTask",$param) and $param["ImageTask"] !== null) {

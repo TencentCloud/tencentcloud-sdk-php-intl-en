@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 Tencent. All Rights Reserved.
+ * Copyright (c) 2017 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@ namespace TencentCloud\Common\Http;
 use GuzzleHttp\Client;
 
 /**
+ * HTTP connection class
  * @package TencentCloud\Common\http
  */
 class HttpConnection
@@ -37,6 +38,8 @@ class HttpConnection
     {
         $options = ["allow_redirects" => false];
         $options["timeout"] = $this->profile->getHttpProfile()->getReqTimeout();
+        $options["proxy"] = $this->profile->getHttpProfile()->getProxy();
+        $options["stream"] = true;
         return $options;
     }
 
@@ -80,4 +83,3 @@ class HttpConnection
         return $this->client->post($uri, $options);
     }
 }
-

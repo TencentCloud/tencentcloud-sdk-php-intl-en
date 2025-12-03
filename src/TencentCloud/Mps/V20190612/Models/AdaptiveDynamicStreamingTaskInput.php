@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) Set Adaptive dynamic streaming template ID.
  * @method array getWatermarkSet() Obtain Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
  * @method void setWatermarkSet(array $WatermarkSet) Set Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+ * @method BlindWatermarkInput getBlindWatermark() Obtain Digital watermark parameter.	
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set Digital watermark parameter.	
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method TaskOutputStorage getOutputStorage() Obtain Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
@@ -84,6 +88,12 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
      * @var array Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */
     public $WatermarkSet;
+
+    /**
+     * @var BlindWatermarkInput Digital watermark parameter.	
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BlindWatermark;
 
     /**
      * @var TaskOutputStorage Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
@@ -152,6 +162,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param integer $Definition Adaptive dynamic streaming template ID.
      * @param array $WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+     * @param BlindWatermarkInput $BlindWatermark Digital watermark parameter.	
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskOutputStorage $OutputStorage Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $OutputObjectPath Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
@@ -201,6 +213,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->WatermarkSet, $obj);
             }
+        }
+
+        if (array_key_exists("BlindWatermark",$param) and $param["BlindWatermark"] !== null) {
+            $this->BlindWatermark = new BlindWatermarkInput();
+            $this->BlindWatermark->deserialize($param["BlindWatermark"]);
         }
 
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {

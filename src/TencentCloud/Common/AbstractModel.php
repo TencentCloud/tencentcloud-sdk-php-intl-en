@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 Tencent. All Rights Reserved.
+ * Copyright (c) 2017 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,17 +20,18 @@ namespace TencentCloud\Common;
 use \ReflectionClass;
 
 /**
+ * Abstract model class, do not use directly by client
  * @package TencentCloud\Common
  */
 abstract class AbstractModel
 {
     /**
-     * Internal implementation, normal users should not use it.
+     * Internal implementation, users should not call this
      */
     public function serialize()
     {
         $ret = $this->objSerialize($this);
-		return $ret;
+        return $ret;
     }
 
     private function objSerialize($obj) {
@@ -96,7 +97,7 @@ abstract class AbstractModel
     abstract public function deserialize($param);
 
     /**
-     * @param string $jsonString json formatted string.
+     * @param string $jsonString JSON formatted string
      */
     public function fromJsonString($jsonString)
     {
@@ -125,4 +126,3 @@ abstract class AbstractModel
         }
     }
 }
-

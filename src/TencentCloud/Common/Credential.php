@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 Tencent. All Rights Reserved.
+ * Copyright (c) 2017 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +19,7 @@
 namespace TencentCloud\Common;
 
 /**
+ * Credential class, stores authentication related parameters
  * @package TencentCloud\Common
  */
 class Credential
@@ -70,7 +71,7 @@ class Credential
     }
 
     /**
-     * @param string $token
+     * @param string $token Token to set
      */
     public function setToken($token)
     {

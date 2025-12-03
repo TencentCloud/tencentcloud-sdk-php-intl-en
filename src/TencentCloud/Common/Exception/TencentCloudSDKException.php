@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 Tencent. All Rights Reserved.
+ * Copyright (c) 2017 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,12 +19,13 @@
 namespace TencentCloud\Common\Exception;
 
 /**
+ * SDK exception class
  * @package TencentCloud\Common\Exception
  */
 class TencentCloudSDKException extends \Exception
 {
     /**
-     * @var string
+     * @var string Request ID
      */
     private $requestId;
 
@@ -33,9 +34,9 @@ class TencentCloudSDKException extends \Exception
 
     /**
      * TencentCloudSDKException constructor.
-     * @param string $code
-     * @param string $message
-     * @param string $requestId
+     * @param string $code Exception error code
+     * @param string $message Exception message
+     * @param string $requestId Request ID
      */
     public function __construct($code = "", $message = "",  $requestId = "")
     {
@@ -45,7 +46,7 @@ class TencentCloudSDKException extends \Exception
     }
 
     /**
-     * Get request id.
+     * Return request ID
      * @return string
      */
     public function getRequestId()
@@ -54,7 +55,7 @@ class TencentCloudSDKException extends \Exception
     }
 
     /**
-     * Get error code.
+     * Return error code
      * @return string
      */
     public function getErrorCode()
@@ -63,7 +64,7 @@ class TencentCloudSDKException extends \Exception
     }
 
     /**
-     * Format exception.
+     * Format and output exception code, exception message, and request ID
      * @return string
      */
     public function __toString()
@@ -73,4 +74,3 @@ class TencentCloudSDKException extends \Exception
             " requestId:".$this->requestId;
     }
 }
-
