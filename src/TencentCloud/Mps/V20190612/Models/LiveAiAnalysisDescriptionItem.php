@@ -18,35 +18,23 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Information about the live streaming summary result.
  *
- * @method array getResultSet() Obtain Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
+ * @method array getParagraphs() Obtain Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResultSet(array $ResultSet) Set Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
+ * @method void setParagraphs(array $Paragraphs) Set Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class LiveStreamAiAnalysisResultInfo extends AbstractModel
+class LiveAiAnalysisDescriptionItem extends AbstractModel
 {
     /**
-     * @var array Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
+     * @var array Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $ResultSet;
+    public $Paragraphs;
 
     /**
-     * @param array $ResultSet Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
+     * @param array $Paragraphs Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -62,12 +50,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultSet",$param) and $param["ResultSet"] !== null) {
-            $this->ResultSet = [];
-            foreach ($param["ResultSet"] as $key => $value){
-                $obj = new LiveStreamAiAnalysisResultItem();
+        if (array_key_exists("Paragraphs",$param) and $param["Paragraphs"] !== null) {
+            $this->Paragraphs = [];
+            foreach ($param["Paragraphs"] as $key => $value){
+                $obj = new LiveAiParagraphInfo();
                 $obj->deserialize($value);
-                array_push($this->ResultSet, $obj);
+                array_push($this->Paragraphs, $obj);
             }
         }
     }

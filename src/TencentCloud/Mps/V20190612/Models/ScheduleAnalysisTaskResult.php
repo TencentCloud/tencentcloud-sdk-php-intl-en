@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(AiAnalysisTaskInput $Input) Set The input of the content analysis task.
  * @method array getOutput() Obtain Analysis task output.
  * @method void setOutput(array $Output) Set Analysis task output.
- * @method string getBeginProcessTime() Obtain Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
- * @method string getFinishTime() Obtain Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
- * @method void setFinishTime(string $FinishTime) Set Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getBeginProcessTime() Obtain Task execution start time in ISO date and time format.
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in ISO date and time format.
+ * @method string getFinishTime() Obtain Task execution completion time in ISO date and time format.
+ * @method void setFinishTime(string $FinishTime) Set Task execution completion time in ISO date and time format.
  */
 class ScheduleAnalysisTaskResult extends AbstractModel
 {
@@ -70,12 +70,12 @@ class ScheduleAnalysisTaskResult extends AbstractModel
     public $Output;
 
     /**
-     * @var string Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     * @var string Task execution start time in ISO date and time format.
      */
     public $BeginProcessTime;
 
     /**
-     * @var string Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     * @var string Task execution completion time in ISO date and time format.
      */
     public $FinishTime;
 
@@ -86,8 +86,8 @@ class ScheduleAnalysisTaskResult extends AbstractModel
      * @param string $Message The error message.
      * @param AiAnalysisTaskInput $Input The input of the content analysis task.
      * @param array $Output Analysis task output.
-     * @param string $BeginProcessTime Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
-     * @param string $FinishTime Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $BeginProcessTime Task execution start time in ISO date and time format.
+     * @param string $FinishTime Task execution completion time in ISO date and time format.
      */
     function __construct()
     {

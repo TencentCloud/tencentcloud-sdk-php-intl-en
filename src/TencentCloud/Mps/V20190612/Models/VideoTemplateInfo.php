@@ -20,38 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Video stream configuration parameter
  *
- * @method string getCodec() Obtain Encoding format for video streams. Optional values:
-<li>h264: H.264 encoding</li>
-<li>h265: H.265 encoding</li>
-<li>h266: H.266 encoding</li>
-<li>av1: AOMedia Video 1 encoding</li>
-<li>vp8: VP8 encoding</li>
-<li>vp9: VP9 encoding</li>
-<li>mpeg2: MPEG2 encoding</li>
-<li>dnxhd: DNxHD encoding</li>
-<li>mv-hevc: MV-HEVC encoding</li>
-
-Note: AV1 encoding containers currently only support mp4, webm, and mkv.
-Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
-Note: VP8 and VP9 encoding containers currently only support webm and mkv.
-Note: MPEG2 and DNxHD encoding containers currently only support mxf.
-Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
- * @method void setCodec(string $Codec) Set Encoding format for video streams. Optional values:
-<li>h264: H.264 encoding</li>
-<li>h265: H.265 encoding</li>
-<li>h266: H.266 encoding</li>
-<li>av1: AOMedia Video 1 encoding</li>
-<li>vp8: VP8 encoding</li>
-<li>vp9: VP9 encoding</li>
-<li>mpeg2: MPEG2 encoding</li>
-<li>dnxhd: DNxHD encoding</li>
-<li>mv-hevc: MV-HEVC encoding</li>
-
-Note: AV1 encoding containers currently only support mp4, webm, and mkv.
-Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
-Note: VP8 and VP9 encoding containers currently only support webm and mkv.
-Note: MPEG2 and DNxHD encoding containers currently only support mxf.
-Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
+ * @method string getCodec() Obtain Encoding format of video streams. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: The av1 codec currently only supports mp4, webm, and mkv.
+Note: The H.266 codec currently only supports mp4, hls, ts, and mov.
+Note: The VP8 and VP9 codecs currently only support webm and mkv.
+Note: The MPEG2 and dnxhd codecs currently only support mxf.
+Note: The MV-HEVC codec currently only supports mp4, hls, and mov. Among them, the HLS format only supports the MP4 segmented format and requires the input source to be a panoramic video (with multiple views).
+ * @method void setCodec(string $Codec) Set Encoding format of video streams. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: The av1 codec currently only supports mp4, webm, and mkv.
+Note: The H.266 codec currently only supports mp4, hls, ts, and mov.
+Note: The VP8 and VP9 codecs currently only support webm and mkv.
+Note: The MPEG2 and dnxhd codecs currently only support mxf.
+Note: The MV-HEVC codec currently only supports mp4, hls, and mov. Among them, the HLS format only supports the MP4 segmented format and requires the input source to be a panoramic video (with multiple views).
  * @method integer getFps() Obtain Video frame rate. Value range:
 When FpsDenominator is empty, the range is [0, 120], in Hz.
 When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
@@ -330,22 +328,21 @@ Note: This field may return null, indicating that no valid value can be obtained
 class VideoTemplateInfo extends AbstractModel
 {
     /**
-     * @var string Encoding format for video streams. Optional values:
-<li>h264: H.264 encoding</li>
-<li>h265: H.265 encoding</li>
-<li>h266: H.266 encoding</li>
-<li>av1: AOMedia Video 1 encoding</li>
-<li>vp8: VP8 encoding</li>
-<li>vp9: VP9 encoding</li>
-<li>mpeg2: MPEG2 encoding</li>
-<li>dnxhd: DNxHD encoding</li>
-<li>mv-hevc: MV-HEVC encoding</li>
-
-Note: AV1 encoding containers currently only support mp4, webm, and mkv.
-Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
-Note: VP8 and VP9 encoding containers currently only support webm and mkv.
-Note: MPEG2 and DNxHD encoding containers currently only support mxf.
-Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
+     * @var string Encoding format of video streams. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: The av1 codec currently only supports mp4, webm, and mkv.
+Note: The H.266 codec currently only supports mp4, hls, ts, and mov.
+Note: The VP8 and VP9 codecs currently only support webm and mkv.
+Note: The MPEG2 and dnxhd codecs currently only support mxf.
+Note: The MV-HEVC codec currently only supports mp4, hls, and mov. Among them, the HLS format only supports the MP4 segmented format and requires the input source to be a panoramic video (with multiple views).
      */
     public $Codec;
 
@@ -591,22 +588,21 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $CompressType;
 
     /**
-     * @param string $Codec Encoding format for video streams. Optional values:
-<li>h264: H.264 encoding</li>
-<li>h265: H.265 encoding</li>
-<li>h266: H.266 encoding</li>
-<li>av1: AOMedia Video 1 encoding</li>
-<li>vp8: VP8 encoding</li>
-<li>vp9: VP9 encoding</li>
-<li>mpeg2: MPEG2 encoding</li>
-<li>dnxhd: DNxHD encoding</li>
-<li>mv-hevc: MV-HEVC encoding</li>
-
-Note: AV1 encoding containers currently only support mp4, webm, and mkv.
-Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
-Note: VP8 and VP9 encoding containers currently only support webm and mkv.
-Note: MPEG2 and DNxHD encoding containers currently only support mxf.
-Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
+     * @param string $Codec Encoding format of video streams. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: The av1 codec currently only supports mp4, webm, and mkv.
+Note: The H.266 codec currently only supports mp4, hls, ts, and mov.
+Note: The VP8 and VP9 codecs currently only support webm and mkv.
+Note: The MPEG2 and dnxhd codecs currently only support mxf.
+Note: The MV-HEVC codec currently only supports mp4, hls, and mov. Among them, the HLS format only supports the MP4 segmented format and requires the input source to be a panoramic video (with multiple views).
      * @param integer $Fps Video frame rate. Value range:
 When FpsDenominator is empty, the range is [0, 120], in Hz.
 When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].

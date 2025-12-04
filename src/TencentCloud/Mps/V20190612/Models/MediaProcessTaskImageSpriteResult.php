@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method string getErrCodeExt() Obtain The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
- * @method void setErrCodeExt(string $ErrCodeExt) Set The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+ * @method string getErrCodeExt() Obtain The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://www.tencentcloud.com/document/api/1041/33691).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://www.tencentcloud.com/document/api/1041/33691).
  * @method integer getErrCode() Obtain Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
  * @method string getMessage() Obtain Error message.
@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setOutput(MediaImageSpriteItem $Output) Set Output of the image sprite task for videos.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getBeginProcessTime() Obtain Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
- * @method string getFinishTime() Obtain Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
- * @method void setFinishTime(string $FinishTime) Set Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getBeginProcessTime() Obtain Task execution start time in ISO date and time format.
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in ISO date and time format.
+ * @method string getFinishTime() Obtain Task execution completion time in ISO date and time format.
+ * @method void setFinishTime(string $FinishTime) Set Task execution completion time in ISO date and time format.
  */
 class MediaProcessTaskImageSpriteResult extends AbstractModel
 {
@@ -47,7 +47,7 @@ class MediaProcessTaskImageSpriteResult extends AbstractModel
     public $Status;
 
     /**
-     * @var string The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+     * @var string The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://www.tencentcloud.com/document/api/1041/33691).
      */
     public $ErrCodeExt;
 
@@ -73,25 +73,25 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $Output;
 
     /**
-     * @var string Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @var string Task execution start time in ISO date and time format.
      */
     public $BeginProcessTime;
 
     /**
-     * @var string Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @var string Task execution completion time in ISO date and time format.
      */
     public $FinishTime;
 
     /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+     * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://www.tencentcloud.com/document/api/1041/33691).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
      * @param string $Message Error message.
      * @param ImageSpriteTaskInput $Input Input for an image sprite generating task.
      * @param MediaImageSpriteItem $Output Output of the image sprite task for videos.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-     * @param string $FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $BeginProcessTime Task execution start time in ISO date and time format.
+     * @param string $FinishTime Task execution completion time in ISO date and time format.
      */
     function __construct()
     {
