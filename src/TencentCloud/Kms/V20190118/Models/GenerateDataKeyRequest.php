@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Describes the data key. maximum 100 bytes.
  * @method string getHsmClusterId() Obtain HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
  * @method void setHsmClusterId(string $HsmClusterId) Set HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
+ * @method array getTags() Obtain Tag list. valid at that time when parameter IsHostedByKms=1 and the data key is hosted by kms.
+ * @method void setTags(array $Tags) Set Tag list. valid at that time when parameter IsHostedByKms=1 and the data key is hosted by kms.
  */
 class GenerateDataKeyRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class GenerateDataKeyRequest extends AbstractModel
     public $HsmClusterId;
 
     /**
+     * @var array Tag list. valid at that time when parameter IsHostedByKms=1 and the data key is hosted by kms.
+     */
+    public $Tags;
+
+    /**
      * @param string $KeyId Globally unique CMK ID
      * @param string $KeySpec Specifies the encryption algorithm and size of the `DataKey`. Valid values: AES_128, AES_256. Either `KeySpec` or `NumberOfBytes` must be specified.
      * @param integer $NumberOfBytes Length of the `DataKey`. If both `NumberOfBytes` and `KeySpec` are specified, `NumberOfBytes` will prevail. Minimum value: 1; maximum value: 1024. Either `KeySpec` or `NumberOfBytes` must be specified.
@@ -104,6 +111,7 @@ class GenerateDataKeyRequest extends AbstractModel
      * @param string $DataKeyName Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
      * @param string $Description Describes the data key. maximum 100 bytes.
      * @param string $HsmClusterId HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
+     * @param array $Tags Tag list. valid at that time when parameter IsHostedByKms=1 and the data key is hosted by kms.
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class GenerateDataKeyRequest extends AbstractModel
 
         if (array_key_exists("HsmClusterId",$param) and $param["HsmClusterId"] !== null) {
             $this->HsmClusterId = $param["HsmClusterId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

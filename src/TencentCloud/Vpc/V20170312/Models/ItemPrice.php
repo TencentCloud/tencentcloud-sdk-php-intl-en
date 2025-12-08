@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The pricing information of a single billing item
  *
- * @method float getUnitPrice() Obtain The pay-as-you-go billing method. Unit: CNY.
- * @method void setUnitPrice(float $UnitPrice) Set The pay-as-you-go billing method. Unit: CNY.
+ * @method float getUnitPrice() Obtain The pay-as-you-go billing method. Unit: USD.
+ * @method void setUnitPrice(float $UnitPrice) Set The pay-as-you-go billing method. Unit: USD.
  * @method string getChargeUnit() Obtain Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
  * @method void setChargeUnit(string $ChargeUnit) Set Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
- * @method float getOriginalPrice() Obtain Original price of the prepaid product. Unit: CNY.
- * @method void setOriginalPrice(float $OriginalPrice) Set Original price of the prepaid product. Unit: CNY.
- * @method float getDiscountPrice() Obtain Discount price of the prepaid product. Unit: CNY.
- * @method void setDiscountPrice(float $DiscountPrice) Set Discount price of the prepaid product. Unit: CNY.
+ * @method float getOriginalPrice() Obtain Original price of the prepaid product. Unit: USD.
+ * @method void setOriginalPrice(float $OriginalPrice) Set Original price of the prepaid product. Unit: USD.
+ * @method float getDiscountPrice() Obtain Discount price of the prepaid product. Unit: USD.
+ * @method void setDiscountPrice(float $DiscountPrice) Set Discount price of the prepaid product. Unit: USD.
  */
 class ItemPrice extends AbstractModel
 {
     /**
-     * @var float The pay-as-you-go billing method. Unit: CNY.
+     * @var float The pay-as-you-go billing method. Unit: USD.
      */
     public $UnitPrice;
 
@@ -42,20 +42,20 @@ class ItemPrice extends AbstractModel
     public $ChargeUnit;
 
     /**
-     * @var float Original price of the prepaid product. Unit: CNY.
+     * @var float Original price of the prepaid product. Unit: USD.
      */
     public $OriginalPrice;
 
     /**
-     * @var float Discount price of the prepaid product. Unit: CNY.
+     * @var float Discount price of the prepaid product. Unit: USD.
      */
     public $DiscountPrice;
 
     /**
-     * @param float $UnitPrice The pay-as-you-go billing method. Unit: CNY.
+     * @param float $UnitPrice The pay-as-you-go billing method. Unit: USD.
      * @param string $ChargeUnit Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
-     * @param float $OriginalPrice Original price of the prepaid product. Unit: CNY.
-     * @param float $DiscountPrice Discount price of the prepaid product. Unit: CNY.
+     * @param float $OriginalPrice Original price of the prepaid product. Unit: USD.
+     * @param float $DiscountPrice Discount price of the prepaid product. Unit: USD.
      */
     function __construct()
     {

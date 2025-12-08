@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyId(string $KeyId) Set Specifies the globally unique identifier of the root key.
  * @method integer getDataKeyLen() Obtain Length of the data key.
  * @method void setDataKeyLen(integer $DataKeyLen) Set Length of the data key.
+ * @method array getTagFilters() Obtain Tag filtering conditions.
+ * @method void setTagFilters(array $TagFilters) Set Tag filtering conditions.
  */
 class ListDataKeyDetailRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ListDataKeyDetailRequest extends AbstractModel
     public $DataKeyLen;
 
     /**
+     * @var array Tag filtering conditions.
+     */
+    public $TagFilters;
+
+    /**
      * @param integer $Offset Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
      * @param integer $Limit Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
      * @param integer $Role Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
@@ -104,6 +111,7 @@ class ListDataKeyDetailRequest extends AbstractModel
      * @param string $HsmClusterId HSM cluster ID corresponding to KMS advanced edition.
      * @param string $KeyId Specifies the globally unique identifier of the root key.
      * @param integer $DataKeyLen Length of the data key.
+     * @param array $TagFilters Tag filtering conditions.
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class ListDataKeyDetailRequest extends AbstractModel
 
         if (array_key_exists("DataKeyLen",$param) and $param["DataKeyLen"] !== null) {
             $this->DataKeyLen = $param["DataKeyLen"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

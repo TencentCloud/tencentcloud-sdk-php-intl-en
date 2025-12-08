@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataKeyId(string $DataKeyId) Set DataKey globally unique id.
  * @method string getKeyId() Obtain Globally unique id of the CMK.
  * @method void setKeyId(string $KeyId) Set Globally unique id of the CMK.
+ * @method string getKeyName() Obtain CMK name.
+ * @method void setKeyName(string $KeyName) Set CMK name.
  * @method string getDataKeyName() Obtain Key name as a more recognizable and understandable data key.
  * @method void setDataKeyName(string $DataKeyName) Set Key name as a more recognizable and understandable data key.
  * @method integer getNumberOfBytes() Obtain Specifies the length of the data key in bytes.
@@ -72,6 +74,11 @@ class DataKeyMetadata extends AbstractModel
      * @var string Globally unique id of the CMK.
      */
     public $KeyId;
+
+    /**
+     * @var string CMK name.
+     */
+    public $KeyName;
 
     /**
      * @var string Key name as a more recognizable and understandable data key.
@@ -166,6 +173,7 @@ class DataKeyMetadata extends AbstractModel
     /**
      * @param string $DataKeyId DataKey globally unique id.
      * @param string $KeyId Globally unique id of the CMK.
+     * @param string $KeyName CMK name.
      * @param string $DataKeyName Key name as a more recognizable and understandable data key.
      * @param integer $NumberOfBytes Specifies the length of the data key in bytes.
      * @param integer $CreateTime Key key creation time.
@@ -204,6 +212,10 @@ class DataKeyMetadata extends AbstractModel
 
         if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
             $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("KeyName",$param) and $param["KeyName"] !== null) {
+            $this->KeyName = $param["KeyName"];
         }
 
         if (array_key_exists("DataKeyName",$param) and $param["DataKeyName"] !== null) {

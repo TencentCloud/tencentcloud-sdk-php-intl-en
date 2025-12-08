@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCaptionSelectorName(string $CaptionSelectorName) Set Name of caption selector. Required when CaptionSource selects `INPUT`.
  * @method string getCaptionSource() Obtain Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles).
  * @method void setCaptionSource(string $CaptionSource) Set Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles).
- * @method integer getContentType() Obtain Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `.
- * @method void setContentType(integer $ContentType) Set Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `.
- * @method integer getTargetType() Obtain Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `.
- * @method void setTargetType(integer $TargetType) Set Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `.
+ * @method integer getContentType() Obtain Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
+ * @method void setContentType(integer $ContentType) Set Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
+ * @method integer getTargetType() Obtain Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
+ * @method void setTargetType(integer $TargetType) Set Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
  * @method string getSourceLanguage() Obtain Original phonetic language.
 Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
  * @method void setSourceLanguage(string $SourceLanguage) Set Original phonetic language.
@@ -40,10 +40,18 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
 Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
  * @method SubtitleFontConf getFontStyle() Obtain Font style configuration. Required when CaptionSource selects `ANALYSIS `.
  * @method void setFontStyle(SubtitleFontConf $FontStyle) Set Font style configuration. Required when CaptionSource selects `ANALYSIS `.
- * @method string getStateEffectMode() Obtain There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `.
- * @method void setStateEffectMode(string $StateEffectMode) Set There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `.
+ * @method string getStateEffectMode() Obtain There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
+ * @method void setStateEffectMode(string $StateEffectMode) Set There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
  * @method integer getSteadyStateDelayedTime() Obtain Steady-state delay time, unit seconds; optional values: 10, 20, default 10. Required when CaptionSource selects `ANALYSIS `.
  * @method void setSteadyStateDelayedTime(integer $SteadyStateDelayedTime) Set Steady-state delay time, unit seconds; optional values: 10, 20, default 10. Required when CaptionSource selects `ANALYSIS `.
+ * @method string getAudioSelectorName() Obtain Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
+ * @method void setAudioSelectorName(string $AudioSelectorName) Set Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
+ * @method WebVTTFontStyle getWebVTTFontStyle() Obtain Format configuration for speech recognition output on WebVTT.
+ * @method void setWebVTTFontStyle(WebVTTFontStyle $WebVTTFontStyle) Set Format configuration for speech recognition output on WebVTT.
+ * @method string getLanguageCode() Obtain Language code, length 2-20. ISO 639-2 three-digit code is recommend.
+ * @method void setLanguageCode(string $LanguageCode) Set Language code, length 2-20. ISO 639-2 three-digit code is recommend.
+ * @method string getLanguageDescription() Obtain Language description, less than 100 characters in length.
+ * @method void setLanguageDescription(string $LanguageDescription) Set Language description, less than 100 characters in length.
  */
 class SubtitleConf extends AbstractModel
 {
@@ -63,12 +71,12 @@ class SubtitleConf extends AbstractModel
     public $CaptionSource;
 
     /**
-     * @var integer Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `.
+     * @var integer Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
      */
     public $ContentType;
 
     /**
-     * @var integer Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `.
+     * @var integer Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
      */
     public $TargetType;
 
@@ -90,7 +98,7 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
     public $FontStyle;
 
     /**
-     * @var string There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `.
+     * @var string There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
      */
     public $StateEffectMode;
 
@@ -100,18 +108,42 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
     public $SteadyStateDelayedTime;
 
     /**
+     * @var string Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
+     */
+    public $AudioSelectorName;
+
+    /**
+     * @var WebVTTFontStyle Format configuration for speech recognition output on WebVTT.
+     */
+    public $WebVTTFontStyle;
+
+    /**
+     * @var string Language code, length 2-20. ISO 639-2 three-digit code is recommend.
+     */
+    public $LanguageCode;
+
+    /**
+     * @var string Language description, less than 100 characters in length.
+     */
+    public $LanguageDescription;
+
+    /**
      * @param string $Name Template name.
      * @param string $CaptionSelectorName Name of caption selector. Required when CaptionSource selects `INPUT`.
      * @param string $CaptionSource Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles).
-     * @param integer $ContentType Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `.
-     * @param integer $TargetType Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `.
+     * @param integer $ContentType Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
+     * @param integer $TargetType Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
      * @param string $SourceLanguage Original phonetic language.
 Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
      * @param string $TargetLanguage Target language.
 Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
      * @param SubtitleFontConf $FontStyle Font style configuration. Required when CaptionSource selects `ANALYSIS `.
-     * @param string $StateEffectMode There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `.
+     * @param string $StateEffectMode There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
      * @param integer $SteadyStateDelayedTime Steady-state delay time, unit seconds; optional values: 10, 20, default 10. Required when CaptionSource selects `ANALYSIS `.
+     * @param string $AudioSelectorName Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
+     * @param WebVTTFontStyle $WebVTTFontStyle Format configuration for speech recognition output on WebVTT.
+     * @param string $LanguageCode Language code, length 2-20. ISO 639-2 three-digit code is recommend.
+     * @param string $LanguageDescription Language description, less than 100 characters in length.
      */
     function __construct()
     {
@@ -165,6 +197,23 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
 
         if (array_key_exists("SteadyStateDelayedTime",$param) and $param["SteadyStateDelayedTime"] !== null) {
             $this->SteadyStateDelayedTime = $param["SteadyStateDelayedTime"];
+        }
+
+        if (array_key_exists("AudioSelectorName",$param) and $param["AudioSelectorName"] !== null) {
+            $this->AudioSelectorName = $param["AudioSelectorName"];
+        }
+
+        if (array_key_exists("WebVTTFontStyle",$param) and $param["WebVTTFontStyle"] !== null) {
+            $this->WebVTTFontStyle = new WebVTTFontStyle();
+            $this->WebVTTFontStyle->deserialize($param["WebVTTFontStyle"]);
+        }
+
+        if (array_key_exists("LanguageCode",$param) and $param["LanguageCode"] !== null) {
+            $this->LanguageCode = $param["LanguageCode"];
+        }
+
+        if (array_key_exists("LanguageDescription",$param) and $param["LanguageDescription"] !== null) {
+            $this->LanguageDescription = $param["LanguageDescription"];
         }
     }
 }

@@ -18,14 +18,16 @@ namespace TencentCloud\Controlcenter\V20230110\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Account Factory baseline configuration item.
+ * Account factory baseline information.
  *
  * @method string getIdentifier() Obtain Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
  * @method void setIdentifier(string $Identifier) Set Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
  * @method string getConfiguration() Obtain Account factory baseline item configuration. different baseline item configuration parameters.
  * @method void setConfiguration(string $Configuration) Set Account factory baseline item configuration. different baseline item configuration parameters.
+ * @method integer getApplyCount() Obtain Specifies the number of accounts for baseline applications.
+ * @method void setApplyCount(integer $ApplyCount) Set Specifies the number of accounts for baseline applications.
  */
-class BaselineConfigItem extends AbstractModel
+class BaselineInfoItem extends AbstractModel
 {
     /**
      * @var string Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
@@ -38,8 +40,14 @@ class BaselineConfigItem extends AbstractModel
     public $Configuration;
 
     /**
+     * @var integer Specifies the number of accounts for baseline applications.
+     */
+    public $ApplyCount;
+
+    /**
      * @param string $Identifier Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
      * @param string $Configuration Account factory baseline item configuration. different baseline item configuration parameters.
+     * @param integer $ApplyCount Specifies the number of accounts for baseline applications.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class BaselineConfigItem extends AbstractModel
 
         if (array_key_exists("Configuration",$param) and $param["Configuration"] !== null) {
             $this->Configuration = $param["Configuration"];
+        }
+
+        if (array_key_exists("ApplyCount",$param) and $param["ApplyCount"] !== null) {
+            $this->ApplyCount = $param["ApplyCount"];
         }
     }
 }

@@ -24,6 +24,10 @@ use TencentCloud\Controlcenter\V20230110\Models as Models;
 
 /**
  * @method Models\BatchApplyAccountBaselinesResponse BatchApplyAccountBaselines(Models\BatchApplyAccountBaselinesRequest $req) This API is used to apply baselines to existing accounts in batches.
+ * @method Models\GetAccountFactoryBaselineResponse GetAccountFactoryBaseline(Models\GetAccountFactoryBaselineRequest $req) This API is used to retrieve user baseline configuration data.
+ * @method Models\ListAccountFactoryBaselineItemsResponse ListAccountFactoryBaselineItems(Models\ListAccountFactoryBaselineItemsRequest $req) This API is used to obtain account factory system baseline items.
+ * @method Models\ListDeployStepTasksResponse ListDeployStepTasks(Models\ListDeployStepTasksRequest $req) This API is used to retrieve the application history of a certain baseline item.
+ * @method Models\UpdateAccountFactoryBaselineResponse UpdateAccountFactoryBaseline(Models\UpdateAccountFactoryBaselineRequest $req) This API is used to update the current baseline item configuration of a user. The baseline configuration will be overwritten with the current configuration. When adding new baseline items, the newly-added baseline configuration needs to be added to the existing configuration. When deleting baseline items, the deleted baseline configuration needs to be removed from the existing configuration, then save the latest baseline configuration.
  */
 
 class ControlcenterClient extends AbstractClient
