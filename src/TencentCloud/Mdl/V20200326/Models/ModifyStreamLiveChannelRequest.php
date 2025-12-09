@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoTemplates(array $VideoTemplates) Set Video transcoding templates. Quantity: [1, 10]
  * @method array getAVTemplates() Obtain Audio/Video transcoding templates. Quantity: [1, 10]
  * @method void setAVTemplates(array $AVTemplates) Set Audio/Video transcoding templates. Quantity: [1, 10]
- * @method array getCaptionTemplates() Obtain Subtitle template configuration, only AVTemplates are valid.
- * @method void setCaptionTemplates(array $CaptionTemplates) Set Subtitle template configuration, only AVTemplates are valid.
+ * @method array getCaptionTemplates() Obtain Subtitle template configuration.
+ * @method void setCaptionTemplates(array $CaptionTemplates) Set Subtitle template configuration.
  * @method PlanSettings getPlanSettings() Obtain Event settings
  * @method void setPlanSettings(PlanSettings $PlanSettings) Set Event settings
  * @method EventNotifySetting getEventNotifySettings() Obtain The callback settings.
@@ -91,7 +91,7 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
     public $AVTemplates;
 
     /**
-     * @var array Subtitle template configuration, only AVTemplates are valid.
+     * @var array Subtitle template configuration.
      */
     public $CaptionTemplates;
 
@@ -143,7 +143,7 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
      * @param array $AudioTemplates Audio transcoding templates. Quantity: [1, 20]
      * @param array $VideoTemplates Video transcoding templates. Quantity: [1, 10]
      * @param array $AVTemplates Audio/Video transcoding templates. Quantity: [1, 10]
-     * @param array $CaptionTemplates Subtitle template configuration, only AVTemplates are valid.
+     * @param array $CaptionTemplates Subtitle template configuration.
      * @param PlanSettings $PlanSettings Event settings
      * @param EventNotifySetting $EventNotifySettings The callback settings.
      * @param InputLossBehaviorInfo $InputLossBehavior Complement the last video frame settings.

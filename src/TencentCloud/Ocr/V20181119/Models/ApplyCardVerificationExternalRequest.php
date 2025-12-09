@@ -113,6 +113,9 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
  * @method void setImageUrlBack(string $ImageUrlBack) Set Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
 Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
+
+ * @method boolean getReturnHeadImage() Obtain Whether to extract the ID portrait. Default value: false.
+ * @method void setReturnHeadImage(boolean $ReturnHeadImage) Set Whether to extract the ID portrait. Default value: false.
  */
 class ApplyCardVerificationExternalRequest extends AbstractModel
 {
@@ -188,6 +191,11 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
     public $ImageUrlBack;
 
     /**
+     * @var boolean Whether to extract the ID portrait. Default value: false.
+     */
+    public $ReturnHeadImage;
+
+    /**
      * @param string $Nationality Specifies the country of the document.
 ARG:Argentina
 AUS:Australia
@@ -234,6 +242,8 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
      * @param string $ImageUrlBack Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
 Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
+
+     * @param boolean $ReturnHeadImage Whether to extract the ID portrait. Default value: false.
      */
     function __construct()
     {
@@ -270,6 +280,10 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
 
         if (array_key_exists("ImageUrlBack",$param) and $param["ImageUrlBack"] !== null) {
             $this->ImageUrlBack = $param["ImageUrlBack"];
+        }
+
+        if (array_key_exists("ReturnHeadImage",$param) and $param["ReturnHeadImage"] !== null) {
+            $this->ReturnHeadImage = $param["ReturnHeadImage"];
         }
     }
 }
