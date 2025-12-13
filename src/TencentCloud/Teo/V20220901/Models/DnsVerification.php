@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Information required for DNS resolution verification when applying for a free certificate in CNAME mode integration to verify ownership of a site or domain name.
  *
  * @method string getSubdomain() Obtain The host record.
  * @method void setSubdomain(string $Subdomain) Set The host record.

@@ -23,10 +23,23 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Teo\V20220901\Models as Models;
 
 /**
+ * @method Models\ApplyFreeCertificateResponse ApplyFreeCertificate(Models\ApplyFreeCertificateRequest $req) This API is used to apply for a free certificate. If you need to proceed with DNS delegated verification or file verification, you can call this API to initiate the certificate application and obtain the corresponding verification content based on the application method. The order for API calls is as follows:.
+Step 1: Call ApplyFreeCertificate, specify the verification method for free certificate application, and obtain the verification content.
+Step 2: Configure the corresponding domain as verification content.
+Step 3: Call CheckFreeCertificateVerification to verify. After verification passes, the free certificate application is completed.
+Step 4: Call ModifyHostsCertificate to issue a domain certificate configured to use the EdgeOne free certificate.
+
+The application method introduction in the document: [Free Certificate Application Description](https://www.tencentcloud.comom/document/product/1552/90437?from_cn_redirect=1). 
+description:.
+- Only CNAME access mode can call this API to specify the free certificate application method. NS/DNSPod hosting access modes use automatic validation to apply for free certificates with no need to call this API.
+- If you need to switch the free certificate authentication method, you can call this API again by changing the VerificationMethod field to update it.
+- A domain name can only apply for one free certificate. After calling this API, the backend will trigger the free certificate application task. You need to complete the domain name verification info configuration within 2 days, then finish certificate authentication.
  * @method Models\BindSecurityTemplateToEntityResponse BindSecurityTemplateToEntity(Models\BindSecurityTemplateToEntityRequest $req) This API is used to bind/unbind a domain name to/from a specific policy template. 
  * @method Models\BindSharedCNAMEResponse BindSharedCNAME(Models\BindSharedCNAMERequest $req) This API is used to bind/unbind a domain name to/from a shared CNAME. It is now only available to beta users.
  * @method Models\BindZoneToPlanResponse BindZoneToPlan(Models\BindZoneToPlanRequest $req) This API is used to bind a site to a plan.
  * @method Models\CheckCnameStatusResponse CheckCnameStatus(Models\CheckCnameStatusRequest $req) This API is used to query the CNAME status of a domain name.
+ * @method Models\CheckFreeCertificateVerificationResponse CheckFreeCertificateVerification(Models\CheckFreeCertificateVerificationRequest $req) This API is used to verify a free certificate and obtain the application result. If verified, you can query the free certificate information for the corresponding domain name application through this API. If failed to apply, this API will return the corresponding verification failure message.
+This API is used to check the free certificate application result after triggering the [ApplyFreeCertificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1) . Once the application is successful, you need to configure through the [ModifyHostsCertificate](https://www.tencentcloud.comom/document/product/1552/80764?from_cn_redirect=1) to deploy the free certificate to the acceleration domain.
  * @method Models\ConfirmMultiPathGatewayOriginACLResponse ConfirmMultiPathGatewayOriginACL(Models\ConfirmMultiPathGatewayOriginACLRequest $req) This API is used to confirm the latest origin IP range is updated to the origin server firewall when the multi-channel security acceleration gateway's origin IP range changes.
  * @method Models\ConfirmOriginACLUpdateResponse ConfirmOriginACLUpdate(Models\ConfirmOriginACLUpdateRequest $req) This API is used to confirm that the latest origin ACLs have been updated to the origin server firewall when the origin ACLs change. After confirming the update to the latest version, related change notifications will stop pushing.
  * @method Models\CreateAccelerationDomainResponse CreateAccelerationDomain(Models\CreateAccelerationDomainRequest $req) This API is used to create an acceleration domain name. 
