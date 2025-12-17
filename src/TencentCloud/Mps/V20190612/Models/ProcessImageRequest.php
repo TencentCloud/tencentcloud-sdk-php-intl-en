@@ -47,7 +47,9 @@ The path must end with `.{format}`. For details, please refer to the [Filename V
 
 If not filled in, default relative path: `{inputName}.{format}`.
  * @method integer getDefinition() Obtain Unique identifier of the image processing template.
+The image template feature is in beta testing. If you want to use it, submit a ticket for application.
  * @method void setDefinition(integer $Definition) Set Unique identifier of the image processing template.
+The image template feature is in beta testing. If you want to use it, submit a ticket for application.
  * @method string getResourceId() Obtain Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
  * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
  * @method ImageTaskInput getImageTask() Obtain Image processing parameter.
@@ -86,6 +88,7 @@ If not filled in, default relative path: `{inputName}.{format}`.
 
     /**
      * @var integer Unique identifier of the image processing template.
+The image template feature is in beta testing. If you want to use it, submit a ticket for application.
      */
     public $Definition;
 
@@ -114,6 +117,7 @@ The path must end with `.{format}`. For details, please refer to the [Filename V
 
 If not filled in, default relative path: `{inputName}.{format}`.
      * @param integer $Definition Unique identifier of the image processing template.
+The image template feature is in beta testing. If you want to use it, submit a ticket for application.
      * @param string $ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
      * @param ImageTaskInput $ImageTask Image processing parameter.
      */

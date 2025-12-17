@@ -30,7 +30,7 @@ Smart subtitle (full speech, speech hotword, and speech translation)
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) This API is used to create an adaptive bitrate streaming template. Up up to 100 such templates can be created.
  * @method Models\CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(Models\CreateAnimatedGraphicsTemplateRequest $req) This API is used to create a custom animated image generating template. Up to 16 templates can be created.
  * @method Models\CreateAsrHotwordsResponse CreateAsrHotwords(Models\CreateAsrHotwordsRequest $req) This API is used to create a smart subtitle hotword lexicon.
- * @method Models\CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplate(Models\CreateBlindWatermarkTemplateRequest $req) This API is used to create a user-defined digital watermark template with an upper limit of 1000.
+ * @method Models\CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplate(Models\CreateBlindWatermarkTemplateRequest $req) This API is used to create a user-defined digital watermark template.
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) This API is used to create a custom content moderation template. Up to 50 templates can be created in total.
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) This API is used to create a custom image sprite generating template. Up to 16 templates can be created.
  * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) This API is used to create a live recording template.
@@ -123,6 +123,9 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
 * If the data is large, one API call may not be able to obtain all the tasks in the query. You can use the `ScrollToken` parameter to query tasks with multiple calls.
 * Only tasks in the last seven days (168 hours) can be queried.
  * @method Models\DescribeTranscodeTemplatesResponse DescribeTranscodeTemplates(Models\DescribeTranscodeTemplatesRequest $req) This API is used to get the list of transcoding templates based on unique template ID. The return result includes all eligible custom and [preset transcoding templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
+ * @method Models\DescribeUsageDataResponse DescribeUsageData(Models\DescribeUsageDataRequest $req) This API is used to return the daily Media Processing Service (MPS) usage information within the specified query time range.
+   1. MPS statistical data from the last 365 days can be queried.
+   2. The query time span should not exceed 90 days.
  * @method Models\DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(Models\DescribeWatermarkTemplatesRequest $req) This API is used to query custom watermarking templates and supports paged queries by filters.
  * @method Models\DescribeWordSamplesResponse DescribeWordSamples(Models\DescribeWordSamplesRequest $req) This API is used to perform paged queries of keyword sample information by use case, keyword, and tag.
  * @method Models\DescribeWorkflowsResponse DescribeWorkflows(Models\DescribeWorkflowsRequest $req) This API is used to get the list of workflow details by workflow ID.
@@ -185,20 +188,19 @@ Instead of initiating a video processing task, this API is used to help generate
 * Recording
 
 HTTP callbacks are supported for live stream processing events. Notifications can also be written in real time to and read from a CMQ queue. The output files of processing tasks are saved to the storage you specify.
- * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a processing task for URL video links or media files in COS. Features include:.
-This API is used to perform video transcoding, including standard transcoding, TSC transcoding, and audio/video enhancement.
-This API is used to generate animated images.
-This API is used to take screenshots at specified time points.
-This API is used to take sampled screenshots from videos.
-This API is used to take sprite screenshots of videos.
-This API is used to transcode to adaptive bitrate streaming.
-This API is used to perform intelligent content moderation, such as pornography detection and sensitive information detection.
-This API is used to perform intelligent content analysis such as tag, category, cover, frame tag, video splitting, highlight, opening and ending clips, and game tracking.
-This API is used to perform intelligent content recognition such as human face, full text, text keyword, full speech, speech keyword, speech translation, and object recognition.
-This API is used to perform media quality inspection, such as media format diagnosis, audio and video content detection (jitter, blur, low light, overexposure, screen glitch, noise, mosaic, QR code, and other issues), and no-reference scoring.
-11. Smart subtitle (such as ASR, hotword, and speech translation).
-
-This API is used to perform intelligent erasure (watermark removal, subtitle removal, privacy protection).
+ * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a processing task for video URLs or media files in Cloud Object Storage (COS). Features include:
+- Audio/Video transcoding (such as standard transcoding, top speed codec (TSC) transcoding, audio/video enhancement, visible watermark addition, and digital watermark addition).
+- Adaptive bitrate streaming conversion for audios/videos.
+- Video-to-GIF conversion.
+- Time point screenshot of videos.
+- Sampled screenshot of videos.
+- Image sprite of video screenshots.
+- Media quality inspection (such as media format diagnosis, audio/video content detection, and scoring without reference, where audio/video content detection mainly covers jitter, blur, low light, overexposure, screen glitches, noise, mosaic, QR code, and other issues).
+- Smart subtitle (such as subtitle generation and translation).
+- Smart erasing (such as watermark removal, subtitle removal, and privacy protection).
+- Smart content moderation (such as pornography detection and sensitive information detection).
+- Smart content analysis (such as tags, classifications, covers, frame tags, video splitting, highlights, opening and ending clips, and marking points for games).
+- Smart content recognition (such as human faces, full texts, text keywords, full speech, speech keywords, speech translation, and object recognition).
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) This API is used to reset an existing workflow that is disabled.
  */
 

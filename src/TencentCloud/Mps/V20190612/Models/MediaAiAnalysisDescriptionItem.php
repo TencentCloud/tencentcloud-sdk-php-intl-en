@@ -36,6 +36,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setMindMapUrl(string $MindMapUrl) Set Address of the mind map of a summary task.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getMindMapPath() Obtain Path of the mind map of a summary task.
+ * @method void setMindMapPath(string $MindMapPath) Set Path of the mind map of a summary task.
+ * @method string getSubtitlePath() Obtain Subtitle file path of the video.
+ * @method void setSubtitlePath(string $SubtitlePath) Set Subtitle file path of the video.
+ * @method TaskOutputStorage getOutputStorage() Obtain Storage location of the summary file.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of the summary file.
  */
 class MediaAiAnalysisDescriptionItem extends AbstractModel
 {
@@ -72,6 +78,21 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $MindMapUrl;
 
     /**
+     * @var string Path of the mind map of a summary task.
+     */
+    public $MindMapPath;
+
+    /**
+     * @var string Subtitle file path of the video.
+     */
+    public $SubtitlePath;
+
+    /**
+     * @var TaskOutputStorage Storage location of the summary file.
+     */
+    public $OutputStorage;
+
+    /**
      * @param string $Description Intelligent description.
      * @param float $Confidence Confidence of the intelligent description, with a value range from 0 to 100.
      * @param string $Title Intelligent description title.
@@ -80,6 +101,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MindMapUrl Address of the mind map of a summary task.
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $MindMapPath Path of the mind map of a summary task.
+     * @param string $SubtitlePath Subtitle file path of the video.
+     * @param TaskOutputStorage $OutputStorage Storage location of the summary file.
      */
     function __construct()
     {
@@ -121,6 +145,19 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("MindMapUrl",$param) and $param["MindMapUrl"] !== null) {
             $this->MindMapUrl = $param["MindMapUrl"];
+        }
+
+        if (array_key_exists("MindMapPath",$param) and $param["MindMapPath"] !== null) {
+            $this->MindMapPath = $param["MindMapPath"];
+        }
+
+        if (array_key_exists("SubtitlePath",$param) and $param["SubtitlePath"] !== null) {
+            $this->SubtitlePath = $param["SubtitlePath"];
+        }
+
+        if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
+            $this->OutputStorage = new TaskOutputStorage();
+            $this->OutputStorage->deserialize($param["OutputStorage"]);
         }
     }
 }

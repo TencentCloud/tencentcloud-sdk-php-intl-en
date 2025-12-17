@@ -192,6 +192,7 @@ Create and bind policy Query instance Reset instance access password.
 This API is used to query data with a delay of about 10 minutes. It is recommended to pull data from at least 10 minutes before the current time.
 This API is used to return post-protection traffic request data by default. Users can query defended data in `Filters.mitigatedByWebSecurity`.
  * @method Models\DescribeTimingL7CacheDataResponse DescribeTimingL7CacheData(Models\DescribeTimingL7CacheDataRequest $req) This API is used to query the time series traffic data of the L7 cache analysis. It will be deprecated. Use the <a href="https://intl.cloud.tencent.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a> API instead.
+ * @method Models\DescribeTimingL7OriginPullDataResponse DescribeTimingL7OriginPullData(Models\DescribeTimingL7OriginPullDataRequest $req) This API is used to query time series data for layer-7 domain services' origin-pull data.
  * @method Models\DescribeTopL7AnalysisDataResponse DescribeTopL7AnalysisData(Models\DescribeTopL7AnalysisDataRequest $req) This API is used to query the top N data of the L7 domain name business by specified dimension.
 Create and bind policy Query instance Reset instance access password.
 This API is used to query data with a delay of about 10 minutes. It is recommended to pull data from at least 10 minutes before the current time.

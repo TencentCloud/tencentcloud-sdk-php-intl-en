@@ -28,6 +28,7 @@ use TencentCloud\Mdl\V20200326\Models as Models;
  * @method Models\CreateStreamLiveInputSecurityGroupResponse CreateStreamLiveInputSecurityGroup(Models\CreateStreamLiveInputSecurityGroupRequest $req) This API is used to create an input security group. Up to 5 security groups are allowed.
  * @method Models\CreateStreamLivePlanResponse CreateStreamLivePlan(Models\CreateStreamLivePlanRequest $req) This API is used to create an event in the plan.
  * @method Models\CreateStreamLiveWatermarkResponse CreateStreamLiveWatermark(Models\CreateStreamLiveWatermarkRequest $req) This API is used to add a watermark.
+ * @method Models\CreateWatermarkDetectionResponse CreateWatermarkDetection(Models\CreateWatermarkDetectionRequest $req) Create a watermark detection task
  * @method Models\DeleteStreamLiveChannelResponse DeleteStreamLiveChannel(Models\DeleteStreamLiveChannelRequest $req) This API is used to delete a StreamLive channel.
  * @method Models\DeleteStreamLiveInputResponse DeleteStreamLiveInput(Models\DeleteStreamLiveInputRequest $req) This API is used to delete a StreamLive input.
  * @method Models\DeleteStreamLiveInputSecurityGroupResponse DeleteStreamLiveInputSecurityGroup(Models\DeleteStreamLiveInputSecurityGroupRequest $req) This API is used to delete an input security group.
@@ -48,6 +49,8 @@ use TencentCloud\Mdl\V20200326\Models as Models;
  * @method Models\DescribeStreamLiveTranscodeDetailResponse DescribeStreamLiveTranscodeDetail(Models\DescribeStreamLiveTranscodeDetailRequest $req) This API is used to query the transcoding information of StreamLive streams.
  * @method Models\DescribeStreamLiveWatermarkResponse DescribeStreamLiveWatermark(Models\DescribeStreamLiveWatermarkRequest $req) This API is used to query a watermark.
  * @method Models\DescribeStreamLiveWatermarksResponse DescribeStreamLiveWatermarks(Models\DescribeStreamLiveWatermarksRequest $req) This API is used to query multiple watermarks at a time.
+ * @method Models\DescribeWatermarkDetectionResponse DescribeWatermarkDetection(Models\DescribeWatermarkDetectionRequest $req) Describe watermark detection task
+ * @method Models\DescribeWatermarkDetectionsResponse DescribeWatermarkDetections(Models\DescribeWatermarkDetectionsRequest $req) Batch Describe watermark detection task
  * @method Models\GetAbWatermarkPlayUrlResponse GetAbWatermarkPlayUrl(Models\GetAbWatermarkPlayUrlRequest $req) Get AB watermark play url.
  * @method Models\ModifyStreamLiveChannelResponse ModifyStreamLiveChannel(Models\ModifyStreamLiveChannelRequest $req) This API is used to modify a StreamLive channel.
  * @method Models\ModifyStreamLiveInputResponse ModifyStreamLiveInput(Models\ModifyStreamLiveInputRequest $req) This API is used to modify a StreamLive input.

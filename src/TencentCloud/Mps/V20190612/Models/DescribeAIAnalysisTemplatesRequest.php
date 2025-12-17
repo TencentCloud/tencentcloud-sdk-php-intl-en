@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAIAnalysisTemplates request structure.
  *
- * @method array getDefinitions() Obtain Unique ID filter of video content analysis templates. Array length limit: 10.
- * @method void setDefinitions(array $Definitions) Set Unique ID filter of video content analysis templates. Array length limit: 10.
+ * @method array getDefinitions() Obtain Filter condition for the unique identifier of the video content analysis template. The array can contain up to 100 unique identifiers.
+ * @method void setDefinitions(array $Definitions) Set Filter condition for the unique identifier of the video content analysis template. The array can contain up to 100 unique identifiers.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAIAnalysisTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Unique ID filter of video content analysis templates. Array length limit: 10.
+     * @var array Filter condition for the unique identifier of the video content analysis template. The array can contain up to 100 unique identifiers.
      */
     public $Definitions;
 
@@ -65,7 +65,7 @@ class DescribeAIAnalysisTemplatesRequest extends AbstractModel
     public $Name;
 
     /**
-     * @param array $Definitions Unique ID filter of video content analysis templates. Array length limit: 10.
+     * @param array $Definitions Filter condition for the unique identifier of the video content analysis template. The array can contain up to 100 unique identifiers.
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param string $Type The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:

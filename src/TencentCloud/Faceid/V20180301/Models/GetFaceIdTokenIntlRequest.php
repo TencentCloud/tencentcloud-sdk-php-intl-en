@@ -64,12 +64,8 @@ You can choose 1-2 actions out of the four.
 Single action example: "blink"
 Multiple action example: "blink,mouth"
 The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
- * @method string getSdkVersion() Obtain PLUS: Plus Version.
-ENHANCED: Enhanced Version.
-BASIC: Basic Version (Default).
- * @method void setSdkVersion(string $SdkVersion) Set PLUS: Plus Version.
-ENHANCED: Enhanced Version.
-BASIC: Basic Version (Default).
+ * @method string getSdkVersion() Obtain BASIC: Basic Version (Default).
+ * @method void setSdkVersion(string $SdkVersion) Set BASIC: Basic Version (Default).
  */
 class GetFaceIdTokenIntlRequest extends AbstractModel
 {
@@ -116,9 +112,7 @@ The default value is blink. The different action types passed in this parameter 
     public $ActionList;
 
     /**
-     * @var string PLUS: Plus Version.
-ENHANCED: Enhanced Version.
-BASIC: Basic Version (Default).
+     * @var string BASIC: Basic Version (Default).
      */
     public $SdkVersion;
 
@@ -145,9 +139,7 @@ You can choose 1-2 actions out of the four.
 Single action example: "blink"
 Multiple action example: "blink,mouth"
 The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
-     * @param string $SdkVersion PLUS: Plus Version.
-ENHANCED: Enhanced Version.
-BASIC: Basic Version (Default).
+     * @param string $SdkVersion BASIC: Basic Version (Default).
      */
     function __construct()
     {
