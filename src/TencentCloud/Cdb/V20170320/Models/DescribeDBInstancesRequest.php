@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
  * @method string getSecurityGroupId() Obtain Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
  * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
- * @method array getPayTypes() Obtain Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
- * @method void setPayTypes(array $PayTypes) Set Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
+ * @method array getPayTypes() Obtain Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
+ * @method void setPayTypes(array $PayTypes) Set Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
  * @method array getInstanceNames() Obtain Instance name.
  * @method void setInstanceNames(array $InstanceNames) Set Instance name.
- * @method array getTaskStatus() Obtain Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
- * @method void setTaskStatus(array $TaskStatus) Set Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
+ * @method array getTaskStatus() Obtain Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
+ * @method void setTaskStatus(array $TaskStatus) Set Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
  * @method array getEngineVersions() Obtain Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
  * @method void setEngineVersions(array $EngineVersions) Set Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
  * @method array getVpcIds() Obtain VPC ID.
@@ -50,12 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetIds(array $SubnetIds) Set Subnet ID.
  * @method array getCdbErrors() Obtain Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
  * @method void setCdbErrors(array $CdbErrors) Set Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
- * @method string getOrderBy() Obtain Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
- * @method void setOrderBy(string $OrderBy) Set Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
- * @method string getOrderDirection() Obtain Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
- * @method void setOrderDirection(string $OrderDirection) Set Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
- * @method integer getWithSecurityGroup() Obtain Whether security group ID is used as a filter
- * @method void setWithSecurityGroup(integer $WithSecurityGroup) Set Whether security group ID is used as a filter
+ * @method string getOrderBy() Obtain Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
+ * @method void setOrderBy(string $OrderBy) Set Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
+ * @method string getOrderDirection() Obtain Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
+ * @method void setOrderDirection(string $OrderDirection) Set Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
+ * @method integer getWithSecurityGroup() Obtain Whether to use the security group ID as the filter condition.
+Note: 0 indicates no; 1 indicates yes.
+ * @method void setWithSecurityGroup(integer $WithSecurityGroup) Set Whether to use the security group ID as the filter condition.
+Note: 0 indicates no; 1 indicates yes.
  * @method integer getWithExCluster() Obtain Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
  * @method void setWithExCluster(integer $WithExCluster) Set Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
  * @method string getExClusterId() Obtain Exclusive cluster ID.
@@ -82,14 +84,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqueVpcIds(array $UniqueVpcIds) Set VPC character vpcId
  * @method array getUniqSubnetIds() Obtain VPC character subnetId
  * @method void setUniqSubnetIds(array $UniqSubnetIds) Set VPC character subnetId
- * @method array getTags() Obtain Tag key value
- * @method void setTags(array $Tags) Set Tag key value
+ * @method array getTags() Obtain Tag key value.
+Note that tags cannot be queried for instances being created.
+ * @method void setTags(array $Tags) Set Tag key value.
+Note that tags cannot be queried for instances being created.
  * @method array getProxyVips() Obtain Database proxy IP
  * @method void setProxyVips(array $ProxyVips) Set Database proxy IP
  * @method array getProxyIds() Obtain Database proxy ID
  * @method void setProxyIds(array $ProxyIds) Set Database proxy ID
- * @method array getEngineTypes() Obtain Database engine type
- * @method void setEngineTypes(array $EngineTypes) Set Database engine type
+ * @method array getEngineTypes() Obtain Database engine type. Valid values: InnoDB; RocksDB.
+ * @method void setEngineTypes(array $EngineTypes) Set Database engine type. Valid values: InnoDB; RocksDB.
+ * @method boolean getQueryClusterInfo() Obtain Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+ * @method void setQueryClusterInfo(boolean $QueryClusterInfo) Set Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -129,7 +135,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $SecurityGroupId;
 
     /**
-     * @var array Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
+     * @var array Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
      */
     public $PayTypes;
 
@@ -139,7 +145,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $InstanceNames;
 
     /**
-     * @var array Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
+     * @var array Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
      */
     public $TaskStatus;
 
@@ -169,17 +175,18 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $CdbErrors;
 
     /**
-     * @var string Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
+     * @var string Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
+     * @var string Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
      */
     public $OrderDirection;
 
     /**
-     * @var integer Whether security group ID is used as a filter
+     * @var integer Whether to use the security group ID as the filter condition.
+Note: 0 indicates no; 1 indicates yes.
      */
     public $WithSecurityGroup;
 
@@ -249,7 +256,8 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $UniqSubnetIds;
 
     /**
-     * @var array Tag key value
+     * @var array Tag key value.
+Note that tags cannot be queried for instances being created.
      */
     public $Tags;
 
@@ -264,9 +272,14 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $ProxyIds;
 
     /**
-     * @var array Database engine type
+     * @var array Database engine type. Valid values: InnoDB; RocksDB.
      */
     public $EngineTypes;
+
+    /**
+     * @var boolean Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+     */
+    public $QueryClusterInfo;
 
     /**
      * @param integer $ProjectId Project ID.
@@ -276,17 +289,18 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $Offset Offset. Default value: 0.
      * @param integer $Limit Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
      * @param string $SecurityGroupId Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
-     * @param array $PayTypes Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
+     * @param array $PayTypes Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
      * @param array $InstanceNames Instance name.
-     * @param array $TaskStatus Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
+     * @param array $TaskStatus Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
      * @param array $EngineVersions Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
      * @param array $VpcIds VPC ID.
      * @param array $ZoneIds AZ ID.
      * @param array $SubnetIds Subnet ID.
      * @param array $CdbErrors Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
-     * @param string $OrderBy Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
-     * @param string $OrderDirection Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
-     * @param integer $WithSecurityGroup Whether security group ID is used as a filter
+     * @param string $OrderBy Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
+     * @param string $OrderDirection Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
+     * @param integer $WithSecurityGroup Whether to use the security group ID as the filter condition.
+Note: 0 indicates no; 1 indicates yes.
      * @param integer $WithExCluster Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
      * @param string $ExClusterId Exclusive cluster ID.
      * @param array $InstanceIds Instance ID.
@@ -300,10 +314,12 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $TagValues Tag value
      * @param array $UniqueVpcIds VPC character vpcId
      * @param array $UniqSubnetIds VPC character subnetId
-     * @param array $Tags Tag key value
+     * @param array $Tags Tag key value.
+Note that tags cannot be queried for instances being created.
      * @param array $ProxyVips Database proxy IP
      * @param array $ProxyIds Database proxy ID
-     * @param array $EngineTypes Database engine type
+     * @param array $EngineTypes Database engine type. Valid values: InnoDB; RocksDB.
+     * @param boolean $QueryClusterInfo Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
      */
     function __construct()
     {
@@ -461,6 +477,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("EngineTypes",$param) and $param["EngineTypes"] !== null) {
             $this->EngineTypes = $param["EngineTypes"];
+        }
+
+        if (array_key_exists("QueryClusterInfo",$param) and $param["QueryClusterInfo"] !== null) {
+            $this->QueryClusterInfo = $param["QueryClusterInfo"];
         }
     }
 }

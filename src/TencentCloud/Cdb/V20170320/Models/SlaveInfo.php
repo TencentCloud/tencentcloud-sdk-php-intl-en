@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method SlaveInstanceInfo getFirst() Obtain Information of secondary server 1
  * @method void setFirst(SlaveInstanceInfo $First) Set Information of secondary server 1
- * @method SlaveInstanceInfo getSecond() Obtain Information of secondary server 2
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSecond(SlaveInstanceInfo $Second) Set Information of secondary server 2
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SlaveInstanceInfo getSecond() Obtain Second secondary server information.
+ * @method void setSecond(SlaveInstanceInfo $Second) Set Second secondary server information.
  */
 class SlaveInfo extends AbstractModel
 {
@@ -35,15 +33,13 @@ class SlaveInfo extends AbstractModel
     public $First;
 
     /**
-     * @var SlaveInstanceInfo Information of secondary server 2
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SlaveInstanceInfo Second secondary server information.
      */
     public $Second;
 
     /**
      * @param SlaveInstanceInfo $First Information of secondary server 1
-     * @param SlaveInstanceInfo $Second Information of secondary server 2
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SlaveInstanceInfo $Second Second secondary server information.
      */
     function __construct()
     {

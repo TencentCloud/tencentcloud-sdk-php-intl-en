@@ -23,13 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRoGroupMode() Obtain Read-only group mode. Valid values: `alone` (the system assigns a read-only group automatically), `allinone` (a new read-only group will be created), `join` (an existing read-only group will be used).
  * @method void setRoGroupMode(string $RoGroupMode) Set Read-only group mode. Valid values: `alone` (the system assigns a read-only group automatically), `allinone` (a new read-only group will be created), `join` (an existing read-only group will be used).
  * @method string getRoGroupId() Obtain Read-only group ID.
+Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
  * @method void setRoGroupId(string $RoGroupId) Set Read-only group ID.
+Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
  * @method string getRoGroupName() Obtain Read-only group name.
  * @method void setRoGroupName(string $RoGroupName) Set Read-only group name.
  * @method integer getRoOfflineDelay() Obtain Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the primary instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
  * @method void setRoOfflineDelay(integer $RoOfflineDelay) Set Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the primary instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
- * @method integer getRoMaxDelayTime() Obtain Latency threshold
- * @method void setRoMaxDelayTime(integer $RoMaxDelayTime) Set Latency threshold
+ * @method integer getRoMaxDelayTime() Obtain Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
+ * @method void setRoMaxDelayTime(integer $RoMaxDelayTime) Set Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
  * @method integer getMinRoInGroup() Obtain Minimum number of instances to be retained. If the number of the purchased read-only instances is smaller than the set value, they will not be removed.
  * @method void setMinRoInGroup(integer $MinRoInGroup) Set Minimum number of instances to be retained. If the number of the purchased read-only instances is smaller than the set value, they will not be removed.
  * @method string getWeightMode() Obtain Read/write weight distribution mode. Valid values: `system` (weights are assigned by the system automatically), `custom` (weights are customized)
@@ -42,26 +44,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) Set Private IP of read-only group.
  * @method integer getVport() Obtain Private network port number of read-only group.
  * @method void setVport(integer $Vport) Set Private network port number of read-only group.
- * @method string getUniqVpcId() Obtain VPC ID.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getUniqVpcId() Obtain Virtual Private Cloud (VPC) ID.
+ * @method void setUniqVpcId(string $UniqVpcId) Set Virtual Private Cloud (VPC) ID.
  * @method string getUniqSubnetId() Obtain Subnet ID.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet ID.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getRoGroupRegion() Obtain Read-only group region.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRoGroupRegion(string $RoGroupRegion) Set Read-only group region.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getRoGroupZone() Obtain Read-only group AZ.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRoGroupZone(string $RoGroupZone) Set Read-only group AZ.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getDelayReplicationTime() Obtain Replication delay.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setDelayReplicationTime(integer $DelayReplicationTime) Set Replication delay.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getRoGroupRegion() Obtain Region of the read-only group.
+ * @method void setRoGroupRegion(string $RoGroupRegion) Set Region of the read-only group.
+ * @method string getRoGroupZone() Obtain AZ of the read-only group.
+ * @method void setRoGroupZone(string $RoGroupZone) Set AZ of the read-only group.
+ * @method integer getDelayReplicationTime() Obtain Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
+ * @method void setDelayReplicationTime(integer $DelayReplicationTime) Set Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
  */
 class RoGroup extends AbstractModel
 {
@@ -72,6 +64,7 @@ class RoGroup extends AbstractModel
 
     /**
      * @var string Read-only group ID.
+Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
      */
     public $RoGroupId;
 
@@ -86,7 +79,7 @@ class RoGroup extends AbstractModel
     public $RoOfflineDelay;
 
     /**
-     * @var integer Latency threshold
+     * @var integer Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
      */
     public $RoMaxDelayTime;
 
@@ -121,57 +114,48 @@ class RoGroup extends AbstractModel
     public $Vport;
 
     /**
-     * @var string VPC ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Virtual Private Cloud (VPC) ID.
      */
     public $UniqVpcId;
 
     /**
      * @var string Subnet ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $UniqSubnetId;
 
     /**
-     * @var string Read-only group region.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Region of the read-only group.
      */
     public $RoGroupRegion;
 
     /**
-     * @var string Read-only group AZ.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string AZ of the read-only group.
      */
     public $RoGroupZone;
 
     /**
-     * @var integer Replication delay.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
      */
     public $DelayReplicationTime;
 
     /**
      * @param string $RoGroupMode Read-only group mode. Valid values: `alone` (the system assigns a read-only group automatically), `allinone` (a new read-only group will be created), `join` (an existing read-only group will be used).
      * @param string $RoGroupId Read-only group ID.
+Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
      * @param string $RoGroupName Read-only group name.
      * @param integer $RoOfflineDelay Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the primary instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
-     * @param integer $RoMaxDelayTime Latency threshold
+     * @param integer $RoMaxDelayTime Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
      * @param integer $MinRoInGroup Minimum number of instances to be retained. If the number of the purchased read-only instances is smaller than the set value, they will not be removed.
      * @param string $WeightMode Read/write weight distribution mode. Valid values: `system` (weights are assigned by the system automatically), `custom` (weights are customized)
      * @param integer $Weight This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
      * @param array $RoInstances Details of read-only instances in read-only group
      * @param string $Vip Private IP of read-only group.
      * @param integer $Vport Private network port number of read-only group.
-     * @param string $UniqVpcId VPC ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $UniqVpcId Virtual Private Cloud (VPC) ID.
      * @param string $UniqSubnetId Subnet ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $RoGroupRegion Read-only group region.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $RoGroupZone Read-only group AZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $DelayReplicationTime Replication delay.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $RoGroupRegion Region of the read-only group.
+     * @param string $RoGroupZone AZ of the read-only group.
+     * @param integer $DelayReplicationTime Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
      */
     function __construct()
     {

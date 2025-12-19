@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(integer $InstanceType) Set Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
  * @method string getInstanceName() Obtain RO instance name
  * @method void setInstanceName(string $InstanceName) Set RO instance name
- * @method integer getHourFeeStatus() Obtain Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
- * @method void setHourFeeStatus(integer $HourFeeStatus) Set Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
+ * @method integer getHourFeeStatus() Obtain Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears.
+ * @method void setHourFeeStatus(integer $HourFeeStatus) Set Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears.
  * @method integer getTaskStatus() Obtain RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
  * @method void setTaskStatus(integer $TaskStatus) Set RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
  * @method integer getMemory() Obtain RO instance memory size in MB
@@ -64,8 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineVersion(string $EngineVersion) Set Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
  * @method string getDeadlineTime() Obtain RO instance expiration time in the format of yyyy-mm-dd hh:mm:ss. If it is a pay-as-you-go instance, the value of this field is 0000-00-00 00:00:00
  * @method void setDeadlineTime(string $DeadlineTime) Set RO instance expiration time in the format of yyyy-mm-dd hh:mm:ss. If it is a pay-as-you-go instance, the value of this field is 0000-00-00 00:00:00
- * @method integer getPayType() Obtain RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
- * @method void setPayType(integer $PayType) Set RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
+ * @method integer getPayType() Obtain Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month.
+ * @method void setPayType(integer $PayType) Set Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month.
+ * @method string getReplicationStatus() Obtain RO replication delay status.
+ * @method void setReplicationStatus(string $ReplicationStatus) Set RO replication delay status.
  */
 class RoInstanceInfo extends AbstractModel
 {
@@ -120,7 +122,7 @@ class RoInstanceInfo extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
+     * @var integer Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears.
      */
     public $HourFeeStatus;
 
@@ -180,9 +182,14 @@ class RoInstanceInfo extends AbstractModel
     public $DeadlineTime;
 
     /**
-     * @var integer RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
+     * @var integer Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month.
      */
     public $PayType;
+
+    /**
+     * @var string RO replication delay status.
+     */
+    public $ReplicationStatus;
 
     /**
      * @param string $MasterInstanceId Master instance ID corresponding to the RO group
@@ -195,7 +202,7 @@ class RoInstanceInfo extends AbstractModel
      * @param integer $Status RO instance status. Valid values: `0` (creating), `1` (running), `3` (remote RO), `4` (deleting). When the `DescribeDBInstances` API is used to query the information of the source instance, if the source instance is associated with a remote read-only instance, the returned status value of the remote read-only instance always shows 3.
      * @param integer $InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
      * @param string $InstanceName RO instance name
-     * @param integer $HourFeeStatus Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
+     * @param integer $HourFeeStatus Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears.
      * @param integer $TaskStatus RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
      * @param integer $Memory RO instance memory size in MB
      * @param integer $Volume RO instance disk size in GB
@@ -207,7 +214,8 @@ class RoInstanceInfo extends AbstractModel
      * @param string $DeviceType RO instance specification description. Value range: CUSTOM
      * @param string $EngineVersion Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
      * @param string $DeadlineTime RO instance expiration time in the format of yyyy-mm-dd hh:mm:ss. If it is a pay-as-you-go instance, the value of this field is 0000-00-00 00:00:00
-     * @param integer $PayType RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
+     * @param integer $PayType Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month.
+     * @param string $ReplicationStatus RO replication delay status.
      */
     function __construct()
     {
@@ -312,6 +320,10 @@ class RoInstanceInfo extends AbstractModel
 
         if (array_key_exists("PayType",$param) and $param["PayType"] !== null) {
             $this->PayType = $param["PayType"];
+        }
+
+        if (array_key_exists("ReplicationStatus",$param) and $param["ReplicationStatus"] !== null) {
+            $this->ReplicationStatus = $param["ReplicationStatus"];
         }
     }
 }
