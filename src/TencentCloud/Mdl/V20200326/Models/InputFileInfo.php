@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InputFileInfo
  *
- * @method integer getSegmentDuration() Obtain 
- * @method void setSegmentDuration(integer $SegmentDuration) Set 
+ * @method integer getSegmentDuration() Obtain Segment duration, in milliseconds, ranging from 1000-10000, must be a multiple of 1000. The input video duration should be between SegmentDuration * 90 and SegmentDuration * 180
+ * @method void setSegmentDuration(integer $SegmentDuration) Set Segment duration, in milliseconds, ranging from 1000-10000, must be a multiple of 1000. The input video duration should be between SegmentDuration * 90 and SegmentDuration * 180
  */
 class InputFileInfo extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Segment duration, in milliseconds, ranging from 1000-10000, must be a multiple of 1000. The input video duration should be between SegmentDuration * 90 and SegmentDuration * 180
      */
     public $SegmentDuration;
 
     /**
-     * @param integer $SegmentDuration 
+     * @param integer $SegmentDuration Segment duration, in milliseconds, ranging from 1000-10000, must be a multiple of 1000. The input video duration should be between SegmentDuration * 90 and SegmentDuration * 180
      */
     function __construct()
     {

@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InputInfo
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method UrlInputInfo getUrlInputInfo() Obtain 
- * @method void setUrlInputInfo(UrlInputInfo $UrlInputInfo) Set 
+ * @method string getType() Obtain Input type, optional URL/COS, currently only supports URL
+
+ * @method void setType(string $Type) Set Input type, optional URL/COS, currently only supports URL
+
+ * @method UrlInputInfo getUrlInputInfo() Obtain URL input information
+ * @method void setUrlInputInfo(UrlInputInfo $UrlInputInfo) Set URL input information
  */
 class AbWatermarkInputInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Input type, optional URL/COS, currently only supports URL
+
      */
     public $Type;
 
     /**
-     * @var UrlInputInfo 
+     * @var UrlInputInfo URL input information
      */
     public $UrlInputInfo;
 
     /**
-     * @param string $Type 
-     * @param UrlInputInfo $UrlInputInfo 
+     * @param string $Type Input type, optional URL/COS, currently only supports URL
+
+     * @param UrlInputInfo $UrlInputInfo URL input information
      */
     function __construct()
     {

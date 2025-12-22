@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ALG protocol type
  *
- * @method boolean getFtp() Obtain Whether FTP ALG is enabled
- * @method void setFtp(boolean $Ftp) Set Whether FTP ALG is enabled
- * @method boolean getSip() Obtain Whether SIP ALG is enabled
- * @method void setSip(boolean $Sip) Set Whether SIP ALG is enabled
+ * @method boolean getFtp() Obtain Ftp protocol Alg functionality whether enabled, available values:.
+<li>true: enable Ftp protocol Alg functionality.</li>.
+<li>false: disable Ftp protocol Alg functionality.</li>.
+ * @method void setFtp(boolean $Ftp) Set Ftp protocol Alg functionality whether enabled, available values:.
+<li>true: enable Ftp protocol Alg functionality.</li>.
+<li>false: disable Ftp protocol Alg functionality.</li>.
+ * @method boolean getSip() Obtain Whether the Sip protocol Alg function is enabled. available values:.
+<li>true: enable Sip protocol Alg function.</li>.
+<li>false: disable Sip protocol Alg function.</li>.
+ * @method void setSip(boolean $Sip) Set Whether the Sip protocol Alg function is enabled. available values:.
+<li>true: enable Sip protocol Alg function.</li>.
+<li>false: disable Sip protocol Alg function.</li>.
  */
 class AlgType extends AbstractModel
 {
     /**
-     * @var boolean Whether FTP ALG is enabled
+     * @var boolean Ftp protocol Alg functionality whether enabled, available values:.
+<li>true: enable Ftp protocol Alg functionality.</li>.
+<li>false: disable Ftp protocol Alg functionality.</li>.
      */
     public $Ftp;
 
     /**
-     * @var boolean Whether SIP ALG is enabled
+     * @var boolean Whether the Sip protocol Alg function is enabled. available values:.
+<li>true: enable Sip protocol Alg function.</li>.
+<li>false: disable Sip protocol Alg function.</li>.
      */
     public $Sip;
 
     /**
-     * @param boolean $Ftp Whether FTP ALG is enabled
-     * @param boolean $Sip Whether SIP ALG is enabled
+     * @param boolean $Ftp Ftp protocol Alg functionality whether enabled, available values:.
+<li>true: enable Ftp protocol Alg functionality.</li>.
+<li>false: disable Ftp protocol Alg functionality.</li>.
+     * @param boolean $Sip Whether the Sip protocol Alg function is enabled. available values:.
+<li>true: enable Sip protocol Alg function.</li>.
+<li>false: disable Sip protocol Alg function.</li>.
      */
     function __construct()
     {

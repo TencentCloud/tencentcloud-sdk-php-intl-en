@@ -40,8 +40,8 @@ shumei: shumei moderation. (Valid values: 1: audio slicing moderation; 2: video 
 Yidun: NetEase Yidun moderation. (Valid values: 1: audio slicing moderation; 2: video frame extraction moderation; 3: audio-visual slicing moderation + video frame extraction moderation.)
  * @method ModerationSupplierParam getModerationSupplierParam() Obtain Configuration information required for submitting content to the third-party moderation supplier.
  * @method void setModerationSupplierParam(ModerationSupplierParam $ModerationSupplierParam) Set Configuration information required for submitting content to the third-party moderation supplier.
- * @method integer getSaveModerationFile() Obtain Whether to save the hit file. 0: not save by default; 1: save.
- * @method void setSaveModerationFile(integer $SaveModerationFile) Set Whether to save the hit file. 0: not save by default; 1: save.
+ * @method integer getSaveModerationFile() Obtain Whether to save file. 0: not save by default; 1: save; 2 save the hit file.
+ * @method void setSaveModerationFile(integer $SaveModerationFile) Set Whether to save file. 0: not save by default; 1: save; 2 save the hit file.
  * @method integer getCallbackAllResults() Obtain Whether to call back all moderation results: 0: call back all results by default; 1: only call back hit results.
  * @method void setCallbackAllResults(integer $CallbackAllResults) Set Whether to call back all moderation results: 0: call back all results by default; 1: only call back hit results.
  * @method SubscribeModerationUserIds getSubscribeStreamUserIds() Obtain Specifies the allowlist or blocklist for the subscription stream.
@@ -84,7 +84,7 @@ Yidun: NetEase Yidun moderation. (Valid values: 1: audio slicing moderation; 2: 
     public $ModerationSupplierParam;
 
     /**
-     * @var integer Whether to save the hit file. 0: not save by default; 1: save.
+     * @var integer Whether to save file. 0: not save by default; 1: save; 2 save the hit file.
      */
     public $SaveModerationFile;
 
@@ -109,7 +109,7 @@ ace: ACE content security. (Valid values: 1: audio slicing moderation; 2: video 
 shumei: shumei moderation. (Valid values: 1: audio slicing moderation; 2: video frame extraction moderation; 3: audio-visual slicing moderation + video frame extraction moderation.)
 Yidun: NetEase Yidun moderation. (Valid values: 1: audio slicing moderation; 2: video frame extraction moderation; 3: audio-visual slicing moderation + video frame extraction moderation.)
      * @param ModerationSupplierParam $ModerationSupplierParam Configuration information required for submitting content to the third-party moderation supplier.
-     * @param integer $SaveModerationFile Whether to save the hit file. 0: not save by default; 1: save.
+     * @param integer $SaveModerationFile Whether to save file. 0: not save by default; 1: save; 2 save the hit file.
      * @param integer $CallbackAllResults Whether to call back all moderation results: 0: call back all results by default; 1: only call back hit results.
      * @param SubscribeModerationUserIds $SubscribeStreamUserIds Specifies the allowlist or blocklist for the subscription stream.
      */

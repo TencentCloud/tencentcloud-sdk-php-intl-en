@@ -24,18 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeStamp(integer $StartTimeStamp) Set Start timestamp, unix timestamp in seconds. supports up to the past 180 days.
  * @method integer getEndTimeStamp() Obtain End timestamp, unix timestamp in seconds. the range between the end time and start time is less than 90 days.
  * @method void setEndTimeStamp(integer $EndTimeStamp) Set End timestamp, unix timestamp in seconds. the range between the end time and start time is less than 90 days.
- * @method integer getInstanceId() Obtain Instance id (deprecated).
- * @method void setInstanceId(integer $InstanceId) Set Instance id (deprecated).
- * @method integer getLimit() Obtain Maximum number of returned entries (deprecated).
- * @method void setLimit(integer $Limit) Set Maximum number of returned entries (deprecated).
- * @method integer getOffset() Obtain Offset (deprecated).
- * @method void setOffset(integer $Offset) Set Offset (deprecated).
  * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method integer getPageSize() Obtain Page size (required), up to 100.
  * @method void setPageSize(integer $PageSize) Set Page size (required), up to 100.
  * @method integer getPageNumber() Obtain <Page number (required), starting from 0.>.
  * @method void setPageNumber(integer $PageNumber) Set <Page number (required), starting from 0.>.
+ * @method integer getInstanceId() Obtain Instance id (deprecated).
+ * @method void setInstanceId(integer $InstanceId) Set Instance id (deprecated).
+ * @method integer getLimit() Obtain Maximum number of returned entries (deprecated).
+ * @method void setLimit(integer $Limit) Set Maximum number of returned entries (deprecated).
+ * @method integer getOffset() Obtain Offset (deprecated).
+ * @method void setOffset(integer $Offset) Set Offset (deprecated).
  * @method array getPhones() Obtain Filter by phone number.
  * @method void setPhones(array $Phones) Set Filter by phone number.
  * @method array getSessionIds() Obtain Filter by sessionid.
@@ -54,6 +54,21 @@ class DescribeTelCdrRequest extends AbstractModel
     public $EndTimeStamp;
 
     /**
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     */
+    public $SdkAppId;
+
+    /**
+     * @var integer Page size (required), up to 100.
+     */
+    public $PageSize;
+
+    /**
+     * @var integer <Page number (required), starting from 0.>.
+     */
+    public $PageNumber;
+
+    /**
      * @var integer Instance id (deprecated).
      * @deprecated
      */
@@ -70,21 +85,6 @@ class DescribeTelCdrRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
-     */
-    public $SdkAppId;
-
-    /**
-     * @var integer Page size (required), up to 100.
-     */
-    public $PageSize;
-
-    /**
-     * @var integer <Page number (required), starting from 0.>.
-     */
-    public $PageNumber;
-
-    /**
      * @var array Filter by phone number.
      */
     public $Phones;
@@ -97,12 +97,12 @@ class DescribeTelCdrRequest extends AbstractModel
     /**
      * @param integer $StartTimeStamp Start timestamp, unix timestamp in seconds. supports up to the past 180 days.
      * @param integer $EndTimeStamp End timestamp, unix timestamp in seconds. the range between the end time and start time is less than 90 days.
-     * @param integer $InstanceId Instance id (deprecated).
-     * @param integer $Limit Maximum number of returned entries (deprecated).
-     * @param integer $Offset Offset (deprecated).
      * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param integer $PageSize Page size (required), up to 100.
      * @param integer $PageNumber <Page number (required), starting from 0.>.
+     * @param integer $InstanceId Instance id (deprecated).
+     * @param integer $Limit Maximum number of returned entries (deprecated).
+     * @param integer $Offset Offset (deprecated).
      * @param array $Phones Filter by phone number.
      * @param array $SessionIds Filter by sessionid.
      */
@@ -127,18 +127,6 @@ class DescribeTelCdrRequest extends AbstractModel
             $this->EndTimeStamp = $param["EndTimeStamp"];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
-        }
-
         if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
             $this->SdkAppId = $param["SdkAppId"];
         }
@@ -149,6 +137,18 @@ class DescribeTelCdrRequest extends AbstractModel
 
         if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
             $this->PageNumber = $param["PageNumber"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
 
         if (array_key_exists("Phones",$param) and $param["Phones"] !== null) {

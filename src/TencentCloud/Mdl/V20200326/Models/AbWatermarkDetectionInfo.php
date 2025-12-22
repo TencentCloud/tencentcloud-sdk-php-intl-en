@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AbWatermarkDetectionInfo
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getState() Obtain 
- * @method void setState(string $State) Set 
- * @method string getResult() Obtain 
- * @method void setResult(string $Result) Set 
- * @method integer getErrorCode() Obtain 
- * @method void setErrorCode(integer $ErrorCode) Set 
- * @method string getErrorMsg() Obtain 
- * @method void setErrorMsg(string $ErrorMsg) Set 
- * @method AbWatermarkInputInfo getInputInfo() Obtain 
- * @method void setInputInfo(AbWatermarkInputInfo $InputInfo) Set 
- * @method TaskNotifyConfig getTaskNotifyConfig() Obtain 
- * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set 
- * @method integer getCreateTime() Obtain 
- * @method void setCreateTime(integer $CreateTime) Set 
- * @method integer getUpdateTime() Obtain 
- * @method void setUpdateTime(integer $UpdateTime) Set 
- * @method InputFileInfo getInputFileInfo() Obtain 
- * @method void setInputFileInfo(InputFileInfo $InputFileInfo) Set 
+ * @method string getTaskId() Obtain Task ID
+ * @method void setTaskId(string $TaskId) Set Task ID
+ * @method string getType() Obtain Types of testing
+ * @method void setType(string $Type) Set Types of testing
+ * @method string getState() Obtain State
+ * @method void setState(string $State) Set State
+ * @method string getResult() Obtain Result
+ * @method void setResult(string $Result) Set Result
+ * @method integer getErrorCode() Obtain Error code
+ * @method void setErrorCode(integer $ErrorCode) Set Error code
+ * @method string getErrorMsg() Obtain Error message
+ * @method void setErrorMsg(string $ErrorMsg) Set Error message
+ * @method AbWatermarkInputInfo getInputInfo() Obtain Input information
+ * @method void setInputInfo(AbWatermarkInputInfo $InputInfo) Set Input information
+ * @method TaskNotifyConfig getTaskNotifyConfig() Obtain Task notification configuration
+ * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set Task notification configuration
+ * @method integer getCreateTime() Obtain Create time
+ * @method void setCreateTime(integer $CreateTime) Set Create time
+ * @method integer getUpdateTime() Obtain Update time
+ * @method void setUpdateTime(integer $UpdateTime) Set Update time
+ * @method InputFileInfo getInputFileInfo() Obtain Input file information
+ * @method void setInputFileInfo(InputFileInfo $InputFileInfo) Set Input file information
  */
 class AbWatermarkDetectionInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task ID
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Types of testing
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string State
      */
     public $State;
 
     /**
-     * @var string 
+     * @var string Result
      */
     public $Result;
 
     /**
-     * @var integer 
+     * @var integer Error code
      */
     public $ErrorCode;
 
     /**
-     * @var string 
+     * @var string Error message
      */
     public $ErrorMsg;
 
     /**
-     * @var AbWatermarkInputInfo 
+     * @var AbWatermarkInputInfo Input information
      */
     public $InputInfo;
 
     /**
-     * @var TaskNotifyConfig 
+     * @var TaskNotifyConfig Task notification configuration
      */
     public $TaskNotifyConfig;
 
     /**
-     * @var integer 
+     * @var integer Create time
      */
     public $CreateTime;
 
     /**
-     * @var integer 
+     * @var integer Update time
      */
     public $UpdateTime;
 
     /**
-     * @var InputFileInfo 
+     * @var InputFileInfo Input file information
      */
     public $InputFileInfo;
 
     /**
-     * @param string $TaskId 
-     * @param string $Type 
-     * @param string $State 
-     * @param string $Result 
-     * @param integer $ErrorCode 
-     * @param string $ErrorMsg 
-     * @param AbWatermarkInputInfo $InputInfo 
-     * @param TaskNotifyConfig $TaskNotifyConfig 
-     * @param integer $CreateTime 
-     * @param integer $UpdateTime 
-     * @param InputFileInfo $InputFileInfo 
+     * @param string $TaskId Task ID
+     * @param string $Type Types of testing
+     * @param string $State State
+     * @param string $Result Result
+     * @param integer $ErrorCode Error code
+     * @param string $ErrorMsg Error message
+     * @param AbWatermarkInputInfo $InputInfo Input information
+     * @param TaskNotifyConfig $TaskNotifyConfig Task notification configuration
+     * @param integer $CreateTime Create time
+     * @param integer $UpdateTime Update time
+     * @param InputFileInfo $InputFileInfo Input file information
      */
     function __construct()
     {

@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set The ID of the bound resource instance. This can be a `CVM` or `NAT`.
  * @method string getCreatedTime() Obtain The creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
  * @method void setCreatedTime(string $CreatedTime) Set The creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
- * @method string getNetworkInterfaceId() Obtain The ID of the bound ENI
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the bound ENI
- * @method string getPrivateAddressIp() Obtain The private IP of the bound resources
- * @method void setPrivateAddressIp(string $PrivateAddressIp) Set The private IP of the bound resources
+ * @method string getNetworkInterfaceId() Obtain Specifies the bound elastic network interface ID. null means no elastic network interface is bound.
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set Specifies the bound elastic network interface ID. null means no elastic network interface is bound.
+ * @method string getPrivateAddressIp() Obtain Bound resource internal ip. null means no bound resource internal ip.
+ * @method void setPrivateAddressIp(string $PrivateAddressIp) Set Bound resource internal ip. null means no bound resource internal ip.
  * @method boolean getIsArrears() Obtain The isolation status of the resource. `True` indicates the EIP is isolated. `False` indicates that the resource is not isolated.
  * @method void setIsArrears(boolean $IsArrears) Set The isolation status of the resource. `True` indicates the EIP is isolated. `False` indicates that the resource is not isolated.
  * @method boolean getIsBlocked() Obtain The block status of the resource. `True` indicates the EIP is blocked. `False` indicates that the EIP is not blocked.
@@ -48,10 +48,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCascadeRelease(boolean $CascadeRelease) Set Whether the EIP is automatically released after being unbound. `True` indicates the EIP will be automatically released after being unbound. `False` indicates the EIP will not be automatically released after being unbound.
  * @method AlgType getEipAlgType() Obtain Type of the protocol used in EIP ALG
  * @method void setEipAlgType(AlgType $EipAlgType) Set Type of the protocol used in EIP ALG
- * @method string getInternetServiceProvider() Obtain The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
- * @method void setInternetServiceProvider(string $InternetServiceProvider) Set The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
- * @method boolean getLocalBgp() Obtain Whether the EIP is in a local BGP.
- * @method void setLocalBgp(boolean $LocalBgp) Set Whether the EIP is in a local BGP.
+ * @method string getInternetServiceProvider() Obtain EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP).
+ * @method void setInternetServiceProvider(string $InternetServiceProvider) Set EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP).
+ * @method boolean getLocalBgp() Obtain Specifies whether the EIP is a local bandwidth EIP. valid values:.
+<li>true: EIP with local bandwidth.</li>.
+<li>false: not a local bandwidth EIP.</li>.
+ * @method void setLocalBgp(boolean $LocalBgp) Set Specifies whether the EIP is a local bandwidth EIP. valid values:.
+<li>true: EIP with local bandwidth.</li>.
+<li>false: not a local bandwidth EIP.</li>.
  * @method integer getBandwidth() Obtain Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setBandwidth(integer $Bandwidth) Set Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
@@ -80,18 +84,34 @@ Including:
 <li><strong>BANDWIDTH_PACKAGE</strong></li>
 <p style="padding-left: 30px;">Bandwidth package.</p>
 Note: this field may return `null`, indicating that no valid value was found.
- * @method array getTagSet() Obtain List of tags associated with the EIP
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTagSet(array $TagSet) Set List of tags associated with the EIP
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getDeadlineDate() Obtain The expiration time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setDeadlineDate(string $DeadlineDate) Set The expiration time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getInstanceType() Obtain The type of instance bound with the EIP
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setInstanceType(string $InstanceType) Set The type of instance bound with the EIP
-Note: this field may return `null`, indicating that no valid value was found.
+ * @method array getTagSet() Obtain Specifies the Tag list associated with the elastic IP.
+ * @method void setTagSet(array $TagSet) Set Specifies the Tag list associated with the elastic IP.
+ * @method string getDeadlineDate() Obtain Prepaid monthly subscription bandwidth IP expiration time.
+Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setDeadlineDate(string $DeadlineDate) Set Prepaid monthly subscription bandwidth IP expiration time.
+Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid value was found.
+ * @method string getInstanceType() Obtain Instance type to which the EIP is bound. valid values:.
+<Li>CVM: indicates cloud virtual machine.</li>.
+<li>Specifies the NAT gateway.</li>.
+<Li>HAVIP: high availability virtual ip.</li>.
+<Li>ENI: specifies the elastic network interface.</li>.
+<Li>CLB: specifies a private network clb.</li>.
+<Li>DHCPIP: elastic private ip address</li>.
+
+
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setInstanceType(string $InstanceType) Set Instance type to which the EIP is bound. valid values:.
+<Li>CVM: indicates cloud virtual machine.</li>.
+<li>Specifies the NAT gateway.</li>.
+<Li>HAVIP: high availability virtual ip.</li>.
+<Li>ENI: specifies the elastic network interface.</li>.
+<Li>CLB: specifies a private network clb.</li>.
+<Li>DHCPIP: elastic private ip address</li>.
+
+
+Note: This field may return null, indicating that no valid value was found.
  * @method string getEgress() Obtain Static single-line IP network egress
 Note: This field may return null, indicating that no valid value was found.
  * @method void setEgress(string $Egress) Set Static single-line IP network egress
@@ -108,14 +128,10 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setBandwidthPackageId(string $BandwidthPackageId) Set Indicates the ID of the Bandwidth Package associated with the current public IP. If the public IP is not billed by Bandwidth Package, this field is empty.
 Note: This field may return null, indicating that no valid value was found.
- * @method string getUnVpcId() Obtain Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setUnVpcId(string $UnVpcId) Set Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-Note: This field may return null, indicating that no valid value was found.
- * @method string getDedicatedClusterId() Obtain Indicates the unique ID of the CDC.
-Note: This field may return 'null', indicating that no valid value was found.
- * @method void setDedicatedClusterId(string $DedicatedClusterId) Set Indicates the unique ID of the CDC.
-Note: This field may return 'null', indicating that no valid value was found.
+ * @method string getUnVpcId() Obtain Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs.
+ * @method void setUnVpcId(string $UnVpcId) Set Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs.
+ * @method string getDedicatedClusterId() Obtain Specifies the unique ID of the CDC.
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set Specifies the unique ID of the CDC.
  */
 class Address extends AbstractModel
 {
@@ -150,12 +166,12 @@ class Address extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var string The ID of the bound ENI
+     * @var string Specifies the bound elastic network interface ID. null means no elastic network interface is bound.
      */
     public $NetworkInterfaceId;
 
     /**
-     * @var string The private IP of the bound resources
+     * @var string Bound resource internal ip. null means no bound resource internal ip.
      */
     public $PrivateAddressIp;
 
@@ -190,12 +206,14 @@ class Address extends AbstractModel
     public $EipAlgType;
 
     /**
-     * @var string The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
+     * @var string EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP).
      */
     public $InternetServiceProvider;
 
     /**
-     * @var boolean Whether the EIP is in a local BGP.
+     * @var boolean Specifies whether the EIP is a local bandwidth EIP. valid values:.
+<li>true: EIP with local bandwidth.</li>.
+<li>false: not a local bandwidth EIP.</li>.
      */
     public $LocalBgp;
 
@@ -222,20 +240,28 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $InternetChargeType;
 
     /**
-     * @var array List of tags associated with the EIP
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Specifies the Tag list associated with the elastic IP.
      */
     public $TagSet;
 
     /**
-     * @var string The expiration time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Prepaid monthly subscription bandwidth IP expiration time.
+Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid value was found.
      */
     public $DeadlineDate;
 
     /**
-     * @var string The type of instance bound with the EIP
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var string Instance type to which the EIP is bound. valid values:.
+<Li>CVM: indicates cloud virtual machine.</li>.
+<li>Specifies the NAT gateway.</li>.
+<Li>HAVIP: high availability virtual ip.</li>.
+<Li>ENI: specifies the elastic network interface.</li>.
+<Li>CLB: specifies a private network clb.</li>.
+<Li>DHCPIP: elastic private ip address</li>.
+
+
+Note: This field may return null, indicating that no valid value was found.
      */
     public $InstanceType;
 
@@ -264,14 +290,12 @@ Note: This field may return null, indicating that no valid value was found.
     public $BandwidthPackageId;
 
     /**
-     * @var string Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-Note: This field may return null, indicating that no valid value was found.
+     * @var string Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs.
      */
     public $UnVpcId;
 
     /**
-     * @var string Indicates the unique ID of the CDC.
-Note: This field may return 'null', indicating that no valid value was found.
+     * @var string Specifies the unique ID of the CDC.
      */
     public $DedicatedClusterId;
 
@@ -282,16 +306,18 @@ Note: This field may return 'null', indicating that no valid value was found.
      * @param string $AddressIp The public IP address
      * @param string $InstanceId The ID of the bound resource instance. This can be a `CVM` or `NAT`.
      * @param string $CreatedTime The creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
-     * @param string $NetworkInterfaceId The ID of the bound ENI
-     * @param string $PrivateAddressIp The private IP of the bound resources
+     * @param string $NetworkInterfaceId Specifies the bound elastic network interface ID. null means no elastic network interface is bound.
+     * @param string $PrivateAddressIp Bound resource internal ip. null means no bound resource internal ip.
      * @param boolean $IsArrears The isolation status of the resource. `True` indicates the EIP is isolated. `False` indicates that the resource is not isolated.
      * @param boolean $IsBlocked The block status of the resource. `True` indicates the EIP is blocked. `False` indicates that the EIP is not blocked.
      * @param boolean $IsEipDirectConnection Whether the EIP supports direct connection mode. `True` indicates the EIP supports direct connection. `False` indicates that the resource does not support direct connection.
      * @param string $AddressType EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public IP), `EIP` (elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (anti-DDoS EIP).
      * @param boolean $CascadeRelease Whether the EIP is automatically released after being unbound. `True` indicates the EIP will be automatically released after being unbound. `False` indicates the EIP will not be automatically released after being unbound.
      * @param AlgType $EipAlgType Type of the protocol used in EIP ALG
-     * @param string $InternetServiceProvider The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
-     * @param boolean $LocalBgp Whether the EIP is in a local BGP.
+     * @param string $InternetServiceProvider EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP).
+     * @param boolean $LocalBgp Specifies whether the EIP is a local bandwidth EIP. valid values:.
+<li>true: EIP with local bandwidth.</li>.
+<li>false: not a local bandwidth EIP.</li>.
      * @param integer $Bandwidth Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param string $InternetChargeType Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
@@ -306,12 +332,20 @@ Including:
 <li><strong>BANDWIDTH_PACKAGE</strong></li>
 <p style="padding-left: 30px;">Bandwidth package.</p>
 Note: this field may return `null`, indicating that no valid value was found.
-     * @param array $TagSet List of tags associated with the EIP
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $DeadlineDate The expiration time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $InstanceType The type of instance bound with the EIP
-Note: this field may return `null`, indicating that no valid value was found.
+     * @param array $TagSet Specifies the Tag list associated with the elastic IP.
+     * @param string $DeadlineDate Prepaid monthly subscription bandwidth IP expiration time.
+Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid value was found.
+     * @param string $InstanceType Instance type to which the EIP is bound. valid values:.
+<Li>CVM: indicates cloud virtual machine.</li>.
+<li>Specifies the NAT gateway.</li>.
+<Li>HAVIP: high availability virtual ip.</li>.
+<Li>ENI: specifies the elastic network interface.</li>.
+<Li>CLB: specifies a private network clb.</li>.
+<Li>DHCPIP: elastic private ip address</li>.
+
+
+Note: This field may return null, indicating that no valid value was found.
      * @param string $Egress Static single-line IP network egress
 Note: This field may return null, indicating that no valid value was found.
      * @param string $AntiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
@@ -320,10 +354,8 @@ Note: This field may return null, indicating that no valid value was found.
 
      * @param string $BandwidthPackageId Indicates the ID of the Bandwidth Package associated with the current public IP. If the public IP is not billed by Bandwidth Package, this field is empty.
 Note: This field may return null, indicating that no valid value was found.
-     * @param string $UnVpcId Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-Note: This field may return null, indicating that no valid value was found.
-     * @param string $DedicatedClusterId Indicates the unique ID of the CDC.
-Note: This field may return 'null', indicating that no valid value was found.
+     * @param string $UnVpcId Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs.
+     * @param string $DedicatedClusterId Specifies the unique ID of the CDC.
      */
     function __construct()
     {

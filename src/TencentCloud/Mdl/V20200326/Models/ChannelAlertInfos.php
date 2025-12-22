@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPipeline0(array $Pipeline0) Set Alarm details of pipeline 0 under this channel.
  * @method array getPipeline1() Obtain Alarm details of pipeline 1 under this channel.
  * @method void setPipeline1(array $Pipeline1) Set Alarm details of pipeline 1 under this channel.
+ * @method integer getPipelineAActiveAlerts() Obtain Pipeline 0 total active alarm count
+ * @method void setPipelineAActiveAlerts(integer $PipelineAActiveAlerts) Set Pipeline 0 total active alarm count
+ * @method integer getPipelineBActiveAlerts() Obtain Pipeline 1 total active alarm count
+ * @method void setPipelineBActiveAlerts(integer $PipelineBActiveAlerts) Set Pipeline 1 total active alarm count
  */
 class ChannelAlertInfos extends AbstractModel
 {
@@ -38,8 +42,20 @@ class ChannelAlertInfos extends AbstractModel
     public $Pipeline1;
 
     /**
+     * @var integer Pipeline 0 total active alarm count
+     */
+    public $PipelineAActiveAlerts;
+
+    /**
+     * @var integer Pipeline 1 total active alarm count
+     */
+    public $PipelineBActiveAlerts;
+
+    /**
      * @param array $Pipeline0 Alarm details of pipeline 0 under this channel.
      * @param array $Pipeline1 Alarm details of pipeline 1 under this channel.
+     * @param integer $PipelineAActiveAlerts Pipeline 0 total active alarm count
+     * @param integer $PipelineBActiveAlerts Pipeline 1 total active alarm count
      */
     function __construct()
     {
@@ -70,6 +86,14 @@ class ChannelAlertInfos extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Pipeline1, $obj);
             }
+        }
+
+        if (array_key_exists("PipelineAActiveAlerts",$param) and $param["PipelineAActiveAlerts"] !== null) {
+            $this->PipelineAActiveAlerts = $param["PipelineAActiveAlerts"];
+        }
+
+        if (array_key_exists("PipelineBActiveAlerts",$param) and $param["PipelineBActiveAlerts"] !== null) {
+            $this->PipelineBActiveAlerts = $param["PipelineBActiveAlerts"];
         }
     }
 }
