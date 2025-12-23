@@ -36,6 +36,8 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
  * @method Models\AttachCcnResponse AttachCcn(Models\AttachCcnRequest $req) This API is used to associate a CCN instance.
  * @method Models\AttachDisksResponse AttachDisks(Models\AttachDisksRequest $req) This API is used to attach one or more cloud disks.
+ * @method Models\CancelShareBlueprintAcrossAccountsResponse CancelShareBlueprintAcrossAccounts(Models\CancelShareBlueprintAcrossAccountsRequest $req) This API is used to cancel image sharing across accounts.
+An image to be canceled sharing must be a custom image that is originally shared from another account to your account.
  * @method Models\CreateBlueprintResponse CreateBlueprint(Models\CreateBlueprintRequest $req) This API is used to create an image.
  * @method Models\CreateDisksResponse CreateDisks(Models\CreateDisksRequest $req) This API is used to create one or more cloud disks.
  * @method Models\CreateFirewallRulesResponse CreateFirewallRules(Models\CreateFirewallRulesRequest $req) This API is used to add a firewall rule on an instance.
@@ -164,6 +166,14 @@ In the `FirewallRules` parameter:
 * For the `CidrBlock` field, you can enter any string that conforms to the CIDR format standard. Multi-Tenant network isolation rules take precedence over private network rules in the firewall.
 * For the `Action` field, you can enter only `ACCEPT` or `DROP`.
 * The length of the `FirewallRuleDescription` field cannot exceed 64 characters.
+ * @method Models\ModifyImageSharePermissionResponse ModifyImageSharePermission(Models\ModifyImageSharePermissionRequest $req) This API is used to share and cancel sharing of CVM custom images to the Lighthouse service.
+Sharing CVM images to Lighthouse requires the following conditions to be met:
+1. Images that have been shared cannot be shared again.
+2. Images imported from external sources are not supported for sharing.
+3. Full-instance images are not supported for sharing.
+4. Images need to support CloudInit to be eligible for sharing.
+5. The Platform and OsName of the images must meet the sharing conditions before the images are eligible for sharing.
+6. Only images in the NORMAL status are supported for sharing.
  * @method Models\ModifyInstancesAttributeResponse ModifyInstancesAttribute(Models\ModifyInstancesAttributeRequest $req) This API is used to modify an instance attribute. 
 * The instance name is used only for users’ convenience. 
 * Batch operations are supported. The maximum number of instances in each request is 100.
@@ -219,6 +229,13 @@ Note: Just like powering off a physical PC, a forced shutdown may cause data los
 * The instance status will become `STOPPING` when the API is called successfully and will become `STOPPED` when the instance is successfully shut down.
 * Batch operations are supported. The maximum number of instances in each request is 100.
 * This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+ * @method Models\SyncBlueprintResponse SyncBlueprint(Models\SyncBlueprintRequest $req) This API is used to synchronize a custom image to other regions.
+
+* Synchronization to multiple regions is supported. Up to 10 regions are supported.
+* Synchronization to the source region is not supported.
+* Only images in the NORMAL status are supported for synchronization.
+* Synchronization between Chinese mainland regions and regions outside the Chinese mainland is not supported.
+ * You can use the [DescribeBlueprints](https://www.tencentcloud.comom/document/api/1207/47689?from_cn_redirect=1) API to query the image status. When the status is NORMAL, it indicates that the source region synchronization ends.
  * @method Models\TerminateDisksResponse TerminateDisks(Models\TerminateDisksRequest $req) This API is used to terminate one or more cloud disk.
  * @method Models\TerminateInstancesResponse TerminateInstances(Models\TerminateInstancesRequest $req) This API is used to terminate one or more instances.
 
