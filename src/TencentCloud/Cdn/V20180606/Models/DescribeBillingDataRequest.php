@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillingData request structure.
  *
- * @method string getStartTime() Obtain Start time of the query, e.g., 2018-09-04 10:40:00.
+ * @method string getStartTime() Obtain Start time of the query, e.g. 2018-09-04 10:40:00.
 The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
 The period between the start time and end time can be up to 90 days.
- * @method void setStartTime(string $StartTime) Set Start time of the query, e.g., 2018-09-04 10:40:00.
+ * @method void setStartTime(string $StartTime) Set Start time of the query, e.g. 2018-09-04 10:40:00.
 The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
 The period between the start time and end time can be up to 90 days.
  * @method string getEndTime() Obtain End time of the query, e.g. 2018-09-04 10:40:00.
@@ -82,7 +82,7 @@ Default value: `bandwidth`
 class DescribeBillingDataRequest extends AbstractModel
 {
     /**
-     * @var string Start time of the query, e.g., 2018-09-04 10:40:00.
+     * @var string Start time of the query, e.g. 2018-09-04 10:40:00.
 The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
 The period between the start time and end time can be up to 90 days.
      */
@@ -151,7 +151,7 @@ Default value: `bandwidth`
     public $TimeZone;
 
     /**
-     * @param string $StartTime Start time of the query, e.g., 2018-09-04 10:40:00.
+     * @param string $StartTime Start time of the query, e.g. 2018-09-04 10:40:00.
 The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
 The period between the start time and end time can be up to 90 days.
      * @param string $EndTime End time of the query, e.g. 2018-09-04 10:40:00.

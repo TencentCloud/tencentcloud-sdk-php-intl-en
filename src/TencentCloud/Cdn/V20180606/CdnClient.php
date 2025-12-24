@@ -29,7 +29,10 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\CreateScdnFailedLogTaskResponse CreateScdnFailedLogTask(Models\CreateScdnFailedLogTaskRequest $req) This API is used to recreate a failed event log task.
  * @method Models\DeleteCdnDomainResponse DeleteCdnDomain(Models\DeleteCdnDomainRequest $req) This API is used to delete a specified acceleration domain name.
  * @method Models\DeleteClsLogTopicResponse DeleteClsLogTopic(Models\DeleteClsLogTopicRequest $req) This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5–15 minutes.
- * @method Models\DescribeBillingDataResponse DescribeBillingData(Models\DescribeBillingDataRequest $req) This API is used to query billing data details.
+ * @method Models\DescribeBillingDataResponse DescribeBillingData(Models\DescribeBillingDataRequest $req) This API is used to query billing data details. 
+Notes: 
+Due to the impact of the billing and settlement methods, the data returned by the DescribeBillingData  has a certain delay. For hourly-billed customers, the expected delay is 3 to 5 hours. For monthly-billed customers, the expected delay is 4 to 28 hours. Before 4:00 AM  (UTC+8, excluding 4:00 AM), only data from two days prior can be queried; after 4:00 AM (including 4:00 AM), data from the previous day can be queried. 
+If you have a strong requirement for data timeliness, it is recommended to use the DescribeCdnData.
  * @method Models\DescribeCdnDataResponse DescribeCdnData(Models\DescribeCdnDataRequest $req) This API is used to query CDN real-time access monitoring data and supports the following metrics:
 
 + Traffic (in bytes)

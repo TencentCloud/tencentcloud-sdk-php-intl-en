@@ -82,6 +82,7 @@ The snapshot must be in `NORMAL` status. To query the status of a snapshot, you 
  * @method Models\DescribeFirewallRulesResponse DescribeFirewallRules(Models\DescribeFirewallRulesRequest $req) This API is used to query the firewall rules of an instance.
  * @method Models\DescribeFirewallRulesTemplateResponse DescribeFirewallRulesTemplate(Models\DescribeFirewallRulesTemplateRequest $req) This API is used to query a firewall rule template.
  * @method Models\DescribeGeneralResourceQuotasResponse DescribeGeneralResourceQuotas(Models\DescribeGeneralResourceQuotasRequest $req) This API is used to query the quota information of general resources.
+ * @method Models\DescribeImagesToShareResponse DescribeImagesToShare(Models\DescribeImagesToShareRequest $req) This API is used to query the list of Cloud Virtual Machine (CVM) custom images and share the images to Tencent Cloud Lighthouse (Lighthouse).
  * @method Models\DescribeInstanceLoginKeyPairAttributeResponse DescribeInstanceLoginKeyPairAttribute(Models\DescribeInstanceLoginKeyPairAttributeRequest $req) This API is used to query the attributes of the default login key of an instance.
  * @method Models\DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(Models\DescribeInstanceVncUrlRequest $req) This API is used to query the URL for VNC login.
 
@@ -218,6 +219,10 @@ This API is async. After the request is sent, a `RequestId` is returned. At this
 * It’s recommended to shut down the instance first and then reset the password. If the instance is running, this API will try to shut it down normally. If the attempt fails, it will force to instance to shut down.
 * This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
 Note: Just like powering off a physical PC, a forced shutdown may cause data loss or the corruption of file system.
+ * @method Models\ResizeDisksResponse ResizeDisks(Models\ResizeDisksRequest $req) This API is used to scale out a cloud disk. The operation currently only supports cloud disks of the data disk type that are in the ATTACHED or UNATTACHED status.
+ * @method Models\ShareBlueprintAcrossAccountsResponse ShareBlueprintAcrossAccounts(Models\ShareBlueprintAcrossAccountsRequest $req) This API is used to share an image across accounts.
+This API is used to share custom images only, and the status of the shared image must be NORMAL.
+The account receiving the shared image must be a root account.
  * @method Models\StartInstancesResponse StartInstances(Models\StartInstancesRequest $req) This API is used to start one or more instances.
 
 * You can only perform this operation on instances whose status is `STOPPED`.
