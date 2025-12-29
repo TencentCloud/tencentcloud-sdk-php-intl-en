@@ -20,266 +20,266 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance details
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
- * @method string getInstanceName() Obtain CKafka cluster instance name.
- * @method void setInstanceName(string $InstanceName) Set CKafka cluster instance name.
- * @method string getVip() Obtain Instance VIP information
- * @method void setVip(string $Vip) Set Instance VIP information
- * @method string getVport() Obtain Instance port information
- * @method void setVport(string $Vport) Set Instance port information
- * @method array getVipList() Obtain Virtual IP list
- * @method void setVipList(array $VipList) Set Virtual IP list
- * @method integer getStatus() Obtain Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
- * @method void setStatus(integer $Status) Set Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
- * @method integer getBandwidth() Obtain Instance bandwidth in Mbps
- * @method void setBandwidth(integer $Bandwidth) Set Instance bandwidth in Mbps
- * @method integer getDiskSize() Obtain Specifies the ckafka cluster instance disk size in gb.
- * @method void setDiskSize(integer $DiskSize) Set Specifies the ckafka cluster instance disk size in gb.
- * @method integer getZoneId() Obtain AZ ID
- * @method void setZoneId(integer $ZoneId) Set AZ ID
- * @method string getVpcId() Obtain vpcId. If this parameter is empty, it means the basic network
- * @method void setVpcId(string $VpcId) Set vpcId. If this parameter is empty, it means the basic network
- * @method string getSubnetId() Obtain Subnet ID
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
- * @method integer getRenewFlag() Obtain Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
- * @method void setRenewFlag(integer $RenewFlag) Set Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
- * @method integer getHealthy() Obtain Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
- * @method void setHealthy(integer $Healthy) Set Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
- * @method string getHealthyMessage() Obtain Instance status information
- * @method void setHealthyMessage(string $HealthyMessage) Set Instance status information
- * @method integer getCreateTime() Obtain Instance creation time
- * @method void setCreateTime(integer $CreateTime) Set Instance creation time
- * @method integer getExpireTime() Obtain Instance expiration time
- * @method void setExpireTime(integer $ExpireTime) Set Instance expiration time
- * @method integer getIsInternal() Obtain Whether it is an internal customer. 1: yes
- * @method void setIsInternal(integer $IsInternal) Set Whether it is an internal customer. 1: yes
- * @method integer getTopicNum() Obtain Number of topics
- * @method void setTopicNum(integer $TopicNum) Set Number of topics
- * @method array getTags() Obtain Tag
- * @method void setTags(array $Tags) Set Tag
- * @method string getVersion() Obtain kafka version information.
- * @method void setVersion(string $Version) Set kafka version information.
- * @method array getZoneIds() Obtain Cross-Availability zone.
- * @method void setZoneIds(array $ZoneIds) Set Cross-Availability zone.
- * @method integer getCvm() Obtain ckafka sales type.
- * @method void setCvm(integer $Cvm) Set ckafka sales type.
- * @method string getInstanceType() Obtain Specifies the cluster instance type of ckafka.
- * @method void setInstanceType(string $InstanceType) Set Specifies the cluster instance type of ckafka.
- * @method string getDiskType() Obtain Specifies the ckafka cluster instance disk type.
- * @method void setDiskType(string $DiskType) Set Specifies the ckafka cluster instance disk type.
- * @method integer getMaxTopicNumber() Obtain Maximum number of topics for current specifications.
- * @method void setMaxTopicNumber(integer $MaxTopicNumber) Set Maximum number of topics for current specifications.
- * @method integer getMaxPartitionNumber() Obtain Maximum number of partitions for current specifications.
- * @method void setMaxPartitionNumber(integer $MaxPartitionNumber) Set Maximum number of partitions for current specifications.
- * @method string getRebalanceTime() Obtain Scheduled configuration upgrade time.
- * @method void setRebalanceTime(string $RebalanceTime) Set Scheduled configuration upgrade time.
- * @method integer getPartitionNumber() Obtain Specifies the number of partitions in the current instance.
- * @method void setPartitionNumber(integer $PartitionNumber) Set Specifies the number of partitions in the current instance.
- * @method string getPublicNetworkChargeType() Obtain Specifies the public network bandwidth type of the ckafka cluster instance.
- * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) Set Specifies the public network bandwidth type of the ckafka cluster instance.
- * @method integer getPublicNetwork() Obtain Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
- * @method void setPublicNetwork(integer $PublicNetwork) Set Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
- * @method string getClusterType() Obtain Specifies the underlying cluster type of the ckafka cluster instance.
- * @method void setClusterType(string $ClusterType) Set Specifies the underlying cluster type of the ckafka cluster instance.
- * @method array getFeatures() Obtain Instance feature list.
- * @method void setFeatures(array $Features) Set Instance feature list.
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id.</p>.
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id.</p>.
+ * @method string getInstanceName() Obtain <P>Specifies the name of the ckafka cluster instance.</p>.
+ * @method void setInstanceName(string $InstanceName) Set <P>Specifies the name of the ckafka cluster instance.</p>.
+ * @method string getVip() Obtain <P>Specifies the vip information for accessing the instance.</p>.
+ * @method void setVip(string $Vip) Set <P>Specifies the vip information for accessing the instance.</p>.
+ * @method string getVport() Obtain <P>Specifies the port information to access the instance.</p>.
+ * @method void setVport(string $Vport) Set <P>Specifies the port information to access the instance.</p>.
+ * @method array getVipList() Obtain <p>Specifies the virtual IP list.</p>.
+ * @method void setVipList(array $VipList) Set <p>Specifies the virtual IP list.</p>.
+ * @method integer getStatus() Obtain <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+ * @method void setStatus(integer $Status) Set <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+ * @method integer getBandwidth() Obtain <p>Specifies the instance bandwidth in Mbps.</p>.
+ * @method void setBandwidth(integer $Bandwidth) Set <p>Specifies the instance bandwidth in Mbps.</p>.
+ * @method integer getDiskSize() Obtain <p>Specifies the disk size of the ckafka cluster instance, in gb.</p>.
+ * @method void setDiskSize(integer $DiskSize) Set <p>Specifies the disk size of the ckafka cluster instance, in gb.</p>.
+ * @method integer getZoneId() Obtain <p>Specifies the available zone ID.</p>.
+ * @method void setZoneId(integer $ZoneId) Set <p>Specifies the available zone ID.</p>.
+ * @method string getVpcId() Obtain <p>vpcId. if empty, indicates a basic network.</p>.
+ * @method void setVpcId(string $VpcId) Set <p>vpcId. if empty, indicates a basic network.</p>.
+ * @method string getSubnetId() Obtain <P>Subnet id.</p>.
+ * @method void setSubnetId(string $SubnetId) Set <P>Subnet id.</p>.
+ * @method integer getRenewFlag() Obtain <P>Specifies whether to renew the instance. int enumeration value: 1 means auto-renew, 2 means explicitly no auto-renew.</p>.
+ * @method void setRenewFlag(integer $RenewFlag) Set <P>Specifies whether to renew the instance. int enumeration value: 1 means auto-renew, 2 means explicitly no auto-renew.</p>.
+ * @method integer getHealthy() Obtain <p>Specifies the instance status. valid values: 1 (healthy), 2 (alarm), 3 (instance status exception).</p>.
+ * @method void setHealthy(integer $Healthy) Set <p>Specifies the instance status. valid values: 1 (healthy), 2 (alarm), 3 (instance status exception).</p>.
+ * @method string getHealthyMessage() Obtain <P>Specifies the instance status information.</p>.
+ * @method void setHealthyMessage(string $HealthyMessage) Set <P>Specifies the instance status information.</p>.
+ * @method integer getCreateTime() Obtain <P>Specifies the instance creation time.</p>.
+ * @method void setCreateTime(integer $CreateTime) Set <P>Specifies the instance creation time.</p>.
+ * @method integer getExpireTime() Obtain <P>Specifies the instance expiration time.</p>.
+ * @method void setExpireTime(integer $ExpireTime) Set <P>Specifies the instance expiration time.</p>.
+ * @method integer getIsInternal() Obtain <P>Specifies whether it is an internal customer. a value of 1 indicates an internal customer.</p>.
+ * @method void setIsInternal(integer $IsInternal) Set <P>Specifies whether it is an internal customer. a value of 1 indicates an internal customer.</p>.
+ * @method integer getTopicNum() Obtain <p>Specifies the number of topics.</p>.
+ * @method void setTopicNum(integer $TopicNum) Set <p>Specifies the number of topics.</p>.
+ * @method array getTags() Obtain <P>Specifies the identifier tag.</p>.
+ * @method void setTags(array $Tags) Set <P>Specifies the identifier tag.</p>.
+ * @method string getVersion() Obtain <p>kafka version information.</p>.
+ * @method void setVersion(string $Version) Set <p>kafka version information.</p>.
+ * @method array getZoneIds() Obtain <P>Specifies the cross-availability zone.</p>.
+ * @method void setZoneIds(array $ZoneIds) Set <P>Specifies the cross-availability zone.</p>.
+ * @method integer getCvm() Obtain <P>Specifies the ckafka sales type.</p>.
+ * @method void setCvm(integer $Cvm) Set <P>Specifies the ckafka sales type.</p>.
+ * @method string getInstanceType() Obtain <P>Specifies the ckafka cluster instance type.</p>.
+ * @method void setInstanceType(string $InstanceType) Set <P>Specifies the ckafka cluster instance type.</p>.
+ * @method string getDiskType() Obtain <P>Specifies the disk type of the ckafka cluster instance.</p>.
+ * @method void setDiskType(string $DiskType) Set <P>Specifies the disk type of the ckafka cluster instance.</p>.
+ * @method integer getMaxTopicNumber() Obtain <p>Maximum number of topics for current specifications.</p>.
+ * @method void setMaxTopicNumber(integer $MaxTopicNumber) Set <p>Maximum number of topics for current specifications.</p>.
+ * @method integer getMaxPartitionNumber() Obtain <p>Specifies the maximum number of partitions for current specifications.</p>.
+ * @method void setMaxPartitionNumber(integer $MaxPartitionNumber) Set <p>Specifies the maximum number of partitions for current specifications.</p>.
+ * @method string getRebalanceTime() Obtain <P>Specifies the planned configuration upgrade time.</p>.
+ * @method void setRebalanceTime(string $RebalanceTime) Set <P>Specifies the planned configuration upgrade time.</p>.
+ * @method integer getPartitionNumber() Obtain <P>Current number of partitions of the instance.</p>.
+ * @method void setPartitionNumber(integer $PartitionNumber) Set <P>Current number of partitions of the instance.</p>.
+ * @method string getPublicNetworkChargeType() Obtain <P>Specifies the public network bandwidth type of the ckafka cluster instance.</p>.
+ * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) Set <P>Specifies the public network bandwidth type of the ckafka cluster instance.</p>.
+ * @method integer getPublicNetwork() Obtain <p>Specifies the public network bandwidth. value range: 3Mbps to 999Mbps. only supported in pro edition.</p>.
+ * @method void setPublicNetwork(integer $PublicNetwork) Set <p>Specifies the public network bandwidth. value range: 3Mbps to 999Mbps. only supported in pro edition.</p>.
+ * @method string getClusterType() Obtain <P>Specifies the underlying cluster type of the ckafka cluster instance.</p>.
+ * @method void setClusterType(string $ClusterType) Set <P>Specifies the underlying cluster type of the ckafka cluster instance.</p>.
+ * @method array getFeatures() Obtain <P>Specifies the instance feature list.</p>.
+ * @method void setFeatures(array $Features) Set <P>Specifies the instance feature list.</p>.
  */
 class InstanceDetail extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id.
+     * @var string <p>ckafka cluster instance Id.</p>.
      */
     public $InstanceId;
 
     /**
-     * @var string CKafka cluster instance name.
+     * @var string <P>Specifies the name of the ckafka cluster instance.</p>.
      */
     public $InstanceName;
 
     /**
-     * @var string Instance VIP information
+     * @var string <P>Specifies the vip information for accessing the instance.</p>.
      */
     public $Vip;
 
     /**
-     * @var string Instance port information
+     * @var string <P>Specifies the port information to access the instance.</p>.
      */
     public $Vport;
 
     /**
-     * @var array Virtual IP list
+     * @var array <p>Specifies the virtual IP list.</p>.
      */
     public $VipList;
 
     /**
-     * @var integer Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+     * @var integer <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
      */
     public $Status;
 
     /**
-     * @var integer Instance bandwidth in Mbps
+     * @var integer <p>Specifies the instance bandwidth in Mbps.</p>.
      */
     public $Bandwidth;
 
     /**
-     * @var integer Specifies the ckafka cluster instance disk size in gb.
+     * @var integer <p>Specifies the disk size of the ckafka cluster instance, in gb.</p>.
      */
     public $DiskSize;
 
     /**
-     * @var integer AZ ID
+     * @var integer <p>Specifies the available zone ID.</p>.
      */
     public $ZoneId;
 
     /**
-     * @var string vpcId. If this parameter is empty, it means the basic network
+     * @var string <p>vpcId. if empty, indicates a basic network.</p>.
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID
+     * @var string <P>Subnet id.</p>.
      */
     public $SubnetId;
 
     /**
-     * @var integer Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
+     * @var integer <P>Specifies whether to renew the instance. int enumeration value: 1 means auto-renew, 2 means explicitly no auto-renew.</p>.
      */
     public $RenewFlag;
 
     /**
-     * @var integer Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
+     * @var integer <p>Specifies the instance status. valid values: 1 (healthy), 2 (alarm), 3 (instance status exception).</p>.
      */
     public $Healthy;
 
     /**
-     * @var string Instance status information
+     * @var string <P>Specifies the instance status information.</p>.
      */
     public $HealthyMessage;
 
     /**
-     * @var integer Instance creation time
+     * @var integer <P>Specifies the instance creation time.</p>.
      */
     public $CreateTime;
 
     /**
-     * @var integer Instance expiration time
+     * @var integer <P>Specifies the instance expiration time.</p>.
      */
     public $ExpireTime;
 
     /**
-     * @var integer Whether it is an internal customer. 1: yes
+     * @var integer <P>Specifies whether it is an internal customer. a value of 1 indicates an internal customer.</p>.
      */
     public $IsInternal;
 
     /**
-     * @var integer Number of topics
+     * @var integer <p>Specifies the number of topics.</p>.
      */
     public $TopicNum;
 
     /**
-     * @var array Tag
+     * @var array <P>Specifies the identifier tag.</p>.
      */
     public $Tags;
 
     /**
-     * @var string kafka version information.
+     * @var string <p>kafka version information.</p>.
      */
     public $Version;
 
     /**
-     * @var array Cross-Availability zone.
+     * @var array <P>Specifies the cross-availability zone.</p>.
      */
     public $ZoneIds;
 
     /**
-     * @var integer ckafka sales type.
+     * @var integer <P>Specifies the ckafka sales type.</p>.
      */
     public $Cvm;
 
     /**
-     * @var string Specifies the cluster instance type of ckafka.
+     * @var string <P>Specifies the ckafka cluster instance type.</p>.
      */
     public $InstanceType;
 
     /**
-     * @var string Specifies the ckafka cluster instance disk type.
+     * @var string <P>Specifies the disk type of the ckafka cluster instance.</p>.
      */
     public $DiskType;
 
     /**
-     * @var integer Maximum number of topics for current specifications.
+     * @var integer <p>Maximum number of topics for current specifications.</p>.
      */
     public $MaxTopicNumber;
 
     /**
-     * @var integer Maximum number of partitions for current specifications.
+     * @var integer <p>Specifies the maximum number of partitions for current specifications.</p>.
      */
     public $MaxPartitionNumber;
 
     /**
-     * @var string Scheduled configuration upgrade time.
+     * @var string <P>Specifies the planned configuration upgrade time.</p>.
      */
     public $RebalanceTime;
 
     /**
-     * @var integer Specifies the number of partitions in the current instance.
+     * @var integer <P>Current number of partitions of the instance.</p>.
      */
     public $PartitionNumber;
 
     /**
-     * @var string Specifies the public network bandwidth type of the ckafka cluster instance.
+     * @var string <P>Specifies the public network bandwidth type of the ckafka cluster instance.</p>.
      */
     public $PublicNetworkChargeType;
 
     /**
-     * @var integer Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
+     * @var integer <p>Specifies the public network bandwidth. value range: 3Mbps to 999Mbps. only supported in pro edition.</p>.
      */
     public $PublicNetwork;
 
     /**
-     * @var string Specifies the underlying cluster type of the ckafka cluster instance.
+     * @var string <P>Specifies the underlying cluster type of the ckafka cluster instance.</p>.
      */
     public $ClusterType;
 
     /**
-     * @var array Instance feature list.
+     * @var array <P>Specifies the instance feature list.</p>.
      */
     public $Features;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id.
-     * @param string $InstanceName CKafka cluster instance name.
-     * @param string $Vip Instance VIP information
-     * @param string $Vport Instance port information
-     * @param array $VipList Virtual IP list
-     * @param integer $Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
-     * @param integer $Bandwidth Instance bandwidth in Mbps
-     * @param integer $DiskSize Specifies the ckafka cluster instance disk size in gb.
-     * @param integer $ZoneId AZ ID
-     * @param string $VpcId vpcId. If this parameter is empty, it means the basic network
-     * @param string $SubnetId Subnet ID
-     * @param integer $RenewFlag Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
-     * @param integer $Healthy Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
-     * @param string $HealthyMessage Instance status information
-     * @param integer $CreateTime Instance creation time
-     * @param integer $ExpireTime Instance expiration time
-     * @param integer $IsInternal Whether it is an internal customer. 1: yes
-     * @param integer $TopicNum Number of topics
-     * @param array $Tags Tag
-     * @param string $Version kafka version information.
-     * @param array $ZoneIds Cross-Availability zone.
-     * @param integer $Cvm ckafka sales type.
-     * @param string $InstanceType Specifies the cluster instance type of ckafka.
-     * @param string $DiskType Specifies the ckafka cluster instance disk type.
-     * @param integer $MaxTopicNumber Maximum number of topics for current specifications.
-     * @param integer $MaxPartitionNumber Maximum number of partitions for current specifications.
-     * @param string $RebalanceTime Scheduled configuration upgrade time.
-     * @param integer $PartitionNumber Specifies the number of partitions in the current instance.
-     * @param string $PublicNetworkChargeType Specifies the public network bandwidth type of the ckafka cluster instance.
-     * @param integer $PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
-     * @param string $ClusterType Specifies the underlying cluster type of the ckafka cluster instance.
-     * @param array $Features Instance feature list.
+     * @param string $InstanceId <p>ckafka cluster instance Id.</p>.
+     * @param string $InstanceName <P>Specifies the name of the ckafka cluster instance.</p>.
+     * @param string $Vip <P>Specifies the vip information for accessing the instance.</p>.
+     * @param string $Vport <P>Specifies the port information to access the instance.</p>.
+     * @param array $VipList <p>Specifies the virtual IP list.</p>.
+     * @param integer $Status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+     * @param integer $Bandwidth <p>Specifies the instance bandwidth in Mbps.</p>.
+     * @param integer $DiskSize <p>Specifies the disk size of the ckafka cluster instance, in gb.</p>.
+     * @param integer $ZoneId <p>Specifies the available zone ID.</p>.
+     * @param string $VpcId <p>vpcId. if empty, indicates a basic network.</p>.
+     * @param string $SubnetId <P>Subnet id.</p>.
+     * @param integer $RenewFlag <P>Specifies whether to renew the instance. int enumeration value: 1 means auto-renew, 2 means explicitly no auto-renew.</p>.
+     * @param integer $Healthy <p>Specifies the instance status. valid values: 1 (healthy), 2 (alarm), 3 (instance status exception).</p>.
+     * @param string $HealthyMessage <P>Specifies the instance status information.</p>.
+     * @param integer $CreateTime <P>Specifies the instance creation time.</p>.
+     * @param integer $ExpireTime <P>Specifies the instance expiration time.</p>.
+     * @param integer $IsInternal <P>Specifies whether it is an internal customer. a value of 1 indicates an internal customer.</p>.
+     * @param integer $TopicNum <p>Specifies the number of topics.</p>.
+     * @param array $Tags <P>Specifies the identifier tag.</p>.
+     * @param string $Version <p>kafka version information.</p>.
+     * @param array $ZoneIds <P>Specifies the cross-availability zone.</p>.
+     * @param integer $Cvm <P>Specifies the ckafka sales type.</p>.
+     * @param string $InstanceType <P>Specifies the ckafka cluster instance type.</p>.
+     * @param string $DiskType <P>Specifies the disk type of the ckafka cluster instance.</p>.
+     * @param integer $MaxTopicNumber <p>Maximum number of topics for current specifications.</p>.
+     * @param integer $MaxPartitionNumber <p>Specifies the maximum number of partitions for current specifications.</p>.
+     * @param string $RebalanceTime <P>Specifies the planned configuration upgrade time.</p>.
+     * @param integer $PartitionNumber <P>Current number of partitions of the instance.</p>.
+     * @param string $PublicNetworkChargeType <P>Specifies the public network bandwidth type of the ckafka cluster instance.</p>.
+     * @param integer $PublicNetwork <p>Specifies the public network bandwidth. value range: 3Mbps to 999Mbps. only supported in pro edition.</p>.
+     * @param string $ClusterType <P>Specifies the underlying cluster type of the ckafka cluster instance.</p>.
+     * @param array $Features <P>Specifies the instance feature list.</p>.
      */
     function __construct()
     {

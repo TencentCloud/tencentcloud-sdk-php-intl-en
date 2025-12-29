@@ -20,186 +20,194 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstancePre request structure.
  *
- * @method string getInstanceName() Obtain Specifies the ckafka cluster instance Name, an arbitrary string with length no more than 128 characters.
- * @method void setInstanceName(string $InstanceName) Set Specifies the ckafka cluster instance Name, an arbitrary string with length no more than 128 characters.
- * @method integer getZoneId() Obtain Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. [view availability zones](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1).
- * @method void setZoneId(integer $ZoneId) Set Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. [view availability zones](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1).
- * @method string getPeriod() Obtain Prepaid purchase duration, such as "1m", exactly one month. value ranges from 1m to 36m.
- * @method void setPeriod(string $Period) Set Prepaid purchase duration, such as "1m", exactly one month. value ranges from 1m to 36m.
- * @method integer getInstanceType() Obtain Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.
- * @method void setInstanceType(integer $InstanceType) Set Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.
- * @method string getVpcId() Obtain VPC Id.
- * @method void setVpcId(string $VpcId) Set VPC Id.
- * @method string getSubnetId() Obtain Subnet ID
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
- * @method integer getMsgRetentionTime() Obtain Optional. maximum retention time of instance logs, in minutes. default value: 1440 (1 day). value range: 1 minute to 90 days.
- * @method void setMsgRetentionTime(integer $MsgRetentionTime) Set Optional. maximum retention time of instance logs, in minutes. default value: 1440 (1 day). value range: 1 minute to 90 days.
- * @method integer getClusterId() Obtain Specifies the cluster Id when creating an instance.
- * @method void setClusterId(integer $ClusterId) Set Specifies the cluster Id when creating an instance.
- * @method integer getRenewFlag() Obtain Auto-Renewal tag for prepaid services. valid values: 0 (default state, not set by the user, initial status), 1 (auto-renew), 2 (explicitly no auto-renew, set by the user).
- * @method void setRenewFlag(integer $RenewFlag) Set Auto-Renewal tag for prepaid services. valid values: 0 (default state, not set by the user, initial status), 1 (auto-renew), 2 (explicitly no auto-renew, set by the user).
- * @method string getKafkaVersion() Obtain Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value 2.4.1. 2.4.1 and 2.4.2 belong to the same version. any can be passed.
- * @method void setKafkaVersion(string $KafkaVersion) Set Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value 2.4.1. 2.4.1 and 2.4.2 belong to the same version. any can be passed.
- * @method string getSpecificationsType() Obtain Specifies the instance type. valid values: standard (default), profession, premium.
- * @method void setSpecificationsType(string $SpecificationsType) Set Specifies the instance type. valid values: standard (default), profession, premium.
- * @method integer getDiskSize() Obtain Disk size. if it does not match the console specification ratio, the creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
- * @method void setDiskSize(integer $DiskSize) Set Disk size. if it does not match the console specification ratio, the creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
- * @method integer getBandWidth() Obtain Instance bandwidth. default value: 40 MB/s. minimum value: 20 MB/s. maximum value for advanced edition: 360 MB/s. maximum value for pro edition: 100000 MB/s. standard version fixed bandwidth specifications: 40 MB/s, 100 MB/s, 150 MB/s. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
- * @method void setBandWidth(integer $BandWidth) Set Instance bandwidth. default value: 40 MB/s. minimum value: 20 MB/s. maximum value for advanced edition: 360 MB/s. maximum value for pro edition: 100000 MB/s. standard version fixed bandwidth specifications: 40 MB/s, 100 MB/s, 150 MB/s. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
- * @method integer getPartition() Obtain Partition size. if it does not match the console specification ratio, creation will fail. default value is 800, step length is 100. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
- * @method void setPartition(integer $Partition) Set Partition size. if it does not match the console specification ratio, creation will fail. default value is 800, step length is 100. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
- * @method array getTags() Obtain Tag.
- * @method void setTags(array $Tags) Set Tag.
- * @method string getDiskType() Obtain Specifies the disk type for a pro/advanced edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC".
- * @method void setDiskType(string $DiskType) Set Specifies the disk type for a pro/advanced edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC".
- * @method boolean getMultiZoneFlag() Obtain Specifies whether to create a cross-az instance. when the current parameter is true, zoneIds is required.
- * @method void setMultiZoneFlag(boolean $MultiZoneFlag) Set Specifies whether to create a cross-az instance. when the current parameter is true, zoneIds is required.
- * @method array getZoneIds() Obtain Availability zone list. required item when purchasing a multi-availability zone instance.
- * @method void setZoneIds(array $ZoneIds) Set Availability zone list. required item when purchasing a multi-availability zone instance.
- * @method integer getPublicNetworkMonthly() Obtain Public network bandwidth size, in Mbps. the default is no free 3 Mbps bandwidth. for example, for a total of 3 Mbps public network bandwidth, pass 0 here; for a total of 6 Mbps public network bandwidth, pass 3 here. default value is 0. ensure the input parameter is a multiple of 3.
- * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) Set Public network bandwidth size, in Mbps. the default is no free 3 Mbps bandwidth. for example, for a total of 3 Mbps public network bandwidth, pass 0 here; for a total of 6 Mbps public network bandwidth, pass 3 here. default value is 0. ensure the input parameter is a multiple of 3.
- * @method integer getInstanceNum() Obtain Number of instances to purchase. optional. default value is 1. when you input this parameter, it enables the creation of multiple instances with case-sensitive suffixes added to instanceName.
- * @method void setInstanceNum(integer $InstanceNum) Set Number of instances to purchase. optional. default value is 1. when you input this parameter, it enables the creation of multiple instances with case-sensitive suffixes added to instanceName.
- * @method integer getAutoVoucher() Obtain Whether to automatically select a voucher. valid values: 1 (yes), 0 (no). default is 0.
- * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select a voucher. valid values: 1 (yes), 0 (no). default is 0.
- * @method integer getElasticBandwidthSwitch() Obtain Elastic bandwidth switch. specifies whether to enable elastic bandwidth. valid values: 0 (not enabled, default), 1 (enabled).
- * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) Set Elastic bandwidth switch. specifies whether to enable elastic bandwidth. valid values: 0 (not enabled, default), 1 (enabled).
+ * @method string getInstanceName() Obtain <p>Specifies the Name of the ckafka cluster instance, which is any string with a length not more than 128 characters.</p>.
+ * @method void setInstanceName(string $InstanceName) Set <p>Specifies the Name of the ckafka cluster instance, which is any string with a length not more than 128 characters.</p>.
+ * @method integer getZoneId() Obtain <P>Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. <a href="https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1">view availability zones</a></p>.
+ * @method void setZoneId(integer $ZoneId) Set <P>Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. <a href="https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1">view availability zones</a></p>.
+ * @method string getPeriod() Obtain <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
+ * @method void setPeriod(string $Period) Set <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
+ * @method integer getInstanceType() Obtain <P>Specifies the standard edition instance specification for the international site. currently only the standard edition on the international site uses the current field to distinguish specifications, while the domestic site standard edition uses peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.</p>.
+ * @method void setInstanceType(integer $InstanceType) Set <P>Specifies the standard edition instance specification for the international site. currently only the standard edition on the international site uses the current field to distinguish specifications, while the domestic site standard edition uses peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.</p>.
+ * @method string getVpcId() Obtain <p>VPC Id.</p>.
+ * @method void setVpcId(string $VpcId) Set <p>VPC Id.</p>.
+ * @method string getSubnetId() Obtain <P>Subnet id.</p>.
+ * @method void setSubnetId(string $SubnetId) Set <P>Subnet id.</p>.
+ * @method integer getMsgRetentionTime() Obtain <P>Optional. specifies the maximum retention time for instance logs, in minutes. default value: 1440 (1 day) when left blank. configurable range: 1 minute to 90 days.</p>.
+ * @method void setMsgRetentionTime(integer $MsgRetentionTime) Set <P>Optional. specifies the maximum retention time for instance logs, in minutes. default value: 1440 (1 day) when left blank. configurable range: 1 minute to 90 days.</p>.
+ * @method integer getClusterId() Obtain <p>Specifies the cluster Id when creating an instance. this parameter indicates the cluster Id.</p>.
+ * @method void setClusterId(integer $ClusterId) Set <p>Specifies the cluster Id when creating an instance. this parameter indicates the cluster Id.</p>.
+ * @method integer getRenewFlag() Obtain <P>Auto-Renewal tag for prepaid services. 0 means default state (not set by the user, i.e. initial state), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user).</p>.
+ * @method void setRenewFlag(integer $RenewFlag) Set <P>Auto-Renewal tag for prepaid services. 0 means default state (not set by the user, i.e. initial state), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user).</p>.
+ * @method string getKafkaVersion() Obtain <p>Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value is 2.4.1. 2.4.1 and 2.4.2 belong to the same version, any one can be passed.</p>.
+ * @method void setKafkaVersion(string $KafkaVersion) Set <p>Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value is 2.4.1. 2.4.1 and 2.4.2 belong to the same version, any one can be passed.</p>.
+ * @method string getSpecificationsType() Obtain <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
+ * @method void setSpecificationsType(string $SpecificationsType) Set <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
+ * @method integer getDiskSize() Obtain <P>Disk size. if it does not match the console specification ratio, creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link to view billing specifications: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1</p>.
+ * @method void setDiskSize(integer $DiskSize) Set <P>Disk size. if it does not match the console specification ratio, creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link to view billing specifications: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1</p>.
+ * @method integer getBandWidth() Obtain <p>Instance bandwidth, default value is 40, unit MB/s. minimum value: 20MB/s. advanced edition maximum value: 360MB/s. professional edition maximum value: 100000MB/s. standard version fixed bandwidth specifications: 40MB/s, 100MB/s, 150MB/s. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1</p>.
+ * @method void setBandWidth(integer $BandWidth) Set <p>Instance bandwidth, default value is 40, unit MB/s. minimum value: 20MB/s. advanced edition maximum value: 360MB/s. professional edition maximum value: 100000MB/s. standard version fixed bandwidth specifications: 40MB/s, 100MB/s, 150MB/s. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1</p>.
+ * @method integer getPartition() Obtain <P>Specifies the partition size. if it does not match the console specification ratio, the creation cannot succeed. default value is 800 with a step length of 100. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1</p>.
+ * @method void setPartition(integer $Partition) Set <P>Specifies the partition size. if it does not match the console specification ratio, the creation cannot succeed. default value is 800 with a step length of 100. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1</p>.
+ * @method array getTags() Obtain <p>Tag.</p>.
+ * @method void setTags(array $Tags) Set <p>Tag.</p>.
+ * @method string getDiskType() Obtain <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+ * @method void setDiskType(string $DiskType) Set <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+ * @method boolean getMultiZoneFlag() Obtain <p>Specifies whether to create a cross-availability zone instance. when the current parameter is true, zoneIds is required.</p>.
+ * @method void setMultiZoneFlag(boolean $MultiZoneFlag) Set <p>Specifies whether to create a cross-availability zone instance. when the current parameter is true, zoneIds is required.</p>.
+ * @method array getZoneIds() Obtain <P>Availability zone list. required item when purchasing multi-availability zone instance.</p>.
+ * @method void setZoneIds(array $ZoneIds) Set <P>Availability zone list. required item when purchasing multi-availability zone instance.</p>.
+ * @method integer getPublicNetworkMonthly() Obtain <p>Specifies the public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. default value: 0. ensure the input parameter is a multiple of 3.</p>.
+ * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) Set <p>Specifies the public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. default value: 0. ensure the input parameter is a multiple of 3.</p>.
+ * @method integer getInstanceNum() Obtain <p>Specifies the number of instances to purchase. optional. default value is 1. when input this parameter, it will create multiple instances with case-sensitive suffixes added to instanceName.</p>.
+ * @method void setInstanceNum(integer $InstanceNum) Set <p>Specifies the number of instances to purchase. optional. default value is 1. when input this parameter, it will create multiple instances with case-sensitive suffixes added to instanceName.</p>.
+ * @method integer getAutoVoucher() Obtain <P>Specifies whether to automatically select voucher. valid values: 1-yes; 0-no. default is 0.</p>.
+ * @method void setAutoVoucher(integer $AutoVoucher) Set <P>Specifies whether to automatically select voucher. valid values: 1-yes; 0-no. default is 0.</p>.
+ * @method integer getElasticBandwidthSwitch() Obtain <P>Elastic bandwidth switch 0 disable 1 enable (0 default).</p>.
+ * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) Set <P>Elastic bandwidth switch 0 disable 1 enable (0 default).</p>.
+ * @method string getCustomSSLCertId() Obtain <p>Specifies the custom certificate Id. this parameter is valid only when SpecificationsType is profession. supports custom certificate capacity.</p><p>can be obtained through the <a href="https://www.tencentcloud.comom/document/product/400/41673?from_cn_redirect=1">DescribeCertificateDetail</a> api.</p>.
+ * @method void setCustomSSLCertId(string $CustomSSLCertId) Set <p>Specifies the custom certificate Id. this parameter is valid only when SpecificationsType is profession. supports custom certificate capacity.</p><p>can be obtained through the <a href="https://www.tencentcloud.comom/document/product/400/41673?from_cn_redirect=1">DescribeCertificateDetail</a> api.</p>.
  */
 class CreateInstancePreRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the ckafka cluster instance Name, an arbitrary string with length no more than 128 characters.
+     * @var string <p>Specifies the Name of the ckafka cluster instance, which is any string with a length not more than 128 characters.</p>.
      */
     public $InstanceName;
 
     /**
-     * @var integer Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. [view availability zones](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1).
+     * @var integer <P>Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. <a href="https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1">view availability zones</a></p>.
      */
     public $ZoneId;
 
     /**
-     * @var string Prepaid purchase duration, such as "1m", exactly one month. value ranges from 1m to 36m.
+     * @var string <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
      */
     public $Period;
 
     /**
-     * @var integer Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.
+     * @var integer <P>Specifies the standard edition instance specification for the international site. currently only the standard edition on the international site uses the current field to distinguish specifications, while the domestic site standard edition uses peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.</p>.
      */
     public $InstanceType;
 
     /**
-     * @var string VPC Id.
+     * @var string <p>VPC Id.</p>.
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID
+     * @var string <P>Subnet id.</p>.
      */
     public $SubnetId;
 
     /**
-     * @var integer Optional. maximum retention time of instance logs, in minutes. default value: 1440 (1 day). value range: 1 minute to 90 days.
+     * @var integer <P>Optional. specifies the maximum retention time for instance logs, in minutes. default value: 1440 (1 day) when left blank. configurable range: 1 minute to 90 days.</p>.
      */
     public $MsgRetentionTime;
 
     /**
-     * @var integer Specifies the cluster Id when creating an instance.
+     * @var integer <p>Specifies the cluster Id when creating an instance. this parameter indicates the cluster Id.</p>.
      */
     public $ClusterId;
 
     /**
-     * @var integer Auto-Renewal tag for prepaid services. valid values: 0 (default state, not set by the user, initial status), 1 (auto-renew), 2 (explicitly no auto-renew, set by the user).
+     * @var integer <P>Auto-Renewal tag for prepaid services. 0 means default state (not set by the user, i.e. initial state), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user).</p>.
      */
     public $RenewFlag;
 
     /**
-     * @var string Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value 2.4.1. 2.4.1 and 2.4.2 belong to the same version. any can be passed.
+     * @var string <p>Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value is 2.4.1. 2.4.1 and 2.4.2 belong to the same version, any one can be passed.</p>.
      */
     public $KafkaVersion;
 
     /**
-     * @var string Specifies the instance type. valid values: standard (default), profession, premium.
+     * @var string <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
      */
     public $SpecificationsType;
 
     /**
-     * @var integer Disk size. if it does not match the console specification ratio, the creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+     * @var integer <P>Disk size. if it does not match the console specification ratio, creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link to view billing specifications: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1</p>.
      */
     public $DiskSize;
 
     /**
-     * @var integer Instance bandwidth. default value: 40 MB/s. minimum value: 20 MB/s. maximum value for advanced edition: 360 MB/s. maximum value for pro edition: 100000 MB/s. standard version fixed bandwidth specifications: 40 MB/s, 100 MB/s, 150 MB/s. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+     * @var integer <p>Instance bandwidth, default value is 40, unit MB/s. minimum value: 20MB/s. advanced edition maximum value: 360MB/s. professional edition maximum value: 100000MB/s. standard version fixed bandwidth specifications: 40MB/s, 100MB/s, 150MB/s. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1</p>.
      */
     public $BandWidth;
 
     /**
-     * @var integer Partition size. if it does not match the console specification ratio, creation will fail. default value is 800, step length is 100. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+     * @var integer <P>Specifies the partition size. if it does not match the console specification ratio, the creation cannot succeed. default value is 800 with a step length of 100. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1</p>.
      */
     public $Partition;
 
     /**
-     * @var array Tag.
+     * @var array <p>Tag.</p>.
      */
     public $Tags;
 
     /**
-     * @var string Specifies the disk type for a pro/advanced edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC".
+     * @var string <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
      */
     public $DiskType;
 
     /**
-     * @var boolean Specifies whether to create a cross-az instance. when the current parameter is true, zoneIds is required.
+     * @var boolean <p>Specifies whether to create a cross-availability zone instance. when the current parameter is true, zoneIds is required.</p>.
      */
     public $MultiZoneFlag;
 
     /**
-     * @var array Availability zone list. required item when purchasing a multi-availability zone instance.
+     * @var array <P>Availability zone list. required item when purchasing multi-availability zone instance.</p>.
      */
     public $ZoneIds;
 
     /**
-     * @var integer Public network bandwidth size, in Mbps. the default is no free 3 Mbps bandwidth. for example, for a total of 3 Mbps public network bandwidth, pass 0 here; for a total of 6 Mbps public network bandwidth, pass 3 here. default value is 0. ensure the input parameter is a multiple of 3.
+     * @var integer <p>Specifies the public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. default value: 0. ensure the input parameter is a multiple of 3.</p>.
      */
     public $PublicNetworkMonthly;
 
     /**
-     * @var integer Number of instances to purchase. optional. default value is 1. when you input this parameter, it enables the creation of multiple instances with case-sensitive suffixes added to instanceName.
+     * @var integer <p>Specifies the number of instances to purchase. optional. default value is 1. when input this parameter, it will create multiple instances with case-sensitive suffixes added to instanceName.</p>.
      */
     public $InstanceNum;
 
     /**
-     * @var integer Whether to automatically select a voucher. valid values: 1 (yes), 0 (no). default is 0.
+     * @var integer <P>Specifies whether to automatically select voucher. valid values: 1-yes; 0-no. default is 0.</p>.
      */
     public $AutoVoucher;
 
     /**
-     * @var integer Elastic bandwidth switch. specifies whether to enable elastic bandwidth. valid values: 0 (not enabled, default), 1 (enabled).
+     * @var integer <P>Elastic bandwidth switch 0 disable 1 enable (0 default).</p>.
      */
     public $ElasticBandwidthSwitch;
 
     /**
-     * @param string $InstanceName Specifies the ckafka cluster instance Name, an arbitrary string with length no more than 128 characters.
-     * @param integer $ZoneId Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. [view availability zones](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1).
-     * @param string $Period Prepaid purchase duration, such as "1m", exactly one month. value ranges from 1m to 36m.
-     * @param integer $InstanceType Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.
-     * @param string $VpcId VPC Id.
-     * @param string $SubnetId Subnet ID
-     * @param integer $MsgRetentionTime Optional. maximum retention time of instance logs, in minutes. default value: 1440 (1 day). value range: 1 minute to 90 days.
-     * @param integer $ClusterId Specifies the cluster Id when creating an instance.
-     * @param integer $RenewFlag Auto-Renewal tag for prepaid services. valid values: 0 (default state, not set by the user, initial status), 1 (auto-renew), 2 (explicitly no auto-renew, set by the user).
-     * @param string $KafkaVersion Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value 2.4.1. 2.4.1 and 2.4.2 belong to the same version. any can be passed.
-     * @param string $SpecificationsType Specifies the instance type. valid values: standard (default), profession, premium.
-     * @param integer $DiskSize Disk size. if it does not match the console specification ratio, the creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
-     * @param integer $BandWidth Instance bandwidth. default value: 40 MB/s. minimum value: 20 MB/s. maximum value for advanced edition: 360 MB/s. maximum value for pro edition: 100000 MB/s. standard version fixed bandwidth specifications: 40 MB/s, 100 MB/s, 150 MB/s. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
-     * @param integer $Partition Partition size. if it does not match the console specification ratio, creation will fail. default value is 800, step length is 100. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
-     * @param array $Tags Tag.
-     * @param string $DiskType Specifies the disk type for a pro/advanced edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC".
-     * @param boolean $MultiZoneFlag Specifies whether to create a cross-az instance. when the current parameter is true, zoneIds is required.
-     * @param array $ZoneIds Availability zone list. required item when purchasing a multi-availability zone instance.
-     * @param integer $PublicNetworkMonthly Public network bandwidth size, in Mbps. the default is no free 3 Mbps bandwidth. for example, for a total of 3 Mbps public network bandwidth, pass 0 here; for a total of 6 Mbps public network bandwidth, pass 3 here. default value is 0. ensure the input parameter is a multiple of 3.
-     * @param integer $InstanceNum Number of instances to purchase. optional. default value is 1. when you input this parameter, it enables the creation of multiple instances with case-sensitive suffixes added to instanceName.
-     * @param integer $AutoVoucher Whether to automatically select a voucher. valid values: 1 (yes), 0 (no). default is 0.
-     * @param integer $ElasticBandwidthSwitch Elastic bandwidth switch. specifies whether to enable elastic bandwidth. valid values: 0 (not enabled, default), 1 (enabled).
+     * @var string <p>Specifies the custom certificate Id. this parameter is valid only when SpecificationsType is profession. supports custom certificate capacity.</p><p>can be obtained through the <a href="https://www.tencentcloud.comom/document/product/400/41673?from_cn_redirect=1">DescribeCertificateDetail</a> api.</p>.
+     */
+    public $CustomSSLCertId;
+
+    /**
+     * @param string $InstanceName <p>Specifies the Name of the ckafka cluster instance, which is any string with a length not more than 128 characters.</p>.
+     * @param integer $ZoneId <P>Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. <a href="https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1">view availability zones</a></p>.
+     * @param string $Period <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
+     * @param integer $InstanceType <P>Specifies the standard edition instance specification for the international site. currently only the standard edition on the international site uses the current field to distinguish specifications, while the domestic site standard edition uses peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.</p>.
+     * @param string $VpcId <p>VPC Id.</p>.
+     * @param string $SubnetId <P>Subnet id.</p>.
+     * @param integer $MsgRetentionTime <P>Optional. specifies the maximum retention time for instance logs, in minutes. default value: 1440 (1 day) when left blank. configurable range: 1 minute to 90 days.</p>.
+     * @param integer $ClusterId <p>Specifies the cluster Id when creating an instance. this parameter indicates the cluster Id.</p>.
+     * @param integer $RenewFlag <P>Auto-Renewal tag for prepaid services. 0 means default state (not set by the user, i.e. initial state), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user).</p>.
+     * @param string $KafkaVersion <p>Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value is 2.4.1. 2.4.1 and 2.4.2 belong to the same version, any one can be passed.</p>.
+     * @param string $SpecificationsType <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
+     * @param integer $DiskSize <P>Disk size. if it does not match the console specification ratio, creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link to view billing specifications: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1</p>.
+     * @param integer $BandWidth <p>Instance bandwidth, default value is 40, unit MB/s. minimum value: 20MB/s. advanced edition maximum value: 360MB/s. professional edition maximum value: 100000MB/s. standard version fixed bandwidth specifications: 40MB/s, 100MB/s, 150MB/s. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1</p>.
+     * @param integer $Partition <P>Specifies the partition size. if it does not match the console specification ratio, the creation cannot succeed. default value is 800 with a step length of 100. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1</p>.
+     * @param array $Tags <p>Tag.</p>.
+     * @param string $DiskType <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+     * @param boolean $MultiZoneFlag <p>Specifies whether to create a cross-availability zone instance. when the current parameter is true, zoneIds is required.</p>.
+     * @param array $ZoneIds <P>Availability zone list. required item when purchasing multi-availability zone instance.</p>.
+     * @param integer $PublicNetworkMonthly <p>Specifies the public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. default value: 0. ensure the input parameter is a multiple of 3.</p>.
+     * @param integer $InstanceNum <p>Specifies the number of instances to purchase. optional. default value is 1. when input this parameter, it will create multiple instances with case-sensitive suffixes added to instanceName.</p>.
+     * @param integer $AutoVoucher <P>Specifies whether to automatically select voucher. valid values: 1-yes; 0-no. default is 0.</p>.
+     * @param integer $ElasticBandwidthSwitch <P>Elastic bandwidth switch 0 disable 1 enable (0 default).</p>.
+     * @param string $CustomSSLCertId <p>Specifies the custom certificate Id. this parameter is valid only when SpecificationsType is profession. supports custom certificate capacity.</p><p>can be obtained through the <a href="https://www.tencentcloud.comom/document/product/400/41673?from_cn_redirect=1">DescribeCertificateDetail</a> api.</p>.
      */
     function __construct()
     {
@@ -305,6 +313,10 @@ class CreateInstancePreRequest extends AbstractModel
 
         if (array_key_exists("ElasticBandwidthSwitch",$param) and $param["ElasticBandwidthSwitch"] !== null) {
             $this->ElasticBandwidthSwitch = $param["ElasticBandwidthSwitch"];
+        }
+
+        if (array_key_exists("CustomSSLCertId",$param) and $param["CustomSSLCertId"] !== null) {
+            $this->CustomSSLCertId = $param["CustomSSLCertId"];
         }
     }
 }

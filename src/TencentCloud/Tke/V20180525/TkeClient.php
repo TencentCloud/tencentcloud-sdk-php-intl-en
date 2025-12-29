@@ -90,6 +90,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeClusterVirtualNodeResponse DescribeClusterVirtualNode(Models\DescribeClusterVirtualNodeRequest $req) This API is used to view the Super Node list.
  * @method Models\DescribeClusterVirtualNodePoolsResponse DescribeClusterVirtualNodePools(Models\DescribeClusterVirtualNodePoolsRequest $req) This API is used to view the Super Node Pool list.
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) This API is used to query clusters list.
+ * @method Models\DescribeControlPlaneLogsResponse DescribeControlPlaneLogs(Models\DescribeControlPlaneLogsRequest $req) This API is used to query plug-in log collection settings.
  * @method Models\DescribeECMInstancesResponse DescribeECMInstances(Models\DescribeECMInstancesRequest $req) This API is used to obtain the ECM instance information.
  * @method Models\DescribeEdgeAvailableExtraArgsResponse DescribeEdgeAvailableExtraArgs(Models\DescribeEdgeAvailableExtraArgsRequest $req) This API is used to query the custom parameters available for an edge cluster.
  * @method Models\DescribeEdgeCVMInstancesResponse DescribeEdgeCVMInstances(Models\DescribeEdgeCVMInstancesRequest $req) This API is used to obtain the edge CVM instance information.
@@ -120,9 +121,11 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeVersionsResponse DescribeVersions(Models\DescribeVersionsRequest $req) This API is used to query cluster version information.
  * @method Models\DescribeVpcCniPodLimitsResponse DescribeVpcCniPodLimits(Models\DescribeVpcCniPodLimitsRequest $req) This API is used to query the maximum number of Pods in the VPC-CNI network mode supported by the models in the specified availability zone of the current user and region.
  * @method Models\DisableClusterDeletionProtectionResponse DisableClusterDeletionProtection(Models\DisableClusterDeletionProtectionRequest $req) This API is used to disable cluster deletion protection.
+ * @method Models\DisableControlPlaneLogsResponse DisableControlPlaneLogs(Models\DisableControlPlaneLogsRequest $req) This API is used to delete the log collection configuration of a plugin.
  * @method Models\DisableEncryptionProtectionResponse DisableEncryptionProtection(Models\DisableEncryptionProtectionRequest $req) This API is used to disable encryption protection.
  * @method Models\DrainClusterVirtualNodeResponse DrainClusterVirtualNode(Models\DrainClusterVirtualNodeRequest $req) This API is used to evict the Super Node.
  * @method Models\EnableClusterDeletionProtectionResponse EnableClusterDeletionProtection(Models\EnableClusterDeletionProtectionRequest $req) This API is used to enable cluster deletion protection.
+ * @method Models\EnableControlPlaneLogsResponse EnableControlPlaneLogs(Models\EnableControlPlaneLogsRequest $req) This API is used to create log collection settings for plugins.
  * @method Models\EnableEncryptionProtectionResponse EnableEncryptionProtection(Models\EnableEncryptionProtectionRequest $req) This API is used to enable Encrypted Data Protection, which requires enabling KMS capability and completing KMS authorization.
  * @method Models\EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkType(Models\EnableVpcCniNetworkTypeRequest $req) This API is used to enable the VPC-CNI network mode for GR clusters.
  * @method Models\ForwardTKEEdgeApplicationRequestV3Response ForwardTKEEdgeApplicationRequestV3(Models\ForwardTKEEdgeApplicationRequestV3Request $req) This API is used to work with the add-ons of a TKE Edge cluster.

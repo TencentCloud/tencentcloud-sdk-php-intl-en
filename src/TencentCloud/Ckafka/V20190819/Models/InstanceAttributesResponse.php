@@ -20,454 +20,378 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Returned result object of instance attributes
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
- * @method string getInstanceName() Obtain Specifies the Name of the ckafka cluster instance.
- * @method void setInstanceName(string $InstanceName) Set Specifies the Name of the ckafka cluster instance.
- * @method array getVipList() Obtain VIP list information of access point
- * @method void setVipList(array $VipList) Set VIP list information of access point
- * @method string getVip() Obtain Virtual IP
- * @method void setVip(string $Vip) Set Virtual IP
- * @method string getVport() Obtain Virtual port
- * @method void setVport(string $Vport) Set Virtual port
- * @method integer getStatus() Obtain Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
- * @method void setStatus(integer $Status) Set Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
- * @method integer getBandwidth() Obtain Instance bandwidth in Mbps
- * @method void setBandwidth(integer $Bandwidth) Set Instance bandwidth in Mbps
- * @method integer getDiskSize() Obtain Instance storage capacity in GB
- * @method void setDiskSize(integer $DiskSize) Set Instance storage capacity in GB
- * @method integer getZoneId() Obtain AZ
- * @method void setZoneId(integer $ZoneId) Set AZ
- * @method string getVpcId() Obtain VPC ID. If this parameter is empty, it means the basic network
- * @method void setVpcId(string $VpcId) Set VPC ID. If this parameter is empty, it means the basic network
- * @method string getSubnetId() Obtain Subnet ID. If this parameter is empty, it means the basic network
- * @method void setSubnetId(string $SubnetId) Set Subnet ID. If this parameter is empty, it means the basic network
- * @method integer getHealthy() Obtain Instance health status. 1: healthy, 2: alarmed, 3: exceptional
- * @method void setHealthy(integer $Healthy) Set Instance health status. 1: healthy, 2: alarmed, 3: exceptional
- * @method string getHealthyMessage() Obtain Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
- * @method void setHealthyMessage(string $HealthyMessage) Set Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
- * @method integer getCreateTime() Obtain Creation time
- * @method void setCreateTime(integer $CreateTime) Set Creation time
- * @method integer getMsgRetentionTime() Obtain Message retention period in minutes
- * @method void setMsgRetentionTime(integer $MsgRetentionTime) Set Message retention period in minutes
- * @method InstanceConfigDO getConfig() Obtain Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
- * @method void setConfig(InstanceConfigDO $Config) Set Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
- * @method integer getRemainderPartitions() Obtain Number of remaining creatable partitions
- * @method void setRemainderPartitions(integer $RemainderPartitions) Set Number of remaining creatable partitions
- * @method integer getRemainderTopics() Obtain Number of remaining creatable topics
- * @method void setRemainderTopics(integer $RemainderTopics) Set Number of remaining creatable topics
- * @method integer getCreatedPartitions() Obtain Number of partitions already created
- * @method void setCreatedPartitions(integer $CreatedPartitions) Set Number of partitions already created
- * @method integer getCreatedTopics() Obtain Number of topics already created
- * @method void setCreatedTopics(integer $CreatedTopics) Set Number of topics already created
- * @method array getTags() Obtain Tag array
- * @method void setTags(array $Tags) Set Tag array
- * @method integer getExpireTime() Obtain Expiration time
- * @method void setExpireTime(integer $ExpireTime) Set Expiration time
- * @method array getZoneIds() Obtain Availability Zone List
- * @method void setZoneIds(array $ZoneIds) Set Availability Zone List
- * @method string getVersion() Obtain Specifies the ckafka cluster instance version.
- * @method void setVersion(string $Version) Set Specifies the ckafka cluster instance version.
- * @method integer getMaxGroupNum() Obtain Maximum number of groups.
- * @method void setMaxGroupNum(integer $MaxGroupNum) Set Maximum number of groups.
- * @method integer getCvm() Obtain Sale type. valid values: 0 (standard version), 1 (pro edition).
- * @method void setCvm(integer $Cvm) Set Sale type. valid values: 0 (standard version), 1 (pro edition).
- * @method string getInstanceType() Obtain Instance type. valid values:. 
-Specifies the pro edition.    
-Standard version.
-premium. specifies the advanced edition.
-Specifies the serverless version.
- * @method void setInstanceType(string $InstanceType) Set Instance type. valid values:. 
-Specifies the pro edition.    
-Standard version.
-premium. specifies the advanced edition.
-Specifies the serverless version.
- * @method array getFeatures() Obtain Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
- * @method void setFeatures(array $Features) Set Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
- * @method DynamicRetentionTime getRetentionTimeConfig() Obtain Dynamic message retention policy.
- * @method void setRetentionTimeConfig(DynamicRetentionTime $RetentionTimeConfig) Set Dynamic message retention policy.
- * @method integer getMaxConnection() Obtain Maximum number of connections.
- * @method void setMaxConnection(integer $MaxConnection) Set Maximum number of connections.
- * @method integer getPublicNetwork() Obtain Public network bandwidth
- * @method void setPublicNetwork(integer $PublicNetwork) Set Public network bandwidth
- * @method string getDeleteRouteTimestamp() Obtain Specifies the deprecated field with no actual meaning.
- * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) Set Specifies the deprecated field with no actual meaning.
- * @method integer getRemainingPartitions() Obtain Number of remaining creatable partitions.
- * @method void setRemainingPartitions(integer $RemainingPartitions) Set Number of remaining creatable partitions.
- * @method integer getRemainingTopics() Obtain Number of remaining creatable topics.
- * @method void setRemainingTopics(integer $RemainingTopics) Set Number of remaining creatable topics.
- * @method DynamicDiskConfig getDynamicDiskConfig() Obtain Scaling policy for dynamic disk.
- * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) Set Scaling policy for dynamic disk.
- * @method string getSystemMaintenanceTime() Obtain Specifies the system maintenance time.
- * @method void setSystemMaintenanceTime(string $SystemMaintenanceTime) Set Specifies the system maintenance time.
- * @method integer getMaxMessageByte() Obtain Specifies the maximum size of messages at the instance level.
- * @method void setMaxMessageByte(integer $MaxMessageByte) Set Specifies the maximum size of messages at the instance level.
- * @method string getInstanceChargeType() Obtain Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
- * @method integer getElasticBandwidthSwitch() Obtain Whether to enable the elastic bandwidth allowlist.   
-Indicates the allowlist feature with elastic bandwidth enabled.
-0: elastic bandwidth allowlist feature is disabled.
- * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) Set Whether to enable the elastic bandwidth allowlist.   
-Indicates the allowlist feature with elastic bandwidth enabled.
-0: elastic bandwidth allowlist feature is disabled.
- * @method integer getElasticBandwidthOpenStatus() Obtain Indicates the elastic bandwidth activation status.
-1: indicates elastic bandwidth is disabled.
-Enable elastic bandwidth.
-Enable elastic bandwidth successfully.
-33: disabling elastic bandwidth.
-Indicates that the elastic bandwidth is successfully disabled.
-Enable elastic bandwidth failed.
-Bandwidth failure.
- * @method void setElasticBandwidthOpenStatus(integer $ElasticBandwidthOpenStatus) Set Indicates the elastic bandwidth activation status.
-1: indicates elastic bandwidth is disabled.
-Enable elastic bandwidth.
-Enable elastic bandwidth successfully.
-33: disabling elastic bandwidth.
-Indicates that the elastic bandwidth is successfully disabled.
-Enable elastic bandwidth failed.
-Bandwidth failure.
- * @method string getClusterType() Obtain Cluster type.  
-CLOUD_IDC idc cluster.
-CLOUD_CVM_SHARE shared cluster.
-CLOUD_CVM_YUNTI yunti cvm cluster.
-CLOUD_CVM. specifies the cvm cluster.
-CLOUD_CDC cdc cluster.
-CLOUD_EKS_TSE eks cluster.
- * @method void setClusterType(string $ClusterType) Set Cluster type.  
-CLOUD_IDC idc cluster.
-CLOUD_CVM_SHARE shared cluster.
-CLOUD_CVM_YUNTI yunti cvm cluster.
-CLOUD_CVM. specifies the cvm cluster.
-CLOUD_CDC cdc cluster.
-CLOUD_EKS_TSE eks cluster.
- * @method integer getFreePartitionNumber() Obtain Number of free partitions.
- * @method void setFreePartitionNumber(integer $FreePartitionNumber) Set Number of free partitions.
- * @method integer getElasticFloatBandwidth() Obtain Specifies the elastic bandwidth upper limit.
- * @method void setElasticFloatBandwidth(integer $ElasticFloatBandwidth) Set Specifies the elastic bandwidth upper limit.
- * @method string getCustomCertId() Obtain ssl custom certificate id. only returned for instance clusters with custom certificates.
- * @method void setCustomCertId(string $CustomCertId) Set ssl custom certificate id. only returned for instance clusters with custom certificates.
- * @method integer getUncleanLeaderElectionEnable() Obtain Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
- * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
- * @method integer getDeleteProtectionEnable() Obtain Instance deletion protection switch. 1: enabled; 0: disabled.
- * @method void setDeleteProtectionEnable(integer $DeleteProtectionEnable) Set Instance deletion protection switch. 1: enabled; 0: disabled.
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id.</p>.
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id.</p>.
+ * @method string getInstanceName() Obtain <p>Specifies the Name of the ckafka cluster instance.</p>.
+ * @method void setInstanceName(string $InstanceName) Set <p>Specifies the Name of the ckafka cluster instance.</p>.
+ * @method array getVipList() Obtain <p>Access point VIP list information.</p>.
+ * @method void setVipList(array $VipList) Set <p>Access point VIP list information.</p>.
+ * @method string getVip() Obtain <p>Virtual IP.</p>.
+ * @method void setVip(string $Vip) Set <p>Virtual IP.</p>.
+ * @method string getVport() Obtain <P>Virtual port.</p>.
+ * @method void setVport(string $Vport) Set <P>Virtual port.</p>.
+ * @method integer getStatus() Obtain <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+ * @method void setStatus(integer $Status) Set <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+ * @method integer getBandwidth() Obtain <p>Instance bandwidth (unit: Mbps).</p>.
+ * @method void setBandwidth(integer $Bandwidth) Set <p>Instance bandwidth (unit: Mbps).</p>.
+ * @method integer getDiskSize() Obtain <p>Specifies the instance storage size in GB.</p>.
+ * @method void setDiskSize(integer $DiskSize) Set <p>Specifies the instance storage size in GB.</p>.
+ * @method integer getZoneId() Obtain <P>Specifies the availability zone.</p>.
+ * @method void setZoneId(integer $ZoneId) Set <P>Specifies the availability zone.</p>.
+ * @method string getVpcId() Obtain <p>VPC ID. being empty indicates a basic network.</p>.
+ * @method void setVpcId(string $VpcId) Set <p>VPC ID. being empty indicates a basic network.</p>.
+ * @method string getSubnetId() Obtain <p>Specifies the subnet ID. being empty indicates the basic network.</p>.
+ * @method void setSubnetId(string $SubnetId) Set <p>Specifies the subnet ID. being empty indicates the basic network.</p>.
+ * @method integer getHealthy() Obtain <P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>.
+ * @method void setHealthy(integer $Healthy) Set <P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>.
+ * @method string getHealthyMessage() Obtain <P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>.
+ * @method void setHealthyMessage(string $HealthyMessage) Set <P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>.
+ * @method integer getCreateTime() Obtain <P>Creation time.</p>.
+ * @method void setCreateTime(integer $CreateTime) Set <P>Creation time.</p>.
+ * @method integer getMsgRetentionTime() Obtain <P>Message retention period, in minutes.</p>.
+ * @method void setMsgRetentionTime(integer $MsgRetentionTime) Set <P>Message retention period, in minutes.</p>.
+ * @method InstanceConfigDO getConfig() Obtain <p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>.
+ * @method void setConfig(InstanceConfigDO $Config) Set <p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>.
+ * @method integer getRemainderPartitions() Obtain <P>Number of remaining creatable partitions.</p>.
+ * @method void setRemainderPartitions(integer $RemainderPartitions) Set <P>Number of remaining creatable partitions.</p>.
+ * @method integer getRemainderTopics() Obtain <P>Number of remaining creatable topics.</p>.
+ * @method void setRemainderTopics(integer $RemainderTopics) Set <P>Number of remaining creatable topics.</p>.
+ * @method integer getCreatedPartitions() Obtain <P>Specifies the current number of partitions created.</p>.
+ * @method void setCreatedPartitions(integer $CreatedPartitions) Set <P>Specifies the current number of partitions created.</p>.
+ * @method integer getCreatedTopics() Obtain <P>Specifies the current number of topics created.</p>.
+ * @method void setCreatedTopics(integer $CreatedTopics) Set <P>Specifies the current number of topics created.</p>.
+ * @method array getTags() Obtain <P>Tag array.</p>.
+ * @method void setTags(array $Tags) Set <P>Tag array.</p>.
+ * @method integer getExpireTime() Obtain <P>Specifies the expiration time.</p>.
+ * @method void setExpireTime(integer $ExpireTime) Set <P>Specifies the expiration time.</p>.
+ * @method array getZoneIds() Obtain <P>Specifies the availability zone list.</p>.
+ * @method void setZoneIds(array $ZoneIds) Set <P>Specifies the availability zone list.</p>.
+ * @method string getVersion() Obtain <P>Specifies the ckafka cluster instance version.</p>.
+ * @method void setVersion(string $Version) Set <P>Specifies the ckafka cluster instance version.</p>.
+ * @method integer getMaxGroupNum() Obtain <P>Specifies the maximum number of groups.</p>.
+ * @method void setMaxGroupNum(integer $MaxGroupNum) Set <P>Specifies the maximum number of groups.</p>.
+ * @method integer getCvm() Obtain <P>Sale type. 0: standard version; 1: pro edition.</p>.
+ * @method void setCvm(integer $Cvm) Set <P>Sale type. 0: standard version; 1: pro edition.</p>.
+ * @method string getInstanceType() Obtain <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+ * @method void setInstanceType(string $InstanceType) Set <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+ * @method array getFeatures() Obtain <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
+ * @method void setFeatures(array $Features) Set <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
+ * @method DynamicRetentionTime getRetentionTimeConfig() Obtain <P>Dynamic message retention policy.</p>.
+ * @method void setRetentionTimeConfig(DynamicRetentionTime $RetentionTimeConfig) Set <P>Dynamic message retention policy.</p>.
+ * @method integer getMaxConnection() Obtain <P>Maximum number of connections.</p>.
+ * @method void setMaxConnection(integer $MaxConnection) Set <P>Maximum number of connections.</p>.
+ * @method integer getPublicNetwork() Obtain <P>Public network bandwidth.</p>.
+ * @method void setPublicNetwork(integer $PublicNetwork) Set <P>Public network bandwidth.</p>.
+ * @method string getDeleteRouteTimestamp() Obtain <P>Deprecated. no actual meaning.</p>.
+ * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) Set <P>Deprecated. no actual meaning.</p>.
+ * @method integer getRemainingPartitions() Obtain <P>Number of remaining creatable partitions.</p>.
+ * @method void setRemainingPartitions(integer $RemainingPartitions) Set <P>Number of remaining creatable partitions.</p>.
+ * @method integer getRemainingTopics() Obtain <P>Number of remaining creatable topics.</p>.
+ * @method void setRemainingTopics(integer $RemainingTopics) Set <P>Number of remaining creatable topics.</p>.
+ * @method DynamicDiskConfig getDynamicDiskConfig() Obtain <P>Dynamic disk expansion policy.</p>.
+ * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) Set <P>Dynamic disk expansion policy.</p>.
+ * @method string getSystemMaintenanceTime() Obtain <P>Specifies the system maintenance time.</p>.
+ * @method void setSystemMaintenanceTime(string $SystemMaintenanceTime) Set <P>Specifies the system maintenance time.</p>.
+ * @method integer getMaxMessageByte() Obtain <P>Specifies the maximum size of instance level messages.</p>.
+ * @method void setMaxMessageByte(integer $MaxMessageByte) Set <P>Specifies the maximum size of instance level messages.</p>.
+ * @method string getInstanceChargeType() Obtain <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+ * @method integer getElasticBandwidthSwitch() Obtain <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
+ * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) Set <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
+ * @method integer getElasticBandwidthOpenStatus() Obtain <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
+ * @method void setElasticBandwidthOpenStatus(integer $ElasticBandwidthOpenStatus) Set <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
+ * @method string getClusterType() Obtain <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+ * @method void setClusterType(string $ClusterType) Set <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+ * @method integer getFreePartitionNumber() Obtain <P>Specifies the number of free partitions.</p>.
+ * @method void setFreePartitionNumber(integer $FreePartitionNumber) Set <P>Specifies the number of free partitions.</p>.
+ * @method integer getElasticFloatBandwidth() Obtain <P>Specifies the elastic bandwidth upper limit.</p>.
+ * @method void setElasticFloatBandwidth(integer $ElasticFloatBandwidth) Set <P>Specifies the elastic bandwidth upper limit.</p>.
+ * @method string getCustomCertId() Obtain <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
+ * @method void setCustomCertId(string $CustomCertId) Set <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
+ * @method integer getUncleanLeaderElectionEnable() Obtain <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
+ * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
+ * @method integer getDeleteProtectionEnable() Obtain <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
+ * @method void setDeleteProtectionEnable(integer $DeleteProtectionEnable) Set <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
  */
 class InstanceAttributesResponse extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id.
+     * @var string <p>ckafka cluster instance Id.</p>.
      */
     public $InstanceId;
 
     /**
-     * @var string Specifies the Name of the ckafka cluster instance.
+     * @var string <p>Specifies the Name of the ckafka cluster instance.</p>.
      */
     public $InstanceName;
 
     /**
-     * @var array VIP list information of access point
+     * @var array <p>Access point VIP list information.</p>.
      */
     public $VipList;
 
     /**
-     * @var string Virtual IP
+     * @var string <p>Virtual IP.</p>.
      */
     public $Vip;
 
     /**
-     * @var string Virtual port
+     * @var string <P>Virtual port.</p>.
      */
     public $Vport;
 
     /**
-     * @var integer Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+     * @var integer <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
      */
     public $Status;
 
     /**
-     * @var integer Instance bandwidth in Mbps
+     * @var integer <p>Instance bandwidth (unit: Mbps).</p>.
      */
     public $Bandwidth;
 
     /**
-     * @var integer Instance storage capacity in GB
+     * @var integer <p>Specifies the instance storage size in GB.</p>.
      */
     public $DiskSize;
 
     /**
-     * @var integer AZ
+     * @var integer <P>Specifies the availability zone.</p>.
      */
     public $ZoneId;
 
     /**
-     * @var string VPC ID. If this parameter is empty, it means the basic network
+     * @var string <p>VPC ID. being empty indicates a basic network.</p>.
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID. If this parameter is empty, it means the basic network
+     * @var string <p>Specifies the subnet ID. being empty indicates the basic network.</p>.
      */
     public $SubnetId;
 
     /**
-     * @var integer Instance health status. 1: healthy, 2: alarmed, 3: exceptional
+     * @var integer <P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>.
      */
     public $Healthy;
 
     /**
-     * @var string Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
+     * @var string <P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>.
      */
     public $HealthyMessage;
 
     /**
-     * @var integer Creation time
+     * @var integer <P>Creation time.</p>.
      */
     public $CreateTime;
 
     /**
-     * @var integer Message retention period in minutes
+     * @var integer <P>Message retention period, in minutes.</p>.
      */
     public $MsgRetentionTime;
 
     /**
-     * @var InstanceConfigDO Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
+     * @var InstanceConfigDO <p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>.
      */
     public $Config;
 
     /**
-     * @var integer Number of remaining creatable partitions
+     * @var integer <P>Number of remaining creatable partitions.</p>.
      */
     public $RemainderPartitions;
 
     /**
-     * @var integer Number of remaining creatable topics
+     * @var integer <P>Number of remaining creatable topics.</p>.
      */
     public $RemainderTopics;
 
     /**
-     * @var integer Number of partitions already created
+     * @var integer <P>Specifies the current number of partitions created.</p>.
      */
     public $CreatedPartitions;
 
     /**
-     * @var integer Number of topics already created
+     * @var integer <P>Specifies the current number of topics created.</p>.
      */
     public $CreatedTopics;
 
     /**
-     * @var array Tag array
+     * @var array <P>Tag array.</p>.
      */
     public $Tags;
 
     /**
-     * @var integer Expiration time
+     * @var integer <P>Specifies the expiration time.</p>.
      */
     public $ExpireTime;
 
     /**
-     * @var array Availability Zone List
+     * @var array <P>Specifies the availability zone list.</p>.
      */
     public $ZoneIds;
 
     /**
-     * @var string Specifies the ckafka cluster instance version.
+     * @var string <P>Specifies the ckafka cluster instance version.</p>.
      */
     public $Version;
 
     /**
-     * @var integer Maximum number of groups.
+     * @var integer <P>Specifies the maximum number of groups.</p>.
      */
     public $MaxGroupNum;
 
     /**
-     * @var integer Sale type. valid values: 0 (standard version), 1 (pro edition).
+     * @var integer <P>Sale type. 0: standard version; 1: pro edition.</p>.
      */
     public $Cvm;
 
     /**
-     * @var string Instance type. valid values:. 
-Specifies the pro edition.    
-Standard version.
-premium. specifies the advanced edition.
-Specifies the serverless version.
+     * @var string <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
      */
     public $InstanceType;
 
     /**
-     * @var array Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
+     * @var array <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
      */
     public $Features;
 
     /**
-     * @var DynamicRetentionTime Dynamic message retention policy.
+     * @var DynamicRetentionTime <P>Dynamic message retention policy.</p>.
      */
     public $RetentionTimeConfig;
 
     /**
-     * @var integer Maximum number of connections.
+     * @var integer <P>Maximum number of connections.</p>.
      */
     public $MaxConnection;
 
     /**
-     * @var integer Public network bandwidth
+     * @var integer <P>Public network bandwidth.</p>.
      */
     public $PublicNetwork;
 
     /**
-     * @var string Specifies the deprecated field with no actual meaning.
+     * @var string <P>Deprecated. no actual meaning.</p>.
      */
     public $DeleteRouteTimestamp;
 
     /**
-     * @var integer Number of remaining creatable partitions.
+     * @var integer <P>Number of remaining creatable partitions.</p>.
      */
     public $RemainingPartitions;
 
     /**
-     * @var integer Number of remaining creatable topics.
+     * @var integer <P>Number of remaining creatable topics.</p>.
      */
     public $RemainingTopics;
 
     /**
-     * @var DynamicDiskConfig Scaling policy for dynamic disk.
+     * @var DynamicDiskConfig <P>Dynamic disk expansion policy.</p>.
      */
     public $DynamicDiskConfig;
 
     /**
-     * @var string Specifies the system maintenance time.
+     * @var string <P>Specifies the system maintenance time.</p>.
      */
     public $SystemMaintenanceTime;
 
     /**
-     * @var integer Specifies the maximum size of messages at the instance level.
+     * @var integer <P>Specifies the maximum size of instance level messages.</p>.
      */
     public $MaxMessageByte;
 
     /**
-     * @var string Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+     * @var string <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
      */
     public $InstanceChargeType;
 
     /**
-     * @var integer Whether to enable the elastic bandwidth allowlist.   
-Indicates the allowlist feature with elastic bandwidth enabled.
-0: elastic bandwidth allowlist feature is disabled.
+     * @var integer <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
      */
     public $ElasticBandwidthSwitch;
 
     /**
-     * @var integer Indicates the elastic bandwidth activation status.
-1: indicates elastic bandwidth is disabled.
-Enable elastic bandwidth.
-Enable elastic bandwidth successfully.
-33: disabling elastic bandwidth.
-Indicates that the elastic bandwidth is successfully disabled.
-Enable elastic bandwidth failed.
-Bandwidth failure.
+     * @var integer <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
      */
     public $ElasticBandwidthOpenStatus;
 
     /**
-     * @var string Cluster type.  
-CLOUD_IDC idc cluster.
-CLOUD_CVM_SHARE shared cluster.
-CLOUD_CVM_YUNTI yunti cvm cluster.
-CLOUD_CVM. specifies the cvm cluster.
-CLOUD_CDC cdc cluster.
-CLOUD_EKS_TSE eks cluster.
+     * @var string <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
      */
     public $ClusterType;
 
     /**
-     * @var integer Number of free partitions.
+     * @var integer <P>Specifies the number of free partitions.</p>.
      */
     public $FreePartitionNumber;
 
     /**
-     * @var integer Specifies the elastic bandwidth upper limit.
+     * @var integer <P>Specifies the elastic bandwidth upper limit.</p>.
      */
     public $ElasticFloatBandwidth;
 
     /**
-     * @var string ssl custom certificate id. only returned for instance clusters with custom certificates.
+     * @var string <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
      */
     public $CustomCertId;
 
     /**
-     * @var integer Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+     * @var integer <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
      */
     public $UncleanLeaderElectionEnable;
 
     /**
-     * @var integer Instance deletion protection switch. 1: enabled; 0: disabled.
+     * @var integer <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
      */
     public $DeleteProtectionEnable;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id.
-     * @param string $InstanceName Specifies the Name of the ckafka cluster instance.
-     * @param array $VipList VIP list information of access point
-     * @param string $Vip Virtual IP
-     * @param string $Vport Virtual port
-     * @param integer $Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
-     * @param integer $Bandwidth Instance bandwidth in Mbps
-     * @param integer $DiskSize Instance storage capacity in GB
-     * @param integer $ZoneId AZ
-     * @param string $VpcId VPC ID. If this parameter is empty, it means the basic network
-     * @param string $SubnetId Subnet ID. If this parameter is empty, it means the basic network
-     * @param integer $Healthy Instance health status. 1: healthy, 2: alarmed, 3: exceptional
-     * @param string $HealthyMessage Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
-     * @param integer $CreateTime Creation time
-     * @param integer $MsgRetentionTime Message retention period in minutes
-     * @param InstanceConfigDO $Config Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
-     * @param integer $RemainderPartitions Number of remaining creatable partitions
-     * @param integer $RemainderTopics Number of remaining creatable topics
-     * @param integer $CreatedPartitions Number of partitions already created
-     * @param integer $CreatedTopics Number of topics already created
-     * @param array $Tags Tag array
-     * @param integer $ExpireTime Expiration time
-     * @param array $ZoneIds Availability Zone List
-     * @param string $Version Specifies the ckafka cluster instance version.
-     * @param integer $MaxGroupNum Maximum number of groups.
-     * @param integer $Cvm Sale type. valid values: 0 (standard version), 1 (pro edition).
-     * @param string $InstanceType Instance type. valid values:. 
-Specifies the pro edition.    
-Standard version.
-premium. specifies the advanced edition.
-Specifies the serverless version.
-     * @param array $Features Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
-     * @param DynamicRetentionTime $RetentionTimeConfig Dynamic message retention policy.
-     * @param integer $MaxConnection Maximum number of connections.
-     * @param integer $PublicNetwork Public network bandwidth
-     * @param string $DeleteRouteTimestamp Specifies the deprecated field with no actual meaning.
-     * @param integer $RemainingPartitions Number of remaining creatable partitions.
-     * @param integer $RemainingTopics Number of remaining creatable topics.
-     * @param DynamicDiskConfig $DynamicDiskConfig Scaling policy for dynamic disk.
-     * @param string $SystemMaintenanceTime Specifies the system maintenance time.
-     * @param integer $MaxMessageByte Specifies the maximum size of messages at the instance level.
-     * @param string $InstanceChargeType Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
-     * @param integer $ElasticBandwidthSwitch Whether to enable the elastic bandwidth allowlist.   
-Indicates the allowlist feature with elastic bandwidth enabled.
-0: elastic bandwidth allowlist feature is disabled.
-     * @param integer $ElasticBandwidthOpenStatus Indicates the elastic bandwidth activation status.
-1: indicates elastic bandwidth is disabled.
-Enable elastic bandwidth.
-Enable elastic bandwidth successfully.
-33: disabling elastic bandwidth.
-Indicates that the elastic bandwidth is successfully disabled.
-Enable elastic bandwidth failed.
-Bandwidth failure.
-     * @param string $ClusterType Cluster type.  
-CLOUD_IDC idc cluster.
-CLOUD_CVM_SHARE shared cluster.
-CLOUD_CVM_YUNTI yunti cvm cluster.
-CLOUD_CVM. specifies the cvm cluster.
-CLOUD_CDC cdc cluster.
-CLOUD_EKS_TSE eks cluster.
-     * @param integer $FreePartitionNumber Number of free partitions.
-     * @param integer $ElasticFloatBandwidth Specifies the elastic bandwidth upper limit.
-     * @param string $CustomCertId ssl custom certificate id. only returned for instance clusters with custom certificates.
-     * @param integer $UncleanLeaderElectionEnable Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
-     * @param integer $DeleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
+     * @param string $InstanceId <p>ckafka cluster instance Id.</p>.
+     * @param string $InstanceName <p>Specifies the Name of the ckafka cluster instance.</p>.
+     * @param array $VipList <p>Access point VIP list information.</p>.
+     * @param string $Vip <p>Virtual IP.</p>.
+     * @param string $Vport <P>Virtual port.</p>.
+     * @param integer $Status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+     * @param integer $Bandwidth <p>Instance bandwidth (unit: Mbps).</p>.
+     * @param integer $DiskSize <p>Specifies the instance storage size in GB.</p>.
+     * @param integer $ZoneId <P>Specifies the availability zone.</p>.
+     * @param string $VpcId <p>VPC ID. being empty indicates a basic network.</p>.
+     * @param string $SubnetId <p>Specifies the subnet ID. being empty indicates the basic network.</p>.
+     * @param integer $Healthy <P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>.
+     * @param string $HealthyMessage <P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>.
+     * @param integer $CreateTime <P>Creation time.</p>.
+     * @param integer $MsgRetentionTime <P>Message retention period, in minutes.</p>.
+     * @param InstanceConfigDO $Config <p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>.
+     * @param integer $RemainderPartitions <P>Number of remaining creatable partitions.</p>.
+     * @param integer $RemainderTopics <P>Number of remaining creatable topics.</p>.
+     * @param integer $CreatedPartitions <P>Specifies the current number of partitions created.</p>.
+     * @param integer $CreatedTopics <P>Specifies the current number of topics created.</p>.
+     * @param array $Tags <P>Tag array.</p>.
+     * @param integer $ExpireTime <P>Specifies the expiration time.</p>.
+     * @param array $ZoneIds <P>Specifies the availability zone list.</p>.
+     * @param string $Version <P>Specifies the ckafka cluster instance version.</p>.
+     * @param integer $MaxGroupNum <P>Specifies the maximum number of groups.</p>.
+     * @param integer $Cvm <P>Sale type. 0: standard version; 1: pro edition.</p>.
+     * @param string $InstanceType <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+     * @param array $Features <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
+     * @param DynamicRetentionTime $RetentionTimeConfig <P>Dynamic message retention policy.</p>.
+     * @param integer $MaxConnection <P>Maximum number of connections.</p>.
+     * @param integer $PublicNetwork <P>Public network bandwidth.</p>.
+     * @param string $DeleteRouteTimestamp <P>Deprecated. no actual meaning.</p>.
+     * @param integer $RemainingPartitions <P>Number of remaining creatable partitions.</p>.
+     * @param integer $RemainingTopics <P>Number of remaining creatable topics.</p>.
+     * @param DynamicDiskConfig $DynamicDiskConfig <P>Dynamic disk expansion policy.</p>.
+     * @param string $SystemMaintenanceTime <P>Specifies the system maintenance time.</p>.
+     * @param integer $MaxMessageByte <P>Specifies the maximum size of instance level messages.</p>.
+     * @param string $InstanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+     * @param integer $ElasticBandwidthSwitch <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
+     * @param integer $ElasticBandwidthOpenStatus <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
+     * @param string $ClusterType <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+     * @param integer $FreePartitionNumber <P>Specifies the number of free partitions.</p>.
+     * @param integer $ElasticFloatBandwidth <P>Specifies the elastic bandwidth upper limit.</p>.
+     * @param string $CustomCertId <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
+     * @param integer $UncleanLeaderElectionEnable <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
+     * @param integer $DeleteProtectionEnable <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
      */
     function __construct()
     {

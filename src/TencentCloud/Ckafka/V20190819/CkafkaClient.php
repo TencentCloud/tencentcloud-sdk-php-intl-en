@@ -40,6 +40,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DeleteAclResponse DeleteAcl(Models\DeleteAclRequest $req) This API is used to delete an ACL.
  * @method Models\DeleteAclRuleResponse DeleteAclRule(Models\DeleteAclRuleRequest $req) This API is used to delete an ACL rule.
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) Delete consumer groups.
+ * @method Models\DeleteGroupSubscribeTopicResponse DeleteGroupSubscribeTopic(Models\DeleteGroupSubscribeTopicRequest $req) This API is used to delete topics subscribed by a consumption group. The consumption group status must be Empty.
  * @method Models\DeleteInstancePostResponse DeleteInstancePost(Models\DeleteInstancePostRequest $req) This API is used to delete post-payment instances. It directly performs instance termination by calling API deletion without associating connectors and tasks in pre-check.
  * @method Models\DeleteInstancePreResponse DeleteInstancePre(Models\DeleteInstancePreRequest $req) This API is used to delete prepaid instances. It performs isolation and deletion actions on the instance. After successful execution, the instance will be directly deleted and terminated. By calling API deletion, it directly performs instance termination without associating connectors and tasks in pre-check.
  * @method Models\DeleteRouteResponse DeleteRoute(Models\DeleteRouteRequest $req) This API is used to delete a route.
@@ -61,6 +62,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeInstanceAttributesResponse DescribeInstanceAttributes(Models\DescribeInstanceAttributesRequest $req) This API is used to obtain instance attributes.
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to search for a list of TDMQ CKafka instances under a user account.
  * @method Models\DescribeInstancesDetailResponse DescribeInstancesDetail(Models\DescribeInstancesDetailRequest $req) This API is used to get instance list details under a user account.
+ * @method Models\DescribeModifyTypeResponse DescribeModifyType(Models\DescribeModifyTypeRequest $req) This API is used to query instance specification change types.
  * @method Models\DescribeRegionResponse DescribeRegion(Models\DescribeRegionRequest $req) This API is used to enumerate regions, and can be called only in Guangzhou.
  * @method Models\DescribeRouteResponse DescribeRoute(Models\DescribeRouteRequest $req) This API is used to view route information.
  * @method Models\DescribeSecurityGroupRoutesResponse DescribeSecurityGroupRoutes(Models\DescribeSecurityGroupRoutesRequest $req) This API is used to retrieve the security group route information list.
