@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
 - AsrFullTextRecognition: full speech recognition.
 - TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
+- OcrFullTextRecognition: text-based subtitle extraction.
  * @method void setType(string $Type) Set Task type. Valid values:
 - AsrFullTextRecognition: full speech recognition.
 - TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
+- OcrFullTextRecognition: text-based subtitle extraction.
  * @method SmartSubtitleTaskAsrFullTextResult getAsrFullTextTask() Obtain Full speech recognition result. When Type is
  set to AsrFullTextRecognition, this parameter takes effect.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -46,6 +48,12 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPureSubtitleTransTask(PureSubtitleTransResult $PureSubtitleTransTask) Set The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SmartSubtitleTaskFullTextResult getOcrFullTextTask() Obtain Text-based subtitle extraction result. This field is valid when the value of Type is
+OcrFullTextRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOcrFullTextTask(SmartSubtitleTaskFullTextResult $OcrFullTextTask) Set Text-based subtitle extraction result. This field is valid when the value of Type is
+OcrFullTextRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SmartSubtitlesResult extends AbstractModel
 {
@@ -54,6 +62,7 @@ class SmartSubtitlesResult extends AbstractModel
 - AsrFullTextRecognition: full speech recognition.
 - TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
+- OcrFullTextRecognition: text-based subtitle extraction.
      */
     public $Type;
 
@@ -79,10 +88,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PureSubtitleTransTask;
 
     /**
+     * @var SmartSubtitleTaskFullTextResult Text-based subtitle extraction result. This field is valid when the value of Type is
+OcrFullTextRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OcrFullTextTask;
+
+    /**
      * @param string $Type Task type. Valid values:
 - AsrFullTextRecognition: full speech recognition.
 - TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
+- OcrFullTextRecognition: text-based subtitle extraction.
      * @param SmartSubtitleTaskAsrFullTextResult $AsrFullTextTask Full speech recognition result. When Type is
  set to AsrFullTextRecognition, this parameter takes effect.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -91,6 +108,9 @@ Note: This field may return null, indicating that no valid value can be obtained
  set to TransTextRecognition, this parameter takes effect.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param PureSubtitleTransResult $PureSubtitleTransTask The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SmartSubtitleTaskFullTextResult $OcrFullTextTask Text-based subtitle extraction result. This field is valid when the value of Type is
+OcrFullTextRecognition.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -123,6 +143,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("PureSubtitleTransTask",$param) and $param["PureSubtitleTransTask"] !== null) {
             $this->PureSubtitleTransTask = new PureSubtitleTransResult();
             $this->PureSubtitleTransTask->deserialize($param["PureSubtitleTransTask"]);
+        }
+
+        if (array_key_exists("OcrFullTextTask",$param) and $param["OcrFullTextTask"] !== null) {
+            $this->OcrFullTextTask = new SmartSubtitleTaskFullTextResult();
+            $this->OcrFullTextTask->deserialize($param["OcrFullTextTask"]);
         }
     }
 }

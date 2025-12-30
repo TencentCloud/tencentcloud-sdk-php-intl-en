@@ -119,7 +119,7 @@ Valid values for enhancement TYPE:
 <li>Highlights: highlights.</li>
 <li>OpeningAndEnding: opening and ending clips.</li>
 6. Intelligent recognition specification:
-<li>AIRecognition: major category for recognition without splitting.</li>
+<li>AIRecognition: major category for recognition.</li>
 <li>FaceRecognition: face recognition.</li>
 <li>TextRecognition: optical character recognition.</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -189,7 +189,7 @@ Valid values for enhancement TYPE:
 <li>Highlights: highlights.</li>
 <li>OpeningAndEnding: opening and ending clips.</li>
 6. Intelligent recognition specification:
-<li>AIRecognition: major category for recognition without splitting.</li>
+<li>AIRecognition: major category for recognition.</li>
 <li>FaceRecognition: face recognition.</li>
 <li>TextRecognition: optical character recognition.</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -289,7 +289,7 @@ Valid values for enhancement TYPE:
 <li>Highlights: highlights.</li>
 <li>OpeningAndEnding: opening and ending clips.</li>
 6. Intelligent recognition specification:
-<li>AIRecognition: major category for recognition without splitting.</li>
+<li>AIRecognition: major category for recognition.</li>
 <li>FaceRecognition: face recognition.</li>
 <li>TextRecognition: optical character recognition.</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -381,7 +381,7 @@ Valid values for enhancement TYPE:
 <li>Highlights: highlights.</li>
 <li>OpeningAndEnding: opening and ending clips.</li>
 6. Intelligent recognition specification:
-<li>AIRecognition: major category for recognition without splitting.</li>
+<li>AIRecognition: major category for recognition.</li>
 <li>FaceRecognition: face recognition.</li>
 <li>TextRecognition: optical character recognition.</li>
 <li>ObjectRecognition: object recognition.</li>

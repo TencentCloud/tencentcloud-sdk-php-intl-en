@@ -76,8 +76,8 @@ Note 3: The trigger configured for an orchestration is for automatically startin
  * @method void setTaskType(string $TaskType) Set The task type.
 <li> `Online` (default): A task that is executed immediately.</li>
 <li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
- * @method string getResourceId() Obtain Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
- * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+ * @method string getResourceId() Obtain Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+ * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
  * @method integer getSkipMateData() Obtain Whether to skip metadata acquisition. Valid values:
 0: do not skip
 1: skip
@@ -182,7 +182,7 @@ Note 3: The trigger configured for an orchestration is for automatically startin
     public $TaskType;
 
     /**
-     * @var string Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     * @var string Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
      */
     public $ResourceId;
 
@@ -223,7 +223,7 @@ Note 3: The trigger configured for an orchestration is for automatically startin
      * @param string $TaskType The task type.
 <li> `Online` (default): A task that is executed immediately.</li>
 <li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
-     * @param string $ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     * @param string $ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
      * @param integer $SkipMateData Whether to skip metadata acquisition. Valid values:
 0: do not skip
 1: skip

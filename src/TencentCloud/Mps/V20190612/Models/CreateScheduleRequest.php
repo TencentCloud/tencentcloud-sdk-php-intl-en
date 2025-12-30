@@ -34,8 +34,8 @@ If you do not specify this, the file will be saved to the trigger directory.
 If you do not specify this, the file will be saved to the trigger directory.
  * @method TaskNotifyConfig getTaskNotifyConfig() Obtain The notification configuration. If you do not specify this parameter, notifications will not be sent.
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set The notification configuration. If you do not specify this parameter, notifications will not be sent.
- * @method string getResourceId() Obtain Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
- * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+ * @method string getResourceId() Obtain Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+ * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
  */
 class CreateScheduleRequest extends AbstractModel
 {
@@ -71,7 +71,7 @@ If you do not specify this, the file will be saved to the trigger directory.
     public $TaskNotifyConfig;
 
     /**
-     * @var string Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     * @var string Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
      */
     public $ResourceId;
 
@@ -83,7 +83,7 @@ If you do not specify this, the file will be saved to the trigger directory.
      * @param string $OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
 If you do not specify this, the file will be saved to the trigger directory.
      * @param TaskNotifyConfig $TaskNotifyConfig The notification configuration. If you do not specify this parameter, notifications will not be sent.
-     * @param string $ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     * @param string $ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
      */
     function __construct()
     {

@@ -140,7 +140,7 @@ This API is used to delete a player configuration.
 * You can query data of different service regions.
 * You can query data of Chinese mainland by region and ISP.
  * @method Models\DescribeCDNUsageDataResponse DescribeCDNUsageData(Models\DescribeCDNUsageDataRequest $req) This API is used to query the CDN statistics of VOD such as traffic and bandwidth.
-   1. Only CDN usage data for the last 365 days can be queried.
+   1. CDN usage data is retained on the system side for 13 months, while you can only query the CDN usage data for the most recent 365 days via the API.If you need to retrieve historical usage data beyond 365 days, please contact us.
    2. The query time range cannot be more than 90 days.
    3. The time granularity of usage data can be specified, including 5-minute, 1-hour, and 1-day.
    4. Traffic refers to the total traffic within the query time granularity, while bandwidth the peak bandwidth.
@@ -198,7 +198,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
 * If the granularity is an hour, the start and end time cannot be more than seven days apart.
 * If the granularity is a day, the start and end time cannot be more than 90 days apart.
  * @method Models\DescribeMediaProcessUsageDataResponse DescribeMediaProcessUsageData(Models\DescribeMediaProcessUsageDataRequest $req) This API is used to query the information of video processing usage within the specified time range.
-   1. Statistics on video processing for the last 365 days can be queried.
+   1. Video processing usage data is retained on the system side for 13 months, and you may only query the usage data for the most recent 365 days via the API. If you need to retrieve historical usage data beyond 365 days, please contact us.
    2. The query time range cannot be more than 90 days.
  * @method Models\DescribePersonSamplesResponse DescribePersonSamples(Models\DescribePersonSamplesRequest $req) This API is used to query the information of samples and supports paginated queries by sample ID, name, and tag.
  * @method Models\DescribeProcedureTemplatesResponse DescribeProcedureTemplates(Models\DescribeProcedureTemplatesRequest $req) This API is used to get the list of task flow template details by task flow template name.
@@ -217,7 +217,7 @@ This API returns the video content duration for intelligent recognition in secon
  * @method Models\DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(Models\DescribeSnapshotByTimeOffsetTemplatesRequest $req) This API is used to query the list of time point screencapturing templates and supports paged queries by filters.
  * @method Models\DescribeStorageDataResponse DescribeStorageData(Models\DescribeStorageDataRequest $req) This API is used to query the storage capacity usage and number of files.
  * @method Models\DescribeStorageDetailsResponse DescribeStorageDetails(Models\DescribeStorageDetailsRequest $req) This API is used to query VOD storage usage in bytes within the query period.
-    1. You can only query storage usage for the last 365 days.
+    1. Storage usage data is retained on the system side for 13 months, and you may only query the usage data for the most recent 365 days via the API. If you need to retrieve historical usage data beyond 365 days, please contact us.
     2. The query period is up to 90 days.
     3. The query period at minute-level granularity is up to 7 days.
  * @method Models\DescribeStorageRegionsResponse DescribeStorageRegions(Models\DescribeStorageRegionsRequest $req) This API is used to query the following information:

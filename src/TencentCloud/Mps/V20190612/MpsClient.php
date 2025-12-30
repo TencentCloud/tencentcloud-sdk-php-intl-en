@@ -202,6 +202,7 @@ HTTP callbacks are supported for live stream processing events. Notifications ca
 - Smart content analysis (such as tags, classifications, covers, frame tags, video splitting, highlights, opening and ending clips, and marking points for games).
 - Smart content recognition (such as human faces, full texts, text keywords, full speech, speech keywords, speech translation, and object recognition).
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) This API is used to reset an existing workflow that is disabled.
+ * @method Models\TextTranslationResponse TextTranslation(Models\TextTranslationRequest $req) This API is used to translate text.
  */
 
 class MpsClient extends AbstractClient
