@@ -18,20 +18,20 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AB watermark configuration.
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getType() Obtain Optional values: A/B.
+ * @method void setType(string $Type) Set Optional values: A/B.
  */
 class AbWatermarkSettingsReq extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Optional values: A/B.
      */
     public $Type;
 
     /**
-     * @param string $Type 
+     * @param string $Type Optional values: A/B.
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UrlInputInfo
  *
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
+ * @method string getUrl() Obtain Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH)
+ * @method void setUrl(string $Url) Set Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH)
  */
 class UrlInputInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH)
      */
     public $Url;
 
     /**
-     * @param string $Url 
+     * @param string $Url Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH)
      */
     function __construct()
     {

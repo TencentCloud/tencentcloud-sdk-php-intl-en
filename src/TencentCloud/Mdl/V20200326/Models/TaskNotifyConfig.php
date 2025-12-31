@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TaskNotifyConfig
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getNotifyUrl() Obtain 
- * @method void setNotifyUrl(string $NotifyUrl) Set 
+ * @method string getType() Obtain Notification type. Currently only supports URLs
+ * @method void setType(string $Type) Set Notification type. Currently only supports URLs
+ * @method string getNotifyUrl() Obtain Callback URL. Starting with http/https, supporting a maximum of 512 characters
+ * @method void setNotifyUrl(string $NotifyUrl) Set Callback URL. Starting with http/https, supporting a maximum of 512 characters
  */
 class TaskNotifyConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Notification type. Currently only supports URLs
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Callback URL. Starting with http/https, supporting a maximum of 512 characters
      */
     public $NotifyUrl;
 
     /**
-     * @param string $Type 
-     * @param string $NotifyUrl 
+     * @param string $Type Notification type. Currently only supports URLs
+     * @param string $NotifyUrl Callback URL. Starting with http/https, supporting a maximum of 512 characters
      */
     function __construct()
     {

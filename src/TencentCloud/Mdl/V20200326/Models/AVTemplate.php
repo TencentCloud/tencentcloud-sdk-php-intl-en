@@ -94,16 +94,18 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
  * @method void setMultiAudioTrackEnabled(integer $MultiAudioTrackEnabled) Set Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
  * @method array getAudioTracks() Obtain Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
  * @method void setAudioTracks(array $AudioTracks) Set Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
- * @method integer getVideoEnhanceEnabled() Obtain 
- * @method void setVideoEnhanceEnabled(integer $VideoEnhanceEnabled) Set 
- * @method array getVideoEnhanceSettings() Obtain 
- * @method void setVideoEnhanceSettings(array $VideoEnhanceSettings) Set 
+ * @method integer getVideoEnhanceEnabled() Obtain Do you want to enable video enhancement? 1: Enable 0: Do not enable.
+ * @method void setVideoEnhanceEnabled(integer $VideoEnhanceEnabled) Set Do you want to enable video enhancement? 1: Enable 0: Do not enable.
+ * @method array getVideoEnhanceSettings() Obtain Video enhancement configuration array.
+ * @method void setVideoEnhanceSettings(array $VideoEnhanceSettings) Set Video enhancement configuration array.
  * @method integer getGopSize() Obtain Key frame interval, 300-10000, optional.
  * @method void setGopSize(integer $GopSize) Set Key frame interval, 300-10000, optional.
  * @method string getGopSizeUnits() Obtain Keyframe units, only support MILLISECONDS (milliseconds).
  * @method void setGopSizeUnits(string $GopSizeUnits) Set Keyframe units, only support MILLISECONDS (milliseconds).
  * @method ColorSpaceSetting getColorSpaceSettings() Obtain Color space setting.
  * @method void setColorSpaceSettings(ColorSpaceSetting $ColorSpaceSettings) Set Color space setting.
+ * @method array getForensicWatermarkIds() Obtain Traceability watermark.
+ * @method void setForensicWatermarkIds(array $ForensicWatermarkIds) Set Traceability watermark.
  */
 class AVTemplate extends AbstractModel
 {
@@ -265,12 +267,12 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     public $AudioTracks;
 
     /**
-     * @var integer 
+     * @var integer Do you want to enable video enhancement? 1: Enable 0: Do not enable.
      */
     public $VideoEnhanceEnabled;
 
     /**
-     * @var array 
+     * @var array Video enhancement configuration array.
      */
     public $VideoEnhanceSettings;
 
@@ -288,6 +290,11 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
      * @var ColorSpaceSetting Color space setting.
      */
     public $ColorSpaceSettings;
+
+    /**
+     * @var array Traceability watermark.
+     */
+    public $ForensicWatermarkIds;
 
     /**
      * @param string $Name Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
@@ -327,11 +334,12 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
      * @param AudioCodecDetail $AudioCodecDetails Audio encoding configuration.
      * @param integer $MultiAudioTrackEnabled Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
      * @param array $AudioTracks Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
-     * @param integer $VideoEnhanceEnabled 
-     * @param array $VideoEnhanceSettings 
+     * @param integer $VideoEnhanceEnabled Do you want to enable video enhancement? 1: Enable 0: Do not enable.
+     * @param array $VideoEnhanceSettings Video enhancement configuration array.
      * @param integer $GopSize Key frame interval, 300-10000, optional.
      * @param string $GopSizeUnits Keyframe units, only support MILLISECONDS (milliseconds).
      * @param ColorSpaceSetting $ColorSpaceSettings Color space setting.
+     * @param array $ForensicWatermarkIds Traceability watermark.
      */
     function __construct()
     {
@@ -499,6 +507,10 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         if (array_key_exists("ColorSpaceSettings",$param) and $param["ColorSpaceSettings"] !== null) {
             $this->ColorSpaceSettings = new ColorSpaceSetting();
             $this->ColorSpaceSettings->deserialize($param["ColorSpaceSettings"]);
+        }
+
+        if (array_key_exists("ForensicWatermarkIds",$param) and $param["ForensicWatermarkIds"] !== null) {
+            $this->ForensicWatermarkIds = $param["ForensicWatermarkIds"];
         }
     }
 }

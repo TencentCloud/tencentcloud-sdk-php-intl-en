@@ -58,12 +58,14 @@ Note: This field may return `null`, indicating that no valid value was found.
  * @method void setAdditionalRateSettings(AdditionalRateSetting $AdditionalRateSettings) Set Additional video bitrate configuration.
  * @method VideoCodecDetail getVideoCodecDetails() Obtain Video encoding configuration.
  * @method void setVideoCodecDetails(VideoCodecDetail $VideoCodecDetails) Set Video encoding configuration.
- * @method integer getVideoEnhanceEnabled() Obtain 
- * @method void setVideoEnhanceEnabled(integer $VideoEnhanceEnabled) Set 
- * @method array getVideoEnhanceSettings() Obtain 
- * @method void setVideoEnhanceSettings(array $VideoEnhanceSettings) Set 
+ * @method integer getVideoEnhanceEnabled() Obtain Video enhancement switch, 1: on 0: off.
+ * @method void setVideoEnhanceEnabled(integer $VideoEnhanceEnabled) Set Video enhancement switch, 1: on 0: off.
+ * @method array getVideoEnhanceSettings() Obtain Video enhancement parameter array.
+ * @method void setVideoEnhanceSettings(array $VideoEnhanceSettings) Set Video enhancement parameter array.
  * @method ColorSpaceSetting getColorSpaceSettings() Obtain Color space setting.
  * @method void setColorSpaceSettings(ColorSpaceSetting $ColorSpaceSettings) Set Color space setting.
+ * @method array getForensicWatermarkIds() Obtain Traceability watermark.
+ * @method void setForensicWatermarkIds(array $ForensicWatermarkIds) Set Traceability watermark.
  */
 class VideoTemplateInfo extends AbstractModel
 {
@@ -159,12 +161,12 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $VideoCodecDetails;
 
     /**
-     * @var integer 
+     * @var integer Video enhancement switch, 1: on 0: off.
      */
     public $VideoEnhanceEnabled;
 
     /**
-     * @var array 
+     * @var array Video enhancement parameter array.
      */
     public $VideoEnhanceSettings;
 
@@ -172,6 +174,11 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @var ColorSpaceSetting Color space setting.
      */
     public $ColorSpaceSettings;
+
+    /**
+     * @var array Traceability watermark.
+     */
+    public $ForensicWatermarkIds;
 
     /**
      * @param string $Name Video transcoding template name, which can contain 1-20 letters and digits.
@@ -193,9 +200,10 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param integer $RefFramesNum The number of reference frames can be selected from 1 to 16.
      * @param AdditionalRateSetting $AdditionalRateSettings Additional video bitrate configuration.
      * @param VideoCodecDetail $VideoCodecDetails Video encoding configuration.
-     * @param integer $VideoEnhanceEnabled 
-     * @param array $VideoEnhanceSettings 
+     * @param integer $VideoEnhanceEnabled Video enhancement switch, 1: on 0: off.
+     * @param array $VideoEnhanceSettings Video enhancement parameter array.
      * @param ColorSpaceSetting $ColorSpaceSettings Color space setting.
+     * @param array $ForensicWatermarkIds Traceability watermark.
      */
     function __construct()
     {
@@ -300,6 +308,10 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (array_key_exists("ColorSpaceSettings",$param) and $param["ColorSpaceSettings"] !== null) {
             $this->ColorSpaceSettings = new ColorSpaceSetting();
             $this->ColorSpaceSettings->deserialize($param["ColorSpaceSettings"]);
+        }
+
+        if (array_key_exists("ForensicWatermarkIds",$param) and $param["ForensicWatermarkIds"] !== null) {
+            $this->ForensicWatermarkIds = $param["ForensicWatermarkIds"];
         }
     }
 }

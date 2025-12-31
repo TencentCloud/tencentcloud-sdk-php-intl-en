@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setText(string $Text) Set Text
  * @method string getLocation() Obtain Origin
  * @method void setLocation(string $Location) Set Origin
- * @method integer getXPos() Obtain The watermark image’s horizontal distance from the origin as a percentage of the video width
- * @method void setXPos(integer $XPos) Set The watermark image’s horizontal distance from the origin as a percentage of the video width
- * @method integer getYPos() Obtain The watermark image’s vertical distance from the origin as a percentage of the video height
- * @method void setYPos(integer $YPos) Set The watermark image’s vertical distance from the origin as a percentage of the video height
+ * @method integer getXPos() Obtain The watermark image's horizontal distance from the origin as a percentage of the video width
+ * @method void setXPos(integer $XPos) Set The watermark image's horizontal distance from the origin as a percentage of the video width
+ * @method integer getYPos() Obtain The watermark image's vertical distance from the origin as a percentage of the video height
+ * @method void setYPos(integer $YPos) Set The watermark image's vertical distance from the origin as a percentage of the video height
  * @method integer getFontSize() Obtain Font size
  * @method void setFontSize(integer $FontSize) Set Font size
  * @method string getFontColor() Obtain Font color
@@ -46,12 +46,12 @@ class DescribeTextSettings extends AbstractModel
     public $Location;
 
     /**
-     * @var integer The watermark image’s horizontal distance from the origin as a percentage of the video width
+     * @var integer The watermark image's horizontal distance from the origin as a percentage of the video width
      */
     public $XPos;
 
     /**
-     * @var integer The watermark image’s vertical distance from the origin as a percentage of the video height
+     * @var integer The watermark image's vertical distance from the origin as a percentage of the video height
      */
     public $YPos;
 
@@ -68,8 +68,8 @@ class DescribeTextSettings extends AbstractModel
     /**
      * @param string $Text Text
      * @param string $Location Origin
-     * @param integer $XPos The watermark image’s horizontal distance from the origin as a percentage of the video width
-     * @param integer $YPos The watermark image’s vertical distance from the origin as a percentage of the video height
+     * @param integer $XPos The watermark image's horizontal distance from the origin as a percentage of the video width
+     * @param integer $YPos The watermark image's vertical distance from the origin as a percentage of the video height
      * @param integer $FontSize Font size
      * @param string $FontColor Font color
      */

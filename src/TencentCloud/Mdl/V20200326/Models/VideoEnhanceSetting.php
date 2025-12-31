@@ -18,28 +18,28 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * VideoEnhanceSetting
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method float getStrength() Obtain 
- * @method void setStrength(float $Strength) Set 
+ * @method string getType() Obtain Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
+ * @method void setType(string $Type) Set Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
+ * @method float getStrength() Obtain Video enhancement intensity, 0-1.0, granularity 0.1
+ * @method void setStrength(float $Strength) Set Video enhancement intensity, 0-1.0, granularity 0.1
  */
 class VideoEnhanceSetting extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
      */
     public $Type;
 
     /**
-     * @var float 
+     * @var float Video enhancement intensity, 0-1.0, granularity 0.1
      */
     public $Strength;
 
     /**
-     * @param string $Type 
-     * @param float $Strength 
+     * @param string $Type Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
+     * @param float $Strength Video enhancement intensity, 0-1.0, granularity 0.1
      */
     function __construct()
     {
