@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUPID(string $UPID) Set Corresponds to SCTE-35 segmentation_upid. 
  * @method integer getTypeID() Obtain Corresponds to SCTE-35 segmentation_type_id.
  * @method void setTypeID(integer $TypeID) Set Corresponds to SCTE-35 segmentation_type_id.
- * @method integer getNum() Obtain Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments.
- * @method void setNum(integer $Num) Set Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments.
+ * @method integer getNum() Obtain Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments.
+ * @method void setNum(integer $Num) Set Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments.
  * @method integer getExpected() Obtain Corresponds to SCTE-35 segment_expected.This field provides a count of the expected number of individual segments within a collection of segments.
  * @method void setExpected(integer $Expected) Set Corresponds to SCTE-35 segment_expected.This field provides a count of the expected number of individual segments within a collection of segments.
  * @method integer getSubSegmentNum() Obtain Corresponds to SCTE-35 sub_segment_num.This field provides identification for a specific sub-segment within a collection of sub-segments.
@@ -81,7 +81,7 @@ class SegmentationDescriptorInfo extends AbstractModel
     public $TypeID;
 
     /**
-     * @var integer Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments.
+     * @var integer Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments.
      */
     public $Num;
 
@@ -108,7 +108,7 @@ class SegmentationDescriptorInfo extends AbstractModel
      * @param integer $UPIDType Corresponds to SCTE-35 segmentation_upid_type parameter.
      * @param string $UPID Corresponds to SCTE-35 segmentation_upid. 
      * @param integer $TypeID Corresponds to SCTE-35 segmentation_type_id.
-     * @param integer $Num Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments.
+     * @param integer $Num Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments.
      * @param integer $Expected Corresponds to SCTE-35 segment_expected.This field provides a count of the expected number of individual segments within a collection of segments.
      * @param integer $SubSegmentNum Corresponds to SCTE-35 sub_segment_num.This field provides identification for a specific sub-segment within a collection of sub-segments.
      * @param integer $SubSegmentsExpected Corresponds to SCTE-35 sub_segments_expected.This field provides a count of the expected number of individual sub-segments within the collection of sub-segments.

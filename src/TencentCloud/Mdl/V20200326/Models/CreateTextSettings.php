@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setText(string $Text) Set Text
  * @method string getLocation() Obtain Origin. Valid values: TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT.
  * @method void setLocation(string $Location) Set Origin. Valid values: TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT.
- * @method integer getXPos() Obtain The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
- * @method void setXPos(integer $XPos) Set The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
- * @method integer getYPos() Obtain The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
- * @method void setYPos(integer $YPos) Set The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+ * @method integer getXPos() Obtain The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+ * @method void setXPos(integer $XPos) Set The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+ * @method integer getYPos() Obtain The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+ * @method void setYPos(integer $YPos) Set The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
  * @method integer getFontSize() Obtain Font size. Value range: 25-50.
  * @method void setFontSize(integer $FontSize) Set Font size. Value range: 25-50.
  * @method string getFontColor() Obtain Font color, which is an RGB color value. Default value: 0x000000.
@@ -46,12 +46,12 @@ class CreateTextSettings extends AbstractModel
     public $Location;
 
     /**
-     * @var integer The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+     * @var integer The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
      */
     public $XPos;
 
     /**
-     * @var integer The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+     * @var integer The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
      */
     public $YPos;
 
@@ -68,8 +68,8 @@ class CreateTextSettings extends AbstractModel
     /**
      * @param string $Text Text
      * @param string $Location Origin. Valid values: TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT.
-     * @param integer $XPos The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
-     * @param integer $YPos The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+     * @param integer $XPos The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+     * @param integer $YPos The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
      * @param integer $FontSize Font size. Value range: 25-50.
      * @param string $FontColor Font color, which is an RGB color value. Default value: 0x000000.
      */

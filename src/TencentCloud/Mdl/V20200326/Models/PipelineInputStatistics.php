@@ -36,6 +36,12 @@ For other inputs, the quantity is 1.
  * @method void setAudio(array $Audio) Set Audio information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
 For other inputs, the quantity is 1.
+ * @method string getSessionId() Obtain Session ID
+ * @method void setSessionId(string $SessionId) Set Session ID
+ * @method integer getRTT() Obtain Rtt time, in milliseconds
+ * @method void setRTT(integer $RTT) Set Rtt time, in milliseconds
+ * @method integer getNetworkValid() Obtain Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+ * @method void setNetworkValid(integer $NetworkValid) Set Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
  */
 class PipelineInputStatistics extends AbstractModel
 {
@@ -64,6 +70,21 @@ For other inputs, the quantity is 1.
     public $Audio;
 
     /**
+     * @var string Session ID
+     */
+    public $SessionId;
+
+    /**
+     * @var integer Rtt time, in milliseconds
+     */
+    public $RTT;
+
+    /**
+     * @var integer Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+     */
+    public $NetworkValid;
+
+    /**
      * @param integer $Timestamp Data timestamp in seconds.
      * @param integer $NetworkIn Input bandwidth in bps.
      * @param array $Video Video information array.
@@ -72,6 +93,9 @@ For other inputs, the quantity is 1.
      * @param array $Audio Audio information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
 For other inputs, the quantity is 1.
+     * @param string $SessionId Session ID
+     * @param integer $RTT Rtt time, in milliseconds
+     * @param integer $NetworkValid Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
      */
     function __construct()
     {
@@ -110,6 +134,18 @@ For other inputs, the quantity is 1.
                 $obj->deserialize($value);
                 array_push($this->Audio, $obj);
             }
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("RTT",$param) and $param["RTT"] !== null) {
+            $this->RTT = $param["RTT"];
+        }
+
+        if (array_key_exists("NetworkValid",$param) and $param["NetworkValid"] !== null) {
+            $this->NetworkValid = $param["NetworkValid"];
         }
     }
 }

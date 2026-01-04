@@ -42,6 +42,8 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setAttachedChannels(array $AttachedChannels) Set List of channel IDs the watermark is bound to
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method AbWatermarkSettingsResp getAbWatermarkSettings() Obtain AB watermark configuration.
+ * @method void setAbWatermarkSettings(AbWatermarkSettingsResp $AbWatermarkSettings) Set AB watermark configuration.
  */
 class DescribeWatermarkInfo extends AbstractModel
 {
@@ -85,6 +87,11 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $AttachedChannels;
 
     /**
+     * @var AbWatermarkSettingsResp AB watermark configuration.
+     */
+    public $AbWatermarkSettings;
+
+    /**
      * @param string $Id Watermark ID
      * @param string $Name Watermark name
      * @param string $Type Watermark type. Valid values: STATIC_IMAGE, TEXT.
@@ -96,6 +103,7 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param array $AttachedChannels List of channel IDs the watermark is bound to
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param AbWatermarkSettingsResp $AbWatermarkSettings AB watermark configuration.
      */
     function __construct()
     {
@@ -138,6 +146,11 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("AttachedChannels",$param) and $param["AttachedChannels"] !== null) {
             $this->AttachedChannels = $param["AttachedChannels"];
+        }
+
+        if (array_key_exists("AbWatermarkSettings",$param) and $param["AbWatermarkSettings"] !== null) {
+            $this->AbWatermarkSettings = new AbWatermarkSettingsResp();
+            $this->AbWatermarkSettings->deserialize($param["AbWatermarkSettings"]);
         }
     }
 }

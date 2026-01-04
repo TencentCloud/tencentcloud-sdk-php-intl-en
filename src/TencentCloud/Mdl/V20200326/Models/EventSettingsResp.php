@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStaticImageDeactivateSetting(StaticImageDeactivateSetting $StaticImageDeactivateSetting) Set Static image deactivate setting.
  * @method MotionGraphicsActivateSetting getMotionGraphicsActivateSetting() Obtain Dynamic graphic overlay activate configuration.
  * @method void setMotionGraphicsActivateSetting(MotionGraphicsActivateSetting $MotionGraphicsActivateSetting) Set Dynamic graphic overlay activate configuration.
+ * @method AdBreakSetting getAdBreakSetting() Obtain Ad Settings
+ * @method void setAdBreakSetting(AdBreakSetting $AdBreakSetting) Set Ad Settings
  */
 class EventSettingsResp extends AbstractModel
 {
@@ -115,6 +117,11 @@ class EventSettingsResp extends AbstractModel
     public $MotionGraphicsActivateSetting;
 
     /**
+     * @var AdBreakSetting Ad Settings
+     */
+    public $AdBreakSetting;
+
+    /**
      * @param string $EventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`, `STATIC_IMAGE_ACTIVATE`, `STATIC_IMAGE_DEACTIVATE`.
      * @param string $InputAttachment ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
      * @param integer $PipelineId When the type is FIXED_PTS, it is mandatory and defaults to 0
@@ -128,6 +135,7 @@ class EventSettingsResp extends AbstractModel
      * @param StaticImageActivateSetting $StaticImageActivateSetting Static image activate setting.
      * @param StaticImageDeactivateSetting $StaticImageDeactivateSetting Static image deactivate setting.
      * @param MotionGraphicsActivateSetting $MotionGraphicsActivateSetting Dynamic graphic overlay activate configuration.
+     * @param AdBreakSetting $AdBreakSetting Ad Settings
      */
     function __construct()
     {
@@ -206,6 +214,11 @@ class EventSettingsResp extends AbstractModel
         if (array_key_exists("MotionGraphicsActivateSetting",$param) and $param["MotionGraphicsActivateSetting"] !== null) {
             $this->MotionGraphicsActivateSetting = new MotionGraphicsActivateSetting();
             $this->MotionGraphicsActivateSetting->deserialize($param["MotionGraphicsActivateSetting"]);
+        }
+
+        if (array_key_exists("AdBreakSetting",$param) and $param["AdBreakSetting"] !== null) {
+            $this->AdBreakSetting = new AdBreakSetting();
+            $this->AdBreakSetting->deserialize($param["AdBreakSetting"]);
         }
     }
 }

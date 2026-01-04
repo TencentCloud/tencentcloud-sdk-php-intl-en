@@ -26,6 +26,8 @@ In seconds, indicating data time.
 In seconds, indicating data time.
  * @method integer getNetworkOut() Obtain Output bandwidth in bps.
  * @method void setNetworkOut(integer $NetworkOut) Set Output bandwidth in bps.
+ * @method integer getNetworkValid() Obtain Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+ * @method void setNetworkValid(integer $NetworkValid) Set Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
  */
 class PipelineOutputStatistics extends AbstractModel
 {
@@ -41,9 +43,15 @@ In seconds, indicating data time.
     public $NetworkOut;
 
     /**
+     * @var integer Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+     */
+    public $NetworkValid;
+
+    /**
      * @param integer $Timestamp Timestamp.
 In seconds, indicating data time.
      * @param integer $NetworkOut Output bandwidth in bps.
+     * @param integer $NetworkValid Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
      */
     function __construct()
     {
@@ -64,6 +72,10 @@ In seconds, indicating data time.
 
         if (array_key_exists("NetworkOut",$param) and $param["NetworkOut"] !== null) {
             $this->NetworkOut = $param["NetworkOut"];
+        }
+
+        if (array_key_exists("NetworkValid",$param) and $param["NetworkValid"] !== null) {
+            $this->NetworkValid = $param["NetworkValid"];
         }
     }
 }

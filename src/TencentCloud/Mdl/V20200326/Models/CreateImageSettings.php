@@ -26,20 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageContent(string $ImageContent) Set Base64 encoded image content
  * @method string getLocation() Obtain Origin. Valid values: TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT.
  * @method void setLocation(string $Location) Set Origin. Valid values: TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT.
- * @method integer getXPos() Obtain The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
- * @method void setXPos(integer $XPos) Set The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
- * @method integer getYPos() Obtain The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
- * @method void setYPos(integer $YPos) Set The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
- * @method integer getWidth() Obtain The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+ * @method integer getXPos() Obtain The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+ * @method void setXPos(integer $XPos) Set The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+ * @method integer getYPos() Obtain The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+ * @method void setYPos(integer $YPos) Set The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+ * @method integer getWidth() Obtain The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
- * @method void setWidth(integer $Width) Set The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+ * @method void setWidth(integer $Width) Set The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
- * @method integer getHeight() Obtain The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+ * @method integer getHeight() Obtain The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
- * @method void setHeight(integer $Height) Set The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+ * @method void setHeight(integer $Height) Set The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
  */
@@ -61,24 +61,24 @@ class CreateImageSettings extends AbstractModel
     public $Location;
 
     /**
-     * @var integer The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+     * @var integer The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
      */
     public $XPos;
 
     /**
-     * @var integer The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+     * @var integer The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
      */
     public $YPos;
 
     /**
-     * @var integer The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+     * @var integer The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
      */
     public $Width;
 
     /**
-     * @var integer The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+     * @var integer The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
      */
@@ -88,12 +88,12 @@ You cannot set both `Width` and `Height` to `0`.
      * @param string $ImageType Image file format. Valid values: png, jpg.
      * @param string $ImageContent Base64 encoded image content
      * @param string $Location Origin. Valid values: TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT.
-     * @param integer $XPos The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
-     * @param integer $YPos The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
-     * @param integer $Width The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+     * @param integer $XPos The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+     * @param integer $YPos The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+     * @param integer $Width The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
-     * @param integer $Height The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+     * @param integer $Height The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
      */
