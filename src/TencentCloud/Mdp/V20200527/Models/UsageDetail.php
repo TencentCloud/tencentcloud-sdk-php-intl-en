@@ -56,6 +56,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreReplacedNum(integer $PreReplacedNum) Set Number of pre-roll ad replacements.
  * @method float getPreReplaceRate() Obtain Ad replacement rate.
  * @method void setPreReplaceRate(float $PreReplaceRate) Set Ad replacement rate.
+ * @method integer getADMarkerFound() Obtain Number of ad tags found in the list
+ * @method void setADMarkerFound(integer $ADMarkerFound) Set Number of ad tags found in the list
+ * @method integer getMakeAdsRequest() Obtain Request advertising frequency from ADS
+ * @method void setMakeAdsRequest(integer $MakeAdsRequest) Set Request advertising frequency from ADS
+ * @method integer getVASTResponse() Obtain Received VAST returns from ADS
+ * @method void setVASTResponse(integer $VASTResponse) Set Received VAST returns from ADS
+ * @method integer getFilledAvail() Obtain Successfully filled the ad count
+ * @method void setFilledAvail(integer $FilledAvail) Set Successfully filled the ad count
+ * @method integer getWarningNoAd() Obtain The number of issues encountered during ad replacement execution
+ * @method void setWarningNoAd(integer $WarningNoAd) Set The number of issues encountered during ad replacement execution
+ * @method integer getErrorAdsTimeout() Obtain The number of timeouts returned by ADS
+ * @method void setErrorAdsTimeout(integer $ErrorAdsTimeout) Set The number of timeouts returned by ADS
+ * @method integer getEmptyVASTResponse() Obtain The number of empty VAST responses returned by ADS
+ * @method void setEmptyVASTResponse(integer $EmptyVASTResponse) Set The number of empty VAST responses returned by ADS
+ * @method integer getEmptyVMAPResponse() Obtain The number of empty VMAP responses returned by ADS
+ * @method void setEmptyVMAPResponse(integer $EmptyVMAPResponse) Set The number of empty VMAP responses returned by ADS
+ * @method string getDate() Obtain Date
+ * @method void setDate(string $Date) Set Date
+ * @method string getStartTime() Obtain Start time
+ * @method void setStartTime(string $StartTime) Set Start time
+ * @method string getEndTime() Obtain End time
+ * @method void setEndTime(string $EndTime) Set End time
  */
 class UsageDetail extends AbstractModel
 {
@@ -121,33 +143,94 @@ class UsageDetail extends AbstractModel
 
     /**
      * @var float Advertising tag time.
+     * @deprecated
      */
     public $AdMarkerTime;
 
     /**
      * @var float Personalization replacement time.
+     * @deprecated
      */
     public $ReplacedTime;
 
     /**
      * @var float Fill factor for personalized ads.
+     * @deprecated
      */
     public $MidFillRate;
 
     /**
      * @var integer Number of pre-roll ad requests.
+     * @deprecated
      */
     public $PreReqNum;
 
     /**
      * @var integer Number of pre-roll ad replacements.
+     * @deprecated
      */
     public $PreReplacedNum;
 
     /**
      * @var float Ad replacement rate.
+     * @deprecated
      */
     public $PreReplaceRate;
+
+    /**
+     * @var integer Number of ad tags found in the list
+     */
+    public $ADMarkerFound;
+
+    /**
+     * @var integer Request advertising frequency from ADS
+     */
+    public $MakeAdsRequest;
+
+    /**
+     * @var integer Received VAST returns from ADS
+     */
+    public $VASTResponse;
+
+    /**
+     * @var integer Successfully filled the ad count
+     */
+    public $FilledAvail;
+
+    /**
+     * @var integer The number of issues encountered during ad replacement execution
+     */
+    public $WarningNoAd;
+
+    /**
+     * @var integer The number of timeouts returned by ADS
+     */
+    public $ErrorAdsTimeout;
+
+    /**
+     * @var integer The number of empty VAST responses returned by ADS
+     */
+    public $EmptyVASTResponse;
+
+    /**
+     * @var integer The number of empty VMAP responses returned by ADS
+     */
+    public $EmptyVMAPResponse;
+
+    /**
+     * @var string Date
+     */
+    public $Date;
+
+    /**
+     * @var string Start time
+     */
+    public $StartTime;
+
+    /**
+     * @var string End time
+     */
+    public $EndTime;
 
     /**
      * @param string $UniqId Ad insertion configuration uniq_id.
@@ -168,6 +251,17 @@ class UsageDetail extends AbstractModel
      * @param integer $PreReqNum Number of pre-roll ad requests.
      * @param integer $PreReplacedNum Number of pre-roll ad replacements.
      * @param float $PreReplaceRate Ad replacement rate.
+     * @param integer $ADMarkerFound Number of ad tags found in the list
+     * @param integer $MakeAdsRequest Request advertising frequency from ADS
+     * @param integer $VASTResponse Received VAST returns from ADS
+     * @param integer $FilledAvail Successfully filled the ad count
+     * @param integer $WarningNoAd The number of issues encountered during ad replacement execution
+     * @param integer $ErrorAdsTimeout The number of timeouts returned by ADS
+     * @param integer $EmptyVASTResponse The number of empty VAST responses returned by ADS
+     * @param integer $EmptyVMAPResponse The number of empty VMAP responses returned by ADS
+     * @param string $Date Date
+     * @param string $StartTime Start time
+     * @param string $EndTime End time
      */
     function __construct()
     {
@@ -252,6 +346,50 @@ class UsageDetail extends AbstractModel
 
         if (array_key_exists("PreReplaceRate",$param) and $param["PreReplaceRate"] !== null) {
             $this->PreReplaceRate = $param["PreReplaceRate"];
+        }
+
+        if (array_key_exists("ADMarkerFound",$param) and $param["ADMarkerFound"] !== null) {
+            $this->ADMarkerFound = $param["ADMarkerFound"];
+        }
+
+        if (array_key_exists("MakeAdsRequest",$param) and $param["MakeAdsRequest"] !== null) {
+            $this->MakeAdsRequest = $param["MakeAdsRequest"];
+        }
+
+        if (array_key_exists("VASTResponse",$param) and $param["VASTResponse"] !== null) {
+            $this->VASTResponse = $param["VASTResponse"];
+        }
+
+        if (array_key_exists("FilledAvail",$param) and $param["FilledAvail"] !== null) {
+            $this->FilledAvail = $param["FilledAvail"];
+        }
+
+        if (array_key_exists("WarningNoAd",$param) and $param["WarningNoAd"] !== null) {
+            $this->WarningNoAd = $param["WarningNoAd"];
+        }
+
+        if (array_key_exists("ErrorAdsTimeout",$param) and $param["ErrorAdsTimeout"] !== null) {
+            $this->ErrorAdsTimeout = $param["ErrorAdsTimeout"];
+        }
+
+        if (array_key_exists("EmptyVASTResponse",$param) and $param["EmptyVASTResponse"] !== null) {
+            $this->EmptyVASTResponse = $param["EmptyVASTResponse"];
+        }
+
+        if (array_key_exists("EmptyVMAPResponse",$param) and $param["EmptyVMAPResponse"] !== null) {
+            $this->EmptyVMAPResponse = $param["EmptyVMAPResponse"];
+        }
+
+        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
+            $this->Date = $param["Date"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

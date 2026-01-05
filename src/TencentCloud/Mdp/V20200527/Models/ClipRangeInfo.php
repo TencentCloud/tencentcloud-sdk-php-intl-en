@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set The vod type is valid, the content is valid starting time, Entire and SpecifyTimeRange are optional.
  * @method integer getOffset() Obtain Offset, valid when Type is SpecifyTimeRange.
  * @method void setOffset(integer $Offset) Set Offset, valid when Type is SpecifyTimeRange.
+ * @method integer getStartOffset() Obtain Start offset, Valid when the Type is SpecifyTimeRange.
+ * @method void setStartOffset(integer $StartOffset) Set Start offset, Valid when the Type is SpecifyTimeRange.
+ * @method integer getEndOffset() Obtain End offset, valid when Type is SpecifyTimeRange.
+ * @method void setEndOffset(integer $EndOffset) Set End offset, valid when Type is SpecifyTimeRange.
  */
 class ClipRangeInfo extends AbstractModel
 {
@@ -39,8 +43,20 @@ class ClipRangeInfo extends AbstractModel
     public $Offset;
 
     /**
+     * @var integer Start offset, Valid when the Type is SpecifyTimeRange.
+     */
+    public $StartOffset;
+
+    /**
+     * @var integer End offset, valid when Type is SpecifyTimeRange.
+     */
+    public $EndOffset;
+
+    /**
      * @param string $Type The vod type is valid, the content is valid starting time, Entire and SpecifyTimeRange are optional.
      * @param integer $Offset Offset, valid when Type is SpecifyTimeRange.
+     * @param integer $StartOffset Start offset, Valid when the Type is SpecifyTimeRange.
+     * @param integer $EndOffset End offset, valid when Type is SpecifyTimeRange.
      */
     function __construct()
     {
@@ -61,6 +77,14 @@ class ClipRangeInfo extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("StartOffset",$param) and $param["StartOffset"] !== null) {
+            $this->StartOffset = $param["StartOffset"];
+        }
+
+        if (array_key_exists("EndOffset",$param) and $param["EndOffset"] !== null) {
+            $this->EndOffset = $param["EndOffset"];
         }
     }
 }

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 
  *
- * @method integer getTotalSize() Obtain 
- * @method void setTotalSize(integer $TotalSize) Set 
- * @method array getRecords() Obtain 
- * @method void setRecords(array $Records) Set 
+ * @method integer getTotalSize() Obtain Total list size.
+ * @method void setTotalSize(integer $TotalSize) Set Total list size.
+ * @method array getRecords() Obtain List of associated domain name information.
+ * @method void setRecords(array $Records) Set List of associated domain name information.
  */
 class CdnDomainInfo extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Total list size.
      */
     public $TotalSize;
 
     /**
-     * @var array 
+     * @var array List of associated domain name information.
      */
     public $Records;
 
     /**
-     * @param integer $TotalSize 
-     * @param array $Records 
+     * @param integer $TotalSize Total list size.
+     * @param array $Records List of associated domain name information.
      */
     function __construct()
     {

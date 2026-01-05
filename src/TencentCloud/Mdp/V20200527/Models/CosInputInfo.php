@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 
  *
- * @method string getBucket() Obtain 
- * @method void setBucket(string $Bucket) Set 
- * @method string getRegion() Obtain 
- * @method void setRegion(string $Region) Set 
- * @method string getObject() Obtain 
- * @method void setObject(string $Object) Set 
+ * @method string getBucket() Obtain COS bucket name
+ * @method void setBucket(string $Bucket) Set COS bucket name
+ * @method string getRegion() Obtain Region
+ * @method void setRegion(string $Region) Set Region
+ * @method string getObject() Obtain File object path
+ * @method void setObject(string $Object) Set File object path
  */
 class CosInputInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string COS bucket name
      */
     public $Bucket;
 
     /**
-     * @var string 
+     * @var string Region
      */
     public $Region;
 
     /**
-     * @var string 
+     * @var string File object path
      */
     public $Object;
 
     /**
-     * @param string $Bucket 
-     * @param string $Region 
-     * @param string $Object 
+     * @param string $Bucket COS bucket name
+     * @param string $Region Region
+     * @param string $Object File object path
      */
     function __construct()
     {

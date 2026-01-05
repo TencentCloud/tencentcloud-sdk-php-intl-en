@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSSAIInfo(SSAIConf $SSAIInfo) Set SSAI configuration info
  * @method string getRegion() Obtain Region info
  * @method void setRegion(string $Region) Set Region info
+ * @method string getSessionInitPrefix() Obtain Used for clickthrough addresses
+ * @method void setSessionInitPrefix(string $SessionInitPrefix) Set Used for clickthrough addresses
  */
 class SSAIChannelInfo extends AbstractModel
 {
@@ -66,12 +68,18 @@ class SSAIChannelInfo extends AbstractModel
     public $Region;
 
     /**
+     * @var string Used for clickthrough addresses
+     */
+    public $SessionInitPrefix;
+
+    /**
      * @param string $ID SSAI configuration ID, globally unique identifier
      * @param string $Name Configuration name
      * @param string $ContentSource Content source stream prefix
      * @param string $PlaybackPrefix Generated playback address prefix
      * @param SSAIConf $SSAIInfo SSAI configuration info
      * @param string $Region Region info
+     * @param string $SessionInitPrefix Used for clickthrough addresses
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class SSAIChannelInfo extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("SessionInitPrefix",$param) and $param["SessionInitPrefix"] !== null) {
+            $this->SessionInitPrefix = $param["SessionInitPrefix"];
         }
     }
 }

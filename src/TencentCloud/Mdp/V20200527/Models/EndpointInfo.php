@@ -48,6 +48,8 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
  * @method void setDRMEnabled(boolean $DRMEnabled) Set DRM switch. If it is turned on, only CMAF will take effect.
  * @method DRMInfo getDRMInfo() Obtain DRM configuration information.
  * @method void setDRMInfo(DRMInfo $DRMInfo) Set DRM configuration information.
+ * @method boolean getAbsolutePathEnable() Obtain The switch of absolute path.
+ * @method void setAbsolutePathEnable(boolean $AbsolutePathEnable) Set The switch of absolute path.
  */
 class EndpointInfo extends AbstractModel
 {
@@ -118,6 +120,11 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
     public $DRMInfo;
 
     /**
+     * @var boolean The switch of absolute path.
+     */
+    public $AbsolutePathEnable;
+
+    /**
      * @param string $Name Endpoint name.
      * @param string $Url Endpoint URL.
      * @param EndpointAuthInfo $AuthInfo Endpoint authentication information.
@@ -132,6 +139,7 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
 The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
      * @param boolean $DRMEnabled DRM switch. If it is turned on, only CMAF will take effect.
      * @param DRMInfo $DRMInfo DRM configuration information.
+     * @param boolean $AbsolutePathEnable The switch of absolute path.
      */
     function __construct()
     {
@@ -199,6 +207,10 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
         if (array_key_exists("DRMInfo",$param) and $param["DRMInfo"] !== null) {
             $this->DRMInfo = new DRMInfo();
             $this->DRMInfo->deserialize($param["DRMInfo"]);
+        }
+
+        if (array_key_exists("AbsolutePathEnable",$param) and $param["AbsolutePathEnable"] !== null) {
+            $this->AbsolutePathEnable = $param["AbsolutePathEnable"];
         }
     }
 }

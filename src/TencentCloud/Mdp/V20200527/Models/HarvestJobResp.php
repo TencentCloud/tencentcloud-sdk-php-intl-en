@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelId(string $ChannelId) Set The associated ChannelID.
  * @method string getRegion() Obtain The region corresponding to the harvest job.
  * @method void setRegion(string $Region) Set The region corresponding to the harvest job.
+ * @method string getCallbackURL() Obtain Callback URL after recording is completed
+ * @method void setCallbackURL(string $CallbackURL) Set Callback URL after recording is completed
  */
 class HarvestJobResp extends AbstractModel
 {
@@ -115,6 +117,11 @@ class HarvestJobResp extends AbstractModel
     public $Region;
 
     /**
+     * @var string Callback URL after recording is completed
+     */
+    public $CallbackURL;
+
+    /**
      * @param string $ID HarvestJob ID, a globally unique identifier.
      * @param string $ChannelName The associated channel name.
      * @param string $EndpointName The associated endpoint name.
@@ -128,6 +135,7 @@ class HarvestJobResp extends AbstractModel
      * @param integer $CreateTime HarvestJob creation time, timestamp in seconds.
      * @param string $ChannelId The associated ChannelID.
      * @param string $Region The region corresponding to the harvest job.
+     * @param string $CallbackURL Callback URL after recording is completed
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class HarvestJobResp extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("CallbackURL",$param) and $param["CallbackURL"] !== null) {
+            $this->CallbackURL = $param["CallbackURL"];
         }
     }
 }

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 
  *
- * @method string getCdnDomain() Obtain 
- * @method void setCdnDomain(string $CdnDomain) Set 
- * @method string getRegion() Obtain 
- * @method void setRegion(string $Region) Set 
- * @method string getChannelId() Obtain 
- * @method void setChannelId(string $ChannelId) Set 
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
+ * @method string getCdnDomain() Obtain Associated playback domain name.
+ * @method void setCdnDomain(string $CdnDomain) Set Associated playback domain name.
+ * @method string getRegion() Obtain Belonging region.
+ * @method void setRegion(string $Region) Set Belonging region.
+ * @method string getChannelId() Obtain Channel ID.
+ * @method void setChannelId(string $ChannelId) Set Channel ID.
+ * @method string getId() Obtain The ID of a record
+ * @method void setId(string $Id) Set The ID of a record
  */
 class DomainRecordInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Associated playback domain name.
      */
     public $CdnDomain;
 
     /**
-     * @var string 
+     * @var string Belonging region.
      */
     public $Region;
 
     /**
-     * @var string 
+     * @var string Channel ID.
      */
     public $ChannelId;
 
     /**
-     * @var string 
+     * @var string The ID of a record
      */
     public $Id;
 
     /**
-     * @param string $CdnDomain 
-     * @param string $Region 
-     * @param string $ChannelId 
-     * @param string $Id 
+     * @param string $CdnDomain Associated playback domain name.
+     * @param string $Region Belonging region.
+     * @param string $ChannelId Channel ID.
+     * @param string $Id The ID of a record
      */
     function __construct()
     {

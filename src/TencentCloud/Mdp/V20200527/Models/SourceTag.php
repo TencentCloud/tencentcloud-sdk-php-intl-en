@@ -23,26 +23,28 @@ use TencentCloud\Common\AbstractModel;
 	Value string `json:"Value"`
 }
  *
- * @method string getKey() Obtain 
- * @method void setKey(string $Key) Set 
- * @method string getValue() Obtain 
- * @method void setValue(string $Value) Set 
+ * @method string getKey() Obtain The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits
+ * @method void setKey(string $Key) Set The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits
+ * @method string getValue() Obtain The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
+
+ * @method void setValue(string $Value) Set The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
  */
 class SourceTag extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits
      */
     public $Key;
 
     /**
-     * @var string 
+     * @var string The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
+
      */
     public $Value;
 
     /**
-     * @param string $Key 
-     * @param string $Value 
+     * @param string $Key The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits
+     * @param string $Value The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
      */
     function __construct()
     {
