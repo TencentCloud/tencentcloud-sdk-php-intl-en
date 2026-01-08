@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * List of sensitive APIs that can be called by a mini program
  *
  * @method integer getTotalCount() Obtain Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTotalCount(integer $TotalCount) Set Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getDataList() Obtain List data
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDataList(array $DataList) Set List data
@@ -33,7 +31,6 @@ class DescribeMNPSensitiveAPIPermissionListResp extends AbstractModel
 {
     /**
      * @var integer Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TotalCount;
 
@@ -45,7 +42,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $DataList List data
 Note: This field may return null, indicating that no valid values can be obtained.
      */

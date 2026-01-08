@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * String object
  *
- * @method string getData() Obtain String type response data
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setData(string $Data) Set String type response data
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getData() Obtain string type response data.
+ * @method void setData(string $Data) Set string type response data.
  */
 class StringData extends AbstractModel
 {
     /**
-     * @var string String type response data
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string string type response data.
      */
     public $Data;
 
     /**
-     * @param string $Data String type response data
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Data string type response data.
      */
     function __construct()
     {

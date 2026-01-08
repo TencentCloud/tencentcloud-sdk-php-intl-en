@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAPIMethod() Obtain API request method
  * @method void setAPIMethod(string $APIMethod) Set API request method
  * @method string getAPIDesc() Obtain API description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAPIDesc(string $APIDesc) Set API description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateUser() Obtain Creator
  * @method void setCreateUser(string $CreateUser) Set Creator
  * @method string getCreateTime() Obtain Creation time
@@ -39,33 +37,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method string getUpdateTime() Obtain Update time
  * @method void setUpdateTime(string $UpdateTime) Set Update time
  * @method string getApplicationId() Obtain Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplicationId(string $ApplicationId) Set Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getApplicationName() Obtain Application name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplicationName(string $ApplicationName) Set Application name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTeamId() Obtain Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTeamId(string $TeamId) Set Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTeamName() Obtain Team name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTeamName(string $TeamName) Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getApplicationLogo() Obtain Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApplicationLogo(string $ApplicationLogo) Set Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAPIType() Obtain API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAPIType(integer $APIType) Set API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain API status. 0: Public; 1: Restricted
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set API status. 0: Public; 1: Restricted
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getApplicationLogo() Obtain Specifies the application icon.
+ * @method void setApplicationLogo(string $ApplicationLogo) Set Specifies the application icon.
+ * @method integer getAPIType() Obtain API type. 1: system; 2: custom.
+ * @method void setAPIType(integer $APIType) Set API type. 1: system; 2: custom.
+ * @method integer getStatus() Obtain API status. 0: public; 1: restricted.
+ * @method void setStatus(integer $Status) Set API status. 0: public; 1: restricted.
  */
 class DescribeApplicationSensitiveAPIListData extends AbstractModel
 {
@@ -86,7 +70,6 @@ class DescribeApplicationSensitiveAPIListData extends AbstractModel
 
     /**
      * @var string API description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $APIDesc;
 
@@ -112,43 +95,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplicationId;
 
     /**
      * @var string Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplicationName;
 
     /**
      * @var string Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeamId;
 
     /**
      * @var string Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeamName;
 
     /**
-     * @var string Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the application icon.
      */
     public $ApplicationLogo;
 
     /**
-     * @var integer API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer API type. 1: system; 2: custom.
      */
     public $APIType;
 
     /**
-     * @var integer API status. 0: Public; 1: Restricted
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer API status. 0: public; 1: restricted.
      */
     public $Status;
 
@@ -157,25 +133,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $APIName API name
      * @param string $APIMethod API request method
      * @param string $APIDesc API description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateUser Creator
      * @param string $CreateTime Creation time
      * @param string $UpdateUser Updater
      * @param string $UpdateTime Update time
      * @param string $ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ApplicationLogo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status API status. 0: Public; 1: Restricted
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ApplicationLogo Specifies the application icon.
+     * @param integer $APIType API type. 1: system; 2: custom.
+     * @param integer $Status API status. 0: public; 1: restricted.
      */
     function __construct()
     {

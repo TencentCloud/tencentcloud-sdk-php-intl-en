@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getApplicationId() Obtain Application ID
  * @method void setApplicationId(string $ApplicationId) Set Application ID
- * @method integer getAppType() Obtain Application platform. 2: Android; 3: iOS
- * @method void setAppType(integer $AppType) Set Application platform. 2: Android; 3: iOS
  * @method string getPlatformId() Obtain Platform ID
  * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method integer getAppType() Obtain Application platform. 2: Android; 3: iOS
+ * @method void setAppType(integer $AppType) Set Application platform. 2: Android; 3: iOS
  */
 class DescribeApplicationConfigFileRequest extends AbstractModel
 {
@@ -35,19 +35,20 @@ class DescribeApplicationConfigFileRequest extends AbstractModel
     public $ApplicationId;
 
     /**
-     * @var integer Application platform. 2: Android; 3: iOS
-     */
-    public $AppType;
-
-    /**
      * @var string Platform ID
      */
     public $PlatformId;
 
     /**
+     * @var integer Application platform. 2: Android; 3: iOS
+     * @deprecated
+     */
+    public $AppType;
+
+    /**
      * @param string $ApplicationId Application ID
-     * @param integer $AppType Application platform. 2: Android; 3: iOS
      * @param string $PlatformId Platform ID
+     * @param integer $AppType Application platform. 2: Android; 3: iOS
      */
     function __construct()
     {
@@ -66,12 +67,12 @@ class DescribeApplicationConfigFileRequest extends AbstractModel
             $this->ApplicationId = $param["ApplicationId"];
         }
 
-        if (array_key_exists("AppType",$param) and $param["AppType"] !== null) {
-            $this->AppType = $param["AppType"];
-        }
-
         if (array_key_exists("PlatformId",$param) and $param["PlatformId"] !== null) {
             $this->PlatformId = $param["PlatformId"];
+        }
+
+        if (array_key_exists("AppType",$param) and $param["AppType"] !== null) {
+            $this->AppType = $param["AppType"];
         }
     }
 }

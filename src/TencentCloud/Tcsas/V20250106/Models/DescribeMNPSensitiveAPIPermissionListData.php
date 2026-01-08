@@ -21,87 +21,59 @@ use TencentCloud\Common\AbstractModel;
  * List of sensitive APIs that can be called by a mini program
  *
  * @method string getAPIId() Obtain API ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAPIId(string $APIId) Set API ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAPIName() Obtain API name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAPIName(string $APIName) Set API name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAPIName() Obtain API name.
+ * @method void setAPIName(string $APIName) Set API name.
  * @method string getAPIMethod() Obtain API request method
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAPIMethod(string $APIMethod) Set API request method
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAPIStatus() Obtain API status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAPIStatus(integer $APIStatus) Set API status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAPIApplyStatus() Obtain API application status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAPIApplyStatus(integer $APIApplyStatus) Set API application status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRejectReason() Obtain Reason for rejection
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRejectReason(string $RejectReason) Set Reason for rejection
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAPIStatus() Obtain API status.
+ * @method void setAPIStatus(integer $APIStatus) Set API status.
+ * @method integer getAPIApplyStatus() Obtain API application status.
+ * @method void setAPIApplyStatus(integer $APIApplyStatus) Set API application status.
+ * @method string getRejectReason() Obtain Reason for rejection.
+ * @method void setRejectReason(string $RejectReason) Set Reason for rejection.
  * @method string getApprovalNo() Obtain Approval ID
  * @method void setApprovalNo(string $ApprovalNo) Set Approval ID
  * @method string getApplicationId() Obtain Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplicationId(string $ApplicationId) Set Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getApplicationIcon() Obtain Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApplicationIcon(string $ApplicationIcon) Set Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getApplicationIcon() Obtain Specifies the application icon.
+ * @method void setApplicationIcon(string $ApplicationIcon) Set Specifies the application icon.
  * @method string getApplicationName() Obtain Application name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplicationName(string $ApplicationName) Set Application name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAPIType() Obtain API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAPIType(integer $APIType) Set API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAPIDesc() Obtain API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAPIDesc(string $APIDesc) Set API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAPIType() Obtain API type. 1: system; 2: custom.
+ * @method void setAPIType(integer $APIType) Set API type. 1: system; 2: custom.
+ * @method string getAPIDesc() Obtain API feature description.
+ * @method void setAPIDesc(string $APIDesc) Set API feature description.
  */
 class DescribeMNPSensitiveAPIPermissionListData extends AbstractModel
 {
     /**
      * @var string API ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $APIId;
 
     /**
-     * @var string API name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string API name.
      */
     public $APIName;
 
     /**
      * @var string API request method
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $APIMethod;
 
     /**
-     * @var integer API status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer API status.
      */
     public $APIStatus;
 
     /**
-     * @var integer API application status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer API application status.
      */
     public $APIApplyStatus;
 
     /**
-     * @var string Reason for rejection
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Reason for rejection.
      */
     public $RejectReason;
 
@@ -112,58 +84,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplicationId;
 
     /**
-     * @var string Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the application icon.
      */
     public $ApplicationIcon;
 
     /**
      * @var string Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplicationName;
 
     /**
-     * @var integer API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer API type. 1: system; 2: custom.
      */
     public $APIType;
 
     /**
-     * @var string API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string API feature description.
      */
     public $APIDesc;
 
     /**
      * @param string $APIId API ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $APIName API name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $APIName API name.
      * @param string $APIMethod API request method
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $APIStatus API status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $APIApplyStatus API application status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RejectReason Reason for rejection
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $APIStatus API status.
+     * @param integer $APIApplyStatus API application status.
+     * @param string $RejectReason Reason for rejection.
      * @param string $ApprovalNo Approval ID
      * @param string $ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ApplicationIcon Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ApplicationIcon Specifies the application icon.
      * @param string $ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $APIDesc API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $APIType API type. 1: system; 2: custom.
+     * @param string $APIDesc API feature description.
      */
     function __construct()
     {

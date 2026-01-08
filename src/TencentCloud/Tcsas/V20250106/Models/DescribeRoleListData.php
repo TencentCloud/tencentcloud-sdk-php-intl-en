@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * Role management list
  *
  * @method integer getRoleId() Obtain Role ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRoleId(integer $RoleId) Set Role ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRoleName() Obtain Role name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRoleName(string $RoleName) Set Role name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRoleName() Obtain Role name.
+ * @method void setRoleName(string $RoleName) Set Role name.
  * @method string getTeamName() Obtain Team name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTeamName(string $TeamName) Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRoleType() Obtain Role type 1-Preset role 2-Custom role
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRoleType(integer $RoleType) Set Role type 1-Preset role 2-Custom role
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRoleType() Obtain Role type 1-preset role 2-custom role.
+ * @method void setRoleType(integer $RoleType) Set Role type 1-preset role 2-custom role.
  */
 class DescribeRoleListData extends AbstractModel
 {
     /**
      * @var integer Role ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RoleId;
 
     /**
-     * @var string Role name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Role name.
      */
     public $RoleName;
 
     /**
      * @var string Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeamName;
 
     /**
      * @var string Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var integer Role type 1-Preset role 2-Custom role
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Role type 1-preset role 2-custom role.
      */
     public $RoleType;
 
     /**
      * @param integer $RoleId Role ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RoleName Role name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RoleName Role name.
      * @param string $TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RoleType Role type 1-Preset role 2-Custom role
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RoleType Role type 1-preset role 2-custom role.
      */
     function __construct()
     {

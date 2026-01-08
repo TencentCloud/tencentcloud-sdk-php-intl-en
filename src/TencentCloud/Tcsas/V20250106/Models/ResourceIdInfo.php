@@ -20,34 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Unified operation success ID - integer
  *
- * @method integer getResourceId() Obtain Resource ID
-0: No preview
-1. A preview is currently available and uploaded by the current user.
-2. A preview is currently available and uploaded by another user.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResourceId(integer $ResourceId) Set Resource ID
-0: No preview
-1. A preview is currently available and uploaded by the current user.
-2. A preview is currently available and uploaded by another user.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getResourceId() Obtain Specifies the resource ID returned by the business.
+0: no trial version available.
+A trial version is currently available and uploaded by the current user.
+2: a trial version is currently available and uploaded by another user.
+ * @method void setResourceId(integer $ResourceId) Set Specifies the resource ID returned by the business.
+0: no trial version available.
+A trial version is currently available and uploaded by the current user.
+2: a trial version is currently available and uploaded by another user.
  */
 class ResourceIdInfo extends AbstractModel
 {
     /**
-     * @var integer Resource ID
-0: No preview
-1. A preview is currently available and uploaded by the current user.
-2. A preview is currently available and uploaded by another user.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the resource ID returned by the business.
+0: no trial version available.
+A trial version is currently available and uploaded by the current user.
+2: a trial version is currently available and uploaded by another user.
      */
     public $ResourceId;
 
     /**
-     * @param integer $ResourceId Resource ID
-0: No preview
-1. A preview is currently available and uploaded by the current user.
-2. A preview is currently available and uploaded by another user.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ResourceId Specifies the resource ID returned by the business.
+0: no trial version available.
+A trial version is currently available and uploaded by the current user.
+2: a trial version is currently available and uploaded by another user.
      */
     function __construct()
     {

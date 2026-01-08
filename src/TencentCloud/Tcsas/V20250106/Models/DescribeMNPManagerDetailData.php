@@ -21,153 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * Mini program details
  *
  * @method string getMNPType() Obtain Mini program type 
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPType(string $MNPType) Set Mini program type 
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMNPId() Obtain Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPId(string $MNPId) Set Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMNPName() Obtain Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPName(string $MNPName) Set Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMNPIcon() Obtain Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPIcon(string $MNPIcon) Set Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMNPIntro() Obtain Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPIntro(string $MNPIntro) Set Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMNPDesc() Obtain Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPDesc(string $MNPDesc) Set Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time, timestamp
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Creation time, timestamp
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreateTime() Obtain Creation time, timestamp.
+ * @method void setCreateTime(string $CreateTime) Set Creation time, timestamp.
  * @method string getCreateUser() Obtain Creator
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateUser(string $CreateUser) Set Creator
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAccessStatus() Obtain Connection status. 1: Not connected; 2: Connected
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAccessStatus(integer $AccessStatus) Set Connection status. 1: Not connected; 2: Connected
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTeamName() Obtain The name of the associated team
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTeamName(string $TeamName) Set The name of the associated team
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAccessStatus() Obtain Access status. 1: not connected; 2: connected.
+ * @method void setAccessStatus(integer $AccessStatus) Set Access status. 1: not connected; 2: connected.
+ * @method string getTeamName() Obtain Name of the associated team
+ * @method void setTeamName(string $TeamName) Set Name of the associated team
  * @method string getTeamId() Obtain Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTeamId(string $TeamId) Set Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Mini program release status. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Mini program release status. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+ * @method void setStatus(integer $Status) Set Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
  */
 class DescribeMNPManagerDetailData extends AbstractModel
 {
     /**
      * @var string Mini program type 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPType;
 
     /**
      * @var string Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPId;
 
     /**
      * @var string Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPName;
 
     /**
      * @var string Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPIcon;
 
     /**
      * @var string Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPIntro;
 
     /**
      * @var string Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPDesc;
 
     /**
-     * @var string Creation time, timestamp
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Creation time, timestamp.
      */
     public $CreateTime;
 
     /**
      * @var string Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateUser;
 
     /**
-     * @var integer Connection status. 1: Not connected; 2: Connected
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Access status. 1: not connected; 2: connected.
      */
     public $AccessStatus;
 
     /**
-     * @var string The name of the associated team
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name of the associated team
      */
     public $TeamName;
 
     /**
      * @var string Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeamId;
 
     /**
-     * @var integer Mini program release status. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
      */
     public $Status;
 
     /**
      * @param string $MNPType Mini program type 
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time, timestamp
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreateTime Creation time, timestamp.
      * @param string $CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AccessStatus Connection status. 1: Not connected; 2: Connected
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TeamName The name of the associated team
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AccessStatus Access status. 1: not connected; 2: connected.
+     * @param string $TeamName Name of the associated team
      * @param string $TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Mini program release status. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
      */
     function __construct()
     {

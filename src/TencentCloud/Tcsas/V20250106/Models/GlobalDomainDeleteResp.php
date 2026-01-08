@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Response of deleting a global domain name
  *
- * @method boolean getResult() Obtain Response result
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResult(boolean $Result) Set Response result
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getResult() Obtain Result.
+ * @method void setResult(boolean $Result) Set Result.
  */
 class GlobalDomainDeleteResp extends AbstractModel
 {
     /**
-     * @var boolean Response result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Result.
      */
     public $Result;
 
     /**
-     * @param boolean $Result Response result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $Result Result.
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Role management list
  *
  * @method integer getTotalCount() Obtain Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTotalCount(integer $TotalCount) Set Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getDataList() Obtain List data
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDataList(array $DataList) Set List data
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DescribeRoleListResp extends AbstractModel
 {
     /**
      * @var integer Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TotalCount;
 
     /**
      * @var array List data
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataList;
 
     /**
      * @param integer $TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $DataList List data
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

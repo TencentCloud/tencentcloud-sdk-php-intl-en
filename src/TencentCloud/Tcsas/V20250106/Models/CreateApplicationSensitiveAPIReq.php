@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * The request to add a sensitive API
  *
  * @method string getAPIName() Obtain API name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAPIName(string $APIName) Set API name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getAPIDesc() Obtain API description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAPIDesc(string $APIDesc) Set API description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAPIType() Obtain API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAPIType(integer $APIType) Set API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAPIType() Obtain API type. 1: system; 2: custom.
+ * @method void setAPIType(integer $APIType) Set API type. 1: system; 2: custom.
  */
 class CreateApplicationSensitiveAPIReq extends AbstractModel
 {
     /**
      * @var string API name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $APIName;
 
     /**
      * @var string API description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $APIDesc;
 
     /**
-     * @var integer API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer API type. 1: system; 2: custom.
      */
     public $APIType;
 
     /**
      * @param string $APIName API name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $APIDesc API description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $APIType API type. 1: system; 2: custom.
      */
     function __construct()
     {

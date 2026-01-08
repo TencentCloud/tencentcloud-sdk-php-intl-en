@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Response of global domain name modification
  *
- * @method integer getResult() Obtain 0: Success; 1: Allowed domains; 2: Blocked domains
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResult(integer $Result) Set 0: Success; 1: Allowed domains; 2: Blocked domains
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getResult() Obtain 0: success; 1: allowed domains exist; 2: blocked domains exist.
+ * @method void setResult(integer $Result) Set 0: success; 1: allowed domains exist; 2: blocked domains exist.
  */
 class GlobalDomainModifyRespResp extends AbstractModel
 {
     /**
-     * @var integer 0: Success; 1: Allowed domains; 2: Blocked domains
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 0: success; 1: allowed domains exist; 2: blocked domains exist.
      */
     public $Result;
 
     /**
-     * @param integer $Result 0: Success; 1: Allowed domains; 2: Blocked domains
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Result 0: success; 1: allowed domains exist; 2: blocked domains exist.
      */
     function __construct()
     {

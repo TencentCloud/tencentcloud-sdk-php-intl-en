@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * List of global domain names
  *
  * @method integer getDomainId() Obtain Domain ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDomainId(integer $DomainId) Set Domain ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDomainUrl() Obtain Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDomainUrl(string $DomainUrl) Set Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDomainType() Obtain Type. 1: Allowed; 2: Blocked
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomainType(integer $DomainType) Set Type. 1: Allowed; 2: Blocked
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDomainType() Obtain Type. 1: allowlist; 2: blocklist.
+ * @method void setDomainType(integer $DomainType) Set Type. 1: allowlist; 2: blocklist.
  * @method string getCreateUser() Obtain Creator
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateUser(string $CreateUser) Set Creator
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUpdateUser() Obtain Updater
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateUser(string $UpdateUser) Set Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUpdateUser() Obtain Specifies the updater.
+ * @method void setUpdateUser(string $UpdateUser) Set Specifies the updater.
  * @method string getUpdateTime() Obtain Update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DescribeGlobalDomainsListData extends AbstractModel
 {
     /**
      * @var integer Domain ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DomainId;
 
     /**
      * @var string Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DomainUrl;
 
     /**
-     * @var integer Type. 1: Allowed; 2: Blocked
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Type. 1: allowlist; 2: blocklist.
      */
     public $DomainType;
 
     /**
      * @var string Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateUser;
 
     /**
      * @var string Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var string Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the updater.
      */
     public $UpdateUser;
 
     /**
      * @var string Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
     /**
      * @param integer $DomainId Domain ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DomainUrl Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DomainType Type. 1: Allowed; 2: Blocked
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DomainType Type. 1: allowlist; 2: blocklist.
      * @param string $CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdateUser Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UpdateUser Specifies the updater.
      * @param string $UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

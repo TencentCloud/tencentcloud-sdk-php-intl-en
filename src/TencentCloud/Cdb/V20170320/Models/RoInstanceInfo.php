@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeight(integer $Weight) Set RO instance weight in the RO group
  * @method string getRegion() Obtain RO instance region name, such as ap-shanghai
  * @method void setRegion(string $Region) Set RO instance region name, such as ap-shanghai
- * @method string getZone() Obtain Name of RO AZ, such as ap-shanghai-1
- * @method void setZone(string $Zone) Set Name of RO AZ, such as ap-shanghai-1
+ * @method string getZone() Obtain Name of RO AZ, such as ap-shanghai-2
+ * @method void setZone(string $Zone) Set Name of RO AZ, such as ap-shanghai-2
  * @method string getInstanceId() Obtain RO instance ID in the format of cdbro-c1nl9rpv
  * @method void setInstanceId(string $InstanceId) Set RO instance ID in the format of cdbro-c1nl9rpv
  * @method integer getStatus() Obtain RO instance status. Valid values: `0` (creating), `1` (running), `3` (remote RO), `4` (deleting). When the `DescribeDBInstances` API is used to query the information of the source instance, if the source instance is associated with a remote read-only instance, the returned status value of the remote read-only instance always shows 3.
@@ -97,7 +97,7 @@ class RoInstanceInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var string Name of RO AZ, such as ap-shanghai-1
+     * @var string Name of RO AZ, such as ap-shanghai-2
      */
     public $Zone;
 
@@ -197,7 +197,7 @@ class RoInstanceInfo extends AbstractModel
      * @param string $OfflineTime Last deactivation time of a RO instance in the RO group
      * @param integer $Weight RO instance weight in the RO group
      * @param string $Region RO instance region name, such as ap-shanghai
-     * @param string $Zone Name of RO AZ, such as ap-shanghai-1
+     * @param string $Zone Name of RO AZ, such as ap-shanghai-2
      * @param string $InstanceId RO instance ID in the format of cdbro-c1nl9rpv
      * @param integer $Status RO instance status. Valid values: `0` (creating), `1` (running), `3` (remote RO), `4` (deleting). When the `DescribeDBInstances` API is used to query the information of the source instance, if the source instance is associated with a remote read-only instance, the returned status value of the remote read-only instance always shows 3.
      * @param integer $InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)

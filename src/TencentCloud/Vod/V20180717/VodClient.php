@@ -259,6 +259,7 @@ If event notification is used, the type of event notification is [Video editing 
  * @method Models\ForbidMediaDistributionResponse ForbidMediaDistribution(Models\ForbidMediaDistributionRequest $req) * After a media file is forbidden, except previewing it in the VOD Console, accessing the URLs of its various resources (such as source file, output files, and screenshots) in other scenarios will return error 403.
   It takes about 5-10 minutes for a forbidding/unblocking operation to take effect across the entire network.
  * @method Models\HandleCurrentPlaylistResponse HandleCurrentPlaylist(Models\HandleCurrentPlaylistRequest $req) Operate the current play list . Supported operations include:<li> Insert: Insert a playing program into the current playlist.</li><li> Delete: Remove a playing program from the playlist.</li>
+ * @method Models\ImportMediaKnowledgeResponse ImportMediaKnowledge(Models\ImportMediaKnowledgeRequest $req) This API is used to import AI analysis results into the knowledge base.
  * @method Models\InspectMediaQualityResponse InspectMediaQuality(Models\InspectMediaQualityRequest $req) Initiate media quality inspection task.
  * @method Models\LiveRealTimeClipResponse LiveRealTimeClip(Models\LiveRealTimeClipRequest $req) Live broadcast real-time editing means that during the live broadcast process (that is, before the live broadcast has ended), customers can select a section of past live broadcast content to generate a new video (HLS format) in real time. Developers can share it immediately, or permanently Save it.
 
@@ -435,6 +436,7 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
 - (Not recommended: use StreamIds instead) Search for media files with a single live streaming code (StreamId).
 - (Not recommended: use CreateTime instead) Search for media files with a single start creation time (StartTime).
 - (Not recommended: use CreateTime instead) Search for media files with a single end creation time (EndTime).
+ * @method Models\SearchMediaBySemanticsResponse SearchMediaBySemantics(Models\SearchMediaBySemanticsRequest $req) This API is used to conduct semantic search on media using natural language.
  * @method Models\SetDrmKeyProviderInfoResponse SetDrmKeyProviderInfo(Models\SetDrmKeyProviderInfoRequest $req) This API is used to configure DRM key information.
  * @method Models\SetVodDomainCertificateResponse SetVodDomainCertificate(Models\SetVodDomainCertificateRequest $req) Set Vod Domain Certificate.
  * @method Models\SimpleHlsClipResponse SimpleHlsClip(Models\SimpleHlsClipRequest $req) This API is used to cut a clip from an HLS video to generate a new video (in HLS format). You can either share the new video or save it.

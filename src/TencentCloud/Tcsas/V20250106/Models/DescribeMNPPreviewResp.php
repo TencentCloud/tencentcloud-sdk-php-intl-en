@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * Response of querying the preview
  *
  * @method string getMNPId() Obtain Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPId(string $MNPId) Set Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMNPName() Obtain Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPName(string $MNPName) Set Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMNPDesc() Obtain Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPDesc(string $MNPDesc) Set Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMNPVersion() Obtain Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMNPVersion(string $MNPVersion) Set Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMNPVersionIntro() Obtain Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMNPVersionIntro(string $MNPVersionIntro) Set Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getQRCodeUrl() Obtain Mini program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQRCodeUrl(string $QRCodeUrl) Set Mini program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPreviewEntrancePath() Obtain Path to the preview
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPreviewEntrancePath(string $PreviewEntrancePath) Set Path to the preview
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getQRCodeContent() Obtain QR code content
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQRCodeContent(string $QRCodeContent) Set QR code content
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMNPVersion() Obtain Mini program version.
+ * @method void setMNPVersion(string $MNPVersion) Set Mini program version.
+ * @method string getMNPVersionIntro() Obtain Describes the mini program version.
+ * @method void setMNPVersionIntro(string $MNPVersionIntro) Set Describes the mini program version.
+ * @method string getQRCodeUrl() Obtain Specifies the mini program qr code.
+ * @method void setQRCodeUrl(string $QRCodeUrl) Set Specifies the mini program qr code.
+ * @method string getPreviewEntrancePath() Obtain Specifies the path to the preview version.
+ * @method void setPreviewEntrancePath(string $PreviewEntrancePath) Set Specifies the path to the preview version.
+ * @method string getQRCodeContent() Obtain Specifies the qr code content.
+ * @method void setQRCodeContent(string $QRCodeContent) Set Specifies the qr code content.
  */
 class DescribeMNPPreviewResp extends AbstractModel
 {
     /**
      * @var string Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPId;
 
     /**
      * @var string Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPName;
 
     /**
      * @var string Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPDesc;
 
     /**
-     * @var string Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Mini program version.
      */
     public $MNPVersion;
 
     /**
-     * @var string Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Describes the mini program version.
      */
     public $MNPVersionIntro;
 
     /**
-     * @var string Mini program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the mini program qr code.
      */
     public $QRCodeUrl;
 
     /**
-     * @var string Path to the preview
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the path to the preview version.
      */
     public $PreviewEntrancePath;
 
     /**
-     * @var string QR code content
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the qr code content.
      */
     public $QRCodeContent;
 
     /**
      * @param string $MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MNPVersionIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $QRCodeUrl Mini program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PreviewEntrancePath Path to the preview
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $QRCodeContent QR code content
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MNPVersion Mini program version.
+     * @param string $MNPVersionIntro Describes the mini program version.
+     * @param string $QRCodeUrl Specifies the mini program qr code.
+     * @param string $PreviewEntrancePath Specifies the path to the preview version.
+     * @param string $QRCodeContent Specifies the qr code content.
      */
     function __construct()
     {

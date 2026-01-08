@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Domain information
  *
- * @method string getDomainUrl() Obtain Multiple domain separators ';'
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomainUrl(string $DomainUrl) Set Multiple domain separators ';'
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDomainType() Obtain Domain type 1-requests domain 2-WebView load domain
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomainType(integer $DomainType) Set Domain type 1-requests domain 2-WebView load domain
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDomainUrl() Obtain Multiple domain separators ';'.
+ * @method void setDomainUrl(string $DomainUrl) Set Multiple domain separators ';'.
+ * @method integer getDomainType() Obtain Domain type 1-requests domain 2-business domain.
+ * @method void setDomainType(integer $DomainType) Set Domain type 1-requests domain 2-business domain.
  */
 class DescribeDomainInfoParam extends AbstractModel
 {
     /**
-     * @var string Multiple domain separators ';'
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Multiple domain separators ';'.
      */
     public $DomainUrl;
 
     /**
-     * @var integer Domain type 1-requests domain 2-WebView load domain
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Domain type 1-requests domain 2-business domain.
      */
     public $DomainType;
 
     /**
-     * @param string $DomainUrl Multiple domain separators ';'
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DomainType Domain type 1-requests domain 2-WebView load domain
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DomainUrl Multiple domain separators ';'.
+     * @param integer $DomainType Domain type 1-requests domain 2-business domain.
      */
     function __construct()
     {

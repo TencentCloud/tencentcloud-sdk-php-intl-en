@@ -20,230 +20,158 @@ use TencentCloud\Common\AbstractModel;
 /**
  * List of all developer versions of a mini program
  *
- * @method string getMNPId() Obtain Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMNPId(string $MNPId) Set Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMNPVersionId() Obtain Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMNPVersionId(integer $MNPVersionId) Set Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMNPId() Obtain Mini program ID.
+ * @method void setMNPId(string $MNPId) Set Mini program ID.
+ * @method integer getMNPVersionId() Obtain Specifies the mini program version primary key id.
+ * @method void setMNPVersionId(integer $MNPVersionId) Set Specifies the mini program version primary key id.
  * @method string getMNPName() Obtain Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPName(string $MNPName) Set Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMNPIcon() Obtain Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMNPIcon(string $MNPIcon) Set Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMNPIcon() Obtain Specifies the mini program avatar.
+ * @method void setMNPIcon(string $MNPIcon) Set Specifies the mini program avatar.
  * @method string getMNPType() Obtain Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPType(string $MNPType) Set Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMNPIntro() Obtain Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPIntro(string $MNPIntro) Set Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMNPDesc() Obtain Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPDesc(string $MNPDesc) Set Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateUser() Obtain Developer
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateUser(string $CreateUser) Set Developer
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain The time when the developer created it
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set The time when the developer created it
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMNPVersion() Obtain Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMNPVersion(string $MNPVersion) Set Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMNPVersionIntro() Obtain Version features
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMNPVersionIntro(string $MNPVersionIntro) Set Version features
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPhase() Obtain Phase. Values: [Develop,Platform,Online]
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPhase(string $Phase) Set Phase. Values: [Develop,Platform,Online]
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getApprovalStatus() Obtain 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApprovalStatus(integer $ApprovalStatus) Set 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getApprovalNo() Obtain Approval request number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApprovalNo(string $ApprovalNo) Set Approval request number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getShowCase() Obtain Whether it is a preview
-0: Not a preview; 1: Preview
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setShowCase(integer $ShowCase) Set Whether it is a preview
-0: Not a preview; 1: Preview
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRollbackVersion() Obtain Version number to roll back to
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRollbackVersion(integer $RollbackVersion) Set Version number to roll back to
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Release status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Release status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getVersionCurrentStatus() Obtain Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVersionCurrentStatus(integer $VersionCurrentStatus) Set Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreateUser() Obtain Specifies the developer.
+ * @method void setCreateUser(string $CreateUser) Set Specifies the developer.
+ * @method string getCreateTime() Obtain Developer creation time.
+ * @method void setCreateTime(string $CreateTime) Set Developer creation time.
+ * @method string getMNPVersion() Obtain Mini program version.
+ * @method void setMNPVersion(string $MNPVersion) Set Mini program version.
+ * @method string getMNPVersionIntro() Obtain Describes version features.
+ * @method void setMNPVersionIntro(string $MNPVersionIntro) Set Describes version features.
+ * @method string getPhase() Obtain Development Platform Online.
+ * @method void setPhase(string $Phase) Set Development Platform Online.
+ * @method integer getApprovalStatus() Obtain 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
+ * @method void setApprovalStatus(integer $ApprovalStatus) Set 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
+ * @method string getApprovalNo() Obtain Approval ticket ID
+ * @method void setApprovalNo(string $ApprovalNo) Set Approval ticket ID
+ * @method integer getShowCase() Obtain Specifies whether it is a trial version.
+Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
+ * @method void setShowCase(integer $ShowCase) Set Specifies whether it is a trial version.
+Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
+ * @method integer getRollbackVersion() Obtain Version number to roll back to.
+ * @method void setRollbackVersion(integer $RollbackVersion) Set Version number to roll back to.
+ * @method integer getStatus() Obtain Indicates the release status.
+ * @method void setStatus(integer $Status) Set Indicates the release status.
+ * @method integer getVersionCurrentStatus() Obtain Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
+ * @method void setVersionCurrentStatus(integer $VersionCurrentStatus) Set Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
  */
 class DescribeMPAllStageVersionsResp extends AbstractModel
 {
     /**
-     * @var string Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Mini program ID.
      */
     public $MNPId;
 
     /**
-     * @var integer Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the mini program version primary key id.
      */
     public $MNPVersionId;
 
     /**
      * @var string Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPName;
 
     /**
-     * @var string Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the mini program avatar.
      */
     public $MNPIcon;
 
     /**
      * @var string Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPType;
 
     /**
      * @var string Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPIntro;
 
     /**
      * @var string Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPDesc;
 
     /**
-     * @var string Developer
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the developer.
      */
     public $CreateUser;
 
     /**
-     * @var string The time when the developer created it
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Developer creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Mini program version.
      */
     public $MNPVersion;
 
     /**
-     * @var string Version features
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Describes version features.
      */
     public $MNPVersionIntro;
 
     /**
-     * @var string Phase. Values: [Develop,Platform,Online]
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Development Platform Online.
      */
     public $Phase;
 
     /**
-     * @var integer 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
      */
     public $ApprovalStatus;
 
     /**
-     * @var string Approval request number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Approval ticket ID
      */
     public $ApprovalNo;
 
     /**
-     * @var integer Whether it is a preview
-0: Not a preview; 1: Preview
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies whether it is a trial version.
+Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
      */
     public $ShowCase;
 
     /**
-     * @var integer Version number to roll back to
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Version number to roll back to.
      */
     public $RollbackVersion;
 
     /**
-     * @var integer Release status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Indicates the release status.
      */
     public $Status;
 
     /**
-     * @var integer Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
      */
     public $VersionCurrentStatus;
 
     /**
-     * @param string $MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MNPVersionId Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MNPId Mini program ID.
+     * @param integer $MNPVersionId Specifies the mini program version primary key id.
      * @param string $MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MNPIcon Specifies the mini program avatar.
      * @param string $MNPType Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateUser Developer
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime The time when the developer created it
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MNPVersionIntro Version features
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Phase Phase. Values: [Develop,Platform,Online]
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ApprovalStatus 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ApprovalNo Approval request number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ShowCase Whether it is a preview
-0: Not a preview; 1: Preview
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RollbackVersion Version number to roll back to
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Release status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $VersionCurrentStatus Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreateUser Specifies the developer.
+     * @param string $CreateTime Developer creation time.
+     * @param string $MNPVersion Mini program version.
+     * @param string $MNPVersionIntro Describes version features.
+     * @param string $Phase Development Platform Online.
+     * @param integer $ApprovalStatus 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
+     * @param string $ApprovalNo Approval ticket ID
+     * @param integer $ShowCase Specifies whether it is a trial version.
+Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
+     * @param integer $RollbackVersion Version number to roll back to.
+     * @param integer $Status Indicates the release status.
+     * @param integer $VersionCurrentStatus Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
      */
     function __construct()
     {

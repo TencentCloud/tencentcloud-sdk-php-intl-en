@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIosAppKey(string $IosAppKey) Set iOS App bundleId
  * @method string getRemark() Obtain Remarks
  * @method void setRemark(string $Remark) Set Remarks
+ * @method string getScheme() Obtain Scheme
+ * @method void setScheme(string $Scheme) Set Scheme
  */
 class ModifyApplicationRequest extends AbstractModel
 {
@@ -66,18 +68,26 @@ class ModifyApplicationRequest extends AbstractModel
 
     /**
      * @var string Android app package name
+     * @deprecated
      */
     public $AndroidAppKey;
 
     /**
      * @var string iOS App bundleId
+     * @deprecated
      */
     public $IosAppKey;
 
     /**
      * @var string Remarks
+     * @deprecated
      */
     public $Remark;
+
+    /**
+     * @var string Scheme
+     */
+    public $Scheme;
 
     /**
      * @param string $ApplicationId Application ID
@@ -88,6 +98,7 @@ class ModifyApplicationRequest extends AbstractModel
      * @param string $AndroidAppKey Android app package name
      * @param string $IosAppKey iOS App bundleId
      * @param string $Remark Remarks
+     * @param string $Scheme Scheme
      */
     function __construct()
     {
@@ -132,6 +143,10 @@ class ModifyApplicationRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Scheme",$param) and $param["Scheme"] !== null) {
+            $this->Scheme = $param["Scheme"];
         }
     }
 }

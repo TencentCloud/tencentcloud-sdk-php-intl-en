@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Response of creating a global domain name
  *
  * @method boolean getResult() Obtain Result
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setResult(boolean $Result) Set Result
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getRepeatUrls() Obtain List of duplicate domain names
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRepeatUrls(array $RepeatUrls) Set List of duplicate domain names
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getExistsWhiteUrls() Obtain List of allowed domain names
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExistsWhiteUrls(array $ExistsWhiteUrls) Set List of allowed domain names
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getExistsBlackUrls() Obtain List of blocked domain names
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExistsBlackUrls(array $ExistsBlackUrls) Set List of blocked domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getRepeatUrls() Obtain Indicates the duplicate domain name.
+ * @method void setRepeatUrls(array $RepeatUrls) Set Indicates the duplicate domain name.
+ * @method array getExistsWhiteUrls() Obtain Lists allowed domain names.
+ * @method void setExistsWhiteUrls(array $ExistsWhiteUrls) Set Lists allowed domain names.
+ * @method array getExistsBlackUrls() Obtain Indicates the domain name already exists in the blocklist.
+ * @method void setExistsBlackUrls(array $ExistsBlackUrls) Set Indicates the domain name already exists in the blocklist.
  */
 class CreateGlobalDomainResp extends AbstractModel
 {
     /**
      * @var boolean Result
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Result;
 
     /**
-     * @var array List of duplicate domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Indicates the duplicate domain name.
      */
     public $RepeatUrls;
 
     /**
-     * @var array List of allowed domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Lists allowed domain names.
      */
     public $ExistsWhiteUrls;
 
     /**
-     * @var array List of blocked domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Indicates the domain name already exists in the blocklist.
      */
     public $ExistsBlackUrls;
 
     /**
      * @param boolean $Result Result
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $RepeatUrls List of duplicate domain names
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ExistsWhiteUrls List of allowed domain names
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ExistsBlackUrls List of blocked domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $RepeatUrls Indicates the duplicate domain name.
+     * @param array $ExistsWhiteUrls Lists allowed domain names.
+     * @param array $ExistsBlackUrls Indicates the domain name already exists in the blocklist.
      */
     function __construct()
     {

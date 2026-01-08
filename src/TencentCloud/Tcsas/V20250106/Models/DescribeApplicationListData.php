@@ -21,81 +21,52 @@ use TencentCloud\Common\AbstractModel;
  * Application information
  *
  * @method string getApplicationId() Obtain Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplicationId(string $ApplicationId) Set Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAppIdentityId() Obtain App ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAppIdentityId(integer $AppIdentityId) Set App ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAppIdentityId() Obtain App Id.
+ * @method void setAppIdentityId(integer $AppIdentityId) Set App Id.
  * @method string getApplicationName() Obtain Name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplicationName(string $ApplicationName) Set Name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLogo() Obtain Icon
  * @method void setLogo(string $Logo) Set Icon
  * @method string getRemark() Obtain Remarks
  * @method void setRemark(string $Remark) Set Remarks
  * @method string getAndroidAppKey() Obtain Android app package name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAndroidAppKey(string $AndroidAppKey) Set Android app package name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getIosAppKey() Obtain iOS App bundleId
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIosAppKey(string $IosAppKey) Set iOS App bundleId
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateUser() Obtain Creator
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateUser(string $CreateUser) Set Creator
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUpdateUser() Obtain Updater
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateUser(string $UpdateUser) Set Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUpdateUser() Obtain Specifies the updater.
+ * @method void setUpdateUser(string $UpdateUser) Set Specifies the updater.
  * @method string getUpdateTime() Obtain Update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getIntro() Obtain Introduction
  * @method void setIntro(string $Intro) Set Introduction
- * @method string getTeamId() Obtain Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTeamId(string $TeamId) Set Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTeamId() Obtain Team Id.
+ * @method void setTeamId(string $TeamId) Set Team Id.
  * @method string getTeamName() Obtain Team name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTeamName(string $TeamName) Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSensitiveApiCount() Obtain Number of sensitive APIs
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSensitiveApiCount(integer $SensitiveApiCount) Set Number of sensitive APIs
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSensitiveApiCount() Obtain Number of sensitive apis.
+ * @method void setSensitiveApiCount(integer $SensitiveApiCount) Set Number of sensitive apis.
  * @method integer getApplicationType() Obtain Application type. 1: Test; 2: Formal
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplicationType(integer $ApplicationType) Set Application type. 1: Test; 2: Formal
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DescribeApplicationListData extends AbstractModel
 {
     /**
      * @var string Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplicationId;
 
     /**
-     * @var integer App ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer App Id.
      */
     public $AppIdentityId;
 
     /**
      * @var string Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplicationName;
 
@@ -111,37 +82,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Android app package name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AndroidAppKey;
 
     /**
      * @var string iOS App bundleId
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IosAppKey;
 
     /**
      * @var string Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateUser;
 
     /**
      * @var string Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var string Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the updater.
      */
     public $UpdateUser;
 
     /**
      * @var string Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -151,59 +116,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Intro;
 
     /**
-     * @var string Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Team Id.
      */
     public $TeamId;
 
     /**
      * @var string Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeamName;
 
     /**
-     * @var integer Number of sensitive APIs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of sensitive apis.
      */
     public $SensitiveApiCount;
 
     /**
      * @var integer Application type. 1: Test; 2: Formal
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplicationType;
 
     /**
      * @param string $ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AppIdentityId App ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AppIdentityId App Id.
      * @param string $ApplicationName Name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Logo Icon
      * @param string $Remark Remarks
      * @param string $AndroidAppKey Android app package name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IosAppKey iOS App bundleId
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdateUser Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UpdateUser Specifies the updater.
      * @param string $UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Intro Introduction
-     * @param string $TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TeamId Team Id.
      * @param string $TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SensitiveApiCount Number of sensitive APIs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SensitiveApiCount Number of sensitive apis.
      * @param integer $ApplicationType Application type. 1: Test; 2: Formal
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

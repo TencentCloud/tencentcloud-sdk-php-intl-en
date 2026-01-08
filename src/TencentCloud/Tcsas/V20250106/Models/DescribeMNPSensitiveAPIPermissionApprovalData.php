@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * Details of a permission request to allow a mini program to call sensitive APIs
  *
  * @method string getAPIId() Obtain API ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAPIId(string $APIId) Set API ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAPIMethod() Obtain API request method
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAPIMethod(string $APIMethod) Set API request method
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getApplyReason() Obtain Reason for the request
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApplyReason(string $ApplyReason) Set Reason for the request
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRejectReason() Obtain Reason for rejection
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRejectReason(string $RejectReason) Set Reason for rejection
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getApprovalStatus() Obtain Approval status. 20: Rejected; 30: Approved
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status. 20: Rejected; 30: Approved
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAPIDesc() Obtain API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAPIDesc(string $APIDesc) Set API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAPIType() Obtain API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAPIType(integer $APIType) Set API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAPIMethod() Obtain API method.
+ * @method void setAPIMethod(string $APIMethod) Set API method.
+ * @method string getApplyReason() Obtain Reason for application
+ * @method void setApplyReason(string $ApplyReason) Set Reason for application
+ * @method string getRejectReason() Obtain Reason for rejection.
+ * @method void setRejectReason(string $RejectReason) Set Reason for rejection.
+ * @method integer getApprovalStatus() Obtain Approval status. valid values: 20 (rejected), 30 (approved).
+ * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status. valid values: 20 (rejected), 30 (approved).
+ * @method string getAPIDesc() Obtain API feature description.
+ * @method void setAPIDesc(string $APIDesc) Set API feature description.
+ * @method integer getAPIType() Obtain API type. 1: system; 2: custom.
+ * @method void setAPIType(integer $APIType) Set API type. 1: system; 2: custom.
  */
 class DescribeMNPSensitiveAPIPermissionApprovalData extends AbstractModel
 {
     /**
      * @var string API ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $APIId;
 
     /**
-     * @var string API request method
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string API method.
      */
     public $APIMethod;
 
     /**
-     * @var string Reason for the request
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Reason for application
      */
     public $ApplyReason;
 
     /**
-     * @var string Reason for rejection
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Reason for rejection.
      */
     public $RejectReason;
 
     /**
-     * @var integer Approval status. 20: Rejected; 30: Approved
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Approval status. valid values: 20 (rejected), 30 (approved).
      */
     public $ApprovalStatus;
 
     /**
-     * @var string API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string API feature description.
      */
     public $APIDesc;
 
     /**
-     * @var integer API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer API type. 1: system; 2: custom.
      */
     public $APIType;
 
     /**
      * @param string $APIId API ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $APIMethod API request method
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ApplyReason Reason for the request
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RejectReason Reason for rejection
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ApprovalStatus Approval status. 20: Rejected; 30: Approved
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $APIDesc API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $APIMethod API method.
+     * @param string $ApplyReason Reason for application
+     * @param string $RejectReason Reason for rejection.
+     * @param integer $ApprovalStatus Approval status. valid values: 20 (rejected), 30 (approved).
+     * @param string $APIDesc API feature description.
+     * @param integer $APIType API type. 1: system; 2: custom.
      */
     function __construct()
     {

@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Global domain name page list
  *
- * @method integer getTotalCount() Obtain Total number of results
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Total number of results
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDataList() Obtain Domain name information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataList(array $DataList) Set Domain name information
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain Total number
+ * @method void setTotalCount(integer $TotalCount) Set Total number
+ * @method array getDataList() Obtain Describes the domain information.
+ * @method void setDataList(array $DataList) Set Describes the domain information.
  */
 class DescribeGlobalDomainsResp extends AbstractModel
 {
     /**
-     * @var integer Total number of results
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Total number
      */
     public $TotalCount;
 
     /**
-     * @var array Domain name information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Describes the domain information.
      */
     public $DataList;
 
     /**
-     * @param integer $TotalCount Total number of results
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $DataList Domain name information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalCount Total number
+     * @param array $DataList Describes the domain information.
      */
     function __construct()
     {

@@ -28,16 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatformId(string $PlatformId) Set Platform ID
  * @method string getTeamId() Obtain Team ID
  * @method void setTeamId(string $TeamId) Set Team ID
- * @method integer getApplicationType() Obtain Application type. 1: Test; 2: Formal
- * @method void setApplicationType(integer $ApplicationType) Set Application type. 1: Test; 2: Formal
  * @method string getIntro() Obtain Introduction
  * @method void setIntro(string $Intro) Set Introduction
+ * @method integer getApplicationType() Obtain Application type. 1: Test; 2: Formal
+ * @method void setApplicationType(integer $ApplicationType) Set Application type. 1: Test; 2: Formal
  * @method string getAndroidAppKey() Obtain Android app package name
  * @method void setAndroidAppKey(string $AndroidAppKey) Set Android app package name
  * @method string getIosAppKey() Obtain iOS App bundleId
  * @method void setIosAppKey(string $IosAppKey) Set iOS App bundleId
  * @method string getRemark() Obtain Remarks
  * @method void setRemark(string $Remark) Set Remarks
+ * @method string getScheme() Obtain Scheme
+ * @method void setScheme(string $Scheme) Set Scheme
  */
 class CreateApplicationRequest extends AbstractModel
 {
@@ -62,40 +64,50 @@ class CreateApplicationRequest extends AbstractModel
     public $TeamId;
 
     /**
-     * @var integer Application type. 1: Test; 2: Formal
-     */
-    public $ApplicationType;
-
-    /**
      * @var string Introduction
      */
     public $Intro;
 
     /**
+     * @var integer Application type. 1: Test; 2: Formal
+     * @deprecated
+     */
+    public $ApplicationType;
+
+    /**
      * @var string Android app package name
+     * @deprecated
      */
     public $AndroidAppKey;
 
     /**
      * @var string iOS App bundleId
+     * @deprecated
      */
     public $IosAppKey;
 
     /**
      * @var string Remarks
+     * @deprecated
      */
     public $Remark;
+
+    /**
+     * @var string Scheme
+     */
+    public $Scheme;
 
     /**
      * @param string $ApplicationName Application name
      * @param string $Logo Logo address
      * @param string $PlatformId Platform ID
      * @param string $TeamId Team ID
-     * @param integer $ApplicationType Application type. 1: Test; 2: Formal
      * @param string $Intro Introduction
+     * @param integer $ApplicationType Application type. 1: Test; 2: Formal
      * @param string $AndroidAppKey Android app package name
      * @param string $IosAppKey iOS App bundleId
      * @param string $Remark Remarks
+     * @param string $Scheme Scheme
      */
     function __construct()
     {
@@ -126,12 +138,12 @@ class CreateApplicationRequest extends AbstractModel
             $this->TeamId = $param["TeamId"];
         }
 
-        if (array_key_exists("ApplicationType",$param) and $param["ApplicationType"] !== null) {
-            $this->ApplicationType = $param["ApplicationType"];
-        }
-
         if (array_key_exists("Intro",$param) and $param["Intro"] !== null) {
             $this->Intro = $param["Intro"];
+        }
+
+        if (array_key_exists("ApplicationType",$param) and $param["ApplicationType"] !== null) {
+            $this->ApplicationType = $param["ApplicationType"];
         }
 
         if (array_key_exists("AndroidAppKey",$param) and $param["AndroidAppKey"] !== null) {
@@ -144,6 +156,10 @@ class CreateApplicationRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Scheme",$param) and $param["Scheme"] !== null) {
+            $this->Scheme = $param["Scheme"];
         }
     }
 }

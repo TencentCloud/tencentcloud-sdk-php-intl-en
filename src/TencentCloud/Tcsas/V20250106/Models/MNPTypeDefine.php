@@ -20,82 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Mini program category information
  *
- * @method string getTypeName() Obtain Mini program category name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTypeName(string $TypeName) Set Mini program category name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTypeValue() Obtain Mini program category value
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTypeValue(array $TypeValue) Set Mini program category value
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTypeId() Obtain Category ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTypeId(integer $TypeId) Set Category ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTypeName() Obtain Specifies the mini program category name.
+ * @method void setTypeName(string $TypeName) Set Specifies the mini program category name.
+ * @method array getTypeValue() Obtain Mini program category value.
+ * @method void setTypeValue(array $TypeValue) Set Mini program category value.
+ * @method integer getTypeId() Obtain Category ID.
+ * @method void setTypeId(integer $TypeId) Set Category ID.
  * @method integer getCreateTime() Obtain Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(integer $CreateTime) Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateUser() Obtain Creator
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateUser(string $CreateUser) Set Creator
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsSystem() Obtain Whether it is a system category
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsSystem(boolean $IsSystem) Set Whether it is a system category
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsSystem() Obtain Indicates whether it is a system category.
+ * @method void setIsSystem(boolean $IsSystem) Set Indicates whether it is a system category.
  */
 class MNPTypeDefine extends AbstractModel
 {
     /**
-     * @var string Mini program category name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the mini program category name.
      */
     public $TypeName;
 
     /**
-     * @var array Mini program category value
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Mini program category value.
      */
     public $TypeValue;
 
     /**
-     * @var integer Category ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Category ID.
      */
     public $TypeId;
 
     /**
      * @var integer Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
      * @var string Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateUser;
 
     /**
-     * @var boolean Whether it is a system category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Indicates whether it is a system category.
      */
     public $IsSystem;
 
     /**
-     * @param string $TypeName Mini program category name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $TypeValue Mini program category value
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TypeId Category ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TypeName Specifies the mini program category name.
+     * @param array $TypeValue Mini program category value.
+     * @param integer $TypeId Category ID.
      * @param integer $CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsSystem Whether it is a system category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsSystem Indicates whether it is a system category.
      */
     function __construct()
     {

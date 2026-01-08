@@ -30,46 +30,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTeamName(string $TeamName) Set Name of the associated team
  * @method string getMNPType() Obtain Mini program type
  * @method void setMNPType(string $MNPType) Set Mini program type
- * @method integer getStatus() Obtain Whether the mini program is released. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Whether the mini program is released. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+ * @method void setStatus(integer $Status) Set Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
  * @method string getMNPIntro() Obtain Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPIntro(string $MNPIntro) Set Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateUser() Obtain Creator
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateUser(string $CreateUser) Set Creator
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUpdateUser() Obtain Updater
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateUser(string $UpdateUser) Set Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUpdateUser() Obtain Specifies the updater.
+ * @method void setUpdateUser(string $UpdateUser) Set Specifies the updater.
  * @method string getUpdateTime() Obtain Update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getApplicationName() Obtain Application name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplicationName(string $ApplicationName) Set Application name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getEffectStatus() Obtain Effective status of the bound application. 1: Not effective; 2: Effective
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEffectStatus(integer $EffectStatus) Set Effective status of the bound application. 1: Not effective; 2: Effective
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getEffectMNPVersionId() Obtain ID of the application bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEffectMNPVersionId(integer $EffectMNPVersionId) Set ID of the application bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEffectMNPVersion() Obtain Effective version number of the application that bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEffectMNPVersion(string $EffectMNPVersion) Set Effective version number of the application that bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getEffectStatus() Obtain Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
+ * @method void setEffectStatus(integer $EffectStatus) Set Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
+ * @method integer getEffectMNPVersionId() Obtain Specifies the ID of the application bound with the mini program.
+ * @method void setEffectMNPVersionId(integer $EffectMNPVersionId) Set Specifies the ID of the application bound with the mini program.
+ * @method string getEffectMNPVersion() Obtain Specifies the effective version number of the application bound to the mini program.
+ * @method void setEffectMNPVersion(string $EffectMNPVersion) Set Specifies the effective version number of the application bound to the mini program.
  */
 class DescribeMNPListData extends AbstractModel
 {
@@ -99,62 +79,52 @@ class DescribeMNPListData extends AbstractModel
     public $MNPType;
 
     /**
-     * @var integer Whether the mini program is released. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
      */
     public $Status;
 
     /**
      * @var string Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPIntro;
 
     /**
      * @var string Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateUser;
 
     /**
      * @var string Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var string Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the updater.
      */
     public $UpdateUser;
 
     /**
      * @var string Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
     /**
      * @var string Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplicationName;
 
     /**
-     * @var integer Effective status of the bound application. 1: Not effective; 2: Effective
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
      */
     public $EffectStatus;
 
     /**
-     * @var integer ID of the application bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the ID of the application bound with the mini program.
      */
     public $EffectMNPVersionId;
 
     /**
-     * @var string Effective version number of the application that bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the effective version number of the application bound to the mini program.
      */
     public $EffectMNPVersion;
 
@@ -164,26 +134,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $MNPName Mini program name
      * @param string $TeamName Name of the associated team
      * @param string $MNPType Mini program type
-     * @param integer $Status Whether the mini program is released. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
      * @param string $MNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdateUser Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UpdateUser Specifies the updater.
      * @param string $UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $EffectStatus Effective status of the bound application. 1: Not effective; 2: Effective
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $EffectMNPVersionId ID of the application bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EffectMNPVersion Effective version number of the application that bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $EffectStatus Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
+     * @param integer $EffectMNPVersionId Specifies the ID of the application bound with the mini program.
+     * @param string $EffectMNPVersion Specifies the effective version number of the application bound to the mini program.
      */
     function __construct()
     {

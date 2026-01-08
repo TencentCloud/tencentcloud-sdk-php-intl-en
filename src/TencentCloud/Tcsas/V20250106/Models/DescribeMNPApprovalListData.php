@@ -20,238 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * List of mini program approval requests of the application
  *
- * @method string getApprovalNo() Obtain Approval request ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApprovalNo(string $ApprovalNo) Set Approval request ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getApprovalNo() Obtain Approval ticket ID
+ * @method void setApprovalNo(string $ApprovalNo) Set Approval ticket ID
  * @method string getApplicationId() Obtain Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplicationId(string $ApplicationId) Set Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getApprovalStatus() Obtain Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getApprovalStatus() Obtain Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
+ * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
  * @method string getMNPId() Obtain Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPId(string $MNPId) Set Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMNPVersion() Obtain Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMNPVersion(string $MNPVersion) Set Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMNPVersion() Obtain Mini program version.
+ * @method void setMNPVersion(string $MNPVersion) Set Mini program version.
  * @method integer getMNPVersionId() Obtain Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPVersionId(integer $MNPVersionId) Set Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getApplyUser() Obtain Applicant
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplyUser(string $ApplyUser) Set Applicant
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getApplyTime() Obtain Application time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplyTime(string $ApplyTime) Set Application time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMNPName() Obtain Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPName(string $MNPName) Set Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMNPIcon() Obtain Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPIcon(string $MNPIcon) Set Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getApplicationName() Obtain Application name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplicationName(string $ApplicationName) Set Application name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getApplicationLogo() Obtain Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApplicationLogo(string $ApplicationLogo) Set Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getApplicationLogo() Obtain Specifies the application icon.
+ * @method void setApplicationLogo(string $ApplicationLogo) Set Specifies the application icon.
  * @method string getTeamId() Obtain Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTeamId(string $TeamId) Set Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTeamName() Obtain Team name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTeamName(string $TeamName) Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMNPQrCodeUrl() Obtain Mini Program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMNPQrCodeUrl(string $MNPQrCodeUrl) Set Mini Program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMNPQrCodeUrl() Obtain Mini program review qr code.
+ * @method void setMNPQrCodeUrl(string $MNPQrCodeUrl) Set Mini program review qr code.
  * @method string getMNPType() Obtain Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPType(string $MNPType) Set Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getApprovalUser() Obtain Approver
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApprovalUser(string $ApprovalUser) Set Approver
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getApprovalTime() Obtain Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApprovalTime(string $ApprovalTime) Set Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getApprovalUser() Obtain Specifies the reviewer.
+ * @method void setApprovalUser(string $ApprovalUser) Set Specifies the reviewer.
+ * @method string getApprovalTime() Obtain Approval time.
+ * @method void setApprovalTime(string $ApprovalTime) Set Approval time.
  * @method string getApprovalNote() Obtain Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApprovalNote(string $ApprovalNote) Set Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DescribeMNPApprovalListData extends AbstractModel
 {
     /**
-     * @var string Approval request ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Approval ticket ID
      */
     public $ApprovalNo;
 
     /**
      * @var string Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplicationId;
 
     /**
-     * @var integer Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
      */
     public $ApprovalStatus;
 
     /**
      * @var string Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPId;
 
     /**
-     * @var string Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Mini program version.
      */
     public $MNPVersion;
 
     /**
      * @var integer Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPVersionId;
 
     /**
      * @var string Applicant
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplyUser;
 
     /**
      * @var string Application time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplyTime;
 
     /**
      * @var string Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPName;
 
     /**
      * @var string Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPIcon;
 
     /**
      * @var string Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplicationName;
 
     /**
-     * @var string Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the application icon.
      */
     public $ApplicationLogo;
 
     /**
      * @var string Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeamId;
 
     /**
      * @var string Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeamName;
 
     /**
-     * @var string Mini Program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Mini program review qr code.
      */
     public $MNPQrCodeUrl;
 
     /**
      * @var string Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPType;
 
     /**
-     * @var string Approver
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the reviewer.
      */
     public $ApprovalUser;
 
     /**
-     * @var string Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Approval time.
      */
     public $ApprovalTime;
 
     /**
      * @var string Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApprovalNote;
 
     /**
-     * @param string $ApprovalNo Approval request ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ApprovalNo Approval ticket ID
      * @param string $ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ApprovalStatus Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ApprovalStatus Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
      * @param string $MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MNPVersion Mini program version.
      * @param integer $MNPVersionId Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ApplyUser Applicant
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ApplyTime Application time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ApplicationLogo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ApplicationLogo Specifies the application icon.
      * @param string $TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MNPQrCodeUrl Mini Program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MNPQrCodeUrl Mini program review qr code.
      * @param string $MNPType Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ApprovalUser Approver
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ApprovalTime Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ApprovalUser Specifies the reviewer.
+     * @param string $ApprovalTime Approval time.
      * @param string $ApprovalNote Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

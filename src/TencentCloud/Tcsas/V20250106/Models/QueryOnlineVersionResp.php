@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * Mini program online version ID
  *
  * @method string getMNPId() Obtain Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMNPId(string $MNPId) Set Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMNPVersion() Obtain Version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMNPVersion(string $MNPVersion) Set Version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMNPVersionId() Obtain Version ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMNPVersionId(integer $MNPVersionId) Set Version ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMNPVersionNote() Obtain Version note
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMNPVersionNote(string $MNPVersionNote) Set Version note
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMNPVersion() Obtain Version number
+ * @method void setMNPVersion(string $MNPVersion) Set Version number
+ * @method integer getMNPVersionId() Obtain Version ID.
+ * @method void setMNPVersionId(integer $MNPVersionId) Set Version ID.
+ * @method string getMNPVersionNote() Obtain Version remarks.
+ * @method void setMNPVersionNote(string $MNPVersionNote) Set Version remarks.
  * @method string getUpdateTime() Obtain Update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class QueryOnlineVersionResp extends AbstractModel
 {
     /**
      * @var string Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MNPId;
 
     /**
-     * @var string Version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Version number
      */
     public $MNPVersion;
 
     /**
-     * @var integer Version ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Version ID.
      */
     public $MNPVersionId;
 
     /**
-     * @var string Version note
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Version remarks.
      */
     public $MNPVersionNote;
 
     /**
      * @var string Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
     /**
      * @param string $MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MNPVersion Version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MNPVersionId Version ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MNPVersionNote Version note
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MNPVersion Version number
+     * @param integer $MNPVersionId Version ID.
+     * @param string $MNPVersionNote Version remarks.
      * @param string $UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

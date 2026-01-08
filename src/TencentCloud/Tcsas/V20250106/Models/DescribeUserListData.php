@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * User list data
  *
  * @method string getUserId() Obtain User ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUserId(string $UserId) Set User ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUserAccount() Obtain User account
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUserAccount(string $UserAccount) Set User account
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAccountType() Obtain Account type. 1: Super admin; 2: Platform admin; 3: Member
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAccountType(integer $AccountType) Set Account type. 1: Super admin; 2: Platform admin; 3: Member
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAccountType() Obtain Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
+ * @method void setAccountType(integer $AccountType) Set Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
  * @method string getUserName() Obtain User name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUserName(string $UserName) Set User name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Status. 1: Normal; 2: Disabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Status. 1: Normal; 2: Disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Status. 1: normal; 2: disabled.
+ * @method void setStatus(integer $Status) Set Status. 1: normal; 2: disabled.
  * @method string getTeamName() Obtain Team name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTeamName(string $TeamName) Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DescribeUserListData extends AbstractModel
 {
     /**
      * @var string User ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserId;
 
     /**
      * @var string User account
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserAccount;
 
     /**
-     * @var integer Account type. 1: Super admin; 2: Platform admin; 3: Member
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
      */
     public $AccountType;
 
     /**
      * @var string User name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserName;
 
     /**
      * @var string Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var integer Status. 1: Normal; 2: Disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Status. 1: normal; 2: disabled.
      */
     public $Status;
 
     /**
      * @var string Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeamName;
 
     /**
      * @param string $UserId User ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UserAccount User account
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AccountType Account type. 1: Super admin; 2: Platform admin; 3: Member
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AccountType Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
      * @param string $UserName User name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Status. 1: Normal; 2: Disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Status. 1: normal; 2: disabled.
      * @param string $TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

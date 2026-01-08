@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getReplicationMode() Obtain Replication mode of the secondary database. Value range: async, semi-sync
  * @method void setReplicationMode(string $ReplicationMode) Set Replication mode of the secondary database. Value range: async, semi-sync
- * @method string getZone() Obtain AZ name of the secondary database, such as ap-shanghai-1
- * @method void setZone(string $Zone) Set AZ name of the secondary database, such as ap-shanghai-1
+ * @method string getZone() Obtain AZ name of the secondary database, such as ap-shanghai-2
+ * @method void setZone(string $Zone) Set AZ name of the secondary database, such as ap-shanghai-2
  */
 class SlaveConfig extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SlaveConfig extends AbstractModel
     public $ReplicationMode;
 
     /**
-     * @var string AZ name of the secondary database, such as ap-shanghai-1
+     * @var string AZ name of the secondary database, such as ap-shanghai-2
      */
     public $Zone;
 
     /**
      * @param string $ReplicationMode Replication mode of the secondary database. Value range: async, semi-sync
-     * @param string $Zone AZ name of the secondary database, such as ap-shanghai-1
+     * @param string $Zone AZ name of the secondary database, such as ap-shanghai-2
      */
     function __construct()
     {

@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Encryption key returned
  *
- * @method string getKey() Obtain RSA encryption public key
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKey(string $Key) Set RSA encryption public key
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getKey() Obtain RSA encryption public key.
+ * @method void setKey(string $Key) Set RSA encryption public key.
  */
 class PresetResp extends AbstractModel
 {
     /**
-     * @var string RSA encryption public key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string RSA encryption public key.
      */
     public $Key;
 
     /**
-     * @param string $Key RSA encryption public key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Key RSA encryption public key.
      */
     function __construct()
     {

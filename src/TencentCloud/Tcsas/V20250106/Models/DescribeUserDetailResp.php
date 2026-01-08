@@ -20,62 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * User details
  *
- * @method string getUserId() Obtain User ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserId(string $UserId) Set User ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUserId() Obtain User iD.
+ * @method void setUserId(string $UserId) Set User iD.
  * @method string getUserAccount() Obtain User account
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUserAccount(string $UserAccount) Set User account
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getAccountType() Obtain User account
-1 - Super admin 2 - Platform admin 3 - Member
-Note: This field may return null, indicating that no valid values can be obtained.
+1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
  * @method void setAccountType(integer $AccountType) Set User account
-1 - Super admin 2 - Platform admin 3 - Member
-Note: This field may return null, indicating that no valid values can be obtained.
+1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
  * @method string getUserName() Obtain User name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUserName(string $UserName) Set User name
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DescribeUserDetailResp extends AbstractModel
 {
     /**
-     * @var string User ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string User iD.
      */
     public $UserId;
 
     /**
      * @var string User account
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserAccount;
 
     /**
      * @var integer User account
-1 - Super admin 2 - Platform admin 3 - Member
-Note: This field may return null, indicating that no valid values can be obtained.
+1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
      */
     public $AccountType;
 
     /**
      * @var string User name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserName;
 
     /**
-     * @param string $UserId User ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UserId User iD.
      * @param string $UserAccount User account
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $AccountType User account
-1 - Super admin 2 - Platform admin 3 - Member
-Note: This field may return null, indicating that no valid values can be obtained.
+1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
      * @param string $UserName User name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

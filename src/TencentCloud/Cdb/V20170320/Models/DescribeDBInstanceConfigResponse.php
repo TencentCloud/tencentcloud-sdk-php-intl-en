@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtectMode(integer $ProtectMode) Set Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
  * @method integer getDeployMode() Obtain Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
  * @method void setDeployMode(integer $DeployMode) Set Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
- * @method string getZone() Obtain Instance AZ information in the format of "ap-shanghai-1".
- * @method void setZone(string $Zone) Set Instance AZ information in the format of "ap-shanghai-1".
+ * @method string getZone() Obtain Instance AZ information in the format of "ap-shanghai-2".
+ * @method void setZone(string $Zone) Set Instance AZ information in the format of "ap-shanghai-2".
  * @method SlaveConfig getSlaveConfig() Obtain Configurations of the replica node
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setSlaveConfig(SlaveConfig $SlaveConfig) Set Configurations of the replica node
@@ -52,7 +52,7 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
     public $DeployMode;
 
     /**
-     * @var string Instance AZ information in the format of "ap-shanghai-1".
+     * @var string Instance AZ information in the format of "ap-shanghai-2".
      */
     public $Zone;
 
@@ -81,7 +81,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
     /**
      * @param integer $ProtectMode Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
      * @param integer $DeployMode Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
-     * @param string $Zone Instance AZ information in the format of "ap-shanghai-1".
+     * @param string $Zone Instance AZ information in the format of "ap-shanghai-2".
      * @param SlaveConfig $SlaveConfig Configurations of the replica node
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      * @param BackupConfig $BackupConfig Configurations of the second replica node of a strong-sync instance

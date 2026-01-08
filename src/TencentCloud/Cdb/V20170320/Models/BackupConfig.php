@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getReplicationMode() Obtain Replication mode of secondary database 2. Value range: async, semi-sync
  * @method void setReplicationMode(string $ReplicationMode) Set Replication mode of secondary database 2. Value range: async, semi-sync
- * @method string getZone() Obtain Name of the AZ of secondary database 2, such as ap-shanghai-1
- * @method void setZone(string $Zone) Set Name of the AZ of secondary database 2, such as ap-shanghai-1
+ * @method string getZone() Obtain Name of the AZ of secondary database 2, such as ap-shanghai-2
+ * @method void setZone(string $Zone) Set Name of the AZ of secondary database 2, such as ap-shanghai-2
  * @method string getVip() Obtain Private IP address of secondary database 2
  * @method void setVip(string $Vip) Set Private IP address of secondary database 2
  * @method integer getVport() Obtain Access port of secondary database 2
@@ -37,7 +37,7 @@ class BackupConfig extends AbstractModel
     public $ReplicationMode;
 
     /**
-     * @var string Name of the AZ of secondary database 2, such as ap-shanghai-1
+     * @var string Name of the AZ of secondary database 2, such as ap-shanghai-2
      */
     public $Zone;
 
@@ -53,7 +53,7 @@ class BackupConfig extends AbstractModel
 
     /**
      * @param string $ReplicationMode Replication mode of secondary database 2. Value range: async, semi-sync
-     * @param string $Zone Name of the AZ of secondary database 2, such as ap-shanghai-1
+     * @param string $Zone Name of the AZ of secondary database 2, such as ap-shanghai-2
      * @param string $Vip Private IP address of secondary database 2
      * @param integer $Vport Access port of secondary database 2
      */

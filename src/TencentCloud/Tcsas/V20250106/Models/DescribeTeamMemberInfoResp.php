@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * Team member information
  *
  * @method string getUserId() Obtain User ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUserId(string $UserId) Set User ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUserAccount() Obtain User account
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUserAccount(string $UserAccount) Set User account
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUserName() Obtain User name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUserName(string $UserName) Set User name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTeamId() Obtain Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTeamId(string $TeamId) Set Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTeamName() Obtain Team name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTeamName(string $TeamName) Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTeamRoleName() Obtain Team role name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTeamRoleName(string $TeamRoleName) Set Team role name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTeamRoleId() Obtain Team role ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTeamRoleId(integer $TeamRoleId) Set Team role ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getCanEdit() Obtain Editable or not
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCanEdit(boolean $CanEdit) Set Editable or not
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTeamRoleName() Obtain Specifies the team role name.
+ * @method void setTeamRoleName(string $TeamRoleName) Set Specifies the team role name.
+ * @method integer getTeamRoleId() Obtain Specifies the team role ID.
+ * @method void setTeamRoleId(integer $TeamRoleId) Set Specifies the team role ID.
+ * @method boolean getCanEdit() Obtain Whether it is editable
+ * @method void setCanEdit(boolean $CanEdit) Set Whether it is editable
  */
 class DescribeTeamMemberInfoResp extends AbstractModel
 {
     /**
      * @var string User ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserId;
 
     /**
      * @var string User account
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserAccount;
 
     /**
      * @var string User name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserName;
 
     /**
      * @var string Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeamId;
 
     /**
      * @var string Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeamName;
 
     /**
-     * @var string Team role name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the team role name.
      */
     public $TeamRoleName;
 
     /**
-     * @var integer Team role ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the team role ID.
      */
     public $TeamRoleId;
 
     /**
-     * @var boolean Editable or not
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether it is editable
      */
     public $CanEdit;
 
     /**
      * @param string $UserId User ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UserAccount User account
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UserName User name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TeamRoleName Team role name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TeamRoleId Team role ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $CanEdit Editable or not
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TeamRoleName Specifies the team role name.
+     * @param integer $TeamRoleId Specifies the team role ID.
+     * @param boolean $CanEdit Whether it is editable
      */
     function __construct()
     {

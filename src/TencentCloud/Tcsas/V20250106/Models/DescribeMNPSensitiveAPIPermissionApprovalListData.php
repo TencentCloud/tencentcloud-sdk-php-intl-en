@@ -40,38 +40,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplyNote(string $ApplyNote) Set Application notes
  * @method integer getApprovalStatus() Obtain Approval status. 1: Processing; 20: Rejected; 30: Approved
  * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status. 1: Processing; 20: Rejected; 30: Approved
- * @method string getApprovalUser() Obtain Approver
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApprovalUser(string $ApprovalUser) Set Approver
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getApprovalTime() Obtain Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApprovalTime(string $ApprovalTime) Set Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getApprovalUser() Obtain Specifies the review user.
+ * @method void setApprovalUser(string $ApprovalUser) Set Specifies the review user.
+ * @method string getApprovalTime() Obtain Approval time.
+ * @method void setApprovalTime(string $ApprovalTime) Set Approval time.
  * @method string getApprovalNote() Obtain Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApprovalNote(string $ApprovalNote) Set Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getApplicationId() Obtain Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplicationId(string $ApplicationId) Set Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getApplicationName() Obtain Application name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplicationName(string $ApplicationName) Set Application name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getApplicationLogo() Obtain Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApplicationLogo(string $ApplicationLogo) Set Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAPIType() Obtain API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAPIType(integer $APIType) Set API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAPIDesc() Obtain API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAPIDesc(string $APIDesc) Set API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getApplicationLogo() Obtain Specifies the application icon.
+ * @method void setApplicationLogo(string $ApplicationLogo) Set Specifies the application icon.
+ * @method integer getAPIType() Obtain API type. 1: system; 2: custom.
+ * @method void setAPIType(integer $APIType) Set API type. 1: system; 2: custom.
+ * @method string getAPIDesc() Obtain API feature description.
+ * @method void setAPIDesc(string $APIDesc) Set API feature description.
  */
 class DescribeMNPSensitiveAPIPermissionApprovalListData extends AbstractModel
 {
@@ -126,50 +110,42 @@ class DescribeMNPSensitiveAPIPermissionApprovalListData extends AbstractModel
     public $ApprovalStatus;
 
     /**
-     * @var string Approver
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the review user.
      */
     public $ApprovalUser;
 
     /**
-     * @var string Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Approval time.
      */
     public $ApprovalTime;
 
     /**
      * @var string Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApprovalNote;
 
     /**
      * @var string Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplicationId;
 
     /**
      * @var string Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplicationName;
 
     /**
-     * @var string Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the application icon.
      */
     public $ApplicationLogo;
 
     /**
-     * @var integer API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer API type. 1: system; 2: custom.
      */
     public $APIType;
 
     /**
-     * @var string API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string API feature description.
      */
     public $APIDesc;
 
@@ -184,22 +160,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ApplyTime Application time
      * @param string $ApplyNote Application notes
      * @param integer $ApprovalStatus Approval status. 1: Processing; 20: Rejected; 30: Approved
-     * @param string $ApprovalUser Approver
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ApprovalTime Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ApprovalUser Specifies the review user.
+     * @param string $ApprovalTime Approval time.
      * @param string $ApprovalNote Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ApplicationLogo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $APIDesc API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ApplicationLogo Specifies the application icon.
+     * @param integer $APIType API type. 1: system; 2: custom.
+     * @param string $APIDesc API feature description.
      */
     function __construct()
     {
