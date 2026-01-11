@@ -18,48 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Noise removal configuration.
+ * The volume equalization configuration.
  *
- * @method string getSwitch() Obtain Whether to enable noise removal. Valid values:
+ * @method string getSwitch() Obtain Whether to enable volume equalization. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
- * @method void setSwitch(string $Switch) Set Whether to enable noise removal. Valid values:
+ * @method void setSwitch(string $Switch) Set Whether to enable volume equalization. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
- * @method string getType() Obtain The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
- * @method void setType(string $Type) Set The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+ * @method string getType() Obtain The type. Valid values:
+<li>`loudNorm`: Loudness normalization.</li>
+<li>`gainControl`: Volume leveling.</li>
+Default value: `loudNorm`.
+ * @method void setType(string $Type) Set The type. Valid values:
+<li>`loudNorm`: Loudness normalization.</li>
+<li>`gainControl`: Volume leveling.</li>
+Default value: `loudNorm`.
  */
-class AudioDenoiseInfo extends AbstractModel
+class AudioVolumeBalanceInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable noise removal. Valid values:
+     * @var string Whether to enable volume equalization. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
      */
     public $Switch;
 
     /**
-     * @var string The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+     * @var string The type. Valid values:
+<li>`loudNorm`: Loudness normalization.</li>
+<li>`gainControl`: Volume leveling.</li>
+Default value: `loudNorm`.
      */
     public $Type;
 
     /**
-     * @param string $Switch Whether to enable noise removal. Valid values:
+     * @param string $Switch Whether to enable volume equalization. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
-     * @param string $Type The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+     * @param string $Type The type. Valid values:
+<li>`loudNorm`: Loudness normalization.</li>
+<li>`gainControl`: Volume leveling.</li>
+Default value: `loudNorm`.
      */
     function __construct()
     {

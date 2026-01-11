@@ -23,23 +23,25 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSwitch() Obtain Whether to enable HDR. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
  * @method void setSwitch(string $Switch) Set Whether to enable HDR. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
  * @method string getType() Obtain The HDR type. Valid values:
 <li>`hdr10`</li>
 <li>`hlg`</li>
 
 Note:
 <li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx265`.</li>
+<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
  * @method void setType(string $Type) Set The HDR type. Valid values:
 <li>`hdr10`</li>
 <li>`hlg`</li>
 
 Note:
 <li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx265`.</li>
+<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
  */
 class HDRInfo extends AbstractModel
 {
@@ -47,6 +49,7 @@ class HDRInfo extends AbstractModel
      * @var string Whether to enable HDR. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
      */
     public $Switch;
 
@@ -57,7 +60,7 @@ class HDRInfo extends AbstractModel
 
 Note:
 <li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx265`.</li>
+<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
      */
     public $Type;
 
@@ -65,13 +68,14 @@ Note:
      * @param string $Switch Whether to enable HDR. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
      * @param string $Type The HDR type. Valid values:
 <li>`hdr10`</li>
 <li>`hlg`</li>
 
 Note:
 <li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx265`.</li>
+<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
      */
     function __construct()
     {

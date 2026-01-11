@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) Set Audio stream configuration parameter.
  * @method TEHDConfigForUpdate getTEHDConfig() Obtain TESHD transcoding parameter.
  * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set TESHD transcoding parameter.
+ * @method EnhanceConfigForUpdate getEnhanceConfig() Obtain Audio/Video enhancement parameter.
+ * @method void setEnhanceConfig(EnhanceConfigForUpdate $EnhanceConfig) Set Audio/Video enhancement parameter.
  * @method string getSegmentType() Obtain The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
 <li>ts: TS segment</li>
 <li>fmp4: fMP4 segment</li>
@@ -112,6 +114,11 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
     public $TEHDConfig;
 
     /**
+     * @var EnhanceConfigForUpdate Audio/Video enhancement parameter.
+     */
+    public $EnhanceConfig;
+
+    /**
      * @var string The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
 <li>ts: TS segment</li>
 <li>fmp4: fMP4 segment</li>
@@ -133,6 +140,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
      * @param VideoTemplateInfoForUpdate $VideoTemplate Video stream configuration parameter.
      * @param AudioTemplateInfoForUpdate $AudioTemplate Audio stream configuration parameter.
      * @param TEHDConfigForUpdate $TEHDConfig TESHD transcoding parameter.
+     * @param EnhanceConfigForUpdate $EnhanceConfig Audio/Video enhancement parameter.
      * @param string $SegmentType The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
 <li>ts: TS segment</li>
 <li>fmp4: fMP4 segment</li>
@@ -191,6 +199,11 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfigForUpdate();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
+            $this->EnhanceConfig = new EnhanceConfigForUpdate();
+            $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
         }
 
         if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {

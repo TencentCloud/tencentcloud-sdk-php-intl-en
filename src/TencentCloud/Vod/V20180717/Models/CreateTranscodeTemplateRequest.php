@@ -50,6 +50,8 @@ Default value: 0.
  * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) Set Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
  * @method TEHDConfig getTEHDConfig() Obtain TESHD transcoding parameter.
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set TESHD transcoding parameter.
+ * @method EnhanceConfig getEnhanceConfig() Obtain Audio/Video enhancement parameter.
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement parameter.
  * @method string getSegmentType() Obtain The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
 <li>ts: TS segment</li>
 <li>fmp4: fMP4 segment</li>
@@ -113,6 +115,11 @@ Default value: 0.
     public $TEHDConfig;
 
     /**
+     * @var EnhanceConfig Audio/Video enhancement parameter.
+     */
+    public $EnhanceConfig;
+
+    /**
      * @var string The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
 <li>ts: TS segment</li>
 <li>fmp4: fMP4 segment</li>
@@ -136,6 +143,7 @@ Default value: 0.
      * @param VideoTemplateInfo $VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
      * @param AudioTemplateInfo $AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
      * @param TEHDConfig $TEHDConfig TESHD transcoding parameter.
+     * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement parameter.
      * @param string $SegmentType The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
 <li>ts: TS segment</li>
 <li>fmp4: fMP4 segment</li>
@@ -191,6 +199,11 @@ Default: ts
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfig();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
+            $this->EnhanceConfig = new EnhanceConfig();
+            $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
         }
 
         if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {

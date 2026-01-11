@@ -18,48 +18,56 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Noise removal configuration.
+ * LLM enhancement configuration.
  *
- * @method string getSwitch() Obtain Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
- * @method void setSwitch(string $Switch) Set Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
- * @method string getType() Obtain The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
- * @method void setType(string $Type) Set The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+ * @method string getSwitch() Obtain Whether to enable LLM enhancement. Valid values:
+<li>ON</li>
+<li>OFF</li>
+Default value: OFF.
+ * @method void setSwitch(string $Switch) Set Whether to enable LLM enhancement. Valid values:
+<li>ON</li>
+<li>OFF</li>
+Default value: OFF.
+ * @method string getType() Obtain The strength. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: normal.
+ * @method void setType(string $Type) Set The strength. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: normal.
  */
-class AudioDenoiseInfo extends AbstractModel
+class DiffusionEnhanceInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+     * @var string Whether to enable LLM enhancement. Valid values:
+<li>ON</li>
+<li>OFF</li>
+Default value: OFF.
      */
     public $Switch;
 
     /**
-     * @var string The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+     * @var string The strength. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: normal.
      */
     public $Type;
 
     /**
-     * @param string $Switch Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
-     * @param string $Type The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+     * @param string $Switch Whether to enable LLM enhancement. Valid values:
+<li>ON</li>
+<li>OFF</li>
+Default value: OFF.
+     * @param string $Type The strength. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: normal.
      */
     function __construct()
     {

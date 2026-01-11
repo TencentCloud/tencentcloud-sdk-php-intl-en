@@ -23,12 +23,14 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSwitch() Obtain Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
  * @method void setSwitch(string $Switch) Set Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
- * @method float getIntensity() Obtain The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+Default value: `OFF`.
+ * @method float getIntensity() Obtain The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
- * @method void setIntensity(float $Intensity) Set The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+ * @method void setIntensity(float $Intensity) Set The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
  * @method string getType() Obtain The banding removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
 <li>`normal`</li>
@@ -43,11 +45,12 @@ class ScratchRepairInfo extends AbstractModel
      * @var string Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
      */
     public $Switch;
 
     /**
-     * @var float The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+     * @var float The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
      */
     public $Intensity;
@@ -63,7 +66,8 @@ Default value: `normal`.
      * @param string $Switch Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
-     * @param float $Intensity The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+Default value: `OFF`.
+     * @param float $Intensity The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
      * @param string $Type The banding removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
 <li>`normal`</li>

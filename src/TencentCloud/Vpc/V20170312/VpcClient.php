@@ -517,6 +517,7 @@ This API is completed asynchronously. If you need to query the execution result 
  * @method Models\ReplaceRouteTableAssociationResponse ReplaceRouteTableAssociation(Models\ReplaceRouteTableAssociationRequest $req) This API (ReplaceRouteTableAssociation) is used to modify the route table associated with a subnet.
 * A subnet can only be associated with one route table.
  * @method Models\ReplaceRoutesResponse ReplaceRoutes(Models\ReplaceRoutesRequest $req) This API (ReplaceRoutes) is used to modify a specified routing policy by its ID (RouteId). Batch modification is supported.
+ * @method Models\ReplaceRoutesWithRoutePolicyResponse ReplaceRoutesWithRoutePolicy(Models\ReplaceRoutesWithRoutePolicyRequest $req) This API (ReplaceRoutes) modifies the specified routing policy (Route) based on the routing policy ID (RouteId), supporting batch modifications.
  * @method Models\ReplaceSecurityGroupPoliciesResponse ReplaceSecurityGroupPolicies(Models\ReplaceSecurityGroupPoliciesRequest $req) This API is used to batch modify security group policies.
 Policies to modify must be in the same direction. `PolicyIndex` must be specified.
  * @method Models\ReplaceSecurityGroupPolicyResponse ReplaceSecurityGroupPolicy(Models\ReplaceSecurityGroupPolicyRequest $req) This API (ReplaceSecurityGroupPolicy) is used to replace a single security group policy (SecurityGroupPolicy).

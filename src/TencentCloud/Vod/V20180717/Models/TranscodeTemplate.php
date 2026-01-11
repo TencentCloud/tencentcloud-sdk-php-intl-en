@@ -62,6 +62,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set TESHD transcoding parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method EnhanceConfig getEnhanceConfig() Obtain Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getContainerType() Obtain Container filter. Valid values:
 <li>Video: video container that can contain both video stream and audio stream;</li>
 <li>PureAudio: audio container that can contain only audio stream.</li>
@@ -139,6 +143,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TEHDConfig;
 
     /**
+     * @var EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EnhanceConfig;
+
+    /**
      * @var string Container filter. Valid values:
 <li>Video: video container that can contain both video stream and audio stream;</li>
 <li>PureAudio: audio container that can contain only audio stream.</li>
@@ -182,6 +192,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param TEHDConfig $TEHDConfig TESHD transcoding parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ContainerType Container filter. Valid values:
 <li>Video: video container that can contain both video stream and audio stream;</li>
 <li>PureAudio: audio container that can contain only audio stream.</li>
@@ -243,6 +255,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfig();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
+            $this->EnhanceConfig = new EnhanceConfig();
+            $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
         }
 
         if (array_key_exists("ContainerType",$param) and $param["ContainerType"] !== null) {

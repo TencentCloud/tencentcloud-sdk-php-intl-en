@@ -20,27 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * eKYC Web related configuration
  *
- * @method boolean getAutoSkipStartPage() Obtain When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
- * @method void setAutoSkipStartPage(boolean $AutoSkipStartPage) Set When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+ * @method boolean getAutoSkipStartPage() Obtain When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
+Example: false
+ * @method void setAutoSkipStartPage(boolean $AutoSkipStartPage) Set When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
+Example: false
  * @method boolean getAutoSkip() Obtain When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
-Example value: false
+Example: false
  * @method void setAutoSkip(boolean $AutoSkip) Set When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
-Example value: false
+Example: false
  * @method integer getCheckMode() Obtain Detection mode, parameter values are as follows:
 1: OCR+liveness detection & face comparison;
 2: Liveness detection & face comparison;
 3: Liveness detection;
 4: OCR;
 The default value is 2.
-Example value: 3
+Example: 3
  * @method void setCheckMode(integer $CheckMode) Set Detection mode, parameter values are as follows:
 1: OCR+liveness detection & face comparison;
 2: Liveness detection & face comparison;
 3: Liveness detection;
 4: OCR;
 The default value is 2.
-Example value: 3
- * @method string getIDCardType() Obtain The type of lisence used for verification. The following types are supported.
+Example: 3
+ * @method string getIDCardType() Obtain Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
 3.IndonesialDCard: Indonesia ID card
@@ -54,7 +56,7 @@ Example value: 3
 11.SingaporelDCard: Singapore ID card
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
- * @method void setIDCardType(string $IDCardType) Set The type of lisence used for verification. The following types are supported.
+ * @method void setIDCardType(string $IDCardType) Set Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
 3.IndonesialDCard: Indonesia ID card
@@ -69,45 +71,95 @@ Example: HKIDCard
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
  * @method boolean getDisableCheckOcrWarnings() Obtain Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+Example: false
  * @method void setDisableCheckOcrWarnings(boolean $DisableCheckOcrWarnings) Set Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
- * @method integer getSecurityLevel() Obtain Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
- * @method void setSecurityLevel(integer $SecurityLevel) Set Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
- * @method boolean getSkipPrivacyPolicy() Obtain Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
- * @method void setSkipPrivacyPolicy(boolean $SkipPrivacyPolicy) Set Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
- * @method boolean getIdCardCutReturn() Obtain The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
- * @method void setIdCardCutReturn(boolean $IdCardCutReturn) Set The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
- * @method string getThemeColor() Obtain Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
- * @method void setThemeColor(string $ThemeColor) Set Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
- * @method string getLanguage() Obtain International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
- * @method void setLanguage(string $Language) Set International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
- * @method integer getAutoDowngrade() Obtain Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
- * @method void setAutoDowngrade(integer $AutoDowngrade) Set Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+Example: false
+ * @method integer getSecurityLevel() Obtain Liveness security level, the default value is 3. The currently supported security level are as follows:
+1:Silent mode;
+2:Action mode;
+3:Lighting mode;
+4:Action+Lighting mode;
+5:Action+Lighting(High security) mode.
+Example: 4
+ * @method void setSecurityLevel(integer $SecurityLevel) Set Liveness security level, the default value is 3. The currently supported security level are as follows:
+1:Silent mode;
+2:Action mode;
+3:Lighting mode;
+4:Action+Lighting mode;
+5:Action+Lighting(High security) mode.
+Example: 4
+ * @method boolean getSkipPrivacyPolicy() Obtain Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
+Example: false
+ * @method void setSkipPrivacyPolicy(boolean $SkipPrivacyPolicy) Set Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
+Example: false
+ * @method boolean getIdCardCutReturn() Obtain whether to display the cropped ID card image. When set to false, the original ID card image is displayed. When set to true, the cropped version is displayed. The default value is false. 
+Example: false
+ * @method void setIdCardCutReturn(boolean $IdCardCutReturn) Set whether to display the cropped ID card image. When set to false, the original ID card image is displayed. When set to true, the cropped version is displayed. The default value is false. 
+Example: false
+ * @method string getThemeColor() Obtain Front-end theme color, in the format of RGB hexadecimal color code. If the format is incorrect, the default value color will be used. The default value is "#2d72f1".
+Example: #2d72f1
+ * @method void setThemeColor(string $ThemeColor) Set Front-end theme color, in the format of RGB hexadecimal color code. If the format is incorrect, the default value color will be used. The default value is "#2d72f1".
+Example: #2d72f1
+ * @method string getLanguage() Obtain International language, the default value is en (English). The currently supported language are as follows: 
+th: Thai; 
+en: English; 
+zh-cn: Simplified Chinese; 
+zh-tc: Tradionnal Chinese; 
+id: Bahasa Indonesia.
+ * @method void setLanguage(string $Language) Set International language, the default value is en (English). The currently supported language are as follows: 
+th: Thai; 
+en: English; 
+zh-cn: Simplified Chinese; 
+zh-tc: Tradionnal Chinese; 
+id: Bahasa Indonesia.
+ * @method integer getAutoDowngrade() Obtain Automatic downgrade mode, the following parameter are supported: 
+1: Downgrade to silent live mode; 
+2: Disable downgrade mode. 
+The default value is 1.
+ * @method void setAutoDowngrade(integer $AutoDowngrade) Set Automatic downgrade mode, the following parameter are supported: 
+1: Downgrade to silent live mode; 
+2: Disable downgrade mode. 
+The default value is 1.
  * @method string getActionList() Obtain This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The supported action types are as follows:
+"blink";
+"mouth";
+"nod";
+"shake".
+You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The default value is blink.
  * @method void setActionList(string $ActionList) Set This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The supported action types are as follows:
+"blink";
+"mouth";
+"nod";
+"shake".
+You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The default value is blink.
  * @method integer getLivenessRetryLimit() Obtain Control liveness retry number.The value range is 1-99.
+The default value is 99.
  * @method void setLivenessRetryLimit(integer $LivenessRetryLimit) Set Control liveness retry number.The value range is 1-99.
+The default value is 99.
  * @method integer getLivenessTimeout() Obtain Specifies the liveness detection timeout period in seconds. value range: (0,600].
+The default value is 45.
  * @method void setLivenessTimeout(integer $LivenessTimeout) Set Specifies the liveness detection timeout period in seconds. value range: (0,600].
- * @method string getSelectedWarningCodes() Obtain Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
- * @method void setSelectedWarningCodes(string $SelectedWarningCodes) Set Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+The default value is 45.
+ * @method string getSelectedWarningCodes() Obtain Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
+-9101: Incomplete Border Alert;
+-9102: Copy Document Alert;
+-9103: Remediated Document Alert;
+-9104: PS-altered Document Alert;
+-9107: Glare Alert;
+-9108: Blurriness Alert;
+-9109: Alert Not Activated.
+ * @method void setSelectedWarningCodes(string $SelectedWarningCodes) Set Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
+-9101: Incomplete Border Alert;
+-9102: Copy Document Alert;
+-9103: Remediated Document Alert;
+-9104: PS-altered Document Alert;
+-9107: Glare Alert;
+-9108: Blurriness Alert;
+-9109: Alert Not Activated.
  * @method boolean getAllowExpiredDocument() Obtain Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
 true (default value): Expired HKID is allowed to enter the liveness process.
 false : Expired HKID is rejected and cannot enter the liveness process.
@@ -118,13 +170,14 @@ false : Expired HKID is rejected and cannot enter the liveness process.
 class WebVerificationConfigIntl extends AbstractModel
 {
     /**
-     * @var boolean When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+     * @var boolean When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
+Example: false
      */
     public $AutoSkipStartPage;
 
     /**
      * @var boolean When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
-Example value: false
+Example: false
      */
     public $AutoSkip;
 
@@ -135,12 +188,12 @@ Example value: false
 3: Liveness detection;
 4: OCR;
 The default value is 2.
-Example value: 3
+Example: 3
      */
     public $CheckMode;
 
     /**
-     * @var string The type of lisence used for verification. The following types are supported.
+     * @var string Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
 3.IndonesialDCard: Indonesia ID card
@@ -159,65 +212,90 @@ Example: HKIDCard
 
     /**
      * @var boolean Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+Example: false
      */
     public $DisableCheckOcrWarnings;
 
     /**
-     * @var integer Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
+     * @var integer Liveness security level, the default value is 3. The currently supported security level are as follows:
+1:Silent mode;
+2:Action mode;
+3:Lighting mode;
+4:Action+Lighting mode;
+5:Action+Lighting(High security) mode.
+Example: 4
      */
     public $SecurityLevel;
 
     /**
-     * @var boolean Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+     * @var boolean Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
+Example: false
      */
     public $SkipPrivacyPolicy;
 
     /**
-     * @var boolean The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+     * @var boolean whether to display the cropped ID card image. When set to false, the original ID card image is displayed. When set to true, the cropped version is displayed. The default value is false. 
+Example: false
      */
     public $IdCardCutReturn;
 
     /**
-     * @var string Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
+     * @var string Front-end theme color, in the format of RGB hexadecimal color code. If the format is incorrect, the default value color will be used. The default value is "#2d72f1".
+Example: #2d72f1
      */
     public $ThemeColor;
 
     /**
-     * @var string International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
+     * @var string International language, the default value is en (English). The currently supported language are as follows: 
+th: Thai; 
+en: English; 
+zh-cn: Simplified Chinese; 
+zh-tc: Tradionnal Chinese; 
+id: Bahasa Indonesia.
      */
     public $Language;
 
     /**
-     * @var integer Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+     * @var integer Automatic downgrade mode, the following parameter are supported: 
+1: Downgrade to silent live mode; 
+2: Disable downgrade mode. 
+The default value is 1.
      */
     public $AutoDowngrade;
 
     /**
      * @var string This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The supported action types are as follows:
+"blink";
+"mouth";
+"nod";
+"shake".
+You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The default value is blink.
      */
     public $ActionList;
 
     /**
      * @var integer Control liveness retry number.The value range is 1-99.
+The default value is 99.
      */
     public $LivenessRetryLimit;
 
     /**
      * @var integer Specifies the liveness detection timeout period in seconds. value range: (0,600].
+The default value is 45.
      */
     public $LivenessTimeout;
 
     /**
-     * @var string Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+     * @var string Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
+-9101: Incomplete Border Alert;
+-9102: Copy Document Alert;
+-9103: Remediated Document Alert;
+-9104: PS-altered Document Alert;
+-9107: Glare Alert;
+-9108: Blurriness Alert;
+-9109: Alert Not Activated.
      */
     public $SelectedWarningCodes;
 
@@ -229,17 +307,18 @@ false : Expired HKID is rejected and cannot enter the liveness process.
     public $AllowExpiredDocument;
 
     /**
-     * @param boolean $AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+     * @param boolean $AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
+Example: false
      * @param boolean $AutoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
-Example value: false
+Example: false
      * @param integer $CheckMode Detection mode, parameter values are as follows:
 1: OCR+liveness detection & face comparison;
 2: Liveness detection & face comparison;
 3: Liveness detection;
 4: OCR;
 The default value is 2.
-Example value: 3
-     * @param string $IDCardType The type of lisence used for verification. The following types are supported.
+Example: 3
+     * @param string $IDCardType Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
 3.IndonesialDCard: Indonesia ID card
@@ -254,25 +333,50 @@ Example value: 3
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
      * @param boolean $DisableCheckOcrWarnings Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
-     * @param integer $SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
-     * @param boolean $SkipPrivacyPolicy Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
-     * @param boolean $IdCardCutReturn The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
-     * @param string $ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
-     * @param string $Language International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
-     * @param integer $AutoDowngrade Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+Example: false
+     * @param integer $SecurityLevel Liveness security level, the default value is 3. The currently supported security level are as follows:
+1:Silent mode;
+2:Action mode;
+3:Lighting mode;
+4:Action+Lighting mode;
+5:Action+Lighting(High security) mode.
+Example: 4
+     * @param boolean $SkipPrivacyPolicy Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
+Example: false
+     * @param boolean $IdCardCutReturn whether to display the cropped ID card image. When set to false, the original ID card image is displayed. When set to true, the cropped version is displayed. The default value is false. 
+Example: false
+     * @param string $ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. If the format is incorrect, the default value color will be used. The default value is "#2d72f1".
+Example: #2d72f1
+     * @param string $Language International language, the default value is en (English). The currently supported language are as follows: 
+th: Thai; 
+en: English; 
+zh-cn: Simplified Chinese; 
+zh-tc: Tradionnal Chinese; 
+id: Bahasa Indonesia.
+     * @param integer $AutoDowngrade Automatic downgrade mode, the following parameter are supported: 
+1: Downgrade to silent live mode; 
+2: Disable downgrade mode. 
+The default value is 1.
      * @param string $ActionList This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The supported action types are as follows:
+"blink";
+"mouth";
+"nod";
+"shake".
+You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The default value is blink.
      * @param integer $LivenessRetryLimit Control liveness retry number.The value range is 1-99.
+The default value is 99.
      * @param integer $LivenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
-     * @param string $SelectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+The default value is 45.
+     * @param string $SelectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
+-9101: Incomplete Border Alert;
+-9102: Copy Document Alert;
+-9103: Remediated Document Alert;
+-9104: PS-altered Document Alert;
+-9107: Glare Alert;
+-9108: Blurriness Alert;
+-9109: Alert Not Activated.
      * @param boolean $AllowExpiredDocument Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
 true (default value): Expired HKID is allowed to enter the liveness process.
 false : Expired HKID is rejected and cannot enter the liveness process.

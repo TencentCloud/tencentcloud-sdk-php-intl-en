@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set TESHD transcoding parameters
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method EnhanceConfig getEnhanceConfig() Obtain Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AdaptiveStreamTemplate extends AbstractModel
 {
@@ -74,6 +78,12 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $TEHDConfig;
 
     /**
+     * @var EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EnhanceConfig;
+
+    /**
      * @param VideoTemplateInfo $Video Video parameter information.
      * @param AudioTemplateInfo $Audio Audio parameter information.
      * @param integer $RemoveAudio Whether to remove audio stream. Valid values:
@@ -84,6 +94,8 @@ Note: This field may return `null`, indicating that no valid value was found.
 <li>1: yes</li>
      * @param TEHDConfig $TEHDConfig TESHD transcoding parameters
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -119,6 +131,11 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfig();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
+            $this->EnhanceConfig = new EnhanceConfig();
+            $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
         }
     }
 }

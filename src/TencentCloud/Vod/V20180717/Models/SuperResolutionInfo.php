@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+Default value: `OFF`.
  * @method void setSwitch(string $Switch) Set Whether to enable super resolution. Valid values:
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+Default value: `OFF`.
  * @method string getType() Obtain The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
 <li>`lq`: For low-resolution videos with obvious noise</li>
 <li>`hq`: For high-resolution videos</li>
@@ -48,6 +50,7 @@ class SuperResolutionInfo extends AbstractModel
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+Default value: `OFF`.
      */
     public $Switch;
 
@@ -70,6 +73,7 @@ Default value: `2`.
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+Default value: `OFF`.
      * @param string $Type The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
 <li>`lq`: For low-resolution videos with obvious noise</li>
 <li>`hq`: For high-resolution videos</li>
