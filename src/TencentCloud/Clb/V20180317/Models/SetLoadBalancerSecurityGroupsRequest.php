@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetLoadBalancerSecurityGroups request structure.
  *
- * @method string getLoadBalancerId() Obtain ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
- * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+ * @method string getLoadBalancerId() Obtain ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
  * @method array getSecurityGroups() Obtain Specifies an array of security group ids. a load balancing instance supports a maximum binding of 50 security groups. to unbind all security groups, omit this parameter.
-Can be queried through the [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1) api.
+Can be queried through the [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1) api.
  * @method void setSecurityGroups(array $SecurityGroups) Set Specifies an array of security group ids. a load balancing instance supports a maximum binding of 50 security groups. to unbind all security groups, omit this parameter.
-Can be queried through the [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1) api.
+Can be queried through the [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1) api.
  */
 class SetLoadBalancerSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+     * @var string ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
      */
     public $LoadBalancerId;
 
     /**
      * @var array Specifies an array of security group ids. a load balancing instance supports a maximum binding of 50 security groups. to unbind all security groups, omit this parameter.
-Can be queried through the [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1) api.
+Can be queried through the [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1) api.
      */
     public $SecurityGroups;
 
     /**
-     * @param string $LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+     * @param string $LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
      * @param array $SecurityGroups Specifies an array of security group ids. a load balancing instance supports a maximum binding of 50 security groups. to unbind all security groups, omit this parameter.
-Can be queried through the [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1) api.
+Can be queried through the [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1) api.
      */
     function __construct()
     {

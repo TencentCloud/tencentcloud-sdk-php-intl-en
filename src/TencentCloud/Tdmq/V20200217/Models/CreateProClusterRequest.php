@@ -27,13 +27,13 @@ Single-AZ deployment selects an availability zone. example: [200002].
 
 Single-AZ deployment selects an availability zone. example: [200002].
  * @method string getProductName() Obtain Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
  * @method void setProductName(string $ProductName) Set Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
  * @method integer getStorageSize() Obtain Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
  * @method void setStorageSize(integer $StorageSize) Set Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
  * @method integer getAutoRenewFlag() Obtain `1`: true. enables automatic monthly renewal.
 
 false. disables automatic monthly renewal.
@@ -62,13 +62,13 @@ Single-AZ deployment selects an availability zone. example: [200002].
 
     /**
      * @var string Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
      */
     public $ProductName;
 
     /**
      * @var integer Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
      */
     public $StorageSize;
 
@@ -109,9 +109,9 @@ false. disables automatic monthly renewal.
 
 Single-AZ deployment selects an availability zone. example: [200002].
      * @param string $ProductName Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
      * @param integer $StorageSize Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
      * @param integer $AutoRenewFlag `1`: true. enables automatic monthly renewal.
 
 false. disables automatic monthly renewal.

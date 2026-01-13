@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAclRule request structure.
  *
- * @method string getInstanceId() Obtain Instance id information. you can obtain it through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
- * @method void setInstanceId(string $InstanceId) Set Instance id information. you can obtain it through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method string getInstanceId() Obtain Instance id information. you can obtain it through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set Instance id information. you can obtain it through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
  * @method string getRuleName() Obtain acl rule name, obtain through the API DescribeAclRule.
  * @method void setRuleName(string $RuleName) Set acl rule name, obtain through the API DescribeAclRule.
  */
 class DeleteAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string Instance id information. you can obtain it through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @var string Instance id information. you can obtain it through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class DeleteAclRuleRequest extends AbstractModel
     public $RuleName;
 
     /**
-     * @param string $InstanceId Instance id information. you can obtain it through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param string $InstanceId Instance id information. you can obtain it through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      * @param string $RuleName acl rule name, obtain through the API DescribeAclRule.
      */
     function __construct()

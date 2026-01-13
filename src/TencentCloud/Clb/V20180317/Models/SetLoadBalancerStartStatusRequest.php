@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOperationType() Obtain Operation type. Start: Start the instance; Stop: Stop the instance.
  * @method void setOperationType(string $OperationType) Set Operation type. Start: Start the instance; Stop: Stop the instance.
- * @method string getLoadBalancerId() Obtain ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
- * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+ * @method string getLoadBalancerId() Obtain ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
  * @method array getListenerIds() Obtain Listener ID. If this field is empty, it indicates operating the CLB instance; if not empty, it indicates operating the listener.
  * @method void setListenerIds(array $ListenerIds) Set Listener ID. If this field is empty, it indicates operating the CLB instance; if not empty, it indicates operating the listener.
  */
@@ -35,7 +35,7 @@ class SetLoadBalancerStartStatusRequest extends AbstractModel
     public $OperationType;
 
     /**
-     * @var string ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+     * @var string ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
      */
     public $LoadBalancerId;
 
@@ -46,7 +46,7 @@ class SetLoadBalancerStartStatusRequest extends AbstractModel
 
     /**
      * @param string $OperationType Operation type. Start: Start the instance; Stop: Stop the instance.
-     * @param string $LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+     * @param string $LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
      * @param array $ListenerIds Listener ID. If this field is empty, it indicates operating the CLB instance; if not empty, it indicates operating the listener.
      */
     function __construct()

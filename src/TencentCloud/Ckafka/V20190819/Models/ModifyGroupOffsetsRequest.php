@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGroupOffsets request structure.
  *
- * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
- * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
- * @method string getGroup() Obtain Consumer group name. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
- * @method void setGroup(string $Group) Set Consumer group name. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
+ * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+ * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+ * @method string getGroup() Obtain Consumer group name. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
+ * @method void setGroup(string $Group) Set Consumer group name. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
  * @method integer getStrategy() Obtain Reset offset strategy. parameter meaning: 0. align with the shift-by parameter, move the offset forward or backward by shift entries. 1. alignment reference (by-duration, to-datetime, to-earliest, to-latest), move the offset to the specified timestamp position. 2. alignment reference (to-offset), move the offset to the specified offset position.
  * @method void setStrategy(integer $Strategy) Set Reset offset strategy. parameter meaning: 0. align with the shift-by parameter, move the offset forward or backward by shift entries. 1. alignment reference (by-duration, to-datetime, to-earliest, to-latest), move the offset to the specified timestamp position. 2. alignment reference (to-offset), move the offset to the specified offset position.
  * @method array getTopics() Obtain Specifies the topic name list that needs to reset.
@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyGroupOffsetsRequest extends AbstractModel
 {
     /**
-     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public $InstanceId;
 
     /**
-     * @var string Consumer group name. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
+     * @var string Consumer group name. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
      */
     public $Group;
 
@@ -80,8 +80,8 @@ class ModifyGroupOffsetsRequest extends AbstractModel
     public $Partitions;
 
     /**
-     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
-     * @param string $Group Consumer group name. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
+     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+     * @param string $Group Consumer group name. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
      * @param integer $Strategy Reset offset strategy. parameter meaning: 0. align with the shift-by parameter, move the offset forward or backward by shift entries. 1. alignment reference (by-duration, to-datetime, to-earliest, to-latest), move the offset to the specified timestamp position. 2. alignment reference (to-offset), move the offset to the specified offset position.
      * @param array $Topics Specifies the topic name list that needs to reset.
      * @param integer $Shift When `strategy` is 0, this field is required. If it is above zero, the offset will be shifted backward by the value of the `shift`. If it is below zero, the offset will be shifted forward by the value of the `shift`. After a correct reset, the new offset should be (old_offset + shift). Note that if the new offset is smaller than the `earliest` parameter of the partition, it will be set to `earliest`, and if it is greater than the `latest` parameter of the partition, it will be set to `latest`

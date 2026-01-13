@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDomain request structure.
  *
- * @method string getLoadBalancerId() Obtain ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
- * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
- * @method string getListenerId() Obtain ID of the clb listener. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
- * @method void setListenerId(string $ListenerId) Set ID of the clb listener. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
- * @method string getDomain() Obtain An existing domain under the listener, can be queried through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
- * @method void setDomain(string $Domain) Set An existing domain under the listener, can be queried through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+ * @method string getLoadBalancerId() Obtain ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+ * @method string getListenerId() Obtain ID of the clb listener. you can call the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+ * @method void setListenerId(string $ListenerId) Set ID of the clb listener. you can call the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+ * @method string getDomain() Obtain An existing domain under the listener, can be queried through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) api.
+ * @method void setDomain(string $Domain) Set An existing domain under the listener, can be queried through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) api.
  * @method string getNewDomain() Obtain New domain name. 	Length limit: 1-120. There are three usage formats: non-regular expression, wildcard, and regular expression. A non-regular expression can only contain letters, digits, "-", and ".". In a wildcard, "*" can only be at the beginning or the end. A regular expressions must begin with a "~".
  * @method void setNewDomain(string $NewDomain) Set New domain name. 	Length limit: 1-120. There are three usage formats: non-regular expression, wildcard, and regular expression. A non-regular expression can only contain letters, digits, "-", and ".". In a wildcard, "*" can only be at the beginning or the end. A regular expressions must begin with a "~".
  */
 class ModifyDomainRequest extends AbstractModel
 {
     /**
-     * @var string ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+     * @var string ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to query the ID.
      */
     public $LoadBalancerId;
 
     /**
-     * @var string ID of the clb listener. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+     * @var string ID of the clb listener. you can call the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) API to query the ID.
      */
     public $ListenerId;
 
     /**
-     * @var string An existing domain under the listener, can be queried through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+     * @var string An existing domain under the listener, can be queried through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) api.
      */
     public $Domain;
 
@@ -52,9 +52,9 @@ class ModifyDomainRequest extends AbstractModel
     public $NewDomain;
 
     /**
-     * @param string $LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
-     * @param string $ListenerId ID of the clb listener. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
-     * @param string $Domain An existing domain under the listener, can be queried through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+     * @param string $LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+     * @param string $ListenerId ID of the clb listener. you can call the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+     * @param string $Domain An existing domain under the listener, can be queried through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) api.
      * @param string $NewDomain New domain name. 	Length limit: 1-120. There are three usage formats: non-regular expression, wildcard, and regular expression. A non-regular expression can only contain letters, digits, "-", and ".". In a wildcard, "*" can only be at the beginning or the end. A regular expressions must begin with a "~".
      */
     function __construct()

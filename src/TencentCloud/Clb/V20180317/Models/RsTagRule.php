@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargets(array $Targets) Set List of real servers with tags to be modified.
  * @method string getLocationId() Obtain Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
  * @method void setLocationId(string $LocationId) Set Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
- * @method string getTag() Obtain Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.comom/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
- * @method void setTag(string $Tag) Set Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.comom/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
+ * @method string getTag() Obtain Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
+ * @method void setTag(string $Tag) Set Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
  */
 class RsTagRule extends AbstractModel
 {
@@ -47,7 +47,7 @@ class RsTagRule extends AbstractModel
     public $LocationId;
 
     /**
-     * @var string Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.comom/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
+     * @var string Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
      */
     public $Tag;
 
@@ -55,7 +55,7 @@ class RsTagRule extends AbstractModel
      * @param string $ListenerId CLB listener ID.
      * @param array $Targets List of real servers with tags to be modified.
      * @param string $LocationId Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
-     * @param string $Tag Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.comom/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
+     * @param string $Tag Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
      */
     function __construct()
     {

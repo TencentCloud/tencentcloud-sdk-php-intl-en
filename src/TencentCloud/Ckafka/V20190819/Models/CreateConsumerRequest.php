@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConsumer request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
  * @method string getGroupName() Obtain Consumer group name.
  * @method void setGroupName(string $GroupName) Set Consumer group name.
  * @method string getTopicName() Obtain Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateConsumerRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class CreateConsumerRequest extends AbstractModel
     public $TopicNameList;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      * @param string $GroupName Consumer group name.
      * @param string $TopicName Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
      * @param array $TopicNameList Topic name list.

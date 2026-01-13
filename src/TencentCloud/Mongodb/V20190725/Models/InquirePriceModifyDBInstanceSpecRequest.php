@@ -22,15 +22,15 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
  * @method void setInstanceId(string $InstanceId) Set Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
- * @method integer getMemory() Obtain Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
- * @method void setMemory(integer $Memory) Set Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
- * @method integer getVolume() Obtain Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
- * @method void setVolume(integer $Volume) Set Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
- * @method integer getNodeNum() Obtain Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+ * @method integer getMemory() Obtain Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
+ * @method void setMemory(integer $Memory) Set Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
+ * @method integer getVolume() Obtain Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
+ * @method void setVolume(integer $Volume) Set Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
+ * @method integer getNodeNum() Obtain Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
 - Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
 - Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
 **Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
- * @method void setNodeNum(integer $NodeNum) Set Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+ * @method void setNodeNum(integer $NodeNum) Set Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
 - Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
 - Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
 **Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
@@ -47,17 +47,17 @@ class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
+     * @var integer Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
      */
     public $Memory;
 
     /**
-     * @var integer Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
+     * @var integer Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
      */
     public $Volume;
 
     /**
-     * @var integer Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+     * @var integer Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
 - Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
 - Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
 **Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
@@ -72,9 +72,9 @@ class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
-     * @param integer $Memory Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
-     * @param integer $Volume Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
-     * @param integer $NodeNum Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+     * @param integer $Memory Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
+     * @param integer $Volume Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
+     * @param integer $NodeNum Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
 - Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
 - Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
 **Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.

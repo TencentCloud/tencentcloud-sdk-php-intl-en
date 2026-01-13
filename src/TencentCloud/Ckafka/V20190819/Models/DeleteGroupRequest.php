@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGroup request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
- * @method string getGroup() Obtain Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
- * @method void setGroup(string $Group) Set Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+ * @method string getGroup() Obtain Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
+ * @method void setGroup(string $Group) Set Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
  */
 class DeleteGroupRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @var string The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
     /**
-     * @var string Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
+     * @var string Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
      */
     public $Group;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
-     * @param string $Group Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
+     * @param string $InstanceId The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+     * @param string $Group Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRouteTriggerTime request structure.
  *
- * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
- * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+ * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+ * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
  * @method string getDelayTime() Obtain Modifies the scheduled time for deleting routes.
  * @method void setDelayTime(string $DelayTime) Set Modifies the scheduled time for deleting routes.
  */
 class DeleteRouteTriggerTimeRequest extends AbstractModel
 {
     /**
-     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class DeleteRouteTriggerTimeRequest extends AbstractModel
     public $DelayTime;
 
     /**
-     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      * @param string $DelayTime Modifies the scheduled time for deleting routes.
      */
     function __construct()

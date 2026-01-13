@@ -240,7 +240,7 @@ The account receiving the shared image must be a root account.
 * Synchronization to the source region is not supported.
 * Only images in the NORMAL status are supported for synchronization.
 * Synchronization between Chinese mainland regions and regions outside the Chinese mainland is not supported.
- * You can use the [DescribeBlueprints](https://www.tencentcloud.comom/document/api/1207/47689?from_cn_redirect=1) API to query the image status. When the status is NORMAL, it indicates that the source region synchronization ends.
+ * You can use the [DescribeBlueprints](https://www.tencentcloud.com/document/api/1207/47689?from_cn_redirect=1) API to query the image status. When the status is NORMAL, it indicates that the source region synchronization ends.
  * @method Models\TerminateDisksResponse TerminateDisks(Models\TerminateDisksRequest $req) This API is used to terminate one or more cloud disk.
  * @method Models\TerminateInstancesResponse TerminateInstances(Models\TerminateInstancesRequest $req) This API is used to terminate one or more instances.
 

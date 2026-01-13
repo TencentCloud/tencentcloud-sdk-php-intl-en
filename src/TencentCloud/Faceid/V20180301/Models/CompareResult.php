@@ -98,6 +98,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The request ID of this verification process.
  * @method void setRequestId(string $RequestId) Set The request ID of this verification process.
+ * @method array getLivenessInfoTag() Obtain Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+01 - User kept eyes closed throughout the process.
+02 - User failed to complete the specified action.
+03 - Suspected photo replay attack.
+04 - Suspected synthetic image.
+05 - Suspected synthetic video.
+06 - Suspected synthetic action.
+07 - Suspected fraud template.
+08 - Suspected watermark existence.
+09 - Light verification failed.
+10 - Face verification failed.
+11 - Poor face quality.
+12 - Unqualified collection quality.
+13 - Suspected adversarial sample attack.
+ * @method void setLivenessInfoTag(array $LivenessInfoTag) Set Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+01 - User kept eyes closed throughout the process.
+02 - User failed to complete the specified action.
+03 - Suspected photo replay attack.
+04 - Suspected synthetic image.
+05 - Suspected synthetic video.
+06 - Suspected synthetic action.
+07 - Suspected fraud template.
+08 - Suspected watermark existence.
+09 - Light verification failed.
+10 - Face verification failed.
+11 - Poor face quality.
+12 - Unqualified collection quality.
+13 - Suspected adversarial sample attack.
  */
 class CompareResult extends AbstractModel
 {
@@ -201,6 +229,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
+     * @var array Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+01 - User kept eyes closed throughout the process.
+02 - User failed to complete the specified action.
+03 - Suspected photo replay attack.
+04 - Suspected synthetic image.
+05 - Suspected synthetic video.
+06 - Suspected synthetic action.
+07 - Suspected fraud template.
+08 - Suspected watermark existence.
+09 - Light verification failed.
+10 - Face verification failed.
+11 - Poor face quality.
+12 - Unqualified collection quality.
+13 - Suspected adversarial sample attack.
+     */
+    public $LivenessInfoTag;
+
+    /**
      * @param string $ErrorCode The final verification result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
@@ -240,6 +286,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param FileInfo $CardInfoInputJson The identity document photo info edited by the user. Currently, this parameter is not applied.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The request ID of this verification process.
+     * @param array $LivenessInfoTag Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+01 - User kept eyes closed throughout the process.
+02 - User failed to complete the specified action.
+03 - Suspected photo replay attack.
+04 - Suspected synthetic image.
+05 - Suspected synthetic video.
+06 - Suspected synthetic action.
+07 - Suspected fraud template.
+08 - Suspected watermark existence.
+09 - Light verification failed.
+10 - Face verification failed.
+11 - Poor face quality.
+12 - Unqualified collection quality.
+13 - Suspected adversarial sample attack.
      */
     function __construct()
     {
@@ -318,6 +378,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
+        }
+
+        if (array_key_exists("LivenessInfoTag",$param) and $param["LivenessInfoTag"] !== null) {
+            $this->LivenessInfoTag = $param["LivenessInfoTag"];
         }
     }
 }

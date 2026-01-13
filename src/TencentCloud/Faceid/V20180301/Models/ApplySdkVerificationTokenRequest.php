@@ -88,8 +88,14 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
 Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
  * @method string getExtra() Obtain A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
  * @method void setExtra(string $Extra) Set A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
- * @method string getSdkVersion() Obtain BASIC: Basic Version (default).
- * @method void setSdkVersion(string $SdkVersion) Set BASIC: Basic Version (default).
+ * @method string getSdkVersion() Obtain BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
+ * @method void setSdkVersion(string $SdkVersion) Set BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
  * @method string getActionList() Obtain This interface is used to control th action sequences.
 Action types are as follows:
 "blink"
@@ -191,7 +197,10 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
     public $Extra;
 
     /**
-     * @var string BASIC: Basic Version (default).
+     * @var string BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
      */
     public $SdkVersion;
 
@@ -251,7 +260,10 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
      * @param array $SelectedWarningCodes Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
 Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
      * @param string $Extra A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
-     * @param string $SdkVersion BASIC: Basic Version (default).
+     * @param string $SdkVersion BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
      * @param string $ActionList This interface is used to control th action sequences.
 Action types are as follows:
 "blink"

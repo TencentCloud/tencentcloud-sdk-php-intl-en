@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchCreateAcl request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
  * @method integer getResourceType() Obtain ACL resource type. Default value: `2` (topic).
  * @method void setResourceType(integer $ResourceType) Set ACL resource type. Default value: `2` (topic).
- * @method array getResourceNames() Obtain Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1).
- * @method void setResourceNames(array $ResourceNames) Set Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1).
- * @method array getRuleList() Obtain Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1).
- * @method void setRuleList(array $RuleList) Set Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1).
+ * @method array getResourceNames() Obtain Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+ * @method void setResourceNames(array $ResourceNames) Set Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+ * @method array getRuleList() Obtain Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.com/document/product/597/89217?from_cn_redirect=1).
+ * @method void setRuleList(array $RuleList) Set Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.com/document/product/597/89217?from_cn_redirect=1).
  */
 class BatchCreateAclRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
@@ -42,20 +42,20 @@ class BatchCreateAclRequest extends AbstractModel
     public $ResourceType;
 
     /**
-     * @var array Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1).
+     * @var array Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
      */
     public $ResourceNames;
 
     /**
-     * @var array Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1).
+     * @var array Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.com/document/product/597/89217?from_cn_redirect=1).
      */
     public $RuleList;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      * @param integer $ResourceType ACL resource type. Default value: `2` (topic).
-     * @param array $ResourceNames Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1).
-     * @param array $RuleList Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1).
+     * @param array $ResourceNames Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+     * @param array $RuleList Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.com/document/product/597/89217?from_cn_redirect=1).
      */
     function __construct()
     {

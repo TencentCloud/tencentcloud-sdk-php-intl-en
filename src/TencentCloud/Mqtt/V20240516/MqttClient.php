@@ -45,7 +45,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
 
 This API is used to perform Username fuzzy search.
  * @method Models\KickOutClientResponse KickOutClient(Models\KickOutClientRequest $req) This API is used to kick out a client.
- * @method Models\ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicy(Models\ModifyAuthorizationPolicyRequest $req) This API is used to modify policy rules. See the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+ * @method Models\ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicy(Models\ModifyAuthorizationPolicyRequest $req) This API is used to modify policy rules. See the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) This API is used to modify instance attributes. Only running clusters can call this API to perform configuration change.
  * @method Models\ModifyMessageEnrichmentRuleResponse ModifyMessageEnrichmentRule(Models\ModifyMessageEnrichmentRuleRequest $req) This API is used to modify message enrichment rules.
 Note: All attributes of the current rule must be submitted, even if specific fields are not modified.

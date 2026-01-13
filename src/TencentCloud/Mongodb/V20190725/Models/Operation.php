@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Operation to be terminated.
  *
- * @method string getReplicaSetName() Obtain Name of the shard where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.comom/document/product/240/48120?from_cn_redirect=1) API can be called to query the shard name.
- * @method void setReplicaSetName(string $ReplicaSetName) Set Name of the shard where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.comom/document/product/240/48120?from_cn_redirect=1) API can be called to query the shard name.
- * @method string getNodeName() Obtain Name of the node where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.comom/document/product/240/48120?from_cn_redirect=1) API can be called to query the node name.
- * @method void setNodeName(string $NodeName) Set Name of the node where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.comom/document/product/240/48120?from_cn_redirect=1) API can be called to query the node name.
- * @method integer getOpId() Obtain Operation number. The [DescribeCurrentOp](https://www.tencentcloud.comom/document/product/240/48120?from_cn_redirect=1) API can be called to query the operation number.
- * @method void setOpId(integer $OpId) Set Operation number. The [DescribeCurrentOp](https://www.tencentcloud.comom/document/product/240/48120?from_cn_redirect=1) API can be called to query the operation number.
+ * @method string getReplicaSetName() Obtain Name of the shard where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.com/document/product/240/48120?from_cn_redirect=1) API can be called to query the shard name.
+ * @method void setReplicaSetName(string $ReplicaSetName) Set Name of the shard where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.com/document/product/240/48120?from_cn_redirect=1) API can be called to query the shard name.
+ * @method string getNodeName() Obtain Name of the node where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.com/document/product/240/48120?from_cn_redirect=1) API can be called to query the node name.
+ * @method void setNodeName(string $NodeName) Set Name of the node where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.com/document/product/240/48120?from_cn_redirect=1) API can be called to query the node name.
+ * @method integer getOpId() Obtain Operation number. The [DescribeCurrentOp](https://www.tencentcloud.com/document/product/240/48120?from_cn_redirect=1) API can be called to query the operation number.
+ * @method void setOpId(integer $OpId) Set Operation number. The [DescribeCurrentOp](https://www.tencentcloud.com/document/product/240/48120?from_cn_redirect=1) API can be called to query the operation number.
  */
 class Operation extends AbstractModel
 {
     /**
-     * @var string Name of the shard where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.comom/document/product/240/48120?from_cn_redirect=1) API can be called to query the shard name.
+     * @var string Name of the shard where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.com/document/product/240/48120?from_cn_redirect=1) API can be called to query the shard name.
      */
     public $ReplicaSetName;
 
     /**
-     * @var string Name of the node where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.comom/document/product/240/48120?from_cn_redirect=1) API can be called to query the node name.
+     * @var string Name of the node where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.com/document/product/240/48120?from_cn_redirect=1) API can be called to query the node name.
      */
     public $NodeName;
 
     /**
-     * @var integer Operation number. The [DescribeCurrentOp](https://www.tencentcloud.comom/document/product/240/48120?from_cn_redirect=1) API can be called to query the operation number.
+     * @var integer Operation number. The [DescribeCurrentOp](https://www.tencentcloud.com/document/product/240/48120?from_cn_redirect=1) API can be called to query the operation number.
      */
     public $OpId;
 
     /**
-     * @param string $ReplicaSetName Name of the shard where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.comom/document/product/240/48120?from_cn_redirect=1) API can be called to query the shard name.
-     * @param string $NodeName Name of the node where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.comom/document/product/240/48120?from_cn_redirect=1) API can be called to query the node name.
-     * @param integer $OpId Operation number. The [DescribeCurrentOp](https://www.tencentcloud.comom/document/product/240/48120?from_cn_redirect=1) API can be called to query the operation number.
+     * @param string $ReplicaSetName Name of the shard where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.com/document/product/240/48120?from_cn_redirect=1) API can be called to query the shard name.
+     * @param string $NodeName Name of the node where the operation is performed. The [DescribeCurrentOp](https://www.tencentcloud.com/document/product/240/48120?from_cn_redirect=1) API can be called to query the node name.
+     * @param integer $OpId Operation number. The [DescribeCurrentOp](https://www.tencentcloud.com/document/product/240/48120?from_cn_redirect=1) API can be called to query the operation number.
      */
     function __construct()
     {

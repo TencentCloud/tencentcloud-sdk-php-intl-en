@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceAttributes request structure.
  *
- * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
- * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+ * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+ * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
  * @method integer getMsgRetentionTime() Obtain Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
  * @method void setMsgRetentionTime(integer $MsgRetentionTime) Set Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
  * @method string getInstanceName() Obtain Specifies the Name of the ckafka cluster instance.
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInstanceAttributesRequest extends AbstractModel
 {
     /**
-     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public $InstanceId;
 
@@ -102,7 +102,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $DeleteProtectionEnable;
 
     /**
-     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      * @param integer $MsgRetentionTime Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
      * @param string $InstanceName Specifies the Name of the ckafka cluster instance.
      * @param ModifyInstanceAttributesConfig $Config Instance configuration

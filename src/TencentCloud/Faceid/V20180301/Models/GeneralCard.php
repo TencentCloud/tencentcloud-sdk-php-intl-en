@@ -108,6 +108,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAddress(Address $Address) Set Address
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFullNameLocal() Obtain Localized name.
+ * @method void setFullNameLocal(string $FullNameLocal) Set Localized name.
+ * @method string getFirstNameLocal() Obtain Localization.
+ * @method void setFirstNameLocal(string $FirstNameLocal) Set Localization.
+ * @method string getLastNameLocal() Obtain Localized surname.
+ * @method void setLastNameLocal(string $LastNameLocal) Set Localized surname.
  */
 class GeneralCard extends AbstractModel
 {
@@ -232,6 +238,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Address;
 
     /**
+     * @var string Localized name.
+     */
+    public $FullNameLocal;
+
+    /**
+     * @var string Localization.
+     */
+    public $FirstNameLocal;
+
+    /**
+     * @var string Localized surname.
+     */
+    public $LastNameLocal;
+
+    /**
      * @param string $LicenseNumber License number
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PersonalNumber Personal number, which is returned when it is a passport
@@ -276,6 +297,9 @@ Example: IND
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param Address $Address Address
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FullNameLocal Localized name.
+     * @param string $FirstNameLocal Localization.
+     * @param string $LastNameLocal Localized surname.
      */
     function __construct()
     {
@@ -365,6 +389,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Address",$param) and $param["Address"] !== null) {
             $this->Address = new Address();
             $this->Address->deserialize($param["Address"]);
+        }
+
+        if (array_key_exists("FullNameLocal",$param) and $param["FullNameLocal"] !== null) {
+            $this->FullNameLocal = $param["FullNameLocal"];
+        }
+
+        if (array_key_exists("FirstNameLocal",$param) and $param["FirstNameLocal"] !== null) {
+            $this->FirstNameLocal = $param["FirstNameLocal"];
+        }
+
+        if (array_key_exists("LastNameLocal",$param) and $param["LastNameLocal"] !== null) {
+            $this->LastNameLocal = $param["LastNameLocal"];
         }
     }
 }

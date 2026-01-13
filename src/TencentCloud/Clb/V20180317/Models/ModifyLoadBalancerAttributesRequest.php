@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLoadBalancerAttributes request structure.
  *
- * @method string getLoadBalancerId() Obtain Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
- * @method void setLoadBalancerId(string $LoadBalancerId) Set Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+ * @method string getLoadBalancerId() Obtain Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
  * @method string getLoadBalancerName() Obtain Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
  * @method void setLoadBalancerName(string $LoadBalancerName) Set Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
  * @method TargetRegionInfo getTargetRegionInfo() Obtain The backend service information of cross-region binding 1.0
@@ -42,13 +42,13 @@ Specifies no modification if left blank.
  * @method void setDeleteProtect(boolean $DeleteProtect) Set Specifies whether to enable deletion protection. leave it blank to keep the current setting.
  * @method boolean getModifyClassicDomain() Obtain Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
  * @method void setModifyClassicDomain(boolean $ModifyClassicDomain) Set Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
- * @method string getAssociateEndpoint() Obtain The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
- * @method void setAssociateEndpoint(string $AssociateEndpoint) Set The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+ * @method string getAssociateEndpoint() Obtain The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+ * @method void setAssociateEndpoint(string $AssociateEndpoint) Set The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
  */
 class ModifyLoadBalancerAttributesRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+     * @var string Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
      */
     public $LoadBalancerId;
 
@@ -91,12 +91,12 @@ Specifies no modification if left blank.
     public $ModifyClassicDomain;
 
     /**
-     * @var string The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+     * @var string The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
      */
     public $AssociateEndpoint;
 
     /**
-     * @param string $LoadBalancerId Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+     * @param string $LoadBalancerId Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
      * @param string $LoadBalancerName Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
      * @param TargetRegionInfo $TargetRegionInfo The backend service information of cross-region binding 1.0
      * @param InternetAccessible $InternetChargeInfo Network billing parameter
@@ -107,7 +107,7 @@ Specifies no modification if left blank.
      * @param boolean $SnatPro Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
      * @param boolean $DeleteProtect Specifies whether to enable deletion protection. leave it blank to keep the current setting.
      * @param boolean $ModifyClassicDomain Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
-     * @param string $AssociateEndpoint The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+     * @param string $AssociateEndpoint The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
      */
     function __construct()
     {

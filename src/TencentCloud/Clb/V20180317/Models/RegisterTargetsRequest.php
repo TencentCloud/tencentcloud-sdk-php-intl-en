@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerId(string $ListenerId) Set CLB listener ID
  * @method array getTargets() Obtain List of real servers to be bound. Array length limit: 20.
  * @method void setTargets(array $Targets) Set List of real servers to be bound. Array length limit: 20.
- * @method string getLocationId() Obtain Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
- * @method void setLocationId(string $LocationId) Set Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
+ * @method string getLocationId() Obtain Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
+ * @method void setLocationId(string $LocationId) Set Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
  * @method string getDomain() Obtain Target forwarding rule domain name. This parameter does not take effect if LocationId is specified.
  * @method void setDomain(string $Domain) Set Target forwarding rule domain name. This parameter does not take effect if LocationId is specified.
  * @method string getUrl() Obtain Target forwarding rule URL. This parameter does not take effect if LocationId is specified.
@@ -51,7 +51,7 @@ class RegisterTargetsRequest extends AbstractModel
     public $Targets;
 
     /**
-     * @var string Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
+     * @var string Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
      */
     public $LocationId;
 
@@ -69,7 +69,7 @@ class RegisterTargetsRequest extends AbstractModel
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
      * @param array $Targets List of real servers to be bound. Array length limit: 20.
-     * @param string $LocationId Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
+     * @param string $LocationId Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
      * @param string $Domain Target forwarding rule domain name. This parameter does not take effect if LocationId is specified.
      * @param string $Url Target forwarding rule URL. This parameter does not take effect if LocationId is specified.
      */

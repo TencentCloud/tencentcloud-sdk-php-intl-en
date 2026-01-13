@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroupInfo request structure.
  *
- * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
- * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
- * @method array getGroupList() Obtain Kafka group list. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
- * @method void setGroupList(array $GroupList) Set Kafka group list. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
+ * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+ * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+ * @method array getGroupList() Obtain Kafka group list. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
+ * @method void setGroupList(array $GroupList) Set Kafka group list. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
  */
 class DescribeGroupInfoRequest extends AbstractModel
 {
     /**
-     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public $InstanceId;
 
     /**
-     * @var array Kafka group list. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
+     * @var array Kafka group list. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
      */
     public $GroupList;
 
     /**
-     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
-     * @param array $GroupList Kafka group list. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
+     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+     * @param array $GroupList Kafka group list. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
      */
     function __construct()
     {

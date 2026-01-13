@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetSecurityGroupForLoadbalancers request structure.
  *
- * @method string getSecurityGroup() Obtain Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
- * @method void setSecurityGroup(string $SecurityGroup) Set Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+ * @method string getSecurityGroup() Obtain Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
+ * @method void setSecurityGroup(string $SecurityGroup) Set Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
  * @method string getOperationType() Obtain ADD: bind a security group;
 DEL: unbind a security group
  * @method void setOperationType(string $OperationType) Set ADD: bind a security group;
 DEL: unbind a security group
- * @method array getLoadBalancerIds() Obtain ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+ * @method array getLoadBalancerIds() Obtain ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
 Specifies the maximum length supported by the list is 20.
- * @method void setLoadBalancerIds(array $LoadBalancerIds) Set ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
 Specifies the maximum length supported by the list is 20.
  */
 class SetSecurityGroupForLoadbalancersRequest extends AbstractModel
 {
     /**
-     * @var string Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+     * @var string Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
      */
     public $SecurityGroup;
 
@@ -45,16 +45,16 @@ DEL: unbind a security group
     public $OperationType;
 
     /**
-     * @var array ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+     * @var array ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
 Specifies the maximum length supported by the list is 20.
      */
     public $LoadBalancerIds;
 
     /**
-     * @param string $SecurityGroup Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+     * @param string $SecurityGroup Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
      * @param string $OperationType ADD: bind a security group;
 DEL: unbind a security group
-     * @param array $LoadBalancerIds ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+     * @param array $LoadBalancerIds ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
 Specifies the maximum length supported by the list is 20.
      */
     function __construct()

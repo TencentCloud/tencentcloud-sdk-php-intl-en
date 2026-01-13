@@ -72,9 +72,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setServiceNodeInfo(array $ServiceNodeInfo) Set Startup process list.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getSoftDeployInfo() Obtain Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+ * @method array getSoftDeployInfo() Obtain Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSoftDeployInfo(array $SoftDeployInfo) Set Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+ * @method void setSoftDeployInfo(array $SoftDeployInfo) Set Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method LoadMetricsConditions getLoadMetricsConditions() Obtain Multi-metric trigger condition.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -186,7 +186,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ServiceNodeInfo;
 
     /**
-     * @var array Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+     * @var array Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SoftDeployInfo;
@@ -234,7 +234,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ServiceNodeDesc Startup process list, such as ["NodeManager"].
      * @param array $ServiceNodeInfo Startup process list.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $SoftDeployInfo Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+     * @param array $SoftDeployInfo Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param LoadMetricsConditions $LoadMetricsConditions Multi-metric trigger condition.
 Note: This field may return null, indicating that no valid values can be obtained.

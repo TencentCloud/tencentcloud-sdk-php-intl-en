@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicDetail request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
  * @method string getSearchWord() Obtain (Filter) filter by `topicName`. Fuzzy search is supported
  * @method void setSearchWord(string $SearchWord) Set (Filter) filter by `topicName`. Fuzzy search is supported
  * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTopicDetailRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
@@ -80,7 +80,7 @@ class DescribeTopicDetailRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      * @param string $SearchWord (Filter) filter by `topicName`. Fuzzy search is supported
      * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default
      * @param integer $Limit Number of returned results. default: 20. value must be above 0.

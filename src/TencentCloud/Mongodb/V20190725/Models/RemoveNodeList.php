@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeName(string $NodeName) Set IDs of nodes to be deleted. For a sharded cluster instance, specify the names of nodes to be deleted on one shard. Nodes with the same names on other shards will also be deleted.
 - Obtaining method: Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), go to the **Node Management** tab, and obtain the **node ID**.
 - Note: For a sharded cluster instance, specify the IDs of nodes on shard 0. For example, cmgo-6hfk\*\*\*\*\_0-node-primary.
- * @method string getZone() Obtain AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+ * @method string getZone() Obtain AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.com/document/product/240/3637?from_cn_redirect=1).
 - Single AZ: all nodes are in the same AZ.
 - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any 2 AZs should be larger than that in the third AZ.
- * @method void setZone(string $Zone) Set AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+ * @method void setZone(string $Zone) Set AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.com/document/product/240/3637?from_cn_redirect=1).
 - Single AZ: all nodes are in the same AZ.
 - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any 2 AZs should be larger than that in the third AZ.
  */
@@ -59,7 +59,7 @@ class RemoveNodeList extends AbstractModel
     public $NodeName;
 
     /**
-     * @var string AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+     * @var string AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.com/document/product/240/3637?from_cn_redirect=1).
 - Single AZ: all nodes are in the same AZ.
 - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any 2 AZs should be larger than that in the third AZ.
      */
@@ -73,7 +73,7 @@ class RemoveNodeList extends AbstractModel
      * @param string $NodeName IDs of nodes to be deleted. For a sharded cluster instance, specify the names of nodes to be deleted on one shard. Nodes with the same names on other shards will also be deleted.
 - Obtaining method: Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), go to the **Node Management** tab, and obtain the **node ID**.
 - Note: For a sharded cluster instance, specify the IDs of nodes on shard 0. For example, cmgo-6hfk\*\*\*\*\_0-node-primary.
-     * @param string $Zone AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+     * @param string $Zone AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.com/document/product/240/3637?from_cn_redirect=1).
 - Single AZ: all nodes are in the same AZ.
 - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any 2 AZs should be larger than that in the third AZ.
      */

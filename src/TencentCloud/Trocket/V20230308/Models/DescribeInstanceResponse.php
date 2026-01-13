@@ -132,8 +132,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTopicNumUpperLimit(integer $TopicNumUpperLimit) Set Maximum settable number of topics.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getZoneIds() Obtain AZ list. See [ZoneInfo](https://www.tencentcloud.comom/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.comom/document/product/1596/77929?from_cn_redirect=1) in Data Type.
- * @method void setZoneIds(array $ZoneIds) Set AZ list. See [ZoneInfo](https://www.tencentcloud.comom/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.comom/document/product/1596/77929?from_cn_redirect=1) in Data Type.
+ * @method array getZoneIds() Obtain AZ list. See [ZoneInfo](https://www.tencentcloud.com/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.com/document/product/1596/77929?from_cn_redirect=1) in Data Type.
+ * @method void setZoneIds(array $ZoneIds) Set AZ list. See [ZoneInfo](https://www.tencentcloud.com/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.com/document/product/1596/77929?from_cn_redirect=1) in Data Type.
  * @method integer getNodeCount() Obtain Number of proxy nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNodeCount(integer $NodeCount) Set Number of proxy nodes.
@@ -324,7 +324,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TopicNumUpperLimit;
 
     /**
-     * @var array AZ list. See [ZoneInfo](https://www.tencentcloud.comom/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.comom/document/product/1596/77929?from_cn_redirect=1) in Data Type.
+     * @var array AZ list. See [ZoneInfo](https://www.tencentcloud.com/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.com/document/product/1596/77929?from_cn_redirect=1) in Data Type.
      */
     public $ZoneIds;
 
@@ -402,7 +402,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TopicNumUpperLimit Maximum settable number of topics.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ZoneIds AZ list. See [ZoneInfo](https://www.tencentcloud.comom/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.comom/document/product/1596/77929?from_cn_redirect=1) in Data Type.
+     * @param array $ZoneIds AZ list. See [ZoneInfo](https://www.tencentcloud.com/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.com/document/product/1596/77929?from_cn_redirect=1) in Data Type.
      * @param integer $NodeCount Number of proxy nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ZoneScheduledList Proxy scheduling details.

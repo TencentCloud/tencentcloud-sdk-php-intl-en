@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAuthorizationPolicy request structure.
  *
- * @method string getInstanceId() Obtain tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
- * @method void setInstanceId(string $InstanceId) Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
- * @method integer getId() Obtain Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.comom/document/api/1778/111074?from_cn_redirect=1).
- * @method void setId(integer $Id) Set Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.comom/document/api/1778/111074?from_cn_redirect=1).
+ * @method string getInstanceId() Obtain tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method void setInstanceId(string $InstanceId) Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method integer getId() Obtain Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.com/document/api/1778/111074?from_cn_redirect=1).
+ * @method void setId(integer $Id) Set Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.com/document/api/1778/111074?from_cn_redirect=1).
  */
 class DeleteAuthorizationPolicyRequest extends AbstractModel
 {
     /**
-     * @var string tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @var string tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      */
     public $InstanceId;
 
     /**
-     * @var integer Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.comom/document/api/1778/111074?from_cn_redirect=1).
+     * @var integer Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.com/document/api/1778/111074?from_cn_redirect=1).
      */
     public $Id;
 
     /**
-     * @param string $InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
-     * @param integer $Id Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.comom/document/api/1778/111074?from_cn_redirect=1).
+     * @param string $InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @param integer $Id Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.com/document/api/1778/111074?from_cn_redirect=1).
      */
     function __construct()
     {

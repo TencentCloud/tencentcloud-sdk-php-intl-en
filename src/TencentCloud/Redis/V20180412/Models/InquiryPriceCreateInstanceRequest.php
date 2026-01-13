@@ -58,9 +58,9 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
  * @method void setBillingMode(integer $BillingMode) Set Billing mode.
 - 0: pay-as-you-go.
 - 1: monthly subscription.
- * @method integer getZoneId() Obtain ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+ * @method integer getZoneId() Obtain ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
- * @method void setZoneId(integer $ZoneId) Set ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+ * @method void setZoneId(integer $ZoneId) Set ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
  * @method integer getRedisShardNum() Obtain Number of instance shards.
 - The number of shards is required to be set to 1 for the standard architecture.
@@ -76,9 +76,9 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
  * @method void setReplicasReadonly(boolean $ReplicasReadonly) Set Whether replica read-only is supported. For the standard architecture of Redis 2.8 and CKV, this parameter does not need to be configured.
 - true: Replica read-only is not required.
 - false: Replica read-only is required.
- * @method string getZoneName() Obtain Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+ * @method string getZoneName() Obtain Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
- * @method void setZoneName(string $ZoneName) Set Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+ * @method void setZoneName(string $ZoneName) Set Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
  * @method string getProductVersion() Obtain Deployment mode.
 - local: local disk. This is the default value.
@@ -131,7 +131,7 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     public $BillingMode;
 
     /**
-     * @var integer ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+     * @var integer ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
      */
     public $ZoneId;
@@ -156,7 +156,7 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     public $ReplicasReadonly;
 
     /**
-     * @var string Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+     * @var string Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
      */
     public $ZoneName;
@@ -189,7 +189,7 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
      * @param integer $BillingMode Billing mode.
 - 0: pay-as-you-go.
 - 1: monthly subscription.
-     * @param integer $ZoneId ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+     * @param integer $ZoneId ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
      * @param integer $RedisShardNum Number of instance shards.
 - The number of shards is required to be set to 1 for the standard architecture.
@@ -198,7 +198,7 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
      * @param boolean $ReplicasReadonly Whether replica read-only is supported. For the standard architecture of Redis 2.8 and CKV, this parameter does not need to be configured.
 - true: Replica read-only is not required.
 - false: Replica read-only is required.
-     * @param string $ZoneName Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+     * @param string $ZoneName Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
      * @param string $ProductVersion Deployment mode.
 - local: local disk. This is the default value.

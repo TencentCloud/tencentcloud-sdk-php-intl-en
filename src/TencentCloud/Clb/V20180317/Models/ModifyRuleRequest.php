@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRule request structure.
  *
- * @method string getLoadBalancerId() Obtain ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
- * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
- * @method string getListenerId() Obtain ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
- * @method void setListenerId(string $ListenerId) Set ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
- * @method string getLocationId() Obtain Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
- * @method void setLocationId(string $LocationId) Set Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
+ * @method string getLoadBalancerId() Obtain ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+ * @method string getListenerId() Obtain ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) api.
+ * @method void setListenerId(string $ListenerId) Set ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) api.
+ * @method string getLocationId() Obtain Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1).
+ * @method void setLocationId(string $LocationId) Set Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1).
  * @method string getUrl() Obtain New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
  * @method void setUrl(string $Url) Set New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
  * @method HealthCheck getHealthCheck() Obtain Health check information
@@ -52,17 +52,17 @@ Defaults to 0.
 class ModifyRuleRequest extends AbstractModel
 {
     /**
-     * @var string ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+     * @var string ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
      */
     public $LoadBalancerId;
 
     /**
-     * @var string ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+     * @var string ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) api.
      */
     public $ListenerId;
 
     /**
-     * @var string Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
+     * @var string Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1).
      */
     public $LocationId;
 
@@ -114,9 +114,9 @@ Defaults to 0.
     public $CookieName;
 
     /**
-     * @param string $LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
-     * @param string $ListenerId ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
-     * @param string $LocationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
+     * @param string $LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+     * @param string $ListenerId ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) api.
+     * @param string $LocationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1).
      * @param string $Url New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
      * @param HealthCheck $HealthCheck Health check information
      * @param string $Scheduler Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLoadBalancerSnatIps request structure.
  *
- * @method string getLoadBalancerId() Obtain Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID, such as lb-12345678.
- * @method void setLoadBalancerId(string $LoadBalancerId) Set Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID, such as lb-12345678.
+ * @method string getLoadBalancerId() Obtain Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID, such as lb-12345678.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID, such as lb-12345678.
  * @method array getIps() Obtain Specifies the address array of SnatIp to delete. maximum deletion supported is 20.
  * @method void setIps(array $Ips) Set Specifies the address array of SnatIp to delete. maximum deletion supported is 20.
  */
 class DeleteLoadBalancerSnatIpsRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID, such as lb-12345678.
+     * @var string Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID, such as lb-12345678.
      */
     public $LoadBalancerId;
 
@@ -38,7 +38,7 @@ class DeleteLoadBalancerSnatIpsRequest extends AbstractModel
     public $Ips;
 
     /**
-     * @param string $LoadBalancerId Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID, such as lb-12345678.
+     * @param string $LoadBalancerId Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID, such as lb-12345678.
      * @param array $Ips Specifies the address array of SnatIp to delete. maximum deletion supported is 20.
      */
     function __construct()

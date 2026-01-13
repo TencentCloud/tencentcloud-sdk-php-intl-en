@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUser request structure.
  *
- * @method string getInstanceId() Obtain Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
- * @method void setInstanceId(string $InstanceId) Set Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method string getInstanceId() Obtain Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
  * @method string getUsername() Obtain Username.
  * @method void setUsername(string $Username) Set Username.
  * @method string getRemark() Obtain Specifies the remark with length not exceeding 128 characters.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyUserRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @var string Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class ModifyUserRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $InstanceId Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @param string $InstanceId Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      * @param string $Username Username.
      * @param string $Remark Specifies the remark with length not exceeding 128 characters.
      */

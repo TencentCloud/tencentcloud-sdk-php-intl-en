@@ -23,11 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getGroupId() Obtain Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
  * @method void setGroupId(string $GroupId) Set Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
  * @method string getInstanceId() Obtain Instance ID.
-- There are region and AZ limitations for adding a replication group instance. For detailed information, see [Use Limits](https://www.tencentcloud.comom/document/product/239/71934?from_cn_redirect=1).
+- There are region and AZ limitations for adding a replication group instance. For detailed information, see [Use Limits](https://www.tencentcloud.com/document/product/239/71934?from_cn_redirect=1).
 - Currently, only Redis 4.0 and 5.0 cluster architecture instances support being added to the replication groups.
 - Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the ID of the instance that needs to be added to the replication group in the instance list.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
-- There are region and AZ limitations for adding a replication group instance. For detailed information, see [Use Limits](https://www.tencentcloud.comom/document/product/239/71934?from_cn_redirect=1).
+- There are region and AZ limitations for adding a replication group instance. For detailed information, see [Use Limits](https://www.tencentcloud.com/document/product/239/71934?from_cn_redirect=1).
 - Currently, only Redis 4.0 and 5.0 cluster architecture instances support being added to the replication groups.
 - Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the ID of the instance that needs to be added to the replication group in the instance list.
  * @method string getInstanceRole() Obtain Assigns roles to instances added to the replication group. <ul><li>rw: read-write;</li> <li>r: read-only.</li></ul>
@@ -42,7 +42,7 @@ class AddReplicationInstanceRequest extends AbstractModel
 
     /**
      * @var string Instance ID.
-- There are region and AZ limitations for adding a replication group instance. For detailed information, see [Use Limits](https://www.tencentcloud.comom/document/product/239/71934?from_cn_redirect=1).
+- There are region and AZ limitations for adding a replication group instance. For detailed information, see [Use Limits](https://www.tencentcloud.com/document/product/239/71934?from_cn_redirect=1).
 - Currently, only Redis 4.0 and 5.0 cluster architecture instances support being added to the replication groups.
 - Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the ID of the instance that needs to be added to the replication group in the instance list.
      */
@@ -56,7 +56,7 @@ class AddReplicationInstanceRequest extends AbstractModel
     /**
      * @param string $GroupId Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
      * @param string $InstanceId Instance ID.
-- There are region and AZ limitations for adding a replication group instance. For detailed information, see [Use Limits](https://www.tencentcloud.comom/document/product/239/71934?from_cn_redirect=1).
+- There are region and AZ limitations for adding a replication group instance. For detailed information, see [Use Limits](https://www.tencentcloud.com/document/product/239/71934?from_cn_redirect=1).
 - Currently, only Redis 4.0 and 5.0 cluster architecture instances support being added to the replication groups.
 - Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the ID of the instance that needs to be added to the replication group in the instance list.
      * @param string $InstanceRole Assigns roles to instances added to the replication group. <ul><li>rw: read-write;</li> <li>r: read-only.</li></ul>

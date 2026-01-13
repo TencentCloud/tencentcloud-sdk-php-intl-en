@@ -38,11 +38,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopic(integer $Topic) Set The number of instance topics to be purchased, which is required when you purchase an instance.
  * @method integer getPartition() Obtain Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
 Partition upper limit. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
 
  * @method void setPartition(integer $Partition) Set Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
 Partition upper limit. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
 
  * @method array getZoneIds() Obtain The region for instance purchase, which can be obtained via the `DescribeCkafkaZone` API.
  * @method void setZoneIds(array $ZoneIds) Set The region for instance purchase, which can be obtained via the `DescribeCkafkaZone` API.
@@ -96,7 +96,7 @@ class InquireCkafkaPriceRequest extends AbstractModel
     /**
      * @var integer Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
 Partition upper limit. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
 
      */
     public $Partition;
@@ -137,7 +137,7 @@ Specifies the specifications and limits that can be viewed through the following
      * @param integer $Topic The number of instance topics to be purchased, which is required when you purchase an instance.
      * @param integer $Partition Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
 Partition upper limit. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
 
      * @param array $ZoneIds The region for instance purchase, which can be obtained via the `DescribeCkafkaZone` API.
      * @param string $CategoryAction Operation type flag. `purchase`: Making new purchases; `renew`: Renewing an instance. The default value is `purchase` if this parameter is left empty.

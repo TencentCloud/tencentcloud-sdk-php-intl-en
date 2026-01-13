@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMessageByTopic request structure.
  *
- * @method string getInstanceId() Obtain tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
- * @method void setInstanceId(string $InstanceId) Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method string getInstanceId() Obtain tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method void setInstanceId(string $InstanceId) Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
  * @method string getTopic() Obtain home/room
  * @method void setTopic(string $Topic) Set home/room
  * @method integer getStartTime() Obtain Start time. millisecond-level timestamp.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeMessageByTopicRequest extends AbstractModel
 {
     /**
-     * @var string tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @var string tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class DescribeMessageByTopicRequest extends AbstractModel
     public $MaxNumber;
 
     /**
-     * @param string $InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @param string $InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      * @param string $Topic home/room
      * @param integer $StartTime Start time. millisecond-level timestamp.
      * @param integer $MaxNumber Specifies the number of query messages. value range: 1-1024. default: 100.

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUsageData request structure.
  *
- * @method string getStartTime() Obtain Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setStartTime(string $StartTime) Set Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method string getEndTime() Obtain End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setEndTime(string $EndTime) Set End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method string getStartTime() Obtain Start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method void setStartTime(string $StartTime) Set Start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method string getEndTime() Obtain End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method void setEndTime(string $EndTime) Set End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method array getTypes() Obtain Queries the MPS task type. The transcoding task is queried by default.
 <li>Transcode: transcoding.</li>
 <li>Enhance: enhancement.</li>
@@ -90,12 +90,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeUsageDataRequest extends AbstractModel
 {
     /**
-     * @var string Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public $StartTime;
 
     /**
-     * @var string End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public $EndTime;
 
@@ -139,8 +139,8 @@ class DescribeUsageDataRequest extends AbstractModel
     public $ProcessRegions;
 
     /**
-     * @param string $StartTime Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param string $EndTime End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @param string $StartTime Start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @param string $EndTime End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param array $Types Queries the MPS task type. The transcoding task is queried by default.
 <li>Transcode: transcoding.</li>
 <li>Enhance: enhancement.</li>

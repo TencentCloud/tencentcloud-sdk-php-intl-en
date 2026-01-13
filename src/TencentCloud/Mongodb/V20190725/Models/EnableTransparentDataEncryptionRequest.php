@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID. For example, cmgo-p8vn****. Log in to the[TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb) to copy the instance ID from the instance list. Currently, the supported general versions include 4.4 and 5.0, and Cloud Disk Edition is not supported.
  * @method void setInstanceId(string $InstanceId) Set Instance ID. For example, cmgo-p8vn****. Log in to the[TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb) to copy the instance ID from the instance list. Currently, the supported general versions include 4.4 and 5.0, and Cloud Disk Edition is not supported.
- * @method string getKmsRegion() Obtain  Region where the [Key Management Service (KMS)](https://www.tencentcloud.comom/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
- * @method void setKmsRegion(string $KmsRegion) Set  Region where the [Key Management Service (KMS)](https://www.tencentcloud.comom/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
+ * @method string getKmsRegion() Obtain  Region where the [Key Management Service (KMS)](https://www.tencentcloud.com/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
+ * @method void setKmsRegion(string $KmsRegion) Set  Region where the [Key Management Service (KMS)](https://www.tencentcloud.com/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
  * @method string getKeyId() Obtain Key ID. If the parameter is left unspecified, there is no specific key ID, Tencent Cloud will generate the key automatically.
  * @method void setKeyId(string $KeyId) Set Key ID. If the parameter is left unspecified, there is no specific key ID, Tencent Cloud will generate the key automatically.
  */
@@ -35,7 +35,7 @@ class EnableTransparentDataEncryptionRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string  Region where the [Key Management Service (KMS)](https://www.tencentcloud.comom/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
+     * @var string  Region where the [Key Management Service (KMS)](https://www.tencentcloud.com/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
      */
     public $KmsRegion;
 
@@ -46,7 +46,7 @@ class EnableTransparentDataEncryptionRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID. For example, cmgo-p8vn****. Log in to the[TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb) to copy the instance ID from the instance list. Currently, the supported general versions include 4.4 and 5.0, and Cloud Disk Edition is not supported.
-     * @param string $KmsRegion  Region where the [Key Management Service (KMS)](https://www.tencentcloud.comom/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
+     * @param string $KmsRegion  Region where the [Key Management Service (KMS)](https://www.tencentcloud.com/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
      * @param string $KeyId Key ID. If the parameter is left unspecified, there is no specific key ID, Tencent Cloud will generate the key automatically.
      */
     function __construct()

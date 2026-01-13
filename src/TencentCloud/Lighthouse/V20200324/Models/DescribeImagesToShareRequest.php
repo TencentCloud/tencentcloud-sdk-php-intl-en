@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeImagesToShare request structure.
  *
- * @method array getImageIds() Obtain List of CVM image IDs, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.comom/document/api/213/15715?from_cn_redirect=1) API.
- * @method void setImageIds(array $ImageIds) Set List of CVM image IDs, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.comom/document/api/213/15715?from_cn_redirect=1) API.
- * @method integer getOffset() Obtain Offset. The default value is 0. For more information on `Offset`, see the relevant section in API [Introduction](https://www.tencentcloud.comom/document/product/1207/47578?from_cn_redirect=1).
- * @method void setOffset(integer $Offset) Set Offset. The default value is 0. For more information on `Offset`, see the relevant section in API [Introduction](https://www.tencentcloud.comom/document/product/1207/47578?from_cn_redirect=1).
- * @method integer getLimit() Obtain Number of returned results. The default value is 20, and the maximum value is 100. For more information on `Limit`, see the relevant section in API [Introduction](https://www.tencentcloud.comom/document/product/1207/47578?from_cn_redirect=1).
- * @method void setLimit(integer $Limit) Set Number of returned results. The default value is 20, and the maximum value is 100. For more information on `Limit`, see the relevant section in API [Introduction](https://www.tencentcloud.comom/document/product/1207/47578?from_cn_redirect=1).
+ * @method array getImageIds() Obtain List of CVM image IDs, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1) API.
+ * @method void setImageIds(array $ImageIds) Set List of CVM image IDs, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1) API.
+ * @method integer getOffset() Obtain Offset. The default value is 0. For more information on `Offset`, see the relevant section in API [Introduction](https://www.tencentcloud.com/document/product/1207/47578?from_cn_redirect=1).
+ * @method void setOffset(integer $Offset) Set Offset. The default value is 0. For more information on `Offset`, see the relevant section in API [Introduction](https://www.tencentcloud.com/document/product/1207/47578?from_cn_redirect=1).
+ * @method integer getLimit() Obtain Number of returned results. The default value is 20, and the maximum value is 100. For more information on `Limit`, see the relevant section in API [Introduction](https://www.tencentcloud.com/document/product/1207/47578?from_cn_redirect=1).
+ * @method void setLimit(integer $Limit) Set Number of returned results. The default value is 20, and the maximum value is 100. For more information on `Limit`, see the relevant section in API [Introduction](https://www.tencentcloud.com/document/product/1207/47578?from_cn_redirect=1).
  * @method array getFilters() Obtain Filter list.
 <li>image-id</li>: filter by [CVM image ID].
 Type: string.
@@ -66,17 +66,17 @@ ImageIds and Filters cannot be specified simultaneously for parameters.
 class DescribeImagesToShareRequest extends AbstractModel
 {
     /**
-     * @var array List of CVM image IDs, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.comom/document/api/213/15715?from_cn_redirect=1) API.
+     * @var array List of CVM image IDs, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1) API.
      */
     public $ImageIds;
 
     /**
-     * @var integer Offset. The default value is 0. For more information on `Offset`, see the relevant section in API [Introduction](https://www.tencentcloud.comom/document/product/1207/47578?from_cn_redirect=1).
+     * @var integer Offset. The default value is 0. For more information on `Offset`, see the relevant section in API [Introduction](https://www.tencentcloud.com/document/product/1207/47578?from_cn_redirect=1).
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned results. The default value is 20, and the maximum value is 100. For more information on `Limit`, see the relevant section in API [Introduction](https://www.tencentcloud.comom/document/product/1207/47578?from_cn_redirect=1).
+     * @var integer Number of returned results. The default value is 20, and the maximum value is 100. For more information on `Limit`, see the relevant section in API [Introduction](https://www.tencentcloud.com/document/product/1207/47578?from_cn_redirect=1).
      */
     public $Limit;
 
@@ -103,9 +103,9 @@ ImageIds and Filters cannot be specified simultaneously for parameters.
     public $Filters;
 
     /**
-     * @param array $ImageIds List of CVM image IDs, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.comom/document/api/213/15715?from_cn_redirect=1) API.
-     * @param integer $Offset Offset. The default value is 0. For more information on `Offset`, see the relevant section in API [Introduction](https://www.tencentcloud.comom/document/product/1207/47578?from_cn_redirect=1).
-     * @param integer $Limit Number of returned results. The default value is 20, and the maximum value is 100. For more information on `Limit`, see the relevant section in API [Introduction](https://www.tencentcloud.comom/document/product/1207/47578?from_cn_redirect=1).
+     * @param array $ImageIds List of CVM image IDs, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1) API.
+     * @param integer $Offset Offset. The default value is 0. For more information on `Offset`, see the relevant section in API [Introduction](https://www.tencentcloud.com/document/product/1207/47578?from_cn_redirect=1).
+     * @param integer $Limit Number of returned results. The default value is 20, and the maximum value is 100. For more information on `Limit`, see the relevant section in API [Introduction](https://www.tencentcloud.com/document/product/1207/47578?from_cn_redirect=1).
      * @param array $Filters Filter list.
 <li>image-id</li>: filter by [CVM image ID].
 Type: string.

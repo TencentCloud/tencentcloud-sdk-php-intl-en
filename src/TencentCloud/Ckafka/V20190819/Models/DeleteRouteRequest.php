@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRoute request structure.
  *
- * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
- * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
- * @method integer getRouteId() Obtain Route id, obtain through the API [DescribeRoute](https://www.tencentcloud.comom/document/product/597/45484?from_cn_redirect=1).
- * @method void setRouteId(integer $RouteId) Set Route id, obtain through the API [DescribeRoute](https://www.tencentcloud.comom/document/product/597/45484?from_cn_redirect=1).
+ * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+ * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+ * @method integer getRouteId() Obtain Route id, obtain through the API [DescribeRoute](https://www.tencentcloud.com/document/product/597/45484?from_cn_redirect=1).
+ * @method void setRouteId(integer $RouteId) Set Route id, obtain through the API [DescribeRoute](https://www.tencentcloud.com/document/product/597/45484?from_cn_redirect=1).
  * @method integer getCallerAppid() Obtain AppId of the caller.
  * @method void setCallerAppid(integer $CallerAppid) Set AppId of the caller.
  * @method string getDeleteRouteTime() Obtain Sets the scheduled deletion time for routes. only public network routes support scheduled deletion. available for any time within the next 24 hours.
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DeleteRouteRequest extends AbstractModel
 {
     /**
-     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public $InstanceId;
 
     /**
-     * @var integer Route id, obtain through the API [DescribeRoute](https://www.tencentcloud.comom/document/product/597/45484?from_cn_redirect=1).
+     * @var integer Route id, obtain through the API [DescribeRoute](https://www.tencentcloud.com/document/product/597/45484?from_cn_redirect=1).
      */
     public $RouteId;
 
@@ -52,8 +52,8 @@ class DeleteRouteRequest extends AbstractModel
     public $DeleteRouteTime;
 
     /**
-     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
-     * @param integer $RouteId Route id, obtain through the API [DescribeRoute](https://www.tencentcloud.comom/document/product/597/45484?from_cn_redirect=1).
+     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+     * @param integer $RouteId Route id, obtain through the API [DescribeRoute](https://www.tencentcloud.com/document/product/597/45484?from_cn_redirect=1).
      * @param integer $CallerAppid AppId of the caller.
      * @param string $DeleteRouteTime Sets the scheduled deletion time for routes. only public network routes support scheduled deletion. available for any time within the next 24 hours.
      */

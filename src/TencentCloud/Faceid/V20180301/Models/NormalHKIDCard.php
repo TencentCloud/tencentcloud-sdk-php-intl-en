@@ -68,6 +68,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCurrentIssueDate(string $CurrentIssueDate) Set The current date of issue
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHKIDVersion() Obtain Hong kong identity card version.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHKIDVersion(string $HKIDVersion) Set Hong kong identity card version.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NormalHKIDCard extends AbstractModel
 {
@@ -136,6 +140,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CurrentIssueDate;
 
     /**
+     * @var string Hong kong identity card version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HKIDVersion;
+
+    /**
      * @param string $ChineseName Chinese name
 Note: This field may return null, indicating that no valid values can be obtained.
 
@@ -159,6 +169,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $IssuedDate The first date of issue
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CurrentIssueDate The current date of issue
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HKIDVersion Hong kong identity card version.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -212,6 +224,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CurrentIssueDate",$param) and $param["CurrentIssueDate"] !== null) {
             $this->CurrentIssueDate = $param["CurrentIssueDate"];
+        }
+
+        if (array_key_exists("HKIDVersion",$param) and $param["HKIDVersion"] !== null) {
+            $this->HKIDVersion = $param["HKIDVersion"];
         }
     }
 }

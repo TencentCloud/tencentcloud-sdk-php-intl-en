@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule priority.
  *
- * @method integer getId() Obtain Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.comom/document/api/1778/111074?from_cn_redirect=1).
- * @method void setId(integer $Id) Set Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.comom/document/api/1778/111074?from_cn_redirect=1).
+ * @method integer getId() Obtain Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.com/document/api/1778/111074?from_cn_redirect=1).
+ * @method void setId(integer $Id) Set Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.com/document/api/1778/111074?from_cn_redirect=1).
  * @method integer getPriority() Obtain Priority
  * @method void setPriority(integer $Priority) Set Priority
  */
 class AuthorizationPolicyPriority extends AbstractModel
 {
     /**
-     * @var integer Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.comom/document/api/1778/111074?from_cn_redirect=1).
+     * @var integer Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.com/document/api/1778/111074?from_cn_redirect=1).
      */
     public $Id;
 
@@ -38,7 +38,7 @@ class AuthorizationPolicyPriority extends AbstractModel
     public $Priority;
 
     /**
-     * @param integer $Id Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.comom/document/api/1778/111074?from_cn_redirect=1).
+     * @param integer $Id Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.com/document/api/1778/111074?from_cn_redirect=1).
      * @param integer $Priority Priority
      */
     function __construct()

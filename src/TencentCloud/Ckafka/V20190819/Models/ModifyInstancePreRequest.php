@@ -20,62 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstancePre request structure.
  *
- * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
- * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+ * @method string getInstanceId() Obtain ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+ * @method void setInstanceId(string $InstanceId) Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
  * @method integer getDiskSize() Obtain Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
 
  * @method void setDiskSize(integer $DiskSize) Set Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
 
  * @method integer getBandWidth() Obtain Peak bandwidth in MB/s.
-Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
 
  * @method void setBandWidth(integer $BandWidth) Set Peak bandwidth in MB/s.
-Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
 
  * @method integer getPartition() Obtain Partition upper bound. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
  * @method void setPartition(integer $Partition) Set Partition upper bound. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
  */
 class ModifyInstancePreRequest extends AbstractModel
 {
     /**
-     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @var string ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public $InstanceId;
 
     /**
      * @var integer Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
 
      */
     public $DiskSize;
 
     /**
      * @var integer Peak bandwidth in MB/s.
-Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
 
      */
     public $BandWidth;
 
     /**
      * @var integer Partition upper bound. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
      */
     public $Partition;
 
     /**
-     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @param string $InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      * @param integer $DiskSize Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
 
      * @param integer $BandWidth Peak bandwidth in MB/s.
-Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
 
      * @param integer $Partition Partition upper bound. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
      */
     function __construct()
     {

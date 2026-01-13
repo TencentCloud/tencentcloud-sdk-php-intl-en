@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommands(array $Commands) Set Specifies the command type for querying slow logs.
  * @method array getTexts() Obtain Full-text search keyword. The logical operator among multiple keywords is OR.
  * @method void setTexts(array $Texts) Set Full-text search keyword. The logical operator among multiple keywords is OR.
- * @method array getNodeNames() Obtain Specifies the node name for querying slow logs. The [DescribeDBInstanceNodeProperty](https://www.tencentcloud.comom/document/product/240/82022?from_cn_redirect=1) API can be called to query the node name.
- * @method void setNodeNames(array $NodeNames) Set Specifies the node name for querying slow logs. The [DescribeDBInstanceNodeProperty](https://www.tencentcloud.comom/document/product/240/82022?from_cn_redirect=1) API can be called to query the node name.
+ * @method array getNodeNames() Obtain Specifies the node name for querying slow logs. The [DescribeDBInstanceNodeProperty](https://www.tencentcloud.com/document/product/240/82022?from_cn_redirect=1) API can be called to query the node name.
+ * @method void setNodeNames(array $NodeNames) Set Specifies the node name for querying slow logs. The [DescribeDBInstanceNodeProperty](https://www.tencentcloud.com/document/product/240/82022?from_cn_redirect=1) API can be called to query the node name.
  * @method array getQueryHash() Obtain Specifies the queryHash value to be queried.
  * @method void setQueryHash(array $QueryHash) Set Specifies the queryHash value to be queried.
  * @method integer getOffset() Obtain Pagination offset. The default value is 0, and the value range is [0, 100].
@@ -94,7 +94,7 @@ class DescribeDetailedSlowLogsRequest extends AbstractModel
     public $Texts;
 
     /**
-     * @var array Specifies the node name for querying slow logs. The [DescribeDBInstanceNodeProperty](https://www.tencentcloud.comom/document/product/240/82022?from_cn_redirect=1) API can be called to query the node name.
+     * @var array Specifies the node name for querying slow logs. The [DescribeDBInstanceNodeProperty](https://www.tencentcloud.com/document/product/240/82022?from_cn_redirect=1) API can be called to query the node name.
      */
     public $NodeNames;
 
@@ -137,7 +137,7 @@ class DescribeDetailedSlowLogsRequest extends AbstractModel
      * @param integer $ExecTime Specifies the threshold for querying slow logs, in milliseconds. It indicates that the execution time of the slow log query exceeds this value. The default value is 100.
      * @param array $Commands Specifies the command type for querying slow logs.
      * @param array $Texts Full-text search keyword. The logical operator among multiple keywords is OR.
-     * @param array $NodeNames Specifies the node name for querying slow logs. The [DescribeDBInstanceNodeProperty](https://www.tencentcloud.comom/document/product/240/82022?from_cn_redirect=1) API can be called to query the node name.
+     * @param array $NodeNames Specifies the node name for querying slow logs. The [DescribeDBInstanceNodeProperty](https://www.tencentcloud.com/document/product/240/82022?from_cn_redirect=1) API can be called to query the node name.
      * @param array $QueryHash Specifies the queryHash value to be queried.
      * @param integer $Offset Pagination offset. The default value is 0, and the value range is [0, 100].
 

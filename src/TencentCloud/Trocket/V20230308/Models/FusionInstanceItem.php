@@ -122,9 +122,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDestroyTime(integer $DestroyTime) Set Expected termination time. **It is a Unix timestamp (ms).**
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getZoneIds() Obtain AZ list. See [ZoneInfo](https://www.tencentcloud.comom/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.comom/document/product/1596/77929?from_cn_redirect=1) in Data Type.
+ * @method array getZoneIds() Obtain AZ list. See [ZoneInfo](https://www.tencentcloud.com/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.com/document/product/1596/77929?from_cn_redirect=1) in Data Type.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneIds(array $ZoneIds) Set AZ list. See [ZoneInfo](https://www.tencentcloud.comom/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.comom/document/product/1596/77929?from_cn_redirect=1) in Data Type.
+ * @method void setZoneIds(array $ZoneIds) Set AZ list. See [ZoneInfo](https://www.tencentcloud.com/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.com/document/product/1596/77929?from_cn_redirect=1) in Data Type.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getEnableDeletionProtection() Obtain Whether to enable deletion protection
  * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) Set Whether to enable deletion protection
@@ -275,7 +275,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DestroyTime;
 
     /**
-     * @var array AZ list. See [ZoneInfo](https://www.tencentcloud.comom/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.comom/document/product/1596/77929?from_cn_redirect=1) in Data Type.
+     * @var array AZ list. See [ZoneInfo](https://www.tencentcloud.com/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.com/document/product/1596/77929?from_cn_redirect=1) in Data Type.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ZoneIds;
@@ -349,7 +349,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $DestroyTime Expected termination time. **It is a Unix timestamp (ms).**
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ZoneIds AZ list. See [ZoneInfo](https://www.tencentcloud.comom/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.comom/document/product/1596/77929?from_cn_redirect=1) in Data Type.
+     * @param array $ZoneIds AZ list. See [ZoneInfo](https://www.tencentcloud.com/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.com/document/product/1596/77929?from_cn_redirect=1) in Data Type.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $EnableDeletionProtection Whether to enable deletion protection
      * @param integer $CreateTime Instance creation time

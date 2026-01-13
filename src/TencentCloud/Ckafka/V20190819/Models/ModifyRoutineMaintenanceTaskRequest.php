@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRoutineMaintenanceTask request structure.
  *
- * @method string getInstanceId() Obtain Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
- * @method void setInstanceId(string $InstanceId) Set Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method string getInstanceId() Obtain Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
  * @method string getMaintenanceType() Obtain Automated operation and maintenance category. valid values: QUOTA, ANALYSIS, RE_BALANCE, ELASTIC_BANDWIDTH.
  * @method void setMaintenanceType(string $MaintenanceType) Set Automated operation and maintenance category. valid values: QUOTA, ANALYSIS, RE_BALANCE, ELASTIC_BANDWIDTH.
  * @method string getMaintenanceSubtype() Obtain INSTANCE_STORAGE_CAPACITY (automatic disk scale-out)/MESSAGE_RETENTION_PERIOD (dynamic MESSAGE RETENTION policy).
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyRoutineMaintenanceTaskRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @var string Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
@@ -101,7 +101,7 @@ class ModifyRoutineMaintenanceTaskRequest extends AbstractModel
     public $Week;
 
     /**
-     * @param string $InstanceId Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param string $InstanceId Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      * @param string $MaintenanceType Automated operation and maintenance category. valid values: QUOTA, ANALYSIS, RE_BALANCE, ELASTIC_BANDWIDTH.
      * @param string $MaintenanceSubtype INSTANCE_STORAGE_CAPACITY (automatic disk scale-out)/MESSAGE_RETENTION_PERIOD (dynamic MESSAGE RETENTION policy).
      * @param string $TopicName Topic name

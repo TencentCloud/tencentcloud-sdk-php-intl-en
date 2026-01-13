@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyImageSharePermission request structure.
  *
- * @method string getImageId() Obtain Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.comom/document/api/213/15715?from_cn_redirect=1) API.
- * @method void setImageId(string $ImageId) Set Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.comom/document/api/213/15715?from_cn_redirect=1) API.
+ * @method string getImageId() Obtain Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1) API.
+ * @method void setImageId(string $ImageId) Set Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1) API.
  * @method string getPermission() Obtain Sharing property, including SHARE and CANCEL. Among them, SHARE indicates sharing, and CANCEL indicates canceling sharing.
  * @method void setPermission(string $Permission) Set Sharing property, including SHARE and CANCEL. Among them, SHARE indicates sharing, and CANCEL indicates canceling sharing.
  */
 class ModifyImageSharePermissionRequest extends AbstractModel
 {
     /**
-     * @var string Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.comom/document/api/213/15715?from_cn_redirect=1) API.
+     * @var string Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1) API.
      */
     public $ImageId;
 
@@ -38,7 +38,7 @@ class ModifyImageSharePermissionRequest extends AbstractModel
     public $Permission;
 
     /**
-     * @param string $ImageId Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.comom/document/api/213/15715?from_cn_redirect=1) API.
+     * @param string $ImageId Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1) API.
      * @param string $Permission Sharing property, including SHARE and CANCEL. Among them, SHARE indicates sharing, and CANCEL indicates canceling sharing.
      */
     function __construct()

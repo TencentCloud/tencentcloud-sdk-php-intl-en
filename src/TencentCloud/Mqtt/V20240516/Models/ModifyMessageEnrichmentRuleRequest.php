@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() Obtain Message enrichment rule ID.
  * @method void setId(integer $Id) Set Message enrichment rule ID.
- * @method string getInstanceId() Obtain Tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method string getInstanceId() Obtain Tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
 
- * @method void setInstanceId(string $InstanceId) Set Tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method void setInstanceId(string $InstanceId) Set Tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
 
  * @method string getRuleName() Obtain Rule name, which cannot be empty, contains 3 to 64 characters, and supports chinese, letters, digits, "-", and "_".
  * @method void setRuleName(string $RuleName) Set Rule name, which cannot be empty, contains 3 to 64 characters, and supports chinese, letters, digits, "-", and "_".
@@ -61,7 +61,7 @@ class ModifyMessageEnrichmentRuleRequest extends AbstractModel
     public $Id;
 
     /**
-     * @var string Tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @var string Tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
 
      */
     public $InstanceId;
@@ -105,7 +105,7 @@ Specifies the BASE64-encoded string eyJtZXNzYWdlRXhwaXJ5SW50ZXJ2YWwiOjM2MCwicmVz
 
     /**
      * @param integer $Id Message enrichment rule ID.
-     * @param string $InstanceId Tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @param string $InstanceId Tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
 
      * @param string $RuleName Rule name, which cannot be empty, contains 3 to 64 characters, and supports chinese, letters, digits, "-", and "_".
      * @param string $Condition Rule matching conditions in JSON format, Base64 encoding is required.

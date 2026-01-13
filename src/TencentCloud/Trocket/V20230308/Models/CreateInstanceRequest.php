@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
 -PLATINUM: platinum version.
  * @method string getName() Obtain Cluster name. values cannot be empty. 3-64 characters, only comprised of digits, letters, "-", and "_".
  * @method void setName(string $Name) Set Cluster name. values cannot be empty. 3-64 characters, only comprised of digits, letters, "-", and "_".
- * @method string getSkuCode() Obtain Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
- * @method void setSkuCode(string $SkuCode) Set Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+ * @method string getSkuCode() Obtain Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
+ * @method void setSkuCode(string $SkuCode) Set Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
  * @method array getVpcList() Obtain Specifies the VPC information bound to the cluster.
  * @method void setVpcList(array $VpcList) Set Specifies the VPC information bound to the cluster.
  * @method string getRemark() Obtain Remarks
@@ -56,12 +56,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidth(integer $Bandwidth) Set Public network bandwidth (unit: mbps). the default value is 0. if public network access is enabled, this field must be a positive integer above 0.
  * @method array getIpRules() Obtain Public network access allowlist. if left blank, it means deny all IP access.
  * @method void setIpRules(array $IpRules) Set Public network access allowlist. if left blank, it means deny all IP access.
- * @method integer getMessageRetention() Obtain Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+ * @method integer getMessageRetention() Obtain Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
 
 -Default value: DefaultRetention parameter.
 -Minimum value: specifies the RetentionLowerLimit parameter.
 -Specifies the maximum value of the RetentionUpperLimit parameter.
- * @method void setMessageRetention(integer $MessageRetention) Set Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+ * @method void setMessageRetention(integer $MessageRetention) Set Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
 
 -Default value: DefaultRetention parameter.
 -Minimum value: specifies the RetentionLowerLimit parameter.
@@ -72,16 +72,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRenewFlag(integer $RenewFlag) Set Whether the prepaid cluster is automatically renewed (0: no auto-renewal; 1: auto-renewal). default value: 0.
  * @method integer getTimeSpan() Obtain Specifies the purchase duration (unit: month) for a prepaid cluster. value range: 1–60. default value: 1.
  * @method void setTimeSpan(integer $TimeSpan) Set Specifies the purchase duration (unit: month) for a prepaid cluster. value range: 1–60. default value: 1.
- * @method integer getMaxTopicNum() Obtain Specifies the maximum number of topics that can be created. obtained from the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
+ * @method integer getMaxTopicNum() Obtain Specifies the maximum number of topics that can be created. obtained from the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
 
 -Default value and minimum value: specifies the TopicNumLimit parameter.
 -Maximum value of TopicNumUpperLimit parameter.
- * @method void setMaxTopicNum(integer $MaxTopicNum) Set Specifies the maximum number of topics that can be created. obtained from the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
+ * @method void setMaxTopicNum(integer $MaxTopicNum) Set Specifies the maximum number of topics that can be created. obtained from the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
 
 -Default value and minimum value: specifies the TopicNumLimit parameter.
 -Maximum value of TopicNumUpperLimit parameter.
- * @method array getZoneIds() Obtain Deployment AZ list. obtain from the [ZoneInfo](https://www.tencentcloud.comom/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) data structure returned by the api [DescribeZones](https://www.tencentcloud.comom/document/product/1596/77929?from_cn_redirect=1).
- * @method void setZoneIds(array $ZoneIds) Set Deployment AZ list. obtain from the [ZoneInfo](https://www.tencentcloud.comom/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) data structure returned by the api [DescribeZones](https://www.tencentcloud.comom/document/product/1596/77929?from_cn_redirect=1).
+ * @method array getZoneIds() Obtain Deployment AZ list. obtain from the [ZoneInfo](https://www.tencentcloud.com/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) data structure returned by the api [DescribeZones](https://www.tencentcloud.com/document/product/1596/77929?from_cn_redirect=1).
+ * @method void setZoneIds(array $ZoneIds) Set Deployment AZ list. obtain from the [ZoneInfo](https://www.tencentcloud.com/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) data structure returned by the api [DescribeZones](https://www.tencentcloud.com/document/product/1596/77929?from_cn_redirect=1).
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -104,7 +104,7 @@ class CreateInstanceRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+     * @var string Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
      */
     public $SkuCode;
 
@@ -144,7 +144,7 @@ class CreateInstanceRequest extends AbstractModel
     public $IpRules;
 
     /**
-     * @var integer Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+     * @var integer Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
 
 -Default value: DefaultRetention parameter.
 -Minimum value: specifies the RetentionLowerLimit parameter.
@@ -168,7 +168,7 @@ class CreateInstanceRequest extends AbstractModel
     public $TimeSpan;
 
     /**
-     * @var integer Specifies the maximum number of topics that can be created. obtained from the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
+     * @var integer Specifies the maximum number of topics that can be created. obtained from the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
 
 -Default value and minimum value: specifies the TopicNumLimit parameter.
 -Maximum value of TopicNumUpperLimit parameter.
@@ -176,7 +176,7 @@ class CreateInstanceRequest extends AbstractModel
     public $MaxTopicNum;
 
     /**
-     * @var array Deployment AZ list. obtain from the [ZoneInfo](https://www.tencentcloud.comom/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) data structure returned by the api [DescribeZones](https://www.tencentcloud.comom/document/product/1596/77929?from_cn_redirect=1).
+     * @var array Deployment AZ list. obtain from the [ZoneInfo](https://www.tencentcloud.com/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) data structure returned by the api [DescribeZones](https://www.tencentcloud.com/document/product/1596/77929?from_cn_redirect=1).
      */
     public $ZoneIds;
 
@@ -191,7 +191,7 @@ class CreateInstanceRequest extends AbstractModel
 
 -PLATINUM: platinum version.
      * @param string $Name Cluster name. values cannot be empty. 3-64 characters, only comprised of digits, letters, "-", and "_".
-     * @param string $SkuCode Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+     * @param string $SkuCode Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
      * @param array $VpcList Specifies the VPC information bound to the cluster.
      * @param string $Remark Remarks
      * @param array $TagList Tag list
@@ -199,7 +199,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param boolean $BillingFlow Whether the public network is billed by traffic. the default value is false, which indicates that the public network is not billed by traffic.
      * @param integer $Bandwidth Public network bandwidth (unit: mbps). the default value is 0. if public network access is enabled, this field must be a positive integer above 0.
      * @param array $IpRules Public network access allowlist. if left blank, it means deny all IP access.
-     * @param integer $MessageRetention Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+     * @param integer $MessageRetention Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
 
 -Default value: DefaultRetention parameter.
 -Minimum value: specifies the RetentionLowerLimit parameter.
@@ -207,11 +207,11 @@ class CreateInstanceRequest extends AbstractModel
      * @param integer $PayMode Payment mode (0: postpaid; 1: prepaid). the default value is 0.
      * @param integer $RenewFlag Whether the prepaid cluster is automatically renewed (0: no auto-renewal; 1: auto-renewal). default value: 0.
      * @param integer $TimeSpan Specifies the purchase duration (unit: month) for a prepaid cluster. value range: 1–60. default value: 1.
-     * @param integer $MaxTopicNum Specifies the maximum number of topics that can be created. obtained from the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
+     * @param integer $MaxTopicNum Specifies the maximum number of topics that can be created. obtained from the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
 
 -Default value and minimum value: specifies the TopicNumLimit parameter.
 -Maximum value of TopicNumUpperLimit parameter.
-     * @param array $ZoneIds Deployment AZ list. obtain from the [ZoneInfo](https://www.tencentcloud.comom/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) data structure returned by the api [DescribeZones](https://www.tencentcloud.comom/document/product/1596/77929?from_cn_redirect=1).
+     * @param array $ZoneIds Deployment AZ list. obtain from the [ZoneInfo](https://www.tencentcloud.com/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) data structure returned by the api [DescribeZones](https://www.tencentcloud.com/document/product/1596/77929?from_cn_redirect=1).
      */
     function __construct()
     {

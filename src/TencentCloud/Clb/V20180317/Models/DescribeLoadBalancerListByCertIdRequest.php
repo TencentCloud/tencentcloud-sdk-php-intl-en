@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoadBalancerListByCertId request structure.
  *
- * @method array getCertIds() Obtain Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+ * @method array getCertIds() Obtain Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.com/document/api/400/41674?from_cn_redirect=1) api.
 Specifies the maximum length of the array is 20.
- * @method void setCertIds(array $CertIds) Set Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+ * @method void setCertIds(array $CertIds) Set Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.com/document/api/400/41674?from_cn_redirect=1) api.
 Specifies the maximum length of the array is 20.
  */
 class DescribeLoadBalancerListByCertIdRequest extends AbstractModel
 {
     /**
-     * @var array Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+     * @var array Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.com/document/api/400/41674?from_cn_redirect=1) api.
 Specifies the maximum length of the array is 20.
      */
     public $CertIds;
 
     /**
-     * @param array $CertIds Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+     * @param array $CertIds Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.com/document/api/400/41674?from_cn_redirect=1) api.
 Specifies the maximum length of the array is 20.
      */
     function __construct()

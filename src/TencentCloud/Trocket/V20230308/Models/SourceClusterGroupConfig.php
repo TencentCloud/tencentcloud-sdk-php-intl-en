@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Specifies the consumer group configuration information.
  *
- * @method string getGroupName() Obtain Consumer group name. It can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the API [DescribeSourceClusterGroupList](https://www.tencentcloud.comom/document/api/1493/118006?from_cn_redirect=1).
+ * @method string getGroupName() Obtain Consumer group name. It can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the API [DescribeSourceClusterGroupList](https://www.tencentcloud.com/document/api/1493/118006?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupName(string $GroupName) Set Consumer group name. It can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the API [DescribeSourceClusterGroupList](https://www.tencentcloud.comom/document/api/1493/118006?from_cn_redirect=1).
+ * @method void setGroupName(string $GroupName) Set Consumer group name. It can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the API [DescribeSourceClusterGroupList](https://www.tencentcloud.com/document/api/1493/118006?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRemark() Obtain Remarks
 
@@ -74,7 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class SourceClusterGroupConfig extends AbstractModel
 {
     /**
-     * @var string Consumer group name. It can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the API [DescribeSourceClusterGroupList](https://www.tencentcloud.comom/document/api/1493/118006?from_cn_redirect=1).
+     * @var string Consumer group name. It can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the API [DescribeSourceClusterGroupList](https://www.tencentcloud.com/document/api/1493/118006?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $GroupName;
@@ -135,7 +135,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ConsumeMessageOrderly;
 
     /**
-     * @param string $GroupName Consumer group name. It can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the API [DescribeSourceClusterGroupList](https://www.tencentcloud.comom/document/api/1493/118006?from_cn_redirect=1).
+     * @param string $GroupName Consumer group name. It can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the API [DescribeSourceClusterGroupList](https://www.tencentcloud.com/document/api/1493/118006?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Remark Remarks
 

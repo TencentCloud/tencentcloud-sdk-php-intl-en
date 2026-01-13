@@ -44,9 +44,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setDuration(string $Duration) Set Alert will be triggered after 'Expr' satisfied for 'Duration'.
 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpr() Obtain Alert expression. see <a href="https://www.tencentcloud.comom/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
+ * @method string getExpr() Obtain Alert expression. see <a href="https://www.tencentcloud.com/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpr(string $Expr) Set Alert expression. see <a href="https://www.tencentcloud.comom/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
+ * @method void setExpr(string $Expr) Set Alert expression. see <a href="https://www.tencentcloud.com/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getState() Obtain Alert rule status.
 2 - enable.
@@ -90,7 +90,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Duration;
 
     /**
-     * @var string Alert expression. see <a href="https://www.tencentcloud.comom/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
+     * @var string Alert expression. see <a href="https://www.tencentcloud.com/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Expr;
@@ -117,7 +117,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Duration Alert will be triggered after 'Expr' satisfied for 'Duration'.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Expr Alert expression. see <a href="https://www.tencentcloud.comom/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
+     * @param string $Expr Alert expression. see <a href="https://www.tencentcloud.com/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $State Alert rule status.
 2 - enable.

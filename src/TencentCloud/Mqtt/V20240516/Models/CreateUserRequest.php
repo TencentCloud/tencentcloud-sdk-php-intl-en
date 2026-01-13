@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUser request structure.
  *
- * @method string getInstanceId() Obtain Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
- * @method void setInstanceId(string $InstanceId) Set Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method string getInstanceId() Obtain Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
  * @method string getUsername() Obtain Specifies the username, which cannot be empty, only supports numbers, uppercase and lowercase letters, and separators ("_", "-"), and must not exceed 32 characters.
  * @method void setUsername(string $Username) Set Specifies the username, which cannot be empty, only supports numbers, uppercase and lowercase letters, and separators ("_", "-"), and must not exceed 32 characters.
  * @method string getPassword() Obtain Specifies the password. if this field is empty, the backend performs default generation. when using a user-defined password, the value cannot be empty, only supports numbers, uppercase and lowercase letters, and separators ("_", "-"), and must not exceed 64 characters.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateUserRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @var string Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class CreateUserRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $InstanceId Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @param string $InstanceId Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      * @param string $Username Specifies the username, which cannot be empty, only supports numbers, uppercase and lowercase letters, and separators ("_", "-"), and must not exceed 32 characters.
      * @param string $Password Specifies the password. if this field is empty, the backend performs default generation. when using a user-defined password, the value cannot be empty, only supports numbers, uppercase and lowercase letters, and separators ("_", "-"), and must not exceed 64 characters.
      * @param string $Remark Specifies the remark with length not exceeding 128 characters.

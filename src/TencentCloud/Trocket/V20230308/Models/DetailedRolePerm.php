@@ -21,11 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * Permission configuration in Topic & Group dimension.
  *
  * @method string getResource() Obtain Resources corresponding to permissions.
-Specifies the topic name, which can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the api [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console.
-Specifies the consumer group name, which can be obtained from the api response of DescribeConsumerGroupList (https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or the console.
+Specifies the topic name, which can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the api [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console.
+Specifies the consumer group name, which can be obtained from the api response of DescribeConsumerGroupList (https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or the console.
  * @method void setResource(string $Resource) Set Resources corresponding to permissions.
-Specifies the topic name, which can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the api [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console.
-Specifies the consumer group name, which can be obtained from the api response of DescribeConsumerGroupList (https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or the console.
+Specifies the topic name, which can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the api [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console.
+Specifies the consumer group name, which can be obtained from the api response of DescribeConsumerGroupList (https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or the console.
  * @method boolean getPermWrite() Obtain Whether to enable production permission
  * @method void setPermWrite(boolean $PermWrite) Set Whether to enable production permission
  * @method boolean getPermRead() Obtain Whether to enable consumption permission
@@ -39,8 +39,8 @@ class DetailedRolePerm extends AbstractModel
 {
     /**
      * @var string Resources corresponding to permissions.
-Specifies the topic name, which can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the api [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console.
-Specifies the consumer group name, which can be obtained from the api response of DescribeConsumerGroupList (https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or the console.
+Specifies the topic name, which can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the api [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console.
+Specifies the consumer group name, which can be obtained from the api response of DescribeConsumerGroupList (https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or the console.
      */
     public $Resource;
 
@@ -66,8 +66,8 @@ Specifies the consumer group name, which can be obtained from the api response o
 
     /**
      * @param string $Resource Resources corresponding to permissions.
-Specifies the topic name, which can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the api [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console.
-Specifies the consumer group name, which can be obtained from the api response of DescribeConsumerGroupList (https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or the console.
+Specifies the topic name, which can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the api [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console.
+Specifies the consumer group name, which can be obtained from the api response of DescribeConsumerGroupList (https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or the console.
      * @param boolean $PermWrite Whether to enable production permission
      * @param boolean $PermRead Whether to enable consumption permission
      * @param string $ResourceType Authorize resource type (Topic: theme; Group: consumption Group).

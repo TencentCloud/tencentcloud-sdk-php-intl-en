@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRole request structure.
  *
- * @method string getInstanceId() Obtain TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
- * @method void setInstanceId(string $InstanceId) Set TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
+ * @method string getInstanceId() Obtain TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
+ * @method void setInstanceId(string $InstanceId) Set TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
  * @method string getRole() Obtain Role name. It cannot be left blank. Only digits, uppercase and lowercase letters, and separators (_ -) are supported. The name cannot exceed 32 characters.
  * @method void setRole(string $Role) Set Role name. It cannot be left blank. Only digits, uppercase and lowercase letters, and separators (_ -) are supported. The name cannot exceed 32 characters.
  * @method boolean getPermWrite() Obtain Whether to enable production permission
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateRoleRequest extends AbstractModel
 {
     /**
-     * @var string TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
+     * @var string TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
      */
     public $InstanceId;
 
@@ -73,7 +73,7 @@ class CreateRoleRequest extends AbstractModel
     public $DetailedPerms;
 
     /**
-     * @param string $InstanceId TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
+     * @param string $InstanceId TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
      * @param string $Role Role name. It cannot be left blank. Only digits, uppercase and lowercase letters, and separators (_ -) are supported. The name cannot exceed 32 characters.
      * @param boolean $PermWrite Whether to enable production permission
      * @param boolean $PermRead Whether to enable consumption permission

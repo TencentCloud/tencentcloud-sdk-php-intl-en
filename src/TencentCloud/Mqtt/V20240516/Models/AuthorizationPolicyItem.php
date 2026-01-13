@@ -28,41 +28,41 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyName(string $PolicyName) Set Specifies the policy rule name.
  * @method integer getVersion() Obtain Rule syntax version. currently only support 1. defaults to 1.
  * @method void setVersion(integer $Version) Set Rule syntax version. currently only support 1. defaults to 1.
- * @method integer getPriority() Obtain Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method void setPriority(integer $Priority) Set Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+ * @method integer getPriority() Obtain Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method void setPriority(integer $Priority) Set Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
  * @method string getEffect() Obtain Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
  * @method void setEffect(string $Effect) Set Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
  * @method string getActions() Obtain Operation.
 Specifies the connection.
 Publishes an mqtt message.
 Sub. specifies the subscription to mqtt messages.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
  * @method void setActions(string $Actions) Set Operation.
 Specifies the connection.
 Publishes an mqtt message.
 Sub. specifies the subscription to mqtt messages.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method string getResources() Obtain Resource. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method void setResources(string $Resources) Set Resource. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method string getClientId() Obtain Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method void setClientId(string $ClientId) Set Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method string getUsername() Obtain Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method void setUsername(string $Username) Set Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method string getIp() Obtain Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method void setIp(string $Ip) Set Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method string getQos() Obtain Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method void setQos(string $Qos) Set Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method integer getRetain() Obtain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method string getResources() Obtain Resource. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method void setResources(string $Resources) Set Resource. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method string getClientId() Obtain Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method void setClientId(string $ClientId) Set Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method string getUsername() Obtain Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method void setUsername(string $Username) Set Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method string getIp() Obtain Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method void setIp(string $Ip) Set Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method string getQos() Obtain Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method void setQos(string $Qos) Set Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method integer getRetain() Obtain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Indicates the match of retain messages.
 2: indicates non-retain messages.
 3: indicates matching retain and non-retain messages.
- * @method void setRetain(integer $Retain) Set Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+ * @method void setRetain(integer $Retain) Set Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Indicates the match of retain messages.
 2: indicates non-retain messages.
 3: indicates matching retain and non-retain messages.
@@ -96,7 +96,7 @@ class AuthorizationPolicyItem extends AbstractModel
     public $Version;
 
     /**
-     * @var integer Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @var integer Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public $Priority;
 
@@ -104,7 +104,7 @@ class AuthorizationPolicyItem extends AbstractModel
      * @var string Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public $Effect;
 
@@ -113,37 +113,37 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
 Specifies the connection.
 Publishes an mqtt message.
 Sub. specifies the subscription to mqtt messages.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public $Actions;
 
     /**
-     * @var string Resource. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @var string Resource. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public $Resources;
 
     /**
-     * @var string Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @var string Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public $ClientId;
 
     /**
-     * @var string Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @var string Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public $Username;
 
     /**
-     * @var string Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @var string Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public $Ip;
 
     /**
-     * @var string Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @var string Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public $Qos;
 
     /**
-     * @var integer Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @var integer Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Indicates the match of retain messages.
 2: indicates non-retain messages.
 3: indicates matching retain and non-retain messages.
@@ -170,22 +170,22 @@ Indicates the match of retain messages.
      * @param string $InstanceId MQTT cluster ID.
      * @param string $PolicyName Specifies the policy rule name.
      * @param integer $Version Rule syntax version. currently only support 1. defaults to 1.
-     * @param integer $Priority Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @param integer $Priority Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      * @param string $Effect Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      * @param string $Actions Operation.
 Specifies the connection.
 Publishes an mqtt message.
 Sub. specifies the subscription to mqtt messages.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-     * @param string $Resources Resource. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-     * @param string $ClientId Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-     * @param string $Username Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-     * @param string $Ip Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-     * @param string $Qos Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-     * @param integer $Retain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+     * @param string $Resources Resource. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+     * @param string $ClientId Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+     * @param string $Username Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+     * @param string $Ip Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+     * @param string $Qos Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+     * @param integer $Retain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Indicates the match of retain messages.
 2: indicates non-retain messages.
 3: indicates matching retain and non-retain messages.

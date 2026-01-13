@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstance request structure.
  *
- * @method string getInstanceId() Obtain tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
- * @method void setInstanceId(string $InstanceId) Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method string getInstanceId() Obtain tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method void setInstanceId(string $InstanceId) Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
  * @method string getName() Obtain Specifies the instance name to be modified, cannot be empty, 3-64 characters, only comprised of digits, letters, "-", and "_".
  * @method void setName(string $Name) Set Specifies the instance name to be modified, cannot be empty, 3-64 characters, only comprised of digits, letters, "-", and "_".
  * @method string getRemark() Obtain Specifies the remark information to be modified, with a maximum of 128 characters.
@@ -54,7 +54,7 @@ BYOC: one device, one certificate.
 class ModifyInstanceRequest extends AbstractModel
 {
     /**
-     * @var string tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @var string tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      */
     public $InstanceId;
 
@@ -111,7 +111,7 @@ BYOC: one device, one certificate.
     public $MessageRate;
 
     /**
-     * @param string $InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @param string $InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      * @param string $Name Specifies the instance name to be modified, cannot be empty, 3-64 characters, only comprised of digits, letters, "-", and "_".
      * @param string $Remark Specifies the remark information to be modified, with a maximum of 128 characters.
      * @param string $SkuCode Specifies the configuration specification to be changed.

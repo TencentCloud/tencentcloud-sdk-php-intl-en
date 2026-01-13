@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBillingMode(integer $BillingMode) Set Billing mode. Valid values: <ul><li>`0` (Pay-as-you-go) </li><li>`1` (Monthly subscription) </li></ul>
  * @method integer getPeriod() Obtain Purchase duration of an instance. <ul><li>Unit: Month</li><li>Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`, `48`, `60` (for monthly subscription mode).</li><li> Valid value: `1` (for pay-as-you-go mode).</li></ul>
  * @method void setPeriod(integer $Period) Set Purchase duration of an instance. <ul><li>Unit: Month</li><li>Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`, `48`, `60` (for monthly subscription mode).</li><li> Valid value: `1` (for pay-as-you-go mode).</li></ul>
- * @method array getSecurityGroupIdList() Obtain Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
- * @method void setSecurityGroupIdList(array $SecurityGroupIdList) Set Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
+ * @method array getSecurityGroupIdList() Obtain Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.com/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
+ * @method void setSecurityGroupIdList(array $SecurityGroupIdList) Set Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.com/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
  * @method string getBackupId() Obtain Backup ID of the clone instance, which can be obtained through the [DescribeInstanceBackups](https://intl.cloud.tencent.com/document/product/239/20011?from_cn_redirect=1) API.
  * @method void setBackupId(string $BackupId) Set Backup ID of the clone instance, which can be obtained through the [DescribeInstanceBackups](https://intl.cloud.tencent.com/document/product/239/20011?from_cn_redirect=1) API.
  * @method boolean getNoAuth() Obtain Whether the clone instance supports password-free access. Valid values: <ul><li>`true` (Yes)</li><li>`false` (No. When SSL or public network is enabled). Default value: `false`.</li></ul>
@@ -105,7 +105,7 @@ class CloneInstancesRequest extends AbstractModel
     public $Period;
 
     /**
-     * @var array Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
+     * @var array Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.com/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
      */
     public $SecurityGroupIdList;
 
@@ -196,7 +196,7 @@ Only instances with second-level backup enabled are supported.
      * @param integer $ZoneId ID of the AZ where the clone instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
      * @param integer $BillingMode Billing mode. Valid values: <ul><li>`0` (Pay-as-you-go) </li><li>`1` (Monthly subscription) </li></ul>
      * @param integer $Period Purchase duration of an instance. <ul><li>Unit: Month</li><li>Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`, `48`, `60` (for monthly subscription mode).</li><li> Valid value: `1` (for pay-as-you-go mode).</li></ul>
-     * @param array $SecurityGroupIdList Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
+     * @param array $SecurityGroupIdList Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.com/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
      * @param string $BackupId Backup ID of the clone instance, which can be obtained through the [DescribeInstanceBackups](https://intl.cloud.tencent.com/document/product/239/20011?from_cn_redirect=1) API.
      * @param boolean $NoAuth Whether the clone instance supports password-free access. Valid values: <ul><li>`true` (Yes)</li><li>`false` (No. When SSL or public network is enabled). Default value: `false`.</li></ul>
      * @param string $VpcId The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.

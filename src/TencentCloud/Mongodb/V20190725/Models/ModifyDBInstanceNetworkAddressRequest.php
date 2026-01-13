@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  - Unit: minutes. 0 means that the IP address is immediately repossessed.
  - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
 
- * @method string getNewUniqVpcId() Obtain VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
- * @method void setNewUniqVpcId(string $NewUniqVpcId) Set VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
- * @method string getNewUniqSubnetId() Obtain VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
- * @method void setNewUniqSubnetId(string $NewUniqSubnetId) Set VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
+ * @method string getNewUniqVpcId() Obtain VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
+ * @method void setNewUniqVpcId(string $NewUniqVpcId) Set VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
+ * @method string getNewUniqSubnetId() Obtain VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
+ * @method void setNewUniqSubnetId(string $NewUniqSubnetId) Set VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
  * @method array getNetworkAddresses() Obtain IP address information, including the new IP address and the original IP address.
  * @method void setNetworkAddresses(array $NetworkAddresses) Set IP address information, including the new IP address and the original IP address.
  */
@@ -56,12 +56,12 @@ class ModifyDBInstanceNetworkAddressRequest extends AbstractModel
     public $OldIpExpiredTime;
 
     /**
-     * @var string VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
+     * @var string VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
      */
     public $NewUniqVpcId;
 
     /**
-     * @var string VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
+     * @var string VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
      */
     public $NewUniqSubnetId;
 
@@ -77,8 +77,8 @@ class ModifyDBInstanceNetworkAddressRequest extends AbstractModel
  - Unit: minutes. 0 means that the IP address is immediately repossessed.
  - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
 
-     * @param string $NewUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
-     * @param string $NewUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
+     * @param string $NewUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
+     * @param string $NewUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
      * @param array $NetworkAddresses IP address information, including the new IP address and the original IP address.
      */
     function __construct()

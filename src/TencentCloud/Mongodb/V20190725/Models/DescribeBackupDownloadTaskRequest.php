@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
  * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
- * @method string getBackupName() Obtain Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
- * @method void setBackupName(string $BackupName) Set Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
+ * @method string getBackupName() Obtain Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.com/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
+ * @method void setBackupName(string $BackupName) Set Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.com/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
  * @method string getStartTime() Obtain Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
  * @method void setStartTime(string $StartTime) Set Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
  * @method string getEndTime() Obtain Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
@@ -65,7 +65,7 @@ class DescribeBackupDownloadTaskRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
+     * @var string Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.com/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
      */
     public $BackupName;
 
@@ -115,7 +115,7 @@ class DescribeBackupDownloadTaskRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
-     * @param string $BackupName Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
+     * @param string $BackupName Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.com/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
      * @param string $StartTime Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
      * @param string $EndTime Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
      * @param integer $Limit Number of entries returned for this query. Value range: 1–100. The default value is 20.

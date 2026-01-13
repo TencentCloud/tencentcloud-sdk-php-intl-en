@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChangeMigratingTopicToNextStage request structure.
  *
- * @method string getTaskId() Obtain Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.comom/document/api/1493/119997?from_cn_redirect=1) or from the console.
+ * @method string getTaskId() Obtain Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.com/document/api/1493/119997?from_cn_redirect=1) or from the console.
 
- * @method void setTaskId(string $TaskId) Set Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.comom/document/api/1493/119997?from_cn_redirect=1) or from the console.
+ * @method void setTaskId(string $TaskId) Set Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.com/document/api/1493/119997?from_cn_redirect=1) or from the console.
 
- * @method array getTopicNameList() Obtain List of topic names. topic name can be obtained from [MigratingTopic](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the api [DescribeMigratingTopicList](https://www.tencentcloud.comom/document/api/1493/118007?from_cn_redirect=1) in data type.
+ * @method array getTopicNameList() Obtain List of topic names. topic name can be obtained from [MigratingTopic](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the api [DescribeMigratingTopicList](https://www.tencentcloud.com/document/api/1493/118007?from_cn_redirect=1) in data type.
 
- * @method void setTopicNameList(array $TopicNameList) Set List of topic names. topic name can be obtained from [MigratingTopic](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the api [DescribeMigratingTopicList](https://www.tencentcloud.comom/document/api/1493/118007?from_cn_redirect=1) in data type.
+ * @method void setTopicNameList(array $TopicNameList) Set List of topic names. topic name can be obtained from [MigratingTopic](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the api [DescribeMigratingTopicList](https://www.tencentcloud.com/document/api/1493/118007?from_cn_redirect=1) in data type.
 
- * @method array getNamespaceList() Obtain Namespace list. It is valid only for 4.x clusters and has a one-to-one relationship with TopicNameList. The list can be obtained from [MigratingTopic](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the API [DescribeMigratingTopicList](https://www.tencentcloud.comom/document/api/1493/118007?from_cn_redirect=1) in Data Type.
- * @method void setNamespaceList(array $NamespaceList) Set Namespace list. It is valid only for 4.x clusters and has a one-to-one relationship with TopicNameList. The list can be obtained from [MigratingTopic](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the API [DescribeMigratingTopicList](https://www.tencentcloud.comom/document/api/1493/118007?from_cn_redirect=1) in Data Type.
+ * @method array getNamespaceList() Obtain Namespace list. It is valid only for 4.x clusters and has a one-to-one relationship with TopicNameList. The list can be obtained from [MigratingTopic](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the API [DescribeMigratingTopicList](https://www.tencentcloud.com/document/api/1493/118007?from_cn_redirect=1) in Data Type.
+ * @method void setNamespaceList(array $NamespaceList) Set Namespace list. It is valid only for 4.x clusters and has a one-to-one relationship with TopicNameList. The list can be obtained from [MigratingTopic](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the API [DescribeMigratingTopicList](https://www.tencentcloud.com/document/api/1493/118007?from_cn_redirect=1) in Data Type.
  */
 class ChangeMigratingTopicToNextStageRequest extends AbstractModel
 {
     /**
-     * @var string Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.comom/document/api/1493/119997?from_cn_redirect=1) or from the console.
+     * @var string Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.com/document/api/1493/119997?from_cn_redirect=1) or from the console.
 
      */
     public $TaskId;
 
     /**
-     * @var array List of topic names. topic name can be obtained from [MigratingTopic](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the api [DescribeMigratingTopicList](https://www.tencentcloud.comom/document/api/1493/118007?from_cn_redirect=1) in data type.
+     * @var array List of topic names. topic name can be obtained from [MigratingTopic](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the api [DescribeMigratingTopicList](https://www.tencentcloud.com/document/api/1493/118007?from_cn_redirect=1) in data type.
 
      */
     public $TopicNameList;
 
     /**
-     * @var array Namespace list. It is valid only for 4.x clusters and has a one-to-one relationship with TopicNameList. The list can be obtained from [MigratingTopic](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the API [DescribeMigratingTopicList](https://www.tencentcloud.comom/document/api/1493/118007?from_cn_redirect=1) in Data Type.
+     * @var array Namespace list. It is valid only for 4.x clusters and has a one-to-one relationship with TopicNameList. The list can be obtained from [MigratingTopic](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the API [DescribeMigratingTopicList](https://www.tencentcloud.com/document/api/1493/118007?from_cn_redirect=1) in Data Type.
      */
     public $NamespaceList;
 
     /**
-     * @param string $TaskId Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.comom/document/api/1493/119997?from_cn_redirect=1) or from the console.
+     * @param string $TaskId Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.com/document/api/1493/119997?from_cn_redirect=1) or from the console.
 
-     * @param array $TopicNameList List of topic names. topic name can be obtained from [MigratingTopic](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the api [DescribeMigratingTopicList](https://www.tencentcloud.comom/document/api/1493/118007?from_cn_redirect=1) in data type.
+     * @param array $TopicNameList List of topic names. topic name can be obtained from [MigratingTopic](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the api [DescribeMigratingTopicList](https://www.tencentcloud.com/document/api/1493/118007?from_cn_redirect=1) in data type.
 
-     * @param array $NamespaceList Namespace list. It is valid only for 4.x clusters and has a one-to-one relationship with TopicNameList. The list can be obtained from [MigratingTopic](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the API [DescribeMigratingTopicList](https://www.tencentcloud.comom/document/api/1493/118007?from_cn_redirect=1) in Data Type.
+     * @param array $NamespaceList Namespace list. It is valid only for 4.x clusters and has a one-to-one relationship with TopicNameList. The list can be obtained from [MigratingTopic](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#MigratingTopic) returned by the API [DescribeMigratingTopicList](https://www.tencentcloud.com/document/api/1493/118007?from_cn_redirect=1) in Data Type.
      */
     function __construct()
     {

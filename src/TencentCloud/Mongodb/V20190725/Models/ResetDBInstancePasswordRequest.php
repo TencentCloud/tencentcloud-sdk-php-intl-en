@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Specifies the instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
  * @method void setInstanceId(string $InstanceId) Set Specifies the instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
- * @method string getUserName() Obtain Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.comom/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
- * @method void setUserName(string $UserName) Set Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.comom/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
+ * @method string getUserName() Obtain Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.com/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
+ * @method void setUserName(string $UserName) Set Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.com/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
  * @method string getPassword() Obtain Specifies a new password for the account. Password complexity requirements:
 - It should contain 8–32 characters.
 - It should contain at least two types of the following: letters, digits, and special characters (!@#%^\*()\_).
@@ -39,7 +39,7 @@ class ResetDBInstancePasswordRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.comom/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
+     * @var string Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.com/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
      */
     public $UserName;
 
@@ -52,7 +52,7 @@ class ResetDBInstancePasswordRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Specifies the instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
-     * @param string $UserName Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.comom/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
+     * @param string $UserName Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.com/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
      * @param string $Password Specifies a new password for the account. Password complexity requirements:
 - It should contain 8–32 characters.
 - It should contain at least two types of the following: letters, digits, and special characters (!@#%^\*()\_).

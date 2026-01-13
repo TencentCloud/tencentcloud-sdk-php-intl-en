@@ -62,16 +62,16 @@ Defaults to CreateTime.
  * @method void setOrderType(integer $OrderType) Set 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
  * @method string getSearchKey() Obtain Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
  * @method void setSearchKey(string $SearchKey) Set Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
- * @method integer getProjectId() Obtain Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
- * @method void setProjectId(integer $ProjectId) Set Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
+ * @method integer getProjectId() Obtain Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
+ * @method void setProjectId(integer $ProjectId) Set Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
  * @method integer getWithRs() Obtain Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
  * @method void setWithRs(integer $WithRs) Set Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
- * @method string getVpcId() Obtain Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+ * @method string getVpcId() Obtain Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api to obtain it.
 Searches for cloud load balancer of basic network type. allows input '0'.
- * @method void setVpcId(string $VpcId) Set Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+ * @method void setVpcId(string $VpcId) Set Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api to obtain it.
 Searches for cloud load balancer of basic network type. allows input '0'.
- * @method string getSecurityGroup() Obtain Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
- * @method void setSecurityGroup(string $SecurityGroup) Set Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+ * @method string getSecurityGroup() Obtain Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
+ * @method void setSecurityGroup(string $SecurityGroup) Set Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
  * @method string getMasterZone() Obtain Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
  * @method void setMasterZone(string $MasterZone) Set Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
  * @method array getFilters() Obtain Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
@@ -159,7 +159,7 @@ Defaults to CreateTime.
     public $SearchKey;
 
     /**
-     * @var integer Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
+     * @var integer Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
      */
     public $ProjectId;
 
@@ -169,13 +169,13 @@ Defaults to CreateTime.
     public $WithRs;
 
     /**
-     * @var string Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+     * @var string Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api to obtain it.
 Searches for cloud load balancer of basic network type. allows input '0'.
      */
     public $VpcId;
 
     /**
-     * @var string Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+     * @var string Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
      */
     public $SecurityGroup;
 
@@ -218,11 +218,11 @@ Defaults to CreateTime.
 
      * @param integer $OrderType 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
      * @param string $SearchKey Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
-     * @param integer $ProjectId Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
+     * @param integer $ProjectId Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
      * @param integer $WithRs Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
-     * @param string $VpcId Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+     * @param string $VpcId Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api to obtain it.
 Searches for cloud load balancer of basic network type. allows input '0'.
-     * @param string $SecurityGroup Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+     * @param string $SecurityGroup Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
      * @param string $MasterZone Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
      * @param array $Filters Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
 <li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>

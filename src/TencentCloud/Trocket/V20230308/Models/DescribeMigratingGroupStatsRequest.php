@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMigratingGroupStats request structure.
  *
- * @method string getTaskId() Obtain Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.comom/document/api/1493/119997?from_cn_redirect=1) or from the console.
- * @method void setTaskId(string $TaskId) Set Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.comom/document/api/1493/119997?from_cn_redirect=1) or from the console.
- * @method string getGroupName() Obtain Specifies the consumer group name. it can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.comom/document/api/1493/118006?from_cn_redirect=1) or in the console.
+ * @method string getTaskId() Obtain Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.com/document/api/1493/119997?from_cn_redirect=1) or from the console.
+ * @method void setTaskId(string $TaskId) Set Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.com/document/api/1493/119997?from_cn_redirect=1) or from the console.
+ * @method string getGroupName() Obtain Specifies the consumer group name. it can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.com/document/api/1493/118006?from_cn_redirect=1) or in the console.
 
- * @method void setGroupName(string $GroupName) Set Specifies the consumer group name. it can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.comom/document/api/1493/118006?from_cn_redirect=1) or in the console.
+ * @method void setGroupName(string $GroupName) Set Specifies the consumer group name. it can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.com/document/api/1493/118006?from_cn_redirect=1) or in the console.
 
- * @method string getNamespace() Obtain Namespace. it is valid only when migrated to 4.x clusters. the namespace can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.comom/document/api/1493/118006?from_cn_redirect=1) or from the console.
- * @method void setNamespace(string $Namespace) Set Namespace. it is valid only when migrated to 4.x clusters. the namespace can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.comom/document/api/1493/118006?from_cn_redirect=1) or from the console.
+ * @method string getNamespace() Obtain Namespace. it is valid only when migrated to 4.x clusters. the namespace can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.com/document/api/1493/118006?from_cn_redirect=1) or from the console.
+ * @method void setNamespace(string $Namespace) Set Namespace. it is valid only when migrated to 4.x clusters. the namespace can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.com/document/api/1493/118006?from_cn_redirect=1) or from the console.
  */
 class DescribeMigratingGroupStatsRequest extends AbstractModel
 {
     /**
-     * @var string Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.comom/document/api/1493/119997?from_cn_redirect=1) or from the console.
+     * @var string Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.com/document/api/1493/119997?from_cn_redirect=1) or from the console.
      */
     public $TaskId;
 
     /**
-     * @var string Specifies the consumer group name. it can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.comom/document/api/1493/118006?from_cn_redirect=1) or in the console.
+     * @var string Specifies the consumer group name. it can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.com/document/api/1493/118006?from_cn_redirect=1) or in the console.
 
      */
     public $GroupName;
 
     /**
-     * @var string Namespace. it is valid only when migrated to 4.x clusters. the namespace can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.comom/document/api/1493/118006?from_cn_redirect=1) or from the console.
+     * @var string Namespace. it is valid only when migrated to 4.x clusters. the namespace can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.com/document/api/1493/118006?from_cn_redirect=1) or from the console.
      */
     public $Namespace;
 
     /**
-     * @param string $TaskId Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.comom/document/api/1493/119997?from_cn_redirect=1) or from the console.
-     * @param string $GroupName Specifies the consumer group name. it can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.comom/document/api/1493/118006?from_cn_redirect=1) or in the console.
+     * @param string $TaskId Task ID. It can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the API [DescribeSmoothMigrationTaskList](https://www.tencentcloud.com/document/api/1493/119997?from_cn_redirect=1) or from the console.
+     * @param string $GroupName Specifies the consumer group name. it can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.com/document/api/1493/118006?from_cn_redirect=1) or in the console.
 
-     * @param string $Namespace Namespace. it is valid only when migrated to 4.x clusters. the namespace can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.comom/document/api/1493/118006?from_cn_redirect=1) or from the console.
+     * @param string $Namespace Namespace. it is valid only when migrated to 4.x clusters. the namespace can be obtained from [SourceClusterGroupConfig](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SourceClusterGroupConfig) returned by the api [DescribeSourceClusterGroupList](https://www.tencentcloud.com/document/api/1493/118006?from_cn_redirect=1) or from the console.
      */
     function __construct()
     {

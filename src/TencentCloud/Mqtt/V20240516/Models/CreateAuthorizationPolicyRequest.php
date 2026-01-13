@@ -20,35 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAuthorizationPolicy request structure.
  *
- * @method string getInstanceId() Obtain tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
- * @method void setInstanceId(string $InstanceId) Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method string getInstanceId() Obtain tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method void setInstanceId(string $InstanceId) Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
  * @method string getPolicyName() Obtain Policy name, which cannot be empty, contains 3 to 64 characters, and supports chinese, letters, digits, "-", and "_".
  * @method void setPolicyName(string $PolicyName) Set Policy name, which cannot be empty, contains 3 to 64 characters, and supports chinese, letters, digits, "-", and "_".
  * @method integer getPolicyVersion() Obtain Policy version, defaults to 1. currently only support 1.
  * @method void setPolicyVersion(integer $PolicyVersion) Set Policy version, defaults to 1. currently only support 1.
- * @method integer getPriority() Obtain Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method void setPriority(integer $Priority) Set Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+ * @method integer getPriority() Obtain Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method void setPriority(integer $Priority) Set Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
  * @method string getEffect() Obtain Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
  * @method void setEffect(string $Effect) Set Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method string getActions() Obtain Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method string getActions() Obtain Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
- * @method void setActions(string $Actions) Set Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+ * @method void setActions(string $Actions) Set Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
- * @method integer getRetain() Obtain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+ * @method integer getRetain() Obtain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Matches message retention.
 Matches non-retention messages.
 3. match retained and non-retained messages.
- * @method void setRetain(integer $Retain) Set Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+ * @method void setRetain(integer $Retain) Set Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Matches message retention.
 Matches non-retention messages.
 3. match retained and non-retained messages.
@@ -56,29 +56,29 @@ Matches non-retention messages.
 0: at most once.
 Minimum once.
 2: exactly once.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
  * @method void setQos(string $Qos) Set Condition: specifies the service quality.
 0: at most once.
 Minimum once.
 2: exactly once.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method string getResources() Obtain Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method string getResources() Obtain Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
- * @method void setResources(string $Resources) Set Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+ * @method void setResources(string $Resources) Set Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
  * @method string getUsername() Obtain Specifies the condition-username.
  * @method void setUsername(string $Username) Set Specifies the condition-username.
  * @method string getClientId() Obtain Client ID. supports regular expressions.
  * @method void setClientId(string $ClientId) Set Client ID. supports regular expressions.
- * @method string getIp() Obtain Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
- * @method void setIp(string $Ip) Set Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+ * @method string getIp() Obtain Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method void setIp(string $Ip) Set Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
  * @method string getRemark() Obtain Specifies the remark information with a maximum length of 128 characters.
  * @method void setRemark(string $Remark) Set Specifies the remark information with a maximum length of 128 characters.
  */
 class CreateAuthorizationPolicyRequest extends AbstractModel
 {
     /**
-     * @var string tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @var string tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      */
     public $InstanceId;
 
@@ -93,7 +93,7 @@ class CreateAuthorizationPolicyRequest extends AbstractModel
     public $PolicyVersion;
 
     /**
-     * @var integer Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @var integer Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public $Priority;
 
@@ -101,12 +101,12 @@ class CreateAuthorizationPolicyRequest extends AbstractModel
      * @var string Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public $Effect;
 
     /**
-     * @var string Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @var string Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
@@ -114,7 +114,7 @@ Sub. specifies the subscription.
     public $Actions;
 
     /**
-     * @var integer Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @var integer Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Matches message retention.
 Matches non-retention messages.
 3. match retained and non-retained messages.
@@ -126,12 +126,12 @@ Matches non-retention messages.
 0: at most once.
 Minimum once.
 2: exactly once.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public $Qos;
 
     /**
-     * @var string Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @var string Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
      */
     public $Resources;
@@ -147,7 +147,7 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
     public $ClientId;
 
     /**
-     * @var string Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @var string Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public $Ip;
 
@@ -157,19 +157,19 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
     public $Remark;
 
     /**
-     * @param string $InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @param string $InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      * @param string $PolicyName Policy name, which cannot be empty, contains 3 to 64 characters, and supports chinese, letters, digits, "-", and "_".
      * @param integer $PolicyVersion Policy version, defaults to 1. currently only support 1.
-     * @param integer $Priority Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @param integer $Priority Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      * @param string $Effect Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-     * @param string $Actions Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+     * @param string $Actions Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
-     * @param integer $Retain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @param integer $Retain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Matches message retention.
 Matches non-retention messages.
 3. match retained and non-retained messages.
@@ -177,12 +177,12 @@ Matches non-retention messages.
 0: at most once.
 Minimum once.
 2: exactly once.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-     * @param string $Resources Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+     * @param string $Resources Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
      * @param string $Username Specifies the condition-username.
      * @param string $ClientId Client ID. supports regular expressions.
-     * @param string $Ip Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @param string $Ip Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      * @param string $Remark Specifies the remark information with a maximum length of 128 characters.
      */
     function __construct()

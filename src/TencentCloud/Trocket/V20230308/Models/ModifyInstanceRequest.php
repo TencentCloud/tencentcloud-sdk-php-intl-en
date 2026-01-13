@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstance request structure.
  *
- * @method string getInstanceId() Obtain TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
- * @method void setInstanceId(string $InstanceId) Set TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
+ * @method string getInstanceId() Obtain TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
+ * @method void setInstanceId(string $InstanceId) Set TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
  * @method string getName() Obtain Instance name. It cannot be left blank. It can contain 3 to 64 characters consisting of only digits, letters, hyphens (-), and underscores (_).
  * @method void setName(string $Name) Set Instance name. It cannot be left blank. It can contain 3 to 64 characters consisting of only digits, letters, hyphens (-), and underscores (_).
  * @method string getRemark() Obtain Remarks. Up to 128 characters are allowed.
  * @method void setRemark(string $Remark) Set Remarks. Up to 128 characters are allowed.
  * @method float getSendReceiveRatio() Obtain Message sending and receiving ratio
  * @method void setSendReceiveRatio(float $SendReceiveRatio) Set Message sending and receiving ratio
- * @method string getSkuCode() Obtain Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
- * @method void setSkuCode(string $SkuCode) Set Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
- * @method integer getMessageRetention() Obtain Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+ * @method string getSkuCode() Obtain Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
+ * @method void setSkuCode(string $SkuCode) Set Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
+ * @method integer getMessageRetention() Obtain Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
 
 -Default value: DefaultRetention parameter.
 -Minimum value: specifies the RetentionLowerLimit parameter.
 -Specifies the maximum value of the RetentionUpperLimit parameter.
- * @method void setMessageRetention(integer $MessageRetention) Set Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+ * @method void setMessageRetention(integer $MessageRetention) Set Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
 
 -Default value: DefaultRetention parameter.
 -Minimum value: specifies the RetentionLowerLimit parameter.
@@ -44,23 +44,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScaledTpsEnabled(boolean $ScaledTpsEnabled) Set Whether to enable elastic TPS.
  * @method boolean getAclEnabled() Obtain Whether ACL is enabled.
  * @method void setAclEnabled(boolean $AclEnabled) Set Whether ACL is enabled.
- * @method integer getMaxTopicNum() Obtain The maximum number of topics that can be created. value ranges from...to... refer to the ProductSKU output parameter in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
+ * @method integer getMaxTopicNum() Obtain The maximum number of topics that can be created. value ranges from...to... refer to the ProductSKU output parameter in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
 
 -Minimum value and default value: TopicNumLimit parameter.
 -Maximum value of TopicNumUpperLimit parameter.
- * @method void setMaxTopicNum(integer $MaxTopicNum) Set The maximum number of topics that can be created. value ranges from...to... refer to the ProductSKU output parameter in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
+ * @method void setMaxTopicNum(integer $MaxTopicNum) Set The maximum number of topics that can be created. value ranges from...to... refer to the ProductSKU output parameter in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
 
 -Minimum value and default value: TopicNumLimit parameter.
 -Maximum value of TopicNumUpperLimit parameter.
- * @method string getExtraTopicNum() Obtain Number of topics not included in the free quota. For the free quota, see the TopicNumLimit parameter in the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
- * @method void setExtraTopicNum(string $ExtraTopicNum) Set Number of topics not included in the free quota. For the free quota, see the TopicNumLimit parameter in the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+ * @method string getExtraTopicNum() Obtain Number of topics not included in the free quota. For the free quota, see the TopicNumLimit parameter in the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
+ * @method void setExtraTopicNum(string $ExtraTopicNum) Set Number of topics not included in the free quota. For the free quota, see the TopicNumLimit parameter in the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
  * @method boolean getEnableDeletionProtection() Obtain Whether to enable deletion protection
  * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) Set Whether to enable deletion protection
  */
 class ModifyInstanceRequest extends AbstractModel
 {
     /**
-     * @var string TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
+     * @var string TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
      */
     public $InstanceId;
 
@@ -80,12 +80,12 @@ class ModifyInstanceRequest extends AbstractModel
     public $SendReceiveRatio;
 
     /**
-     * @var string Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+     * @var string Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
      */
     public $SkuCode;
 
     /**
-     * @var integer Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+     * @var integer Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
 
 -Default value: DefaultRetention parameter.
 -Minimum value: specifies the RetentionLowerLimit parameter.
@@ -104,7 +104,7 @@ class ModifyInstanceRequest extends AbstractModel
     public $AclEnabled;
 
     /**
-     * @var integer The maximum number of topics that can be created. value ranges from...to... refer to the ProductSKU output parameter in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
+     * @var integer The maximum number of topics that can be created. value ranges from...to... refer to the ProductSKU output parameter in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
 
 -Minimum value and default value: TopicNumLimit parameter.
 -Maximum value of TopicNumUpperLimit parameter.
@@ -112,7 +112,7 @@ class ModifyInstanceRequest extends AbstractModel
     public $MaxTopicNum;
 
     /**
-     * @var string Number of topics not included in the free quota. For the free quota, see the TopicNumLimit parameter in the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+     * @var string Number of topics not included in the free quota. For the free quota, see the TopicNumLimit parameter in the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
      */
     public $ExtraTopicNum;
 
@@ -122,23 +122,23 @@ class ModifyInstanceRequest extends AbstractModel
     public $EnableDeletionProtection;
 
     /**
-     * @param string $InstanceId TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
+     * @param string $InstanceId TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
      * @param string $Name Instance name. It cannot be left blank. It can contain 3 to 64 characters consisting of only digits, letters, hyphens (-), and underscores (_).
      * @param string $Remark Remarks. Up to 128 characters are allowed.
      * @param float $SendReceiveRatio Message sending and receiving ratio
-     * @param string $SkuCode Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
-     * @param integer $MessageRetention Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+     * @param string $SkuCode Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
+     * @param integer $MessageRetention Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
 
 -Default value: DefaultRetention parameter.
 -Minimum value: specifies the RetentionLowerLimit parameter.
 -Specifies the maximum value of the RetentionUpperLimit parameter.
      * @param boolean $ScaledTpsEnabled Whether to enable elastic TPS.
      * @param boolean $AclEnabled Whether ACL is enabled.
-     * @param integer $MaxTopicNum The maximum number of topics that can be created. value ranges from...to... refer to the ProductSKU output parameter in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
+     * @param integer $MaxTopicNum The maximum number of topics that can be created. value ranges from...to... refer to the ProductSKU output parameter in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
 
 -Minimum value and default value: TopicNumLimit parameter.
 -Maximum value of TopicNumUpperLimit parameter.
-     * @param string $ExtraTopicNum Number of topics not included in the free quota. For the free quota, see the TopicNumLimit parameter in the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+     * @param string $ExtraTopicNum Number of topics not included in the free quota. For the free quota, see the TopicNumLimit parameter in the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
      * @param boolean $EnableDeletionProtection Whether to enable deletion protection
      */
     function __construct()

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceModifyLoadBalancer request structure.
  *
- * @method string getLoadBalancerId() Obtain ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
- * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+ * @method string getLoadBalancerId() Obtain ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
  * @method InternetAccessible getInternetAccessible() Obtain New bandwidth bandwidth specification
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set New bandwidth bandwidth specification
  */
 class InquiryPriceModifyLoadBalancerRequest extends AbstractModel
 {
     /**
-     * @var string ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+     * @var string ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
      */
     public $LoadBalancerId;
 
@@ -38,7 +38,7 @@ class InquiryPriceModifyLoadBalancerRequest extends AbstractModel
     public $InternetAccessible;
 
     /**
-     * @param string $LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+     * @param string $LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
      * @param InternetAccessible $InternetAccessible New bandwidth bandwidth specification
      */
     function __construct()

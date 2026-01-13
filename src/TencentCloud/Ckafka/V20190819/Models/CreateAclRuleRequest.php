@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAclRule request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+ * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+ * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
  * @method string getResourceType() Obtain ACL resource type. Currently, the only valid value is `Topic`.
  * @method void setResourceType(string $ResourceType) Set ACL resource type. Currently, the only valid value is `Topic`.
  * @method string getPatternType() Obtain ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      */
     public $InstanceId;
 
@@ -80,7 +80,7 @@ class CreateAclRuleRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      * @param string $ResourceType ACL resource type. Currently, the only valid value is `Topic`.
      * @param string $PatternType ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
      * @param string $RuleName Rule name

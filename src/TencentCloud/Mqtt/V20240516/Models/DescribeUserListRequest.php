@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserList request structure.
  *
- * @method string getInstanceId() Obtain Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
- * @method void setInstanceId(string $InstanceId) Set Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method string getInstanceId() Obtain Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
  * @method array getFilters() Obtain Specifies the supported fields in the query criteria list.
 Username: specifies the Username for filtering, supports fuzzy filtering. type: String.
  * @method void setFilters(array $Filters) Set Specifies the supported fields in the query criteria list.
@@ -34,7 +34,7 @@ Username: specifies the Username for filtering, supports fuzzy filtering. type: 
 class DescribeUserListRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @var string Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      */
     public $InstanceId;
 
@@ -55,7 +55,7 @@ Username: specifies the Username for filtering, supports fuzzy filtering. type: 
     public $Limit;
 
     /**
-     * @param string $InstanceId Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @param string $InstanceId Instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      * @param array $Filters Specifies the supported fields in the query criteria list.
 Username: specifies the Username for filtering, supports fuzzy filtering. type: String.
      * @param integer $Offset Query start position. default value: 0.

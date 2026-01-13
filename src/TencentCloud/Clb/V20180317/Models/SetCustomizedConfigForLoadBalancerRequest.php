@@ -35,15 +35,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUconfigId() Obtain Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
  * @method void setUconfigId(string $UconfigId) Set Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
  * @method string getConfigContent() Obtain Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
  * @method void setConfigContent(string $ConfigContent) Set Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
  * @method string getConfigName() Obtain Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
  * @method void setConfigName(string $ConfigName) Set Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
  * @method array getLoadBalancerIds() Obtain CLB instance ID. this field is required for bind/unbind operations.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
  * @method void setLoadBalancerIds(array $LoadBalancerIds) Set CLB instance ID. this field is required for bind/unbind operations.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
  */
 class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel
 {
@@ -64,7 +64,7 @@ class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel
 
     /**
      * @var string Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
      */
     public $ConfigContent;
 
@@ -75,7 +75,7 @@ Specifies specific restrictions. view layer-7 personalized configuration (https:
 
     /**
      * @var array CLB instance ID. this field is required for bind/unbind operations.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
      */
     public $LoadBalancerIds;
 
@@ -88,10 +88,10 @@ Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.como
 -UNBIND: unbind.
      * @param string $UconfigId Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
      * @param string $ConfigContent Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
      * @param string $ConfigName Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
      * @param array $LoadBalancerIds CLB instance ID. this field is required for bind/unbind operations.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRoute request structure.
  *
- * @method string getInstanceId() Obtain <p>Specifies the ckafka cluster instance id. obtain through the API <a href="https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a>.</p>.
- * @method void setInstanceId(string $InstanceId) Set <p>Specifies the ckafka cluster instance id. obtain through the API <a href="https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a>.</p>.
+ * @method string getInstanceId() Obtain <p>Specifies the ckafka cluster instance id. obtain through the API <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a>.</p>.
+ * @method void setInstanceId(string $InstanceId) Set <p>Specifies the ckafka cluster instance id. obtain through the API <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a>.</p>.
  * @method integer getVipType() Obtain <P>Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).</p>.
  * @method void setVipType(integer $VipType) Set <P>Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).</p>.
  * @method string getVpcId() Obtain <p>vpc network Id. required when vipType is 3.</p>.
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateRouteRequest extends AbstractModel
 {
     /**
-     * @var string <p>Specifies the ckafka cluster instance id. obtain through the API <a href="https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a>.</p>.
+     * @var string <p>Specifies the ckafka cluster instance id. obtain through the API <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a>.</p>.
      */
     public $InstanceId;
 
@@ -101,7 +101,7 @@ class CreateRouteRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @param string $InstanceId <p>Specifies the ckafka cluster instance id. obtain through the API <a href="https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a>.</p>.
+     * @param string $InstanceId <p>Specifies the ckafka cluster instance id. obtain through the API <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a>.</p>.
      * @param integer $VipType <P>Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).</p>.
      * @param string $VpcId <p>vpc network Id. required when vipType is 3.</p>.
      * @param string $SubnetId <p>Specifies the vpc subnet id. required when vipType is 3.</p>.

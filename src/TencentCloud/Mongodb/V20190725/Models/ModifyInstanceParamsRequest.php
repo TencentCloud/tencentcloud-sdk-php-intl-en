@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setInstanceId(string $InstanceId) Set Specifies the instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
 
- * @method array getInstanceParams() Obtain Specifies the parameter name and value to be modified. For details about the currently supported parameter names and the corresponding valid values, see [DescribeInstanceParams](https://www.tencentcloud.comom/document/product/240/65903?from_cn_redirect=1).
- * @method void setInstanceParams(array $InstanceParams) Set Specifies the parameter name and value to be modified. For details about the currently supported parameter names and the corresponding valid values, see [DescribeInstanceParams](https://www.tencentcloud.comom/document/product/240/65903?from_cn_redirect=1).
+ * @method array getInstanceParams() Obtain Specifies the parameter name and value to be modified. For details about the currently supported parameter names and the corresponding valid values, see [DescribeInstanceParams](https://www.tencentcloud.com/document/product/240/65903?from_cn_redirect=1).
+ * @method void setInstanceParams(array $InstanceParams) Set Specifies the parameter name and value to be modified. For details about the currently supported parameter names and the corresponding valid values, see [DescribeInstanceParams](https://www.tencentcloud.com/document/product/240/65903?from_cn_redirect=1).
  * @method string getModifyType() Obtain Operation type. Valid values:
 - IMMEDIATELY: immediate adjustment.
 - DELAY: delayed adjustment. It is an optional field. The default value is immediate adjustment if this parameter is left unspecified.
@@ -42,7 +42,7 @@ class ModifyInstanceParamsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array Specifies the parameter name and value to be modified. For details about the currently supported parameter names and the corresponding valid values, see [DescribeInstanceParams](https://www.tencentcloud.comom/document/product/240/65903?from_cn_redirect=1).
+     * @var array Specifies the parameter name and value to be modified. For details about the currently supported parameter names and the corresponding valid values, see [DescribeInstanceParams](https://www.tencentcloud.com/document/product/240/65903?from_cn_redirect=1).
      */
     public $InstanceParams;
 
@@ -56,7 +56,7 @@ class ModifyInstanceParamsRequest extends AbstractModel
     /**
      * @param string $InstanceId Specifies the instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
 
-     * @param array $InstanceParams Specifies the parameter name and value to be modified. For details about the currently supported parameter names and the corresponding valid values, see [DescribeInstanceParams](https://www.tencentcloud.comom/document/product/240/65903?from_cn_redirect=1).
+     * @param array $InstanceParams Specifies the parameter name and value to be modified. For details about the currently supported parameter names and the corresponding valid values, see [DescribeInstanceParams](https://www.tencentcloud.com/document/product/240/65903?from_cn_redirect=1).
      * @param string $ModifyType Operation type. Valid values:
 - IMMEDIATELY: immediate adjustment.
 - DELAY: delayed adjustment. It is an optional field. The default value is immediate adjustment if this parameter is left unspecified.

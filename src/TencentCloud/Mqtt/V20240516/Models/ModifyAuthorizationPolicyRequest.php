@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAuthorizationPolicy request structure.
  *
- * @method integer getId() Obtain Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.comom/document/product/1778/111074?from_cn_redirect=1).
- * @method void setId(integer $Id) Set Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.comom/document/product/1778/111074?from_cn_redirect=1).
- * @method string getInstanceId() Obtain tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method integer getId() Obtain Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.com/document/product/1778/111074?from_cn_redirect=1).
+ * @method void setId(integer $Id) Set Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.com/document/product/1778/111074?from_cn_redirect=1).
+ * @method string getInstanceId() Obtain tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
 
- * @method void setInstanceId(string $InstanceId) Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method void setInstanceId(string $InstanceId) Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
 
  * @method string getPolicyName() Obtain Policy name, which cannot be empty, contains 3 to 64 characters, and supports chinese, letters, digits, "-", and "_".
  * @method void setPolicyName(string $PolicyName) Set Policy name, which cannot be empty, contains 3 to 64 characters, and supports chinese, letters, digits, "-", and "_".
@@ -38,17 +38,17 @@ Denies.
  * @method void setEffect(string $Effect) Set Specifies the decision.
 allow. specifies the permission.
 Denies.
- * @method string getActions() Obtain Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+ * @method string getActions() Obtain Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
- * @method void setActions(string $Actions) Set Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+ * @method void setActions(string $Actions) Set Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
- * @method string getResources() Obtain Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+ * @method string getResources() Obtain Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
- * @method void setResources(string $Resources) Set Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+ * @method void setResources(string $Resources) Set Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
  * @method string getUsername() Obtain Specifies the condition-username.
  * @method void setUsername(string $Username) Set Specifies the condition-username.
@@ -78,12 +78,12 @@ Minimum once.
 class ModifyAuthorizationPolicyRequest extends AbstractModel
 {
     /**
-     * @var integer Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.comom/document/product/1778/111074?from_cn_redirect=1).
+     * @var integer Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.com/document/product/1778/111074?from_cn_redirect=1).
      */
     public $Id;
 
     /**
-     * @var string tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @var string tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
 
      */
     public $InstanceId;
@@ -111,7 +111,7 @@ Denies.
     public $Effect;
 
     /**
-     * @var string Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @var string Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
@@ -119,7 +119,7 @@ Sub. specifies the subscription.
     public $Actions;
 
     /**
-     * @var string Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @var string Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
      */
     public $Resources;
@@ -161,8 +161,8 @@ Minimum once.
     public $Remark;
 
     /**
-     * @param integer $Id Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.comom/document/product/1778/111074?from_cn_redirect=1).
-     * @param string $InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @param integer $Id Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.com/document/product/1778/111074?from_cn_redirect=1).
+     * @param string $InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
 
      * @param string $PolicyName Policy name, which cannot be empty, contains 3 to 64 characters, and supports chinese, letters, digits, "-", and "_".
      * @param integer $PolicyVersion Policy version, defaults to 1. currently only support 1.
@@ -170,11 +170,11 @@ Minimum once.
      * @param string $Effect Specifies the decision.
 allow. specifies the permission.
 Denies.
-     * @param string $Actions Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @param string $Actions Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
-     * @param string $Resources Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @param string $Resources Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
      * @param string $Username Specifies the condition-username.
      * @param integer $Retain Condition - message retention.

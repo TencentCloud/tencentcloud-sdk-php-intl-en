@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstance request structure.
  *
- * @method string getInstanceType() Obtain Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api.
+ * @method string getInstanceType() Obtain Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api.
 BASIC: basic edition.
 PRO edition.
 PLATINUM version.
 
- * @method void setInstanceType(string $InstanceType) Set Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api.
+ * @method void setInstanceType(string $InstanceType) Set Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api.
 BASIC: basic edition.
 PRO edition.
 PLATINUM version.
 
  * @method string getName() Obtain Specifies the cluster name, cannot be empty, 3-64 characters, only comprised of digits, letters, "-", and "_".
  * @method void setName(string $Name) Set Specifies the cluster name, cannot be empty, 3-64 characters, only comprised of digits, letters, "-", and "_".
- * @method string getSkuCode() Obtain Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
- * @method void setSkuCode(string $SkuCode) Set Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
+ * @method string getSkuCode() Obtain Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
+ * @method void setSkuCode(string $SkuCode) Set Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
  * @method string getRemark() Obtain Specifies the remark information with a maximum length of 128 characters.
  * @method void setRemark(string $Remark) Set Specifies the remark information with a maximum length of 128 characters.
  * @method array getTagList() Obtain Tag list
@@ -56,7 +56,7 @@ PLATINUM version.
 class CreateInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api.
+     * @var string Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api.
 BASIC: basic edition.
 PRO edition.
 PLATINUM version.
@@ -70,7 +70,7 @@ PLATINUM version.
     public $Name;
 
     /**
-     * @var string Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
+     * @var string Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
      */
     public $SkuCode;
 
@@ -120,13 +120,13 @@ PLATINUM version.
     public $PayMode;
 
     /**
-     * @param string $InstanceType Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api.
+     * @param string $InstanceType Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api.
 BASIC: basic edition.
 PRO edition.
 PLATINUM version.
 
      * @param string $Name Specifies the cluster name, cannot be empty, 3-64 characters, only comprised of digits, letters, "-", and "_".
-     * @param string $SkuCode Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
+     * @param string $SkuCode Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
      * @param string $Remark Specifies the remark information with a maximum length of 128 characters.
      * @param array $TagList Tag list
      * @param array $VpcList Specifies the VPC information associated with the instance. the available VPC and SUBNET under the current user must be provided.

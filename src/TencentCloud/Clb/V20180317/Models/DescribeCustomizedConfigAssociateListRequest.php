@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCustomizedConfigAssociateList request structure.
  *
- * @method string getUconfigId() Obtain Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api.
- * @method void setUconfigId(string $UconfigId) Set Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api.
+ * @method string getUconfigId() Obtain Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/product/214/60009?from_cn_redirect=1) api.
+ * @method void setUconfigId(string $UconfigId) Set Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/product/214/60009?from_cn_redirect=1) api.
  * @method integer getOffset() Obtain Start position of the binding list. Default: 0.
  * @method void setOffset(integer $Offset) Set Start position of the binding list. Default: 0.
  * @method integer getLimit() Obtain Number of binding lists to pull. Default: 20.
  * @method void setLimit(integer $Limit) Set Number of binding lists to pull. Default: 20.
- * @method string getDomain() Obtain Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value.
- * @method void setDomain(string $Domain) Set Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value.
+ * @method string getDomain() Obtain Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/product/214/46916?from_cn_redirect=1) API return value.
+ * @method void setDomain(string $Domain) Set Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/product/214/46916?from_cn_redirect=1) API return value.
  */
 class DescribeCustomizedConfigAssociateListRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api.
+     * @var string Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/product/214/60009?from_cn_redirect=1) api.
      */
     public $UconfigId;
 
@@ -47,15 +47,15 @@ class DescribeCustomizedConfigAssociateListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value.
+     * @var string Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/product/214/46916?from_cn_redirect=1) API return value.
      */
     public $Domain;
 
     /**
-     * @param string $UconfigId Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api.
+     * @param string $UconfigId Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/product/214/60009?from_cn_redirect=1) api.
      * @param integer $Offset Start position of the binding list. Default: 0.
      * @param integer $Limit Number of binding lists to pull. Default: 20.
-     * @param string $Domain Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value.
+     * @param string $Domain Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/product/214/46916?from_cn_redirect=1) API return value.
      */
     function __construct()
     {
