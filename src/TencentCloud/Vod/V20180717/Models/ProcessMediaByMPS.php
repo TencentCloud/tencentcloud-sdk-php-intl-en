@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * MPS media processing task information.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method array getSubTaskSet() Obtain 
- * @method void setSubTaskSet(array $SubTaskSet) Set 
+ * @method string getTaskId() Obtain The task ID.
+ * @method void setTaskId(string $TaskId) Set The task ID.
+ * @method string getStatus() Obtain Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
+ * @method void setStatus(string $Status) Set Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
+ * @method integer getErrCode() Obtain Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
+ * @method void setErrCode(integer $ErrCode) Set Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
+ * @method string getMessage() Obtain Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
+ * @method void setMessage(string $Message) Set Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
+ * @method array getSubTaskSet() Obtain MPS media processing tasks.
+ * @method void setSubTaskSet(array $SubTaskSet) Set MPS media processing tasks.
  */
 class ProcessMediaByMPS extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The task ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
      */
     public $Message;
 
     /**
-     * @var array 
+     * @var array MPS media processing tasks.
      */
     public $SubTaskSet;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param array $SubTaskSet 
+     * @param string $TaskId The task ID.
+     * @param string $Status Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
+     * @param integer $ErrCode Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
+     * @param string $Message Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
+     * @param array $SubTaskSet MPS media processing tasks.
      */
     function __construct()
     {

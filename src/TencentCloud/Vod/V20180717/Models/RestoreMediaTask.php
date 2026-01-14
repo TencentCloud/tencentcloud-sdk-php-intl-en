@@ -73,11 +73,13 @@ class RestoreMediaTask extends AbstractModel
 
     /**
      * @var integer This field has been disused.
+     * @deprecated
      */
     public $Status;
 
     /**
      * @var string This field has been disused.
+     * @deprecated
      */
     public $Message;
 

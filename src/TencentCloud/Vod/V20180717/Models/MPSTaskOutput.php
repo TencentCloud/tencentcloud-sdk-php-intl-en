@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * The MPS subtask output returns the result.
  *
- * @method array getOutputFiles() Obtain 
- * @method void setOutputFiles(array $OutputFiles) Set 
+ * @method array getOutputFiles() Obtain The file type in the task's return result. For example, in a smart erase, the erased video file will be stored in the media asset and its FileId will be given in this field. The URL of the subtitle file extracted based on the image will also be given in this field.
+ * @method void setOutputFiles(array $OutputFiles) Set The file type in the task's return result. For example, in a smart erase, the erased video file will be stored in the media asset and its FileId will be given in this field. The URL of the subtitle file extracted based on the image will also be given in this field.
  */
 class MPSTaskOutput extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array The file type in the task's return result. For example, in a smart erase, the erased video file will be stored in the media asset and its FileId will be given in this field. The URL of the subtitle file extracted based on the image will also be given in this field.
      */
     public $OutputFiles;
 
     /**
-     * @param array $OutputFiles 
+     * @param array $OutputFiles The file type in the task's return result. For example, in a smart erase, the erased video file will be stored in the media asset and its FileId will be given in this field. The URL of the subtitle file extracted based on the image will also be given in this field.
      */
     function __construct()
     {

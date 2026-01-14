@@ -114,6 +114,16 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setComplexAdaptiveDynamicStreamingCompleteEvent(ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingCompleteEvent) Set Complex adaptive bitrate streaming processing completion event, valid when the event type is ComplexAdaptiveDynamicStreamingComplete.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method ProcessMediaByMPS getProcessMediaByMPSCompleteEvent() Obtain 
+ * @method void setProcessMediaByMPSCompleteEvent(ProcessMediaByMPS $ProcessMediaByMPSCompleteEvent) Set 
+ * @method AigcImageTask getAigcImageCompleteEvent() Obtain AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setAigcImageCompleteEvent(AigcImageTask $AigcImageCompleteEvent) Set AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method AigcVideoTask getAigcVideoCompleteEvent() Obtain AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setAigcVideoCompleteEvent(AigcVideoTask $AigcVideoCompleteEvent) Set AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class EventContent extends AbstractModel
 {
@@ -281,6 +291,23 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $ComplexAdaptiveDynamicStreamingCompleteEvent;
 
     /**
+     * @var ProcessMediaByMPS 
+     */
+    public $ProcessMediaByMPSCompleteEvent;
+
+    /**
+     * @var AigcImageTask AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $AigcImageCompleteEvent;
+
+    /**
+     * @var AigcVideoTask AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $AigcVideoCompleteEvent;
+
+    /**
      * @param string $EventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
      * @param string $EventType <b>Supported event types:</b><li>`NewFileUpload`: Video uploaded.</li><li>`ProcedureStateChanged`: Task flow status changed.</li><li>`FileDeleted`: Video deleted.</li><li>`RestoreMediaComplete`: Video retrieved.</li><li>`PullComplete`: Finished video pulling.</li><li>`EditMediaComplete`: Finished video editing.</li><li>`SplitMediaComplete`: Finished video splitting.</li><li>`ComposeMediaComplete`: Finished producing the media file.</li><li>`WechatMiniProgramPublishComplete`: Finished publishing on Weixin Mini Program.</li><li>`RemoveWatermark`: Watermark removed.</li><li>`RebuildMediaComplete`: Finished audio/video remastering.</li><li>`ReviewAudioVideoComplete`: Finished moderation.</li><li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li><li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li><li>`QualityEnhanceComplete`: FinishedQualityEnhance.</li><li>`PersistenceComplete`: Clipping persistented. </li><li>`ComplexAdaptiveDynamicStreamingComplete `: Finished complex adaptive bitrate streaming processing. </li><b>v2017 task types:</b><li>`TranscodeComplete`: Finished video transcoding.</li><li>`ConcatComplete`: Finished video splicing.</li><li>`ClipComplete`: Finished video clipping.</li><li>`CreateImageSpriteComplete`: Finished image sprite generation.</li><li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
      * @param FileUploadTask $FileUploadEvent Media uploaded event, valid when the event type is NewFileUpload.
@@ -327,6 +354,11 @@ Pay attention to: this field may return null, indicating that no valid value can
      * @param PersistenceCompleteTask $PersistenceCompleteEvent Persistence completion event, valid when the event type is PersistenceComplete.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingCompleteEvent Complex adaptive bitrate streaming processing completion event, valid when the event type is ComplexAdaptiveDynamicStreamingComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ProcessMediaByMPS $ProcessMediaByMPSCompleteEvent 
+     * @param AigcImageTask $AigcImageCompleteEvent AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param AigcVideoTask $AigcVideoCompleteEvent AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -483,6 +515,21 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("ComplexAdaptiveDynamicStreamingCompleteEvent",$param) and $param["ComplexAdaptiveDynamicStreamingCompleteEvent"] !== null) {
             $this->ComplexAdaptiveDynamicStreamingCompleteEvent = new ComplexAdaptiveDynamicStreamingTask();
             $this->ComplexAdaptiveDynamicStreamingCompleteEvent->deserialize($param["ComplexAdaptiveDynamicStreamingCompleteEvent"]);
+        }
+
+        if (array_key_exists("ProcessMediaByMPSCompleteEvent",$param) and $param["ProcessMediaByMPSCompleteEvent"] !== null) {
+            $this->ProcessMediaByMPSCompleteEvent = new ProcessMediaByMPS();
+            $this->ProcessMediaByMPSCompleteEvent->deserialize($param["ProcessMediaByMPSCompleteEvent"]);
+        }
+
+        if (array_key_exists("AigcImageCompleteEvent",$param) and $param["AigcImageCompleteEvent"] !== null) {
+            $this->AigcImageCompleteEvent = new AigcImageTask();
+            $this->AigcImageCompleteEvent->deserialize($param["AigcImageCompleteEvent"]);
+        }
+
+        if (array_key_exists("AigcVideoCompleteEvent",$param) and $param["AigcVideoCompleteEvent"] !== null) {
+            $this->AigcVideoCompleteEvent = new AigcVideoTask();
+            $this->AigcVideoCompleteEvent->deserialize($param["AigcVideoCompleteEvent"]);
         }
     }
 }
