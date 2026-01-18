@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Hunyuan\V20230901\Models as Models;
 
 /**
+ * @method Models\Convert3DFormatResponse Convert3DFormat(Models\Convert3DFormatRequest $req) After inputting a 3D model file, the 3D model file format can be switched.
  * @method Models\QueryHunyuan3DPartJobResponse QueryHunyuan3DPartJob(Models\QueryHunyuan3DPartJobRequest $req) This API is used to query the generation task of a component.
  * @method Models\QueryHunyuanTo3DProJobResponse QueryHunyuanTo3DProJob(Models\QueryHunyuanTo3DProJobRequest $req) This API is used to intelligently generate 3D content based on the HunYuan Large Model and input text descriptions/images.
 This API is used to provide 3 concurrent tasks by default, which can process 3 submitted tasks simultaneously. The next task can be processed only after the previous task is completed.

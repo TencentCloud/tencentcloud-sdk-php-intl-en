@@ -64,14 +64,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 3 - Medium Risk
 4 - High Risk
 Empty - Risk level not obtained.
-Only returned for the ENHANCED version, with the default value being empty.
+Only returned for the Enhance and Plus version, with the default value being empty.
  * @method void setDeviceInfoLevel(string $DeviceInfoLevel) Set Describe the risk level of the device where the current request is located, with a total of 4 levels. The details are as follows:
 1 - Secure
 2 - Low Risk
 3 - Medium Risk
 4 - High Risk
 Empty - Risk level not obtained.
-Only returned for the ENHANCED version, with the default value being empty.
+Only returned for the Enhance and Plus version, with the default value being empty.
  * @method array getLivenessInfoTag() Obtain Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
 01 - User kept eyes closed throughout the process.
 02 - User failed to complete the specified action.
@@ -159,7 +159,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 3 - Medium Risk
 4 - High Risk
 Empty - Risk level not obtained.
-Only returned for the ENHANCED version, with the default value being empty.
+Only returned for the Enhance and Plus version, with the default value being empty.
      */
     public $DeviceInfoLevel;
 
@@ -212,7 +212,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 3 - Medium Risk
 4 - High Risk
 Empty - Risk level not obtained.
-Only returned for the ENHANCED version, with the default value being empty.
+Only returned for the Enhance and Plus version, with the default value being empty.
      * @param array $LivenessInfoTag Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
 01 - User kept eyes closed throughout the process.
 02 - User failed to complete the specified action.
