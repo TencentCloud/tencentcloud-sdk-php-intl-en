@@ -29,11 +29,14 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\AnalyzeAuditLogsResponse AnalyzeAuditLogs(Models\AnalyzeAuditLogsRequest $req) This API is used to aggregate the audit logs filtered by different conditions and aggregate the statistics of the specified data rows.
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) This API (AssociateSecurityGroups) is used to bind security groups to instances in batches.
  * @method Models\BalanceRoGroupLoadResponse BalanceRoGroupLoad(Models\BalanceRoGroupLoadRequest $req) This API is used to rebalance the loads of instances in an RO group. Please note that the database connections to those instances will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases. This operation should be performed with caution.
+ * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) This API is used to disable the audit service for an instance.
  * @method Models\CloseCDBProxyResponse CloseCDBProxy(Models\CloseCDBProxyRequest $req) This API is used to disable database proxy.
  * @method Models\CloseCdbProxyAddressResponse CloseCdbProxyAddress(Models\CloseCdbProxyAddressRequest $req) This API is used to disable the database proxy address.
  * @method Models\CloseWanServiceResponse CloseWanService(Models\CloseWanServiceRequest $req) This API (CloseWanService) is used to disable public network access for TencentDB instance, which will make public IP addresses inaccessible.
  * @method Models\CreateAccountsResponse CreateAccounts(Models\CreateAccountsRequest $req) This API is used to create a TencentDB account. The account name, host address, and password are required. Account remarks and maximum connections can also be configured.
+ * @method Models\CreateAuditLogFileResponse CreateAuditLogFile(Models\CreateAuditLogFileRequest $req) This API is used to create an audit log file for a TencentDB instance.
  * @method Models\CreateAuditPolicyResponse CreateAuditPolicy(Models\CreateAuditPolicyRequest $req) This API is used to create an audit policy for a TencentDB instance by associating an audit rule with the TencentDB instance.
+ * @method Models\CreateAuditRuleTemplateResponse CreateAuditRuleTemplate(Models\CreateAuditRuleTemplateRequest $req) This API is used to create an audit rule template.
  * @method Models\CreateBackupResponse CreateBackup(Models\CreateBackupRequest $req) This API (CreateBackup) is used to create a TencentDB instance backup.
  * @method Models\CreateCdbProxyResponse CreateCdbProxy(Models\CreateCdbProxyRequest $req) This API is used create a database proxy for a source instance.
  * @method Models\CreateCdbProxyAddressResponse CreateCdbProxyAddress(Models\CreateCdbProxyAddressRequest $req) This API is used to create a database proxy address.
@@ -63,15 +66,24 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
  * @method Models\CreateDatabaseResponse CreateDatabase(Models\CreateDatabaseRequest $req) This API is used to create a database in a TencentDB instance.
  * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) This API is used to create a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
  * @method Models\CreateRoInstanceIpResponse CreateRoInstanceIp(Models\CreateRoInstanceIpRequest $req) This API is used to create a VIP exclusive to a TencentDB read-only instance.
+ * @method Models\CreateRotationPasswordResponse CreateRotationPassword(Models\CreateRotationPasswordRequest $req) This API is used to enable password rotation.
  * @method Models\DeleteAccountsResponse DeleteAccounts(Models\DeleteAccountsRequest $req) This API (DeleteAccounts) is used to delete TencentDB accounts.
+ * @method Models\DeleteAuditLogFileResponse DeleteAuditLogFile(Models\DeleteAuditLogFileRequest $req) This API is used to delete an audit log file of a TencentDB instance.
+ * @method Models\DeleteAuditPolicyResponse DeleteAuditPolicy(Models\DeleteAuditPolicyRequest $req) This API is used to delete an audit policy.
+ * @method Models\DeleteAuditRuleTemplatesResponse DeleteAuditRuleTemplates(Models\DeleteAuditRuleTemplatesRequest $req) This API is used to delete audit rule templates.
  * @method Models\DeleteBackupResponse DeleteBackup(Models\DeleteBackupRequest $req) This API is used to delete a database backup. It can only delete manually initiated backups.
  * @method Models\DeleteParamTemplateResponse DeleteParamTemplate(Models\DeleteParamTemplateRequest $req) This API is used to delete a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
  * @method Models\DeleteTimeWindowResponse DeleteTimeWindow(Models\DeleteTimeWindowRequest $req) This API (DeleteTimeWindow) is used to delete a maintenance time window for a TencentDB instance. After it is deleted, the default maintenance time window will be 03:00-04:00, i.e., switch to a new instance will be performed during 03:00-04:00 by default.
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) This API (DescribeAccountPrivileges) is used to query the information of TencentDB account permissions.
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) This API is used to query information of all TencentDB accounts.
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) This API (DescribeAsyncRequestInfo) is used to query the async task execution result of a TencentDB instance.
+ * @method Models\DescribeAuditConfigResponse DescribeAuditConfig(Models\DescribeAuditConfigRequest $req) This API is used to query the service configurations for a TencentDB audit policy, including the audit log retention period.
+ * @method Models\DescribeAuditInstanceListResponse DescribeAuditInstanceList(Models\DescribeAuditInstanceListRequest $req) This API is used to obtain the list of audit instances.
+ * @method Models\DescribeAuditLogFilesResponse DescribeAuditLogFiles(Models\DescribeAuditLogFilesRequest $req) This API is used to query the audit log files of a TencentDB instance.
  * @method Models\DescribeAuditLogsResponse DescribeAuditLogs(Models\DescribeAuditLogsRequest $req) This API is used to query a database audit log.
  * @method Models\DescribeAuditPoliciesResponse DescribeAuditPolicies(Models\DescribeAuditPoliciesRequest $req) This API is used to query the audit policies of a TencentDB instance.
+ * @method Models\DescribeAuditRuleTemplateModifyHistoryResponse DescribeAuditRuleTemplateModifyHistory(Models\DescribeAuditRuleTemplateModifyHistoryRequest $req) This API is used to query the change history of rule templates.
+ * @method Models\DescribeAuditRuleTemplatesResponse DescribeAuditRuleTemplates(Models\DescribeAuditRuleTemplatesRequest $req) This API is used to query the information of audit rule templates.
  * @method Models\DescribeAuditRulesResponse DescribeAuditRules(Models\DescribeAuditRulesRequest $req) This API is used to query the audit rules in the current region.
  * @method Models\DescribeBackupConfigResponse DescribeBackupConfig(Models\DescribeBackupConfigRequest $req) This API (DescribeBackupConfig) is used to query the configuration information of a TencentDB instance backup.
  * @method Models\DescribeBackupDecryptionKeyResponse DescribeBackupDecryptionKey(Models\DescribeBackupDecryptionKeyRequest $req) This API is used to query the decryption key of a backup file.
@@ -138,6 +150,9 @@ Note: the HTTP response packet will be very large if it contain a single large s
 
 Note that when modifying account permissions, you need to pass in the full permission information of the account. You can [query the account permission information
 ](https://intl.cloud.tencent.com/document/api/236/17500?from_cn_redirect=1) first before modifying permissions.
+ * @method Models\ModifyAuditConfigResponse ModifyAuditConfig(Models\ModifyAuditConfigRequest $req) This API is used to modify the service configurations for a TencentDB audit policy, including the audit log retention period.
+ * @method Models\ModifyAuditRuleTemplatesResponse ModifyAuditRuleTemplates(Models\ModifyAuditRuleTemplatesRequest $req) This API is used to modify audit rule templates.
+ * @method Models\ModifyAuditServiceResponse ModifyAuditService(Models\ModifyAuditServiceRequest $req) This API is used to modify the service configurations for a TencentDB instance, including the audit log retention period and the audit rules.
  * @method Models\ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(Models\ModifyAutoRenewFlagRequest $req) This API is used to modify the auto-renewal flag of a TencentDB instance.
  * @method Models\ModifyBackupConfigResponse ModifyBackupConfig(Models\ModifyBackupConfigRequest $req) This API (ModifyBackupConfig) is used to modify the database backup configuration.
  * @method Models\ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(Models\ModifyBackupDownloadRestrictionRequest $req) This API is used to modify the restrictions of downloading backups in a region. You can specify which types of networks (private, or both private and public), VPCs, and IPs to download backups.

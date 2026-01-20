@@ -18,20 +18,20 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Filter of rule audit
+ * DescribeAuditConfig request structure.
  *
- * @method array getRuleFilters() Obtain A single audit rule.
- * @method void setRuleFilters(array $RuleFilters) Set A single audit rule.
+ * @method string getInstanceId() Obtain Instance ID, in the format such as cdb-c1nl9rpv or cdbro-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, in the format such as cdb-c1nl9rpv or cdbro-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
  */
-class AuditRuleFilters extends AbstractModel
+class DescribeAuditConfigRequest extends AbstractModel
 {
     /**
-     * @var array A single audit rule.
+     * @var string Instance ID, in the format such as cdb-c1nl9rpv or cdbro-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
-    public $RuleFilters;
+    public $InstanceId;
 
     /**
-     * @param array $RuleFilters A single audit rule.
+     * @param string $InstanceId Instance ID, in the format such as cdb-c1nl9rpv or cdbro-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     function __construct()
     {
@@ -46,13 +46,8 @@ class AuditRuleFilters extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleFilters",$param) and $param["RuleFilters"] !== null) {
-            $this->RuleFilters = [];
-            foreach ($param["RuleFilters"] as $key => $value){
-                $obj = new RuleFilters();
-                $obj->deserialize($value);
-                array_push($this->RuleFilters, $obj);
-            }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

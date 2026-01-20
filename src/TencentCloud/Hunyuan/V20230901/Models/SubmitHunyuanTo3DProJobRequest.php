@@ -20,6 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitHunyuanTo3DProJob request structure.
  *
+ * @method string getModel() Obtain Tencent HY 3D Global model version
+Defaults to 3.0, with optional choices: 3.0, 3.1
+When selecting version 3.1, the LowPoly parameter is unavailable
+Example value:3.0
+ * @method void setModel(string $Model) Set Tencent HY 3D Global model version
+Defaults to 3.0, with optional choices: 3.0, 3.1
+When selecting version 3.1, the LowPoly parameter is unavailable
+Example value:3.0
  * @method string getPrompt() Obtain Generates 3D content, describes 3D content.
 Supports up to 1024 utf-8 characters.
 Text-To-3D. Specifies either ImageBase64/ImageUrl or Prompt is required. Prompt and ImageBase64/ImageUrl cannot coexist.
@@ -63,18 +71,26 @@ Input image suggestion:
 Valid values: jpg, png, jpeg, webp.
 Specifies either ImageBase64/ImageUrl or Prompt is required. Prompt and ImageBase64/ImageUrl cannot coexist.
  * @method array getMultiViewImages() Obtain Multi-Perspective model image. reference value for viewing angle:.
-left view.
-right view.
-back view.
+left: Left view;
+right: Right view;
+back: Rear view;
+top: Top view (only supported in Model 3.1);
+bottom: Bottom view (only supported in Model 3.1);
+left_front: Left front 45 degree view (only supported in Model 3.1);
+right_front: Right front 45 degree view (only supported in Model 3.1);
 
 Each perspective is limited to one image.
 Image size limit. the value must not exceed 8 mb after encoding.
 Image resolution limitation: the unilateral resolution should be less than 5000 and greater than 128.
 Supported image format: JPG or PNG
  * @method void setMultiViewImages(array $MultiViewImages) Set Multi-Perspective model image. reference value for viewing angle:.
-left view.
-right view.
-back view.
+left: Left view;
+right: Right view;
+back: Rear view;
+top: Top view (only supported in Model 3.1);
+bottom: Bottom view (only supported in Model 3.1);
+left_front: Left front 45 degree view (only supported in Model 3.1);
+right_front: Right front 45 degree view (only supported in Model 3.1);
 
 Each perspective is limited to one image.
 Image size limit. the value must not exceed 8 mb after encoding.
@@ -110,6 +126,14 @@ quadrilateral: mix quadrangle and triangle faces to generate.
 class SubmitHunyuanTo3DProJobRequest extends AbstractModel
 {
     /**
+     * @var string Tencent HY 3D Global model version
+Defaults to 3.0, with optional choices: 3.0, 3.1
+When selecting version 3.1, the LowPoly parameter is unavailable
+Example value:3.0
+     */
+    public $Model;
+
+    /**
      * @var string Generates 3D content, describes 3D content.
 Supports up to 1024 utf-8 characters.
 Text-To-3D. Specifies either ImageBase64/ImageUrl or Prompt is required. Prompt and ImageBase64/ImageUrl cannot coexist.
@@ -144,9 +168,13 @@ Specifies either ImageBase64/ImageUrl or Prompt is required. Prompt and ImageBas
 
     /**
      * @var array Multi-Perspective model image. reference value for viewing angle:.
-left view.
-right view.
-back view.
+left: Left view;
+right: Right view;
+back: Rear view;
+top: Top view (only supported in Model 3.1);
+bottom: Bottom view (only supported in Model 3.1);
+left_front: Left front 45 degree view (only supported in Model 3.1);
+right_front: Right front 45 degree view (only supported in Model 3.1);
 
 Each perspective is limited to one image.
 Image size limit. the value must not exceed 8 mb after encoding.
@@ -185,6 +213,10 @@ quadrilateral: mix quadrangle and triangle faces to generate.
     public $PolygonType;
 
     /**
+     * @param string $Model Tencent HY 3D Global model version
+Defaults to 3.0, with optional choices: 3.0, 3.1
+When selecting version 3.1, the LowPoly parameter is unavailable
+Example value:3.0
      * @param string $Prompt Generates 3D content, describes 3D content.
 Supports up to 1024 utf-8 characters.
 Text-To-3D. Specifies either ImageBase64/ImageUrl or Prompt is required. Prompt and ImageBase64/ImageUrl cannot coexist.
@@ -207,9 +239,13 @@ Input image suggestion:
 Valid values: jpg, png, jpeg, webp.
 Specifies either ImageBase64/ImageUrl or Prompt is required. Prompt and ImageBase64/ImageUrl cannot coexist.
      * @param array $MultiViewImages Multi-Perspective model image. reference value for viewing angle:.
-left view.
-right view.
-back view.
+left: Left view;
+right: Right view;
+back: Rear view;
+top: Top view (only supported in Model 3.1);
+bottom: Bottom view (only supported in Model 3.1);
+left_front: Left front 45 degree view (only supported in Model 3.1);
+right_front: Right front 45 degree view (only supported in Model 3.1);
 
 Each perspective is limited to one image.
 Image size limit. the value must not exceed 8 mb after encoding.
@@ -242,6 +278,10 @@ quadrilateral: mix quadrangle and triangle faces to generate.
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
+            $this->Model = $param["Model"];
+        }
+
         if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {
             $this->Prompt = $param["Prompt"];
         }

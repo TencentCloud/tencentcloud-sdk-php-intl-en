@@ -90,10 +90,12 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
  * @method void setExtra(string $Extra) Set A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
  * @method string getSdkVersion() Obtain BASIC: Basic version (Default).
 ENHANCE: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
  * @method void setSdkVersion(string $SdkVersion) Set BASIC: Basic version (Default).
 ENHANCE: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
  * @method string getActionList() Obtain This interface is used to control th action sequences.
@@ -199,6 +201,7 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
     /**
      * @var string BASIC: Basic version (Default).
 ENHANCE: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
      */
@@ -262,6 +265,7 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
      * @param string $Extra A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
      * @param string $SdkVersion BASIC: Basic version (Default).
 ENHANCE: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
      * @param string $ActionList This interface is used to control th action sequences.

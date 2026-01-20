@@ -18,20 +18,28 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Filter of rule audit
+ * DeleteAuditPolicy request structure.
  *
- * @method array getRuleFilters() Obtain A single audit rule.
- * @method void setRuleFilters(array $RuleFilters) Set A single audit rule.
+ * @method string getPolicyId() Obtain Audit policy ID.
+ * @method void setPolicyId(string $PolicyId) Set Audit policy ID.
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  */
-class AuditRuleFilters extends AbstractModel
+class DeleteAuditPolicyRequest extends AbstractModel
 {
     /**
-     * @var array A single audit rule.
+     * @var string Audit policy ID.
      */
-    public $RuleFilters;
+    public $PolicyId;
 
     /**
-     * @param array $RuleFilters A single audit rule.
+     * @var string Instance ID.
+     */
+    public $InstanceId;
+
+    /**
+     * @param string $PolicyId Audit policy ID.
+     * @param string $InstanceId Instance ID.
      */
     function __construct()
     {
@@ -46,13 +54,12 @@ class AuditRuleFilters extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleFilters",$param) and $param["RuleFilters"] !== null) {
-            $this->RuleFilters = [];
-            foreach ($param["RuleFilters"] as $key => $value){
-                $obj = new RuleFilters();
-                $obj->deserialize($value);
-                array_push($this->RuleFilters, $obj);
-            }
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }
