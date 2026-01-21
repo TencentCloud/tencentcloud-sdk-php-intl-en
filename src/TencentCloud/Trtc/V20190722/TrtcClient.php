@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Trtc\V20190722\Models as Models;
 
 /**
- * @method Models\ControlAIConversationResponse ControlAIConversation(Models\ControlAIConversationRequest $req) Provides server-side control of AI Conversation
+ * @method Models\ControlAIConversationResponse ControlAIConversation(Models\ControlAIConversationRequest $req) This API is used to provide service for server-side robot control.
  * @method Models\CreateCloudModerationResponse CreateCloudModeration(Models\CreateCloudModerationRequest $req) API description:
 This API is used to enable the cloud moderation feature to complete audio and video slicing, video frame extraction, and audio stream recording in the room, and submit them to the specified moderation supplier for completing the moderation.
 
