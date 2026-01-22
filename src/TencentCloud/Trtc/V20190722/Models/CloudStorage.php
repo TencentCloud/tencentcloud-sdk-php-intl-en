@@ -24,16 +24,26 @@ use TencentCloud\Common\AbstractModel;
 `0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
  * @method void setVendor(integer $Vendor) Set The cloud storage provider.
 `0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
- * @method string getRegion() Obtain The region of cloud storage.
- * @method void setRegion(string $Region) Set The region of cloud storage.
+ * @method string getRegion() Obtain [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+Example value: cn-shanghai-1.
+
+[Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
+ * @method void setRegion(string $Region) Set [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+Example value: cn-shanghai-1.
+
+[Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
  * @method string getBucket() Obtain The storage bucket.
  * @method void setBucket(string $Bucket) Set The storage bucket.
- * @method string getAccessKey() Obtain The access_key of the cloud storage account.
- * @method void setAccessKey(string $AccessKey) Set The access_key of the cloud storage account.
- * @method string getSecretKey() Obtain The secret_key of the cloud storage account.
- * @method void setSecretKey(string $SecretKey) Set The secret_key of the cloud storage account.
- * @method array getFileNamePrefix() Obtain The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
- * @method void setFileNamePrefix(array $FileNamePrefix) Set The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+ * @method string getAccessKey() Obtain access_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretId value corresponding to the key fields in the link.
+ * @method void setAccessKey(string $AccessKey) Set access_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretId value corresponding to the key fields in the link.
+ * @method string getSecretKey() Obtain secret_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretKey value corresponding to the key fields in the link.
+ * @method void setSecretKey(string $SecretKey) Set secret_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretKey value corresponding to the key fields in the link.
+ * @method array getFileNamePrefix() Obtain The specified position of the cloud storage bucket consists of an array of strings. valid values: az, az, 0-9, '_', and '-'. for example, the recording file xxx.m3u8 becomes prefix1/prefix2/TaskId/xxx.m3u8 under the function of ["prefix1", "prefix2"].
+ * @method void setFileNamePrefix(array $FileNamePrefix) Set The specified position of the cloud storage bucket consists of an array of strings. valid values: az, az, 0-9, '_', and '-'. for example, the recording file xxx.m3u8 becomes prefix1/prefix2/TaskId/xxx.m3u8 under the function of ["prefix1", "prefix2"].
  */
 class CloudStorage extends AbstractModel
 {
@@ -44,7 +54,10 @@ class CloudStorage extends AbstractModel
     public $Vendor;
 
     /**
-     * @var string The region of cloud storage.
+     * @var string [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+Example value: cn-shanghai-1.
+
+[Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
      */
     public $Region;
 
@@ -54,28 +67,35 @@ class CloudStorage extends AbstractModel
     public $Bucket;
 
     /**
-     * @var string The access_key of the cloud storage account.
+     * @var string access_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretId value corresponding to the key fields in the link.
      */
     public $AccessKey;
 
     /**
-     * @var string The secret_key of the cloud storage account.
+     * @var string secret_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretKey value corresponding to the key fields in the link.
      */
     public $SecretKey;
 
     /**
-     * @var array The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+     * @var array The specified position of the cloud storage bucket consists of an array of strings. valid values: az, az, 0-9, '_', and '-'. for example, the recording file xxx.m3u8 becomes prefix1/prefix2/TaskId/xxx.m3u8 under the function of ["prefix1", "prefix2"].
      */
     public $FileNamePrefix;
 
     /**
      * @param integer $Vendor The cloud storage provider.
 `0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
-     * @param string $Region The region of cloud storage.
+     * @param string $Region [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+Example value: cn-shanghai-1.
+
+[Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
      * @param string $Bucket The storage bucket.
-     * @param string $AccessKey The access_key of the cloud storage account.
-     * @param string $SecretKey The secret_key of the cloud storage account.
-     * @param array $FileNamePrefix The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+     * @param string $AccessKey access_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretId value corresponding to the key fields in the link.
+     * @param string $SecretKey secret_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretKey value corresponding to the key fields in the link.
+     * @param array $FileNamePrefix The specified position of the cloud storage bucket consists of an array of strings. valid values: az, az, 0-9, '_', and '-'. for example, the recording file xxx.m3u8 becomes prefix1/prefix2/TaskId/xxx.m3u8 under the function of ["prefix1", "prefix2"].
      */
     function __construct()
     {

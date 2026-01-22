@@ -20,86 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The Tencent Cloud VOD parameters.
  *
- * @method string getProcedure() Obtain The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
- * @method void setProcedure(string $Procedure) Set The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
- * @method integer getExpireTime() Obtain The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
- * @method void setExpireTime(integer $ExpireTime) Set The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
- * @method string getStorageRegion() Obtain The storage region. Set this parameter if you have special requirements on the storage region.
- * @method void setStorageRegion(string $StorageRegion) Set The storage region. Set this parameter if you have special requirements on the storage region.
- * @method integer getClassId() Obtain The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
-The default value is `0`, which means others.
- * @method void setClassId(integer $ClassId) Set The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
-The default value is `0`, which means others.
- * @method integer getSubAppId() Obtain The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
- * @method string getSessionContext() Obtain The task flow context, which is passed through after the task is completed.
- * @method void setSessionContext(string $SessionContext) Set The task flow context, which is passed through after the task is completed.
- * @method string getSourceContext() Obtain The upload context, which is passed through after upload is completed.
- * @method void setSourceContext(string $SourceContext) Set The upload context, which is passed through after upload is completed.
- * @method integer getMediaType() Obtain The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
- * @method void setMediaType(integer $MediaType) Set The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
- * @method string getUserDefineRecordId() Obtain The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
- * @method void setUserDefineRecordId(string $UserDefineRecordId) Set The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+ * @method string getProcedure() Obtain Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
+ * @method void setProcedure(string $Procedure) Set Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
+ * @method integer getExpireTime() Obtain Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
+ * @method void setExpireTime(integer $ExpireTime) Set Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
+ * @method string getStorageRegion() Obtain Specify the upload park, applicable only to the user with special requirement for upload region.
+ * @method void setStorageRegion(string $StorageRegion) Set Specify the upload park, applicable only to the user with special requirement for upload region.
+ * @method integer getClassId() Obtain Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
+ * @method void setClassId(integer $ClassId) Set Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
+ * @method integer getSubAppId() Obtain Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
+ * @method void setSubAppId(integer $SubAppId) Set Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
+ * @method string getSessionContext() Obtain Task flow context, passed through when task complete.
+ * @method void setSessionContext(string $SessionContext) Set Task flow context, passed through when task complete.
+ * @method string getSourceContext() Obtain Upload context, passed through on upload completion callback.
+ * @method void setSourceContext(string $SourceContext) Set Upload context, passed through on upload completion callback.
+ * @method integer getMediaType() Obtain The recording file format type uploaded to the vod platform. valid values: 0: mp4 (default), 1: hls, 2: aac (valid at that time when StreamType=1 for audio-only recording).
+3: hls+mp4, 4: hls+aac (valid at that time when StreamType=1 is audio-only recording).
+ * @method void setMediaType(integer $MediaType) Set The recording file format type uploaded to the vod platform. valid values: 0: mp4 (default), 1: hls, 2: aac (valid at that time when StreamType=1 for audio-only recording).
+3: hls+mp4, 4: hls+aac (valid at that time when StreamType=1 is audio-only recording).
+ * @method string getUserDefineRecordId() Obtain Only supports API recording upload to vod. this parameter indicates you can customize the recording file name prefix. [length limit: 64 bytes, only allows a combination of uppercase and lowercase letters (a-zA-Z), numbers (0-9), underline, and hyphen]. the prefix is separated from the automatically generated recording file name by `__UserDefine_u_`.
+ * @method void setUserDefineRecordId(string $UserDefineRecordId) Set Only supports API recording upload to vod. this parameter indicates you can customize the recording file name prefix. [length limit: 64 bytes, only allows a combination of uppercase and lowercase letters (a-zA-Z), numbers (0-9), underline, and hyphen]. the prefix is separated from the automatically generated recording file name by `__UserDefine_u_`.
  */
 class TencentVod extends AbstractModel
 {
     /**
-     * @var string The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
+     * @var string Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
      */
     public $Procedure;
 
     /**
-     * @var integer The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
+     * @var integer Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
      */
     public $ExpireTime;
 
     /**
-     * @var string The storage region. Set this parameter if you have special requirements on the storage region.
+     * @var string Specify the upload park, applicable only to the user with special requirement for upload region.
      */
     public $StorageRegion;
 
     /**
-     * @var integer The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
-The default value is `0`, which means others.
+     * @var integer Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
      */
     public $ClassId;
 
     /**
-     * @var integer The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+     * @var integer Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
      */
     public $SubAppId;
 
     /**
-     * @var string The task flow context, which is passed through after the task is completed.
+     * @var string Task flow context, passed through when task complete.
      */
     public $SessionContext;
 
     /**
-     * @var string The upload context, which is passed through after upload is completed.
+     * @var string Upload context, passed through on upload completion callback.
      */
     public $SourceContext;
 
     /**
-     * @var integer The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
+     * @var integer The recording file format type uploaded to the vod platform. valid values: 0: mp4 (default), 1: hls, 2: aac (valid at that time when StreamType=1 for audio-only recording).
+3: hls+mp4, 4: hls+aac (valid at that time when StreamType=1 is audio-only recording).
      */
     public $MediaType;
 
     /**
-     * @var string The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+     * @var string Only supports API recording upload to vod. this parameter indicates you can customize the recording file name prefix. [length limit: 64 bytes, only allows a combination of uppercase and lowercase letters (a-zA-Z), numbers (0-9), underline, and hyphen]. the prefix is separated from the automatically generated recording file name by `__UserDefine_u_`.
      */
     public $UserDefineRecordId;
 
     /**
-     * @param string $Procedure The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
-     * @param integer $ExpireTime The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
-     * @param string $StorageRegion The storage region. Set this parameter if you have special requirements on the storage region.
-     * @param integer $ClassId The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
-The default value is `0`, which means others.
-     * @param integer $SubAppId The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-     * @param string $SessionContext The task flow context, which is passed through after the task is completed.
-     * @param string $SourceContext The upload context, which is passed through after upload is completed.
-     * @param integer $MediaType The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
-     * @param string $UserDefineRecordId The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+     * @param string $Procedure Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
+     * @param integer $ExpireTime Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
+     * @param string $StorageRegion Specify the upload park, applicable only to the user with special requirement for upload region.
+     * @param integer $ClassId Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
+     * @param integer $SubAppId Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
+     * @param string $SessionContext Task flow context, passed through when task complete.
+     * @param string $SourceContext Upload context, passed through on upload completion callback.
+     * @param integer $MediaType The recording file format type uploaded to the vod platform. valid values: 0: mp4 (default), 1: hls, 2: aac (valid at that time when StreamType=1 for audio-only recording).
+3: hls+mp4, 4: hls+aac (valid at that time when StreamType=1 is audio-only recording).
+     * @param string $UserDefineRecordId Only supports API recording upload to vod. this parameter indicates you can customize the recording file name prefix. [length limit: 64 bytes, only allows a combination of uppercase and lowercase letters (a-zA-Z), numbers (0-9), underline, and hyphen]. the prefix is separated from the automatically generated recording file name by `__UserDefine_u_`.
      */
     function __construct()
     {

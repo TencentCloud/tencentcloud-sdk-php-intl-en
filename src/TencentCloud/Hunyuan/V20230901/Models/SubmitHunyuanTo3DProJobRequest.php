@@ -96,32 +96,32 @@ Each perspective is limited to one image.
 Image size limit. the value must not exceed 8 mb after encoding.
 Image resolution limitation: the unilateral resolution should be less than 5000 and greater than 128.
 Supported image format: JPG or PNG
- * @method boolean getEnablePBR() Obtain Specifies whether PBR material generation is enabled. default false.
- * @method void setEnablePBR(boolean $EnablePBR) Set Specifies whether PBR material generation is enabled. default false.
+ * @method boolean getEnablePBR() Obtain Specifies whether PBR material generation is enabled. default false
+ * @method void setEnablePBR(boolean $EnablePBR) Set Specifies whether PBR material generation is enabled. default false
  * @method integer getFaceCount() Obtain Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000.
+Specifies the supported face count generation range. value range: 40000-1500000
  * @method void setFaceCount(integer $FaceCount) Set Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000.
- * @method string getGenerateType() Obtain Generation task type. default: Normal. valid values:.
-Normal: generates a geometric model with textures.
+Specifies the supported face count generation range. value range: 40000-1500000
+ * @method string getGenerateType() Obtain Generation task type. default: Normal. valid values:
+Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together.
- * @method void setGenerateType(string $GenerateType) Set Generation task type. default: Normal. valid values:.
-Normal: generates a geometric model with textures.
+Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
+ * @method void setGenerateType(string $GenerateType) Set Generation task type. default: Normal. valid values:
+Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together.
- * @method string getPolygonType() Obtain This parameter only takes effect when LowPoly mode is selected from GenerateType.
+Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
+ * @method string getPolygonType() Obtain This parameter only takes effect when LowPoly mode is selected from GenerateType
 
-Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-triangle. specifies the triangular face.
-quadrilateral: mix quadrangle and triangle faces to generate.
- * @method void setPolygonType(string $PolygonType) Set This parameter only takes effect when LowPoly mode is selected from GenerateType.
+Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+triangle. specifies the triangular face
+quadrilateral: mix quadrangle and triangle faces to generate
+ * @method void setPolygonType(string $PolygonType) Set This parameter only takes effect when LowPoly mode is selected from GenerateType
 
-Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-triangle. specifies the triangular face.
-quadrilateral: mix quadrangle and triangle faces to generate.
+Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+triangle. specifies the triangular face
+quadrilateral: mix quadrangle and triangle faces to generate
  */
 class SubmitHunyuanTo3DProJobRequest extends AbstractModel
 {
@@ -184,31 +184,31 @@ Supported image format: JPG or PNG
     public $MultiViewImages;
 
     /**
-     * @var boolean Specifies whether PBR material generation is enabled. default false.
+     * @var boolean Specifies whether PBR material generation is enabled. default false
      */
     public $EnablePBR;
 
     /**
      * @var integer Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000.
+Specifies the supported face count generation range. value range: 40000-1500000
      */
     public $FaceCount;
 
     /**
-     * @var string Generation task type. default: Normal. valid values:.
-Normal: generates a geometric model with textures.
+     * @var string Generation task type. default: Normal. valid values:
+Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together.
+Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
      */
     public $GenerateType;
 
     /**
-     * @var string This parameter only takes effect when LowPoly mode is selected from GenerateType.
+     * @var string This parameter only takes effect when LowPoly mode is selected from GenerateType
 
-Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-triangle. specifies the triangular face.
-quadrilateral: mix quadrangle and triangle faces to generate.
+Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+triangle. specifies the triangular face
+quadrilateral: mix quadrangle and triangle faces to generate
      */
     public $PolygonType;
 
@@ -251,19 +251,19 @@ Each perspective is limited to one image.
 Image size limit. the value must not exceed 8 mb after encoding.
 Image resolution limitation: the unilateral resolution should be less than 5000 and greater than 128.
 Supported image format: JPG or PNG
-     * @param boolean $EnablePBR Specifies whether PBR material generation is enabled. default false.
+     * @param boolean $EnablePBR Specifies whether PBR material generation is enabled. default false
      * @param integer $FaceCount Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000.
-     * @param string $GenerateType Generation task type. default: Normal. valid values:.
-Normal: generates a geometric model with textures.
+Specifies the supported face count generation range. value range: 40000-1500000
+     * @param string $GenerateType Generation task type. default: Normal. valid values:
+Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together.
-     * @param string $PolygonType This parameter only takes effect when LowPoly mode is selected from GenerateType.
+Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
+     * @param string $PolygonType This parameter only takes effect when LowPoly mode is selected from GenerateType
 
-Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-triangle. specifies the triangular face.
-quadrilateral: mix quadrangle and triangle faces to generate.
+Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+triangle. specifies the triangular face
+quadrilateral: mix quadrangle and triangle faces to generate
      */
     function __construct()
     {

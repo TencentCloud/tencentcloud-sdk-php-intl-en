@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryHunyuan3DPartJob request structure.
  *
- * @method string getJobId() Obtain Task ID.	
- * @method void setJobId(string $JobId) Set Task ID.	
+ * @method string getJobId() Obtain Task ID
+ * @method void setJobId(string $JobId) Set Task ID
  */
 class QueryHunyuan3DPartJobRequest extends AbstractModel
 {
     /**
-     * @var string Task ID.	
+     * @var string Task ID
      */
     public $JobId;
 
     /**
-     * @param string $JobId Task ID.	
+     * @param string $JobId Task ID
      */
     function __construct()
     {

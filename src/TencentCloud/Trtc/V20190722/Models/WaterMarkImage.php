@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The information of watermark images.
  *
- * @method string getWaterMarkUrl() Obtain The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
- * @method void setWaterMarkUrl(string $WaterMarkUrl) Set The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
+ * @method string getWaterMarkUrl() Obtain The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
+ * @method void setWaterMarkUrl(string $WaterMarkUrl) Set The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
  * @method integer getTop() Obtain The Y axis of the image's top-left corner. Value range: [0, 2560]. The value cannot be larger than the canvas height.
  * @method void setTop(integer $Top) Set The Y axis of the image's top-left corner. Value range: [0, 2560]. The value cannot be larger than the canvas height.
  * @method integer getLeft() Obtain The X axis of the image’s top-left corner. Value range: [0, 2560]. The value cannot be larger than the canvas width.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class WaterMarkImage extends AbstractModel
 {
     /**
-     * @var string The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
+     * @var string The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
      */
     public $WaterMarkUrl;
 
@@ -59,7 +59,7 @@ class WaterMarkImage extends AbstractModel
     public $Height;
 
     /**
-     * @param string $WaterMarkUrl The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
+     * @param string $WaterMarkUrl The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
      * @param integer $Top The Y axis of the image's top-left corner. Value range: [0, 2560]. The value cannot be larger than the canvas height.
      * @param integer $Left The X axis of the image’s top-left corner. Value range: [0, 2560]. The value cannot be larger than the canvas width.
      * @param integer $Width The relative width of the image. Value range: [0, 2560]. The sum of the values of this parameter and `Left` cannot exceed the canvas width.

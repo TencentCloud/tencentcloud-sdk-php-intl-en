@@ -20,33 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Convert3DFormat request structure.
  *
- * @method string getFile3D() Obtain 3D file url address. model file size ≤60 mb. supports fbx, obj, and glb format 3d file input.
- * @method void setFile3D(string $File3D) Set 3D file url address. model file size ≤60 mb. supports fbx, obj, and glb format 3d file input.
- * @method string getFormat() Obtain Returns the 3D file format. valid values: STL, USDZ, FBX, MP4, GIF.
-Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format.
+ * @method string getFile3D() Obtain 3D file url address. model file size not greater than 60 mb
+Supports fbx, obj, and glb format 3d file input
+ * @method void setFile3D(string $File3D) Set 3D file url address. model file size not greater than 60 mb
+Supports fbx, obj, and glb format 3d file input
+ * @method string getFormat() Obtain Returns the 3D file format. valid values: 
+STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
 Example value: STL.
- * @method void setFormat(string $Format) Set Returns the 3D file format. valid values: STL, USDZ, FBX, MP4, GIF.
-Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format.
+ * @method void setFormat(string $Format) Set Returns the 3D file format. valid values: 
+STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
 Example value: STL.
  */
 class Convert3DFormatRequest extends AbstractModel
 {
     /**
-     * @var string 3D file url address. model file size ≤60 mb. supports fbx, obj, and glb format 3d file input.
+     * @var string 3D file url address. model file size not greater than 60 mb
+Supports fbx, obj, and glb format 3d file input
      */
     public $File3D;
 
     /**
-     * @var string Returns the 3D file format. valid values: STL, USDZ, FBX, MP4, GIF.
-Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format.
+     * @var string Returns the 3D file format. valid values: 
+STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
 Example value: STL.
      */
     public $Format;
 
     /**
-     * @param string $File3D 3D file url address. model file size ≤60 mb. supports fbx, obj, and glb format 3d file input.
-     * @param string $Format Returns the 3D file format. valid values: STL, USDZ, FBX, MP4, GIF.
-Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format.
+     * @param string $File3D 3D file url address. model file size not greater than 60 mb
+Supports fbx, obj, and glb format 3d file input
+     * @param string $Format Returns the 3D file format. valid values: 
+STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
 Example value: STL.
      */
     function __construct()

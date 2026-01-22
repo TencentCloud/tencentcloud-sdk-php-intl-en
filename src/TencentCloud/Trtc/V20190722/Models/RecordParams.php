@@ -20,98 +20,150 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The on-cloud recording parameters.
  *
- * @method integer getRecordMode() Obtain The recording mode.
-1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
- * @method void setRecordMode(integer $RecordMode) Set The recording mode.
-1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
- * @method integer getMaxIdleTime() Obtain The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
- * @method void setMaxIdleTime(integer $MaxIdleTime) Set The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
- * @method integer getStreamType() Obtain The media type of the streams to record.
-0: Audio and video streams (default)
-1: Audio streams only
-2: Video streams only
- * @method void setStreamType(integer $StreamType) Set The media type of the streams to record.
-0: Audio and video streams (default)
-1: Audio streams only
-2: Video streams only
- * @method SubscribeStreamUserIds getSubscribeStreamUserIds() Obtain The allowlist/blocklist for stream subscription.
- * @method void setSubscribeStreamUserIds(SubscribeStreamUserIds $SubscribeStreamUserIds) Set The allowlist/blocklist for stream subscription.
- * @method integer getOutputFormat() Obtain The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
- * @method void setOutputFormat(integer $OutputFormat) Set The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
- * @method integer getAvMerge() Obtain Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
- * @method void setAvMerge(integer $AvMerge) Set Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
- * @method integer getMaxMediaFileDuration() Obtain The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-This parameter is invalid if the output format is HLS.
- * @method void setMaxMediaFileDuration(integer $MaxMediaFileDuration) Set The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-This parameter is invalid if the output format is HLS.
- * @method integer getMediaId() Obtain The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
- * @method void setMediaId(integer $MediaId) Set The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
+ * @method integer getRecordMode() Obtain Recording mode:.
+1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage.
+ * @method void setRecordMode(integer $RecordMode) Set Recording mode:.
+1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage.
+ * @method integer getMaxIdleTime() Obtain Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours).
+ * @method void setMaxIdleTime(integer $MaxIdleTime) Set Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours).
+ * @method integer getStreamType() Obtain Media stream type for recording.
+0: recording audio and video streams (default).
+1: record audio streams only.
+2: record video stream only.
+ * @method void setStreamType(integer $StreamType) Set Media stream type for recording.
+0: recording audio and video streams (default).
+1: record audio streams only.
+2: record video stream only.
+ * @method SubscribeStreamUserIds getSubscribeStreamUserIds() Obtain Specifies the allowlist or blocklist for the subscription stream.
+ * @method void setSubscribeStreamUserIds(SubscribeStreamUserIds $SubscribeStreamUserIds) Set Specifies the allowlist or blocklist for the subscription stream.
+ * @method integer getOutputFormat() Obtain Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+
+This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+ * @method void setOutputFormat(integer $OutputFormat) Set Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+
+This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+ * @method integer getAvMerge() Obtain In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default.
+ * @method void setAvMerge(integer $AvMerge) Set In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default.
+ * @method integer getMaxMediaFileDuration() Obtain If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+ * @method void setMaxMediaFileDuration(integer $MaxMediaFileDuration) Set If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+ * @method integer getMediaId() Obtain Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream.
+ * @method void setMediaId(integer $MediaId) Set Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream.
+ * @method integer getFillType() Obtain Specifies the type of frame to fill when the upstream video stream stops:
+- 0: Fill with the last frame (freeze the last video frame)
+- 1: Fill with black frames
+ * @method void setFillType(integer $FillType) Set Specifies the type of frame to fill when the upstream video stream stops:
+- 0: Fill with the last frame (freeze the last video frame)
+- 1: Fill with black frames
+ * @method integer getSubscribeAbility() Obtain Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+
+- 1: Subscribe. 
+- 0: Do not subscribe (default).
+> Note: 
+When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file.
+ * @method void setSubscribeAbility(integer $SubscribeAbility) Set Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+
+- 1: Subscribe. 
+- 0: Do not subscribe (default).
+> Note: 
+When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file.
  */
 class RecordParams extends AbstractModel
 {
     /**
-     * @var integer The recording mode.
-1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
+     * @var integer Recording mode:.
+1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage.
      */
     public $RecordMode;
 
     /**
-     * @var integer The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
+     * @var integer Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours).
      */
     public $MaxIdleTime;
 
     /**
-     * @var integer The media type of the streams to record.
-0: Audio and video streams (default)
-1: Audio streams only
-2: Video streams only
+     * @var integer Media stream type for recording.
+0: recording audio and video streams (default).
+1: record audio streams only.
+2: record video stream only.
      */
     public $StreamType;
 
     /**
-     * @var SubscribeStreamUserIds The allowlist/blocklist for stream subscription.
+     * @var SubscribeStreamUserIds Specifies the allowlist or blocklist for the subscription stream.
      */
     public $SubscribeStreamUserIds;
 
     /**
-     * @var integer The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+     * @var integer Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+
+This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
      */
     public $OutputFormat;
 
     /**
-     * @var integer Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+     * @var integer In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default.
      */
     public $AvMerge;
 
     /**
-     * @var integer The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-This parameter is invalid if the output format is HLS.
+     * @var integer If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
      */
     public $MaxMediaFileDuration;
 
     /**
-     * @var integer The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
+     * @var integer Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream.
      */
     public $MediaId;
 
     /**
-     * @param integer $RecordMode The recording mode.
-1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
-     * @param integer $MaxIdleTime The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
-     * @param integer $StreamType The media type of the streams to record.
-0: Audio and video streams (default)
-1: Audio streams only
-2: Video streams only
-     * @param SubscribeStreamUserIds $SubscribeStreamUserIds The allowlist/blocklist for stream subscription.
-     * @param integer $OutputFormat The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
-     * @param integer $AvMerge Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
-     * @param integer $MaxMediaFileDuration The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-This parameter is invalid if the output format is HLS.
-     * @param integer $MediaId The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
+     * @var integer Specifies the type of frame to fill when the upstream video stream stops:
+- 0: Fill with the last frame (freeze the last video frame)
+- 1: Fill with black frames
+     */
+    public $FillType;
+
+    /**
+     * @var integer Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+
+- 1: Subscribe. 
+- 0: Do not subscribe (default).
+> Note: 
+When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file.
+     */
+    public $SubscribeAbility;
+
+    /**
+     * @param integer $RecordMode Recording mode:.
+1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage.
+     * @param integer $MaxIdleTime Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours).
+     * @param integer $StreamType Media stream type for recording.
+0: recording audio and video streams (default).
+1: record audio streams only.
+2: record video stream only.
+     * @param SubscribeStreamUserIds $SubscribeStreamUserIds Specifies the allowlist or blocklist for the subscription stream.
+     * @param integer $OutputFormat Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+
+This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+     * @param integer $AvMerge In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default.
+     * @param integer $MaxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+     * @param integer $MediaId Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream.
+     * @param integer $FillType Specifies the type of frame to fill when the upstream video stream stops:
+- 0: Fill with the last frame (freeze the last video frame)
+- 1: Fill with black frames
+     * @param integer $SubscribeAbility Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+
+- 1: Subscribe. 
+- 0: Do not subscribe (default).
+> Note: 
+When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file.
      */
     function __construct()
     {
@@ -157,6 +209,14 @@ This parameter is invalid if the output format is HLS.
 
         if (array_key_exists("MediaId",$param) and $param["MediaId"] !== null) {
             $this->MediaId = $param["MediaId"];
+        }
+
+        if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
+            $this->FillType = $param["FillType"];
+        }
+
+        if (array_key_exists("SubscribeAbility",$param) and $param["SubscribeAbility"] !== null) {
+            $this->SubscribeAbility = $param["SubscribeAbility"];
         }
     }
 }

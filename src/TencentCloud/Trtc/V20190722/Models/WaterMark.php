@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The watermark layout.
  *
- * @method integer getWaterMarkType() Obtain The watermark type. 0 (default): image; 1: text (not supported yet).
- * @method void setWaterMarkType(integer $WaterMarkType) Set The watermark type. 0 (default): image; 1: text (not supported yet).
+ * @method integer getWaterMarkType() Obtain The watermark type. 0 (default): image; 1: text; 2: timestamp.
+ * @method void setWaterMarkType(integer $WaterMarkType) Set The watermark type. 0 (default): image; 1: text; 2: timestamp.
  * @method WaterMarkImage getWaterMarkImage() Obtain The information of watermark images. This parameter is required if the watermark type is image.
  * @method void setWaterMarkImage(WaterMarkImage $WaterMarkImage) Set The information of watermark images. This parameter is required if the watermark type is image.
  * @method WaterMarkChar getWaterMarkChar() Obtain The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class WaterMark extends AbstractModel
 {
     /**
-     * @var integer The watermark type. 0 (default): image; 1: text (not supported yet).
+     * @var integer The watermark type. 0 (default): image; 1: text; 2: timestamp.
      */
     public $WaterMarkType;
 
@@ -52,7 +52,7 @@ class WaterMark extends AbstractModel
     public $WaterMarkTimestamp;
 
     /**
-     * @param integer $WaterMarkType The watermark type. 0 (default): image; 1: text (not supported yet).
+     * @param integer $WaterMarkType The watermark type. 0 (default): image; 1: text; 2: timestamp.
      * @param WaterMarkImage $WaterMarkImage The information of watermark images. This parameter is required if the watermark type is image.
      * @param WaterMarkChar $WaterMarkChar The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
      * @param WaterMarkTimestamp $WaterMarkTimestamp The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
