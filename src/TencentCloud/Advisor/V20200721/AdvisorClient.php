@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Advisor\V20200721\Models as Models;
 
 /**
+ * @method Models\CreateAdvisorAuthorizationResponse CreateAdvisorAuthorization(Models\CreateAdvisorAuthorizationRequest $req) Enable Tencent Cloud Smart Advisor authorization. This will synchronously enable report interpretation and cloud architecture collaboration permissions.
  * @method Models\DescribeStrategiesResponse DescribeStrategies(Models\DescribeStrategiesRequest $req) This API is used to query information about assessment items.
  * @method Models\DescribeTaskStrategyRisksResponse DescribeTaskStrategyRisks(Models\DescribeTaskStrategyRisksRequest $req) This API is used to query the risky instance list of the assessment item.
  */

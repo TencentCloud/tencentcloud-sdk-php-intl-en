@@ -27,6 +27,8 @@ use TencentCloud\Billing\V20180709\Models as Models;
  * @method Models\CreateAllocationTagResponse CreateAllocationTag(Models\CreateAllocationTagRequest $req) This API is used to batch set cost allocation tags.
  * @method Models\CreateAllocationUnitResponse CreateAllocationUnit(Models\CreateAllocationUnitRequest $req) This API is used to create allocation units.
  * @method Models\CreateGatherRuleResponse CreateGatherRule(Models\CreateGatherRuleRequest $req) Create a collection rule.
+ * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) Creating an instance resource will generate an order for the newly purchased instance resource and automatically complete the payment using the balance of the Tencent Cloud account. The account calling this API must be granted the finace:trade permission; otherwise, the payment will fail.
+Currently, the integrated and supported product for purchase includes: Cloud Firewall.
  * @method Models\DeleteAllocationRuleResponse DeleteAllocationRule(Models\DeleteAllocationRuleRequest $req) Delete sharing rule interface.
  * @method Models\DeleteAllocationTagResponse DeleteAllocationTag(Models\DeleteAllocationTagRequest $req) u200cThis API is used to batch cancel cost allocation tags.
  * @method Models\DeleteAllocationUnitResponse DeleteAllocationUnit(Models\DeleteAllocationUnitRequest $req) Delete a cost allocation unit.
