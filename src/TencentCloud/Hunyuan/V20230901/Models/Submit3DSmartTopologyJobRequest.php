@@ -33,11 +33,11 @@ Url: file size cannot exceed 200MB.
  * @method string getPolygonType() Obtain Polygon type, indicates the model surface is composed of grid components, defaults to triangle
 Reference value:
 triangle: triangle face
-quadrilateral: quadrangle face
+quadrilateral: triangular and quadrilateral mixed face
  * @method void setPolygonType(string $PolygonType) Set Polygon type, indicates the model surface is composed of grid components, defaults to triangle
 Reference value:
 triangle: triangle face
-quadrilateral: quadrangle face
+quadrilateral: triangular and quadrilateral mixed face
  * @method string getFaceLevel() Obtain Reduction level bit type
 valid values: high, medium, low
  * @method void setFaceLevel(string $FaceLevel) Set Reduction level bit type
@@ -58,7 +58,7 @@ Url: file size cannot exceed 200MB.
      * @var string Polygon type, indicates the model surface is composed of grid components, defaults to triangle
 Reference value:
 triangle: triangle face
-quadrilateral: quadrangle face
+quadrilateral: triangular and quadrilateral mixed face
      */
     public $PolygonType;
 
@@ -77,7 +77,7 @@ Url: file size cannot exceed 200MB.
      * @param string $PolygonType Polygon type, indicates the model surface is composed of grid components, defaults to triangle
 Reference value:
 triangle: triangle face
-quadrilateral: quadrangle face
+quadrilateral: triangular and quadrilateral mixed face
      * @param string $FaceLevel Reduction level bit type
 valid values: high, medium, low
      */
