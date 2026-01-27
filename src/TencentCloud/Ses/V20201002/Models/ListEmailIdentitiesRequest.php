@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListEmailIdentities request structure.
  *
-
+ * @method array getTagList() Obtain tag.
+ * @method void setTagList(array $TagList) Set tag.
+ * @method integer getLimit() Obtain Pagination limit.
+ * @method void setLimit(integer $Limit) Set Pagination limit.
+ * @method integer getOffset() Obtain Paging offset.
+ * @method void setOffset(integer $Offset) Set Paging offset.
  */
 class ListEmailIdentitiesRequest extends AbstractModel
 {
-
+    /**
+     * @var array tag.
+     */
+    public $TagList;
 
     /**
+     * @var integer Pagination limit.
+     */
+    public $Limit;
 
+    /**
+     * @var integer Paging offset.
+     */
+    public $Offset;
+
+    /**
+     * @param array $TagList tag.
+     * @param integer $Limit Pagination limit.
+     * @param integer $Offset Paging offset.
      */
     function __construct()
     {
@@ -42,6 +62,21 @@ class ListEmailIdentitiesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new TagList();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
+        }
 
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
     }
 }

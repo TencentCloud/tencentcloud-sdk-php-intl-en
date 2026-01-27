@@ -23,6 +23,12 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Hunyuan\V20230901\Models as Models;
 
 /**
+ * @method Models\ChatTranslationsResponse ChatTranslations(Models\ChatTranslationsRequest $req) Tencent Hunyuan is a large language model (LLM) developed by Tencent R&D. It possesses powerful Chinese creation capacity, logical reasoning in complex context, and reliable task execution power. This API supports streaming or non-streaming calls. When using streaming calls, it follows the SSE protocol.
+
+1. This API does not currently support returning Image Content.
+2. By default, this API has account restrictions with a number of concurrencies of 5. 
+3. Please use the SDK to call this API. examples are provided in the Git repository examples/hunyuan/v20230901/ directory for each development language. The SDK link is provided in the "**Developer Resources - SDK**" part under the document.
+4. We recommend you use API Explorer for quick online debugging interface and download example code in languages, [click to open](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions).
  * @method Models\Convert3DFormatResponse Convert3DFormat(Models\Convert3DFormatRequest $req) After inputting a 3D model file, the 3D model file format can be switched.
  * @method Models\Describe3DSmartTopologyJobResponse Describe3DSmartTopologyJob(Models\Describe3DSmartTopologyJobRequest $req) The SmartTopoly API uses the Polygon 1.5 model. After manually inputting a 3D high-poly model, it can generate a neat 3D model with lower polygon count.
 1 concurrent is provided by default, which means 1 submitted task can be processed simultaneously. The next task can be processed only after the previous task is completed.

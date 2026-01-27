@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
  * @method string getEmailAddress() Obtain You can specify an email address to query.
  * @method void setEmailAddress(string $EmailAddress) Set You can specify an email address to query.
- * @method string getTaskID() Obtain You can specify a task ID to query.
- * @method void setTaskID(string $TaskID) Set You can specify a task ID to query.
+ * @method string getTaskID() Obtain This parameter has been deprecated.
+ * @method void setTaskID(string $TaskID) Set This parameter has been deprecated.
  */
 class ListBlackEmailAddressRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class ListBlackEmailAddressRequest extends AbstractModel
     public $EmailAddress;
 
     /**
-     * @var string You can specify a task ID to query.
+     * @var string This parameter has been deprecated.
      */
     public $TaskID;
 
@@ -71,7 +71,7 @@ class ListBlackEmailAddressRequest extends AbstractModel
      * @param integer $Limit Common parameter. It must be used with `Offset`.
      * @param integer $Offset Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
      * @param string $EmailAddress You can specify an email address to query.
-     * @param string $TaskID You can specify a task ID to query.
+     * @param string $TaskID This parameter has been deprecated.
      */
     function __construct()
     {

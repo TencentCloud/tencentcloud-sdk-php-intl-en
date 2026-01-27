@@ -22,11 +22,11 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModel() Obtain Tencent HY 3D Global model version
 Defaults to 3.0, with optional choices: 3.0, 3.1
-When selecting version 3.1, the LowPoly parameter is unavailable
+When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
 Example value:3.0
  * @method void setModel(string $Model) Set Tencent HY 3D Global model version
 Defaults to 3.0, with optional choices: 3.0, 3.1
-When selecting version 3.1, the LowPoly parameter is unavailable
+When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
 Example value:3.0
  * @method string getPrompt() Obtain Generates 3D content, describes 3D content.
 Supports up to 1024 utf-8 characters.
@@ -128,7 +128,7 @@ class SubmitHunyuanTo3DProJobRequest extends AbstractModel
     /**
      * @var string Tencent HY 3D Global model version
 Defaults to 3.0, with optional choices: 3.0, 3.1
-When selecting version 3.1, the LowPoly parameter is unavailable
+When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
 Example value:3.0
      */
     public $Model;
@@ -215,7 +215,7 @@ quadrilateral: mix quadrangle and triangle faces to generate
     /**
      * @param string $Model Tencent HY 3D Global model version
 Defaults to 3.0, with optional choices: 3.0, 3.1
-When selecting version 3.1, the LowPoly parameter is unavailable
+When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
 Example value:3.0
      * @param string $Prompt Generates 3D content, describes 3D content.
 Supports up to 1024 utf-8 characters.

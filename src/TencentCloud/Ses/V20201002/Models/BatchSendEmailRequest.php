@@ -20,114 +20,118 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchSendEmail request structure.
  *
- * @method string getFromEmailAddress() Obtain Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
-sender &lt;email address&gt;. For example:
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
- * @method void setFromEmailAddress(string $FromEmailAddress) Set Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
-sender &lt;email address&gt;. For example:
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
- * @method integer getReceiverId() Obtain Recipient group ID
- * @method void setReceiverId(integer $ReceiverId) Set Recipient group ID
- * @method string getSubject() Obtain Email subject
- * @method void setSubject(string $Subject) Set Email subject
- * @method integer getTaskType() Obtain Task type. `1`: immediate; `2`: scheduled; `3`: recurring
- * @method void setTaskType(integer $TaskType) Set Task type. `1`: immediate; `2`: scheduled; `3`: recurring
- * @method string getReplyToAddresses() Obtain Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
- * @method void setReplyToAddresses(string $ReplyToAddresses) Set Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
- * @method Template getTemplate() Obtain Template when emails are sent using a template
- * @method void setTemplate(Template $Template) Set Template when emails are sent using a template
- * @method Simple getSimple() Obtain Disused
- * @method void setSimple(Simple $Simple) Set Disused
- * @method array getAttachments() Obtain Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
- * @method void setAttachments(array $Attachments) Set Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
- * @method CycleEmailParam getCycleParam() Obtain Parameter required for a recurring sending task
- * @method void setCycleParam(CycleEmailParam $CycleParam) Set Parameter required for a recurring sending task
- * @method TimedEmailParam getTimedParam() Obtain Parameter required for a scheduled sending task
- * @method void setTimedParam(TimedEmailParam $TimedParam) Set Parameter required for a scheduled sending task
- * @method string getUnsubscribe() Obtain Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
- * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
- * @method integer getADLocation() Obtain Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
- * @method void setADLocation(integer $ADLocation) Set Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
+ * @method string getFromEmailAddress() Obtain Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
+Sender &lt;email address&gt; via fill in, such as:.
+Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
+ * @method void setFromEmailAddress(string $FromEmailAddress) Set Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
+Sender &lt;email address&gt; via fill in, such as:.
+Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
+ * @method integer getReceiverId() Obtain Recipient list ID.
+ * @method void setReceiverId(integer $ReceiverId) Set Recipient list ID.
+ * @method string getSubject() Obtain Email subject.
+ * @method void setSubject(string $Subject) Set Email subject.
+ * @method integer getTaskType() Obtain Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
+ * @method void setTaskType(integer $TaskType) Set Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
+ * @method string getReplyToAddresses() Obtain The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+ * @method void setReplyToAddresses(string $ReplyToAddresses) Set The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+ * @method Template getTemplate() Obtain When using a template to send, fill in the related parameters of the template.
+<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+ * @method void setTemplate(Template $Template) Set When using a template to send, fill in the related parameters of the template.
+<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+ * @method Simple getSimple() Obtain Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+ * @method void setSimple(Simple $Simple) Set Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+ * @method array getAttachments() Obtain Send attachment when required. fill in related parameters (not supported).
+ * @method void setAttachments(array $Attachments) Set Send attachment when required. fill in related parameters (not supported).
+ * @method CycleEmailParam getCycleParam() Obtain Required parameter for sending tasks periodically.
+ * @method void setCycleParam(CycleEmailParam $CycleParam) Set Required parameter for sending tasks periodically.
+ * @method TimedEmailParam getTimedParam() Obtain Required parameter for scheduled task assignment.
+ * @method void setTimedParam(TimedEmailParam $TimedParam) Set Required parameter for scheduled task assignment.
+ * @method string getUnsubscribe() Obtain Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+ * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+ * @method integer getADLocation() Obtain Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
+ * @method void setADLocation(integer $ADLocation) Set Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
  */
 class BatchSendEmailRequest extends AbstractModel
 {
     /**
-     * @var string Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
-sender &lt;email address&gt;. For example:
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+     * @var string Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
+Sender &lt;email address&gt; via fill in, such as:.
+Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
      */
     public $FromEmailAddress;
 
     /**
-     * @var integer Recipient group ID
+     * @var integer Recipient list ID.
      */
     public $ReceiverId;
 
     /**
-     * @var string Email subject
+     * @var string Email subject.
      */
     public $Subject;
 
     /**
-     * @var integer Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+     * @var integer Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
      */
     public $TaskType;
 
     /**
-     * @var string Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+     * @var string The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
      */
     public $ReplyToAddresses;
 
     /**
-     * @var Template Template when emails are sent using a template
+     * @var Template When using a template to send, fill in the related parameters of the template.
+<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
      */
     public $Template;
 
     /**
-     * @var Simple Disused
+     * @var Simple Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
      */
     public $Simple;
 
     /**
-     * @var array Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
+     * @var array Send attachment when required. fill in related parameters (not supported).
      */
     public $Attachments;
 
     /**
-     * @var CycleEmailParam Parameter required for a recurring sending task
+     * @var CycleEmailParam Required parameter for sending tasks periodically.
      */
     public $CycleParam;
 
     /**
-     * @var TimedEmailParam Parameter required for a scheduled sending task
+     * @var TimedEmailParam Required parameter for scheduled task assignment.
      */
     public $TimedParam;
 
     /**
-     * @var string Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+     * @var string Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
      */
     public $Unsubscribe;
 
     /**
-     * @var integer Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
+     * @var integer Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
      */
     public $ADLocation;
 
     /**
-     * @param string $FromEmailAddress Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
-sender &lt;email address&gt;. For example:
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
-     * @param integer $ReceiverId Recipient group ID
-     * @param string $Subject Email subject
-     * @param integer $TaskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring
-     * @param string $ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
-     * @param Template $Template Template when emails are sent using a template
-     * @param Simple $Simple Disused
-     * @param array $Attachments Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
-     * @param CycleEmailParam $CycleParam Parameter required for a recurring sending task
-     * @param TimedEmailParam $TimedParam Parameter required for a scheduled sending task
-     * @param string $Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
-     * @param integer $ADLocation Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
+     * @param string $FromEmailAddress Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
+Sender &lt;email address&gt; via fill in, such as:.
+Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
+     * @param integer $ReceiverId Recipient list ID.
+     * @param string $Subject Email subject.
+     * @param integer $TaskType Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
+     * @param string $ReplyToAddresses The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+     * @param Template $Template When using a template to send, fill in the related parameters of the template.
+<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+     * @param Simple $Simple Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+     * @param array $Attachments Send attachment when required. fill in related parameters (not supported).
+     * @param CycleEmailParam $CycleParam Required parameter for sending tasks periodically.
+     * @param TimedEmailParam $TimedParam Required parameter for scheduled task assignment.
+     * @param string $Unsubscribe Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+     * @param integer $ADLocation Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
      */
     function __construct()
     {

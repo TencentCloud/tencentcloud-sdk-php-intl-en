@@ -42,10 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) Set Task update time
  * @method string getSubject() Obtain Email subject
  * @method void setSubject(string $Subject) Set Email subject
- * @method Template getTemplate() Obtain Template and template data
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setTemplate(Template $Template) Set Template and template data
-Note: This field may return `null`, indicating that no valid value can be found.
+ * @method Template getTemplate() Obtain Template and template data.
+ * @method void setTemplate(Template $Template) Set Template and template data.
  * @method CycleEmailParam getCycleParam() Obtain Parameters of a recurring task
 Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setCycleParam(CycleEmailParam $CycleParam) Set Parameters of a recurring task
@@ -54,10 +52,8 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setTimedParam(TimedEmailParam $TimedParam) Set Parameters of a scheduled task
 Note: This field may return `null`, indicating that no valid value can be found.
- * @method string getErrMsg() Obtain Task exception information
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setErrMsg(string $ErrMsg) Set Task exception information
-Note: This field may return `null`, indicating that no valid value can be found.
+ * @method string getErrMsg() Obtain Task exception information.
+ * @method void setErrMsg(string $ErrMsg) Set Task exception information.
  * @method string getReceiversName() Obtain Recipient group name
  * @method void setReceiversName(string $ReceiversName) Set Recipient group name
  */
@@ -119,8 +115,7 @@ class SendTaskData extends AbstractModel
     public $Subject;
 
     /**
-     * @var Template Template and template data
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var Template Template and template data.
      */
     public $Template;
 
@@ -137,8 +132,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
     public $TimedParam;
 
     /**
-     * @var string Task exception information
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var string Task exception information.
      */
     public $ErrMsg;
 
@@ -159,14 +153,12 @@ Note: This field may return `null`, indicating that no valid value can be found.
      * @param string $CreateTime Task creation time
      * @param string $UpdateTime Task update time
      * @param string $Subject Email subject
-     * @param Template $Template Template and template data
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @param Template $Template Template and template data.
      * @param CycleEmailParam $CycleParam Parameters of a recurring task
 Note: This field may return `null`, indicating that no valid value can be found.
      * @param TimedEmailParam $TimedParam Parameters of a scheduled task
 Note: This field may return `null`, indicating that no valid value can be found.
-     * @param string $ErrMsg Task exception information
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @param string $ErrMsg Task exception information.
      * @param string $ReceiversName Recipient group name
      */
     function __construct()

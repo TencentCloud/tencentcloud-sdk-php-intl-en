@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEmailAddress() Obtain Sender address.
  * @method void setEmailAddress(string $EmailAddress) Set Sender address.
- * @method string getEmailSenderName() Obtain Sender name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setEmailSenderName(string $EmailSenderName) Set Sender name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getEmailSenderName() Obtain Sender alias.
+ * @method void setEmailSenderName(string $EmailSenderName) Set Sender alias.
  * @method integer getCreatedTimestamp() Obtain Creation time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+
+
  * @method void setCreatedTimestamp(integer $CreatedTimestamp) Set Creation time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+
+
+ * @method integer getSmtpPwdType() Obtain smtp password type. 0=not set. 1=already set up.
+ * @method void setSmtpPwdType(integer $SmtpPwdType) Set smtp password type. 0=not set. 1=already set up.
  */
 class EmailSender extends AbstractModel
 {
@@ -39,23 +41,29 @@ class EmailSender extends AbstractModel
     public $EmailAddress;
 
     /**
-     * @var string Sender name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Sender alias.
      */
     public $EmailSenderName;
 
     /**
      * @var integer Creation time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+
+
      */
     public $CreatedTimestamp;
 
     /**
+     * @var integer smtp password type. 0=not set. 1=already set up.
+     */
+    public $SmtpPwdType;
+
+    /**
      * @param string $EmailAddress Sender address.
-     * @param string $EmailSenderName Sender name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $EmailSenderName Sender alias.
      * @param integer $CreatedTimestamp Creation time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+
+
+     * @param integer $SmtpPwdType smtp password type. 0=not set. 1=already set up.
      */
     function __construct()
     {
@@ -80,6 +88,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("CreatedTimestamp",$param) and $param["CreatedTimestamp"] !== null) {
             $this->CreatedTimestamp = $param["CreatedTimestamp"];
+        }
+
+        if (array_key_exists("SmtpPwdType",$param) and $param["SmtpPwdType"] !== null) {
+            $this->SmtpPwdType = $param["SmtpPwdType"];
         }
     }
 }

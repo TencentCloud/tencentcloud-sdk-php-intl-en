@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEmailIdentity() Obtain Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
  * @method void setEmailIdentity(string $EmailIdentity) Set Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
+ * @method integer getDKIMOption() Obtain Generated dkim key length. valid values: 0 (1024), 1 (2048).
+ * @method void setDKIMOption(integer $DKIMOption) Set Generated dkim key length. valid values: 0 (1024), 1 (2048).
+ * @method array getTagList() Obtain tag.
+ * @method void setTagList(array $TagList) Set tag.
  */
 class CreateEmailIdentityRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class CreateEmailIdentityRequest extends AbstractModel
     public $EmailIdentity;
 
     /**
+     * @var integer Generated dkim key length. valid values: 0 (1024), 1 (2048).
+     */
+    public $DKIMOption;
+
+    /**
+     * @var array tag.
+     */
+    public $TagList;
+
+    /**
      * @param string $EmailIdentity Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
+     * @param integer $DKIMOption Generated dkim key length. valid values: 0 (1024), 1 (2048).
+     * @param array $TagList tag.
      */
     function __construct()
     {
@@ -48,6 +64,19 @@ class CreateEmailIdentityRequest extends AbstractModel
         }
         if (array_key_exists("EmailIdentity",$param) and $param["EmailIdentity"] !== null) {
             $this->EmailIdentity = $param["EmailIdentity"];
+        }
+
+        if (array_key_exists("DKIMOption",$param) and $param["DKIMOption"] !== null) {
+            $this->DKIMOption = $param["DKIMOption"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new TagList();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

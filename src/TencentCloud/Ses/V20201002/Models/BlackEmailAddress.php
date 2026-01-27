@@ -18,12 +18,14 @@ namespace TencentCloud\Ses\V20201002\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Email address blocklist structure, including the blocklisted address and the time when it is blocklisted.
+ * Email blocklist structure describes the blocked email address, blocklist time, and reason.
  *
  * @method string getBounceTime() Obtain Time when the email address is blocklisted.
  * @method void setBounceTime(string $BounceTime) Set Time when the email address is blocklisted.
  * @method string getEmailAddress() Obtain Blocklisted email address.
  * @method void setEmailAddress(string $EmailAddress) Set Blocklisted email address.
+ * @method string getIspDesc() Obtain Reason for being blacklisted.
+ * @method void setIspDesc(string $IspDesc) Set Reason for being blacklisted.
  */
 class BlackEmailAddress extends AbstractModel
 {
@@ -38,8 +40,14 @@ class BlackEmailAddress extends AbstractModel
     public $EmailAddress;
 
     /**
+     * @var string Reason for being blacklisted.
+     */
+    public $IspDesc;
+
+    /**
      * @param string $BounceTime Time when the email address is blocklisted.
      * @param string $EmailAddress Blocklisted email address.
+     * @param string $IspDesc Reason for being blacklisted.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class BlackEmailAddress extends AbstractModel
 
         if (array_key_exists("EmailAddress",$param) and $param["EmailAddress"] !== null) {
             $this->EmailAddress = $param["EmailAddress"];
+        }
+
+        if (array_key_exists("IspDesc",$param) and $param["IspDesc"] !== null) {
+            $this->IspDesc = $param["IspDesc"];
         }
     }
 }

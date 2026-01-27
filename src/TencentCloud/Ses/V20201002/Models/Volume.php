@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * Statistics structure.
  *
  * @method string getSendDate() Obtain Date
-Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setSendDate(string $SendDate) Set Date
-Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method integer getRequestCount() Obtain Number of email requests.
  * @method void setRequestCount(integer $RequestCount) Set Number of email requests.
  * @method integer getAcceptedCount() Obtain Number of email requests accepted by Tencent Cloud.
@@ -36,16 +34,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method void setClickedCount(integer $ClickedCount) Set Number of recipients who clicked on links in emails.
  * @method integer getBounceCount() Obtain Number of bounced emails.
  * @method void setBounceCount(integer $BounceCount) Set Number of bounced emails.
- * @method integer getUnsubscribeCount() Obtain Number of users who canceled subscriptions.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setUnsubscribeCount(integer $UnsubscribeCount) Set Number of users who canceled subscriptions.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getUnsubscribeCount() Obtain Number of users for unsubscription.
+ * @method void setUnsubscribeCount(integer $UnsubscribeCount) Set Number of users for unsubscription.
  */
 class Volume extends AbstractModel
 {
     /**
      * @var string Date
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $SendDate;
 
@@ -80,22 +75,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $BounceCount;
 
     /**
-     * @var integer Number of users who canceled subscriptions.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Number of users for unsubscription.
      */
     public $UnsubscribeCount;
 
     /**
      * @param string $SendDate Date
-Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $RequestCount Number of email requests.
      * @param integer $AcceptedCount Number of email requests accepted by Tencent Cloud.
      * @param integer $DeliveredCount Number of delivered emails.
      * @param integer $OpenedCount Number of users (deduplicated) who opened emails.
      * @param integer $ClickedCount Number of recipients who clicked on links in emails.
      * @param integer $BounceCount Number of bounced emails.
-     * @param integer $UnsubscribeCount Number of users who canceled subscriptions.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $UnsubscribeCount Number of users for unsubscription.
      */
     function __construct()
     {

@@ -102,6 +102,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserUnsubscribed(boolean $UserUnsubscribed) Set Whether the recipient has unsubscribed from the email sent by the sender
  * @method boolean getUserComplainted() Obtain Whether the recipient has reported the sender
  * @method void setUserComplainted(boolean $UserComplainted) Set Whether the recipient has reported the sender
+ * @method boolean getUserComplained() Obtain Whether the user reports the sender.
+ * @method void setUserComplained(boolean $UserComplained) Set Whether the user reports the sender.
  */
 class SendEmailStatus extends AbstractModel
 {
@@ -191,8 +193,14 @@ class SendEmailStatus extends AbstractModel
 
     /**
      * @var boolean Whether the recipient has reported the sender
+     * @deprecated
      */
     public $UserComplainted;
+
+    /**
+     * @var boolean Whether the user reports the sender.
+     */
+    public $UserComplained;
 
     /**
      * @param string $MessageId The `MessageId` field returned by the `SendEmail` API
@@ -236,6 +244,7 @@ class SendEmailStatus extends AbstractModel
      * @param boolean $UserClicked Whether the recipient has clicked the links in the email
      * @param boolean $UserUnsubscribed Whether the recipient has unsubscribed from the email sent by the sender
      * @param boolean $UserComplainted Whether the recipient has reported the sender
+     * @param boolean $UserComplained Whether the user reports the sender.
      */
     function __construct()
     {
@@ -296,6 +305,10 @@ class SendEmailStatus extends AbstractModel
 
         if (array_key_exists("UserComplainted",$param) and $param["UserComplainted"] !== null) {
             $this->UserComplainted = $param["UserComplainted"];
+        }
+
+        if (array_key_exists("UserComplained",$param) and $param["UserComplained"] !== null) {
+            $this->UserComplained = $param["UserComplained"];
         }
     }
 }

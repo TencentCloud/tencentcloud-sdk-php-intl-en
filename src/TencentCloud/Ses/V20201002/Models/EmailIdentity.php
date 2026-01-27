@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentReputationLevel(integer $CurrentReputationLevel) Set Current reputation level
  * @method integer getDailyQuota() Obtain Maximum number of messages sent per day
  * @method void setDailyQuota(integer $DailyQuota) Set Maximum number of messages sent per day
+ * @method array getSendIp() Obtain Independent ip for domain configuration.
+ * @method void setSendIp(array $SendIp) Set Independent ip for domain configuration.
+ * @method array getTagList() Obtain tag.
+ * @method void setTagList(array $TagList) Set tag.
  */
 class EmailIdentity extends AbstractModel
 {
@@ -59,11 +63,23 @@ class EmailIdentity extends AbstractModel
     public $DailyQuota;
 
     /**
+     * @var array Independent ip for domain configuration.
+     */
+    public $SendIp;
+
+    /**
+     * @var array tag.
+     */
+    public $TagList;
+
+    /**
      * @param string $IdentityName Sender domain.
      * @param string $IdentityType Verification type. The value is fixed to `DOMAIN`.
      * @param boolean $SendingEnabled Verification passed or not.
      * @param integer $CurrentReputationLevel Current reputation level
      * @param integer $DailyQuota Maximum number of messages sent per day
+     * @param array $SendIp Independent ip for domain configuration.
+     * @param array $TagList tag.
      */
     function __construct()
     {
@@ -96,6 +112,19 @@ class EmailIdentity extends AbstractModel
 
         if (array_key_exists("DailyQuota",$param) and $param["DailyQuota"] !== null) {
             $this->DailyQuota = $param["DailyQuota"];
+        }
+
+        if (array_key_exists("SendIp",$param) and $param["SendIp"] !== null) {
+            $this->SendIp = $param["SendIp"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new TagList();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }
