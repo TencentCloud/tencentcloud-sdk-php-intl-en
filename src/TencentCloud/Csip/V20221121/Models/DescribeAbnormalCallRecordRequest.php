@@ -18,36 +18,52 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRiskCenterAssetViewVULRiskList request structure.
+ * DescribeAbnormalCallRecord request structure.
  *
+ * @method integer getAlarmRuleID() Obtain Alarm rule ID.
+ * @method void setAlarmRuleID(integer $AlarmRuleID) Set Alarm rule ID.
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method Filter getFilter() Obtain Filter conditions
- * @method void setFilter(Filter $Filter) Set Filter conditions
- * @method array getTags() Obtain Asset tags
- * @method void setTags(array $Tags) Set Asset tags
+ * @method string getAccessKey() Obtain Access key.
+ * @method void setAccessKey(string $AccessKey) Set Access key.
+ * @method string getSourceIP() Obtain Source IP of the call.
+ * @method void setSourceIP(string $SourceIP) Set Source IP of the call.
+ * @method Filter getFilter() Obtain Filter.
+ * @method void setFilter(Filter $Filter) Set Filter.
  */
-class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
+class DescribeAbnormalCallRecordRequest extends AbstractModel
 {
+    /**
+     * @var integer Alarm rule ID.
+     */
+    public $AlarmRuleID;
+
     /**
      * @var array Group Account Member ID
      */
     public $MemberId;
 
     /**
-     * @var Filter Filter conditions
+     * @var string Access key.
+     */
+    public $AccessKey;
+
+    /**
+     * @var string Source IP of the call.
+     */
+    public $SourceIP;
+
+    /**
+     * @var Filter Filter.
      */
     public $Filter;
 
     /**
-     * @var array Asset tags
-     */
-    public $Tags;
-
-    /**
+     * @param integer $AlarmRuleID Alarm rule ID.
      * @param array $MemberId Group Account Member ID
-     * @param Filter $Filter Filter conditions
-     * @param array $Tags Asset tags
+     * @param string $AccessKey Access key.
+     * @param string $SourceIP Source IP of the call.
+     * @param Filter $Filter Filter.
      */
     function __construct()
     {
@@ -62,22 +78,25 @@ class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AlarmRuleID",$param) and $param["AlarmRuleID"] !== null) {
+            $this->AlarmRuleID = $param["AlarmRuleID"];
+        }
+
         if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
             $this->MemberId = $param["MemberId"];
+        }
+
+        if (array_key_exists("AccessKey",$param) and $param["AccessKey"] !== null) {
+            $this->AccessKey = $param["AccessKey"];
+        }
+
+        if (array_key_exists("SourceIP",$param) and $param["SourceIP"] !== null) {
+            $this->SourceIP = $param["SourceIP"];
         }
 
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);
-        }
-
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new AssetTag();
-                $obj->deserialize($value);
-                array_push($this->Tags, $obj);
-            }
         }
     }
 }

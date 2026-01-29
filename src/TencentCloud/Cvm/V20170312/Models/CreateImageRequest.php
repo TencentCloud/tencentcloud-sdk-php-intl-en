@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateImage request structure.
  *
- * @method string getImageName() Obtain Image name
- * @method void setImageName(string $ImageName) Set Image name
+ * @method string getImageName() Obtain Image name.
+ * @method void setImageName(string $ImageName) Set Image name.
  * @method string getInstanceId() Obtain ID of the instance from which an image will be created. This parameter is required when using instance to create an image.
  * @method void setInstanceId(string $InstanceId) Set ID of the instance from which an image will be created. This parameter is required when using instance to create an image.
- * @method string getImageDescription() Obtain Image description
- * @method void setImageDescription(string $ImageDescription) Set Image description
+ * @method string getImageDescription() Obtain Image description.
+ * @method void setImageDescription(string $ImageDescription) Set Image description.
  * @method string getForcePoweroff() Obtain Whether to perform forced power-off operation to create an image.
 Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
  * @method void setForcePoweroff(string $ForcePoweroff) Set Whether to perform forced power-off operation to create an image.
@@ -52,7 +52,7 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
 class CreateImageRequest extends AbstractModel
 {
     /**
-     * @var string Image name
+     * @var string Image name.
      */
     public $ImageName;
 
@@ -62,7 +62,7 @@ class CreateImageRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Image description
+     * @var string Image description.
      */
     public $ImageDescription;
 
@@ -106,9 +106,9 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
     public $ImageFamily;
 
     /**
-     * @param string $ImageName Image name
+     * @param string $ImageName Image name.
      * @param string $InstanceId ID of the instance from which an image will be created. This parameter is required when using instance to create an image.
-     * @param string $ImageDescription Image description
+     * @param string $ImageDescription Image description.
      * @param string $ForcePoweroff Whether to perform forced power-off operation to create an image.
 Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
      * @param string $Sysprep Whether to enable Sysprep when creating a Windows image.

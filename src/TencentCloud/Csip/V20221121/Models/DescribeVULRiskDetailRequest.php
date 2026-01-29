@@ -18,16 +18,16 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRiskCenterAssetViewVULRiskList request structure.
+ * DescribeVULRiskDetail request structure.
  *
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method Filter getFilter() Obtain Filter conditions
- * @method void setFilter(Filter $Filter) Set Filter conditions
- * @method array getTags() Obtain Asset tags
- * @method void setTags(array $Tags) Set Asset tags
+ * @method string getRiskId() Obtain Risk id.
+ * @method void setRiskId(string $RiskId) Set Risk id.
+ * @method string getPCMGRId() Obtain pcMgrId
+ * @method void setPCMGRId(string $PCMGRId) Set pcMgrId
  */
-class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
+class DescribeVULRiskDetailRequest extends AbstractModel
 {
     /**
      * @var array Group Account Member ID
@@ -35,19 +35,19 @@ class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var Filter Filter conditions
+     * @var string Risk id.
      */
-    public $Filter;
+    public $RiskId;
 
     /**
-     * @var array Asset tags
+     * @var string pcMgrId
      */
-    public $Tags;
+    public $PCMGRId;
 
     /**
      * @param array $MemberId Group Account Member ID
-     * @param Filter $Filter Filter conditions
-     * @param array $Tags Asset tags
+     * @param string $RiskId Risk id.
+     * @param string $PCMGRId pcMgrId
      */
     function __construct()
     {
@@ -66,18 +66,12 @@ class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
             $this->MemberId = $param["MemberId"];
         }
 
-        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
-            $this->Filter = new Filter();
-            $this->Filter->deserialize($param["Filter"]);
+        if (array_key_exists("RiskId",$param) and $param["RiskId"] !== null) {
+            $this->RiskId = $param["RiskId"];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new AssetTag();
-                $obj->deserialize($value);
-                array_push($this->Tags, $obj);
-            }
+        if (array_key_exists("PCMGRId",$param) and $param["PCMGRId"] !== null) {
+            $this->PCMGRId = $param["PCMGRId"];
         }
     }
 }

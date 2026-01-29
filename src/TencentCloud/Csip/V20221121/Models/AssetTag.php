@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Asset tags
  *
- * @method string getTagKey() Obtain Tag key. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTagKey(string $TagKey) Set Tag key. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getTagValue() Obtain Tag value. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTagValue(string $TagValue) Set Tag value. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getTagKey() Obtain Tag Key, can be letters, digits, and underscores.
+ * @method void setTagKey(string $TagKey) Set Tag Key, can be letters, digits, and underscores.
+ * @method string getTagValue() Obtain Tag Value, can be letters, digits, and underscores.
+ * @method void setTagValue(string $TagValue) Set Tag Value, can be letters, digits, and underscores.
  */
 class AssetTag extends AbstractModel
 {
     /**
-     * @var string Tag key. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Tag Key, can be letters, digits, and underscores.
      */
     public $TagKey;
 
     /**
-     * @var string Tag value. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Tag Value, can be letters, digits, and underscores.
      */
     public $TagValue;
 
     /**
-     * @param string $TagKey Tag key. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $TagValue Tag value. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $TagKey Tag Key, can be letters, digits, and underscores.
+     * @param string $TagValue Tag Value, can be letters, digits, and underscores.
      */
     function __construct()
     {

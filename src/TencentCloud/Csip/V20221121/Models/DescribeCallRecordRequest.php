@@ -18,16 +18,20 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRiskCenterAssetViewVULRiskList request structure.
+ * DescribeCallRecord request structure.
  *
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method Filter getFilter() Obtain Filter conditions
- * @method void setFilter(Filter $Filter) Set Filter conditions
- * @method array getTags() Obtain Asset tags
- * @method void setTags(array $Tags) Set Asset tags
+ * @method integer getAccessKeyID() Obtain Access key ID.
+ * @method void setAccessKeyID(integer $AccessKeyID) Set Access key ID.
+ * @method integer getSourceIPID() Obtain ID of the source IP for the call.
+ * @method void setSourceIPID(integer $SourceIPID) Set ID of the source IP for the call.
+ * @method string getAccUin() Obtain Access account uin.
+ * @method void setAccUin(string $AccUin) Set Access account uin.
+ * @method Filter getFilter() Obtain Filter.
+ * @method void setFilter(Filter $Filter) Set Filter.
  */
-class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
+class DescribeCallRecordRequest extends AbstractModel
 {
     /**
      * @var array Group Account Member ID
@@ -35,19 +39,31 @@ class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var Filter Filter conditions
+     * @var integer Access key ID.
+     */
+    public $AccessKeyID;
+
+    /**
+     * @var integer ID of the source IP for the call.
+     */
+    public $SourceIPID;
+
+    /**
+     * @var string Access account uin.
+     */
+    public $AccUin;
+
+    /**
+     * @var Filter Filter.
      */
     public $Filter;
 
     /**
-     * @var array Asset tags
-     */
-    public $Tags;
-
-    /**
      * @param array $MemberId Group Account Member ID
-     * @param Filter $Filter Filter conditions
-     * @param array $Tags Asset tags
+     * @param integer $AccessKeyID Access key ID.
+     * @param integer $SourceIPID ID of the source IP for the call.
+     * @param string $AccUin Access account uin.
+     * @param Filter $Filter Filter.
      */
     function __construct()
     {
@@ -66,18 +82,21 @@ class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
             $this->MemberId = $param["MemberId"];
         }
 
+        if (array_key_exists("AccessKeyID",$param) and $param["AccessKeyID"] !== null) {
+            $this->AccessKeyID = $param["AccessKeyID"];
+        }
+
+        if (array_key_exists("SourceIPID",$param) and $param["SourceIPID"] !== null) {
+            $this->SourceIPID = $param["SourceIPID"];
+        }
+
+        if (array_key_exists("AccUin",$param) and $param["AccUin"] !== null) {
+            $this->AccUin = $param["AccUin"];
+        }
+
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);
-        }
-
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new AssetTag();
-                $obj->deserialize($value);
-                array_push($this->Tags, $obj);
-            }
         }
     }
 }

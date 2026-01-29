@@ -18,36 +18,44 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRiskCenterAssetViewVULRiskList request structure.
+ * DescribeAccessKeyRisk request structure.
  *
+ * @method Filter getFilter() Obtain Filter.
+ * @method void setFilter(Filter $Filter) Set Filter.
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method Filter getFilter() Obtain Filter conditions
- * @method void setFilter(Filter $Filter) Set Filter conditions
- * @method array getTags() Obtain Asset tags
- * @method void setTags(array $Tags) Set Asset tags
+ * @method integer getAccessKeyID() Obtain Access key ID.
+ * @method void setAccessKeyID(integer $AccessKeyID) Set Access key ID.
+ * @method string getSubUin() Obtain Account UIN
+ * @method void setSubUin(string $SubUin) Set Account UIN
  */
-class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
+class DescribeAccessKeyRiskRequest extends AbstractModel
 {
+    /**
+     * @var Filter Filter.
+     */
+    public $Filter;
+
     /**
      * @var array Group Account Member ID
      */
     public $MemberId;
 
     /**
-     * @var Filter Filter conditions
+     * @var integer Access key ID.
      */
-    public $Filter;
+    public $AccessKeyID;
 
     /**
-     * @var array Asset tags
+     * @var string Account UIN
      */
-    public $Tags;
+    public $SubUin;
 
     /**
+     * @param Filter $Filter Filter.
      * @param array $MemberId Group Account Member ID
-     * @param Filter $Filter Filter conditions
-     * @param array $Tags Asset tags
+     * @param integer $AccessKeyID Access key ID.
+     * @param string $SubUin Account UIN
      */
     function __construct()
     {
@@ -62,22 +70,21 @@ class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
-            $this->MemberId = $param["MemberId"];
-        }
-
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new AssetTag();
-                $obj->deserialize($value);
-                array_push($this->Tags, $obj);
-            }
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
+        }
+
+        if (array_key_exists("AccessKeyID",$param) and $param["AccessKeyID"] !== null) {
+            $this->AccessKeyID = $param["AccessKeyID"];
+        }
+
+        if (array_key_exists("SubUin",$param) and $param["SubUin"] !== null) {
+            $this->SubUin = $param["SubUin"];
         }
     }
 }

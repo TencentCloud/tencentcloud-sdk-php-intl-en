@@ -20,46 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Task asset information
  *
- * @method string getAssetName() Obtain Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAssetName(string $AssetName) Set Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getInstanceType() Obtain 	Asset category
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setInstanceType(string $InstanceType) Set 	Asset category
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getAssetType() Obtain Asset sub-category
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAssetType(string $AssetType) Set Asset sub-category
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getAssetName() Obtain Asset name.
+ * @method void setAssetName(string $AssetName) Set Asset name.
+ * @method string getInstanceType() Obtain Asset type.
+ * @method void setInstanceType(string $InstanceType) Set Asset type.
+ * @method string getAssetType() Obtain Asset category.
+ * @method void setAssetType(string $AssetType) Set Asset category.
  * @method string getAsset() Obtain IP, domain name, asset ID, database ID, and more
  * @method void setAsset(string $Asset) Set IP, domain name, asset ID, database ID, and more
- * @method string getRegion() Obtain Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getArn() Obtain The ID specific for an asset synched from another cloud platform
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setArn(string $Arn) Set The ID specific for an asset synched from another cloud platform
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getRegion() Obtain Region.
+ * @method void setRegion(string $Region) Set Region.
+ * @method string getArn() Obtain Unique ID of Multi-Cloud Assets
+ * @method void setArn(string $Arn) Set Unique ID of Multi-Cloud Assets
  */
 class TaskAssetObject extends AbstractModel
 {
     /**
-     * @var string Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Asset name.
      */
     public $AssetName;
 
     /**
-     * @var string 	Asset category
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Asset type.
      */
     public $InstanceType;
 
     /**
-     * @var string Asset sub-category
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Asset category.
      */
     public $AssetType;
 
@@ -69,29 +56,22 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $Asset;
 
     /**
-     * @var string Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Region.
      */
     public $Region;
 
     /**
-     * @var string The ID specific for an asset synched from another cloud platform
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Unique ID of Multi-Cloud Assets
      */
     public $Arn;
 
     /**
-     * @param string $AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $InstanceType 	Asset category
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $AssetType Asset sub-category
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $AssetName Asset name.
+     * @param string $InstanceType Asset type.
+     * @param string $AssetType Asset category.
      * @param string $Asset IP, domain name, asset ID, database ID, and more
-     * @param string $Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Arn The ID specific for an asset synched from another cloud platform
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Region Region.
+     * @param string $Arn Unique ID of Multi-Cloud Assets
      */
     function __construct()
     {

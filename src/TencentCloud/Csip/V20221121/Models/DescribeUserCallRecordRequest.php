@@ -18,36 +18,36 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRiskCenterAssetViewVULRiskList request structure.
+ * DescribeUserCallRecord request structure.
  *
+ * @method string getSubUin() Obtain Account UIN
+ * @method void setSubUin(string $SubUin) Set Account UIN
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method Filter getFilter() Obtain Filter conditions
- * @method void setFilter(Filter $Filter) Set Filter conditions
- * @method array getTags() Obtain Asset tags
- * @method void setTags(array $Tags) Set Asset tags
+ * @method Filter getFilter() Obtain Filter.
+ * @method void setFilter(Filter $Filter) Set Filter.
  */
-class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
+class DescribeUserCallRecordRequest extends AbstractModel
 {
+    /**
+     * @var string Account UIN
+     */
+    public $SubUin;
+
     /**
      * @var array Group Account Member ID
      */
     public $MemberId;
 
     /**
-     * @var Filter Filter conditions
+     * @var Filter Filter.
      */
     public $Filter;
 
     /**
-     * @var array Asset tags
-     */
-    public $Tags;
-
-    /**
+     * @param string $SubUin Account UIN
      * @param array $MemberId Group Account Member ID
-     * @param Filter $Filter Filter conditions
-     * @param array $Tags Asset tags
+     * @param Filter $Filter Filter.
      */
     function __construct()
     {
@@ -62,6 +62,10 @@ class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubUin",$param) and $param["SubUin"] !== null) {
+            $this->SubUin = $param["SubUin"];
+        }
+
         if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
             $this->MemberId = $param["MemberId"];
         }
@@ -69,15 +73,6 @@ class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);
-        }
-
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new AssetTag();
-                $obj->deserialize($value);
-                array_push($this->Tags, $obj);
-            }
         }
     }
 }

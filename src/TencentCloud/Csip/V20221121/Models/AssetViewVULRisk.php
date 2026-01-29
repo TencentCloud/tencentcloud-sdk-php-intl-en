@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAffectAsset() Obtain Affected assets
  * @method void setAffectAsset(string $AffectAsset) Set Affected assets
- * @method string getLevel() Obtain Risk level
- * @method void setLevel(string $Level) Set Risk level
+ * @method string getLevel() Obtain Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+
+ * @method void setLevel(string $Level) Set Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+
  * @method string getInstanceType() Obtain Asset type
  * @method void setInstanceType(string $InstanceType) Set Asset type
  * @method string getComponent() Obtain Components
@@ -36,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstTime(string $FirstTime) Set First detected
  * @method integer getStatus() Obtain Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
  * @method void setStatus(integer $Status) Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
- * @method string getId() Obtain Unique ID of the asset
- * @method void setId(string $Id) Set Unique ID of the asset
+ * @method string getId() Obtain Risk ID
+ * @method void setId(string $Id) Set Risk ID
  * @method string getIndex() Obtain Frontend index
  * @method void setIndex(string $Index) Set Frontend index
  * @method string getInstanceId() Obtain Instance ID
@@ -46,38 +48,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set Instance name
  * @method string getAppId() Obtain User `appid`
  * @method void setAppId(string $AppId) Set User `appid`
- * @method string getNick() Obtain User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setNick(string $Nick) Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getUin() Obtain User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setUin(string $Uin) Set User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getNick() Obtain User Nickname
+ * @method void setNick(string $Nick) Set User Nickname
+ * @method string getUin() Obtain User UIN
+ * @method void setUin(string $Uin) Set User UIN
  * @method string getVULType() Obtain Vulnerability type
  * @method void setVULType(string $VULType) Set Vulnerability type
  * @method string getPort() Obtain Port
  * @method void setPort(string $Port) Set Port
- * @method string getDescribe() Obtain Description
- * @method void setDescribe(string $Describe) Set Description
- * @method string getAppName() Obtain Components affected by the vulnerability 
- * @method void setAppName(string $AppName) Set Components affected by the vulnerability 
- * @method string getReferences() Obtain Reference information about the vulnerability
- * @method void setReferences(string $References) Set Reference information about the vulnerability
- * @method string getAppVersion() Obtain Version
- * @method void setAppVersion(string $AppVersion) Set Version
- * @method string getVULURL() Obtain Vulnerability URL
- * @method void setVULURL(string $VULURL) Set Vulnerability URL
+ * @method string getDescribe() Obtain Vulnerability description
+ * @method void setDescribe(string $Describe) Set Vulnerability description
+ * @method string getAppName() Obtain Vulnerability impact component.
+ * @method void setAppName(string $AppName) Set Vulnerability impact component.
+ * @method string getReferences() Obtain Technology reference.
+ * @method void setReferences(string $References) Set Technology reference.
+ * @method string getAppVersion() Obtain Vulnerability impact version.
+ * @method void setAppVersion(string $AppVersion) Set Vulnerability impact version.
+ * @method string getVULURL() Obtain Risks.
+ * @method void setVULURL(string $VULURL) Set Risks.
  * @method string getVULName() Obtain Vulnerability name
  * @method void setVULName(string $VULName) Set Vulnerability name
  * @method string getCVE() Obtain CVE number
  * @method void setCVE(string $CVE) Set CVE number
- * @method string getFix() Obtain Fix suggestion
- * @method void setFix(string $Fix) Set Fix suggestion
+ * @method string getFix() Obtain Fixing solution
+ * @method void setFix(string $Fix) Set Fixing solution
  * @method string getPOCId() Obtain POC ID
  * @method void setPOCId(string $POCId) Set POC ID
- * @method string getFrom() Obtain Source of the task
- * @method void setFrom(string $From) Set Source of the task
+ * @method string getFrom() Obtain Scan Source
+ * @method void setFrom(string $From) Set Scan Source
  * @method integer getCWPVersion() Obtain CWPP edition
  * @method void setCWPVersion(integer $CWPVersion) Set CWPP edition
  * @method boolean getIsSupportRepair() Obtain Whether it can be fixed 
@@ -86,12 +84,10 @@ Note: This field may return·null, indicating that no valid values can be obtain
  * @method void setIsSupportDetect(boolean $IsSupportDetect) Set Whether it can be detected
  * @method string getInstanceUUID() Obtain Instance UUID
  * @method void setInstanceUUID(string $InstanceUUID) Set Instance UUID
- * @method string getPayload() Obtain Pay load
- * @method void setPayload(string $Payload) Set Pay load
- * @method integer getEMGCVulType() Obtain Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setEMGCVulType(integer $EMGCVulType) Set Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getPayload() Obtain Payload
+ * @method void setPayload(string $Payload) Set Payload
+ * @method integer getEMGCVulType() Obtain Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
+ * @method void setEMGCVulType(integer $EMGCVulType) Set Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
  */
 class AssetViewVULRisk extends AbstractModel
 {
@@ -101,7 +97,8 @@ class AssetViewVULRisk extends AbstractModel
     public $AffectAsset;
 
     /**
-     * @var string Risk level
+     * @var string Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+
      */
     public $Level;
 
@@ -136,7 +133,7 @@ class AssetViewVULRisk extends AbstractModel
     public $Status;
 
     /**
-     * @var string Unique ID of the asset
+     * @var string Risk ID
      */
     public $Id;
 
@@ -161,14 +158,12 @@ class AssetViewVULRisk extends AbstractModel
     public $AppId;
 
     /**
-     * @var string User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User Nickname
      */
     public $Nick;
 
     /**
-     * @var string User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User UIN
      */
     public $Uin;
 
@@ -183,27 +178,27 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $Port;
 
     /**
-     * @var string Description
+     * @var string Vulnerability description
      */
     public $Describe;
 
     /**
-     * @var string Components affected by the vulnerability 
+     * @var string Vulnerability impact component.
      */
     public $AppName;
 
     /**
-     * @var string Reference information about the vulnerability
+     * @var string Technology reference.
      */
     public $References;
 
     /**
-     * @var string Version
+     * @var string Vulnerability impact version.
      */
     public $AppVersion;
 
     /**
-     * @var string Vulnerability URL
+     * @var string Risks.
      */
     public $VULURL;
 
@@ -218,7 +213,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $CVE;
 
     /**
-     * @var string Fix suggestion
+     * @var string Fixing solution
      */
     public $Fix;
 
@@ -228,7 +223,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $POCId;
 
     /**
-     * @var string Source of the task
+     * @var string Scan Source
      */
     public $From;
 
@@ -253,53 +248,50 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $InstanceUUID;
 
     /**
-     * @var string Pay load
+     * @var string Payload
      */
     public $Payload;
 
     /**
-     * @var integer Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
      */
     public $EMGCVulType;
 
     /**
      * @param string $AffectAsset Affected assets
-     * @param string $Level Risk level
+     * @param string $Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+
      * @param string $InstanceType Asset type
      * @param string $Component Components
      * @param string $Service Service
      * @param string $RecentTime Last detected 
      * @param string $FirstTime First detected
      * @param integer $Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-     * @param string $Id Unique ID of the asset
+     * @param string $Id Risk ID
      * @param string $Index Frontend index
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $AppId User `appid`
-     * @param string $Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Nick User Nickname
+     * @param string $Uin User UIN
      * @param string $VULType Vulnerability type
      * @param string $Port Port
-     * @param string $Describe Description
-     * @param string $AppName Components affected by the vulnerability 
-     * @param string $References Reference information about the vulnerability
-     * @param string $AppVersion Version
-     * @param string $VULURL Vulnerability URL
+     * @param string $Describe Vulnerability description
+     * @param string $AppName Vulnerability impact component.
+     * @param string $References Technology reference.
+     * @param string $AppVersion Vulnerability impact version.
+     * @param string $VULURL Risks.
      * @param string $VULName Vulnerability name
      * @param string $CVE CVE number
-     * @param string $Fix Fix suggestion
+     * @param string $Fix Fixing solution
      * @param string $POCId POC ID
-     * @param string $From Source of the task
+     * @param string $From Scan Source
      * @param integer $CWPVersion CWPP edition
      * @param boolean $IsSupportRepair Whether it can be fixed 
      * @param boolean $IsSupportDetect Whether it can be detected
      * @param string $InstanceUUID Instance UUID
-     * @param string $Payload Pay load
-     * @param integer $EMGCVulType Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Payload Payload
+     * @param integer $EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
      */
     function __construct()
     {

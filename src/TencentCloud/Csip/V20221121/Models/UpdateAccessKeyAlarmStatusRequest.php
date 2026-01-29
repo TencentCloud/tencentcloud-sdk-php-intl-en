@@ -18,36 +18,44 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRiskCenterAssetViewVULRiskList request structure.
+ * UpdateAccessKeyAlarmStatus request structure.
  *
+ * @method integer getStatus() Obtain Status  0: unprocessed 1: fixed 2: ignored.
+ * @method void setStatus(integer $Status) Set Status  0: unprocessed 1: fixed 2: ignored.
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method Filter getFilter() Obtain Filter conditions
- * @method void setFilter(Filter $Filter) Set Filter conditions
- * @method array getTags() Obtain Asset tags
- * @method void setTags(array $Tags) Set Asset tags
+ * @method array getAlarmIDList() Obtain Alarm ID list.
+ * @method void setAlarmIDList(array $AlarmIDList) Set Alarm ID list.
+ * @method array getRiskIDList() Obtain Risk ID list.
+ * @method void setRiskIDList(array $RiskIDList) Set Risk ID list.
  */
-class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
+class UpdateAccessKeyAlarmStatusRequest extends AbstractModel
 {
+    /**
+     * @var integer Status  0: unprocessed 1: fixed 2: ignored.
+     */
+    public $Status;
+
     /**
      * @var array Group Account Member ID
      */
     public $MemberId;
 
     /**
-     * @var Filter Filter conditions
+     * @var array Alarm ID list.
      */
-    public $Filter;
+    public $AlarmIDList;
 
     /**
-     * @var array Asset tags
+     * @var array Risk ID list.
      */
-    public $Tags;
+    public $RiskIDList;
 
     /**
+     * @param integer $Status Status  0: unprocessed 1: fixed 2: ignored.
      * @param array $MemberId Group Account Member ID
-     * @param Filter $Filter Filter conditions
-     * @param array $Tags Asset tags
+     * @param array $AlarmIDList Alarm ID list.
+     * @param array $RiskIDList Risk ID list.
      */
     function __construct()
     {
@@ -62,22 +70,20 @@ class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
         if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
             $this->MemberId = $param["MemberId"];
         }
 
-        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
-            $this->Filter = new Filter();
-            $this->Filter->deserialize($param["Filter"]);
+        if (array_key_exists("AlarmIDList",$param) and $param["AlarmIDList"] !== null) {
+            $this->AlarmIDList = $param["AlarmIDList"];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new AssetTag();
-                $obj->deserialize($value);
-                array_push($this->Tags, $obj);
-            }
+        if (array_key_exists("RiskIDList",$param) and $param["RiskIDList"] !== null) {
+            $this->RiskIDList = $param["RiskIDList"];
         }
     }
 }
