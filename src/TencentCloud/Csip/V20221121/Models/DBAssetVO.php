@@ -21,277 +21,193 @@ use TencentCloud\Common\AbstractModel;
  * Details of a database asset
  *
  * @method string getAssetId() Obtain Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetId(string $AssetId) Set Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getAssetName() Obtain Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAssetName(string $AssetName) Set Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getAssetType() Obtain Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAssetType(string $AssetType) Set Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getVpcId() Obtain 
- * @method void setVpcId(string $VpcId) Set 
- * @method string getVpcName() Obtain VPC tags
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setVpcName(string $VpcName) Set VPC tags
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getDomain() Obtain Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) Set Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getAssetCreateTime() Obtain Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAssetCreateTime(string $AssetCreateTime) Set Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getAssetName() Obtain Asset name.
+ * @method void setAssetName(string $AssetName) Set Asset name.
+ * @method string getAssetType() Obtain Asset type.
+ * @method void setAssetType(string $AssetType) Set Asset type.
+ * @method string getVpcId() Obtain vpcid
+ * @method void setVpcId(string $VpcId) Set vpcid
+ * @method string getVpcName() Obtain vpc Tag.
+ * @method void setVpcName(string $VpcName) Set vpc Tag.
+ * @method string getRegion() Obtain Region.
+ * @method void setRegion(string $Region) Set Region.
+ * @method string getDomain() Obtain Domain
+ * @method void setDomain(string $Domain) Set Domain
+ * @method string getAssetCreateTime() Obtain Asset creation time.
+ * @method void setAssetCreateTime(string $AssetCreateTime) Set Asset creation time.
  * @method string getLastScanTime() Obtain Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setLastScanTime(string $LastScanTime) Set Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getConfigurationRisk() Obtain Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setConfigurationRisk(integer $ConfigurationRisk) Set Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getAttack() Obtain Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAttack(integer $Attack) Set Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getAccess() Obtain 
- * @method void setAccess(integer $Access) Set 
- * @method integer getScanTask() Obtain Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setScanTask(integer $ScanTask) Set Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getAppId() Obtain User `appid`
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAppId(integer $AppId) Set User `appid`
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getConfigurationRisk() Obtain Configuration risk.
+ * @method void setConfigurationRisk(integer $ConfigurationRisk) Set Configuration risk.
+ * @method integer getAttack() Obtain Network attack.
+ * @method void setAttack(integer $Attack) Set Network attack.
+ * @method integer getAccess() Obtain Network access.
+ * @method void setAccess(integer $Access) Set Network access.
+ * @method integer getScanTask() Obtain Scan Task
+ * @method void setScanTask(integer $ScanTask) Set Scan Task
+ * @method integer getAppId() Obtain User appid.
+ * @method void setAppId(integer $AppId) Set User appid.
  * @method string getUin() Obtain User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setUin(string $Uin) Set User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getNickName() Obtain User name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setNickName(string $NickName) Set User name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getPort() Obtain Port
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPort(integer $Port) Set Port
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getTag() Obtain Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTag(array $Tag) Set Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getPrivateIp() Obtain Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPrivateIp(string $PrivateIp) Set Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getPublicIp() Obtain Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPublicIp(string $PublicIp) Set Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Status
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Status
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsCore() Obtain Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsCore(integer $IsCore) Set Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsNewAsset() Obtain Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsNewAsset(integer $IsNewAsset) Set Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getNickName() Obtain Nickname Alias
+ * @method void setNickName(string $NickName) Set Nickname Alias
+ * @method integer getPort() Obtain Port.
+ * @method void setPort(integer $Port) Set Port.
+ * @method array getTag() Obtain Tag.
+ * @method void setTag(array $Tag) Set Tag.
+ * @method string getPrivateIp() Obtain Private IP address
+ * @method void setPrivateIp(string $PrivateIp) Set Private IP address
+ * @method string getPublicIp() Obtain Public IP address
+ * @method void setPublicIp(string $PublicIp) Set Public IP address
+ * @method integer getStatus() Obtain Status.
+ * @method void setStatus(integer $Status) Set Status.
+ * @method integer getIsCore() Obtain Core or Not
+ * @method void setIsCore(integer $IsCore) Set Core or Not
+ * @method integer getIsNewAsset() Obtain New Asset or Not. 1: New
+ * @method void setIsNewAsset(integer $IsNewAsset) Set New Asset or Not. 1: New
  */
 class DBAssetVO extends AbstractModel
 {
     /**
      * @var string Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AssetId;
 
     /**
-     * @var string Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Asset name.
      */
     public $AssetName;
 
     /**
-     * @var string Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Asset type.
      */
     public $AssetType;
 
     /**
-     * @var string 
+     * @var string vpcid
      */
     public $VpcId;
 
     /**
-     * @var string VPC tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string vpc Tag.
      */
     public $VpcName;
 
     /**
-     * @var string Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Region.
      */
     public $Region;
 
     /**
-     * @var string Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Domain
      */
     public $Domain;
 
     /**
-     * @var string Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Asset creation time.
      */
     public $AssetCreateTime;
 
     /**
      * @var string Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $LastScanTime;
 
     /**
-     * @var integer Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Configuration risk.
      */
     public $ConfigurationRisk;
 
     /**
-     * @var integer Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Network attack.
      */
     public $Attack;
 
     /**
-     * @var integer 
+     * @var integer Network access.
      */
     public $Access;
 
     /**
-     * @var integer Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Scan Task
      */
     public $ScanTask;
 
     /**
-     * @var integer User `appid`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer User appid.
      */
     public $AppId;
 
     /**
      * @var string User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Uin;
 
     /**
-     * @var string User name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Nickname Alias
      */
     public $NickName;
 
     /**
-     * @var integer Port
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Port.
      */
     public $Port;
 
     /**
-     * @var array Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Tag.
      */
     public $Tag;
 
     /**
-     * @var string Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Private IP address
      */
     public $PrivateIp;
 
     /**
-     * @var string Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Public IP address
      */
     public $PublicIp;
 
     /**
-     * @var integer Status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Status.
      */
     public $Status;
 
     /**
-     * @var integer Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Core or Not
      */
     public $IsCore;
 
     /**
-     * @var integer Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer New Asset or Not. 1: New
      */
     public $IsNewAsset;
 
     /**
      * @param string $AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $VpcId 
-     * @param string $VpcName VPC tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Domain Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $AssetCreateTime Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $AssetName Asset name.
+     * @param string $AssetType Asset type.
+     * @param string $VpcId vpcid
+     * @param string $VpcName vpc Tag.
+     * @param string $Region Region.
+     * @param string $Domain Domain
+     * @param string $AssetCreateTime Asset creation time.
      * @param string $LastScanTime Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $ConfigurationRisk Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Attack Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Access 
-     * @param integer $ScanTask Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $AppId User `appid`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $ConfigurationRisk Configuration risk.
+     * @param integer $Attack Network attack.
+     * @param integer $Access Network access.
+     * @param integer $ScanTask Scan Task
+     * @param integer $AppId User appid.
      * @param string $Uin User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $NickName User name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Port Port
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Status Status
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $NickName Nickname Alias
+     * @param integer $Port Port.
+     * @param array $Tag Tag.
+     * @param string $PrivateIp Private IP address
+     * @param string $PublicIp Public IP address
+     * @param integer $Status Status.
+     * @param integer $IsCore Core or Not
+     * @param integer $IsNewAsset New Asset or Not. 1: New
      */
     function __construct()
     {

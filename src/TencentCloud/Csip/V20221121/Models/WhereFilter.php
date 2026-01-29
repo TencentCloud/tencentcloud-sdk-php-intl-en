@@ -24,13 +24,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Filter item
  * @method array getValues() Obtain Filter value
  * @method void setValues(array $Values) Set Filter value
- * @method integer getOperatorType() Obtain  
-`1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-`7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+ * @method integer getOperatorType() Obtain Central platform definition:.
+1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+Exact match fills 7. fuzzy matching fills 9. 
 
- * @method void setOperatorType(integer $OperatorType) Set  
-`1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-`7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+ * @method void setOperatorType(integer $OperatorType) Set Central platform definition:.
+1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+Exact match fills 7. fuzzy matching fills 9. 
  */
 class WhereFilter extends AbstractModel
 {
@@ -45,9 +45,9 @@ class WhereFilter extends AbstractModel
     public $Values;
 
     /**
-     * @var integer  
-`1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-`7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+     * @var integer Central platform definition:.
+1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+Exact match fills 7. fuzzy matching fills 9. 
 
      */
     public $OperatorType;
@@ -55,9 +55,9 @@ class WhereFilter extends AbstractModel
     /**
      * @param string $Name Filter item
      * @param array $Values Filter value
-     * @param integer $OperatorType  
-`1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-`7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+     * @param integer $OperatorType Central platform definition:.
+1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+Exact match fills 7. fuzzy matching fills 9. 
      */
     function __construct()
     {
