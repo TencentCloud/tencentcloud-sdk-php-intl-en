@@ -20,242 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAigcVideoTask request structure.
  *
- * @method string getModelName() Obtain Model Name. Currently supported models include: Hunyuan, Hailuo, Kling, Vidu, OS, GV
- * @method void setModelName(string $ModelName) Set Model Name. Currently supported models include: Hunyuan, Hailuo, Kling, Vidu, OS, GV
- * @method string getModelVersion() Obtain Specify the version number of a particular model. By default, the system uses the currently supported stable version of the model.  
-1. Hailuo: Available options [02, 2.3].  
-2. Kling: Available options [2.0, 2.1, 2.5, O1, 2.6].  
-3. Vidu: Available options [q2, q2-pro, q2-turbo].  
-4. GV: Available option [3.1].  
-5. OS: Available option [2.0].
- * @method void setModelVersion(string $ModelVersion) Set Specify the version number of a particular model. By default, the system uses the currently supported stable version of the model.  
-1. Hailuo: Available options [02, 2.3].  
-2. Kling: Available options [2.0, 2.1, 2.5, O1, 2.6].  
-3. Vidu: Available options [q2, q2-pro, q2-turbo].  
-4. GV: Available option [3.1].  
-5. OS: Available option [2.0].
- * @method string getPrompt() Obtain Generate video description. (Note: Maximum 2000 characters supported). This parameter is mandatory when no images are provided.
- * @method void setPrompt(string $Prompt) Set Generate video description. (Note: Maximum 2000 characters supported). This parameter is mandatory when no images are provided.
- * @method string getNegativePrompt() Obtain Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
- * @method void setNegativePrompt(string $NegativePrompt) Set Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
- * @method boolean getEnhancePrompt() Obtain The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
- * @method void setEnhancePrompt(boolean $EnhancePrompt) Set The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
- * @method string getImageUrl() Obtain The URL of the image used to guide video generation, which must be publicly accessible via the internet.  
-Notes:  
-1. The recommended image size should not exceed 10MB, though size limitations may vary across different models.  
-2. Supported image formats: JPEG, PNG.  
-3. When using the OS model, the input image dimensions must be either 1280x720 or 720x1280.
- * @method void setImageUrl(string $ImageUrl) Set The URL of the image used to guide video generation, which must be publicly accessible via the internet.  
-Notes:  
-1. The recommended image size should not exceed 10MB, though size limitations may vary across different models.  
-2. Supported image formats: JPEG, PNG.  
-3. When using the OS model, the input image dimensions must be either 1280x720 or 720x1280.
- * @method string getLastImageUrl() Obtain The model will utilize the image provided via this parameter as the ending frame for video generation.  
-Supported models for this parameter:  
-1. GV: When an ending frame image is provided, the ImageUrl parameter must also be specified as the starting frame.  
-2. Kling: Under Resolution: 1080P, version 2.1 supports both start&end frames.  
-3. Vidu, q2-pro, q2-turbo: Support start&end frames. 
-Notes:  
-1. It is recommended that the image size does not exceed 10MB, though specific model limitations may vary.  
-2. Supported image formats: JPEG, PNG.
- * @method void setLastImageUrl(string $LastImageUrl) Set The model will utilize the image provided via this parameter as the ending frame for video generation.  
-Supported models for this parameter:  
-1. GV: When an ending frame image is provided, the ImageUrl parameter must also be specified as the starting frame.  
-2. Kling: Under Resolution: 1080P, version 2.1 supports both start&end frames.  
-3. Vidu, q2-pro, q2-turbo: Support start&end frames. 
-Notes:  
-1. It is recommended that the image size does not exceed 10MB, though specific model limitations may vary.  
-2. Supported image formats: JPEG, PNG.
- * @method array getImageInfos() Obtain A list comprising up to three material resource images, utilized to depict the reference images the model will employ for video generation.  
-Models supporting multi-image input:  
-1. GV: When utilizing multi-image input, neither ImageUrl nor LastImageUrl should be used.  
-2. Vidu: Supports video generation with multiple reference images. For model q2, 1-7 images can be provided, with the subject ID specified via ReferenceType within ImageInfos.
-Notes:  
-1. Each image must not exceed 10MB in size.  
-2. Supported image formats: JPEG, PNG.
- * @method void setImageInfos(array $ImageInfos) Set A list comprising up to three material resource images, utilized to depict the reference images the model will employ for video generation.  
-Models supporting multi-image input:  
-1. GV: When utilizing multi-image input, neither ImageUrl nor LastImageUrl should be used.  
-2. Vidu: Supports video generation with multiple reference images. For model q2, 1-7 images can be provided, with the subject ID specified via ReferenceType within ImageInfos.
-Notes:  
-1. Each image must not exceed 10MB in size.  
-2. Supported image formats: JPEG, PNG.
- * @method integer getDuration() Obtain Duration of generated videos.  
-Notes:  
-1. Kling supports 5 and 10 seconds. Default: 5 seconds.  
-2. Hailuo's standard mode supports 6 and 10 seconds, while other modes only support 6 seconds. Default: 6 seconds.  
-3. Vidu supports 1 to 10 seconds.  
-4. GV supports 8 seconds. Default: 8 seconds.  
-5. OS supports 4, 8, and 12 seconds. Default: 8 seconds.
- * @method void setDuration(integer $Duration) Set Duration of generated videos.  
-Notes:  
-1. Kling supports 5 and 10 seconds. Default: 5 seconds.  
-2. Hailuo's standard mode supports 6 and 10 seconds, while other modes only support 6 seconds. Default: 6 seconds.  
-3. Vidu supports 1 to 10 seconds.  
-4. GV supports 8 seconds. Default: 8 seconds.  
-5. OS supports 4, 8, and 12 seconds. Default: 8 seconds.
- * @method AigcVideoExtraParam getExtraParameters() Obtain Used to pass additional parameters.
- * @method void setExtraParameters(AigcVideoExtraParam $ExtraParameters) Set Used to pass additional parameters.
- * @method AigcStoreCosParam getStoreCosParam() Obtain The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
- * @method void setStoreCosParam(AigcStoreCosParam $StoreCosParam) Set The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
- * @method string getAdditionalParameters() Obtain 
-Used to pass specific scenario parameters required by the model, serialized into a JSON format string. Example: {"camera_control":{"type":"simple"}}
- * @method void setAdditionalParameters(string $AdditionalParameters) Set 
-Used to pass specific scenario parameters required by the model, serialized into a JSON format string. Example: {"camera_control":{"type":"simple"}}
- * @method string getOperator() Obtain Interface operator name.
- * @method void setOperator(string $Operator) Set Interface operator name.
+ * @method string getModelName() Obtain Model name.
+Supported models:Hunyuan,
+Hailuo,
+Kling,
+Vidu,
+OS,
+GV.
+ * @method void setModelName(string $ModelName) Set Model name.
+Supported models:Hunyuan,
+Hailuo,
+Kling,
+Vidu,
+OS,
+GV.
+ * @method string getModelVersion() Obtain Specific version number of the model. By default, the system uses the supported stable version of the model.1. Hailuo: [02 and 2.3].2. Kling: [2.0, 2.1, 2.5, O1, and 2.6].3. Vidu: [q2, q2-pro, and q2-turbo].4. GV: [3.1].5. OS: [2.0].
+ * @method void setModelVersion(string $ModelVersion) Set Specific version number of the model. By default, the system uses the supported stable version of the model.1. Hailuo: [02 and 2.3].2. Kling: [2.0, 2.1, 2.5, O1, and 2.6].3. Vidu: [q2, q2-pro, and q2-turbo].4. GV: [3.1].5. OS: [2.0].
+ * @method string getSceneType() Obtain Scenario for the generated video.Note: Not all models support scenarios.1. Kling supports motion control (motion_control).2. Mingmou supports landscape-to-portrait conversion (land2port).3. Vidu supports special effect templates (template_effect).
+ * @method void setSceneType(string $SceneType) Set Scenario for the generated video.Note: Not all models support scenarios.1. Kling supports motion control (motion_control).2. Mingmou supports landscape-to-portrait conversion (land2port).3. Vidu supports special effect templates (template_effect).
+ * @method string getPrompt() Obtain Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.
+ * @method void setPrompt(string $Prompt) Set Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.
+ * @method string getNegativePrompt() Obtain Content you want to prevent the model from generating.Note: Not all models support this.For example:Top lighting and bright color.People and animals.Multiple vehicles and wind.
+ * @method void setNegativePrompt(string $NegativePrompt) Set Content you want to prevent the model from generating.Note: Not all models support this.For example:Top lighting and bright color.People and animals.Multiple vehicles and wind.
+ * @method boolean getEnhancePrompt() Obtain The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
+ * @method void setEnhancePrompt(boolean $EnhancePrompt) Set The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
+ * @method string getImageUrl() Obtain Image URL for video generation. The URL must be accessible from the public network.Note:1. The recommended image size is no more than 10 MB. Different models have different size limits.2. Supported image formats: JPEG and PNG.3. If the OS model is used, the input image dimension should be 1280x720 or 720x1280.
+ * @method void setImageUrl(string $ImageUrl) Set Image URL for video generation. The URL must be accessible from the public network.Note:1. The recommended image size is no more than 10 MB. Different models have different size limits.2. Supported image formats: JPEG and PNG.3. If the OS model is used, the input image dimension should be 1280x720 or 720x1280.
+ * @method string getLastImageUrl() Obtain The model will generate a video using the image of this parameter as the ending frame.Models that support this parameter:1. GV. If the ending frame image is specified, ImageUrl is required as the starting frame.2. Kling. Version 2.1 supports starting and ending frames with a resolution of 1080P.3. Vidu. q2-pro and q2-turbo support starting and ending frames.Note:1. The recommended image size is no more than 10 MB. Different models have different limits.2. Supported image formats: JPEG and PNG.
+ * @method void setLastImageUrl(string $LastImageUrl) Set The model will generate a video using the image of this parameter as the ending frame.Models that support this parameter:1. GV. If the ending frame image is specified, ImageUrl is required as the starting frame.2. Kling. Version 2.1 supports starting and ending frames with a resolution of 1080P.3. Vidu. q2-pro and q2-turbo support starting and ending frames.Note:1. The recommended image size is no more than 10 MB. Different models have different limits.2. Supported image formats: JPEG and PNG.
+ * @method array getImageInfos() Obtain List of up to 3 asset images, used to describe the images the model should use for video generation.Model that supports multiple images:1. GV. If multiple images are specified, ImageUrl and LastImageUrl are unavailable.2. Vidu supports video generation with multiple reference images. The q2 model accepts 1 to 7 images. The ReferenceType in ImageInfos can be used to specify the subject ID for the input.Note:1. The image size cannot exceed 10 MB.2. Supported image formats: JPEG and PNG.
+ * @method void setImageInfos(array $ImageInfos) Set List of up to 3 asset images, used to describe the images the model should use for video generation.Model that supports multiple images:1. GV. If multiple images are specified, ImageUrl and LastImageUrl are unavailable.2. Vidu supports video generation with multiple reference images. The q2 model accepts 1 to 7 images. The ReferenceType in ImageInfos can be used to specify the subject ID for the input.Note:1. The image size cannot exceed 10 MB.2. Supported image formats: JPEG and PNG.
+ * @method integer getDuration() Obtain Duration of the generated video.Note:1. Kling supports 5 and 10 seconds. Default value: 5 seconds.2. The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.3. Vidu supports 1 to 10 seconds.4. GV supports 8 seconds. Default value: 8 seconds.5. OS supports 4, 8, and 12 seconds. Default value: 8 seconds.
+ * @method void setDuration(integer $Duration) Set Duration of the generated video.Note:1. Kling supports 5 and 10 seconds. Default value: 5 seconds.2. The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.3. Vidu supports 1 to 10 seconds.4. GV supports 8 seconds. Default value: 8 seconds.5. OS supports 4, 8, and 12 seconds. Default value: 8 seconds.
+ * @method AigcVideoExtraParam getExtraParameters() Obtain Additional parameters required.
+ * @method void setExtraParameters(AigcVideoExtraParam $ExtraParameters) Set Additional parameters required.
+ * @method AigcStoreCosParam getStoreCosParam() Obtain COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
+ * @method void setStoreCosParam(AigcStoreCosParam $StoreCosParam) Set COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
+ * @method string getAdditionalParameters() Obtain Special scenario parameters required by the model, formatted as a JSON serialized string.Example:{\"camera_control\":{\"type\":\"simple\"}}
+ * @method void setAdditionalParameters(string $AdditionalParameters) Set Special scenario parameters required by the model, formatted as a JSON serialized string.Example:{\"camera_control\":{\"type\":\"simple\"}}
+ * @method string getOperator() Obtain API operator name.
+ * @method void setOperator(string $Operator) Set API operator name.
  */
 class CreateAigcVideoTaskRequest extends AbstractModel
 {
     /**
-     * @var string Model Name. Currently supported models include: Hunyuan, Hailuo, Kling, Vidu, OS, GV
+     * @var string Model name.
+Supported models:Hunyuan,
+Hailuo,
+Kling,
+Vidu,
+OS,
+GV.
      */
     public $ModelName;
 
     /**
-     * @var string Specify the version number of a particular model. By default, the system uses the currently supported stable version of the model.  
-1. Hailuo: Available options [02, 2.3].  
-2. Kling: Available options [2.0, 2.1, 2.5, O1, 2.6].  
-3. Vidu: Available options [q2, q2-pro, q2-turbo].  
-4. GV: Available option [3.1].  
-5. OS: Available option [2.0].
+     * @var string Specific version number of the model. By default, the system uses the supported stable version of the model.1. Hailuo: [02 and 2.3].2. Kling: [2.0, 2.1, 2.5, O1, and 2.6].3. Vidu: [q2, q2-pro, and q2-turbo].4. GV: [3.1].5. OS: [2.0].
      */
     public $ModelVersion;
 
     /**
-     * @var string Generate video description. (Note: Maximum 2000 characters supported). This parameter is mandatory when no images are provided.
+     * @var string Scenario for the generated video.Note: Not all models support scenarios.1. Kling supports motion control (motion_control).2. Mingmou supports landscape-to-portrait conversion (land2port).3. Vidu supports special effect templates (template_effect).
+     */
+    public $SceneType;
+
+    /**
+     * @var string Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.
      */
     public $Prompt;
 
     /**
-     * @var string Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
+     * @var string Content you want to prevent the model from generating.Note: Not all models support this.For example:Top lighting and bright color.People and animals.Multiple vehicles and wind.
      */
     public $NegativePrompt;
 
     /**
-     * @var boolean The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
+     * @var boolean The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
      */
     public $EnhancePrompt;
 
     /**
-     * @var string The URL of the image used to guide video generation, which must be publicly accessible via the internet.  
-Notes:  
-1. The recommended image size should not exceed 10MB, though size limitations may vary across different models.  
-2. Supported image formats: JPEG, PNG.  
-3. When using the OS model, the input image dimensions must be either 1280x720 or 720x1280.
+     * @var string Image URL for video generation. The URL must be accessible from the public network.Note:1. The recommended image size is no more than 10 MB. Different models have different size limits.2. Supported image formats: JPEG and PNG.3. If the OS model is used, the input image dimension should be 1280x720 or 720x1280.
      */
     public $ImageUrl;
 
     /**
-     * @var string The model will utilize the image provided via this parameter as the ending frame for video generation.  
-Supported models for this parameter:  
-1. GV: When an ending frame image is provided, the ImageUrl parameter must also be specified as the starting frame.  
-2. Kling: Under Resolution: 1080P, version 2.1 supports both start&end frames.  
-3. Vidu, q2-pro, q2-turbo: Support start&end frames. 
-Notes:  
-1. It is recommended that the image size does not exceed 10MB, though specific model limitations may vary.  
-2. Supported image formats: JPEG, PNG.
+     * @var string The model will generate a video using the image of this parameter as the ending frame.Models that support this parameter:1. GV. If the ending frame image is specified, ImageUrl is required as the starting frame.2. Kling. Version 2.1 supports starting and ending frames with a resolution of 1080P.3. Vidu. q2-pro and q2-turbo support starting and ending frames.Note:1. The recommended image size is no more than 10 MB. Different models have different limits.2. Supported image formats: JPEG and PNG.
      */
     public $LastImageUrl;
 
     /**
-     * @var array A list comprising up to three material resource images, utilized to depict the reference images the model will employ for video generation.  
-Models supporting multi-image input:  
-1. GV: When utilizing multi-image input, neither ImageUrl nor LastImageUrl should be used.  
-2. Vidu: Supports video generation with multiple reference images. For model q2, 1-7 images can be provided, with the subject ID specified via ReferenceType within ImageInfos.
-Notes:  
-1. Each image must not exceed 10MB in size.  
-2. Supported image formats: JPEG, PNG.
+     * @var array List of up to 3 asset images, used to describe the images the model should use for video generation.Model that supports multiple images:1. GV. If multiple images are specified, ImageUrl and LastImageUrl are unavailable.2. Vidu supports video generation with multiple reference images. The q2 model accepts 1 to 7 images. The ReferenceType in ImageInfos can be used to specify the subject ID for the input.Note:1. The image size cannot exceed 10 MB.2. Supported image formats: JPEG and PNG.
      */
     public $ImageInfos;
 
     /**
-     * @var integer Duration of generated videos.  
-Notes:  
-1. Kling supports 5 and 10 seconds. Default: 5 seconds.  
-2. Hailuo's standard mode supports 6 and 10 seconds, while other modes only support 6 seconds. Default: 6 seconds.  
-3. Vidu supports 1 to 10 seconds.  
-4. GV supports 8 seconds. Default: 8 seconds.  
-5. OS supports 4, 8, and 12 seconds. Default: 8 seconds.
+     * @var integer Duration of the generated video.Note:1. Kling supports 5 and 10 seconds. Default value: 5 seconds.2. The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.3. Vidu supports 1 to 10 seconds.4. GV supports 8 seconds. Default value: 8 seconds.5. OS supports 4, 8, and 12 seconds. Default value: 8 seconds.
      */
     public $Duration;
 
     /**
-     * @var AigcVideoExtraParam Used to pass additional parameters.
+     * @var AigcVideoExtraParam Additional parameters required.
      */
     public $ExtraParameters;
 
     /**
-     * @var AigcStoreCosParam The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
+     * @var AigcStoreCosParam COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
      */
     public $StoreCosParam;
 
     /**
-     * @var string 
-Used to pass specific scenario parameters required by the model, serialized into a JSON format string. Example: {"camera_control":{"type":"simple"}}
+     * @var string Special scenario parameters required by the model, formatted as a JSON serialized string.Example:{\"camera_control\":{\"type\":\"simple\"}}
      */
     public $AdditionalParameters;
 
     /**
-     * @var string Interface operator name.
+     * @var string API operator name.
      */
     public $Operator;
 
     /**
-     * @param string $ModelName Model Name. Currently supported models include: Hunyuan, Hailuo, Kling, Vidu, OS, GV
-     * @param string $ModelVersion Specify the version number of a particular model. By default, the system uses the currently supported stable version of the model.  
-1. Hailuo: Available options [02, 2.3].  
-2. Kling: Available options [2.0, 2.1, 2.5, O1, 2.6].  
-3. Vidu: Available options [q2, q2-pro, q2-turbo].  
-4. GV: Available option [3.1].  
-5. OS: Available option [2.0].
-     * @param string $Prompt Generate video description. (Note: Maximum 2000 characters supported). This parameter is mandatory when no images are provided.
-     * @param string $NegativePrompt Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
-     * @param boolean $EnhancePrompt The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
-     * @param string $ImageUrl The URL of the image used to guide video generation, which must be publicly accessible via the internet.  
-Notes:  
-1. The recommended image size should not exceed 10MB, though size limitations may vary across different models.  
-2. Supported image formats: JPEG, PNG.  
-3. When using the OS model, the input image dimensions must be either 1280x720 or 720x1280.
-     * @param string $LastImageUrl The model will utilize the image provided via this parameter as the ending frame for video generation.  
-Supported models for this parameter:  
-1. GV: When an ending frame image is provided, the ImageUrl parameter must also be specified as the starting frame.  
-2. Kling: Under Resolution: 1080P, version 2.1 supports both start&end frames.  
-3. Vidu, q2-pro, q2-turbo: Support start&end frames. 
-Notes:  
-1. It is recommended that the image size does not exceed 10MB, though specific model limitations may vary.  
-2. Supported image formats: JPEG, PNG.
-     * @param array $ImageInfos A list comprising up to three material resource images, utilized to depict the reference images the model will employ for video generation.  
-Models supporting multi-image input:  
-1. GV: When utilizing multi-image input, neither ImageUrl nor LastImageUrl should be used.  
-2. Vidu: Supports video generation with multiple reference images. For model q2, 1-7 images can be provided, with the subject ID specified via ReferenceType within ImageInfos.
-Notes:  
-1. Each image must not exceed 10MB in size.  
-2. Supported image formats: JPEG, PNG.
-     * @param integer $Duration Duration of generated videos.  
-Notes:  
-1. Kling supports 5 and 10 seconds. Default: 5 seconds.  
-2. Hailuo's standard mode supports 6 and 10 seconds, while other modes only support 6 seconds. Default: 6 seconds.  
-3. Vidu supports 1 to 10 seconds.  
-4. GV supports 8 seconds. Default: 8 seconds.  
-5. OS supports 4, 8, and 12 seconds. Default: 8 seconds.
-     * @param AigcVideoExtraParam $ExtraParameters Used to pass additional parameters.
-     * @param AigcStoreCosParam $StoreCosParam The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
-     * @param string $AdditionalParameters 
-Used to pass specific scenario parameters required by the model, serialized into a JSON format string. Example: {"camera_control":{"type":"simple"}}
-     * @param string $Operator Interface operator name.
+     * @param string $ModelName Model name.
+Supported models:Hunyuan,
+Hailuo,
+Kling,
+Vidu,
+OS,
+GV.
+     * @param string $ModelVersion Specific version number of the model. By default, the system uses the supported stable version of the model.1. Hailuo: [02 and 2.3].2. Kling: [2.0, 2.1, 2.5, O1, and 2.6].3. Vidu: [q2, q2-pro, and q2-turbo].4. GV: [3.1].5. OS: [2.0].
+     * @param string $SceneType Scenario for the generated video.Note: Not all models support scenarios.1. Kling supports motion control (motion_control).2. Mingmou supports landscape-to-portrait conversion (land2port).3. Vidu supports special effect templates (template_effect).
+     * @param string $Prompt Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.
+     * @param string $NegativePrompt Content you want to prevent the model from generating.Note: Not all models support this.For example:Top lighting and bright color.People and animals.Multiple vehicles and wind.
+     * @param boolean $EnhancePrompt The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
+     * @param string $ImageUrl Image URL for video generation. The URL must be accessible from the public network.Note:1. The recommended image size is no more than 10 MB. Different models have different size limits.2. Supported image formats: JPEG and PNG.3. If the OS model is used, the input image dimension should be 1280x720 or 720x1280.
+     * @param string $LastImageUrl The model will generate a video using the image of this parameter as the ending frame.Models that support this parameter:1. GV. If the ending frame image is specified, ImageUrl is required as the starting frame.2. Kling. Version 2.1 supports starting and ending frames with a resolution of 1080P.3. Vidu. q2-pro and q2-turbo support starting and ending frames.Note:1. The recommended image size is no more than 10 MB. Different models have different limits.2. Supported image formats: JPEG and PNG.
+     * @param array $ImageInfos List of up to 3 asset images, used to describe the images the model should use for video generation.Model that supports multiple images:1. GV. If multiple images are specified, ImageUrl and LastImageUrl are unavailable.2. Vidu supports video generation with multiple reference images. The q2 model accepts 1 to 7 images. The ReferenceType in ImageInfos can be used to specify the subject ID for the input.Note:1. The image size cannot exceed 10 MB.2. Supported image formats: JPEG and PNG.
+     * @param integer $Duration Duration of the generated video.Note:1. Kling supports 5 and 10 seconds. Default value: 5 seconds.2. The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.3. Vidu supports 1 to 10 seconds.4. GV supports 8 seconds. Default value: 8 seconds.5. OS supports 4, 8, and 12 seconds. Default value: 8 seconds.
+     * @param AigcVideoExtraParam $ExtraParameters Additional parameters required.
+     * @param AigcStoreCosParam $StoreCosParam COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
+     * @param string $AdditionalParameters Special scenario parameters required by the model, formatted as a JSON serialized string.Example:{\"camera_control\":{\"type\":\"simple\"}}
+     * @param string $Operator API operator name.
      */
     function __construct()
     {
@@ -276,6 +180,10 @@ Used to pass specific scenario parameters required by the model, serialized into
 
         if (array_key_exists("ModelVersion",$param) and $param["ModelVersion"] !== null) {
             $this->ModelVersion = $param["ModelVersion"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
 
         if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {

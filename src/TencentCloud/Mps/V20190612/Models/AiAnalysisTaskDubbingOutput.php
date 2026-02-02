@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setSpeakerPath(string $SpeakerPath) Set Specifies the file path of the tag.
 
+ * @method string getVoiceId() Obtain Voice type ID.
+ * @method void setVoiceId(string $VoiceId) Set Voice type ID.
  * @method TaskOutputStorage getOutputStorage() Obtain Specifies the storage location of the transcoded video.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Specifies the storage location of the transcoded video.
  */
@@ -43,6 +45,11 @@ class AiAnalysisTaskDubbingOutput extends AbstractModel
     public $SpeakerPath;
 
     /**
+     * @var string Voice type ID.
+     */
+    public $VoiceId;
+
+    /**
      * @var TaskOutputStorage Specifies the storage location of the transcoded video.
      */
     public $OutputStorage;
@@ -51,6 +58,7 @@ class AiAnalysisTaskDubbingOutput extends AbstractModel
      * @param string $VideoPath Specifies the video path for translation.
      * @param string $SpeakerPath Specifies the file path of the tag.
 
+     * @param string $VoiceId Voice type ID.
      * @param TaskOutputStorage $OutputStorage Specifies the storage location of the transcoded video.
      */
     function __construct()
@@ -72,6 +80,10 @@ class AiAnalysisTaskDubbingOutput extends AbstractModel
 
         if (array_key_exists("SpeakerPath",$param) and $param["SpeakerPath"] !== null) {
             $this->SpeakerPath = $param["SpeakerPath"];
+        }
+
+        if (array_key_exists("VoiceId",$param) and $param["VoiceId"] !== null) {
+            $this->VoiceId = $param["VoiceId"];
         }
 
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {

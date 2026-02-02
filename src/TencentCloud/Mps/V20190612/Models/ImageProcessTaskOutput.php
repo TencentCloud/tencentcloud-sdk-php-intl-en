@@ -28,6 +28,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of the output file.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getContent() Obtain Processing result of the image-to-text task.
+ * @method void setContent(string $Content) Set Processing result of the image-to-text task.
  */
 class ImageProcessTaskOutput extends AbstractModel
 {
@@ -44,10 +46,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $OutputStorage;
 
     /**
+     * @var string Processing result of the image-to-text task.
+     */
+    public $Content;
+
+    /**
      * @param string $Path Path of the output file.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param TaskOutputStorage $OutputStorage Storage location of the output file.
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Content Processing result of the image-to-text task.
      */
     function __construct()
     {
@@ -69,6 +77,10 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
             $this->OutputStorage->deserialize($param["OutputStorage"]);
+        }
+
+        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+            $this->Content = $param["Content"];
         }
     }
 }

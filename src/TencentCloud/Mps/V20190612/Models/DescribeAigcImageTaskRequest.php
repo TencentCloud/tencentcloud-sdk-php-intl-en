@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAigcImageTask request structure.
  *
- * @method string getTaskId() Obtain AIGC image task processing task ID.
- * @method void setTaskId(string $TaskId) Set AIGC image task processing task ID.
+ * @method string getTaskId() Obtain ID of the created AIGC image generation task.
+ * @method void setTaskId(string $TaskId) Set ID of the created AIGC image generation task.
  */
 class DescribeAigcImageTaskRequest extends AbstractModel
 {
     /**
-     * @var string AIGC image task processing task ID.
+     * @var string ID of the created AIGC image generation task.
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId AIGC image task processing task ID.
+     * @param string $TaskId ID of the created AIGC image generation task.
      */
     function __construct()
     {

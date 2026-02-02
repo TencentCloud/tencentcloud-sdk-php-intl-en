@@ -18,36 +18,36 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Area configurations for the subtitle OCR extraction box.
  *
- * @method array getAutoAreas() Obtain 
- * @method void setAutoAreas(array $AutoAreas) Set 
- * @method integer getSampleWidth() Obtain 
- * @method void setSampleWidth(integer $SampleWidth) Set 
- * @method integer getSampleHeight() Obtain 
- * @method void setSampleHeight(integer $SampleHeight) Set 
+ * @method array getAutoAreas() Obtain Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
+ * @method void setAutoAreas(array $AutoAreas) Set Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
+ * @method integer getSampleWidth() Obtain Width of the sample video or image, in pixels.
+ * @method void setSampleWidth(integer $SampleWidth) Set Width of the sample video or image, in pixels.
+ * @method integer getSampleHeight() Obtain Height of the sample video or image, in pixels.
+ * @method void setSampleHeight(integer $SampleHeight) Set Height of the sample video or image, in pixels.
  */
 class SelectingSubtitleAreasConfig extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
      */
     public $AutoAreas;
 
     /**
-     * @var integer 
+     * @var integer Width of the sample video or image, in pixels.
      */
     public $SampleWidth;
 
     /**
-     * @var integer 
+     * @var integer Height of the sample video or image, in pixels.
      */
     public $SampleHeight;
 
     /**
-     * @param array $AutoAreas 
-     * @param integer $SampleWidth 
-     * @param integer $SampleHeight 
+     * @param array $AutoAreas Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
+     * @param integer $SampleWidth Width of the sample video or image, in pixels.
+     * @param integer $SampleHeight Height of the sample video or image, in pixels.
      */
     function __construct()
     {

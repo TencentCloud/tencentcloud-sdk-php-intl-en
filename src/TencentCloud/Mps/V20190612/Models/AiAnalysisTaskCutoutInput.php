@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAigcVideoTask request structure.
+ * Input type of the intelligent video matting task.
  *
- * @method string getTaskId() Obtain Task ID returned when the AIGC video generation task is created.
- * @method void setTaskId(string $TaskId) Set Task ID returned when the AIGC video generation task is created.
+ * @method integer getDefinition() Obtain ID of the intelligent video matting template.
+ * @method void setDefinition(integer $Definition) Set ID of the intelligent video matting template.
  */
-class DescribeAigcVideoTaskRequest extends AbstractModel
+class AiAnalysisTaskCutoutInput extends AbstractModel
 {
     /**
-     * @var string Task ID returned when the AIGC video generation task is created.
+     * @var integer ID of the intelligent video matting template.
      */
-    public $TaskId;
+    public $Definition;
 
     /**
-     * @param string $TaskId Task ID returned when the AIGC video generation task is created.
+     * @param integer $Definition ID of the intelligent video matting template.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeAigcVideoTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
         }
     }
 }

@@ -20,126 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAigcImageTask request structure.
  *
- * @method string getModelName() Obtain Model Name. Currently supported models include: Hunyuan,GEM,Qwen.
- * @method void setModelName(string $ModelName) Set Model Name. Currently supported models include: Hunyuan,GEM,Qwen.
- * @method string getModelVersion() Obtain Specify the version number of a particular model. By default, the system utilizes the currently supported stable version of the model.  
-1. GEM, available options [2.5, 3.0].
-
- * @method void setModelVersion(string $ModelVersion) Set Specify the version number of a particular model. By default, the system utilizes the currently supported stable version of the model.  
-1. GEM, available options [2.5, 3.0].
-
- * @method string getPrompt() Obtain 
-Generate a description of the image. (Note: The maximum supported length is 1000 characters.) This parameter is mandatory when no reference image is provided.
-
- * @method void setPrompt(string $Prompt) Set 
-Generate a description of the image. (Note: The maximum supported length is 1000 characters.) This parameter is mandatory when no reference image is provided.
-
- * @method string getNegativePrompt() Obtain Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
- * @method void setNegativePrompt(string $NegativePrompt) Set Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
- * @method boolean getEnhancePrompt() Obtain The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
-
- * @method void setEnhancePrompt(boolean $EnhancePrompt) Set The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
-
- * @method array getImageInfos() Obtain 
-Supports single image input by default. Models supporting multi-image input include GEM (up to 3 images).  
-Recommended image size should be under 7MB, with support for JPEG, PNG, and WebP formats.
-
- * @method void setImageInfos(array $ImageInfos) Set 
-Supports single image input by default. Models supporting multi-image input include GEM (up to 3 images).  
-Recommended image size should be under 7MB, with support for JPEG, PNG, and WebP formats.
-
- * @method AigcImageExtraParam getExtraParameters() Obtain Used to pass additional parameters.
- * @method void setExtraParameters(AigcImageExtraParam $ExtraParameters) Set Used to pass additional parameters.
- * @method AigcStoreCosParam getStoreCosParam() Obtain The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
- * @method void setStoreCosParam(AigcStoreCosParam $StoreCosParam) Set The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
- * @method string getOperator() Obtain Interface operator name.
- * @method void setOperator(string $Operator) Set Interface operator name.
+ * @method string getModelName() Obtain Model name.
+Supported models:Hunyuan,
+GEM,
+Qwen.
+ * @method void setModelName(string $ModelName) Set Model name.
+Supported models:Hunyuan,
+GEM,
+Qwen.
+ * @method string getModelVersion() Obtain Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0].
+ * @method void setModelVersion(string $ModelVersion) Set Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0].
+ * @method string getPrompt() Obtain Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified.
+ * @method void setPrompt(string $Prompt) Set Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified.
+ * @method string getNegativePrompt() Obtain Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.
+ * @method void setNegativePrompt(string $NegativePrompt) Set Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.
+ * @method boolean getEnhancePrompt() Obtain The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
+ * @method void setEnhancePrompt(boolean $EnhancePrompt) Set The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
+ * @method array getImageInfos() Obtain Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP.
+ * @method void setImageInfos(array $ImageInfos) Set Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP.
+ * @method AigcImageExtraParam getExtraParameters() Obtain Additional parameters required for the model.
+ * @method void setExtraParameters(AigcImageExtraParam $ExtraParameters) Set Additional parameters required for the model.
+ * @method AigcStoreCosParam getStoreCosParam() Obtain COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
+ * @method void setStoreCosParam(AigcStoreCosParam $StoreCosParam) Set COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
+ * @method string getOperator() Obtain API operator name.
+ * @method void setOperator(string $Operator) Set API operator name.
  */
 class CreateAigcImageTaskRequest extends AbstractModel
 {
     /**
-     * @var string Model Name. Currently supported models include: Hunyuan,GEM,Qwen.
+     * @var string Model name.
+Supported models:Hunyuan,
+GEM,
+Qwen.
      */
     public $ModelName;
 
     /**
-     * @var string Specify the version number of a particular model. By default, the system utilizes the currently supported stable version of the model.  
-1. GEM, available options [2.5, 3.0].
-
+     * @var string Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0].
      */
     public $ModelVersion;
 
     /**
-     * @var string 
-Generate a description of the image. (Note: The maximum supported length is 1000 characters.) This parameter is mandatory when no reference image is provided.
-
+     * @var string Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified.
      */
     public $Prompt;
 
     /**
-     * @var string Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
+     * @var string Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.
      */
     public $NegativePrompt;
 
     /**
-     * @var boolean The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
-
+     * @var boolean The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
      */
     public $EnhancePrompt;
 
     /**
-     * @var array 
-Supports single image input by default. Models supporting multi-image input include GEM (up to 3 images).  
-Recommended image size should be under 7MB, with support for JPEG, PNG, and WebP formats.
-
+     * @var array Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP.
      */
     public $ImageInfos;
 
     /**
-     * @var AigcImageExtraParam Used to pass additional parameters.
+     * @var AigcImageExtraParam Additional parameters required for the model.
      */
     public $ExtraParameters;
 
     /**
-     * @var AigcStoreCosParam The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
+     * @var AigcStoreCosParam COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
      */
     public $StoreCosParam;
 
     /**
-     * @var string Interface operator name.
+     * @var string API operator name.
      */
     public $Operator;
 
     /**
-     * @param string $ModelName Model Name. Currently supported models include: Hunyuan,GEM,Qwen.
-     * @param string $ModelVersion Specify the version number of a particular model. By default, the system utilizes the currently supported stable version of the model.  
-1. GEM, available options [2.5, 3.0].
-
-     * @param string $Prompt 
-Generate a description of the image. (Note: The maximum supported length is 1000 characters.) This parameter is mandatory when no reference image is provided.
-
-     * @param string $NegativePrompt Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
-     * @param boolean $EnhancePrompt The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
-
-     * @param array $ImageInfos 
-Supports single image input by default. Models supporting multi-image input include GEM (up to 3 images).  
-Recommended image size should be under 7MB, with support for JPEG, PNG, and WebP formats.
-
-     * @param AigcImageExtraParam $ExtraParameters Used to pass additional parameters.
-     * @param AigcStoreCosParam $StoreCosParam The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
-     * @param string $Operator Interface operator name.
+     * @param string $ModelName Model name.
+Supported models:Hunyuan,
+GEM,
+Qwen.
+     * @param string $ModelVersion Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0].
+     * @param string $Prompt Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified.
+     * @param string $NegativePrompt Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.
+     * @param boolean $EnhancePrompt The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
+     * @param array $ImageInfos Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP.
+     * @param AigcImageExtraParam $ExtraParameters Additional parameters required for the model.
+     * @param AigcStoreCosParam $StoreCosParam COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
+     * @param string $Operator API operator name.
      */
     function __construct()
     {

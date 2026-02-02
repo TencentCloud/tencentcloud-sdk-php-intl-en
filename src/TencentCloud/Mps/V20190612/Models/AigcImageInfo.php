@@ -18,28 +18,32 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Image information for AIGC generation.
  *
- * @method string getImageUrl() Obtain 
- * @method void setImageUrl(string $ImageUrl) Set 
- * @method string getReferenceType() Obtain 
- * @method void setReferenceType(string $ReferenceType) Set 
+ * @method string getImageUrl() Obtain Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
+ * @method void setImageUrl(string $ImageUrl) Set Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
+ * @method string getReferenceType() Obtain Reference type.
+Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+ * @method void setReferenceType(string $ReferenceType) Set Reference type.
+Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
  */
 class AigcImageInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
      */
     public $ImageUrl;
 
     /**
-     * @var string 
+     * @var string Reference type.
+Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
      */
     public $ReferenceType;
 
     /**
-     * @param string $ImageUrl 
-     * @param string $ReferenceType 
+     * @param string $ImageUrl Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
+     * @param string $ReferenceType Reference type.
+Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
      */
     function __construct()
     {

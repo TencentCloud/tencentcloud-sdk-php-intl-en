@@ -20,38 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUsageData request structure.
  *
- * @method string getStartTime() Obtain Start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setStartTime(string $StartTime) Set Start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method string getEndTime() Obtain End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setEndTime(string $EndTime) Set End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method array getTypes() Obtain Queries the MPS task type. The transcoding task is queried by default.
-<li>Transcode: transcoding.</li>
-<li>Enhance: enhancement.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIReview: content moderation.</li>
-<li>Snapshot: screenshot.</li>
-<li>AnimatedGraphics: conversion to GIF.</li>
-<li>AiQualityControl: media quality inspection.</li>
-<li>Evaluation: video assessment.</li>
-<li>ImageProcess: image processing.</li>
-<li>AddBlindWatermark: add a basic copyright digital watermark.</li>
-<li>AddNagraWatermark: add a NAGRA digital watermark.</li>
-<li>ExtractBlindWatermark: extract a basic copyright digital watermark.</li>
- * @method void setTypes(array $Types) Set Queries the MPS task type. The transcoding task is queried by default.
-<li>Transcode: transcoding.</li>
-<li>Enhance: enhancement.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIReview: content moderation.</li>
-<li>Snapshot: screenshot.</li>
-<li>AnimatedGraphics: conversion to GIF.</li>
-<li>AiQualityControl: media quality inspection.</li>
-<li>Evaluation: video assessment.</li>
-<li>ImageProcess: image processing.</li>
-<li>AddBlindWatermark: add a basic copyright digital watermark.</li>
-<li>AddNagraWatermark: add a NAGRA digital watermark.</li>
-<li>ExtractBlindWatermark: extract a basic copyright digital watermark.</li>
+ * @method string getStartTime() Obtain Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method void setStartTime(string $StartTime) Set Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method string getEndTime() Obtain End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method void setEndTime(string $EndTime) Set End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method array getTypes() Obtain Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
+<li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li>
+ * @method void setTypes(array $Types) Set Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
+<li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li>
  * @method array getProcessRegions() Obtain MPS park. ap-guangzhou park is returned by default.
 <li>ap-guangzhou: Guangzhou.</li>
 <li>ap-hongkong: Hong Kong (China).</li>
@@ -65,7 +41,7 @@ use TencentCloud\Common\AbstractModel;
 <li>na-siliconvalley: Silicon Valley.</li>
 <li>na-ashburn: Virginia.</li>
 <li>na-toronto: Toronto.</li>
-<li>sa-saopaulo: São Paulo.</li>
+<li>sa-saopaulo: Sao Paulo.</li>
 <li>eu-frankfurt: Frankfurt.</li>
 <li>eu-moscow: Russia.</li>
 <li>aws: AWS.</li>
@@ -82,7 +58,7 @@ use TencentCloud\Common\AbstractModel;
 <li>na-siliconvalley: Silicon Valley.</li>
 <li>na-ashburn: Virginia.</li>
 <li>na-toronto: Toronto.</li>
-<li>sa-saopaulo: São Paulo.</li>
+<li>sa-saopaulo: Sao Paulo.</li>
 <li>eu-frankfurt: Frankfurt.</li>
 <li>eu-moscow: Russia.</li>
 <li>aws: AWS.</li>
@@ -90,30 +66,18 @@ use TencentCloud\Common\AbstractModel;
 class DescribeUsageDataRequest extends AbstractModel
 {
     /**
-     * @var string Start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public $StartTime;
 
     /**
-     * @var string End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public $EndTime;
 
     /**
-     * @var array Queries the MPS task type. The transcoding task is queried by default.
-<li>Transcode: transcoding.</li>
-<li>Enhance: enhancement.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIReview: content moderation.</li>
-<li>Snapshot: screenshot.</li>
-<li>AnimatedGraphics: conversion to GIF.</li>
-<li>AiQualityControl: media quality inspection.</li>
-<li>Evaluation: video assessment.</li>
-<li>ImageProcess: image processing.</li>
-<li>AddBlindWatermark: add a basic copyright digital watermark.</li>
-<li>AddNagraWatermark: add a NAGRA digital watermark.</li>
-<li>ExtractBlindWatermark: extract a basic copyright digital watermark.</li>
+     * @var array Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
+<li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li>
      */
     public $Types;
 
@@ -131,7 +95,7 @@ class DescribeUsageDataRequest extends AbstractModel
 <li>na-siliconvalley: Silicon Valley.</li>
 <li>na-ashburn: Virginia.</li>
 <li>na-toronto: Toronto.</li>
-<li>sa-saopaulo: São Paulo.</li>
+<li>sa-saopaulo: Sao Paulo.</li>
 <li>eu-frankfurt: Frankfurt.</li>
 <li>eu-moscow: Russia.</li>
 <li>aws: AWS.</li>
@@ -139,22 +103,10 @@ class DescribeUsageDataRequest extends AbstractModel
     public $ProcessRegions;
 
     /**
-     * @param string $StartTime Start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param string $EndTime End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param array $Types Queries the MPS task type. The transcoding task is queried by default.
-<li>Transcode: transcoding.</li>
-<li>Enhance: enhancement.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIReview: content moderation.</li>
-<li>Snapshot: screenshot.</li>
-<li>AnimatedGraphics: conversion to GIF.</li>
-<li>AiQualityControl: media quality inspection.</li>
-<li>Evaluation: video assessment.</li>
-<li>ImageProcess: image processing.</li>
-<li>AddBlindWatermark: add a basic copyright digital watermark.</li>
-<li>AddNagraWatermark: add a NAGRA digital watermark.</li>
-<li>ExtractBlindWatermark: extract a basic copyright digital watermark.</li>
+     * @param string $StartTime Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @param string $EndTime End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @param array $Types Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
+<li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li>
      * @param array $ProcessRegions MPS park. ap-guangzhou park is returned by default.
 <li>ap-guangzhou: Guangzhou.</li>
 <li>ap-hongkong: Hong Kong (China).</li>
@@ -168,7 +120,7 @@ class DescribeUsageDataRequest extends AbstractModel
 <li>na-siliconvalley: Silicon Valley.</li>
 <li>na-ashburn: Virginia.</li>
 <li>na-toronto: Toronto.</li>
-<li>sa-saopaulo: São Paulo.</li>
+<li>sa-saopaulo: Sao Paulo.</li>
 <li>eu-frankfurt: Frankfurt.</li>
 <li>eu-moscow: Russia.</li>
 <li>aws: AWS.</li>

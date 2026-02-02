@@ -34,6 +34,8 @@ Note: This field may return null, indicating that no valid value can be obtained
  * @method void setWordlist(array $Wordlist) Set Word timestamp information.
 
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getSpeakerId() Obtain Speaker ID (if speaker recognition is enabled).
+ * @method void setSpeakerId(string $SpeakerId) Set Speaker ID (if speaker recognition is enabled).
  */
 class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel
 {
@@ -65,6 +67,11 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $Wordlist;
 
     /**
+     * @var string Speaker ID (if speaker recognition is enabled).
+     */
+    public $SpeakerId;
+
+    /**
      * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.
      * @param float $StartTimeOffset Start time offset of a recognized segment, in seconds.
      * @param float $EndTimeOffset End time offset of a recognized segment, in seconds.
@@ -72,6 +79,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param array $Wordlist Word timestamp information.
 
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $SpeakerId Speaker ID (if speaker recognition is enabled).
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                 $obj->deserialize($value);
                 array_push($this->Wordlist, $obj);
             }
+        }
+
+        if (array_key_exists("SpeakerId",$param) and $param["SpeakerId"] !== null) {
+            $this->SpeakerId = $param["SpeakerId"];
         }
     }
 }

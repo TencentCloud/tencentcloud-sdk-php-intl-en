@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Site ID.
  * @method void setZoneId(string $ZoneId) Set Site ID.
- * @method array getRecordNames() Obtain List of accelerated domain names.
- * @method void setRecordNames(array $RecordNames) Set List of accelerated domain names.
+ * @method array getRecordNames() Obtain The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
+ * @method void setRecordNames(array $RecordNames) Set The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
  */
 class CheckCnameStatusRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CheckCnameStatusRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array List of accelerated domain names.
+     * @var array The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
      */
     public $RecordNames;
 
     /**
      * @param string $ZoneId Site ID.
-     * @param array $RecordNames List of accelerated domain names.
+     * @param array $RecordNames The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
      */
     function __construct()
     {

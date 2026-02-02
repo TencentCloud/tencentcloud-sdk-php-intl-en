@@ -28,15 +28,9 @@ Default value: ON.
 <li>ON: enabled.</li>
 <li>OFF: disabled.</li>
 Default value: ON.
- * @method string getType() Obtain Type. Valid values:
-<li>standard: standard super-resolution.</li>
-<li>super: advanced super-resolution.</li>
-Default value: standard.
+ * @method string getType() Obtain Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set Type. Valid values:
-<li>standard: standard super-resolution.</li>
-<li>super: advanced super-resolution.</li>
-Default value: standard.
+ * @method void setType(string $Type) Set Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMode() Obtain Image output mode. The default value is percent.
 <li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
@@ -48,18 +42,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
 <li>percent: magnification factor of super-resolution, which can be a decimal.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getPercent() Obtain Magnification factor of super-resolution, which can be a decimal.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPercent(float $Percent) Set Magnification factor of super-resolution, which can be a decimal.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getWidth() Obtain Width of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWidth(integer $Width) Set Width of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getHeight() Obtain Height of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHeight(integer $Height) Set Height of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getPercent() Obtain Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPercent(float $Percent) Set Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getWidth() Obtain Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWidth(integer $Width) Set Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getHeight() Obtain Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHeight(integer $Height) Set Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getLongSide() Obtain Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLongSide(integer $LongSide) Set Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getShortSide() Obtain Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setShortSide(integer $ShortSide) Set Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AdvancedSuperResolutionConfig extends AbstractModel
 {
@@ -72,10 +64,7 @@ Default value: ON.
     public $Switch;
 
     /**
-     * @var string Type. Valid values:
-<li>standard: standard super-resolution.</li>
-<li>super: advanced super-resolution.</li>
-Default value: standard.
+     * @var string Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
@@ -90,44 +79,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Mode;
 
     /**
-     * @var float Magnification factor of super-resolution, which can be a decimal.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Percent;
 
     /**
-     * @var integer Width of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Width;
 
     /**
-     * @var integer Height of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Height;
+
+    /**
+     * @var integer Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $LongSide;
+
+    /**
+     * @var integer Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ShortSide;
 
     /**
      * @param string $Switch Capability configuration switch. Valid values:
 <li>ON: enabled.</li>
 <li>OFF: disabled.</li>
 Default value: ON.
-     * @param string $Type Type. Valid values:
-<li>standard: standard super-resolution.</li>
-<li>super: advanced super-resolution.</li>
-Default value: standard.
+     * @param string $Type Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Mode Image output mode. The default value is percent.
 <li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
 <li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
 <li>percent: magnification factor of super-resolution, which can be a decimal.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Percent Magnification factor of super-resolution, which can be a decimal.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Width Width of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Height Height of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $Percent Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Width Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Height Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $LongSide Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ShortSide Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -164,6 +156,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("LongSide",$param) and $param["LongSide"] !== null) {
+            $this->LongSide = $param["LongSide"];
+        }
+
+        if (array_key_exists("ShortSide",$param) and $param["ShortSide"] !== null) {
+            $this->ShortSide = $param["ShortSide"];
         }
     }
 }

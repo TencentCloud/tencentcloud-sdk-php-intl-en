@@ -20,28 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent analysis results
  *
- * @method string getType() Obtain Task type. Valid values:
-<li>Classification: smart classification.</li>
-<li>Cover: smart cover.</li>
-<li>Tag: smart tag.</li>
-<li>FrameTag: smart frame tag.</li>
-<li>Highlight: smart highlights.</li>
-<li>DeLogo: smart erasing.</li>
-<li>Description: LLM summary.</li>
-<li>Dubbing: smart dubbing.</li>
-<li>VideoRemake: video deduplication.</li>
-<li>VideoComprehension: video (audio) recognition.</li>
- * @method void setType(string $Type) Set Task type. Valid values:
-<li>Classification: smart classification.</li>
-<li>Cover: smart cover.</li>
-<li>Tag: smart tag.</li>
-<li>FrameTag: smart frame tag.</li>
-<li>Highlight: smart highlights.</li>
-<li>DeLogo: smart erasing.</li>
-<li>Description: LLM summary.</li>
-<li>Dubbing: smart dubbing.</li>
-<li>VideoRemake: video deduplication.</li>
-<li>VideoComprehension: video (audio) recognition.</li>
+ * @method string getType() Obtain Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
+ * @method void setType(string $Type) Set Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
  * @method AiAnalysisTaskClassificationResult getClassificationTask() Obtain Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
  * @method void setClassificationTask(AiAnalysisTaskClassificationResult $ClassificationTask) Set Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
  * @method AiAnalysisTaskCoverResult getCoverTask() Obtain Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
@@ -86,21 +68,16 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVideoComprehensionTask(AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask) Set Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskCutoutResult getCutoutTask() Obtain Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCutoutTask(AiAnalysisTaskCutoutResult $CutoutTask) Set Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskReelResult getReelTask() Obtain Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReelTask(AiAnalysisTaskReelResult $ReelTask) Set Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AiAnalysisResult extends AbstractModel
 {
     /**
-     * @var string Task type. Valid values:
-<li>Classification: smart classification.</li>
-<li>Cover: smart cover.</li>
-<li>Tag: smart tag.</li>
-<li>FrameTag: smart frame tag.</li>
-<li>Highlight: smart highlights.</li>
-<li>DeLogo: smart erasing.</li>
-<li>Description: LLM summary.</li>
-<li>Dubbing: smart dubbing.</li>
-<li>VideoRemake: video deduplication.</li>
-<li>VideoComprehension: video (audio) recognition.</li>
+     * @var string Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
      */
     public $Type;
 
@@ -179,17 +156,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VideoComprehensionTask;
 
     /**
-     * @param string $Type Task type. Valid values:
-<li>Classification: smart classification.</li>
-<li>Cover: smart cover.</li>
-<li>Tag: smart tag.</li>
-<li>FrameTag: smart frame tag.</li>
-<li>Highlight: smart highlights.</li>
-<li>DeLogo: smart erasing.</li>
-<li>Description: LLM summary.</li>
-<li>Dubbing: smart dubbing.</li>
-<li>VideoRemake: video deduplication.</li>
-<li>VideoComprehension: video (audio) recognition.</li>
+     * @var AiAnalysisTaskCutoutResult Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CutoutTask;
+
+    /**
+     * @var AiAnalysisTaskReelResult Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ReelTask;
+
+    /**
+     * @param string $Type Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
      * @param AiAnalysisTaskClassificationResult $ClassificationTask Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
      * @param AiAnalysisTaskCoverResult $CoverTask Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
      * @param AiAnalysisTaskTagResult $TagTask Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
@@ -212,6 +190,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskCutoutResult $CutoutTask Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskReelResult $ReelTask Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -293,6 +273,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("VideoComprehensionTask",$param) and $param["VideoComprehensionTask"] !== null) {
             $this->VideoComprehensionTask = new AiAnalysisTaskVideoComprehensionResult();
             $this->VideoComprehensionTask->deserialize($param["VideoComprehensionTask"]);
+        }
+
+        if (array_key_exists("CutoutTask",$param) and $param["CutoutTask"] !== null) {
+            $this->CutoutTask = new AiAnalysisTaskCutoutResult();
+            $this->CutoutTask->deserialize($param["CutoutTask"]);
+        }
+
+        if (array_key_exists("ReelTask",$param) and $param["ReelTask"] !== null) {
+            $this->ReelTask = new AiAnalysisTaskReelResult();
+            $this->ReelTask->deserialize($param["ReelTask"]);
         }
     }
 }

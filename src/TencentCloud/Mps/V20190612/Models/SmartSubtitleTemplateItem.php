@@ -100,18 +100,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 `hi`: Hindi.
 `fil`: Filipino.
 `auto`: automatic recognition (it is only supported in pure subtitle translation).
- * @method string getSubtitleFormat() Obtain Smart subtitle file format:
-- vtt: WebVTT format.
-- srt: SRT format.
-- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-- If this field is unspecified or left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubtitleFormat(string $SubtitleFormat) Set Smart subtitle file format:
-- vtt: WebVTT format.
-- srt: SRT format.
-- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-- If this field is unspecified or left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSubtitleFormat() Obtain Smart subtitle file format.
+- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubtitleFormat(string $SubtitleFormat) Set Smart subtitle file format.
+- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getSubtitleType() Obtain Smart subtitle language type.
 0: source language1: target language
 2: source language + target language
@@ -184,12 +176,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setAliasName(string $AliasName) Set Alias of the preset smart subtitle template.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getProcessType() Obtain Subtitle processing type.
-- 0: ASR recognition subtitle.
-- 1: pure subtitle translation.
- * @method void setProcessType(integer $ProcessType) Set Subtitle processing type.
-- 0: ASR recognition subtitle.
-- 1: pure subtitle translation.
+ * @method integer getProcessType() Obtain Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
+ * @method void setProcessType(integer $ProcessType) Set Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
+ * @method SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() Obtain Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig) Set Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SmartSubtitleTemplateItem extends AbstractModel
 {
@@ -262,12 +252,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $VideoSrcLanguage;
 
     /**
-     * @var string Smart subtitle file format:
-- vtt: WebVTT format.
-- srt: SRT format.
-- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-- If this field is unspecified or left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Smart subtitle file format.
+- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubtitleFormat;
 
@@ -332,11 +318,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $AliasName;
 
     /**
-     * @var integer Subtitle processing type.
-- 0: ASR recognition subtitle.
-- 1: pure subtitle translation.
+     * @var integer Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
      */
     public $ProcessType;
+
+    /**
+     * @var SelectingSubtitleAreasConfig Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SelectingSubtitleAreasConfig;
 
     /**
      * @param integer $Definition Unique identifier of the smart subtitle template.
@@ -379,12 +368,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 `hi`: Hindi.
 `fil`: Filipino.
 `auto`: automatic recognition (it is only supported in pure subtitle translation).
-     * @param string $SubtitleFormat Smart subtitle file format:
-- vtt: WebVTT format.
-- srt: SRT format.
-- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-- If this field is unspecified or left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SubtitleFormat Smart subtitle file format.
+- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SubtitleType Smart subtitle language type.
 0: source language1: target language
 2: source language + target language
@@ -421,9 +406,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $UpdateTime Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $AliasName Alias of the preset smart subtitle template.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $ProcessType Subtitle processing type.
-- 0: ASR recognition subtitle.
-- 1: pure subtitle translation.
+     * @param integer $ProcessType Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
+     * @param SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -497,6 +481,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("ProcessType",$param) and $param["ProcessType"] !== null) {
             $this->ProcessType = $param["ProcessType"];
+        }
+
+        if (array_key_exists("SelectingSubtitleAreasConfig",$param) and $param["SelectingSubtitleAreasConfig"] !== null) {
+            $this->SelectingSubtitleAreasConfig = new SelectingSubtitleAreasConfig();
+            $this->SelectingSubtitleAreasConfig->deserialize($param["SelectingSubtitleAreasConfig"]);
         }
     }
 }
