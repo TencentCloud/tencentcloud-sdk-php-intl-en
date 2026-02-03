@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mdl\V20200326\Models;
+namespace TencentCloud\Hunyuan\V20230901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryInputStreamState request structure.
+ * QueryHunyuanTo3DTextureEditJob request structure.
  *
- * @method string getId() Obtain The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
- * @method void setId(string $Id) Set The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+ * @method string getJobId() Obtain Task ID
+ * @method void setJobId(string $JobId) Set Task ID
  */
-class QueryInputStreamStateRequest extends AbstractModel
+class QueryHunyuanTo3DTextureEditJobRequest extends AbstractModel
 {
     /**
-     * @var string The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+     * @var string Task ID
      */
-    public $Id;
+    public $JobId;
 
     /**
-     * @param string $Id The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+     * @param string $JobId Task ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class QueryInputStreamStateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
     }
 }

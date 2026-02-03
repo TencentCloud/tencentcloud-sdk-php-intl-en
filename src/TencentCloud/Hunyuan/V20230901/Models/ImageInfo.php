@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mdl\V20200326\Models;
+namespace TencentCloud\Hunyuan\V20230901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryInputStreamState request structure.
+ * Image information.
  *
- * @method string getId() Obtain The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
- * @method void setId(string $Id) Set The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+ * @method string getUrl() Obtain Image Url.
+ * @method void setUrl(string $Url) Set Image Url.
+ * @method string getBase64() Obtain Image Base64.
+ * @method void setBase64(string $Base64) Set Image Base64.
  */
-class QueryInputStreamStateRequest extends AbstractModel
+class ImageInfo extends AbstractModel
 {
     /**
-     * @var string The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+     * @var string Image Url.
      */
-    public $Id;
+    public $Url;
 
     /**
-     * @param string $Id The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+     * @var string Image Base64.
+     */
+    public $Base64;
+
+    /**
+     * @param string $Url Image Url.
+     * @param string $Base64 Image Base64.
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class QueryInputStreamStateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Base64",$param) and $param["Base64"] !== null) {
+            $this->Base64 = $param["Base64"];
         }
     }
 }
