@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
  * @method string getDiskId() Obtain ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
  * @method void setDiskId(string $DiskId) Set ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
- * @method boolean getAutoStopInstance() Obtain Specifies whether to shut down a CVM automatically before a rollback
- * @method void setAutoStopInstance(boolean $AutoStopInstance) Set Specifies whether to shut down a CVM automatically before a rollback
- * @method boolean getAutoStartInstance() Obtain Specifies whether to start up a CVM automatically after a rollback
- * @method void setAutoStartInstance(boolean $AutoStartInstance) Set Specifies whether to start up a CVM automatically after a rollback
+ * @method boolean getAutoStopInstance() Obtain Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+Specifies whether AutoStartInstance can be set to true when this parameter is true.
+ * @method void setAutoStopInstance(boolean $AutoStopInstance) Set Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+Specifies whether AutoStartInstance can be set to true when this parameter is true.
+ * @method boolean getAutoStartInstance() Obtain Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance.
+ * @method void setAutoStartInstance(boolean $AutoStartInstance) Set Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance.
  */
 class ApplySnapshotRequest extends AbstractModel
 {
@@ -42,20 +44,22 @@ class ApplySnapshotRequest extends AbstractModel
     public $DiskId;
 
     /**
-     * @var boolean Specifies whether to shut down a CVM automatically before a rollback
+     * @var boolean Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+Specifies whether AutoStartInstance can be set to true when this parameter is true.
      */
     public $AutoStopInstance;
 
     /**
-     * @var boolean Specifies whether to start up a CVM automatically after a rollback
+     * @var boolean Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance.
      */
     public $AutoStartInstance;
 
     /**
      * @param string $SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
      * @param string $DiskId ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-     * @param boolean $AutoStopInstance Specifies whether to shut down a CVM automatically before a rollback
-     * @param boolean $AutoStartInstance Specifies whether to start up a CVM automatically after a rollback
+     * @param boolean $AutoStopInstance Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+Specifies whether AutoStartInstance can be set to true when this parameter is true.
+     * @param boolean $AutoStartInstance Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance.
      */
     function __construct()
     {

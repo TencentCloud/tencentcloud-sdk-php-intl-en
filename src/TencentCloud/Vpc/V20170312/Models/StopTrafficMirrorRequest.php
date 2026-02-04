@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mdp\V20200527\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteStreamPackageSource request structure.
+ * StopTrafficMirror request structure.
  *
- * @method string getId() Obtain Source Id.
- * @method void setId(string $Id) Set Source Id.
+ * @method string getTrafficMirrorId() Obtain Traffic mirroring instance ID.
+ * @method void setTrafficMirrorId(string $TrafficMirrorId) Set Traffic mirroring instance ID.
  */
-class DeleteStreamPackageSourceRequest extends AbstractModel
+class StopTrafficMirrorRequest extends AbstractModel
 {
     /**
-     * @var string Source Id.
+     * @var string Traffic mirroring instance ID.
      */
-    public $Id;
+    public $TrafficMirrorId;
 
     /**
-     * @param string $Id Source Id.
+     * @param string $TrafficMirrorId Traffic mirroring instance ID.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteStreamPackageSourceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists("TrafficMirrorId",$param) and $param["TrafficMirrorId"] !== null) {
+            $this->TrafficMirrorId = $param["TrafficMirrorId"];
         }
     }
 }

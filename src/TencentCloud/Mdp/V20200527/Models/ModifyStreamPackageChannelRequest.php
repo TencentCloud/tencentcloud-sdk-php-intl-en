@@ -48,6 +48,7 @@ class ModifyStreamPackageChannelRequest extends AbstractModel
 
     /**
      * @var CacheInfo Cache configuration.
+     * @deprecated
      */
     public $CacheInfo;
 

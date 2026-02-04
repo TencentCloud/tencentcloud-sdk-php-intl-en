@@ -97,6 +97,7 @@ This API is completed asynchronously. If you need to query the execution result 
 * Check whether the secondary CIDR block overlaps with the routing destination of the current VPC.
 * If the current VPC is used in a peering connection, check whether the secondary CIDR block overlaps with the primary/secondary CIDR block of the peer VPC.
  * @method Models\CheckNetDetectStateResponse CheckNetDetectState(Models\CheckNetDetectStateRequest $req) This API is used to verify the network detection status.
+ * @method Models\CheckTrafficMirrorResponse CheckTrafficMirror(Models\CheckTrafficMirrorRequest $req) This API is used to check the collector and receiver for traffic mirroring (public IP address type).
  * @method Models\CloneSecurityGroupResponse CloneSecurityGroup(Models\CloneSecurityGroupRequest $req) This API is used to create a security group with the same rule configurations as an existing security group. The cloning only copies the security group and its rules, but not the security group tags.
  * @method Models\CreateAddressTemplateResponse CreateAddressTemplate(Models\CreateAddressTemplateRequest $req) This API is used to create an IP address template.
  * @method Models\CreateAddressTemplateGroupResponse CreateAddressTemplateGroup(Models\CreateAddressTemplateGroupRequest $req) This API is used to create an IP address template group.
@@ -204,6 +205,7 @@ Description:
 * IP address ranges of different subnets cannot overlap with each other within the same VPC instance.
 * A subnet is automatically associated with the default route table once created.
 * You can bind a tag when creating a subnet. The tag list in the response indicates the tags that have been successfully added.
+ * @method Models\CreateTrafficMirrorResponse CreateTrafficMirror(Models\CreateTrafficMirrorRequest $req) This API is used to create a traffic mirroring instance.
  * @method Models\CreateVpcResponse CreateVpc(Models\CreateVpcRequest $req) This API is used to create a VPC instance.
 * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), that of the largest IP address ranges 10.0.0.0/12 and 172.16.0.0/12 is 12 (1,048,576 IP addresses), and that of the largest IP address range 192.168.0.0/16 is 16 (65,536 IP addresses). For more information on how to plan VPC IP ranges, see [Network Planning](https://intl.cloud.tencent.com/document/product/215/30313?from_cn_redirect=1).
 * The number of VPC instances that can be created in a region is limited. For more information, see <a href="https://intl.cloud.tencent.com/doc/product/215/537?from_cn_redirect=1" title="VPC Use Limits">VPC Use Limits</a>. To request more resources, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
@@ -264,6 +266,7 @@ This API is completed asynchronously. If you need to query the execution result 
  * @method Models\DeleteSubnetResponse DeleteSubnet(Models\DeleteSubnetRequest $req) This API is used to delete a subnet.
 * Remove all resources in the subnet before deleting it
  * @method Models\DeleteTemplateMemberResponse DeleteTemplateMember(Models\DeleteTemplateMemberRequest $req) This API is used to delete a parameter template of the IP address, protocol port, IP address group, or protocol port group type.
+ * @method Models\DeleteTrafficMirrorResponse DeleteTrafficMirror(Models\DeleteTrafficMirrorRequest $req) This API is used to delete a traffic mirroring instance.
  * @method Models\DeleteTrafficPackagesResponse DeleteTrafficPackages(Models\DeleteTrafficPackagesRequest $req) This API is used to delete traffic packages. Note that only non-valid traffic packages can be deleted. 
  * @method Models\DeleteVpcResponse DeleteVpc(Models\DeleteVpcRequest $req) This API (DeleteVpc) is used to delete VPCs.
 * Before deleting a VPC, ensure that the VPC contains no resources, including CVMs, cloud databases, NoSQL databases, VPN gateways, direct connect gateways, load balancers, peering connections, and basic network devices that are linked to the VPC.
@@ -345,6 +348,7 @@ This API is used to check the jumbo frame status before and after instance migra
  * @method Models\DescribeSubnetResourceDashboardResponse DescribeSubnetResourceDashboard(Models\DescribeSubnetResourceDashboardRequest $req) This API is used to query the subnet resource.
  * @method Models\DescribeSubnetsResponse DescribeSubnets(Models\DescribeSubnetsRequest $req) This API (DescribeSubnets) is used to query the list of subnets.
  * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) This API is used to query the EIP async job execution results.
+ * @method Models\DescribeTrafficMirrorsResponse DescribeTrafficMirrors(Models\DescribeTrafficMirrorsRequest $req) This API is used to query the information of a traffic mirroring instance.
  * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) This API is used to query the details of shared traffic packages.
  * @method Models\DescribeUsedIpAddressResponse DescribeUsedIpAddress(Models\DescribeUsedIpAddressRequest $req) This API is used to query the IP usage of a subnet or VPC.
 If the IP is occupied, the resource type and ID associated with the are is returned. If the IP is not used, it returns null.
@@ -484,6 +488,8 @@ This API is completed asynchronously. If you need to query the execution result 
  * @method Models\ModifySnapshotPoliciesResponse ModifySnapshotPolicies(Models\ModifySnapshotPoliciesRequest $req) This API is used to modify specified snapshot policies.
  * @method Models\ModifySubnetAttributeResponse ModifySubnetAttribute(Models\ModifySubnetAttributeRequest $req) This API (ModifySubnetAttribute) is used to modify subnet attributes.
  * @method Models\ModifyTemplateMemberResponse ModifyTemplateMember(Models\ModifyTemplateMemberRequest $req) This API is used to modify a parameter template of the IP address, protocol port, IP address group, or protocol port group type.
+ * @method Models\ModifyTrafficMirrorAttributeResponse ModifyTrafficMirrorAttribute(Models\ModifyTrafficMirrorAttributeRequest $req) This API is used to modify the attributes of a traffic mirroring instance.
+Note: Only the name and description can be modified.
  * @method Models\ModifyVpcAttributeResponse ModifyVpcAttribute(Models\ModifyVpcAttributeRequest $req) This API (ModifyVpcAttribute) is used to modify VPC attributes.
  * @method Models\ModifyVpcEndPointAttributeResponse ModifyVpcEndPointAttribute(Models\ModifyVpcEndPointAttributeRequest $req) This API is used to modify endpoint attributes.
  * @method Models\ModifyVpcEndPointServiceAttributeResponse ModifyVpcEndPointServiceAttribute(Models\ModifyVpcEndPointServiceAttributeRequest $req) This API is used to modify the VPC endpoint service attributes.
@@ -528,6 +534,10 @@ Only one policy in a single direction can be replaced in each request, and the P
  * @method Models\ResetRoutePolicyEntriesResponse ResetRoutePolicyEntries(Models\ResetRoutePolicyEntriesRequest $req) This API is used to reset the designated route reception policy entry based on the rule ID and supports batch modification.
  * @method Models\ResetRoutesResponse ResetRoutes(Models\ResetRoutesRequest $req) This API (ResetRoutes) is used to reset the name of a route table and all its routing policies.<br />
 Note: When this API is called, all routing policies in the current route table are deleted before new routing policies are saved, which may incur network interruption.
+ * @method Models\ResetTrafficMirrorFilterResponse ResetTrafficMirrorFilter(Models\ResetTrafficMirrorFilterRequest $req) This API is used to update a traffic mirroring instance filter rule.
+Note: A traffic mirroring instance cannot simultaneously support filtering based on NAT gateway and five tuple rules.
+ * @method Models\ResetTrafficMirrorSrcsResponse ResetTrafficMirrorSrcs(Models\ResetTrafficMirrorSrcsRequest $req) This API is used to reset the collection object of a traffic mirroring instance.
+ * @method Models\ResetTrafficMirrorTargetResponse ResetTrafficMirrorTarget(Models\ResetTrafficMirrorTargetRequest $req) This API is used to update the receiving destination information of a traffic mirroring instance.
  * @method Models\ResetVpnConnectionResponse ResetVpnConnection(Models\ResetVpnConnectionRequest $req) The API is used to reset a VPN tunnel.
  * @method Models\ResetVpnGatewayInternetMaxBandwidthResponse ResetVpnGatewayInternetMaxBandwidth(Models\ResetVpnGatewayInternetMaxBandwidthRequest $req) This API is used to adjust the bandwidth cap of a VPN gateway. The adjustment of the VPN gateway bandwidth is limited to [5,100] Mbps and [200,1000] Mbps. 
  * @method Models\ResumeSnapshotInstanceResponse ResumeSnapshotInstance(Models\ResumeSnapshotInstanceRequest $req) This API is used to restore security group policies with a backup.
@@ -535,6 +545,8 @@ Note: When this API is called, all routing policies in the current route table a
 Note: Starting from Dec 15, 2022, CAM authorization is required for a sub-account to call this API. For more details, see [Authorization Guide](https://intl.cloud.tencent.com/document/product/598/34545?from_cn_redirect=1).
  * @method Models\SetCcnRegionBandwidthLimitsResponse SetCcnRegionBandwidthLimits(Models\SetCcnRegionBandwidthLimitsRequest $req) This API (SetCcnRegionBandwidthLimits) is used to set the outbound bandwidth cap for CCNs in each region. This API can only set the outbound bandwidth cap for regions in the network instances that have already been associated.
  * @method Models\SetVpnGatewaysRenewFlagResponse SetVpnGatewaysRenewFlag(Models\SetVpnGatewaysRenewFlagRequest $req) This API is used set the auto-renewal configuration of a VPN gateway.
+ * @method Models\StartTrafficMirrorResponse StartTrafficMirror(Models\StartTrafficMirrorRequest $req) This API is used to start a traffic mirroring instance.
+ * @method Models\StopTrafficMirrorResponse StopTrafficMirror(Models\StopTrafficMirrorRequest $req) This API is used to stop a traffic mirroring instance.
  * @method Models\TransformAddressResponse TransformAddress(Models\TransformAddressRequest $req) This API is used to convert a common public IP into an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short).
 * Tencent Cloud limits the number of times that a user can unbind EIPs and reassign public IPs in each region per day. For more information, see product introduction of [Elastic IP](https://intl.cloud.tencent.com/document/product/213/5733?from_cn_redirect=1). The preceding quota can be obtained through the API [DescribeAddressQuota](https://intl.cloud.tencent.com/document/product/215/16701).
  * @method Models\UnassignIpv6AddressesResponse UnassignIpv6Addresses(Models\UnassignIpv6AddressesRequest $req) This API is used to release the IPv6 addresses of an ENI. <br />
@@ -547,6 +559,8 @@ If the subnet IP range still has occupied IPs that are not yet repossessed, the 
 * If a secondary private IP of an ENI is returned, the EIP will be automatically unassociated as well. The primary private IP of the ENI cannot be returned.
 
 This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
+ * @method Models\UpdateTrafficMirrorAllFilterResponse UpdateTrafficMirrorAllFilter(Models\UpdateTrafficMirrorAllFilterRequest $req) This API is used to update the filter rule or collection object of a traffic mirroring instance.
+ * @method Models\UpdateTrafficMirrorDirectionResponse UpdateTrafficMirrorDirection(Models\UpdateTrafficMirrorDirectionRequest $req) This API is used to update the collection direction of a traffic mirroring instance.
  * @method Models\WithdrawNotifyRoutesResponse WithdrawNotifyRoutes(Models\WithdrawNotifyRoutesRequest $req) This API is used to withdraw a route from CCN. 
  */
 

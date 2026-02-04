@@ -41,6 +41,7 @@ class CreateStreamPackageChannelRequest extends AbstractModel
 
     /**
      * @var CacheInfo Cache configuration.
+     * @deprecated
      */
     public $CacheInfo;
 

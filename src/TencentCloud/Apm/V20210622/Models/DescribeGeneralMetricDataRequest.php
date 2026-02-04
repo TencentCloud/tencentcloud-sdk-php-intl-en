@@ -39,13 +39,13 @@ use TencentCloud\Common\AbstractModel;
 - if 1 is filled in, the aggregation granularity will be selected according to the time span from the start time to the deadline:.
  -If the time span is (0,12) hours, it is aggregated by one-minute granularity.
  -If the time span is [12,48] hours, it is aggregated at a five-minute granularity.
- -If the time span is (48, +∞) hours, it is aggregated at an hourly granularity.
+ -If the time span is (48, +inf) hours, it is aggregated at an hourly granularity.
  * @method void setPeriod(integer $Period) Set Whether to aggregate by a fixed time span: enter 1 for values of 1 and greater, and 0 if not filled in.
 -If 0 is filled in, it calculates the metric data from the start time to the cutoff time.
 - if 1 is filled in, the aggregation granularity will be selected according to the time span from the start time to the deadline:.
  -If the time span is (0,12) hours, it is aggregated by one-minute granularity.
  -If the time span is [12,48] hours, it is aggregated at a five-minute granularity.
- -If the time span is (48, +∞) hours, it is aggregated at an hourly granularity.
+ -If the time span is (48, +inf) hours, it is aggregated at an hourly granularity.
  * @method OrderBy getOrderBy() Obtain Sort query metrics.
 Key: enter the tencentcloud api metric name. [for details, see](https://intl.cloud.tencent.com/document/product/248/101681?from_cn_redirect=1) .
 Value: specify the sorting method:.     
@@ -102,7 +102,7 @@ class DescribeGeneralMetricDataRequest extends AbstractModel
 - if 1 is filled in, the aggregation granularity will be selected according to the time span from the start time to the deadline:.
  -If the time span is (0,12) hours, it is aggregated by one-minute granularity.
  -If the time span is [12,48] hours, it is aggregated at a five-minute granularity.
- -If the time span is (48, +∞) hours, it is aggregated at an hourly granularity.
+ -If the time span is (48, +inf) hours, it is aggregated at an hourly granularity.
      */
     public $Period;
 
@@ -133,7 +133,7 @@ Value: specify the sorting method:.
 - if 1 is filled in, the aggregation granularity will be selected according to the time span from the start time to the deadline:.
  -If the time span is (0,12) hours, it is aggregated by one-minute granularity.
  -If the time span is [12,48] hours, it is aggregated at a five-minute granularity.
- -If the time span is (48, +∞) hours, it is aggregated at an hourly granularity.
+ -If the time span is (48, +inf) hours, it is aggregated at an hourly granularity.
      * @param OrderBy $OrderBy Sort query metrics.
 Key: enter the tencentcloud api metric name. [for details, see](https://intl.cloud.tencent.com/document/product/248/101681?from_cn_redirect=1) .
 Value: specify the sorting method:.     

@@ -58,6 +58,7 @@ class ChannelInfo extends AbstractModel
     /**
      * @var CacheInfo Cache configuration
 Note: this field may return `null`, indicating that no valid value was found.
+     * @deprecated
      */
     public $CacheInfo;
 
