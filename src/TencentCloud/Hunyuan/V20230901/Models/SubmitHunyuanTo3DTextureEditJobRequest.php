@@ -21,10 +21,10 @@ use TencentCloud\Common\AbstractModel;
  * SubmitHunyuanTo3DTextureEditJob request structure.
  *
  * @method InputFile3D getFile3D() Obtain File URL of the 3D model file that requires texture edit
-Supported formats: FBX, OBJ, GLB
+Supported formats: FBX
 3D model limit: less than 100000 faces
  * @method void setFile3D(InputFile3D $File3D) Set File URL of the 3D model file that requires texture edit
-Supported formats: FBX, OBJ, GLB
+Supported formats: FBX
 3D model limit: less than 100000 faces
  * @method ImageInfo getImage() Obtain Reference image for 3D model texture editing: Base64 data and image Url
 Either Base64 or Url must be provided. if both are provided, Url prevails
@@ -51,7 +51,7 @@ class SubmitHunyuanTo3DTextureEditJobRequest extends AbstractModel
 {
     /**
      * @var InputFile3D File URL of the 3D model file that requires texture edit
-Supported formats: FBX, OBJ, GLB
+Supported formats: FBX
 3D model limit: less than 100000 faces
      */
     public $File3D;
@@ -80,7 +80,7 @@ Example value: true
 
     /**
      * @param InputFile3D $File3D File URL of the 3D model file that requires texture edit
-Supported formats: FBX, OBJ, GLB
+Supported formats: FBX
 3D model limit: less than 100000 faces
      * @param ImageInfo $Image Reference image for 3D model texture editing: Base64 data and image Url
 Either Base64 or Url must be provided. if both are provided, Url prevails
