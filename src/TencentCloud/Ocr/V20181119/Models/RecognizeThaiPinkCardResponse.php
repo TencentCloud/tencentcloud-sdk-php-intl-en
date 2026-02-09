@@ -50,10 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIssuingAgency(string $IssuingAgency) Set Issuing agency
  * @method string getRefNumber() Obtain Ref number
  * @method void setRefNumber(string $RefNumber) Set Ref number
- * @method string getAdvancedInfo() Obtain Field confidence:
- { "ID": { "Confidence": 0.9999 }, "ThaiName": { "Confidence": 0.9996 } }
- * @method void setAdvancedInfo(string $AdvancedInfo) Set Field confidence:
- { "ID": { "Confidence": 0.9999 }, "ThaiName": { "Confidence": 0.9996 } }
+ * @method string getAdvancedInfo() Obtain This field is deprecated and will always return "1". Usage is not recommended.
+ * @method void setAdvancedInfo(string $AdvancedInfo) Set This field is deprecated and will always return "1". Usage is not recommended.
  * @method string getPortraitImage() Obtain Identity photo
  * @method void setPortraitImage(string $PortraitImage) Set Identity photo
  * @method array getWarnCardInfos() Obtain Card Warning Information
@@ -153,8 +151,8 @@ class RecognizeThaiPinkCardResponse extends AbstractModel
     public $RefNumber;
 
     /**
-     * @var string Field confidence:
- { "ID": { "Confidence": 0.9999 }, "ThaiName": { "Confidence": 0.9996 } }
+     * @var string This field is deprecated and will always return "1". Usage is not recommended.
+     * @deprecated
      */
     public $AdvancedInfo;
 
@@ -196,8 +194,7 @@ class RecognizeThaiPinkCardResponse extends AbstractModel
      * @param string $DateOfExpiry Expiration date in English
      * @param string $IssuingAgency Issuing agency
      * @param string $RefNumber Ref number
-     * @param string $AdvancedInfo Field confidence:
- { "ID": { "Confidence": 0.9999 }, "ThaiName": { "Confidence": 0.9996 } }
+     * @param string $AdvancedInfo This field is deprecated and will always return "1". Usage is not recommended.
      * @param string $PortraitImage Identity photo
      * @param array $WarnCardInfos Card Warning Information
 

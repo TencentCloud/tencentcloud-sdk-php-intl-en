@@ -631,7 +631,7 @@ A maximum of 2 requests can be initiated per second for this API.
 
 A maximum of 10 requests can be initiated per second for this API.
  * @method Models\RecognizeThaiPinkCardResponse RecognizeThaiPinkCard(Models\RecognizeThaiPinkCardRequest $req) This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
-Currently, this API is not generally available. For more information, please [contact your sales rep](https://intl.cloud.tencent.com/about/connect?from_cn_redirect=1).
+Currently, this API is not generally available. For more information, please [contact your sales rep](https://intl.cloud.tencent.com/zh/contact-us).
 
 A maximum of 5 requests can be initiated per second for this API.
  * @method Models\SealOCRResponse SealOCR(Models\SealOCRRequest $req) This API is used to recognize various types of seals, including invoice seals and finance seals. It is suitable for scenarios such as official document and invoice/ticket OCR.
