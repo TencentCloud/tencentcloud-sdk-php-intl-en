@@ -62,6 +62,12 @@ such as "kghy_0101"
 such as "kghy_0101"
  * @method string getExtended() Obtain Extension field, which is left empty by default.
  * @method void setExtended(string $Extended) Set Extension field, which is left empty by default.
+ * @method string getCustomerName() Obtain For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+1. Length: 2~200 characters
+2. Customer name cannot be pure numbers
+ * @method void setCustomerName(string $CustomerName) Set For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+1. Length: 2~200 characters
+2. Customer name cannot be pure numbers
  */
 class CreateAccountRequest extends AbstractModel
 {
@@ -131,6 +137,13 @@ such as "kghy_0101"
     public $Extended;
 
     /**
+     * @var string For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+1. Length: 2~200 characters
+2. Customer name cannot be pure numbers
+     */
+    public $CustomerName;
+
+    /**
      * @param string $AccountType Account type of a new customer.
 Valid values: `personal`, `company`.
      * @param string $Mail Registered email address, which should be valid and correct.
@@ -152,6 +165,9 @@ such as "kghy_01".
      * @param string $TradeTwo Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
 such as "kghy_0101"
      * @param string $Extended Extension field, which is left empty by default.
+     * @param string $CustomerName For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+1. Length: 2~200 characters
+2. Customer name cannot be pure numbers
      */
     function __construct()
     {
@@ -208,6 +224,10 @@ such as "kghy_0101"
 
         if (array_key_exists("Extended",$param) and $param["Extended"] !== null) {
             $this->Extended = $param["Extended"];
+        }
+
+        if (array_key_exists("CustomerName",$param) and $param["CustomerName"] !== null) {
+            $this->CustomerName = $param["CustomerName"];
         }
     }
 }

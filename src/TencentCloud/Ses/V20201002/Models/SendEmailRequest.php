@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFromEmailAddress() Obtain Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
  * @method void setFromEmailAddress(string $FromEmailAddress) Set Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
- * @method array getDestination() Obtain Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
- * @method void setDestination(array $Destination) Set Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
  * @method string getSubject() Obtain Email subject.
  * @method void setSubject(string $Subject) Set Email subject.
+ * @method array getDestination() Obtain Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+ * @method void setDestination(array $Destination) Set Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
  * @method string getReplyToAddresses() Obtain The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
  * @method void setReplyToAddresses(string $ReplyToAddresses) Set The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
  * @method array getCc() Obtain Cc recipient email address, supports up to 20 carbon copies.
@@ -61,14 +63,15 @@ class SendEmailRequest extends AbstractModel
     public $FromEmailAddress;
 
     /**
-     * @var array Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
-     */
-    public $Destination;
-
-    /**
      * @var string Email subject.
      */
     public $Subject;
+
+    /**
+     * @var array Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+     */
+    public $Destination;
 
     /**
      * @var string The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
@@ -129,8 +132,9 @@ class SendEmailRequest extends AbstractModel
 
     /**
      * @param string $FromEmailAddress Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
-     * @param array $Destination Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
      * @param string $Subject Email subject.
+     * @param array $Destination Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
      * @param string $ReplyToAddresses The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
      * @param array $Cc Cc recipient email address, supports up to 20 carbon copies.
      * @param array $Bcc Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
@@ -162,12 +166,12 @@ class SendEmailRequest extends AbstractModel
             $this->FromEmailAddress = $param["FromEmailAddress"];
         }
 
-        if (array_key_exists("Destination",$param) and $param["Destination"] !== null) {
-            $this->Destination = $param["Destination"];
-        }
-
         if (array_key_exists("Subject",$param) and $param["Subject"] !== null) {
             $this->Subject = $param["Subject"];
+        }
+
+        if (array_key_exists("Destination",$param) and $param["Destination"] !== null) {
+            $this->Destination = $param["Destination"];
         }
 
         if (array_key_exists("ReplyToAddresses",$param) and $param["ReplyToAddresses"] !== null) {
