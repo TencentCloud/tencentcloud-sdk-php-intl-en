@@ -51,9 +51,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getActionVideo() Obtain Records the specific action performed by the user, used for AI Face Shield analysis.
  * @method void setActionVideo(string $ActionVideo) Set Records the specific action performed by the user, used for AI Face Shield analysis.
  * @method float getSimilarity() Obtain The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: The Similarity metric is exclusively valid for "compare" mode. In "liveness" mode, the returned Similarity value (0.0) is non-significant and should be ignored.
  * @method void setSimilarity(float $Similarity) Set The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: The Similarity metric is exclusively valid for "compare" mode. In "liveness" mode, the returned Similarity value (0.0) is non-significant and should be ignored.
  * @method string getExtra() Obtain The pass-through parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExtra(string $Extra) Set The pass-through parameter.
@@ -142,7 +142,7 @@ class GetFaceIdResultIntlResponse extends AbstractModel
 
     /**
      * @var float The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: The Similarity metric is exclusively valid for "compare" mode. In "liveness" mode, the returned Similarity value (0.0) is non-significant and should be ignored.
      */
     public $Similarity;
 
@@ -203,7 +203,7 @@ Only returned for the Enhance and Plus version, with the default value being emp
      * @param string $Video The video file (Base64) for verification.Used for verification, contains specific color reflection effects.
      * @param string $ActionVideo Records the specific action performed by the user, used for AI Face Shield analysis.
      * @param float $Similarity The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: The Similarity metric is exclusively valid for "compare" mode. In "liveness" mode, the returned Similarity value (0.0) is non-significant and should be ignored.
      * @param string $Extra The pass-through parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DeviceInfoLevel Describe the risk level of the device where the current request is located, with a total of 4 levels. The details are as follows:

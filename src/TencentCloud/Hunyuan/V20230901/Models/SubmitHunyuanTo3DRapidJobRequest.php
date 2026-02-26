@@ -42,6 +42,14 @@ Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with i
 Unilateral resolution requirement not less than 128, not greater than 5000. size not greater than 8mb
 Format: jpg, png, jpeg, webp
 Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl	
+ * @method string getResultFormat() Obtain Returns the 3D file format. valid values:
+OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+Example value: STL
+ * @method void setResultFormat(string $ResultFormat) Set Returns the 3D file format. valid values:
+OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+Example value: STL
  * @method boolean getEnablePBR() Obtain Specifies whether PBR material generation is enabled, false by default.	
  * @method void setEnablePBR(boolean $EnablePBR) Set Specifies whether PBR material generation is enabled, false by default.	
  * @method boolean getEnableGeometry() Obtain Specifies whether to enable the single geometry generation option
@@ -79,6 +87,14 @@ Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with i
     public $ImageUrl;
 
     /**
+     * @var string Returns the 3D file format. valid values:
+OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+Example value: STL
+     */
+    public $ResultFormat;
+
+    /**
      * @var boolean Specifies whether PBR material generation is enabled, false by default.	
      */
     public $EnablePBR;
@@ -103,6 +119,10 @@ Imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/image
 Unilateral resolution requirement not less than 128, not greater than 5000. size not greater than 8mb
 Format: jpg, png, jpeg, webp
 Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl	
+     * @param string $ResultFormat Returns the 3D file format. valid values:
+OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+Example value: STL
      * @param boolean $EnablePBR Specifies whether PBR material generation is enabled, false by default.	
      * @param boolean $EnableGeometry Specifies whether to enable the single geometry generation option
 When enabled, it generates a 3D model without textures (white model)
@@ -132,6 +152,10 @@ Default model file format is GLB
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("ResultFormat",$param) and $param["ResultFormat"] !== null) {
+            $this->ResultFormat = $param["ResultFormat"];
         }
 
         if (array_key_exists("EnablePBR",$param) and $param["EnablePBR"] !== null) {

@@ -38,7 +38,7 @@ use TencentCloud\Hunyuan\V20230901\Models as Models;
 This API is used to provide 3 concurrent tasks by default, which can process 3 submitted tasks simultaneously. The next task can be processed only after the previous task is completed.
  * @method Models\QueryHunyuanTo3DRapidJobResponse QueryHunyuanTo3DRapidJob(Models\QueryHunyuanTo3DRapidJobRequest $req) This API is used to intelligently generate 3D content based on the HunYuan Large Model with input text descriptions or images.
 This API is used to provide 1 concurrent task by default, which means only 1 submitted task can be processed simultaneously. The next task can be processed only after the previous task is completed.
- * @method Models\QueryHunyuanTo3DTextureEditJobResponse QueryHunyuanTo3DTextureEditJob(Models\QueryHunyuanTo3DTextureEditJobRequest $req) Query 3D texture edit tasks.
+ * @method Models\QueryHunyuanTo3DTextureEditJobResponse QueryHunyuanTo3DTextureEditJob(Models\QueryHunyuanTo3DTextureEditJobRequest $req) Query 3D texture edit tasks, redraw the texture of the 3D model based on semantics or images, and output a redrawn texture image.
  * @method Models\Submit3DSmartTopologyJobResponse Submit3DSmartTopologyJob(Models\Submit3DSmartTopologyJobRequest $req) The SmartTopoly API uses the Polygen 1.5 model. After manually inputting a 3D high-poly model, it can generate a neat 3D model with lower polygon count.
 1 concurrent is provided by default, which means 1 submitted task can be processed simultaneously. The next task can be processed only after the previous task is completed.
  * @method Models\SubmitHunyuan3DPartJobResponse SubmitHunyuan3DPartJob(Models\SubmitHunyuan3DPartJobRequest $req) This API is used to automatically perform component identification and generation based on the model structure after inputting a 3D model file.
@@ -46,7 +46,7 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
 This API is used to provide 3 concurrent tasks by default. Up to 3 submitted tasks can be processed simultaneously. A new task can be processed only after the previous one is completed.
  * @method Models\SubmitHunyuanTo3DRapidJobResponse SubmitHunyuanTo3DRapidJob(Models\SubmitHunyuanTo3DRapidJobRequest $req) This API is used to intelligently generate 3D content based on the HunYuan Large Model with input text descriptions or images.
 This API is used to provide 1 concurrent task by default, which means only 1 submitted task can be processed simultaneously. The next task can be processed only after the previous task is completed.
- * @method Models\SubmitHunyuanTo3DTextureEditJobResponse SubmitHunyuanTo3DTextureEditJob(Models\SubmitHunyuanTo3DTextureEditJobRequest $req) After inputting the 3D model, perform 3D model texture redrawing based on semantics or images.
+ * @method Models\SubmitHunyuanTo3DTextureEditJobResponse SubmitHunyuanTo3DTextureEditJob(Models\SubmitHunyuanTo3DTextureEditJobRequest $req) After inputting the 3D model, redraw the texture of the 3D model based on semantics or images, and output a redrawn texture image.
  * @method Models\SubmitHunyuanTo3DUVJobResponse SubmitHunyuanTo3DUVJob(Models\SubmitHunyuanTo3DUVJobRequest $req) After inputting the model, UV unfolding can be performed based on the model texture to output the corresponding UV texture
  */
 

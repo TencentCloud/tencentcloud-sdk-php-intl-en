@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) Set Project ID.
  * @method array getTagList() Obtain Tag information.
  * @method void setTagList(array $TagList) Set Tag information.
- * @method string getDbType() Obtain Database engine type.
- * @method void setDbType(string $DbType) Set Database engine type.
- * @method string getDbVersion() Obtain Database engine version.
- * @method void setDbVersion(string $DbVersion) Set Database engine version.
+ * @method string getDbType() Obtain Database kernel type.
+ * @method void setDbType(string $DbType) Set Database kernel type.
+ * @method string getDbVersion() Obtain Database kernel version.
+ * @method void setDbVersion(string $DbVersion) Set Database kernel version.
  */
 class AuditInstanceInfo extends AbstractModel
 {
@@ -42,20 +42,20 @@ class AuditInstanceInfo extends AbstractModel
     public $TagList;
 
     /**
-     * @var string Database engine type.
+     * @var string Database kernel type.
      */
     public $DbType;
 
     /**
-     * @var string Database engine version.
+     * @var string Database kernel version.
      */
     public $DbVersion;
 
     /**
      * @param integer $ProjectId Project ID.
      * @param array $TagList Tag information.
-     * @param string $DbType Database engine type.
-     * @param string $DbVersion Database engine version.
+     * @param string $DbType Database kernel type.
+     * @param string $DbVersion Database kernel version.
      */
     function __construct()
     {

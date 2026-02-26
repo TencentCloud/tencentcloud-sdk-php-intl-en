@@ -18,10 +18,10 @@ namespace TencentCloud\Hunyuan\V20230901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 3D file.
+ * 3D model related files, files or textures.
  *
- * @method string getType() Obtain 3D file format. valid values: GIF, OBJ.
- * @method void setType(string $Type) Set 3D file format. valid values: GIF, OBJ.
+ * @method string getType() Obtain 3D model or texture. valid values: GIF or OBJ or Image.
+ * @method void setType(string $Type) Set 3D model or texture. valid values: GIF or OBJ or Image.
  * @method string getUrl() Obtain Specifies the file Url (valid for 24 hours).
  * @method void setUrl(string $Url) Set Specifies the file Url (valid for 24 hours).
  * @method string getPreviewImageUrl() Obtain Preview image Url.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class File3D extends AbstractModel
 {
     /**
-     * @var string 3D file format. valid values: GIF, OBJ.
+     * @var string 3D model or texture. valid values: GIF or OBJ or Image.
      */
     public $Type;
 
@@ -45,7 +45,7 @@ class File3D extends AbstractModel
     public $PreviewImageUrl;
 
     /**
-     * @param string $Type 3D file format. valid values: GIF, OBJ.
+     * @param string $Type 3D model or texture. valid values: GIF or OBJ or Image.
      * @param string $Url Specifies the file Url (valid for 24 hours).
      * @param string $PreviewImageUrl Preview image Url.
      */
