@@ -40,6 +40,7 @@ Note: Only an approved template can be used to send emails.
  * @method Models\DeleteEmailIdentityResponse DeleteEmailIdentity(Models\DeleteEmailIdentityRequest $req) This API is used to delete a sender domain. After deleted, the sender domain can no longer be used to send emails.
  * @method Models\DeleteEmailTemplateResponse DeleteEmailTemplate(Models\DeleteEmailTemplateRequest $req) This API is used to delete an email template.
  * @method Models\DeleteReceiverResponse DeleteReceiver(Models\DeleteReceiverRequest $req) This API is used to delete a recipient group and all recipient email addresses in the group based on the recipient group ID.
+ * @method Models\GetAbuseReportResponse GetAbuseReport(Models\GetAbuseReportRequest $req) Retrieve reported spam data.
  * @method Models\GetEmailIdentityResponse GetEmailIdentity(Models\GetEmailIdentityRequest $req) This API is used to get the configuration details of a sender domain.
  * @method Models\GetEmailTemplateResponse GetEmailTemplate(Models\GetEmailTemplateRequest $req) This API is used to get the details of a template.
  * @method Models\GetSendEmailStatusResponse GetSendEmailStatus(Models\GetSendEmailStatusRequest $req) Search the email sending status. Only support querying data within 30 days.
