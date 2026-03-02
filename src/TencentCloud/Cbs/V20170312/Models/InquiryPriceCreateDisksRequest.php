@@ -20,57 +20,63 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceCreateDisks request structure.
  *
- * @method string getDiskChargeType() Obtain Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
- * @method void setDiskChargeType(string $DiskChargeType) Set Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
- * @method string getDiskType() Obtain Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
- * @method void setDiskType(string $DiskType) Set Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
- * @method integer getDiskSize() Obtain Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
- * @method void setDiskSize(integer $DiskSize) Set Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
- * @method integer getProjectId() Obtain ID of the project to which the cloud disk belongs.
- * @method void setProjectId(integer $ProjectId) Set ID of the project to which the cloud disk belongs.
- * @method integer getDiskCount() Obtain Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
- * @method void setDiskCount(integer $DiskCount) Set Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
- * @method integer getThroughputPerformance() Obtain Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
- * @method void setThroughputPerformance(integer $ThroughputPerformance) Set Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
- * @method DiskChargePrepaid getDiskChargePrepaid() Obtain Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
- * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) Set Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
+ * @method string getDiskChargeType() Obtain Cloud disk billing mode. <br>
+<li>PREPAID: Prepaid by month.</li>
+<li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.</li>
+ * @method void setDiskChargeType(string $DiskChargeType) Set Cloud disk billing mode. <br>
+<li>PREPAID: Prepaid by month.</li>
+<li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.</li>
+ * @method string getDiskType() Obtain Hard disk media type. valid values: <ul> <li>CLOUD_PREMIUM: high-performance CLOUD block storage</li> <li>CLOUD_SSD: SSD CLOUD disk</li> <li>CLOUD_HSSD: enhanced SSD CLOUD disk</li> <li>CLOUD_TSSD: ultra-fast SSD cbs</li> </ul>.
+ * @method void setDiskType(string $DiskType) Set Hard disk media type. valid values: <ul> <li>CLOUD_PREMIUM: high-performance CLOUD block storage</li> <li>CLOUD_SSD: SSD CLOUD disk</li> <li>CLOUD_HSSD: enhanced SSD CLOUD disk</li> <li>CLOUD_TSSD: ultra-fast SSD cbs</li> </ul>.
+ * @method integer getDiskSize() Obtain Specifies the disk capacity in GiB. for the cloud disk size range, please refer to the product type of cloud block storage (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1).
+ * @method void setDiskSize(integer $DiskSize) Set Specifies the disk capacity in GiB. for the cloud disk size range, please refer to the product type of cloud block storage (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1).
+ * @method integer getProjectId() Obtain cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1). default to the default project.
+ * @method void setProjectId(integer $ProjectId) Set cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1). default to the default project.
+ * @method integer getDiskCount() Obtain Specifies the number of cloud block storage (cbs) disks to purchase. defaults to 1 if left blank.
+ * @method void setDiskCount(integer $DiskCount) Set Specifies the number of cloud block storage (cbs) disks to purchase. defaults to 1 if left blank.
+ * @method integer getThroughputPerformance() Obtain Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) Set Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+ * @method DiskChargePrepaid getDiskChargePrepaid() Obtain Prepaid mode, that is, the settings for the monthly subscription-related parameters. through this parameter, you can specify the purchase duration of the monthly subscribed cloud disk, whether to enable auto-renewal, and other attributes. this parameter is required for creating a prepaid cloud disk, but no need to specify it when creating an hourly postpaid cloud disk.
+ * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) Set Prepaid mode, that is, the settings for the monthly subscription-related parameters. through this parameter, you can specify the purchase duration of the monthly subscribed cloud disk, whether to enable auto-renewal, and other attributes. this parameter is required for creating a prepaid cloud disk, but no need to specify it when creating an hourly postpaid cloud disk.
  * @method integer getDiskBackupQuota() Obtain Specifies the cloud disk backup point quota.
  * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Specifies the cloud disk backup point quota.
  */
 class InquiryPriceCreateDisksRequest extends AbstractModel
 {
     /**
-     * @var string Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
+     * @var string Cloud disk billing mode. <br>
+<li>PREPAID: Prepaid by month.</li>
+<li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.</li>
      */
     public $DiskChargeType;
 
     /**
-     * @var string Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
+     * @var string Hard disk media type. valid values: <ul> <li>CLOUD_PREMIUM: high-performance CLOUD block storage</li> <li>CLOUD_SSD: SSD CLOUD disk</li> <li>CLOUD_HSSD: enhanced SSD CLOUD disk</li> <li>CLOUD_TSSD: ultra-fast SSD cbs</li> </ul>.
      */
     public $DiskType;
 
     /**
-     * @var integer Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+     * @var integer Specifies the disk capacity in GiB. for the cloud disk size range, please refer to the product type of cloud block storage (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1).
      */
     public $DiskSize;
 
     /**
-     * @var integer ID of the project to which the cloud disk belongs.
+     * @var integer cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1). default to the default project.
      */
     public $ProjectId;
 
     /**
-     * @var integer Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+     * @var integer Specifies the number of cloud block storage (cbs) disks to purchase. defaults to 1 if left blank.
      */
     public $DiskCount;
 
     /**
-     * @var integer Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
+     * @var integer Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
      */
     public $ThroughputPerformance;
 
     /**
-     * @var DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
+     * @var DiskChargePrepaid Prepaid mode, that is, the settings for the monthly subscription-related parameters. through this parameter, you can specify the purchase duration of the monthly subscribed cloud disk, whether to enable auto-renewal, and other attributes. this parameter is required for creating a prepaid cloud disk, but no need to specify it when creating an hourly postpaid cloud disk.
      */
     public $DiskChargePrepaid;
 
@@ -80,13 +86,15 @@ class InquiryPriceCreateDisksRequest extends AbstractModel
     public $DiskBackupQuota;
 
     /**
-     * @param string $DiskChargeType Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
-     * @param string $DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
-     * @param integer $DiskSize Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
-     * @param integer $ProjectId ID of the project to which the cloud disk belongs.
-     * @param integer $DiskCount Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
-     * @param integer $ThroughputPerformance Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
-     * @param DiskChargePrepaid $DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
+     * @param string $DiskChargeType Cloud disk billing mode. <br>
+<li>PREPAID: Prepaid by month.</li>
+<li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.</li>
+     * @param string $DiskType Hard disk media type. valid values: <ul> <li>CLOUD_PREMIUM: high-performance CLOUD block storage</li> <li>CLOUD_SSD: SSD CLOUD disk</li> <li>CLOUD_HSSD: enhanced SSD CLOUD disk</li> <li>CLOUD_TSSD: ultra-fast SSD cbs</li> </ul>.
+     * @param integer $DiskSize Specifies the disk capacity in GiB. for the cloud disk size range, please refer to the product type of cloud block storage (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1).
+     * @param integer $ProjectId cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1). default to the default project.
+     * @param integer $DiskCount Specifies the number of cloud block storage (cbs) disks to purchase. defaults to 1 if left blank.
+     * @param integer $ThroughputPerformance Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+     * @param DiskChargePrepaid $DiskChargePrepaid Prepaid mode, that is, the settings for the monthly subscription-related parameters. through this parameter, you can specify the purchase duration of the monthly subscribed cloud disk, whether to enable auto-renewal, and other attributes. this parameter is required for creating a prepaid cloud disk, but no need to specify it when creating an hourly postpaid cloud disk.
      * @param integer $DiskBackupQuota Specifies the cloud disk backup point quota.
      */
     function __construct()

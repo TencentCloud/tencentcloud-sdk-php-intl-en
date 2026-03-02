@@ -136,13 +136,13 @@ The supported action types are as follows:
 "shake".
 You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
 The default value is blink.
- * @method integer getLivenessRetryLimit() Obtain Control liveness retry number.The value range is 1-99.
+ * @method integer getLivenessRetryLimit() Obtain Maximum liveness verification attempts. Valid range: [1,99].
 The default value is 99.
- * @method void setLivenessRetryLimit(integer $LivenessRetryLimit) Set Control liveness retry number.The value range is 1-99.
+ * @method void setLivenessRetryLimit(integer $LivenessRetryLimit) Set Maximum liveness verification attempts. Valid range: [1,99].
 The default value is 99.
- * @method integer getLivenessTimeout() Obtain Specifies the liveness detection timeout period in seconds. value range: (0,600].
+ * @method integer getLivenessTimeout() Obtain Specifies the liveness detection timeout period in seconds. Value range: (0,600].
 The default value is 45.
- * @method void setLivenessTimeout(integer $LivenessTimeout) Set Specifies the liveness detection timeout period in seconds. value range: (0,600].
+ * @method void setLivenessTimeout(integer $LivenessTimeout) Set Specifies the liveness detection timeout period in seconds. Value range: (0,600].
 The default value is 45.
  * @method string getSelectedWarningCodes() Obtain Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
 -9101: Incomplete Border Alert;
@@ -276,13 +276,13 @@ The default value is blink.
     public $ActionList;
 
     /**
-     * @var integer Control liveness retry number.The value range is 1-99.
+     * @var integer Maximum liveness verification attempts. Valid range: [1,99].
 The default value is 99.
      */
     public $LivenessRetryLimit;
 
     /**
-     * @var integer Specifies the liveness detection timeout period in seconds. value range: (0,600].
+     * @var integer Specifies the liveness detection timeout period in seconds. Value range: (0,600].
 The default value is 45.
      */
     public $LivenessTimeout;
@@ -365,9 +365,9 @@ The supported action types are as follows:
 "shake".
 You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
 The default value is blink.
-     * @param integer $LivenessRetryLimit Control liveness retry number.The value range is 1-99.
+     * @param integer $LivenessRetryLimit Maximum liveness verification attempts. Valid range: [1,99].
 The default value is 99.
-     * @param integer $LivenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
+     * @param integer $LivenessTimeout Specifies the liveness detection timeout period in seconds. Value range: (0,600].
 The default value is 45.
      * @param string $SelectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
 -9101: Incomplete Border Alert;

@@ -138,6 +138,9 @@ After snapshots are shared, the accounts they are shared to can use the snapshot
 * You can use a shared snapshot to create cloud disks, but you cannot change its name or description.
 * Snapshots can only be shared with accounts in the same region.
 * Only data disk snapshots can be shared.
+ * @method Models\RenewDiskResponse RenewDisk(Models\RenewDiskRequest $req) This API is used to renew cloud disks.
+
+This API is used to support renewal along with mounted instances. The parameter specifies CurInstanceDeadline in [DiskChargePrepaid](https://www.tencentcloud.com/document/product/362/15669?from_cn_redirect=1#DiskChargePrepaid), and renewal will be at the expiry date after the instance is renewed.
  * @method Models\ResizeDiskResponse ResizeDisk(Models\ResizeDiskRequest $req) This API is used to expand cloud disks. 
 
 *This API supports only the expansion of elastic cloud disks. To query the type of a cloud disk, you can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API and check the `Portable` field in the response. To expand non-elastic cloud disks, you can call the [ResizeInstanceDisks](https://intl.cloud.tencent.com/document/product/213/15731?from_cn_redirect=1) API. *This is an async API. A successful return of this API does not mean that the cloud disk has been expanded successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API to query the status of a cloud disk. `EXPANDING` indicates that the expansion is in process.
