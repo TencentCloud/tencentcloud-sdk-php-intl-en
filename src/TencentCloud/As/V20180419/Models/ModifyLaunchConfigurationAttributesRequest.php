@@ -88,25 +88,29 @@ The default data disk should be the same as the system disk.
  * @method void setDataDisks(array $DataDisks) Set Configuration information of instance data disks.
 Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
 The default data disk should be the same as the system disk.
- * @method HostNameSettings getHostNameSettings() Obtain CVM hostname settings.
-This field is not supported for Windows instances.
-This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
- * @method void setHostNameSettings(HostNameSettings $HostNameSettings) Set CVM hostname settings.
-This field is not supported for Windows instances.
-This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
- * @method InstanceNameSettings getInstanceNameSettings() Obtain Settings of CVM instance names. 
-If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
-This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
- * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set Settings of CVM instance names. 
-If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
-This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
+ * @method HostNameSettings getHostNameSettings() Obtain Specifies the related settings for the cloud virtual machine HostName (HostName).
+windows instances do not support setting hostname.
+When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
+Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
+ * @method void setHostNameSettings(HostNameSettings $HostNameSettings) Set Specifies the related settings for the cloud virtual machine HostName (HostName).
+windows instances do not support setting hostname.
+When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
+Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
+ * @method InstanceNameSettings getInstanceNameSettings() Obtain Specifies the related settings of the cloud virtual machine (cvm) instance name. 
+If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
+Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
+Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
+ * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set Specifies the related settings of the cloud virtual machine (cvm) instance name. 
+If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
+Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
+Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
  * @method EnhancedService getEnhancedService() Obtain Specifies whether to enable additional services, such as security services and monitoring service.
  * @method void setEnhancedService(EnhancedService $EnhancedService) Set Specifies whether to enable additional services, such as security services and monitoring service.
  * @method string getCamRoleName() Obtain Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
  * @method void setCamRoleName(string $CamRoleName) Set Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
- * @method string getHpcClusterId() Obtain High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+ * @method string getHpcClusterId() Obtain High-Performance computing cluster ID. See [Tencent Cloud HPC Documentation](https://www.tencentcloud.com/zh/document/product/1236) for more details.
 Note: this field is empty by default.
- * @method void setHpcClusterId(string $HpcClusterId) Set High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+ * @method void setHpcClusterId(string $HpcClusterId) Set High-Performance computing cluster ID. See [Tencent Cloud HPC Documentation](https://www.tencentcloud.com/zh/document/product/1236) for more details.
 Note: this field is empty by default.
  * @method IPv6InternetAccessible getIPv6InternetAccessible() Obtain IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
  * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) Set IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
@@ -218,16 +222,18 @@ The default data disk should be the same as the system disk.
     public $DataDisks;
 
     /**
-     * @var HostNameSettings CVM hostname settings.
-This field is not supported for Windows instances.
-This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
+     * @var HostNameSettings Specifies the related settings for the cloud virtual machine HostName (HostName).
+windows instances do not support setting hostname.
+When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
+Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
      */
     public $HostNameSettings;
 
     /**
-     * @var InstanceNameSettings Settings of CVM instance names. 
-If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
-This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
+     * @var InstanceNameSettings Specifies the related settings of the cloud virtual machine (cvm) instance name. 
+If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
+Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
+Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
      */
     public $InstanceNameSettings;
 
@@ -242,7 +248,7 @@ This field requires passing in the `InstanceName` field. Other fields that are n
     public $CamRoleName;
 
     /**
-     * @var string High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+     * @var string High-Performance computing cluster ID. See [Tencent Cloud HPC Documentation](https://www.tencentcloud.com/zh/document/product/1236) for more details.
 Note: this field is empty by default.
      */
     public $HpcClusterId;
@@ -318,15 +324,17 @@ This field can be modified only when the current billing mode is spot instance.
      * @param array $DataDisks Configuration information of instance data disks.
 Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
 The default data disk should be the same as the system disk.
-     * @param HostNameSettings $HostNameSettings CVM hostname settings.
-This field is not supported for Windows instances.
-This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
-     * @param InstanceNameSettings $InstanceNameSettings Settings of CVM instance names. 
-If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
-This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
+     * @param HostNameSettings $HostNameSettings Specifies the related settings for the cloud virtual machine HostName (HostName).
+windows instances do not support setting hostname.
+When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
+Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
+     * @param InstanceNameSettings $InstanceNameSettings Specifies the related settings of the cloud virtual machine (cvm) instance name. 
+If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
+Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
+Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
      * @param EnhancedService $EnhancedService Specifies whether to enable additional services, such as security services and monitoring service.
      * @param string $CamRoleName Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
-     * @param string $HpcClusterId High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+     * @param string $HpcClusterId High-Performance computing cluster ID. See [Tencent Cloud HPC Documentation](https://www.tencentcloud.com/zh/document/product/1236) for more details.
 Note: this field is empty by default.
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
      * @param array $DisasterRecoverGroupIds Placement group id. only one can be specified. obtain through the API [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1).
