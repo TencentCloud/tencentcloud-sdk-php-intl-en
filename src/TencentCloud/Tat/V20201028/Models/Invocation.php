@@ -24,32 +24,44 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvocationId(string $InvocationId) Set Execution activity ID.
  * @method string getCommandId() Obtain Command ID.
  * @method void setCommandId(string $CommandId) Set Command ID.
- * @method string getInvocationStatus() Obtain Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed
-<li> TIMEOUT: Command timed out
-<li> PARTIAL_FAILED: Partial failure
- * @method void setInvocationStatus(string $InvocationStatus) Set Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed
-<li> TIMEOUT: Command timed out
-<li> PARTIAL_FAILED: Partial failure
+ * @method string getCommandName() Obtain Name of the executed command.
+ * @method void setCommandName(string $CommandName) Set Name of the executed command.
+ * @method string getInvocationStatus() Obtain Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
+ * @method void setInvocationStatus(string $InvocationStatus) Set Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
  * @method array getInvocationTaskBasicInfoSet() Obtain Execution task information list.
  * @method void setInvocationTaskBasicInfoSet(array $InvocationTaskBasicInfoSet) Set Execution task information list.
  * @method string getDescription() Obtain Execution activity description.
  * @method void setDescription(string $Description) Set Execution activity description.
- * @method string getStartTime() Obtain Start time of the execution activity.
- * @method void setStartTime(string $StartTime) Set Start time of the execution activity.
- * @method string getEndTime() Obtain End time of the execution activity.
- * @method void setEndTime(string $EndTime) Set End time of the execution activity.
- * @method string getCreatedTime() Obtain Time when the execution activity is created.
- * @method void setCreatedTime(string $CreatedTime) Set Time when the execution activity is created.
- * @method string getUpdatedTime() Obtain Time when the execution activity is updated.
- * @method void setUpdatedTime(string $UpdatedTime) Set Time when the execution activity is updated.
+ * @method string getStartTime() Obtain Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
+ * @method void setStartTime(string $StartTime) Set Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
+ * @method string getEndTime() Obtain Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEndTime(string $EndTime) Set Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreatedTime() Obtain Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ.
+ * @method void setCreatedTime(string $CreatedTime) Set Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ.
+ * @method string getUpdatedTime() Obtain Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ.
+ * @method void setUpdatedTime(string $UpdatedTime) Set Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ.
  * @method string getParameters() Obtain Values of custom parameters.
  * @method void setParameters(string $Parameters) Set Values of custom parameters.
  * @method string getDefaultParameters() Obtain Default custom parameter value.
@@ -59,7 +71,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUsername() Obtain The user who executes the command on the instance.
  * @method void setUsername(string $Username) Set The user who executes the command on the instance.
  * @method string getInvocationSource() Obtain Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
  * @method void setInvocationSource(string $InvocationSource) Set Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
  * @method string getCommandContent() Obtain Base64-encoded command
  * @method void setCommandContent(string $CommandContent) Set Base64-encoded command
  * @method string getCommandType() Obtain Command type
@@ -86,13 +104,22 @@ class Invocation extends AbstractModel
     public $CommandId;
 
     /**
-     * @var string Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed
-<li> TIMEOUT: Command timed out
-<li> PARTIAL_FAILED: Partial failure
+     * @var string Name of the executed command.
+     */
+    public $CommandName;
+
+    /**
+     * @var string Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
      */
     public $InvocationStatus;
 
@@ -107,22 +134,23 @@ class Invocation extends AbstractModel
     public $Description;
 
     /**
-     * @var string Start time of the execution activity.
+     * @var string Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public $StartTime;
 
     /**
-     * @var string End time of the execution activity.
+     * @var string Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EndTime;
 
     /**
-     * @var string Time when the execution activity is created.
+     * @var string Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ.
      */
     public $CreatedTime;
 
     /**
-     * @var string Time when the execution activity is updated.
+     * @var string Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public $UpdatedTime;
 
@@ -148,6 +176,9 @@ class Invocation extends AbstractModel
 
     /**
      * @var string Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
      */
     public $InvocationSource;
 
@@ -184,24 +215,33 @@ class Invocation extends AbstractModel
     /**
      * @param string $InvocationId Execution activity ID.
      * @param string $CommandId Command ID.
-     * @param string $InvocationStatus Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed
-<li> TIMEOUT: Command timed out
-<li> PARTIAL_FAILED: Partial failure
+     * @param string $CommandName Name of the executed command.
+     * @param string $InvocationStatus Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
      * @param array $InvocationTaskBasicInfoSet Execution task information list.
      * @param string $Description Execution activity description.
-     * @param string $StartTime Start time of the execution activity.
-     * @param string $EndTime End time of the execution activity.
-     * @param string $CreatedTime Time when the execution activity is created.
-     * @param string $UpdatedTime Time when the execution activity is updated.
+     * @param string $StartTime Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
+     * @param string $EndTime Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreatedTime Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ.
+     * @param string $UpdatedTime Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ.
      * @param string $Parameters Values of custom parameters.
      * @param string $DefaultParameters Default custom parameter value.
      * @param string $InstanceKind Type of the instance executing the command. Valid values: `CVM`, `LIGHTHOUSE`.
      * @param string $Username The user who executes the command on the instance.
      * @param string $InvocationSource Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
      * @param string $CommandContent Base64-encoded command
      * @param string $CommandType Command type
      * @param integer $Timeout Command timeout period, in seconds.
@@ -228,6 +268,10 @@ class Invocation extends AbstractModel
 
         if (array_key_exists("CommandId",$param) and $param["CommandId"] !== null) {
             $this->CommandId = $param["CommandId"];
+        }
+
+        if (array_key_exists("CommandName",$param) and $param["CommandName"] !== null) {
+            $this->CommandName = $param["CommandName"];
         }
 
         if (array_key_exists("InvocationStatus",$param) and $param["InvocationStatus"] !== null) {

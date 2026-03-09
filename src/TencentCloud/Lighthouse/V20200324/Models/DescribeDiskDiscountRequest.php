@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDiskDiscount request structure.
  *
- * @method string getDiskType() Obtain Cloud disk type. Valid values: "CLOUD_PREMIUM".
- * @method void setDiskType(string $DiskType) Set Cloud disk type. Valid values: "CLOUD_PREMIUM".
- * @method integer getDiskSize() Obtain Cloud disk size.
- * @method void setDiskSize(integer $DiskSize) Set Cloud disk size.
- * @method integer getDiskBackupQuota() Obtain Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
- * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+ * @method string getDiskType() Obtain CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk.
+ * @method void setDiskType(string $DiskType) Set CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk.
+ * @method integer getDiskSize() Obtain CBS disk capacity, unit: GB.
+ * @method void setDiskSize(integer $DiskSize) Set CBS disk capacity, unit: GB.
+ * @method integer getDiskBackupQuota() Obtain Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500].
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500].
  */
 class DescribeDiskDiscountRequest extends AbstractModel
 {
     /**
-     * @var string Cloud disk type. Valid values: "CLOUD_PREMIUM".
+     * @var string CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk.
      */
     public $DiskType;
 
     /**
-     * @var integer Cloud disk size.
+     * @var integer CBS disk capacity, unit: GB.
      */
     public $DiskSize;
 
     /**
-     * @var integer Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     * @var integer Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500].
      */
     public $DiskBackupQuota;
 
     /**
-     * @param string $DiskType Cloud disk type. Valid values: "CLOUD_PREMIUM".
-     * @param integer $DiskSize Cloud disk size.
-     * @param integer $DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     * @param string $DiskType CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk.
+     * @param integer $DiskSize CBS disk capacity, unit: GB.
+     * @param integer $DiskBackupQuota Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500].
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(string $Content) Set Base64-encoded command. The maximum length is 64 KB.
  * @method string getDescription() Obtain Command description. The maximum length is 120 characters.
  * @method void setDescription(string $Description) Set Command description. The maximum length is 120 characters.
- * @method string getCommandType() Obtain Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
- * @method void setCommandType(string $CommandType) Set Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+ * @method string getCommandType() Obtain Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
+ * @method void setCommandType(string $CommandType) Set Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
  * @method string getWorkingDirectory() Obtain Command execution path. The default value is /root for `SHELL` commands and C:\Program Files\qcloud\tat_agent\workdir for `POWERSHELL` commands.
  * @method void setWorkingDirectory(string $WorkingDirectory) Set Command execution path. The default value is /root for `SHELL` commands and C:\Program Files\qcloud\tat_agent\workdir for `POWERSHELL` commands.
  * @method integer getTimeout() Obtain Command timeout period. Default value: 60 seconds. Value range: [1, 86400].
@@ -38,16 +38,30 @@ Default value: `false`.
  * @method void setEnableParameter(boolean $EnableParameter) Set Whether to enable the custom parameter feature.
 This cannot be modified once created.
 Default value: `false`.
- * @method string getDefaultParameters() Obtain The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
- * @method void setDefaultParameters(string $DefaultParameters) Set The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+ * @method string getDefaultParameters() Obtain Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+ * @method void setDefaultParameters(string $DefaultParameters) Set Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+ * @method array getDefaultParameterConfs() Obtain Custom parameter array.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+ * @method void setDefaultParameterConfs(array $DefaultParameterConfs) Set Custom parameter array.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
  * @method array getTags() Obtain Tags bound to the command. At most 10 tags are allowed.
  * @method void setTags(array $Tags) Set Tags bound to the command. At most 10 tags are allowed.
  * @method string getUsername() Obtain The username used to execute the command on the CVM or Lighthouse instance.
@@ -83,7 +97,7 @@ class CreateCommandRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+     * @var string Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
      */
     public $CommandType;
 
@@ -105,13 +119,24 @@ Default value: `false`.
     public $EnableParameter;
 
     /**
-     * @var string The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+     * @var string Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
      */
     public $DefaultParameters;
+
+    /**
+     * @var array Custom parameter array.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+     */
+    public $DefaultParameterConfs;
 
     /**
      * @var array Tags bound to the command. At most 10 tags are allowed.
@@ -141,17 +166,24 @@ The principle of least privilege is the best practice for permission management.
      * @param string $CommandName Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
      * @param string $Content Base64-encoded command. The maximum length is 64 KB.
      * @param string $Description Command description. The maximum length is 120 characters.
-     * @param string $CommandType Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+     * @param string $CommandType Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
      * @param string $WorkingDirectory Command execution path. The default value is /root for `SHELL` commands and C:\Program Files\qcloud\tat_agent\workdir for `POWERSHELL` commands.
      * @param integer $Timeout Command timeout period. Default value: 60 seconds. Value range: [1, 86400].
      * @param boolean $EnableParameter Whether to enable the custom parameter feature.
 This cannot be modified once created.
 Default value: `false`.
-     * @param string $DefaultParameters The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+     * @param string $DefaultParameters Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+     * @param array $DefaultParameterConfs Custom parameter array.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
      * @param array $Tags Tags bound to the command. At most 10 tags are allowed.
      * @param string $Username The username used to execute the command on the CVM or Lighthouse instance.
 The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. By default, the root user is used to execute commands on Linux and the System user is used on Windows.
@@ -204,6 +236,15 @@ The principle of least privilege is the best practice for permission management.
 
         if (array_key_exists("DefaultParameters",$param) and $param["DefaultParameters"] !== null) {
             $this->DefaultParameters = $param["DefaultParameters"];
+        }
+
+        if (array_key_exists("DefaultParameterConfs",$param) and $param["DefaultParameterConfs"] !== null) {
+            $this->DefaultParameterConfs = [];
+            foreach ($param["DefaultParameterConfs"] as $key => $value){
+                $obj = new DefaultParameterConf();
+                $obj->deserialize($value);
+                array_push($this->DefaultParameterConfs, $obj);
+            }
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

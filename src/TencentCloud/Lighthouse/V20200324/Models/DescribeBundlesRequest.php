@@ -20,53 +20,55 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBundles request structure.
  *
- * @method array getBundleIds() Obtain Package ID list.
- * @method void setBundleIds(array $BundleIds) Set Package ID list.
+ * @method array getBundleIds() Obtain List of bundle ids. the maximum is 100 per request for batch packages. you can get the BundleId in the return value from the API [DescribeBundles](https://www.tencentcloud.comom/document/product/1207/47575?from_cn_redirect=1).
+ * @method void setBundleIds(array $BundleIds) Set List of bundle ids. the maximum is 100 per request for batch packages. you can get the BundleId in the return value from the API [DescribeBundles](https://www.tencentcloud.comom/document/product/1207/47575?from_cn_redirect=1).
  * @method integer getOffset() Obtain Offset. Default value: 0. For more information on `Offset`, please see the relevant section in [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0. For more information on `Offset`, please see the relevant section in [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, please see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, please see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
  * @method array getFilters() Obtain Filter list.
-<li>bundle-id</li>Filter by the **bundle ID**.
-Type: String
+<li>bundle-id</li>Filter by [bundle id].
+Type: String.
 Required: No
-<li>`support-platform-type`<li>Filter by the **system type**.
-Values: `LINUX_UNIX` (Linux/Unix), `WINDOWS` (Windows).
-Type: String
+<li>`support-platform-type`</li>Filter by the system type.
+Value: LINUX_UNIX (LINUX/UNIX system); WINDOWS (WINDOWS systems).
+Type: String.
 Required: No
-<li>bundle-type</li>Filter by the **bundle type**.
-Values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle), `STARTER_BUNDLE` (Beginner bundle); `CAREFREE_BUNDLE` (Carefree bundle);
-Type: String
+<li>bundle-type</li>Filter by [package type].
+Valid values: GENERAL_BUNDLE (GENERAL BUNDLE); STORAGE_BUNDLE (STORAGE BUNDLE); ENTERPRISE_BUNDLE (ENTERPRISE BUNDLE); EXCLUSIVE_BUNDLE (dedicated BUNDLE); BEFAST_BUNDLE (SPEED BUNDLE); STARTER_BUNDLE (STARTER BUNDLE); CAREFREE_BUNDLE (CAREFREE BUNDLE); RAZOR_SPEED_BUNDLE (RAZOR SPEED BUNDLE).
+Type: String.
 Required: No
-<li>bundle-state</li>Filter by the **bundle status**.
-Values: `ONLINE`, `OFFLINE`
-Type: String
+<li>bundle-state</li>Filter by [package status].
+Valid values: ONLINE, OFFLINE.
+Type: String.
 Required: No
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `BundleIds` and `Filters` at the same time.
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. the parameter does not support specifying both `BundleIds` and `Filters`.
  * @method void setFilters(array $Filters) Set Filter list.
-<li>bundle-id</li>Filter by the **bundle ID**.
-Type: String
+<li>bundle-id</li>Filter by [bundle id].
+Type: String.
 Required: No
-<li>`support-platform-type`<li>Filter by the **system type**.
-Values: `LINUX_UNIX` (Linux/Unix), `WINDOWS` (Windows).
-Type: String
+<li>`support-platform-type`</li>Filter by the system type.
+Value: LINUX_UNIX (LINUX/UNIX system); WINDOWS (WINDOWS systems).
+Type: String.
 Required: No
-<li>bundle-type</li>Filter by the **bundle type**.
-Values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle), `STARTER_BUNDLE` (Beginner bundle); `CAREFREE_BUNDLE` (Carefree bundle);
-Type: String
+<li>bundle-type</li>Filter by [package type].
+Valid values: GENERAL_BUNDLE (GENERAL BUNDLE); STORAGE_BUNDLE (STORAGE BUNDLE); ENTERPRISE_BUNDLE (ENTERPRISE BUNDLE); EXCLUSIVE_BUNDLE (dedicated BUNDLE); BEFAST_BUNDLE (SPEED BUNDLE); STARTER_BUNDLE (STARTER BUNDLE); CAREFREE_BUNDLE (CAREFREE BUNDLE); RAZOR_SPEED_BUNDLE (RAZOR SPEED BUNDLE).
+Type: String.
 Required: No
-<li>bundle-state</li>Filter by the **bundle status**.
-Values: `ONLINE`, `OFFLINE`
-Type: String
+<li>bundle-state</li>Filter by [package status].
+Valid values: ONLINE, OFFLINE.
+Type: String.
 Required: No
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `BundleIds` and `Filters` at the same time.
- * @method array getZones() Obtain AZ list, which contains all AZs by default.
- * @method void setZones(array $Zones) Set AZ list, which contains all AZs by default.
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. the parameter does not support specifying both `BundleIds` and `Filters`.
+ * @method array getZones() Obtain AZ list. default to all availability zones.
+<li>AZs can be queried through the API [DescribeZones](https://www.tencentcloud.comom/document/product/1207/57513?from_cn_redirect=1)</li>.
+ * @method void setZones(array $Zones) Set AZ list. default to all availability zones.
+<li>AZs can be queried through the API [DescribeZones](https://www.tencentcloud.comom/document/product/1207/57513?from_cn_redirect=1)</li>.
  */
 class DescribeBundlesRequest extends AbstractModel
 {
     /**
-     * @var array Package ID list.
+     * @var array List of bundle ids. the maximum is 100 per request for batch packages. you can get the BundleId in the return value from the API [DescribeBundles](https://www.tencentcloud.comom/document/product/1207/47575?from_cn_redirect=1).
      */
     public $BundleIds;
 
@@ -82,52 +84,54 @@ class DescribeBundlesRequest extends AbstractModel
 
     /**
      * @var array Filter list.
-<li>bundle-id</li>Filter by the **bundle ID**.
-Type: String
+<li>bundle-id</li>Filter by [bundle id].
+Type: String.
 Required: No
-<li>`support-platform-type`<li>Filter by the **system type**.
-Values: `LINUX_UNIX` (Linux/Unix), `WINDOWS` (Windows).
-Type: String
+<li>`support-platform-type`</li>Filter by the system type.
+Value: LINUX_UNIX (LINUX/UNIX system); WINDOWS (WINDOWS systems).
+Type: String.
 Required: No
-<li>bundle-type</li>Filter by the **bundle type**.
-Values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle), `STARTER_BUNDLE` (Beginner bundle); `CAREFREE_BUNDLE` (Carefree bundle);
-Type: String
+<li>bundle-type</li>Filter by [package type].
+Valid values: GENERAL_BUNDLE (GENERAL BUNDLE); STORAGE_BUNDLE (STORAGE BUNDLE); ENTERPRISE_BUNDLE (ENTERPRISE BUNDLE); EXCLUSIVE_BUNDLE (dedicated BUNDLE); BEFAST_BUNDLE (SPEED BUNDLE); STARTER_BUNDLE (STARTER BUNDLE); CAREFREE_BUNDLE (CAREFREE BUNDLE); RAZOR_SPEED_BUNDLE (RAZOR SPEED BUNDLE).
+Type: String.
 Required: No
-<li>bundle-state</li>Filter by the **bundle status**.
-Values: `ONLINE`, `OFFLINE`
-Type: String
+<li>bundle-state</li>Filter by [package status].
+Valid values: ONLINE, OFFLINE.
+Type: String.
 Required: No
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `BundleIds` and `Filters` at the same time.
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. the parameter does not support specifying both `BundleIds` and `Filters`.
      */
     public $Filters;
 
     /**
-     * @var array AZ list, which contains all AZs by default.
+     * @var array AZ list. default to all availability zones.
+<li>AZs can be queried through the API [DescribeZones](https://www.tencentcloud.comom/document/product/1207/57513?from_cn_redirect=1)</li>.
      */
     public $Zones;
 
     /**
-     * @param array $BundleIds Package ID list.
+     * @param array $BundleIds List of bundle ids. the maximum is 100 per request for batch packages. you can get the BundleId in the return value from the API [DescribeBundles](https://www.tencentcloud.comom/document/product/1207/47575?from_cn_redirect=1).
      * @param integer $Offset Offset. Default value: 0. For more information on `Offset`, please see the relevant section in [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, please see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
      * @param array $Filters Filter list.
-<li>bundle-id</li>Filter by the **bundle ID**.
-Type: String
+<li>bundle-id</li>Filter by [bundle id].
+Type: String.
 Required: No
-<li>`support-platform-type`<li>Filter by the **system type**.
-Values: `LINUX_UNIX` (Linux/Unix), `WINDOWS` (Windows).
-Type: String
+<li>`support-platform-type`</li>Filter by the system type.
+Value: LINUX_UNIX (LINUX/UNIX system); WINDOWS (WINDOWS systems).
+Type: String.
 Required: No
-<li>bundle-type</li>Filter by the **bundle type**.
-Values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle), `STARTER_BUNDLE` (Beginner bundle); `CAREFREE_BUNDLE` (Carefree bundle);
-Type: String
+<li>bundle-type</li>Filter by [package type].
+Valid values: GENERAL_BUNDLE (GENERAL BUNDLE); STORAGE_BUNDLE (STORAGE BUNDLE); ENTERPRISE_BUNDLE (ENTERPRISE BUNDLE); EXCLUSIVE_BUNDLE (dedicated BUNDLE); BEFAST_BUNDLE (SPEED BUNDLE); STARTER_BUNDLE (STARTER BUNDLE); CAREFREE_BUNDLE (CAREFREE BUNDLE); RAZOR_SPEED_BUNDLE (RAZOR SPEED BUNDLE).
+Type: String.
 Required: No
-<li>bundle-state</li>Filter by the **bundle status**.
-Values: `ONLINE`, `OFFLINE`
-Type: String
+<li>bundle-state</li>Filter by [package status].
+Valid values: ONLINE, OFFLINE.
+Type: String.
 Required: No
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `BundleIds` and `Filters` at the same time.
-     * @param array $Zones AZ list, which contains all AZs by default.
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. the parameter does not support specifying both `BundleIds` and `Filters`.
+     * @param array $Zones AZ list. default to all availability zones.
+<li>AZs can be queried through the API [DescribeZones](https://www.tencentcloud.comom/document/product/1207/57513?from_cn_redirect=1)</li>.
      */
     function __construct()
     {

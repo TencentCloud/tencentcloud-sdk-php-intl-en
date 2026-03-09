@@ -20,18 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInvokers request structure.
  *
- * @method array getInvokerIds() Obtain List of invoker IDs.
- * @method void setInvokerIds(array $InvokerIds) Set List of invoker IDs.
- * @method array getFilters() Obtain Filter conditions:
+ * @method array getInvokerIds() Obtain Executor ID list.
 
-<li> `invoker-id` - String - Required: No - (Filter condition) Filter by the invoker ID.
-<li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID.
-<li> `type` - String - Required: No - (Filter condition) Filter by the invoker type.
- * @method void setFilters(array $Filters) Set Filter conditions:
+The maximum per request is 100.
 
-<li> `invoker-id` - String - Required: No - (Filter condition) Filter by the invoker ID.
-<li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID.
-<li> `type` - String - Required: No - (Filter condition) Filter by the invoker type.
+Parameters must not be specified simultaneously `InvokerIds` and `Filters`.
+
+ * @method void setInvokerIds(array $InvokerIds) Set Executor ID list.
+
+The maximum per request is 100.
+
+Parameters must not be specified simultaneously `InvokerIds` and `Filters`.
+
+ * @method array getFilters() Obtain Filter criteria:.
+
+- invoker-id - String - required: no - (filter condition) filter by executor id.
+-command-id - String - required: no - (filter condition) filters commands by id. you can obtain the id through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+- invoker-type - String - required: no - (filter condition) filter by the executor type. currently only support SCHEDULE.
+
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InvokerIds` and `Filters` parameters cannot be specified at the same time.
+ * @method void setFilters(array $Filters) Set Filter criteria:.
+
+- invoker-id - String - required: no - (filter condition) filter by executor id.
+-command-id - String - required: no - (filter condition) filters commands by id. you can obtain the id through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+- invoker-type - String - required: no - (filter condition) filter by the executor type. currently only support SCHEDULE.
+
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InvokerIds` and `Filters` parameters cannot be specified at the same time.
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
  * @method integer getOffset() Obtain Offset. Default value: 0.
@@ -40,16 +54,23 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInvokersRequest extends AbstractModel
 {
     /**
-     * @var array List of invoker IDs.
+     * @var array Executor ID list.
+
+The maximum per request is 100.
+
+Parameters must not be specified simultaneously `InvokerIds` and `Filters`.
+
      */
     public $InvokerIds;
 
     /**
-     * @var array Filter conditions:
+     * @var array Filter criteria:.
 
-<li> `invoker-id` - String - Required: No - (Filter condition) Filter by the invoker ID.
-<li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID.
-<li> `type` - String - Required: No - (Filter condition) Filter by the invoker type.
+- invoker-id - String - required: no - (filter condition) filter by executor id.
+-command-id - String - required: no - (filter condition) filters commands by id. you can obtain the id through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+- invoker-type - String - required: no - (filter condition) filter by the executor type. currently only support SCHEDULE.
+
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InvokerIds` and `Filters` parameters cannot be specified at the same time.
      */
     public $Filters;
 
@@ -64,12 +85,19 @@ class DescribeInvokersRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param array $InvokerIds List of invoker IDs.
-     * @param array $Filters Filter conditions:
+     * @param array $InvokerIds Executor ID list.
 
-<li> `invoker-id` - String - Required: No - (Filter condition) Filter by the invoker ID.
-<li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID.
-<li> `type` - String - Required: No - (Filter condition) Filter by the invoker type.
+The maximum per request is 100.
+
+Parameters must not be specified simultaneously `InvokerIds` and `Filters`.
+
+     * @param array $Filters Filter criteria:.
+
+- invoker-id - String - required: no - (filter condition) filter by executor id.
+-command-id - String - required: no - (filter condition) filters commands by id. you can obtain the id through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+- invoker-type - String - required: no - (filter condition) filter by the executor type. currently only support SCHEDULE.
+
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InvokerIds` and `Filters` parameters cannot be specified at the same time.
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
      */

@@ -20,62 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Data disk price
  *
- * @method string getDiskId() Obtain Cloud disk ID.
- * @method void setDiskId(string $DiskId) Set Cloud disk ID.
- * @method float getOriginalDiskPrice() Obtain Cloud disk unit price.
- * @method void setOriginalDiskPrice(float $OriginalDiskPrice) Set Cloud disk unit price.
- * @method float getOriginalPrice() Obtain Total price of cloud disk
- * @method void setOriginalPrice(float $OriginalPrice) Set Total price of cloud disk
- * @method float getDiscount() Obtain Discount.
- * @method void setDiscount(float $Discount) Set Discount.
- * @method float getDiscountPrice() Obtain Discounted total price.
- * @method void setDiscountPrice(float $DiscountPrice) Set Discounted total price.
- * @method string getInstanceId() Obtain ID of the instance to which the data disk is mounted.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setInstanceId(string $InstanceId) Set ID of the instance to which the data disk is mounted.
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getDiskId() Obtain <p>Cloud disk ID.</p>.
+ * @method void setDiskId(string $DiskId) Set <p>Cloud disk ID.</p>.
+ * @method float getOriginalDiskPrice() Obtain <P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>.
+ * @method void setOriginalDiskPrice(float $OriginalDiskPrice) Set <P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>.
+ * @method float getOriginalPrice() Obtain <P>Total CBS price.</p><p>unit: usd</p>.
+ * @method void setOriginalPrice(float $OriginalPrice) Set <P>Total CBS price.</p><p>unit: usd</p>.
+ * @method float getDiscount() Obtain <p>Discount.</p>.
+ * @method void setDiscount(float $Discount) Set <p>Discount.</p>.
+ * @method float getDiscountPrice() Obtain <P>Discounted total price.</p><p>unit: usd</p>.
+ * @method void setDiscountPrice(float $DiscountPrice) Set <P>Discounted total price.</p><p>unit: usd</p>.
+ * @method string getInstanceId() Obtain <p>Instance ID for data disk mounting.</p>.
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID for data disk mounting.</p>.
  */
 class DataDiskPrice extends AbstractModel
 {
     /**
-     * @var string Cloud disk ID.
+     * @var string <p>Cloud disk ID.</p>.
      */
     public $DiskId;
 
     /**
-     * @var float Cloud disk unit price.
+     * @var float <P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>.
      */
     public $OriginalDiskPrice;
 
     /**
-     * @var float Total price of cloud disk
+     * @var float <P>Total CBS price.</p><p>unit: usd</p>.
      */
     public $OriginalPrice;
 
     /**
-     * @var float Discount.
+     * @var float <p>Discount.</p>.
      */
     public $Discount;
 
     /**
-     * @var float Discounted total price.
+     * @var float <P>Discounted total price.</p><p>unit: usd</p>.
      */
     public $DiscountPrice;
 
     /**
-     * @var string ID of the instance to which the data disk is mounted.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string <p>Instance ID for data disk mounting.</p>.
      */
     public $InstanceId;
 
     /**
-     * @param string $DiskId Cloud disk ID.
-     * @param float $OriginalDiskPrice Cloud disk unit price.
-     * @param float $OriginalPrice Total price of cloud disk
-     * @param float $Discount Discount.
-     * @param float $DiscountPrice Discounted total price.
-     * @param string $InstanceId ID of the instance to which the data disk is mounted.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $DiskId <p>Cloud disk ID.</p>.
+     * @param float $OriginalDiskPrice <P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>.
+     * @param float $OriginalPrice <P>Total CBS price.</p><p>unit: usd</p>.
+     * @param float $Discount <p>Discount.</p>.
+     * @param float $DiscountPrice <P>Discounted total price.</p><p>unit: usd</p>.
+     * @param string $InstanceId <p>Instance ID for data disk mounting.</p>.
      */
     function __construct()
     {

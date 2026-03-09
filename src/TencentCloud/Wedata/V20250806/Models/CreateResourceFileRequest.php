@@ -30,11 +30,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosRegion(string $CosRegion) Set BucketName specifies the cos storage bucket region.
  * @method string getParentFolderPath() Obtain Upload path for resource files in the project. value example: /wedata/qxxxm/. root directory, please use /.
  * @method void setParentFolderPath(string $ParentFolderPath) Set Upload path for resource files in the project. value example: /wedata/qxxxm/. root directory, please use /.
- * @method string getResourceFile() Obtain -Upload file and manual entry are two methods, choose one. if both are provided, the sequence is file > manual entry.
--The manually entered value must be an existing cos path. /datastudio/resource/ is the fixed prefix. projectId is the project ID. import a specific value. parentFolderPath is the folder path. name is the file name. value example: /datastudio/resource/projectId/parentFolderPath/name. 
+ * @method string getResourceFile() Obtain -Upload file or manually enter value. only select one method. if both are provided, the sequence is file > manually entered value.
+-Manually entered value must be existing cos path. parentFolderPath specifies the parent folder path. name specifies the file name. value example: /datastudio/resource/projectId/parentFolderPath/name. 
 
- * @method void setResourceFile(string $ResourceFile) Set -Upload file and manual entry are two methods, choose one. if both are provided, the sequence is file > manual entry.
--The manually entered value must be an existing cos path. /datastudio/resource/ is the fixed prefix. projectId is the project ID. import a specific value. parentFolderPath is the folder path. name is the file name. value example: /datastudio/resource/projectId/parentFolderPath/name. 
+ * @method void setResourceFile(string $ResourceFile) Set -Upload file or manually enter value. only select one method. if both are provided, the sequence is file > manually entered value.
+-Manually entered value must be existing cos path. parentFolderPath specifies the parent folder path. name specifies the file name. value example: /datastudio/resource/projectId/parentFolderPath/name. 
 
  * @method string getBundleId() Obtain Bundle Client ID.
  * @method void setBundleId(string $BundleId) Set Bundle Client ID.
@@ -69,8 +69,8 @@ class CreateResourceFileRequest extends AbstractModel
     public $ParentFolderPath;
 
     /**
-     * @var string -Upload file and manual entry are two methods, choose one. if both are provided, the sequence is file > manual entry.
--The manually entered value must be an existing cos path. /datastudio/resource/ is the fixed prefix. projectId is the project ID. import a specific value. parentFolderPath is the folder path. name is the file name. value example: /datastudio/resource/projectId/parentFolderPath/name. 
+     * @var string -Upload file or manually enter value. only select one method. if both are provided, the sequence is file > manually entered value.
+-Manually entered value must be existing cos path. parentFolderPath specifies the parent folder path. name specifies the file name. value example: /datastudio/resource/projectId/parentFolderPath/name. 
 
      */
     public $ResourceFile;
@@ -91,8 +91,8 @@ class CreateResourceFileRequest extends AbstractModel
      * @param string $BucketName Bucket name. can be obtained from the GetResourceCosPath api.
      * @param string $CosRegion BucketName specifies the cos storage bucket region.
      * @param string $ParentFolderPath Upload path for resource files in the project. value example: /wedata/qxxxm/. root directory, please use /.
-     * @param string $ResourceFile -Upload file and manual entry are two methods, choose one. if both are provided, the sequence is file > manual entry.
--The manually entered value must be an existing cos path. /datastudio/resource/ is the fixed prefix. projectId is the project ID. import a specific value. parentFolderPath is the folder path. name is the file name. value example: /datastudio/resource/projectId/parentFolderPath/name. 
+     * @param string $ResourceFile -Upload file or manually enter value. only select one method. if both are provided, the sequence is file > manually entered value.
+-Manually entered value must be existing cos path. parentFolderPath specifies the parent folder path. name specifies the file name. value example: /datastudio/resource/projectId/parentFolderPath/name. 
 
      * @param string $BundleId Bundle Client ID.
      * @param string $BundleInfo bundle client info.

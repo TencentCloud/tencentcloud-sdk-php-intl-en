@@ -20,66 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInvoker request structure.
  *
- * @method string getName() Obtain Invoker name.
- * @method void setName(string $Name) Set Invoker name.
- * @method string getType() Obtain Invoker type. It can only be `SCHEDULE` (recurring invokers).
- * @method void setType(string $Type) Set Invoker type. It can only be `SCHEDULE` (recurring invokers).
+ * @method string getName() Obtain Executor name. length not exceeding 120 characters.
+ * @method void setName(string $Name) Set Executor name. length not exceeding 120 characters.
+ * @method string getType() Obtain Executor type.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
+ * @method void setType(string $Type) Set Executor type.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
  * @method string getCommandId() Obtain Remote command ID.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
  * @method void setCommandId(string $CommandId) Set Remote command ID.
- * @method array getInstanceIds() Obtain ID of the instance bound to the trigger. Up to 100 IDs are allowed.
- * @method void setInstanceIds(array $InstanceIds) Set ID of the instance bound to the trigger. Up to 100 IDs are allowed.
- * @method string getUsername() Obtain The user who executes the command.
- * @method void setUsername(string $Username) Set The user who executes the command.
- * @method string getParameters() Obtain Custom parameters of the command.
- * @method void setParameters(string $Parameters) Set Custom parameters of the command.
- * @method ScheduleSettings getScheduleSettings() Obtain Settings required for a recurring invoker.
- * @method void setScheduleSettings(ScheduleSettings $ScheduleSettings) Set Settings required for a recurring invoker.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+ * @method array getInstanceIds() Obtain Trigger associated instance ID. list cap 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
+ * @method void setInstanceIds(array $InstanceIds) Set Trigger associated instance ID. list cap 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
+ * @method string getUsername() Obtain Command execution user. length not exceeding 256 characters.
+ * @method void setUsername(string $Username) Set Command execution user. length not exceeding 256 characters.
+ * @method string getParameters() Obtain Command custom parameter. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+ * @method void setParameters(string $Parameters) Set Command custom parameter. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+ * @method ScheduleSettings getScheduleSettings() Obtain Recurring invoker settings.
+
+When the executor type is `SCHEDULE`, specify this parameter.
+ * @method void setScheduleSettings(ScheduleSettings $ScheduleSettings) Set Recurring invoker settings.
+
+When the executor type is `SCHEDULE`, specify this parameter.
+ * @method array getTags() Obtain Tag associated with the command. list length not exceeding 10.
+ * @method void setTags(array $Tags) Set Tag associated with the command. list length not exceeding 10.
  */
 class CreateInvokerRequest extends AbstractModel
 {
     /**
-     * @var string Invoker name.
+     * @var string Executor name. length not exceeding 120 characters.
      */
     public $Name;
 
     /**
-     * @var string Invoker type. It can only be `SCHEDULE` (recurring invokers).
+     * @var string Executor type.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
      */
     public $Type;
 
     /**
      * @var string Remote command ID.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      */
     public $CommandId;
 
     /**
-     * @var array ID of the instance bound to the trigger. Up to 100 IDs are allowed.
+     * @var array Trigger associated instance ID. list cap 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
      */
     public $InstanceIds;
 
     /**
-     * @var string The user who executes the command.
+     * @var string Command execution user. length not exceeding 256 characters.
      */
     public $Username;
 
     /**
-     * @var string Custom parameters of the command.
+     * @var string Command custom parameter. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
      */
     public $Parameters;
 
     /**
-     * @var ScheduleSettings Settings required for a recurring invoker.
+     * @var ScheduleSettings Recurring invoker settings.
+
+When the executor type is `SCHEDULE`, specify this parameter.
      */
     public $ScheduleSettings;
 
     /**
-     * @param string $Name Invoker name.
-     * @param string $Type Invoker type. It can only be `SCHEDULE` (recurring invokers).
+     * @var array Tag associated with the command. list length not exceeding 10.
+     */
+    public $Tags;
+
+    /**
+     * @param string $Name Executor name. length not exceeding 120 characters.
+     * @param string $Type Executor type.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
      * @param string $CommandId Remote command ID.
-     * @param array $InstanceIds ID of the instance bound to the trigger. Up to 100 IDs are allowed.
-     * @param string $Username The user who executes the command.
-     * @param string $Parameters Custom parameters of the command.
-     * @param ScheduleSettings $ScheduleSettings Settings required for a recurring invoker.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+     * @param array $InstanceIds Trigger associated instance ID. list cap 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
+     * @param string $Username Command execution user. length not exceeding 256 characters.
+     * @param string $Parameters Command custom parameter. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+     * @param ScheduleSettings $ScheduleSettings Recurring invoker settings.
+
+When the executor type is `SCHEDULE`, specify this parameter.
+     * @param array $Tags Tag associated with the command. list length not exceeding 10.
      */
     function __construct()
     {
@@ -121,6 +185,15 @@ class CreateInvokerRequest extends AbstractModel
         if (array_key_exists("ScheduleSettings",$param) and $param["ScheduleSettings"] !== null) {
             $this->ScheduleSettings = new ScheduleSettings();
             $this->ScheduleSettings->deserialize($param["ScheduleSettings"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

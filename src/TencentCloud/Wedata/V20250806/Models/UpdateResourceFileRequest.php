@@ -24,15 +24,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) Set Project ID.
  * @method string getResourceId() Obtain Resource file ID. Can be obtained through the ListResourceFiles API.
  * @method void setResourceId(string $ResourceId) Set Resource file ID. Can be obtained through the ListResourceFiles API.
- * @method string getResourceFile() Obtain -Upload file and manual entry are two methods, choose one. if both are provided, the sequence is file > manual entry.
--The hand-filled value must be an existing cos path. /datastudio/resource/ is the fixed prefix. projectId is the project ID and requires a specific value. parentFolderPath is the parent folder path. name is the file name. 
-Hand-filled value example:.
-   /datastudio/resource/projectId/parentFolderPath/name 
+ * @method string getResourceFile() Obtain -Upload file or manually enter value. only select one method. if both are provided, the sequence is file > manually entered value.
+-Manually entered value must be existing cos path. parentFolderPath specifies the parent folder path. name specifies the file name. value example for manually entered value:.
+     /datastudio/resource/projectId/parentFolderPath/name 
 
- * @method void setResourceFile(string $ResourceFile) Set -Upload file and manual entry are two methods, choose one. if both are provided, the sequence is file > manual entry.
--The hand-filled value must be an existing cos path. /datastudio/resource/ is the fixed prefix. projectId is the project ID and requires a specific value. parentFolderPath is the parent folder path. name is the file name. 
-Hand-filled value example:.
-   /datastudio/resource/projectId/parentFolderPath/name 
+ * @method void setResourceFile(string $ResourceFile) Set -Upload file or manually enter value. only select one method. if both are provided, the sequence is file > manually entered value.
+-Manually entered value must be existing cos path. parentFolderPath specifies the parent folder path. name specifies the file name. value example for manually entered value:.
+     /datastudio/resource/projectId/parentFolderPath/name 
 
  * @method string getResourceName() Obtain Resource name, preferably kept consistent with the file name.
  * @method void setResourceName(string $ResourceName) Set Resource name, preferably kept consistent with the file name.
@@ -54,10 +52,9 @@ class UpdateResourceFileRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string -Upload file and manual entry are two methods, choose one. if both are provided, the sequence is file > manual entry.
--The hand-filled value must be an existing cos path. /datastudio/resource/ is the fixed prefix. projectId is the project ID and requires a specific value. parentFolderPath is the parent folder path. name is the file name. 
-Hand-filled value example:.
-   /datastudio/resource/projectId/parentFolderPath/name 
+     * @var string -Upload file or manually enter value. only select one method. if both are provided, the sequence is file > manually entered value.
+-Manually entered value must be existing cos path. parentFolderPath specifies the parent folder path. name specifies the file name. value example for manually entered value:.
+     /datastudio/resource/projectId/parentFolderPath/name 
 
      */
     public $ResourceFile;
@@ -80,10 +77,9 @@ Hand-filled value example:.
     /**
      * @param string $ProjectId Project ID.
      * @param string $ResourceId Resource file ID. Can be obtained through the ListResourceFiles API.
-     * @param string $ResourceFile -Upload file and manual entry are two methods, choose one. if both are provided, the sequence is file > manual entry.
--The hand-filled value must be an existing cos path. /datastudio/resource/ is the fixed prefix. projectId is the project ID and requires a specific value. parentFolderPath is the parent folder path. name is the file name. 
-Hand-filled value example:.
-   /datastudio/resource/projectId/parentFolderPath/name 
+     * @param string $ResourceFile -Upload file or manually enter value. only select one method. if both are provided, the sequence is file > manually entered value.
+-Manually entered value must be existing cos path. parentFolderPath specifies the parent folder path. name specifies the file name. value example for manually entered value:.
+     /datastudio/resource/projectId/parentFolderPath/name 
 
      * @param string $ResourceName Resource name, preferably kept consistent with the file name.
      * @param string $BundleId Bundle Client ID.

@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
 
 
  * @method void setChildren(array $Children) Set Sub-node list
+
+
+ * @method string getParentFolderPath() Obtain Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setParentFolderPath(string $ParentFolderPath) Set Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CodeFolderNode extends AbstractModel
 {
@@ -117,6 +123,12 @@ class CodeFolderNode extends AbstractModel
     public $Children;
 
     /**
+     * @var string Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ParentFolderPath;
+
+    /**
      * @param string $Id Unique identifier
      * @param string $Title Name
      * @param string $Type folder type, script.
@@ -132,6 +144,10 @@ class CodeFolderNode extends AbstractModel
      * @param string $NodePermission Specifies the permission of the current user for nodes.	
 
      * @param array $Children Sub-node list
+
+
+     * @param string $ParentFolderPath Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -193,6 +209,10 @@ class CodeFolderNode extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Children, $obj);
             }
+        }
+
+        if (array_key_exists("ParentFolderPath",$param) and $param["ParentFolderPath"] !== null) {
+            $this->ParentFolderPath = $param["ParentFolderPath"];
         }
     }
 }

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Instance price details
  *
  * @method string getInstanceId() Obtain Instance ID.
-Note: This field may return `null`, indicating that no valid value was found.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method InstancePrice getInstancePrice() Obtain Price query information.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setInstancePrice(InstancePrice $InstancePrice) Set Price query information.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method array getDiscountDetail() Obtain Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setDiscountDetail(array $DiscountDetail) Set Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method InstancePrice getInstancePrice() Obtain Price inquiry information.
+ * @method void setInstancePrice(InstancePrice $InstancePrice) Set Price inquiry information.
+ * @method array getDiscountDetail() Obtain Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount).
+ * @method void setDiscountDetail(array $DiscountDetail) Set Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount).
  */
 class InstancePriceDetail extends AbstractModel
 {
     /**
      * @var string Instance ID.
-Note: This field may return `null`, indicating that no valid value was found.
      */
     public $InstanceId;
 
     /**
-     * @var InstancePrice Price query information.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var InstancePrice Price inquiry information.
      */
     public $InstancePrice;
 
     /**
-     * @var array Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount).
      */
     public $DiscountDetail;
 
     /**
      * @param string $InstanceId Instance ID.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param InstancePrice $InstancePrice Price query information.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param array $DiscountDetail Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param InstancePrice $InstancePrice Price inquiry information.
+     * @param array $DiscountDetail Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount).
      */
     function __construct()
     {

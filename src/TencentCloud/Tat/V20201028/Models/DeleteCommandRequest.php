@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCommand request structure.
  *
- * @method string getCommandId() Obtain ID of the command to be deleted.
- * @method void setCommandId(string $CommandId) Set ID of the command to be deleted.
+ * @method string getCommandId() Obtain Command ID to be deleted. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+ * @method void setCommandId(string $CommandId) Set Command ID to be deleted. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
  */
 class DeleteCommandRequest extends AbstractModel
 {
     /**
-     * @var string ID of the command to be deleted.
+     * @var string Command ID to be deleted. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      */
     public $CommandId;
 
     /**
-     * @param string $CommandId ID of the command to be deleted.
+     * @param string $CommandId Command ID to be deleted. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      */
     function __construct()
     {

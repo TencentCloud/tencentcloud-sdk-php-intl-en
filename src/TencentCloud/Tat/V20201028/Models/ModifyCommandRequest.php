@@ -20,134 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCommand request structure.
  *
- * @method string getCommandId() Obtain Command ID.
- * @method void setCommandId(string $CommandId) Set Command ID.
- * @method string getCommandName() Obtain Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
- * @method void setCommandName(string $CommandName) Set Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
- * @method string getDescription() Obtain Command description. The maximum length is 120 characters.
- * @method void setDescription(string $Description) Set Command description. The maximum length is 120 characters.
- * @method string getContent() Obtain Base64-encoded command. The maximum length is 64 KB.
- * @method void setContent(string $Content) Set Base64-encoded command. The maximum length is 64 KB.
- * @method string getCommandType() Obtain Command type. `SHELL` and `POWERSHELL` are supported.
- * @method void setCommandType(string $CommandType) Set Command type. `SHELL` and `POWERSHELL` are supported.
- * @method string getWorkingDirectory() Obtain Command execution path.
- * @method void setWorkingDirectory(string $WorkingDirectory) Set Command execution path.
- * @method integer getTimeout() Obtain Command timeout period. Value range: [1, 86400].
- * @method void setTimeout(integer $Timeout) Set Command timeout period. Value range: [1, 86400].
- * @method string getDefaultParameters() Obtain The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-All parameters are overwritten. All default values are required for modification.
-Modification is only allowed when `EnableParameter` is `true`.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
- * @method void setDefaultParameters(string $DefaultParameters) Set The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-All parameters are overwritten. All default values are required for modification.
-Modification is only allowed when `EnableParameter` is `true`.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
- * @method string getUsername() Obtain The username used to execute the command on the CVM or Lighthouse instance.
-The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user.
- * @method void setUsername(string $Username) Set The username used to execute the command on the CVM or Lighthouse instance.
-The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user.
- * @method string getOutputCOSBucketUrl() Obtain The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
- * @method void setOutputCOSBucketUrl(string $OutputCOSBucketUrl) Set The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
- * @method string getOutputCOSKeyPrefix() Obtain The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
-1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
-2. Use a slash (/) to create a subdirectory.
-3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
- * @method void setOutputCOSKeyPrefix(string $OutputCOSKeyPrefix) Set The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
-1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
-2. Use a slash (/) to create a subdirectory.
-3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
+ * @method string getCommandId() Obtain <p>Command ID. call the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands</a> api to query command details.</p>.
+ * @method void setCommandId(string $CommandId) Set <p>Command ID. call the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands</a> api to query command details.</p>.
+ * @method string getCommandName() Obtain <p>Command name. name only supports chinese, english, digits, underscore, separator "-", and decimal point. the maximum length cannot exceed 60 bytes.</p>.
+ * @method void setCommandName(string $CommandName) Set <p>Command name. name only supports chinese, english, digits, underscore, separator "-", and decimal point. the maximum length cannot exceed 60 bytes.</p>.
+ * @method string getDescription() Obtain <P>Command description. no more than 120 characters.</p>.
+ * @method void setDescription(string $Description) Set <P>Command description. no more than 120 characters.</p>.
+ * @method string getContent() Obtain <p>The Base64-encoded command content, length cannot exceed 64KB.</p>.
+ * @method void setContent(string $Content) Set <p>The Base64-encoded command content, length cannot exceed 64KB.</p>.
+ * @method string getCommandType() Obtain <p>Command type. currently supports SHELL, POWERSHELL, BAT.</p>.
+ * @method void setCommandType(string $CommandType) Set <p>Command type. currently supports SHELL, POWERSHELL, BAT.</p>.
+ * @method string getWorkingDirectory() Obtain <P>Command execution path.</p>.
+ * @method void setWorkingDirectory(string $WorkingDirectory) Set <P>Command execution path.</p>.
+ * @method integer getTimeout() Obtain <p>Command timeout time.</p><p>value range: [1, 86400].</p><p>unit: seconds.</p><p>default value: 60.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
+ * @method void setTimeout(integer $Timeout) Set <p>Command timeout time.</p><p>value range: [1, 86400].</p><p>unit: seconds.</p><p>default value: 60.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
+ * @method string getDefaultParameters() Obtain <p>The default value of custom parameters when the custom parameter feature is enabled. the field type is a json-encoded string, for example: {"varA": "222"}.<br>parameters must not be specified simultaneously for <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>a comprehensive modification is applied, meaning all new default values must be provided when modifying.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings of the command through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>the key is the custom parameter name, and the value is the default value of this parameter. both key and value are string-type.<br>there is an upper limit of 20 custom parameters.<br>custom parameter names must meet the following requirements: the upper limit of character quantity is 64, and the optional range is [a-zA-Z0-9-_].</p>.
+ * @method void setDefaultParameters(string $DefaultParameters) Set <p>The default value of custom parameters when the custom parameter feature is enabled. the field type is a json-encoded string, for example: {"varA": "222"}.<br>parameters must not be specified simultaneously for <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>a comprehensive modification is applied, meaning all new default values must be provided when modifying.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings of the command through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>the key is the custom parameter name, and the value is the default value of this parameter. both key and value are string-type.<br>there is an upper limit of 20 custom parameters.<br>custom parameter names must meet the following requirements: the upper limit of character quantity is 64, and the optional range is [a-zA-Z0-9-_].</p>.
+ * @method array getDefaultParameterConfs() Obtain <p>Custom parameter array. if no parameter value is provided when invoking the command, the default value here will be used to replace it.<br>parameters do not support specifying both <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>up to 20 custom parameters are allowed.</p>.
+ * @method void setDefaultParameterConfs(array $DefaultParameterConfs) Set <p>Custom parameter array. if no parameter value is provided when invoking the command, the default value here will be used to replace it.<br>parameters do not support specifying both <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>up to 20 custom parameters are allowed.</p>.
+ * @method string getUsername() Obtain <p>The username to run commands in a CVM or Lighthouse instance.<br>using minimum permission to execute commands is the best practice for permission management. we recommend running cloud assistant commands as a regular user identity.</p>.
+ * @method void setUsername(string $Username) Set <p>The username to run commands in a CVM or Lighthouse instance.<br>using minimum permission to execute commands is the best practice for permission management. we recommend running cloud assistant commands as a regular user identity.</p>.
+ * @method string getOutputCOSBucketUrl() Obtain <p>Specifies the cos bucket address for the uploaded log, which must start with https, such as https://BucketName-123454321.cos.ap-beijing.myqcloud.com.</p>.
+ * @method void setOutputCOSBucketUrl(string $OutputCOSBucketUrl) Set <p>Specifies the cos bucket address for the uploaded log, which must start with https, such as https://BucketName-123454321.cos.ap-beijing.myqcloud.com.</p>.
+ * @method string getOutputCOSKeyPrefix() Obtain <P>Specify the directory for logs in the cos bucket. the directory naming has the following rules:</p><ol><li>use a combination of numbers, chinese and english, and visible characters, with a maximum length of 60.</li><li>use / to split the path and quickly create subdirectories.</li><li>consecutive / are not allowed; cannot start with /; cannot use .. as the folder name.</li></ol>.
+ * @method void setOutputCOSKeyPrefix(string $OutputCOSKeyPrefix) Set <P>Specify the directory for logs in the cos bucket. the directory naming has the following rules:</p><ol><li>use a combination of numbers, chinese and english, and visible characters, with a maximum length of 60.</li><li>use / to split the path and quickly create subdirectories.</li><li>consecutive / are not allowed; cannot start with /; cannot use .. as the folder name.</li></ol>.
  */
 class ModifyCommandRequest extends AbstractModel
 {
     /**
-     * @var string Command ID.
+     * @var string <p>Command ID. call the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands</a> api to query command details.</p>.
      */
     public $CommandId;
 
     /**
-     * @var string Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
+     * @var string <p>Command name. name only supports chinese, english, digits, underscore, separator "-", and decimal point. the maximum length cannot exceed 60 bytes.</p>.
      */
     public $CommandName;
 
     /**
-     * @var string Command description. The maximum length is 120 characters.
+     * @var string <P>Command description. no more than 120 characters.</p>.
      */
     public $Description;
 
     /**
-     * @var string Base64-encoded command. The maximum length is 64 KB.
+     * @var string <p>The Base64-encoded command content, length cannot exceed 64KB.</p>.
      */
     public $Content;
 
     /**
-     * @var string Command type. `SHELL` and `POWERSHELL` are supported.
+     * @var string <p>Command type. currently supports SHELL, POWERSHELL, BAT.</p>.
      */
     public $CommandType;
 
     /**
-     * @var string Command execution path.
+     * @var string <P>Command execution path.</p>.
      */
     public $WorkingDirectory;
 
     /**
-     * @var integer Command timeout period. Value range: [1, 86400].
+     * @var integer <p>Command timeout time.</p><p>value range: [1, 86400].</p><p>unit: seconds.</p><p>default value: 60.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
      */
     public $Timeout;
 
     /**
-     * @var string The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-All parameters are overwritten. All default values are required for modification.
-Modification is only allowed when `EnableParameter` is `true`.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+     * @var string <p>The default value of custom parameters when the custom parameter feature is enabled. the field type is a json-encoded string, for example: {"varA": "222"}.<br>parameters must not be specified simultaneously for <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>a comprehensive modification is applied, meaning all new default values must be provided when modifying.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings of the command through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>the key is the custom parameter name, and the value is the default value of this parameter. both key and value are string-type.<br>there is an upper limit of 20 custom parameters.<br>custom parameter names must meet the following requirements: the upper limit of character quantity is 64, and the optional range is [a-zA-Z0-9-_].</p>.
      */
     public $DefaultParameters;
 
     /**
-     * @var string The username used to execute the command on the CVM or Lighthouse instance.
-The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user.
+     * @var array <p>Custom parameter array. if no parameter value is provided when invoking the command, the default value here will be used to replace it.<br>parameters do not support specifying both <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>up to 20 custom parameters are allowed.</p>.
+     */
+    public $DefaultParameterConfs;
+
+    /**
+     * @var string <p>The username to run commands in a CVM or Lighthouse instance.<br>using minimum permission to execute commands is the best practice for permission management. we recommend running cloud assistant commands as a regular user identity.</p>.
      */
     public $Username;
 
     /**
-     * @var string The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+     * @var string <p>Specifies the cos bucket address for the uploaded log, which must start with https, such as https://BucketName-123454321.cos.ap-beijing.myqcloud.com.</p>.
      */
     public $OutputCOSBucketUrl;
 
     /**
-     * @var string The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
-1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
-2. Use a slash (/) to create a subdirectory.
-3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
+     * @var string <P>Specify the directory for logs in the cos bucket. the directory naming has the following rules:</p><ol><li>use a combination of numbers, chinese and english, and visible characters, with a maximum length of 60.</li><li>use / to split the path and quickly create subdirectories.</li><li>consecutive / are not allowed; cannot start with /; cannot use .. as the folder name.</li></ol>.
      */
     public $OutputCOSKeyPrefix;
 
     /**
-     * @param string $CommandId Command ID.
-     * @param string $CommandName Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
-     * @param string $Description Command description. The maximum length is 120 characters.
-     * @param string $Content Base64-encoded command. The maximum length is 64 KB.
-     * @param string $CommandType Command type. `SHELL` and `POWERSHELL` are supported.
-     * @param string $WorkingDirectory Command execution path.
-     * @param integer $Timeout Command timeout period. Value range: [1, 86400].
-     * @param string $DefaultParameters The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-All parameters are overwritten. All default values are required for modification.
-Modification is only allowed when `EnableParameter` is `true`.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
-     * @param string $Username The username used to execute the command on the CVM or Lighthouse instance.
-The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user.
-     * @param string $OutputCOSBucketUrl The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
-     * @param string $OutputCOSKeyPrefix The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
-1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
-2. Use a slash (/) to create a subdirectory.
-3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
+     * @param string $CommandId <p>Command ID. call the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands</a> api to query command details.</p>.
+     * @param string $CommandName <p>Command name. name only supports chinese, english, digits, underscore, separator "-", and decimal point. the maximum length cannot exceed 60 bytes.</p>.
+     * @param string $Description <P>Command description. no more than 120 characters.</p>.
+     * @param string $Content <p>The Base64-encoded command content, length cannot exceed 64KB.</p>.
+     * @param string $CommandType <p>Command type. currently supports SHELL, POWERSHELL, BAT.</p>.
+     * @param string $WorkingDirectory <P>Command execution path.</p>.
+     * @param integer $Timeout <p>Command timeout time.</p><p>value range: [1, 86400].</p><p>unit: seconds.</p><p>default value: 60.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
+     * @param string $DefaultParameters <p>The default value of custom parameters when the custom parameter feature is enabled. the field type is a json-encoded string, for example: {"varA": "222"}.<br>parameters must not be specified simultaneously for <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>a comprehensive modification is applied, meaning all new default values must be provided when modifying.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings of the command through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>the key is the custom parameter name, and the value is the default value of this parameter. both key and value are string-type.<br>there is an upper limit of 20 custom parameters.<br>custom parameter names must meet the following requirements: the upper limit of character quantity is 64, and the optional range is [a-zA-Z0-9-_].</p>.
+     * @param array $DefaultParameterConfs <p>Custom parameter array. if no parameter value is provided when invoking the command, the default value here will be used to replace it.<br>parameters do not support specifying both <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>up to 20 custom parameters are allowed.</p>.
+     * @param string $Username <p>The username to run commands in a CVM or Lighthouse instance.<br>using minimum permission to execute commands is the best practice for permission management. we recommend running cloud assistant commands as a regular user identity.</p>.
+     * @param string $OutputCOSBucketUrl <p>Specifies the cos bucket address for the uploaded log, which must start with https, such as https://BucketName-123454321.cos.ap-beijing.myqcloud.com.</p>.
+     * @param string $OutputCOSKeyPrefix <P>Specify the directory for logs in the cos bucket. the directory naming has the following rules:</p><ol><li>use a combination of numbers, chinese and english, and visible characters, with a maximum length of 60.</li><li>use / to split the path and quickly create subdirectories.</li><li>consecutive / are not allowed; cannot start with /; cannot use .. as the folder name.</li></ol>.
      */
     function __construct()
     {
@@ -192,6 +164,15 @@ The principle of least privilege is the best practice for permission management.
 
         if (array_key_exists("DefaultParameters",$param) and $param["DefaultParameters"] !== null) {
             $this->DefaultParameters = $param["DefaultParameters"];
+        }
+
+        if (array_key_exists("DefaultParameterConfs",$param) and $param["DefaultParameterConfs"] !== null) {
+            $this->DefaultParameterConfs = [];
+            foreach ($param["DefaultParameterConfs"] as $key => $value){
+                $obj = new DefaultParameterConf();
+                $obj->deserialize($value);
+                array_push($this->DefaultParameterConfs, $obj);
+            }
         }
 
         if (array_key_exists("Username",$param) and $param["Username"] !== null) {

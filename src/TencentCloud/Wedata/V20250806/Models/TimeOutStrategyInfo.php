@@ -55,6 +55,23 @@ Cycle-Incomplete Timeout - The task was expected to complete within its schedule
  * @method string getScheduleTimeZone() Obtain The time zone configuration corresponding to the timeout, such as UTC+7, defaults to UTC+8.
 
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) Set The time zone configuration corresponding to the timeout, such as UTC+7, defaults to UTC+8.
+
+ * @method integer getSecond() Obtain Seconds (for Spark Streaming policy).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSecond(integer $Second) Set Seconds (for Spark Streaming policy).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTimes() Obtain Count (for Spark Streaming retry count limit policy, ruleType=10).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTimes(integer $Times) Set Count (for Spark Streaming retry count limit policy, ruleType=10).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAlarmTriggerFrequency() Obtain Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+Unit: minute. value range: 5-1440.
+After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAlarmTriggerFrequency(integer $AlarmTriggerFrequency) Set Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+Unit: minute. value range: 5-1440.
+After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TimeOutStrategyInfo extends AbstractModel
 {
@@ -97,6 +114,26 @@ Cycle-Incomplete Timeout - The task was expected to complete within its schedule
     public $ScheduleTimeZone;
 
     /**
+     * @var integer Seconds (for Spark Streaming policy).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Second;
+
+    /**
+     * @var integer Count (for Spark Streaming retry count limit policy, ruleType=10).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Times;
+
+    /**
+     * @var integer Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+Unit: minute. value range: 5-1440.
+After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AlarmTriggerFrequency;
+
+    /**
      * @param integer $RuleType Timeout Alarm Configuration
 
 Expected Execution Duration Timeout - The actual runtime exceeds the estimated execution duration.
@@ -114,6 +151,15 @@ Cycle-Incomplete Timeout - The task was expected to complete within its schedule
      * @param integer $Hour Timeout Specified Value (hours) - The timeout threshold in hours. Default is 1.
      * @param integer $Min Timeout Specified Value (minutes) - The timeout threshold in minutes. Default is 1.
      * @param string $ScheduleTimeZone The time zone configuration corresponding to the timeout, such as UTC+7, defaults to UTC+8.
+
+     * @param integer $Second Seconds (for Spark Streaming policy).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Times Count (for Spark Streaming retry count limit policy, ruleType=10).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AlarmTriggerFrequency Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+Unit: minute. value range: 5-1440.
+After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -146,6 +192,18 @@ Cycle-Incomplete Timeout - The task was expected to complete within its schedule
 
         if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
             $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("Second",$param) and $param["Second"] !== null) {
+            $this->Second = $param["Second"];
+        }
+
+        if (array_key_exists("Times",$param) and $param["Times"] !== null) {
+            $this->Times = $param["Times"];
+        }
+
+        if (array_key_exists("AlarmTriggerFrequency",$param) and $param["AlarmTriggerFrequency"] !== null) {
+            $this->AlarmTriggerFrequency = $param["AlarmTriggerFrequency"];
         }
     }
 }

@@ -42,29 +42,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setYarnQueue(string $YarnQueue) Set Resource pool queue name. need to pass through DescribeProjectClusterQueues to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSourceServiceId() Obtain Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+ * @method string getSourceServiceId() Obtain Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSourceServiceId(string $SourceServiceId) Set Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+ * @method void setSourceServiceId(string $SourceServiceId) Set Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSourceServiceType() Obtain Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+ * @method string getSourceServiceType() Obtain Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSourceServiceType(string $SourceServiceType) Set Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+ * @method void setSourceServiceType(string $SourceServiceType) Set Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSourceServiceName() Obtain Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+ * @method string getSourceServiceName() Obtain Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSourceServiceName(string $SourceServiceName) Set Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+ * @method void setSourceServiceName(string $SourceServiceName) Set Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTargetServiceId() Obtain TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+ * @method string getTargetServiceId() Obtain Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetServiceId(string $TargetServiceId) Set TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+ * @method void setTargetServiceId(string $TargetServiceId) Set Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTargetServiceType() Obtain Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+ * @method string getTargetServiceType() Obtain Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetServiceType(string $TargetServiceType) Set Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+ * @method void setTargetServiceType(string $TargetServiceType) Set Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTargetServiceName() Obtain Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+ * @method string getTargetServiceName() Obtain Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetServiceName(string $TargetServiceName) Set Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+ * @method void setTargetServiceName(string $TargetServiceName) Set Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getResourceGroup() Obtain Resource group ID: need to pass through DescribeNormalSchedulerExecutorGroups to obtain ExecutorGroupId.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -121,37 +121,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $YarnQueue;
 
     /**
-     * @var string Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+     * @var string Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SourceServiceId;
 
     /**
-     * @var string Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @var string Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SourceServiceType;
 
     /**
-     * @var string Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @var string Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SourceServiceName;
 
     /**
-     * @var string TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @var string Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TargetServiceId;
 
     /**
-     * @var string Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+     * @var string Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TargetServiceType;
 
     /**
-     * @var string Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @var string Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TargetServiceName;
@@ -198,17 +198,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $YarnQueue Resource pool queue name. need to pass through DescribeProjectClusterQueues to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SourceServiceId Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+     * @param string $SourceServiceId Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SourceServiceType Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @param string $SourceServiceType Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SourceServiceName Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @param string $SourceServiceName Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TargetServiceId TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @param string $TargetServiceId Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TargetServiceType Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+     * @param string $TargetServiceType Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TargetServiceName Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @param string $TargetServiceName Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ResourceGroup Resource group ID: need to pass through DescribeNormalSchedulerExecutorGroups to obtain ExecutorGroupId.
 Note: This field may return null, indicating that no valid values can be obtained.

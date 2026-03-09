@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvokerId(string $InvokerId) Set Invoker ID.
  * @method string getName() Obtain Invoker name.
  * @method void setName(string $Name) Set Invoker name.
- * @method string getType() Obtain Invoker type.
- * @method void setType(string $Type) Set Invoker type.
+ * @method string getType() Obtain Executor type. currently only support SCHEDULE.
+ * @method void setType(string $Type) Set Executor type. currently only support SCHEDULE.
  * @method string getCommandId() Obtain Command ID.
  * @method void setCommandId(string $CommandId) Set Command ID.
  * @method string getUsername() Obtain Username.
@@ -36,14 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID list.
  * @method boolean getEnable() Obtain Whether to enable the invoker.
  * @method void setEnable(boolean $Enable) Set Whether to enable the invoker.
- * @method ScheduleSettings getScheduleSettings() Obtain Execution schedule of the invoker. This field is returned for recurring invokers.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setScheduleSettings(ScheduleSettings $ScheduleSettings) Set Execution schedule of the invoker. This field is returned for recurring invokers.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getCreatedTime() Obtain Creation time.
- * @method void setCreatedTime(string $CreatedTime) Set Creation time.
- * @method string getUpdatedTime() Obtain Modification time.
- * @method void setUpdatedTime(string $UpdatedTime) Set Modification time.
+ * @method ScheduleSettings getScheduleSettings() Obtain Executor periodic schedule. recurring invoker will return this field.
+ * @method void setScheduleSettings(ScheduleSettings $ScheduleSettings) Set Executor periodic schedule. recurring invoker will return this field.
+ * @method string getCreatedTime() Obtain Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
+ * @method string getUpdatedTime() Obtain Last modified. the format is YYYY-MM-DDThh:MM:ssZ.
+ * @method void setUpdatedTime(string $UpdatedTime) Set Last modified. the format is YYYY-MM-DDThh:MM:ssZ.
  */
 class Invoker extends AbstractModel
 {
@@ -58,7 +56,7 @@ class Invoker extends AbstractModel
     public $Name;
 
     /**
-     * @var string Invoker type.
+     * @var string Executor type. currently only support SCHEDULE.
      */
     public $Type;
 
@@ -88,34 +86,32 @@ class Invoker extends AbstractModel
     public $Enable;
 
     /**
-     * @var ScheduleSettings Execution schedule of the invoker. This field is returned for recurring invokers.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var ScheduleSettings Executor periodic schedule. recurring invoker will return this field.
      */
     public $ScheduleSettings;
 
     /**
-     * @var string Creation time.
+     * @var string Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public $CreatedTime;
 
     /**
-     * @var string Modification time.
+     * @var string Last modified. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public $UpdatedTime;
 
     /**
      * @param string $InvokerId Invoker ID.
      * @param string $Name Invoker name.
-     * @param string $Type Invoker type.
+     * @param string $Type Executor type. currently only support SCHEDULE.
      * @param string $CommandId Command ID.
      * @param string $Username Username.
      * @param string $Parameters Custom parameters.
      * @param array $InstanceIds Instance ID list.
      * @param boolean $Enable Whether to enable the invoker.
-     * @param ScheduleSettings $ScheduleSettings Execution schedule of the invoker. This field is returned for recurring invokers.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $CreatedTime Creation time.
-     * @param string $UpdatedTime Modification time.
+     * @param ScheduleSettings $ScheduleSettings Executor periodic schedule. recurring invoker will return this field.
+     * @param string $CreatedTime Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
+     * @param string $UpdatedTime Last modified. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     function __construct()
     {

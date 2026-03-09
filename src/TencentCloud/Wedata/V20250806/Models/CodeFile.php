@@ -67,6 +67,11 @@ Note: This field may return null, indicating that no valid
  * @method string getPath() Obtain Full path of the node, /aaa/bbb/ccc.ipynb, consists of the name of each node.
 
  * @method void setPath(string $Path) Set Full path of the node, /aaa/bbb/ccc.ipynb, consists of the name of each node.
+
+ * @method string getParentFolderPath() Obtain Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setParentFolderPath(string $ParentFolderPath) Set Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CodeFile extends AbstractModel
 {
@@ -139,6 +144,12 @@ Note: This field may return null, indicating that no valid
     public $Path;
 
     /**
+     * @var string Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ParentFolderPath;
+
+    /**
      * @param string $CodeFileId Script ID
 
 
@@ -162,6 +173,9 @@ Note: This field may return null, indicating that no valid
      * @param string $AccessScope Access permission: SHARED, PRIVATE.
 
      * @param string $Path Full path of the node, /aaa/bbb/ccc.ipynb, consists of the name of each node.
+
+     * @param string $ParentFolderPath Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -219,6 +233,10 @@ Note: This field may return null, indicating that no valid
 
         if (array_key_exists("Path",$param) and $param["Path"] !== null) {
             $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("ParentFolderPath",$param) and $param["ParentFolderPath"] !== null) {
+            $this->ParentFolderPath = $param["ParentFolderPath"];
         }
     }
 }

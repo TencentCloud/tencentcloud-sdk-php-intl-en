@@ -52,11 +52,11 @@ Action mode: set this parameter to a custom action sequence (e.g., `2,1` or `1,2
 Silent mode: do not pass in this parameter.
  * @method string getOptional() Obtain Optional configuration (a JSON string)
 {
-"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
 }
  * @method void setOptional(string $Optional) Set Optional configuration (a JSON string)
 {
-"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
 }
  * @method string getVideoBase64() Obtain Base64 string of the video for liveness detection.
 The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
@@ -115,7 +115,7 @@ Silent mode: do not pass in this parameter.
     /**
      * @var string Optional configuration (a JSON string)
 {
-"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
 }
      */
     public $Optional;
@@ -156,7 +156,7 @@ Action mode: set this parameter to a custom action sequence (e.g., `2,1` or `1,2
 Silent mode: do not pass in this parameter.
      * @param string $Optional Optional configuration (a JSON string)
 {
-"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
 }
      * @param string $VideoBase64 Base64 string of the video for liveness detection.
 The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.

@@ -22,34 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInvocationTaskId() Obtain Execution task ID.
  * @method void setInvocationTaskId(string $InvocationTaskId) Set Execution task ID.
- * @method string getTaskStatus() Obtain Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
- * @method void setTaskStatus(string $TaskStatus) Set Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+ * @method string getTaskStatus() Obtain Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
+ * @method void setTaskStatus(string $TaskStatus) Set Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  */
@@ -61,20 +63,21 @@ class InvocationTaskBasicInfo extends AbstractModel
     public $InvocationTaskId;
 
     /**
-     * @var string Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+     * @var string Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
      */
     public $TaskStatus;
 
@@ -85,20 +88,21 @@ class InvocationTaskBasicInfo extends AbstractModel
 
     /**
      * @param string $InvocationTaskId Execution task ID.
-     * @param string $TaskStatus Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+     * @param string $TaskStatus Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
      * @param string $InstanceId Instance ID.
      */
     function __construct()

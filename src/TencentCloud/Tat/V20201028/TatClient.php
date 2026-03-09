@@ -23,24 +23,33 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tat\V20201028\Models as Models;
 
 /**
- * @method Models\CancelInvocationResponse CancelInvocation(Models\CancelInvocationRequest $req) This API is used to cancel the command executed on one or more CVM instances.
+ * @method Models\CancelInvocationResponse CancelInvocation(Models\CancelInvocationRequest $req) Cancel the executed command on one or multiple instances.
 
-* If the command has not been delivered to the TAT agent, the task status is `PENDING`, `DELIVERING`, or `DELIVER_DELAYED`, and will be `CANCELLED` after the command is canceled.
-* If the command has been delivered to the TAT agent, the task status is `RUNNING`, and will be `TERMINATED` after the command is canceled.
+* If the command is not delivered to the agent and the task status is in PENDING, DELIVERING, or DELIVER_DELAYED, the state of a task is CANCELLED after cancellation.
+* If the command is sent to the agent and the task status is RUNNING, the task status is TERMINATED after cancellation.
  * @method Models\CreateCommandResponse CreateCommand(Models\CreateCommandRequest $req) This API is used to create a command.
  * @method Models\CreateInvokerResponse CreateInvoker(Models\CreateInvokerRequest $req) This API is used to create an invoker.
+ * @method Models\CreateRegisterCodeResponse CreateRegisterCode(Models\CreateRegisterCodeRequest $req) This API is used to create a registration code.
  * @method Models\DeleteCommandResponse DeleteCommand(Models\DeleteCommandRequest $req) This API is used to delete a command.
 Commands bound to an invoker cannot be deleted.
+ * @method Models\DeleteCommandsResponse DeleteCommands(Models\DeleteCommandsRequest $req) This API is used to execute batch deletion commands.
  * @method Models\DeleteInvokerResponse DeleteInvoker(Models\DeleteInvokerRequest $req) This API is used to delete an invoker.
+ * @method Models\DeleteRegisterCodesResponse DeleteRegisterCodes(Models\DeleteRegisterCodesRequest $req) This API is used to delete registration codes in batches.
+ * @method Models\DeleteRegisterInstanceResponse DeleteRegisterInstance(Models\DeleteRegisterInstanceRequest $req) This API is used to delete managed instances.
  * @method Models\DescribeAutomationAgentStatusResponse DescribeAutomationAgentStatus(Models\DescribeAutomationAgentStatusRequest $req) This API is used to query the status of the TAT agent.
  * @method Models\DescribeCommandsResponse DescribeCommands(Models\DescribeCommandsRequest $req) This API is used to query command details.
  * @method Models\DescribeInvocationTasksResponse DescribeInvocationTasks(Models\DescribeInvocationTasksRequest $req) This API is used to query execution task details.
  * @method Models\DescribeInvocationsResponse DescribeInvocations(Models\DescribeInvocationsRequest $req) This API is used to query execution activity details.
  * @method Models\DescribeInvokerRecordsResponse DescribeInvokerRecords(Models\DescribeInvokerRecordsRequest $req) This API is used to query the execution history of an invoker.
  * @method Models\DescribeInvokersResponse DescribeInvokers(Models\DescribeInvokersRequest $req) This API is used to query invoker details.
+ * @method Models\DescribeQuotasResponse DescribeQuotas(Models\DescribeQuotasRequest $req) This API is used to obtain quota information.
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) This API is used to query the list of regions that supports TAT.
 If the `RegionState` is `AVAILABLE`, it means that TAT is available in the region. If no value is returned, TAT is not available in the region.
+ * @method Models\DescribeRegisterCodesResponse DescribeRegisterCodes(Models\DescribeRegisterCodesRequest $req) This API is used to query registration code info.
+ * @method Models\DescribeRegisterInstancesResponse DescribeRegisterInstances(Models\DescribeRegisterInstancesRequest $req) This API is used to query managed instance information.
+ * @method Models\DescribeScenesResponse DescribeScenes(Models\DescribeScenesRequest $req) This API is used to query scenario details.
  * @method Models\DisableInvokerResponse DisableInvoker(Models\DisableInvokerRequest $req) This API is used to disable an invoker.
+ * @method Models\DisableRegisterCodesResponse DisableRegisterCodes(Models\DisableRegisterCodesRequest $req) This API is used to bulk disable registration codes.
  * @method Models\EnableInvokerResponse EnableInvoker(Models\EnableInvokerRequest $req) This API is used to enable an invoker.
  * @method Models\InvokeCommandResponse InvokeCommand(Models\InvokeCommandRequest $req) This API is used to trigger a command on the specified instance and returns the execution activity ID (inv-xxxxxxxx) on success. Each execution activity has one or more execution tasks (invt-xxxxxxxx) and each execution task indicates an execution record on a CVM or Lighthouse instance.
 
@@ -51,6 +60,7 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
 * Only one type of instances (CVM or Lighthouse) can be specified in a single request.
  * @method Models\ModifyCommandResponse ModifyCommand(Models\ModifyCommandRequest $req) This API is used to modify a command.
  * @method Models\ModifyInvokerResponse ModifyInvoker(Models\ModifyInvokerRequest $req) This API is used to modify an invoker.
+ * @method Models\ModifyRegisterInstanceResponse ModifyRegisterInstance(Models\ModifyRegisterInstanceRequest $req) This API is used to modify managed instance information.
  * @method Models\PreviewReplacedCommandContentResponse PreviewReplacedCommandContent(Models\PreviewReplacedCommandContentRequest $req) This API is used to preview the command with custom parameters. The command is not executed.
  * @method Models\RunCommandResponse RunCommand(Models\RunCommandRequest $req) This API is used to execute a command and returns the execution activity ID (inv-xxxxxxxx) on success. Each execution has one or more execution tasks (invt-xxxxxxxx) and each execution task indicates an execution record on a CVM or Lighthouse instance.
 

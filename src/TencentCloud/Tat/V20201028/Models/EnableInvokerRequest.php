@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableInvoker request structure.
  *
- * @method string getInvokerId() Obtain ID of the invoker to be enabled.
- * @method void setInvokerId(string $InvokerId) Set ID of the invoker to be enabled.
+ * @method string getInvokerId() Obtain Executor ID to be enabled.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+ * @method void setInvokerId(string $InvokerId) Set Executor ID to be enabled.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
  */
 class EnableInvokerRequest extends AbstractModel
 {
     /**
-     * @var string ID of the invoker to be enabled.
+     * @var string Executor ID to be enabled.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public $InvokerId;
 
     /**
-     * @param string $InvokerId ID of the invoker to be enabled.
+     * @param string $InvokerId Executor ID to be enabled.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     function __construct()
     {

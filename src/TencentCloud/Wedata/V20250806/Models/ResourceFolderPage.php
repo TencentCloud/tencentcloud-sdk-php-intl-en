@@ -18,7 +18,7 @@ namespace TencentCloud\Wedata\V20250806\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Paginate resource folders.
+ * Resource folder page.
  *
  * @method array getItems() Obtain Resource folder collection information.
  * @method void setItems(array $Items) Set Resource folder collection information.

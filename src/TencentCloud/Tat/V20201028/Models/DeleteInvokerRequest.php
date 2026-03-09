@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteInvoker request structure.
  *
- * @method string getInvokerId() Obtain ID of the invoker to be deleted.
- * @method void setInvokerId(string $InvokerId) Set ID of the invoker to be deleted.
+ * @method string getInvokerId() Obtain Pending deletion executor ID.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+ * @method void setInvokerId(string $InvokerId) Set Pending deletion executor ID.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
  */
 class DeleteInvokerRequest extends AbstractModel
 {
     /**
-     * @var string ID of the invoker to be deleted.
+     * @var string Pending deletion executor ID.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public $InvokerId;
 
     /**
-     * @param string $InvokerId ID of the invoker to be deleted.
+     * @param string $InvokerId Pending deletion executor ID.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     function __construct()
     {

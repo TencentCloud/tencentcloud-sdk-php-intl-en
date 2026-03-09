@@ -48,30 +48,28 @@ Values:
  * @method void setInternetChargeType(string $InternetChargeType) Set Network billing mode.
  * @method string getBundleSalesState() Obtain Package sale status. Valid values: AVAILABLE, SOLD_OUT
  * @method void setBundleSalesState(string $BundleSalesState) Set Package sale status. Valid values: AVAILABLE, SOLD_OUT
- * @method string getBundleType() Obtain Bundle type. 
-Valid values: 
-<li>STARTER_BUNDLE: Starter bundle</li>
-<li>GENERAL_BUNDLE: General bundle</li>
-<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-<li>BEFAST_BUNDLE: BeFast bundle </li>
- * @method void setBundleType(string $BundleType) Set Bundle type. 
-Valid values: 
-<li>STARTER_BUNDLE: Starter bundle</li>
-<li>GENERAL_BUNDLE: General bundle</li>
-<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-<li>BEFAST_BUNDLE: BeFast bundle </li>
- * @method string getBundleTypeDescription() Obtain Bundle type description 
-Note: This parameter may return null, indicating that no valid values can be obtained.
- * @method void setBundleTypeDescription(string $BundleTypeDescription) Set Bundle type description 
-Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method string getBundleType() Obtain Package type.
+Value range:.
+<Li>GENERAL_BUNDLE: general.</li>.
+<Li>STORAGE_BUNDLE: storage type</li>.
+<Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+<Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+<Li>BEFAST_BUNDLE: beefast bundle</li>.
+<Li>STARTER_BUNDLE: entry-level.</li>.
+<Li>CAREFREE_BUNDLE: carefree</li>.
+<Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>.
+ * @method void setBundleType(string $BundleType) Set Package type.
+Value range:.
+<Li>GENERAL_BUNDLE: general.</li>.
+<Li>STORAGE_BUNDLE: storage type</li>.
+<Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+<Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+<Li>BEFAST_BUNDLE: beefast bundle</li>.
+<Li>STARTER_BUNDLE: entry-level.</li>.
+<Li>CAREFREE_BUNDLE: carefree</li>.
+<Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>.
+ * @method string getBundleTypeDescription() Obtain Package type description.
+ * @method void setBundleTypeDescription(string $BundleTypeDescription) Set Package type description.
  * @method string getBundleDisplayLabel() Obtain Package tag.
 Valid values:
 "ACTIVITY": promotional package
@@ -82,6 +80,8 @@ Valid values:
 "ACTIVITY": promotional package
 "NORMAL": regular package
 "CAREFREE": carefree package
+ * @method boolean getTrafficUnlimited() Obtain Whether the traffic volume is unlimited.
+ * @method void setTrafficUnlimited(boolean $TrafficUnlimited) Set Whether the traffic volume is unlimited.
  */
 class Bundle extends AbstractModel
 {
@@ -148,22 +148,21 @@ Values:
     public $BundleSalesState;
 
     /**
-     * @var string Bundle type. 
-Valid values: 
-<li>STARTER_BUNDLE: Starter bundle</li>
-<li>GENERAL_BUNDLE: General bundle</li>
-<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-<li>BEFAST_BUNDLE: BeFast bundle </li>
+     * @var string Package type.
+Value range:.
+<Li>GENERAL_BUNDLE: general.</li>.
+<Li>STORAGE_BUNDLE: storage type</li>.
+<Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+<Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+<Li>BEFAST_BUNDLE: beefast bundle</li>.
+<Li>STARTER_BUNDLE: entry-level.</li>.
+<Li>CAREFREE_BUNDLE: carefree</li>.
+<Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>.
      */
     public $BundleType;
 
     /**
-     * @var string Bundle type description 
-Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @var string Package type description.
      */
     public $BundleTypeDescription;
 
@@ -175,6 +174,11 @@ Valid values:
 "CAREFREE": carefree package
      */
     public $BundleDisplayLabel;
+
+    /**
+     * @var boolean Whether the traffic volume is unlimited.
+     */
+    public $TrafficUnlimited;
 
     /**
      * @param string $BundleId Package ID.
@@ -191,23 +195,23 @@ Values:
      * @param integer $InternetMaxBandwidthOut Peak bandwidth in Mbps.
      * @param string $InternetChargeType Network billing mode.
      * @param string $BundleSalesState Package sale status. Valid values: AVAILABLE, SOLD_OUT
-     * @param string $BundleType Bundle type. 
-Valid values: 
-<li>STARTER_BUNDLE: Starter bundle</li>
-<li>GENERAL_BUNDLE: General bundle</li>
-<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-<li>BEFAST_BUNDLE: BeFast bundle </li>
-     * @param string $BundleTypeDescription Bundle type description 
-Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param string $BundleType Package type.
+Value range:.
+<Li>GENERAL_BUNDLE: general.</li>.
+<Li>STORAGE_BUNDLE: storage type</li>.
+<Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+<Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+<Li>BEFAST_BUNDLE: beefast bundle</li>.
+<Li>STARTER_BUNDLE: entry-level.</li>.
+<Li>CAREFREE_BUNDLE: carefree</li>.
+<Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>.
+     * @param string $BundleTypeDescription Package type description.
      * @param string $BundleDisplayLabel Package tag.
 Valid values:
 "ACTIVITY": promotional package
 "NORMAL": regular package
 "CAREFREE": carefree package
+     * @param boolean $TrafficUnlimited Whether the traffic volume is unlimited.
      */
     function __construct()
     {
@@ -281,6 +285,10 @@ Valid values:
 
         if (array_key_exists("BundleDisplayLabel",$param) and $param["BundleDisplayLabel"] !== null) {
             $this->BundleDisplayLabel = $param["BundleDisplayLabel"];
+        }
+
+        if (array_key_exists("TrafficUnlimited",$param) and $param["TrafficUnlimited"] !== null) {
+            $this->TrafficUnlimited = $param["TrafficUnlimited"];
         }
     }
 }

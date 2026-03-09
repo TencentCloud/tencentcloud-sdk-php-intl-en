@@ -18,56 +18,60 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Price information of Lighthouse instances
+ * About Lighthouse Instance price.
  *
- * @method float getOriginalBundlePrice() Obtain Original package unit price.
- * @method void setOriginalBundlePrice(float $OriginalBundlePrice) Set Original package unit price.
- * @method float getOriginalPrice() Obtain Original price.
- * @method void setOriginalPrice(float $OriginalPrice) Set Original price.
- * @method integer getDiscount() Obtain Discount.
- * @method void setDiscount(integer $Discount) Set Discount.
- * @method float getDiscountPrice() Obtain Discounted price.
- * @method void setDiscountPrice(float $DiscountPrice) Set Discounted price.
- * @method string getCurrency() Obtain Currency unit. Valid values: `CNY` and `USD`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setCurrency(string $Currency) Set Currency unit. Valid values: `CNY` and `USD`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method float getOriginalBundlePrice() Obtain <P>Unit price of the package.</p><p>unit: usd</p>.
+ * @method void setOriginalBundlePrice(float $OriginalBundlePrice) Set <P>Unit price of the package.</p><p>unit: usd</p>.
+ * @method float getOriginalPrice() Obtain <P>Original price.</p><p>unit: usd</p>.
+ * @method void setOriginalPrice(float $OriginalPrice) Set <P>Original price.</p><p>unit: usd</p>.
+ * @method float getDiscount() Obtain <p>Discount.</p>.
+ * @method void setDiscount(float $Discount) Set <p>Discount.</p>.
+ * @method float getDiscountPrice() Obtain <P>Discounted price.</p><p>unit: usd</p>.
+ * @method void setDiscountPrice(float $DiscountPrice) Set <P>Discounted price.</p><p>unit: usd</p>.
+ * @method string getCurrency() Obtain <p>Price currency unit. valid values: USD.</p>.
+ * @method void setCurrency(string $Currency) Set <p>Price currency unit. valid values: USD.</p>.
+ * @method array getDetailPrices() Obtain <P>Billing item detail.</p>.
+ * @method void setDetailPrices(array $DetailPrices) Set <P>Billing item detail.</p>.
  */
 class InstancePrice extends AbstractModel
 {
     /**
-     * @var float Original package unit price.
+     * @var float <P>Unit price of the package.</p><p>unit: usd</p>.
      */
     public $OriginalBundlePrice;
 
     /**
-     * @var float Original price.
+     * @var float <P>Original price.</p><p>unit: usd</p>.
      */
     public $OriginalPrice;
 
     /**
-     * @var integer Discount.
+     * @var float <p>Discount.</p>.
      */
     public $Discount;
 
     /**
-     * @var float Discounted price.
+     * @var float <P>Discounted price.</p><p>unit: usd</p>.
      */
     public $DiscountPrice;
 
     /**
-     * @var string Currency unit. Valid values: `CNY` and `USD`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string <p>Price currency unit. valid values: USD.</p>.
      */
     public $Currency;
 
     /**
-     * @param float $OriginalBundlePrice Original package unit price.
-     * @param float $OriginalPrice Original price.
-     * @param integer $Discount Discount.
-     * @param float $DiscountPrice Discounted price.
-     * @param string $Currency Currency unit. Valid values: `CNY` and `USD`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array <P>Billing item detail.</p>.
+     */
+    public $DetailPrices;
+
+    /**
+     * @param float $OriginalBundlePrice <P>Unit price of the package.</p><p>unit: usd</p>.
+     * @param float $OriginalPrice <P>Original price.</p><p>unit: usd</p>.
+     * @param float $Discount <p>Discount.</p>.
+     * @param float $DiscountPrice <P>Discounted price.</p><p>unit: usd</p>.
+     * @param string $Currency <p>Price currency unit. valid values: USD.</p>.
+     * @param array $DetailPrices <P>Billing item detail.</p>.
      */
     function __construct()
     {
@@ -100,6 +104,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
             $this->Currency = $param["Currency"];
+        }
+
+        if (array_key_exists("DetailPrices",$param) and $param["DetailPrices"] !== null) {
+            $this->DetailPrices = [];
+            foreach ($param["DetailPrices"] as $key => $value){
+                $obj = new DetailPrice();
+                $obj->deserialize($value);
+                array_push($this->DetailPrices, $obj);
+            }
         }
     }
 }

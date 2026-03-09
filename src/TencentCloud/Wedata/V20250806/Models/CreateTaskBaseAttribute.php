@@ -88,6 +88,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUin(string $OwnerUin) Set Task owner ID. defaults to the current user.
  * @method string getTaskDescription() Obtain Task description
  * @method void setTaskDescription(string $TaskDescription) Set Task description
+ * @method string getTaskFolderPath() Obtain Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" classification, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for the operation to succeed.
+
+ * @method void setTaskFolderPath(string $TaskFolderPath) Set Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" classification, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for the operation to succeed.
  */
 class CreateTaskBaseAttribute extends AbstractModel
 {
@@ -146,6 +157,16 @@ class CreateTaskBaseAttribute extends AbstractModel
     public $TaskDescription;
 
     /**
+     * @var string Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" classification, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for the operation to succeed.
+
+     */
+    public $TaskFolderPath;
+
+    /**
      * @param string $TaskName Task name.
      * @param string $TaskTypeId Task type ID:
 
@@ -180,6 +201,11 @@ class CreateTaskBaseAttribute extends AbstractModel
      * @param string $WorkflowId Workflow ID.
      * @param string $OwnerUin Task owner ID. defaults to the current user.
      * @param string $TaskDescription Task description
+     * @param string $TaskFolderPath Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" classification, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for the operation to succeed.
      */
     function __construct()
     {
@@ -212,6 +238,10 @@ class CreateTaskBaseAttribute extends AbstractModel
 
         if (array_key_exists("TaskDescription",$param) and $param["TaskDescription"] !== null) {
             $this->TaskDescription = $param["TaskDescription"];
+        }
+
+        if (array_key_exists("TaskFolderPath",$param) and $param["TaskFolderPath"] !== null) {
+            $this->TaskFolderPath = $param["TaskFolderPath"];
         }
     }
 }

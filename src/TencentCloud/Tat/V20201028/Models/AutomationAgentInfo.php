@@ -26,18 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersion(string $Version) Set Agent version.
  * @method string getLastHeartbeatTime() Obtain Last heartbeat time
  * @method void setLastHeartbeatTime(string $LastHeartbeatTime) Set Last heartbeat time
- * @method string getAgentStatus() Obtain Agent status. Valid values:
-<li> `Online`
-<li> `Offline`
- * @method void setAgentStatus(string $AgentStatus) Set Agent status. Valid values:
-<li> `Online`
-<li> `Offline`
- * @method string getEnvironment() Obtain Agent runtime environment. Valid values:
-<li> `Linux`: Linux instance
-<li> `Windows`: Windows instance
- * @method void setEnvironment(string $Environment) Set Agent runtime environment. Valid values:
-<li> `Linux`: Linux instance
-<li> `Windows`: Windows instance
+ * @method string getAgentStatus() Obtain Agent status. valid values:.
+Online: Online, Offline: Offline.
+
+ * @method void setAgentStatus(string $AgentStatus) Set Agent status. valid values:.
+Online: Online, Offline: Offline.
+
+ * @method string getEnvironment() Obtain Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance.
+ * @method void setEnvironment(string $Environment) Set Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance.
  * @method array getSupportFeatures() Obtain Features supported by the TAT agent.
  * @method void setSupportFeatures(array $SupportFeatures) Set Features supported by the TAT agent.
  */
@@ -59,16 +55,14 @@ class AutomationAgentInfo extends AbstractModel
     public $LastHeartbeatTime;
 
     /**
-     * @var string Agent status. Valid values:
-<li> `Online`
-<li> `Offline`
+     * @var string Agent status. valid values:.
+Online: Online, Offline: Offline.
+
      */
     public $AgentStatus;
 
     /**
-     * @var string Agent runtime environment. Valid values:
-<li> `Linux`: Linux instance
-<li> `Windows`: Windows instance
+     * @var string Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance.
      */
     public $Environment;
 
@@ -81,12 +75,10 @@ class AutomationAgentInfo extends AbstractModel
      * @param string $InstanceId Instance ID.
      * @param string $Version Agent version.
      * @param string $LastHeartbeatTime Last heartbeat time
-     * @param string $AgentStatus Agent status. Valid values:
-<li> `Online`
-<li> `Offline`
-     * @param string $Environment Agent runtime environment. Valid values:
-<li> `Linux`: Linux instance
-<li> `Windows`: Windows instance
+     * @param string $AgentStatus Agent status. valid values:.
+Online: Online, Offline: Offline.
+
+     * @param string $Environment Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance.
      * @param array $SupportFeatures Features supported by the TAT agent.
      */
     function __construct()

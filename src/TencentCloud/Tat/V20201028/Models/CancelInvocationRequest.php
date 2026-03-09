@@ -20,34 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CancelInvocation request structure.
  *
- * @method string getInvocationId() Obtain Execution activity ID
- * @method void setInvocationId(string $InvocationId) Set Execution activity ID
- * @method array getInstanceIds() Obtain Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
+ * @method string getInvocationId() Obtain Execution activity ID.
+
+Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+ * @method void setInvocationId(string $InvocationId) Set Execution activity ID.
+
+Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+ * @method array getInstanceIds() Obtain Instance ID list. upper limit: 100.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+- TAT Register instance.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID list. upper limit: 100.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+- TAT Register instance.
  */
 class CancelInvocationRequest extends AbstractModel
 {
     /**
-     * @var string Execution activity ID
+     * @var string Execution activity ID.
+
+Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
      */
     public $InvocationId;
 
     /**
-     * @var array Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
+     * @var array Instance ID list. upper limit: 100.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+- TAT Register instance.
      */
     public $InstanceIds;
 
     /**
-     * @param string $InvocationId Execution activity ID
-     * @param array $InstanceIds Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
+     * @param string $InvocationId Execution activity ID.
+
+Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+     * @param array $InstanceIds Instance ID list. upper limit: 100.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+- TAT Register instance.
      */
     function __construct()
     {

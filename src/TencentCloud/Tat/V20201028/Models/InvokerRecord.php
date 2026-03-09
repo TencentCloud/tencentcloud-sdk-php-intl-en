@@ -22,14 +22,34 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInvokerId() Obtain Invoker ID.
  * @method void setInvokerId(string $InvokerId) Set Invoker ID.
- * @method string getInvokeTime() Obtain Execution time.
- * @method void setInvokeTime(string $InvokeTime) Set Execution time.
+ * @method string getInvokeTime() Obtain Execution time. format: YYYY-MM-DDThh:MM:ssZ.
+ * @method void setInvokeTime(string $InvokeTime) Set Execution time. format: YYYY-MM-DDThh:MM:ssZ.
  * @method string getReason() Obtain Execution reason.
  * @method void setReason(string $Reason) Set Execution reason.
  * @method string getInvocationId() Obtain Command execution ID.
  * @method void setInvocationId(string $InvocationId) Set Command execution ID.
  * @method string getResult() Obtain Trigger result.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
  * @method void setResult(string $Result) Set Trigger result.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
  */
 class InvokerRecord extends AbstractModel
 {
@@ -39,7 +59,7 @@ class InvokerRecord extends AbstractModel
     public $InvokerId;
 
     /**
-     * @var string Execution time.
+     * @var string Execution time. format: YYYY-MM-DDThh:MM:ssZ.
      */
     public $InvokeTime;
 
@@ -55,15 +75,35 @@ class InvokerRecord extends AbstractModel
 
     /**
      * @var string Trigger result.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
      */
     public $Result;
 
     /**
      * @param string $InvokerId Invoker ID.
-     * @param string $InvokeTime Execution time.
+     * @param string $InvokeTime Execution time. format: YYYY-MM-DDThh:MM:ssZ.
      * @param string $Reason Execution reason.
      * @param string $InvocationId Command execution ID.
      * @param string $Result Trigger result.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
      */
     function __construct()
     {

@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Total price information
  *
- * @method float getOriginalPrice() Obtain Total original price
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setOriginalPrice(float $OriginalPrice) Set Total original price
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method float getDiscountPrice() Obtain Total discounted price
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setDiscountPrice(float $DiscountPrice) Set Total discounted price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method float getOriginalPrice() Obtain <P>Original total price.</p><p>unit: usd</p>.
+ * @method void setOriginalPrice(float $OriginalPrice) Set <P>Original total price.</p><p>unit: usd</p>.
+ * @method float getDiscountPrice() Obtain <P>Total price after discount.</p><p>unit: usd</p>.
+ * @method void setDiscountPrice(float $DiscountPrice) Set <P>Total price after discount.</p><p>unit: usd</p>.
  */
 class TotalPrice extends AbstractModel
 {
     /**
-     * @var float Total original price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var float <P>Original total price.</p><p>unit: usd</p>.
      */
     public $OriginalPrice;
 
     /**
-     * @var float Total discounted price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var float <P>Total price after discount.</p><p>unit: usd</p>.
      */
     public $DiscountPrice;
 
     /**
-     * @param float $OriginalPrice Total original price
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param float $DiscountPrice Total discounted price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param float $OriginalPrice <P>Original total price.</p><p>unit: usd</p>.
+     * @param float $DiscountPrice <P>Total price after discount.</p><p>unit: usd</p>.
      */
     function __construct()
     {

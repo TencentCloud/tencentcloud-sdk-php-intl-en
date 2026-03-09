@@ -20,74 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInvoker request structure.
  *
- * @method string getInvokerId() Obtain ID of the invoker to be modified.
- * @method void setInvokerId(string $InvokerId) Set ID of the invoker to be modified.
- * @method string getName() Obtain Name of the invoker to be modified.
- * @method void setName(string $Name) Set Name of the invoker to be modified.
- * @method string getType() Obtain Invoker type. It can only be `SCHEDULE` (recurring invokers).
- * @method void setType(string $Type) Set Invoker type. It can only be `SCHEDULE` (recurring invokers).
- * @method string getCommandId() Obtain ID of the command to be modified.
- * @method void setCommandId(string $CommandId) Set ID of the command to be modified.
- * @method string getUsername() Obtain The username to be modified.
- * @method void setUsername(string $Username) Set The username to be modified.
- * @method string getParameters() Obtain Custom parameters to be modified.
- * @method void setParameters(string $Parameters) Set Custom parameters to be modified.
- * @method array getInstanceIds() Obtain List of instance IDs to be modified. Up to 100 IDs are allowed.
- * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs to be modified. Up to 100 IDs are allowed.
- * @method ScheduleSettings getScheduleSettings() Obtain Scheduled invoker settings to be modified.
- * @method void setScheduleSettings(ScheduleSettings $ScheduleSettings) Set Scheduled invoker settings to be modified.
+ * @method string getInvokerId() Obtain Executor ID to be modified.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+ * @method void setInvokerId(string $InvokerId) Set Executor ID to be modified.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+ * @method string getName() Obtain Executor name to be modified. length not exceeding 120 characters.
+ * @method void setName(string $Name) Set Executor name to be modified. length not exceeding 120 characters.
+ * @method string getType() Obtain Executor type to be modified.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
+ * @method void setType(string $Type) Set Executor type to be modified.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
+ * @method string getCommandId() Obtain Command ID to be modified.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+ * @method void setCommandId(string $CommandId) Set Command ID to be modified.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+ * @method string getUsername() Obtain Username to be modified. length not exceeding 256 characters.
+ * @method void setUsername(string $Username) Set Username to be modified. length not exceeding 256 characters.
+ * @method string getParameters() Obtain Custom parameters to be modified. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+ * @method void setParameters(string $Parameters) Set Custom parameters to be modified. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+ * @method array getInstanceIds() Obtain List of instance ids to be modified. list length limit 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
+ * @method void setInstanceIds(array $InstanceIds) Set List of instance ids to be modified. list length limit 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
+ * @method ScheduleSettings getScheduleSettings() Obtain Recurring invoker settings to be modified.
+
+Change the executor type to `SCHEDULE` and specify this parameter.
+ * @method void setScheduleSettings(ScheduleSettings $ScheduleSettings) Set Recurring invoker settings to be modified.
+
+Change the executor type to `SCHEDULE` and specify this parameter.
  */
 class ModifyInvokerRequest extends AbstractModel
 {
     /**
-     * @var string ID of the invoker to be modified.
+     * @var string Executor ID to be modified.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public $InvokerId;
 
     /**
-     * @var string Name of the invoker to be modified.
+     * @var string Executor name to be modified. length not exceeding 120 characters.
      */
     public $Name;
 
     /**
-     * @var string Invoker type. It can only be `SCHEDULE` (recurring invokers).
+     * @var string Executor type to be modified.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
      */
     public $Type;
 
     /**
-     * @var string ID of the command to be modified.
+     * @var string Command ID to be modified.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      */
     public $CommandId;
 
     /**
-     * @var string The username to be modified.
+     * @var string Username to be modified. length not exceeding 256 characters.
      */
     public $Username;
 
     /**
-     * @var string Custom parameters to be modified.
+     * @var string Custom parameters to be modified. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
      */
     public $Parameters;
 
     /**
-     * @var array List of instance IDs to be modified. Up to 100 IDs are allowed.
+     * @var array List of instance ids to be modified. list length limit 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
      */
     public $InstanceIds;
 
     /**
-     * @var ScheduleSettings Scheduled invoker settings to be modified.
+     * @var ScheduleSettings Recurring invoker settings to be modified.
+
+Change the executor type to `SCHEDULE` and specify this parameter.
      */
     public $ScheduleSettings;
 
     /**
-     * @param string $InvokerId ID of the invoker to be modified.
-     * @param string $Name Name of the invoker to be modified.
-     * @param string $Type Invoker type. It can only be `SCHEDULE` (recurring invokers).
-     * @param string $CommandId ID of the command to be modified.
-     * @param string $Username The username to be modified.
-     * @param string $Parameters Custom parameters to be modified.
-     * @param array $InstanceIds List of instance IDs to be modified. Up to 100 IDs are allowed.
-     * @param ScheduleSettings $ScheduleSettings Scheduled invoker settings to be modified.
+     * @param string $InvokerId Executor ID to be modified.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+     * @param string $Name Executor name to be modified. length not exceeding 120 characters.
+     * @param string $Type Executor type to be modified.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
+     * @param string $CommandId Command ID to be modified.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+     * @param string $Username Username to be modified. length not exceeding 256 characters.
+     * @param string $Parameters Custom parameters to be modified. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+     * @param array $InstanceIds List of instance ids to be modified. list length limit 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
+     * @param ScheduleSettings $ScheduleSettings Recurring invoker settings to be modified.
+
+Change the executor type to `SCHEDULE` and specify this parameter.
      */
     function __construct()
     {

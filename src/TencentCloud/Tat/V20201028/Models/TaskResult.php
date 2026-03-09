@@ -24,10 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExitCode(integer $ExitCode) Set ExitCode of the execution.
  * @method string getOutput() Obtain Base64-encoded command output. The maximum length is 24 KB.
  * @method void setOutput(string $Output) Set Base64-encoded command output. The maximum length is 24 KB.
- * @method string getExecStartTime() Obtain Time when the execution is started.
- * @method void setExecStartTime(string $ExecStartTime) Set Time when the execution is started.
- * @method string getExecEndTime() Obtain Time when the execution is ended.
- * @method void setExecEndTime(string $ExecEndTime) Set Time when the execution is ended.
+ * @method string getExecStartTime() Obtain Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExecStartTime(string $ExecStartTime) Set Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExecEndTime() Obtain Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExecEndTime(string $ExecEndTime) Set Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getDropped() Obtain Dropped bytes of the command output.
  * @method void setDropped(integer $Dropped) Set Dropped bytes of the command output.
  * @method string getOutputUrl() Obtain COS URL of the logs.
@@ -48,12 +52,14 @@ class TaskResult extends AbstractModel
     public $Output;
 
     /**
-     * @var string Time when the execution is started.
+     * @var string Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExecStartTime;
 
     /**
-     * @var string Time when the execution is ended.
+     * @var string Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExecEndTime;
 
@@ -75,8 +81,10 @@ class TaskResult extends AbstractModel
     /**
      * @param integer $ExitCode ExitCode of the execution.
      * @param string $Output Base64-encoded command output. The maximum length is 24 KB.
-     * @param string $ExecStartTime Time when the execution is started.
-     * @param string $ExecEndTime Time when the execution is ended.
+     * @param string $ExecStartTime Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ExecEndTime Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Dropped Dropped bytes of the command output.
      * @param string $OutputUrl COS URL of the logs.
      * @param string $OutputUploadCOSErrorInfo Error message for uploading logs to COS.

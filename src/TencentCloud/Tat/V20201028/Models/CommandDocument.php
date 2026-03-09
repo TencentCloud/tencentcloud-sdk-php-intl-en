@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getContent() Obtain Base64-encoded command.
  * @method void setContent(string $Content) Set Base64-encoded command.
- * @method string getCommandType() Obtain Command type.
- * @method void setCommandType(string $CommandType) Set Command type.
- * @method integer getTimeout() Obtain Timeout period.
- * @method void setTimeout(integer $Timeout) Set Timeout period.
+ * @method string getCommandType() Obtain Command type. value is one of SHELL, POWERSHELL, BAT.
+ * @method void setCommandType(string $CommandType) Set Command type. value is one of SHELL, POWERSHELL, BAT.
+ * @method integer getTimeout() Obtain Timeout period. unit: seconds.
+ * @method void setTimeout(integer $Timeout) Set Timeout period. unit: seconds.
  * @method string getWorkingDirectory() Obtain Execution path.
  * @method void setWorkingDirectory(string $WorkingDirectory) Set Execution path.
  * @method string getUsername() Obtain The user who executes the command.
@@ -43,12 +43,12 @@ class CommandDocument extends AbstractModel
     public $Content;
 
     /**
-     * @var string Command type.
+     * @var string Command type. value is one of SHELL, POWERSHELL, BAT.
      */
     public $CommandType;
 
     /**
-     * @var integer Timeout period.
+     * @var integer Timeout period. unit: seconds.
      */
     public $Timeout;
 
@@ -74,8 +74,8 @@ class CommandDocument extends AbstractModel
 
     /**
      * @param string $Content Base64-encoded command.
-     * @param string $CommandType Command type.
-     * @param integer $Timeout Timeout period.
+     * @param string $CommandType Command type. value is one of SHELL, POWERSHELL, BAT.
+     * @param integer $Timeout Timeout period. unit: seconds.
      * @param string $WorkingDirectory Execution path.
      * @param string $Username The user who executes the command.
      * @param string $OutputCOSBucketUrl URL of the COS bucket to store the output

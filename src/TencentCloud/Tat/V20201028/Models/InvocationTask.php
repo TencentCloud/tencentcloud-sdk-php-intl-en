@@ -26,52 +26,66 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvocationTaskId(string $InvocationTaskId) Set Execution task ID.
  * @method string getCommandId() Obtain Command ID.
  * @method void setCommandId(string $CommandId) Set Command ID.
- * @method string getTaskStatus() Obtain Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
- * @method void setTaskStatus(string $TaskStatus) Set Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+ * @method string getTaskStatus() Obtain Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
+ * @method void setTaskStatus(string $TaskStatus) Set Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method TaskResult getTaskResult() Obtain Execution result.
  * @method void setTaskResult(TaskResult $TaskResult) Set Execution result.
- * @method string getStartTime() Obtain Start time of the execution task.
- * @method void setStartTime(string $StartTime) Set Start time of the execution task.
- * @method string getEndTime() Obtain End time of the execution task.
- * @method void setEndTime(string $EndTime) Set End time of the execution task.
- * @method string getCreatedTime() Obtain Creation time.
- * @method void setCreatedTime(string $CreatedTime) Set Creation time.
- * @method string getUpdatedTime() Obtain Update time.
- * @method void setUpdatedTime(string $UpdatedTime) Set Update time.
+ * @method string getStartTime() Obtain Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStartTime(string $StartTime) Set Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEndTime() Obtain Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEndTime(string $EndTime) Set Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreatedTime() Obtain Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
+ * @method string getUpdatedTime() Obtain Update time. the format is YYYY-MM-DDThh:MM:ssZ.
+ * @method void setUpdatedTime(string $UpdatedTime) Set Update time. the format is YYYY-MM-DDThh:MM:ssZ.
  * @method CommandDocument getCommandDocument() Obtain Command details of the execution task.
  * @method void setCommandDocument(CommandDocument $CommandDocument) Set Command details of the execution task.
  * @method string getErrorInfo() Obtain Error message displayed when the execution task fails.
  * @method void setErrorInfo(string $ErrorInfo) Set Error message displayed when the execution task fails.
  * @method string getInvocationSource() Obtain Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
  * @method void setInvocationSource(string $InvocationSource) Set Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
+ * @method string getCommandName() Obtain Name of the executed command.
+ * @method void setCommandName(string $CommandName) Set Name of the executed command.
  */
 class InvocationTask extends AbstractModel
 {
@@ -91,20 +105,21 @@ class InvocationTask extends AbstractModel
     public $CommandId;
 
     /**
-     * @var string Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+     * @var string Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
      */
     public $TaskStatus;
 
@@ -119,22 +134,24 @@ class InvocationTask extends AbstractModel
     public $TaskResult;
 
     /**
-     * @var string Start time of the execution task.
+     * @var string Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StartTime;
 
     /**
-     * @var string End time of the execution task.
+     * @var string Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EndTime;
 
     /**
-     * @var string Creation time.
+     * @var string Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public $CreatedTime;
 
     /**
-     * @var string Update time.
+     * @var string Update time. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public $UpdatedTime;
 
@@ -150,36 +167,51 @@ class InvocationTask extends AbstractModel
 
     /**
      * @var string Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
      */
     public $InvocationSource;
+
+    /**
+     * @var string Name of the executed command.
+     */
+    public $CommandName;
 
     /**
      * @param string $InvocationId Execution activity ID.
      * @param string $InvocationTaskId Execution task ID.
      * @param string $CommandId Command ID.
-     * @param string $TaskStatus Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+     * @param string $TaskStatus Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
      * @param string $InstanceId Instance ID.
      * @param TaskResult $TaskResult Execution result.
-     * @param string $StartTime Start time of the execution task.
-     * @param string $EndTime End time of the execution task.
-     * @param string $CreatedTime Creation time.
-     * @param string $UpdatedTime Update time.
+     * @param string $StartTime Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EndTime Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreatedTime Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
+     * @param string $UpdatedTime Update time. the format is YYYY-MM-DDThh:MM:ssZ.
      * @param CommandDocument $CommandDocument Command details of the execution task.
      * @param string $ErrorInfo Error message displayed when the execution task fails.
      * @param string $InvocationSource Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
+     * @param string $CommandName Name of the executed command.
      */
     function __construct()
     {
@@ -246,6 +278,10 @@ class InvocationTask extends AbstractModel
 
         if (array_key_exists("InvocationSource",$param) and $param["InvocationSource"] !== null) {
             $this->InvocationSource = $param["InvocationSource"];
+        }
+
+        if (array_key_exists("CommandName",$param) and $param["CommandName"] !== null) {
+            $this->CommandName = $param["CommandName"];
         }
     }
 }

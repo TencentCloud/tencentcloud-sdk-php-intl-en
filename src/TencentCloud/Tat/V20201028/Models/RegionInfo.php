@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Region name, such as `ap-guangzhou`
  * @method string getRegionName() Obtain Region description, such as `Guangzhou`
  * @method void setRegionName(string $RegionName) Set Region description, such as `Guangzhou`
- * @method string getRegionState() Obtain Region status. `AVAILABLE` indicates the region is available.
- * @method void setRegionState(string $RegionState) Set Region status. `AVAILABLE` indicates the region is available.
+ * @method string getRegionState() Obtain Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE.
+ * @method void setRegionState(string $RegionState) Set Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE.
  */
 class RegionInfo extends AbstractModel
 {
@@ -40,14 +40,14 @@ class RegionInfo extends AbstractModel
     public $RegionName;
 
     /**
-     * @var string Region status. `AVAILABLE` indicates the region is available.
+     * @var string Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE.
      */
     public $RegionState;
 
     /**
      * @param string $Region Region name, such as `ap-guangzhou`
      * @param string $RegionName Region description, such as `Guangzhou`
-     * @param string $RegionState Region status. `AVAILABLE` indicates the region is available.
+     * @param string $RegionState Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE.
      */
     function __construct()
     {

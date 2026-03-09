@@ -151,6 +151,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateUserUin() Obtain Created By User ID
 
  * @method void setCreateUserUin(string $CreateUserUin) Set Created By User ID
+
+ * @method string getTaskFolderPath() Obtain Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTaskFolderPath(string $TaskFolderPath) Set Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TaskBaseAttribute extends AbstractModel
 {
@@ -293,6 +306,16 @@ class TaskBaseAttribute extends AbstractModel
     public $CreateUserUin;
 
     /**
+     * @var string Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TaskFolderPath;
+
+    /**
      * @param string $TaskId Task ID
 
      * @param integer $TaskTypeId Specifies the task type ID.
@@ -358,6 +381,13 @@ class TaskBaseAttribute extends AbstractModel
      * @param string $UpdateUserUin Last Updated User ID
 
      * @param string $CreateUserUin Created By User ID
+
+     * @param string $TaskFolderPath Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -442,6 +472,10 @@ class TaskBaseAttribute extends AbstractModel
 
         if (array_key_exists("CreateUserUin",$param) and $param["CreateUserUin"] !== null) {
             $this->CreateUserUin = $param["CreateUserUin"];
+        }
+
+        if (array_key_exists("TaskFolderPath",$param) and $param["TaskFolderPath"] !== null) {
+            $this->TaskFolderPath = $param["TaskFolderPath"];
         }
     }
 }

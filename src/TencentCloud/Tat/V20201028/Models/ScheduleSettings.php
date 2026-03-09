@@ -20,23 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Settings of a scheduled invoker
  *
- * @method string getPolicy() Obtain Execution policy:
-<br><li>`ONCE`: Execute once
-<br><li>`RECURRENCE`: Execute repeatedly
- * @method void setPolicy(string $Policy) Set Execution policy:
-<br><li>`ONCE`: Execute once
-<br><li>`RECURRENCE`: Execute repeatedly
+ * @method string getPolicy() Obtain Execution policy.
+
+-ONCE: one-time execution.
+-RECURRENCE: execute periodically.
+ * @method void setPolicy(string $Policy) Set Execution policy.
+
+-ONCE: one-time execution.
+-RECURRENCE: execute periodically.
  * @method string getRecurrence() Obtain Trigger the crontab expression. This field is required if `Policy` is `RECURRENCE`. The crontab expression is parsed in UTC+8.
  * @method void setRecurrence(string $Recurrence) Set Trigger the crontab expression. This field is required if `Policy` is `RECURRENCE`. The crontab expression is parsed in UTC+8.
- * @method string getInvokeTime() Obtain The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
- * @method void setInvokeTime(string $InvokeTime) Set The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
+ * @method string getInvokeTime() Obtain Next execution time of the executor. this field requires specifying when Policy is ONCE.
+
+The time format is YYYY-MM-DDThh:MM:ssZ.
+ * @method void setInvokeTime(string $InvokeTime) Set Next execution time of the executor. this field requires specifying when Policy is ONCE.
+
+The time format is YYYY-MM-DDThh:MM:ssZ.
  */
 class ScheduleSettings extends AbstractModel
 {
     /**
-     * @var string Execution policy:
-<br><li>`ONCE`: Execute once
-<br><li>`RECURRENCE`: Execute repeatedly
+     * @var string Execution policy.
+
+-ONCE: one-time execution.
+-RECURRENCE: execute periodically.
      */
     public $Policy;
 
@@ -46,16 +53,21 @@ class ScheduleSettings extends AbstractModel
     public $Recurrence;
 
     /**
-     * @var string The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
+     * @var string Next execution time of the executor. this field requires specifying when Policy is ONCE.
+
+The time format is YYYY-MM-DDThh:MM:ssZ.
      */
     public $InvokeTime;
 
     /**
-     * @param string $Policy Execution policy:
-<br><li>`ONCE`: Execute once
-<br><li>`RECURRENCE`: Execute repeatedly
+     * @param string $Policy Execution policy.
+
+-ONCE: one-time execution.
+-RECURRENCE: execute periodically.
      * @param string $Recurrence Trigger the crontab expression. This field is required if `Policy` is `RECURRENCE`. The crontab expression is parsed in UTC+8.
-     * @param string $InvokeTime The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
+     * @param string $InvokeTime Next execution time of the executor. this field requires specifying when Policy is ONCE.
+
+The time format is YYYY-MM-DDThh:MM:ssZ.
      */
     function __construct()
     {

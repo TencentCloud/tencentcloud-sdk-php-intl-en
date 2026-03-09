@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisableInvoker request structure.
  *
- * @method string getInvokerId() Obtain ID of the invoker to be disabled.
- * @method void setInvokerId(string $InvokerId) Set ID of the invoker to be disabled.
+ * @method string getInvokerId() Obtain ID of the executor to terminate.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+ * @method void setInvokerId(string $InvokerId) Set ID of the executor to terminate.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
  */
 class DisableInvokerRequest extends AbstractModel
 {
     /**
-     * @var string ID of the invoker to be disabled.
+     * @var string ID of the executor to terminate.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public $InvokerId;
 
     /**
-     * @param string $InvokerId ID of the invoker to be disabled.
+     * @param string $InvokerId ID of the executor to terminate.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     function __construct()
     {

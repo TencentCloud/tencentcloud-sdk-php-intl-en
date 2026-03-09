@@ -62,10 +62,6 @@ CRONTAB_CYCLE: specifies the crontab expression type
 
  * @method void setExecutionEndTime(string $ExecutionEndTime) Set Execution time. right closed interval.
 
- * @method integer getScheduleRunType() Obtain Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling.
-
- * @method void setScheduleRunType(integer $ScheduleRunType) Set Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling.
-
  * @method string getCalendarOpen() Obtain Whether calendar scheduling is enabled. Valid values: 1 (enabled), 0 (disabled).
  * @method void setCalendarOpen(string $CalendarOpen) Set Whether calendar scheduling is enabled. Valid values: 1 (enabled), 0 (disabled).
  * @method string getCalendarId() Obtain Calendar id.
@@ -76,32 +72,14 @@ CRONTAB_CYCLE: specifies the crontab expression type
  * @method void setSelfDepend(string $SelfDepend) Set Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
  * @method array getUpstreamDependencyConfigList() Obtain Specifies the upstream dependency array.
  * @method void setUpstreamDependencyConfigList(array $UpstreamDependencyConfigList) Set Specifies the upstream dependency array.
- * @method array getDownStreamDependencyConfigList() Obtain SpecSpecifies the downstream dependency array.
-
- * @method void setDownStreamDependencyConfigList(array $DownStreamDependencyConfigList) Set SpecSpecifies the downstream dependency array.
-
+ * @method array getDownstreamDependencyConfigList() Obtain Downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDownstreamDependencyConfigList(array $DownstreamDependencyConfigList) Set Downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getEventListenerList() Obtain Array of Events
 
  * @method void setEventListenerList(array $EventListenerList) Set Array of Events
 
- * @method integer getRunPriority() Obtain Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
-
- * @method void setRunPriority(integer $RunPriority) Set Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
-
- * @method integer getRetryWait() Obtain Retry policy. retry wait time in minutes. default: 5.
-
- * @method void setRetryWait(integer $RetryWait) Set Retry policy. retry wait time in minutes. default: 5.
-
- * @method integer getMaxRetryAttempts() Obtain Specifies the maximum attempts of the retry policy. default: 4.
-
- * @method void setMaxRetryAttempts(integer $MaxRetryAttempts) Set Specifies the maximum attempts of the retry policy. default: 4.
-
- * @method integer getExecutionTTL() Obtain Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-
- * @method void setExecutionTTL(integer $ExecutionTTL) Set Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-
- * @method string getWaitExecutionTotalTTL() Obtain Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
- * @method void setWaitExecutionTotalTTL(string $WaitExecutionTotalTTL) Set Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
  * @method string getAllowRedoType() Obtain Rerun & Refill Configuration: Default: ALL;
 
 * ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
@@ -128,6 +106,56 @@ T_PLUS_1: specifies t+1 generation.
  * @method void setInitStrategy(string $InitStrategy) Set **Instance generation policy**.
 T_PLUS_0: specifies t+0 generation. default policy.
 T_PLUS_1: specifies t+1 generation.
+ * @method integer getScheduleRunType() Obtain Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setScheduleRunType(integer $ScheduleRunType) Set Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getDownStreamDependencyConfigList() Obtain (Deprecated, recommend using DownstreamDependencyConfigList) downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDownStreamDependencyConfigList(array $DownStreamDependencyConfigList) Set (Deprecated, recommend using DownstreamDependencyConfigList) downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRunPriority() Obtain Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+
+ * @method void setRunPriority(integer $RunPriority) Set Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+
+ * @method integer getRetryWait() Obtain Retry policy. retry wait time in minutes. default: 5.
+
+ * @method void setRetryWait(integer $RetryWait) Set Retry policy. retry wait time in minutes. default: 5.
+
+ * @method integer getMaxRetryAttempts() Obtain Specifies the maximum attempts of the retry policy. default: 4.
+
+ * @method void setMaxRetryAttempts(integer $MaxRetryAttempts) Set Specifies the maximum attempts of the retry policy. default: 4.
+
+ * @method integer getExecutionTTL() Obtain Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+
+ * @method void setExecutionTTL(integer $ExecutionTTL) Set Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+
+ * @method string getWaitExecutionTotalTTL() Obtain Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+ * @method void setWaitExecutionTotalTTL(string $WaitExecutionTotalTTL) Set Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+ * @method integer getScheduleType() Obtain Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setScheduleType(integer $ScheduleType) Set Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRunPriorityType() Obtain Task scheduling priority execution priority 4 high 5 medium 6 low, default: 6.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRunPriorityType(integer $RunPriorityType) Set Task scheduling priority execution priority 4 high 5 medium 6 low, default: 6.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRetryWaitMinute() Obtain Retry policy retry wait time, in minutes: default: 5.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRetryWaitMinute(integer $RetryWaitMinute) Set Retry policy retry wait time, in minutes: default: 5.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxRetryNumber() Obtain Retry policy maximum attempts. default: 4.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMaxRetryNumber(integer $MaxRetryNumber) Set Retry policy maximum attempts. default: 4.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getExecutionTTLMinute() Obtain Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExecutionTTLMinute(integer $ExecutionTTLMinute) Set Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getWaitExecutionTotalTTLMinute() Obtain Timeout handling strategy wait for the total duration timeout (measurement unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWaitExecutionTotalTTLMinute(integer $WaitExecutionTotalTTLMinute) Set Timeout handling strategy wait for the total duration timeout (measurement unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TaskSchedulerConfiguration extends AbstractModel
 {
@@ -181,12 +209,6 @@ CRONTAB_CYCLE: specifies the crontab expression type
     public $ExecutionEndTime;
 
     /**
-     * @var integer Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling.
-
-     */
-    public $ScheduleRunType;
-
-    /**
      * @var string Whether calendar scheduling is enabled. Valid values: 1 (enabled), 0 (disabled).
      */
     public $CalendarOpen;
@@ -212,45 +234,16 @@ CRONTAB_CYCLE: specifies the crontab expression type
     public $UpstreamDependencyConfigList;
 
     /**
-     * @var array SpecSpecifies the downstream dependency array.
-
+     * @var array Downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $DownStreamDependencyConfigList;
+    public $DownstreamDependencyConfigList;
 
     /**
      * @var array Array of Events
 
      */
     public $EventListenerList;
-
-    /**
-     * @var integer Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
-
-     */
-    public $RunPriority;
-
-    /**
-     * @var integer Retry policy. retry wait time in minutes. default: 5.
-
-     */
-    public $RetryWait;
-
-    /**
-     * @var integer Specifies the maximum attempts of the retry policy. default: 4.
-
-     */
-    public $MaxRetryAttempts;
-
-    /**
-     * @var integer Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-
-     */
-    public $ExecutionTTL;
-
-    /**
-     * @var string Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-     */
-    public $WaitExecutionTotalTTL;
 
     /**
      * @var string Rerun & Refill Configuration: Default: ALL;
@@ -286,6 +279,90 @@ T_PLUS_1: specifies t+1 generation.
     public $InitStrategy;
 
     /**
+     * @var integer Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
+     */
+    public $ScheduleRunType;
+
+    /**
+     * @var array (Deprecated, recommend using DownstreamDependencyConfigList) downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
+     */
+    public $DownStreamDependencyConfigList;
+
+    /**
+     * @var integer Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+
+     * @deprecated
+     */
+    public $RunPriority;
+
+    /**
+     * @var integer Retry policy. retry wait time in minutes. default: 5.
+
+     * @deprecated
+     */
+    public $RetryWait;
+
+    /**
+     * @var integer Specifies the maximum attempts of the retry policy. default: 4.
+
+     * @deprecated
+     */
+    public $MaxRetryAttempts;
+
+    /**
+     * @var integer Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+
+     * @deprecated
+     */
+    public $ExecutionTTL;
+
+    /**
+     * @var string Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+     * @deprecated
+     */
+    public $WaitExecutionTotalTTL;
+
+    /**
+     * @var integer Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ScheduleType;
+
+    /**
+     * @var integer Task scheduling priority execution priority 4 high 5 medium 6 low, default: 6.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RunPriorityType;
+
+    /**
+     * @var integer Retry policy retry wait time, in minutes: default: 5.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RetryWaitMinute;
+
+    /**
+     * @var integer Retry policy maximum attempts. default: 4.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MaxRetryNumber;
+
+    /**
+     * @var integer Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ExecutionTTLMinute;
+
+    /**
+     * @var integer Timeout handling strategy wait for the total duration timeout (measurement unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $WaitExecutionTotalTTLMinute;
+
+    /**
      * @param string $CycleType Period type. Supported types:
 
 ONEOFF_CYCLE: specifies a one-time cycle.
@@ -307,26 +384,15 @@ CRONTAB_CYCLE: specifies the crontab expression type
 
      * @param string $ExecutionEndTime Execution time. right closed interval.
 
-     * @param integer $ScheduleRunType Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling.
-
      * @param string $CalendarOpen Whether calendar scheduling is enabled. Valid values: 1 (enabled), 0 (disabled).
      * @param string $CalendarId Calendar id.
      * @param string $CalendarName Calendar name, which needs to be obtained from DescribeScheduleCalendarPageList API.
      * @param string $SelfDepend Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
      * @param array $UpstreamDependencyConfigList Specifies the upstream dependency array.
-     * @param array $DownStreamDependencyConfigList SpecSpecifies the downstream dependency array.
-
+     * @param array $DownstreamDependencyConfigList Downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $EventListenerList Array of Events
 
-     * @param integer $RunPriority Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
-
-     * @param integer $RetryWait Retry policy. retry wait time in minutes. default: 5.
-
-     * @param integer $MaxRetryAttempts Specifies the maximum attempts of the retry policy. default: 4.
-
-     * @param integer $ExecutionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-
-     * @param string $WaitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
      * @param string $AllowRedoType Rerun & Refill Configuration: Default: ALL;
 
 * ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
@@ -340,6 +406,31 @@ CRONTAB_CYCLE: specifies the crontab expression type
      * @param string $InitStrategy **Instance generation policy**.
 T_PLUS_0: specifies t+0 generation. default policy.
 T_PLUS_1: specifies t+1 generation.
+     * @param integer $ScheduleRunType Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $DownStreamDependencyConfigList (Deprecated, recommend using DownstreamDependencyConfigList) downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RunPriority Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+
+     * @param integer $RetryWait Retry policy. retry wait time in minutes. default: 5.
+
+     * @param integer $MaxRetryAttempts Specifies the maximum attempts of the retry policy. default: 4.
+
+     * @param integer $ExecutionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+
+     * @param string $WaitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+     * @param integer $ScheduleType Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RunPriorityType Task scheduling priority execution priority 4 high 5 medium 6 low, default: 6.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RetryWaitMinute Retry policy retry wait time, in minutes: default: 5.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxRetryNumber Retry policy maximum attempts. default: 4.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ExecutionTTLMinute Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $WaitExecutionTotalTTLMinute Timeout handling strategy wait for the total duration timeout (measurement unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -382,10 +473,6 @@ T_PLUS_1: specifies t+1 generation.
             $this->ExecutionEndTime = $param["ExecutionEndTime"];
         }
 
-        if (array_key_exists("ScheduleRunType",$param) and $param["ScheduleRunType"] !== null) {
-            $this->ScheduleRunType = $param["ScheduleRunType"];
-        }
-
         if (array_key_exists("CalendarOpen",$param) and $param["CalendarOpen"] !== null) {
             $this->CalendarOpen = $param["CalendarOpen"];
         }
@@ -411,12 +498,12 @@ T_PLUS_1: specifies t+1 generation.
             }
         }
 
-        if (array_key_exists("DownStreamDependencyConfigList",$param) and $param["DownStreamDependencyConfigList"] !== null) {
-            $this->DownStreamDependencyConfigList = [];
-            foreach ($param["DownStreamDependencyConfigList"] as $key => $value){
+        if (array_key_exists("DownstreamDependencyConfigList",$param) and $param["DownstreamDependencyConfigList"] !== null) {
+            $this->DownstreamDependencyConfigList = [];
+            foreach ($param["DownstreamDependencyConfigList"] as $key => $value){
                 $obj = new DependencyTaskBrief();
                 $obj->deserialize($value);
-                array_push($this->DownStreamDependencyConfigList, $obj);
+                array_push($this->DownstreamDependencyConfigList, $obj);
             }
         }
 
@@ -427,26 +514,6 @@ T_PLUS_1: specifies t+1 generation.
                 $obj->deserialize($value);
                 array_push($this->EventListenerList, $obj);
             }
-        }
-
-        if (array_key_exists("RunPriority",$param) and $param["RunPriority"] !== null) {
-            $this->RunPriority = $param["RunPriority"];
-        }
-
-        if (array_key_exists("RetryWait",$param) and $param["RetryWait"] !== null) {
-            $this->RetryWait = $param["RetryWait"];
-        }
-
-        if (array_key_exists("MaxRetryAttempts",$param) and $param["MaxRetryAttempts"] !== null) {
-            $this->MaxRetryAttempts = $param["MaxRetryAttempts"];
-        }
-
-        if (array_key_exists("ExecutionTTL",$param) and $param["ExecutionTTL"] !== null) {
-            $this->ExecutionTTL = $param["ExecutionTTL"];
-        }
-
-        if (array_key_exists("WaitExecutionTotalTTL",$param) and $param["WaitExecutionTotalTTL"] !== null) {
-            $this->WaitExecutionTotalTTL = $param["WaitExecutionTotalTTL"];
         }
 
         if (array_key_exists("AllowRedoType",$param) and $param["AllowRedoType"] !== null) {
@@ -482,6 +549,63 @@ T_PLUS_1: specifies t+1 generation.
 
         if (array_key_exists("InitStrategy",$param) and $param["InitStrategy"] !== null) {
             $this->InitStrategy = $param["InitStrategy"];
+        }
+
+        if (array_key_exists("ScheduleRunType",$param) and $param["ScheduleRunType"] !== null) {
+            $this->ScheduleRunType = $param["ScheduleRunType"];
+        }
+
+        if (array_key_exists("DownStreamDependencyConfigList",$param) and $param["DownStreamDependencyConfigList"] !== null) {
+            $this->DownStreamDependencyConfigList = [];
+            foreach ($param["DownStreamDependencyConfigList"] as $key => $value){
+                $obj = new DependencyTaskBrief();
+                $obj->deserialize($value);
+                array_push($this->DownStreamDependencyConfigList, $obj);
+            }
+        }
+
+        if (array_key_exists("RunPriority",$param) and $param["RunPriority"] !== null) {
+            $this->RunPriority = $param["RunPriority"];
+        }
+
+        if (array_key_exists("RetryWait",$param) and $param["RetryWait"] !== null) {
+            $this->RetryWait = $param["RetryWait"];
+        }
+
+        if (array_key_exists("MaxRetryAttempts",$param) and $param["MaxRetryAttempts"] !== null) {
+            $this->MaxRetryAttempts = $param["MaxRetryAttempts"];
+        }
+
+        if (array_key_exists("ExecutionTTL",$param) and $param["ExecutionTTL"] !== null) {
+            $this->ExecutionTTL = $param["ExecutionTTL"];
+        }
+
+        if (array_key_exists("WaitExecutionTotalTTL",$param) and $param["WaitExecutionTotalTTL"] !== null) {
+            $this->WaitExecutionTotalTTL = $param["WaitExecutionTotalTTL"];
+        }
+
+        if (array_key_exists("ScheduleType",$param) and $param["ScheduleType"] !== null) {
+            $this->ScheduleType = $param["ScheduleType"];
+        }
+
+        if (array_key_exists("RunPriorityType",$param) and $param["RunPriorityType"] !== null) {
+            $this->RunPriorityType = $param["RunPriorityType"];
+        }
+
+        if (array_key_exists("RetryWaitMinute",$param) and $param["RetryWaitMinute"] !== null) {
+            $this->RetryWaitMinute = $param["RetryWaitMinute"];
+        }
+
+        if (array_key_exists("MaxRetryNumber",$param) and $param["MaxRetryNumber"] !== null) {
+            $this->MaxRetryNumber = $param["MaxRetryNumber"];
+        }
+
+        if (array_key_exists("ExecutionTTLMinute",$param) and $param["ExecutionTTLMinute"] !== null) {
+            $this->ExecutionTTLMinute = $param["ExecutionTTLMinute"];
+        }
+
+        if (array_key_exists("WaitExecutionTotalTTLMinute",$param) and $param["WaitExecutionTotalTTLMinute"] !== null) {
+            $this->WaitExecutionTotalTTLMinute = $param["WaitExecutionTotalTTLMinute"];
         }
     }
 }

@@ -20,146 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Command details.
  *
- * @method string getCommandId() Obtain Command ID.
- * @method void setCommandId(string $CommandId) Set Command ID.
- * @method string getCommandName() Obtain Command name.
- * @method void setCommandName(string $CommandName) Set Command name.
- * @method string getDescription() Obtain Command description.
- * @method void setDescription(string $Description) Set Command description.
- * @method string getContent() Obtain Base64-encoded command.
- * @method void setContent(string $Content) Set Base64-encoded command.
- * @method string getCommandType() Obtain Command type.
- * @method void setCommandType(string $CommandType) Set Command type.
- * @method string getWorkingDirectory() Obtain Command execution path.
- * @method void setWorkingDirectory(string $WorkingDirectory) Set Command execution path.
- * @method integer getTimeout() Obtain Command timeout period.
- * @method void setTimeout(integer $Timeout) Set Command timeout period.
- * @method string getCreatedTime() Obtain Command creation time.
- * @method void setCreatedTime(string $CreatedTime) Set Command creation time.
- * @method string getUpdatedTime() Obtain Command update time.
- * @method void setUpdatedTime(string $UpdatedTime) Set Command update time.
- * @method boolean getEnableParameter() Obtain Whether to enable the custom parameter feature.
- * @method void setEnableParameter(boolean $EnableParameter) Set Whether to enable the custom parameter feature.
- * @method string getDefaultParameters() Obtain Default custom parameter value.
- * @method void setDefaultParameters(string $DefaultParameters) Set Default custom parameter value.
- * @method string getFormattedDescription() Obtain Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
- * @method void setFormattedDescription(string $FormattedDescription) Set Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
- * @method string getCreatedBy() Obtain Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
- * @method void setCreatedBy(string $CreatedBy) Set Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
- * @method array getTags() Obtain The list of tags bound to the command.
- * @method void setTags(array $Tags) Set The list of tags bound to the command.
- * @method string getUsername() Obtain The user who executes the command on the instance.
- * @method void setUsername(string $Username) Set The user who executes the command on the instance.
- * @method string getOutputCOSBucketUrl() Obtain The COS bucket URL for uploading logs.
- * @method void setOutputCOSBucketUrl(string $OutputCOSBucketUrl) Set The COS bucket URL for uploading logs.
- * @method string getOutputCOSKeyPrefix() Obtain The COS bucket directory where the logs are saved.
- * @method void setOutputCOSKeyPrefix(string $OutputCOSKeyPrefix) Set The COS bucket directory where the logs are saved.
+ * @method string getCommandId() Obtain <p>Command ID.</p>.
+ * @method void setCommandId(string $CommandId) Set <p>Command ID.</p>.
+ * @method string getCommandName() Obtain <P>Command name.</p>.
+ * @method void setCommandName(string $CommandName) Set <P>Command name.</p>.
+ * @method string getDescription() Obtain <P>Command description.</p>.
+ * @method void setDescription(string $Description) Set <P>Command description.</p>.
+ * @method string getContent() Obtain <p>The Base64-encoded command content.</p>.
+ * @method void setContent(string $Content) Set <p>The Base64-encoded command content.</p>.
+ * @method string getCommandType() Obtain <p>Command type. value is one of SHELL, POWERSHELL, BAT.</p>.
+ * @method void setCommandType(string $CommandType) Set <p>Command type. value is one of SHELL, POWERSHELL, BAT.</p>.
+ * @method string getWorkingDirectory() Obtain <P>Command execution path.</p>.
+ * @method void setWorkingDirectory(string $WorkingDirectory) Set <P>Command execution path.</p>.
+ * @method integer getTimeout() Obtain <p>Command timeout time.</p><p>unit: seconds.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
+ * @method void setTimeout(integer $Timeout) Set <p>Command timeout time.</p><p>unit: seconds.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
+ * @method string getCreatedTime() Obtain <p>Command creation time. the format is YYYY-MM-DDThh:MM:ssZ.</p>.
+ * @method void setCreatedTime(string $CreatedTime) Set <p>Command creation time. the format is YYYY-MM-DDThh:MM:ssZ.</p>.
+ * @method string getUpdatedTime() Obtain <p>Command last update time. format: YYYY-MM-DDThh:MM:ssZ.</p>.
+ * @method void setUpdatedTime(string $UpdatedTime) Set <p>Command last update time. format: YYYY-MM-DDThh:MM:ssZ.</p>.
+ * @method boolean getEnableParameter() Obtain <P>Whether to enable the custom parameter feature.</p>.
+ * @method void setEnableParameter(boolean $EnableParameter) Set <P>Whether to enable the custom parameter feature.</p>.
+ * @method string getDefaultParameters() Obtain <P>Default value of custom parameter.</p>.
+ * @method void setDefaultParameters(string $DefaultParameters) Set <P>Default value of custom parameter.</p>.
+ * @method array getDefaultParameterConfs() Obtain <P>Default value of custom parameters.</p>.
+ * @method void setDefaultParameterConfs(array $DefaultParameterConfs) Set <P>Default value of custom parameters.</p>.
+ * @method array getScenes() Obtain <P>Command association scenarios</p>.
+ * @method void setScenes(array $Scenes) Set <P>Command association scenarios</p>.
+ * @method string getFormattedDescription() Obtain <P>Structured description of the command. public commands have values, and user commands are empty strings.</p>.
+ * @method void setFormattedDescription(string $FormattedDescription) Set <P>Structured description of the command. public commands have values, and user commands are empty strings.</p>.
+ * @method string getCreatedBy() Obtain <p>Command creator.</p><p>enumeration value:</p><ul><li>TAT: public command</li><li>USER: personal creation command</li></ul>.
+ * @method void setCreatedBy(string $CreatedBy) Set <p>Command creator.</p><p>enumeration value:</p><ul><li>TAT: public command</li><li>USER: personal creation command</li></ul>.
+ * @method array getTags() Obtain <P>Tag list associated with the command.</p>.
+ * @method void setTags(array $Tags) Set <P>Tag list associated with the command.</p>.
+ * @method string getUsername() Obtain <P>Username to run command on the instance.</p>.
+ * @method void setUsername(string $Username) Set <P>Username to run command on the instance.</p>.
+ * @method string getOutputCOSBucketUrl() Obtain <P>The cos bucket address for log upload.</p>.
+ * @method void setOutputCOSBucketUrl(string $OutputCOSBucketUrl) Set <P>The cos bucket address for log upload.</p>.
+ * @method string getOutputCOSKeyPrefix() Obtain <P>Directory of logs in the cos bucket.</p>.
+ * @method void setOutputCOSKeyPrefix(string $OutputCOSKeyPrefix) Set <P>Directory of logs in the cos bucket.</p>.
  */
 class Command extends AbstractModel
 {
     /**
-     * @var string Command ID.
+     * @var string <p>Command ID.</p>.
      */
     public $CommandId;
 
     /**
-     * @var string Command name.
+     * @var string <P>Command name.</p>.
      */
     public $CommandName;
 
     /**
-     * @var string Command description.
+     * @var string <P>Command description.</p>.
      */
     public $Description;
 
     /**
-     * @var string Base64-encoded command.
+     * @var string <p>The Base64-encoded command content.</p>.
      */
     public $Content;
 
     /**
-     * @var string Command type.
+     * @var string <p>Command type. value is one of SHELL, POWERSHELL, BAT.</p>.
      */
     public $CommandType;
 
     /**
-     * @var string Command execution path.
+     * @var string <P>Command execution path.</p>.
      */
     public $WorkingDirectory;
 
     /**
-     * @var integer Command timeout period.
+     * @var integer <p>Command timeout time.</p><p>unit: seconds.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
      */
     public $Timeout;
 
     /**
-     * @var string Command creation time.
+     * @var string <p>Command creation time. the format is YYYY-MM-DDThh:MM:ssZ.</p>.
      */
     public $CreatedTime;
 
     /**
-     * @var string Command update time.
+     * @var string <p>Command last update time. format: YYYY-MM-DDThh:MM:ssZ.</p>.
      */
     public $UpdatedTime;
 
     /**
-     * @var boolean Whether to enable the custom parameter feature.
+     * @var boolean <P>Whether to enable the custom parameter feature.</p>.
      */
     public $EnableParameter;
 
     /**
-     * @var string Default custom parameter value.
+     * @var string <P>Default value of custom parameter.</p>.
      */
     public $DefaultParameters;
 
     /**
-     * @var string Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
+     * @var array <P>Default value of custom parameters.</p>.
+     */
+    public $DefaultParameterConfs;
+
+    /**
+     * @var array <P>Command association scenarios</p>.
+     */
+    public $Scenes;
+
+    /**
+     * @var string <P>Structured description of the command. public commands have values, and user commands are empty strings.</p>.
      */
     public $FormattedDescription;
 
     /**
-     * @var string Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
+     * @var string <p>Command creator.</p><p>enumeration value:</p><ul><li>TAT: public command</li><li>USER: personal creation command</li></ul>.
      */
     public $CreatedBy;
 
     /**
-     * @var array The list of tags bound to the command.
+     * @var array <P>Tag list associated with the command.</p>.
      */
     public $Tags;
 
     /**
-     * @var string The user who executes the command on the instance.
+     * @var string <P>Username to run command on the instance.</p>.
      */
     public $Username;
 
     /**
-     * @var string The COS bucket URL for uploading logs.
+     * @var string <P>The cos bucket address for log upload.</p>.
      */
     public $OutputCOSBucketUrl;
 
     /**
-     * @var string The COS bucket directory where the logs are saved.
+     * @var string <P>Directory of logs in the cos bucket.</p>.
      */
     public $OutputCOSKeyPrefix;
 
     /**
-     * @param string $CommandId Command ID.
-     * @param string $CommandName Command name.
-     * @param string $Description Command description.
-     * @param string $Content Base64-encoded command.
-     * @param string $CommandType Command type.
-     * @param string $WorkingDirectory Command execution path.
-     * @param integer $Timeout Command timeout period.
-     * @param string $CreatedTime Command creation time.
-     * @param string $UpdatedTime Command update time.
-     * @param boolean $EnableParameter Whether to enable the custom parameter feature.
-     * @param string $DefaultParameters Default custom parameter value.
-     * @param string $FormattedDescription Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
-     * @param string $CreatedBy Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
-     * @param array $Tags The list of tags bound to the command.
-     * @param string $Username The user who executes the command on the instance.
-     * @param string $OutputCOSBucketUrl The COS bucket URL for uploading logs.
-     * @param string $OutputCOSKeyPrefix The COS bucket directory where the logs are saved.
+     * @param string $CommandId <p>Command ID.</p>.
+     * @param string $CommandName <P>Command name.</p>.
+     * @param string $Description <P>Command description.</p>.
+     * @param string $Content <p>The Base64-encoded command content.</p>.
+     * @param string $CommandType <p>Command type. value is one of SHELL, POWERSHELL, BAT.</p>.
+     * @param string $WorkingDirectory <P>Command execution path.</p>.
+     * @param integer $Timeout <p>Command timeout time.</p><p>unit: seconds.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
+     * @param string $CreatedTime <p>Command creation time. the format is YYYY-MM-DDThh:MM:ssZ.</p>.
+     * @param string $UpdatedTime <p>Command last update time. format: YYYY-MM-DDThh:MM:ssZ.</p>.
+     * @param boolean $EnableParameter <P>Whether to enable the custom parameter feature.</p>.
+     * @param string $DefaultParameters <P>Default value of custom parameter.</p>.
+     * @param array $DefaultParameterConfs <P>Default value of custom parameters.</p>.
+     * @param array $Scenes <P>Command association scenarios</p>.
+     * @param string $FormattedDescription <P>Structured description of the command. public commands have values, and user commands are empty strings.</p>.
+     * @param string $CreatedBy <p>Command creator.</p><p>enumeration value:</p><ul><li>TAT: public command</li><li>USER: personal creation command</li></ul>.
+     * @param array $Tags <P>Tag list associated with the command.</p>.
+     * @param string $Username <P>Username to run command on the instance.</p>.
+     * @param string $OutputCOSBucketUrl <P>The cos bucket address for log upload.</p>.
+     * @param string $OutputCOSKeyPrefix <P>Directory of logs in the cos bucket.</p>.
      */
     function __construct()
     {
@@ -216,6 +232,19 @@ class Command extends AbstractModel
 
         if (array_key_exists("DefaultParameters",$param) and $param["DefaultParameters"] !== null) {
             $this->DefaultParameters = $param["DefaultParameters"];
+        }
+
+        if (array_key_exists("DefaultParameterConfs",$param) and $param["DefaultParameterConfs"] !== null) {
+            $this->DefaultParameterConfs = [];
+            foreach ($param["DefaultParameterConfs"] as $key => $value){
+                $obj = new DefaultParameterConf();
+                $obj->deserialize($value);
+                array_push($this->DefaultParameterConfs, $obj);
+            }
+        }
+
+        if (array_key_exists("Scenes",$param) and $param["Scenes"] !== null) {
+            $this->Scenes = $param["Scenes"];
         }
 
         if (array_key_exists("FormattedDescription",$param) and $param["FormattedDescription"] !== null) {

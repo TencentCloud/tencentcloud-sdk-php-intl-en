@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInvokerRecords request structure.
  *
- * @method array getInvokerIds() Obtain List of invoker IDs. Up to 100 IDs are allowed.
- * @method void setInvokerIds(array $InvokerIds) Set List of invoker IDs. Up to 100 IDs are allowed.
+ * @method array getInvokerIds() Obtain Executor ID list. the list has a cap of 100.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+ * @method void setInvokerIds(array $InvokerIds) Set Executor ID list. the list has a cap of 100.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
  * @method integer getOffset() Obtain Offset. Default value: 0.
@@ -30,7 +34,9 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInvokerRecordsRequest extends AbstractModel
 {
     /**
-     * @var array List of invoker IDs. Up to 100 IDs are allowed.
+     * @var array Executor ID list. the list has a cap of 100.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public $InvokerIds;
 
@@ -45,7 +51,9 @@ class DescribeInvokerRecordsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param array $InvokerIds List of invoker IDs. Up to 100 IDs are allowed.
+     * @param array $InvokerIds Executor ID list. the list has a cap of 100.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
      */

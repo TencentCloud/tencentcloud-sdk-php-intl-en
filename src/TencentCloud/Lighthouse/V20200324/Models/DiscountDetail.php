@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Package discount details (only returned for price query APIs called in the console).
  *
- * @method integer getTimeSpan() Obtain Billing duration.
- * @method void setTimeSpan(integer $TimeSpan) Set Billing duration.
- * @method string getTimeUnit() Obtain Billing unit.
- * @method void setTimeUnit(string $TimeUnit) Set Billing unit.
- * @method float getTotalCost() Obtain Total price.
- * @method void setTotalCost(float $TotalCost) Set Total price.
- * @method float getRealTotalCost() Obtain Discounted total price.
- * @method void setRealTotalCost(float $RealTotalCost) Set Discounted total price.
- * @method integer getDiscount() Obtain Discount.
- * @method void setDiscount(integer $Discount) Set Discount.
- * @method PolicyDetail getPolicyDetail() Obtain Discount details.
- * @method void setPolicyDetail(PolicyDetail $PolicyDetail) Set Discount details.
+ * @method integer getTimeSpan() Obtain <P>Billing duration.</p>.
+ * @method void setTimeSpan(integer $TimeSpan) Set <P>Billing duration.</p>.
+ * @method string getTimeUnit() Obtain <P>Time unit.<br>value is:</p><ul><li>m - month</li><li>d - day</li></ul>.
+ * @method void setTimeUnit(string $TimeUnit) Set <P>Time unit.<br>value is:</p><ul><li>m - month</li><li>d - day</li></ul>.
+ * @method float getTotalCost() Obtain <P>Total price.</p><p>unit: usd</p>.
+ * @method void setTotalCost(float $TotalCost) Set <P>Total price.</p><p>unit: usd</p>.
+ * @method float getRealTotalCost() Obtain <P>Discounted total price.</p><p>unit: usd</p>.
+ * @method void setRealTotalCost(float $RealTotalCost) Set <P>Discounted total price.</p><p>unit: usd</p>.
+ * @method float getDiscount() Obtain <p>Discount.</p>.
+ * @method void setDiscount(float $Discount) Set <p>Discount.</p>.
+ * @method PolicyDetail getPolicyDetail() Obtain <P>Specific discount details.</p>.
+ * @method void setPolicyDetail(PolicyDetail $PolicyDetail) Set <P>Specific discount details.</p>.
  */
 class DiscountDetail extends AbstractModel
 {
     /**
-     * @var integer Billing duration.
+     * @var integer <P>Billing duration.</p>.
      */
     public $TimeSpan;
 
     /**
-     * @var string Billing unit.
+     * @var string <P>Time unit.<br>value is:</p><ul><li>m - month</li><li>d - day</li></ul>.
      */
     public $TimeUnit;
 
     /**
-     * @var float Total price.
+     * @var float <P>Total price.</p><p>unit: usd</p>.
      */
     public $TotalCost;
 
     /**
-     * @var float Discounted total price.
+     * @var float <P>Discounted total price.</p><p>unit: usd</p>.
      */
     public $RealTotalCost;
 
     /**
-     * @var integer Discount.
+     * @var float <p>Discount.</p>.
      */
     public $Discount;
 
     /**
-     * @var PolicyDetail Discount details.
+     * @var PolicyDetail <P>Specific discount details.</p>.
      */
     public $PolicyDetail;
 
     /**
-     * @param integer $TimeSpan Billing duration.
-     * @param string $TimeUnit Billing unit.
-     * @param float $TotalCost Total price.
-     * @param float $RealTotalCost Discounted total price.
-     * @param integer $Discount Discount.
-     * @param PolicyDetail $PolicyDetail Discount details.
+     * @param integer $TimeSpan <P>Billing duration.</p>.
+     * @param string $TimeUnit <P>Time unit.<br>value is:</p><ul><li>m - month</li><li>d - day</li></ul>.
+     * @param float $TotalCost <P>Total price.</p><p>unit: usd</p>.
+     * @param float $RealTotalCost <P>Discounted total price.</p><p>unit: usd</p>.
+     * @param float $Discount <p>Discount.</p>.
+     * @param PolicyDetail $PolicyDetail <P>Specific discount details.</p>.
      */
     function __construct()
     {

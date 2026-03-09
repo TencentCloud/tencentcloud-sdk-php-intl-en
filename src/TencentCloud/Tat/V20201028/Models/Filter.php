@@ -18,17 +18,18 @@ namespace TencentCloud\Tat\V20201028\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * > Key-value pair filters for conditional filtering queries, such as filtering ID, name, and status.
-> * If there are multiple `Filter` parameters, the relationship among them is the logical `AND`.
-> * If there are multiple `Values` for the same `Filter`, the relationship among the `Values` for the same `Filter` is the logical `OR`.
->
-> Take the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API as an example. You can use the following filters to query the instances whose availability zone (`zone`) is Guangzhou 1 ***and*** billing method (`instance-charge-type`) is prepaid ***or*** pay-as-you-go:
+ * Describes the key-value pair filter, which is used for conditional filtering queries. for example, filter by ID, name, and status.
+- if there are multiple `Filter`s, the logical relationship between them is `AND`.
+- if there are multiple Values in the same Filter, the relationship between Values under the same Filter is logical OR.
+> 
+Take the `Filters` of the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api as an example. if we need to query commands with the `command-name` "print working directory" and the `command-type` "POWERSHELL" or "BAT", it can be implemented as follows:.
 ```
-Filters.0.Name=zone
-&Filters.0.Values.0=ap-guangzhou-1
-&Filters.1.Name=instance-charge-type
-&Filters.1.Values.0=PREPAID
-&Filters.1.Values.1=POSTPAID_BY_HOUR
+Filters.0.Name=command-name
+&Filters.0.Values.0=Print working directory.
+
+&Filters.1.Name=command-type
+&Filters.1.Values.0=POWERSHELL
+&Filters.1.Values.1=BAT
 ```
  *
  * @method string getName() Obtain Field to be filtered.

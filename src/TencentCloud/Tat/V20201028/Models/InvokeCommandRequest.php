@@ -20,20 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InvokeCommand request structure.
  *
- * @method string getCommandId() Obtain ID of the command to be triggered.
- * @method void setCommandId(string $CommandId) Set ID of the command to be triggered.
- * @method array getInstanceIds() Obtain IDs of instances about to execute commands. At most 100 IDs are allowed.
- * @method void setInstanceIds(array $InstanceIds) Set IDs of instances about to execute commands. At most 100 IDs are allowed.
- * @method string getParameters() Obtain Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the DefaultParameters of the command is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
- * @method void setParameters(string $Parameters) Set Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the DefaultParameters of the command is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+ * @method string getCommandId() Obtain Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+ * @method void setCommandId(string $CommandId) Set Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+ * @method array getInstanceIds() Obtain Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
+ * @method string getParameters() Obtain Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+ * @method void setParameters(string $Parameters) Set Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
  * @method string getUsername() Obtain The username used to execute the command on the CVM or Lighthouse instance.
 The principle of the least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. If this is not specified, the Username of the command is used by default.
  * @method void setUsername(string $Username) Set The username used to execute the command on the CVM or Lighthouse instance.
@@ -56,21 +68,27 @@ The principle of the least privilege is the best practice for permission managem
 class InvokeCommandRequest extends AbstractModel
 {
     /**
-     * @var string ID of the command to be triggered.
+     * @var string Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      */
     public $CommandId;
 
     /**
-     * @var array IDs of instances about to execute commands. At most 100 IDs are allowed.
+     * @var array Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
      */
     public $InstanceIds;
 
     /**
-     * @var string Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the DefaultParameters of the command is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+     * @var string Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
      */
     public $Parameters;
 
@@ -104,13 +122,19 @@ The principle of the least privilege is the best practice for permission managem
     public $OutputCOSKeyPrefix;
 
     /**
-     * @param string $CommandId ID of the command to be triggered.
-     * @param array $InstanceIds IDs of instances about to execute commands. At most 100 IDs are allowed.
-     * @param string $Parameters Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the DefaultParameters of the command is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+     * @param string $CommandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+     * @param array $InstanceIds Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
+     * @param string $Parameters Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
      * @param string $Username The username used to execute the command on the CVM or Lighthouse instance.
 The principle of the least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. If this is not specified, the Username of the command is used by default.
      * @param string $WorkingDirectory Execution path of the command. The WorkingDirectory of the command is used by default.

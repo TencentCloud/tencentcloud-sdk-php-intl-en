@@ -52,6 +52,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectInstanceStatisticsAlarmInfoList(array $ProjectInstanceStatisticsAlarmInfoList) Set Specifies the detail of Alarm configuration for project fluctuation.
  * @method array getReconciliationExtInfo() Obtain Describes the Alarm configuration information for offline integration reconciliation.
  * @method void setReconciliationExtInfo(array $ReconciliationExtInfo) Set Describes the Alarm configuration information for offline integration reconciliation.
+ * @method array getMonitorWhiteTasks() Obtain Configure allowlist for monitored object.
+ * @method void setMonitorWhiteTasks(array $MonitorWhiteTasks) Set Configure allowlist for monitored object.
+ * @method array getWorkflowCompletionTimeCycleExtInfo() Obtain 3.0 Workflow completion time (period) Alarm policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWorkflowCompletionTimeCycleExtInfo(array $WorkflowCompletionTimeCycleExtInfo) Set 3.0 Workflow completion time (period) Alarm policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getWorkflowExecutionTrigger() Obtain Workflow execution triggers the Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWorkflowExecutionTrigger(integer $WorkflowExecutionTrigger) Set Workflow execution triggers the Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getWorkflowExecutionFailureTrigger() Obtain Workflow execution failure Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWorkflowExecutionFailureTrigger(integer $WorkflowExecutionFailureTrigger) Set Workflow execution failure Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getWorkflowExecutionSuccessTrigger() Obtain Workflow execution successful Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWorkflowExecutionSuccessTrigger(integer $WorkflowExecutionSuccessTrigger) Set Workflow execution successful Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AlarmRuleDetail extends AbstractModel
 {
@@ -96,6 +114,35 @@ class AlarmRuleDetail extends AbstractModel
     public $ReconciliationExtInfo;
 
     /**
+     * @var array Configure allowlist for monitored object.
+     */
+    public $MonitorWhiteTasks;
+
+    /**
+     * @var array 3.0 Workflow completion time (period) Alarm policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $WorkflowCompletionTimeCycleExtInfo;
+
+    /**
+     * @var integer Workflow execution triggers the Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $WorkflowExecutionTrigger;
+
+    /**
+     * @var integer Workflow execution failure Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $WorkflowExecutionFailureTrigger;
+
+    /**
+     * @var integer Workflow execution successful Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $WorkflowExecutionSuccessTrigger;
+
+    /**
      * @param integer $Trigger Failure Trigger Condition
 
 1: Trigger on the first failure
@@ -112,6 +159,15 @@ class AlarmRuleDetail extends AbstractModel
 
      * @param array $ProjectInstanceStatisticsAlarmInfoList Specifies the detail of Alarm configuration for project fluctuation.
      * @param array $ReconciliationExtInfo Describes the Alarm configuration information for offline integration reconciliation.
+     * @param array $MonitorWhiteTasks Configure allowlist for monitored object.
+     * @param array $WorkflowCompletionTimeCycleExtInfo 3.0 Workflow completion time (period) Alarm policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $WorkflowExecutionTrigger Workflow execution triggers the Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $WorkflowExecutionFailureTrigger Workflow execution failure Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $WorkflowExecutionSuccessTrigger Workflow execution successful Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -168,6 +224,36 @@ class AlarmRuleDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ReconciliationExtInfo, $obj);
             }
+        }
+
+        if (array_key_exists("MonitorWhiteTasks",$param) and $param["MonitorWhiteTasks"] !== null) {
+            $this->MonitorWhiteTasks = [];
+            foreach ($param["MonitorWhiteTasks"] as $key => $value){
+                $obj = new MonitorWhiteTask();
+                $obj->deserialize($value);
+                array_push($this->MonitorWhiteTasks, $obj);
+            }
+        }
+
+        if (array_key_exists("WorkflowCompletionTimeCycleExtInfo",$param) and $param["WorkflowCompletionTimeCycleExtInfo"] !== null) {
+            $this->WorkflowCompletionTimeCycleExtInfo = [];
+            foreach ($param["WorkflowCompletionTimeCycleExtInfo"] as $key => $value){
+                $obj = new TimeOutStrategyInfo();
+                $obj->deserialize($value);
+                array_push($this->WorkflowCompletionTimeCycleExtInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("WorkflowExecutionTrigger",$param) and $param["WorkflowExecutionTrigger"] !== null) {
+            $this->WorkflowExecutionTrigger = $param["WorkflowExecutionTrigger"];
+        }
+
+        if (array_key_exists("WorkflowExecutionFailureTrigger",$param) and $param["WorkflowExecutionFailureTrigger"] !== null) {
+            $this->WorkflowExecutionFailureTrigger = $param["WorkflowExecutionFailureTrigger"];
+        }
+
+        if (array_key_exists("WorkflowExecutionSuccessTrigger",$param) and $param["WorkflowExecutionSuccessTrigger"] !== null) {
+            $this->WorkflowExecutionSuccessTrigger = $param["WorkflowExecutionSuccessTrigger"];
         }
     }
 }

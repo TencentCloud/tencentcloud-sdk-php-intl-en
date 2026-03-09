@@ -20,58 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Billable items
  *
- * @method string getPriceName() Obtain Values: 
-<li>"DiskSpace": Cloud disk space</li>
-<li>"DiskBackupQuota": Cloud disk backups</li>
- * @method void setPriceName(string $PriceName) Set Values: 
-<li>"DiskSpace": Cloud disk space</li>
-<li>"DiskBackupQuota": Cloud disk backups</li>
- * @method float getOriginUnitPrice() Obtain Official unit price of the billable item
- * @method void setOriginUnitPrice(float $OriginUnitPrice) Set Official unit price of the billable item
- * @method float getOriginalPrice() Obtain Official total price of the billable item
- * @method void setOriginalPrice(float $OriginalPrice) Set Official total price of the billable item
- * @method float getDiscount() Obtain Discount of the billable item
- * @method void setDiscount(float $Discount) Set Discount of the billable item
- * @method float getDiscountPrice() Obtain Discounted total price of the billable item
- * @method void setDiscountPrice(float $DiscountPrice) Set Discounted total price of the billable item
+ * @method string getPriceName() Obtain <p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>.
+ * @method void setPriceName(string $PriceName) Set <p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>.
+ * @method float getOriginUnitPrice() Obtain <P>Unit price per billing item dimension.</p><p>unit: usd</p>.
+ * @method void setOriginUnitPrice(float $OriginUnitPrice) Set <P>Unit price per billing item dimension.</p><p>unit: usd</p>.
+ * @method float getOriginalPrice() Obtain <P>Total price of billing item dimension.</p><p>unit: usd</p>.
+ * @method void setOriginalPrice(float $OriginalPrice) Set <P>Total price of billing item dimension.</p><p>unit: usd</p>.
+ * @method float getDiscount() Obtain <P>Dimensional discount for billing items.</p>.
+ * @method void setDiscount(float $Discount) Set <P>Dimensional discount for billing items.</p>.
+ * @method float getDiscountPrice() Obtain <P>Discounted total price by billing item dimension.</p><p>unit: usd</p>.
+ * @method void setDiscountPrice(float $DiscountPrice) Set <P>Discounted total price by billing item dimension.</p><p>unit: usd</p>.
  */
 class DetailPrice extends AbstractModel
 {
     /**
-     * @var string Values: 
-<li>"DiskSpace": Cloud disk space</li>
-<li>"DiskBackupQuota": Cloud disk backups</li>
+     * @var string <p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>.
      */
     public $PriceName;
 
     /**
-     * @var float Official unit price of the billable item
+     * @var float <P>Unit price per billing item dimension.</p><p>unit: usd</p>.
      */
     public $OriginUnitPrice;
 
     /**
-     * @var float Official total price of the billable item
+     * @var float <P>Total price of billing item dimension.</p><p>unit: usd</p>.
      */
     public $OriginalPrice;
 
     /**
-     * @var float Discount of the billable item
+     * @var float <P>Dimensional discount for billing items.</p>.
      */
     public $Discount;
 
     /**
-     * @var float Discounted total price of the billable item
+     * @var float <P>Discounted total price by billing item dimension.</p><p>unit: usd</p>.
      */
     public $DiscountPrice;
 
     /**
-     * @param string $PriceName Values: 
-<li>"DiskSpace": Cloud disk space</li>
-<li>"DiskBackupQuota": Cloud disk backups</li>
-     * @param float $OriginUnitPrice Official unit price of the billable item
-     * @param float $OriginalPrice Official total price of the billable item
-     * @param float $Discount Discount of the billable item
-     * @param float $DiscountPrice Discounted total price of the billable item
+     * @param string $PriceName <p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>.
+     * @param float $OriginUnitPrice <P>Unit price per billing item dimension.</p><p>unit: usd</p>.
+     * @param float $OriginalPrice <P>Total price of billing item dimension.</p><p>unit: usd</p>.
+     * @param float $Discount <P>Dimensional discount for billing items.</p>.
+     * @param float $DiscountPrice <P>Discounted total price by billing item dimension.</p><p>unit: usd</p>.
      */
     function __construct()
     {

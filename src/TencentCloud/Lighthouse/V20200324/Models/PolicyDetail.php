@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Discount details.
  *
- * @method integer getUserDiscount() Obtain User discount.
- * @method void setUserDiscount(integer $UserDiscount) Set User discount.
- * @method integer getCommonDiscount() Obtain Public discount.
- * @method void setCommonDiscount(integer $CommonDiscount) Set Public discount.
- * @method integer getFinalDiscount() Obtain Final discount.
- * @method void setFinalDiscount(integer $FinalDiscount) Set Final discount.
+ * @method float getUserDiscount() Obtain User discount.
+ * @method void setUserDiscount(float $UserDiscount) Set User discount.
+ * @method float getCommonDiscount() Obtain Public discount.
+ * @method void setCommonDiscount(float $CommonDiscount) Set Public discount.
+ * @method float getFinalDiscount() Obtain Final discount.
+ * @method void setFinalDiscount(float $FinalDiscount) Set Final discount.
  * @method float getActivityDiscount() Obtain Activity discount. The value `null` indicates no discount.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setActivityDiscount(float $ActivityDiscount) Set Activity discount. The value `null` indicates no discount.
@@ -40,17 +40,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 class PolicyDetail extends AbstractModel
 {
     /**
-     * @var integer User discount.
+     * @var float User discount.
      */
     public $UserDiscount;
 
     /**
-     * @var integer Public discount.
+     * @var float Public discount.
      */
     public $CommonDiscount;
 
     /**
-     * @var integer Final discount.
+     * @var float Final discount.
      */
     public $FinalDiscount;
 
@@ -68,9 +68,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $DiscountType;
 
     /**
-     * @param integer $UserDiscount User discount.
-     * @param integer $CommonDiscount Public discount.
-     * @param integer $FinalDiscount Final discount.
+     * @param float $UserDiscount User discount.
+     * @param float $CommonDiscount Public discount.
+     * @param float $FinalDiscount Final discount.
      * @param float $ActivityDiscount Activity discount. The value `null` indicates no discount.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $DiscountType Discount type.
