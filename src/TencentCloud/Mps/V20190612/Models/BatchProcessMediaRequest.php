@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInputInfo() Obtain Path of the input file.
  * @method void setInputInfo(array $InputInfo) Set Path of the input file.
- * @method TaskOutputStorage getOutputStorage() Obtain Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-Note: When InputInfo.Type is URL, this parameter is required.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-Note: When InputInfo.Type is URL, this parameter is required.
+ * @method TaskOutputStorage getOutputStorage() Obtain Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output.
  * @method string getOutputDir() Obtain Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
 If left blank, it indicates that the directory is the same as the one where the file is located in InputInfo.
  * @method void setOutputDir(string $OutputDir) Set Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
@@ -38,8 +38,8 @@ If left blank, it indicates that the directory is the same as the one where the 
  * @method void setTasksPriority(integer $TasksPriority) Set Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
  * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
- * @method string getResourceId() Obtain Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
- * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+ * @method string getResourceId() Obtain Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+ * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
  * @method integer getSkipMateData() Obtain Whether to skip metadata acquisition. Valid values:
 0: do not skip.
 1: skip.
@@ -57,8 +57,8 @@ class BatchProcessMediaRequest extends AbstractModel
     public $InputInfo;
 
     /**
-     * @var TaskOutputStorage Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-Note: When InputInfo.Type is URL, this parameter is required.
+     * @var TaskOutputStorage Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output.
      */
     public $OutputStorage;
 
@@ -89,7 +89,7 @@ If left blank, it indicates that the directory is the same as the one where the 
     public $SessionContext;
 
     /**
-     * @var string Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     * @var string Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
      */
     public $ResourceId;
 
@@ -103,15 +103,15 @@ Default value: 0
 
     /**
      * @param array $InputInfo Path of the input file.
-     * @param TaskOutputStorage $OutputStorage Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-Note: When InputInfo.Type is URL, this parameter is required.
+     * @param TaskOutputStorage $OutputStorage Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output.
      * @param string $OutputDir Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
 If left blank, it indicates that the directory is the same as the one where the file is located in InputInfo.
      * @param SmartSubtitlesTaskInput $SmartSubtitlesTask Smart subtitle.
      * @param TaskNotifyConfig $TaskNotifyConfig Event notification information of the task. If left blank, it indicates that no event notification will be obtained.
      * @param integer $TasksPriority Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-     * @param string $ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     * @param string $ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
      * @param integer $SkipMateData Whether to skip metadata acquisition. Valid values:
 0: do not skip.
 1: skip.

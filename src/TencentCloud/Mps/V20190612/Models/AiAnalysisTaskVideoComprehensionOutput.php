@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVideoComprehensionAnalysisResult() Obtain Details of the video (audio) recognition output content.
  * @method void setVideoComprehensionAnalysisResult(string $VideoComprehensionAnalysisResult) Set Details of the video (audio) recognition output content.
+ * @method string getVideoComprehensionExtInfo() Obtain Video (audio) extended information.
+ * @method void setVideoComprehensionExtInfo(string $VideoComprehensionExtInfo) Set Video (audio) extended information.
+ * @method array getVideoComprehensionResultList() Obtain Video shot understanding result.
+ * @method void setVideoComprehensionResultList(array $VideoComprehensionResultList) Set Video shot understanding result.
  */
 class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel
 {
@@ -31,7 +35,19 @@ class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel
     public $VideoComprehensionAnalysisResult;
 
     /**
+     * @var string Video (audio) extended information.
+     */
+    public $VideoComprehensionExtInfo;
+
+    /**
+     * @var array Video shot understanding result.
+     */
+    public $VideoComprehensionResultList;
+
+    /**
      * @param string $VideoComprehensionAnalysisResult Details of the video (audio) recognition output content.
+     * @param string $VideoComprehensionExtInfo Video (audio) extended information.
+     * @param array $VideoComprehensionResultList Video shot understanding result.
      */
     function __construct()
     {
@@ -48,6 +64,19 @@ class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel
         }
         if (array_key_exists("VideoComprehensionAnalysisResult",$param) and $param["VideoComprehensionAnalysisResult"] !== null) {
             $this->VideoComprehensionAnalysisResult = $param["VideoComprehensionAnalysisResult"];
+        }
+
+        if (array_key_exists("VideoComprehensionExtInfo",$param) and $param["VideoComprehensionExtInfo"] !== null) {
+            $this->VideoComprehensionExtInfo = $param["VideoComprehensionExtInfo"];
+        }
+
+        if (array_key_exists("VideoComprehensionResultList",$param) and $param["VideoComprehensionResultList"] !== null) {
+            $this->VideoComprehensionResultList = [];
+            foreach ($param["VideoComprehensionResultList"] as $key => $value){
+                $obj = new VideoComprehensionResultItem();
+                $obj->deserialize($value);
+                array_push($this->VideoComprehensionResultList, $obj);
+            }
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Type of the intelligent video editing result.
+ * AI narration and video re-creation result type.
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0: Task successful. Other values: Task failed.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiAnalysisTaskReelInput getInput() Obtain Input of the intelligent video editing task.
- * @method void setInput(AiAnalysisTaskReelInput $Input) Set Input of the intelligent video editing task.
- * @method AiAnalysisTaskReelOutput getOutput() Obtain Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskReelOutput $Output) Set Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskReelInput getInput() Obtain AI narration and video re-creation task input.
+ * @method void setInput(AiAnalysisTaskReelInput $Input) Set AI narration and video re-creation task input.
+ * @method AiAnalysisTaskReelOutput getOutput() Obtain AI narration and video re-creation task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOutput(AiAnalysisTaskReelOutput $Output) Set AI narration and video re-creation task output.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getProgress() Obtain Task progress.
@@ -61,12 +63,13 @@ class AiAnalysisTaskReelResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiAnalysisTaskReelInput Input of the intelligent video editing task.
+     * @var AiAnalysisTaskReelInput AI narration and video re-creation task input.
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskReelOutput Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskReelOutput AI narration and video re-creation task output.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Output;
 
@@ -96,8 +99,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
-     * @param AiAnalysisTaskReelInput $Input Input of the intelligent video editing task.
-     * @param AiAnalysisTaskReelOutput $Output Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskReelInput $Input AI narration and video re-creation task input.
+     * @param AiAnalysisTaskReelOutput $Output AI narration and video re-creation task output.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Progress Task progress.
 Note: This field may return null, indicating that no valid values can be obtained.

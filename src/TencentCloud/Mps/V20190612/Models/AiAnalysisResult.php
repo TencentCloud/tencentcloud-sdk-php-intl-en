@@ -68,10 +68,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVideoComprehensionTask(AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask) Set Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiAnalysisTaskCutoutResult getCutoutTask() Obtain Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCutoutTask(AiAnalysisTaskCutoutResult $CutoutTask) Set Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiAnalysisTaskReelResult getReelTask() Obtain Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReelTask(AiAnalysisTaskReelResult $ReelTask) Set Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskCutoutResult getCutoutTask() Obtain Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCutoutTask(AiAnalysisTaskCutoutResult $CutoutTask) Set Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskReelResult getReelTask() Obtain Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReelTask(AiAnalysisTaskReelResult $ReelTask) Set Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AiAnalysisResult extends AbstractModel
 {
@@ -156,12 +160,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VideoComprehensionTask;
 
     /**
-     * @var AiAnalysisTaskCutoutResult Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskCutoutResult Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CutoutTask;
 
     /**
-     * @var AiAnalysisTaskReelResult Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskReelResult Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReelTask;
 
@@ -190,8 +196,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiAnalysisTaskCutoutResult $CutoutTask Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiAnalysisTaskReelResult $ReelTask Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskCutoutResult $CutoutTask Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskReelResult $ReelTask Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

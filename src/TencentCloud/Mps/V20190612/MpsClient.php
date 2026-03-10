@@ -183,15 +183,15 @@ Instead of initiating a video processing task, this API is used to help generate
 1. Format conversion.
 2. Image enhancement.
 3. Image erasure.
- * @method Models\ProcessLiveStreamResponse ProcessLiveStream(Models\ProcessLiveStreamRequest $req) This API is used to initiate live stream processing tasks. Such tasks may include the following:
+ * @method Models\ProcessLiveStreamResponse ProcessLiveStream(Models\ProcessLiveStreamRequest $req) This API is used to initiate a processing task for live streaming. Features include:.
 
-* Intelligent content moderation (detection of pornographic content in images and audio, detection of sensitive information)
-* Intelligent content recognition (face, full text, text keyword, full speech, speech keyword, real-time speech translation, object recognition, game event tracking)
-* Intelligent content analysis (real-time news splitting)
-* Quality control, including recognizing live stream format, checking audio/video content for flickering, blur, low light, overexposure, black bars, white bars, black screen, white screen, noise, pixelation, QR code, etc., and no-reference scoring.
-* Recording
+Intelligent content moderation (porn detection in images, sensitive information detection, audio pornography detection);.
+* Smart content recognition (human faces, full texts, text keywords, full speech, speech keywords, real-time speech translation, object recognition, game tagging).
+Intelligent content analysis (clipping, highlights).
+Quality inspection (live stream format diagnosis, audio and video content detection (jitter, blur, low light, overexposure, black and white edges, black and white screens, screen glitch, noise, mosaic, QR code, and more), and no-reference scoring).
+recording.
 
-HTTP callbacks are supported for live stream processing events. Notifications can also be written in real time to and read from a CMQ queue. The output files of processing tasks are saved to the storage you specify.
+Live stream processing event notification supports HTTP callback and also supports real-time writing to user-specified TDMQ CMQ. Users obtain event notification results from TDMQ CMQ. Meanwhile, if output files exist during the process, they will be written to the target storage specified by the user.
  * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a processing task for video URLs or media files in Cloud Object Storage (COS). Features include:
 - Audio/Video transcoding (such as standard transcoding, top speed codec (TSC) transcoding, audio/video enhancement, visible watermark addition, and digital watermark addition).
 - Adaptive bitrate streaming conversion for audios/videos.
@@ -207,6 +207,7 @@ HTTP callbacks are supported for live stream processing events. Notifications ca
 - Smart content recognition (such as human faces, full texts, text keywords, full speech, speech keywords, speech translation, and object recognition).
  * @method Models\RecognizeAudioResponse RecognizeAudio(Models\RecognizeAudioRequest $req) This API is used to return the speech recognition results synchronously.
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) This API is used to reset an existing workflow that is disabled.
+ * @method Models\SyncDubbingResponse SyncDubbing(Models\SyncDubbingRequest $req) This API is used to return the clone voice type Id or synthetic audio results synchronously.
  * @method Models\TextTranslationResponse TextTranslation(Models\TextTranslationRequest $req) This API is used to translate text.
  */
 

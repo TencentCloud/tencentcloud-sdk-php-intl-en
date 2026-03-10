@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(AiQualityControlTaskInput $Input) Set Media quality inspection task input.
  * @method QualityControlData getOutput() Obtain Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(QualityControlData $Output) Set Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getProgress() Obtain Task execution progress.
+ * @method void setProgress(integer $Progress) Set Task execution progress.
  */
 class ScheduleQualityControlTaskResult extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ScheduleQualityControlTaskResult extends AbstractModel
     public $Output;
 
     /**
+     * @var integer Task execution progress.
+     */
+    public $Progress;
+
+    /**
      * @param string $Status The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
      * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://www.tencentcloud.com/document/product/1041/40249).
      * @param integer $ErrCode The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
      * @param string $Message The error message.
      * @param AiQualityControlTaskInput $Input Media quality inspection task input.
      * @param QualityControlData $Output Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Progress Task execution progress.
      */
     function __construct()
     {
@@ -110,6 +118,10 @@ class ScheduleQualityControlTaskResult extends AbstractModel
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new QualityControlData();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }

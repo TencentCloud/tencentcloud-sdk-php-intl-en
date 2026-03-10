@@ -20,54 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Extended parameters used for AIGC video generation.
  *
- * @method string getResolution() Obtain The resolution of the generated video, which is related to the selected model and set video duration.Supported resolution options for different models:1. Kling: 720P (default) and 1080P.2. Hailuo: 768P (default) and 1080P.3. Vidu: 720P (default) and 1080P.4. GV: 720P (default) and 1080P.5. OS: 720P. For images, only 1280x720 and 720x1280 are supported. Resolution cannot be specified.Note: In addition to the resolution supported by the model, 2K and 4K resolutions are also available.
- * @method void setResolution(string $Resolution) Set The resolution of the generated video, which is related to the selected model and set video duration.Supported resolution options for different models:1. Kling: 720P (default) and 1080P.2. Hailuo: 768P (default) and 1080P.3. Vidu: 720P (default) and 1080P.4. GV: 720P (default) and 1080P.5. OS: 720P. For images, only 1280x720 and 720x1280 are supported. Resolution cannot be specified.Note: In addition to the resolution supported by the model, 2K and 4K resolutions are also available.
- * @method string getAspectRatio() Obtain The aspect ratio of the generated video.Support for this parameter by different models:1. Kling only supports this parameter for text-to-video, with aspect ratios of 16:9 (default), 9:16, and 1:1.2. Hailuo does not support this parameter.3. Vidu supports [16:9, 9:16, 4:3, 3:4, 1:1] for text-to-video and reference image-to-video only. Only q2 supports 4:3 and 3:4.4. GV supports 16:9 (default) and 9:16.5. OS only supports this parameter for text-to-video, with aspect ratios of 16:9 (default) and 9:16.Note: For more information about the supported aspect ratios of specific models, see the model website.
- * @method void setAspectRatio(string $AspectRatio) Set The aspect ratio of the generated video.Support for this parameter by different models:1. Kling only supports this parameter for text-to-video, with aspect ratios of 16:9 (default), 9:16, and 1:1.2. Hailuo does not support this parameter.3. Vidu supports [16:9, 9:16, 4:3, 3:4, 1:1] for text-to-video and reference image-to-video only. Only q2 supports 4:3 and 3:4.4. GV supports 16:9 (default) and 9:16.5. OS only supports this parameter for text-to-video, with aspect ratios of 16:9 (default) and 9:16.Note: For more information about the supported aspect ratios of specific models, see the model website.
- * @method integer getLogoAdd() Obtain Indicates whether to add a logo watermark.1. Hailuo supports this parameter.2. Kling supports this parameter.
-3. Vidu supports this parameter.
- * @method void setLogoAdd(integer $LogoAdd) Set Indicates whether to add a logo watermark.1. Hailuo supports this parameter.2. Kling supports this parameter.
-3. Vidu supports this parameter.
- * @method boolean getEnableAudio() Obtain Indicates whether to generate audio for the video. Valid values: true or false.Models that support this parameter:1. GV. Default value: true.2. OS. Default value: true.
- * @method void setEnableAudio(boolean $EnableAudio) Set Indicates whether to generate audio for the video. Valid values: true or false.Models that support this parameter:1. GV. Default value: true.2. OS. Default value: true.
- * @method boolean getOffPeak() Obtain Indicates whether to use the off-peak scheduling mode. Only Vidu supports this parameter.Tasks submitted in off-peak mode will be processed within 48 hours. Uncompleted tasks will be canceled.
- * @method void setOffPeak(boolean $OffPeak) Set Indicates whether to use the off-peak scheduling mode. Only Vidu supports this parameter.Tasks submitted in off-peak mode will be processed within 48 hours. Uncompleted tasks will be canceled.
+ * @method string getResolution() Obtain <p>Resolution of the generated video. The resolution is related to the selected model and set video duration.</p><p>Supported resolution options for different models:</p><ol><li>Kling: 720P (default) and 1080P.</li><li>Hailuo: 768P (default) and 1080P.</li><li>Vidu: 720P (default) and 1080P.</li><li>GV: 720P (default) and 1080P.</li><li>OS: 720P. For images, only 1280x720 and 720x1280 are supported. Resolution cannot be specified.</li></ol><p>Note: In addition to the resolution supported by the model, 2K and 4K resolutions are also available.</p>
+ * @method void setResolution(string $Resolution) Set <p>Resolution of the generated video. The resolution is related to the selected model and set video duration.</p><p>Supported resolution options for different models:</p><ol><li>Kling: 720P (default) and 1080P.</li><li>Hailuo: 768P (default) and 1080P.</li><li>Vidu: 720P (default) and 1080P.</li><li>GV: 720P (default) and 1080P.</li><li>OS: 720P. For images, only 1280x720 and 720x1280 are supported. Resolution cannot be specified.</li></ol><p>Note: In addition to the resolution supported by the model, 2K and 4K resolutions are also available.</p>
+ * @method string getAspectRatio() Obtain <p>Aspect ratio of the generated video.</p><p>Support for this parameter by different models:</p><ol><li>Kling only supports this parameter for text-to-video, with aspect ratios of 16:9 (default), 9:16, and 1:1.</li><li>Hailuo does not support this parameter.</li><li>Vidu supports [16:9, 9:16, 4:3, 3:4, 1:1] for text-to-video and reference image-to-video only. Only q2 supports 4:3 and 3:4.</li><li>GV supports 16:9 (default) and 9:16.</li><li>OS only supports this parameter for text-to-video, with aspect ratios of 16:9 (default) and 9:16.</li></ol><p>Note: For more information about the supported aspect ratios of specific models, see the model website.</p>
+ * @method void setAspectRatio(string $AspectRatio) Set <p>Aspect ratio of the generated video.</p><p>Support for this parameter by different models:</p><ol><li>Kling only supports this parameter for text-to-video, with aspect ratios of 16:9 (default), 9:16, and 1:1.</li><li>Hailuo does not support this parameter.</li><li>Vidu supports [16:9, 9:16, 4:3, 3:4, 1:1] for text-to-video and reference image-to-video only. Only q2 supports 4:3 and 3:4.</li><li>GV supports 16:9 (default) and 9:16.</li><li>OS only supports this parameter for text-to-video, with aspect ratios of 16:9 (default) and 9:16.</li></ol><p>Note: For more information about the supported aspect ratios of specific models, see the model website.</p>
+ * @method integer getLogoAdd() Obtain <p>Indicates whether to add a logo watermark.</p><ol><li>Hailuo supports this parameter.</li><li>Kling supports this parameter.</li><li>Vidu supports this parameter.</li></ol>
+ * @method void setLogoAdd(integer $LogoAdd) Set <p>Indicates whether to add a logo watermark.</p><ol><li>Hailuo supports this parameter.</li><li>Kling supports this parameter.</li><li>Vidu supports this parameter.</li></ol>
+ * @method boolean getEnableAudio() Obtain <p>Indicates whether to generate audio for the video. Valid values: true or false.</p><p>Models that support this parameter:</p><ol><li>GV. Default value: true.</li><li>OS. Default value: true.</li></ol>
+ * @method void setEnableAudio(boolean $EnableAudio) Set <p>Indicates whether to generate audio for the video. Valid values: true or false.</p><p>Models that support this parameter:</p><ol><li>GV. Default value: true.</li><li>OS. Default value: true.</li></ol>
+ * @method boolean getOffPeak() Obtain <p>Indicates whether to use the off-peak scheduling mode. Only Vidu supports this parameter.<br>Tasks submitted in off-peak mode will be processed within 48 hours. Uncompleted tasks will be canceled.</p>
+ * @method void setOffPeak(boolean $OffPeak) Set <p>Indicates whether to use the off-peak scheduling mode. Only Vidu supports this parameter.<br>Tasks submitted in off-peak mode will be processed within 48 hours. Uncompleted tasks will be canceled.</p>
+ * @method boolean getEnableBgm() Obtain <p>Indicates whether to add background music to the generated video. Default value: false. Valid values: true or false.<br>Note: Only some model versions support this.</p>
+ * @method void setEnableBgm(boolean $EnableBgm) Set <p>Indicates whether to add background music to the generated video. Default value: false. Valid values: true or false.<br>Note: Only some model versions support this.</p>
  */
 class AigcVideoExtraParam extends AbstractModel
 {
     /**
-     * @var string The resolution of the generated video, which is related to the selected model and set video duration.Supported resolution options for different models:1. Kling: 720P (default) and 1080P.2. Hailuo: 768P (default) and 1080P.3. Vidu: 720P (default) and 1080P.4. GV: 720P (default) and 1080P.5. OS: 720P. For images, only 1280x720 and 720x1280 are supported. Resolution cannot be specified.Note: In addition to the resolution supported by the model, 2K and 4K resolutions are also available.
+     * @var string <p>Resolution of the generated video. The resolution is related to the selected model and set video duration.</p><p>Supported resolution options for different models:</p><ol><li>Kling: 720P (default) and 1080P.</li><li>Hailuo: 768P (default) and 1080P.</li><li>Vidu: 720P (default) and 1080P.</li><li>GV: 720P (default) and 1080P.</li><li>OS: 720P. For images, only 1280x720 and 720x1280 are supported. Resolution cannot be specified.</li></ol><p>Note: In addition to the resolution supported by the model, 2K and 4K resolutions are also available.</p>
      */
     public $Resolution;
 
     /**
-     * @var string The aspect ratio of the generated video.Support for this parameter by different models:1. Kling only supports this parameter for text-to-video, with aspect ratios of 16:9 (default), 9:16, and 1:1.2. Hailuo does not support this parameter.3. Vidu supports [16:9, 9:16, 4:3, 3:4, 1:1] for text-to-video and reference image-to-video only. Only q2 supports 4:3 and 3:4.4. GV supports 16:9 (default) and 9:16.5. OS only supports this parameter for text-to-video, with aspect ratios of 16:9 (default) and 9:16.Note: For more information about the supported aspect ratios of specific models, see the model website.
+     * @var string <p>Aspect ratio of the generated video.</p><p>Support for this parameter by different models:</p><ol><li>Kling only supports this parameter for text-to-video, with aspect ratios of 16:9 (default), 9:16, and 1:1.</li><li>Hailuo does not support this parameter.</li><li>Vidu supports [16:9, 9:16, 4:3, 3:4, 1:1] for text-to-video and reference image-to-video only. Only q2 supports 4:3 and 3:4.</li><li>GV supports 16:9 (default) and 9:16.</li><li>OS only supports this parameter for text-to-video, with aspect ratios of 16:9 (default) and 9:16.</li></ol><p>Note: For more information about the supported aspect ratios of specific models, see the model website.</p>
      */
     public $AspectRatio;
 
     /**
-     * @var integer Indicates whether to add a logo watermark.1. Hailuo supports this parameter.2. Kling supports this parameter.
-3. Vidu supports this parameter.
+     * @var integer <p>Indicates whether to add a logo watermark.</p><ol><li>Hailuo supports this parameter.</li><li>Kling supports this parameter.</li><li>Vidu supports this parameter.</li></ol>
      */
     public $LogoAdd;
 
     /**
-     * @var boolean Indicates whether to generate audio for the video. Valid values: true or false.Models that support this parameter:1. GV. Default value: true.2. OS. Default value: true.
+     * @var boolean <p>Indicates whether to generate audio for the video. Valid values: true or false.</p><p>Models that support this parameter:</p><ol><li>GV. Default value: true.</li><li>OS. Default value: true.</li></ol>
      */
     public $EnableAudio;
 
     /**
-     * @var boolean Indicates whether to use the off-peak scheduling mode. Only Vidu supports this parameter.Tasks submitted in off-peak mode will be processed within 48 hours. Uncompleted tasks will be canceled.
+     * @var boolean <p>Indicates whether to use the off-peak scheduling mode. Only Vidu supports this parameter.<br>Tasks submitted in off-peak mode will be processed within 48 hours. Uncompleted tasks will be canceled.</p>
      */
     public $OffPeak;
 
     /**
-     * @param string $Resolution The resolution of the generated video, which is related to the selected model and set video duration.Supported resolution options for different models:1. Kling: 720P (default) and 1080P.2. Hailuo: 768P (default) and 1080P.3. Vidu: 720P (default) and 1080P.4. GV: 720P (default) and 1080P.5. OS: 720P. For images, only 1280x720 and 720x1280 are supported. Resolution cannot be specified.Note: In addition to the resolution supported by the model, 2K and 4K resolutions are also available.
-     * @param string $AspectRatio The aspect ratio of the generated video.Support for this parameter by different models:1. Kling only supports this parameter for text-to-video, with aspect ratios of 16:9 (default), 9:16, and 1:1.2. Hailuo does not support this parameter.3. Vidu supports [16:9, 9:16, 4:3, 3:4, 1:1] for text-to-video and reference image-to-video only. Only q2 supports 4:3 and 3:4.4. GV supports 16:9 (default) and 9:16.5. OS only supports this parameter for text-to-video, with aspect ratios of 16:9 (default) and 9:16.Note: For more information about the supported aspect ratios of specific models, see the model website.
-     * @param integer $LogoAdd Indicates whether to add a logo watermark.1. Hailuo supports this parameter.2. Kling supports this parameter.
-3. Vidu supports this parameter.
-     * @param boolean $EnableAudio Indicates whether to generate audio for the video. Valid values: true or false.Models that support this parameter:1. GV. Default value: true.2. OS. Default value: true.
-     * @param boolean $OffPeak Indicates whether to use the off-peak scheduling mode. Only Vidu supports this parameter.Tasks submitted in off-peak mode will be processed within 48 hours. Uncompleted tasks will be canceled.
+     * @var boolean <p>Indicates whether to add background music to the generated video. Default value: false. Valid values: true or false.<br>Note: Only some model versions support this.</p>
+     */
+    public $EnableBgm;
+
+    /**
+     * @param string $Resolution <p>Resolution of the generated video. The resolution is related to the selected model and set video duration.</p><p>Supported resolution options for different models:</p><ol><li>Kling: 720P (default) and 1080P.</li><li>Hailuo: 768P (default) and 1080P.</li><li>Vidu: 720P (default) and 1080P.</li><li>GV: 720P (default) and 1080P.</li><li>OS: 720P. For images, only 1280x720 and 720x1280 are supported. Resolution cannot be specified.</li></ol><p>Note: In addition to the resolution supported by the model, 2K and 4K resolutions are also available.</p>
+     * @param string $AspectRatio <p>Aspect ratio of the generated video.</p><p>Support for this parameter by different models:</p><ol><li>Kling only supports this parameter for text-to-video, with aspect ratios of 16:9 (default), 9:16, and 1:1.</li><li>Hailuo does not support this parameter.</li><li>Vidu supports [16:9, 9:16, 4:3, 3:4, 1:1] for text-to-video and reference image-to-video only. Only q2 supports 4:3 and 3:4.</li><li>GV supports 16:9 (default) and 9:16.</li><li>OS only supports this parameter for text-to-video, with aspect ratios of 16:9 (default) and 9:16.</li></ol><p>Note: For more information about the supported aspect ratios of specific models, see the model website.</p>
+     * @param integer $LogoAdd <p>Indicates whether to add a logo watermark.</p><ol><li>Hailuo supports this parameter.</li><li>Kling supports this parameter.</li><li>Vidu supports this parameter.</li></ol>
+     * @param boolean $EnableAudio <p>Indicates whether to generate audio for the video. Valid values: true or false.</p><p>Models that support this parameter:</p><ol><li>GV. Default value: true.</li><li>OS. Default value: true.</li></ol>
+     * @param boolean $OffPeak <p>Indicates whether to use the off-peak scheduling mode. Only Vidu supports this parameter.<br>Tasks submitted in off-peak mode will be processed within 48 hours. Uncompleted tasks will be canceled.</p>
+     * @param boolean $EnableBgm <p>Indicates whether to add background music to the generated video. Default value: false. Valid values: true or false.<br>Note: Only some model versions support this.</p>
      */
     function __construct()
     {
@@ -100,6 +104,10 @@ class AigcVideoExtraParam extends AbstractModel
 
         if (array_key_exists("OffPeak",$param) and $param["OffPeak"] !== null) {
             $this->OffPeak = $param["OffPeak"];
+        }
+
+        if (array_key_exists("EnableBgm",$param) and $param["EnableBgm"] !== null) {
+            $this->EnableBgm = $param["EnableBgm"];
         }
     }
 }

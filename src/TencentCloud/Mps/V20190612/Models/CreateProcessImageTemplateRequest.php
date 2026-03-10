@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Image processing template name. The length cannot exceed 64 characters.
  * @method string getComment() Obtain Description information of the image processing template. The length cannot exceed 256 characters.
  * @method void setComment(string $Comment) Set Description information of the image processing template. The length cannot exceed 256 characters.
+ * @method string getStdExtInfo() Obtain Extended parameters for the image processing template.
+ * @method void setStdExtInfo(string $StdExtInfo) Set Extended parameters for the image processing template.
  */
 class CreateProcessImageTemplateRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateProcessImageTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string Extended parameters for the image processing template.
+     */
+    public $StdExtInfo;
+
+    /**
      * @param ImageTaskInput $ProcessImageTemplate Image processing template.
      * @param string $Name Image processing template name. The length cannot exceed 64 characters.
      * @param string $Comment Description information of the image processing template. The length cannot exceed 256 characters.
+     * @param string $StdExtInfo Extended parameters for the image processing template.
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class CreateProcessImageTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
         }
     }
 }

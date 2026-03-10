@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Data structure of the video matting result.
+ * Data structure of the video intelligent image masking result.
  *
  * @method string getStatus() Obtain Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
  * @method void setStatus(string $Status) Set Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.

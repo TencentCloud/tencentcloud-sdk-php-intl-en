@@ -54,6 +54,8 @@ The image template feature is in beta testing. If you want to use it, submit a t
  * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
  * @method ImageTaskInput getImageTask() Obtain Image processing parameter.
  * @method void setImageTask(ImageTaskInput $ImageTask) Set Image processing parameter.
+ * @method string getStdExtInfo() Obtain Extended parameters for image processing.
+ * @method void setStdExtInfo(string $StdExtInfo) Set Extended parameters for image processing.
  */
 class ProcessImageRequest extends AbstractModel
 {
@@ -103,6 +105,11 @@ The image template feature is in beta testing. If you want to use it, submit a t
     public $ImageTask;
 
     /**
+     * @var string Extended parameters for image processing.
+     */
+    public $StdExtInfo;
+
+    /**
      * @param MediaInputInfo $InputInfo File input information for image processing.
      * @param TaskOutputStorage $OutputStorage Target storage for image processing output files. If left blank, it inherits the storage location in InputInfo.
      * @param string $OutputDir Output file path for image processing. If left blank, it is the directory of the file in InputInfo. If it is a directory, such as `/image/201907/`, it means inheriting the original filename and outputting to this directory.
@@ -120,6 +127,7 @@ If not filled in, default relative path: `{inputName}.{format}`.
 The image template feature is in beta testing. If you want to use it, submit a ticket for application.
      * @param string $ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
      * @param ImageTaskInput $ImageTask Image processing parameter.
+     * @param string $StdExtInfo Extended parameters for image processing.
      */
     function __construct()
     {
@@ -163,6 +171,10 @@ The image template feature is in beta testing. If you want to use it, submit a t
         if (array_key_exists("ImageTask",$param) and $param["ImageTask"] !== null) {
             $this->ImageTask = new ImageTaskInput();
             $this->ImageTask->deserialize($param["ImageTask"]);
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
         }
     }
 }

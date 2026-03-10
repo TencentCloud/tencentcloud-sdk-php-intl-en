@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
  * @method string getUpdateTime() Obtain Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
  * @method void setUpdateTime(string $UpdateTime) Set Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getStrength() Obtain Digital watermark strength. 
+default: default, balance between hd video quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
+ * @method void setStrength(string $Strength) Set Digital watermark strength. 
+default: default, balance between hd video quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
  */
 class BlindWatermarkTemplate extends AbstractModel
 {
@@ -73,6 +81,14 @@ class BlindWatermarkTemplate extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string Digital watermark strength. 
+default: default, balance between hd video quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
+     */
+    public $Strength;
+
+    /**
      * @param integer $Definition Unique identifier of the digital watermark template.
      * @param string $Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
      * @param string $Name Digital watermark template name.
@@ -80,6 +96,10 @@ class BlindWatermarkTemplate extends AbstractModel
      * @param string $Comment Description information of the digital watermark template.
      * @param string $CreateTime Creation time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $UpdateTime Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $Strength Digital watermark strength. 
+default: default, balance between hd video quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
      */
     function __construct()
     {
@@ -120,6 +140,10 @@ class BlindWatermarkTemplate extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Strength",$param) and $param["Strength"] !== null) {
+            $this->Strength = $param["Strength"];
         }
     }
 }

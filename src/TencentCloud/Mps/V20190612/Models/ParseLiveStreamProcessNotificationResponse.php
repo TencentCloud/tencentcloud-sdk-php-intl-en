@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ParseLiveStreamProcessNotification response structure.
  *
- * @method string getNotificationType() Obtain Live stream processing result type. Valid values:
-<li>AiReviewResult: content review result.</li>
-<li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live streaming recording result.</li>
-<li>AiQualityControlResult: media live quality control result.</li>
-<li>AiAnalysisResult: content analysis result.</li>
+ * @method string getNotificationType() Obtain Live stream processing result type, including:.
+<Li>AiReviewResult: content moderation result;</li>.
+<Li>AiRecognitionResult: content recognition result;</li>.
+<Li>LiveRecordResult: live streaming result;</li>.
+<Li>AiQualityControlResult: media quality inspection result.</li>.
+<Li>AiAnalysisResult: content analysis result.</li>.
+<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
 <li>ProcessEof: end of live stream processing.</li>
- * @method void setNotificationType(string $NotificationType) Set Live stream processing result type. Valid values:
-<li>AiReviewResult: content review result.</li>
-<li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live streaming recording result.</li>
-<li>AiQualityControlResult: media live quality control result.</li>
-<li>AiAnalysisResult: content analysis result.</li>
+ * @method void setNotificationType(string $NotificationType) Set Live stream processing result type, including:.
+<Li>AiReviewResult: content moderation result;</li>.
+<Li>AiRecognitionResult: content recognition result;</li>.
+<Li>LiveRecordResult: live streaming result;</li>.
+<Li>AiQualityControlResult: media quality inspection result.</li>.
+<Li>AiAnalysisResult: content analysis result.</li>.
+<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
 <li>ProcessEof: end of live stream processing.</li>
  * @method string getTaskId() Obtain Video processing task ID.
  * @method void setTaskId(string $TaskId) Set Video processing task ID.
@@ -54,6 +56,8 @@ Note: when this field return null, means no valid values can be obtained.
 Note: when this field return null, means no valid values can be obtained.
  * @method void setLiveRecordResultInfo(LiveStreamRecordResultInfo $LiveRecordResultInfo) Set Live recording result is valid when NotificationType is LiveRecordResult.
 Note: when this field return null, means no valid values can be obtained.
+ * @method LiveStreamAiSmartSubtitleResultInfo getAiSmartSubtitleResultInfo() Obtain Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
+ * @method void setAiSmartSubtitleResultInfo(LiveStreamAiSmartSubtitleResultInfo $AiSmartSubtitleResultInfo) Set Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
  * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
@@ -68,12 +72,13 @@ Note: when this field return null, means no valid values can be obtained.
 class ParseLiveStreamProcessNotificationResponse extends AbstractModel
 {
     /**
-     * @var string Live stream processing result type. Valid values:
-<li>AiReviewResult: content review result.</li>
-<li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live streaming recording result.</li>
-<li>AiQualityControlResult: media live quality control result.</li>
-<li>AiAnalysisResult: content analysis result.</li>
+     * @var string Live stream processing result type, including:.
+<Li>AiReviewResult: content moderation result;</li>.
+<Li>AiRecognitionResult: content recognition result;</li>.
+<Li>LiveRecordResult: live streaming result;</li>.
+<Li>AiQualityControlResult: media quality inspection result.</li>.
+<Li>AiAnalysisResult: content analysis result.</li>.
+<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
 <li>ProcessEof: end of live stream processing.</li>
      */
     public $NotificationType;
@@ -117,6 +122,11 @@ Note: when this field return null, means no valid values can be obtained.
     public $LiveRecordResultInfo;
 
     /**
+     * @var LiveStreamAiSmartSubtitleResultInfo Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
+     */
+    public $AiSmartSubtitleResultInfo;
+
+    /**
      * @var string The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      */
     public $SessionId;
@@ -142,12 +152,13 @@ Note: when this field return null, means no valid values can be obtained.
     public $RequestId;
 
     /**
-     * @param string $NotificationType Live stream processing result type. Valid values:
-<li>AiReviewResult: content review result.</li>
-<li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live streaming recording result.</li>
-<li>AiQualityControlResult: media live quality control result.</li>
-<li>AiAnalysisResult: content analysis result.</li>
+     * @param string $NotificationType Live stream processing result type, including:.
+<Li>AiReviewResult: content moderation result;</li>.
+<Li>AiRecognitionResult: content recognition result;</li>.
+<Li>LiveRecordResult: live streaming result;</li>.
+<Li>AiQualityControlResult: media quality inspection result.</li>.
+<Li>AiAnalysisResult: content analysis result.</li>.
+<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
 <li>ProcessEof: end of live stream processing.</li>
      * @param string $TaskId Video processing task ID.
      * @param LiveStreamProcessErrorInfo $ProcessEofInfo Information of a live stream processing error, which is valid when `NotificationType` is `ProcessEof`.
@@ -159,6 +170,7 @@ Note: when this field return null, means no valid values can be obtained.
      * @param LiveStreamAiQualityControlResultInfo $AiQualityControlResultInfo Media quality inspection result, which is valid if `NotificationType` is `AiQualityControlResult`.
      * @param LiveStreamRecordResultInfo $LiveRecordResultInfo Live recording result is valid when NotificationType is LiveRecordResult.
 Note: when this field return null, means no valid values can be obtained.
+     * @param LiveStreamAiSmartSubtitleResultInfo $AiSmartSubtitleResultInfo Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
      * @param integer $Timestamp - expiration time, event notification signature expiration in UNIX Timestamp format. - notifications from media processing default to an expiration time of 10 minutes. if the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, furthermore preventing network replay attacks. - the Timestamp format is decimal UNIX Timestamp, seconds elapsed since midnight (UTC/GMT) on january 1, 1970.
@@ -214,6 +226,11 @@ Note: when this field return null, means no valid values can be obtained.
         if (array_key_exists("LiveRecordResultInfo",$param) and $param["LiveRecordResultInfo"] !== null) {
             $this->LiveRecordResultInfo = new LiveStreamRecordResultInfo();
             $this->LiveRecordResultInfo->deserialize($param["LiveRecordResultInfo"]);
+        }
+
+        if (array_key_exists("AiSmartSubtitleResultInfo",$param) and $param["AiSmartSubtitleResultInfo"] !== null) {
+            $this->AiSmartSubtitleResultInfo = new LiveStreamAiSmartSubtitleResultInfo();
+            $this->AiSmartSubtitleResultInfo->deserialize($param["AiSmartSubtitleResultInfo"]);
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {

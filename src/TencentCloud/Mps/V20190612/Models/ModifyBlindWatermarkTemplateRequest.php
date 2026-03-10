@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComment(string $Comment) Set Description information of the digital watermark template. The length cannot exceed 256 characters.
  * @method string getTextContent() Obtain Text content of the digital watermark. The length cannot exceed 64 characters. The text content cannot be modified for NAGRA watermark templates.
  * @method void setTextContent(string $TextContent) Set Text content of the digital watermark. The length cannot exceed 64 characters. The text content cannot be modified for NAGRA watermark templates.
+ * @method string getStrength() Obtain Digital watermark strength. 
+default: default, balance between high-definition quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
+ * @method void setStrength(string $Strength) Set Digital watermark strength. 
+default: default, balance between high-definition quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
  */
 class ModifyBlindWatermarkTemplateRequest extends AbstractModel
 {
@@ -52,10 +60,22 @@ class ModifyBlindWatermarkTemplateRequest extends AbstractModel
     public $TextContent;
 
     /**
+     * @var string Digital watermark strength. 
+default: default, balance between high-definition quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
+     */
+    public $Strength;
+
+    /**
      * @param integer $Definition Unique identifier of the digital watermark template.
      * @param string $Name Digital watermark template name, which supports Chinese, English, digits, underscores (_), hyphens (-), and periods (.). The length cannot exceed 64 characters.
      * @param string $Comment Description information of the digital watermark template. The length cannot exceed 256 characters.
      * @param string $TextContent Text content of the digital watermark. The length cannot exceed 64 characters. The text content cannot be modified for NAGRA watermark templates.
+     * @param string $Strength Digital watermark strength. 
+default: default, balance between high-definition quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
      */
     function __construct()
     {
@@ -84,6 +104,10 @@ class ModifyBlindWatermarkTemplateRequest extends AbstractModel
 
         if (array_key_exists("TextContent",$param) and $param["TextContent"] !== null) {
             $this->TextContent = $param["TextContent"];
+        }
+
+        if (array_key_exists("Strength",$param) and $param["Strength"] !== null) {
+            $this->Strength = $param["Strength"];
         }
     }
 }

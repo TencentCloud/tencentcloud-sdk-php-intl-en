@@ -18,23 +18,42 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent video editing result.
+ * AI narration and video re-creation result info.
  *
- * @method string getVideoPath() Obtain Path of the edited video.
- * @method void setVideoPath(string $VideoPath) Set Path of the edited video.
+ * @method string getVideoPath() Obtain Path of the output video.
+ * @method void setVideoPath(string $VideoPath) Set Path of the output video.
+ * @method array getVideoPaths() Obtain Path list of the output videos.
+
+**Note**:.
+1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+ * @method void setVideoPaths(array $VideoPaths) Set Path list of the output videos.
+
+**Note**:.
+1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
  * @method string getScriptPath() Obtain Script file path.
 
  * @method void setScriptPath(string $ScriptPath) Set Script file path.
 
- * @method TaskOutputStorage getOutputStorage() Obtain Storage location of the edited video.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of the edited video.
+ * @method TaskOutputStorage getOutputStorage() Obtain Storage location of the output video.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of the output video.
  */
 class AiAnalysisTaskReelOutput extends AbstractModel
 {
     /**
-     * @var string Path of the edited video.
+     * @var string Path of the output video.
      */
     public $VideoPath;
+
+    /**
+     * @var array Path list of the output videos.
+
+**Note**:.
+1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+     */
+    public $VideoPaths;
 
     /**
      * @var string Script file path.
@@ -43,15 +62,20 @@ class AiAnalysisTaskReelOutput extends AbstractModel
     public $ScriptPath;
 
     /**
-     * @var TaskOutputStorage Storage location of the edited video.
+     * @var TaskOutputStorage Storage location of the output video.
      */
     public $OutputStorage;
 
     /**
-     * @param string $VideoPath Path of the edited video.
+     * @param string $VideoPath Path of the output video.
+     * @param array $VideoPaths Path list of the output videos.
+
+**Note**:.
+1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
      * @param string $ScriptPath Script file path.
 
-     * @param TaskOutputStorage $OutputStorage Storage location of the edited video.
+     * @param TaskOutputStorage $OutputStorage Storage location of the output video.
      */
     function __construct()
     {
@@ -68,6 +92,10 @@ class AiAnalysisTaskReelOutput extends AbstractModel
         }
         if (array_key_exists("VideoPath",$param) and $param["VideoPath"] !== null) {
             $this->VideoPath = $param["VideoPath"];
+        }
+
+        if (array_key_exists("VideoPaths",$param) and $param["VideoPaths"] !== null) {
+            $this->VideoPaths = $param["VideoPaths"];
         }
 
         if (array_key_exists("ScriptPath",$param) and $param["ScriptPath"] !== null) {
