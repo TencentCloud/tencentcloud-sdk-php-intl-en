@@ -44,6 +44,7 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\CreateTaskFolderResponse CreateTaskFolder(Models\CreateTaskFolderRequest $req) Create a folder.
  * @method Models\CreateTriggerTaskResponse CreateTriggerTask(Models\CreateTriggerTaskRequest $req) This API is used to create a task.
  * @method Models\CreateTriggerWorkflowResponse CreateTriggerWorkflow(Models\CreateTriggerWorkflowRequest $req) create workflow.
+ * @method Models\CreateTriggerWorkflowRunResponse CreateTriggerWorkflowRun(Models\CreateTriggerWorkflowRunRequest $req) Run workflow under workflow scheduling model.
  * @method Models\CreateWorkflowResponse CreateWorkflow(Models\CreateWorkflowRequest $req) This API is used to create workflow.
  * @method Models\CreateWorkflowFolderResponse CreateWorkflowFolder(Models\CreateWorkflowFolderRequest $req) This API is used to create a workflow folder.
  * @method Models\CreateWorkflowPermissionsResponse CreateWorkflowPermissions(Models\CreateWorkflowPermissionsRequest $req) This API is used to configure data development permissions.
