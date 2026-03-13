@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMountTargets request structure.
  *
- * @method string getFileSystemId() Obtain File system ID
- * @method void setFileSystemId(string $FileSystemId) Set File system ID
+ * @method string getFileSystemId() Obtain File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api.
+ * @method void setFileSystemId(string $FileSystemId) Set File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api.
  */
 class DescribeMountTargetsRequest extends AbstractModel
 {
     /**
-     * @var string File system ID
+     * @var string File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api.
      */
     public $FileSystemId;
 
     /**
-     * @param string $FileSystemId File system ID
+     * @param string $FileSystemId File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api.
      */
     function __construct()
     {

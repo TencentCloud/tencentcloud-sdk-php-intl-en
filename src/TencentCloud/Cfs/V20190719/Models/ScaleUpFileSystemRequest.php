@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ScaleUpFileSystem request structure.
  *
- * @method string getFileSystemId() Obtain File system ID
- * @method void setFileSystemId(string $FileSystemId) Set File system ID
- * @method integer getTargetCapacity() Obtain Target capacity after scaling
- * @method void setTargetCapacity(integer $TargetCapacity) Set Target capacity after scaling
+ * @method string getFileSystemId() Obtain File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+ * @method void setFileSystemId(string $FileSystemId) Set File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+ * @method integer getTargetCapacity() Obtain Target capacity after scale-out (unit GiB).
+ * @method void setTargetCapacity(integer $TargetCapacity) Set Target capacity after scale-out (unit GiB).
  */
 class ScaleUpFileSystemRequest extends AbstractModel
 {
     /**
-     * @var string File system ID
+     * @var string File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
      */
     public $FileSystemId;
 
     /**
-     * @var integer Target capacity after scaling
+     * @var integer Target capacity after scale-out (unit GiB).
      */
     public $TargetCapacity;
 
     /**
-     * @param string $FileSystemId File system ID
-     * @param integer $TargetCapacity Target capacity after scaling
+     * @param string $FileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+     * @param integer $TargetCapacity Target capacity after scale-out (unit GiB).
      */
     function __construct()
     {

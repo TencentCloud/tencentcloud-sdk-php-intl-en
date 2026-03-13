@@ -20,18 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCfsFileSystemClients request structure.
  *
- * @method string getFileSystemId() Obtain File system ID
- * @method void setFileSystemId(string $FileSystemId) Set File system ID
+ * @method string getFileSystemId() Obtain File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+ * @method void setFileSystemId(string $FileSystemId) Set File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+ * @method integer getOffset() Obtain Offset paging number, defaults to 0.
+ * @method void setOffset(integer $Offset) Set Offset paging number, defaults to 0.
+ * @method integer getLimit() Obtain Limit page size. default value 10. maximum value 100.
+ * @method void setLimit(integer $Limit) Set Limit page size. default value 10. maximum value 100.
  */
 class DescribeCfsFileSystemClientsRequest extends AbstractModel
 {
     /**
-     * @var string File system ID
+     * @var string File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
      */
     public $FileSystemId;
 
     /**
-     * @param string $FileSystemId File system ID
+     * @var integer Offset paging number, defaults to 0.
+     */
+    public $Offset;
+
+    /**
+     * @var integer Limit page size. default value 10. maximum value 100.
+     */
+    public $Limit;
+
+    /**
+     * @param string $FileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+     * @param integer $Offset Offset paging number, defaults to 0.
+     * @param integer $Limit Limit page size. default value 10. maximum value 100.
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeCfsFileSystemClientsRequest extends AbstractModel
         }
         if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
             $this->FileSystemId = $param["FileSystemId"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

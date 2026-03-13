@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSrcService() Obtain Data source service provider. Valid values: `COS` (Tencent Cloud COS), `OSS` (Alibaba Cloud OSS), and `OBS` (Huawei Cloud OBS).
  * @method void setSrcService(string $SrcService) Set Data source service provider. Valid values: `COS` (Tencent Cloud COS), `OSS` (Alibaba Cloud OSS), and `OBS` (Huawei Cloud OBS).
- * @method string getSrcSecretId() Obtain SecretId of the data source account
-
- * @method void setSrcSecretId(string $SrcSecretId) Set SecretId of the data source account
-
+ * @method string getSrcSecretId() Obtain SecretId of the data source account.
+ * @method void setSrcSecretId(string $SrcSecretId) Set SecretId of the data source account.
  * @method string getSrcSecretKey() Obtain SecretKey of the data source account
  * @method void setSrcSecretKey(string $SrcSecretKey) Set SecretKey of the data source account
  */
@@ -37,8 +35,7 @@ class DescribeBucketListRequest extends AbstractModel
     public $SrcService;
 
     /**
-     * @var string SecretId of the data source account
-
+     * @var string SecretId of the data source account.
      */
     public $SrcSecretId;
 
@@ -49,8 +46,7 @@ class DescribeBucketListRequest extends AbstractModel
 
     /**
      * @param string $SrcService Data source service provider. Valid values: `COS` (Tencent Cloud COS), `OSS` (Alibaba Cloud OSS), and `OBS` (Huawei Cloud OBS).
-     * @param string $SrcSecretId SecretId of the data source account
-
+     * @param string $SrcSecretId SecretId of the data source account.
      * @param string $SrcSecretKey SecretKey of the data source account
      */
     function __construct()

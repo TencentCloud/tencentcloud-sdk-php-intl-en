@@ -24,36 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set The pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Maximum number of entries per page. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Maximum number of entries per page. Default value: 20. Maximum value: 100.
- * @method array getFilters() Obtain <br><li> taskId
-
-Filter by **migration task ID**
-Type: String
-
-Required: No
-
-<br><li> taskName
-
-Fuzzy filter by **migration task name**
-Type: String
-
-Required: No
-
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
- * @method void setFilters(array $Filters) Set <br><li> taskId
-
-Filter by **migration task ID**
-Type: String
-
-Required: No
-
-<br><li> taskName
-
-Fuzzy filter by **migration task name**
-Type: String
-
-Required: No
-
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+ * @method array getFilters() Obtain <br><li> taskId Filters by [migration task id]. type: String required: no<br></li><br><li> taskName does fuzzy search filtering by [migration task name]. type: String required: no the maximum number of Filters per request is 10, and the maximum number of Filter.Values is 100.</li>.
+ * @method void setFilters(array $Filters) Set <br><li> taskId Filters by [migration task id]. type: String required: no<br></li><br><li> taskName does fuzzy search filtering by [migration task name]. type: String required: no the maximum number of Filters per request is 10, and the maximum number of Filter.Values is 100.</li>.
  */
 class DescribeMigrationTasksRequest extends AbstractModel
 {
@@ -68,42 +40,14 @@ class DescribeMigrationTasksRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array <br><li> taskId
-
-Filter by **migration task ID**
-Type: String
-
-Required: No
-
-<br><li> taskName
-
-Fuzzy filter by **migration task name**
-Type: String
-
-Required: No
-
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+     * @var array <br><li> taskId Filters by [migration task id]. type: String required: no<br></li><br><li> taskName does fuzzy search filtering by [migration task name]. type: String required: no the maximum number of Filters per request is 10, and the maximum number of Filter.Values is 100.</li>.
      */
     public $Filters;
 
     /**
      * @param integer $Offset The pagination offset. Default value: 0.
      * @param integer $Limit Maximum number of entries per page. Default value: 20. Maximum value: 100.
-     * @param array $Filters <br><li> taskId
-
-Filter by **migration task ID**
-Type: String
-
-Required: No
-
-<br><li> taskName
-
-Fuzzy filter by **migration task name**
-Type: String
-
-Required: No
-
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+     * @param array $Filters <br><li> taskId Filters by [migration task id]. type: String required: no<br></li><br><li> taskName does fuzzy search filtering by [migration task name]. type: String required: no the maximum number of Filters per request is 10, and the maximum number of Filter.Values is 100.</li>.
      */
     function __construct()
     {

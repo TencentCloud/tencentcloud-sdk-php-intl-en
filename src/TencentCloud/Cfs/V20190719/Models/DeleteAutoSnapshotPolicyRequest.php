@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAutoSnapshotPolicy request structure.
  *
- * @method string getAutoSnapshotPolicyId() Obtain Snapshot policy ID
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set Snapshot policy ID
+ * @method string getAutoSnapshotPolicyId() Obtain Snapshot policy ID, which can be obtained by querying the snapshot policy interface through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set Snapshot policy ID, which can be obtained by querying the snapshot policy interface through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
  */
 class DeleteAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string Snapshot policy ID
+     * @var string Snapshot policy ID, which can be obtained by querying the snapshot policy interface through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
      */
     public $AutoSnapshotPolicyId;
 
     /**
-     * @param string $AutoSnapshotPolicyId Snapshot policy ID
+     * @param string $AutoSnapshotPolicyId Snapshot policy ID, which can be obtained by querying the snapshot policy interface through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
      */
     function __construct()
     {

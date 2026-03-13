@@ -20,20 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyFileSystemAutoScaleUpRule request structure.
  *
- * @method string getFileSystemId() Obtain File system ID
- * @method void setFileSystemId(string $FileSystemId) Set File system ID
+ * @method string getFileSystemId() Obtain File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+ * @method void setFileSystemId(string $FileSystemId) Set File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
  * @method integer getScaleUpThreshold() Obtain Threshold for triggering scaling. Value range: 10-90
  * @method void setScaleUpThreshold(integer $ScaleUpThreshold) Set Threshold for triggering scaling. Value range: 10-90
- * @method integer getTargetThreshold() Obtain Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`.
- * @method void setTargetThreshold(integer $TargetThreshold) Set Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`.
- * @method integer getStatus() Obtain Rule status. Valid values: `0` (disabled) and `1` (enabled).
-
- * @method void setStatus(integer $Status) Set Rule status. Valid values: `0` (disabled) and `1` (enabled).
+ * @method integer getTargetThreshold() Obtain Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold.
+ * @method void setTargetThreshold(integer $TargetThreshold) Set Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold.
+ * @method integer getStatus() Obtain Rule status 0: turn off, 1: turn on; keep the original status if not specified.
+ * @method void setStatus(integer $Status) Set Rule status 0: turn off, 1: turn on; keep the original status if not specified.
  */
 class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel
 {
     /**
-     * @var string File system ID
+     * @var string File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
      */
     public $FileSystemId;
 
@@ -43,21 +42,20 @@ class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel
     public $ScaleUpThreshold;
 
     /**
-     * @var integer Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`.
+     * @var integer Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold.
      */
     public $TargetThreshold;
 
     /**
-     * @var integer Rule status. Valid values: `0` (disabled) and `1` (enabled).
-
+     * @var integer Rule status 0: turn off, 1: turn on; keep the original status if not specified.
      */
     public $Status;
 
     /**
-     * @param string $FileSystemId File system ID
+     * @param string $FileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
      * @param integer $ScaleUpThreshold Threshold for triggering scaling. Value range: 10-90
-     * @param integer $TargetThreshold Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`.
-     * @param integer $Status Rule status. Valid values: `0` (disabled) and `1` (enabled).
+     * @param integer $TargetThreshold Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold.
+     * @param integer $Status Rule status 0: turn off, 1: turn on; keep the original status if not specified.
      */
     function __construct()
     {

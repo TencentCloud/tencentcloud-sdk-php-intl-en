@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreationToken(string $CreationToken) Set File system name
  * @method string getFileSystemId() Obtain File system ID
  * @method void setFileSystemId(string $FileSystemId) Set File system ID
- * @method integer getSizeByte() Obtain File system size
- * @method void setSizeByte(integer $SizeByte) Set File system size
- * @method string getStorageType() Obtain Storage class
- * @method void setStorageType(string $StorageType) Set Storage class
- * @method integer getTotalSnapshotSize() Obtain Total snapshot size
- * @method void setTotalSnapshotSize(integer $TotalSnapshotSize) Set Total snapshot size
+ * @method integer getSizeByte() Obtain File system size, in Byte.
+ * @method void setSizeByte(integer $SizeByte) Set File system size, in Byte.
+ * @method string getStorageType() Obtain Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+ * @method void setStorageType(string $StorageType) Set Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+ * @method integer getTotalSnapshotSize() Obtain Total snapshot size in GiB.
+ * @method void setTotalSnapshotSize(integer $TotalSnapshotSize) Set Total snapshot size in GiB.
  * @method string getCreationTime() Obtain File system creation time
  * @method void setCreationTime(string $CreationTime) Set File system creation time
  * @method integer getZoneId() Obtain Region ID of the file system
@@ -48,17 +48,17 @@ class FileSystemByPolicy extends AbstractModel
     public $FileSystemId;
 
     /**
-     * @var integer File system size
+     * @var integer File system size, in Byte.
      */
     public $SizeByte;
 
     /**
-     * @var string Storage class
+     * @var string Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
      */
     public $StorageType;
 
     /**
-     * @var integer Total snapshot size
+     * @var integer Total snapshot size in GiB.
      */
     public $TotalSnapshotSize;
 
@@ -75,9 +75,9 @@ class FileSystemByPolicy extends AbstractModel
     /**
      * @param string $CreationToken File system name
      * @param string $FileSystemId File system ID
-     * @param integer $SizeByte File system size
-     * @param string $StorageType Storage class
-     * @param integer $TotalSnapshotSize Total snapshot size
+     * @param integer $SizeByte File system size, in Byte.
+     * @param string $StorageType Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+     * @param integer $TotalSnapshotSize Total snapshot size in GiB.
      * @param string $CreationTime File system creation time
      * @param integer $ZoneId Region ID of the file system
      */

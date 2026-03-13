@@ -26,8 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthClientIp(string $AuthClientIp) Set Client IP allowed for access
  * @method string getRWPermission() Obtain Read/write permission. ro: read-only; rw: read & write
  * @method void setRWPermission(string $RWPermission) Set Read/write permission. ro: read-only; rw: read & write
- * @method string getUserPermission() Obtain User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
- * @method void setUserPermission(string $UserPermission) Set User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
+ * @method string getUserPermission() Obtain All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
+ * @method void setUserPermission(string $UserPermission) Set All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
  * @method integer getPriority() Obtain Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
  * @method void setPriority(integer $Priority) Set Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
  */
@@ -49,7 +57,11 @@ class PGroupRuleInfo extends AbstractModel
     public $RWPermission;
 
     /**
-     * @var string User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
+     * @var string All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
      */
     public $UserPermission;
 
@@ -62,7 +74,11 @@ class PGroupRuleInfo extends AbstractModel
      * @param string $RuleId Rule ID
      * @param string $AuthClientIp Client IP allowed for access
      * @param string $RWPermission Read/write permission. ro: read-only; rw: read & write
-     * @param string $UserPermission User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
+     * @param string $UserPermission All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
      * @param integer $Priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
      */
     function __construct()

@@ -18,28 +18,28 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteMountTarget request structure.
+ * CreateLifecyclePolicyDownloadTask request structure.
  *
- * @method string getFileSystemId() Obtain File system ID
- * @method void setFileSystemId(string $FileSystemId) Set File system ID
- * @method string getMountTargetId() Obtain Mount target ID
- * @method void setMountTargetId(string $MountTargetId) Set Mount target ID
+ * @method string getTaskId() Obtain Task ID
+ * @method void setTaskId(string $TaskId) Set Task ID
+ * @method string getType() Obtain Download file type, including FileSuccessList, FileTotalList, FileFailedList.
+ * @method void setType(string $Type) Set Download file type, including FileSuccessList, FileTotalList, FileFailedList.
  */
-class DeleteMountTargetRequest extends AbstractModel
+class CreateLifecyclePolicyDownloadTaskRequest extends AbstractModel
 {
     /**
-     * @var string File system ID
+     * @var string Task ID
      */
-    public $FileSystemId;
+    public $TaskId;
 
     /**
-     * @var string Mount target ID
+     * @var string Download file type, including FileSuccessList, FileTotalList, FileFailedList.
      */
-    public $MountTargetId;
+    public $Type;
 
     /**
-     * @param string $FileSystemId File system ID
-     * @param string $MountTargetId Mount target ID
+     * @param string $TaskId Task ID
+     * @param string $Type Download file type, including FileSuccessList, FileTotalList, FileFailedList.
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DeleteMountTargetRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
-            $this->FileSystemId = $param["FileSystemId"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
-        if (array_key_exists("MountTargetId",$param) and $param["MountTargetId"] !== null) {
-            $this->MountTargetId = $param["MountTargetId"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCfsPGroup request structure.
  *
- * @method string getPGroupId() Obtain Permission group ID
- * @method void setPGroupId(string $PGroupId) Set Permission group ID
+ * @method string getPGroupId() Obtain Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+ * @method void setPGroupId(string $PGroupId) Set Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
  * @method string getName() Obtain Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
  * @method void setName(string $Name) Set Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
- * @method string getDescInfo() Obtain Permission group description, which can contain 1-255 characters
- * @method void setDescInfo(string $DescInfo) Set Permission group description, which can contain 1-255 characters
+ * @method string getDescInfo() Obtain Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time.
+ * @method void setDescInfo(string $DescInfo) Set Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time.
  */
 class UpdateCfsPGroupRequest extends AbstractModel
 {
     /**
-     * @var string Permission group ID
+     * @var string Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      */
     public $PGroupId;
 
@@ -40,14 +40,14 @@ class UpdateCfsPGroupRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string Permission group description, which can contain 1-255 characters
+     * @var string Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time.
      */
     public $DescInfo;
 
     /**
-     * @param string $PGroupId Permission group ID
+     * @param string $PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      * @param string $Name Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
-     * @param string $DescInfo Permission group description, which can contain 1-255 characters
+     * @param string $DescInfo Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time.
      */
     function __construct()
     {

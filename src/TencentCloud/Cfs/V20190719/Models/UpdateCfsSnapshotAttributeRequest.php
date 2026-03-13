@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCfsSnapshotAttribute request structure.
  *
- * @method string getSnapshotId() Obtain File system snapshot ID
- * @method void setSnapshotId(string $SnapshotId) Set File system snapshot ID
- * @method string getSnapshotName() Obtain File system snapshot name
- * @method void setSnapshotName(string $SnapshotName) Set File system snapshot name
- * @method integer getAliveDays() Obtain File system snapshot retention period in days
- * @method void setAliveDays(integer $AliveDays) Set File system snapshot retention period in days
+ * @method string getSnapshotId() Obtain Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
+ * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
+ * @method string getSnapshotName() Obtain File system snapshot name, must fill in either this or AliveDays. snapshot name supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+ * @method void setSnapshotName(string $SnapshotName) Set File system snapshot name, must fill in either this or AliveDays. snapshot name supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+ * @method integer getAliveDays() Obtain File system snapshot retention days. either this or SnapshotName must be specified. if the original setting has permanent retention attribute, it is not allowed to be modified to short-term validity.
+ * @method void setAliveDays(integer $AliveDays) Set File system snapshot retention days. either this or SnapshotName must be specified. if the original setting has permanent retention attribute, it is not allowed to be modified to short-term validity.
  */
 class UpdateCfsSnapshotAttributeRequest extends AbstractModel
 {
     /**
-     * @var string File system snapshot ID
+     * @var string Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
      */
     public $SnapshotId;
 
     /**
-     * @var string File system snapshot name
+     * @var string File system snapshot name, must fill in either this or AliveDays. snapshot name supports no more than 64 characters in length, supports chinese, numbers, _, and -.
      */
     public $SnapshotName;
 
     /**
-     * @var integer File system snapshot retention period in days
+     * @var integer File system snapshot retention days. either this or SnapshotName must be specified. if the original setting has permanent retention attribute, it is not allowed to be modified to short-term validity.
      */
     public $AliveDays;
 
     /**
-     * @param string $SnapshotId File system snapshot ID
-     * @param string $SnapshotName File system snapshot name
-     * @param integer $AliveDays File system snapshot retention period in days
+     * @param string $SnapshotId Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
+     * @param string $SnapshotName File system snapshot name, must fill in either this or AliveDays. snapshot name supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+     * @param integer $AliveDays File system snapshot retention days. either this or SnapshotName must be specified. if the original setting has permanent retention attribute, it is not allowed to be modified to short-term validity.
      */
     function __construct()
     {

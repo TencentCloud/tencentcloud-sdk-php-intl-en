@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCfsFileSystemName request structure.
  *
- * @method string getFileSystemId() Obtain File system ID
- * @method void setFileSystemId(string $FileSystemId) Set File system ID
- * @method string getFsName() Obtain Custom file system name
- * @method void setFsName(string $FsName) Set Custom file system name
+ * @method string getFileSystemId() Obtain File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+ * @method void setFileSystemId(string $FileSystemId) Set File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+ * @method string getFsName() Obtain User-Defined file system name, alphanumeric chinese characters or _,- within 64 bytes. at least one of them or CreationToken must be provided.
+ * @method void setFsName(string $FsName) Set User-Defined file system name, alphanumeric chinese characters or _,- within 64 bytes. at least one of them or CreationToken must be provided.
  */
 class UpdateCfsFileSystemNameRequest extends AbstractModel
 {
     /**
-     * @var string File system ID
+     * @var string File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
      */
     public $FileSystemId;
 
     /**
-     * @var string Custom file system name
+     * @var string User-Defined file system name, alphanumeric chinese characters or _,- within 64 bytes. at least one of them or CreationToken must be provided.
      */
     public $FsName;
 
     /**
-     * @param string $FileSystemId File system ID
-     * @param string $FsName Custom file system name
+     * @param string $FileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+     * @param string $FsName User-Defined file system name, alphanumeric chinese characters or _,- within 64 bytes. at least one of them or CreationToken must be provided.
      */
     function __construct()
     {

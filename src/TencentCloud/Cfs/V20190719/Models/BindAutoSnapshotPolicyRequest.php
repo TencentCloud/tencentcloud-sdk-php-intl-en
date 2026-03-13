@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindAutoSnapshotPolicy request structure.
  *
- * @method string getAutoSnapshotPolicyId() Obtain Snapshot policy ID
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set Snapshot policy ID
- * @method string getFileSystemIds() Obtain List of file systems
- * @method void setFileSystemIds(string $FileSystemIds) Set List of file systems
+ * @method string getAutoSnapshotPolicyId() Obtain List of file system ids to be unbound, separated by ",". file system ids can be obtained by querying the file system list through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set List of file system ids to be unbound, separated by ",". file system ids can be obtained by querying the file system list through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+ * @method string getFileSystemIds() Obtain Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
+ * @method void setFileSystemIds(string $FileSystemIds) Set Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
  */
 class BindAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string Snapshot policy ID
+     * @var string List of file system ids to be unbound, separated by ",". file system ids can be obtained by querying the file system list through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
      */
     public $AutoSnapshotPolicyId;
 
     /**
-     * @var string List of file systems
+     * @var string Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
      */
     public $FileSystemIds;
 
     /**
-     * @param string $AutoSnapshotPolicyId Snapshot policy ID
-     * @param string $FileSystemIds List of file systems
+     * @param string $AutoSnapshotPolicyId List of file system ids to be unbound, separated by ",". file system ids can be obtained by querying the file system list through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+     * @param string $FileSystemIds Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
      */
     function __construct()
     {

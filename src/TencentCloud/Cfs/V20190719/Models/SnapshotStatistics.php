@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Region
  * @method integer getSnapshotNumber() Obtain Total number of snapshots
  * @method void setSnapshotNumber(integer $SnapshotNumber) Set Total number of snapshots
- * @method integer getSnapshotSize() Obtain Total snapshot size
- * @method void setSnapshotSize(integer $SnapshotSize) Set Total snapshot size
+ * @method integer getSnapshotSize() Obtain Total snapshot capacity in MiB.
+ * @method void setSnapshotSize(integer $SnapshotSize) Set Total snapshot capacity in MiB.
  */
 class SnapshotStatistics extends AbstractModel
 {
@@ -40,14 +40,14 @@ class SnapshotStatistics extends AbstractModel
     public $SnapshotNumber;
 
     /**
-     * @var integer Total snapshot size
+     * @var integer Total snapshot capacity in MiB.
      */
     public $SnapshotSize;
 
     /**
      * @param string $Region Region
      * @param integer $SnapshotNumber Total number of snapshots
-     * @param integer $SnapshotSize Total snapshot size
+     * @param integer $SnapshotSize Total snapshot capacity in MiB.
      */
     function __construct()
     {

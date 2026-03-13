@@ -18,13 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Versioning - protocol details
-
+ * Version control - protocol details.
  *
  * @method string getSaleStatus() Obtain Sale status. Valid values: sale_out (sold out), saling (purchasable), no_saling (non-purchasable)
  * @method void setSaleStatus(string $SaleStatus) Set Sale status. Valid values: sale_out (sold out), saling (purchasable), no_saling (non-purchasable)
- * @method string getProtocol() Obtain Protocol type. Valid values: NFS, CIFS
- * @method void setProtocol(string $Protocol) Set Protocol type. Valid values: NFS, CIFS
+ * @method string getProtocol() Obtain Protocol type. optional values: NFS, CIFS, and TURBO.
+ * @method void setProtocol(string $Protocol) Set Protocol type. optional values: NFS, CIFS, and TURBO.
  */
 class AvailableProtoStatus extends AbstractModel
 {
@@ -34,13 +33,13 @@ class AvailableProtoStatus extends AbstractModel
     public $SaleStatus;
 
     /**
-     * @var string Protocol type. Valid values: NFS, CIFS
+     * @var string Protocol type. optional values: NFS, CIFS, and TURBO.
      */
     public $Protocol;
 
     /**
      * @param string $SaleStatus Sale status. Valid values: sale_out (sold out), saling (purchasable), no_saling (non-purchasable)
-     * @param string $Protocol Protocol type. Valid values: NFS, CIFS
+     * @param string $Protocol Protocol type. optional values: NFS, CIFS, and TURBO.
      */
     function __construct()
     {

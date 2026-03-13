@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCfsRule request structure.
  *
- * @method string getPGroupId() Obtain Permission group ID
- * @method void setPGroupId(string $PGroupId) Set Permission group ID
- * @method string getRuleId() Obtain Rule ID
- * @method void setRuleId(string $RuleId) Set Rule ID
+ * @method string getPGroupId() Obtain Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+ * @method void setPGroupId(string $PGroupId) Set Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+ * @method string getRuleId() Obtain Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
+ * @method void setRuleId(string $RuleId) Set Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
  */
 class DeleteCfsRuleRequest extends AbstractModel
 {
     /**
-     * @var string Permission group ID
+     * @var string Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      */
     public $PGroupId;
 
     /**
-     * @var string Rule ID
+     * @var string Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
      */
     public $RuleId;
 
     /**
-     * @param string $PGroupId Permission group ID
-     * @param string $RuleId Rule ID
+     * @param string $PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+     * @param string $RuleId Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
      */
     function __construct()
     {

@@ -40,18 +40,18 @@ use TencentCloud\Common\AbstractModel;
 - available
 - unserviced
 - upgrading
- * @method integer getSizeByte() Obtain Used file system capacity
- * @method void setSizeByte(integer $SizeByte) Set Used file system capacity
- * @method integer getSizeLimit() Obtain Maximum storage limit of a file system
- * @method void setSizeLimit(integer $SizeLimit) Set Maximum storage limit of a file system
+ * @method integer getSizeByte() Obtain Used capacity of the file system, in Byte.
+ * @method void setSizeByte(integer $SizeByte) Set Used capacity of the file system, in Byte.
+ * @method integer getSizeLimit() Obtain File system space limit, in GiB.
+ * @method void setSizeLimit(integer $SizeLimit) Set File system space limit, in GiB.
  * @method integer getZoneId() Obtain Region ID
  * @method void setZoneId(integer $ZoneId) Set Region ID
  * @method string getZone() Obtain Region name
  * @method void setZone(string $Zone) Set Region name
- * @method string getProtocol() Obtain File system protocol type
- * @method void setProtocol(string $Protocol) Set File system protocol type
- * @method string getStorageType() Obtain File system storage class
- * @method void setStorageType(string $StorageType) Set File system storage class
+ * @method string getProtocol() Obtain File system protocol type. Valid values: NFS, CIFS, and TURBO.
+ * @method void setProtocol(string $Protocol) Set File system protocol type. Valid values: NFS, CIFS, and TURBO.
+ * @method string getStorageType() Obtain Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+ * @method void setStorageType(string $StorageType) Set Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
  * @method string getStorageResourcePkg() Obtain Prepaid storage pack bound with the file system
  * @method void setStorageResourcePkg(string $StorageResourcePkg) Set Prepaid storage pack bound with the file system
  * @method string getBandwidthResourcePkg() Obtain Prepaid bandwidth pack bound to a file system (not supported currently)
@@ -60,30 +60,44 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPGroup(PGroup $PGroup) Set Information of permission groups bound to a file system
  * @method string getFsName() Obtain Custom name
  * @method void setFsName(string $FsName) Set Custom name
- * @method boolean getEncrypted() Obtain Whether a file system is encrypted
- * @method void setEncrypted(boolean $Encrypted) Set Whether a file system is encrypted
+ * @method boolean getEncrypted() Obtain Is the file system encrypted. true: encrypted. false: non-encrypted.
+ * @method void setEncrypted(boolean $Encrypted) Set Is the file system encrypted. true: encrypted. false: non-encrypted.
  * @method string getKmsKeyId() Obtain Key used for encryption, which can be the key ID or ARN
  * @method void setKmsKeyId(string $KmsKeyId) Set Key used for encryption, which can be the key ID or ARN
  * @method integer getAppId() Obtain Application ID
  * @method void setAppId(integer $AppId) Set Application ID
- * @method float getBandwidthLimit() Obtain The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
- * @method void setBandwidthLimit(float $BandwidthLimit) Set The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
- * @method string getAutoSnapshotPolicyId() Obtain 
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set 
- * @method string getSnapStatus() Obtain 
- * @method void setSnapStatus(string $SnapStatus) Set 
- * @method integer getCapacity() Obtain Total capacity of the file system
- * @method void setCapacity(integer $Capacity) Set Total capacity of the file system
+ * @method float getBandwidthLimit() Obtain Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
+ * @method void setBandwidthLimit(float $BandwidthLimit) Set Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
+ * @method string getAutoSnapshotPolicyId() Obtain Snapshot policy associated with the file system.
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set Snapshot policy associated with the file system.
+ * @method string getSnapStatus() Obtain File system processes snapshot status, snapping: in snapshot, normal: in normal status.
+ * @method void setSnapStatus(string $SnapStatus) Set File system processes snapshot status, snapping: in snapshot, normal: in normal status.
+ * @method integer getCapacity() Obtain Upper limit of file system capacity.
+Unit: GiB.
+ * @method void setCapacity(integer $Capacity) Set Upper limit of file system capacity.
+Unit: GiB.
  * @method array getTags() Obtain File system tag list
  * @method void setTags(array $Tags) Set File system tag list
- * @method string getTieringState() Obtain The lifecycle management status of a file system.
- * @method void setTieringState(string $TieringState) Set The lifecycle management status of a file system.
- * @method TieringDetailInfo getTieringDetail() Obtain The details about tiered storage.
+ * @method string getTieringState() Obtain Status of file system lifecycle management.
+NotAvailable: unavailable.
+Available.
+ * @method void setTieringState(string $TieringState) Set Status of file system lifecycle management.
+NotAvailable: unavailable.
+Available.
+ * @method TieringDetailInfo getTieringDetail() Obtain Layered storage detail.
+ * @method void setTieringDetail(TieringDetailInfo $TieringDetail) Set Layered storage detail.
+ * @method AutoScaleUpRule getAutoScaleUpRule() Obtain File system auto scale-out policy.
+ * @method void setAutoScaleUpRule(AutoScaleUpRule $AutoScaleUpRule) Set File system auto scale-out policy.
+ * @method string getVersion() Obtain File System Version
+ * @method void setVersion(string $Version) Set File System Version
+ * @method array getExstraPerformanceInfo() Obtain Additional performance info.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTieringDetail(TieringDetailInfo $TieringDetail) Set The details about tiered storage.
+ * @method void setExstraPerformanceInfo(array $ExstraPerformanceInfo) Set Additional performance info.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method AutoScaleUpRule getAutoScaleUpRule() Obtain 
- * @method void setAutoScaleUpRule(AutoScaleUpRule $AutoScaleUpRule) Set 
+ * @method string getMetaType() Obtain basic: standard version metadata type.
+enhanced: additional metadata type.
+ * @method void setMetaType(string $MetaType) Set basic: standard version metadata type.
+enhanced: additional metadata type.
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -114,12 +128,12 @@ class FileSystemInfo extends AbstractModel
     public $LifeCycleState;
 
     /**
-     * @var integer Used file system capacity
+     * @var integer Used capacity of the file system, in Byte.
      */
     public $SizeByte;
 
     /**
-     * @var integer Maximum storage limit of a file system
+     * @var integer File system space limit, in GiB.
      */
     public $SizeLimit;
 
@@ -134,12 +148,12 @@ class FileSystemInfo extends AbstractModel
     public $Zone;
 
     /**
-     * @var string File system protocol type
+     * @var string File system protocol type. Valid values: NFS, CIFS, and TURBO.
      */
     public $Protocol;
 
     /**
-     * @var string File system storage class
+     * @var string Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
      */
     public $StorageType;
 
@@ -164,7 +178,7 @@ class FileSystemInfo extends AbstractModel
     public $FsName;
 
     /**
-     * @var boolean Whether a file system is encrypted
+     * @var boolean Is the file system encrypted. true: encrypted. false: non-encrypted.
      */
     public $Encrypted;
 
@@ -179,22 +193,23 @@ class FileSystemInfo extends AbstractModel
     public $AppId;
 
     /**
-     * @var float The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+     * @var float Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
      */
     public $BandwidthLimit;
 
     /**
-     * @var string 
+     * @var string Snapshot policy associated with the file system.
      */
     public $AutoSnapshotPolicyId;
 
     /**
-     * @var string 
+     * @var string File system processes snapshot status, snapping: in snapshot, normal: in normal status.
      */
     public $SnapStatus;
 
     /**
-     * @var integer Total capacity of the file system
+     * @var integer Upper limit of file system capacity.
+Unit: GiB.
      */
     public $Capacity;
 
@@ -204,20 +219,38 @@ class FileSystemInfo extends AbstractModel
     public $Tags;
 
     /**
-     * @var string The lifecycle management status of a file system.
+     * @var string Status of file system lifecycle management.
+NotAvailable: unavailable.
+Available.
      */
     public $TieringState;
 
     /**
-     * @var TieringDetailInfo The details about tiered storage.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TieringDetailInfo Layered storage detail.
      */
     public $TieringDetail;
 
     /**
-     * @var AutoScaleUpRule 
+     * @var AutoScaleUpRule File system auto scale-out policy.
      */
     public $AutoScaleUpRule;
+
+    /**
+     * @var string File System Version
+     */
+    public $Version;
+
+    /**
+     * @var array Additional performance info.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ExstraPerformanceInfo;
+
+    /**
+     * @var string basic: standard version metadata type.
+enhanced: additional metadata type.
+     */
+    public $MetaType;
 
     /**
      * @param string $CreationTime Creation time
@@ -230,28 +263,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - available
 - unserviced
 - upgrading
-     * @param integer $SizeByte Used file system capacity
-     * @param integer $SizeLimit Maximum storage limit of a file system
+     * @param integer $SizeByte Used capacity of the file system, in Byte.
+     * @param integer $SizeLimit File system space limit, in GiB.
      * @param integer $ZoneId Region ID
      * @param string $Zone Region name
-     * @param string $Protocol File system protocol type
-     * @param string $StorageType File system storage class
+     * @param string $Protocol File system protocol type. Valid values: NFS, CIFS, and TURBO.
+     * @param string $StorageType Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
      * @param string $StorageResourcePkg Prepaid storage pack bound with the file system
      * @param string $BandwidthResourcePkg Prepaid bandwidth pack bound to a file system (not supported currently)
      * @param PGroup $PGroup Information of permission groups bound to a file system
      * @param string $FsName Custom name
-     * @param boolean $Encrypted Whether a file system is encrypted
+     * @param boolean $Encrypted Is the file system encrypted. true: encrypted. false: non-encrypted.
      * @param string $KmsKeyId Key used for encryption, which can be the key ID or ARN
      * @param integer $AppId Application ID
-     * @param float $BandwidthLimit The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
-     * @param string $AutoSnapshotPolicyId 
-     * @param string $SnapStatus 
-     * @param integer $Capacity Total capacity of the file system
+     * @param float $BandwidthLimit Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
+     * @param string $AutoSnapshotPolicyId Snapshot policy associated with the file system.
+     * @param string $SnapStatus File system processes snapshot status, snapping: in snapshot, normal: in normal status.
+     * @param integer $Capacity Upper limit of file system capacity.
+Unit: GiB.
      * @param array $Tags File system tag list
-     * @param string $TieringState The lifecycle management status of a file system.
-     * @param TieringDetailInfo $TieringDetail The details about tiered storage.
+     * @param string $TieringState Status of file system lifecycle management.
+NotAvailable: unavailable.
+Available.
+     * @param TieringDetailInfo $TieringDetail Layered storage detail.
+     * @param AutoScaleUpRule $AutoScaleUpRule File system auto scale-out policy.
+     * @param string $Version File System Version
+     * @param array $ExstraPerformanceInfo Additional performance info.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AutoScaleUpRule $AutoScaleUpRule 
+     * @param string $MetaType basic: standard version metadata type.
+enhanced: additional metadata type.
      */
     function __construct()
     {
@@ -372,6 +412,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("AutoScaleUpRule",$param) and $param["AutoScaleUpRule"] !== null) {
             $this->AutoScaleUpRule = new AutoScaleUpRule();
             $this->AutoScaleUpRule->deserialize($param["AutoScaleUpRule"]);
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("ExstraPerformanceInfo",$param) and $param["ExstraPerformanceInfo"] !== null) {
+            $this->ExstraPerformanceInfo = [];
+            foreach ($param["ExstraPerformanceInfo"] as $key => $value){
+                $obj = new ExstraPerformanceInfo();
+                $obj->deserialize($value);
+                array_push($this->ExstraPerformanceInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("MetaType",$param) and $param["MetaType"] !== null) {
+            $this->MetaType = $param["MetaType"];
         }
     }
 }

@@ -20,66 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCfsSnapshots request structure.
  *
- * @method string getFileSystemId() Obtain File system ID
- * @method void setFileSystemId(string $FileSystemId) Set File system ID
- * @method string getSnapshotId() Obtain Snapshot ID
- * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID
- * @method integer getOffset() Obtain The starting position of paging
- * @method void setOffset(integer $Offset) Set The starting position of paging
- * @method integer getLimit() Obtain Page length
- * @method void setLimit(integer $Limit) Set Page length
- * @method array getFilters() Obtain Filters
- * @method void setFilters(array $Filters) Set Filters
- * @method string getOrderField() Obtain Order field
- * @method void setOrderField(string $OrderField) Set Order field
- * @method string getOrder() Obtain Sorting order (ascending or descending)
- * @method void setOrder(string $Order) Set Sorting order (ascending or descending)
+ * @method string getFileSystemId() Obtain File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+ * @method void setFileSystemId(string $FileSystemId) Set File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+ * @method string getSnapshotId() Obtain Snapshot ID.
+ * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID.
+ * @method integer getOffset() Obtain Paging start position, defaults to 0.
+ * @method void setOffset(integer $Offset) Set Paging start position, defaults to 0.
+ * @method integer getLimit() Obtain Page length. default value 20.
+ * @method void setLimit(integer $Limit) Set Page length. default value 20.
+ * @method array getFilters() Obtain Filter criteria
+SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+<br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+<br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+<br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+<br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+<br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+<br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.
+ * @method void setFilters(array $Filters) Set Filter criteria
+SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+<br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+<br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+<br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+<br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+<br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+<br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.
+ * @method string getOrderField() Obtain Sort by creation time to obtain value.
+ * @method void setOrderField(string $OrderField) Set Sort by creation time to obtain value.
+ * @method string getOrder() Obtain Sorting order; ascending or descending order.
+ * @method void setOrder(string $Order) Set Sorting order; ascending or descending order.
  */
 class DescribeCfsSnapshotsRequest extends AbstractModel
 {
     /**
-     * @var string File system ID
+     * @var string File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
      */
     public $FileSystemId;
 
     /**
-     * @var string Snapshot ID
+     * @var string Snapshot ID.
      */
     public $SnapshotId;
 
     /**
-     * @var integer The starting position of paging
+     * @var integer Paging start position, defaults to 0.
      */
     public $Offset;
 
     /**
-     * @var integer Page length
+     * @var integer Page length. default value 20.
      */
     public $Limit;
 
     /**
-     * @var array Filters
+     * @var array Filter criteria
+SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+<br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+<br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+<br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+<br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+<br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+<br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.
      */
     public $Filters;
 
     /**
-     * @var string Order field
+     * @var string Sort by creation time to obtain value.
      */
     public $OrderField;
 
     /**
-     * @var string Sorting order (ascending or descending)
+     * @var string Sorting order; ascending or descending order.
      */
     public $Order;
 
     /**
-     * @param string $FileSystemId File system ID
-     * @param string $SnapshotId Snapshot ID
-     * @param integer $Offset The starting position of paging
-     * @param integer $Limit Page length
-     * @param array $Filters Filters
-     * @param string $OrderField Order field
-     * @param string $Order Sorting order (ascending or descending)
+     * @param string $FileSystemId File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+     * @param string $SnapshotId Snapshot ID.
+     * @param integer $Offset Paging start position, defaults to 0.
+     * @param integer $Limit Page length. default value 20.
+     * @param array $Filters Filter criteria
+SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+<br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+<br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+<br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+<br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+<br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+<br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.
+     * @param string $OrderField Sort by creation time to obtain value.
+     * @param string $Order Sorting order; ascending or descending order.
      */
     function __construct()
     {

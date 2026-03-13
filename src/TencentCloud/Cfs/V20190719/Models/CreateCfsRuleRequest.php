@@ -20,21 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCfsRule request structure.
  *
- * @method string getPGroupId() Obtain Permission group ID
- * @method void setPGroupId(string $PGroupId) Set Permission group ID
+ * @method string getPGroupId() Obtain Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+ * @method void setPGroupId(string $PGroupId) Set Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
  * @method string getAuthClientIp() Obtain You can enter a single IP or IP range, such as 10.1.10.11 or 10.10.1.0/24. The default visiting address is `*`, indicating that all IPs are allowed. Please note that you need to enter the CVM instance's private IP here.
  * @method void setAuthClientIp(string $AuthClientIp) Set You can enter a single IP or IP range, such as 10.1.10.11 or 10.10.1.0/24. The default visiting address is `*`, indicating that all IPs are allowed. Please note that you need to enter the CVM instance's private IP here.
  * @method integer getPriority() Obtain Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
  * @method void setPriority(integer $Priority) Set Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
  * @method string getRWPermission() Obtain Read/write permission. Valid values: RO (read-only), RW (read & write). Default value: RO
  * @method void setRWPermission(string $RWPermission) Set Read/write permission. Valid values: RO (read-only), RW (read & write). Default value: RO
- * @method string getUserPermission() Obtain User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
- * @method void setUserPermission(string $UserPermission) Set User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
+ * @method string getUserPermission() Obtain User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
+ * @method void setUserPermission(string $UserPermission) Set User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
  */
 class CreateCfsRuleRequest extends AbstractModel
 {
     /**
-     * @var string Permission group ID
+     * @var string Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      */
     public $PGroupId;
 
@@ -54,16 +63,25 @@ class CreateCfsRuleRequest extends AbstractModel
     public $RWPermission;
 
     /**
-     * @var string User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
+     * @var string User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
      */
     public $UserPermission;
 
     /**
-     * @param string $PGroupId Permission group ID
+     * @param string $PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      * @param string $AuthClientIp You can enter a single IP or IP range, such as 10.1.10.11 or 10.10.1.0/24. The default visiting address is `*`, indicating that all IPs are allowed. Please note that you need to enter the CVM instance's private IP here.
      * @param integer $Priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
      * @param string $RWPermission Read/write permission. Valid values: RO (read-only), RW (read & write). Default value: RO
-     * @param string $UserPermission User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
+     * @param string $UserPermission User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
      */
     function __construct()
     {

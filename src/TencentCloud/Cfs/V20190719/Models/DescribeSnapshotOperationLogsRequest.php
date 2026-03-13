@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSnapshotOperationLogs request structure.
  *
- * @method string getSnapshotId() Obtain File system snapshot ID
- * @method void setSnapshotId(string $SnapshotId) Set File system snapshot ID
- * @method string getStartTime() Obtain Start time
- * @method void setStartTime(string $StartTime) Set Start time
- * @method string getEndTime() Obtain End time
- * @method void setEndTime(string $EndTime) Set End time
+ * @method string getSnapshotId() Obtain Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
+ * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
+ * @method string getStartTime() Obtain Start time, format "YYYY-MM-DD hh:MM:ss".
+ * @method void setStartTime(string $StartTime) Set Start time, format "YYYY-MM-DD hh:MM:ss".
+ * @method string getEndTime() Obtain End time, format "YYYY-MM-DD hh:MM:ss".
+ * @method void setEndTime(string $EndTime) Set End time, format "YYYY-MM-DD hh:MM:ss".
  */
 class DescribeSnapshotOperationLogsRequest extends AbstractModel
 {
     /**
-     * @var string File system snapshot ID
+     * @var string Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
      */
     public $SnapshotId;
 
     /**
-     * @var string Start time
+     * @var string Start time, format "YYYY-MM-DD hh:MM:ss".
      */
     public $StartTime;
 
     /**
-     * @var string End time
+     * @var string End time, format "YYYY-MM-DD hh:MM:ss".
      */
     public $EndTime;
 
     /**
-     * @param string $SnapshotId File system snapshot ID
-     * @param string $StartTime Start time
-     * @param string $EndTime End time
+     * @param string $SnapshotId Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
+     * @param string $StartTime Start time, format "YYYY-MM-DD hh:MM:ss".
+     * @param string $EndTime End time, format "YYYY-MM-DD hh:MM:ss".
      */
     function __construct()
     {

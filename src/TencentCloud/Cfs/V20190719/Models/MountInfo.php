@@ -28,10 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpAddress(string $IpAddress) Set Mount target IP
  * @method string getFSID() Obtain Mount root-directory
  * @method void setFSID(string $FSID) Set Mount root-directory
- * @method string getLifeCycleState() Obtain Mount target status
- * @method void setLifeCycleState(string $LifeCycleState) Set Mount target status
- * @method string getNetworkInterface() Obtain Network type
- * @method void setNetworkInterface(string $NetworkInterface) Set Network type
+ * @method string getLifeCycleState() Obtain Mount point status, including creating: under creation; available: running.
+Deleting: deleting.
+Creation failed.
+ * @method void setLifeCycleState(string $LifeCycleState) Set Mount point status, including creating: under creation; available: running.
+Deleting: deleting.
+Creation failed.
+ * @method string getNetworkInterface() Obtain Network type, including VPC, CCN.
+ * @method void setNetworkInterface(string $NetworkInterface) Set Network type, including VPC, CCN.
  * @method string getVpcId() Obtain VPC ID
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getVpcName() Obtain VPC name
@@ -68,12 +72,14 @@ class MountInfo extends AbstractModel
     public $FSID;
 
     /**
-     * @var string Mount target status
+     * @var string Mount point status, including creating: under creation; available: running.
+Deleting: deleting.
+Creation failed.
      */
     public $LifeCycleState;
 
     /**
-     * @var string Network type
+     * @var string Network type, including VPC, CCN.
      */
     public $NetworkInterface;
 
@@ -112,8 +118,10 @@ class MountInfo extends AbstractModel
      * @param string $MountTargetId Mount target ID
      * @param string $IpAddress Mount target IP
      * @param string $FSID Mount root-directory
-     * @param string $LifeCycleState Mount target status
-     * @param string $NetworkInterface Network type
+     * @param string $LifeCycleState Mount point status, including creating: under creation; available: running.
+Deleting: deleting.
+Creation failed.
+     * @param string $NetworkInterface Network type, including VPC, CCN.
      * @param string $VpcId VPC ID
      * @param string $VpcName VPC name
      * @param string $SubnetId Subnet ID

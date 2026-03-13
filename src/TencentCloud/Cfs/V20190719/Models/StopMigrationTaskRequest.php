@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopMigrationTask request structure.
  *
- * @method string getTaskId() Obtain Migration task name
- * @method void setTaskId(string $TaskId) Set Migration task name
+ * @method string getTaskId() Obtain Migration task Id.
+ * @method void setTaskId(string $TaskId) Set Migration task Id.
  */
 class StopMigrationTaskRequest extends AbstractModel
 {
     /**
-     * @var string Migration task name
+     * @var string Migration task Id.
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId Migration task name
+     * @param string $TaskId Migration task Id.
      */
     function __construct()
     {

@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getSubnetId() Obtain Subnet ID
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
- * @method string getCreationToken() Obtain 
- * @method void setCreationToken(string $CreationToken) Set 
+ * @method integer getOffset() Obtain Offset paging number. default 0.
+ * @method void setOffset(integer $Offset) Set Offset paging number. default 0.
+ * @method integer getLimit() Obtain Limit page size. default value 10.
+ * @method void setLimit(integer $Limit) Set Limit page size. default value 10.
+ * @method string getCreationToken() Obtain User-defined name
+ * @method void setCreationToken(string $CreationToken) Set User-defined name
  */
 class DescribeCfsFileSystemsRequest extends AbstractModel
 {
@@ -51,17 +51,17 @@ class DescribeCfsFileSystemsRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer 
+     * @var integer Offset paging number. default 0.
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer Limit page size. default value 10.
      */
     public $Limit;
 
     /**
-     * @var string 
+     * @var string User-defined name
      */
     public $CreationToken;
 
@@ -69,9 +69,9 @@ class DescribeCfsFileSystemsRequest extends AbstractModel
      * @param string $FileSystemId File system ID
      * @param string $VpcId VPC ID
      * @param string $SubnetId Subnet ID
-     * @param integer $Offset 
-     * @param integer $Limit 
-     * @param string $CreationToken 
+     * @param integer $Offset Offset paging number. default 0.
+     * @param integer $Limit Limit page size. default value 10.
+     * @param string $CreationToken User-defined name
      */
     function __construct()
     {

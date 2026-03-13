@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoSnapshotPolicyId() Obtain Snapshot policy ID
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set Snapshot policy ID
- * @method string getPolicyName() Obtain Snapshot policy name
- * @method void setPolicyName(string $PolicyName) Set Snapshot policy name
+ * @method string getPolicyName() Obtain Snapshot policy name.
+ * @method void setPolicyName(string $PolicyName) Set Snapshot policy name.
  * @method string getCreationTime() Obtain Snapshot policy creation time
  * @method void setCreationTime(string $CreationTime) Set Snapshot policy creation time
  * @method integer getFileSystemNums() Obtain Number of bound file systems
@@ -32,14 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDayOfWeek(string $DayOfWeek) Set The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
  * @method string getHour() Obtain The hour of a day at which to regularly back up the snapshot
  * @method void setHour(string $Hour) Set The hour of a day at which to regularly back up the snapshot
- * @method integer getIsActivated() Obtain Whether to activate the scheduled snapshot feature
- * @method void setIsActivated(integer $IsActivated) Set Whether to activate the scheduled snapshot feature
+ * @method integer getIsActivated() Obtain Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive.
+ * @method void setIsActivated(integer $IsActivated) Set Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive.
  * @method string getNextActiveTime() Obtain Next time to trigger snapshot
  * @method void setNextActiveTime(string $NextActiveTime) Set Next time to trigger snapshot
- * @method string getStatus() Obtain Snapshot policy status
- * @method void setStatus(string $Status) Set Snapshot policy status
- * @method integer getAppId() Obtain Account ID
- * @method void setAppId(integer $AppId) Set Account ID
+ * @method string getStatus() Obtain Snapshot policy status. available represents normal status. only status here.
+ * @method void setStatus(string $Status) Set Snapshot policy status. available represents normal status. only status here.
+ * @method integer getAppId() Obtain Account ID.
+ * @method void setAppId(integer $AppId) Set Account ID.
  * @method integer getAliveDays() Obtain Retention period
  * @method void setAliveDays(integer $AliveDays) Set Retention period
  * @method string getRegionName() Obtain Region
@@ -54,6 +54,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIntervalDays(integer $IntervalDays) Set The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCrossRegionsAliveDays() Obtain Snapshot retention time for cross-region replication, in days.
+ * @method void setCrossRegionsAliveDays(integer $CrossRegionsAliveDays) Set Snapshot retention time for cross-region replication, in days.
+ * @method array getTags() Obtain Snapshot policy tag.
+ * @method void setTags(array $Tags) Set Snapshot policy tag.
  */
 class AutoSnapshotPolicyInfo extends AbstractModel
 {
@@ -63,7 +67,7 @@ class AutoSnapshotPolicyInfo extends AbstractModel
     public $AutoSnapshotPolicyId;
 
     /**
-     * @var string Snapshot policy name
+     * @var string Snapshot policy name.
      */
     public $PolicyName;
 
@@ -88,7 +92,7 @@ class AutoSnapshotPolicyInfo extends AbstractModel
     public $Hour;
 
     /**
-     * @var integer Whether to activate the scheduled snapshot feature
+     * @var integer Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive.
      */
     public $IsActivated;
 
@@ -98,12 +102,12 @@ class AutoSnapshotPolicyInfo extends AbstractModel
     public $NextActiveTime;
 
     /**
-     * @var string Snapshot policy status
+     * @var string Snapshot policy status. available represents normal status. only status here.
      */
     public $Status;
 
     /**
-     * @var integer Account ID
+     * @var integer Account ID.
      */
     public $AppId;
 
@@ -135,16 +139,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IntervalDays;
 
     /**
+     * @var integer Snapshot retention time for cross-region replication, in days.
+     */
+    public $CrossRegionsAliveDays;
+
+    /**
+     * @var array Snapshot policy tag.
+     */
+    public $Tags;
+
+    /**
      * @param string $AutoSnapshotPolicyId Snapshot policy ID
-     * @param string $PolicyName Snapshot policy name
+     * @param string $PolicyName Snapshot policy name.
      * @param string $CreationTime Snapshot policy creation time
      * @param integer $FileSystemNums Number of bound file systems
      * @param string $DayOfWeek The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
      * @param string $Hour The hour of a day at which to regularly back up the snapshot
-     * @param integer $IsActivated Whether to activate the scheduled snapshot feature
+     * @param integer $IsActivated Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive.
      * @param string $NextActiveTime Next time to trigger snapshot
-     * @param string $Status Snapshot policy status
-     * @param integer $AppId Account ID
+     * @param string $Status Snapshot policy status. available represents normal status. only status here.
+     * @param integer $AppId Account ID.
      * @param integer $AliveDays Retention period
      * @param string $RegionName Region
      * @param array $FileSystems File system information
@@ -152,6 +166,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $IntervalDays The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $CrossRegionsAliveDays Snapshot retention time for cross-region replication, in days.
+     * @param array $Tags Snapshot policy tag.
      */
     function __construct()
     {
@@ -229,6 +245,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IntervalDays",$param) and $param["IntervalDays"] !== null) {
             $this->IntervalDays = $param["IntervalDays"];
+        }
+
+        if (array_key_exists("CrossRegionsAliveDays",$param) and $param["CrossRegionsAliveDays"] !== null) {
+            $this->CrossRegionsAliveDays = $param["CrossRegionsAliveDays"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -18,36 +18,36 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Auto scale-out rule.
  *
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getScaleThreshold() Obtain 
- * @method void setScaleThreshold(integer $ScaleThreshold) Set 
- * @method integer getTargetThreshold() Obtain 
- * @method void setTargetThreshold(integer $TargetThreshold) Set 
+ * @method string getStatus() Obtain Enable auto scale-out policy, disable.
+ * @method void setStatus(string $Status) Set Enable auto scale-out policy, disable.
+ * @method integer getScaleThreshold() Obtain Cluster usage percentage. start expansion when reaching this value. value range: [10-90].
+ * @method void setScaleThreshold(integer $ScaleThreshold) Set Cluster usage percentage. start expansion when reaching this value. value range: [10-90].
+ * @method integer getTargetThreshold() Obtain Used capacity to total clusters ratio after expansion. value range: [10-90].
+ * @method void setTargetThreshold(integer $TargetThreshold) Set Used capacity to total clusters ratio after expansion. value range: [10-90].
  */
 class AutoScaleUpRule extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Enable auto scale-out policy, disable.
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Cluster usage percentage. start expansion when reaching this value. value range: [10-90].
      */
     public $ScaleThreshold;
 
     /**
-     * @var integer 
+     * @var integer Used capacity to total clusters ratio after expansion. value range: [10-90].
      */
     public $TargetThreshold;
 
     /**
-     * @param string $Status 
-     * @param integer $ScaleThreshold 
-     * @param integer $TargetThreshold 
+     * @param string $Status Enable auto scale-out policy, disable.
+     * @param integer $ScaleThreshold Cluster usage percentage. start expansion when reaching this value. value range: [10-90].
+     * @param integer $TargetThreshold Used capacity to total clusters ratio after expansion. value range: [10-90].
      */
     function __construct()
     {

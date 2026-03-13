@@ -20,22 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The details about tiered storage.
  *
- * @method integer getTieringSizeInBytes() Obtain STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTieringSizeInBytes(integer $TieringSizeInBytes) Set STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTieringSizeInBytes() Obtain <p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+ * @method void setTieringSizeInBytes(integer $TieringSizeInBytes) Set <p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+ * @method integer getSecondaryTieringSizeInBytes() Obtain <p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+ * @method void setSecondaryTieringSizeInBytes(integer $SecondaryTieringSizeInBytes) Set <p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
  */
 class TieringDetailInfo extends AbstractModel
 {
     /**
-     * @var integer STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
      */
     public $TieringSizeInBytes;
 
     /**
-     * @param integer $TieringSizeInBytes STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+     */
+    public $SecondaryTieringSizeInBytes;
+
+    /**
+     * @param integer $TieringSizeInBytes <p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+     * @param integer $SecondaryTieringSizeInBytes <p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
      */
     function __construct()
     {
@@ -52,6 +56,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (array_key_exists("TieringSizeInBytes",$param) and $param["TieringSizeInBytes"] !== null) {
             $this->TieringSizeInBytes = $param["TieringSizeInBytes"];
+        }
+
+        if (array_key_exists("SecondaryTieringSizeInBytes",$param) and $param["SecondaryTieringSizeInBytes"] !== null) {
+            $this->SecondaryTieringSizeInBytes = $param["SecondaryTieringSizeInBytes"];
         }
     }
 }

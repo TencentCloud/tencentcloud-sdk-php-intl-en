@@ -28,26 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMigrationType(integer $MigrationType) Set Migration type. Valid values: `0` (bucket) and `1` (list). Default value: `0`.
  * @method integer getMigrationMode() Obtain Migration mode. Default value: `0` (full migration).
  * @method void setMigrationMode(integer $MigrationMode) Set Migration mode. Default value: `0` (full migration).
- * @method string getBucketName() Obtain Data source bucket name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBucketName(string $BucketName) Set Data source bucket name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBucketRegion() Obtain Data source bucket region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBucketRegion(string $BucketRegion) Set Data source bucket region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBucketAddress() Obtain Data source bucket address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBucketAddress(string $BucketAddress) Set Data source bucket address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getListAddress() Obtain List address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setListAddress(string $ListAddress) Set List address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFsName() Obtain File system instance name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFsName(string $FsName) Set File system instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBucketName() Obtain Data source bucket name.
+ * @method void setBucketName(string $BucketName) Set Data source bucket name.
+ * @method string getBucketRegion() Obtain Source bucket region.
+ * @method void setBucketRegion(string $BucketRegion) Set Source bucket region.
+ * @method string getBucketAddress() Obtain Data source bucket address.
+ * @method void setBucketAddress(string $BucketAddress) Set Data source bucket address.
+ * @method string getListAddress() Obtain Checklist address.
+ * @method void setListAddress(string $ListAddress) Set Checklist address.
+ * @method string getFsName() Obtain File system instance name.
+ * @method void setFsName(string $FsName) Set File system instance name.
  * @method string getFileSystemId() Obtain File system instance ID
  * @method void setFileSystemId(string $FileSystemId) Set File system instance ID
  * @method string getFsPath() Obtain File system path
@@ -56,52 +46,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setCoverType(integer $CoverType) Set Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
  * @method integer getCreateTime() Obtain Creation time
  * @method void setCreateTime(integer $CreateTime) Set Creation time
- * @method integer getEndTime() Obtain End time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(integer $EndTime) Set End time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
- * @method void setStatus(integer $Status) Set Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
- * @method integer getFileTotalCount() Obtain Number of files
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileTotalCount(integer $FileTotalCount) Set Number of files
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFileMigratedCount() Obtain Number of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileMigratedCount(integer $FileMigratedCount) Set Number of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFileFailedCount() Obtain Number of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileFailedCount(integer $FileFailedCount) Set Number of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFileTotalSize() Obtain File size, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileTotalSize(integer $FileTotalSize) Set File size, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFileMigratedSize() Obtain Size of migrated files, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileMigratedSize(integer $FileMigratedSize) Set Size of migrated files, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFileFailedSize() Obtain Size of files that failed to be migrated, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileFailedSize(integer $FileFailedSize) Set Size of files that failed to be migrated, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileTotalList() Obtain List of all files
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileTotalList(string $FileTotalList) Set List of all files
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileCompletedList() Obtain List of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileCompletedList(string $FileCompletedList) Set List of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileFailedList() Obtain List of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileFailedList(string $FileFailedList) Set List of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBucketPath() Obtain Source bucket path
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBucketPath(string $BucketPath) Set Source bucket path
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getEndTime() Obtain Completion/Termination time.
+ * @method void setEndTime(integer $EndTime) Set Completion/Termination time.
+ * @method integer getStatus() Obtain Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
+ * @method void setStatus(integer $Status) Set Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
+ * @method integer getFileTotalCount() Obtain Number of files.
+ * @method void setFileTotalCount(integer $FileTotalCount) Set Number of files.
+ * @method integer getFileMigratedCount() Obtain Number of migrated files.
+ * @method void setFileMigratedCount(integer $FileMigratedCount) Set Number of migrated files.
+ * @method integer getFileFailedCount() Obtain Number of failed files in migration.
+ * @method void setFileFailedCount(integer $FileFailedCount) Set Number of failed files in migration.
+ * @method integer getFileTotalSize() Obtain File capacity, in Byte.
+ * @method void setFileTotalSize(integer $FileTotalSize) Set File capacity, in Byte.
+ * @method integer getFileMigratedSize() Obtain Migrated file capacity in Byte.
+ * @method void setFileMigratedSize(integer $FileMigratedSize) Set Migrated file capacity in Byte.
+ * @method integer getFileFailedSize() Obtain Capacity of failed migration files, in Byte.
+ * @method void setFileFailedSize(integer $FileFailedSize) Set Capacity of failed migration files, in Byte.
+ * @method string getFileTotalList() Obtain Total inventory.
+ * @method void setFileTotalList(string $FileTotalList) Set Total inventory.
+ * @method string getFileCompletedList() Obtain File list completed.
+ * @method void setFileCompletedList(string $FileCompletedList) Set File list completed.
+ * @method string getFileFailedList() Obtain Failed file list.
+ * @method void setFileFailedList(string $FileFailedList) Set Failed file list.
+ * @method string getBucketPath() Obtain Source bucket path.
+ * @method void setBucketPath(string $BucketPath) Set Source bucket path.
+ * @method integer getDirection() Obtain Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+ * @method void setDirection(integer $Direction) Set Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
  */
 class MigrationTaskInfo extends AbstractModel
 {
@@ -126,32 +96,27 @@ class MigrationTaskInfo extends AbstractModel
     public $MigrationMode;
 
     /**
-     * @var string Data source bucket name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Data source bucket name.
      */
     public $BucketName;
 
     /**
-     * @var string Data source bucket region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Source bucket region.
      */
     public $BucketRegion;
 
     /**
-     * @var string Data source bucket address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Data source bucket address.
      */
     public $BucketAddress;
 
     /**
-     * @var string List address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Checklist address.
      */
     public $ListAddress;
 
     /**
-     * @var string File system instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File system instance name.
      */
     public $FsName;
 
@@ -176,118 +141,97 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CreateTime;
 
     /**
-     * @var integer End time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Completion/Termination time.
      */
     public $EndTime;
 
     /**
-     * @var integer Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
+     * @var integer Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
      */
     public $Status;
 
     /**
-     * @var integer Number of files
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of files.
      */
     public $FileTotalCount;
 
     /**
-     * @var integer Number of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of migrated files.
      */
     public $FileMigratedCount;
 
     /**
-     * @var integer Number of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of failed files in migration.
      */
     public $FileFailedCount;
 
     /**
-     * @var integer File size, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer File capacity, in Byte.
      */
     public $FileTotalSize;
 
     /**
-     * @var integer Size of migrated files, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Migrated file capacity in Byte.
      */
     public $FileMigratedSize;
 
     /**
-     * @var integer Size of files that failed to be migrated, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Capacity of failed migration files, in Byte.
      */
     public $FileFailedSize;
 
     /**
-     * @var string List of all files
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Total inventory.
      */
     public $FileTotalList;
 
     /**
-     * @var string List of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File list completed.
      */
     public $FileCompletedList;
 
     /**
-     * @var string List of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Failed file list.
      */
     public $FileFailedList;
 
     /**
-     * @var string Source bucket path
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Source bucket path.
      */
     public $BucketPath;
+
+    /**
+     * @var integer Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+     */
+    public $Direction;
 
     /**
      * @param string $TaskName Migration task name
      * @param string $TaskId Migration task ID
      * @param integer $MigrationType Migration type. Valid values: `0` (bucket) and `1` (list). Default value: `0`.
      * @param integer $MigrationMode Migration mode. Default value: `0` (full migration).
-     * @param string $BucketName Data source bucket name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BucketRegion Data source bucket region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BucketAddress Data source bucket address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ListAddress List address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FsName File system instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BucketName Data source bucket name.
+     * @param string $BucketRegion Source bucket region.
+     * @param string $BucketAddress Data source bucket address.
+     * @param string $ListAddress Checklist address.
+     * @param string $FsName File system instance name.
      * @param string $FileSystemId File system instance ID
      * @param string $FsPath File system path
      * @param integer $CoverType Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
      * @param integer $CreateTime Creation time
-     * @param integer $EndTime End time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
-     * @param integer $FileTotalCount Number of files
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FileMigratedCount Number of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FileFailedCount Number of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FileTotalSize File size, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FileMigratedSize Size of migrated files, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FileFailedSize Size of files that failed to be migrated, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileTotalList List of all files
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileCompletedList List of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileFailedList List of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BucketPath Source bucket path
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $EndTime Completion/Termination time.
+     * @param integer $Status Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
+     * @param integer $FileTotalCount Number of files.
+     * @param integer $FileMigratedCount Number of migrated files.
+     * @param integer $FileFailedCount Number of failed files in migration.
+     * @param integer $FileTotalSize File capacity, in Byte.
+     * @param integer $FileMigratedSize Migrated file capacity in Byte.
+     * @param integer $FileFailedSize Capacity of failed migration files, in Byte.
+     * @param string $FileTotalList Total inventory.
+     * @param string $FileCompletedList File list completed.
+     * @param string $FileFailedList Failed file list.
+     * @param string $BucketPath Source bucket path.
+     * @param integer $Direction Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
      */
     function __construct()
     {
@@ -400,6 +344,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BucketPath",$param) and $param["BucketPath"] !== null) {
             $this->BucketPath = $param["BucketPath"];
+        }
+
+        if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
+            $this->Direction = $param["Direction"];
         }
     }
 }

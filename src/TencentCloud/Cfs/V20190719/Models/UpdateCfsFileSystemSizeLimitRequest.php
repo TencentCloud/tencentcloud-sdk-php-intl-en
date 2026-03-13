@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getFsLimit() Obtain File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
  * @method void setFsLimit(integer $FsLimit) Set File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
- * @method string getFileSystemId() Obtain File system ID. Currently, only Standard file systems are supported.
- * @method void setFileSystemId(string $FileSystemId) Set File system ID. Currently, only Standard file systems are supported.
+ * @method string getFileSystemId() Obtain File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+ * @method void setFileSystemId(string $FileSystemId) Set File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
  */
 class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel
     public $FsLimit;
 
     /**
-     * @var string File system ID. Currently, only Standard file systems are supported.
+     * @var string File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
      */
     public $FileSystemId;
 
     /**
      * @param integer $FsLimit File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
-     * @param string $FileSystemId File system ID. Currently, only Standard file systems are supported.
+     * @param string $FileSystemId File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
      */
     function __construct()
     {

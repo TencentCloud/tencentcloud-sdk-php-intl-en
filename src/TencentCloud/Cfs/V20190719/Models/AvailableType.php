@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getProtocols() Obtain Protocol and sale details
  * @method void setProtocols(array $Protocols) Set Protocol and sale details
- * @method string getType() Obtain Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
- * @method void setType(string $Type) Set Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+ * @method string getType() Obtain Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
+ * @method void setType(string $Type) Set Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
  * @method boolean getPrepayment() Obtain Indicates whether prepaid is supported. `true`: yes; `false`: no
  * @method void setPrepayment(boolean $Prepayment) Set Indicates whether prepaid is supported. `true`: yes; `false`: no
  */
@@ -35,7 +35,7 @@ class AvailableType extends AbstractModel
     public $Protocols;
 
     /**
-     * @var string Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+     * @var string Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
      */
     public $Type;
 
@@ -46,7 +46,7 @@ class AvailableType extends AbstractModel
 
     /**
      * @param array $Protocols Protocol and sale details
-     * @param string $Type Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+     * @param string $Type Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
      * @param boolean $Prepayment Indicates whether prepaid is supported. `true`: yes; `false`: no
      */
     function __construct()

@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAutoSnapshotPolicy request structure.
  *
- * @method string getHour() Obtain The time point when to repeat the snapshot operation
- * @method void setHour(string $Hour) Set The time point when to repeat the snapshot operation
- * @method string getPolicyName() Obtain Policy name
- * @method void setPolicyName(string $PolicyName) Set Policy name
- * @method string getDayOfWeek() Obtain The day of the week on which to repeat the snapshot operation
- * @method void setDayOfWeek(string $DayOfWeek) Set The day of the week on which to repeat the snapshot operation
- * @method integer getAliveDays() Obtain Snapshot retention period
- * @method void setAliveDays(integer $AliveDays) Set Snapshot retention period
- * @method string getDayOfMonth() Obtain The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
- * @method void setDayOfMonth(string $DayOfMonth) Set The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
- * @method integer getIntervalDays() Obtain The snapshot interval, in days.
- * @method void setIntervalDays(integer $IntervalDays) Set The snapshot interval, in days.
+ * @method string getHour() Obtain Snapshot repeat time point. value range: 0-23 hr.
+ * @method void setHour(string $Hour) Set Snapshot repeat time point. value range: 0-23 hr.
+ * @method string getPolicyName() Obtain Policy name, limited to 64 characters, only supports input of chinese, letters, numbers, _, or -.
+ * @method void setPolicyName(string $PolicyName) Set Policy name, limited to 64 characters, only supports input of chinese, letters, numbers, _, or -.
+ * @method string getDayOfWeek() Obtain Snapshot repeat date, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
+ * @method void setDayOfWeek(string $DayOfWeek) Set Snapshot repeat date, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
+ * @method integer getAliveDays() Obtain Specifies the snapshot retention duration in days. the default value is 0 (permanent).
+ * @method void setAliveDays(integer $AliveDays) Set Specifies the snapshot retention duration in days. the default value is 0 (permanent).
+ * @method string getDayOfMonth() Obtain Snapshot monthly recurrence, select a day from the 1st to the 31st of each month, and a snapshot will be automatically created on that day. for example, 1 represents the 1st. choose one of the three: DayOfWeek, IntervalDays.
+ * @method void setDayOfMonth(string $DayOfMonth) Set Snapshot monthly recurrence, select a day from the 1st to the 31st of each month, and a snapshot will be automatically created on that day. for example, 1 represents the 1st. choose one of the three: DayOfWeek, IntervalDays.
+ * @method integer getIntervalDays() Obtain Interval days. choose one of the three with DayOfWeek and DayOfMonth.
+ * @method void setIntervalDays(integer $IntervalDays) Set Interval days. choose one of the three with DayOfWeek and DayOfMonth.
+ * @method array getResourceTags() Obtain Snapshot policy tag.
+ * @method void setResourceTags(array $ResourceTags) Set Snapshot policy tag.
  */
 class CreateAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string The time point when to repeat the snapshot operation
+     * @var string Snapshot repeat time point. value range: 0-23 hr.
      */
     public $Hour;
 
     /**
-     * @var string Policy name
+     * @var string Policy name, limited to 64 characters, only supports input of chinese, letters, numbers, _, or -.
      */
     public $PolicyName;
 
     /**
-     * @var string The day of the week on which to repeat the snapshot operation
+     * @var string Snapshot repeat date, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
      */
     public $DayOfWeek;
 
     /**
-     * @var integer Snapshot retention period
+     * @var integer Specifies the snapshot retention duration in days. the default value is 0 (permanent).
      */
     public $AliveDays;
 
     /**
-     * @var string The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
+     * @var string Snapshot monthly recurrence, select a day from the 1st to the 31st of each month, and a snapshot will be automatically created on that day. for example, 1 represents the 1st. choose one of the three: DayOfWeek, IntervalDays.
      */
     public $DayOfMonth;
 
     /**
-     * @var integer The snapshot interval, in days.
+     * @var integer Interval days. choose one of the three with DayOfWeek and DayOfMonth.
      */
     public $IntervalDays;
 
     /**
-     * @param string $Hour The time point when to repeat the snapshot operation
-     * @param string $PolicyName Policy name
-     * @param string $DayOfWeek The day of the week on which to repeat the snapshot operation
-     * @param integer $AliveDays Snapshot retention period
-     * @param string $DayOfMonth The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
-     * @param integer $IntervalDays The snapshot interval, in days.
+     * @var array Snapshot policy tag.
+     */
+    public $ResourceTags;
+
+    /**
+     * @param string $Hour Snapshot repeat time point. value range: 0-23 hr.
+     * @param string $PolicyName Policy name, limited to 64 characters, only supports input of chinese, letters, numbers, _, or -.
+     * @param string $DayOfWeek Snapshot repeat date, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
+     * @param integer $AliveDays Specifies the snapshot retention duration in days. the default value is 0 (permanent).
+     * @param string $DayOfMonth Snapshot monthly recurrence, select a day from the 1st to the 31st of each month, and a snapshot will be automatically created on that day. for example, 1 represents the 1st. choose one of the three: DayOfWeek, IntervalDays.
+     * @param integer $IntervalDays Interval days. choose one of the three with DayOfWeek and DayOfMonth.
+     * @param array $ResourceTags Snapshot policy tag.
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
 
         if (array_key_exists("IntervalDays",$param) and $param["IntervalDays"] !== null) {
             $this->IntervalDays = $param["IntervalDays"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

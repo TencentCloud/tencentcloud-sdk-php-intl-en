@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCfsSnapshot request structure.
  *
- * @method string getFileSystemId() Obtain File system ID
- * @method void setFileSystemId(string $FileSystemId) Set File system ID
- * @method string getSnapshotName() Obtain Snapshot name
- * @method void setSnapshotName(string $SnapshotName) Set Snapshot name
+ * @method string getFileSystemId() Obtain File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+ * @method void setFileSystemId(string $FileSystemId) Set File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+ * @method string getSnapshotName() Obtain Snapshot name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+ * @method void setSnapshotName(string $SnapshotName) Set Snapshot name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
  * @method array getResourceTags() Obtain Snapshot tag
  * @method void setResourceTags(array $ResourceTags) Set Snapshot tag
  */
 class CreateCfsSnapshotRequest extends AbstractModel
 {
     /**
-     * @var string File system ID
+     * @var string File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
      */
     public $FileSystemId;
 
     /**
-     * @var string Snapshot name
+     * @var string Snapshot name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
      */
     public $SnapshotName;
 
@@ -45,8 +45,8 @@ class CreateCfsSnapshotRequest extends AbstractModel
     public $ResourceTags;
 
     /**
-     * @param string $FileSystemId File system ID
-     * @param string $SnapshotName Snapshot name
+     * @param string $FileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+     * @param string $SnapshotName Snapshot name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
      * @param array $ResourceTags Snapshot tag
      */
     function __construct()

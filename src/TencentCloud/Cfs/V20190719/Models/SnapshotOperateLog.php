@@ -21,20 +21,40 @@ use TencentCloud\Common\AbstractModel;
  * Snapshot operation log
  *
  * @method string getAction() Obtain Operation type
+CreateCfsSnapshot: create a snapshot.
+DeleteCfsSnapshot: delete snapshot.
+CreateCfsFileSystem: create a file system.
+UpdateCfsSnapshotAttribute: update snapshot.
  * @method void setAction(string $Action) Set Operation type
+CreateCfsSnapshot: create a snapshot.
+DeleteCfsSnapshot: delete snapshot.
+CreateCfsFileSystem: create a file system.
+UpdateCfsSnapshotAttribute: update snapshot.
  * @method string getActionTime() Obtain Operation time
  * @method void setActionTime(string $ActionTime) Set Operation time
- * @method string getActionName() Obtain Operation name
- * @method void setActionName(string $ActionName) Set Operation name
- * @method string getOperator() Obtain Operator
- * @method void setOperator(string $Operator) Set Operator
- * @method integer getResult() Obtain Result
- * @method void setResult(integer $Result) Set Result
+ * @method string getActionName() Obtain Operation name.
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
+ * @method void setActionName(string $ActionName) Set Operation name.
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
+ * @method string getOperator() Obtain Operator uin.
+ * @method void setOperator(string $Operator) Set Operator uin.
+ * @method integer getResult() Obtain 1- task in progress; 2- task success; 3- task failure.
+ * @method void setResult(integer $Result) Set 1- task in progress; 2- task success; 3- task failure.
  */
 class SnapshotOperateLog extends AbstractModel
 {
     /**
      * @var string Operation type
+CreateCfsSnapshot: create a snapshot.
+DeleteCfsSnapshot: delete snapshot.
+CreateCfsFileSystem: create a file system.
+UpdateCfsSnapshotAttribute: update snapshot.
      */
     public $Action;
 
@@ -44,26 +64,38 @@ class SnapshotOperateLog extends AbstractModel
     public $ActionTime;
 
     /**
-     * @var string Operation name
+     * @var string Operation name.
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
      */
     public $ActionName;
 
     /**
-     * @var string Operator
+     * @var string Operator uin.
      */
     public $Operator;
 
     /**
-     * @var integer Result
+     * @var integer 1- task in progress; 2- task success; 3- task failure.
      */
     public $Result;
 
     /**
      * @param string $Action Operation type
+CreateCfsSnapshot: create a snapshot.
+DeleteCfsSnapshot: delete snapshot.
+CreateCfsFileSystem: create a file system.
+UpdateCfsSnapshotAttribute: update snapshot.
      * @param string $ActionTime Operation time
-     * @param string $ActionName Operation name
-     * @param string $Operator Operator
-     * @param integer $Result Result
+     * @param string $ActionName Operation name.
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
+     * @param string $Operator Operator uin.
+     * @param integer $Result 1- task in progress; 2- task success; 3- task failure.
      */
     function __construct()
     {

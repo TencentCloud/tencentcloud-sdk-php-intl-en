@@ -20,125 +20,137 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Snapshot information
  *
- * @method string getCreationTime() Obtain Snapshot creation time
- * @method void setCreationTime(string $CreationTime) Set Snapshot creation time
- * @method string getSnapshotName() Obtain Snapshot name
- * @method void setSnapshotName(string $SnapshotName) Set Snapshot name
- * @method string getSnapshotId() Obtain Snapshot ID
- * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID
- * @method string getStatus() Obtain Snapshot status
- * @method void setStatus(string $Status) Set Snapshot status
- * @method string getRegionName() Obtain Region name
- * @method void setRegionName(string $RegionName) Set Region name
- * @method string getFileSystemId() Obtain File system ID
- * @method void setFileSystemId(string $FileSystemId) Set File system ID
- * @method integer getSize() Obtain Snapshot size
- * @method void setSize(integer $Size) Set Snapshot size
- * @method integer getAliveDay() Obtain Retention period in days
- * @method void setAliveDay(integer $AliveDay) Set Retention period in days
- * @method integer getPercent() Obtain Snapshot progress
- * @method void setPercent(integer $Percent) Set Snapshot progress
- * @method integer getAppId() Obtain Account ID
- * @method void setAppId(integer $AppId) Set Account ID
- * @method string getDeleteTime() Obtain Snapshot deletion time
- * @method void setDeleteTime(string $DeleteTime) Set Snapshot deletion time
- * @method string getFsName() Obtain File system name
- * @method void setFsName(string $FsName) Set File system name
- * @method array getTags() Obtain Snapshot tag
- * @method void setTags(array $Tags) Set Snapshot tag
- * @method string getSnapshotType() Obtain Snapshot type
+ * @method string getCreationTime() Obtain <P>Snapshot creation time</p>.
+ * @method void setCreationTime(string $CreationTime) Set <P>Snapshot creation time</p>.
+ * @method string getSnapshotName() Obtain <P>Snapshot name</p>.
+ * @method void setSnapshotName(string $SnapshotName) Set <P>Snapshot name</p>.
+ * @method string getSnapshotId() Obtain <p>Snapshot ID.</p>.
+ * @method void setSnapshotId(string $SnapshotId) Set <p>Snapshot ID.</p>.
+ * @method string getStatus() Obtain <P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>.
+ * @method void setStatus(string $Status) Set <P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>.
+ * @method string getRegionName() Obtain <P>Region name</p>.
+ * @method void setRegionName(string $RegionName) Set <P>Region name</p>.
+ * @method string getFileSystemId() Obtain <p>File system ID</p>.
+ * @method void setFileSystemId(string $FileSystemId) Set <p>File system ID</p>.
+ * @method integer getSize() Obtain <p>Snapshot size</p><p>unit: MiB</p>.
+ * @method void setSize(integer $Size) Set <p>Snapshot size</p><p>unit: MiB</p>.
+ * @method integer getAliveDay() Obtain <P>Retention duration days</p>.
+ * @method void setAliveDay(integer $AliveDay) Set <P>Retention duration days</p>.
+ * @method integer getPercent() Obtain <P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>.
+ * @method void setPercent(integer $Percent) Set <P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>.
+ * @method integer getAppId() Obtain <p>Account ID.</p>.
+ * @method void setAppId(integer $AppId) Set <p>Account ID.</p>.
+ * @method string getDeleteTime() Obtain <P>Snapshot deletion time</p>.
+ * @method void setDeleteTime(string $DeleteTime) Set <P>Snapshot deletion time</p>.
+ * @method string getFsName() Obtain <P>File system name</p>.
+ * @method void setFsName(string $FsName) Set <P>File system name</p>.
+ * @method array getTags() Obtain <P>Snapshot tag.</p>.
+ * @method void setTags(array $Tags) Set <P>Snapshot tag.</p>.
+ * @method string getSnapshotType() Obtain <p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSnapshotType(string $SnapshotType) Set Snapshot type
+ * @method void setSnapshotType(string $SnapshotType) Set <p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSnapshotTime() Obtain <P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSnapshotTime(string $SnapshotTime) Set <P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SnapshotInfo extends AbstractModel
 {
     /**
-     * @var string Snapshot creation time
+     * @var string <P>Snapshot creation time</p>.
      */
     public $CreationTime;
 
     /**
-     * @var string Snapshot name
+     * @var string <P>Snapshot name</p>.
      */
     public $SnapshotName;
 
     /**
-     * @var string Snapshot ID
+     * @var string <p>Snapshot ID.</p>.
      */
     public $SnapshotId;
 
     /**
-     * @var string Snapshot status
+     * @var string <P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>.
      */
     public $Status;
 
     /**
-     * @var string Region name
+     * @var string <P>Region name</p>.
      */
     public $RegionName;
 
     /**
-     * @var string File system ID
+     * @var string <p>File system ID</p>.
      */
     public $FileSystemId;
 
     /**
-     * @var integer Snapshot size
+     * @var integer <p>Snapshot size</p><p>unit: MiB</p>.
      */
     public $Size;
 
     /**
-     * @var integer Retention period in days
+     * @var integer <P>Retention duration days</p>.
      */
     public $AliveDay;
 
     /**
-     * @var integer Snapshot progress
+     * @var integer <P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>.
      */
     public $Percent;
 
     /**
-     * @var integer Account ID
+     * @var integer <p>Account ID.</p>.
      */
     public $AppId;
 
     /**
-     * @var string Snapshot deletion time
+     * @var string <P>Snapshot deletion time</p>.
      */
     public $DeleteTime;
 
     /**
-     * @var string File system name
+     * @var string <P>File system name</p>.
      */
     public $FsName;
 
     /**
-     * @var array Snapshot tag
+     * @var array <P>Snapshot tag.</p>.
      */
     public $Tags;
 
     /**
-     * @var string Snapshot type
+     * @var string <p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SnapshotType;
 
     /**
-     * @param string $CreationTime Snapshot creation time
-     * @param string $SnapshotName Snapshot name
-     * @param string $SnapshotId Snapshot ID
-     * @param string $Status Snapshot status
-     * @param string $RegionName Region name
-     * @param string $FileSystemId File system ID
-     * @param integer $Size Snapshot size
-     * @param integer $AliveDay Retention period in days
-     * @param integer $Percent Snapshot progress
-     * @param integer $AppId Account ID
-     * @param string $DeleteTime Snapshot deletion time
-     * @param string $FsName File system name
-     * @param array $Tags Snapshot tag
-     * @param string $SnapshotType Snapshot type
+     * @var string <P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SnapshotTime;
+
+    /**
+     * @param string $CreationTime <P>Snapshot creation time</p>.
+     * @param string $SnapshotName <P>Snapshot name</p>.
+     * @param string $SnapshotId <p>Snapshot ID.</p>.
+     * @param string $Status <P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>.
+     * @param string $RegionName <P>Region name</p>.
+     * @param string $FileSystemId <p>File system ID</p>.
+     * @param integer $Size <p>Snapshot size</p><p>unit: MiB</p>.
+     * @param integer $AliveDay <P>Retention duration days</p>.
+     * @param integer $Percent <P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>.
+     * @param integer $AppId <p>Account ID.</p>.
+     * @param string $DeleteTime <P>Snapshot deletion time</p>.
+     * @param string $FsName <P>File system name</p>.
+     * @param array $Tags <P>Snapshot tag.</p>.
+     * @param string $SnapshotType <p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SnapshotTime <P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -213,6 +225,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SnapshotType",$param) and $param["SnapshotType"] !== null) {
             $this->SnapshotType = $param["SnapshotType"];
+        }
+
+        if (array_key_exists("SnapshotTime",$param) and $param["SnapshotTime"] !== null) {
+            $this->SnapshotTime = $param["SnapshotTime"];
         }
     }
 }

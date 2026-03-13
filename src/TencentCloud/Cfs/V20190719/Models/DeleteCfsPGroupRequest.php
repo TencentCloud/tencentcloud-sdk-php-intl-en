@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCfsPGroup request structure.
  *
- * @method string getPGroupId() Obtain Permission group ID
- * @method void setPGroupId(string $PGroupId) Set Permission group ID
+ * @method string getPGroupId() Obtain Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+ * @method void setPGroupId(string $PGroupId) Set Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
  */
 class DeleteCfsPGroupRequest extends AbstractModel
 {
     /**
-     * @var string Permission group ID
+     * @var string Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      */
     public $PGroupId;
 
     /**
-     * @param string $PGroupId Permission group ID
+     * @param string $PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      */
     function __construct()
     {
