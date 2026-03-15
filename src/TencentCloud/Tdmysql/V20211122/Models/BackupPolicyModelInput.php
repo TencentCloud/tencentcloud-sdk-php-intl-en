@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Modify backup policy object.
  *
- * @method string getBackupEndTime() Obtain <P>Backup end time.</p>.
- * @method void setBackupEndTime(string $BackupEndTime) Set <P>Backup end time.</p>.
- * @method string getBackupMethod() Obtain <P>Backup method: physical physical backup, snapshot snapshot backup</p>.
- * @method void setBackupMethod(string $BackupMethod) Set <P>Backup method: physical physical backup, snapshot snapshot backup</p>.
- * @method string getBackupStartTime() Obtain <P>Backup start time</p>.
- * @method void setBackupStartTime(string $BackupStartTime) Set <P>Backup start time</p>.
- * @method integer getEnableFull() Obtain <P>Whether full backup is enabled</p>.
- * @method void setEnableFull(integer $EnableFull) Set <P>Whether full backup is enabled</p>.
- * @method integer getEnableLog() Obtain <P>Whether to enable log backup</p>.
- * @method void setEnableLog(integer $EnableLog) Set <P>Whether to enable log backup</p>.
- * @method integer getFullRetentionPeriod() Obtain <P>Full backup retention time can currently only be set to 7 days.</p>.
- * @method void setFullRetentionPeriod(integer $FullRetentionPeriod) Set <P>Full backup retention time can currently only be set to 7 days.</p>.
- * @method string getInstanceId() Obtain <p>Instance ID.</p>.
- * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>.
- * @method integer getLogRetentionPeriod() Obtain <P>Log retention days. currently, can only set retention to 7 days.</p>.
- * @method void setLogRetentionPeriod(integer $LogRetentionPeriod) Set <P>Log retention days. currently, can only set retention to 7 days.</p>.
- * @method string getPeriodTime() Obtain <P>Days of the week to perform backup.</p>.
- * @method void setPeriodTime(string $PeriodTime) Set <P>Days of the week to perform backup.</p>.
- * @method string getStorageType() Obtain <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>.
- * @method void setStorageType(string $StorageType) Set <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>.
+ * @method string getBackupEndTime() Obtain <P>Backup end time.</p>
+ * @method void setBackupEndTime(string $BackupEndTime) Set <P>Backup end time.</p>
+ * @method string getBackupMethod() Obtain <P>Backup method: physical physical backup, snapshot snapshot backup</p>
+ * @method void setBackupMethod(string $BackupMethod) Set <P>Backup method: physical physical backup, snapshot snapshot backup</p>
+ * @method string getBackupStartTime() Obtain <P>Backup start time</p>
+ * @method void setBackupStartTime(string $BackupStartTime) Set <P>Backup start time</p>
+ * @method integer getEnableFull() Obtain <P>Whether full backup is enabled</p>
+ * @method void setEnableFull(integer $EnableFull) Set <P>Whether full backup is enabled</p>
+ * @method integer getEnableLog() Obtain <P>Whether to enable log backup</p>
+ * @method void setEnableLog(integer $EnableLog) Set <P>Whether to enable log backup</p>
+ * @method integer getFullRetentionPeriod() Obtain <P>Full backup retention time can currently only be set to 7 days.</p>
+ * @method void setFullRetentionPeriod(integer $FullRetentionPeriod) Set <P>Full backup retention time can currently only be set to 7 days.</p>
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method integer getLogRetentionPeriod() Obtain <P>Log retention days. currently, can only set retention to 7 days.</p>
+ * @method void setLogRetentionPeriod(integer $LogRetentionPeriod) Set <P>Log retention days. currently, can only set retention to 7 days.</p>
+ * @method string getPeriodTime() Obtain <P>Days of the week to perform backup.</p>
+ * @method void setPeriodTime(string $PeriodTime) Set <P>Days of the week to perform backup.</p>
+ * @method string getStorageType() Obtain <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>
+ * @method void setStorageType(string $StorageType) Set <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>
  */
 class BackupPolicyModelInput extends AbstractModel
 {
     /**
-     * @var string <P>Backup end time.</p>.
+     * @var string <P>Backup end time.</p>
      */
     public $BackupEndTime;
 
     /**
-     * @var string <P>Backup method: physical physical backup, snapshot snapshot backup</p>.
+     * @var string <P>Backup method: physical physical backup, snapshot snapshot backup</p>
      */
     public $BackupMethod;
 
     /**
-     * @var string <P>Backup start time</p>.
+     * @var string <P>Backup start time</p>
      */
     public $BackupStartTime;
 
     /**
-     * @var integer <P>Whether full backup is enabled</p>.
+     * @var integer <P>Whether full backup is enabled</p>
      */
     public $EnableFull;
 
     /**
-     * @var integer <P>Whether to enable log backup</p>.
+     * @var integer <P>Whether to enable log backup</p>
      */
     public $EnableLog;
 
     /**
-     * @var integer <P>Full backup retention time can currently only be set to 7 days.</p>.
+     * @var integer <P>Full backup retention time can currently only be set to 7 days.</p>
      */
     public $FullRetentionPeriod;
 
     /**
-     * @var string <p>Instance ID.</p>.
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer <P>Log retention days. currently, can only set retention to 7 days.</p>.
+     * @var integer <P>Log retention days. currently, can only set retention to 7 days.</p>
      */
     public $LogRetentionPeriod;
 
     /**
-     * @var string <P>Days of the week to perform backup.</p>.
+     * @var string <P>Days of the week to perform backup.</p>
      */
     public $PeriodTime;
 
     /**
-     * @var string <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>.
+     * @var string <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>
      */
     public $StorageType;
 
     /**
-     * @param string $BackupEndTime <P>Backup end time.</p>.
-     * @param string $BackupMethod <P>Backup method: physical physical backup, snapshot snapshot backup</p>.
-     * @param string $BackupStartTime <P>Backup start time</p>.
-     * @param integer $EnableFull <P>Whether full backup is enabled</p>.
-     * @param integer $EnableLog <P>Whether to enable log backup</p>.
-     * @param integer $FullRetentionPeriod <P>Full backup retention time can currently only be set to 7 days.</p>.
-     * @param string $InstanceId <p>Instance ID.</p>.
-     * @param integer $LogRetentionPeriod <P>Log retention days. currently, can only set retention to 7 days.</p>.
-     * @param string $PeriodTime <P>Days of the week to perform backup.</p>.
-     * @param string $StorageType <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>.
+     * @param string $BackupEndTime <P>Backup end time.</p>
+     * @param string $BackupMethod <P>Backup method: physical physical backup, snapshot snapshot backup</p>
+     * @param string $BackupStartTime <P>Backup start time</p>
+     * @param integer $EnableFull <P>Whether full backup is enabled</p>
+     * @param integer $EnableLog <P>Whether to enable log backup</p>
+     * @param integer $FullRetentionPeriod <P>Full backup retention time can currently only be set to 7 days.</p>
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param integer $LogRetentionPeriod <P>Log retention days. currently, can only set retention to 7 days.</p>
+     * @param string $PeriodTime <P>Days of the week to perform backup.</p>
+     * @param string $StorageType <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAutoRenewFlag request structure.
  *
- * @method array getInstanceIds() Obtain Instance list that needs to be modified.
- * @method void setInstanceIds(array $InstanceIds) Set Instance list that needs to be modified.
- * @method integer getAutoRenewFlag() Obtain 1 indicates enable automatic renewal, 0 indicates disable automatic renewal.
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set 1 indicates enable automatic renewal, 0 indicates disable automatic renewal.
+ * @method array getInstanceIds() Obtain <P>Instance list that needs to be modified</p>.
+ * @method void setInstanceIds(array $InstanceIds) Set <P>Instance list that needs to be modified</p>.
+ * @method integer getAutoRenewFlag() Obtain <P>1 enables automatic renewal, 0 disables automatic renewal.</p>.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set <P>1 enables automatic renewal, 0 disables automatic renewal.</p>.
  */
 class ModifyAutoRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var array Instance list that needs to be modified.
+     * @var array <P>Instance list that needs to be modified</p>.
      */
     public $InstanceIds;
 
     /**
-     * @var integer 1 indicates enable automatic renewal, 0 indicates disable automatic renewal.
+     * @var integer <P>1 enables automatic renewal, 0 disables automatic renewal.</p>.
      */
     public $AutoRenewFlag;
 
     /**
-     * @param array $InstanceIds Instance list that needs to be modified.
-     * @param integer $AutoRenewFlag 1 indicates enable automatic renewal, 0 indicates disable automatic renewal.
+     * @param array $InstanceIds <P>Instance list that needs to be modified</p>.
+     * @param integer $AutoRenewFlag <P>1 enables automatic renewal, 0 disables automatic renewal.</p>.
      */
     function __construct()
     {

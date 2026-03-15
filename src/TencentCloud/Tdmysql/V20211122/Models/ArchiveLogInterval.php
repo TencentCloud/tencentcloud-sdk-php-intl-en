@@ -18,7 +18,7 @@ namespace TencentCloud\Tdmysql\V20211122\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Recoverable time interval.
+ * Recoverable time interval
  *
  * @method string getEndTime() Obtain End time.
 Note: This field may return null, indicating that no valid values can be obtained.

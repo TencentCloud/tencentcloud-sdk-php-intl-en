@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * The description of a single comparison result.
  *
  * @method string getErrorCode() Obtain The final verification result code.
-0: Success.
-1001: Failed to call the liveness detection engine.
+0: Succeeded.
+1001: Failed to call the liveness engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
  * @method void setErrorCode(string $ErrorCode) Set The final verification result code.
-0: Success.
-1001: Failed to call the liveness detection engine.
+0: Succeeded.
+1001: Failed to call the liveness engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
  * @method string getErrorMsg() Obtain The description of the final verification result.
  * @method void setErrorMsg(string $ErrorMsg) Set The description of the final verification result.
  * @method FileInfo getLiveData() Obtain The liveness algorithm package generated during this SDK-based liveness detection.
@@ -51,11 +59,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLiveErrorCode() Obtain The liveness detection result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+
  * @method void setLiveErrorCode(string $LiveErrorCode) Set The liveness detection result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+
  * @method string getLiveErrorMsg() Obtain The description of the liveness detection result.
  * @method void setLiveErrorMsg(string $LiveErrorMsg) Set The description of the liveness detection result.
  * @method FileInfo getBestFrame() Obtain The download URL of the face screenshot during verification, which is valid for 10 minutes.
@@ -66,21 +82,23 @@ Note: This field may return null, indicating that no valid value can be obtained
  * @method void setProfileImage(FileInfo $ProfileImage) Set The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
  * @method string getCompareErrorCode() Obtain The face comparison result code.
 0: Success.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setCompareErrorCode(string $CompareErrorCode) Set The face comparison result code.
 0: Success.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getCompareErrorMsg() Obtain The description of the face comparison result.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -131,15 +149,19 @@ class CompareResult extends AbstractModel
 {
     /**
      * @var string The final verification result code.
-0: Success.
-1001: Failed to call the liveness detection engine.
+0: Succeeded.
+1001: Failed to call the liveness engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
      */
     public $ErrorCode;
 
@@ -167,7 +189,11 @@ class CompareResult extends AbstractModel
      * @var string The liveness detection result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+
      */
     public $LiveErrorCode;
 
@@ -190,12 +216,13 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * @var string The face comparison result code.
 0: Success.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $CompareErrorCode;
@@ -248,15 +275,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $ErrorCode The final verification result code.
-0: Success.
-1001: Failed to call the liveness detection engine.
+0: Succeeded.
+1001: Failed to call the liveness engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
      * @param string $ErrorMsg The description of the final verification result.
      * @param FileInfo $LiveData The liveness algorithm package generated during this SDK-based liveness detection.
      * @param FileInfo $LiveVideo The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
@@ -264,19 +295,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $LiveErrorCode The liveness detection result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+
      * @param string $LiveErrorMsg The description of the liveness detection result.
      * @param FileInfo $BestFrame The download URL of the face screenshot during verification, which is valid for 10 minutes.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param FileInfo $ProfileImage The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
      * @param string $CompareErrorCode The face comparison result code.
 0: Success.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $CompareErrorMsg The description of the face comparison result.
 Note: This field may return null, indicating that no valid values can be obtained.

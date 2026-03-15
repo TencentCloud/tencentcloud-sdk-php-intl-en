@@ -26,24 +26,15 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\CancelIsolateDBInstancesResponse CancelIsolateDBInstances(Models\CancelIsolateDBInstancesRequest $req) This API is used to lift isolation for instances in batch.
  * @method Models\CreateDBSBackupResponse CreateDBSBackup(Models\CreateDBSBackupRequest $req) Create an instance backup set.
  * @method Models\DeleteDBSBackupSetsResponse DeleteDBSBackupSets(Models\DeleteDBSBackupSetsRequest $req) Delete instance backup sets.
- * @method Models\DescribeBillingEnableResponse DescribeBillingEnable(Models\DescribeBillingEnableRequest $req) No place to call.
-
-This API is used to query whether billing is enabled.
  * @method Models\DescribeDBParametersResponse DescribeDBParameters(Models\DescribeDBParametersRequest $req) This API is used to obtain the current parameter settings of the instance.
  * @method Models\DescribeDBSAvailableRecoveryTimeResponse DescribeDBSAvailableRecoveryTime(Models\DescribeDBSAvailableRecoveryTimeRequest $req) Query recoverable time.
  * @method Models\DescribeDBSCloneInstancesResponse DescribeDBSCloneInstances(Models\DescribeDBSCloneInstancesRequest $req) Query clone list of instances.
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) This API is used to query instance security group information.
  * @method Models\DescribeDatabaseObjectsResponse DescribeDatabaseObjects(Models\DescribeDatabaseObjectsRequest $req) This API is used to query the object list in the database of a cloud database instance, including table, stored procedure, view and function.
- * @method Models\DescribeDatabaseTableResponse DescribeDatabaseTable(Models\DescribeDatabaseTableRequest $req) Redundant API, no API calls.
-
-This API is used to query table information of a cloud database instance.
  * @method Models\DescribeFlowResponse DescribeFlow(Models\DescribeFlowRequest $req) This API is used to query the process status of an asynchronous task.
  * @method Models\DestroyInstancesResponse DestroyInstances(Models\DestroyInstancesRequest $req) This API is used to destroy instances in batch.
  * @method Models\IsolateDBInstanceResponse IsolateDBInstance(Models\IsolateDBInstanceRequest $req) This API is used to batch isolate instances.
  * @method Models\ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(Models\ModifyAutoRenewFlagRequest $req) This API is used to modify the auto-renewal flag.
- * @method Models\ModifyBinlogStatusResponse ModifyBinlogStatus(Models\ModifyBinlogStatusRequest $req) This API is used to entirely overwrite the API feature of ModifyInstanceCdc.
-
-Modify the binlog status.
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) This API is used to modify cloud database security groups.
  * @method Models\ModifyDBParametersResponse ModifyDBParameters(Models\ModifyDBParametersRequest $req) This API is used to modify instance parameters.
  * @method Models\ModifyDBSBackupPolicyResponse ModifyDBSBackupPolicy(Models\ModifyDBSBackupPolicyRequest $req) Modify the instance backup strategy.
