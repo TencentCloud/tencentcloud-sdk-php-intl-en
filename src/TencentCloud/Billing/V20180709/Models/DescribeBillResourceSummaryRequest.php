@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 1 = yes, 0 = no
  * @method string getActionType() Obtain Hourly settlement
 Daily settlement
-Monthly settlement
+Yearly/monthly subscription
 Spot
 New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund
+Yearly/monthly subscription renewal
+Yearly/monthly subscription specification adjustment
+Yearly/monthly subscription refund
 Adjustment - deduction
 Adjustment - refund
 Hourly RI fee
@@ -49,12 +49,12 @@ Offline project deduction
 Offline product deduction
  * @method void setActionType(string $ActionType) Set Hourly settlement
 Daily settlement
-Monthly settlement
+Yearly/monthly subscription
 Spot
 New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund
+Yearly/monthly subscription renewal
+Yearly/monthly subscription specification adjustment
+Yearly/monthly subscription refund
 Adjustment - deduction
 Adjustment - refund
 Hourly RI fee
@@ -111,12 +111,12 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     /**
      * @var string Hourly settlement
 Daily settlement
-Monthly settlement
+Yearly/monthly subscription
 Spot
 New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund
+Yearly/monthly subscription renewal
+Yearly/monthly subscription specification adjustment
+Yearly/monthly subscription refund
 Adjustment - deduction
 Adjustment - refund
 Hourly RI fee
@@ -168,12 +168,12 @@ This parameter can be used for querying bills after January 2021.
 1 = yes, 0 = no
      * @param string $ActionType Hourly settlement
 Daily settlement
-Monthly settlement
+Yearly/monthly subscription
 Spot
 New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund
+Yearly/monthly subscription renewal
+Yearly/monthly subscription specification adjustment
+Yearly/monthly subscription refund
 Adjustment - deduction
 Adjustment - refund
 Hourly RI fee

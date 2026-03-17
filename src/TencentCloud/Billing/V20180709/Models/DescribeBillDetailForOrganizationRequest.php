@@ -36,15 +36,15 @@ use TencentCloud\Common\AbstractModel;
 Valid values: `1` (required), `0` (not required).
  * @method void setNeedRecordNum(integer $NeedRecordNum) Set Indicates whether the total number of records is required, used for pagination.
 Valid values: `1` (required), `0` (not required).
- * @method string getPayMode() Obtain Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go).
- * @method void setPayMode(string $PayMode) Set Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go).
+ * @method string getPayMode() Obtain Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go).
+ * @method void setPayMode(string $PayMode) Set Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go).
  * @method string getResourceId() Obtain ID of the instance to be queried.
  * @method void setResourceId(string $ResourceId) Set ID of the instance to be queried.
  * @method string getActionType() Obtain Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -60,20 +60,20 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
  * @method void setActionType(string $ActionType) Set Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -89,13 +89,13 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
  * @method integer getProjectId() Obtain Project ID: The ID of the project to which the resource belongs.
@@ -147,7 +147,7 @@ Valid values: `1` (required), `0` (not required).
     public $NeedRecordNum;
 
     /**
-     * @var string Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go).
+     * @var string Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go).
      */
     public $PayMode;
 
@@ -158,10 +158,10 @@ Valid values: `1` (required), `0` (not required).
 
     /**
      * @var string Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -177,13 +177,13 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
      */
@@ -214,13 +214,13 @@ Note: To query the product codes used in the current month, call <a href="https:
      * @param string $EndTime The end time of the period in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month queries are not supported and the query results are data for the entire month. Data within the last 18 months can be pulled at most.
      * @param integer $NeedRecordNum Indicates whether the total number of records is required, used for pagination.
 Valid values: `1` (required), `0` (not required).
-     * @param string $PayMode Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go).
+     * @param string $PayMode Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go).
      * @param string $ResourceId ID of the instance to be queried.
      * @param string $ActionType Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -236,13 +236,13 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
      * @param integer $ProjectId Project ID: The ID of the project to which the resource belongs.

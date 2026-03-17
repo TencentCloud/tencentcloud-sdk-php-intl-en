@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatformId(string $PlatformId) Set Tenant ID
  * @method string getApplicationId() Obtain Superapp ID
  * @method void setApplicationId(string $ApplicationId) Set Superapp ID
- * @method integer getMNPTeamId() Obtain Mini program team ID
- * @method void setMNPTeamId(integer $MNPTeamId) Set Mini program team ID
  * @method string getMNPId() Obtain Mini program appid, required. When provided, the query is performed based on the mini program.
  * @method void setMNPId(string $MNPId) Set Mini program appid, required. When provided, the query is performed based on the mini program.
+ * @method integer getMNPTeamId() Obtain Mini program team ID
+ * @method void setMNPTeamId(integer $MNPTeamId) Set Mini program team ID
  */
 class DescribeMNGMAULineChartRequest extends AbstractModel
 {
@@ -49,21 +49,21 @@ class DescribeMNGMAULineChartRequest extends AbstractModel
     public $ApplicationId;
 
     /**
-     * @var integer Mini program team ID
-     */
-    public $MNPTeamId;
-
-    /**
      * @var string Mini program appid, required. When provided, the query is performed based on the mini program.
      */
     public $MNPId;
 
     /**
+     * @var integer Mini program team ID
+     */
+    public $MNPTeamId;
+
+    /**
      * @param integer $DataType Type: 0 Non-production data, 1 Production data 
      * @param string $PlatformId Tenant ID
      * @param string $ApplicationId Superapp ID
-     * @param integer $MNPTeamId Mini program team ID
      * @param string $MNPId Mini program appid, required. When provided, the query is performed based on the mini program.
+     * @param integer $MNPTeamId Mini program team ID
      */
     function __construct()
     {
@@ -90,12 +90,12 @@ class DescribeMNGMAULineChartRequest extends AbstractModel
             $this->ApplicationId = $param["ApplicationId"];
         }
 
-        if (array_key_exists("MNPTeamId",$param) and $param["MNPTeamId"] !== null) {
-            $this->MNPTeamId = $param["MNPTeamId"];
-        }
-
         if (array_key_exists("MNPId",$param) and $param["MNPId"] !== null) {
             $this->MNPId = $param["MNPId"];
+        }
+
+        if (array_key_exists("MNPTeamId",$param) and $param["MNPTeamId"] !== null) {
+            $this->MNPTeamId = $param["MNPTeamId"];
         }
     }
 }

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupType(string $GroupType) Set Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
  * @method array getTagKey() Obtain Tag key, which is used when `GroupType` is `tag`.
  * @method void setTagKey(array $TagKey) Set Tag key, which is used when `GroupType` is `tag`.
+ * @method string getOperateUin() Obtain 
+ * @method void setOperateUin(string $OperateUin) Set 
+ * @method string getPayerUin() Obtain 
+ * @method void setPayerUin(string $PayerUin) Set 
  */
 class DescribeBillSummaryRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeBillSummaryRequest extends AbstractModel
     public $TagKey;
 
     /**
+     * @var string 
+     */
+    public $OperateUin;
+
+    /**
+     * @var string 
+     */
+    public $PayerUin;
+
+    /**
      * @param string $Month Bill month in the format of "yyyy-mm"
      * @param string $GroupType Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
      * @param array $TagKey Tag key, which is used when `GroupType` is `tag`.
+     * @param string $OperateUin 
+     * @param string $PayerUin 
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeBillSummaryRequest extends AbstractModel
 
         if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
             $this->TagKey = $param["TagKey"];
+        }
+
+        if (array_key_exists("OperateUin",$param) and $param["OperateUin"] !== null) {
+            $this->OperateUin = $param["OperateUin"];
+        }
+
+        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
+            $this->PayerUin = $param["PayerUin"];
         }
     }
 }
