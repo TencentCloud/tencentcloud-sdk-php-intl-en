@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDataKeyId() Obtain Unique id of a data key.
  * @method void setDataKeyId(string $DataKeyId) Set Unique id of a data key.
+ * @method MemberAccount getMemberAccount() Obtain Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+ * @method void setMemberAccount(MemberAccount $MemberAccount) Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
  */
 class EnableDataKeyRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class EnableDataKeyRequest extends AbstractModel
     public $DataKeyId;
 
     /**
+     * @var MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public $MemberAccount;
+
+    /**
      * @param string $DataKeyId Unique id of a data key.
+     * @param MemberAccount $MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
      */
     function __construct()
     {
@@ -48,6 +56,11 @@ class EnableDataKeyRequest extends AbstractModel
         }
         if (array_key_exists("DataKeyId",$param) and $param["DataKeyId"] !== null) {
             $this->DataKeyId = $param["DataKeyId"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

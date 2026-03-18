@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyId(string $KeyId) Set Unique CMK ID
  * @method integer getRotateDays() Obtain The interval between each key rotation in days. Value range: 7 - 365 (default).
  * @method void setRotateDays(integer $RotateDays) Set The interval between each key rotation in days. Value range: 7 - 365 (default).
+ * @method MemberAccount getMemberAccount() Obtain Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+ * @method void setMemberAccount(MemberAccount $MemberAccount) Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
  */
 class EnableKeyRotationRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class EnableKeyRotationRequest extends AbstractModel
     public $RotateDays;
 
     /**
+     * @var MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public $MemberAccount;
+
+    /**
      * @param string $KeyId Unique CMK ID
      * @param integer $RotateDays The interval between each key rotation in days. Value range: 7 - 365 (default).
+     * @param MemberAccount $MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class EnableKeyRotationRequest extends AbstractModel
 
         if (array_key_exists("RotateDays",$param) and $param["RotateDays"] !== null) {
             $this->RotateDays = $param["RotateDays"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

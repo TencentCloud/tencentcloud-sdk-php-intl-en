@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlias(string $Alias) Set New alias containing 1-60 characters or digits
  * @method string getKeyId() Obtain Globally unique CMK ID
  * @method void setKeyId(string $KeyId) Set Globally unique CMK ID
+ * @method MemberAccount getMemberAccount() Obtain Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+ * @method void setMemberAccount(MemberAccount $MemberAccount) Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
  */
 class UpdateAliasRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class UpdateAliasRequest extends AbstractModel
     public $KeyId;
 
     /**
+     * @var MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public $MemberAccount;
+
+    /**
      * @param string $Alias New alias containing 1-60 characters or digits
      * @param string $KeyId Globally unique CMK ID
+     * @param MemberAccount $MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class UpdateAliasRequest extends AbstractModel
 
         if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
             $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

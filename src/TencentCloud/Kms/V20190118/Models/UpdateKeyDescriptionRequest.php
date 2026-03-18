@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set New description of up to 1,024 bytes in length
  * @method string getKeyId() Obtain ID of the CMK for which to modify the description
  * @method void setKeyId(string $KeyId) Set ID of the CMK for which to modify the description
+ * @method MemberAccount getMemberAccount() Obtain Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+ * @method void setMemberAccount(MemberAccount $MemberAccount) Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
  */
 class UpdateKeyDescriptionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class UpdateKeyDescriptionRequest extends AbstractModel
     public $KeyId;
 
     /**
+     * @var MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public $MemberAccount;
+
+    /**
      * @param string $Description New description of up to 1,024 bytes in length
      * @param string $KeyId ID of the CMK for which to modify the description
+     * @param MemberAccount $MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class UpdateKeyDescriptionRequest extends AbstractModel
 
         if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
             $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

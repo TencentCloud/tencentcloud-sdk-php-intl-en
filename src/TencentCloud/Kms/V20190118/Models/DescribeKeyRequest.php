@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyId() Obtain Globally unique CMK ID
  * @method void setKeyId(string $KeyId) Set Globally unique CMK ID
+ * @method MemberAccount getMemberAccount() Obtain Trusted service member account information.
+ * @method void setMemberAccount(MemberAccount $MemberAccount) Set Trusted service member account information.
  */
 class DescribeKeyRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeKeyRequest extends AbstractModel
     public $KeyId;
 
     /**
+     * @var MemberAccount Trusted service member account information.
+     */
+    public $MemberAccount;
+
+    /**
      * @param string $KeyId Globally unique CMK ID
+     * @param MemberAccount $MemberAccount Trusted service member account information.
      */
     function __construct()
     {
@@ -48,6 +56,11 @@ class DescribeKeyRequest extends AbstractModel
         }
         if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
             $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

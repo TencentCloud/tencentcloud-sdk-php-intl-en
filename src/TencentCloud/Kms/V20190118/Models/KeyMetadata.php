@@ -70,6 +70,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncEndTime(integer $SyncEndTime) Set Specifies the synchronous end time.
  * @method string getSourceHsmClusterId() Obtain Synchronous original cluster. if empty, it is a public cloud public cluster.
  * @method void setSourceHsmClusterId(string $SourceHsmClusterId) Set Synchronous original cluster. if empty, it is a public cloud public cluster.
+ * @method integer getAccountAppId() Obtain Member account appId.
+ * @method void setAccountAppId(integer $AccountAppId) Set Member account appId.
+ * @method integer getAccountUin() Obtain Member account UIN
+ * @method void setAccountUin(integer $AccountUin) Set Member account UIN
+ * @method string getAccountName() Obtain Member account name.
+ * @method void setAccountName(string $AccountName) Set Member account name.
  */
 class KeyMetadata extends AbstractModel
 {
@@ -199,6 +205,21 @@ class KeyMetadata extends AbstractModel
     public $SourceHsmClusterId;
 
     /**
+     * @var integer Member account appId.
+     */
+    public $AccountAppId;
+
+    /**
+     * @var integer Member account UIN
+     */
+    public $AccountUin;
+
+    /**
+     * @var string Member account name.
+     */
+    public $AccountName;
+
+    /**
      * @param string $KeyId Globally unique CMK ID
      * @param string $Alias Alias that makes a key more recognizable and understandable
      * @param integer $CreateTime Key creation time
@@ -224,6 +245,9 @@ class KeyMetadata extends AbstractModel
      * @param integer $SyncStartTime Start time of synchronization.
      * @param integer $SyncEndTime Specifies the synchronous end time.
      * @param string $SourceHsmClusterId Synchronous original cluster. if empty, it is a public cloud public cluster.
+     * @param integer $AccountAppId Member account appId.
+     * @param integer $AccountUin Member account UIN
+     * @param string $AccountName Member account name.
      */
     function __construct()
     {
@@ -336,6 +360,18 @@ class KeyMetadata extends AbstractModel
 
         if (array_key_exists("SourceHsmClusterId",$param) and $param["SourceHsmClusterId"] !== null) {
             $this->SourceHsmClusterId = $param["SourceHsmClusterId"];
+        }
+
+        if (array_key_exists("AccountAppId",$param) and $param["AccountAppId"] !== null) {
+            $this->AccountAppId = $param["AccountAppId"];
+        }
+
+        if (array_key_exists("AccountUin",$param) and $param["AccountUin"] !== null) {
+            $this->AccountUin = $param["AccountUin"];
+        }
+
+        if (array_key_exists("AccountName",$param) and $param["AccountName"] !== null) {
+            $this->AccountName = $param["AccountName"];
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyId() Obtain Unique ID of the CMK for which to cancel schedule deletion
  * @method void setKeyId(string $KeyId) Set Unique ID of the CMK for which to cancel schedule deletion
+ * @method MemberAccount getMemberAccount() Obtain Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+ * @method void setMemberAccount(MemberAccount $MemberAccount) Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
  */
 class CancelKeyDeletionRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CancelKeyDeletionRequest extends AbstractModel
     public $KeyId;
 
     /**
+     * @var MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public $MemberAccount;
+
+    /**
      * @param string $KeyId Unique ID of the CMK for which to cancel schedule deletion
+     * @param MemberAccount $MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
      */
     function __construct()
     {
@@ -48,6 +56,11 @@ class CancelKeyDeletionRequest extends AbstractModel
         }
         if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
             $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

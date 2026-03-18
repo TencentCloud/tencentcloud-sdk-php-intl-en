@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDataKeyIds() Obtain Specifies the Id list of datakeys to be bulk disabled. supports a maximum of 100 data keys.
  * @method void setDataKeyIds(array $DataKeyIds) Set Specifies the Id list of datakeys to be bulk disabled. supports a maximum of 100 data keys.
+ * @method MemberAccount getMemberAccount() Obtain Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+ * @method void setMemberAccount(MemberAccount $MemberAccount) Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
  */
 class DisableDataKeysRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DisableDataKeysRequest extends AbstractModel
     public $DataKeyIds;
 
     /**
+     * @var MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public $MemberAccount;
+
+    /**
      * @param array $DataKeyIds Specifies the Id list of datakeys to be bulk disabled. supports a maximum of 100 data keys.
+     * @param MemberAccount $MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
      */
     function __construct()
     {
@@ -48,6 +56,11 @@ class DisableDataKeysRequest extends AbstractModel
         }
         if (array_key_exists("DataKeyIds",$param) and $param["DataKeyIds"] !== null) {
             $this->DataKeyIds = $param["DataKeyIds"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

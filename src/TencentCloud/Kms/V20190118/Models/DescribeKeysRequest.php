@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getKeyIds() Obtain List of IDs of the CMKs to be queried in batches. Up to 100 `KeyId` values are supported in one query.
  * @method void setKeyIds(array $KeyIds) Set List of IDs of the CMKs to be queried in batches. Up to 100 `KeyId` values are supported in one query.
+ * @method MemberAccount getMemberAccount() Obtain Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+ * @method void setMemberAccount(MemberAccount $MemberAccount) Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
  */
 class DescribeKeysRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeKeysRequest extends AbstractModel
     public $KeyIds;
 
     /**
+     * @var MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public $MemberAccount;
+
+    /**
      * @param array $KeyIds List of IDs of the CMKs to be queried in batches. Up to 100 `KeyId` values are supported in one query.
+     * @param MemberAccount $MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
      */
     function __construct()
     {
@@ -48,6 +56,11 @@ class DescribeKeysRequest extends AbstractModel
         }
         if (array_key_exists("KeyIds",$param) and $param["KeyIds"] !== null) {
             $this->KeyIds = $param["KeyIds"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

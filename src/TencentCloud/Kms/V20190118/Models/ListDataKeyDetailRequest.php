@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataKeyLen(integer $DataKeyLen) Set Length of the data key.
  * @method array getTagFilters() Obtain Tag filtering conditions.
  * @method void setTagFilters(array $TagFilters) Set Tag filtering conditions.
+ * @method array getMemberAccounts() Obtain Array of member account information.
+ * @method void setMemberAccounts(array $MemberAccounts) Set Array of member account information.
  */
 class ListDataKeyDetailRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class ListDataKeyDetailRequest extends AbstractModel
     public $TagFilters;
 
     /**
+     * @var array Array of member account information.
+     */
+    public $MemberAccounts;
+
+    /**
      * @param integer $Offset Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
      * @param integer $Limit Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
      * @param integer $Role Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
@@ -112,6 +119,7 @@ class ListDataKeyDetailRequest extends AbstractModel
      * @param string $KeyId Specifies the globally unique identifier of the root key.
      * @param integer $DataKeyLen Length of the data key.
      * @param array $TagFilters Tag filtering conditions.
+     * @param array $MemberAccounts Array of member account information.
      */
     function __construct()
     {
@@ -172,6 +180,15 @@ class ListDataKeyDetailRequest extends AbstractModel
                 $obj = new TagFilter();
                 $obj->deserialize($value);
                 array_push($this->TagFilters, $obj);
+            }
+        }
+
+        if (array_key_exists("MemberAccounts",$param) and $param["MemberAccounts"] !== null) {
+            $this->MemberAccounts = [];
+            foreach ($param["MemberAccounts"] as $key => $value){
+                $obj = new MemberAccount();
+                $obj->deserialize($value);
+                array_push($this->MemberAccounts, $obj);
             }
         }
     }

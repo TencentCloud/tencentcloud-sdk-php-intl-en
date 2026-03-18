@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyId(string $KeyId) Set Unique CMK ID
  * @method integer getPendingWindowInDays() Obtain Schedule deletion time range. Value range: [7,30]
  * @method void setPendingWindowInDays(integer $PendingWindowInDays) Set Schedule deletion time range. Value range: [7,30]
+ * @method MemberAccount getMemberAccount() Obtain Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+ * @method void setMemberAccount(MemberAccount $MemberAccount) Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
  */
 class ScheduleKeyDeletionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ScheduleKeyDeletionRequest extends AbstractModel
     public $PendingWindowInDays;
 
     /**
+     * @var MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public $MemberAccount;
+
+    /**
      * @param string $KeyId Unique CMK ID
      * @param integer $PendingWindowInDays Schedule deletion time range. Value range: [7,30]
+     * @param MemberAccount $MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class ScheduleKeyDeletionRequest extends AbstractModel
 
         if (array_key_exists("PendingWindowInDays",$param) and $param["PendingWindowInDays"] !== null) {
             $this->PendingWindowInDays = $param["PendingWindowInDays"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

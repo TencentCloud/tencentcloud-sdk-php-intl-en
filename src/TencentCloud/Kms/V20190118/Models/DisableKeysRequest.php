@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getKeyIds() Obtain List of IDs of the CMKs to be disabled in batches. Up to 100 CMKs are supported at a time
  * @method void setKeyIds(array $KeyIds) Set List of IDs of the CMKs to be disabled in batches. Up to 100 CMKs are supported at a time
+ * @method MemberAccount getMemberAccount() Obtain Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+ * @method void setMemberAccount(MemberAccount $MemberAccount) Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
  */
 class DisableKeysRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DisableKeysRequest extends AbstractModel
     public $KeyIds;
 
     /**
+     * @var MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public $MemberAccount;
+
+    /**
      * @param array $KeyIds List of IDs of the CMKs to be disabled in batches. Up to 100 CMKs are supported at a time
+     * @param MemberAccount $MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
      */
     function __construct()
     {
@@ -48,6 +56,11 @@ class DisableKeysRequest extends AbstractModel
         }
         if (array_key_exists("KeyIds",$param) and $param["KeyIds"] !== null) {
             $this->KeyIds = $param["KeyIds"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

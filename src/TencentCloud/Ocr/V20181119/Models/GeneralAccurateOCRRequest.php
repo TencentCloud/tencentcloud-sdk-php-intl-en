@@ -20,33 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GeneralAccurateOCR request structure.
  *
- * @method string getImageBase64() Obtain Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
- * @method void setImageBase64(string $ImageBase64) Set Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+ * @method string getImageBase64() Obtain The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used.
+ * @method void setImageBase64(string $ImageBase64) Set The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used.
  * @method string getImageUrl() Obtain URL address of image. (This field is not supported outside Chinese mainland)
 The image cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
  * @method void setImageUrl(string $ImageUrl) Set URL address of image. (This field is not supported outside Chinese mainland)
 The image cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
- * @method boolean getIsWords() Obtain Whether to return the character information. Default value: `false`
- * @method void setIsWords(boolean $IsWords) Set Whether to return the character information. Default value: `false`
- * @method boolean getEnableDetectSplit() Obtain Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
- * @method void setEnableDetectSplit(boolean $EnableDetectSplit) Set Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+ * @method boolean getEnableDetectSplit() Obtain Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR.
+ * @method void setEnableDetectSplit(boolean $EnableDetectSplit) Set Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR.
  * @method boolean getIsPdf() Obtain Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
  * @method void setIsPdf(boolean $IsPdf) Set Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
  * @method integer getPdfPageNumber() Obtain Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
  * @method void setPdfPageNumber(integer $PdfPageNumber) Set Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
+ * @method boolean getEnableDetectText() Obtain Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text.
+ * @method void setEnableDetectText(boolean $EnableDetectText) Set Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text.
+ * @method string getConfigID() Obtain Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR.
+ * @method void setConfigID(string $ConfigID) Set Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR.
  */
 class GeneralAccurateOCRRequest extends AbstractModel
 {
     /**
-     * @var string Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+     * @var string The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used.
      */
     public $ImageBase64;
 
@@ -58,12 +54,7 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     public $ImageUrl;
 
     /**
-     * @var boolean Whether to return the character information. Default value: `false`
-     */
-    public $IsWords;
-
-    /**
-     * @var boolean Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+     * @var boolean Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR.
      */
     public $EnableDetectSplit;
 
@@ -78,16 +69,25 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     public $PdfPageNumber;
 
     /**
-     * @param string $ImageBase64 Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+     * @var boolean Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text.
+     */
+    public $EnableDetectText;
+
+    /**
+     * @var string Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR.
+     */
+    public $ConfigID;
+
+    /**
+     * @param string $ImageBase64 The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used.
      * @param string $ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
 The image cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
-     * @param boolean $IsWords Whether to return the character information. Default value: `false`
-     * @param boolean $EnableDetectSplit Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+     * @param boolean $EnableDetectSplit Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR.
      * @param boolean $IsPdf Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
      * @param integer $PdfPageNumber Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
+     * @param boolean $EnableDetectText Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text.
+     * @param string $ConfigID Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR.
      */
     function __construct()
     {
@@ -110,10 +110,6 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
             $this->ImageUrl = $param["ImageUrl"];
         }
 
-        if (array_key_exists("IsWords",$param) and $param["IsWords"] !== null) {
-            $this->IsWords = $param["IsWords"];
-        }
-
         if (array_key_exists("EnableDetectSplit",$param) and $param["EnableDetectSplit"] !== null) {
             $this->EnableDetectSplit = $param["EnableDetectSplit"];
         }
@@ -124,6 +120,14 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
 
         if (array_key_exists("PdfPageNumber",$param) and $param["PdfPageNumber"] !== null) {
             $this->PdfPageNumber = $param["PdfPageNumber"];
+        }
+
+        if (array_key_exists("EnableDetectText",$param) and $param["EnableDetectText"] !== null) {
+            $this->EnableDetectText = $param["EnableDetectText"];
+        }
+
+        if (array_key_exists("ConfigID",$param) and $param["ConfigID"] !== null) {
+            $this->ConfigID = $param["ConfigID"];
         }
     }
 }

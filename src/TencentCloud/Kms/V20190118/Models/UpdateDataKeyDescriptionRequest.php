@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataKeyId(string $DataKeyId) Set Specifies the unique identifier of the data key.
  * @method string getDescription() Obtain Data key description of up to 100 bytes.
  * @method void setDescription(string $Description) Set Data key description of up to 100 bytes.
+ * @method MemberAccount getMemberAccount() Obtain Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+ * @method void setMemberAccount(MemberAccount $MemberAccount) Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
  */
 class UpdateDataKeyDescriptionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class UpdateDataKeyDescriptionRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public $MemberAccount;
+
+    /**
      * @param string $DataKeyId Specifies the unique identifier of the data key.
      * @param string $Description Data key description of up to 100 bytes.
+     * @param MemberAccount $MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class UpdateDataKeyDescriptionRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }
