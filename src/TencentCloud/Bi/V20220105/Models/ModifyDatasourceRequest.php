@@ -27,7 +27,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getServiceType() Obtain The backend provides dictionaries: domain type. 1: Tencent Cloud; 2: local.
  * @method void setServiceType(string $ServiceType) Set The backend provides dictionaries: domain type. 1: Tencent Cloud; 2: local.
  * @method string getDbType() Obtain Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
  * @method void setDbType(string $DbType) Set Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
  * @method string getCharset() Obtain Database encoding.
  * @method void setCharset(string $Charset) Set Database encoding.
  * @method string getDbUser() Obtain Username.
@@ -64,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUseVPC(boolean $UseVPC) Set Enable VPC.  
  * @method string getRegionId() Obtain Region.
  * @method void setRegionId(string $RegionId) Set Region.
+ * @method string getSchema() Obtain Database schema.
+ * @method void setSchema(string $Schema) Set Database schema.
+ * @method string getDbVersion() Obtain Database version.
+ * @method void setDbVersion(string $DbVersion) Set Database version.
  */
 class ModifyDatasourceRequest extends AbstractModel
 {
@@ -84,6 +100,12 @@ class ModifyDatasourceRequest extends AbstractModel
 
     /**
      * @var string Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
      */
     public $DbType;
 
@@ -178,10 +200,26 @@ class ModifyDatasourceRequest extends AbstractModel
     public $RegionId;
 
     /**
+     * @var string Database schema.
+     */
+    public $Schema;
+
+    /**
+     * @var string Database version.
+     */
+    public $DbVersion;
+
+    /**
      * @param string $DbHost HOST
      * @param integer $DbPort Port.
      * @param string $ServiceType The backend provides dictionaries: domain type. 1: Tencent Cloud; 2: local.
      * @param string $DbType Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
      * @param string $Charset Database encoding.
      * @param string $DbUser Username.
      * @param string $DbPwd Password.
@@ -200,6 +238,8 @@ class ModifyDatasourceRequest extends AbstractModel
      * @param string $VpcId Tencent Cloud VPC identifier.
      * @param boolean $UseVPC Enable VPC.  
      * @param string $RegionId Region.
+     * @param string $Schema Database schema.
+     * @param string $DbVersion Database version.
      */
     function __construct()
     {
@@ -300,6 +340,14 @@ class ModifyDatasourceRequest extends AbstractModel
 
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
             $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("Schema",$param) and $param["Schema"] !== null) {
+            $this->Schema = $param["Schema"];
+        }
+
+        if (array_key_exists("DbVersion",$param) and $param["DbVersion"] !== null) {
+            $this->DbVersion = $param["DbVersion"];
         }
     }
 }

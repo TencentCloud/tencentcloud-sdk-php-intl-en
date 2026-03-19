@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * CIC permission policy.
  *
  * @method integer getRolePolicyId() Obtain Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRolePolicyId(integer $RolePolicyId) Set Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRolePolicyName() Obtain Permission policy name.
  * @method void setRolePolicyName(string $RolePolicyName) Set Permission policy name.
  * @method string getRolePolicyType() Obtain Permission policy type.
@@ -37,7 +35,6 @@ class RolePolicie extends AbstractModel
 {
     /**
      * @var integer Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RolePolicyId;
 
@@ -63,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $RolePolicyId Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RolePolicyName Permission policy name.
      * @param string $RolePolicyType Permission policy type.
      * @param string $RolePolicyDocument Custom policy content. This parameter is only returned for custom policies.

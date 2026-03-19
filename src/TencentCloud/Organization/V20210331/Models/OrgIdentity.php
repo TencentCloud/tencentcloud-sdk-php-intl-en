@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * Organization identity
  *
  * @method integer getIdentityId() Obtain Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIdentityId(integer $IdentityId) Set Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getIdentityAliasName() Obtain Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIdentityAliasName(string $IdentityAliasName) Set Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDescription() Obtain Description.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Description.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getIdentityPolicy() Obtain Identity policy.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIdentityPolicy(array $IdentityPolicy) Set Identity policy.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIdentityType() Obtain Identity type. Valid values: `1` (preset); `2` (custom).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIdentityType(integer $IdentityType) Set Identity type. Valid values: `1` (preset); `2` (custom).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIdentityType() Obtain Identity type. 1: preset; 2: custom.
+ * @method void setIdentityType(integer $IdentityType) Set Identity type. 1: preset; 2: custom.
  * @method string getUpdateTime() Obtain Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OrgIdentity extends AbstractModel
 {
     /**
      * @var integer Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IdentityId;
 
     /**
      * @var string Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IdentityAliasName;
 
     /**
      * @var string Description.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Description;
 
     /**
      * @var array Identity policy.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IdentityPolicy;
 
     /**
-     * @var integer Identity type. Valid values: `1` (preset); `2` (custom).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Identity type. 1: preset; 2: custom.
      */
     public $IdentityType;
 
     /**
      * @var string Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
     /**
      * @param integer $IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IdentityAliasName Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Description Description.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $IdentityPolicy Identity policy.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IdentityType Identity type. Valid values: `1` (preset); `2` (custom).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IdentityType Identity type. 1: preset; 2: custom.
      * @param string $UpdateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * Information on the delegated member of the organization service.
  *
  * @method integer getServiceId() Obtain Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setServiceId(integer $ServiceId) Set Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getProductName() Obtain Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProductName(string $ProductName) Set Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getMemberUin() Obtain Uin of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMemberUin(integer $MemberUin) Set Uin of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMemberName() Obtain Name of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMemberName(string $MemberName) Set Name of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getUsageStatus() Obtain Activation status. Valid values: 0 (the service has no activation status), 1 (activated), 2 (not activated).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUsageStatus(integer $UsageStatus) Set Activation status. Valid values: 0 (the service has no activation status), 1 (activated), 2 (not activated).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMemberName() Obtain Delegated administrator name.
+ * @method void setMemberName(string $MemberName) Set Delegated administrator name.
+ * @method integer getUsageStatus() Obtain Activation status. Valid values: 0: not applicable to the service; 1: activated; 2: not activated.
+ * @method void setUsageStatus(integer $UsageStatus) Set Activation status. Valid values: 0: not applicable to the service; 1: activated; 2: not activated.
  * @method string getCreateTime() Obtain Delegation time.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Delegation time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getManagementScope() Obtain Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setManagementScope(integer $ManagementScope) Set Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getManagementScopeMembers() Obtain Uin list of managed members. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setManagementScopeMembers(array $ManagementScopeMembers) Set Uin list of managed members. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getManagementScopeNodes() Obtain ID list of the managed departments. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setManagementScopeNodes(array $ManagementScopeNodes) Set ID list of the managed departments. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getManagementScope() Obtain Management scope of the delegated administrator. Valid values: 1: all members; 2 some members.
+ * @method void setManagementScope(integer $ManagementScope) Set Management scope of the delegated administrator. Valid values: 1: all members; 2 some members.
+ * @method array getManagementScopeMembers() Obtain UIN list of the managed members. This parameter is valid when the value of ManagementScope is 2.
+ * @method void setManagementScopeMembers(array $ManagementScopeMembers) Set UIN list of the managed members. This parameter is valid when the value of ManagementScope is 2.
+ * @method array getManagementScopeNodes() Obtain ID list of the departments under management. This parameter is valid when the value of ManagementScope is 2.
+ * @method void setManagementScopeNodes(array $ManagementScopeNodes) Set ID list of the departments under management. This parameter is valid when the value of ManagementScope is 2.
  */
 class OrganizationServiceAssignMember extends AbstractModel
 {
     /**
      * @var integer Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceId;
 
     /**
      * @var string Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProductName;
 
     /**
      * @var integer Uin of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MemberUin;
 
     /**
-     * @var string Name of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Delegated administrator name.
      */
     public $MemberName;
 
     /**
-     * @var integer Activation status. Valid values: 0 (the service has no activation status), 1 (activated), 2 (not activated).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Activation status. Valid values: 0: not applicable to the service; 1: activated; 2: not activated.
      */
     public $UsageStatus;
 
     /**
      * @var string Delegation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var integer Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Management scope of the delegated administrator. Valid values: 1: all members; 2 some members.
      */
     public $ManagementScope;
 
     /**
-     * @var array Uin list of managed members. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array UIN list of the managed members. This parameter is valid when the value of ManagementScope is 2.
      */
     public $ManagementScopeMembers;
 
     /**
-     * @var array ID list of the managed departments. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array ID list of the departments under management. This parameter is valid when the value of ManagementScope is 2.
      */
     public $ManagementScopeNodes;
 
     /**
      * @param integer $ServiceId Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ProductName Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MemberUin Uin of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MemberName Name of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $UsageStatus Activation status. Valid values: 0 (the service has no activation status), 1 (activated), 2 (not activated).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MemberName Delegated administrator name.
+     * @param integer $UsageStatus Activation status. Valid values: 0: not applicable to the service; 1: activated; 2: not activated.
      * @param string $CreateTime Delegation time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ManagementScope Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ManagementScopeMembers Uin list of managed members. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ManagementScopeNodes ID list of the managed departments. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ManagementScope Management scope of the delegated administrator. Valid values: 1: all members; 2 some members.
+     * @param array $ManagementScopeMembers UIN list of the managed members. This parameter is valid when the value of ManagementScope is 2.
+     * @param array $ManagementScopeNodes ID list of the departments under management. This parameter is valid when the value of ManagementScope is 2.
      */
     function __construct()
     {

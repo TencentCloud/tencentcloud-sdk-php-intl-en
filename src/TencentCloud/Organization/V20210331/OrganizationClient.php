@@ -30,10 +30,14 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\AddPermissionPolicyToRoleConfigurationResponse AddPermissionPolicyToRoleConfiguration(Models\AddPermissionPolicyToRoleConfigurationRequest $req) This API is used to add policies to permission configurations.
  * @method Models\AddShareUnitResponse AddShareUnit(Models\AddShareUnitRequest $req) This API is used to create a shared unit.
  * @method Models\AddShareUnitMembersResponse AddShareUnitMembers(Models\AddShareUnitMembersRequest $req) This API is used to add a shared unit member.
+ * @method Models\AddShareUnitNodeResponse AddShareUnitNode(Models\AddShareUnitNodeRequest $req) Add a shared unit department.
  * @method Models\AddShareUnitResourcesResponse AddShareUnitResources(Models\AddShareUnitResourcesRequest $req) This API is used to add resources to a shared unit.
  * @method Models\AddUserToGroupResponse AddUserToGroup(Models\AddUserToGroupRequest $req) This API is used to add users to a user group.
+ * @method Models\AttachPolicyResponse AttachPolicy(Models\AttachPolicyRequest $req) Bind a policy.
  * @method Models\BindOrganizationMemberAuthAccountResponse BindOrganizationMemberAuthAccount(Models\BindOrganizationMemberAuthAccountRequest $req) This API is used to bind an organization member to a sub-account of the organization admin.
+ * @method Models\BindOrganizationPolicySubAccountResponse BindOrganizationPolicySubAccount(Models\BindOrganizationPolicySubAccountRequest $req) This API is used to bind member access authorization policies to the sub-accounts of the organization administrator.
  * @method Models\CancelOrganizationMemberAuthAccountResponse CancelOrganizationMemberAuthAccount(Models\CancelOrganizationMemberAuthAccountRequest $req) This API is used to unbind an organization member from a sub-account of the organization admin.
+ * @method Models\CancelOrganizationPolicySubAccountResponse CancelOrganizationPolicySubAccount(Models\CancelOrganizationPolicySubAccountRequest $req) This API is used to unbind member access authorization policies from the sub-accounts of the organization administrator.
  * @method Models\ClearExternalSAMLIdentityProviderResponse ClearExternalSAMLIdentityProvider(Models\ClearExternalSAMLIdentityProviderRequest $req) This API is used to clear the SAML identity provider configuration information.
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) This API is used to create user groups.
  * @method Models\CreateOrgServiceAssignResponse CreateOrgServiceAssign(Models\CreateOrgServiceAssignRequest $req) This API is used to add a delegated admin of the organization service.
@@ -43,6 +47,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\CreateOrganizationMemberAuthIdentityResponse CreateOrganizationMemberAuthIdentity(Models\CreateOrganizationMemberAuthIdentityRequest $req) This API is used to add organization member access authorization.
  * @method Models\CreateOrganizationMemberPolicyResponse CreateOrganizationMemberPolicy(Models\CreateOrganizationMemberPolicyRequest $req) This API is used to create an organization member access authorization policy.
  * @method Models\CreateOrganizationMembersPolicyResponse CreateOrganizationMembersPolicy(Models\CreateOrganizationMembersPolicyRequest $req) This API is used to create an organization member access policy.
+ * @method Models\CreatePolicyResponse CreatePolicy(Models\CreatePolicyRequest $req) This API is used to create a special type of policy that can be attached to the enterprise organization Root node, enterprise department nodes, or enterprise member accounts.
  * @method Models\CreateRoleAssignmentResponse CreateRoleAssignment(Models\CreateRoleAssignmentRequest $req) This API is used to grant authorizations on member accounts.
  * @method Models\CreateRoleConfigurationResponse CreateRoleConfiguration(Models\CreateRoleConfigurationRequest $req) This API is used to create permission configurations.
  * @method Models\CreateSCIMCredentialResponse CreateSCIMCredential(Models\CreateSCIMCredentialRequest $req) This API is used to create a SCIM key.
@@ -56,14 +61,17 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DeleteOrganizationMembersResponse DeleteOrganizationMembers(Models\DeleteOrganizationMembersRequest $req) This API is used to remove a member account from the organization, rather than delete the account.
  * @method Models\DeleteOrganizationMembersPolicyResponse DeleteOrganizationMembersPolicy(Models\DeleteOrganizationMembersPolicyRequest $req) This API is used to delete an organization member access policy.
  * @method Models\DeleteOrganizationNodesResponse DeleteOrganizationNodes(Models\DeleteOrganizationNodesRequest $req) This API is used to batch delete organization nodes.
+ * @method Models\DeletePolicyResponse DeletePolicy(Models\DeletePolicyRequest $req) Deleting a Policy
  * @method Models\DeleteRoleAssignmentResponse DeleteRoleAssignment(Models\DeleteRoleAssignmentRequest $req) This API is used to remove authorizations on member accounts.
  * @method Models\DeleteRoleConfigurationResponse DeleteRoleConfiguration(Models\DeleteRoleConfigurationRequest $req) This API is used to delete the permission configuration information.
  * @method Models\DeleteSCIMCredentialResponse DeleteSCIMCredential(Models\DeleteSCIMCredentialRequest $req) This API is used to delete a SCIM key.
  * @method Models\DeleteShareUnitResponse DeleteShareUnit(Models\DeleteShareUnitRequest $req) This API is used to delete a shared unit.
  * @method Models\DeleteShareUnitMembersResponse DeleteShareUnitMembers(Models\DeleteShareUnitMembersRequest $req) This API is used to delete a shared unit member.
+ * @method Models\DeleteShareUnitNodeResponse DeleteShareUnitNode(Models\DeleteShareUnitNodeRequest $req) Delete a shared unit department.
  * @method Models\DeleteShareUnitResourcesResponse DeleteShareUnitResources(Models\DeleteShareUnitResourcesRequest $req) This API is used to delete shared unit resources.
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) This API is used to delete a user.
  * @method Models\DeleteUserSyncProvisioningResponse DeleteUserSyncProvisioning(Models\DeleteUserSyncProvisioningRequest $req) This API is used to delete sub-user synchronization tasks.
+ * @method Models\DescribeEffectivePolicyResponse DescribeEffectivePolicy(Models\DescribeEffectivePolicyRequest $req) This API is used to query the valid policy associated with the target.
  * @method Models\DescribeIdentityCenterResponse DescribeIdentityCenter(Models\DescribeIdentityCenterRequest $req) This API is used to obtain TCO Identity Center service information.
  * @method Models\DescribeOrganizationResponse DescribeOrganization(Models\DescribeOrganizationRequest $req) This API is used to get the organization information.
  * @method Models\DescribeOrganizationMemberAuthAccountsResponse DescribeOrganizationMemberAuthAccounts(Models\DescribeOrganizationMemberAuthAccountsRequest $req) This API is used to get the list of sub-accounts bound to an organization member.
@@ -71,12 +79,20 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DescribeOrganizationMemberEmailBindResponse DescribeOrganizationMemberEmailBind(Models\DescribeOrganizationMemberEmailBindRequest $req) This API is used to query detailed information about member mailbox binding.
  * @method Models\DescribeOrganizationMemberPoliciesResponse DescribeOrganizationMemberPolicies(Models\DescribeOrganizationMemberPoliciesRequest $req) This API is used to get the list of authorization policies of an organization member.
  * @method Models\DescribeOrganizationMembersResponse DescribeOrganizationMembers(Models\DescribeOrganizationMembersRequest $req) This API is used to get the list of organization members.
+ * @method Models\DescribeOrganizationMembersAuthPolicyResponse DescribeOrganizationMembersAuthPolicy(Models\DescribeOrganizationMembersAuthPolicyRequest $req) This API is used to query the list of organization member access policies.
  * @method Models\DescribeOrganizationNodesResponse DescribeOrganizationNodes(Models\DescribeOrganizationNodesRequest $req) This API is used to get the list of organization nodes.
+ * @method Models\DescribePolicyResponse DescribePolicy(Models\DescribePolicyRequest $req) This API is used to query policy details.
+ * @method Models\DescribePolicyConfigResponse DescribePolicyConfig(Models\DescribePolicyConfigRequest $req) This API is used to query enterprise organization policy configurations.
+ * @method Models\DescribeResourceToShareMemberResponse DescribeResourceToShareMember(Models\DescribeResourceToShareMemberRequest $req) This API is used to obtain the list of resources shared with me.
  * @method Models\DescribeShareAreasResponse DescribeShareAreas(Models\DescribeShareAreasRequest $req) This API is used to obtain a list of shareable regions.
  * @method Models\DescribeShareUnitMembersResponse DescribeShareUnitMembers(Models\DescribeShareUnitMembersRequest $req) This API is used to obtain the member list of a shared unit.
+ * @method Models\DescribeShareUnitNodesResponse DescribeShareUnitNodes(Models\DescribeShareUnitNodesRequest $req) This API is used to obtain a list of shared unit departments.
  * @method Models\DescribeShareUnitResourcesResponse DescribeShareUnitResources(Models\DescribeShareUnitResourcesRequest $req) This API is used to obtain the resource list of a shared unit.
  * @method Models\DescribeShareUnitsResponse DescribeShareUnits(Models\DescribeShareUnitsRequest $req) This API is used to obtain a list of shared units.
+ * @method Models\DetachPolicyResponse DetachPolicy(Models\DetachPolicyRequest $req) Unbind a policy.
+ * @method Models\DisablePolicyTypeResponse DisablePolicyType(Models\DisablePolicyTypeRequest $req) This API is used to disable a policy type.
  * @method Models\DismantleRoleConfigurationResponse DismantleRoleConfiguration(Models\DismantleRoleConfigurationRequest $req) This API is used to undeploy permission configurations on member accounts.
+ * @method Models\EnablePolicyTypeResponse EnablePolicyType(Models\EnablePolicyTypeRequest $req) This API is used to enable a policy type.
  * @method Models\GetExternalSAMLIdentityProviderResponse GetExternalSAMLIdentityProvider(Models\GetExternalSAMLIdentityProviderRequest $req) This API is used to query the SAML identity provider configuration information.
  * @method Models\GetGroupResponse GetGroup(Models\GetGroupRequest $req) This API is used to query the user group information.
  * @method Models\GetProvisioningTaskStatusResponse GetProvisioningTaskStatus(Models\GetProvisioningTaskStatusRequest $req) This API is used to query the status of async tasks of user synchronization.
@@ -92,14 +108,17 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\ListGroupMembersResponse ListGroupMembers(Models\ListGroupMembersRequest $req) This API is used to query the user list of the user group.
  * @method Models\ListGroupsResponse ListGroups(Models\ListGroupsRequest $req) This API is used to query the user group list.
  * @method Models\ListJoinedGroupsForUserResponse ListJoinedGroupsForUser(Models\ListJoinedGroupsForUserRequest $req) This API is used to query the user group joined by users.
+ * @method Models\ListNonCompliantResourceResponse ListNonCompliantResource(Models\ListNonCompliantResourceRequest $req) This API is used to obtain the list of non-compliant resources detected by member tags.
  * @method Models\ListOrgServiceAssignMemberResponse ListOrgServiceAssignMember(Models\ListOrgServiceAssignMemberRequest $req) This API is used to obtain the list of delegated admins of the organization service.
  * @method Models\ListOrganizationIdentityResponse ListOrganizationIdentity(Models\ListOrganizationIdentityRequest $req) This API is used to get the list of access identities of an organization member.
  * @method Models\ListOrganizationServiceResponse ListOrganizationService(Models\ListOrganizationServiceRequest $req) This API is used to obtain the list of organization service settings.
  * @method Models\ListPermissionPoliciesInRoleConfigurationResponse ListPermissionPoliciesInRoleConfiguration(Models\ListPermissionPoliciesInRoleConfigurationRequest $req) This API is used to obtain the policy list in permission configurations.
+ * @method Models\ListPoliciesForTargetResponse ListPoliciesForTarget(Models\ListPoliciesForTargetRequest $req) This API is used to query the list of policies associated with a target.
  * @method Models\ListRoleAssignmentsResponse ListRoleAssignments(Models\ListRoleAssignmentsRequest $req) This API is used to query the authorization list.
  * @method Models\ListRoleConfigurationProvisioningsResponse ListRoleConfigurationProvisionings(Models\ListRoleConfigurationProvisioningsRequest $req) This API is used to query the permission configuration deployment list.
  * @method Models\ListRoleConfigurationsResponse ListRoleConfigurations(Models\ListRoleConfigurationsRequest $req) This API is used to query the permission configuration list.
  * @method Models\ListSCIMCredentialsResponse ListSCIMCredentials(Models\ListSCIMCredentialsRequest $req) This API is used to query the user SCIM key list.
+ * @method Models\ListTargetsForPolicyResponse ListTargetsForPolicy(Models\ListTargetsForPolicyRequest $req) This API is used to query the list of targets associated with a specified policy.
  * @method Models\ListTasksResponse ListTasks(Models\ListTasksRequest $req) This API is used to query the async task list.
  * @method Models\ListUserSyncProvisioningsResponse ListUserSyncProvisionings(Models\ListUserSyncProvisioningsRequest $req) This API is used to query the CAM user synchronization list.
  * @method Models\ListUsersResponse ListUsers(Models\ListUsersRequest $req) This API is used to query the user list.
@@ -118,7 +137,9 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\UpdateOrganizationIdentityResponse UpdateOrganizationIdentity(Models\UpdateOrganizationIdentityRequest $req) This API is used to update an organization identity.
  * @method Models\UpdateOrganizationMemberResponse UpdateOrganizationMember(Models\UpdateOrganizationMemberRequest $req) This API is used to update organization member information.
  * @method Models\UpdateOrganizationMemberEmailBindResponse UpdateOrganizationMemberEmailBind(Models\UpdateOrganizationMemberEmailBindRequest $req) This API is used to modify the mailbox of a bound member.
+ * @method Models\UpdateOrganizationMembersPolicyResponse UpdateOrganizationMembersPolicy(Models\UpdateOrganizationMembersPolicyRequest $req) This API is used to modify an organization's member access policies.
  * @method Models\UpdateOrganizationNodeResponse UpdateOrganizationNode(Models\UpdateOrganizationNodeRequest $req) This API is used to update an organization node.
+ * @method Models\UpdatePolicyResponse UpdatePolicy(Models\UpdatePolicyRequest $req) Edit policy.
  * @method Models\UpdateRoleConfigurationResponse UpdateRoleConfiguration(Models\UpdateRoleConfigurationRequest $req) This API is used to modify the permission configuration information.
  * @method Models\UpdateSCIMCredentialStatusResponse UpdateSCIMCredentialStatus(Models\UpdateSCIMCredentialStatusRequest $req) This API is used to enable or disable a SCIM key.
  * @method Models\UpdateSCIMSynchronizationStatusResponse UpdateSCIMSynchronizationStatus(Models\UpdateSCIMSynchronizationStatusRequest $req) This API is used to enable or disable user SCIM synchronization.

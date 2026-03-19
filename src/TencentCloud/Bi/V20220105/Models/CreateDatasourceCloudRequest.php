@@ -23,7 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getServiceType() Obtain The backend provides dictionaries: domain type. 1. Tencent Cloud, 2. local.
  * @method void setServiceType(string $ServiceType) Set The backend provides dictionaries: domain type. 1. Tencent Cloud, 2. local.
  * @method string getDbType() Obtain Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
  * @method void setDbType(string $DbType) Set Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
  * @method string getCharset() Obtain Database encoding.
  * @method void setCharset(string $Charset) Set Database encoding.
  * @method string getDbUser() Obtain Username.
@@ -60,10 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataOriginDatasourceId(string $DataOriginDatasourceId) Set Third-party data source ID.
  * @method string getClusterId() Obtain Cluster ID.
  * @method void setClusterId(string $ClusterId) Set Cluster ID.
- * @method string getSchema() Obtain 
- * @method void setSchema(string $Schema) Set 
- * @method string getDbVersion() Obtain 
- * @method void setDbVersion(string $DbVersion) Set 
+ * @method string getSchema() Obtain Database schema.
+ * @method void setSchema(string $Schema) Set Database schema.
+ * @method string getDbVersion() Obtain Database version.
+ * @method void setDbVersion(string $DbVersion) Set Database version.
  */
 class CreateDatasourceCloudRequest extends AbstractModel
 {
@@ -74,6 +86,12 @@ class CreateDatasourceCloudRequest extends AbstractModel
 
     /**
      * @var string Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
      */
     public $DbType;
 
@@ -168,18 +186,24 @@ class CreateDatasourceCloudRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 
+     * @var string Database schema.
      */
     public $Schema;
 
     /**
-     * @var string 
+     * @var string Database version.
      */
     public $DbVersion;
 
     /**
      * @param string $ServiceType The backend provides dictionaries: domain type. 1. Tencent Cloud, 2. local.
      * @param string $DbType Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
      * @param string $Charset Database encoding.
      * @param string $DbUser Username.
      * @param string $DbPwd Password.
@@ -198,8 +222,8 @@ class CreateDatasourceCloudRequest extends AbstractModel
      * @param string $DataOriginProjectId Third-party project ID.
      * @param string $DataOriginDatasourceId Third-party data source ID.
      * @param string $ClusterId Cluster ID.
-     * @param string $Schema 
-     * @param string $DbVersion 
+     * @param string $Schema Database schema.
+     * @param string $DbVersion Database version.
      */
     function __construct()
     {

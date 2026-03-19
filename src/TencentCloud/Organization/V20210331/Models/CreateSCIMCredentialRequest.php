@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Space ID, which starts with the z- prefix, followed by 12 random digits/lowercase letters.
  * @method void setZoneId(string $ZoneId) Set Space ID, which starts with the z- prefix, followed by 12 random digits/lowercase letters.
+ * @method integer getExpireDuration() Obtain Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default.
+ * @method void setExpireDuration(integer $ExpireDuration) Set Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default.
  */
 class CreateSCIMCredentialRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CreateSCIMCredentialRequest extends AbstractModel
     public $ZoneId;
 
     /**
+     * @var integer Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default.
+     */
+    public $ExpireDuration;
+
+    /**
      * @param string $ZoneId Space ID, which starts with the z- prefix, followed by 12 random digits/lowercase letters.
+     * @param integer $ExpireDuration Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CreateSCIMCredentialRequest extends AbstractModel
         }
         if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
             $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("ExpireDuration",$param) and $param["ExpireDuration"] !== null) {
+            $this->ExpireDuration = $param["ExpireDuration"];
         }
     }
 }

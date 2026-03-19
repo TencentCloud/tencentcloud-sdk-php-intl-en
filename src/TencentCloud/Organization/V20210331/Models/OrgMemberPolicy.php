@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * Authorized policy of the organization member
  *
  * @method integer getPolicyId() Obtain Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPolicyId(integer $PolicyId) Set Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPolicyName() Obtain Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPolicyName(string $PolicyName) Set Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getIdentityId() Obtain Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIdentityId(integer $IdentityId) Set Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getIdentityRoleName() Obtain Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIdentityRoleName(string $IdentityRoleName) Set Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIdentityRoleAliasName() Obtain Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIdentityRoleAliasName(string $IdentityRoleAliasName) Set Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIdentityRoleAliasName() Obtain Role alias of an identity.
+ * @method void setIdentityRoleAliasName(string $IdentityRoleAliasName) Set Role alias of an identity.
  * @method string getDescription() Obtain Description.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Description.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUpdateTime() Obtain Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OrgMemberPolicy extends AbstractModel
 {
     /**
      * @var integer Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PolicyId;
 
     /**
      * @var string Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PolicyName;
 
     /**
      * @var integer Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IdentityId;
 
     /**
      * @var string Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IdentityRoleName;
 
     /**
-     * @var string Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Role alias of an identity.
      */
     public $IdentityRoleAliasName;
 
     /**
      * @var string Description.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Description;
 
     /**
      * @var string Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
      * @var string Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
     /**
      * @param integer $PolicyId Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PolicyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IdentityRoleName Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IdentityRoleAliasName Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IdentityRoleAliasName Role alias of an identity.
      * @param string $Description Description.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UpdateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

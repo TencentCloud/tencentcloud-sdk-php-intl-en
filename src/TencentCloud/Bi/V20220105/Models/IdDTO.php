@@ -37,8 +37,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTranId(string $TranId) Set Transaction ID.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getTranStatus() Obtain Transaction status.
+Value range:.
+Processing.
+2: processing is successful.
+3: processing failure.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTranStatus(integer $TranStatus) Set Transaction status.
+Value range:.
+Processing.
+2: processing is successful.
+3: processing failure.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class IdDTO extends AbstractModel
@@ -69,6 +77,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var integer Transaction status.
+Value range:.
+Processing.
+2: processing is successful.
+3: processing failure.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TranStatus;
@@ -83,6 +95,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $TranId Transaction ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TranStatus Transaction status.
+Value range:.
+Processing.
+2: processing is successful.
+3: processing failure.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

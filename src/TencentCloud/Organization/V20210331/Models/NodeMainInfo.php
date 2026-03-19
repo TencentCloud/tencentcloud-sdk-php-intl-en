@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Main department information.
  *
  * @method integer getNodeId() Obtain Department ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNodeId(integer $NodeId) Set Department ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getNodeName() Obtain Department name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNodeName(string $NodeName) Set Department name.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NodeMainInfo extends AbstractModel
 {
     /**
      * @var integer Department ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NodeId;
 
     /**
      * @var string Department name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NodeName;
 
     /**
      * @param integer $NodeId Department ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $NodeName Department name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Main member information.
  *
  * @method integer getMemberUin() Obtain Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMemberUin(integer $MemberUin) Set Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMemberName() Obtain Member name j.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMemberName(string $MemberName) Set Member name j.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMemberName() Obtain Member name.
+ * @method void setMemberName(string $MemberName) Set Member name.
  */
 class MemberMainInfo extends AbstractModel
 {
     /**
      * @var integer Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MemberUin;
 
     /**
-     * @var string Member name j.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Member name.
      */
     public $MemberName;
 
     /**
      * @param integer $MemberUin Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MemberName Member name j.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MemberName Member name.
      */
     function __construct()
     {

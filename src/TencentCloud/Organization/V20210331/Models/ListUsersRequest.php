@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterGroups(array $FilterGroups) Set Filtered user group. IsSelected=1 will be returned for the sub-user associated with this user group.
  * @method string getSortField() Obtain Sorting field, which currently only supports CreateTime. The default is the CreateTime field.
  * @method void setSortField(string $SortField) Set Sorting field, which currently only supports CreateTime. The default is the CreateTime field.
- * @method string getSortType() Obtain Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
- * @method void setSortType(string $SortType) Set Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+ * @method string getSortType() Obtain Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
+ * @method void setSortType(string $SortType) Set Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
  * @method integer getOffset() Obtain Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
  * @method void setOffset(integer $Offset) Set Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
  */
@@ -84,7 +84,7 @@ class ListUsersRequest extends AbstractModel
     public $SortField;
 
     /**
-     * @var string Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+     * @var string Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
      */
     public $SortType;
 
@@ -102,7 +102,7 @@ class ListUsersRequest extends AbstractModel
      * @param string $NextToken Token for querying the next page of returned results. During use of the API for the first time, NextToken is not needed. When you call the API for the first time, if the total number of returned data entries exceeds the MaxResults limit, the data is truncated and only MaxResults data entries are returned. Meanwhile, the return parameter IsTruncated is true and a NextToken is returned. You can use the NextToken returned last time to continue calling the API with other request parameters unchanged, to query the truncated data. You can use this method for multiple queries until IsTruncated is false, indicating that all data has been queried.
      * @param array $FilterGroups Filtered user group. IsSelected=1 will be returned for the sub-user associated with this user group.
      * @param string $SortField Sorting field, which currently only supports CreateTime. The default is the CreateTime field.
-     * @param string $SortType Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+     * @param string $SortType Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
      * @param integer $Offset Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
      */
     function __construct()

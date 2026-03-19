@@ -21,37 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Real-name mutual trust application proof file.
  *
  * @method string getName() Obtain File name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set File name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUrl() Obtain File path.
-
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUrl(string $Url) Set File path.
-
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AuthRelationFile extends AbstractModel
 {
     /**
      * @var string File name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
      * @var string File path.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Url;
 
     /**
      * @param string $Name File name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Url File path.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

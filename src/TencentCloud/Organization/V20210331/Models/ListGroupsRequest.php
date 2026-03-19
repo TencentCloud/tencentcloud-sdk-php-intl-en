@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterUsers(array $FilterUsers) Set Filtered user. IsSelected=1 will be returned for the user group associated with this user.
  * @method string getSortField() Obtain Sorting field, which currently only supports CreateTime. The default is the CreateTime field.
  * @method void setSortField(string $SortField) Set Sorting field, which currently only supports CreateTime. The default is the CreateTime field.
- * @method string getSortType() Obtain Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
- * @method void setSortType(string $SortType) Set Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+ * @method string getSortType() Obtain Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
+ * @method void setSortType(string $SortType) Set Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
  * @method integer getOffset() Obtain Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
  * @method void setOffset(integer $Offset) Set Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
  */
@@ -77,7 +77,7 @@ class ListGroupsRequest extends AbstractModel
     public $SortField;
 
     /**
-     * @var string Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+     * @var string Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
      */
     public $SortType;
 
@@ -94,7 +94,7 @@ class ListGroupsRequest extends AbstractModel
      * @param string $GroupType User group type. Manual: manually created; Synchronized: externally imported.
      * @param array $FilterUsers Filtered user. IsSelected=1 will be returned for the user group associated with this user.
      * @param string $SortField Sorting field, which currently only supports CreateTime. The default is the CreateTime field.
-     * @param string $SortType Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+     * @param string $SortType Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
      * @param integer $Offset Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
      */
     function __construct()

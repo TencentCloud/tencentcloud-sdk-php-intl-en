@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberUins() Obtain Uin list of the delegated admins, including up to 20 items.
  * @method void setMemberUins(array $MemberUins) Set Uin list of the delegated admins, including up to 20 items.
- * @method integer getServiceId() Obtain Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
- * @method void setServiceId(integer $ServiceId) Set Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+ * @method integer getServiceId() Obtain Group service ID. either this or group service product identifier is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+ * @method void setServiceId(integer $ServiceId) Set Group service ID. either this or group service product identifier is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+ * @method string getProduct() Obtain Group service product identifier. either this or group service ID is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+ * @method void setProduct(string $Product) Set Group service product identifier. either this or group service ID is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
  * @method integer getManagementScope() Obtain Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members). Default value: 1.
  * @method void setManagementScope(integer $ManagementScope) Set Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members). Default value: 1.
  * @method array getManagementScopeUins() Obtain Uin list of the managed members. This parameter is valid when ManagementScope is 2.
@@ -39,9 +41,14 @@ class CreateOrgServiceAssignRequest extends AbstractModel
     public $MemberUins;
 
     /**
-     * @var integer Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+     * @var integer Group service ID. either this or group service product identifier is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
      */
     public $ServiceId;
+
+    /**
+     * @var string Group service product identifier. either this or group service ID is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+     */
+    public $Product;
 
     /**
      * @var integer Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members). Default value: 1.
@@ -60,7 +67,8 @@ class CreateOrgServiceAssignRequest extends AbstractModel
 
     /**
      * @param array $MemberUins Uin list of the delegated admins, including up to 20 items.
-     * @param integer $ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+     * @param integer $ServiceId Group service ID. either this or group service product identifier is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+     * @param string $Product Group service product identifier. either this or group service ID is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
      * @param integer $ManagementScope Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members). Default value: 1.
      * @param array $ManagementScopeUins Uin list of the managed members. This parameter is valid when ManagementScope is 2.
      * @param array $ManagementScopeNodeIds ID list of the managed departments. This parameter is valid when ManagementScope is 2.
@@ -84,6 +92,10 @@ class CreateOrgServiceAssignRequest extends AbstractModel
 
         if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
             $this->ServiceId = $param["ServiceId"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
 
         if (array_key_exists("ManagementScope",$param) and $param["ManagementScope"] !== null) {

@@ -25,8 +25,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setModuleId(string $ModuleId) Set Configuration name.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getIncludeType() Obtain Configuration mode.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIncludeType(string $IncludeType) Set Configuration mode.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getParams() Obtain Additional parameters.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -43,6 +61,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Configuration mode.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IncludeType;
@@ -57,6 +84,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ModuleId Configuration name.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IncludeType Configuration mode.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Params Additional parameters.
 Note: This field may return null, indicating that no valid values can be obtained.

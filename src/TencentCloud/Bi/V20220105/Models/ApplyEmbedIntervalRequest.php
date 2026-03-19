@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyEmbedInterval request structure.
  *
- * @method integer getProjectId() Obtain Shares the project ID. Required.
- * @method void setProjectId(integer $ProjectId) Set Shares the project ID. Required.
+ * @method integer getProjectId() Obtain Shares the project ID.
+ * @method void setProjectId(integer $ProjectId) Set Shares the project ID.
  * @method integer getPageId() Obtain Shares the page ID. This field is empty (0) for embedding a dashboard and is not passed for embedding ChatBI.
 
  * @method void setPageId(integer $PageId) Set Shares the page ID. This field is empty (0) for embedding a dashboard and is not passed for embedding ChatBI.
@@ -42,7 +42,7 @@ project, during ChatBI embedding.
 class ApplyEmbedIntervalRequest extends AbstractModel
 {
     /**
-     * @var integer Shares the project ID. Required.
+     * @var integer Shares the project ID.
      */
     public $ProjectId;
 
@@ -75,7 +75,7 @@ project, during ChatBI embedding.
     public $Scope;
 
     /**
-     * @param integer $ProjectId Shares the project ID. Required.
+     * @param integer $ProjectId Shares the project ID.
      * @param integer $PageId Shares the page ID. This field is empty (0) for embedding a dashboard and is not passed for embedding ChatBI.
 
      * @param string $BIToken Token requiring extension.

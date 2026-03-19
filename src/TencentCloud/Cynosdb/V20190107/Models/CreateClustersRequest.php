@@ -56,8 +56,12 @@ Storage capacity in GB
  * @method void setAdminPassword(string $AdminPassword) Set Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
  * @method integer getPort() Obtain Port. Valid range: [0, 65535). Default value: 3306
  * @method void setPort(integer $Port) Set Port. Valid range: [0, 65535). Default value: 3306
- * @method integer getPayMode() Obtain Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
- * @method void setPayMode(integer $PayMode) Set Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
+ * @method integer getPayMode() Obtain Billing mode. supported values: 0 and 1. default value: 0.
+Value is 0, indicating pay-as-you-go billing.
+Value is 1, which means yearly/monthly subscription.
+ * @method void setPayMode(integer $PayMode) Set Billing mode. supported values: 0 and 1. default value: 0.
+Value is 0, indicating pay-as-you-go billing.
+Value is 1, which means yearly/monthly subscription.
  * @method integer getCount() Obtain Number of purchased clusters. Valid range: [1,50]. Default value: 1
  * @method void setCount(integer $Count) Set Number of purchased clusters. Valid range: [1,50]. Default value: 1
  * @method string getRollbackStrategy() Obtain Rollback type:
@@ -79,16 +83,16 @@ Specified allowed time range for time point rollback
  * @method void setExpectTimeThresh(integer $ExpectTimeThresh) Set This parameter has been deprecated.
 Specified allowed time range for time point rollback
  * @method integer getStorageLimit() Obtain Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
+If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
  * @method void setStorageLimit(integer $StorageLimit) Set Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
- * @method integer getTimeSpan() Obtain Purchase duration of monthly subscription plan
- * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration of monthly subscription plan
- * @method string getTimeUnit() Obtain Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
- * @method void setTimeUnit(string $TimeUnit) Set Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
- * @method integer getAutoRenewFlag() Obtain Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
+ * @method integer getTimeSpan() Obtain Purchase duration of yearly/monthly subscription plan
+ * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration of yearly/monthly subscription plan
+ * @method string getTimeUnit() Obtain Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
+ * @method void setTimeUnit(string $TimeUnit) Set Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
+ * @method integer getAutoRenewFlag() Obtain Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
  * @method integer getAutoVoucher() Obtain Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
@@ -126,26 +130,36 @@ Default value: yes
 Default value: `600`
  * @method void setAutoPauseDelay(integer $AutoPauseDelay) Set This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
 Default value: `600`
- * @method integer getStoragePayMode() Obtain The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+ * @method integer getStoragePayMode() Obtain The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
- * @method void setStoragePayMode(integer $StoragePayMode) Set The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
+ * @method void setStoragePayMode(integer $StoragePayMode) Set The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
+Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
  * @method array getSecurityGroupIds() Obtain Array of security group IDs
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Array of security group IDs
  * @method array getAlarmPolicyIds() Obtain Array of alarm policy IDs
  * @method void setAlarmPolicyIds(array $AlarmPolicyIds) Set Array of alarm policy IDs
- * @method array getClusterParams() Obtain Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
- * @method void setClusterParams(array $ClusterParams) Set Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+ * @method array getClusterParams() Obtain Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+ * @method void setClusterParams(array $ClusterParams) Set Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
  * @method integer getDealMode() Obtain Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
  * @method void setDealMode(integer $DealMode) Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
- * @method integer getParamTemplateId() Obtain Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
- * @method void setParamTemplateId(integer $ParamTemplateId) Set Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
+ * @method integer getParamTemplateId() Obtain Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
+ * @method void setParamTemplateId(integer $ParamTemplateId) Set Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
  * @method string getSlaveZone() Obtain Multi-AZ address
  * @method void setSlaveZone(string $SlaveZone) Set Multi-AZ address
  * @method array getInstanceInitInfos() Obtain Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
  * @method void setInstanceInitInfos(array $InstanceInitInfos) Set Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
+ * @method string getGdnId() Obtain Global database unique identifier.
+ * @method void setGdnId(string $GdnId) Set Global database unique identifier.
+ * @method ProxyConfig getProxyConfig() Obtain Database proxy configuration.
+ * @method void setProxyConfig(ProxyConfig $ProxyConfig) Set Database proxy configuration.
+ * @method string getAutoArchive() Obtain Automatically archive.
+ * @method void setAutoArchive(string $AutoArchive) Set Automatically archive.
+ * @method integer getAutoArchiveDelayHours() Obtain Archiving processing time after pausing.
+ * @method void setAutoArchiveDelayHours(integer $AutoArchiveDelayHours) Set Archiving processing time after pausing.
+ * @method string getCynosVersion() Obtain Kernel minor version number.
+ * @method void setCynosVersion(string $CynosVersion) Set Kernel minor version number.
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -220,7 +234,9 @@ Storage capacity in GB
     public $Port;
 
     /**
-     * @var integer Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
+     * @var integer Billing mode. supported values: 0 and 1. default value: 0.
+Value is 0, indicating pay-as-you-go billing.
+Value is 1, which means yearly/monthly subscription.
      */
     public $PayMode;
 
@@ -260,22 +276,22 @@ Specified allowed time range for time point rollback
 
     /**
      * @var integer Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
+If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
      */
     public $StorageLimit;
 
     /**
-     * @var integer Purchase duration of monthly subscription plan
+     * @var integer Purchase duration of yearly/monthly subscription plan
      */
     public $TimeSpan;
 
     /**
-     * @var string Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
+     * @var string Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
      */
     public $TimeUnit;
 
     /**
-     * @var integer Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+     * @var integer Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
      */
     public $AutoRenewFlag;
@@ -335,9 +351,9 @@ Default value: `600`
     public $AutoPauseDelay;
 
     /**
-     * @var integer The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+     * @var integer The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
+Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
      */
     public $StoragePayMode;
 
@@ -352,7 +368,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
     public $AlarmPolicyIds;
 
     /**
-     * @var array Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+     * @var array Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
      */
     public $ClusterParams;
 
@@ -362,7 +378,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
     public $DealMode;
 
     /**
-     * @var integer Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
+     * @var integer Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
      */
     public $ParamTemplateId;
 
@@ -375,6 +391,31 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
      * @var array Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
      */
     public $InstanceInitInfos;
+
+    /**
+     * @var string Global database unique identifier.
+     */
+    public $GdnId;
+
+    /**
+     * @var ProxyConfig Database proxy configuration.
+     */
+    public $ProxyConfig;
+
+    /**
+     * @var string Automatically archive.
+     */
+    public $AutoArchive;
+
+    /**
+     * @var integer Archiving processing time after pausing.
+     */
+    public $AutoArchiveDelayHours;
+
+    /**
+     * @var string Kernel minor version number.
+     */
+    public $CynosVersion;
 
     /**
      * @param string $Zone AZ
@@ -395,7 +436,9 @@ Storage capacity in GB
      * @param string $ClusterName Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
      * @param string $AdminPassword Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
      * @param integer $Port Port. Valid range: [0, 65535). Default value: 3306
-     * @param integer $PayMode Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
+     * @param integer $PayMode Billing mode. supported values: 0 and 1. default value: 0.
+Value is 0, indicating pay-as-you-go billing.
+Value is 1, which means yearly/monthly subscription.
      * @param integer $Count Number of purchased clusters. Valid range: [1,50]. Default value: 1
      * @param string $RollbackStrategy Rollback type:
 noneRollback: no rollback;
@@ -407,10 +450,10 @@ timeRollback: rollback by time point
      * @param integer $ExpectTimeThresh This parameter has been deprecated.
 Specified allowed time range for time point rollback
      * @param integer $StorageLimit Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
-     * @param integer $TimeSpan Purchase duration of monthly subscription plan
-     * @param string $TimeUnit Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
-     * @param integer $AutoRenewFlag Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
+     * @param integer $TimeSpan Purchase duration of yearly/monthly subscription plan
+     * @param string $TimeUnit Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
+     * @param integer $AutoRenewFlag Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
      * @param integer $AutoVoucher Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
      * @param integer $HaCount Number of instances (this parameter has been disused and is retained only for compatibility with existing instances)
@@ -430,16 +473,21 @@ Maximum number of CPU cores. For the value range, see the returned result of `De
 Default value: yes
      * @param integer $AutoPauseDelay This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
 Default value: `600`
-     * @param integer $StoragePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+     * @param integer $StoragePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
+Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
      * @param array $SecurityGroupIds Array of security group IDs
      * @param array $AlarmPolicyIds Array of alarm policy IDs
-     * @param array $ClusterParams Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+     * @param array $ClusterParams Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
      * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
-     * @param integer $ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
+     * @param integer $ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
      * @param string $SlaveZone Multi-AZ address
      * @param array $InstanceInitInfos Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
+     * @param string $GdnId Global database unique identifier.
+     * @param ProxyConfig $ProxyConfig Database proxy configuration.
+     * @param string $AutoArchive Automatically archive.
+     * @param integer $AutoArchiveDelayHours Archiving processing time after pausing.
+     * @param string $CynosVersion Kernel minor version number.
      */
     function __construct()
     {
@@ -631,6 +679,27 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
                 $obj->deserialize($value);
                 array_push($this->InstanceInitInfos, $obj);
             }
+        }
+
+        if (array_key_exists("GdnId",$param) and $param["GdnId"] !== null) {
+            $this->GdnId = $param["GdnId"];
+        }
+
+        if (array_key_exists("ProxyConfig",$param) and $param["ProxyConfig"] !== null) {
+            $this->ProxyConfig = new ProxyConfig();
+            $this->ProxyConfig->deserialize($param["ProxyConfig"]);
+        }
+
+        if (array_key_exists("AutoArchive",$param) and $param["AutoArchive"] !== null) {
+            $this->AutoArchive = $param["AutoArchive"];
+        }
+
+        if (array_key_exists("AutoArchiveDelayHours",$param) and $param["AutoArchiveDelayHours"] !== null) {
+            $this->AutoArchiveDelayHours = $param["AutoArchiveDelayHours"];
+        }
+
+        if (array_key_exists("CynosVersion",$param) and $param["CynosVersion"] !== null) {
+            $this->CynosVersion = $param["CynosVersion"];
         }
     }
 }

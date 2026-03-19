@@ -55,6 +55,7 @@ class QueryFilter extends AbstractModel
 
     /**
      * @var string Operator
+     * @deprecated
      */
     public $Operator;
 

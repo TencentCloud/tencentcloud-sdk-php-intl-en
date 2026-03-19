@@ -28,14 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) Set Remarks, which contain up to 40 characters.
  * @method string getPolicyType() Obtain Relationship policy type. When PolicyType is not empty, PermissionIds cannot be empty. Value: Financial.
  * @method void setPolicyType(string $PolicyType) Set Relationship policy type. When PolicyType is not empty, PermissionIds cannot be empty. Value: Financial.
- * @method array getPermissionIds() Obtain List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default.
- * @method void setPermissionIds(array $PermissionIds) Set List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default.
+ * @method array getPermissionIds() Obtain List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default.
+ * @method void setPermissionIds(array $PermissionIds) Set List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default.
  * @method string getIsAllowQuit() Obtain Whether to allow members to exit an organization. Valid values: Allow: permitted, Denied: not permitted.
  * @method void setIsAllowQuit(string $IsAllowQuit) Set Whether to allow members to exit an organization. Valid values: Allow: permitted, Denied: not permitted.
  * @method string getPayUin() Obtain Payer UIN, which is required when pay-on-behalf mode is used in member financial permission. The value is the principal administrator UIN of the corresponding member.
  * @method void setPayUin(string $PayUin) Set Payer UIN, which is required when pay-on-behalf mode is used in member financial permission. The value is the principal administrator UIN of the corresponding member.
+ * @method integer getIsModifyNickName() Obtain Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized.
+ * @method void setIsModifyNickName(integer $IsModifyNickName) Set Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized.
  */
 class UpdateOrganizationMemberRequest extends AbstractModel
 {
@@ -60,8 +62,8 @@ class UpdateOrganizationMemberRequest extends AbstractModel
     public $PolicyType;
 
     /**
-     * @var array List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default.
+     * @var array List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default.
      */
     public $PermissionIds;
 
@@ -76,14 +78,20 @@ Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate 
     public $PayUin;
 
     /**
+     * @var integer Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized.
+     */
+    public $IsModifyNickName;
+
+    /**
      * @param integer $MemberUin Member UIN.
      * @param string $Name Member name, which contains up to 25 characters, including English letters, digits, and symbols `+@&._[]-:,`.
      * @param string $Remark Remarks, which contain up to 40 characters.
      * @param string $PolicyType Relationship policy type. When PolicyType is not empty, PermissionIds cannot be empty. Value: Financial.
-     * @param array $PermissionIds List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default.
+     * @param array $PermissionIds List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default.
      * @param string $IsAllowQuit Whether to allow members to exit an organization. Valid values: Allow: permitted, Denied: not permitted.
      * @param string $PayUin Payer UIN, which is required when pay-on-behalf mode is used in member financial permission. The value is the principal administrator UIN of the corresponding member.
+     * @param integer $IsModifyNickName Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized.
      */
     function __construct()
     {
@@ -124,6 +132,10 @@ Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate 
 
         if (array_key_exists("PayUin",$param) and $param["PayUin"] !== null) {
             $this->PayUin = $param["PayUin"];
+        }
+
+        if (array_key_exists("IsModifyNickName",$param) and $param["IsModifyNickName"] !== null) {
+            $this->IsModifyNickName = $param["IsModifyNickName"];
         }
     }
 }

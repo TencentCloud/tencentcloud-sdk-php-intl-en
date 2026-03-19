@@ -158,6 +158,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOwnerName(string $OwnerName) Set Associated person name.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSchema() Obtain Database schema.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSchema(string $Schema) Set Database schema.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDbVersion() Obtain Database version.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDbVersion(string $DbVersion) Set Database version.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DatasourceInfo extends AbstractModel
 {
@@ -387,6 +395,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OwnerName;
 
     /**
+     * @var string Database schema.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Schema;
+
+    /**
+     * @var string Database version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DbVersion;
+
+    /**
      * @param integer $Id Database ID.
      * @param string $DbName Database name.
      * @param string $ServiceType Domain type. Valid values: 1: Tencent Cloud; 2: local.
@@ -455,6 +475,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Owner Associated person ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OwnerName Associated person name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Schema Database schema.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DbVersion Database version.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -630,6 +654,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("OwnerName",$param) and $param["OwnerName"] !== null) {
             $this->OwnerName = $param["OwnerName"];
+        }
+
+        if (array_key_exists("Schema",$param) and $param["Schema"] !== null) {
+            $this->Schema = $param["Schema"];
+        }
+
+        if (array_key_exists("DbVersion",$param) and $param["DbVersion"] !== null) {
+            $this->DbVersion = $param["DbVersion"];
         }
     }
 }

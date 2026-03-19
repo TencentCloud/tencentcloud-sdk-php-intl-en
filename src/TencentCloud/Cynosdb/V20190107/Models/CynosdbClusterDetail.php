@@ -30,8 +30,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set AZ
  * @method string getPhysicalZone() Obtain Physical availability zone.
  * @method void setPhysicalZone(string $PhysicalZone) Set Physical availability zone.
- * @method string getStatus() Obtain Status
- * @method void setStatus(string $Status) Set Status
+ * @method string getStatus() Obtain Status. supported values are as follows:.
+-Creating: creating.
+- running: running.
+-isolating.
+-Isolated: isolated.
+-activating: restore from recycle bin.
+-offlining: offline.
+-offlined: offline.
+- deleting: deleting.
+- deleted: deleted.
+ * @method void setStatus(string $Status) Set Status. supported values are as follows:.
+-Creating: creating.
+- running: running.
+-isolating.
+-Isolated: isolated.
+-activating: restore from recycle bin.
+-offlining: offline.
+-offlined: offline.
+- deleting: deleting.
+- deleted: deleted.
  * @method string getStatusDesc() Obtain Status description
  * @method void setStatusDesc(string $StatusDesc) Set Status description
  * @method string getServerlessStatus() Obtain Serverless cluster status when the database type is `SERVERLESS`. Valid values:
@@ -52,8 +70,8 @@ pausing
  * @method void setMaxStorageSize(integer $MaxStorageSize) Set Maximum storage specification, in gb.
  * @method integer getMinStorageSize() Obtain Specifies the minimum storage specification, in gb.
  * @method void setMinStorageSize(integer $MinStorageSize) Set Specifies the minimum storage specification, in gb.
- * @method integer getStoragePayMode() Obtain Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
- * @method void setStoragePayMode(integer $StoragePayMode) Set Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
+ * @method integer getStoragePayMode() Obtain Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
+ * @method void setStoragePayMode(integer $StoragePayMode) Set Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
  * @method string getVpcName() Obtain VPC name
  * @method void setVpcName(string $VpcName) Set VPC name
  * @method string getVpcId() Obtain Unique VPC ID
@@ -80,8 +98,8 @@ pausing
  * @method void setVip(string $Vip) Set VIP
  * @method integer getVport() Obtain vport
  * @method void setVport(integer $Vport) Set vport
- * @method array getRoAddr() Obtain VIP and vport of the read-only instance in a cluster
- * @method void setRoAddr(array $RoAddr) Set VIP and vport of the read-only instance in a cluster
+ * @method array getRoAddr() Obtain VIP and vport of the read-only instance in a cluster.
+ * @method void setRoAddr(array $RoAddr) Set VIP and vport of the read-only instance in a cluster.
  * @method Ability getAbility() Obtain Functions supported by the cluster.
  * @method void setAbility(Ability $Ability) Set Functions supported by the cluster.
  * @method string getCynosVersion() Obtain Specifies the cynos version.
@@ -130,6 +148,24 @@ pausing
  * @method void setSlaveZoneAttr(array $SlaveZoneAttr) Set Secondary availability zone property.
  * @method string getCynosVersionTag() Obtain Version Tag.
  * @method void setCynosVersionTag(string $CynosVersionTag) Set Version Tag.
+ * @method string getGdnId() Obtain Global database network unique id.
+ * @method void setGdnId(string $GdnId) Set Global database network unique id.
+ * @method string getGdnRole() Obtain The role of clusters in the global data network.
+primary cluster.
+Slave cluster - standby.
+If empty, the field is invalid.
+ * @method void setGdnRole(string $GdnRole) Set The role of clusters in the global data network.
+primary cluster.
+Slave cluster - standby.
+If empty, the field is invalid.
+ * @method integer getUsedArchiveStorage() Obtain Secondary storage usage, unit: G.
+ * @method void setUsedArchiveStorage(integer $UsedArchiveStorage) Set Secondary storage usage, unit: G.
+ * @method string getArchiveStatus() Obtain Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+ * @method void setArchiveStatus(string $ArchiveStatus) Set Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+ * @method integer getArchiveProgress() Obtain Archive progress, percentage.
+ * @method void setArchiveProgress(integer $ArchiveProgress) Set Archive progress, percentage.
+ * @method boolean getIsOpenTDE() Obtain Whether transparent encryption is enabled.
+ * @method void setIsOpenTDE(boolean $IsOpenTDE) Set Whether transparent encryption is enabled.
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -159,7 +195,16 @@ class CynosdbClusterDetail extends AbstractModel
     public $PhysicalZone;
 
     /**
-     * @var string Status
+     * @var string Status. supported values are as follows:.
+-Creating: creating.
+- running: running.
+-isolating.
+-Isolated: isolated.
+-activating: restore from recycle bin.
+-offlining: offline.
+-offlined: offline.
+- deleting: deleting.
+- deleted: deleted.
      */
     public $Status;
 
@@ -198,7 +243,7 @@ pausing
     public $MinStorageSize;
 
     /**
-     * @var integer Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
+     * @var integer Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
      */
     public $StoragePayMode;
 
@@ -268,7 +313,7 @@ pausing
     public $Vport;
 
     /**
-     * @var array VIP and vport of the read-only instance in a cluster
+     * @var array VIP and vport of the read-only instance in a cluster.
      */
     public $RoAddr;
 
@@ -393,12 +438,54 @@ pausing
     public $CynosVersionTag;
 
     /**
+     * @var string Global database network unique id.
+     */
+    public $GdnId;
+
+    /**
+     * @var string The role of clusters in the global data network.
+primary cluster.
+Slave cluster - standby.
+If empty, the field is invalid.
+     */
+    public $GdnRole;
+
+    /**
+     * @var integer Secondary storage usage, unit: G.
+     */
+    public $UsedArchiveStorage;
+
+    /**
+     * @var string Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+     */
+    public $ArchiveStatus;
+
+    /**
+     * @var integer Archive progress, percentage.
+     */
+    public $ArchiveProgress;
+
+    /**
+     * @var boolean Whether transparent encryption is enabled.
+     */
+    public $IsOpenTDE;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $Region Region
      * @param string $Zone AZ
      * @param string $PhysicalZone Physical availability zone.
-     * @param string $Status Status
+     * @param string $Status Status. supported values are as follows:.
+-Creating: creating.
+- running: running.
+-isolating.
+-Isolated: isolated.
+-activating: restore from recycle bin.
+-offlining: offline.
+-offlined: offline.
+- deleting: deleting.
+- deleted: deleted.
      * @param string $StatusDesc Status description
      * @param string $ServerlessStatus Serverless cluster status when the database type is `SERVERLESS`. Valid values:
 resume
@@ -409,7 +496,7 @@ pausing
      * @param integer $Storage Storage size in gb.
      * @param integer $MaxStorageSize Maximum storage specification, in gb.
      * @param integer $MinStorageSize Specifies the minimum storage specification, in gb.
-     * @param integer $StoragePayMode Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
+     * @param integer $StoragePayMode Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
      * @param string $VpcName VPC name
      * @param string $VpcId Unique VPC ID
      * @param string $SubnetName Subnet name
@@ -423,7 +510,7 @@ pausing
      * @param integer $UsedStorage Used capacity
      * @param string $Vip VIP
      * @param integer $Vport vport
-     * @param array $RoAddr VIP and vport of the read-only instance in a cluster
+     * @param array $RoAddr VIP and vport of the read-only instance in a cluster.
      * @param Ability $Ability Functions supported by the cluster.
      * @param string $CynosVersion Specifies the cynos version.
      * @param string $BusinessType Business type.
@@ -448,6 +535,15 @@ pausing
      * @param string $NetworkType Specifies the node network type.
      * @param array $SlaveZoneAttr Secondary availability zone property.
      * @param string $CynosVersionTag Version Tag.
+     * @param string $GdnId Global database network unique id.
+     * @param string $GdnRole The role of clusters in the global data network.
+primary cluster.
+Slave cluster - standby.
+If empty, the field is invalid.
+     * @param integer $UsedArchiveStorage Secondary storage usage, unit: G.
+     * @param string $ArchiveStatus Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+     * @param integer $ArchiveProgress Archive progress, percentage.
+     * @param boolean $IsOpenTDE Whether transparent encryption is enabled.
      */
     function __construct()
     {
@@ -695,6 +791,30 @@ pausing
 
         if (array_key_exists("CynosVersionTag",$param) and $param["CynosVersionTag"] !== null) {
             $this->CynosVersionTag = $param["CynosVersionTag"];
+        }
+
+        if (array_key_exists("GdnId",$param) and $param["GdnId"] !== null) {
+            $this->GdnId = $param["GdnId"];
+        }
+
+        if (array_key_exists("GdnRole",$param) and $param["GdnRole"] !== null) {
+            $this->GdnRole = $param["GdnRole"];
+        }
+
+        if (array_key_exists("UsedArchiveStorage",$param) and $param["UsedArchiveStorage"] !== null) {
+            $this->UsedArchiveStorage = $param["UsedArchiveStorage"];
+        }
+
+        if (array_key_exists("ArchiveStatus",$param) and $param["ArchiveStatus"] !== null) {
+            $this->ArchiveStatus = $param["ArchiveStatus"];
+        }
+
+        if (array_key_exists("ArchiveProgress",$param) and $param["ArchiveProgress"] !== null) {
+            $this->ArchiveProgress = $param["ArchiveProgress"];
+        }
+
+        if (array_key_exists("IsOpenTDE",$param) and $param["IsOpenTDE"] !== null) {
+            $this->IsOpenTDE = $param["IsOpenTDE"];
         }
     }
 }

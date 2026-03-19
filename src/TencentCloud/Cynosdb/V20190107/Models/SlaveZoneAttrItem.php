@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set Availability zone
  * @method string getBinlogSyncWay() Obtain binlog synchronization mode.
  * @method void setBinlogSyncWay(string $BinlogSyncWay) Set binlog synchronization mode.
+ * @method integer getSemiSyncTimeout() Obtain Semi-Sync timeout period in milliseconds.
+ * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) Set Semi-Sync timeout period in milliseconds.
  */
 class SlaveZoneAttrItem extends AbstractModel
 {
@@ -38,8 +40,14 @@ class SlaveZoneAttrItem extends AbstractModel
     public $BinlogSyncWay;
 
     /**
+     * @var integer Semi-Sync timeout period in milliseconds.
+     */
+    public $SemiSyncTimeout;
+
+    /**
      * @param string $Zone Availability zone
      * @param string $BinlogSyncWay binlog synchronization mode.
+     * @param integer $SemiSyncTimeout Semi-Sync timeout period in milliseconds.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class SlaveZoneAttrItem extends AbstractModel
 
         if (array_key_exists("BinlogSyncWay",$param) and $param["BinlogSyncWay"] !== null) {
             $this->BinlogSyncWay = $param["BinlogSyncWay"];
+        }
+
+        if (array_key_exists("SemiSyncTimeout",$param) and $param["SemiSyncTimeout"] !== null) {
+            $this->SemiSyncTimeout = $param["SemiSyncTimeout"];
         }
     }
 }

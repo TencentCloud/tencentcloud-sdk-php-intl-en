@@ -24,14 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyId(integer $PolicyId) Set CAM preset policy ID, which is valid and required when PolicyType is a preset policy.
  * @method string getPolicyName() Obtain CAM preset policy name, which is valid and required when PolicyType is a preset policy.
  * @method void setPolicyName(string $PolicyName) Set CAM preset policy name, which is valid and required when PolicyType is a preset policy.
- * @method integer getPolicyType() Obtain Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPolicyType(integer $PolicyType) Set Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPolicyDocument() Obtain Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPolicyDocument(string $PolicyDocument) Set Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getPolicyType() Obtain Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2.
+ * @method void setPolicyType(integer $PolicyType) Set Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2.
+ * @method string getPolicyDocument() Obtain Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy.
+ * @method void setPolicyDocument(string $PolicyDocument) Set Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy.
  */
 class IdentityPolicy extends AbstractModel
 {
@@ -46,24 +42,20 @@ class IdentityPolicy extends AbstractModel
     public $PolicyName;
 
     /**
-     * @var integer Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2.
      */
     public $PolicyType;
 
     /**
-     * @var string Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy.
      */
     public $PolicyDocument;
 
     /**
      * @param integer $PolicyId CAM preset policy ID, which is valid and required when PolicyType is a preset policy.
      * @param string $PolicyName CAM preset policy name, which is valid and required when PolicyType is a preset policy.
-     * @param integer $PolicyType Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PolicyDocument Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $PolicyType Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2.
+     * @param string $PolicyDocument Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy.
      */
     function __construct()
     {

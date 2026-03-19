@@ -20,8 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Purchasable instance type
  *
- * @method string getTypeName() Obtain Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
- * @method void setTypeName(string $TypeName) Set Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+ * @method string getTypeName() Obtain Purchasable instance name.
+Z3: High-availability, corresponds to the specified specification DeviceType, including UNIVERSAL and EXCLUSIVE.
+CVM: It is a basic edition type, and the DeviceType in the corresponding specifications is BASIC (Offline).
+TKE: It is the basic version v2 type, and the DeviceType in the corresponding specifications is BASIC_V2.
+CLOUD_NATIVE_CLUSTER: Represents the standard type of cloud disk edition.
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Indicates the enhanced cloud disk edition.
+ECONOMICAL: Means economical.
+ * @method void setTypeName(string $TypeName) Set Purchasable instance name.
+Z3: High-availability, corresponds to the specified specification DeviceType, including UNIVERSAL and EXCLUSIVE.
+CVM: It is a basic edition type, and the DeviceType in the corresponding specifications is BASIC (Offline).
+TKE: It is the basic version v2 type, and the DeviceType in the corresponding specifications is BASIC_V2.
+CLOUD_NATIVE_CLUSTER: Represents the standard type of cloud disk edition.
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Indicates the enhanced cloud disk edition.
+ECONOMICAL: Means economical.
  * @method array getEngineVersion() Obtain Engine version number
  * @method void setEngineVersion(array $EngineVersion) Set Engine version number
  * @method array getConfigIds() Obtain Purchasable specifications ID
@@ -30,7 +42,13 @@ use TencentCloud\Common\AbstractModel;
 class CdbSellType extends AbstractModel
 {
     /**
-     * @var string Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+     * @var string Purchasable instance name.
+Z3: High-availability, corresponds to the specified specification DeviceType, including UNIVERSAL and EXCLUSIVE.
+CVM: It is a basic edition type, and the DeviceType in the corresponding specifications is BASIC (Offline).
+TKE: It is the basic version v2 type, and the DeviceType in the corresponding specifications is BASIC_V2.
+CLOUD_NATIVE_CLUSTER: Represents the standard type of cloud disk edition.
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Indicates the enhanced cloud disk edition.
+ECONOMICAL: Means economical.
      */
     public $TypeName;
 
@@ -45,7 +63,13 @@ class CdbSellType extends AbstractModel
     public $ConfigIds;
 
     /**
-     * @param string $TypeName Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+     * @param string $TypeName Purchasable instance name.
+Z3: High-availability, corresponds to the specified specification DeviceType, including UNIVERSAL and EXCLUSIVE.
+CVM: It is a basic edition type, and the DeviceType in the corresponding specifications is BASIC (Offline).
+TKE: It is the basic version v2 type, and the DeviceType in the corresponding specifications is BASIC_V2.
+CLOUD_NATIVE_CLUSTER: Represents the standard type of cloud disk edition.
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Indicates the enhanced cloud disk edition.
+ECONOMICAL: Means economical.
      * @param array $EngineVersion Engine version number
      * @param array $ConfigIds Purchasable specifications ID
      */

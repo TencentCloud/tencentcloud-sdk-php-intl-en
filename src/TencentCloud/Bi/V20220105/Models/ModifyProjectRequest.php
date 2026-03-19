@@ -37,7 +37,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSeed() Obtain Seed.
  * @method void setSeed(string $Seed) Set Seed.
  * @method integer getDefaultPanelType() Obtain Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
  * @method void setDefaultPanelType(integer $DefaultPanelType) Set Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
  * @method string getPanelScope() Obtain 2
  * @method void setPanelScope(string $PanelScope) Set 2
  * @method string getManagePlatform() Obtain Project management platform.
@@ -83,6 +89,9 @@ class ModifyProjectRequest extends AbstractModel
 
     /**
      * @var integer Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
      */
     public $DefaultPanelType;
 
@@ -106,6 +115,9 @@ class ModifyProjectRequest extends AbstractModel
      * @param boolean $IsApply Available upon request.
      * @param string $Seed Seed.
      * @param integer $DefaultPanelType Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
      * @param string $PanelScope 2
      * @param string $ManagePlatform Project management platform.
      */

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Member management identity
  *
  * @method integer getIdentityId() Obtain Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIdentityId(integer $IdentityId) Set Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getIdentityAliasName() Obtain Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIdentityAliasName(string $IdentityAliasName) Set Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MemberIdentity extends AbstractModel
 {
     /**
      * @var integer Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IdentityId;
 
     /**
      * @var string Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IdentityAliasName;
 
     /**
      * @param integer $IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IdentityAliasName Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -21,69 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * DescribeOrganization response structure.
  *
  * @method integer getOrgId() Obtain Organization ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOrgId(integer $OrgId) Set Organization ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getHostUin() Obtain Creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostUin(integer $HostUin) Set Creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNickName() Obtain Creator name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNickName(string $NickName) Set Creator name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getOrgType() Obtain Organization type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOrgType(integer $OrgType) Set Organization type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsManager() Obtain Whether the member is the organization admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsManager(boolean $IsManager) Set Whether the member is the organization admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOrgPolicyType() Obtain Policy type. Valid values: `Financial` (finance management).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOrgPolicyType(string $OrgPolicyType) Set Policy type. Valid values: `Financial` (finance management).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNickName() Obtain Creator'S nickname.
+ * @method void setNickName(string $NickName) Set Creator'S nickname.
+ * @method integer getOrgType() Obtain Enterprise organization type.
+ * @method void setOrgType(integer $OrgType) Set Enterprise organization type.
+ * @method boolean getIsManager() Obtain Whether the organization admin. valid values: true, false.
+ * @method void setIsManager(boolean $IsManager) Set Whether the organization admin. valid values: true, false.
+ * @method string getOrgPolicyType() Obtain Policy type. Financial: financial management.
+ * @method void setOrgPolicyType(string $OrgPolicyType) Set Policy type. Financial: financial management.
  * @method string getOrgPolicyName() Obtain Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOrgPolicyName(string $OrgPolicyName) Set Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getOrgPermission() Obtain List of member financial permissions.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOrgPermission(array $OrgPermission) Set List of member financial permissions.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRootNodeId() Obtain Organization root node ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRootNodeId(integer $RootNodeId) Set Organization root node ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getOrgPermission() Obtain Member financial permission list.
+ * @method void setOrgPermission(array $OrgPermission) Set Member financial permission list.
+ * @method integer getRootNodeId() Obtain Root node ID of the organization.
+ * @method void setRootNodeId(integer $RootNodeId) Set Root node ID of the organization.
  * @method string getCreateTime() Obtain Organization creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Organization creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getJoinTime() Obtain Member joining time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setJoinTime(string $JoinTime) Set Member joining time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIsAllowQuit() Obtain Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsAllowQuit(string $IsAllowQuit) Set Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPayUin() Obtain Payer UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayUin(string $PayUin) Set Payer UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getJoinTime() Obtain Member join time.
+ * @method void setJoinTime(string $JoinTime) Set Member join time.
+ * @method string getIsAllowQuit() Obtain Whether to allow a member to exit. Valid values: Allow, Denied.
+ * @method void setIsAllowQuit(string $IsAllowQuit) Set Whether to allow a member to exit. Valid values: Allow, Denied.
+ * @method string getPayUin() Obtain Proxy payer UIN.
+ * @method void setPayUin(string $PayUin) Set Proxy payer UIN.
  * @method string getPayName() Obtain Payer name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPayName(string $PayName) Set Payer name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsAssignManager() Obtain Whether the member is the trusted service admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsAssignManager(boolean $IsAssignManager) Set Whether the member is the trusted service admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsAuthManager() Obtain Whether the member is the verified entity admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsAuthManager(boolean $IsAuthManager) Set Whether the member is the verified entity admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsAssignManager() Obtain Specifies whether an account belongs to a trusted service administrator. true: yes; false: no.
+ * @method void setIsAssignManager(boolean $IsAssignManager) Set Specifies whether an account belongs to a trusted service administrator. true: yes; false: no.
+ * @method boolean getIsAuthManager() Obtain Specifies whether an account belongs to a real-name entity administrator. true: yes; false: no.
+ * @method void setIsAuthManager(boolean $IsAuthManager) Set Specifies whether an account belongs to a real-name entity administrator. true: yes; false: no.
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
@@ -91,97 +59,81 @@ class DescribeOrganizationResponse extends AbstractModel
 {
     /**
      * @var integer Organization ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OrgId;
 
     /**
      * @var integer Creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostUin;
 
     /**
-     * @var string Creator name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Creator'S nickname.
      */
     public $NickName;
 
     /**
-     * @var integer Organization type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Enterprise organization type.
      */
     public $OrgType;
 
     /**
-     * @var boolean Whether the member is the organization admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether the organization admin. valid values: true, false.
      */
     public $IsManager;
 
     /**
-     * @var string Policy type. Valid values: `Financial` (finance management).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Policy type. Financial: financial management.
      */
     public $OrgPolicyType;
 
     /**
      * @var string Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OrgPolicyName;
 
     /**
-     * @var array List of member financial permissions.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Member financial permission list.
      */
     public $OrgPermission;
 
     /**
-     * @var integer Organization root node ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Root node ID of the organization.
      */
     public $RootNodeId;
 
     /**
      * @var string Organization creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var string Member joining time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Member join time.
      */
     public $JoinTime;
 
     /**
-     * @var string Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Whether to allow a member to exit. Valid values: Allow, Denied.
      */
     public $IsAllowQuit;
 
     /**
-     * @var string Payer UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Proxy payer UIN.
      */
     public $PayUin;
 
     /**
      * @var string Payer name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PayName;
 
     /**
-     * @var boolean Whether the member is the trusted service admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Specifies whether an account belongs to a trusted service administrator. true: yes; false: no.
      */
     public $IsAssignManager;
 
     /**
-     * @var boolean Whether the member is the verified entity admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Specifies whether an account belongs to a real-name entity administrator. true: yes; false: no.
      */
     public $IsAuthManager;
 
@@ -192,37 +144,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $OrgId Organization ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $HostUin Creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $NickName Creator name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $OrgType Organization type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsManager Whether the member is the organization admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OrgPolicyType Policy type. Valid values: `Financial` (finance management).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NickName Creator'S nickname.
+     * @param integer $OrgType Enterprise organization type.
+     * @param boolean $IsManager Whether the organization admin. valid values: true, false.
+     * @param string $OrgPolicyType Policy type. Financial: financial management.
      * @param string $OrgPolicyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $OrgPermission List of member financial permissions.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RootNodeId Organization root node ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $OrgPermission Member financial permission list.
+     * @param integer $RootNodeId Root node ID of the organization.
      * @param string $CreateTime Organization creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $JoinTime Member joining time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IsAllowQuit Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PayUin Payer UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $JoinTime Member join time.
+     * @param string $IsAllowQuit Whether to allow a member to exit. Valid values: Allow, Denied.
+     * @param string $PayUin Proxy payer UIN.
      * @param string $PayName Payer name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsAssignManager Whether the member is the trusted service admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsAuthManager Whether the member is the verified entity admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsAssignManager Specifies whether an account belongs to a trusted service administrator. true: yes; false: no.
+     * @param boolean $IsAuthManager Specifies whether an account belongs to a real-name entity administrator. true: yes; false: no.
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()

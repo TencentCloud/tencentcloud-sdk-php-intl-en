@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set ID of the instance to be renewed in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed in the TencentDB console. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID.
  * @method integer getTimeSpan() Obtain Renewal period in months. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
  * @method void setTimeSpan(integer $TimeSpan) Set Renewal period in months. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
- * @method string getModifyPayType() Obtain To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`.
- * @method void setModifyPayType(string $ModifyPayType) Set To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`.
+ * @method string getModifyPayType() Obtain To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`.
+ * @method void setModifyPayType(string $ModifyPayType) Set To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`.
+ * @method integer getAutoRenew() Obtain Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal.
+ * @method void setAutoRenew(integer $AutoRenew) Set Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal.
  */
 class RenewDBInstanceRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class RenewDBInstanceRequest extends AbstractModel
     public $TimeSpan;
 
     /**
-     * @var string To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`.
+     * @var string To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`.
      */
     public $ModifyPayType;
 
     /**
+     * @var integer Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal.
+     */
+    public $AutoRenew;
+
+    /**
      * @param string $InstanceId ID of the instance to be renewed in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed in the TencentDB console. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID.
      * @param integer $TimeSpan Renewal period in months. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-     * @param string $ModifyPayType To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`.
+     * @param string $ModifyPayType To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`.
+     * @param integer $AutoRenew Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class RenewDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("ModifyPayType",$param) and $param["ModifyPayType"] !== null) {
             $this->ModifyPayType = $param["ModifyPayType"];
+        }
+
+        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
+            $this->AutoRenew = $param["AutoRenew"];
         }
     }
 }

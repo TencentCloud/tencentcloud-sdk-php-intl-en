@@ -36,13 +36,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLastLogin(string $LastLogin) Set Last login time.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Enabled/Disabled status.
+ * @method integer getStatus() Obtain User status.
+Valid values:.
+
+-Enable.
+-0: disabled.
+
+The default value is 1.
+Example value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Enabled/Disabled status.
+ * @method void setStatus(integer $Status) Set User status.
+Valid values:.
+
+-Enable.
+-0: disabled.
+
+The default value is 1.
+Example value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFirstModify() Obtain Whether to change the password during the first-time login.
+ * @method integer getFirstModify() Obtain Whether to change password on first login.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFirstModify(integer $FirstModify) Set Whether to change the password during the first-time login.
+ * @method void setFirstModify(integer $FirstModify) Set Whether to change password on first login.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPhoneNumber() Obtain Mobile number.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -68,13 +82,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdatedAt(string $UpdatedAt) Set Change time.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGlobalUserName() Obtain Global role.
+ * @method string getGlobalUserName() Obtain System global role.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGlobalUserName(string $GlobalUserName) Set Global role.
+ * @method void setGlobalUserName(string $GlobalUserName) Set System global role.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGlobalUserCode() Obtain Global role code.
+ * @method string getGlobalUserCode() Obtain System global role code.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGlobalUserCode(string $GlobalUserCode) Set Global role code.
+ * @method void setGlobalUserCode(string $GlobalUserCode) Set System global role code.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMobile() Obtain Mobile number.
 
@@ -142,13 +156,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $LastLogin;
 
     /**
-     * @var integer Enabled/Disabled status.
+     * @var integer User status.
+Valid values:.
+
+-Enable.
+-0: disabled.
+
+The default value is 1.
+Example value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @var integer Whether to change the password during the first-time login.
+     * @var integer Whether to change password on first login.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FirstModify;
@@ -190,13 +211,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UpdatedAt;
 
     /**
-     * @var string Global role.
+     * @var string System global role.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $GlobalUserName;
 
     /**
-     * @var string Global role code.
+     * @var string System global role code.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $GlobalUserCode;
@@ -259,9 +280,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $LastLogin Last login time.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Enabled/Disabled status.
+     * @param integer $Status User status.
+Valid values:.
+
+-Enable.
+-0: disabled.
+
+The default value is 1.
+Example value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FirstModify Whether to change the password during the first-time login.
+     * @param integer $FirstModify Whether to change password on first login.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PhoneNumber Mobile number.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -275,9 +303,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UpdatedAt Change time.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $GlobalUserName Global role.
+     * @param string $GlobalUserName System global role.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $GlobalUserCode Global role code.
+     * @param string $GlobalUserCode System global role code.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Mobile Mobile number.
 

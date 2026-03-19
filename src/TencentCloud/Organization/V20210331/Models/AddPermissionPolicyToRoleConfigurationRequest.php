@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRolePolicies(array $RolePolicies) Set Details of an added system policy.
  * @method string getCustomPolicyDocument() Obtain Custom policy content, which contains up to 4096 characters. When RolePolicyType is Inline, this parameter must be configured. For details, see the permission policy syntax and structure.
  * @method void setCustomPolicyDocument(string $CustomPolicyDocument) Set Custom policy content, which contains up to 4096 characters. When RolePolicyType is Inline, this parameter must be configured. For details, see the permission policy syntax and structure.
+ * @method array getCustomPolicyDocuments() Obtain List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.)
+ * @method void setCustomPolicyDocuments(array $CustomPolicyDocuments) Set List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.)
  */
 class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
     public $CustomPolicyDocument;
 
     /**
+     * @var array List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.)
+     */
+    public $CustomPolicyDocuments;
+
+    /**
      * @param string $ZoneId Space ID.
      * @param string $RoleConfigurationId Permission configuration ID.
      * @param string $RolePolicyType Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
      * @param array $RolePolicyNames Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
      * @param array $RolePolicies Details of an added system policy.
      * @param string $CustomPolicyDocument Custom policy content, which contains up to 4096 characters. When RolePolicyType is Inline, this parameter must be configured. For details, see the permission policy syntax and structure.
+     * @param array $CustomPolicyDocuments List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.)
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
 
         if (array_key_exists("CustomPolicyDocument",$param) and $param["CustomPolicyDocument"] !== null) {
             $this->CustomPolicyDocument = $param["CustomPolicyDocument"];
+        }
+
+        if (array_key_exists("CustomPolicyDocuments",$param) and $param["CustomPolicyDocuments"] !== null) {
+            $this->CustomPolicyDocuments = $param["CustomPolicyDocuments"];
         }
     }
 }

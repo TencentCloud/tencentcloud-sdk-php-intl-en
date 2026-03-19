@@ -64,8 +64,8 @@ deleted
  * @method void setStatusDesc(string $StatusDesc) Set Cluster status description
  * @method string getCreateTime() Obtain Cluster Creation Time
  * @method void setCreateTime(string $CreateTime) Set Cluster Creation Time
- * @method integer getPayMode() Obtain Payment mode. 0: pay-as-you-go; 1: monthly subscription.
- * @method void setPayMode(integer $PayMode) Set Payment mode. 0: pay-as-you-go; 1: monthly subscription.
+ * @method integer getPayMode() Obtain Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+ * @method void setPayMode(integer $PayMode) Set Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
  * @method string getPeriodEndTime() Obtain Expiration time.
  * @method void setPeriodEndTime(string $PeriodEndTime) Set Expiration time.
  * @method string getVip() Obtain Cluster read/write vip.
@@ -80,6 +80,8 @@ deleted
  * @method void setSubnetId(string $SubnetId) Set Specifies the subnet ID.
  * @method string getCynosVersion() Obtain Specifies the cynos kernel version.
  * @method void setCynosVersion(string $CynosVersion) Set Specifies the cynos kernel version.
+ * @method string getCynosVersionTag() Obtain cynos version tag.
+ * @method void setCynosVersionTag(string $CynosVersionTag) Set cynos version tag.
  * @method integer getStorageLimit() Obtain Specifies the storage capacity.
  * @method void setStorageLimit(integer $StorageLimit) Set Specifies the storage capacity.
  * @method integer getRenewFlag() Obtain Renewal Flag
@@ -102,8 +104,8 @@ pause
  * @method void setStorage(integer $Storage) Set Cluster prepaid storage size.
  * @method string getStorageId() Obtain Cluster storage ID for prepaid storage, specifies the storage ID used for prepaid storage modification.
  * @method void setStorageId(string $StorageId) Set Cluster storage ID for prepaid storage, specifies the storage ID used for prepaid storage modification.
- * @method integer getStoragePayMode() Obtain Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
- * @method void setStoragePayMode(integer $StoragePayMode) Set Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
+ * @method integer getStoragePayMode() Obtain Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+ * @method void setStoragePayMode(integer $StoragePayMode) Set Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
  * @method integer getMinStorageSize() Obtain Minimum storage value corresponding to cluster computing specifications.
  * @method void setMinStorageSize(integer $MinStorageSize) Set Minimum storage value corresponding to cluster computing specifications.
  * @method integer getMaxStorageSize() Obtain The maximum storage value corresponding to the cluster computing specification.
@@ -128,6 +130,10 @@ pause
  * @method void setAbility(Ability $Ability) Set Capacity.
  * @method array getResourcePackages() Obtain Specifies the information of the resource package bound to the instance (only the storage resource package is returned here, that is, packageType=DISK).	
  * @method void setResourcePackages(array $ResourcePackages) Set Specifies the information of the resource package bound to the instance (only the storage resource package is returned here, that is, packageType=DISK).	
+ * @method string getGdnId() Obtain Global database unique Id.
+ * @method void setGdnId(string $GdnId) Set Global database unique Id.
+ * @method string getGdnRole() Obtain Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+ * @method void setGdnRole(string $GdnRole) Set Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
  */
 class CynosdbCluster extends AbstractModel
 {
@@ -206,7 +212,7 @@ deleted
     public $CreateTime;
 
     /**
-     * @var integer Payment mode. 0: pay-as-you-go; 1: monthly subscription.
+     * @var integer Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
      */
     public $PayMode;
 
@@ -244,6 +250,11 @@ deleted
      * @var string Specifies the cynos kernel version.
      */
     public $CynosVersion;
+
+    /**
+     * @var string cynos version tag.
+     */
+    public $CynosVersionTag;
 
     /**
      * @var integer Specifies the storage capacity.
@@ -293,7 +304,7 @@ pause
     public $StorageId;
 
     /**
-     * @var integer Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
+     * @var integer Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
      */
     public $StoragePayMode;
 
@@ -358,6 +369,16 @@ pause
     public $ResourcePackages;
 
     /**
+     * @var string Global database unique Id.
+     */
+    public $GdnId;
+
+    /**
+     * @var string Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+     */
+    public $GdnRole;
+
+    /**
      * @param string $Status Cluster status. Valid values are as follows:
 creating
 running
@@ -380,7 +401,7 @@ deleted
      * @param integer $AppId User appid.
      * @param string $StatusDesc Cluster status description
      * @param string $CreateTime Cluster Creation Time
-     * @param integer $PayMode Payment mode. 0: pay-as-you-go; 1: monthly subscription.
+     * @param integer $PayMode Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
      * @param string $PeriodEndTime Expiration time.
      * @param string $Vip Cluster read/write vip.
      * @param integer $Vport Cluster read/write vport.
@@ -388,6 +409,7 @@ deleted
      * @param string $VpcId Specifies the virtual private cloud ID.
      * @param string $SubnetId Specifies the subnet ID.
      * @param string $CynosVersion Specifies the cynos kernel version.
+     * @param string $CynosVersionTag cynos version tag.
      * @param integer $StorageLimit Specifies the storage capacity.
      * @param integer $RenewFlag Renewal Flag
      * @param string $ProcessingTask Task being processed.
@@ -399,7 +421,7 @@ resume
 pause
      * @param integer $Storage Cluster prepaid storage size.
      * @param string $StorageId Cluster storage ID for prepaid storage, specifies the storage ID used for prepaid storage modification.
-     * @param integer $StoragePayMode Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
+     * @param integer $StoragePayMode Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
      * @param integer $MinStorageSize Minimum storage value corresponding to cluster computing specifications.
      * @param integer $MaxStorageSize The maximum storage value corresponding to the cluster computing specification.
      * @param array $NetAddrs Specifies the cluster network information.
@@ -412,6 +434,8 @@ pause
      * @param string $OrderSource Order Source
      * @param Ability $Ability Capacity.
      * @param array $ResourcePackages Specifies the information of the resource package bound to the instance (only the storage resource package is returned here, that is, packageType=DISK).	
+     * @param string $GdnId Global database unique Id.
+     * @param string $GdnRole Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
      */
     function __construct()
     {
@@ -508,6 +532,10 @@ pause
 
         if (array_key_exists("CynosVersion",$param) and $param["CynosVersion"] !== null) {
             $this->CynosVersion = $param["CynosVersion"];
+        }
+
+        if (array_key_exists("CynosVersionTag",$param) and $param["CynosVersionTag"] !== null) {
+            $this->CynosVersionTag = $param["CynosVersionTag"];
         }
 
         if (array_key_exists("StorageLimit",$param) and $param["StorageLimit"] !== null) {
@@ -617,6 +645,14 @@ pause
                 $obj->deserialize($value);
                 array_push($this->ResourcePackages, $obj);
             }
+        }
+
+        if (array_key_exists("GdnId",$param) and $param["GdnId"] !== null) {
+            $this->GdnId = $param["GdnId"];
+        }
+
+        if (array_key_exists("GdnRole",$param) and $param["GdnRole"] !== null) {
+            $this->GdnRole = $param["GdnRole"];
         }
     }
 }

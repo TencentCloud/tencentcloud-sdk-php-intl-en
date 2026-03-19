@@ -23,11 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getShareMemberUin() Obtain Shared member UIN.
  * @method void setShareMemberUin(integer $ShareMemberUin) Set Shared member UIN.
  * @method string getCreateTime() Obtain Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ShareUnitMember extends AbstractModel
 {
@@ -38,16 +34,12 @@ class ShareUnitMember extends AbstractModel
 
     /**
      * @var string Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
      * @param integer $ShareMemberUin Shared member UIN.
      * @param string $CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResourceId() Obtain Shared resource ID.
  * @method void setResourceId(string $ResourceId) Set Shared resource ID.
  * @method string getProductResourceId() Obtain Product resource ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProductResourceId(string $ProductResourceId) Set Product resource ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ShareResource extends AbstractModel
 {
@@ -37,14 +35,12 @@ class ShareResource extends AbstractModel
 
     /**
      * @var string Product resource ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProductResourceId;
 
     /**
      * @param string $ResourceId Shared resource ID.
      * @param string $ProductResourceId Product resource ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

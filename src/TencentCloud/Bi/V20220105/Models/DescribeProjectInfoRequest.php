@@ -23,7 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() Obtain Project ID.
  * @method void setId(integer $Id) Set Project ID.
  * @method integer getDefaultPanelType() Obtain Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
  * @method void setDefaultPanelType(integer $DefaultPanelType) Set Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
  */
 class DescribeProjectInfoRequest extends AbstractModel
 {
@@ -34,12 +40,18 @@ class DescribeProjectInfoRequest extends AbstractModel
 
     /**
      * @var integer Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
      */
     public $DefaultPanelType;
 
     /**
      * @param integer $Id Project ID.
      * @param integer $DefaultPanelType Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
      */
     function __construct()
     {

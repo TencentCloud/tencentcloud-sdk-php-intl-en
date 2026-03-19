@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewDescription(string $NewDescription) Set User description.
  * @method string getNewEmail() Obtain Email address of the user.
  * @method void setNewEmail(string $NewEmail) Set Email address of the user.
+ * @method boolean getNeedResetPassword() Obtain Whether password reset is required.
+ * @method void setNeedResetPassword(boolean $NeedResetPassword) Set Whether password reset is required.
  */
 class UpdateUserRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class UpdateUserRequest extends AbstractModel
     public $NewEmail;
 
     /**
+     * @var boolean Whether password reset is required.
+     */
+    public $NeedResetPassword;
+
+    /**
      * @param string $ZoneId Space ID.
      * @param string $UserId User ID.
      * @param string $NewFirstName First name of the user.
@@ -80,6 +87,7 @@ class UpdateUserRequest extends AbstractModel
      * @param string $NewDisplayName Display name of the user.
      * @param string $NewDescription User description.
      * @param string $NewEmail Email address of the user.
+     * @param boolean $NeedResetPassword Whether password reset is required.
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class UpdateUserRequest extends AbstractModel
 
         if (array_key_exists("NewEmail",$param) and $param["NewEmail"] !== null) {
             $this->NewEmail = $param["NewEmail"];
+        }
+
+        if (array_key_exists("NeedResetPassword",$param) and $param["NeedResetPassword"] !== null) {
+            $this->NeedResetPassword = $param["NeedResetPassword"];
         }
     }
 }

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDefaultZone(boolean $IsDefaultZone) Set Whether it is a default AZ
  * @method boolean getIsBm() Obtain Whether it is a BM zone
  * @method void setIsBm(boolean $IsBm) Set Whether it is a BM zone
- * @method array getPayType() Obtain Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
- * @method void setPayType(array $PayType) Set Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
+ * @method array getPayType() Obtain Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
+ * @method void setPayType(array $PayType) Set Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
  * @method array getProtectMode() Obtain Data replication type. Valid values: `0` (async), `1` (semi-sync), `2` (strong sync)
  * @method void setProtectMode(array $ProtectMode) Set Data replication type. Valid values: `0` (async), `1` (semi-sync), `2` (strong sync)
  * @method string getZone() Obtain AZ name
@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSupportIpv6(boolean $IsSupportIpv6) Set Whether IPv6 is supported
  * @method array getEngineType() Obtain Supported engine types for purchasable database
  * @method void setEngineType(array $EngineType) Set Supported engine types for purchasable database
+ * @method integer getCloudNativeClusterStatus() Obtain Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed.
+ * @method void setCloudNativeClusterStatus(integer $CloudNativeClusterStatus) Set Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed.
+ * @method array getDiskTypeConf() Obtain Cloud disk edition or single-node basic edition supported disk type.
+ * @method void setDiskTypeConf(array $DiskTypeConf) Set Cloud disk edition or single-node basic edition supported disk type.
  */
 class CdbZoneSellConf extends AbstractModel
 {
@@ -108,7 +112,7 @@ class CdbZoneSellConf extends AbstractModel
     public $IsBm;
 
     /**
-     * @var array Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
+     * @var array Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
      */
     public $PayType;
 
@@ -178,6 +182,16 @@ class CdbZoneSellConf extends AbstractModel
     public $EngineType;
 
     /**
+     * @var integer Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed.
+     */
+    public $CloudNativeClusterStatus;
+
+    /**
+     * @var array Cloud disk edition or single-node basic edition supported disk type.
+     */
+    public $DiskTypeConf;
+
+    /**
      * @param integer $Status AZ status, which is used to indicate whether instances are purchasable. Valid values: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
      * @param string $ZoneName AZ name
      * @param boolean $IsCustom Whether it is a custom instance type
@@ -186,7 +200,7 @@ class CdbZoneSellConf extends AbstractModel
      * @param integer $HourInstanceSaleMaxNum Maximum purchasable quantity of hourly billed instances
      * @param boolean $IsDefaultZone Whether it is a default AZ
      * @param boolean $IsBm Whether it is a BM zone
-     * @param array $PayType Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
+     * @param array $PayType Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
      * @param array $ProtectMode Data replication type. Valid values: `0` (async), `1` (semi-sync), `2` (strong sync)
      * @param string $Zone AZ name
      * @param ZoneConf $ZoneConf Multi-AZ information
@@ -200,6 +214,8 @@ class CdbZoneSellConf extends AbstractModel
      * @param integer $ZoneId AZ ID
      * @param boolean $IsSupportIpv6 Whether IPv6 is supported
      * @param array $EngineType Supported engine types for purchasable database
+     * @param integer $CloudNativeClusterStatus Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed.
+     * @param array $DiskTypeConf Cloud disk edition or single-node basic edition supported disk type.
      */
     function __construct()
     {
@@ -307,6 +323,19 @@ class CdbZoneSellConf extends AbstractModel
 
         if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
             $this->EngineType = $param["EngineType"];
+        }
+
+        if (array_key_exists("CloudNativeClusterStatus",$param) and $param["CloudNativeClusterStatus"] !== null) {
+            $this->CloudNativeClusterStatus = $param["CloudNativeClusterStatus"];
+        }
+
+        if (array_key_exists("DiskTypeConf",$param) and $param["DiskTypeConf"] !== null) {
+            $this->DiskTypeConf = [];
+            foreach ($param["DiskTypeConf"] as $key => $value){
+                $obj = new DiskTypeConfigItem();
+                $obj->deserialize($value);
+                array_push($this->DiskTypeConf, $obj);
+            }
         }
     }
 }

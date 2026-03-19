@@ -24,6 +24,7 @@ use TencentCloud\Bi\V20220105\Models as Models;
 
 /**
  * @method Models\ApplyEmbedIntervalResponse ApplyEmbedInterval(Models\ApplyEmbedIntervalRequest $req) This API is used to extend the available time of a token with strong authentication.
+ * @method Models\ClearEmbedTokenResponse ClearEmbedToken(Models\ClearEmbedTokenRequest $req) Clean strong authentication tokens. Only enterprise admins can call this API.
  * @method Models\CreateDatasourceResponse CreateDatasource(Models\CreateDatasourceRequest $req) This API is used to create a data source.
  * @method Models\CreateDatasourceCloudResponse CreateDatasourceCloud(Models\CreateDatasourceCloudRequest $req) This API is used to create a cloud database.
  * @method Models\CreateEmbedTokenResponse CreateEmbedToken(Models\CreateEmbedTokenRequest $req) This API is used to create an embedded report with strong authentication.

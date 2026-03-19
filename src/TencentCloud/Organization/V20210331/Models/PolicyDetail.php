@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPolicyId() Obtain Policy ID.
  * @method void setPolicyId(integer $PolicyId) Set Policy ID.
  * @method string getPolicyName() Obtain Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPolicyName(string $PolicyName) Set Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PolicyDetail extends AbstractModel
 {
@@ -36,14 +34,12 @@ class PolicyDetail extends AbstractModel
 
     /**
      * @var string Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PolicyName;
 
     /**
      * @param integer $PolicyId Policy ID.
      * @param string $PolicyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

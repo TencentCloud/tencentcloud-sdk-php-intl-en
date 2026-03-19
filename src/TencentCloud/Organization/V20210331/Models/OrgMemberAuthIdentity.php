@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * Authorizable identity of the organization member
  *
  * @method integer getIdentityId() Obtain Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIdentityId(integer $IdentityId) Set Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIdentityRoleName() Obtain Role name of an identity
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIdentityRoleName(string $IdentityRoleName) Set Role name of an identity
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIdentityRoleAliasName() Obtain Role alias of an identity
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIdentityRoleAliasName(string $IdentityRoleAliasName) Set Role alias of an identity
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIdentityRoleName() Obtain Role name of an identity.
+ * @method void setIdentityRoleName(string $IdentityRoleName) Set Role name of an identity.
+ * @method string getIdentityRoleAliasName() Obtain Role alias of an identity.
+ * @method void setIdentityRoleAliasName(string $IdentityRoleAliasName) Set Role alias of an identity.
  * @method string getDescription() Obtain Identity description.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Identity description.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Time of initial configuration success.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Time of initial configuration success.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUpdateTime() Obtain Time of last configuration success.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set Time of last configuration success.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIdentityType() Obtain Identity type. Valid values: 1 (preset identity), 2 (custom identity).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIdentityType(integer $IdentityType) Set Identity type. Valid values: 1 (preset identity), 2 (custom identity).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMemberUin() Obtain Member Uin.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMemberUin(integer $MemberUin) Set Member Uin.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUpdateTime() Obtain Time of the last successful configuration.
+ * @method void setUpdateTime(string $UpdateTime) Set Time of the last successful configuration.
+ * @method integer getIdentityType() Obtain Identity type. Valid values: 1: preset identity; 2: custom identity.
+ * @method void setIdentityType(integer $IdentityType) Set Identity type. Valid values: 1: preset identity; 2: custom identity.
+ * @method integer getStatus() Obtain Configuration status. Valid values: 1: configuration completed; 2: reconfiguration required.
+ * @method void setStatus(integer $Status) Set Configuration status. Valid values: 1: configuration completed; 2: reconfiguration required.
+ * @method integer getMemberUin() Obtain Member UIN.
+ * @method void setMemberUin(integer $MemberUin) Set Member UIN.
  * @method string getMemberName() Obtain Member name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMemberName(string $MemberName) Set Member name.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OrgMemberAuthIdentity extends AbstractModel
 {
     /**
      * @var integer Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IdentityId;
 
     /**
-     * @var string Role name of an identity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Role name of an identity.
      */
     public $IdentityRoleName;
 
     /**
-     * @var string Role alias of an identity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Role alias of an identity.
      */
     public $IdentityRoleAliasName;
 
     /**
      * @var string Identity description.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Description;
 
     /**
      * @var string Time of initial configuration success.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var string Time of last configuration success.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Time of the last successful configuration.
      */
     public $UpdateTime;
 
     /**
-     * @var integer Identity type. Valid values: 1 (preset identity), 2 (custom identity).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Identity type. Valid values: 1: preset identity; 2: custom identity.
      */
     public $IdentityType;
 
     /**
-     * @var integer Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Configuration status. Valid values: 1: configuration completed; 2: reconfiguration required.
      */
     public $Status;
 
     /**
-     * @var integer Member Uin.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Member UIN.
      */
     public $MemberUin;
 
     /**
      * @var string Member name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MemberName;
 
     /**
      * @param integer $IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IdentityRoleName Role name of an identity
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IdentityRoleAliasName Role alias of an identity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IdentityRoleName Role name of an identity.
+     * @param string $IdentityRoleAliasName Role alias of an identity.
      * @param string $Description Identity description.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Time of initial configuration success.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdateTime Time of last configuration success.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IdentityType Identity type. Valid values: 1 (preset identity), 2 (custom identity).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MemberUin Member Uin.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UpdateTime Time of the last successful configuration.
+     * @param integer $IdentityType Identity type. Valid values: 1: preset identity; 2: custom identity.
+     * @param integer $Status Configuration status. Valid values: 1: configuration completed; 2: reconfiguration required.
+     * @param integer $MemberUin Member UIN.
      * @param string $MemberName Member name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

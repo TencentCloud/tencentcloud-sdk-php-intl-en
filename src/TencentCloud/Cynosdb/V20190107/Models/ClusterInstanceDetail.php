@@ -49,13 +49,21 @@ use TencentCloud\Common\AbstractModel;
  * @method array getInstanceTasks() Obtain Instance task information.
  * @method void setInstanceTasks(array $InstanceTasks) Set Instance task information.
  * @method string getInstanceDeviceType() Obtain Instance machine type.
+1. common: general.
+2. exclusive, dedicated.
  * @method void setInstanceDeviceType(string $InstanceDeviceType) Set Instance machine type.
+1. common: general.
+2. exclusive, dedicated.
  * @method string getInstanceStorageType() Obtain Instance storage type.
+Description: this parameter returns a value only when querying resources belonging to LibraDB.
  * @method void setInstanceStorageType(string $InstanceStorageType) Set Instance storage type.
+Description: this parameter returns a value only when querying resources belonging to LibraDB.
  * @method string getDbMode() Obtain Database type.
  * @method void setDbMode(string $DbMode) Set Database type.
  * @method array getNodeList() Obtain Node list
+Description: this parameter returns a value only when querying LibraDB resources.
  * @method void setNodeList(array $NodeList) Set Node list
+Description: this parameter returns a value only when querying LibraDB resources.
  */
 class ClusterInstanceDetail extends AbstractModel
 {
@@ -131,11 +139,14 @@ class ClusterInstanceDetail extends AbstractModel
 
     /**
      * @var string Instance machine type.
+1. common: general.
+2. exclusive, dedicated.
      */
     public $InstanceDeviceType;
 
     /**
      * @var string Instance storage type.
+Description: this parameter returns a value only when querying resources belonging to LibraDB.
      */
     public $InstanceStorageType;
 
@@ -146,6 +157,7 @@ class ClusterInstanceDetail extends AbstractModel
 
     /**
      * @var array Node list
+Description: this parameter returns a value only when querying LibraDB resources.
      */
     public $NodeList;
 
@@ -165,9 +177,13 @@ class ClusterInstanceDetail extends AbstractModel
      * @param string $ServerlessStatus serverless instance substatus.
      * @param array $InstanceTasks Instance task information.
      * @param string $InstanceDeviceType Instance machine type.
+1. common: general.
+2. exclusive, dedicated.
      * @param string $InstanceStorageType Instance storage type.
+Description: this parameter returns a value only when querying resources belonging to LibraDB.
      * @param string $DbMode Database type.
      * @param array $NodeList Node list
+Description: this parameter returns a value only when querying LibraDB resources.
      */
     function __construct()
     {

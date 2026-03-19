@@ -25,25 +25,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() Obtain Shared resource type.
  * @method void setType(string $Type) Set Shared resource type.
  * @method string getCreateTime() Obtain Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getProductResourceId() Obtain Product resource ID.
  * @method void setProductResourceId(string $ProductResourceId) Set Product resource ID.
- * @method integer getSharedMemberNum() Obtain The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSharedMemberNum(integer $SharedMemberNum) Set The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSharedMemberUseNum() Obtain The number of shared unit members in use.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSharedMemberUseNum(integer $SharedMemberUseNum) Set The number of shared unit members in use.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getShareManagerUin() Obtain Shared administrator OwnerUin.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setShareManagerUin(integer $ShareManagerUin) Set Shared administrator OwnerUin.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSharedMemberNum() Obtain Number of members in a sharing unit.
+ * @method void setSharedMemberNum(integer $SharedMemberNum) Set Number of members in a sharing unit.
+ * @method integer getSharedMemberUseNum() Obtain Number of members using shared resources.
+ * @method void setSharedMemberUseNum(integer $SharedMemberUseNum) Set Number of members using shared resources.
+ * @method integer getShareManagerUin() Obtain Sharing unit administrator.
+ * @method void setShareManagerUin(integer $ShareManagerUin) Set Sharing unit administrator.
  */
 class ShareUnitResource extends AbstractModel
 {
@@ -59,8 +49,6 @@ class ShareUnitResource extends AbstractModel
 
     /**
      * @var string Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
@@ -70,20 +58,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ProductResourceId;
 
     /**
-     * @var integer The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of members in a sharing unit.
      */
     public $SharedMemberNum;
 
     /**
-     * @var integer The number of shared unit members in use.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of members using shared resources.
      */
     public $SharedMemberUseNum;
 
     /**
-     * @var integer Shared administrator OwnerUin.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Sharing unit administrator.
      */
     public $ShareManagerUin;
 
@@ -91,15 +76,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ResourceId Shared resource ID.
      * @param string $Type Shared resource type.
      * @param string $CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ProductResourceId Product resource ID.
-     * @param integer $SharedMemberNum The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SharedMemberUseNum The number of shared unit members in use.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ShareManagerUin Shared administrator OwnerUin.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SharedMemberNum Number of members in a sharing unit.
+     * @param integer $SharedMemberUseNum Number of members using shared resources.
+     * @param integer $ShareManagerUin Sharing unit administrator.
      */
     function __construct()
     {

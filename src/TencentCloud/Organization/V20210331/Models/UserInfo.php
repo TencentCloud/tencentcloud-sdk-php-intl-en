@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) Set Modification time of the user.
  * @method boolean getIsSelected() Obtain Whether selected
  * @method void setIsSelected(boolean $IsSelected) Set Whether selected
+ * @method string getPassword() Obtain User password.
+ * @method void setPassword(string $Password) Set User password.
+ * @method boolean getNeedResetPassword() Obtain Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password).
+ * @method void setNeedResetPassword(boolean $NeedResetPassword) Set Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password).
  */
 class UserInfo extends AbstractModel
 {
@@ -108,6 +112,16 @@ class UserInfo extends AbstractModel
     public $IsSelected;
 
     /**
+     * @var string User password.
+     */
+    public $Password;
+
+    /**
+     * @var boolean Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password).
+     */
+    public $NeedResetPassword;
+
+    /**
      * @param string $UserName Queried username.
      * @param string $FirstName First name of the user.
      * @param string $LastName Last name of the user.
@@ -120,6 +134,8 @@ class UserInfo extends AbstractModel
      * @param string $CreateTime Creation time of the user.
      * @param string $UpdateTime Modification time of the user.
      * @param boolean $IsSelected Whether selected
+     * @param string $Password User password.
+     * @param boolean $NeedResetPassword Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password).
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class UserInfo extends AbstractModel
 
         if (array_key_exists("IsSelected",$param) and $param["IsSelected"] !== null) {
             $this->IsSelected = $param["IsSelected"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("NeedResetPassword",$param) and $param["NeedResetPassword"] !== null) {
+            $this->NeedResetPassword = $param["NeedResetPassword"];
         }
     }
 }

@@ -20,94 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Department
  *
- * @method integer getNodeId() Obtain Organization node ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNodeId(integer $NodeId) Set Organization node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getNodeId() Obtain Organization node ID.
+ * @method void setNodeId(integer $NodeId) Set Organization node ID.
  * @method string getName() Obtain Name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getParentNodeId() Obtain Parent node ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setParentNodeId(integer $ParentNodeId) Set Parent node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getParentNodeId() Obtain Parent Node ID
+ * @method void setParentNodeId(integer $ParentNodeId) Set Parent Node ID
  * @method string getRemark() Obtain Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRemark(string $Remark) Set Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUpdateTime() Obtain Update time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUpdateTime() Obtain Update date
+ * @method void setUpdateTime(string $UpdateTime) Set Update date
  * @method array getTags() Obtain Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OrgNode extends AbstractModel
 {
     /**
-     * @var integer Organization node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Organization node ID.
      */
     public $NodeId;
 
     /**
      * @var string Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
-     * @var integer Parent node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Parent Node ID
      */
     public $ParentNodeId;
 
     /**
      * @var string Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Remark;
 
     /**
      * @var string Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var string Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Update date
      */
     public $UpdateTime;
 
     /**
      * @var array Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
     /**
-     * @param integer $NodeId Organization node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $NodeId Organization node ID.
      * @param string $Name Name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ParentNodeId Parent node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ParentNodeId Parent Node ID
      * @param string $Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UpdateTime Update date
      * @param array $Tags Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

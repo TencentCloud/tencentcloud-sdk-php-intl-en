@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setErrorInfo(ErrorInfo $ErrorInfo) Set Custom error information object.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getData() Obtain Success No.
+ * @method string getData() Obtain None.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setData(string $Data) Set Success No.
+ * @method void setData(string $Data) Set None.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getExtra() Obtain Additional information.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -48,7 +48,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ErrorInfo;
 
     /**
-     * @var string Success No.
+     * @var string None.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Data;
@@ -73,7 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param ErrorInfo $ErrorInfo Custom error information object.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Data Success No.
+     * @param string $Data None.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Extra Additional information.
 Note: This field may return null, indicating that no valid values can be obtained.

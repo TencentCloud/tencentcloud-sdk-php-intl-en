@@ -31,7 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsApply() Obtain Whether to allow user requests.
  * @method void setIsApply(boolean $IsApply) Set Whether to allow user requests.
  * @method integer getDefaultPanelType() Obtain Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
  * @method void setDefaultPanelType(integer $DefaultPanelType) Set Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
  * @method string getManagePlatform() Obtain Management platform.
  * @method void setManagePlatform(string $ManagePlatform) Set Management platform.
  */
@@ -64,6 +70,9 @@ class CreateProjectRequest extends AbstractModel
 
     /**
      * @var integer Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
      */
     public $DefaultPanelType;
 
@@ -79,6 +88,9 @@ class CreateProjectRequest extends AbstractModel
      * @param string $Mark Remarks.
      * @param boolean $IsApply Whether to allow user requests.
      * @param integer $DefaultPanelType Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
      * @param string $ManagePlatform Management platform.
      */
     function __construct()

@@ -25,7 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSeed() Obtain Random number.
  * @method void setSeed(string $Seed) Set Random number.
  * @method integer getDefaultPanelType() Obtain Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
  * @method void setDefaultPanelType(integer $DefaultPanelType) Set Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
  */
 class DeleteProjectRequest extends AbstractModel
 {
@@ -41,6 +47,9 @@ class DeleteProjectRequest extends AbstractModel
 
     /**
      * @var integer Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
      */
     public $DefaultPanelType;
 
@@ -48,6 +57,9 @@ class DeleteProjectRequest extends AbstractModel
      * @param integer $Id Project ID.
      * @param string $Seed Random number.
      * @param integer $DefaultPanelType Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
      */
     function __construct()
     {

@@ -24,9 +24,27 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setModuleId(string $ModuleId) Set Permission value.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIncludeType() Obtain Visible/Available.
+ * @method string getIncludeType() Obtain Availability.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIncludeType(string $IncludeType) Set Visible/Available.
+ * @method void setIncludeType(string $IncludeType) Set Availability.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUpgradeVersionType() Obtain Target upgrade version.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -50,7 +68,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ModuleId;
 
     /**
-     * @var string Visible/Available.
+     * @var string Availability.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IncludeType;
@@ -76,7 +103,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $ModuleId Permission value.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IncludeType Visible/Available.
+     * @param string $IncludeType Availability.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UpgradeVersionType Target upgrade version.
 Note: This field may return null, indicating that no valid values can be obtained.

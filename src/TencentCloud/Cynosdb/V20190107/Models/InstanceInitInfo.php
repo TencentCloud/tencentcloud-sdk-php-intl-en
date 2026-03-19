@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinRoCpu(float $MinRoCpu) Set Minimum specifications for serverless instance
  * @method float getMaxRoCpu() Obtain Maximum specifications for serverless instance
  * @method void setMaxRoCpu(float $MaxRoCpu) Set Maximum specifications for serverless instance
+ * @method string getDeviceType() Obtain Instance machine type.
+1. common: general.
+2. exclusive: exclusive.
+ * @method void setDeviceType(string $DeviceType) Set Instance machine type.
+1. common: general.
+2. exclusive: exclusive.
  */
 class InstanceInitInfo extends AbstractModel
 {
@@ -80,6 +86,13 @@ class InstanceInitInfo extends AbstractModel
     public $MaxRoCpu;
 
     /**
+     * @var string Instance machine type.
+1. common: general.
+2. exclusive: exclusive.
+     */
+    public $DeviceType;
+
+    /**
      * @param integer $Cpu Instance CPU
      * @param integer $Memory Instance memory
      * @param string $InstanceType Instance type. Valid values:`rw`, `ro`.
@@ -88,6 +101,9 @@ class InstanceInitInfo extends AbstractModel
      * @param integer $MaxRoCount Maximum number of serverless instances. Value range: 1-15.
      * @param float $MinRoCpu Minimum specifications for serverless instance
      * @param float $MaxRoCpu Maximum specifications for serverless instance
+     * @param string $DeviceType Instance machine type.
+1. common: general.
+2. exclusive: exclusive.
      */
     function __construct()
     {
@@ -132,6 +148,10 @@ class InstanceInitInfo extends AbstractModel
 
         if (array_key_exists("MaxRoCpu",$param) and $param["MaxRoCpu"] !== null) {
             $this->MaxRoCpu = $param["MaxRoCpu"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
     }
 }

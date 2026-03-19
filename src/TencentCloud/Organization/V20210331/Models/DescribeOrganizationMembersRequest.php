@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProduct(string $Product) Set Abbreviation of the trusted service, which is required during querying the trusted service admin.
  * @method array getTags() Obtain Member tag search list, with a maximum of 10.
  * @method void setTags(array $Tags) Set Member tag search list, with a maximum of 10.
+ * @method integer getNodeId() Obtain Organizational unit ID.
+ * @method void setNodeId(integer $NodeId) Set Organizational unit ID.
+ * @method string getNodeName() Obtain Organizational unit name.
+ * @method void setNodeName(string $NodeName) Set Organizational unit name.
  */
 class DescribeOrganizationMembersRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class DescribeOrganizationMembersRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer Organizational unit ID.
+     */
+    public $NodeId;
+
+    /**
+     * @var string Organizational unit name.
+     */
+    public $NodeName;
+
+    /**
      * @param integer $Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
      * @param integer $Limit Limit, which defaults to `10`. Value range: 1-50.
      * @param string $Lang Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
@@ -80,6 +94,8 @@ class DescribeOrganizationMembersRequest extends AbstractModel
      * @param string $AuthName Entity name.
      * @param string $Product Abbreviation of the trusted service, which is required during querying the trusted service admin.
      * @param array $Tags Member tag search list, with a maximum of 10.
+     * @param integer $NodeId Organizational unit ID.
+     * @param string $NodeName Organizational unit name.
      */
     function __construct()
     {
@@ -125,6 +141,14 @@ class DescribeOrganizationMembersRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
         }
     }
 }

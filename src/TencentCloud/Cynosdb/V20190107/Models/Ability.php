@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoSupportTransparentDataEncryptionReason(string $NoSupportTransparentDataEncryptionReason) Set Reasons for no support of transparent data encryption.
  * @method string getIsSupportManualLogic() Obtain Whether manual initiation of logical backup is supported.
  * @method void setIsSupportManualLogic(string $IsSupportManualLogic) Set Whether manual initiation of logical backup is supported.
+ * @method string getIsSupportGlobalEncryption() Obtain Enable global encryption.
+ * @method void setIsSupportGlobalEncryption(string $IsSupportGlobalEncryption) Set Enable global encryption.
+ * @method string getNoSupportGlobalEncryptionReason() Obtain The causes for unsupported global encryption.
+ * @method void setNoSupportGlobalEncryptionReason(string $NoSupportGlobalEncryptionReason) Set The causes for unsupported global encryption.
+ * @method string getNoSupportTransparentDataEncryptionReasonCode() Obtain Status code for unsupported tde reason.
+ * @method void setNoSupportTransparentDataEncryptionReasonCode(string $NoSupportTransparentDataEncryptionReasonCode) Set Status code for unsupported tde reason.
+ * @method string getNoSupportGlobalEncryptionReasonCode() Obtain Status code for unsupported global encryption.
+ * @method void setNoSupportGlobalEncryptionReasonCode(string $NoSupportGlobalEncryptionReasonCode) Set Status code for unsupported global encryption.
  */
 class Ability extends AbstractModel
 {
@@ -80,6 +88,26 @@ class Ability extends AbstractModel
     public $IsSupportManualLogic;
 
     /**
+     * @var string Enable global encryption.
+     */
+    public $IsSupportGlobalEncryption;
+
+    /**
+     * @var string The causes for unsupported global encryption.
+     */
+    public $NoSupportGlobalEncryptionReason;
+
+    /**
+     * @var string Status code for unsupported tde reason.
+     */
+    public $NoSupportTransparentDataEncryptionReasonCode;
+
+    /**
+     * @var string Status code for unsupported global encryption.
+     */
+    public $NoSupportGlobalEncryptionReasonCode;
+
+    /**
      * @param string $IsSupportSlaveZone Whether secondary AZ is supported
      * @param string $NonsupportSlaveZoneReason The causes for no support from an availability zone.
      * @param string $IsSupportRo Whether read-only instance is supported
@@ -88,6 +116,10 @@ class Ability extends AbstractModel
      * @param string $IsSupportTransparentDataEncryption Whether transparent data encryption is supported.
      * @param string $NoSupportTransparentDataEncryptionReason Reasons for no support of transparent data encryption.
      * @param string $IsSupportManualLogic Whether manual initiation of logical backup is supported.
+     * @param string $IsSupportGlobalEncryption Enable global encryption.
+     * @param string $NoSupportGlobalEncryptionReason The causes for unsupported global encryption.
+     * @param string $NoSupportTransparentDataEncryptionReasonCode Status code for unsupported tde reason.
+     * @param string $NoSupportGlobalEncryptionReasonCode Status code for unsupported global encryption.
      */
     function __construct()
     {
@@ -132,6 +164,22 @@ class Ability extends AbstractModel
 
         if (array_key_exists("IsSupportManualLogic",$param) and $param["IsSupportManualLogic"] !== null) {
             $this->IsSupportManualLogic = $param["IsSupportManualLogic"];
+        }
+
+        if (array_key_exists("IsSupportGlobalEncryption",$param) and $param["IsSupportGlobalEncryption"] !== null) {
+            $this->IsSupportGlobalEncryption = $param["IsSupportGlobalEncryption"];
+        }
+
+        if (array_key_exists("NoSupportGlobalEncryptionReason",$param) and $param["NoSupportGlobalEncryptionReason"] !== null) {
+            $this->NoSupportGlobalEncryptionReason = $param["NoSupportGlobalEncryptionReason"];
+        }
+
+        if (array_key_exists("NoSupportTransparentDataEncryptionReasonCode",$param) and $param["NoSupportTransparentDataEncryptionReasonCode"] !== null) {
+            $this->NoSupportTransparentDataEncryptionReasonCode = $param["NoSupportTransparentDataEncryptionReasonCode"];
+        }
+
+        if (array_key_exists("NoSupportGlobalEncryptionReasonCode",$param) and $param["NoSupportGlobalEncryptionReasonCode"] !== null) {
+            $this->NoSupportGlobalEncryptionReasonCode = $param["NoSupportGlobalEncryptionReasonCode"];
         }
     }
 }

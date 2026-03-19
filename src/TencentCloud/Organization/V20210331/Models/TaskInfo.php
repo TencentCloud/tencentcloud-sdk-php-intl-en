@@ -38,10 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(string $TaskType) Set Task type.
  * @method string getStatus() Obtain InProgress: The task is being executed; Success: The task execution succeeded; Failed: The task execution failed.
  * @method void setStatus(string $Status) Set InProgress: The task is being executed; Success: The task execution succeeded; Failed: The task execution failed.
- * @method string getFailureReason() Obtain Cause of the failure.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFailureReason(string $FailureReason) Set Cause of the failure.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFailureReason() Obtain Reason for failure
+ * @method void setFailureReason(string $FailureReason) Set Reason for failure
  */
 class TaskInfo extends AbstractModel
 {
@@ -91,8 +89,7 @@ class TaskInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var string Cause of the failure.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Reason for failure
      */
     public $FailureReason;
 
@@ -106,8 +103,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $PrincipalType Identity type for the user authorization. User: CIC user; Group: CIC user group.
      * @param string $TaskType Task type.
      * @param string $Status InProgress: The task is being executed; Success: The task execution succeeded; Failed: The task execution failed.
-     * @param string $FailureReason Cause of the failure.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FailureReason Reason for failure
      */
     function __construct()
     {

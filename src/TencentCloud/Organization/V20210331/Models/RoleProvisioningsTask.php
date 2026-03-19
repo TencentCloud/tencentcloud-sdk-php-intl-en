@@ -29,17 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTargetUin() Obtain UIN of the authorized target account of the Tencent Cloud Organization.
  * @method void setTargetUin(integer $TargetUin) Set UIN of the authorized target account of the Tencent Cloud Organization.
  * @method string getTargetType() Obtain Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTargetType(string $TargetType) Set Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTaskType() Obtain Task type.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTaskType(string $TaskType) Set Task type.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTaskStatus() Obtain Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTaskStatus(string $TaskStatus) Set Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RoleProvisioningsTask extends AbstractModel
 {
@@ -65,19 +59,16 @@ class RoleProvisioningsTask extends AbstractModel
 
     /**
      * @var string Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TargetType;
 
     /**
      * @var string Task type.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TaskType;
 
     /**
      * @var string Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TaskStatus;
 
@@ -87,11 +78,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $RoleConfigurationName Permission configuration name.
      * @param integer $TargetUin UIN of the authorized target account of the Tencent Cloud Organization.
      * @param string $TargetType Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TaskType Task type.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TaskStatus Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

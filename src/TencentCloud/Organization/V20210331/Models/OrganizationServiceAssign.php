@@ -21,169 +21,117 @@ use TencentCloud\Common\AbstractModel;
  * Organization service settings.
  *
  * @method integer getServiceId() Obtain Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setServiceId(integer $ServiceId) Set Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getProductName() Obtain Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProductName(string $ProductName) Set Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsAssign() Obtain Whether to support delegation. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsAssign(integer $IsAssign) Set Whether to support delegation. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsAssign() Obtain Specifies whether delegation is supported. Valid values: 1: yes; 2: no.
+ * @method void setIsAssign(integer $IsAssign) Set Specifies whether delegation is supported. Valid values: 1: yes; 2: no.
  * @method string getDescription() Obtain Organization service description.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Organization service description.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMemberNum() Obtain Number of the current delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMemberNum(string $MemberNum) Set Number of the current delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMemberNum() Obtain Number of delegated administrators.
+ * @method void setMemberNum(string $MemberNum) Set Number of delegated administrators.
  * @method string getDocument() Obtain Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDocument(string $Document) Set Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getConsoleUrl() Obtain Console path of the organization service product.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConsoleUrl(string $ConsoleUrl) Set Console path of the organization service product.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsUsageStatus() Obtain Whether to access the usage status. Valid values: 1 (yes), 
- 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsUsageStatus(integer $IsUsageStatus) Set Whether to access the usage status. Valid values: 1 (yes), 
- 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCanAssignCount() Obtain Limit for the number of delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCanAssignCount(integer $CanAssignCount) Set Limit for the number of delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProduct() Obtain Organization service product identifier.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProduct(string $Product) Set Organization service product identifier.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getServiceGrant() Obtain Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setServiceGrant(integer $ServiceGrant) Set Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGrantStatus() Obtain Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGrantStatus(string $GrantStatus) Set Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsSetManagementScope() Obtain Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsSetManagementScope(integer $IsSetManagementScope) Set Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getConsoleUrl() Obtain Path to the console for organization service products.
+ * @method void setConsoleUrl(string $ConsoleUrl) Set Path to the console for organization service products.
+ * @method integer getIsUsageStatus() Obtain Whether to access the usage status. valid values: 1 (yes). 
+2: no.
+ * @method void setIsUsageStatus(integer $IsUsageStatus) Set Whether to access the usage status. valid values: 1 (yes). 
+2: no.
+ * @method integer getCanAssignCount() Obtain Limit on the number of delegated administrators.
+ * @method void setCanAssignCount(integer $CanAssignCount) Set Limit on the number of delegated administrators.
+ * @method string getProduct() Obtain Organization service product ID.
+ * @method void setProduct(string $Product) Set Organization service product ID.
+ * @method integer getServiceGrant() Obtain Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no.
+ * @method void setServiceGrant(integer $ServiceGrant) Set Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no.
+ * @method string getGrantStatus() Obtain Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized. 
+ * @method void setGrantStatus(string $GrantStatus) Set Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized. 
+ * @method integer getIsSetManagementScope() Obtain Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no.
+ * @method void setIsSetManagementScope(integer $IsSetManagementScope) Set Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no.
  */
 class OrganizationServiceAssign extends AbstractModel
 {
     /**
      * @var integer Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceId;
 
     /**
      * @var string Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProductName;
 
     /**
-     * @var integer Whether to support delegation. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies whether delegation is supported. Valid values: 1: yes; 2: no.
      */
     public $IsAssign;
 
     /**
      * @var string Organization service description.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Description;
 
     /**
-     * @var string Number of the current delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Number of delegated administrators.
      */
     public $MemberNum;
 
     /**
      * @var string Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Document;
 
     /**
-     * @var string Console path of the organization service product.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Path to the console for organization service products.
      */
     public $ConsoleUrl;
 
     /**
-     * @var integer Whether to access the usage status. Valid values: 1 (yes), 
- 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether to access the usage status. valid values: 1 (yes). 
+2: no.
      */
     public $IsUsageStatus;
 
     /**
-     * @var integer Limit for the number of delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Limit on the number of delegated administrators.
      */
     public $CanAssignCount;
 
     /**
-     * @var string Organization service product identifier.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Organization service product ID.
      */
     public $Product;
 
     /**
-     * @var integer Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no.
      */
     public $ServiceGrant;
 
     /**
-     * @var string Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized. 
      */
     public $GrantStatus;
 
     /**
-     * @var integer Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no.
      */
     public $IsSetManagementScope;
 
     /**
      * @param integer $ServiceId Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ProductName Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsAssign Whether to support delegation. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsAssign Specifies whether delegation is supported. Valid values: 1: yes; 2: no.
      * @param string $Description Organization service description.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MemberNum Number of the current delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MemberNum Number of delegated administrators.
      * @param string $Document Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ConsoleUrl Console path of the organization service product.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsUsageStatus Whether to access the usage status. Valid values: 1 (yes), 
- 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CanAssignCount Limit for the number of delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Product Organization service product identifier.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ServiceGrant Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $GrantStatus Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsSetManagementScope Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ConsoleUrl Path to the console for organization service products.
+     * @param integer $IsUsageStatus Whether to access the usage status. valid values: 1 (yes). 
+2: no.
+     * @param integer $CanAssignCount Limit on the number of delegated administrators.
+     * @param string $Product Organization service product ID.
+     * @param integer $ServiceGrant Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no.
+     * @param string $GrantStatus Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized. 
+     * @param integer $IsSetManagementScope Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no.
      */
     function __construct()
     {
