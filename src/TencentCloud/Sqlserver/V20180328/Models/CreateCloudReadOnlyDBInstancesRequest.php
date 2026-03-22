@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadOnlyGroupMaxDelayTime(integer $ReadOnlyGroupMaxDelayTime) Set The delay threshold for a new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
  * @method integer getReadOnlyGroupMinInGroup() Obtain Minimum number of reserved read-only replicas when the delayed removal is enabled for the new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
  * @method void setReadOnlyGroupMinInGroup(integer $ReadOnlyGroupMinInGroup) Set Minimum number of reserved read-only replicas when the delayed removal is enabled for the new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
- * @method string getInstanceChargeType() Obtain Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+ * @method string getInstanceChargeType() Obtain Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
  * @method integer getGoodsNum() Obtain Number of read-only instances to be purchased this time. Default value: `2`.
  * @method void setGoodsNum(integer $GoodsNum) Set Number of read-only instances to be purchased this time. Default value: `2`.
  * @method string getSubnetId() Obtain VPC subnet ID in the format of `subnet-bdoe83fa`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
@@ -139,7 +139,7 @@ class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel
     public $ReadOnlyGroupMinInGroup;
 
     /**
-     * @var string Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+     * @var string Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
      */
     public $InstanceChargeType;
 
@@ -212,7 +212,7 @@ class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel
      * @param integer $ReadOnlyGroupIsOfflineDelay Whether delayed read-only instance removal is enabled in a new read-only group, which is required when `ReadOnlyGroupType` is `2`. Valid values: `1` (enabled), `0` (disabled).  The read-only replica will be automatically removed when the delay between it and the primary instance exceeds the threshold.
      * @param integer $ReadOnlyGroupMaxDelayTime The delay threshold for a new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
      * @param integer $ReadOnlyGroupMinInGroup Minimum number of reserved read-only replicas when the delayed removal is enabled for the new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
-     * @param string $InstanceChargeType Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+     * @param string $InstanceChargeType Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
      * @param integer $GoodsNum Number of read-only instances to be purchased this time. Default value: `2`.
      * @param string $SubnetId VPC subnet ID in the format of `subnet-bdoe83fa`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
      * @param string $VpcId VPC ID in the format of `vpc-dsp338hz`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.

@@ -45,29 +45,29 @@ Example: 3
  * @method string getIDCardType() Obtain Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesialDCard: Indonesia ID card
+3.IndonesiaIDCard: Indonesia ID card
 4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.ThailandIDCard: Thailand ID card
-11.SingaporelDCard: Singapore ID card
+11.SingaporeIDCard: Singapore ID card
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
  * @method void setIDCardType(string $IDCardType) Set Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesialDCard: Indonesia ID card
+3.IndonesiaIDCard: Indonesia ID card
 4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.ThailandIDCard: Thailand ID card
-11.SingaporelDCard: Singapore ID card
+11.SingaporeIDCard: Singapore ID card
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
  * @method boolean getDisableCheckOcrWarnings() Obtain Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
@@ -196,15 +196,15 @@ Example: 3
      * @var string Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesialDCard: Indonesia ID card
+3.IndonesiaIDCard: Indonesia ID card
 4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.ThailandIDCard: Thailand ID card
-11.SingaporelDCard: Singapore ID card
+11.SingaporeIDCard: Singapore ID card
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
      */
@@ -321,15 +321,15 @@ Example: 3
      * @param string $IDCardType Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesialDCard: Indonesia ID card
+3.IndonesiaIDCard: Indonesia ID card
 4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.ThailandIDCard: Thailand ID card
-11.SingaporelDCard: Singapore ID card
+11.SingaporeIDCard: Singapore ID card
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
      * @param boolean $DisableCheckOcrWarnings Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
