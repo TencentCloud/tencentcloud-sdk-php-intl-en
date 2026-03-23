@@ -25,13 +25,13 @@ CVM: Cloud Virtual Machine
 BM: BM
 ECM: Edge Computing Machine
 LH: Lighthouse
-Other: Hybrid Cloud Zone
+Other: Hybrid Cloud Zone
  * @method void setMachineType(string $MachineType) Set Type of the machine's zone
 CVM: Cloud Virtual Machine
 BM: BM
 ECM: Edge Computing Machine
 LH: Lighthouse
-Other: Hybrid Cloud Zone
+Other: Hybrid Cloud Zone
  * @method string getMachineRegion() Obtain Machine region. For example, ap-guangzhou and ap-shanghai.
  * @method void setMachineRegion(string $MachineRegion) Set Machine region. For example, ap-guangzhou and ap-shanghai.
  * @method integer getLimit() Obtain Number of entries to be returned. Default value: 10. Maximum value: 100.
@@ -40,11 +40,11 @@ Other: Hybrid Cloud Zone
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  * @method array getFilters() Obtain Filtering criteria
 <li>Keywords - String - required: no - keywords for querying </li>
-<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in monthly subscription mode)</li>
+<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in yearly/monthly subscription mode)</li>
 <li>TagId - String - required: no - tag ID </li>
  * @method void setFilters(array $Filters) Set Filtering criteria
 <li>Keywords - String - required: no - keywords for querying </li>
-<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in monthly subscription mode)</li>
+<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in yearly/monthly subscription mode)</li>
 <li>TagId - String - required: no - tag ID </li>
  * @method array getProjectIds() Obtain ID list of businesses to which machines belong
  * @method void setProjectIds(array $ProjectIds) Set ID list of businesses to which machines belong
@@ -57,7 +57,7 @@ CVM: Cloud Virtual Machine
 BM: BM
 ECM: Edge Computing Machine
 LH: Lighthouse
-Other: Hybrid Cloud Zone
+Other: Hybrid Cloud Zone
      */
     public $MachineType;
 
@@ -79,7 +79,7 @@ Other: Hybrid Cloud Zone
     /**
      * @var array Filtering criteria
 <li>Keywords - String - required: no - keywords for querying </li>
-<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in monthly subscription mode)</li>
+<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in yearly/monthly subscription mode)</li>
 <li>TagId - String - required: no - tag ID </li>
      */
     public $Filters;
@@ -95,13 +95,13 @@ CVM: Cloud Virtual Machine
 BM: BM
 ECM: Edge Computing Machine
 LH: Lighthouse
-Other: Hybrid Cloud Zone
+Other: Hybrid Cloud Zone
      * @param string $MachineRegion Machine region. For example, ap-guangzhou and ap-shanghai.
      * @param integer $Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
      * @param array $Filters Filtering criteria
 <li>Keywords - String - required: no - keywords for querying </li>
-<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in monthly subscription mode)</li>
+<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in yearly/monthly subscription mode)</li>
 <li>TagId - String - required: no - tag ID </li>
      * @param array $ProjectIds ID list of businesses to which machines belong
      */

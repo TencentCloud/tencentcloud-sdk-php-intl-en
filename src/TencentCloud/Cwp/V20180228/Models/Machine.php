@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 <li>ONLINE: Online</li>
 <li>SHUTDOWN: Shut down</li>
 <li>UNINSTALLED: Unprotected</li>
+ * @method string getAgentStatus() Obtain 
+ * @method void setAgentStatus(string $AgentStatus) Set 
+ * @method string getInstanceStatus() Obtain 
+ * @method void setInstanceStatus(string $InstanceStatus) Set 
  * @method string getUuid() Obtain Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
  * @method void setUuid(string $Uuid) Set Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
  * @method string getQuuid() Obtain CVM or BM Machine Unique UUID.
@@ -52,10 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineWanIp(string $MachineWanIp) Set Public IP address of a host
  * @method string getPayMode() Obtain Host status
 <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating monthly subscription mode</li>
+<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
  * @method void setPayMode(string $PayMode) Set Host status
 <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating monthly subscription mode</li>
+<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
  * @method integer getMalwareNum() Obtain Number of Trojans
  * @method void setMalwareNum(integer $MalwareNum) Set Number of Trojans
  * @method array getTag() Obtain Tag information
@@ -116,6 +120,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRemark(string $Remark) Set Remarks
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAgentVersion() Obtain 
+ * @method void setAgentVersion(string $AgentVersion) Set 
  */
 class Machine extends AbstractModel
 {
@@ -137,6 +143,16 @@ class Machine extends AbstractModel
 <li>UNINSTALLED: Unprotected</li>
      */
     public $MachineStatus;
+
+    /**
+     * @var string 
+     */
+    public $AgentStatus;
+
+    /**
+     * @var string 
+     */
+    public $InstanceStatus;
 
     /**
      * @var string Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
@@ -173,7 +189,7 @@ class Machine extends AbstractModel
     /**
      * @var string Host status
 <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating monthly subscription mode</li>
+<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
      */
     public $PayMode;
 
@@ -292,6 +308,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Remark;
 
     /**
+     * @var string 
+     */
+    public $AgentVersion;
+
+    /**
      * @param string $MachineName Host name.
      * @param string $MachineOs Host System.
      * @param string $MachineStatus Host status
@@ -299,6 +320,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>ONLINE: Online</li>
 <li>SHUTDOWN: Shut down</li>
 <li>UNINSTALLED: Unprotected</li>
+     * @param string $AgentStatus 
+     * @param string $InstanceStatus 
      * @param string $Uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
      * @param string $Quuid CVM or BM Machine Unique UUID.
      * @param integer $VulNum Number of vulnerabilities
@@ -309,7 +332,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $MachineWanIp Public IP address of a host
      * @param string $PayMode Host status
 <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating monthly subscription mode</li>
+<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
      * @param integer $MalwareNum Number of Trojans
      * @param array $Tag Tag information
      * @param integer $BaselineNum Number of baseline risks
@@ -340,6 +363,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $InstanceId Instance ID
      * @param string $Remark Remarks
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AgentVersion 
      */
     function __construct()
     {
@@ -364,6 +388,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MachineStatus",$param) and $param["MachineStatus"] !== null) {
             $this->MachineStatus = $param["MachineStatus"];
+        }
+
+        if (array_key_exists("AgentStatus",$param) and $param["AgentStatus"] !== null) {
+            $this->AgentStatus = $param["AgentStatus"];
+        }
+
+        if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
+            $this->InstanceStatus = $param["InstanceStatus"];
         }
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
@@ -488,6 +520,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("AgentVersion",$param) and $param["AgentVersion"] !== null) {
+            $this->AgentVersion = $param["AgentVersion"];
         }
     }
 }

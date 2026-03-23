@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceId() Obtain Resource ID
  * @method void setResourceId(string $ResourceId) Set Resource ID
- * @method integer getLicenseType() Obtain Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - monthly subscription; 2: Ultimate Edition - monthly subscription.
- * @method void setLicenseType(integer $LicenseType) Set Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - monthly subscription; 2: Ultimate Edition - monthly subscription.
+ * @method integer getLicenseType() Obtain Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
+ * @method void setLicenseType(integer $LicenseType) Set Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
  */
 class DestroyOrderRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DestroyOrderRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var integer Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - monthly subscription; 2: Ultimate Edition - monthly subscription.
+     * @var integer Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
      */
     public $LicenseType;
 
     /**
      * @param string $ResourceId Resource ID
-     * @param integer $LicenseType Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - monthly subscription; 2: Ultimate Edition - monthly subscription.
+     * @param integer $LicenseType Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
      */
     function __construct()
     {

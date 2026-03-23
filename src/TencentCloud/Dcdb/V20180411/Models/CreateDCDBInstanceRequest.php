@@ -72,6 +72,10 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
  * @method array getSecurityGroupIds() Obtain Security group IDs in array. This parameter is compatible with the old parameter `SecurityGroupId`.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group IDs in array. This parameter is compatible with the old parameter `SecurityGroupId`.
+ * @method integer getDcnSyncMode() Obtain 
+ * @method void setDcnSyncMode(integer $DcnSyncMode) Set 
+ * @method string getCpuType() Obtain 
+ * @method void setCpuType(string $CpuType) Set 
  */
 class CreateDCDBInstanceRequest extends AbstractModel
 {
@@ -190,6 +194,16 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
     public $SecurityGroupIds;
 
     /**
+     * @var integer 
+     */
+    public $DcnSyncMode;
+
+    /**
+     * @var string 
+     */
+    public $CpuType;
+
+    /**
      * @param array $Zones AZs to deploy shard nodes. You can specify up to two AZs. When the shard specification is 1-source-2-replica, two of the nodes are deployed in the first AZ.
 The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
      * @param integer $Period Validity period in months
@@ -216,6 +230,8 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
      * @param string $DcnInstanceId DCN source instance ID
      * @param integer $AutoRenewFlag Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
      * @param array $SecurityGroupIds Security group IDs in array. This parameter is compatible with the old parameter `SecurityGroupId`.
+     * @param integer $DcnSyncMode 
+     * @param string $CpuType 
      */
     function __construct()
     {
@@ -326,6 +342,14 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("DcnSyncMode",$param) and $param["DcnSyncMode"] !== null) {
+            $this->DcnSyncMode = $param["DcnSyncMode"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
         }
     }
 }

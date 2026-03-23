@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DestroyDBInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
+ * @method string getInstanceId() Obtain Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console.
  */
 class DestroyDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
+     * @var string Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
+     * @param string $InstanceId Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console.
      */
     function __construct()
     {

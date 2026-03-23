@@ -21,34 +21,34 @@ use TencentCloud\Common\AbstractModel;
  * GetFaceIdResultIntl response structure.
  *
  * @method string getResult() Obtain The return code of the verification result.
-0: Succeeded.
+0: Success.
 1001: Failed to call the liveness engine.
-1002:Suspected spoofed recording.
-1004: Selfie verification comparison failed.
-1005:Liveness detection failed.
-1201:Lighting is too dark or overexposed.
+1002: Suspected spoofed recording.
+1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
 2004: The image passed in is too large or too small.
 2012: Multiple faces detected.
 2013: No face was detected, or the face detected was incomplete.
 2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
 2016: The similarity did not reach the standard passing threshold.
-2017:Facial occlusion detected.
+2017: Facial occlusion detected.
 -999: The verification process wasn't finished.
  * @method void setResult(string $Result) Set The return code of the verification result.
-0: Succeeded.
+0: Success.
 1001: Failed to call the liveness engine.
-1002:Suspected spoofed recording.
-1004: Selfie verification comparison failed.
-1005:Liveness detection failed.
-1201:Lighting is too dark or overexposed.
+1002: Suspected spoofed recording.
+1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
 2004: The image passed in is too large or too small.
 2012: Multiple faces detected.
 2013: No face was detected, or the face detected was incomplete.
 2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
 2016: The similarity did not reach the standard passing threshold.
-2017:Facial occlusion detected.
+2017: Facial occlusion detected.
 -999: The verification process wasn't finished.
  * @method string getDescription() Obtain The description of the verification result.
  * @method void setDescription(string $Description) Set The description of the verification result.
@@ -80,7 +80,7 @@ Only returned for the Enhance and Plus version, with the default value being emp
 4 - High Risk
 Empty - Risk level not obtained.
 Only returned for the Enhance and Plus version, with the default value being empty.
- * @method array getLivenessInfoTag() Obtain Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+ * @method array getLivenessInfoTag() Obtain Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS or PRO. Details are as follows:
 01 - User kept eyes closed throughout the process.
 02 - User failed to complete the specified action.
 03 - Suspected photo replay attack.
@@ -94,7 +94,7 @@ Only returned for the Enhance and Plus version, with the default value being emp
 11 - Poor face quality.
 12 - Unqualified collection quality.
 13 - Suspected adversarial sample attack.
- * @method void setLivenessInfoTag(array $LivenessInfoTag) Set Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+ * @method void setLivenessInfoTag(array $LivenessInfoTag) Set Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS or PRO. Details are as follows:
 01 - User kept eyes closed throughout the process.
 02 - User failed to complete the specified action.
 03 - Suspected photo replay attack.
@@ -115,19 +115,19 @@ class GetFaceIdResultIntlResponse extends AbstractModel
 {
     /**
      * @var string The return code of the verification result.
-0: Succeeded.
+0: Success.
 1001: Failed to call the liveness engine.
-1002:Suspected spoofed recording.
-1004: Selfie verification comparison failed.
-1005:Liveness detection failed.
-1201:Lighting is too dark or overexposed.
+1002: Suspected spoofed recording.
+1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
 2004: The image passed in is too large or too small.
 2012: Multiple faces detected.
 2013: No face was detected, or the face detected was incomplete.
 2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
 2016: The similarity did not reach the standard passing threshold.
-2017:Facial occlusion detected.
+2017: Facial occlusion detected.
 -999: The verification process wasn't finished.
      */
     public $Result;
@@ -176,7 +176,7 @@ Only returned for the Enhance and Plus version, with the default value being emp
     public $DeviceInfoLevel;
 
     /**
-     * @var array Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+     * @var array Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS or PRO. Details are as follows:
 01 - User kept eyes closed throughout the process.
 02 - User failed to complete the specified action.
 03 - Suspected photo replay attack.
@@ -200,19 +200,19 @@ Only returned for the Enhance and Plus version, with the default value being emp
 
     /**
      * @param string $Result The return code of the verification result.
-0: Succeeded.
+0: Success.
 1001: Failed to call the liveness engine.
-1002:Suspected spoofed recording.
-1004: Selfie verification comparison failed.
-1005:Liveness detection failed.
-1201:Lighting is too dark or overexposed.
+1002: Suspected spoofed recording.
+1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
 2004: The image passed in is too large or too small.
 2012: Multiple faces detected.
 2013: No face was detected, or the face detected was incomplete.
 2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
 2016: The similarity did not reach the standard passing threshold.
-2017:Facial occlusion detected.
+2017: Facial occlusion detected.
 -999: The verification process wasn't finished.
      * @param string $Description The description of the verification result.
      * @param string $BestFrame The best frame screenshot (in Base64) obtained during the verification.
@@ -229,7 +229,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 4 - High Risk
 Empty - Risk level not obtained.
 Only returned for the Enhance and Plus version, with the default value being empty.
-     * @param array $LivenessInfoTag Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+     * @param array $LivenessInfoTag Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS or PRO. Details are as follows:
 01 - User kept eyes closed throughout the process.
 02 - User failed to complete the specified action.
 03 - Suspected photo replay attack.

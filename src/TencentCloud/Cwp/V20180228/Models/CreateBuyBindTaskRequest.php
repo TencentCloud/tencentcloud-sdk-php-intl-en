@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDealName() Obtain Order Number
  * @method void setDealName(string $DealName) Set Order Number
- * @method integer getLicenseType() Obtain Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription
- * @method void setLicenseType(integer $LicenseType) Set Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription
+ * @method integer getLicenseType() Obtain Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription
+ * @method void setLicenseType(integer $LicenseType) Set Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription
  * @method array getQuuidList() Obtain Machine list
  * @method void setQuuidList(array $QuuidList) Set Machine list
  * @method boolean getIsAll() Obtain Whether to select all machines
@@ -37,7 +37,7 @@ class CreateBuyBindTaskRequest extends AbstractModel
     public $DealName;
 
     /**
-     * @var integer Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription
+     * @var integer Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription
      */
     public $LicenseType;
 
@@ -53,7 +53,7 @@ class CreateBuyBindTaskRequest extends AbstractModel
 
     /**
      * @param string $DealName Order Number
-     * @param integer $LicenseType Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription
+     * @param integer $LicenseType Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription
      * @param array $QuuidList Machine list
      * @param boolean $IsAll Whether to select all machines
      */

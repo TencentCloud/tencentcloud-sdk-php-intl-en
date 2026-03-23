@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getLicenseId() Obtain Authorization ID
  * @method void setLicenseId(integer $LicenseId) Set Authorization ID
- * @method integer getLicenseType() Obtain Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - monthly subscription; 2: Ultimate Edition - monthly subscription.
- * @method void setLicenseType(integer $LicenseType) Set Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - monthly subscription; 2: Ultimate Edition - monthly subscription.
+ * @method integer getLicenseType() Obtain Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
+ * @method void setLicenseType(integer $LicenseType) Set Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
  * @method integer getLicenseStatus() Obtain Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLicenseStatus(integer $LicenseStatus) Set Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
@@ -67,7 +67,7 @@ class LicenseDetail extends AbstractModel
     public $LicenseId;
 
     /**
-     * @var integer Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - monthly subscription; 2: Ultimate Edition - monthly subscription.
+     * @var integer Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
      */
     public $LicenseType;
 
@@ -146,7 +146,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $LicenseId Authorization ID
-     * @param integer $LicenseType Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - monthly subscription; 2: Ultimate Edition - monthly subscription.
+     * @param integer $LicenseType Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
      * @param integer $LicenseStatus Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $LicenseCnt Total number of authorizations

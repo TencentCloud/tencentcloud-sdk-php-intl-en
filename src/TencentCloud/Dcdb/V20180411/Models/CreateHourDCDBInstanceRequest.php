@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRollbackTime(string $RollbackTime) Set Rollback time, such as "2021-11-22 00:00:00".
  * @method array getSecurityGroupIds() Obtain Array of security group IDs (this parameter is compatible with the old parameter `SecurityGroupId`)
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Array of security group IDs (this parameter is compatible with the old parameter `SecurityGroupId`)
+ * @method integer getDcnSyncMode() Obtain 
+ * @method void setDcnSyncMode(integer $DcnSyncMode) Set 
+ * @method string getCpuType() Obtain 
+ * @method void setCpuType(string $CpuType) Set 
  */
 class CreateHourDCDBInstanceRequest extends AbstractModel
 {
@@ -183,6 +187,16 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var integer 
+     */
+    public $DcnSyncMode;
+
+    /**
+     * @var string 
+     */
+    public $CpuType;
+
+    /**
      * @param integer $ShardMemory Shard memory in GB, which can be obtained through the `DescribeShardSpec` API.
   
      * @param integer $ShardStorage Shard capacity in GB, which can be obtained through the `DescribeShardSpec` API.
@@ -208,6 +222,8 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
      * @param string $RollbackInstanceId ID of the instance to be rolled back
      * @param string $RollbackTime Rollback time, such as "2021-11-22 00:00:00".
      * @param array $SecurityGroupIds Array of security group IDs (this parameter is compatible with the old parameter `SecurityGroupId`)
+     * @param integer $DcnSyncMode 
+     * @param string $CpuType 
      */
     function __construct()
     {
@@ -314,6 +330,14 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("DcnSyncMode",$param) and $param["DcnSyncMode"] !== null) {
+            $this->DcnSyncMode = $param["DcnSyncMode"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
         }
     }
 }

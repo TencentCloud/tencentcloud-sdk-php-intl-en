@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTags() Obtain Tag array. Leaving it blank indicates no tags need to be bound.
  * @method void setTags(array $Tags) Set Tag array. Leaving it blank indicates no tags need to be bound.
- * @method integer getLicenseType() Obtain Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0.
- * @method void setLicenseType(integer $LicenseType) Set Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0.
+ * @method integer getLicenseType() Obtain Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0.
+ * @method void setLicenseType(integer $LicenseType) Set Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0.
  * @method integer getLicenseNum() Obtain Authorization quantity: the number of units that need to be purchased
 The default is 1.
  * @method void setLicenseNum(integer $LicenseNum) Set Authorization quantity: the number of units that need to be purchased
@@ -41,9 +41,9 @@ This parameter is only valid for monthly subscription.
  * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration, with a default value of 1. The optional values are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36
 This parameter is only valid for monthly subscription.
  * @method boolean getAutoRenewFlag() Obtain Whether to auto-renew. The default is not to auto-renew.
-This parameter is only valid for monthly subscription.
+This parameter is only valid for yearly/monthly subscription.
  * @method void setAutoRenewFlag(boolean $AutoRenewFlag) Set Whether to auto-renew. The default is not to auto-renew.
-This parameter is only valid for monthly subscription.
+This parameter is only valid for yearly/monthly subscription.
  * @method string getAutoProtectOpenConfig() Obtain This field is deprecated.
  * @method void setAutoProtectOpenConfig(string $AutoProtectOpenConfig) Set This field is deprecated.
  * @method OrderModifyObject getModifyConfig() Obtain Reconfiguration Parameters
@@ -57,7 +57,7 @@ class CreateLicenseOrderRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0.
+     * @var integer Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0.
      */
     public $LicenseType;
 
@@ -87,7 +87,7 @@ This parameter is only valid for monthly subscription.
 
     /**
      * @var boolean Whether to auto-renew. The default is not to auto-renew.
-This parameter is only valid for monthly subscription.
+This parameter is only valid for yearly/monthly subscription.
      */
     public $AutoRenewFlag;
 
@@ -103,7 +103,7 @@ This parameter is only valid for monthly subscription.
 
     /**
      * @param array $Tags Tag array. Leaving it blank indicates no tags need to be bound.
-     * @param integer $LicenseType Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0.
+     * @param integer $LicenseType Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0.
      * @param integer $LicenseNum Authorization quantity: the number of units that need to be purchased
 The default is 1.
      * @param integer $RegionId Region of purchase order. In this case, only 1 - Guangzhou and 9 - Singapore are supported. Guangzhou is recommended. Singapore region is reserved for allowlisted users.
@@ -113,7 +113,7 @@ The default is 0.
      * @param integer $TimeSpan Purchase duration, with a default value of 1. The optional values are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36
 This parameter is only valid for monthly subscription.
      * @param boolean $AutoRenewFlag Whether to auto-renew. The default is not to auto-renew.
-This parameter is only valid for monthly subscription.
+This parameter is only valid for yearly/monthly subscription.
      * @param string $AutoProtectOpenConfig This field is deprecated.
      * @param OrderModifyObject $ModifyConfig Reconfiguration Parameters
      */

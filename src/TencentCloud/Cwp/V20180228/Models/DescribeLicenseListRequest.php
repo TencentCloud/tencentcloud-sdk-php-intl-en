@@ -23,21 +23,21 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFilters() Obtain Take the intersection when filtering with multiple conditions.
 <li> LicenseStatus authorization status information: 0 - not used; 1 - partially used; 2 - used up; 3 - unavailable; 4 - available</li>
 <li> BuyTime: time of purchase</li>
-<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
 <li>DeadlineStatus expiration status: NotExpired -not expired; expire - expired (including terminated); nearexpiry - about to expire</li>
 <li>ResourceId resource ID</li>
 <li>Keywords IP filtering</li>
-<li>PayMode payment mode. 0: pay-as-you-go; 1: monthly subscription</li>
+<li>PayMode payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription</li>
 <li>OrderStatus order status. 1: normal; 2: isolated; 3: terminated</li>
 <li>DealNames sub-order number, with a maximum length of 10, exceeding this will result in a failure.</li>
  * @method void setFilters(array $Filters) Set Take the intersection when filtering with multiple conditions.
 <li> LicenseStatus authorization status information: 0 - not used; 1 - partially used; 2 - used up; 3 - unavailable; 4 - available</li>
 <li> BuyTime: time of purchase</li>
-<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
 <li>DeadlineStatus expiration status: NotExpired -not expired; expire - expired (including terminated); nearexpiry - about to expire</li>
 <li>ResourceId resource ID</li>
 <li>Keywords IP filtering</li>
-<li>PayMode payment mode. 0: pay-as-you-go; 1: monthly subscription</li>
+<li>PayMode payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription</li>
 <li>OrderStatus order status. 1: normal; 2: isolated; 3: terminated</li>
 <li>DealNames sub-order number, with a maximum length of 10, exceeding this will result in a failure.</li>
  * @method integer getLimit() Obtain Limit number, 10 by default.
@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset, which is 0 by default.
  * @method array getTags() Obtain Tag filtering; filter by the platform's tag capabilities. In this case, you should pass in the tag key and tag value as an object.
  * @method void setTags(array $Tags) Set Tag filtering; filter by the platform's tag capabilities. In this case, you should pass in the tag key and tag value as an object.
+ * @method string getOrder() Obtain 
+ * @method void setOrder(string $Order) Set 
+ * @method string getBy() Obtain 
+ * @method void setBy(string $By) Set 
  */
 class DescribeLicenseListRequest extends AbstractModel
 {
@@ -53,11 +57,11 @@ class DescribeLicenseListRequest extends AbstractModel
      * @var array Take the intersection when filtering with multiple conditions.
 <li> LicenseStatus authorization status information: 0 - not used; 1 - partially used; 2 - used up; 3 - unavailable; 4 - available</li>
 <li> BuyTime: time of purchase</li>
-<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
 <li>DeadlineStatus expiration status: NotExpired -not expired; expire - expired (including terminated); nearexpiry - about to expire</li>
 <li>ResourceId resource ID</li>
 <li>Keywords IP filtering</li>
-<li>PayMode payment mode. 0: pay-as-you-go; 1: monthly subscription</li>
+<li>PayMode payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription</li>
 <li>OrderStatus order status. 1: normal; 2: isolated; 3: terminated</li>
 <li>DealNames sub-order number, with a maximum length of 10, exceeding this will result in a failure.</li>
      */
@@ -79,19 +83,31 @@ class DescribeLicenseListRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 
+     */
+    public $Order;
+
+    /**
+     * @var string 
+     */
+    public $By;
+
+    /**
      * @param array $Filters Take the intersection when filtering with multiple conditions.
 <li> LicenseStatus authorization status information: 0 - not used; 1 - partially used; 2 - used up; 3 - unavailable; 4 - available</li>
 <li> BuyTime: time of purchase</li>
-<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
 <li>DeadlineStatus expiration status: NotExpired -not expired; expire - expired (including terminated); nearexpiry - about to expire</li>
 <li>ResourceId resource ID</li>
 <li>Keywords IP filtering</li>
-<li>PayMode payment mode. 0: pay-as-you-go; 1: monthly subscription</li>
+<li>PayMode payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription</li>
 <li>OrderStatus order status. 1: normal; 2: isolated; 3: terminated</li>
 <li>DealNames sub-order number, with a maximum length of 10, exceeding this will result in a failure.</li>
      * @param integer $Limit Limit number, 10 by default.
      * @param integer $Offset Offset, which is 0 by default.
      * @param array $Tags Tag filtering; filter by the platform's tag capabilities. In this case, you should pass in the tag key and tag value as an object.
+     * @param string $Order 
+     * @param string $By 
      */
     function __construct()
     {
@@ -130,6 +146,14 @@ class DescribeLicenseListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
         }
     }
 }

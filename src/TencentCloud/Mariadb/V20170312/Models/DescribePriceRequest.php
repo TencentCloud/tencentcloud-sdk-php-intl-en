@@ -38,14 +38,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) Set Purchase period in months
  * @method integer getCount() Obtain The number of instances to be purchased. Only one instance is queried for price by default.
  * @method void setCount(integer $Count) Set The number of instances to be purchased. Only one instance is queried for price by default.
- * @method string getPaymode() Obtain Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
- * @method void setPaymode(string $Paymode) Set Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
+ * @method string getPaymode() Obtain Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
+ * @method void setPaymode(string $Paymode) Set Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
  * @method string getAmountUnit() Obtain Price unit. Valid values:   
 `* pent` (cent), 
 `* microPent` (microcent).
  * @method void setAmountUnit(string $AmountUnit) Set Price unit. Valid values:   
 `* pent` (cent), 
 `* microPent` (microcent).
+ * @method string getCpuType() Obtain 
+ * @method void setCpuType(string $CpuType) Set 
  */
 class DescribePriceRequest extends AbstractModel
 {
@@ -83,7 +85,7 @@ class DescribePriceRequest extends AbstractModel
     public $Count;
 
     /**
-     * @var string Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
+     * @var string Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
      */
     public $Paymode;
 
@@ -95,6 +97,11 @@ class DescribePriceRequest extends AbstractModel
     public $AmountUnit;
 
     /**
+     * @var string 
+     */
+    public $CpuType;
+
+    /**
      * @param string $Zone AZ ID of the purchased instance.
      * @param integer $NodeCount Number of instance nodes, which can be obtained 
  by querying the instance specification through the `DescribeDBInstanceSpecs` API.
@@ -104,10 +111,11 @@ class DescribePriceRequest extends AbstractModel
  by querying instance specification through the `DescribeDBInstanceSpecs` API.
      * @param integer $Period Purchase period in months
      * @param integer $Count The number of instances to be purchased. Only one instance is queried for price by default.
-     * @param string $Paymode Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
+     * @param string $Paymode Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
      * @param string $AmountUnit Price unit. Valid values:   
 `* pent` (cent), 
 `* microPent` (microcent).
+     * @param string $CpuType 
      */
     function __construct()
     {
@@ -152,6 +160,10 @@ class DescribePriceRequest extends AbstractModel
 
         if (array_key_exists("AmountUnit",$param) and $param["AmountUnit"] !== null) {
             $this->AmountUnit = $param["AmountUnit"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
         }
     }
 }

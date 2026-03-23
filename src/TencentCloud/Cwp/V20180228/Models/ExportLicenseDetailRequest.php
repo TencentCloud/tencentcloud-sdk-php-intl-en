@@ -21,10 +21,10 @@ use TencentCloud\Common\AbstractModel;
  * ExportLicenseDetail request structure.
  *
  * @method array getFilters() Obtain Take the intersection when filtering with multiple conditions: LicenseStatus, DeadlineStatus, ResourceId, and Keywords
-<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
 <li>ResourceId resource ID</li>
  * @method void setFilters(array $Filters) Set Take the intersection when filtering with multiple conditions: LicenseStatus, DeadlineStatus, ResourceId, and Keywords
-<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
 <li>ResourceId resource ID</li>
  * @method boolean getIsHistory() Obtain Whether to export all authorization details
  * @method void setIsHistory(boolean $IsHistory) Set Whether to export all authorization details
@@ -37,7 +37,7 @@ class ExportLicenseDetailRequest extends AbstractModel
 {
     /**
      * @var array Take the intersection when filtering with multiple conditions: LicenseStatus, DeadlineStatus, ResourceId, and Keywords
-<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
 <li>ResourceId resource ID</li>
      */
     public $Filters;
@@ -59,7 +59,7 @@ class ExportLicenseDetailRequest extends AbstractModel
 
     /**
      * @param array $Filters Take the intersection when filtering with multiple conditions: LicenseStatus, DeadlineStatus, ResourceId, and Keywords
-<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
 <li>ResourceId resource ID</li>
      * @param boolean $IsHistory Whether to export all authorization details
      * @param array $Tags Tag filtering; filter by the platform's tag capabilities. In this case, you should pass in the tag key and tag value as an object.

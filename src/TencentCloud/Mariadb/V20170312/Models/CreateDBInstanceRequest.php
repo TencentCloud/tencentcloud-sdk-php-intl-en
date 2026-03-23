@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDcnRegion(string $DcnRegion) Set DCN source region
  * @method string getDcnInstanceId() Obtain DCN source instance ID
  * @method void setDcnInstanceId(string $DcnInstanceId) Set DCN source instance ID
+ * @method integer getDcnSyncMode() Obtain 
+ * @method void setDcnSyncMode(integer $DcnSyncMode) Set 
+ * @method string getCpuType() Obtain 
+ * @method void setCpuType(string $CpuType) Set 
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -173,6 +177,16 @@ class CreateDBInstanceRequest extends AbstractModel
     public $DcnInstanceId;
 
     /**
+     * @var integer 
+     */
+    public $DcnSyncMode;
+
+    /**
+     * @var string 
+     */
+    public $CpuType;
+
+    /**
      * @param array $Zones AZs to deploy instance nodes. You can specify up to two AZs (one as primary AZ and another as replica AZ). When the shard specification is 1-primary-2-replica, the primary and one of the replicas are deployed in the primary AZ.
      * @param integer $NodeCount Number of nodes, which can be obtained 
  by querying the instance specification through the `DescribeDBInstanceSpecs` API.
@@ -196,6 +210,8 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param array $InitParams List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync; default value: `2`).
      * @param string $DcnRegion DCN source region
      * @param string $DcnInstanceId DCN source instance ID
+     * @param integer $DcnSyncMode 
+     * @param string $CpuType 
      */
     function __construct()
     {
@@ -298,6 +314,14 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("DcnInstanceId",$param) and $param["DcnInstanceId"] !== null) {
             $this->DcnInstanceId = $param["DcnInstanceId"];
+        }
+
+        if (array_key_exists("DcnSyncMode",$param) and $param["DcnSyncMode"] !== null) {
+            $this->DcnSyncMode = $param["DcnSyncMode"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
         }
     }
 }

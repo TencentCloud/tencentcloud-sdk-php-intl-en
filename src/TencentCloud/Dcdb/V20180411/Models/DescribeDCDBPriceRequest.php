@@ -40,14 +40,16 @@ use TencentCloud\Common\AbstractModel;
  by querying the instance specification through the `DescribeDBInstanceSpecs` API.
  * @method integer getShardCount() Obtain The number of shards in the instance. Value range: 2-8. Upgrade your instance to have up to 64 shards if you require more.
  * @method void setShardCount(integer $ShardCount) Set The number of shards in the instance. Value range: 2-8. Upgrade your instance to have up to 64 shards if you require more.
- * @method string getPaymode() Obtain Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
- * @method void setPaymode(string $Paymode) Set Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
+ * @method string getPaymode() Obtain Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
+ * @method void setPaymode(string $Paymode) Set Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
  * @method string getAmountUnit() Obtain Price unit. Valid values:   
 `* pent` (cent), 
 `* microPent` (microcent).
  * @method void setAmountUnit(string $AmountUnit) Set Price unit. Valid values:   
 `* pent` (cent), 
 `* microPent` (microcent).
+ * @method string getCpuType() Obtain 
+ * @method void setCpuType(string $CpuType) Set 
  */
 class DescribeDCDBPriceRequest extends AbstractModel
 {
@@ -90,7 +92,7 @@ class DescribeDCDBPriceRequest extends AbstractModel
     public $ShardCount;
 
     /**
-     * @var string Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
+     * @var string Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
      */
     public $Paymode;
 
@@ -100,6 +102,11 @@ class DescribeDCDBPriceRequest extends AbstractModel
 `* microPent` (microcent).
      */
     public $AmountUnit;
+
+    /**
+     * @var string 
+     */
+    public $CpuType;
 
     /**
      * @param string $Zone AZ ID of the purchased instance.
@@ -112,10 +119,11 @@ class DescribeDCDBPriceRequest extends AbstractModel
      * @param integer $ShardStorage Shard storage size in GB, which can be obtained
  by querying the instance specification through the `DescribeDBInstanceSpecs` API.
      * @param integer $ShardCount The number of shards in the instance. Value range: 2-8. Upgrade your instance to have up to 64 shards if you require more.
-     * @param string $Paymode Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
+     * @param string $Paymode Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
      * @param string $AmountUnit Price unit. Valid values:   
 `* pent` (cent), 
 `* microPent` (microcent).
+     * @param string $CpuType 
      */
     function __construct()
     {
@@ -164,6 +172,10 @@ class DescribeDCDBPriceRequest extends AbstractModel
 
         if (array_key_exists("AmountUnit",$param) and $param["AmountUnit"] !== null) {
             $this->AmountUnit = $param["AmountUnit"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
         }
     }
 }
