@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Versioning - array of classes
  *
- * @method array getProtocols() Obtain Protocol and sale details
- * @method void setProtocols(array $Protocols) Set Protocol and sale details
- * @method string getType() Obtain Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
- * @method void setType(string $Type) Set Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
- * @method boolean getPrepayment() Obtain Indicates whether prepaid is supported. `true`: yes; `false`: no
- * @method void setPrepayment(boolean $Prepayment) Set Indicates whether prepaid is supported. `true`: yes; `false`: no
+ * @method array getProtocols() Obtain <p>Protocol and sale details</p>
+ * @method void setProtocols(array $Protocols) Set <p>Protocol and sale details</p>
+ * @method string getType() Obtain <p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p>
+ * @method void setType(string $Type) Set <p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p>
+ * @method boolean getPrepayment() Obtain <p>Support for prepaid. In the return value, true means supported and false means unsupported.</p>
+ * @method void setPrepayment(boolean $Prepayment) Set <p>Support for prepaid. In the return value, true means supported and false means unsupported.</p>
+ * @method string getVersion() Obtain <p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul>
+ * @method void setVersion(string $Version) Set <p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul>
  */
 class AvailableType extends AbstractModel
 {
     /**
-     * @var array Protocol and sale details
+     * @var array <p>Protocol and sale details</p>
      */
     public $Protocols;
 
     /**
-     * @var string Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
+     * @var string <p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p>
      */
     public $Type;
 
     /**
-     * @var boolean Indicates whether prepaid is supported. `true`: yes; `false`: no
+     * @var boolean <p>Support for prepaid. In the return value, true means supported and false means unsupported.</p>
      */
     public $Prepayment;
 
     /**
-     * @param array $Protocols Protocol and sale details
-     * @param string $Type Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
-     * @param boolean $Prepayment Indicates whether prepaid is supported. `true`: yes; `false`: no
+     * @var string <p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul>
+     */
+    public $Version;
+
+    /**
+     * @param array $Protocols <p>Protocol and sale details</p>
+     * @param string $Type <p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p>
+     * @param boolean $Prepayment <p>Support for prepaid. In the return value, true means supported and false means unsupported.</p>
+     * @param string $Version <p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul>
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class AvailableType extends AbstractModel
 
         if (array_key_exists("Prepayment",$param) and $param["Prepayment"] !== null) {
             $this->Prepayment = $param["Prepayment"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
     }
 }
