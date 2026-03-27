@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Allowed Operations List for Instances
  *
  * @method string getIsSupportForceRestart() Obtain Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
  * @method void setIsSupportForceRestart(string $IsSupportForceRestart) Set Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).

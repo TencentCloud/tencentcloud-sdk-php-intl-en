@@ -18,36 +18,60 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * SSL Encryption Configuration
  *
- * @method string getEncryption() Obtain 
- * @method void setEncryption(string $Encryption) Set 
- * @method string getSSLValidityPeriod() Obtain 
- * @method void setSSLValidityPeriod(string $SSLValidityPeriod) Set 
- * @method integer getSSLValidity() Obtain 
- * @method void setSSLValidity(integer $SSLValidity) Set 
+ * @method string getEncryption() Obtain SSL Encryption Status
+enable - Enabled
+disable - Disabled
+enable_doing - Enabling
+disable_doing - Disabling
+renew_doing - Updating
+wait_doing - Waiting to be executed during maintenance window
+ * @method void setEncryption(string $Encryption) Set SSL Encryption Status
+enable - Enabled
+disable - Disabled
+enable_doing - Enabling
+disable_doing - Disabling
+renew_doing - Updating
+wait_doing - Waiting to be executed during maintenance window
+ * @method string getSSLValidityPeriod() Obtain SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS
+ * @method void setSSLValidityPeriod(string $SSLValidityPeriod) Set SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS
+ * @method integer getSSLValidity() Obtain SSL Certificates Validity: 0 - Invalid, 1 - Valid
+ * @method void setSSLValidity(integer $SSLValidity) Set SSL Certificates Validity: 0 - Invalid, 1 - Valid
  */
 class SSLConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string SSL Encryption Status
+enable - Enabled
+disable - Disabled
+enable_doing - Enabling
+disable_doing - Disabling
+renew_doing - Updating
+wait_doing - Waiting to be executed during maintenance window
      */
     public $Encryption;
 
     /**
-     * @var string 
+     * @var string SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS
      */
     public $SSLValidityPeriod;
 
     /**
-     * @var integer 
+     * @var integer SSL Certificates Validity: 0 - Invalid, 1 - Valid
      */
     public $SSLValidity;
 
     /**
-     * @param string $Encryption 
-     * @param string $SSLValidityPeriod 
-     * @param integer $SSLValidity 
+     * @param string $Encryption SSL Encryption Status
+enable - Enabled
+disable - Disabled
+enable_doing - Enabling
+disable_doing - Disabling
+renew_doing - Updating
+wait_doing - Waiting to be executed during maintenance window
+     * @param string $SSLValidityPeriod SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS
+     * @param integer $SSLValidity SSL Certificates Validity: 0 - Invalid, 1 - Valid
      */
     function __construct()
     {

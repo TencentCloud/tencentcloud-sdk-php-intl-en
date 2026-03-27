@@ -46,8 +46,16 @@ use TencentCloud\Common\AbstractModel;
 `2`: Disable auto-renewal
  * @method string getPlanId() Obtain ID of the plan
  * @method void setPlanId(string $PlanId) Set ID of the plan
- * @method string getArea() Obtain 
- * @method void setArea(string $Area) Set 
+ * @method string getArea() Obtain Region, with values:
+
+<li>mainland: Chinese mainland;</li>
+
+<li>overseas: Overseas.</li>
+ * @method void setArea(string $Area) Set Region, with values:
+
+<li>mainland: Chinese mainland;</li>
+
+<li>overseas: Overseas.</li>
  */
 class Resource extends AbstractModel
 {
@@ -101,7 +109,11 @@ class Resource extends AbstractModel
     public $PlanId;
 
     /**
-     * @var string 
+     * @var string Region, with values:
+
+<li>mainland: Chinese mainland;</li>
+
+<li>overseas: Overseas.</li>
      */
     public $Area;
 
@@ -119,7 +131,11 @@ class Resource extends AbstractModel
 `1`: Enable auto-renewal
 `2`: Disable auto-renewal
      * @param string $PlanId ID of the plan
-     * @param string $Area 
+     * @param string $Area Region, with values:
+
+<li>mainland: Chinese mainland;</li>
+
+<li>overseas: Overseas.</li>
      */
     function __construct()
     {

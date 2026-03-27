@@ -146,10 +146,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setNodeUniqueID(string $NodeUniqueID) Set Unique node ID
  * @method string getHostID() Obtain uuid
  * @method void setHostID(string $HostID) Set uuid
- * @method string getNamespace() Obtain 
- * @method void setNamespace(string $Namespace) Set 
- * @method string getWorkloadType() Obtain 
- * @method void setWorkloadType(string $WorkloadType) Set 
+ * @method string getNamespace() Obtain Namespace
+ * @method void setNamespace(string $Namespace) Set Namespace
+ * @method string getWorkloadType() Obtain WorkloadType
+ * @method void setWorkloadType(string $WorkloadType) Set WorkloadType
  */
 class RunTimeEventBaseInfo extends AbstractModel
 {
@@ -333,12 +333,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HostID;
 
     /**
-     * @var string 
+     * @var string Namespace
      */
     public $Namespace;
 
     /**
-     * @var string 
+     * @var string WorkloadType
      */
     public $WorkloadType;
 
@@ -406,8 +406,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ClusterName Cluster name
      * @param string $NodeUniqueID Unique node ID
      * @param string $HostID uuid
-     * @param string $Namespace 
-     * @param string $WorkloadType 
+     * @param string $Namespace Namespace
+     * @param string $WorkloadType WorkloadType
      */
     function __construct()
     {

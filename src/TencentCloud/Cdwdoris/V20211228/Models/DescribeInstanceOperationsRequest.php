@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceOperations request structure.
  *
- * @method string getInstanceId() Obtain 
- * @method void setInstanceId(string $InstanceId) Set 
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
+ * @method string getInstanceId() Obtain Cluster ID
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID
+ * @method integer getOffset() Obtain Pagination parameter, offset, starting from 0
+ * @method void setOffset(integer $Offset) Set Pagination parameter, offset, starting from 0
+ * @method integer getLimit() Obtain Pagination parameter, page size, default 10
+ * @method void setLimit(integer $Limit) Set Pagination parameter, page size, default 10
+ * @method string getStartTime() Obtain Start Time
+ * @method void setStartTime(string $StartTime) Set Start Time
+ * @method string getEndTime() Obtain End Time
+ * @method void setEndTime(string $EndTime) Set End Time
  */
 class DescribeInstanceOperationsRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Cluster ID
      */
     public $InstanceId;
 
     /**
-     * @var integer 
+     * @var integer Pagination parameter, offset, starting from 0
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer Pagination parameter, page size, default 10
      */
     public $Limit;
 
     /**
-     * @var string 
+     * @var string Start Time
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string End Time
      */
     public $EndTime;
 
     /**
-     * @param string $InstanceId 
-     * @param integer $Offset 
-     * @param integer $Limit 
-     * @param string $StartTime 
-     * @param string $EndTime 
+     * @param string $InstanceId Cluster ID
+     * @param integer $Offset Pagination parameter, offset, starting from 0
+     * @param integer $Limit Pagination parameter, page size, default 10
+     * @param string $StartTime Start Time
+     * @param string $EndTime End Time
      */
     function __construct()
     {

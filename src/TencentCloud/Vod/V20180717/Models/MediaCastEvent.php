@@ -18,28 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Media relay event notification message.
  *
- * @method string getCastId() Obtain 
- * @method void setCastId(string $CastId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
+ * @method string getCastId() Obtain Media relay ID.
+ * @method void setCastId(string $CastId) Set Media relay ID.
+ * @method string getStatus() Obtain Relay status. Valid values:
+<li>Working: Running;</li>
+<li>Scheduled: To be started after the scheduled time arrives;</li>
+<li>Stopped: Relay stopped;</li>
+<li>Idle: Idle.</li>
+ * @method void setStatus(string $Status) Set Relay status. Valid values:
+<li>Working: Running;</li>
+<li>Scheduled: To be started after the scheduled time arrives;</li>
+<li>Stopped: Relay stopped;</li>
+<li>Idle: Idle.</li>
  */
 class MediaCastEvent extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Media relay ID.
      */
     public $CastId;
 
     /**
-     * @var string 
+     * @var string Relay status. Valid values:
+<li>Working: Running;</li>
+<li>Scheduled: To be started after the scheduled time arrives;</li>
+<li>Stopped: Relay stopped;</li>
+<li>Idle: Idle.</li>
      */
     public $Status;
 
     /**
-     * @param string $CastId 
-     * @param string $Status 
+     * @param string $CastId Media relay ID.
+     * @param string $Status Relay status. Valid values:
+<li>Working: Running;</li>
+<li>Scheduled: To be started after the scheduled time arrives;</li>
+<li>Stopped: Relay stopped;</li>
+<li>Idle: Idle.</li>
      */
     function __construct()
     {

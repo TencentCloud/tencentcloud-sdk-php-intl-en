@@ -58,8 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setFailedReason(string $FailedReason) Set Reason for stage failure.
  * @method string getTimeConsuming() Obtain Step duration.
  * @method void setTimeConsuming(string $TimeConsuming) Set Step duration.
- * @method integer getId() Obtain 
- * @method void setId(integer $Id) Set 
+ * @method integer getId() Obtain id, for frontend
+ * @method void setId(integer $Id) Set id, for frontend
  */
 class StageInfoDetail extends AbstractModel
 {
@@ -143,7 +143,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TimeConsuming;
 
     /**
-     * @var integer 
+     * @var integer id, for frontend
      */
     public $Id;
 
@@ -167,7 +167,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $LanguageKey Multi-language version key.
      * @param string $FailedReason Reason for stage failure.
      * @param string $TimeConsuming Step duration.
-     * @param integer $Id 
+     * @param integer $Id id, for frontend
      */
     function __construct()
     {

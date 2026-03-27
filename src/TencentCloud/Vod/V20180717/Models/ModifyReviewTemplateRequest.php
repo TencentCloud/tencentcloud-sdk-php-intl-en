@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyReviewTemplate request structure.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method integer getDefinition() Obtain Audit template unique ID.
+ * @method void setDefinition(integer $Definition) Set Audit template unique ID.
  * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
+ * @method string getName() Obtain Audit template name, length limit: 64 characters.
+ * @method void setName(string $Name) Set Audit template name, length limit: 64 characters.
+ * @method string getComment() Obtain Audit template description, length limit: 256 characters.
+ * @method void setComment(string $Comment) Set Audit template description, length limit: 256 characters.
  * @method array getLabels() Obtain The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
  * @method void setLabels(array $Labels) Set The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
  */
 class ModifyReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Audit template unique ID.
      */
     public $Definition;
 
@@ -44,12 +44,12 @@ class ModifyReviewTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Audit template name, length limit: 64 characters.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Audit template description, length limit: 256 characters.
      */
     public $Comment;
 
@@ -59,10 +59,10 @@ class ModifyReviewTemplateRequest extends AbstractModel
     public $Labels;
 
     /**
-     * @param integer $Definition 
+     * @param integer $Definition Audit template unique ID.
      * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $Name 
-     * @param string $Comment 
+     * @param string $Name Audit template name, length limit: 64 characters.
+     * @param string $Comment Audit template description, length limit: 256 characters.
      * @param array $Labels The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
      */
     function __construct()

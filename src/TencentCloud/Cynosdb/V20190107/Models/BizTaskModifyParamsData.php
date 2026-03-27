@@ -18,10 +18,10 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Parameter Modification Task Data
  *
- * @method string getClusterId() Obtain 
- * @method void setClusterId(string $ClusterId) Set 
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method array getClusterParamList() Obtain Cluster parameter modification data.
  * @method void setClusterParamList(array $ClusterParamList) Set Cluster parameter modification data.
  * @method array getModifyInstanceParams() Obtain Instance parameter modification data.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class BizTaskModifyParamsData extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Cluster ID
      */
     public $ClusterId;
 
@@ -45,7 +45,7 @@ class BizTaskModifyParamsData extends AbstractModel
     public $ModifyInstanceParams;
 
     /**
-     * @param string $ClusterId 
+     * @param string $ClusterId Cluster ID
      * @param array $ClusterParamList Cluster parameter modification data.
      * @param array $ModifyInstanceParams Instance parameter modification data.
      */

@@ -64,6 +64,9 @@ Note: The API request may fail due to network instability or other exceptions. I
  * @method Models\DescribeDealsByCondResponse DescribeDealsByCond(Models\DescribeDealsByCondRequest $req) Querying orders
  * @method Models\DescribeDosageCosDetailByDateResponse DescribeDosageCosDetailByDate(Models\DescribeDosageCosDetailByDateRequest $req) This API is used to query COS usage details.
  * @method Models\DescribeGatherRuleDetailResponse DescribeGatherRuleDetail(Models\DescribeGatherRuleDetailRequest $req) This API is used to query the collection rule details.
+ * @method Models\DescribeRenewInstancesResponse DescribeRenewInstances(Models\DescribeRenewInstancesRequest $req) Notes:
+1. This API supports querying annual and monthly subscription instances integrated into the renewal management page, including running and isolated instances (some products unsupported).
+2. When using this API, a sub-user should have the QcloudFinanceRenewManageFullAccess permission policy.
  * @method Models\DescribeTagListResponse DescribeTagList(Models\DescribeTagListRequest $req) This API is used to get cost allocation tags.
  * @method Models\DescribeVoucherInfoResponse DescribeVoucherInfo(Models\DescribeVoucherInfoRequest $req) This API is used to query vouchers.
  * @method Models\DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetails(Models\DescribeVoucherUsageDetailsRequest $req) This API is used to query voucher usage details.
@@ -75,6 +78,10 @@ Note: The API request may fail due to network instability or other exceptions. I
 Currently, the integrated and supported product for this operation includes: Cloud Firewall.
  * @method Models\RenewInstanceResponse RenewInstance(Models\RenewInstanceRequest $req) Renewing an instance: when calling this API to renew a server, ensure that your Tencent Cloud account has sufficient balance; otherwise, the renewal will fail. The account calling this API must be granted the finace:tradepermission; otherwise, the renewal will fail.
 Currently, the integrated and supported product for renewal includes: Cloud Firewall.
+ * @method Models\SetRenewalResponse SetRenewal(Models\SetRenewalRequest $req) Notes:
+1. This API supports setting auto-renewal mode and period for annual and monthly subscription instances.
+2. Obtain the product code and region code through an instance query API.
+3. When using this API, a sub-user must possess the QcloudFinanceRenewManageFullAccess permission policy.
  */
 
 class BillingClient extends AbstractClient

@@ -18,44 +18,44 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Reference price. This price covers CPU and memory specifications, excluding disk usage. The actual price is subject to the quotation API.
  *
- * @method integer getPrepaidPrice() Obtain 
- * @method void setPrepaidPrice(integer $PrepaidPrice) Set 
- * @method string getPrepaidPriceUnit() Obtain 
- * @method void setPrepaidPriceUnit(string $PrepaidPriceUnit) Set 
- * @method integer getPostpaidPrice() Obtain 
- * @method void setPostpaidPrice(integer $PostpaidPrice) Set 
- * @method string getPostpaidPriceUnit() Obtain 
- * @method void setPostpaidPriceUnit(string $PostpaidPriceUnit) Set 
+ * @method integer getPrepaidPrice() Obtain Reference price for yearly/monthly subscription, unit-cent
+ * @method void setPrepaidPrice(integer $PrepaidPrice) Set Reference price for yearly/monthly subscription, unit-cent
+ * @method string getPrepaidPriceUnit() Obtain Price unit for yearly/monthly subscription, M-month
+ * @method void setPrepaidPriceUnit(string $PrepaidPriceUnit) Set Price unit for yearly/monthly subscription, M-month
+ * @method integer getPostpaidPrice() Obtain Pay-as-you-go price, unit-cent
+ * @method void setPostpaidPrice(integer $PostpaidPrice) Set Pay-as-you-go price, unit-cent
+ * @method string getPostpaidPriceUnit() Obtain Pay-as-you-go price unit, H-hour
+ * @method void setPostpaidPriceUnit(string $PostpaidPriceUnit) Set Pay-as-you-go price unit, H-hour
  */
 class Price extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Reference price for yearly/monthly subscription, unit-cent
      */
     public $PrepaidPrice;
 
     /**
-     * @var string 
+     * @var string Price unit for yearly/monthly subscription, M-month
      */
     public $PrepaidPriceUnit;
 
     /**
-     * @var integer 
+     * @var integer Pay-as-you-go price, unit-cent
      */
     public $PostpaidPrice;
 
     /**
-     * @var string 
+     * @var string Pay-as-you-go price unit, H-hour
      */
     public $PostpaidPriceUnit;
 
     /**
-     * @param integer $PrepaidPrice 
-     * @param string $PrepaidPriceUnit 
-     * @param integer $PostpaidPrice 
-     * @param string $PostpaidPriceUnit 
+     * @param integer $PrepaidPrice Reference price for yearly/monthly subscription, unit-cent
+     * @param string $PrepaidPriceUnit Price unit for yearly/monthly subscription, M-month
+     * @param integer $PostpaidPrice Pay-as-you-go price, unit-cent
+     * @param string $PostpaidPriceUnit Pay-as-you-go price unit, H-hour
      */
     function __construct()
     {

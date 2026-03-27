@@ -18,7 +18,7 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audio track configuration list.
  *
  * @method array getTracks() Obtain Audio track configuration information.
  * @method void setTracks(array $Tracks) Set Audio track configuration information.

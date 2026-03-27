@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AZ Attribute Item
  *
  * @method string getZone() Obtain Availability zone
  * @method void setZone(string $Zone) Set Availability zone

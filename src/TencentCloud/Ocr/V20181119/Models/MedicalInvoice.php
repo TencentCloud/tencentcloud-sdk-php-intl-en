@@ -18,84 +18,84 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Medical bill information.
  *
- * @method string getTitle() Obtain 
- * @method void setTitle(string $Title) Set 
- * @method string getCode() Obtain 
- * @method void setCode(string $Code) Set 
- * @method string getNumber() Obtain 
- * @method void setNumber(string $Number) Set 
- * @method string getTotal() Obtain 
- * @method void setTotal(string $Total) Set 
- * @method string getTotalCn() Obtain 
- * @method void setTotalCn(string $TotalCn) Set 
- * @method string getDate() Obtain 
- * @method void setDate(string $Date) Set 
- * @method string getCheckCode() Obtain 
- * @method void setCheckCode(string $CheckCode) Set 
- * @method string getPlace() Obtain 
- * @method void setPlace(string $Place) Set 
- * @method string getReviewer() Obtain 
- * @method void setReviewer(string $Reviewer) Set 
+ * @method string getTitle() Obtain Invoice name.
+ * @method void setTitle(string $Title) Set Invoice name.
+ * @method string getCode() Obtain Invoice code.
+ * @method void setCode(string $Code) Set Invoice code.
+ * @method string getNumber() Obtain Invoice number.
+ * @method void setNumber(string $Number) Set Invoice number.
+ * @method string getTotal() Obtain Total amount (in figures).
+ * @method void setTotal(string $Total) Set Total amount (in figures).
+ * @method string getTotalCn() Obtain Total Amount (in words).
+ * @method void setTotalCn(string $TotalCn) Set Total Amount (in words).
+ * @method string getDate() Obtain Invoice date.
+ * @method void setDate(string $Date) Set Invoice date.
+ * @method string getCheckCode() Obtain Verification code
+ * @method void setCheckCode(string $CheckCode) Set Verification code
+ * @method string getPlace() Obtain Place of Issue.
+ * @method void setPlace(string $Place) Set Place of Issue.
+ * @method string getReviewer() Obtain Reviewer.
+ * @method void setReviewer(string $Reviewer) Set Reviewer.
  */
 class MedicalInvoice extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Invoice name.
      */
     public $Title;
 
     /**
-     * @var string 
+     * @var string Invoice code.
      */
     public $Code;
 
     /**
-     * @var string 
+     * @var string Invoice number.
      */
     public $Number;
 
     /**
-     * @var string 
+     * @var string Total amount (in figures).
      */
     public $Total;
 
     /**
-     * @var string 
+     * @var string Total Amount (in words).
      */
     public $TotalCn;
 
     /**
-     * @var string 
+     * @var string Invoice date.
      */
     public $Date;
 
     /**
-     * @var string 
+     * @var string Verification code
      */
     public $CheckCode;
 
     /**
-     * @var string 
+     * @var string Place of Issue.
      */
     public $Place;
 
     /**
-     * @var string 
+     * @var string Reviewer.
      */
     public $Reviewer;
 
     /**
-     * @param string $Title 
-     * @param string $Code 
-     * @param string $Number 
-     * @param string $Total 
-     * @param string $TotalCn 
-     * @param string $Date 
-     * @param string $CheckCode 
-     * @param string $Place 
-     * @param string $Reviewer 
+     * @param string $Title Invoice name.
+     * @param string $Code Invoice code.
+     * @param string $Number Invoice number.
+     * @param string $Total Total amount (in figures).
+     * @param string $TotalCn Total Amount (in words).
+     * @param string $Date Invoice date.
+     * @param string $CheckCode Verification code
+     * @param string $Place Place of Issue.
+     * @param string $Reviewer Reviewer.
      */
     function __construct()
     {

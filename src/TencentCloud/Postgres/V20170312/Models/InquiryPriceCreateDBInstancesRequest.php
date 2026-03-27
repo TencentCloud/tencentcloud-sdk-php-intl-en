@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(string $InstanceType) Set Instance type. Default value: `primary`. Valid values:
 `primary` (dual-server high-availability, one-primary-one-standby)
 `readonly` (read-only instance)
- * @method string getDBEngine() Obtain 
- * @method void setDBEngine(string $DBEngine) Set 
+ * @method string getDBEngine() Obtain <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
+ * @method void setDBEngine(string $DBEngine) Set <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
  */
 class InquiryPriceCreateDBInstancesRequest extends AbstractModel
 {
@@ -88,7 +88,7 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string 
+     * @var string <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
      */
     public $DBEngine;
 
@@ -103,7 +103,7 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
      * @param string $InstanceType Instance type. Default value: `primary`. Valid values:
 `primary` (dual-server high-availability, one-primary-one-standby)
 `readonly` (read-only instance)
-     * @param string $DBEngine 
+     * @param string $DBEngine <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
      */
     function __construct()
     {

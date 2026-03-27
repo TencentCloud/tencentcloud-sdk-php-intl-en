@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) Set App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
  * @method string getUid() Obtain User ID, must be consistent with the Uid value in the ClientData field.
  * @method void setUid(string $Uid) Set User ID, must be consistent with the Uid value in the ClientData field.
- * @method integer getExpiredTime() Obtain Valid period, in seconds, no more than 1 hr.
- * @method void setExpiredTime(integer $ExpiredTime) Set Valid period, in seconds, no more than 1 hr.
  * @method string getClientData() Obtain Signature data of the user. required field. standard JSON format.
  * @method void setClientData(string $ClientData) Set Signature data of the user. required field. standard JSON format.
+ * @method integer getExpiredTime() Obtain Valid period, in seconds, no more than 1 hr.
+ * @method void setExpiredTime(integer $ExpiredTime) Set Valid period, in seconds, no more than 1 hr.
  */
 class CreateUserSigRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class CreateUserSigRequest extends AbstractModel
     public $Uid;
 
     /**
-     * @var integer Valid period, in seconds, no more than 1 hr.
-     */
-    public $ExpiredTime;
-
-    /**
      * @var string Signature data of the user. required field. standard JSON format.
      */
     public $ClientData;
 
     /**
+     * @var integer Valid period, in seconds, no more than 1 hr.
+     */
+    public $ExpiredTime;
+
+    /**
      * @param integer $SdkAppId App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
      * @param string $Uid User ID, must be consistent with the Uid value in the ClientData field.
-     * @param integer $ExpiredTime Valid period, in seconds, no more than 1 hr.
      * @param string $ClientData Signature data of the user. required field. standard JSON format.
+     * @param integer $ExpiredTime Valid period, in seconds, no more than 1 hr.
      */
     function __construct()
     {
@@ -78,12 +78,12 @@ class CreateUserSigRequest extends AbstractModel
             $this->Uid = $param["Uid"];
         }
 
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
-        }
-
         if (array_key_exists("ClientData",$param) and $param["ClientData"] !== null) {
             $this->ClientData = $param["ClientData"];
+        }
+
+        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
+            $this->ExpiredTime = $param["ExpiredTime"];
         }
     }
 }

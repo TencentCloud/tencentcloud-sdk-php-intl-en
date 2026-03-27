@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPocID(string $PocID) Set Vulnerability ID
  * @method integer getLimit() Obtain The number of results returned. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set The number of results returned. Default value: 10. Maximum value: 100.
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
+ * @method integer getOffset() Obtain Offset, defaults to 0.
+ * @method void setOffset(integer $Offset) Set Offset, defaults to 0.
  * @method array getFilters() Obtain Filter condition
 `OnlyAffectedNewestImage`: (bool) Whether the latest image is affected.
 `ImageDigest`: Image digest. Fuzzy query is supported.
@@ -62,7 +62,7 @@ class DescribeVulRegistryImageListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 
+     * @var integer Offset, defaults to 0.
      */
     public $Offset;
 
@@ -92,7 +92,7 @@ class DescribeVulRegistryImageListRequest extends AbstractModel
     /**
      * @param string $PocID Vulnerability ID
      * @param integer $Limit The number of results returned. Default value: 10. Maximum value: 100.
-     * @param integer $Offset 
+     * @param integer $Offset Offset, defaults to 0.
      * @param array $Filters Filter condition
 `OnlyAffectedNewestImage`: (bool) Whether the latest image is affected.
 `ImageDigest`: Image digest. Fuzzy query is supported.

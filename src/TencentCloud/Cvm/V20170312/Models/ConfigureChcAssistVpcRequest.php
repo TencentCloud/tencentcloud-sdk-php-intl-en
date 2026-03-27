@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployVirtualPrivateCloud(VirtualPrivateCloud $DeployVirtualPrivateCloud) Set Deployment network information
  * @method array getDeploySecurityGroupIds() Obtain Deployment network security group list
  * @method void setDeploySecurityGroupIds(array $DeploySecurityGroupIds) Set Deployment network security group list
- * @method ChcDeployExtraConfig getChcDeployExtraConfig() Obtain 
- * @method void setChcDeployExtraConfig(ChcDeployExtraConfig $ChcDeployExtraConfig) Set 
+ * @method ChcDeployExtraConfig getChcDeployExtraConfig() Obtain Additional parameters for deployment network, used to specify minios type, bios boot mode, etc.
+ * @method void setChcDeployExtraConfig(ChcDeployExtraConfig $ChcDeployExtraConfig) Set Additional parameters for deployment network, used to specify minios type, bios boot mode, etc.
  */
 class ConfigureChcAssistVpcRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class ConfigureChcAssistVpcRequest extends AbstractModel
     public $DeploySecurityGroupIds;
 
     /**
-     * @var ChcDeployExtraConfig 
+     * @var ChcDeployExtraConfig Additional parameters for deployment network, used to specify minios type, bios boot mode, etc.
      */
     public $ChcDeployExtraConfig;
 
@@ -71,7 +71,7 @@ class ConfigureChcAssistVpcRequest extends AbstractModel
      * @param array $BmcSecurityGroupIds Out-of-band network security group list
      * @param VirtualPrivateCloud $DeployVirtualPrivateCloud Deployment network information
      * @param array $DeploySecurityGroupIds Deployment network security group list
-     * @param ChcDeployExtraConfig $ChcDeployExtraConfig 
+     * @param ChcDeployExtraConfig $ChcDeployExtraConfig Additional parameters for deployment network, used to specify minios type, bios boot mode, etc.
      */
     function __construct()
     {

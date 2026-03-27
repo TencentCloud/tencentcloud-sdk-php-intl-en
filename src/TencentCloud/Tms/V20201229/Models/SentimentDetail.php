@@ -18,28 +18,28 @@ namespace TencentCloud\Tms\V20201229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Sentiment analysis details
  *
- * @method integer getPositive() Obtain 
- * @method void setPositive(integer $Positive) Set 
- * @method integer getNegative() Obtain 
- * @method void setNegative(integer $Negative) Set 
+ * @method integer getPositive() Obtain Positive score, ranging from 0 to 100
+ * @method void setPositive(integer $Positive) Set Positive score, ranging from 0 to 100
+ * @method integer getNegative() Obtain Negative score, ranging from 0 to 100
+ * @method void setNegative(integer $Negative) Set Negative score, ranging from 0 to 100
  */
 class SentimentDetail extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Positive score, ranging from 0 to 100
      */
     public $Positive;
 
     /**
-     * @var integer 
+     * @var integer Negative score, ranging from 0 to 100
      */
     public $Negative;
 
     /**
-     * @param integer $Positive 
-     * @param integer $Negative 
+     * @param integer $Positive Positive score, ranging from 0 to 100
+     * @param integer $Negative Negative score, ranging from 0 to 100
      */
     function __construct()
     {

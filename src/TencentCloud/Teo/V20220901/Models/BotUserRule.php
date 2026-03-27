@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Custom bot rules
  *
- * @method string getRuleName() Obtain 
- * @method void setRuleName(string $RuleName) Set 
+ * @method string getRuleName() Obtain Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore.
+ * @method void setRuleName(string $RuleName) Set Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore.
  * @method string getAction() Obtain The action. Values:
 <li>`drop`: Block the request</li>
 <li>`monitor`: Observe</li>
@@ -88,7 +88,7 @@ Default: `source_to_eo`.
 class BotUserRule extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore.
      */
     public $RuleName;
 
@@ -176,7 +176,7 @@ Default: `source_to_eo`.
     public $RedirectUrl;
 
     /**
-     * @param string $RuleName 
+     * @param string $RuleName Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore.
      * @param string $Action The action. Values:
 <li>`drop`: Block the request</li>
 <li>`monitor`: Observe</li>

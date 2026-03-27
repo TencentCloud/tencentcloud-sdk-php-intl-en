@@ -44,12 +44,12 @@ This parameter is valid only if `IsPersistence` is `1`.
  * @method void setSourceContext(string $SourceContext) Set The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
  * @method string getSessionContext() Obtain The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
  * @method void setSessionContext(string $SessionContext) Set The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
- * @method string getPrecision() Obtain 
- * @method void setPrecision(string $Precision) Set 
- * @method string getOutputMediaType() Obtain 
- * @method void setOutputMediaType(string $OutputMediaType) Set 
- * @method string getExtInfo() Obtain 
- * @method void setExtInfo(string $ExtInfo) Set 
+ * @method string getPrecision() Obtain This field is deprecated.
+ * @method void setPrecision(string $Precision) Set This field is deprecated.
+ * @method string getOutputMediaType() Obtain Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
+ * @method void setOutputMediaType(string $OutputMediaType) Set Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
+ * @method string getExtInfo() Obtain Reserved field, used for special purposes. Example value: ""
+ * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purposes. Example value: ""
  */
 class SimpleHlsClipRequest extends AbstractModel
 {
@@ -106,17 +106,17 @@ This parameter is valid only if `IsPersistence` is `1`.
     public $SessionContext;
 
     /**
-     * @var string 
+     * @var string This field is deprecated.
      */
     public $Precision;
 
     /**
-     * @var string 
+     * @var string Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
      */
     public $OutputMediaType;
 
     /**
-     * @var string 
+     * @var string Reserved field, used for special purposes. Example value: ""
      */
     public $ExtInfo;
 
@@ -133,9 +133,9 @@ This parameter is valid only if `IsPersistence` is `1`.
 This parameter is valid only if `IsPersistence` is `1`.
      * @param string $SourceContext The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
      * @param string $SessionContext The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
-     * @param string $Precision 
-     * @param string $OutputMediaType 
-     * @param string $ExtInfo 
+     * @param string $Precision This field is deprecated.
+     * @param string $OutputMediaType Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
+     * @param string $ExtInfo Reserved field, used for special purposes. Example value: ""
      */
     function __construct()
     {

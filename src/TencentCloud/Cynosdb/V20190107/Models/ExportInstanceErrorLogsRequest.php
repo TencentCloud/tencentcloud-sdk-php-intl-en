@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset
  * @method array getLogLevels() Obtain Log level
  * @method void setLogLevels(array $LogLevels) Set Log level
- * @method array getKeyWords() Obtain 
- * @method void setKeyWords(array $KeyWords) Set 
+ * @method array getKeyWords() Obtain Keywords
+ * @method void setKeyWords(array $KeyWords) Set Keywords
  * @method string getFileType() Obtain The template type. Valid values: `csv`, `original`.
  * @method void setFileType(string $FileType) Set The template type. Valid values: `csv`, `original`.
  * @method string getOrderBy() Obtain Valid value: `Timestamp`
@@ -74,7 +74,7 @@ class ExportInstanceErrorLogsRequest extends AbstractModel
     public $LogLevels;
 
     /**
-     * @var array 
+     * @var array Keywords
      */
     public $KeyWords;
 
@@ -100,7 +100,7 @@ class ExportInstanceErrorLogsRequest extends AbstractModel
      * @param integer $Limit The max number of returned results
      * @param integer $Offset Offset
      * @param array $LogLevels Log level
-     * @param array $KeyWords 
+     * @param array $KeyWords Keywords
      * @param string $FileType The template type. Valid values: `csv`, `original`.
      * @param string $OrderBy Valid value: `Timestamp`
      * @param string $OrderByType Sorting type. valid values: ASC or DESC.

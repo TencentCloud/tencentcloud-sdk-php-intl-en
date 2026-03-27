@@ -18,36 +18,36 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Database Subscription Publication Relationship Collection to be Modified
  *
- * @method DatabaseTuple getDatabaseTuple() Obtain 
- * @method void setDatabaseTuple(DatabaseTuple $DatabaseTuple) Set 
- * @method DatabaseTuple getNewDatabaseTuple() Obtain 
- * @method void setNewDatabaseTuple(DatabaseTuple $NewDatabaseTuple) Set 
- * @method boolean getDeleteDataBasesTuple() Obtain 
- * @method void setDeleteDataBasesTuple(boolean $DeleteDataBasesTuple) Set 
+ * @method DatabaseTuple getDatabaseTuple() Obtain Subscription Relationship to be Modified
+ * @method void setDatabaseTuple(DatabaseTuple $DatabaseTuple) Set Subscription Relationship to be Modified
+ * @method DatabaseTuple getNewDatabaseTuple() Obtain Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false
+ * @method void setNewDatabaseTuple(DatabaseTuple $NewDatabaseTuple) Set Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false
+ * @method boolean getDeleteDataBasesTuple() Obtain Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid
+ * @method void setDeleteDataBasesTuple(boolean $DeleteDataBasesTuple) Set Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid
  */
 class ModifyDataBaseTuple extends AbstractModel
 {
     /**
-     * @var DatabaseTuple 
+     * @var DatabaseTuple Subscription Relationship to be Modified
      */
     public $DatabaseTuple;
 
     /**
-     * @var DatabaseTuple 
+     * @var DatabaseTuple Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false
      */
     public $NewDatabaseTuple;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid
      */
     public $DeleteDataBasesTuple;
 
     /**
-     * @param DatabaseTuple $DatabaseTuple 
-     * @param DatabaseTuple $NewDatabaseTuple 
-     * @param boolean $DeleteDataBasesTuple 
+     * @param DatabaseTuple $DatabaseTuple Subscription Relationship to be Modified
+     * @param DatabaseTuple $NewDatabaseTuple Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false
+     * @param boolean $DeleteDataBasesTuple Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid
      */
     function __construct()
     {

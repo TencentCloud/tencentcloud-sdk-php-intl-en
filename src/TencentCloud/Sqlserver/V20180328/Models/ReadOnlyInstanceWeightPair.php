@@ -18,28 +18,28 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Read-Only Instance to Weight Mapping
  *
- * @method string getReadOnlyInstanceId() Obtain 
- * @method void setReadOnlyInstanceId(string $ReadOnlyInstanceId) Set 
- * @method integer getReadOnlyWeight() Obtain 
- * @method void setReadOnlyWeight(integer $ReadOnlyWeight) Set 
+ * @method string getReadOnlyInstanceId() Obtain Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7
+ * @method void setReadOnlyInstanceId(string $ReadOnlyInstanceId) Set Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7
+ * @method integer getReadOnlyWeight() Obtain Read-Only Instance Weight, in the range of 0-100
+ * @method void setReadOnlyWeight(integer $ReadOnlyWeight) Set Read-Only Instance Weight, in the range of 0-100
  */
 class ReadOnlyInstanceWeightPair extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7
      */
     public $ReadOnlyInstanceId;
 
     /**
-     * @var integer 
+     * @var integer Read-Only Instance Weight, in the range of 0-100
      */
     public $ReadOnlyWeight;
 
     /**
-     * @param string $ReadOnlyInstanceId 
-     * @param integer $ReadOnlyWeight 
+     * @param string $ReadOnlyInstanceId Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7
+     * @param integer $ReadOnlyWeight Read-Only Instance Weight, in the range of 0-100
      */
     function __construct()
     {

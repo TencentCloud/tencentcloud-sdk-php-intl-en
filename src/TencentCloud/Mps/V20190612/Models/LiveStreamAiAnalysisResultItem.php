@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Live streaming AI analysis results
  *
  * @method string getType() Obtain Result type. Valid values:
 <li>SegmentRecognition: video splitting.</li>
@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
 <li>SegmentRecognition: video splitting.</li>
 <li>Highlight: highlight.</li>
 <li>Description: summary.</li>
- * @method array getSegmentResultSet() Obtain 
- * @method void setSegmentResultSet(array $SegmentResultSet) Set 
+ * @method array getSegmentResultSet() Obtain Segmentation results are valid when Type is
+SegmentRecognition.
+ * @method void setSegmentResultSet(array $SegmentResultSet) Set Segmentation results are valid when Type is
+SegmentRecognition.
  * @method array getHighlightResultSet() Obtain Highlight result. This field is valid when Type is set to Highlight.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHighlightResultSet(array $HighlightResultSet) Set Highlight result. This field is valid when Type is set to Highlight.
@@ -48,7 +50,8 @@ class LiveStreamAiAnalysisResultItem extends AbstractModel
     public $Type;
 
     /**
-     * @var array 
+     * @var array Segmentation results are valid when Type is
+SegmentRecognition.
      */
     public $SegmentResultSet;
 
@@ -68,7 +71,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>SegmentRecognition: video splitting.</li>
 <li>Highlight: highlight.</li>
 <li>Description: summary.</li>
-     * @param array $SegmentResultSet 
+     * @param array $SegmentResultSet Segmentation results are valid when Type is
+SegmentRecognition.
      * @param array $HighlightResultSet Highlight result. This field is valid when Type is set to Highlight.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param LiveAiAnalysisDescriptionItem $DescriptionResult Summary result. It is valid when Type is Description.

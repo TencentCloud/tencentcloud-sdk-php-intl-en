@@ -68,8 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSceneName(string $SceneName) Set Scenario values: Hadoop-Kudu, Hadoop-ZooKeeper, Hadoop-Presto, and Hadoop-HBase.
  * @method array getExternalService() Obtain Shared component information
  * @method void setExternalService(array $ExternalService) Set Shared component information
- * @method integer getVersionID() Obtain 
- * @method void setVersionID(integer $VersionID) Set 
+ * @method integer getVersionID() Obtain The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
+ * @method void setVersionID(integer $VersionID) Set The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
  * @method array getMultiZoneSettings() Obtain AZ specs
  * @method void setMultiZoneSettings(array $MultiZoneSettings) Set AZ specs
  */
@@ -160,7 +160,7 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
     public $ExternalService;
 
     /**
-     * @var integer 
+     * @var integer The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
      */
     public $VersionID;
 
@@ -194,7 +194,7 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
      * @param integer $ProductId Product ID. Different product IDs represent different EMR product versions. Valid values: <li>2: EMR v2.0.1;</li> <li>16: EMR v2.3.0;</li> <li>20: EMR v2.5.0;</li> <li>30: EMR v2.6.0;</li> <li>38: EMR v2.7.0;</li> <li>57: EMR v2.8.0;</li> <li>7: EMR v3.0.0;</li> <li>25: EMR v3.1.0;</li> <li>31: EMR v3.1.1;</li> <li>28: EMR v3.2.0</li> <li>33: EMR v3.2.1</li> <li>34: EMR v3.3.0</li> <li>37: EMR v3.4.0;</li> <li>44: EMR v3.5.0;</li> <li>53: EMR v3.6.0;</li> <li>58: EMR v3.6.1;</li> <li>47: EMR v4.0.0.</li>
      * @param string $SceneName Scenario values: Hadoop-Kudu, Hadoop-ZooKeeper, Hadoop-Presto, and Hadoop-HBase.
      * @param array $ExternalService Shared component information
-     * @param integer $VersionID 
+     * @param integer $VersionID The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
      * @param array $MultiZoneSettings AZ specs
      */
     function __construct()

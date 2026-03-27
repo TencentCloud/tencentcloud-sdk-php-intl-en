@@ -18,36 +18,36 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Query filter conditions for audit instances
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method boolean getExactMatch() Obtain 
- * @method void setExactMatch(boolean $ExactMatch) Set 
- * @method array getValues() Obtain 
- * @method void setValues(array $Values) Set 
+ * @method string getName() Obtain Filter condition values. Supports InstanceId-Instance ID, InstanceName-Instance Name, ProjectId-Project ID, TagKey-Tag Key, Tag-Tag (separated by a vertical bar, e.g.: Tagkey|Tagvalue).
+ * @method void setName(string $Name) Set Filter condition values. Supports InstanceId-Instance ID, InstanceName-Instance Name, ProjectId-Project ID, TagKey-Tag Key, Tag-Tag (separated by a vertical bar, e.g.: Tagkey|Tagvalue).
+ * @method boolean getExactMatch() Obtain true indicates exact match; false indicates fuzzy match.
+ * @method void setExactMatch(boolean $ExactMatch) Set true indicates exact match; false indicates fuzzy match.
+ * @method array getValues() Obtain Filter value
+ * @method void setValues(array $Values) Set Filter value
  */
 class AuditInstanceFilters extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Filter condition values. Supports InstanceId-Instance ID, InstanceName-Instance Name, ProjectId-Project ID, TagKey-Tag Key, Tag-Tag (separated by a vertical bar, e.g.: Tagkey|Tagvalue).
      */
     public $Name;
 
     /**
-     * @var boolean 
+     * @var boolean true indicates exact match; false indicates fuzzy match.
      */
     public $ExactMatch;
 
     /**
-     * @var array 
+     * @var array Filter value
      */
     public $Values;
 
     /**
-     * @param string $Name 
-     * @param boolean $ExactMatch 
-     * @param array $Values 
+     * @param string $Name Filter condition values. Supports InstanceId-Instance ID, InstanceName-Instance Name, ProjectId-Project ID, TagKey-Tag Key, Tag-Tag (separated by a vertical bar, e.g.: Tagkey|Tagvalue).
+     * @param boolean $ExactMatch true indicates exact match; false indicates fuzzy match.
+     * @param array $Values Filter value
      */
     function __construct()
     {

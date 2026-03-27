@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of `cdb-c1nl9rpv`,  which is the same as the one displayed in the TencentDB console.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of `cdb-c1nl9rpv`,  which is the same as the one displayed in the TencentDB console.
- * @method string getDBName() Obtain 
- * @method void setDBName(string $DBName) Set 
+ * @method string getDBName() Obtain Database Name, up to 64 characters in length.
+ * @method void setDBName(string $DBName) Set Database Name, up to 64 characters in length.
  * @method string getCharacterSetName() Obtain Character set. Valid values:  `utf8`, `gbk`, `latin1`, `utf8mb4`.
  * @method void setCharacterSetName(string $CharacterSetName) Set Character set. Valid values:  `utf8`, `gbk`, `latin1`, `utf8mb4`.
  */
@@ -35,7 +35,7 @@ class CreateDatabaseRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 
+     * @var string Database Name, up to 64 characters in length.
      */
     public $DBName;
 
@@ -46,7 +46,7 @@ class CreateDatabaseRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID in the format of `cdb-c1nl9rpv`,  which is the same as the one displayed in the TencentDB console.
-     * @param string $DBName 
+     * @param string $DBName Database Name, up to 64 characters in length.
      * @param string $CharacterSetName Character set. Valid values:  `utf8`, `gbk`, `latin1`, `utf8mb4`.
      */
     function __construct()

@@ -18,20 +18,20 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * TTS-related configurations
  *
- * @method string getVoiceId() Obtain 
- * @method void setVoiceId(string $VoiceId) Set 
+ * @method string getVoiceId() Obtain Voice ID
+ * @method void setVoiceId(string $VoiceId) Set Voice ID
  */
 class TTSConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Voice ID
      */
     public $VoiceId;
 
     /**
-     * @param string $VoiceId 
+     * @param string $VoiceId Voice ID
      */
     function __construct()
     {

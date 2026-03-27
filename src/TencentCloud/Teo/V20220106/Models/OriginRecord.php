@@ -48,8 +48,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
  * @method void setPrivateParameter(array $PrivateParameter) Set Private origin parameter.
 It is valid only when `Private=true`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getProto() Obtain 
- * @method void setProto(string $Proto) Set 
+ * @method string getProto() Obtain When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https
+ * @method void setProto(string $Proto) Set When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https
  */
 class OriginRecord extends AbstractModel
 {
@@ -96,7 +96,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $PrivateParameter;
 
     /**
-     * @var string 
+     * @var string When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https
      */
     public $Proto;
 
@@ -115,7 +115,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param array $PrivateParameter Private origin parameter.
 It is valid only when `Private=true`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $Proto 
+     * @param string $Proto When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https
      */
     function __construct()
     {

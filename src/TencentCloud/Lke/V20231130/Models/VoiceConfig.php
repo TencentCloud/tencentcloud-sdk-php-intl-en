@@ -18,36 +18,36 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Timbre Parameters
  *
- * @method integer getVoiceType() Obtain 
- * @method void setVoiceType(integer $VoiceType) Set 
- * @method string getTimbreKey() Obtain 
- * @method void setTimbreKey(string $TimbreKey) Set 
- * @method string getVoiceName() Obtain 
- * @method void setVoiceName(string $VoiceName) Set 
+ * @method integer getVoiceType() Obtain Public Cloud Timbre ID
+ * @method void setVoiceType(integer $VoiceType) Set Public Cloud Timbre ID
+ * @method string getTimbreKey() Obtain Timbre Key
+ * @method void setTimbreKey(string $TimbreKey) Set Timbre Key
+ * @method string getVoiceName() Obtain Timbre Name
+ * @method void setVoiceName(string $VoiceName) Set Timbre Name
  */
 class VoiceConfig extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Public Cloud Timbre ID
      */
     public $VoiceType;
 
     /**
-     * @var string 
+     * @var string Timbre Key
      */
     public $TimbreKey;
 
     /**
-     * @var string 
+     * @var string Timbre Name
      */
     public $VoiceName;
 
     /**
-     * @param integer $VoiceType 
-     * @param string $TimbreKey 
-     * @param string $VoiceName 
+     * @param integer $VoiceType Public Cloud Timbre ID
+     * @param string $TimbreKey Timbre Key
+     * @param string $VoiceName Timbre Name
      */
     function __construct()
     {

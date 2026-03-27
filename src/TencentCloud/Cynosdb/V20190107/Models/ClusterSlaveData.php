@@ -18,16 +18,16 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Cluster AZ Information
  *
  * @method string getOldMasterZone() Obtain Old primary availability zone.
  * @method void setOldMasterZone(string $OldMasterZone) Set Old primary availability zone.
- * @method array getOldSlaveZone() Obtain 
- * @method void setOldSlaveZone(array $OldSlaveZone) Set 
+ * @method array getOldSlaveZone() Obtain Standby AZ
+ * @method void setOldSlaveZone(array $OldSlaveZone) Set Standby AZ
  * @method string getNewMasterZone() Obtain New primary availability zone.
  * @method void setNewMasterZone(string $NewMasterZone) Set New primary availability zone.
- * @method array getNewSlaveZone() Obtain 
- * @method void setNewSlaveZone(array $NewSlaveZone) Set 
+ * @method array getNewSlaveZone() Obtain New Standby AZ
+ * @method void setNewSlaveZone(array $NewSlaveZone) Set New Standby AZ
  * @method array getNewSlaveZoneAttr() Obtain New from availability zone attribute.
  * @method void setNewSlaveZoneAttr(array $NewSlaveZoneAttr) Set New from availability zone attribute.
  * @method array getOldSlaveZoneAttr() Obtain Old availability zone attributes.
@@ -41,7 +41,7 @@ class ClusterSlaveData extends AbstractModel
     public $OldMasterZone;
 
     /**
-     * @var array 
+     * @var array Standby AZ
      */
     public $OldSlaveZone;
 
@@ -51,7 +51,7 @@ class ClusterSlaveData extends AbstractModel
     public $NewMasterZone;
 
     /**
-     * @var array 
+     * @var array New Standby AZ
      */
     public $NewSlaveZone;
 
@@ -67,9 +67,9 @@ class ClusterSlaveData extends AbstractModel
 
     /**
      * @param string $OldMasterZone Old primary availability zone.
-     * @param array $OldSlaveZone 
+     * @param array $OldSlaveZone Standby AZ
      * @param string $NewMasterZone New primary availability zone.
-     * @param array $NewSlaveZone 
+     * @param array $NewSlaveZone New Standby AZ
      * @param array $NewSlaveZoneAttr New from availability zone attribute.
      * @param array $OldSlaveZoneAttr Old availability zone attributes.
      */

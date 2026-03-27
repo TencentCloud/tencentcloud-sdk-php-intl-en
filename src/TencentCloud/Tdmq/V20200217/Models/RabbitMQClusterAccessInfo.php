@@ -18,24 +18,24 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * RabbitMQ Cluster Access Information
  *
- * @method string getPublicAccessEndpoint() Obtain 
- * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) Set 
- * @method string getWebConsoleEndpoint() Obtain 
- * @method void setWebConsoleEndpoint(string $WebConsoleEndpoint) Set 
- * @method string getWebConsoleUsername() Obtain 
- * @method void setWebConsoleUsername(string $WebConsoleUsername) Set 
- * @method string getWebConsolePassword() Obtain 
- * @method void setWebConsolePassword(string $WebConsolePassword) Set 
- * @method boolean getPublicAccessEndpointStatus() Obtain 
- * @method void setPublicAccessEndpointStatus(boolean $PublicAccessEndpointStatus) Set 
- * @method boolean getPublicControlConsoleSwitchStatus() Obtain 
- * @method void setPublicControlConsoleSwitchStatus(boolean $PublicControlConsoleSwitchStatus) Set 
- * @method boolean getVpcControlConsoleSwitchStatus() Obtain 
- * @method void setVpcControlConsoleSwitchStatus(boolean $VpcControlConsoleSwitchStatus) Set 
- * @method string getVpcWebConsoleEndpoint() Obtain 
- * @method void setVpcWebConsoleEndpoint(string $VpcWebConsoleEndpoint) Set 
+ * @method string getPublicAccessEndpoint() Obtain Cluster Public Network Access Address
+ * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) Set Cluster Public Network Access Address
+ * @method string getWebConsoleEndpoint() Obtain Cluster Console Access Address
+ * @method void setWebConsoleEndpoint(string $WebConsoleEndpoint) Set Cluster Console Access Address
+ * @method string getWebConsoleUsername() Obtain Cluster Console Login Username
+ * @method void setWebConsoleUsername(string $WebConsoleUsername) Set Cluster Console Login Username
+ * @method string getWebConsolePassword() Obtain Cluster Console Login Password
+ * @method void setWebConsolePassword(string $WebConsolePassword) Set Cluster Console Login Password
+ * @method boolean getPublicAccessEndpointStatus() Obtain Deprecated
+ * @method void setPublicAccessEndpointStatus(boolean $PublicAccessEndpointStatus) Set Deprecated
+ * @method boolean getPublicControlConsoleSwitchStatus() Obtain Deprecated
+ * @method void setPublicControlConsoleSwitchStatus(boolean $PublicControlConsoleSwitchStatus) Set Deprecated
+ * @method boolean getVpcControlConsoleSwitchStatus() Obtain Deprecated
+ * @method void setVpcControlConsoleSwitchStatus(boolean $VpcControlConsoleSwitchStatus) Set Deprecated
+ * @method string getVpcWebConsoleEndpoint() Obtain Vpc management console access address, example value: http://1.1.1.1:15672
+ * @method void setVpcWebConsoleEndpoint(string $VpcWebConsoleEndpoint) Set Vpc management console access address, example value: http://1.1.1.1:15672
  * @method string getPublicWebConsoleSwitchStatus() Obtain Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
  * @method void setPublicWebConsoleSwitchStatus(string $PublicWebConsoleSwitchStatus) Set Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
  * @method string getVpcWebConsoleSwitchStatus() Obtain Vpc console switch state. example value.
@@ -58,42 +58,42 @@ OFF/ON/CREATING/DELETING
 class RabbitMQClusterAccessInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Cluster Public Network Access Address
      */
     public $PublicAccessEndpoint;
 
     /**
-     * @var string 
+     * @var string Cluster Console Access Address
      */
     public $WebConsoleEndpoint;
 
     /**
-     * @var string 
+     * @var string Cluster Console Login Username
      */
     public $WebConsoleUsername;
 
     /**
-     * @var string 
+     * @var string Cluster Console Login Password
      */
     public $WebConsolePassword;
 
     /**
-     * @var boolean 
+     * @var boolean Deprecated
      */
     public $PublicAccessEndpointStatus;
 
     /**
-     * @var boolean 
+     * @var boolean Deprecated
      */
     public $PublicControlConsoleSwitchStatus;
 
     /**
-     * @var boolean 
+     * @var boolean Deprecated
      */
     public $VpcControlConsoleSwitchStatus;
 
     /**
-     * @var string 
+     * @var string Vpc management console access address, example value: http://1.1.1.1:15672
      */
     public $VpcWebConsoleEndpoint;
 
@@ -139,14 +139,14 @@ OFF/ON/CREATING/DELETING
     public $PublicIpReused;
 
     /**
-     * @param string $PublicAccessEndpoint 
-     * @param string $WebConsoleEndpoint 
-     * @param string $WebConsoleUsername 
-     * @param string $WebConsolePassword 
-     * @param boolean $PublicAccessEndpointStatus 
-     * @param boolean $PublicControlConsoleSwitchStatus 
-     * @param boolean $VpcControlConsoleSwitchStatus 
-     * @param string $VpcWebConsoleEndpoint 
+     * @param string $PublicAccessEndpoint Cluster Public Network Access Address
+     * @param string $WebConsoleEndpoint Cluster Console Access Address
+     * @param string $WebConsoleUsername Cluster Console Login Username
+     * @param string $WebConsolePassword Cluster Console Login Password
+     * @param boolean $PublicAccessEndpointStatus Deprecated
+     * @param boolean $PublicControlConsoleSwitchStatus Deprecated
+     * @param boolean $VpcControlConsoleSwitchStatus Deprecated
+     * @param string $VpcWebConsoleEndpoint Vpc management console access address, example value: http://1.1.1.1:15672
      * @param string $PublicWebConsoleSwitchStatus Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
      * @param string $VpcWebConsoleSwitchStatus Vpc console switch state. example value.
 OFF/ON/CREATING/DELETING

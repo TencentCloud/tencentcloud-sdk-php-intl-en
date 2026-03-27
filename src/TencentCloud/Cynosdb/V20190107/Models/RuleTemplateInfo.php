@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Rule Template Content
  *
  * @method string getRuleTemplateId() Obtain Rule template ID.
  * @method void setRuleTemplateId(string $RuleTemplateId) Set Rule template ID.

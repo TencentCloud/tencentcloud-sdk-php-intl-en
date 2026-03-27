@@ -18,44 +18,44 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * This data structure represents two databases with a publish-subscribe relationship, along with the status information of that relationship between them.
  *
- * @method string getPublishDatabase() Obtain 
- * @method void setPublishDatabase(string $PublishDatabase) Set 
- * @method string getSubscribeDatabase() Obtain 
- * @method void setSubscribeDatabase(string $SubscribeDatabase) Set 
- * @method string getLastSyncTime() Obtain 
- * @method void setLastSyncTime(string $LastSyncTime) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
+ * @method string getPublishDatabase() Obtain Publish Database Name
+ * @method void setPublishDatabase(string $PublishDatabase) Set Publish Database Name
+ * @method string getSubscribeDatabase() Obtain Subscription Database Name
+ * @method void setSubscribeDatabase(string $SubscribeDatabase) Set Subscription Database Name
+ * @method string getLastSyncTime() Obtain Latest Synchronization Time
+ * @method void setLastSyncTime(string $LastSyncTime) Set Latest Synchronization Time
+ * @method string getStatus() Obtain Publish/Subscribe Status Between Databases: running, success, fail, unknow
+ * @method void setStatus(string $Status) Set Publish/Subscribe Status Between Databases: running, success, fail, unknow
  */
 class DatabaseTupleStatus extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Publish Database Name
      */
     public $PublishDatabase;
 
     /**
-     * @var string 
+     * @var string Subscription Database Name
      */
     public $SubscribeDatabase;
 
     /**
-     * @var string 
+     * @var string Latest Synchronization Time
      */
     public $LastSyncTime;
 
     /**
-     * @var string 
+     * @var string Publish/Subscribe Status Between Databases: running, success, fail, unknow
      */
     public $Status;
 
     /**
-     * @param string $PublishDatabase 
-     * @param string $SubscribeDatabase 
-     * @param string $LastSyncTime 
-     * @param string $Status 
+     * @param string $PublishDatabase Publish Database Name
+     * @param string $SubscribeDatabase Subscription Database Name
+     * @param string $LastSyncTime Latest Synchronization Time
+     * @param string $Status Publish/Subscribe Status Between Databases: running, success, fail, unknow
      */
     function __construct()
     {

@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDisabled(integer $IsDisabled) Set Enable/Disable [1-Disable, 0-Enable]
  * @method array getQuuids() Obtain Host list
  * @method void setQuuids(array $Quuids) Set Host list
- * @method array getExcludedQuuids() Obtain 
- * @method void setExcludedQuuids(array $ExcludedQuuids) Set 
+ * @method array getExcludedQuuids() Obtain Machines to be excluded
+ * @method void setExcludedQuuids(array $ExcludedQuuids) Set Machines to be excluded
  */
 class ModifyWebHookPolicyRequest extends AbstractModel
 {
@@ -89,7 +89,7 @@ class ModifyWebHookPolicyRequest extends AbstractModel
     public $Quuids;
 
     /**
-     * @var array 
+     * @var array Machines to be excluded
      */
     public $ExcludedQuuids;
 
@@ -103,7 +103,7 @@ class ModifyWebHookPolicyRequest extends AbstractModel
      * @param array $CustomFields Custom passthrough field
      * @param integer $IsDisabled Enable/Disable [1-Disable, 0-Enable]
      * @param array $Quuids Host list
-     * @param array $ExcludedQuuids 
+     * @param array $ExcludedQuuids Machines to be excluded
      */
     function __construct()
     {

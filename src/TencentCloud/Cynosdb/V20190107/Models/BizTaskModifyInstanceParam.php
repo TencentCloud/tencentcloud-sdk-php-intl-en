@@ -18,17 +18,17 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Instance Parameter Modification Task Details
  *
- * @method string getInstanceId() Obtain 
- * @method void setInstanceId(string $InstanceId) Set 
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method array getModifyInstanceParamList() Obtain Details of instance parameter modification task.
  * @method void setModifyInstanceParamList(array $ModifyInstanceParamList) Set Details of instance parameter modification task.
  */
 class BizTaskModifyInstanceParam extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Instance ID
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class BizTaskModifyInstanceParam extends AbstractModel
     public $ModifyInstanceParamList;
 
     /**
-     * @param string $InstanceId 
+     * @param string $InstanceId Instance ID
      * @param array $ModifyInstanceParamList Details of instance parameter modification task.
      */
     function __construct()

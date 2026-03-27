@@ -18,44 +18,44 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * rabbitmq Prometheus Information
  *
- * @method string getPrometheusEndpointStatus() Obtain 
- * @method void setPrometheusEndpointStatus(string $PrometheusEndpointStatus) Set 
- * @method array getVpcPrometheusEndpoint() Obtain 
- * @method void setVpcPrometheusEndpoint(array $VpcPrometheusEndpoint) Set 
- * @method array getNodePrometheusAddress() Obtain 
- * @method void setNodePrometheusAddress(array $NodePrometheusAddress) Set 
- * @method VpcEndpointInfo getVpcEndpointInfo() Obtain 
- * @method void setVpcEndpointInfo(VpcEndpointInfo $VpcEndpointInfo) Set 
+ * @method string getPrometheusEndpointStatus() Obtain Status of the Prometheus switch
+ * @method void setPrometheusEndpointStatus(string $PrometheusEndpointStatus) Set Status of the Prometheus switch
+ * @method array getVpcPrometheusEndpoint() Obtain prometheus Information
+ * @method void setVpcPrometheusEndpoint(array $VpcPrometheusEndpoint) Set prometheus Information
+ * @method array getNodePrometheusAddress() Obtain Node Information
+ * @method void setNodePrometheusAddress(array $NodePrometheusAddress) Set Node Information
+ * @method VpcEndpointInfo getVpcEndpointInfo() Obtain vpc information
+ * @method void setVpcEndpointInfo(VpcEndpointInfo $VpcEndpointInfo) Set vpc information
  */
 class PrometheusEndpointInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Status of the Prometheus switch
      */
     public $PrometheusEndpointStatus;
 
     /**
-     * @var array 
+     * @var array prometheus Information
      */
     public $VpcPrometheusEndpoint;
 
     /**
-     * @var array 
+     * @var array Node Information
      */
     public $NodePrometheusAddress;
 
     /**
-     * @var VpcEndpointInfo 
+     * @var VpcEndpointInfo vpc information
      */
     public $VpcEndpointInfo;
 
     /**
-     * @param string $PrometheusEndpointStatus 
-     * @param array $VpcPrometheusEndpoint 
-     * @param array $NodePrometheusAddress 
-     * @param VpcEndpointInfo $VpcEndpointInfo 
+     * @param string $PrometheusEndpointStatus Status of the Prometheus switch
+     * @param array $VpcPrometheusEndpoint prometheus Information
+     * @param array $NodePrometheusAddress Node Information
+     * @param VpcEndpointInfo $VpcEndpointInfo vpc information
      */
     function __construct()
     {

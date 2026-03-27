@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 `cmcc`: CMCC IP
 `abroad`: IP outside the Chinese mainland
 ]
- * @method string getEip() Obtain 
- * @method void setEip(string $Eip) Set 
+ * @method string getEip() Obtain line IP
+ * @method void setEip(string $Eip) Set line IP
  * @method string getCname() Obtain CNAME of the instance
  * @method void setCname(string $Cname) Set CNAME of the instance
  * @method integer getResourceFlag() Obtain Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
@@ -55,7 +55,7 @@ class IPLineInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var string 
+     * @var string line IP
      */
     public $Eip;
 
@@ -77,7 +77,7 @@ class IPLineInfo extends AbstractModel
 `cmcc`: CMCC IP
 `abroad`: IP outside the Chinese mainland
 ]
-     * @param string $Eip 
+     * @param string $Eip line IP
      * @param string $Cname CNAME of the instance
      * @param integer $ResourceFlag Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
      */

@@ -18,36 +18,36 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Authentication-free condition information
  *
- * @method string getAttributes() Obtain 
- * @method void setAttributes(string $Attributes) Set 
- * @method integer getRule() Obtain 
- * @method void setRule(integer $Rule) Set 
- * @method string getConditionValue() Obtain 
- * @method void setConditionValue(string $ConditionValue) Set 
+ * @method string getAttributes() Obtain Condition attribute, currently supports only VpcID
+ * @method void setAttributes(string $Attributes) Set Condition attribute, currently supports only VpcID
+ * @method integer getRule() Obtain Condition rule, 1: equal to, 2: not equal to
+ * @method void setRule(integer $Rule) Set Condition rule, 1: equal to, 2: not equal to
+ * @method string getConditionValue() Obtain Value of the corresponding condition attribute
+ * @method void setConditionValue(string $ConditionValue) Set Value of the corresponding condition attribute
  */
 class ConditionInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Condition attribute, currently supports only VpcID
      */
     public $Attributes;
 
     /**
-     * @var integer 
+     * @var integer Condition rule, 1: equal to, 2: not equal to
      */
     public $Rule;
 
     /**
-     * @var string 
+     * @var string Value of the corresponding condition attribute
      */
     public $ConditionValue;
 
     /**
-     * @param string $Attributes 
-     * @param integer $Rule 
-     * @param string $ConditionValue 
+     * @param string $Attributes Condition attribute, currently supports only VpcID
+     * @param integer $Rule Condition rule, 1: equal to, 2: not equal to
+     * @param string $ConditionValue Value of the corresponding condition attribute
      */
     function __construct()
     {

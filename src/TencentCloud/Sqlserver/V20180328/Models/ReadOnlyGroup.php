@@ -18,36 +18,36 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Read-Only Group Object
  *
- * @method string getReadOnlyGroupId() Obtain 
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set 
- * @method string getReadOnlyGroupName() Obtain 
- * @method void setReadOnlyGroupName(string $ReadOnlyGroupName) Set 
- * @method string getRegionId() Obtain 
- * @method void setRegionId(string $RegionId) Set 
- * @method string getZoneId() Obtain 
- * @method void setZoneId(string $ZoneId) Set 
- * @method integer getIsOfflineDelay() Obtain 
- * @method void setIsOfflineDelay(integer $IsOfflineDelay) Set 
- * @method integer getReadOnlyMaxDelayTime() Obtain 
- * @method void setReadOnlyMaxDelayTime(integer $ReadOnlyMaxDelayTime) Set 
- * @method integer getMinReadOnlyInGroup() Obtain 
- * @method void setMinReadOnlyInGroup(integer $MinReadOnlyInGroup) Set 
- * @method string getVip() Obtain 
- * @method void setVip(string $Vip) Set 
- * @method integer getVport() Obtain 
- * @method void setVport(integer $Vport) Set 
- * @method string getVpcId() Obtain 
- * @method void setVpcId(string $VpcId) Set 
- * @method string getSubnetId() Obtain 
- * @method void setSubnetId(string $SubnetId) Set 
- * @method integer getStatus() Obtain 
- * @method void setStatus(integer $Status) Set 
- * @method string getMasterInstanceId() Obtain 
- * @method void setMasterInstanceId(string $MasterInstanceId) Set 
- * @method array getReadOnlyInstanceSet() Obtain 
- * @method void setReadOnlyInstanceSet(array $ReadOnlyInstanceSet) Set 
+ * @method string getReadOnlyGroupId() Obtain Read-Only Group ID
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set Read-Only Group ID
+ * @method string getReadOnlyGroupName() Obtain Read-Only Group Name
+ * @method void setReadOnlyGroupName(string $ReadOnlyGroupName) Set Read-Only Group Name
+ * @method string getRegionId() Obtain Region ID of the Read-Only Group, same as the Primary Instance
+ * @method void setRegionId(string $RegionId) Set Region ID of the Read-Only Group, same as the Primary Instance
+ * @method string getZoneId() Obtain Read-Only Group's AZ ID, same as the Primary Instance
+ * @method void setZoneId(string $ZoneId) Set Read-Only Group's AZ ID, same as the Primary Instance
+ * @method integer getIsOfflineDelay() Obtain Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled
+ * @method void setIsOfflineDelay(integer $IsOfflineDelay) Set Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled
+ * @method integer getReadOnlyMaxDelayTime() Obtain Timeout threshold used after enabling the timeout culling feature
+ * @method void setReadOnlyMaxDelayTime(integer $ReadOnlyMaxDelayTime) Set Timeout threshold used after enabling the timeout culling feature
+ * @method integer getMinReadOnlyInGroup() Obtain Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature
+ * @method void setMinReadOnlyInGroup(integer $MinReadOnlyInGroup) Set Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature
+ * @method string getVip() Obtain Read-Only Group vip
+ * @method void setVip(string $Vip) Set Read-Only Group vip
+ * @method integer getVport() Obtain Read-Only Group vport
+ * @method void setVport(integer $Vport) Set Read-Only Group vport
+ * @method string getVpcId() Obtain Read-Only Group VPC ID
+ * @method void setVpcId(string $VpcId) Set Read-Only Group VPC ID
+ * @method string getSubnetId() Obtain Read-Only Group VPC Subnet ID
+ * @method void setSubnetId(string $SubnetId) Set Read-Only Group VPC Subnet ID
+ * @method integer getStatus() Obtain Read-Only Group Status: 1-Running, 5-Creating
+ * @method void setStatus(integer $Status) Set Read-Only Group Status: 1-Running, 5-Creating
+ * @method string getMasterInstanceId() Obtain Primary instance ID, in the form of mssql-sgeshe3th
+ * @method void setMasterInstanceId(string $MasterInstanceId) Set Primary instance ID, in the form of mssql-sgeshe3th
+ * @method array getReadOnlyInstanceSet() Obtain Read-Only Instance Replica Set
+ * @method void setReadOnlyInstanceSet(array $ReadOnlyInstanceSet) Set Read-Only Instance Replica Set
  * @method string getDnsPodDomain() Obtain RO group's public network address domain name
  * @method void setDnsPodDomain(string $DnsPodDomain) Set RO group's public network address domain name
  * @method integer getTgwWanVPort() Obtain RO group's public network address port
@@ -56,72 +56,72 @@ use TencentCloud\Common\AbstractModel;
 class ReadOnlyGroup extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Read-Only Group ID
      */
     public $ReadOnlyGroupId;
 
     /**
-     * @var string 
+     * @var string Read-Only Group Name
      */
     public $ReadOnlyGroupName;
 
     /**
-     * @var string 
+     * @var string Region ID of the Read-Only Group, same as the Primary Instance
      */
     public $RegionId;
 
     /**
-     * @var string 
+     * @var string Read-Only Group's AZ ID, same as the Primary Instance
      */
     public $ZoneId;
 
     /**
-     * @var integer 
+     * @var integer Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled
      */
     public $IsOfflineDelay;
 
     /**
-     * @var integer 
+     * @var integer Timeout threshold used after enabling the timeout culling feature
      */
     public $ReadOnlyMaxDelayTime;
 
     /**
-     * @var integer 
+     * @var integer Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature
      */
     public $MinReadOnlyInGroup;
 
     /**
-     * @var string 
+     * @var string Read-Only Group vip
      */
     public $Vip;
 
     /**
-     * @var integer 
+     * @var integer Read-Only Group vport
      */
     public $Vport;
 
     /**
-     * @var string 
+     * @var string Read-Only Group VPC ID
      */
     public $VpcId;
 
     /**
-     * @var string 
+     * @var string Read-Only Group VPC Subnet ID
      */
     public $SubnetId;
 
     /**
-     * @var integer 
+     * @var integer Read-Only Group Status: 1-Running, 5-Creating
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Primary instance ID, in the form of mssql-sgeshe3th
      */
     public $MasterInstanceId;
 
     /**
-     * @var array 
+     * @var array Read-Only Instance Replica Set
      */
     public $ReadOnlyInstanceSet;
 
@@ -136,20 +136,20 @@ class ReadOnlyGroup extends AbstractModel
     public $TgwWanVPort;
 
     /**
-     * @param string $ReadOnlyGroupId 
-     * @param string $ReadOnlyGroupName 
-     * @param string $RegionId 
-     * @param string $ZoneId 
-     * @param integer $IsOfflineDelay 
-     * @param integer $ReadOnlyMaxDelayTime 
-     * @param integer $MinReadOnlyInGroup 
-     * @param string $Vip 
-     * @param integer $Vport 
-     * @param string $VpcId 
-     * @param string $SubnetId 
-     * @param integer $Status 
-     * @param string $MasterInstanceId 
-     * @param array $ReadOnlyInstanceSet 
+     * @param string $ReadOnlyGroupId Read-Only Group ID
+     * @param string $ReadOnlyGroupName Read-Only Group Name
+     * @param string $RegionId Region ID of the Read-Only Group, same as the Primary Instance
+     * @param string $ZoneId Read-Only Group's AZ ID, same as the Primary Instance
+     * @param integer $IsOfflineDelay Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled
+     * @param integer $ReadOnlyMaxDelayTime Timeout threshold used after enabling the timeout culling feature
+     * @param integer $MinReadOnlyInGroup Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature
+     * @param string $Vip Read-Only Group vip
+     * @param integer $Vport Read-Only Group vport
+     * @param string $VpcId Read-Only Group VPC ID
+     * @param string $SubnetId Read-Only Group VPC Subnet ID
+     * @param integer $Status Read-Only Group Status: 1-Running, 5-Creating
+     * @param string $MasterInstanceId Primary instance ID, in the form of mssql-sgeshe3th
+     * @param array $ReadOnlyInstanceSet Read-Only Instance Replica Set
      * @param string $DnsPodDomain RO group's public network address domain name
      * @param integer $TgwWanVPort RO group's public network address port
      */

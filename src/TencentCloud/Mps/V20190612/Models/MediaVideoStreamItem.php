@@ -56,8 +56,8 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setHdrType(string $HdrType) Set HDR type
 Note: This field may return `null`, indicating that no valid value was found.
- * @method string getCodecs() Obtain 
- * @method void setCodecs(string $Codecs) Set 
+ * @method string getCodecs() Obtain Video Codecs.
+ * @method void setCodecs(string $Codecs) Set Video Codecs.
  * @method integer getFpsNumerator() Obtain Numerator of the frame rate.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFpsNumerator(integer $FpsNumerator) Set Numerator of the frame rate.
@@ -124,7 +124,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $HdrType;
 
     /**
-     * @var string 
+     * @var string Video Codecs.
      */
     public $Codecs;
 
@@ -159,7 +159,7 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param string $HdrType HDR type
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $Codecs 
+     * @param string $Codecs Video Codecs.
      * @param integer $FpsNumerator Numerator of the frame rate.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $FpsDenominator Denominator of the frame rate.

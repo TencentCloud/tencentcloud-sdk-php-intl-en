@@ -50,14 +50,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setFailOver(string $FailOver) Set Input failover
 Note: this field may return `null`, indicating that no valid value was found.
- * @method DescribeInputRTMPPullSettings getRTMPPullSettings() Obtain 
- * @method void setRTMPPullSettings(DescribeInputRTMPPullSettings $RTMPPullSettings) Set 
- * @method DescribeInputRTSPPullSettings getRTSPPullSettings() Obtain 
- * @method void setRTSPPullSettings(DescribeInputRTSPPullSettings $RTSPPullSettings) Set 
- * @method DescribeInputHLSPullSettings getHLSPullSettings() Obtain 
- * @method void setHLSPullSettings(DescribeInputHLSPullSettings $HLSPullSettings) Set 
- * @method ResilientStreamConf getResilientStream() Obtain 
- * @method void setResilientStream(ResilientStreamConf $ResilientStream) Set 
+ * @method DescribeInputRTMPPullSettings getRTMPPullSettings() Obtain Input RTMP_PULL configuration.
+ * @method void setRTMPPullSettings(DescribeInputRTMPPullSettings $RTMPPullSettings) Set Input RTMP_PULL configuration.
+ * @method DescribeInputRTSPPullSettings getRTSPPullSettings() Obtain Input RTSP_PULL configuration.
+ * @method void setRTSPPullSettings(DescribeInputRTSPPullSettings $RTSPPullSettings) Set Input RTSP_PULL configuration.
+ * @method DescribeInputHLSPullSettings getHLSPullSettings() Obtain Input HLS_PULL configuration.
+ * @method void setHLSPullSettings(DescribeInputHLSPullSettings $HLSPullSettings) Set Input HLS_PULL configuration.
+ * @method ResilientStreamConf getResilientStream() Obtain Delayed broadcast smooth stream delivery configuration.
+ * @method void setResilientStream(ResilientStreamConf $ResilientStream) Set Delayed broadcast smooth stream delivery configuration.
  * @method array getSecurityGroupIds() Obtain The bound security group ID.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The bound security group ID.
  */
@@ -123,22 +123,22 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $FailOver;
 
     /**
-     * @var DescribeInputRTMPPullSettings 
+     * @var DescribeInputRTMPPullSettings Input RTMP_PULL configuration.
      */
     public $RTMPPullSettings;
 
     /**
-     * @var DescribeInputRTSPPullSettings 
+     * @var DescribeInputRTSPPullSettings Input RTSP_PULL configuration.
      */
     public $RTSPPullSettings;
 
     /**
-     * @var DescribeInputHLSPullSettings 
+     * @var DescribeInputHLSPullSettings Input HLS_PULL configuration.
      */
     public $HLSPullSettings;
 
     /**
-     * @var ResilientStreamConf 
+     * @var ResilientStreamConf Delayed broadcast smooth stream delivery configuration.
      */
     public $ResilientStream;
 
@@ -163,10 +163,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param DescribeInputRTMPSettings $RTMPSettings RTMP configuration information of an input
      * @param string $FailOver Input failover
 Note: this field may return `null`, indicating that no valid value was found.
-     * @param DescribeInputRTMPPullSettings $RTMPPullSettings 
-     * @param DescribeInputRTSPPullSettings $RTSPPullSettings 
-     * @param DescribeInputHLSPullSettings $HLSPullSettings 
-     * @param ResilientStreamConf $ResilientStream 
+     * @param DescribeInputRTMPPullSettings $RTMPPullSettings Input RTMP_PULL configuration.
+     * @param DescribeInputRTSPPullSettings $RTSPPullSettings Input RTSP_PULL configuration.
+     * @param DescribeInputHLSPullSettings $HLSPullSettings Input HLS_PULL configuration.
+     * @param ResilientStreamConf $ResilientStream Delayed broadcast smooth stream delivery configuration.
      * @param array $SecurityGroupIds The bound security group ID.
      */
     function __construct()

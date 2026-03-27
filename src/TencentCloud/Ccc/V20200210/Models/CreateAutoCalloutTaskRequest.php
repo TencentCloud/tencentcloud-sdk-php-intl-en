@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAvailableTime(array $AvailableTime) Set Available time period.
  * @method integer getAIAgentId() Obtain Intelligent agent ID. if not filled, IvrId needs to be filled.
  * @method void setAIAgentId(integer $AIAgentId) Set Intelligent agent ID. if not filled, IvrId needs to be filled.
+ * @method integer getRetryInterval() Obtain Retry interval for task failure. value range: 600-86400 seconds.
+ * @method void setRetryInterval(integer $RetryInterval) Set Retry interval for task failure. value range: 600-86400 seconds.
+ * @method integer getMaxRingTimeoutSecond() Obtain Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+ * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) Set Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
  */
 class CreateAutoCalloutTaskRequest extends AbstractModel
 {
@@ -129,6 +133,16 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $AIAgentId;
 
     /**
+     * @var integer Retry interval for task failure. value range: 600-86400 seconds.
+     */
+    public $RetryInterval;
+
+    /**
+     * @var integer Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+     */
+    public $MaxRingTimeoutSecond;
+
+    /**
      * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param integer $NotBefore Task starting timestamp. unix second-level timestamp.
      * @param array $Callees List of called numbers.
@@ -144,6 +158,8 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
      * @param string $TimeZone IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
      * @param array $AvailableTime Available time period.
      * @param integer $AIAgentId Intelligent agent ID. if not filled, IvrId needs to be filled.
+     * @param integer $RetryInterval Retry interval for task failure. value range: 600-86400 seconds.
+     * @param integer $MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
      */
     function __construct()
     {
@@ -231,6 +247,14 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
 
         if (array_key_exists("AIAgentId",$param) and $param["AIAgentId"] !== null) {
             $this->AIAgentId = $param["AIAgentId"];
+        }
+
+        if (array_key_exists("RetryInterval",$param) and $param["RetryInterval"] !== null) {
+            $this->RetryInterval = $param["RetryInterval"];
+        }
+
+        if (array_key_exists("MaxRingTimeoutSecond",$param) and $param["MaxRingTimeoutSecond"] !== null) {
+            $this->MaxRingTimeoutSecond = $param["MaxRingTimeoutSecond"];
         }
     }
 }

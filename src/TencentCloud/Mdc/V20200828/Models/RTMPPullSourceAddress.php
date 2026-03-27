@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Created input RTMP pull stream origin server configuration.
  *
- * @method string getTcUrl() Obtain 
- * @method void setTcUrl(string $TcUrl) Set 
- * @method string getStreamKey() Obtain 
- * @method void setStreamKey(string $StreamKey) Set 
+ * @method string getTcUrl() Obtain The TcUrl address of the RTMP origin server.
+ * @method void setTcUrl(string $TcUrl) Set The TcUrl address of the RTMP origin server.
+ * @method string getStreamKey() Obtain The StreamKey of the RTMP origin server.
+ * @method void setStreamKey(string $StreamKey) Set The StreamKey of the RTMP origin server.
  */
 class RTMPPullSourceAddress extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The TcUrl address of the RTMP origin server.
      */
     public $TcUrl;
 
     /**
-     * @var string 
+     * @var string The StreamKey of the RTMP origin server.
      */
     public $StreamKey;
 
     /**
-     * @param string $TcUrl 
-     * @param string $StreamKey 
+     * @param string $TcUrl The TcUrl address of the RTMP origin server.
+     * @param string $StreamKey The StreamKey of the RTMP origin server.
      */
     function __construct()
     {

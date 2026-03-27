@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVariables(array $Variables) Set Custom variable.
  * @method string getUUI() Obtain User data.
  * @method void setUUI(string $UUI) Set User data.
+ * @method integer getMaxRingTimeoutSecond() Obtain Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+ * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) Set Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
  */
 class CreateIVRSessionRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateIVRSessionRequest extends AbstractModel
     public $UUI;
 
     /**
+     * @var integer Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+     */
+    public $MaxRingTimeoutSecond;
+
+    /**
      * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $Callee Called.
      * @param integer $IVRId Specified ivr id. currently, it supports inbound and automatic outbound types.
      * @param array $Callers List of calling numbers.
      * @param array $Variables Custom variable.
      * @param string $UUI User data.
+     * @param integer $MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class CreateIVRSessionRequest extends AbstractModel
 
         if (array_key_exists("UUI",$param) and $param["UUI"] !== null) {
             $this->UUI = $param["UUI"];
+        }
+
+        if (array_key_exists("MaxRingTimeoutSecond",$param) and $param["MaxRingTimeoutSecond"] !== null) {
+            $this->MaxRingTimeoutSecond = $param["MaxRingTimeoutSecond"];
         }
     }
 }

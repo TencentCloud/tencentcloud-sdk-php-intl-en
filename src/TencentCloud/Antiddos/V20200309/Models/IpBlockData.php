@@ -18,60 +18,60 @@ namespace TencentCloud\Antiddos\V20200309\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * IP blocking records
  *
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getIp() Obtain 
- * @method void setIp(string $Ip) Set 
- * @method string getBlockTime() Obtain 
- * @method void setBlockTime(string $BlockTime) Set 
- * @method string getUnBlockTime() Obtain 
- * @method void setUnBlockTime(string $UnBlockTime) Set 
- * @method string getActionType() Obtain 
- * @method void setActionType(string $ActionType) Set 
- * @method integer getProtectFlag() Obtain 
- * @method void setProtectFlag(integer $ProtectFlag) Set 
+ * @method string getStatus() Obtain Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed)
+ * @method void setStatus(string $Status) Set Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed)
+ * @method string getIp() Obtain Resource IP
+ * @method void setIp(string $Ip) Set Resource IP
+ * @method string getBlockTime() Obtain Blocking Time
+ * @method void setBlockTime(string $BlockTime) Set Blocking Time
+ * @method string getUnBlockTime() Obtain Unblock Time (Estimated Unblock Time)
+ * @method void setUnBlockTime(string $UnBlockTime) Set Unblock Time (Estimated Unblock Time)
+ * @method string getActionType() Obtain Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking)
+ * @method void setActionType(string $ActionType) Set Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking)
+ * @method integer getProtectFlag() Obtain Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS
+ * @method void setProtectFlag(integer $ProtectFlag) Set Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS
  */
 class IpBlockData extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed)
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Resource IP
      */
     public $Ip;
 
     /**
-     * @var string 
+     * @var string Blocking Time
      */
     public $BlockTime;
 
     /**
-     * @var string 
+     * @var string Unblock Time (Estimated Unblock Time)
      */
     public $UnBlockTime;
 
     /**
-     * @var string 
+     * @var string Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking)
      */
     public $ActionType;
 
     /**
-     * @var integer 
+     * @var integer Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS
      */
     public $ProtectFlag;
 
     /**
-     * @param string $Status 
-     * @param string $Ip 
-     * @param string $BlockTime 
-     * @param string $UnBlockTime 
-     * @param string $ActionType 
-     * @param integer $ProtectFlag 
+     * @param string $Status Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed)
+     * @param string $Ip Resource IP
+     * @param string $BlockTime Blocking Time
+     * @param string $UnBlockTime Unblock Time (Estimated Unblock Time)
+     * @param string $ActionType Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking)
+     * @param integer $ProtectFlag Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS
      */
     function __construct()
     {

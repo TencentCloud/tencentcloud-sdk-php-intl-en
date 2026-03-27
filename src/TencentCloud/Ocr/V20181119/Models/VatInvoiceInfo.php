@@ -98,12 +98,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodeConfirm(string $CodeConfirm) Set Machine-printed invoice code
  * @method string getReceiptor() Obtain Payee
  * @method void setReceiptor(string $Receiptor) Set Payee
- * @method integer getElectronicFullMark() Obtain 
- * @method void setElectronicFullMark(integer $ElectronicFullMark) Set 
- * @method string getElectronicFullNumber() Obtain 
- * @method void setElectronicFullNumber(string $ElectronicFullNumber) Set 
- * @method string getFormName() Obtain 
- * @method void setFormName(string $FormName) Set 
+ * @method integer getElectronicFullMark() Obtain Whether fully electronic and paper tickets exist (0: No, 1: Yes).
+ * @method void setElectronicFullMark(integer $ElectronicFullMark) Set Whether fully electronic and paper tickets exist (0: No, 1: Yes).
+ * @method string getElectronicFullNumber() Obtain Fully Electronic Number
+ * @method void setElectronicFullNumber(string $ElectronicFullNumber) Set Fully Electronic Number
+ * @method string getFormName() Obtain Co-branded Invoice.
+ * @method void setFormName(string $FormName) Set Co-branded Invoice.
  */
 class VatInvoiceInfo extends AbstractModel
 {
@@ -303,17 +303,17 @@ class VatInvoiceInfo extends AbstractModel
     public $Receiptor;
 
     /**
-     * @var integer 
+     * @var integer Whether fully electronic and paper tickets exist (0: No, 1: Yes).
      */
     public $ElectronicFullMark;
 
     /**
-     * @var string 
+     * @var string Fully Electronic Number
      */
     public $ElectronicFullNumber;
 
     /**
-     * @var string 
+     * @var string Co-branded Invoice.
      */
     public $FormName;
 
@@ -357,9 +357,9 @@ class VatInvoiceInfo extends AbstractModel
      * @param array $VatInvoiceItemInfos Information about VAT invoice items
      * @param string $CodeConfirm Machine-printed invoice code
      * @param string $Receiptor Payee
-     * @param integer $ElectronicFullMark 
-     * @param string $ElectronicFullNumber 
-     * @param string $FormName 
+     * @param integer $ElectronicFullMark Whether fully electronic and paper tickets exist (0: No, 1: Yes).
+     * @param string $ElectronicFullNumber Fully Electronic Number
+     * @param string $FormName Co-branded Invoice.
      */
     function __construct()
     {

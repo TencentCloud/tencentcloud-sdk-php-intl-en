@@ -28,8 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstancePayMode(string $InstancePayMode) Set Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
  * @method string getStoragePayMode() Obtain Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
  * @method void setStoragePayMode(string $StoragePayMode) Set Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
- * @method string getDeviceType() Obtain device type:common, exclusive
- * @method void setDeviceType(string $DeviceType) Set device type:common, exclusive
+ * @method string getDeviceType() Obtain Instance device type. Supported values are as follows:
+- common: indicates the general type
+- exclusive: indicates the exclusive type.
+ * @method void setDeviceType(string $DeviceType) Set Instance device type. Supported values are as follows:
+- common: indicates the general type
+- exclusive: indicates the exclusive type.
  * @method integer getCpu() Obtain Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
  * @method void setCpu(integer $Cpu) Set Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
  * @method integer getMemory() Obtain Memory size in GB, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
@@ -66,7 +70,9 @@ class InquirePriceCreateRequest extends AbstractModel
     public $StoragePayMode;
 
     /**
-     * @var string device type:common, exclusive
+     * @var string Instance device type. Supported values are as follows:
+- common: indicates the general type
+- exclusive: indicates the exclusive type.
      */
     public $DeviceType;
 
@@ -105,7 +111,9 @@ class InquirePriceCreateRequest extends AbstractModel
      * @param integer $GoodsNum Number of compute node to purchase
      * @param string $InstancePayMode Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
      * @param string $StoragePayMode Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
-     * @param string $DeviceType device type:common, exclusive
+     * @param string $DeviceType Instance device type. Supported values are as follows:
+- common: indicates the general type
+- exclusive: indicates the exclusive type.
      * @param integer $Cpu Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
      * @param integer $Memory Memory size in GB, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
      * @param float $Ccu CCU size, which is required when `InstancePayMode` is `SERVERLESS`.

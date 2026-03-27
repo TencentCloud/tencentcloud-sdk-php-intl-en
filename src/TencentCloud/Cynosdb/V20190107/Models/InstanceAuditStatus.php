@@ -18,12 +18,12 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audit instance details
  *
- * @method string getInstanceId() Obtain 
- * @method void setInstanceId(string $InstanceId) Set 
- * @method string getAuditStatus() Obtain 
- * @method void setAuditStatus(string $AuditStatus) Set 
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getAuditStatus() Obtain Audit status. ON- Audit is enabled; OFF- Audit is disabled.
+ * @method void setAuditStatus(string $AuditStatus) Set Audit status. ON- Audit is enabled; OFF- Audit is disabled.
  * @method integer getLogExpireDay() Obtain Specifies the log retention period.
  * @method void setLogExpireDay(integer $LogExpireDay) Set Specifies the log retention period.
  * @method integer getHighLogExpireDay() Obtain High-Frequency storage duration.
@@ -54,12 +54,12 @@ use TencentCloud\Common\AbstractModel;
 class InstanceAuditStatus extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string 
+     * @var string Audit status. ON- Audit is enabled; OFF- Audit is disabled.
      */
     public $AuditStatus;
 
@@ -129,8 +129,8 @@ class InstanceAuditStatus extends AbstractModel
     public $DeliverSummary;
 
     /**
-     * @param string $InstanceId 
-     * @param string $AuditStatus 
+     * @param string $InstanceId Instance ID.
+     * @param string $AuditStatus Audit status. ON- Audit is enabled; OFF- Audit is disabled.
      * @param integer $LogExpireDay Specifies the log retention period.
      * @param integer $HighLogExpireDay High-Frequency storage duration.
      * @param integer $LowLogExpireDay Specifies the duration of low-frequency storage.

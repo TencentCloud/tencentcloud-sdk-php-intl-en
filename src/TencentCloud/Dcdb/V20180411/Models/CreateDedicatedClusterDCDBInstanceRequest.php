@@ -78,8 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRollbackInstanceId(string $RollbackInstanceId) Set ID of the source instance to be rolled back
  * @method string getRollbackTime() Obtain Rollback time
  * @method void setRollbackTime(string $RollbackTime) Set Rollback time
- * @method integer getDcnSyncMode() Obtain 
- * @method void setDcnSyncMode(integer $DcnSyncMode) Set 
+ * @method integer getDcnSyncMode() Obtain DCN synchronization mode: 0: asynchronous, 1: strong synchronization
+ * @method void setDcnSyncMode(integer $DcnSyncMode) Set DCN synchronization mode: 0: asynchronous, 1: strong synchronization
  */
 class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel
 {
@@ -229,7 +229,7 @@ class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel
     public $RollbackTime;
 
     /**
-     * @var integer 
+     * @var integer DCN synchronization mode: 0: asynchronous, 1: strong synchronization
      */
     public $DcnSyncMode;
 
@@ -263,7 +263,7 @@ class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel
      * @param array $SlaveHostIds Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
      * @param string $RollbackInstanceId ID of the source instance to be rolled back
      * @param string $RollbackTime Rollback time
-     * @param integer $DcnSyncMode 
+     * @param integer $DcnSyncMode DCN synchronization mode: 0: asynchronous, 1: strong synchronization
      */
     function __construct()
     {

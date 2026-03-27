@@ -18,100 +18,104 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Offering Configuration Status
  *
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
- * @method integer getSpecId() Obtain 
- * @method void setSpecId(integer $SpecId) Set 
- * @method string getPayModeStatus() Obtain 
- * @method void setPayModeStatus(string $PayModeStatus) Set 
- * @method string getInstanceType() Obtain 
- * @method void setInstanceType(string $InstanceType) Set 
- * @method string getMultiZonesStatus() Obtain 
- * @method void setMultiZonesStatus(string $MultiZonesStatus) Set 
- * @method string getArchitecture() Obtain 
- * @method void setArchitecture(string $Architecture) Set 
- * @method string getStyle() Obtain 
- * @method void setStyle(string $Style) Set 
- * @method string getVersion() Obtain 
- * @method void setVersion(string $Version) Set 
- * @method array getZoneStatusSet() Obtain 
- * @method void setZoneStatusSet(array $ZoneStatusSet) Set 
- * @method Price getPrice() Obtain 
- * @method void setPrice(Price $Price) Set 
- * @method integer getStatus() Obtain 
- * @method void setStatus(integer $Status) Set 
+ * @method string getId() Obtain Sellable Specification Unique ID
+ * @method void setId(string $Id) Set Sellable Specification Unique ID
+ * @method integer getSpecId() Obtain Instance Type ID
+ * @method void setSpecId(integer $SpecId) Set Instance Type ID
+ * @method string getPayModeStatus() Obtain Supported payment modes for this specification: POST - only supports pay-as-you-go, PRE - only supports yearly/monthly subscription, ALL - supports all.
+ * @method void setPayModeStatus(string $PayModeStatus) Set Supported payment modes for this specification: POST - only supports pay-as-you-go, PRE - only supports yearly/monthly subscription, ALL - supports all.
+ * @method string getInstanceType() Obtain Product type. Types of instances for purchase: HA - Local Disk High Availability (including dual-node high availability, alwaysOn cluster), RO - Local Disk Read-Only Replica, SI - Cloud Disk Edition Single Node, BI - Business Intelligence Service, cvmHA - Cloud Disk Edition High Availability, cvmRO - Cloud Disk Edition Read-Only Replica, MultiHA - Multi-node, cvmMultiHA - Cloud Disk Multi-node.
+ * @method void setInstanceType(string $InstanceType) Set Product type. Types of instances for purchase: HA - Local Disk High Availability (including dual-node high availability, alwaysOn cluster), RO - Local Disk Read-Only Replica, SI - Cloud Disk Edition Single Node, BI - Business Intelligence Service, cvmHA - Cloud Disk Edition High Availability, cvmRO - Cloud Disk Edition Read-Only Replica, MultiHA - Multi-node, cvmMultiHA - Cloud Disk Multi-node.
+ * @method string getMultiZonesStatus() Obtain Whether this specification supports cross-AZ deployment: MultiZones - only supports cross-AZ, SameZones - only supports same-AZ, ALL - supports all.
+ * @method void setMultiZonesStatus(string $MultiZonesStatus) Set Whether this specification supports cross-AZ deployment: MultiZones - only supports cross-AZ, SameZones - only supports same-AZ, ALL - supports all.
+ * @method string getArchitecture() Obtain Architecture Type, SINGLE - single node, DOUBLE - dual node, TRIPLE - three-node, MULTI - multi-node
+Example value: SINGLE
+ * @method void setArchitecture(string $Architecture) Set Architecture Type, SINGLE - single node, DOUBLE - dual node, TRIPLE - three-node, MULTI - multi-node
+Example value: SINGLE
+ * @method string getStyle() Obtain Type identifier, EXCLUSIVE - Dedicated, SHARED - Shared
+ * @method void setStyle(string $Style) Set Type identifier, EXCLUSIVE - Dedicated, SHARED - Shared
+ * @method string getVersion() Obtain Database Version Information
+ * @method void setVersion(string $Version) Set Database Version Information
+ * @method array getZoneStatusSet() Obtain Sellable Status Set Per AZ
+ * @method void setZoneStatusSet(array $ZoneStatusSet) Set Sellable Status Set Per AZ
+ * @method Price getPrice() Obtain Reference price for specifications. The actual price is subject to the quotation API.
+ * @method void setPrice(Price $Price) Set Reference price for specifications. The actual price is subject to the quotation API.
+ * @method integer getStatus() Obtain Specification Sale Status: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
+ * @method void setStatus(integer $Status) Set Specification Sale Status: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
  */
 class SpecSellStatus extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Sellable Specification Unique ID
      */
     public $Id;
 
     /**
-     * @var integer 
+     * @var integer Instance Type ID
      */
     public $SpecId;
 
     /**
-     * @var string 
+     * @var string Supported payment modes for this specification: POST - only supports pay-as-you-go, PRE - only supports yearly/monthly subscription, ALL - supports all.
      */
     public $PayModeStatus;
 
     /**
-     * @var string 
+     * @var string Product type. Types of instances for purchase: HA - Local Disk High Availability (including dual-node high availability, alwaysOn cluster), RO - Local Disk Read-Only Replica, SI - Cloud Disk Edition Single Node, BI - Business Intelligence Service, cvmHA - Cloud Disk Edition High Availability, cvmRO - Cloud Disk Edition Read-Only Replica, MultiHA - Multi-node, cvmMultiHA - Cloud Disk Multi-node.
      */
     public $InstanceType;
 
     /**
-     * @var string 
+     * @var string Whether this specification supports cross-AZ deployment: MultiZones - only supports cross-AZ, SameZones - only supports same-AZ, ALL - supports all.
      */
     public $MultiZonesStatus;
 
     /**
-     * @var string 
+     * @var string Architecture Type, SINGLE - single node, DOUBLE - dual node, TRIPLE - three-node, MULTI - multi-node
+Example value: SINGLE
      */
     public $Architecture;
 
     /**
-     * @var string 
+     * @var string Type identifier, EXCLUSIVE - Dedicated, SHARED - Shared
      */
     public $Style;
 
     /**
-     * @var string 
+     * @var string Database Version Information
      */
     public $Version;
 
     /**
-     * @var array 
+     * @var array Sellable Status Set Per AZ
      */
     public $ZoneStatusSet;
 
     /**
-     * @var Price 
+     * @var Price Reference price for specifications. The actual price is subject to the quotation API.
      */
     public $Price;
 
     /**
-     * @var integer 
+     * @var integer Specification Sale Status: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
      */
     public $Status;
 
     /**
-     * @param string $Id 
-     * @param integer $SpecId 
-     * @param string $PayModeStatus 
-     * @param string $InstanceType 
-     * @param string $MultiZonesStatus 
-     * @param string $Architecture 
-     * @param string $Style 
-     * @param string $Version 
-     * @param array $ZoneStatusSet 
-     * @param Price $Price 
-     * @param integer $Status 
+     * @param string $Id Sellable Specification Unique ID
+     * @param integer $SpecId Instance Type ID
+     * @param string $PayModeStatus Supported payment modes for this specification: POST - only supports pay-as-you-go, PRE - only supports yearly/monthly subscription, ALL - supports all.
+     * @param string $InstanceType Product type. Types of instances for purchase: HA - Local Disk High Availability (including dual-node high availability, alwaysOn cluster), RO - Local Disk Read-Only Replica, SI - Cloud Disk Edition Single Node, BI - Business Intelligence Service, cvmHA - Cloud Disk Edition High Availability, cvmRO - Cloud Disk Edition Read-Only Replica, MultiHA - Multi-node, cvmMultiHA - Cloud Disk Multi-node.
+     * @param string $MultiZonesStatus Whether this specification supports cross-AZ deployment: MultiZones - only supports cross-AZ, SameZones - only supports same-AZ, ALL - supports all.
+     * @param string $Architecture Architecture Type, SINGLE - single node, DOUBLE - dual node, TRIPLE - three-node, MULTI - multi-node
+Example value: SINGLE
+     * @param string $Style Type identifier, EXCLUSIVE - Dedicated, SHARED - Shared
+     * @param string $Version Database Version Information
+     * @param array $ZoneStatusSet Sellable Status Set Per AZ
+     * @param Price $Price Reference price for specifications. The actual price is subject to the quotation API.
+     * @param integer $Status Specification Sale Status: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
      */
     function __construct()
     {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setProductName(string $ProductName) Set The name of the product.
 Note: This field may return `null`, indicating that no valid value was found.
- * @method string getSubProductName() Obtain 
- * @method void setSubProductName(string $SubProductName) Set 
+ * @method string getSubProductName() Obtain Product Details
+ * @method void setSubProductName(string $SubProductName) Set Product Details
  */
 class UsageDetails extends AbstractModel
 {
@@ -36,14 +36,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $ProductName;
 
     /**
-     * @var string 
+     * @var string Product Details
      */
     public $SubProductName;
 
     /**
      * @param string $ProductName The name of the product.
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $SubProductName 
+     * @param string $SubProductName Product Details
      */
     function __construct()
     {

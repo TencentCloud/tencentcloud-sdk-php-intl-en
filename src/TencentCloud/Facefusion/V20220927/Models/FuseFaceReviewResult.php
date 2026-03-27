@@ -18,60 +18,60 @@ namespace TencentCloud\Facefusion\V20220927\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Face Fusion is not suitable for the returned parameter item in CR.
  *
- * @method string getCategory() Obtain 
- * @method void setCategory(string $Category) Set 
- * @method string getCode() Obtain 
- * @method void setCode(string $Code) Set 
- * @method string getCodeDescription() Obtain 
- * @method void setCodeDescription(string $CodeDescription) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method array getDetailSet() Obtain 
- * @method void setDetailSet(array $DetailSet) Set 
+ * @method string getCategory() Obtain Reserved Field
+ * @method void setCategory(string $Category) Set Reserved Field
+ * @method string getCode() Obtain Status code; 0 indicates successful processing, other values indicate processing failure
+ * @method void setCode(string $Code) Set Status code; 0 indicates successful processing, other values indicate processing failure
+ * @method string getCodeDescription() Obtain Description for the status code
+ * @method void setCodeDescription(string $CodeDescription) Set Description for the status code
+ * @method float getConfidence() Obtain Reserved Field
+ * @method void setConfidence(float $Confidence) Set Reserved Field
+ * @method string getSuggestion() Obtain Reserved Field
+ * @method void setSuggestion(string $Suggestion) Set Reserved Field
+ * @method array getDetailSet() Obtain Audit Details
+ * @method void setDetailSet(array $DetailSet) Set Audit Details
  */
 class FuseFaceReviewResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Reserved Field
      */
     public $Category;
 
     /**
-     * @var string 
+     * @var string Status code; 0 indicates successful processing, other values indicate processing failure
      */
     public $Code;
 
     /**
-     * @var string 
+     * @var string Description for the status code
      */
     public $CodeDescription;
 
     /**
-     * @var float 
+     * @var float Reserved Field
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Reserved Field
      */
     public $Suggestion;
 
     /**
-     * @var array 
+     * @var array Audit Details
      */
     public $DetailSet;
 
     /**
-     * @param string $Category 
-     * @param string $Code 
-     * @param string $CodeDescription 
-     * @param float $Confidence 
-     * @param string $Suggestion 
-     * @param array $DetailSet 
+     * @param string $Category Reserved Field
+     * @param string $Code Status code; 0 indicates successful processing, other values indicate processing failure
+     * @param string $CodeDescription Description for the status code
+     * @param float $Confidence Reserved Field
+     * @param string $Suggestion Reserved Field
+     * @param array $DetailSet Audit Details
      */
     function __construct()
     {

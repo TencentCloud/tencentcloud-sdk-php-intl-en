@@ -18,52 +18,52 @@ namespace TencentCloud\Tms\V20201229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Sentiment analysis result
  *
- * @method string getLabel() Obtain 
- * @method void setLabel(string $Label) Set 
- * @method integer getScore() Obtain 
- * @method void setScore(integer $Score) Set 
- * @method SentimentDetail getDetail() Obtain 
- * @method void setDetail(SentimentDetail $Detail) Set 
- * @method string getCode() Obtain 
- * @method void setCode(string $Code) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
+ * @method string getLabel() Obtain Sentiment Tag
+ * @method void setLabel(string $Label) Set Sentiment Tag
+ * @method integer getScore() Obtain Tag score, ranging from 0 to 100
+ * @method void setScore(integer $Score) Set Tag score, ranging from 0 to 100
+ * @method SentimentDetail getDetail() Obtain Sentiment analysis details
+ * @method void setDetail(SentimentDetail $Detail) Set Sentiment analysis details
+ * @method string getCode() Obtain Response code; "OK" for success, "InternalError" for failure
+ * @method void setCode(string $Code) Set Response code; "OK" for success, "InternalError" for failure
+ * @method string getMessage() Obtain Exception information
+ * @method void setMessage(string $Message) Set Exception information
  */
 class SentimentAnalysis extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Sentiment Tag
      */
     public $Label;
 
     /**
-     * @var integer 
+     * @var integer Tag score, ranging from 0 to 100
      */
     public $Score;
 
     /**
-     * @var SentimentDetail 
+     * @var SentimentDetail Sentiment analysis details
      */
     public $Detail;
 
     /**
-     * @var string 
+     * @var string Response code; "OK" for success, "InternalError" for failure
      */
     public $Code;
 
     /**
-     * @var string 
+     * @var string Exception information
      */
     public $Message;
 
     /**
-     * @param string $Label 
-     * @param integer $Score 
-     * @param SentimentDetail $Detail 
-     * @param string $Code 
-     * @param string $Message 
+     * @param string $Label Sentiment Tag
+     * @param integer $Score Tag score, ranging from 0 to 100
+     * @param SentimentDetail $Detail Sentiment analysis details
+     * @param string $Code Response code; "OK" for success, "InternalError" for failure
+     * @param string $Message Exception information
      */
     function __construct()
     {

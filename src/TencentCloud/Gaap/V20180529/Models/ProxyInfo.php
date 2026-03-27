@@ -142,8 +142,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setBanStatus(string $BanStatus) Set Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
 Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method array getIPList() Obtain 
- * @method void setIPList(array $IPList) Set 
+ * @method array getIPList() Obtain IP List
+ * @method void setIPList(array $IPList) Set IP List
  * @method integer getHttp3Supported() Obtain Specifies whether to enable HTTP3. Valid values:
 `0`: disable HTTP3;
 `1`: enable HTTP3.
@@ -371,7 +371,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $BanStatus;
 
     /**
-     * @var array 
+     * @var array IP List
      */
     public $IPList;
 
@@ -468,7 +468,7 @@ and `CrossBorder` (cross-MLC-border connection).
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
 Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param array $IPList 
+     * @param array $IPList IP List
      * @param integer $Http3Supported Specifies whether to enable HTTP3. Valid values:
 `0`: disable HTTP3;
 `1`: enable HTTP3.

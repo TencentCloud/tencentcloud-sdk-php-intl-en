@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAnnotations(array $Annotations) Set Node Annotation List
  * @method NodeCountSummary getNodeCountSummary() Obtain Node list
  * @method void setNodeCountSummary(NodeCountSummary $NodeCountSummary) Set Node list
- * @method string getAutoscalingGroupStatus() Obtain 
- * @method void setAutoscalingGroupStatus(string $AutoscalingGroupStatus) Set 
+ * @method string getAutoscalingGroupStatus() Obtain Status information
+ * @method void setAutoscalingGroupStatus(string $AutoscalingGroupStatus) Set Status information
  * @method integer getMaxNodesNum() Obtain Maximum number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setMaxNodesNum(integer $MaxNodesNum) Set Maximum number of nodes
@@ -168,7 +168,7 @@ class NodePool extends AbstractModel
     public $NodeCountSummary;
 
     /**
-     * @var string 
+     * @var string Status information
      */
     public $AutoscalingGroupStatus;
 
@@ -287,7 +287,7 @@ Note: This field may return "null", indicating that no valid value can be obtain
      * @param array $Taints Array of taint
      * @param array $Annotations Node Annotation List
      * @param NodeCountSummary $NodeCountSummary Node list
-     * @param string $AutoscalingGroupStatus 
+     * @param string $AutoscalingGroupStatus Status information
      * @param integer $MaxNodesNum Maximum number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param integer $MinNodesNum Minimum number of nodes

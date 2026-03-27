@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsername(string $Username) Set System Username in Rescue Mode
  * @method boolean getForceStop() Obtain Whether to perform forced shutdown.
  * @method void setForceStop(boolean $ForceStop) Set Whether to perform forced shutdown.
- * @method string getStopType() Obtain 
- * @method void setStopType(string $StopType) Set 
+ * @method string getStopType() Obtain The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT.
+ * @method void setStopType(string $StopType) Set The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT.
  */
 class EnterRescueModeRequest extends AbstractModel
 {
@@ -55,7 +55,7 @@ class EnterRescueModeRequest extends AbstractModel
     public $ForceStop;
 
     /**
-     * @var string 
+     * @var string The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT.
      */
     public $StopType;
 
@@ -64,7 +64,7 @@ class EnterRescueModeRequest extends AbstractModel
      * @param string $Password System Password in Rescue Mode
      * @param string $Username System Username in Rescue Mode
      * @param boolean $ForceStop Whether to perform forced shutdown.
-     * @param string $StopType 
+     * @param string $StopType The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT.
      */
     function __construct()
     {

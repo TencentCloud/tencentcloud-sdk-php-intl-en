@@ -18,20 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Query the output HLS pull stream configuration.
  *
- * @method array getServerUrls() Obtain 
- * @method void setServerUrls(array $ServerUrls) Set 
+ * @method array getServerUrls() Obtain HLS pull stream address list.
+ * @method void setServerUrls(array $ServerUrls) Set HLS pull stream address list.
  */
 class DescribeOutputHLSPullSettings extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array HLS pull stream address list.
      */
     public $ServerUrls;
 
     /**
-     * @param array $ServerUrls 
+     * @param array $ServerUrls HLS pull stream address list.
      */
     function __construct()
     {

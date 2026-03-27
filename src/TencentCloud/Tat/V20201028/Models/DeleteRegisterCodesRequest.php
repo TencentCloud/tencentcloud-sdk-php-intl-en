@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getRegisterCodeIds() Obtain Registration code ID list. limits the input registration code ID quantity to more than 0 and less than 100.
 
-Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
+Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
  * @method void setRegisterCodeIds(array $RegisterCodeIds) Set Registration code ID list. limits the input registration code ID quantity to more than 0 and less than 100.
 
-Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
+Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
  */
 class DeleteRegisterCodesRequest extends AbstractModel
 {
     /**
      * @var array Registration code ID list. limits the input registration code ID quantity to more than 0 and less than 100.
 
-Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
+Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
      */
     public $RegisterCodeIds;
 
     /**
      * @param array $RegisterCodeIds Registration code ID list. limits the input registration code ID quantity to more than 0 and less than 100.
 
-Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
+Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
      */
     function __construct()
     {

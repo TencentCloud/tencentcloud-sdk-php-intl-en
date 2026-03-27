@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End timestamp, in seconds.
  * @method array getAppBizIds() Obtain Application ID list.
  * @method void setAppBizIds(array $AppBizIds) Set Application ID list.
- * @method string getAppType() Obtain 
- * @method void setAppType(string $AppType) Set 
- * @method array getSubScenes() Obtain 
- * @method void setSubScenes(array $SubScenes) Set 
+ * @method string getAppType() Obtain Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
+ * @method void setAppType(string $AppType) Set Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
+ * @method array getSubScenes() Obtain Filter Sub-scenarios
+ * @method void setSubScenes(array $SubScenes) Set Filter Sub-scenarios
  */
 class DescribeTokenUsageGraphRequest extends AbstractModel
 {
@@ -70,12 +70,12 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
     public $AppBizIds;
 
     /**
-     * @var string 
+     * @var string Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
      */
     public $AppType;
 
     /**
-     * @var array 
+     * @var array Filter Sub-scenarios
      */
     public $SubScenes;
 
@@ -86,8 +86,8 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
      * @param string $StartTime Start timestamp, in seconds.
      * @param string $EndTime End timestamp, in seconds.
      * @param array $AppBizIds Application ID list.
-     * @param string $AppType 
-     * @param array $SubScenes 
+     * @param string $AppType Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
+     * @param array $SubScenes Filter Sub-scenarios
      */
     function __construct()
     {

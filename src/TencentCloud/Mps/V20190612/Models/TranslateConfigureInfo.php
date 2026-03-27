@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Switch of a full speech recognition task. Valid values:
 <li>ON: Enables an intelligent full speech recognition task;</li>
 <li>OFF: Disables an intelligent full speech recognition task.</li>
- * @method string getSourceLanguage() Obtain 
- * @method void setSourceLanguage(string $SourceLanguage) Set 
- * @method string getDestinationLanguage() Obtain 
- * @method void setDestinationLanguage(string $DestinationLanguage) Set 
+ * @method string getSourceLanguage() Obtain Video source language.
+ * @method void setSourceLanguage(string $SourceLanguage) Set Video source language.
+ * @method string getDestinationLanguage() Obtain Translated target language.
+ * @method void setDestinationLanguage(string $DestinationLanguage) Set Translated target language.
  * @method string getSubtitleFormat() Obtain Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file.</li>
 
@@ -49,12 +49,12 @@ class TranslateConfigureInfo extends AbstractModel
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Video source language.
      */
     public $SourceLanguage;
 
     /**
-     * @var string 
+     * @var string Translated target language.
      */
     public $DestinationLanguage;
 
@@ -70,8 +70,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Switch Switch of a full speech recognition task. Valid values:
 <li>ON: Enables an intelligent full speech recognition task;</li>
 <li>OFF: Disables an intelligent full speech recognition task.</li>
-     * @param string $SourceLanguage 
-     * @param string $DestinationLanguage 
+     * @param string $SourceLanguage Video source language.
+     * @param string $DestinationLanguage Translated target language.
      * @param string $SubtitleFormat Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file.</li>
 

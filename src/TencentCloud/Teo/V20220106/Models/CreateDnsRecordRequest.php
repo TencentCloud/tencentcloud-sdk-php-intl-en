@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(string $Content) Set Record content
  * @method string getMode() Obtain Proxy mode. Valid values: `dns_only`, `cdn_only`, and `secure_cdn`.
  * @method void setMode(string $Mode) Set Proxy mode. Valid values: `dns_only`, `cdn_only`, and `secure_cdn`.
- * @method integer getTtl() Obtain 
- * @method void setTtl(integer $Ttl) Set 
+ * @method integer getTtl() Obtain Time to Live Value
+ * @method void setTtl(integer $Ttl) Set Time to Live Value
  * @method integer getPriority() Obtain Priority
  * @method void setPriority(integer $Priority) Set Priority
  */
@@ -63,7 +63,7 @@ class CreateDnsRecordRequest extends AbstractModel
     public $Mode;
 
     /**
-     * @var integer 
+     * @var integer Time to Live Value
      */
     public $Ttl;
 
@@ -78,7 +78,7 @@ class CreateDnsRecordRequest extends AbstractModel
      * @param string $Name Record name
      * @param string $Content Record content
      * @param string $Mode Proxy mode. Valid values: `dns_only`, `cdn_only`, and `secure_cdn`.
-     * @param integer $Ttl 
+     * @param integer $Ttl Time to Live Value
      * @param integer $Priority Priority
      */
     function __construct()

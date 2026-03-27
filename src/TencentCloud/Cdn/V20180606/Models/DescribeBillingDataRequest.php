@@ -76,8 +76,8 @@ Default value: `bandwidth`
 Default value: `bandwidth`
  * @method string getProduct() Obtain Specifies the product to query, either `cdn` (default) or `ecdn`.
  * @method void setProduct(string $Product) Set Specifies the product to query, either `cdn` (default) or `ecdn`.
- * @method string getTimeZone() Obtain 
- * @method void setTimeZone(string $TimeZone) Set 
+ * @method string getTimeZone() Obtain Specify the time zone for query time, default UTC+08:00
+ * @method void setTimeZone(string $TimeZone) Set Specify the time zone for query time, default UTC+08:00
  */
 class DescribeBillingDataRequest extends AbstractModel
 {
@@ -146,7 +146,7 @@ Default value: `bandwidth`
     public $Product;
 
     /**
-     * @var string 
+     * @var string Specify the time zone for query time, default UTC+08:00
      */
     public $TimeZone;
 
@@ -179,7 +179,7 @@ If this parameter is left empty, all countries/regions will be queried
 `bandwidth`: Bill by bandwidth
 Default value: `bandwidth`
      * @param string $Product Specifies the product to query, either `cdn` (default) or `ecdn`.
-     * @param string $TimeZone 
+     * @param string $TimeZone Specify the time zone for query time, default UTC+08:00
      */
     function __construct()
     {

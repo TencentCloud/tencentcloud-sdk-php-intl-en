@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnName(string $EnName) Set Country/region name in English
  * @method string getName() Obtain Country/region name in Chinese
  * @method void setName(string $Name) Set Country/region name in Chinese
- * @method string getIOS2() Obtain 
- * @method void setIOS2(string $IOS2) Set 
- * @method string getIOS3() Obtain 
- * @method void setIOS3(string $IOS3) Set 
+ * @method string getIOS2() Obtain ISO2 standard country/region code
+ * @method void setIOS2(string $IOS2) Set ISO2 standard country/region code
+ * @method string getIOS3() Obtain ISO3 standard country/region code
+ * @method void setIOS3(string $IOS3) Set ISO3 standard country/region code
  * @method string getCode() Obtain International dialing code
  * @method void setCode(string $Code) Set International dialing code
  */
@@ -44,12 +44,12 @@ class CountryCodeItem extends AbstractModel
     public $Name;
 
     /**
-     * @var string 
+     * @var string ISO2 standard country/region code
      */
     public $IOS2;
 
     /**
-     * @var string 
+     * @var string ISO3 standard country/region code
      */
     public $IOS3;
 
@@ -61,8 +61,8 @@ class CountryCodeItem extends AbstractModel
     /**
      * @param string $EnName Country/region name in English
      * @param string $Name Country/region name in Chinese
-     * @param string $IOS2 
-     * @param string $IOS3 
+     * @param string $IOS2 ISO2 standard country/region code
+     * @param string $IOS3 ISO3 standard country/region code
      * @param string $Code International dialing code
      */
     function __construct()

@@ -56,10 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroup(array $SecurityGroup) Set Security group
  * @method string getConnectionPoolType() Obtain Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
  * @method void setConnectionPoolType(string $ConnectionPoolType) Set Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
- * @method boolean getAutoLoadBalance() Obtain 
- * @method void setAutoLoadBalance(boolean $AutoLoadBalance) Set 
- * @method string getAccessMode() Obtain 
- * @method void setAccessMode(string $AccessMode) Set 
+ * @method boolean getAutoLoadBalance() Obtain Whether to enable adaptive load balancing. Disabled by default.
+ * @method void setAutoLoadBalance(boolean $AutoLoadBalance) Set Whether to enable adaptive load balancing. Disabled by default.
+ * @method string getAccessMode() Obtain Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
+ * @method void setAccessMode(string $AccessMode) Set Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
  */
 class CreateCdbProxyAddressRequest extends AbstractModel
 {
@@ -154,12 +154,12 @@ class CreateCdbProxyAddressRequest extends AbstractModel
     public $ConnectionPoolType;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to enable adaptive load balancing. Disabled by default.
      */
     public $AutoLoadBalance;
 
     /**
-     * @var string 
+     * @var string Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
      */
     public $AccessMode;
 
@@ -182,8 +182,8 @@ class CreateCdbProxyAddressRequest extends AbstractModel
      * @param integer $VPort Port
      * @param array $SecurityGroup Security group
      * @param string $ConnectionPoolType Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
-     * @param boolean $AutoLoadBalance 
-     * @param string $AccessMode 
+     * @param boolean $AutoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
+     * @param string $AccessMode Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
      */
     function __construct()
     {

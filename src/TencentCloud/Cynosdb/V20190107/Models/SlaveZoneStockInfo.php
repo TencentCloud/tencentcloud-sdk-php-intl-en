@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Secondary AZ Inventory Information
  *
  * @method string getSlaveZone() Obtain Replica AZ.
  * @method void setSlaveZone(string $SlaveZone) Set Replica AZ.

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InvokeCommand request structure.
  *
- * @method string getCommandId() Obtain Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
- * @method void setCommandId(string $CommandId) Set Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+ * @method string getCommandId() Obtain Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+ * @method void setCommandId(string $CommandId) Set Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
  * @method array getInstanceIds() Obtain Instance ID list for the command to be executed, with a cap of 200.
 
 Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
@@ -36,13 +36,13 @@ Instance ID can be obtained through the query instance interface of correspondin
 -TAT register instance.
  * @method string getParameters() Obtain Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
 The key is the custom parameter name, and the value is the default. both kv are string-type.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
 Custom parameters can be up to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
  * @method void setParameters(string $Parameters) Set Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
 The key is the custom parameter name, and the value is the default. both kv are string-type.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
 Custom parameters can be up to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
@@ -68,7 +68,7 @@ The principle of the least privilege is the best practice for permission managem
 class InvokeCommandRequest extends AbstractModel
 {
     /**
-     * @var string Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+     * @var string Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      */
     public $CommandId;
 
@@ -85,7 +85,7 @@ Instance ID can be obtained through the query instance interface of correspondin
     /**
      * @var string Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
 The key is the custom parameter name, and the value is the default. both kv are string-type.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
 Custom parameters can be up to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
@@ -122,7 +122,7 @@ The principle of the least privilege is the best practice for permission managem
     public $OutputCOSKeyPrefix;
 
     /**
-     * @param string $CommandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+     * @param string $CommandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      * @param array $InstanceIds Instance ID list for the command to be executed, with a cap of 200.
 
 Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
@@ -131,7 +131,7 @@ Instance ID can be obtained through the query instance interface of correspondin
 -TAT register instance.
      * @param string $Parameters Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
 The key is the custom parameter name, and the value is the default. both kv are string-type.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
 Custom parameters can be up to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].

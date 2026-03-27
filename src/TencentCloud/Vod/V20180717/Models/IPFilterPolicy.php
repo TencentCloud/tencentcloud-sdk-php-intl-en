@@ -18,36 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * IP access restriction rules, currently supports configuring IP blocklist and allowlist.
  *
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getFilterType() Obtain 
- * @method void setFilterType(string $FilterType) Set 
- * @method array getIPList() Obtain 
- * @method void setIPList(array $IPList) Set 
+ * @method string getStatus() Obtain IP access restriction status. Optional values:
+<li>Enabled: enable;</li>
+<li>Disabled: disable.</li>
+ * @method void setStatus(string $Status) Set IP access restriction status. Optional values:
+<li>Enabled: enable;</li>
+<li>Disabled: disable.</li>
+ * @method string getFilterType() Obtain IP access restriction type:
+<li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
+<li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned.
+ * @method void setFilterType(string $FilterType) Set IP access restriction type:
+<li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
+<li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned.
+ * @method array getIPList() Obtain IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
+ * @method void setIPList(array $IPList) Set IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
  */
 class IPFilterPolicy extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string IP access restriction status. Optional values:
+<li>Enabled: enable;</li>
+<li>Disabled: disable.</li>
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string IP access restriction type:
+<li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
+<li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned.
      */
     public $FilterType;
 
     /**
-     * @var array 
+     * @var array IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
      */
     public $IPList;
 
     /**
-     * @param string $Status 
-     * @param string $FilterType 
-     * @param array $IPList 
+     * @param string $Status IP access restriction status. Optional values:
+<li>Enabled: enable;</li>
+<li>Disabled: disable.</li>
+     * @param string $FilterType IP access restriction type:
+<li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
+<li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned.
+     * @param array $IPList IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
      */
     function __construct()
     {

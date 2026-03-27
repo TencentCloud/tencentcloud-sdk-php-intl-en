@@ -18,7 +18,7 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Mcu relay recording; video on demand (VOD) related parameters.
  *
  * @method McuTencentVod getMcuTencentVod() Obtain Tencent VOD Parameters
 Example :{"ExpireTime":86400}

@@ -18,36 +18,36 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Specification Sellable Status in a Specific Region's AZ
  *
- * @method string getZone() Obtain 
- * @method void setZone(string $Zone) Set 
- * @method string getRegion() Obtain 
- * @method void setRegion(string $Region) Set 
- * @method integer getStatus() Obtain 
- * @method void setStatus(integer $Status) Set 
+ * @method string getZone() Obtain Specification AZ
+ * @method void setZone(string $Zone) Set Specification AZ
+ * @method string getRegion() Obtain Specification Region
+ * @method void setRegion(string $Region) Set Specification Region
+ * @method integer getStatus() Obtain Specification Sale Status in the AZ: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
+ * @method void setStatus(integer $Status) Set Specification Sale Status in the AZ: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
  */
 class ZoneStatus extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Specification AZ
      */
     public $Zone;
 
     /**
-     * @var string 
+     * @var string Specification Region
      */
     public $Region;
 
     /**
-     * @var integer 
+     * @var integer Specification Sale Status in the AZ: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
      */
     public $Status;
 
     /**
-     * @param string $Zone 
-     * @param string $Region 
-     * @param integer $Status 
+     * @param string $Zone Specification AZ
+     * @param string $Region Specification Region
+     * @param integer $Status Specification Sale Status in the AZ: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
      */
     function __construct()
     {

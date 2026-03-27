@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Configuration options for MiniOS of the CHC deployment network
  *
- * @method string getMiniOsType() Obtain 
- * @method void setMiniOsType(string $MiniOsType) Set 
- * @method string getBootType() Obtain 
- * @method void setBootType(string $BootType) Set 
- * @method string getBootFile() Obtain 
- * @method void setBootFile(string $BootFile) Set 
- * @method string getNextServerAddress() Obtain 
- * @method void setNextServerAddress(string $NextServerAddress) Set 
+ * @method string getMiniOsType() Obtain MinIO type: whether to use Tencent Cloud's minios or the customer's own minios.
+ * @method void setMiniOsType(string $MiniOsType) Set MinIO type: whether to use Tencent Cloud's minios or the customer's own minios.
+ * @method string getBootType() Obtain Server architecture and boot mode. Value: x86_legacy, arm_uefi.
+ * @method void setBootType(string $BootType) Set Server architecture and boot mode. Value: x86_legacy, arm_uefi.
+ * @method string getBootFile() Obtain The boot file used by PXE. Default: pxelinux.0.
+ * @method void setBootFile(string $BootFile) Set The boot file used by PXE. Default: pxelinux.0.
+ * @method string getNextServerAddress() Obtain tftp server ip address.
+ * @method void setNextServerAddress(string $NextServerAddress) Set tftp server ip address.
  */
 class ChcDeployExtraConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string MinIO type: whether to use Tencent Cloud's minios or the customer's own minios.
      */
     public $MiniOsType;
 
     /**
-     * @var string 
+     * @var string Server architecture and boot mode. Value: x86_legacy, arm_uefi.
      */
     public $BootType;
 
     /**
-     * @var string 
+     * @var string The boot file used by PXE. Default: pxelinux.0.
      */
     public $BootFile;
 
     /**
-     * @var string 
+     * @var string tftp server ip address.
      */
     public $NextServerAddress;
 
     /**
-     * @param string $MiniOsType 
-     * @param string $BootType 
-     * @param string $BootFile 
-     * @param string $NextServerAddress 
+     * @param string $MiniOsType MinIO type: whether to use Tencent Cloud's minios or the customer's own minios.
+     * @param string $BootType Server architecture and boot mode. Value: x86_legacy, arm_uefi.
+     * @param string $BootFile The boot file used by PXE. Default: pxelinux.0.
+     * @param string $NextServerAddress tftp server ip address.
      */
     function __construct()
     {

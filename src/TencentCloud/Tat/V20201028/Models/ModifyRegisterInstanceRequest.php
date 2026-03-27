@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Managed instance ID.
 
-Call the [DescribeRegisterInstances](https://www.tencentcloud.comom/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
+Call the [DescribeRegisterInstances](https://www.tencentcloud.com/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
  * @method void setInstanceId(string $InstanceId) Set Managed instance ID.
 
-Call the [DescribeRegisterInstances](https://www.tencentcloud.comom/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
+Call the [DescribeRegisterInstances](https://www.tencentcloud.com/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
  * @method string getInstanceName() Obtain Instance name. valid length is 1–60 characters.
  * @method void setInstanceName(string $InstanceName) Set Instance name. valid length is 1–60 characters.
  */
@@ -34,7 +34,7 @@ class ModifyRegisterInstanceRequest extends AbstractModel
     /**
      * @var string Managed instance ID.
 
-Call the [DescribeRegisterInstances](https://www.tencentcloud.comom/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
+Call the [DescribeRegisterInstances](https://www.tencentcloud.com/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
      */
     public $InstanceId;
 
@@ -46,7 +46,7 @@ Call the [DescribeRegisterInstances](https://www.tencentcloud.comom/document/api
     /**
      * @param string $InstanceId Managed instance ID.
 
-Call the [DescribeRegisterInstances](https://www.tencentcloud.comom/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
+Call the [DescribeRegisterInstances](https://www.tencentcloud.com/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
      * @param string $InstanceName Instance name. valid length is 1–60 characters.
      */
     function __construct()

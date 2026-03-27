@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulId(integer $VulId) Set Vulnerability ID
  * @method array getQuuids() Obtain Hosts that need to fix vulnerabilities. All hosts need to have the vulnerability with the ID of VulId and be in a pending fix status.
  * @method void setQuuids(array $Quuids) Set Hosts that need to fix vulnerabilities. All hosts need to have the vulnerability with the ID of VulId and be in a pending fix status.
- * @method integer getFixMethod() Obtain 
- * @method void setFixMethod(integer $FixMethod) Set 
+ * @method integer getFixMethod() Obtain Repair method: 0 component update or patch installation, 1 disable service
+ * @method void setFixMethod(integer $FixMethod) Set Repair method: 0 component update or patch installation, 1 disable service
  */
 class CreateVulFixTaskQuuids extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateVulFixTaskQuuids extends AbstractModel
     public $Quuids;
 
     /**
-     * @var integer 
+     * @var integer Repair method: 0 component update or patch installation, 1 disable service
      */
     public $FixMethod;
 
     /**
      * @param integer $VulId Vulnerability ID
      * @param array $Quuids Hosts that need to fix vulnerabilities. All hosts need to have the vulnerability with the ID of VulId and be in a pending fix status.
-     * @param integer $FixMethod 
+     * @param integer $FixMethod Repair method: 0 component update or patch installation, 1 disable service
      */
     function __construct()
     {

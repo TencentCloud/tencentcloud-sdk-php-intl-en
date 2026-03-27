@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(array $Host) Set Client address
  * @method array getUser() Obtain Username
  * @method void setUser(array $User) Set Username
- * @method array getDBName() Obtain 
- * @method void setDBName(array $DBName) Set 
+ * @method array getDBName() Obtain Database Name.
+ * @method void setDBName(array $DBName) Set Database Name.
  * @method array getTableName() Obtain Table name
  * @method void setTableName(array $TableName) Set Table name
  * @method array getPolicyName() Obtain Audit policy name
  * @method void setPolicyName(array $PolicyName) Set Audit policy name
- * @method string getSql() Obtain 
- * @method void setSql(string $Sql) Set 
- * @method string getSqlType() Obtain 
- * @method void setSqlType(string $SqlType) Set 
+ * @method string getSql() Obtain SQL statement. Supports fuzzy matching.
+ * @method void setSql(string $Sql) Set SQL statement. Supports fuzzy matching.
+ * @method string getSqlType() Obtain SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE".
+ * @method void setSqlType(string $SqlType) Set SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE".
  * @method integer getExecTime() Obtain Execution time in ms, which is used to filter the audit log with execution time greater than this value.
  * @method void setExecTime(integer $ExecTime) Set Execution time in ms, which is used to filter the audit log with execution time greater than this value.
  * @method integer getAffectRows() Obtain Number of affected rows, which is used to filter the audit log with affected rows greater than this value.
@@ -74,7 +74,7 @@ class AuditLogFilter extends AbstractModel
     public $User;
 
     /**
-     * @var array 
+     * @var array Database Name.
      */
     public $DBName;
 
@@ -89,12 +89,12 @@ class AuditLogFilter extends AbstractModel
     public $PolicyName;
 
     /**
-     * @var string 
+     * @var string SQL statement. Supports fuzzy matching.
      */
     public $Sql;
 
     /**
-     * @var string 
+     * @var string SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE".
      */
     public $SqlType;
 
@@ -166,11 +166,11 @@ class AuditLogFilter extends AbstractModel
     /**
      * @param array $Host Client address
      * @param array $User Username
-     * @param array $DBName 
+     * @param array $DBName Database Name.
      * @param array $TableName Table name
      * @param array $PolicyName Audit policy name
-     * @param string $Sql 
-     * @param string $SqlType 
+     * @param string $Sql SQL statement. Supports fuzzy matching.
+     * @param string $SqlType SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE".
      * @param integer $ExecTime Execution time in ms, which is used to filter the audit log with execution time greater than this value.
      * @param integer $AffectRows Number of affected rows, which is used to filter the audit log with affected rows greater than this value.
      * @param array $SqlTypes SQL type (Multiple types can be queried at same time). Valid values: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE`, `DROP`, `ALTER`, `SET`, `REPLACE`, `EXECUTE`.

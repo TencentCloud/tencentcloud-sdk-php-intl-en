@@ -92,8 +92,8 @@ Default value: `0`.
  * @method void setName(string $Name) Set Instance name (which will be supported in the future)
  * @method string getDBVersion() Obtain (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
  * @method void setDBVersion(string $DBVersion) Set (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
- * @method string getDedicatedClusterId() Obtain 
- * @method void setDedicatedClusterId(string $DedicatedClusterId) Set 
+ * @method string getDedicatedClusterId() Obtain <p>Dedicated Cluster ID</p>
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set <p>Dedicated Cluster ID</p>
  */
 class CreateReadOnlyDBInstanceRequest extends AbstractModel
 {
@@ -215,7 +215,7 @@ Default value: `0`.
     public $DBVersion;
 
     /**
-     * @var string 
+     * @var string <p>Dedicated Cluster ID</p>
      */
     public $DedicatedClusterId;
 
@@ -256,7 +256,7 @@ Default value: `0`.
 Default value: `0`.
      * @param string $Name Instance name (which will be supported in the future)
      * @param string $DBVersion (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
-     * @param string $DedicatedClusterId 
+     * @param string $DedicatedClusterId <p>Dedicated Cluster ID</p>
      */
     function __construct()
     {

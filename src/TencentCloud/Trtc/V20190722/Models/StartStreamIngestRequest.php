@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
 Source URL. Example value: https://a.b/test.mp4
  * @method void setSourceUrl(array $SourceUrl) Set 	
 Source URL. Example value: https://a.b/test.mp4
- * @method integer getSeekSecond() Obtain 
- * @method void setSeekSecond(integer $SeekSecond) Set 
+ * @method integer getSeekSecond() Obtain Specify that the video plays from a specific second timestamp.
+ * @method void setSeekSecond(integer $SeekSecond) Set Specify that the video plays from a specific second timestamp.
  * @method boolean getAutoPush() Obtain Enable auto relay to cdn, please make sure that this feature has been enabled in the console.
  * @method void setAutoPush(boolean $AutoPush) Set Enable auto relay to cdn, please make sure that this feature has been enabled in the console.
  * @method integer getRepeatNum() Obtain Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration.
@@ -110,7 +110,7 @@ Source URL. Example value: https://a.b/test.mp4
     public $SourceUrl;
 
     /**
-     * @var integer 
+     * @var integer Specify that the video plays from a specific second timestamp.
      */
     public $SeekSecond;
 
@@ -146,7 +146,7 @@ Source URL. Example value: https://a.b/test.mp4
      * @param AudioEncodeParams $AudioEncodeParams Audio Codec Parameters. Optional, if not filled, Keep original stream Parameters.
      * @param array $SourceUrl 	
 Source URL. Example value: https://a.b/test.mp4
-     * @param integer $SeekSecond 
+     * @param integer $SeekSecond Specify that the video plays from a specific second timestamp.
      * @param boolean $AutoPush Enable auto relay to cdn, please make sure that this feature has been enabled in the console.
      * @param integer $RepeatNum Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration.
      * @param integer $MaxDuration Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes

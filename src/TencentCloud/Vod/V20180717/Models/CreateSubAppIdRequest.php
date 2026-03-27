@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Subapplication name. Length limit: 40 characters.
  * @method string getDescription() Obtain Subapplication overview. Length limit: 300 characters.
  * @method void setDescription(string $Description) Set Subapplication overview. Length limit: 300 characters.
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getType() Obtain Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
+ * @method void setType(string $Type) Set Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
  */
 class CreateSubAppIdRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateSubAppIdRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string 
+     * @var string Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
      */
     public $Type;
 
     /**
      * @param string $Name Subapplication name. Length limit: 40 characters.
      * @param string $Description Subapplication overview. Length limit: 300 characters.
-     * @param string $Type 
+     * @param string $Type Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
      */
     function __construct()
     {

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInvocationId() Obtain Execution activity ID.
 
-Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution.
  * @method void setInvocationId(string $InvocationId) Set Execution activity ID.
 
-Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution.
  * @method array getInstanceIds() Obtain Instance ID list. upper limit: 100.
 
 Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
@@ -44,7 +44,7 @@ class CancelInvocationRequest extends AbstractModel
     /**
      * @var string Execution activity ID.
 
-Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution.
      */
     public $InvocationId;
 
@@ -61,7 +61,7 @@ Instance ID can be obtained through the query instance interface of correspondin
     /**
      * @param string $InvocationId Execution activity ID.
 
-Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution.
      * @param array $InstanceIds Instance ID list. upper limit: 100.
 
 Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.

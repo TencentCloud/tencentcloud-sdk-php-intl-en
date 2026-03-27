@@ -74,8 +74,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
  * @method void setCreatedOn(string $CreatedOn) Set Site creation date
  * @method string getModifiedOn() Obtain Site modification date
  * @method void setModifiedOn(string $ModifiedOn) Set Site modification date
- * @method string getArea() Obtain 
- * @method void setArea(string $Area) Set 
+ * @method string getArea() Obtain Site access region, with values:
+
+<li> global: Global;</li>
+
+<li> mainland: Chinese mainland;</li>
+
+<li> overseas: Overseas regions.</li>
+ * @method void setArea(string $Area) Set Site access region, with values:
+
+<li> global: Global;</li>
+
+<li> mainland: Chinese mainland;</li>
+
+<li> overseas: Overseas regions.</li>
  */
 class Zone extends AbstractModel
 {
@@ -159,7 +171,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $ModifiedOn;
 
     /**
-     * @var string 
+     * @var string Site access region, with values:
+
+<li> global: Global;</li>
+
+<li> mainland: Chinese mainland;</li>
+
+<li> overseas: Overseas regions.</li>
      */
     public $Area;
 
@@ -191,7 +209,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $CreatedOn Site creation date
      * @param string $ModifiedOn Site modification date
-     * @param string $Area 
+     * @param string $Area Site access region, with values:
+
+<li> global: Global;</li>
+
+<li> mainland: Chinese mainland;</li>
+
+<li> overseas: Overseas regions.</li>
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Cdwdoris\V20211228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * catalog Level Permission
  *
- * @method string getCatalogName() Obtain 
- * @method void setCatalogName(string $CatalogName) Set 
- * @method array getPermissions() Obtain 
- * @method void setPermissions(array $Permissions) Set 
+ * @method string getCatalogName() Obtain catalog Name
+ * @method void setCatalogName(string $CatalogName) Set catalog Name
+ * @method array getPermissions() Obtain catalog permission
+ * @method void setPermissions(array $Permissions) Set catalog permission
  */
 class CatalogPermission extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string catalog Name
      */
     public $CatalogName;
 
     /**
-     * @var array 
+     * @var array catalog permission
      */
     public $Permissions;
 
     /**
-     * @param string $CatalogName 
-     * @param array $Permissions 
+     * @param string $CatalogName catalog Name
+     * @param array $Permissions catalog permission
      */
     function __construct()
     {

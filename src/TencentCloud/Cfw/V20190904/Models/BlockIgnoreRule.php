@@ -80,8 +80,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCountry(string $Country) Set Country.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
+ * @method string getComment() Obtain Remarks
+ * @method void setComment(string $Comment) Set Remarks
  */
 class BlockIgnoreRule extends AbstractModel
 {
@@ -176,7 +176,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Country;
 
     /**
-     * @var string 
+     * @var string Remarks
      */
     public $Comment;
 
@@ -211,7 +211,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Country Country.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Comment 
+     * @param string $Comment Remarks
      */
     function __construct()
     {

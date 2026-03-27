@@ -42,8 +42,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFixSuccessCnt(integer $FixSuccessCnt) Set Number of hosts with successful vulnerability fixing
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFixMethod() Obtain 
- * @method void setFixMethod(integer $FixMethod) Set 
+ * @method integer getFixMethod() Obtain Repair method: 0 component update or patch installation, 1 disable service
+ * @method void setFixMethod(integer $FixMethod) Set Repair method: 0 component update or patch installation, 1 disable service
  */
 class VulFixStatusInfo extends AbstractModel
 {
@@ -83,7 +83,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FixSuccessCnt;
 
     /**
-     * @var integer 
+     * @var integer Repair method: 0 component update or patch installation, 1 disable service
      */
     public $FixMethod;
 
@@ -99,7 +99,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $FixSuccessCnt Number of hosts with successful vulnerability fixing
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FixMethod 
+     * @param integer $FixMethod Repair method: 0 component update or patch installation, 1 disable service
      */
     function __construct()
     {

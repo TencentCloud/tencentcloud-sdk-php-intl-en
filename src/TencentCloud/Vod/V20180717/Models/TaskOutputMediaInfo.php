@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() Obtain Media file ID.
  * @method void setFileId(string $FileId) Set Media file ID.
- * @method MediaBasicInfo getMediaBasicInfo() Obtain 
- * @method void setMediaBasicInfo(MediaBasicInfo $MediaBasicInfo) Set 
+ * @method MediaBasicInfo getMediaBasicInfo() Obtain Basic information of the media files generated after transcoding and pulling.
+ * @method void setMediaBasicInfo(MediaBasicInfo $MediaBasicInfo) Set Basic information of the media files generated after transcoding and pulling.
  */
 class TaskOutputMediaInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class TaskOutputMediaInfo extends AbstractModel
     public $FileId;
 
     /**
-     * @var MediaBasicInfo 
+     * @var MediaBasicInfo Basic information of the media files generated after transcoding and pulling.
      */
     public $MediaBasicInfo;
 
     /**
      * @param string $FileId Media file ID.
-     * @param MediaBasicInfo $MediaBasicInfo 
+     * @param MediaBasicInfo $MediaBasicInfo Basic information of the media files generated after transcoding and pulling.
      */
     function __construct()
     {

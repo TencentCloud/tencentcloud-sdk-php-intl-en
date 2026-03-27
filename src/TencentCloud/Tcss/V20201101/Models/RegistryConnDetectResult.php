@@ -18,60 +18,60 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Image Repository Connectivity Detection Result
  *
- * @method string getQuuid() Obtain 
- * @method void setQuuid(string $Quuid) Set 
- * @method string getUuid() Obtain 
- * @method void setUuid(string $Uuid) Set 
- * @method string getConnDetectStatus() Obtain 
- * @method void setConnDetectStatus(string $ConnDetectStatus) Set 
- * @method string getConnDetectMessage() Obtain 
- * @method void setConnDetectMessage(string $ConnDetectMessage) Set 
- * @method string getSolution() Obtain 
- * @method void setSolution(string $Solution) Set 
- * @method string getFailReason() Obtain 
- * @method void setFailReason(string $FailReason) Set 
+ * @method string getQuuid() Obtain Host quuid or backend for Connectivity Detection
+ * @method void setQuuid(string $Quuid) Set Host quuid or backend for Connectivity Detection
+ * @method string getUuid() Obtain Host uuid or backend for Connectivity Detection
+ * @method void setUuid(string $Uuid) Set Host uuid or backend for Connectivity Detection
+ * @method string getConnDetectStatus() Obtain Detection Result Status
+ * @method void setConnDetectStatus(string $ConnDetectStatus) Set Detection Result Status
+ * @method string getConnDetectMessage() Obtain Detection Result Information
+ * @method void setConnDetectMessage(string $ConnDetectMessage) Set Detection Result Information
+ * @method string getSolution() Obtain Failure Resolution
+ * @method void setSolution(string $Solution) Set Failure Resolution
+ * @method string getFailReason() Obtain Failure Cause
+ * @method void setFailReason(string $FailReason) Set Failure Cause
  */
 class RegistryConnDetectResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Host quuid or backend for Connectivity Detection
      */
     public $Quuid;
 
     /**
-     * @var string 
+     * @var string Host uuid or backend for Connectivity Detection
      */
     public $Uuid;
 
     /**
-     * @var string 
+     * @var string Detection Result Status
      */
     public $ConnDetectStatus;
 
     /**
-     * @var string 
+     * @var string Detection Result Information
      */
     public $ConnDetectMessage;
 
     /**
-     * @var string 
+     * @var string Failure Resolution
      */
     public $Solution;
 
     /**
-     * @var string 
+     * @var string Failure Cause
      */
     public $FailReason;
 
     /**
-     * @param string $Quuid 
-     * @param string $Uuid 
-     * @param string $ConnDetectStatus 
-     * @param string $ConnDetectMessage 
-     * @param string $Solution 
-     * @param string $FailReason 
+     * @param string $Quuid Host quuid or backend for Connectivity Detection
+     * @param string $Uuid Host uuid or backend for Connectivity Detection
+     * @param string $ConnDetectStatus Detection Result Status
+     * @param string $ConnDetectMessage Detection Result Information
+     * @param string $Solution Failure Resolution
+     * @param string $FailReason Failure Cause
      */
     function __construct()
     {

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNegativePrompt(string $NegativePrompt) Set Prevent the model from generating video prompts.
  * @method string getEnhancePrompt() Obtain Whether to optimize Prompt content automatically. when Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>.
  * @method void setEnhancePrompt(string $EnhancePrompt) Set Whether to optimize Prompt content automatically. when Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>.
- * @method string getGenerationMode() Obtain 
- * @method void setGenerationMode(string $GenerationMode) Set 
+ * @method string getGenerationMode() Obtain Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
+ * @method void setGenerationMode(string $GenerationMode) Set Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
  * @method AigcVideoOutputConfig getOutputConfig() Obtain Specifies the output media file configuration for the video task.
  * @method void setOutputConfig(AigcVideoOutputConfig $OutputConfig) Set Specifies the output media file configuration for the video task.
  */
@@ -77,7 +77,7 @@ class AigcVideoTaskInput extends AbstractModel
     public $EnhancePrompt;
 
     /**
-     * @var string 
+     * @var string Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
      */
     public $GenerationMode;
 
@@ -94,7 +94,7 @@ class AigcVideoTaskInput extends AbstractModel
      * @param string $Prompt Prompt content for video generation. 
      * @param string $NegativePrompt Prevent the model from generating video prompts.
      * @param string $EnhancePrompt Whether to optimize Prompt content automatically. when Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>.
-     * @param string $GenerationMode 
+     * @param string $GenerationMode Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
      * @param AigcVideoOutputConfig $OutputConfig Specifies the output media file configuration for the video task.
      */
     function __construct()

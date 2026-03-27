@@ -18,52 +18,52 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Security Group Policy
  *
- * @method string getAction() Obtain 
- * @method void setAction(string $Action) Set 
- * @method string getCidrIp() Obtain 
- * @method void setCidrIp(string $CidrIp) Set 
- * @method string getPortRange() Obtain 
- * @method void setPortRange(string $PortRange) Set 
- * @method string getIpProtocol() Obtain 
- * @method void setIpProtocol(string $IpProtocol) Set 
- * @method string getDir() Obtain 
- * @method void setDir(string $Dir) Set 
+ * @method string getAction() Obtain Policy, ACCEPT or DROP
+ * @method void setAction(string $Action) Set Policy, ACCEPT or DROP
+ * @method string getCidrIp() Obtain Destination IP or IP range, for example 172.16.0.0/12
+ * @method void setCidrIp(string $CidrIp) Set Destination IP or IP range, for example 172.16.0.0/12
+ * @method string getPortRange() Obtain port or port range
+ * @method void setPortRange(string $PortRange) Set port or port range
+ * @method string getIpProtocol() Obtain Network protocol supports UDP, TCP, etc.
+ * @method void setIpProtocol(string $IpProtocol) Set Network protocol supports UDP, TCP, etc.
+ * @method string getDir() Obtain Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules
+ * @method void setDir(string $Dir) Set Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules
  */
 class SecurityGroupPolicy extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Policy, ACCEPT or DROP
      */
     public $Action;
 
     /**
-     * @var string 
+     * @var string Destination IP or IP range, for example 172.16.0.0/12
      */
     public $CidrIp;
 
     /**
-     * @var string 
+     * @var string port or port range
      */
     public $PortRange;
 
     /**
-     * @var string 
+     * @var string Network protocol supports UDP, TCP, etc.
      */
     public $IpProtocol;
 
     /**
-     * @var string 
+     * @var string Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules
      */
     public $Dir;
 
     /**
-     * @param string $Action 
-     * @param string $CidrIp 
-     * @param string $PortRange 
-     * @param string $IpProtocol 
-     * @param string $Dir 
+     * @param string $Action Policy, ACCEPT or DROP
+     * @param string $CidrIp Destination IP or IP range, for example 172.16.0.0/12
+     * @param string $PortRange port or port range
+     * @param string $IpProtocol Network protocol supports UDP, TCP, etc.
+     * @param string $Dir Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules
      */
     function __construct()
     {

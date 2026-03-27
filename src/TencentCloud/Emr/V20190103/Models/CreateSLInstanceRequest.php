@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrePaySetting(PrePaySetting $PrePaySetting) Set Prepaid parameter.
  * @method string getClientToken() Obtain The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
  * @method void setClientToken(string $ClientToken) Set The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
- * @method string getDeploymentMode() Obtain 
- * @method void setDeploymentMode(string $DeploymentMode) Set 
+ * @method string getDeploymentMode() Obtain Deployment Mode
+ * @method void setDeploymentMode(string $DeploymentMode) Set Deployment Mode
  */
 class CreateSLInstanceRequest extends AbstractModel
 {
@@ -89,7 +89,7 @@ class CreateSLInstanceRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @var string 
+     * @var string Deployment Mode
      */
     public $DeploymentMode;
 
@@ -103,7 +103,7 @@ class CreateSLInstanceRequest extends AbstractModel
      * @param array $Tags List of tags to be bound to the instance.
      * @param PrePaySetting $PrePaySetting Prepaid parameter.
      * @param string $ClientToken The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
-     * @param string $DeploymentMode 
+     * @param string $DeploymentMode Deployment Mode
      */
     function __construct()
     {

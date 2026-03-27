@@ -18,28 +18,28 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intent Implementation Approach
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getDesc() Obtain 
- * @method void setDesc(string $Desc) Set 
+ * @method string getName() Obtain Intent Implementation Approach, qa: Q&A response, doc: document-based response, workflow: workflow-based response, llm: LLM response
+ * @method void setName(string $Name) Set Intent Implementation Approach, qa: Q&A response, doc: document-based response, workflow: workflow-based response, llm: LLM response
+ * @method string getDesc() Obtain Intent Implementation Approach Description
+ * @method void setDesc(string $Desc) Set Intent Implementation Approach Description
  */
 class IntentAchievement extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Intent Implementation Approach, qa: Q&A response, doc: document-based response, workflow: workflow-based response, llm: LLM response
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Intent Implementation Approach Description
      */
     public $Desc;
 
     /**
-     * @param string $Name 
-     * @param string $Desc 
+     * @param string $Name Intent Implementation Approach, qa: Q&A response, doc: document-based response, workflow: workflow-based response, llm: LLM response
+     * @param string $Desc Intent Implementation Approach Description
      */
     function __construct()
     {

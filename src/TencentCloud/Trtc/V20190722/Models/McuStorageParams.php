@@ -18,7 +18,7 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Mcu relay recording; third-party storage parameters.
  *
  * @method CloudStorage getCloudStorage() Obtain Third-Party Cloud Storage Account Information
 (Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)

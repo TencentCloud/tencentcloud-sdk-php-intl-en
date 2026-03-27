@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHpcClusterId(string $HpcClusterId) Set HPC cluster ID.
  * @method CpuTopology getCpuTopology() Obtain Information about the CPU topology of an instance. If not specified, it is determined by system resources.
  * @method void setCpuTopology(CpuTopology $CpuTopology) Set Information about the CPU topology of an instance. If not specified, it is determined by system resources.
- * @method LaunchTemplate getLaunchTemplate() Obtain 
- * @method void setLaunchTemplate(LaunchTemplate $LaunchTemplate) Set 
+ * @method LaunchTemplate getLaunchTemplate() Obtain Instance launch template.
+ * @method void setLaunchTemplate(LaunchTemplate $LaunchTemplate) Set Instance launch template.
  */
 class InquiryPriceRunInstancesRequest extends AbstractModel
 {
@@ -188,7 +188,7 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
     public $CpuTopology;
 
     /**
-     * @var LaunchTemplate 
+     * @var LaunchTemplate Instance launch template.
      */
     public $LaunchTemplate;
 
@@ -219,7 +219,7 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
 **Note: this field is in beta test.**.
      * @param string $HpcClusterId HPC cluster ID.
      * @param CpuTopology $CpuTopology Information about the CPU topology of an instance. If not specified, it is determined by system resources.
-     * @param LaunchTemplate $LaunchTemplate 
+     * @param LaunchTemplate $LaunchTemplate Instance launch template.
      */
     function __construct()
     {

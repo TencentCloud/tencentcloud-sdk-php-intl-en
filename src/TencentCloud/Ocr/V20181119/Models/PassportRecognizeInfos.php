@@ -18,124 +18,148 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Information Section Content.
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getIssuingCountry() Obtain 
- * @method void setIssuingCountry(string $IssuingCountry) Set 
- * @method string getPassportID() Obtain 
- * @method void setPassportID(string $PassportID) Set 
- * @method string getSurname() Obtain 
- * @method void setSurname(string $Surname) Set 
- * @method string getGivenName() Obtain 
- * @method void setGivenName(string $GivenName) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getNationality() Obtain 
- * @method void setNationality(string $Nationality) Set 
- * @method string getDateOfBirth() Obtain 
- * @method void setDateOfBirth(string $DateOfBirth) Set 
- * @method string getSex() Obtain 
- * @method void setSex(string $Sex) Set 
- * @method string getDateOfIssuance() Obtain 
- * @method void setDateOfIssuance(string $DateOfIssuance) Set 
- * @method string getDateOfExpiration() Obtain 
- * @method void setDateOfExpiration(string $DateOfExpiration) Set 
- * @method string getSignature() Obtain 
- * @method void setSignature(string $Signature) Set 
- * @method string getIssuePlace() Obtain 
- * @method void setIssuePlace(string $IssuePlace) Set 
- * @method string getIssuingAuthority() Obtain 
- * @method void setIssuingAuthority(string $IssuingAuthority) Set 
+ * @method string getType() Obtain Document Type (Passport Information Page Recognition Result).
+ * @method void setType(string $Type) Set Document Type (Passport Information Page Recognition Result).
+ * @method string getIssuingCountry() Obtain Issuing Country (Passport Information Page Recognition Result).
+ * @method void setIssuingCountry(string $IssuingCountry) Set Issuing Country (Passport Information Page Recognition Result).
+ * @method string getPassportID() Obtain Passport Number (Passport Information Page Recognition Result).
+ * @method void setPassportID(string $PassportID) Set Passport Number (Passport Information Page Recognition Result).
+ * @method string getSurname() Obtain Surname (Passport Information Page Recognition Result).
+ * @method void setSurname(string $Surname) Set Surname (Passport Information Page Recognition Result).
+ * @method string getGivenName() Obtain Given Name (Passport Information Page Recognition Result).
+ * @method void setGivenName(string $GivenName) Set Given Name (Passport Information Page Recognition Result).
+ * @method string getName() Obtain Full Name (Passport Information Page Recognition Result).
+ * @method void setName(string $Name) Set Full Name (Passport Information Page Recognition Result).
+ * @method string getNationality() Obtain Nationality Information (Passport Information Page Recognition Result).
+ * @method void setNationality(string $Nationality) Set Nationality Information (Passport Information Page Recognition Result).
+ * @method string getDateOfBirth() Obtain Date of Birth (Passport Information Page Recognition Result).
+ * @method void setDateOfBirth(string $DateOfBirth) Set Date of Birth (Passport Information Page Recognition Result).
+ * @method string getSex() Obtain Gender (Passport Information Page Recognition Result).
+ * @method void setSex(string $Sex) Set Gender (Passport Information Page Recognition Result).
+ * @method string getDateOfIssuance() Obtain Date of Issue (Passport Information Page Recognition Result).
+ * @method void setDateOfIssuance(string $DateOfIssuance) Set Date of Issue (Passport Information Page Recognition Result).
+ * @method string getDateOfExpiration() Obtain Expiry Date (Passport Information Page Recognition Result).
+ * @method void setDateOfExpiration(string $DateOfExpiration) Set Expiry Date (Passport Information Page Recognition Result).
+ * @method string getSignature() Obtain Cardholder Signature (Passport Information Page Recognition Result)
+
+This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+ * @method void setSignature(string $Signature) Set Cardholder Signature (Passport Information Page Recognition Result)
+
+This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+ * @method string getIssuePlace() Obtain Place of Issue (Passport Information Page Recognition Result)
+
+This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+ * @method void setIssuePlace(string $IssuePlace) Set Place of Issue (Passport Information Page Recognition Result)
+
+This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+ * @method string getIssuingAuthority() Obtain Issuing Authority (Passport Information Page Recognition Result)
+
+This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+ * @method void setIssuingAuthority(string $IssuingAuthority) Set Issuing Authority (Passport Information Page Recognition Result)
+
+This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
  */
 class PassportRecognizeInfos extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Document Type (Passport Information Page Recognition Result).
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Issuing Country (Passport Information Page Recognition Result).
      */
     public $IssuingCountry;
 
     /**
-     * @var string 
+     * @var string Passport Number (Passport Information Page Recognition Result).
      */
     public $PassportID;
 
     /**
-     * @var string 
+     * @var string Surname (Passport Information Page Recognition Result).
      */
     public $Surname;
 
     /**
-     * @var string 
+     * @var string Given Name (Passport Information Page Recognition Result).
      */
     public $GivenName;
 
     /**
-     * @var string 
+     * @var string Full Name (Passport Information Page Recognition Result).
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Nationality Information (Passport Information Page Recognition Result).
      */
     public $Nationality;
 
     /**
-     * @var string 
+     * @var string Date of Birth (Passport Information Page Recognition Result).
      */
     public $DateOfBirth;
 
     /**
-     * @var string 
+     * @var string Gender (Passport Information Page Recognition Result).
      */
     public $Sex;
 
     /**
-     * @var string 
+     * @var string Date of Issue (Passport Information Page Recognition Result).
      */
     public $DateOfIssuance;
 
     /**
-     * @var string 
+     * @var string Expiry Date (Passport Information Page Recognition Result).
      */
     public $DateOfExpiration;
 
     /**
-     * @var string 
+     * @var string Cardholder Signature (Passport Information Page Recognition Result)
+
+This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
      */
     public $Signature;
 
     /**
-     * @var string 
+     * @var string Place of Issue (Passport Information Page Recognition Result)
+
+This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
      */
     public $IssuePlace;
 
     /**
-     * @var string 
+     * @var string Issuing Authority (Passport Information Page Recognition Result)
+
+This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
      */
     public $IssuingAuthority;
 
     /**
-     * @param string $Type 
-     * @param string $IssuingCountry 
-     * @param string $PassportID 
-     * @param string $Surname 
-     * @param string $GivenName 
-     * @param string $Name 
-     * @param string $Nationality 
-     * @param string $DateOfBirth 
-     * @param string $Sex 
-     * @param string $DateOfIssuance 
-     * @param string $DateOfExpiration 
-     * @param string $Signature 
-     * @param string $IssuePlace 
-     * @param string $IssuingAuthority 
+     * @param string $Type Document Type (Passport Information Page Recognition Result).
+     * @param string $IssuingCountry Issuing Country (Passport Information Page Recognition Result).
+     * @param string $PassportID Passport Number (Passport Information Page Recognition Result).
+     * @param string $Surname Surname (Passport Information Page Recognition Result).
+     * @param string $GivenName Given Name (Passport Information Page Recognition Result).
+     * @param string $Name Full Name (Passport Information Page Recognition Result).
+     * @param string $Nationality Nationality Information (Passport Information Page Recognition Result).
+     * @param string $DateOfBirth Date of Birth (Passport Information Page Recognition Result).
+     * @param string $Sex Gender (Passport Information Page Recognition Result).
+     * @param string $DateOfIssuance Date of Issue (Passport Information Page Recognition Result).
+     * @param string $DateOfExpiration Expiry Date (Passport Information Page Recognition Result).
+     * @param string $Signature Cardholder Signature (Passport Information Page Recognition Result)
+
+This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+     * @param string $IssuePlace Place of Issue (Passport Information Page Recognition Result)
+
+This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+     * @param string $IssuingAuthority Issuing Authority (Passport Information Page Recognition Result)
+
+This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
      */
     function __construct()
     {

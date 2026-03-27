@@ -18,28 +18,28 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * This data structure represents two databases that have a publish-subscribe relationship.
  *
- * @method string getPublishDatabase() Obtain 
- * @method void setPublishDatabase(string $PublishDatabase) Set 
- * @method string getSubscribeDatabase() Obtain 
- * @method void setSubscribeDatabase(string $SubscribeDatabase) Set 
+ * @method string getPublishDatabase() Obtain Publish Database Name
+ * @method void setPublishDatabase(string $PublishDatabase) Set Publish Database Name
+ * @method string getSubscribeDatabase() Obtain Subscription Database Name
+ * @method void setSubscribeDatabase(string $SubscribeDatabase) Set Subscription Database Name
  */
 class DatabaseTuple extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Publish Database Name
      */
     public $PublishDatabase;
 
     /**
-     * @var string 
+     * @var string Subscription Database Name
      */
     public $SubscribeDatabase;
 
     /**
-     * @param string $PublishDatabase 
-     * @param string $SubscribeDatabase 
+     * @param string $PublishDatabase Publish Database Name
+     * @param string $SubscribeDatabase Subscription Database Name
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Live streaming analysis results
  *
  * @method array getResultSet() Obtain Live streaming analysis subtask result. Valid values:
 <li>Live streaming video splitting.</li>

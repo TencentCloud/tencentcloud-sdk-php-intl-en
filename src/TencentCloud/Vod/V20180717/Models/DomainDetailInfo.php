@@ -54,8 +54,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQUICConfig(DomainQUICConfig $QUICConfig) Set The QUIC configuration for the domain.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method IPFilterPolicy getIPFilterPolicy() Obtain 
- * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) Set 
+ * @method IPFilterPolicy getIPFilterPolicy() Obtain IP access limit configuration information.
+ * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) Set IP access limit configuration information.
  * @method string getType() Obtain Domain type. Valid values:
 <li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
  * @method void setType(string $Type) Set Domain type. Valid values:
@@ -113,7 +113,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $QUICConfig;
 
     /**
-     * @var IPFilterPolicy 
+     * @var IPFilterPolicy IP access limit configuration information.
      */
     public $IPFilterPolicy;
 
@@ -141,7 +141,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 <li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
      * @param DomainQUICConfig $QUICConfig The QUIC configuration for the domain.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IPFilterPolicy $IPFilterPolicy 
+     * @param IPFilterPolicy $IPFilterPolicy IP access limit configuration information.
      * @param string $Type Domain type. Valid values:
 <li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
      */

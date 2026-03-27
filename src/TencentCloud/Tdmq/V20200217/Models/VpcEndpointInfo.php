@@ -18,14 +18,14 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * VPC Access Point Information
  *
- * @method string getVpcId() Obtain 
- * @method void setVpcId(string $VpcId) Set 
- * @method string getSubnetId() Obtain 
- * @method void setSubnetId(string $SubnetId) Set 
- * @method string getVpcEndpoint() Obtain 
- * @method void setVpcEndpoint(string $VpcEndpoint) Set 
+ * @method string getVpcId() Obtain vpc id
+ * @method void setVpcId(string $VpcId) Set vpc id
+ * @method string getSubnetId() Obtain subnet id
+ * @method void setSubnetId(string $SubnetId) Set subnet id
+ * @method string getVpcEndpoint() Obtain vpc Access Point Information
+ * @method void setVpcEndpoint(string $VpcEndpoint) Set vpc Access Point Information
  * @method string getVpcDataStreamEndpointStatus() Obtain Access point status. valid values: OFF, ON, CREATING, DELETING.
  * @method void setVpcDataStreamEndpointStatus(string $VpcDataStreamEndpointStatus) Set Access point status. valid values: OFF, ON, CREATING, DELETING.
  * @method string getVpcTlsEndpoint() Obtain Encrypted TLS data stream access point.
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class VpcEndpointInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string vpc id
      */
     public $VpcId;
 
     /**
-     * @var string 
+     * @var string subnet id
      */
     public $SubnetId;
 
     /**
-     * @var string 
+     * @var string vpc Access Point Information
      */
     public $VpcEndpoint;
 
@@ -59,9 +59,9 @@ class VpcEndpointInfo extends AbstractModel
     public $VpcTlsEndpoint;
 
     /**
-     * @param string $VpcId 
-     * @param string $SubnetId 
-     * @param string $VpcEndpoint 
+     * @param string $VpcId vpc id
+     * @param string $SubnetId subnet id
+     * @param string $VpcEndpoint vpc Access Point Information
      * @param string $VpcDataStreamEndpointStatus Access point status. valid values: OFF, ON, CREATING, DELETING.
      * @param string $VpcTlsEndpoint Encrypted TLS data stream access point.
      */

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewSlaveZone(string $NewSlaveZone) Set New replica AZ
  * @method string getBinlogSyncWay() Obtain Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
  * @method void setBinlogSyncWay(string $BinlogSyncWay) Set Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
- * @method integer getSemiSyncTimeout() Obtain 
- * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) Set 
+ * @method integer getSemiSyncTimeout() Obtain Semi-sync timeout period in ms. To ensure business stability, the semi-synchronous replication includes a degradation mechanism. If the primary AZ cluster exceeds this timeout while waiting for transaction confirmation from the secondary AZ cluster, the replication mode will fall back to asynchronous replication. Minimum setting: 1000 ms; maximum support: 4294967295 ms; default: 10000 ms.
+ * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) Set Semi-sync timeout period in ms. To ensure business stability, the semi-synchronous replication includes a degradation mechanism. If the primary AZ cluster exceeds this timeout while waiting for transaction confirmation from the secondary AZ cluster, the replication mode will fall back to asynchronous replication. Minimum setting: 1000 ms; maximum support: 4294967295 ms; default: 10000 ms.
  */
 class ModifyClusterSlaveZoneRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ModifyClusterSlaveZoneRequest extends AbstractModel
     public $BinlogSyncWay;
 
     /**
-     * @var integer 
+     * @var integer Semi-sync timeout period in ms. To ensure business stability, the semi-synchronous replication includes a degradation mechanism. If the primary AZ cluster exceeds this timeout while waiting for transaction confirmation from the secondary AZ cluster, the replication mode will fall back to asynchronous replication. Minimum setting: 1000 ms; maximum support: 4294967295 ms; default: 10000 ms.
      */
     public $SemiSyncTimeout;
 
@@ -63,7 +63,7 @@ class ModifyClusterSlaveZoneRequest extends AbstractModel
      * @param string $OldSlaveZone Old replica AZ
      * @param string $NewSlaveZone New replica AZ
      * @param string $BinlogSyncWay Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
-     * @param integer $SemiSyncTimeout 
+     * @param integer $SemiSyncTimeout Semi-sync timeout period in ms. To ensure business stability, the semi-synchronous replication includes a degradation mechanism. If the primary AZ cluster exceeds this timeout while waiting for transaction confirmation from the secondary AZ cluster, the replication mode will fall back to asynchronous replication. Minimum setting: 1000 ms; maximum support: 4294967295 ms; default: 10000 ms.
      */
     function __construct()
     {

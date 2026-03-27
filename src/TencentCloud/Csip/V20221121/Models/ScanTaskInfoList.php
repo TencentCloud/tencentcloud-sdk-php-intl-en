@@ -116,8 +116,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCWPBlProcess(integer $CWPBlProcess) Set CWPP baseline check task progress
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getErrorCode() Obtain 
- * @method void setErrorCode(integer $ErrorCode) Set 
+ * @method integer getErrorCode() Obtain Exception status codes
+ * @method void setErrorCode(integer $ErrorCode) Set Exception status codes
  * @method string getErrorInfo() Obtain Exception information
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setErrorInfo(string $ErrorInfo) Set Exception information
@@ -326,7 +326,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CWPBlProcess;
 
     /**
-     * @var integer 
+     * @var integer Exception status codes
      */
     public $ErrorCode;
 
@@ -469,7 +469,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CWPBlProcess CWPP baseline check task progress
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ErrorCode 
+     * @param integer $ErrorCode Exception status codes
      * @param string $ErrorInfo Exception information
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $StartDay Day of the month to start the scheduled task

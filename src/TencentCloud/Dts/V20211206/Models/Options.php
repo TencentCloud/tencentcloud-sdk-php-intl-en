@@ -60,10 +60,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) Set Settings of the automatic retry time range
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getFilterBeginCommit() Obtain 
- * @method void setFilterBeginCommit(boolean $FilterBeginCommit) Set 
- * @method boolean getFilterCheckpoint() Obtain 
- * @method void setFilterCheckpoint(boolean $FilterCheckpoint) Set 
+ * @method boolean getFilterBeginCommit() Obtain Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+ * @method void setFilterBeginCommit(boolean $FilterBeginCommit) Set Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+ * @method boolean getFilterCheckpoint() Obtain Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+ * @method void setFilterCheckpoint(boolean $FilterCheckpoint) Set Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
  */
 class Options extends AbstractModel
 {
@@ -128,12 +128,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AutoRetryTimeRangeMinutes;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
      */
     public $FilterBeginCommit;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
      */
     public $FilterCheckpoint;
 
@@ -158,8 +158,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $AutoRetryTimeRangeMinutes Settings of the automatic retry time range
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $FilterBeginCommit 
-     * @param boolean $FilterCheckpoint 
+     * @param boolean $FilterBeginCommit Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+     * @param boolean $FilterCheckpoint Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
      */
     function __construct()
     {

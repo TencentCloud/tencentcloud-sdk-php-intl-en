@@ -18,7 +18,7 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * RabbitMQ Cluster Allowlist Information
  *
  * @method string getWhiteList() Obtain Deprecated.
  * @method void setWhiteList(string $WhiteList) Set Deprecated.
@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicControlConsoleWhiteList(string $PublicControlConsoleWhiteList) Set Public network console allowlist.
  * @method string getPublicDataStreamWhiteList() Obtain Public network data flow allowlist.
  * @method void setPublicDataStreamWhiteList(string $PublicDataStreamWhiteList) Set Public network data flow allowlist.
- * @method string getPublicControlConsoleWhiteListStatus() Obtain 
- * @method void setPublicControlConsoleWhiteListStatus(string $PublicControlConsoleWhiteListStatus) Set 
- * @method string getPublicDataStreamWhiteListStatus() Obtain 
- * @method void setPublicDataStreamWhiteListStatus(string $PublicDataStreamWhiteListStatus) Set 
+ * @method string getPublicControlConsoleWhiteListStatus() Obtain Public Network Management Console Allowlist Status
+ * @method void setPublicControlConsoleWhiteListStatus(string $PublicControlConsoleWhiteListStatus) Set Public Network Management Console Allowlist Status
+ * @method string getPublicDataStreamWhiteListStatus() Obtain Public Network Data Flow Allowlist Status
+ * @method void setPublicDataStreamWhiteListStatus(string $PublicDataStreamWhiteListStatus) Set Public Network Data Flow Allowlist Status
  */
 class RabbitMQClusterWhiteListInfo extends AbstractModel
 {
@@ -49,12 +49,12 @@ class RabbitMQClusterWhiteListInfo extends AbstractModel
     public $PublicDataStreamWhiteList;
 
     /**
-     * @var string 
+     * @var string Public Network Management Console Allowlist Status
      */
     public $PublicControlConsoleWhiteListStatus;
 
     /**
-     * @var string 
+     * @var string Public Network Data Flow Allowlist Status
      */
     public $PublicDataStreamWhiteListStatus;
 
@@ -62,8 +62,8 @@ class RabbitMQClusterWhiteListInfo extends AbstractModel
      * @param string $WhiteList Deprecated.
      * @param string $PublicControlConsoleWhiteList Public network console allowlist.
      * @param string $PublicDataStreamWhiteList Public network data flow allowlist.
-     * @param string $PublicControlConsoleWhiteListStatus 
-     * @param string $PublicDataStreamWhiteListStatus 
+     * @param string $PublicControlConsoleWhiteListStatus Public Network Management Console Allowlist Status
+     * @param string $PublicDataStreamWhiteListStatus Public Network Data Flow Allowlist Status
      */
     function __construct()
     {

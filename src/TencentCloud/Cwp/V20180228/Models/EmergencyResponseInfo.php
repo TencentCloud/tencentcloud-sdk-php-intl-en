@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) Set Task ID
  * @method integer getHostNum() Obtain Number of hosts
  * @method void setHostNum(integer $HostNum) Set Number of hosts
- * @method integer getStatus() Obtain 
- * @method void setStatus(integer $Status) Set 
+ * @method integer getStatus() Obtain Service status: 0 not started, · in progress, 2 completed
+ * @method void setStatus(integer $Status) Set Service status: 0 not started, · in progress, 2 completed
  * @method string getStartTime() Obtain Service start time
  * @method void setStartTime(string $StartTime) Set Service start time
  * @method string getEndTime() Obtain Service end time
@@ -46,7 +46,7 @@ class EmergencyResponseInfo extends AbstractModel
     public $HostNum;
 
     /**
-     * @var integer 
+     * @var integer Service status: 0 not started, · in progress, 2 completed
      */
     public $Status;
 
@@ -68,7 +68,7 @@ class EmergencyResponseInfo extends AbstractModel
     /**
      * @param string $TaskId Task ID
      * @param integer $HostNum Number of hosts
-     * @param integer $Status 
+     * @param integer $Status Service status: 0 not started, · in progress, 2 completed
      * @param string $StartTime Service start time
      * @param string $EndTime Service end time
      * @param string $ReportPath Report download link

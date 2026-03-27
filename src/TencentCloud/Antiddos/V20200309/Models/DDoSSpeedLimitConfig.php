@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpeedValues(array $SpeedValues) Set Rate limit value. This field contains at least one valid rate limit type. Note that only up to one value of each type is supported.
  * @method array getDstPortScopes() Obtain This field is replaced with a new field DstPortList.
  * @method void setDstPortScopes(array $DstPortScopes) Set This field is replaced with a new field DstPortList.
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
+ * @method string getId() Obtain Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in.
+ * @method void setId(string $Id) Set Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in.
  * @method string getProtocolList() Obtain IP protocol number. Valid values:
 `ALL`: all protocols
 `TCP`: TCP protocol
@@ -74,7 +74,7 @@ class DDoSSpeedLimitConfig extends AbstractModel
     public $DstPortScopes;
 
     /**
-     * @var string 
+     * @var string Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in.
      */
     public $Id;
 
@@ -102,7 +102,7 @@ Note: For custom protocol ranges, only protocol number is supported. Multiple ra
 ]
      * @param array $SpeedValues Rate limit value. This field contains at least one valid rate limit type. Note that only up to one value of each type is supported.
      * @param array $DstPortScopes This field is replaced with a new field DstPortList.
-     * @param string $Id 
+     * @param string $Id Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in.
      * @param string $ProtocolList IP protocol number. Valid values:
 `ALL`: all protocols
 `TCP`: TCP protocol

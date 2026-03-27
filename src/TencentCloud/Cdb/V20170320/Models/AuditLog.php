@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAffectRows(integer $AffectRows) Set Number of affected rows
  * @method integer getErrCode() Obtain The error code
  * @method void setErrCode(integer $ErrCode) Set The error code
- * @method string getSqlType() Obtain 
- * @method void setSqlType(string $SqlType) Set 
+ * @method string getSqlType() Obtain SQL Type.
+ * @method void setSqlType(string $SqlType) Set SQL Type.
  * @method string getPolicyName() Obtain Audit policy name, which will be unavailable soon.
  * @method void setPolicyName(string $PolicyName) Set Audit policy name, which will be unavailable soon.
- * @method string getDBName() Obtain 
- * @method void setDBName(string $DBName) Set 
- * @method string getSql() Obtain 
- * @method void setSql(string $Sql) Set 
+ * @method string getDBName() Obtain Database Name.
+ * @method void setDBName(string $DBName) Set Database Name.
+ * @method string getSql() Obtain SQL Statement.
+ * @method void setSql(string $Sql) Set SQL Statement.
  * @method string getHost() Obtain Client address
  * @method void setHost(string $Host) Set Client address
  * @method string getUser() Obtain Username
@@ -86,7 +86,7 @@ class AuditLog extends AbstractModel
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string SQL Type.
      */
     public $SqlType;
 
@@ -96,12 +96,12 @@ class AuditLog extends AbstractModel
     public $PolicyName;
 
     /**
-     * @var string 
+     * @var string Database Name.
      */
     public $DBName;
 
     /**
-     * @var string 
+     * @var string SQL Statement.
      */
     public $Sql;
 
@@ -180,10 +180,10 @@ Note: The return value may be null, indicating that no valid data can be obtaine
     /**
      * @param integer $AffectRows Number of affected rows
      * @param integer $ErrCode The error code
-     * @param string $SqlType 
+     * @param string $SqlType SQL Type.
      * @param string $PolicyName Audit policy name, which will be unavailable soon.
-     * @param string $DBName 
-     * @param string $Sql 
+     * @param string $DBName Database Name.
+     * @param string $Sql SQL Statement.
      * @param string $Host Client address
      * @param string $User Username
      * @param integer $ExecTime Execution time (μs)

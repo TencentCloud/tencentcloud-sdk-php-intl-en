@@ -40,154 +40,158 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeatUser(SeatUserInfo $SeatUser) Set Agent information.
  * @method integer getEndStatus() Obtain EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
 
-**Scenario**	EndStatus	EndStatusString	Status description.
+**Scenario**  **EndStatus**  **EndStatusString**  **status description**.
 
-Incoming & outgoing calls. 1. ok. normal call.
+Call in & out    1        ok                        **normal call**.
 
-IVR period user give up.
+Inbound call    102    ivrGiveUp    **user give up during IVR period**.
 
-**User give up while in queue**.
+Inbound call 103 waitingGiveUp **user give up in queue**.
 
-Inbound call 104 ringingGiveUp. specifies the user gives up during ringing.
+Inbound call 104 ringingGiveUp **user gives up during ring**.
 
-Inbound call 105. specifies no agent online.
+Inbound call	105	noSeatOnline	**no agent online**.
 
-Inbound call notWorkTime **off hours**.   
+Inbound call              106	       notWorkTime	       **off hours**.   
 
-IVR ends automatically (no manual intervention).
+Inbound call    107    ivrEnd    **IVR ends automatically (no manual intervention)**.
 
-Inbound call. 100. blocklist (system side).
+Inbound calls    100    blocklist (system side).
 
-restrictedCallee. specifies the global outbound call risk number interception (system side).
+Outgoing call              108        restrictedCallee        **global outbound call risk number blocklist (system side)**.
 
-Outbound call 109 tooManyRequest **outbound call frequency control interception (system side)**.
+Outgoing call     109        tooManyRequest    **outbound call frequency control block (system side)**.
 
-Outbound call 110 restrictedArea **block outgoing calls by region (system side)**.
+Outbound call  110  restrictedArea  **outgoing call region block (system side)**.
 
-restrictedTime. specifies the outbound call interception period on the system side.
+Outgoing call 111 restrictedTime **outbound call interception (system side)**.
                          
-202 notAnswer **callee unanswered**.
+Outgoing call             202            notAnswer	 **callee unanswered**.
 
-Outbound call 203 userReject **callee reject hangup**.
+Outgoing call            203	    userReject	**callee reject hangup**.
 
-Power off. **callee powered off**.
+Outgoing call    204    powerOff    **callee shutdown**.
 
-205            numberNotExist	**callee nonexistent number**.
+Outgoing call           205            numberNotExist	**called nonexistent number**.
 
-Busy. specifies the callee is busy.
+Outbound call    206    busy    **callee busy**.
 
-Outbound call 207 outOfCredit **callee in arrears**.
+Outbound call    207    outOfCredit    **callee in arrears**.
 
-208 operatorError indicates operator channel exception.
+208    operatorError    **operator channel exception**.
 
-Outgoing call caller cancellation.
+Outgoing call          209           callerCancel          **call cancellation by the caller**.
 
-Outgoing call	        210	           notInService	**callee out of service area**.
+Outgoing call 210 notInService **callee out of service area**.
 
-Phone call in/out 211 clientError **client error**.
+Phone call in & out 211 clientError **agent client error**.
 
-Outgoing call 212 carrierBlocked **carrier blocklist**.
+Outgoing call    212     carrierBlocked      **isp blocked**.
 
-Note: call reminder.
+Outgoing call 213 callReminder **note: call reminder**.
 
-Outbound call 215 numberInvalid **called number is invalid**.
+Outbound call 215 numberInvalid **called number invalid**.
 
-Outbound call 216 callRestricted. note: call restricted.
+Outgoing call 216 callRestricted **note: call restricted**.
 
-Callee restricted by blocklist.
+Outgoing call 217 calleeRestricted **callee blocklist restricted**.
 
-Outbound call 218 areaRestricted. **callee area restricted**.
+Outbound call 218 areaRestricted **callee area restricted**.
 
-Prompt call forwarding.
+Outbound call    219     promptCallForwarding      **note call transfer**.
 
-Caller cancellation during ringing.
+Outbound call 220 callerCancelWhileRing **caller cancellation while ringing**.
 
-Caller cancel without ring.
+Outgoing call 221 callerCancelWithoutRing **called number anomaly without ring**.
 
-Audio dial-in 501 call conflict **VoIP user call termination**.
+Outgoing call  222  voiceMailReached  **voice mail hangup**.
 
-VoIP user client timeout.
+Audio inbound 501 callConflict **VoIP user call conflict termination**.
 
-Audio dial-in 503 VoIP user client error.
+Audio dial-in 502 clientTimeout **VoIP user client timeout**.
 
-Chinese version please go domestic site (https://cloud.tencent.com/document/product/679/123938).
+Audio inbound 503 voipClientError **VoIP client error**.
 
-English version please go international site (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
  * @method void setEndStatus(integer $EndStatus) Set EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
 
-**Scenario**	EndStatus	EndStatusString	Status description.
+**Scenario**  **EndStatus**  **EndStatusString**  **status description**.
 
-Incoming & outgoing calls. 1. ok. normal call.
+Call in & out    1        ok                        **normal call**.
 
-IVR period user give up.
+Inbound call    102    ivrGiveUp    **user give up during IVR period**.
 
-**User give up while in queue**.
+Inbound call 103 waitingGiveUp **user give up in queue**.
 
-Inbound call 104 ringingGiveUp. specifies the user gives up during ringing.
+Inbound call 104 ringingGiveUp **user gives up during ring**.
 
-Inbound call 105. specifies no agent online.
+Inbound call	105	noSeatOnline	**no agent online**.
 
-Inbound call notWorkTime **off hours**.   
+Inbound call              106	       notWorkTime	       **off hours**.   
 
-IVR ends automatically (no manual intervention).
+Inbound call    107    ivrEnd    **IVR ends automatically (no manual intervention)**.
 
-Inbound call. 100. blocklist (system side).
+Inbound calls    100    blocklist (system side).
 
-restrictedCallee. specifies the global outbound call risk number interception (system side).
+Outgoing call              108        restrictedCallee        **global outbound call risk number blocklist (system side)**.
 
-Outbound call 109 tooManyRequest **outbound call frequency control interception (system side)**.
+Outgoing call     109        tooManyRequest    **outbound call frequency control block (system side)**.
 
-Outbound call 110 restrictedArea **block outgoing calls by region (system side)**.
+Outbound call  110  restrictedArea  **outgoing call region block (system side)**.
 
-restrictedTime. specifies the outbound call interception period on the system side.
+Outgoing call 111 restrictedTime **outbound call interception (system side)**.
                          
-202 notAnswer **callee unanswered**.
+Outgoing call             202            notAnswer	 **callee unanswered**.
 
-Outbound call 203 userReject **callee reject hangup**.
+Outgoing call            203	    userReject	**callee reject hangup**.
 
-Power off. **callee powered off**.
+Outgoing call    204    powerOff    **callee shutdown**.
 
-205            numberNotExist	**callee nonexistent number**.
+Outgoing call           205            numberNotExist	**called nonexistent number**.
 
-Busy. specifies the callee is busy.
+Outbound call    206    busy    **callee busy**.
 
-Outbound call 207 outOfCredit **callee in arrears**.
+Outbound call    207    outOfCredit    **callee in arrears**.
 
-208 operatorError indicates operator channel exception.
+208    operatorError    **operator channel exception**.
 
-Outgoing call caller cancellation.
+Outgoing call          209           callerCancel          **call cancellation by the caller**.
 
-Outgoing call	        210	           notInService	**callee out of service area**.
+Outgoing call 210 notInService **callee out of service area**.
 
-Phone call in/out 211 clientError **client error**.
+Phone call in & out 211 clientError **agent client error**.
 
-Outgoing call 212 carrierBlocked **carrier blocklist**.
+Outgoing call    212     carrierBlocked      **isp blocked**.
 
-Note: call reminder.
+Outgoing call 213 callReminder **note: call reminder**.
 
-Outbound call 215 numberInvalid **called number is invalid**.
+Outbound call 215 numberInvalid **called number invalid**.
 
-Outbound call 216 callRestricted. note: call restricted.
+Outgoing call 216 callRestricted **note: call restricted**.
 
-Callee restricted by blocklist.
+Outgoing call 217 calleeRestricted **callee blocklist restricted**.
 
-Outbound call 218 areaRestricted. **callee area restricted**.
+Outbound call 218 areaRestricted **callee area restricted**.
 
-Prompt call forwarding.
+Outbound call    219     promptCallForwarding      **note call transfer**.
 
-Caller cancellation during ringing.
+Outbound call 220 callerCancelWhileRing **caller cancellation while ringing**.
 
-Caller cancel without ring.
+Outgoing call 221 callerCancelWithoutRing **called number anomaly without ring**.
 
-Audio dial-in 501 call conflict **VoIP user call termination**.
+Outgoing call  222  voiceMailReached  **voice mail hangup**.
 
-VoIP user client timeout.
+Audio inbound 501 callConflict **VoIP user call conflict termination**.
 
-Audio dial-in 503 VoIP user client error.
+Audio dial-in 502 clientTimeout **VoIP user client timeout**.
 
-Chinese version please go domestic site (https://cloud.tencent.com/document/product/679/123938).
+Audio inbound 503 voipClientError **VoIP client error**.
 
-English version please go international site (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
  * @method string getSkillGroup() Obtain Skill group name.
  * @method void setSkillGroup(string $SkillGroup) Set Skill group name.
  * @method string getCallerLocation() Obtain Caller'S location.
@@ -256,6 +260,14 @@ No record (offline asr generation is not enabled or no package is available).
  * @method void setVoicemailRecordURL(array $VoicemailRecordURL) Set Audio message recording url during call.
  * @method array getVoicemailAsrURL() Obtain Text information address of asr audio message during a call.
  * @method void setVoicemailAsrURL(array $VoicemailAsrURL) Set Text information address of asr audio message during a call.
+ * @method integer getAIAgentId() Obtain If it is a call related to intelligent agent, this is the intelligent agent ID.
+ * @method void setAIAgentId(integer $AIAgentId) Set If it is a call related to intelligent agent, this is the intelligent agent ID.
+ * @method string getAIAgentName() Obtain If it is a call related to intelligent agent, this is the intelligent agent name.
+ * @method void setAIAgentName(string $AIAgentName) Set If it is a call related to intelligent agent, this is the intelligent agent name.
+ * @method integer getSysHangupReason() Obtain Reasons for system hang-up after connection, enumeration class.
+ * @method void setSysHangupReason(integer $SysHangupReason) Set Reasons for system hang-up after connection, enumeration class.
+ * @method string getSysHangupReasonString() Obtain Reason for hang-up after connect, text description.
+ * @method void setSysHangupReasonString(string $SysHangupReasonString) Set Reason for hang-up after connect, text description.
  */
 class TelCdrInfo extends AbstractModel
 {
@@ -307,79 +319,81 @@ class TelCdrInfo extends AbstractModel
     /**
      * @var integer EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
 
-**Scenario**	EndStatus	EndStatusString	Status description.
+**Scenario**  **EndStatus**  **EndStatusString**  **status description**.
 
-Incoming & outgoing calls. 1. ok. normal call.
+Call in & out    1        ok                        **normal call**.
 
-IVR period user give up.
+Inbound call    102    ivrGiveUp    **user give up during IVR period**.
 
-**User give up while in queue**.
+Inbound call 103 waitingGiveUp **user give up in queue**.
 
-Inbound call 104 ringingGiveUp. specifies the user gives up during ringing.
+Inbound call 104 ringingGiveUp **user gives up during ring**.
 
-Inbound call 105. specifies no agent online.
+Inbound call	105	noSeatOnline	**no agent online**.
 
-Inbound call notWorkTime **off hours**.   
+Inbound call              106	       notWorkTime	       **off hours**.   
 
-IVR ends automatically (no manual intervention).
+Inbound call    107    ivrEnd    **IVR ends automatically (no manual intervention)**.
 
-Inbound call. 100. blocklist (system side).
+Inbound calls    100    blocklist (system side).
 
-restrictedCallee. specifies the global outbound call risk number interception (system side).
+Outgoing call              108        restrictedCallee        **global outbound call risk number blocklist (system side)**.
 
-Outbound call 109 tooManyRequest **outbound call frequency control interception (system side)**.
+Outgoing call     109        tooManyRequest    **outbound call frequency control block (system side)**.
 
-Outbound call 110 restrictedArea **block outgoing calls by region (system side)**.
+Outbound call  110  restrictedArea  **outgoing call region block (system side)**.
 
-restrictedTime. specifies the outbound call interception period on the system side.
+Outgoing call 111 restrictedTime **outbound call interception (system side)**.
                          
-202 notAnswer **callee unanswered**.
+Outgoing call             202            notAnswer	 **callee unanswered**.
 
-Outbound call 203 userReject **callee reject hangup**.
+Outgoing call            203	    userReject	**callee reject hangup**.
 
-Power off. **callee powered off**.
+Outgoing call    204    powerOff    **callee shutdown**.
 
-205            numberNotExist	**callee nonexistent number**.
+Outgoing call           205            numberNotExist	**called nonexistent number**.
 
-Busy. specifies the callee is busy.
+Outbound call    206    busy    **callee busy**.
 
-Outbound call 207 outOfCredit **callee in arrears**.
+Outbound call    207    outOfCredit    **callee in arrears**.
 
-208 operatorError indicates operator channel exception.
+208    operatorError    **operator channel exception**.
 
-Outgoing call caller cancellation.
+Outgoing call          209           callerCancel          **call cancellation by the caller**.
 
-Outgoing call	        210	           notInService	**callee out of service area**.
+Outgoing call 210 notInService **callee out of service area**.
 
-Phone call in/out 211 clientError **client error**.
+Phone call in & out 211 clientError **agent client error**.
 
-Outgoing call 212 carrierBlocked **carrier blocklist**.
+Outgoing call    212     carrierBlocked      **isp blocked**.
 
-Note: call reminder.
+Outgoing call 213 callReminder **note: call reminder**.
 
-Outbound call 215 numberInvalid **called number is invalid**.
+Outbound call 215 numberInvalid **called number invalid**.
 
-Outbound call 216 callRestricted. note: call restricted.
+Outgoing call 216 callRestricted **note: call restricted**.
 
-Callee restricted by blocklist.
+Outgoing call 217 calleeRestricted **callee blocklist restricted**.
 
-Outbound call 218 areaRestricted. **callee area restricted**.
+Outbound call 218 areaRestricted **callee area restricted**.
 
-Prompt call forwarding.
+Outbound call    219     promptCallForwarding      **note call transfer**.
 
-Caller cancellation during ringing.
+Outbound call 220 callerCancelWhileRing **caller cancellation while ringing**.
 
-Caller cancel without ring.
+Outgoing call 221 callerCancelWithoutRing **called number anomaly without ring**.
 
-Audio dial-in 501 call conflict **VoIP user call termination**.
+Outgoing call  222  voiceMailReached  **voice mail hangup**.
 
-VoIP user client timeout.
+Audio inbound 501 callConflict **VoIP user call conflict termination**.
 
-Audio dial-in 503 VoIP user client error.
+Audio dial-in 502 clientTimeout **VoIP user client timeout**.
 
-Chinese version please go domestic site (https://cloud.tencent.com/document/product/679/123938).
+Audio inbound 503 voipClientError **VoIP client error**.
 
-English version please go international site (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
      */
     public $EndStatus;
 
@@ -531,6 +545,26 @@ No record (offline asr generation is not enabled or no package is available).
     public $VoicemailAsrURL;
 
     /**
+     * @var integer If it is a call related to intelligent agent, this is the intelligent agent ID.
+     */
+    public $AIAgentId;
+
+    /**
+     * @var string If it is a call related to intelligent agent, this is the intelligent agent name.
+     */
+    public $AIAgentName;
+
+    /**
+     * @var integer Reasons for system hang-up after connection, enumeration class.
+     */
+    public $SysHangupReason;
+
+    /**
+     * @var string Reason for hang-up after connect, text description.
+     */
+    public $SysHangupReasonString;
+
+    /**
      * @param string $Caller Caller number.
      * @param string $Callee Called number.
      * @param integer $Time Call initiation timestamp, unix timestamp.
@@ -542,79 +576,81 @@ No record (offline asr generation is not enabled or no package is available).
      * @param SeatUserInfo $SeatUser Agent information.
      * @param integer $EndStatus EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
 
-**Scenario**	EndStatus	EndStatusString	Status description.
+**Scenario**  **EndStatus**  **EndStatusString**  **status description**.
 
-Incoming & outgoing calls. 1. ok. normal call.
+Call in & out    1        ok                        **normal call**.
 
-IVR period user give up.
+Inbound call    102    ivrGiveUp    **user give up during IVR period**.
 
-**User give up while in queue**.
+Inbound call 103 waitingGiveUp **user give up in queue**.
 
-Inbound call 104 ringingGiveUp. specifies the user gives up during ringing.
+Inbound call 104 ringingGiveUp **user gives up during ring**.
 
-Inbound call 105. specifies no agent online.
+Inbound call	105	noSeatOnline	**no agent online**.
 
-Inbound call notWorkTime **off hours**.   
+Inbound call              106	       notWorkTime	       **off hours**.   
 
-IVR ends automatically (no manual intervention).
+Inbound call    107    ivrEnd    **IVR ends automatically (no manual intervention)**.
 
-Inbound call. 100. blocklist (system side).
+Inbound calls    100    blocklist (system side).
 
-restrictedCallee. specifies the global outbound call risk number interception (system side).
+Outgoing call              108        restrictedCallee        **global outbound call risk number blocklist (system side)**.
 
-Outbound call 109 tooManyRequest **outbound call frequency control interception (system side)**.
+Outgoing call     109        tooManyRequest    **outbound call frequency control block (system side)**.
 
-Outbound call 110 restrictedArea **block outgoing calls by region (system side)**.
+Outbound call  110  restrictedArea  **outgoing call region block (system side)**.
 
-restrictedTime. specifies the outbound call interception period on the system side.
+Outgoing call 111 restrictedTime **outbound call interception (system side)**.
                          
-202 notAnswer **callee unanswered**.
+Outgoing call             202            notAnswer	 **callee unanswered**.
 
-Outbound call 203 userReject **callee reject hangup**.
+Outgoing call            203	    userReject	**callee reject hangup**.
 
-Power off. **callee powered off**.
+Outgoing call    204    powerOff    **callee shutdown**.
 
-205            numberNotExist	**callee nonexistent number**.
+Outgoing call           205            numberNotExist	**called nonexistent number**.
 
-Busy. specifies the callee is busy.
+Outbound call    206    busy    **callee busy**.
 
-Outbound call 207 outOfCredit **callee in arrears**.
+Outbound call    207    outOfCredit    **callee in arrears**.
 
-208 operatorError indicates operator channel exception.
+208    operatorError    **operator channel exception**.
 
-Outgoing call caller cancellation.
+Outgoing call          209           callerCancel          **call cancellation by the caller**.
 
-Outgoing call	        210	           notInService	**callee out of service area**.
+Outgoing call 210 notInService **callee out of service area**.
 
-Phone call in/out 211 clientError **client error**.
+Phone call in & out 211 clientError **agent client error**.
 
-Outgoing call 212 carrierBlocked **carrier blocklist**.
+Outgoing call    212     carrierBlocked      **isp blocked**.
 
-Note: call reminder.
+Outgoing call 213 callReminder **note: call reminder**.
 
-Outbound call 215 numberInvalid **called number is invalid**.
+Outbound call 215 numberInvalid **called number invalid**.
 
-Outbound call 216 callRestricted. note: call restricted.
+Outgoing call 216 callRestricted **note: call restricted**.
 
-Callee restricted by blocklist.
+Outgoing call 217 calleeRestricted **callee blocklist restricted**.
 
-Outbound call 218 areaRestricted. **callee area restricted**.
+Outbound call 218 areaRestricted **callee area restricted**.
 
-Prompt call forwarding.
+Outbound call    219     promptCallForwarding      **note call transfer**.
 
-Caller cancellation during ringing.
+Outbound call 220 callerCancelWhileRing **caller cancellation while ringing**.
 
-Caller cancel without ring.
+Outgoing call 221 callerCancelWithoutRing **called number anomaly without ring**.
 
-Audio dial-in 501 call conflict **VoIP user call termination**.
+Outgoing call  222  voiceMailReached  **voice mail hangup**.
 
-VoIP user client timeout.
+Audio inbound 501 callConflict **VoIP user call conflict termination**.
 
-Audio dial-in 503 VoIP user client error.
+Audio dial-in 502 clientTimeout **VoIP user client timeout**.
 
-Chinese version please go domestic site (https://cloud.tencent.com/document/product/679/123938).
+Audio inbound 503 voipClientError **VoIP client error**.
 
-English version please go international site (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
      * @param string $SkillGroup Skill group name.
      * @param string $CallerLocation Caller'S location.
      * @param integer $IVRDuration Time spent in ivr stage.
@@ -649,6 +685,10 @@ No record (offline asr generation is not enabled or no package is available).
      * @param string $QueuedSkillGroupName Queue skill group name.
      * @param array $VoicemailRecordURL Audio message recording url during call.
      * @param array $VoicemailAsrURL Text information address of asr audio message during a call.
+     * @param integer $AIAgentId If it is a call related to intelligent agent, this is the intelligent agent ID.
+     * @param string $AIAgentName If it is a call related to intelligent agent, this is the intelligent agent name.
+     * @param integer $SysHangupReason Reasons for system hang-up after connection, enumeration class.
+     * @param string $SysHangupReasonString Reason for hang-up after connect, text description.
      */
     function __construct()
     {
@@ -829,6 +869,22 @@ No record (offline asr generation is not enabled or no package is available).
 
         if (array_key_exists("VoicemailAsrURL",$param) and $param["VoicemailAsrURL"] !== null) {
             $this->VoicemailAsrURL = $param["VoicemailAsrURL"];
+        }
+
+        if (array_key_exists("AIAgentId",$param) and $param["AIAgentId"] !== null) {
+            $this->AIAgentId = $param["AIAgentId"];
+        }
+
+        if (array_key_exists("AIAgentName",$param) and $param["AIAgentName"] !== null) {
+            $this->AIAgentName = $param["AIAgentName"];
+        }
+
+        if (array_key_exists("SysHangupReason",$param) and $param["SysHangupReason"] !== null) {
+            $this->SysHangupReason = $param["SysHangupReason"];
+        }
+
+        if (array_key_exists("SysHangupReasonString",$param) and $param["SysHangupReasonString"] !== null) {
+            $this->SysHangupReasonString = $param["SysHangupReasonString"];
         }
     }
 }

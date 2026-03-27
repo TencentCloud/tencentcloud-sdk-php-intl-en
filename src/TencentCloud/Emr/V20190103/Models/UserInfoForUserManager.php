@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) Set Username
  * @method string getUserGroup() Obtain The group to which the user belongs
  * @method void setUserGroup(string $UserGroup) Set The group to which the user belongs
- * @method string getPassWord() Obtain 
- * @method void setPassWord(string $PassWord) Set 
- * @method string getReMark() Obtain 
- * @method void setReMark(string $ReMark) Set 
+ * @method string getPassWord() Obtain Password
+ * @method void setPassWord(string $PassWord) Set Password
+ * @method string getReMark() Obtain Remarks
+ * @method void setReMark(string $ReMark) Set Remarks
  * @method array getGroups() Obtain User subgroup.
  * @method void setGroups(array $Groups) Set User subgroup.
  */
@@ -44,12 +44,12 @@ class UserInfoForUserManager extends AbstractModel
     public $UserGroup;
 
     /**
-     * @var string 
+     * @var string Password
      */
     public $PassWord;
 
     /**
-     * @var string 
+     * @var string Remarks
      */
     public $ReMark;
 
@@ -61,8 +61,8 @@ class UserInfoForUserManager extends AbstractModel
     /**
      * @param string $UserName Username
      * @param string $UserGroup The group to which the user belongs
-     * @param string $PassWord 
-     * @param string $ReMark 
+     * @param string $PassWord Password
+     * @param string $ReMark Remarks
      * @param array $Groups User subgroup.
      */
     function __construct()

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getIpList() Obtain List of IP resources
  * @method void setIpList(array $IpList) Set List of IP resources
- * @method array getIdList() Obtain 
- * @method void setIdList(array $IdList) Set 
- * @method integer getFilterRegion() Obtain 
- * @method void setFilterRegion(integer $FilterRegion) Set 
- * @method array getCnameWafIdList() Obtain 
- * @method void setCnameWafIdList(array $CnameWafIdList) Set 
+ * @method array getIdList() Obtain Pass id for domain-bound resources
+ * @method void setIdList(array $IdList) Set Pass id for domain-bound resources
+ * @method integer getFilterRegion() Obtain region name
+ * @method void setFilterRegion(integer $FilterRegion) Set region name
+ * @method array getCnameWafIdList() Obtain CNAME WAF resource
+ * @method void setCnameWafIdList(array $CnameWafIdList) Set CNAME WAF resource
  */
 class DescribeBasicDeviceStatusRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class DescribeBasicDeviceStatusRequest extends AbstractModel
     public $IpList;
 
     /**
-     * @var array 
+     * @var array Pass id for domain-bound resources
      */
     public $IdList;
 
     /**
-     * @var integer 
+     * @var integer region name
      */
     public $FilterRegion;
 
     /**
-     * @var array 
+     * @var array CNAME WAF resource
      */
     public $CnameWafIdList;
 
     /**
      * @param array $IpList List of IP resources
-     * @param array $IdList 
-     * @param integer $FilterRegion 
-     * @param array $CnameWafIdList 
+     * @param array $IdList Pass id for domain-bound resources
+     * @param integer $FilterRegion region name
+     * @param array $CnameWafIdList CNAME WAF resource
      */
     function __construct()
     {

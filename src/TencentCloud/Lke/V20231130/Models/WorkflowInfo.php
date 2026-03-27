@@ -18,60 +18,60 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Workflow Information
  *
- * @method string getWorkflowId() Obtain 
- * @method void setWorkflowId(string $WorkflowId) Set 
- * @method string getWorkflowName() Obtain 
- * @method void setWorkflowName(string $WorkflowName) Set 
- * @method string getWorkflowRunId() Obtain 
- * @method void setWorkflowRunId(string $WorkflowRunId) Set 
- * @method array getOptionCards() Obtain 
- * @method void setOptionCards(array $OptionCards) Set 
- * @method array getOutputs() Obtain 
- * @method void setOutputs(array $Outputs) Set 
- * @method string getWorkflowReleaseTime() Obtain 
- * @method void setWorkflowReleaseTime(string $WorkflowReleaseTime) Set 
+ * @method string getWorkflowId() Obtain Workflow ID
+ * @method void setWorkflowId(string $WorkflowId) Set Workflow ID
+ * @method string getWorkflowName() Obtain Workflow Name
+ * @method void setWorkflowName(string $WorkflowName) Set Workflow Name
+ * @method string getWorkflowRunId() Obtain Workflow Run ID
+ * @method void setWorkflowRunId(string $WorkflowRunId) Set Workflow Run ID
+ * @method array getOptionCards() Obtain Tab
+ * @method void setOptionCards(array $OptionCards) Set Tab
+ * @method array getOutputs() Obtain Multi-bubble output results
+ * @method void setOutputs(array $Outputs) Set Multi-bubble output results
+ * @method string getWorkflowReleaseTime() Obtain Workflow Publish Time, unix timestamp
+ * @method void setWorkflowReleaseTime(string $WorkflowReleaseTime) Set Workflow Publish Time, unix timestamp
  */
 class WorkflowInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Workflow ID
      */
     public $WorkflowId;
 
     /**
-     * @var string 
+     * @var string Workflow Name
      */
     public $WorkflowName;
 
     /**
-     * @var string 
+     * @var string Workflow Run ID
      */
     public $WorkflowRunId;
 
     /**
-     * @var array 
+     * @var array Tab
      */
     public $OptionCards;
 
     /**
-     * @var array 
+     * @var array Multi-bubble output results
      */
     public $Outputs;
 
     /**
-     * @var string 
+     * @var string Workflow Publish Time, unix timestamp
      */
     public $WorkflowReleaseTime;
 
     /**
-     * @param string $WorkflowId 
-     * @param string $WorkflowName 
-     * @param string $WorkflowRunId 
-     * @param array $OptionCards 
-     * @param array $Outputs 
-     * @param string $WorkflowReleaseTime 
+     * @param string $WorkflowId Workflow ID
+     * @param string $WorkflowName Workflow Name
+     * @param string $WorkflowRunId Workflow Run ID
+     * @param array $OptionCards Tab
+     * @param array $Outputs Multi-bubble output results
+     * @param string $WorkflowReleaseTime Workflow Publish Time, unix timestamp
      */
     function __construct()
     {

@@ -34,10 +34,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getUserType() Obtain User type (1: root account; 2: sub-user; 3: WeCom sub-user; 4: collaborator; 5: message recipient)
  * @method void setUserType(integer $UserType) Set User type (1: root account; 2: sub-user; 3: WeCom sub-user; 4: collaborator; 5: message recipient)
- * @method string getLastLoginIp() Obtain 
- * @method void setLastLoginIp(string $LastLoginIp) Set 
- * @method string getLastLoginTime() Obtain 
- * @method void setLastLoginTime(string $LastLoginTime) Set 
+ * @method string getLastLoginIp() Obtain Recent Login IP
+ * @method void setLastLoginIp(string $LastLoginIp) Set Recent Login IP
+ * @method string getLastLoginTime() Obtain Recent login time; if the returned value is empty, it means the console has never been logged in to.
+ * @method void setLastLoginTime(string $LastLoginTime) Set Recent login time; if the returned value is empty, it means the console has never been logged in to.
  */
 class SubAccountUser extends AbstractModel
 {
@@ -73,12 +73,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $UserType;
 
     /**
-     * @var string 
+     * @var string Recent Login IP
      */
     public $LastLoginIp;
 
     /**
-     * @var string 
+     * @var string Recent login time; if the returned value is empty, it means the console has never been logged in to.
      */
     public $LastLoginTime;
 
@@ -90,8 +90,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $CreateTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $UserType User type (1: root account; 2: sub-user; 3: WeCom sub-user; 4: collaborator; 5: message recipient)
-     * @param string $LastLoginIp 
-     * @param string $LastLoginTime 
+     * @param string $LastLoginIp Recent Login IP
+     * @param string $LastLoginTime Recent login time; if the returned value is empty, it means the console has never been logged in to.
      */
     function __construct()
     {

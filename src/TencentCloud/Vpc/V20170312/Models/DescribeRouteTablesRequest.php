@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) Set Offset.
  * @method string getLimit() Obtain The number of request objects.
  * @method void setLimit(string $Limit) Set The number of request objects.
- * @method boolean getNeedRouterInfo() Obtain 
- * @method void setNeedRouterInfo(boolean $NeedRouterInfo) Set 
+ * @method boolean getNeedRouterInfo() Obtain Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information.
+ * @method void setNeedRouterInfo(boolean $NeedRouterInfo) Set Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information.
  */
 class DescribeRouteTablesRequest extends AbstractModel
 {
@@ -72,7 +72,7 @@ class DescribeRouteTablesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information.
      */
     public $NeedRouterInfo;
 
@@ -87,7 +87,7 @@ class DescribeRouteTablesRequest extends AbstractModel
      * @param array $RouteTableIds The route table instance ID, such as `rtb-azd4dt1c`.
      * @param string $Offset Offset.
      * @param string $Limit The number of request objects.
-     * @param boolean $NeedRouterInfo 
+     * @param boolean $NeedRouterInfo Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information.
      */
     function __construct()
     {

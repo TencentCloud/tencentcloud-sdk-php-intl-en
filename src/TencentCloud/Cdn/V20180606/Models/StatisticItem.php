@@ -52,8 +52,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setMetric(string $Metric) Set Metric type. `flux`: Traffic; `bandwidth`: Bandwidth.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getCycle() Obtain 
- * @method void setCycle(integer $Cycle) Set 
+ * @method integer getCycle() Obtain Detection Cycle, Unit: Minutes, 60 or 1440
+ * @method void setCycle(integer $Cycle) Set Detection Cycle, Unit: Minutes, 60 or 1440
  * @method string getSwitch() Obtain Whether to enable cumulative usage limit. Values:
 `on`: Enable
 `off`: Disable
@@ -110,7 +110,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Metric;
 
     /**
-     * @var integer 
+     * @var integer Detection Cycle, Unit: Minutes, 60 or 1440
      */
     public $Cycle;
 
@@ -139,7 +139,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Metric Metric type. `flux`: Traffic; `bandwidth`: Bandwidth.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $Cycle 
+     * @param integer $Cycle Detection Cycle, Unit: Minutes, 60 or 1440
      * @param string $Switch Whether to enable cumulative usage limit. Values:
 `on`: Enable
 `off`: Disable

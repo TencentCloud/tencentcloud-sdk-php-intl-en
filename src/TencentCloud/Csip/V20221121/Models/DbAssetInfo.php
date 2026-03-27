@@ -48,8 +48,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setRegion(string $Region) Set Region
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getVpcId() Obtain 
- * @method void setVpcId(string $VpcId) Set 
+ * @method string getVpcId() Obtain vpc information
+ * @method void setVpcId(string $VpcId) Set vpc information
  * @method string getAssetName() Obtain Asset name
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetName(string $AssetName) Set Asset name
@@ -108,7 +108,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $Region;
 
     /**
-     * @var string 
+     * @var string vpc information
      */
     public $VpcId;
 
@@ -145,7 +145,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $Region Region
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $VpcId 
+     * @param string $VpcId vpc information
      * @param string $AssetName Asset name
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param integer $CFWProtectLevel CFW edition

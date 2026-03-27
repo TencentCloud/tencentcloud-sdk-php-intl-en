@@ -18,28 +18,44 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Render mobile mode parameters. Do not set this parameter when not rendering the mobile mode.
  *
- * @method integer getMobileDeviceType() Obtain 
- * @method void setMobileDeviceType(integer $MobileDeviceType) Set 
- * @method integer getScreenOrientation() Obtain 
- * @method void setScreenOrientation(integer $ScreenOrientation) Set 
+ * @method integer getMobileDeviceType() Obtain Mobile device types,
+0: Phone
+1: Tablet
+ * @method void setMobileDeviceType(integer $MobileDeviceType) Set Mobile device types,
+0: Phone
+1: Tablet
+ * @method integer getScreenOrientation() Obtain Screen orientation,
+0: Portrait,
+1: Landscape
+ * @method void setScreenOrientation(integer $ScreenOrientation) Set Screen orientation,
+0: Portrait,
+1: Landscape
  */
 class EmulateMobileParams extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Mobile device types,
+0: Phone
+1: Tablet
      */
     public $MobileDeviceType;
 
     /**
-     * @var integer 
+     * @var integer Screen orientation,
+0: Portrait,
+1: Landscape
      */
     public $ScreenOrientation;
 
     /**
-     * @param integer $MobileDeviceType 
-     * @param integer $ScreenOrientation 
+     * @param integer $MobileDeviceType Mobile device types,
+0: Phone
+1: Tablet
+     * @param integer $ScreenOrientation Screen orientation,
+0: Portrait,
+1: Landscape
      */
     function __construct()
     {

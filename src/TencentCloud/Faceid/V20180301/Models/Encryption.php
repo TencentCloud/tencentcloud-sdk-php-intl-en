@@ -18,7 +18,7 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Sensitive Data Encryption
  *
  * @method array getEncryptList() Obtain When using the encryption service, fill in the fields to be encrypted. One or more encrypted fields can be entered in this interface.
  * @method void setEncryptList(array $EncryptList) Set When using the encryption service, fill in the fields to be encrypted. One or more encrypted fields can be entered in this interface.

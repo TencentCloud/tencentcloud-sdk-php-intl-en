@@ -52,8 +52,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setPublicIpType(integer $PublicIpType) Set Public IP type
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getVpcId() Obtain 
- * @method void setVpcId(string $VpcId) Set 
+ * @method string getVpcId() Obtain vpc
+ * @method void setVpcId(string $VpcId) Set vpc
  * @method string getVpcName() Obtain VPC name
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setVpcName(string $VpcName) Set VPC name
@@ -210,7 +210,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $PublicIpType;
 
     /**
-     * @var string 
+     * @var string vpc
      */
     public $VpcId;
 
@@ -387,7 +387,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param integer $PublicIpType Public IP type
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $VpcId 
+     * @param string $VpcId vpc
      * @param string $VpcName VPC name
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param integer $AppId appid

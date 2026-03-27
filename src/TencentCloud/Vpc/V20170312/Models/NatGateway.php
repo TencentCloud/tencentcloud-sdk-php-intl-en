@@ -80,8 +80,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNatProductVersion(integer $NatProductVersion) Set NAT gateway major version. `1`: Classic, `2`: Standard
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getSmartScheduleMode() Obtain 
- * @method void setSmartScheduleMode(boolean $SmartScheduleMode) Set 
+ * @method boolean getSmartScheduleMode() Obtain Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment.
+ * @method void setSmartScheduleMode(boolean $SmartScheduleMode) Set Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment.
  */
 class NatGateway extends AbstractModel
 {
@@ -196,7 +196,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $NatProductVersion;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment.
      */
     public $SmartScheduleMode;
 
@@ -231,7 +231,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $NatProductVersion NAT gateway major version. `1`: Classic, `2`: Standard
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $SmartScheduleMode 
+     * @param boolean $SmartScheduleMode Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment.
      */
     function __construct()
     {

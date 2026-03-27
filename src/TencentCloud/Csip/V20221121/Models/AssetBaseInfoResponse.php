@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of server assets
  *
- * @method string getVpcId() Obtain 
- * @method void setVpcId(string $VpcId) Set 
+ * @method string getVpcId() Obtain vpc-id
+ * @method void setVpcId(string $VpcId) Set vpc-id
  * @method string getVpcName() Obtain vpc-name
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setVpcName(string $VpcName) Set vpc-name
@@ -138,7 +138,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 class AssetBaseInfoResponse extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string vpc-id
      */
     public $VpcId;
 
@@ -311,7 +311,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $ProtectedDay;
 
     /**
-     * @param string $VpcId 
+     * @param string $VpcId vpc-id
      * @param string $VpcName vpc-name
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $AssetName Asset name

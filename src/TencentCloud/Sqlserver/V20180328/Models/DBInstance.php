@@ -130,8 +130,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArchitecture(string $Architecture) Set Architecture flag. SINGLE: single-node; DOUBLE: two-node.
  * @method string getStyle() Obtain Type flag. EXCLUSIVE: exclusive; SHARED: shared.
  * @method void setStyle(string $Style) Set Type flag. EXCLUSIVE: exclusive; SHARED: shared.
- * @method array getMultiSlaveZones() Obtain 
- * @method void setMultiSlaveZones(array $MultiSlaveZones) Set 
+ * @method array getMultiSlaveZones() Obtain Multi-Node Instance Secondary AZ Information
+ * @method void setMultiSlaveZones(array $MultiSlaveZones) Set Multi-Node Instance Secondary AZ Information
  */
 class DBInstance extends AbstractModel
 {
@@ -407,7 +407,7 @@ class DBInstance extends AbstractModel
     public $Style;
 
     /**
-     * @var array 
+     * @var array Multi-Node Instance Secondary AZ Information
      */
     public $MultiSlaveZones;
 
@@ -467,7 +467,7 @@ class DBInstance extends AbstractModel
      * @param SlaveZones $SlaveZones Secondary AZ information on the two-node instance.
      * @param string $Architecture Architecture flag. SINGLE: single-node; DOUBLE: two-node.
      * @param string $Style Type flag. EXCLUSIVE: exclusive; SHARED: shared.
-     * @param array $MultiSlaveZones 
+     * @param array $MultiSlaveZones Multi-Node Instance Secondary AZ Information
      */
     function __construct()
     {

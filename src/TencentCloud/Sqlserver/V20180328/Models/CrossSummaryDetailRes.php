@@ -18,124 +18,124 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Cross-Region Backup Real-Time Statistics List Items
  *
- * @method integer getStatus() Obtain 
- * @method void setStatus(integer $Status) Set 
- * @method string getRegion() Obtain 
- * @method void setRegion(string $Region) Set 
- * @method string getInstanceId() Obtain 
- * @method void setInstanceId(string $InstanceId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getCrossBackupEnabled() Obtain 
- * @method void setCrossBackupEnabled(string $CrossBackupEnabled) Set 
- * @method array getCrossRegions() Obtain 
- * @method void setCrossRegions(array $CrossRegions) Set 
- * @method string getLastBackupStartTime() Obtain 
- * @method void setLastBackupStartTime(string $LastBackupStartTime) Set 
- * @method integer getCrossBackupSaveDays() Obtain 
- * @method void setCrossBackupSaveDays(integer $CrossBackupSaveDays) Set 
- * @method integer getDataBackupSpace() Obtain 
- * @method void setDataBackupSpace(integer $DataBackupSpace) Set 
- * @method integer getDataBackupCount() Obtain 
- * @method void setDataBackupCount(integer $DataBackupCount) Set 
- * @method integer getLogBackupSpace() Obtain 
- * @method void setLogBackupSpace(integer $LogBackupSpace) Set 
- * @method integer getLogBackupCount() Obtain 
- * @method void setLogBackupCount(integer $LogBackupCount) Set 
- * @method integer getActualUsedSpace() Obtain 
- * @method void setActualUsedSpace(integer $ActualUsedSpace) Set 
- * @method integer getActualUsedCount() Obtain 
- * @method void setActualUsedCount(integer $ActualUsedCount) Set 
+ * @method integer getStatus() Obtain Instance Status
+ * @method void setStatus(integer $Status) Set Instance Status
+ * @method string getRegion() Obtain Instance Region
+ * @method void setRegion(string $Region) Set Instance Region
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getName() Obtain Instance Name
+ * @method void setName(string $Name) Set Instance Name
+ * @method string getCrossBackupEnabled() Obtain Cross-Region Backup Status: enable - Enabled, disable - Disabled
+ * @method void setCrossBackupEnabled(string $CrossBackupEnabled) Set Cross-Region Backup Status: enable - Enabled, disable - Disabled
+ * @method array getCrossRegions() Obtain Cross-Region Backup Target Region
+ * @method void setCrossRegions(array $CrossRegions) Set Cross-Region Backup Target Region
+ * @method string getLastBackupStartTime() Obtain Latest Backup Start Time
+ * @method void setLastBackupStartTime(string $LastBackupStartTime) Set Latest Backup Start Time
+ * @method integer getCrossBackupSaveDays() Obtain Cross-Region Backup Retention Days
+ * @method void setCrossBackupSaveDays(integer $CrossBackupSaveDays) Set Cross-Region Backup Retention Days
+ * @method integer getDataBackupSpace() Obtain Cross-Region Data Backup Total Space
+ * @method void setDataBackupSpace(integer $DataBackupSpace) Set Cross-Region Data Backup Total Space
+ * @method integer getDataBackupCount() Obtain Cross-Region Data Backup Total File Count
+ * @method void setDataBackupCount(integer $DataBackupCount) Set Cross-Region Data Backup Total File Count
+ * @method integer getLogBackupSpace() Obtain Cross-Region Log Backup Total Space
+ * @method void setLogBackupSpace(integer $LogBackupSpace) Set Cross-Region Log Backup Total Space
+ * @method integer getLogBackupCount() Obtain Cross-Region Log Backup Total File Count
+ * @method void setLogBackupCount(integer $LogBackupCount) Set Cross-Region Log Backup Total File Count
+ * @method integer getActualUsedSpace() Obtain Cross-Region Backup Total Space
+ * @method void setActualUsedSpace(integer $ActualUsedSpace) Set Cross-Region Backup Total Space
+ * @method integer getActualUsedCount() Obtain Cross-Region Backup Total Count
+ * @method void setActualUsedCount(integer $ActualUsedCount) Set Cross-Region Backup Total Count
  */
 class CrossSummaryDetailRes extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Instance Status
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Instance Region
      */
     public $Region;
 
     /**
-     * @var string 
+     * @var string Instance ID
      */
     public $InstanceId;
 
     /**
-     * @var string 
+     * @var string Instance Name
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Cross-Region Backup Status: enable - Enabled, disable - Disabled
      */
     public $CrossBackupEnabled;
 
     /**
-     * @var array 
+     * @var array Cross-Region Backup Target Region
      */
     public $CrossRegions;
 
     /**
-     * @var string 
+     * @var string Latest Backup Start Time
      */
     public $LastBackupStartTime;
 
     /**
-     * @var integer 
+     * @var integer Cross-Region Backup Retention Days
      */
     public $CrossBackupSaveDays;
 
     /**
-     * @var integer 
+     * @var integer Cross-Region Data Backup Total Space
      */
     public $DataBackupSpace;
 
     /**
-     * @var integer 
+     * @var integer Cross-Region Data Backup Total File Count
      */
     public $DataBackupCount;
 
     /**
-     * @var integer 
+     * @var integer Cross-Region Log Backup Total Space
      */
     public $LogBackupSpace;
 
     /**
-     * @var integer 
+     * @var integer Cross-Region Log Backup Total File Count
      */
     public $LogBackupCount;
 
     /**
-     * @var integer 
+     * @var integer Cross-Region Backup Total Space
      */
     public $ActualUsedSpace;
 
     /**
-     * @var integer 
+     * @var integer Cross-Region Backup Total Count
      */
     public $ActualUsedCount;
 
     /**
-     * @param integer $Status 
-     * @param string $Region 
-     * @param string $InstanceId 
-     * @param string $Name 
-     * @param string $CrossBackupEnabled 
-     * @param array $CrossRegions 
-     * @param string $LastBackupStartTime 
-     * @param integer $CrossBackupSaveDays 
-     * @param integer $DataBackupSpace 
-     * @param integer $DataBackupCount 
-     * @param integer $LogBackupSpace 
-     * @param integer $LogBackupCount 
-     * @param integer $ActualUsedSpace 
-     * @param integer $ActualUsedCount 
+     * @param integer $Status Instance Status
+     * @param string $Region Instance Region
+     * @param string $InstanceId Instance ID
+     * @param string $Name Instance Name
+     * @param string $CrossBackupEnabled Cross-Region Backup Status: enable - Enabled, disable - Disabled
+     * @param array $CrossRegions Cross-Region Backup Target Region
+     * @param string $LastBackupStartTime Latest Backup Start Time
+     * @param integer $CrossBackupSaveDays Cross-Region Backup Retention Days
+     * @param integer $DataBackupSpace Cross-Region Data Backup Total Space
+     * @param integer $DataBackupCount Cross-Region Data Backup Total File Count
+     * @param integer $LogBackupSpace Cross-Region Log Backup Total Space
+     * @param integer $LogBackupCount Cross-Region Log Backup Total File Count
+     * @param integer $ActualUsedSpace Cross-Region Backup Total Space
+     * @param integer $ActualUsedCount Cross-Region Backup Total Count
      */
     function __construct()
     {

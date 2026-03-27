@@ -18,124 +18,164 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Backup Overview Real-Time Statistics
  *
- * @method integer getRegionId() Obtain 
- * @method void setRegionId(integer $RegionId) Set 
- * @method integer getStatus() Obtain 
- * @method void setStatus(integer $Status) Set 
- * @method string getInstanceId() Obtain 
- * @method void setInstanceId(string $InstanceId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method integer getActualUsedSpace() Obtain 
- * @method void setActualUsedSpace(integer $ActualUsedSpace) Set 
- * @method integer getDataBackupSpace() Obtain 
- * @method void setDataBackupSpace(integer $DataBackupSpace) Set 
- * @method integer getDataBackupCount() Obtain 
- * @method void setDataBackupCount(integer $DataBackupCount) Set 
- * @method integer getLogBackupSpace() Obtain 
- * @method void setLogBackupSpace(integer $LogBackupSpace) Set 
- * @method integer getLogBackupCount() Obtain 
- * @method void setLogBackupCount(integer $LogBackupCount) Set 
- * @method integer getAutoBackupSpace() Obtain 
- * @method void setAutoBackupSpace(integer $AutoBackupSpace) Set 
- * @method integer getAutoBackupCount() Obtain 
- * @method void setAutoBackupCount(integer $AutoBackupCount) Set 
- * @method integer getManualBackupSpace() Obtain 
- * @method void setManualBackupSpace(integer $ManualBackupSpace) Set 
- * @method integer getManualBackupCount() Obtain 
- * @method void setManualBackupCount(integer $ManualBackupCount) Set 
- * @method string getRegion() Obtain 
- * @method void setRegion(string $Region) Set 
+ * @method integer getRegionId() Obtain Region Identifier
+ * @method void setRegionId(integer $RegionId) Set Region Identifier
+ * @method integer getStatus() Obtain Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (performing instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+ * @method void setStatus(integer $Status) Set Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (performing instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getName() Obtain Instance Name
+ * @method void setName(string $Name) Set Instance Name
+ * @method integer getActualUsedSpace() Obtain Backup Space
+ * @method void setActualUsedSpace(integer $ActualUsedSpace) Set Backup Space
+ * @method integer getDataBackupSpace() Obtain Data Backup Space
+ * @method void setDataBackupSpace(integer $DataBackupSpace) Set Data Backup Space
+ * @method integer getDataBackupCount() Obtain Data Backup Total File Count
+ * @method void setDataBackupCount(integer $DataBackupCount) Set Data Backup Total File Count
+ * @method integer getLogBackupSpace() Obtain Log Backup Space
+ * @method void setLogBackupSpace(integer $LogBackupSpace) Set Log Backup Space
+ * @method integer getLogBackupCount() Obtain Log Backup Total File Count
+ * @method void setLogBackupCount(integer $LogBackupCount) Set Log Backup Total File Count
+ * @method integer getAutoBackupSpace() Obtain Automatic Backup Space
+ * @method void setAutoBackupSpace(integer $AutoBackupSpace) Set Automatic Backup Space
+ * @method integer getAutoBackupCount() Obtain Automatic Backup Total File Count
+ * @method void setAutoBackupCount(integer $AutoBackupCount) Set Automatic Backup Total File Count
+ * @method integer getManualBackupSpace() Obtain Manual Backup Space
+ * @method void setManualBackupSpace(integer $ManualBackupSpace) Set Manual Backup Space
+ * @method integer getManualBackupCount() Obtain Manual Backup Total File Count
+ * @method void setManualBackupCount(integer $ManualBackupCount) Set Manual Backup Total File Count
+ * @method string getRegion() Obtain Instance Region Code
+ * @method void setRegion(string $Region) Set Instance Region Code
  */
 class SummaryDetailRes extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Region Identifier
      */
     public $RegionId;
 
     /**
-     * @var integer 
+     * @var integer Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (performing instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Instance ID
      */
     public $InstanceId;
 
     /**
-     * @var string 
+     * @var string Instance Name
      */
     public $Name;
 
     /**
-     * @var integer 
+     * @var integer Backup Space
      */
     public $ActualUsedSpace;
 
     /**
-     * @var integer 
+     * @var integer Data Backup Space
      */
     public $DataBackupSpace;
 
     /**
-     * @var integer 
+     * @var integer Data Backup Total File Count
      */
     public $DataBackupCount;
 
     /**
-     * @var integer 
+     * @var integer Log Backup Space
      */
     public $LogBackupSpace;
 
     /**
-     * @var integer 
+     * @var integer Log Backup Total File Count
      */
     public $LogBackupCount;
 
     /**
-     * @var integer 
+     * @var integer Automatic Backup Space
      */
     public $AutoBackupSpace;
 
     /**
-     * @var integer 
+     * @var integer Automatic Backup Total File Count
      */
     public $AutoBackupCount;
 
     /**
-     * @var integer 
+     * @var integer Manual Backup Space
      */
     public $ManualBackupSpace;
 
     /**
-     * @var integer 
+     * @var integer Manual Backup Total File Count
      */
     public $ManualBackupCount;
 
     /**
-     * @var string 
+     * @var string Instance Region Code
      */
     public $Region;
 
     /**
-     * @param integer $RegionId 
-     * @param integer $Status 
-     * @param string $InstanceId 
-     * @param string $Name 
-     * @param integer $ActualUsedSpace 
-     * @param integer $DataBackupSpace 
-     * @param integer $DataBackupCount 
-     * @param integer $LogBackupSpace 
-     * @param integer $LogBackupCount 
-     * @param integer $AutoBackupSpace 
-     * @param integer $AutoBackupCount 
-     * @param integer $ManualBackupSpace 
-     * @param integer $ManualBackupCount 
-     * @param string $Region 
+     * @param integer $RegionId Region Identifier
+     * @param integer $Status Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (performing instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+     * @param string $InstanceId Instance ID
+     * @param string $Name Instance Name
+     * @param integer $ActualUsedSpace Backup Space
+     * @param integer $DataBackupSpace Data Backup Space
+     * @param integer $DataBackupCount Data Backup Total File Count
+     * @param integer $LogBackupSpace Log Backup Space
+     * @param integer $LogBackupCount Log Backup Total File Count
+     * @param integer $AutoBackupSpace Automatic Backup Space
+     * @param integer $AutoBackupCount Automatic Backup Total File Count
+     * @param integer $ManualBackupSpace Manual Backup Space
+     * @param integer $ManualBackupCount Manual Backup Total File Count
+     * @param string $Region Instance Region Code
      */
     function __construct()
     {

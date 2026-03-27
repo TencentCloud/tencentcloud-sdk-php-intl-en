@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set The order status is the filter condition: PENDING INCONSTRUCTION DELIVERING DELIVERED EXPIRED CANCELLED OFFLINE
  * @method string getActionType() Obtain The order type is the filter condition: CREATE EXTEND
  * @method void setActionType(string $ActionType) Set The order type is the filter condition: CREATE EXTEND
- * @method array getOrderTypes() Obtain 
- * @method void setOrderTypes(array $OrderTypes) Set 
+ * @method array getOrderTypes() Obtain Order Type List
+ * @method void setOrderTypes(array $OrderTypes) Set Order Type List
  */
 class DescribeDedicatedClusterOrdersRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DescribeDedicatedClusterOrdersRequest extends AbstractModel
     public $ActionType;
 
     /**
-     * @var array 
+     * @var array Order Type List
      */
     public $OrderTypes;
 
@@ -79,7 +79,7 @@ class DescribeDedicatedClusterOrdersRequest extends AbstractModel
      * @param integer $Limit Number of returned pieces, 20 by default and can be up to 100. For further information on Limit, please refer to relevant sections in API [Overview] (https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
      * @param string $Status The order status is the filter condition: PENDING INCONSTRUCTION DELIVERING DELIVERED EXPIRED CANCELLED OFFLINE
      * @param string $ActionType The order type is the filter condition: CREATE EXTEND
-     * @param array $OrderTypes 
+     * @param array $OrderTypes Order Type List
      */
     function __construct()
     {

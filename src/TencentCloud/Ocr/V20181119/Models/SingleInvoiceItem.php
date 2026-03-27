@@ -108,10 +108,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTrainTicket(TrainTicket $TrainTicket) Set Train ticket
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method MedicalInvoice getMedicalOutpatientInvoice() Obtain 
- * @method void setMedicalOutpatientInvoice(MedicalInvoice $MedicalOutpatientInvoice) Set 
- * @method MedicalInvoice getMedicalHospitalizedInvoice() Obtain 
- * @method void setMedicalHospitalizedInvoice(MedicalInvoice $MedicalHospitalizedInvoice) Set 
+ * @method MedicalInvoice getMedicalOutpatientInvoice() Obtain Medical Outpatient Fee Invoice (Electronic).
+ * @method void setMedicalOutpatientInvoice(MedicalInvoice $MedicalOutpatientInvoice) Set Medical Outpatient Fee Invoice (Electronic).
+ * @method MedicalInvoice getMedicalHospitalizedInvoice() Obtain Inpatient Medical Fee Invoice (Electronic).
+ * @method void setMedicalHospitalizedInvoice(MedicalInvoice $MedicalHospitalizedInvoice) Set Inpatient Medical Fee Invoice (Electronic).
  */
 class SingleInvoiceItem extends AbstractModel
 {
@@ -248,12 +248,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TrainTicket;
 
     /**
-     * @var MedicalInvoice 
+     * @var MedicalInvoice Medical Outpatient Fee Invoice (Electronic).
      */
     public $MedicalOutpatientInvoice;
 
     /**
-     * @var MedicalInvoice 
+     * @var MedicalInvoice Inpatient Medical Fee Invoice (Electronic).
      */
     public $MedicalHospitalizedInvoice;
 
@@ -302,8 +302,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param TrainTicket $TrainTicket Train ticket
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MedicalInvoice $MedicalOutpatientInvoice 
-     * @param MedicalInvoice $MedicalHospitalizedInvoice 
+     * @param MedicalInvoice $MedicalOutpatientInvoice Medical Outpatient Fee Invoice (Electronic).
+     * @param MedicalInvoice $MedicalHospitalizedInvoice Inpatient Medical Fee Invoice (Electronic).
      */
     function __construct()
     {

@@ -18,10 +18,10 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * vhost usage quota information
  *
- * @method integer getMaxVirtualHost() Obtain 
- * @method void setMaxVirtualHost(integer $MaxVirtualHost) Set 
+ * @method integer getMaxVirtualHost() Obtain Maximum number of vhosts allowed to be created
+ * @method void setMaxVirtualHost(integer $MaxVirtualHost) Set Maximum number of vhosts allowed to be created
  * @method integer getUsedVirtualHost() Obtain Number of created vhosts.
  * @method void setUsedVirtualHost(integer $UsedVirtualHost) Set Number of created vhosts.
  * @method integer getMaxConnectionPerVhost() Obtain Specifies the maximum number of connections allowed per vhost.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class VirtualHostQuota extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Maximum number of vhosts allowed to be created
      */
     public $MaxVirtualHost;
 
@@ -59,7 +59,7 @@ class VirtualHostQuota extends AbstractModel
     public $MaxQueuePerVhost;
 
     /**
-     * @param integer $MaxVirtualHost 
+     * @param integer $MaxVirtualHost Maximum number of vhosts allowed to be created
      * @param integer $UsedVirtualHost Number of created vhosts.
      * @param integer $MaxConnectionPerVhost Specifies the maximum number of connections allowed per vhost.
      * @param integer $MaxExchangePerVhost Specifies the maximum number of switches allowed in one vhost.

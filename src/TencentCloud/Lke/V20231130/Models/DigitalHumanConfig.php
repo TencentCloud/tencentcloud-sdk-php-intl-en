@@ -18,36 +18,36 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Digital Human Configuration
  *
- * @method string getAssetKey() Obtain 
- * @method void setAssetKey(string $AssetKey) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getAvatar() Obtain 
- * @method void setAvatar(string $Avatar) Set 
+ * @method string getAssetKey() Obtain Digital Human Asset key
+ * @method void setAssetKey(string $AssetKey) Set Digital Human Asset key
+ * @method string getName() Obtain Digital Human Name
+ * @method void setName(string $Name) Set Digital Human Name
+ * @method string getAvatar() Obtain Image
+ * @method void setAvatar(string $Avatar) Set Image
  */
 class DigitalHumanConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Digital Human Asset key
      */
     public $AssetKey;
 
     /**
-     * @var string 
+     * @var string Digital Human Name
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Image
      */
     public $Avatar;
 
     /**
-     * @param string $AssetKey 
-     * @param string $Name 
-     * @param string $Avatar 
+     * @param string $AssetKey Digital Human Asset key
+     * @param string $Name Digital Human Name
+     * @param string $Avatar Image
      */
     function __construct()
     {

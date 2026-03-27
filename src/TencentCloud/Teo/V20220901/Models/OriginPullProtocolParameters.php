@@ -18,20 +18,32 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Origin HTTPS configuration parameters.
  *
- * @method string getProtocol() Obtain 
- * @method void setProtocol(string $Protocol) Set 
+ * @method string getProtocol() Obtain Origin protocol configuration, with values:
+<li>http: Use HTTP protocol for origin pull;</li>
+<li>https: Use HTTPS protocol for origin pull;</li>
+<li>follow: Protocol following.</li>
+ * @method void setProtocol(string $Protocol) Set Origin protocol configuration, with values:
+<li>http: Use HTTP protocol for origin pull;</li>
+<li>https: Use HTTPS protocol for origin pull;</li>
+<li>follow: Protocol following.</li>
  */
 class OriginPullProtocolParameters extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Origin protocol configuration, with values:
+<li>http: Use HTTP protocol for origin pull;</li>
+<li>https: Use HTTPS protocol for origin pull;</li>
+<li>follow: Protocol following.</li>
      */
     public $Protocol;
 
     /**
-     * @param string $Protocol 
+     * @param string $Protocol Origin protocol configuration, with values:
+<li>http: Use HTTP protocol for origin pull;</li>
+<li>https: Use HTTPS protocol for origin pull;</li>
+<li>follow: Protocol following.</li>
      */
     function __construct()
     {

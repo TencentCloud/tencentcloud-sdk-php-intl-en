@@ -18,7 +18,7 @@ namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Custom Message
  *
  * @method string getData() Obtain Custom message data.
  * @method void setData(string $Data) Set Custom message data.

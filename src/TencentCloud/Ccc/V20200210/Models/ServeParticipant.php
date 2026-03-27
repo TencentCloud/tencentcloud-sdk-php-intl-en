@@ -44,8 +44,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTransferToType(string $TransferToType) Set Transfer destination participant type, which is consistent with type values.
  * @method integer getSkillGroupId() Obtain Skill group id.
  * @method void setSkillGroupId(integer $SkillGroupId) Set Skill group id.
- * @method string getEndStatusString() Obtain Ending status.
- * @method void setEndStatusString(string $EndStatusString) Set Ending status.
+ * @method string getEndStatusString() Obtain End status.
+
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
+ * @method void setEndStatusString(string $EndStatusString) Set End status.
+
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
  * @method string getRecordURL() Obtain Recording url.
  * @method void setRecordURL(string $RecordURL) Set Recording url.
  * @method integer getSequence() Obtain Participant sequence number, starting from 0.
@@ -120,7 +128,11 @@ class ServeParticipant extends AbstractModel
     public $SkillGroupId;
 
     /**
-     * @var string Ending status.
+     * @var string End status.
+
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
      */
     public $EndStatusString;
 
@@ -162,7 +174,11 @@ class ServeParticipant extends AbstractModel
      * @param string $TransferTo Transfer destination agent information.
      * @param string $TransferToType Transfer destination participant type, which is consistent with type values.
      * @param integer $SkillGroupId Skill group id.
-     * @param string $EndStatusString Ending status.
+     * @param string $EndStatusString End status.
+
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
      * @param string $RecordURL Recording url.
      * @param integer $Sequence Participant sequence number, starting from 0.
      * @param integer $StartTimestamp Start timestamp. unix second-level timestamp.

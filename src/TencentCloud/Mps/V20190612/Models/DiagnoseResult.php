@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Diagnosis result item.
  *
  * @method string getCategory() Obtain Diagnosed exception category. Valid values:
 DecodeParamException: decoding parameter exception.
@@ -124,12 +124,12 @@ HLSMediaSegmentsPTSJitterDeviation: PTS jumps between segments without EXT-X-DIS
 HLSMediaSegmentsDTSJitterDeviation: DTS jumps between segments without EXT-X-DISCONTINUITY.
 TimecodeTrackExist: TMCD track in MP4.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getTimestamp() Obtain 
- * @method void setTimestamp(float $Timestamp) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
- * @method string getDateTime() Obtain 
- * @method void setDateTime(string $DateTime) Set 
+ * @method float getTimestamp() Obtain The PTS timestamp for the exception start.
+ * @method void setTimestamp(float $Timestamp) Set The PTS timestamp for the exception start.
+ * @method string getDescription() Obtain Diagnosed abnormal description.
+ * @method void setDescription(string $Description) Set Diagnosed abnormal description.
+ * @method string getDateTime() Obtain Abnormality detection time in Beijing time, using ISO date format.
+ * @method void setDateTime(string $DateTime) Set Abnormality detection time in Beijing time, using ISO date format.
  * @method string getSeverityLevel() Obtain Diagnosed exception level. Valid values:
 Fatal: affecting subsequent playback and parsing.
 Error: may affect playback.
@@ -208,17 +208,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Type;
 
     /**
-     * @var float 
+     * @var float The PTS timestamp for the exception start.
      */
     public $Timestamp;
 
     /**
-     * @var string 
+     * @var string Diagnosed abnormal description.
      */
     public $Description;
 
     /**
-     * @var string 
+     * @var string Abnormality detection time in Beijing time, using ISO date format.
      */
     public $DateTime;
 
@@ -286,9 +286,9 @@ HLSMediaSegmentsPTSJitterDeviation: PTS jumps between segments without EXT-X-DIS
 HLSMediaSegmentsDTSJitterDeviation: DTS jumps between segments without EXT-X-DISCONTINUITY.
 TimecodeTrackExist: TMCD track in MP4.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Timestamp 
-     * @param string $Description 
-     * @param string $DateTime 
+     * @param float $Timestamp The PTS timestamp for the exception start.
+     * @param string $Description Diagnosed abnormal description.
+     * @param string $DateTime Abnormality detection time in Beijing time, using ISO date format.
      * @param string $SeverityLevel Diagnosed exception level. Valid values:
 Fatal: affecting subsequent playback and parsing.
 Error: may affect playback.

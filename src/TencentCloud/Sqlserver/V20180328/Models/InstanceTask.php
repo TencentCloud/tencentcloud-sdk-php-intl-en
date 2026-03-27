@@ -18,76 +18,76 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Instance Asynchronous Task
  *
- * @method integer getId() Obtain 
- * @method void setId(integer $Id) Set 
- * @method integer getType() Obtain 
- * @method void setType(integer $Type) Set 
- * @method integer getStatus() Obtain 
- * @method void setStatus(integer $Status) Set 
- * @method integer getProgress() Obtain 
- * @method void setProgress(integer $Progress) Set 
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
- * @method integer getErrorCode() Obtain 
- * @method void setErrorCode(integer $ErrorCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
+ * @method integer getId() Obtain Unique id
+ * @method void setId(integer $Id) Set Unique id
+ * @method integer getType() Obtain Job Type
+ * @method void setType(integer $Type) Set Job Type
+ * @method integer getStatus() Obtain Job Status
+ * @method void setStatus(integer $Status) Set Job Status
+ * @method integer getProgress() Obtain Progress Percentage 0~100
+ * @method void setProgress(integer $Progress) Set Progress Percentage 0~100
+ * @method string getStartTime() Obtain Start Time
+ * @method void setStartTime(string $StartTime) Set Start Time
+ * @method string getEndTime() Obtain End Time
+ * @method void setEndTime(string $EndTime) Set End Time
+ * @method integer getErrorCode() Obtain Error Code
+ * @method void setErrorCode(integer $ErrorCode) Set Error Code
+ * @method string getMessage() Obtain Error Message Description
+ * @method void setMessage(string $Message) Set Error Message Description
  */
 class InstanceTask extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Unique id
      */
     public $Id;
 
     /**
-     * @var integer 
+     * @var integer Job Type
      */
     public $Type;
 
     /**
-     * @var integer 
+     * @var integer Job Status
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Progress Percentage 0~100
      */
     public $Progress;
 
     /**
-     * @var string 
+     * @var string Start Time
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string End Time
      */
     public $EndTime;
 
     /**
-     * @var integer 
+     * @var integer Error Code
      */
     public $ErrorCode;
 
     /**
-     * @var string 
+     * @var string Error Message Description
      */
     public $Message;
 
     /**
-     * @param integer $Id 
-     * @param integer $Type 
-     * @param integer $Status 
-     * @param integer $Progress 
-     * @param string $StartTime 
-     * @param string $EndTime 
-     * @param integer $ErrorCode 
-     * @param string $Message 
+     * @param integer $Id Unique id
+     * @param integer $Type Job Type
+     * @param integer $Status Job Status
+     * @param integer $Progress Progress Percentage 0~100
+     * @param string $StartTime Start Time
+     * @param string $EndTime End Time
+     * @param integer $ErrorCode Error Code
+     * @param string $Message Error Message Description
      */
     function __construct()
     {

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) Set Page number for pagination queries, starting from 1.
  * @method string getType() Obtain Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
  * @method void setType(string $Type) Set Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
- * @method boolean getMustHasContext() Obtain 
- * @method void setMustHasContext(boolean $MustHasContext) Set 
+ * @method boolean getMustHasContext() Obtain Whether it includes specific parameter suggestions and other information
+ * @method void setMustHasContext(boolean $MustHasContext) Set Whether it includes specific parameter suggestions and other information
  */
 class DescribeInsightListRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DescribeInsightListRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var boolean 
+     * @var boolean Whether it includes specific parameter suggestions and other information
      */
     public $MustHasContext;
 
@@ -79,7 +79,7 @@ class DescribeInsightListRequest extends AbstractModel
      * @param integer $PageSize Page size for pagination query. The minimum value is 1, and the maximum value is 100.
      * @param integer $Page Page number for pagination queries, starting from 1.
      * @param string $Type Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
-     * @param boolean $MustHasContext 
+     * @param boolean $MustHasContext Whether it includes specific parameter suggestions and other information
      */
     function __construct()
     {

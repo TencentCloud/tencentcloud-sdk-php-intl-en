@@ -52,8 +52,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setPrivateIp(string $PrivateIp) Set Private IP
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getVpcId() Obtain 
- * @method void setVpcId(string $VpcId) Set 
+ * @method string getVpcId() Obtain vpc id
+ * @method void setVpcId(string $VpcId) Set vpc id
  * @method string getVpcName() Obtain VPC name
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setVpcName(string $VpcName) Set VPC name
@@ -274,7 +274,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $PrivateIp;
 
     /**
-     * @var string 
+     * @var string vpc id
      */
     public $VpcId;
 
@@ -547,7 +547,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $PrivateIp Private IP
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $VpcId 
+     * @param string $VpcId vpc id
      * @param string $VpcName VPC name
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param integer $AppId App ID

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployVirtualPrivateCloud(VirtualPrivateCloud $DeployVirtualPrivateCloud) Set Deployment network information
  * @method array getDeploySecurityGroupIds() Obtain Deployment network security group list
  * @method void setDeploySecurityGroupIds(array $DeploySecurityGroupIds) Set Deployment network security group list
- * @method ChcDeployExtraConfig getChcDeployExtraConfig() Obtain 
- * @method void setChcDeployExtraConfig(ChcDeployExtraConfig $ChcDeployExtraConfig) Set 
+ * @method ChcDeployExtraConfig getChcDeployExtraConfig() Obtain dhcp option parameters required for deployment
+ * @method void setChcDeployExtraConfig(ChcDeployExtraConfig $ChcDeployExtraConfig) Set dhcp option parameters required for deployment
  */
 class ConfigureChcDeployVpcRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ConfigureChcDeployVpcRequest extends AbstractModel
     public $DeploySecurityGroupIds;
 
     /**
-     * @var ChcDeployExtraConfig 
+     * @var ChcDeployExtraConfig dhcp option parameters required for deployment
      */
     public $ChcDeployExtraConfig;
 
@@ -55,7 +55,7 @@ class ConfigureChcDeployVpcRequest extends AbstractModel
      * @param array $ChcIds CHC instance ID
      * @param VirtualPrivateCloud $DeployVirtualPrivateCloud Deployment network information
      * @param array $DeploySecurityGroupIds Deployment network security group list
-     * @param ChcDeployExtraConfig $ChcDeployExtraConfig 
+     * @param ChcDeployExtraConfig $ChcDeployExtraConfig dhcp option parameters required for deployment
      */
     function __construct()
     {

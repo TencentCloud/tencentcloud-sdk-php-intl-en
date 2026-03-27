@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMethod(string $Method) Set Scheduling method. It only supports `priority` now.
  * @method string getCreateTime() Obtain The creation time.
  * @method void setCreateTime(string $CreateTime) Set The creation time.
- * @method integer getTTL() Obtain 
- * @method void setTTL(integer $TTL) Set 
+ * @method integer getTTL() Obtain ttl
+ * @method void setTTL(integer $TTL) Set ttl
  * @method integer getStatus() Obtain Status
  * @method void setStatus(integer $Status) Set Status
  * @method string getModifyTime() Obtain Modification time
@@ -86,7 +86,7 @@ class SchedulingDomain extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer 
+     * @var integer ttl
      */
     public $TTL;
 
@@ -109,7 +109,7 @@ class SchedulingDomain extends AbstractModel
      * @param array $OverseaIpList List of IPs outside Mainland China
      * @param string $Method Scheduling method. It only supports `priority` now.
      * @param string $CreateTime The creation time.
-     * @param integer $TTL 
+     * @param integer $TTL ttl
      * @param integer $Status Status
      * @param string $ModifyTime Modification time
      */

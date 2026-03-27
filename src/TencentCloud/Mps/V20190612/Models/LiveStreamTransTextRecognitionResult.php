@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(float $Confidence) Set The confidence score for a segment. Value range: 0-100.
  * @method string getTrans() Obtain The translation.
  * @method void setTrans(string $Trans) Set The translation.
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
- * @method boolean getSteadyState() Obtain 
- * @method void setSteadyState(boolean $SteadyState) Set 
+ * @method string getStartTime() Obtain Translation start UTC time.
+ * @method void setStartTime(string $StartTime) Set Translation start UTC time.
+ * @method string getEndTime() Obtain Translation end UTC time.
+ * @method void setEndTime(string $EndTime) Set Translation end UTC time.
+ * @method boolean getSteadyState() Obtain Steady state marker.
+ * @method void setSteadyState(boolean $SteadyState) Set Steady state marker.
  * @method string getUserId() Obtain User ID in the result of real-time translation via WebSocket and TRTC.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setUserId(string $UserId) Set User ID in the result of real-time translation via WebSocket and TRTC.
@@ -69,17 +69,17 @@ class LiveStreamTransTextRecognitionResult extends AbstractModel
     public $Trans;
 
     /**
-     * @var string 
+     * @var string Translation start UTC time.
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string Translation end UTC time.
      */
     public $EndTime;
 
     /**
-     * @var boolean 
+     * @var boolean Steady state marker.
      */
     public $SteadyState;
 
@@ -95,9 +95,9 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param float $EndPtsTime The PTS (seconds) of the end of a segment.
      * @param float $Confidence The confidence score for a segment. Value range: 0-100.
      * @param string $Trans The translation.
-     * @param string $StartTime 
-     * @param string $EndTime 
-     * @param boolean $SteadyState 
+     * @param string $StartTime Translation start UTC time.
+     * @param string $EndTime Translation end UTC time.
+     * @param boolean $SteadyState Steady state marker.
      * @param string $UserId User ID in the result of real-time translation via WebSocket and TRTC.
 Note: This field may return null, indicating that no valid value can be obtained.
      */

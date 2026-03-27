@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodCIDR(string $PodCIDR) Set Cluster Pod CIDR block
  * @method string getServiceCIDR() Obtain Cluster service CIDR block
  * @method void setServiceCIDR(string $ServiceCIDR) Set Cluster service CIDR block
- * @method string getK8SVersion() Obtain 
- * @method void setK8SVersion(string $K8SVersion) Set 
+ * @method string getK8SVersion() Obtain k8s version number
+ * @method void setK8SVersion(string $K8SVersion) Set k8s version number
  * @method string getStatus() Obtain Cluster status
  * @method void setStatus(string $Status) Set Cluster status
  * @method string getClusterDesc() Obtain Cluster description
@@ -97,7 +97,7 @@ class EdgeCluster extends AbstractModel
     public $ServiceCIDR;
 
     /**
-     * @var string 
+     * @var string k8s version number
      */
     public $K8SVersion;
 
@@ -169,7 +169,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $VpcId VPC ID
      * @param string $PodCIDR Cluster Pod CIDR block
      * @param string $ServiceCIDR Cluster service CIDR block
-     * @param string $K8SVersion 
+     * @param string $K8SVersion k8s version number
      * @param string $Status Cluster status
      * @param string $ClusterDesc Cluster description
      * @param string $CreatedTime Cluster creation time

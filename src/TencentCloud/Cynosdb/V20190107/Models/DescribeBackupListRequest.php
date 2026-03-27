@@ -36,14 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupType(string $BackupType) Set Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
  * @method string getBackupMethod() Obtain Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
  * @method void setBackupMethod(string $BackupMethod) Set Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
- * @method string getSnapShotType() Obtain 
- * @method void setSnapShotType(string $SnapShotType) Set 
+ * @method string getSnapShotType() Obtain Snapshot type. Optional values: full, full backup; increment, incremental backup
+ * @method void setSnapShotType(string $SnapShotType) Set Snapshot type. Optional values: full, full backup; increment, incremental backup
  * @method string getStartTime() Obtain Backup start time
  * @method void setStartTime(string $StartTime) Set Backup start time
  * @method string getEndTime() Obtain Backup end time
  * @method void setEndTime(string $EndTime) Set Backup end time
- * @method array getFileNames() Obtain 
- * @method void setFileNames(array $FileNames) Set 
+ * @method array getFileNames() Obtain Backup file name, fuzzy search
+ * @method void setFileNames(array $FileNames) Set Backup file name, fuzzy search
  * @method array getBackupNames() Obtain Backup alias, which supports fuzzy query.
  * @method void setBackupNames(array $BackupNames) Set Backup alias, which supports fuzzy query.
  * @method array getSnapshotIdList() Obtain ID list of the snapshot backup
@@ -88,7 +88,7 @@ class DescribeBackupListRequest extends AbstractModel
     public $BackupMethod;
 
     /**
-     * @var string 
+     * @var string Snapshot type. Optional values: full, full backup; increment, incremental backup
      */
     public $SnapShotType;
 
@@ -103,7 +103,7 @@ class DescribeBackupListRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array 
+     * @var array Backup file name, fuzzy search
      */
     public $FileNames;
 
@@ -126,10 +126,10 @@ class DescribeBackupListRequest extends AbstractModel
      * @param array $BackupIds Backup ID
      * @param string $BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
      * @param string $BackupMethod Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
-     * @param string $SnapShotType 
+     * @param string $SnapShotType Snapshot type. Optional values: full, full backup; increment, incremental backup
      * @param string $StartTime Backup start time
      * @param string $EndTime Backup end time
-     * @param array $FileNames 
+     * @param array $FileNames Backup file name, fuzzy search
      * @param array $BackupNames Backup alias, which supports fuzzy query.
      * @param array $SnapshotIdList ID list of the snapshot backup
      */

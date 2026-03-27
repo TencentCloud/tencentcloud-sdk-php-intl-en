@@ -18,16 +18,16 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Rollback Progress Details
  *
  * @method boolean getIsVipSwitchable() Obtain Is it possible to switch vip.
  * @method void setIsVipSwitchable(boolean $IsVipSwitchable) Set Is it possible to switch vip.
  * @method string getVipSwitchableTime() Obtain The exchangeable time of vip.
  * @method void setVipSwitchableTime(string $VipSwitchableTime) Set The exchangeable time of vip.
- * @method array getExchangeInstanceInfoList() Obtain 
- * @method void setExchangeInstanceInfoList(array $ExchangeInstanceInfoList) Set 
- * @method array getExchangeRoGroupInfoList() Obtain 
- * @method void setExchangeRoGroupInfoList(array $ExchangeRoGroupInfoList) Set 
+ * @method array getExchangeInstanceInfoList() Obtain Exchange Instance List
+ * @method void setExchangeInstanceInfoList(array $ExchangeInstanceInfoList) Set Exchange Instance List
+ * @method array getExchangeRoGroupInfoList() Obtain Swap RO Group List
+ * @method void setExchangeRoGroupInfoList(array $ExchangeRoGroupInfoList) Set Swap RO Group List
  * @method string getCurrentStep() Obtain Current step.
  * @method void setCurrentStep(string $CurrentStep) Set Current step.
  * @method integer getCurrentStepProgress() Obtain Current step progress.
@@ -48,12 +48,12 @@ class RollbackProcessInfo extends AbstractModel
     public $VipSwitchableTime;
 
     /**
-     * @var array 
+     * @var array Exchange Instance List
      */
     public $ExchangeInstanceInfoList;
 
     /**
-     * @var array 
+     * @var array Swap RO Group List
      */
     public $ExchangeRoGroupInfoList;
 
@@ -75,8 +75,8 @@ class RollbackProcessInfo extends AbstractModel
     /**
      * @param boolean $IsVipSwitchable Is it possible to switch vip.
      * @param string $VipSwitchableTime The exchangeable time of vip.
-     * @param array $ExchangeInstanceInfoList 
-     * @param array $ExchangeRoGroupInfoList 
+     * @param array $ExchangeInstanceInfoList Exchange Instance List
+     * @param array $ExchangeRoGroupInfoList Swap RO Group List
      * @param string $CurrentStep Current step.
      * @param integer $CurrentStepProgress Current step progress.
      * @param string $CurrentStepRemainingTime Remaining time of the current step.

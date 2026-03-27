@@ -18,36 +18,36 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Progress Steps Details
  *
- * @method string getMsg() Obtain 
- * @method void setMsg(string $Msg) Set 
- * @method integer getStatus() Obtain 
- * @method void setStatus(integer $Status) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
+ * @method string getMsg() Obtain Detailed Steps Return Information
+ * @method void setMsg(string $Msg) Set Detailed Steps Return Information
+ * @method integer getStatus() Obtain Current Step Status, 0 Success, -2 Not Started
+ * @method void setStatus(integer $Status) Set Current Step Status, 0 Success, -2 Not Started
+ * @method string getName() Obtain Step Name
+ * @method void setName(string $Name) Set Step Name
  */
 class StepDetail extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Detailed Steps Return Information
      */
     public $Msg;
 
     /**
-     * @var integer 
+     * @var integer Current Step Status, 0 Success, -2 Not Started
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Step Name
      */
     public $Name;
 
     /**
-     * @param string $Msg 
-     * @param integer $Status 
-     * @param string $Name 
+     * @param string $Msg Detailed Steps Return Information
+     * @param integer $Status Current Step Status, 0 Success, -2 Not Started
+     * @param string $Name Step Name
      */
     function __construct()
     {

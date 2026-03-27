@@ -40,6 +40,8 @@ dify-inputs-xxx specifies the inputs variable for dify.
 dify-inputs-xxx specifies the inputs variable for dify.
 2. the dify-inputs-user specifies the user value for dify.
 3. dify-inputs-conversation_id is the conversation_id value of dify.
+ * @method integer getMaxRingTimeoutSecond() Obtain Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter.
+ * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) Set Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter.
  */
 class CreateAIAgentCallRequest extends AbstractModel
 {
@@ -79,6 +81,11 @@ dify-inputs-xxx specifies the inputs variable for dify.
     public $Variables;
 
     /**
+     * @var integer Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter.
+     */
+    public $MaxRingTimeoutSecond;
+
+    /**
      * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param integer $AIAgentId AI agent id.
      * @param string $Callee Callee number.
@@ -89,6 +96,7 @@ dify-inputs-xxx specifies the inputs variable for dify.
 dify-inputs-xxx specifies the inputs variable for dify.
 2. the dify-inputs-user specifies the user value for dify.
 3. dify-inputs-conversation_id is the conversation_id value of dify.
+     * @param integer $MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter.
      */
     function __construct()
     {
@@ -135,6 +143,10 @@ dify-inputs-xxx specifies the inputs variable for dify.
                 $obj->deserialize($value);
                 array_push($this->Variables, $obj);
             }
+        }
+
+        if (array_key_exists("MaxRingTimeoutSecond",$param) and $param["MaxRingTimeoutSecond"] !== null) {
+            $this->MaxRingTimeoutSecond = $param["MaxRingTimeoutSecond"];
         }
     }
 }

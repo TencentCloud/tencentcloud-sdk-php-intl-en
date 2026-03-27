@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeDistribution(array $NodeDistribution) Set Node distribution
  * @method array getTopicDistribution() Obtain Topic distribution
  * @method void setTopicDistribution(array $TopicDistribution) Set Topic distribution
- * @method integer getMaxQueuesPerTopic() Obtain 
- * @method void setMaxQueuesPerTopic(integer $MaxQueuesPerTopic) Set 
+ * @method integer getMaxQueuesPerTopic() Obtain Maximum number of queues per topic
+ * @method void setMaxQueuesPerTopic(integer $MaxQueuesPerTopic) Set Maximum number of queues per topic
  * @method integer getMaxRetention() Obtain Maximum configurable message retention time, in hours	
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMaxRetention(integer $MaxRetention) Set Maximum configurable message retention time, in hours	
@@ -125,7 +125,7 @@ class RocketMQInstanceConfig extends AbstractModel
     public $TopicDistribution;
 
     /**
-     * @var integer 
+     * @var integer Maximum number of queues per topic
      */
     public $MaxQueuesPerTopic;
 
@@ -176,7 +176,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $NodeCount Number of nodes in the cluster
      * @param array $NodeDistribution Node distribution
      * @param array $TopicDistribution Topic distribution
-     * @param integer $MaxQueuesPerTopic 
+     * @param integer $MaxQueuesPerTopic Maximum number of queues per topic
      * @param integer $MaxRetention Maximum configurable message retention time, in hours	
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MinRetention Minimum configurable message retention time, in hours

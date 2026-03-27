@@ -90,12 +90,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setPodCpu(integer $PodCpu) Set Number of CPU cores used by the pod
  * @method integer getPodMem() Obtain Memory specification of the Pod
  * @method void setPodMem(integer $PodMem) Set Memory specification of the Pod
- * @method string getClusterName() Obtain 
- * @method void setClusterName(string $ClusterName) Set 
- * @method string getClusterID() Obtain 
- * @method void setClusterID(string $ClusterID) Set 
- * @method string getPodUid() Obtain 
- * @method void setPodUid(string $PodUid) Set 
+ * @method string getClusterName() Obtain Cluster Name
+ * @method void setClusterName(string $ClusterName) Set Cluster Name
+ * @method string getClusterID() Obtain Cluster ID
+ * @method void setClusterID(string $ClusterID) Set Cluster ID
+ * @method string getPodUid() Obtain pod uid
+ * @method void setPodUid(string $PodUid) Set pod uid
  */
 class ContainerInfo extends AbstractModel
 {
@@ -243,17 +243,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PodMem;
 
     /**
-     * @var string 
+     * @var string Cluster Name
      */
     public $ClusterName;
 
     /**
-     * @var string 
+     * @var string Cluster ID
      */
     public $ClusterID;
 
     /**
-     * @var string 
+     * @var string pod uid
      */
     public $PodUid;
 
@@ -293,9 +293,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $NodeUniqueID UID of the super node
      * @param integer $PodCpu Number of CPU cores used by the pod
      * @param integer $PodMem Memory specification of the Pod
-     * @param string $ClusterName 
-     * @param string $ClusterID 
-     * @param string $PodUid 
+     * @param string $ClusterName Cluster Name
+     * @param string $ClusterID Cluster ID
+     * @param string $PodUid pod uid
      */
     function __construct()
     {

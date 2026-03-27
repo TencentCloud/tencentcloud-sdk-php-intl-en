@@ -18,68 +18,68 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Security Group
  *
- * @method integer getProjectId() Obtain 
- * @method void setProjectId(integer $ProjectId) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method array getInboundSet() Obtain 
- * @method void setInboundSet(array $InboundSet) Set 
- * @method array getOutboundSet() Obtain 
- * @method void setOutboundSet(array $OutboundSet) Set 
- * @method string getSecurityGroupId() Obtain 
- * @method void setSecurityGroupId(string $SecurityGroupId) Set 
- * @method string getSecurityGroupName() Obtain 
- * @method void setSecurityGroupName(string $SecurityGroupName) Set 
- * @method string getSecurityGroupRemark() Obtain 
- * @method void setSecurityGroupRemark(string $SecurityGroupRemark) Set 
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method string getCreateTime() Obtain Creation Time, Time format: yyyy-mm-dd hh:mm:ss
+ * @method void setCreateTime(string $CreateTime) Set Creation Time, Time format: yyyy-mm-dd hh:mm:ss
+ * @method array getInboundSet() Obtain Inbound Rules
+ * @method void setInboundSet(array $InboundSet) Set Inbound Rules
+ * @method array getOutboundSet() Obtain Outbound Rules
+ * @method void setOutboundSet(array $OutboundSet) Set Outbound Rules
+ * @method string getSecurityGroupId() Obtain Security Group ID
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set Security Group ID
+ * @method string getSecurityGroupName() Obtain Security Group Name
+ * @method void setSecurityGroupName(string $SecurityGroupName) Set Security Group Name
+ * @method string getSecurityGroupRemark() Obtain Security Group Remarks
+ * @method void setSecurityGroupRemark(string $SecurityGroupRemark) Set Security Group Remarks
  */
 class SecurityGroup extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Project ID
      */
     public $ProjectId;
 
     /**
-     * @var string 
+     * @var string Creation Time, Time format: yyyy-mm-dd hh:mm:ss
      */
     public $CreateTime;
 
     /**
-     * @var array 
+     * @var array Inbound Rules
      */
     public $InboundSet;
 
     /**
-     * @var array 
+     * @var array Outbound Rules
      */
     public $OutboundSet;
 
     /**
-     * @var string 
+     * @var string Security Group ID
      */
     public $SecurityGroupId;
 
     /**
-     * @var string 
+     * @var string Security Group Name
      */
     public $SecurityGroupName;
 
     /**
-     * @var string 
+     * @var string Security Group Remarks
      */
     public $SecurityGroupRemark;
 
     /**
-     * @param integer $ProjectId 
-     * @param string $CreateTime 
-     * @param array $InboundSet 
-     * @param array $OutboundSet 
-     * @param string $SecurityGroupId 
-     * @param string $SecurityGroupName 
-     * @param string $SecurityGroupRemark 
+     * @param integer $ProjectId Project ID
+     * @param string $CreateTime Creation Time, Time format: yyyy-mm-dd hh:mm:ss
+     * @param array $InboundSet Inbound Rules
+     * @param array $OutboundSet Outbound Rules
+     * @param string $SecurityGroupId Security Group ID
+     * @param string $SecurityGroupName Security Group Name
+     * @param string $SecurityGroupRemark Security Group Remarks
      */
     function __construct()
     {

@@ -54,10 +54,30 @@ MIX_STREAM - Stream mixing feature
  * @method void setAudioFileNeeded(boolean $AudioFileNeeded) Set Whether to return the audio-only recording file of different streams in the result callback. The file format is mp3.
  * @method RecordControl getRecordControl() Obtain A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
  * @method void setRecordControl(RecordControl $RecordControl) Set A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
- * @method string getRecordMode() Obtain 
- * @method void setRecordMode(string $RecordMode) Set 
- * @method string getChatGroupId() Obtain 
- * @method void setChatGroupId(string $ChatGroupId) Set 
+ * @method string getRecordMode() Obtain Recording mode
+
+
+
+REALTIME_MODE - Real-time recording mode (default)
+
+VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate)
+ * @method void setRecordMode(string $RecordMode) Set Recording mode
+
+
+
+REALTIME_MODE - Real-time recording mode (default)
+
+VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate)
+ * @method string getChatGroupId() Obtain Chat group ID. This field is only applicable to `video generation mode`.
+
+
+
+In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded.
+ * @method void setChatGroupId(string $ChatGroupId) Set Chat group ID. This field is only applicable to `video generation mode`.
+
+
+
+In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded.
  * @method integer getAutoStopTimeout() Obtain Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
 
 If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
@@ -131,12 +151,22 @@ MIX_STREAM - Stream mixing feature
     public $RecordControl;
 
     /**
-     * @var string 
+     * @var string Recording mode
+
+
+
+REALTIME_MODE - Real-time recording mode (default)
+
+VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate)
      */
     public $RecordMode;
 
     /**
-     * @var string 
+     * @var string Chat group ID. This field is only applicable to `video generation mode`.
+
+
+
+In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded.
      */
     public $ChatGroupId;
 
@@ -170,8 +200,18 @@ List of possible values:
 MIX_STREAM - Stream mixing feature
      * @param boolean $AudioFileNeeded Whether to return the audio-only recording file of different streams in the result callback. The file format is mp3.
      * @param RecordControl $RecordControl A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
-     * @param string $RecordMode 
-     * @param string $ChatGroupId 
+     * @param string $RecordMode Recording mode
+
+
+
+REALTIME_MODE - Real-time recording mode (default)
+
+VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate)
+     * @param string $ChatGroupId Chat group ID. This field is only applicable to `video generation mode`.
+
+
+
+In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded.
      * @param integer $AutoStopTimeout Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
 
 If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.

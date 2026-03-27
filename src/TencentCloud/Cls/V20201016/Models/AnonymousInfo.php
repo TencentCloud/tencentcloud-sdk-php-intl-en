@@ -18,28 +18,28 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Authentication-free information
  *
- * @method array getOperations() Obtain 
- * @method void setOperations(array $Operations) Set 
- * @method array getConditions() Obtain 
- * @method void setConditions(array $Conditions) Set 
+ * @method array getOperations() Obtain Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
+ * @method void setOperations(array $Operations) Set Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
+ * @method array getConditions() Obtain Condition list
+ * @method void setConditions(array $Conditions) Set Condition list
  */
 class AnonymousInfo extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
      */
     public $Operations;
 
     /**
-     * @var array 
+     * @var array Condition list
      */
     public $Conditions;
 
     /**
-     * @param array $Operations 
-     * @param array $Conditions 
+     * @param array $Operations Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
+     * @param array $Conditions Condition list
      */
     function __construct()
     {

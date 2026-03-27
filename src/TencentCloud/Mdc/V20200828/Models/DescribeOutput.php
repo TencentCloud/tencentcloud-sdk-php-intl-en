@@ -60,12 +60,12 @@ Note: This field may return `null`, indicating that no valid value was found.
  * @method void setAllowIpList(array $AllowIpList) Set CIDR allowlist
 This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
 Note: This field may return `null`, indicating that no valid value was found.
- * @method DescribeOutputRTSPPullSettings getRTSPPullSettings() Obtain 
- * @method void setRTSPPullSettings(DescribeOutputRTSPPullSettings $RTSPPullSettings) Set 
- * @method DescribeOutputHLSPullSettings getHLSPullSettings() Obtain 
- * @method void setHLSPullSettings(DescribeOutputHLSPullSettings $HLSPullSettings) Set 
- * @method integer getMaxConcurrent() Obtain 
- * @method void setMaxConcurrent(integer $MaxConcurrent) Set 
+ * @method DescribeOutputRTSPPullSettings getRTSPPullSettings() Obtain Output RTSP pull stream configuration.
+ * @method void setRTSPPullSettings(DescribeOutputRTSPPullSettings $RTSPPullSettings) Set Output RTSP pull stream configuration.
+ * @method DescribeOutputHLSPullSettings getHLSPullSettings() Obtain Output HLS pull stream configuration.
+ * @method void setHLSPullSettings(DescribeOutputHLSPullSettings $HLSPullSettings) Set Output HLS pull stream configuration.
+ * @method integer getMaxConcurrent() Obtain Maximum pull stream concurrency, maximum 4, default 4.
+ * @method void setMaxConcurrent(integer $MaxConcurrent) Set Maximum pull stream concurrency, maximum 4, default 4.
  * @method array getSecurityGroupIds() Obtain The bound security group IDs.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The bound security group IDs.
  */
@@ -140,17 +140,17 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $AllowIpList;
 
     /**
-     * @var DescribeOutputRTSPPullSettings 
+     * @var DescribeOutputRTSPPullSettings Output RTSP pull stream configuration.
      */
     public $RTSPPullSettings;
 
     /**
-     * @var DescribeOutputHLSPullSettings 
+     * @var DescribeOutputHLSPullSettings Output HLS pull stream configuration.
      */
     public $HLSPullSettings;
 
     /**
-     * @var integer 
+     * @var integer Maximum pull stream concurrency, maximum 4, default 4.
      */
     public $MaxConcurrent;
 
@@ -180,9 +180,9 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param array $AllowIpList CIDR allowlist
 This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param DescribeOutputRTSPPullSettings $RTSPPullSettings 
-     * @param DescribeOutputHLSPullSettings $HLSPullSettings 
-     * @param integer $MaxConcurrent 
+     * @param DescribeOutputRTSPPullSettings $RTSPPullSettings Output RTSP pull stream configuration.
+     * @param DescribeOutputHLSPullSettings $HLSPullSettings Output HLS pull stream configuration.
+     * @param integer $MaxConcurrent Maximum pull stream concurrency, maximum 4, default 4.
      * @param array $SecurityGroupIds The bound security group IDs.
      */
     function __construct()

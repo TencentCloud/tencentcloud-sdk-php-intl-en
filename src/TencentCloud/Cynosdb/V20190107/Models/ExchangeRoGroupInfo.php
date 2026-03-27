@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Swap RO group information
  *
  * @method RollbackRoGroupInfo getSrcRoGroupInfo() Obtain Source RO group information.
  * @method void setSrcRoGroupInfo(RollbackRoGroupInfo $SrcRoGroupInfo) Set Source RO group information.

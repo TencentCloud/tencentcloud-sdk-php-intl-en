@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(integer $GroupId) Set The group ID.
  * @method string getClusterId() Obtain The network ID.
  * @method void setClusterId(string $ClusterId) Set The network ID.
- * @method integer getRelegation() Obtain  
- * @method void setRelegation(integer $Relegation) Set  
+ * @method integer getRelegation() Obtain Deployment mechanism: 1 for enabled, 0 for disabled
+ * @method void setRelegation(integer $Relegation) Set Deployment mechanism: 1 for enabled, 0 for disabled
  */
 class CreateTDidRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateTDidRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer  
+     * @var integer Deployment mechanism: 1 for enabled, 0 for disabled
      */
     public $Relegation;
 
     /**
      * @param integer $GroupId The group ID.
      * @param string $ClusterId The network ID.
-     * @param integer $Relegation  
+     * @param integer $Relegation Deployment mechanism: 1 for enabled, 0 for disabled
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getIp() Obtain IP address
  * @method void setIp(string $Ip) Set IP address
- * @method string getDomain() Obtain 
- * @method void setDomain(string $Domain) Set 
+ * @method string getDomain() Obtain domain name
+ * @method void setDomain(string $Domain) Set domain name
  * @method string getProtocol() Obtain Protocol. Valid values: `HTTP` and `HTTPS`.
  * @method void setProtocol(string $Protocol) Set Protocol. Valid values: `HTTP` and `HTTPS`.
  * @method string getAction() Obtain Action. Valid values: `drop` and `alg`.
@@ -59,7 +59,7 @@ class CcGeoIpPolicyNew extends AbstractModel
     public $Ip;
 
     /**
-     * @var string 
+     * @var string domain name
      */
     public $Domain;
 
@@ -97,7 +97,7 @@ class CcGeoIpPolicyNew extends AbstractModel
      * @param string $PolicyId Policy ID
      * @param string $InstanceId Instance ID
      * @param string $Ip IP address
-     * @param string $Domain 
+     * @param string $Domain domain name
      * @param string $Protocol Protocol. Valid values: `HTTP` and `HTTPS`.
      * @param string $Action Action. Valid values: `drop` and `alg`.
      * @param string $RegionType Region type. Valid values: `china`, `oversea` and `customized`.

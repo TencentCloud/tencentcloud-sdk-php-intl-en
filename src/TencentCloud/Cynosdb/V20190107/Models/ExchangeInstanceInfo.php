@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Exchange Instance Information
  *
  * @method RollbackInstanceInfo getSrcInstanceInfo() Obtain Source instance information.
  * @method void setSrcInstanceInfo(RollbackInstanceInfo $SrcInstanceInfo) Set Source instance information.

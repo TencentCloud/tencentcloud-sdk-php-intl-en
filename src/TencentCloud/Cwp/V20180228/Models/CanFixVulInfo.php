@@ -36,8 +36,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFixTag(array $FixTag) Set Fixing prompt tag
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getVulCategory() Obtain 
- * @method void setVulCategory(integer $VulCategory) Set 
+ * @method integer getVulCategory() Obtain Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
+ * @method void setVulCategory(integer $VulCategory) Set Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
  */
 class CanFixVulInfo extends AbstractModel
 {
@@ -66,7 +66,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FixTag;
 
     /**
-     * @var integer 
+     * @var integer Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
      */
     public $VulCategory;
 
@@ -79,7 +79,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $FixTag Fixing prompt tag
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $VulCategory 
+     * @param integer $VulCategory Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
      */
     function __construct()
     {

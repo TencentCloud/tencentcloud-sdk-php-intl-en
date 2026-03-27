@@ -99,9 +99,9 @@ Supported image format: JPG or PNG
  * @method boolean getEnablePBR() Obtain Specifies whether PBR material generation is enabled. default false
  * @method void setEnablePBR(boolean $EnablePBR) Set Specifies whether PBR material generation is enabled. default false
  * @method integer getFaceCount() Obtain Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000
+Specifies the supported face count generation range. value range: 3000-1500000
  * @method void setFaceCount(integer $FaceCount) Set Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000
+Specifies the supported face count generation range. value range: 3000-1500000
  * @method string getGenerateType() Obtain Generation task type. default: Normal. valid values:
 Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
@@ -190,7 +190,7 @@ Supported image format: JPG or PNG
 
     /**
      * @var integer Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000
+Specifies the supported face count generation range. value range: 3000-1500000
      */
     public $FaceCount;
 
@@ -253,7 +253,7 @@ Image resolution limitation: the unilateral resolution should be less than 5000 
 Supported image format: JPG or PNG
      * @param boolean $EnablePBR Specifies whether PBR material generation is enabled. default false
      * @param integer $FaceCount Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000
+Specifies the supported face count generation range. value range: 3000-1500000
      * @param string $GenerateType Generation task type. default: Normal. valid values:
 Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.

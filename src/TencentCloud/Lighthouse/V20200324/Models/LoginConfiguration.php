@@ -36,8 +36,8 @@ For Windows instances, the password must contain 12 to 30 characters of the foll
 <li>Uppercase letters: [A–Z]</li>
 <li>Digits: 0-9</li>
 <li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
- * @method array getKeyIds() Obtain 
- * @method void setKeyIds(array $KeyIds) Set 
+ * @method array getKeyIds() Obtain Key ID list. You can specify up to 5 keys simultaneously. After associating keys, you can access the instance using the corresponding private key. Keys and passwords cannot be specified simultaneously. Additionally, the WINDOWS operating system does not support key specification. The key ID list can be obtained via the [DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540) API.
+ * @method void setKeyIds(array $KeyIds) Set Key ID list. You can specify up to 5 keys simultaneously. After associating keys, you can access the instance using the corresponding private key. Keys and passwords cannot be specified simultaneously. Additionally, the WINDOWS operating system does not support key specification. The key ID list can be obtained via the [DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540) API.
  */
 class LoginConfiguration extends AbstractModel
 {
@@ -58,7 +58,7 @@ For Windows instances, the password must contain 12 to 30 characters of the foll
     public $Password;
 
     /**
-     * @var array 
+     * @var array Key ID list. You can specify up to 5 keys simultaneously. After associating keys, you can access the instance using the corresponding private key. Keys and passwords cannot be specified simultaneously. Additionally, the WINDOWS operating system does not support key specification. The key ID list can be obtained via the [DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540) API.
      */
     public $KeyIds;
 
@@ -71,7 +71,7 @@ For Windows instances, the password must contain 12 to 30 characters of the foll
 <li>Uppercase letters: [A–Z]</li>
 <li>Digits: 0-9</li>
 <li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
-     * @param array $KeyIds 
+     * @param array $KeyIds Key ID list. You can specify up to 5 keys simultaneously. After associating keys, you can access the instance using the corresponding private key. Keys and passwords cannot be specified simultaneously. Additionally, the WINDOWS operating system does not support key specification. The key ID list can be obtained via the [DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540) API.
      */
     function __construct()
     {

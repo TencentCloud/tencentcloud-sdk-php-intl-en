@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Media import knowledge base task
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
+ * @method string getTaskId() Obtain Task ID.
+ * @method void setTaskId(string $TaskId) Set Task ID.
+ * @method string getStatus() Obtain Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+ * @method void setStatus(string $Status) Set Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+ * @method integer getErrCode() Obtain Error code; 0 indicates success, other values indicate failure
+ * @method void setErrCode(integer $ErrCode) Set Error code; 0 indicates success, other values indicate failure
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
  */
 class ImportMediaKnowledgeTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Error code; 0 indicates success, other values indicate failure
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param integer $ErrCode 
-     * @param string $Message 
+     * @param string $TaskId Task ID.
+     * @param string $Status Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+     * @param integer $ErrCode Error code; 0 indicates success, other values indicate failure
+     * @param string $Message Error message.
      */
     function __construct()
     {

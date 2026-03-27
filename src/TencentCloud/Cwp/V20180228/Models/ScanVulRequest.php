@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeoutPeriod(integer $TimeoutPeriod) Set Scan duration, in seconds. Default duration: 3,600 second.
  * @method array getVulIds() Obtain IDs of vulnerabilities to be scanned
  * @method void setVulIds(array $VulIds) Set IDs of vulnerabilities to be scanned
- * @method integer getScanMethod() Obtain 
- * @method void setScanMethod(integer $ScanMethod) Set 
+ * @method integer getScanMethod() Obtain 0 version comparison, 2 version comparison + poc
+ * @method void setScanMethod(integer $ScanMethod) Set 0 version comparison, 2 version comparison + poc
  */
 class ScanVulRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class ScanVulRequest extends AbstractModel
     public $VulIds;
 
     /**
-     * @var integer 
+     * @var integer 0 version comparison, 2 version comparison + poc
      */
     public $ScanMethod;
 
@@ -87,7 +87,7 @@ class ScanVulRequest extends AbstractModel
      * @param integer $VulEmergency Whether it is an emergency vulnerability. 0: no; 1: yes.
      * @param integer $TimeoutPeriod Scan duration, in seconds. Default duration: 3,600 second.
      * @param array $VulIds IDs of vulnerabilities to be scanned
-     * @param integer $ScanMethod 
+     * @param integer $ScanMethod 0 version comparison, 2 version comparison + poc
      */
     function __construct()
     {

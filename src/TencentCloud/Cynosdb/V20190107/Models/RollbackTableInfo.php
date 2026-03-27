@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Rollback Table Information
  *
  * @method string getOldTable() Obtain Old table name.
  * @method void setOldTable(string $OldTable) Set Old table name.

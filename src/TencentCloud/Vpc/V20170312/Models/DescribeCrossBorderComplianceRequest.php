@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) Set (Fuzzy match) Unified Social Credit Code.
  * @method string getLegalPerson() Obtain (Fuzzy match) Legal person.
  * @method void setLegalPerson(string $LegalPerson) Set (Fuzzy match) Legal person.
- * @method string getLegalPersonId() Obtain 
- * @method void setLegalPersonId(string $LegalPersonId) Set 
+ * @method string getLegalPersonId() Obtain (Exact match) Legal person ID number.
+ * @method void setLegalPersonId(string $LegalPersonId) Set (Exact match) Legal person ID number.
  * @method string getIssuingAuthority() Obtain (Fuzzy match) Issuing authority.
  * @method void setIssuingAuthority(string $IssuingAuthority) Set (Fuzzy match) Issuing authority.
  * @method string getBusinessAddress() Obtain (Fuzzy match) Business address.
@@ -87,7 +87,7 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
     public $LegalPerson;
 
     /**
-     * @var string 
+     * @var string (Exact match) Legal person ID number.
      */
     public $LegalPersonId;
 
@@ -162,7 +162,7 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
      * @param string $Company (Fuzzy match) Company name.
      * @param string $UniformSocialCreditCode (Fuzzy match) Unified Social Credit Code.
      * @param string $LegalPerson (Fuzzy match) Legal person.
-     * @param string $LegalPersonId 
+     * @param string $LegalPersonId (Exact match) Legal person ID number.
      * @param string $IssuingAuthority (Fuzzy match) Issuing authority.
      * @param string $BusinessAddress (Fuzzy match) Business address.
      * @param integer $PostCode (Exact match) Zip code.

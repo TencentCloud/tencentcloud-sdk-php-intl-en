@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisableTeamDomain request structure.
  *
- * @method integer getDomainId() Obtain 
- * @method void setDomainId(integer $DomainId) Set 
- * @method string getPlatformId() Obtain 
- * @method void setPlatformId(string $PlatformId) Set 
+ * @method integer getDomainId() Obtain Domain Name ID
+ * @method void setDomainId(integer $DomainId) Set Domain Name ID
+ * @method string getPlatformId() Obtain Platform ID
+ * @method void setPlatformId(string $PlatformId) Set Platform ID
  */
 class DisableTeamDomainRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Domain Name ID
      */
     public $DomainId;
 
     /**
-     * @var string 
+     * @var string Platform ID
      */
     public $PlatformId;
 
     /**
-     * @param integer $DomainId 
-     * @param string $PlatformId 
+     * @param integer $DomainId Domain Name ID
+     * @param string $PlatformId Platform ID
      */
     function __construct()
     {

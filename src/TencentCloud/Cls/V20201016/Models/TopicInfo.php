@@ -74,8 +74,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getIsWebTracking() Obtain Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsWebTracking(boolean $IsWebTracking) Set Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
- * @method TopicExtendInfo getExtends() Obtain 
- * @method void setExtends(TopicExtendInfo $Extends) Set 
+ * @method TopicExtendInfo getExtends() Obtain Log topic extended information
+ * @method void setExtends(TopicExtendInfo $Extends) Set Log topic extended information
  */
 class TopicInfo extends AbstractModel
 {
@@ -179,7 +179,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsWebTracking;
 
     /**
-     * @var TopicExtendInfo 
+     * @var TopicExtendInfo Log topic extended information
      */
     public $Extends;
 
@@ -211,7 +211,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - 1: Metric Topic
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $IsWebTracking Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TopicExtendInfo $Extends 
+     * @param TopicExtendInfo $Extends Log topic extended information
      */
     function __construct()
     {

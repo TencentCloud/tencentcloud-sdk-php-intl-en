@@ -18,44 +18,92 @@ namespace TencentCloud\Facefusion\V20220927\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Face Fusion is not suitable for CR facial information.
  *
- * @method string getField() Obtain 
- * @method void setField(string $Field) Set 
- * @method string getLabel() Obtain 
- * @method void setLabel(string $Label) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
+ * @method string getField() Obtain Reserved Field
+ * @method void setField(string $Field) Set Reserved Field
+ * @method string getLabel() Obtain Tag name matched in audit
+ * @method void setLabel(string $Label) Set Tag name matched in audit
+ * @method float getConfidence() Obtain Confidence score corresponding to the identified label. A higher score indicates a higher probability of violation.
+
+0 to 70: Suggestion is PASS;
+
+70 to 80: Suggestion is REVIEW;
+
+80 to 100: Suggestion is BLOCK.
+ * @method void setConfidence(float $Confidence) Set Confidence score corresponding to the identified label. A higher score indicates a higher probability of violation.
+
+0 to 70: Suggestion is PASS;
+
+70 to 80: Suggestion is REVIEW;
+
+80 to 100: Suggestion is BLOCK.
+ * @method string getSuggestion() Obtain Audit conclusion for identified scenarios:
+
+PASS: Normal
+
+REVIEW: Suspected
+
+BLOCK: Violation
+ * @method void setSuggestion(string $Suggestion) Set Audit conclusion for identified scenarios:
+
+PASS: Normal
+
+REVIEW: Suspected
+
+BLOCK: Violation
  */
 class FuseFaceReviewDetail extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Reserved Field
      */
     public $Field;
 
     /**
-     * @var string 
+     * @var string Tag name matched in audit
      */
     public $Label;
 
     /**
-     * @var float 
+     * @var float Confidence score corresponding to the identified label. A higher score indicates a higher probability of violation.
+
+0 to 70: Suggestion is PASS;
+
+70 to 80: Suggestion is REVIEW;
+
+80 to 100: Suggestion is BLOCK.
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Audit conclusion for identified scenarios:
+
+PASS: Normal
+
+REVIEW: Suspected
+
+BLOCK: Violation
      */
     public $Suggestion;
 
     /**
-     * @param string $Field 
-     * @param string $Label 
-     * @param float $Confidence 
-     * @param string $Suggestion 
+     * @param string $Field Reserved Field
+     * @param string $Label Tag name matched in audit
+     * @param float $Confidence Confidence score corresponding to the identified label. A higher score indicates a higher probability of violation.
+
+0 to 70: Suggestion is PASS;
+
+70 to 80: Suggestion is REVIEW;
+
+80 to 100: Suggestion is BLOCK.
+     * @param string $Suggestion Audit conclusion for identified scenarios:
+
+PASS: Normal
+
+REVIEW: Suspected
+
+BLOCK: Violation
      */
     function __construct()
     {

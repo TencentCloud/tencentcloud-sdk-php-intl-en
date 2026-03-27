@@ -70,8 +70,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setDigitalWatermarkType(string $DigitalWatermarkType) Set The watermark type. Valid values:
 <li>Trace: Digital watermark</li>
 <li>None: Regular watermark</li>
- * @method string getCopyRightWatermarkText() Obtain 
- * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) Set 
+ * @method string getCopyRightWatermarkText() Obtain Copyright information.
+ * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) Set Copyright information.
  */
 class MediaTranscodeItem extends AbstractModel
 {
@@ -149,7 +149,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DigitalWatermarkType;
 
     /**
-     * @var string 
+     * @var string Copyright information.
      */
     public $CopyRightWatermarkText;
 
@@ -179,7 +179,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $DigitalWatermarkType The watermark type. Valid values:
 <li>Trace: Digital watermark</li>
 <li>None: Regular watermark</li>
-     * @param string $CopyRightWatermarkText 
+     * @param string $CopyRightWatermarkText Copyright information.
      */
     function __construct()
     {

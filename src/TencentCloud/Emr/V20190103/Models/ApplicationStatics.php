@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationType(string $ApplicationType) Set Application type
  * @method integer getSumMemorySeconds() Obtain `SumMemorySeconds` meaning
  * @method void setSumMemorySeconds(integer $SumMemorySeconds) Set `SumMemorySeconds` meaning
- * @method integer getSumVCoreSeconds() Obtain 
- * @method void setSumVCoreSeconds(integer $SumVCoreSeconds) Set 
+ * @method integer getSumVCoreSeconds() Obtain Total VCore Seconds
+ * @method void setSumVCoreSeconds(integer $SumVCoreSeconds) Set Total VCore Seconds
  * @method string getSumHDFSBytesWritten() Obtain SumHDFSBytesWritten (with unit)
  * @method void setSumHDFSBytesWritten(string $SumHDFSBytesWritten) Set SumHDFSBytesWritten (with unit)
  * @method string getSumHDFSBytesRead() Obtain SumHDFSBytesRead (with unit)
@@ -60,7 +60,7 @@ class ApplicationStatics extends AbstractModel
     public $SumMemorySeconds;
 
     /**
-     * @var integer 
+     * @var integer Total VCore Seconds
      */
     public $SumVCoreSeconds;
 
@@ -84,7 +84,7 @@ class ApplicationStatics extends AbstractModel
      * @param string $User Username
      * @param string $ApplicationType Application type
      * @param integer $SumMemorySeconds `SumMemorySeconds` meaning
-     * @param integer $SumVCoreSeconds 
+     * @param integer $SumVCoreSeconds Total VCore Seconds
      * @param string $SumHDFSBytesWritten SumHDFSBytesWritten (with unit)
      * @param string $SumHDFSBytesRead SumHDFSBytesRead (with unit)
      * @param integer $CountApps Application count

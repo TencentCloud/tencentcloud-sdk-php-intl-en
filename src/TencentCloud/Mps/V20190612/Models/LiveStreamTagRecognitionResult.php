@@ -18,44 +18,44 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Live streaming AI tagging recognition results
  *
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
- * @method float getStartPtsTime() Obtain 
- * @method void setStartPtsTime(float $StartPtsTime) Set 
- * @method float getEndPtsTime() Obtain 
- * @method void setEndPtsTime(float $EndPtsTime) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
+ * @method string getId() Obtain Tagging events.
+ * @method void setId(string $Id) Set Tagging events.
+ * @method float getStartPtsTime() Obtain Start PTS time of the recognition segment, unit: seconds.
+ * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of the recognition segment, unit: seconds.
+ * @method float getEndPtsTime() Obtain Termination PTS time of the recognition segment, unit: seconds.
+ * @method void setEndPtsTime(float $EndPtsTime) Set Termination PTS time of the recognition segment, unit: seconds.
+ * @method float getConfidence() Obtain Recognition segment confidence. Range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Recognition segment confidence. Range: 0-100.
  */
 class LiveStreamTagRecognitionResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Tagging events.
      */
     public $Id;
 
     /**
-     * @var float 
+     * @var float Start PTS time of the recognition segment, unit: seconds.
      */
     public $StartPtsTime;
 
     /**
-     * @var float 
+     * @var float Termination PTS time of the recognition segment, unit: seconds.
      */
     public $EndPtsTime;
 
     /**
-     * @var float 
+     * @var float Recognition segment confidence. Range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @param string $Id 
-     * @param float $StartPtsTime 
-     * @param float $EndPtsTime 
-     * @param float $Confidence 
+     * @param string $Id Tagging events.
+     * @param float $StartPtsTime Start PTS time of the recognition segment, unit: seconds.
+     * @param float $EndPtsTime Termination PTS time of the recognition segment, unit: seconds.
+     * @param float $Confidence Recognition segment confidence. Range: 0-100.
      */
     function __construct()
     {

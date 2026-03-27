@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 - The unit of sp_tiw_board and sp_tiw_ric is minutes.
  * @method void setValue(float $Value) Set Usage values.
 - The unit of sp_tiw_board and sp_tiw_ric is minutes.
- * @method integer getRoomID() Obtain 
- * @method void setRoomID(integer $RoomID) Set 
+ * @method integer getRoomID() Obtain Interactive whiteboard room ID
+ * @method void setRoomID(integer $RoomID) Set Interactive whiteboard room ID
  */
 class RoomUsageDataItem extends AbstractModel
 {
@@ -63,7 +63,7 @@ class RoomUsageDataItem extends AbstractModel
     public $Value;
 
     /**
-     * @var integer 
+     * @var integer Interactive whiteboard room ID
      */
     public $RoomID;
 
@@ -75,7 +75,7 @@ class RoomUsageDataItem extends AbstractModel
 - sp_tiw_ric: The duration of real-time recording.
      * @param float $Value Usage values.
 - The unit of sp_tiw_board and sp_tiw_ric is minutes.
-     * @param integer $RoomID 
+     * @param integer $RoomID Interactive whiteboard room ID
      */
     function __construct()
     {

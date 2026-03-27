@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set The list of tags to be bound.
  * @method string getProtocol() Obtain The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
  * @method void setProtocol(string $Protocol) Set The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
- * @method integer getTimeSpan() Obtain 
- * @method void setTimeSpan(integer $TimeSpan) Set 
+ * @method integer getTimeSpan() Obtain Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type.
+ * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type.
  * @method string getEgress() Obtain     Network egress. It defaults to `center_egress1`. Valid values:
 center_egress1,center_egress2,center_egress3
 
@@ -107,7 +107,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
     public $Protocol;
 
     /**
-     * @var integer 
+     * @var integer Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type.
      */
     public $TimeSpan;
 
@@ -135,7 +135,7 @@ center_egress1,center_egress2,center_egress3
      * @param integer $InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
      * @param array $Tags The list of tags to be bound.
      * @param string $Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
-     * @param integer $TimeSpan 
+     * @param integer $TimeSpan Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type.
      * @param string $Egress     Network egress. It defaults to `center_egress1`. Valid values:
 center_egress1,center_egress2,center_egress3
      */

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTKEEdgeCluster request structure.
  *
- * @method string getK8SVersion() Obtain 
- * @method void setK8SVersion(string $K8SVersion) Set 
+ * @method string getK8SVersion() Obtain k8s version number
+ * @method void setK8SVersion(string $K8SVersion) Set k8s version number
  * @method string getVpcId() Obtain VPC ID
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getClusterName() Obtain Cluster name
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateTKEEdgeClusterRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string k8s version number
      */
     public $K8SVersion;
 
@@ -129,7 +129,7 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
     public $TagSpecification;
 
     /**
-     * @param string $K8SVersion 
+     * @param string $K8SVersion k8s version number
      * @param string $VpcId VPC ID
      * @param string $ClusterName Cluster name
      * @param string $PodCIDR Cluster Pod CIDR block

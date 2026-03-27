@@ -176,10 +176,10 @@ Note: This field may return `null`, indicating that no valid value was found.
  * @method void setClusterID(string $ClusterID) Set Cluster ID
  * @method string getClusterName() Obtain Cluster name
  * @method void setClusterName(string $ClusterName) Set Cluster name
- * @method string getNamespace() Obtain 
- * @method void setNamespace(string $Namespace) Set 
- * @method string getWorkloadType() Obtain 
- * @method void setWorkloadType(string $WorkloadType) Set 
+ * @method string getNamespace() Obtain Namespace
+ * @method void setNamespace(string $Namespace) Set Namespace
+ * @method string getWorkloadType() Obtain Workload
+ * @method void setWorkloadType(string $WorkloadType) Set Workload
  */
 class VulDefenceEventDetail extends AbstractModel
 {
@@ -438,12 +438,12 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $ClusterName;
 
     /**
-     * @var string 
+     * @var string Namespace
      */
     public $Namespace;
 
     /**
-     * @var string 
+     * @var string Workload
      */
     public $WorkloadType;
 
@@ -526,8 +526,8 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $NodeSubNetID Super node subnet ID
      * @param string $ClusterID Cluster ID
      * @param string $ClusterName Cluster name
-     * @param string $Namespace 
-     * @param string $WorkloadType 
+     * @param string $Namespace Namespace
+     * @param string $WorkloadType Workload
      */
     function __construct()
     {

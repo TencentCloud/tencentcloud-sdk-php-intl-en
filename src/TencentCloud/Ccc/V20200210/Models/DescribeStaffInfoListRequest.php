@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStaffInfoList request structure.
  *
- * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method integer getPageSize() Obtain Page size, upper limit 9,999.
- * @method void setPageSize(integer $PageSize) Set Page size, upper limit 9,999.
- * @method integer getPageNumber() Obtain Page number starting from 0.
- * @method void setPageNumber(integer $PageNumber) Set Page number starting from 0.
- * @method string getStaffMail() Obtain Agent account used when querying a single agent.
- * @method void setStaffMail(string $StaffMail) Set Agent account used when querying a single agent.
- * @method integer getModifiedTime() Obtain Use when querying for agents with a modification time greater or equal to modifiedtime.
- * @method void setModifiedTime(integer $ModifiedTime) Set Use when querying for agents with a modification time greater or equal to modifiedtime.
- * @method integer getSkillGroupId() Obtain Skill group id.
- * @method void setSkillGroupId(integer $SkillGroupId) Set Skill group id.
+ * @method integer getSdkAppId() Obtain <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
+ * @method void setSdkAppId(integer $SdkAppId) Set <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
+ * @method integer getPageSize() Obtain <P>Pagination size. upper limit: 9999.</p>.
+ * @method void setPageSize(integer $PageSize) Set <P>Pagination size. upper limit: 9999.</p>.
+ * @method integer getPageNumber() Obtain <P>Page number, starting from 0.</p>.
+ * @method void setPageNumber(integer $PageNumber) Set <P>Page number, starting from 0.</p>.
+ * @method string getStaffMail() Obtain <P>Agent account, used when query single agent.</p>.
+ * @method void setStaffMail(string $StaffMail) Set <P>Agent account, used when query single agent.</p>.
+ * @method integer getModifiedTime() Obtain <p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>.
+ * @method void setModifiedTime(integer $ModifiedTime) Set <p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>.
+ * @method integer getSkillGroupId() Obtain <p>Skill group ID</p>.
+ * @method void setSkillGroupId(integer $SkillGroupId) Set <p>Skill group ID</p>.
  */
 class DescribeStaffInfoListRequest extends AbstractModel
 {
     /**
-     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
      */
     public $SdkAppId;
 
     /**
-     * @var integer Page size, upper limit 9,999.
+     * @var integer <P>Pagination size. upper limit: 9999.</p>.
      */
     public $PageSize;
 
     /**
-     * @var integer Page number starting from 0.
+     * @var integer <P>Page number, starting from 0.</p>.
      */
     public $PageNumber;
 
     /**
-     * @var string Agent account used when querying a single agent.
+     * @var string <P>Agent account, used when query single agent.</p>.
      */
     public $StaffMail;
 
     /**
-     * @var integer Use when querying for agents with a modification time greater or equal to modifiedtime.
+     * @var integer <p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>.
      */
     public $ModifiedTime;
 
     /**
-     * @var integer Skill group id.
+     * @var integer <p>Skill group ID</p>.
      */
     public $SkillGroupId;
 
     /**
-     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param integer $PageSize Page size, upper limit 9,999.
-     * @param integer $PageNumber Page number starting from 0.
-     * @param string $StaffMail Agent account used when querying a single agent.
-     * @param integer $ModifiedTime Use when querying for agents with a modification time greater or equal to modifiedtime.
-     * @param integer $SkillGroupId Skill group id.
+     * @param integer $SdkAppId <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
+     * @param integer $PageSize <P>Pagination size. upper limit: 9999.</p>.
+     * @param integer $PageNumber <P>Page number, starting from 0.</p>.
+     * @param string $StaffMail <P>Agent account, used when query single agent.</p>.
+     * @param integer $ModifiedTime <p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>.
+     * @param integer $SkillGroupId <p>Skill group ID</p>.
      */
     function __construct()
     {

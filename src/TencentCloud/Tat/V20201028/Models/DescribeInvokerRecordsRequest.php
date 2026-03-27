@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInvokerIds() Obtain Executor ID list. the list has a cap of 100.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
  * @method void setInvokerIds(array $InvokerIds) Set Executor ID list. the list has a cap of 100.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
  * @method integer getOffset() Obtain Offset. Default value: 0.
@@ -36,7 +36,7 @@ class DescribeInvokerRecordsRequest extends AbstractModel
     /**
      * @var array Executor ID list. the list has a cap of 100.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public $InvokerIds;
 
@@ -53,7 +53,7 @@ Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/617
     /**
      * @param array $InvokerIds Executor ID list. the list has a cap of 100.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
      */

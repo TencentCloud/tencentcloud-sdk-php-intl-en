@@ -154,8 +154,8 @@ Hadoop-Presto
 Hadoop-Hbase
  * @method array getExternalService() Obtain Shared component information
  * @method void setExternalService(array $ExternalService) Set Shared component information
- * @method integer getVersionID() Obtain 
- * @method void setVersionID(integer $VersionID) Set 
+ * @method integer getVersionID() Obtain If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
+ * @method void setVersionID(integer $VersionID) Set If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
  * @method boolean getMultiZone() Obtain `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
  * @method void setMultiZone(boolean $MultiZone) Set `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
  * @method array getMultiZoneSettings() Obtain Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
@@ -353,7 +353,7 @@ Hadoop-Hbase
     public $ExternalService;
 
     /**
-     * @var integer 
+     * @var integer If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
      */
     public $VersionID;
 
@@ -450,7 +450,7 @@ Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
      * @param array $ExternalService Shared component information
-     * @param integer $VersionID 
+     * @param integer $VersionID If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
      * @param boolean $MultiZone `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
      * @param array $MultiZoneSettings Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
      * @param string $CosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.

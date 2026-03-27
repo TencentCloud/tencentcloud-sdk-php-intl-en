@@ -60,10 +60,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method string getClusterID() Obtain Cluster ID
  * @method void setClusterID(string $ClusterID) Set Cluster ID
- * @method string getClusterName() Obtain 
- * @method void setClusterName(string $ClusterName) Set 
- * @method string getClusterAccessedStatus() Obtain 
- * @method void setClusterAccessedStatus(string $ClusterAccessedStatus) Set 
+ * @method string getClusterName() Obtain Cluster Name
+ * @method void setClusterName(string $ClusterName) Set Cluster Name
+ * @method string getClusterAccessedStatus() Obtain Cluster Access Status
+ * @method void setClusterAccessedStatus(string $ClusterAccessedStatus) Set Cluster Access Status
  */
 class HostInfo extends AbstractModel
 {
@@ -160,12 +160,12 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $ClusterID;
 
     /**
-     * @var string 
+     * @var string Cluster Name
      */
     public $ClusterName;
 
     /**
-     * @var string 
+     * @var string Cluster Access Status
      */
     public $ClusterAccessedStatus;
 
@@ -190,8 +190,8 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param array $Tags Tags
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $ClusterID Cluster ID
-     * @param string $ClusterName 
-     * @param string $ClusterAccessedStatus 
+     * @param string $ClusterName Cluster Name
+     * @param string $ClusterAccessedStatus Cluster Access Status
      */
     function __construct()
     {

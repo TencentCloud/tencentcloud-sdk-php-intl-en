@@ -36,16 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(array $Id) Set ID of the image to be scanned
  * @method boolean getLatest() Obtain Whether to scan for the latest version
  * @method void setLatest(boolean $Latest) Set Whether to scan for the latest version
- * @method boolean getContainerRunning() Obtain 
- * @method void setContainerRunning(boolean $ContainerRunning) Set 
- * @method string getScanEndTime() Obtain 
- * @method void setScanEndTime(string $ScanEndTime) Set 
- * @method integer getScanScope() Obtain 
- * @method void setScanScope(integer $ScanScope) Set 
- * @method array getRegistryType() Obtain 
- * @method void setRegistryType(array $RegistryType) Set 
- * @method array getNamespace() Obtain 
- * @method void setNamespace(array $Namespace) Set 
+ * @method boolean getContainerRunning() Obtain Whether running containers exist
+ * @method void setContainerRunning(boolean $ContainerRunning) Set Whether running containers exist
+ * @method string getScanEndTime() Obtain Scan End Time
+ * @method void setScanEndTime(string $ScanEndTime) Set Scan End Time
+ * @method integer getScanScope() Obtain Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images
+ * @method void setScanScope(integer $ScanScope) Set Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images
+ * @method array getRegistryType() Obtain Repository Type tcr,ccr,harbor
+ * @method void setRegistryType(array $RegistryType) Set Repository Type tcr,ccr,harbor
+ * @method array getNamespace() Obtain Namespace
+ * @method void setNamespace(array $Namespace) Set Namespace
  */
 class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
 {
@@ -91,27 +91,27 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
     public $Latest;
 
     /**
-     * @var boolean 
+     * @var boolean Whether running containers exist
      */
     public $ContainerRunning;
 
     /**
-     * @var string 
+     * @var string Scan End Time
      */
     public $ScanEndTime;
 
     /**
-     * @var integer 
+     * @var integer Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images
      */
     public $ScanScope;
 
     /**
-     * @var array 
+     * @var array Repository Type tcr,ccr,harbor
      */
     public $RegistryType;
 
     /**
-     * @var array 
+     * @var array Namespace
      */
     public $Namespace;
 
@@ -124,11 +124,11 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
      * @param boolean $All Whether to scan all
      * @param array $Id ID of the image to be scanned
      * @param boolean $Latest Whether to scan for the latest version
-     * @param boolean $ContainerRunning 
-     * @param string $ScanEndTime 
-     * @param integer $ScanScope 
-     * @param array $RegistryType 
-     * @param array $Namespace 
+     * @param boolean $ContainerRunning Whether running containers exist
+     * @param string $ScanEndTime Scan End Time
+     * @param integer $ScanScope Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images
+     * @param array $RegistryType Repository Type tcr,ccr,harbor
+     * @param array $Namespace Namespace
      */
     function __construct()
     {

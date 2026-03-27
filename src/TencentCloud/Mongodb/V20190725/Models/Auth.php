@@ -18,7 +18,7 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * User permissions
  *
  * @method integer getMask() Obtain Permission information of the current account.
 - 0: no permissions.

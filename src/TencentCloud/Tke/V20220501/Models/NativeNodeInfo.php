@@ -82,8 +82,14 @@ Note: This field may return "null", indicating that no valid value can be obtain
 Note: This field may return "null", indicating that no valid value can be obtained.
  * @method void setOsImage(string $OsImage) Set OS name
 Note: This field may return "null", indicating that no valid value can be obtained.
- * @method string getInstanceId() Obtain 
- * @method void setInstanceId(string $InstanceId) Set 
+ * @method string getInstanceId() Obtain **Instance ID corresponding to the native node**
+
+- ins-q47ofw6 indicates that this instance is a CVM instance
+- eks-f8mvyaep indicates that this instance is a CXM instance
+ * @method void setInstanceId(string $InstanceId) Set **Instance ID corresponding to the native node**
+
+- ins-q47ofw6 indicates that this instance is a CVM instance
+- eks-f8mvyaep indicates that this instance is a CXM instance
  */
 class NativeNodeInfo extends AbstractModel
 {
@@ -207,7 +213,10 @@ Note: This field may return "null", indicating that no valid value can be obtain
     public $OsImage;
 
     /**
-     * @var string 
+     * @var string **Instance ID corresponding to the native node**
+
+- ins-q47ofw6 indicates that this instance is a CVM instance
+- eks-f8mvyaep indicates that this instance is a CXM instance
      */
     public $InstanceId;
 
@@ -243,7 +252,10 @@ Note: This field may return "null", indicating that no valid value can be obtain
 Note: This field may return "null", indicating that no valid value can be obtained.
      * @param string $OsImage OS name
 Note: This field may return "null", indicating that no valid value can be obtained.
-     * @param string $InstanceId 
+     * @param string $InstanceId **Instance ID corresponding to the native node**
+
+- ins-q47ofw6 indicates that this instance is a CVM instance
+- eks-f8mvyaep indicates that this instance is a CXM instance
      */
     function __construct()
     {

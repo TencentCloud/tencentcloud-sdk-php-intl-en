@@ -52,10 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCcnOwnerUin(string $CcnOwnerUin) Set The UIN of the main account to which the Cloud Connect Network gateway belongs. It is required for cross-account CCN.Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getExtraAttr() Obtain Additional information added for the business. Parameter name is called key, parameter value is called value. Mandatory parameters for tdpg: PgDatabase (subscribed database name).Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExtraAttr(array $ExtraAttr) Set Additional information added for the business. Parameter name is called key, parameter value is called value. Mandatory parameters for tdpg: PgDatabase (subscribed database name).Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getChildInstanceId() Obtain 
- * @method void setChildInstanceId(string $ChildInstanceId) Set 
- * @method string getChildInstanceType() Obtain 
- * @method void setChildInstanceType(string $ChildInstanceType) Set 
+ * @method string getChildInstanceId() Obtain The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
+ * @method void setChildInstanceId(string $ChildInstanceId) Set The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
+ * @method string getChildInstanceType() Obtain When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
+ * @method void setChildInstanceType(string $ChildInstanceType) Set When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
  */
 class EndpointItem extends AbstractModel
 {
@@ -140,12 +140,12 @@ class EndpointItem extends AbstractModel
     public $ExtraAttr;
 
     /**
-     * @var string 
+     * @var string The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
      */
     public $ChildInstanceId;
 
     /**
-     * @var string 
+     * @var string When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
      */
     public $ChildInstanceType;
 
@@ -166,8 +166,8 @@ class EndpointItem extends AbstractModel
      * @param string $DatabaseNetEnv Database network environment. This field is required when AccessType is ccn. Valid values: UserIDC; TencentVPC; Aws; AliYun; Others.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CcnOwnerUin The UIN of the main account to which the Cloud Connect Network gateway belongs. It is required for cross-account CCN.Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ExtraAttr Additional information added for the business. Parameter name is called key, parameter value is called value. Mandatory parameters for tdpg: PgDatabase (subscribed database name).Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ChildInstanceId 
-     * @param string $ChildInstanceType 
+     * @param string $ChildInstanceId The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
+     * @param string $ChildInstanceType When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
      */
     function __construct()
     {

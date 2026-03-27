@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AIGC image generation task output.
  *
  * @method array getFileInfos() Obtain File information of the out image for the AIGC image generation task.
  * @method void setFileInfos(array $FileInfos) Set File information of the out image for the AIGC image generation task.

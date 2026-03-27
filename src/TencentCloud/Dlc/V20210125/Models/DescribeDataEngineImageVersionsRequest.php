@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEngineType() Obtain Types of engines: SQL, SparkBatch, StandardSpark, and StandardPresto
  * @method void setEngineType(string $EngineType) Set Types of engines: SQL, SparkBatch, StandardSpark, and StandardPresto
- * @method string getSort() Obtain 
- * @method void setSort(string $Sort) Set 
- * @method boolean getAsc() Obtain 
- * @method void setAsc(boolean $Asc) Set 
+ * @method string getSort() Obtain Sort field: InsertTime (Insertion time, default), UpdateTime (Update time)
+ * @method void setSort(string $Sort) Set Sort field: InsertTime (Insertion time, default), UpdateTime (Update time)
+ * @method boolean getAsc() Obtain Sort order: false (descending, default), true (ascending)
+ * @method void setAsc(boolean $Asc) Set Sort order: false (descending, default), true (ascending)
  */
 class DescribeDataEngineImageVersionsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeDataEngineImageVersionsRequest extends AbstractModel
     public $EngineType;
 
     /**
-     * @var string 
+     * @var string Sort field: InsertTime (Insertion time, default), UpdateTime (Update time)
      */
     public $Sort;
 
     /**
-     * @var boolean 
+     * @var boolean Sort order: false (descending, default), true (ascending)
      */
     public $Asc;
 
     /**
      * @param string $EngineType Types of engines: SQL, SparkBatch, StandardSpark, and StandardPresto
-     * @param string $Sort 
-     * @param boolean $Asc 
+     * @param string $Sort Sort field: InsertTime (Insertion time, default), UpdateTime (Update time)
+     * @param boolean $Asc Sort order: false (descending, default), true (ascending)
      */
     function __construct()
     {

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Record name
  * @method string getContent() Obtain Record content
  * @method void setContent(string $Content) Set Record content
- * @method integer getTtl() Obtain 
- * @method void setTtl(integer $Ttl) Set 
+ * @method integer getTtl() Obtain Time to Live Value
+ * @method void setTtl(integer $Ttl) Set Time to Live Value
  * @method integer getPriority() Obtain Priority
  * @method void setPriority(integer $Priority) Set Priority
  * @method string getMode() Obtain Proxy mode
@@ -65,7 +65,7 @@ class ModifyDnsRecordRequest extends AbstractModel
     public $Content;
 
     /**
-     * @var integer 
+     * @var integer Time to Live Value
      */
     public $Ttl;
 
@@ -85,7 +85,7 @@ class ModifyDnsRecordRequest extends AbstractModel
      * @param string $Type Record type
      * @param string $Name Record name
      * @param string $Content Record content
-     * @param integer $Ttl 
+     * @param integer $Ttl Time to Live Value
      * @param integer $Priority Priority
      * @param string $Mode Proxy mode
      */

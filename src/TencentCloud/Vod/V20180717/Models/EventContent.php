@@ -114,8 +114,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setComplexAdaptiveDynamicStreamingCompleteEvent(ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingCompleteEvent) Set Complex adaptive bitrate streaming processing completion event, valid when the event type is ComplexAdaptiveDynamicStreamingComplete.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method ProcessMediaByMPS getProcessMediaByMPSCompleteEvent() Obtain 
- * @method void setProcessMediaByMPSCompleteEvent(ProcessMediaByMPS $ProcessMediaByMPSCompleteEvent) Set 
+ * @method ProcessMediaByMPS getProcessMediaByMPSCompleteEvent() Obtain MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
+ * @method void setProcessMediaByMPSCompleteEvent(ProcessMediaByMPS $ProcessMediaByMPSCompleteEvent) Set MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
  * @method AigcImageTask getAigcImageCompleteEvent() Obtain AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setAigcImageCompleteEvent(AigcImageTask $AigcImageCompleteEvent) Set AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
@@ -291,7 +291,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $ComplexAdaptiveDynamicStreamingCompleteEvent;
 
     /**
-     * @var ProcessMediaByMPS 
+     * @var ProcessMediaByMPS MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
      */
     public $ProcessMediaByMPSCompleteEvent;
 
@@ -355,7 +355,7 @@ Pay attention to: this field may return null, indicating that no valid value can
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingCompleteEvent Complex adaptive bitrate streaming processing completion event, valid when the event type is ComplexAdaptiveDynamicStreamingComplete.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ProcessMediaByMPS $ProcessMediaByMPSCompleteEvent 
+     * @param ProcessMediaByMPS $ProcessMediaByMPSCompleteEvent MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
      * @param AigcImageTask $AigcImageCompleteEvent AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param AigcVideoTask $AigcVideoCompleteEvent AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.

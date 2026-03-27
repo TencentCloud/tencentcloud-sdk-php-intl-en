@@ -18,28 +18,28 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * API Binding Policy List
  *
- * @method integer getTotalCount() Obtain 
- * @method void setTotalCount(integer $TotalCount) Set 
- * @method array getApiEnvironmentStrategySet() Obtain 
- * @method void setApiEnvironmentStrategySet(array $ApiEnvironmentStrategySet) Set 
+ * @method integer getTotalCount() Obtain The quantity of rate limiting policies bound to APIs.
+ * @method void setTotalCount(integer $TotalCount) Set The quantity of rate limiting policies bound to APIs.
+ * @method array getApiEnvironmentStrategySet() Obtain API Binding Rate Limiting Policy List.
+ * @method void setApiEnvironmentStrategySet(array $ApiEnvironmentStrategySet) Set API Binding Rate Limiting Policy List.
  */
 class ApiEnvironmentStrategyStatus extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer The quantity of rate limiting policies bound to APIs.
      */
     public $TotalCount;
 
     /**
-     * @var array 
+     * @var array API Binding Rate Limiting Policy List.
      */
     public $ApiEnvironmentStrategySet;
 
     /**
-     * @param integer $TotalCount 
-     * @param array $ApiEnvironmentStrategySet 
+     * @param integer $TotalCount The quantity of rate limiting policies bound to APIs.
+     * @param array $ApiEnvironmentStrategySet API Binding Rate Limiting Policy List.
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SyncAssetImageRegistryAsset request structure.
  *
- * @method boolean getAll() Obtain 
- * @method void setAll(boolean $All) Set 
- * @method array getRegistryIds() Obtain 
- * @method void setRegistryIds(array $RegistryIds) Set 
+ * @method boolean getAll() Obtain Whether to synchronize all image repositories
+ * @method void setAll(boolean $All) Set Whether to synchronize all image repositories
+ * @method array getRegistryIds() Obtain Partial image repositories requiring synchronization
+ * @method void setRegistryIds(array $RegistryIds) Set Partial image repositories requiring synchronization
  */
 class SyncAssetImageRegistryAssetRequest extends AbstractModel
 {
     /**
-     * @var boolean 
+     * @var boolean Whether to synchronize all image repositories
      */
     public $All;
 
     /**
-     * @var array 
+     * @var array Partial image repositories requiring synchronization
      */
     public $RegistryIds;
 
     /**
-     * @param boolean $All 
-     * @param array $RegistryIds 
+     * @param boolean $All Whether to synchronize all image repositories
+     * @param array $RegistryIds Partial image repositories requiring synchronization
      */
     function __construct()
     {

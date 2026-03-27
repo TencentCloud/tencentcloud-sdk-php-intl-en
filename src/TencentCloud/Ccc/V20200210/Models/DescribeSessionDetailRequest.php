@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSessionDetail request structure.
  *
- * @method integer getSdkAppId() Obtain App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
- * @method string getSessionId() Obtain Specifies the session id of the call.
- * @method void setSessionId(string $SessionId) Set Specifies the session id of the call.
- * @method integer getStartTimestamp() Obtain Start timestamp. Unix second-level timestamp. supports up to nearly 180 days.
- * @method void setStartTimestamp(integer $StartTimestamp) Set Start timestamp. Unix second-level timestamp. supports up to nearly 180 days.
- * @method integer getEndTimestamp() Obtain End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.
- * @method void setEndTimestamp(integer $EndTimestamp) Set End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.
+ * @method integer getSdkAppId() Obtain <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
+ * @method void setSdkAppId(integer $SdkAppId) Set <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
+ * @method string getSessionId() Obtain <P>Call session id</p>.
+ * @method void setSessionId(string $SessionId) Set <P>Call session id</p>.
+ * @method integer getStartTimestamp() Obtain <p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>.
+ * @method void setStartTimestamp(integer $StartTimestamp) Set <p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>.
+ * @method integer getEndTimestamp() Obtain <p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>.
+ * @method void setEndTimestamp(integer $EndTimestamp) Set <p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>.
  */
 class DescribeSessionDetailRequest extends AbstractModel
 {
     /**
-     * @var integer App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
+     * @var integer <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
      */
     public $SdkAppId;
 
     /**
-     * @var string Specifies the session id of the call.
+     * @var string <P>Call session id</p>.
      */
     public $SessionId;
 
     /**
-     * @var integer Start timestamp. Unix second-level timestamp. supports up to nearly 180 days.
+     * @var integer <p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>.
      */
     public $StartTimestamp;
 
     /**
-     * @var integer End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.
+     * @var integer <p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>.
      */
     public $EndTimestamp;
 
     /**
-     * @param integer $SdkAppId App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
-     * @param string $SessionId Specifies the session id of the call.
-     * @param integer $StartTimestamp Start timestamp. Unix second-level timestamp. supports up to nearly 180 days.
-     * @param integer $EndTimestamp End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.
+     * @param integer $SdkAppId <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
+     * @param string $SessionId <P>Call session id</p>.
+     * @param integer $StartTimestamp <p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>.
+     * @param integer $EndTimestamp <p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>.
      */
     function __construct()
     {

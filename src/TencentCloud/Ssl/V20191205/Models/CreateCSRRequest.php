@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyPassword(string $KeyPassword) Set The password of the private key.
  * @method string getRemark() Obtain The remarks.
  * @method void setRemark(string $Remark) Set The remarks.
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
+ * @method array getTags() Obtain Tag List
+ * @method void setTags(array $Tags) Set Tag List
  */
 class CreateCSRRequest extends AbstractModel
 {
@@ -110,7 +110,7 @@ class CreateCSRRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var array 
+     * @var array Tag List
      */
     public $Tags;
 
@@ -127,7 +127,7 @@ class CreateCSRRequest extends AbstractModel
      * @param boolean $Generate Whether to generate the CSR content. Once the CSR content is generated, the CSR record cannot be modified.
      * @param string $KeyPassword The password of the private key.
      * @param string $Remark The remarks.
-     * @param array $Tags 
+     * @param array $Tags Tag List
      */
     function __construct()
     {

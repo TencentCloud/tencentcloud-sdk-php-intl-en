@@ -40,8 +40,8 @@ If this parameter is left empty, edge server information will be returned by def
 `global`: Global nodes
  * @method boolean getSegment() Obtain Whether to return a value as an IP range
  * @method void setSegment(boolean $Segment) Set Whether to return a value as an IP range
- * @method boolean getShowIpv6() Obtain 
- * @method void setShowIpv6(boolean $ShowIpv6) Set 
+ * @method boolean getShowIpv6() Obtain whether to query node IPV6 information.
+ * @method void setShowIpv6(boolean $ShowIpv6) Set whether to query node IPV6 information.
  * @method boolean getAbbreviationIpv6() Obtain Whether to abbreviate the IPv6 address.
  * @method void setAbbreviationIpv6(boolean $AbbreviationIpv6) Set Whether to abbreviate the IPv6 address.
  */
@@ -74,7 +74,7 @@ If this parameter is left empty, edge server information will be returned by def
     public $Segment;
 
     /**
-     * @var boolean 
+     * @var boolean whether to query node IPV6 information.
      */
     public $ShowIpv6;
 
@@ -94,7 +94,7 @@ If this parameter is left empty, edge server information will be returned by def
 `overseas`: Nodes outside the Chinese mainland
 `global`: Global nodes
      * @param boolean $Segment Whether to return a value as an IP range
-     * @param boolean $ShowIpv6 
+     * @param boolean $ShowIpv6 whether to query node IPV6 information.
      * @param boolean $AbbreviationIpv6 Whether to abbreviate the IPv6 address.
      */
     function __construct()

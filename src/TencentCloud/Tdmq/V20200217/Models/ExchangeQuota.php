@@ -18,17 +18,17 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * exchange usage quota information
  *
- * @method integer getMaxExchange() Obtain 
- * @method void setMaxExchange(integer $MaxExchange) Set 
+ * @method integer getMaxExchange() Obtain Maximum number of creatable exchanges
+ * @method void setMaxExchange(integer $MaxExchange) Set Maximum number of creatable exchanges
  * @method integer getUsedExchange() Obtain Number of created exchanges.
  * @method void setUsedExchange(integer $UsedExchange) Set Number of created exchanges.
  */
 class ExchangeQuota extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Maximum number of creatable exchanges
      */
     public $MaxExchange;
 
@@ -38,7 +38,7 @@ class ExchangeQuota extends AbstractModel
     public $UsedExchange;
 
     /**
-     * @param integer $MaxExchange 
+     * @param integer $MaxExchange Maximum number of creatable exchanges
      * @param integer $UsedExchange Number of created exchanges.
      */
     function __construct()

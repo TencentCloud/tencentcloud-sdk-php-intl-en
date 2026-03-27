@@ -18,84 +18,84 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Pub/Sub Object
  *
- * @method integer getId() Obtain 
- * @method void setId(integer $Id) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getPublishInstanceId() Obtain 
- * @method void setPublishInstanceId(string $PublishInstanceId) Set 
- * @method string getPublishInstanceName() Obtain 
- * @method void setPublishInstanceName(string $PublishInstanceName) Set 
- * @method string getPublishInstanceIp() Obtain 
- * @method void setPublishInstanceIp(string $PublishInstanceIp) Set 
- * @method string getSubscribeInstanceId() Obtain 
- * @method void setSubscribeInstanceId(string $SubscribeInstanceId) Set 
- * @method string getSubscribeInstanceName() Obtain 
- * @method void setSubscribeInstanceName(string $SubscribeInstanceName) Set 
- * @method string getSubscribeInstanceIp() Obtain 
- * @method void setSubscribeInstanceIp(string $SubscribeInstanceIp) Set 
- * @method array getDatabaseTupleSet() Obtain 
- * @method void setDatabaseTupleSet(array $DatabaseTupleSet) Set 
+ * @method integer getId() Obtain Pub/Sub ID
+ * @method void setId(integer $Id) Set Pub/Sub ID
+ * @method string getName() Obtain Pub/Sub Name
+ * @method void setName(string $Name) Set Pub/Sub Name
+ * @method string getPublishInstanceId() Obtain Published Instance ID
+ * @method void setPublishInstanceId(string $PublishInstanceId) Set Published Instance ID
+ * @method string getPublishInstanceName() Obtain Published Instance Name
+ * @method void setPublishInstanceName(string $PublishInstanceName) Set Published Instance Name
+ * @method string getPublishInstanceIp() Obtain Published Instance IP
+ * @method void setPublishInstanceIp(string $PublishInstanceIp) Set Published Instance IP
+ * @method string getSubscribeInstanceId() Obtain Subscription Instance ID
+ * @method void setSubscribeInstanceId(string $SubscribeInstanceId) Set Subscription Instance ID
+ * @method string getSubscribeInstanceName() Obtain Subscription Instance Name
+ * @method void setSubscribeInstanceName(string $SubscribeInstanceName) Set Subscription Instance Name
+ * @method string getSubscribeInstanceIp() Obtain Subscription Instance IP
+ * @method void setSubscribeInstanceIp(string $SubscribeInstanceIp) Set Subscription Instance IP
+ * @method array getDatabaseTupleSet() Obtain Publication-Subscription Relationship Collection of Database
+ * @method void setDatabaseTupleSet(array $DatabaseTupleSet) Set Publication-Subscription Relationship Collection of Database
  */
 class PublishSubscribe extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Pub/Sub ID
      */
     public $Id;
 
     /**
-     * @var string 
+     * @var string Pub/Sub Name
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Published Instance ID
      */
     public $PublishInstanceId;
 
     /**
-     * @var string 
+     * @var string Published Instance Name
      */
     public $PublishInstanceName;
 
     /**
-     * @var string 
+     * @var string Published Instance IP
      */
     public $PublishInstanceIp;
 
     /**
-     * @var string 
+     * @var string Subscription Instance ID
      */
     public $SubscribeInstanceId;
 
     /**
-     * @var string 
+     * @var string Subscription Instance Name
      */
     public $SubscribeInstanceName;
 
     /**
-     * @var string 
+     * @var string Subscription Instance IP
      */
     public $SubscribeInstanceIp;
 
     /**
-     * @var array 
+     * @var array Publication-Subscription Relationship Collection of Database
      */
     public $DatabaseTupleSet;
 
     /**
-     * @param integer $Id 
-     * @param string $Name 
-     * @param string $PublishInstanceId 
-     * @param string $PublishInstanceName 
-     * @param string $PublishInstanceIp 
-     * @param string $SubscribeInstanceId 
-     * @param string $SubscribeInstanceName 
-     * @param string $SubscribeInstanceIp 
-     * @param array $DatabaseTupleSet 
+     * @param integer $Id Pub/Sub ID
+     * @param string $Name Pub/Sub Name
+     * @param string $PublishInstanceId Published Instance ID
+     * @param string $PublishInstanceName Published Instance Name
+     * @param string $PublishInstanceIp Published Instance IP
+     * @param string $SubscribeInstanceId Subscription Instance ID
+     * @param string $SubscribeInstanceName Subscription Instance Name
+     * @param string $SubscribeInstanceIp Subscription Instance IP
+     * @param array $DatabaseTupleSet Publication-Subscription Relationship Collection of Database
      */
     function __construct()
     {

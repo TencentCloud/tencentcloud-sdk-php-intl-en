@@ -18,28 +18,28 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Policy List
  *
- * @method integer getTotalCount() Obtain 
- * @method void setTotalCount(integer $TotalCount) Set 
- * @method array getStrategySet() Obtain 
- * @method void setStrategySet(array $StrategySet) Set 
+ * @method integer getTotalCount() Obtain Number of policies.
+ * @method void setTotalCount(integer $TotalCount) Set Number of policies.
+ * @method array getStrategySet() Obtain Policy List.
+ * @method void setStrategySet(array $StrategySet) Set Policy List.
  */
 class IPStrategiesStatus extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Number of policies.
      */
     public $TotalCount;
 
     /**
-     * @var array 
+     * @var array Policy List.
      */
     public $StrategySet;
 
     /**
-     * @param integer $TotalCount 
-     * @param array $StrategySet 
+     * @param integer $TotalCount Number of policies.
+     * @param array $StrategySet Policy List.
      */
     function __construct()
     {

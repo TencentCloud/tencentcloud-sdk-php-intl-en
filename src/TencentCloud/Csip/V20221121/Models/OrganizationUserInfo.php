@@ -18,156 +18,169 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Group Account Member Details
  *
- * @method string getUin() Obtain 
- * @method void setUin(string $Uin) Set 
- * @method string getNickName() Obtain 
- * @method void setNickName(string $NickName) Set 
- * @method string getNodeName() Obtain 
- * @method void setNodeName(string $NodeName) Set 
- * @method integer getAssetCount() Obtain 
- * @method void setAssetCount(integer $AssetCount) Set 
- * @method integer getRiskCount() Obtain 
- * @method void setRiskCount(integer $RiskCount) Set 
- * @method integer getAttackCount() Obtain 
- * @method void setAttackCount(integer $AttackCount) Set 
- * @method string getRole() Obtain 
- * @method void setRole(string $Role) Set 
- * @method string getMemberId() Obtain 
- * @method void setMemberId(string $MemberId) Set 
- * @method string getAppId() Obtain 
- * @method void setAppId(string $AppId) Set 
- * @method string getJoinType() Obtain 
- * @method void setJoinType(string $JoinType) Set 
- * @method string getCFWProtect() Obtain 
- * @method void setCFWProtect(string $CFWProtect) Set 
- * @method string getWAFProtect() Obtain 
- * @method void setWAFProtect(string $WAFProtect) Set 
- * @method string getCWPProtect() Obtain 
- * @method void setCWPProtect(string $CWPProtect) Set 
- * @method integer getEnable() Obtain 
- * @method void setEnable(integer $Enable) Set 
- * @method string getCSIPProtect() Obtain 
- * @method void setCSIPProtect(string $CSIPProtect) Set 
- * @method integer getQuotaConsumer() Obtain 
- * @method void setQuotaConsumer(integer $QuotaConsumer) Set 
- * @method integer getCloudType() Obtain 
- * @method void setCloudType(integer $CloudType) Set 
- * @method integer getSyncFrequency() Obtain 
- * @method void setSyncFrequency(integer $SyncFrequency) Set 
- * @method boolean getIsExpired() Obtain 
- * @method void setIsExpired(boolean $IsExpired) Set 
- * @method array getPermissionList() Obtain 
- * @method void setPermissionList(array $PermissionList) Set 
+ * @method string getUin() Obtain Member account Uin
+ * @method void setUin(string $Uin) Set Member account Uin
+ * @method string getNickName() Obtain Member account name
+ * @method void setNickName(string $NickName) Set Member account name
+ * @method string getNodeName() Obtain Department node name, department of account
+ * @method void setNodeName(string $NodeName) Set Department node name, department of account
+ * @method integer getAssetCount() Obtain Asset Quantity
+ * @method void setAssetCount(integer $AssetCount) Set Asset Quantity
+ * @method integer getRiskCount() Obtain Risk Quantity
+ * @method void setRiskCount(integer $RiskCount) Set Risk Quantity
+ * @method integer getAttackCount() Obtain Attack Quantity
+ * @method void setAttackCount(integer $AttackCount) Set Attack Quantity
+ * @method string getRole() Obtain Member/Admin/;Member or Administrator
+ * @method void setRole(string $Role) Set Member/Admin/;Member or Administrator
+ * @method string getMemberId() Obtain Member account id
+ * @method void setMemberId(string $MemberId) Set Member account id
+ * @method string getAppId() Obtain Member account Appid
+ * @method void setAppId(string $AppId) Set Member account Appid
+ * @method string getJoinType() Obtain account joining method,create/invite
+ * @method void setJoinType(string $JoinType) Set account joining method,create/invite
+ * @method string getCFWProtect() Obtain If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+ * @method void setCFWProtect(string $CFWProtect) Set If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+ * @method string getWAFProtect() Obtain If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+ * @method void setWAFProtect(string $WAFProtect) Set If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+ * @method string getCWPProtect() Obtain If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+ * @method void setCWPProtect(string $CWPProtect) Set If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+ * @method integer getEnable() Obtain 1 enable, 0 not enabled
+ * @method void setEnable(integer $Enable) Set 1 enable, 0 not enabled
+ * @method string getCSIPProtect() Obtain "Free"      
+   //Free edition
+   "Advanced"   //Advanced edition "Enterprise" //Enterprise edition "Ultimate"  
+   //Ultimate edition
+ * @method void setCSIPProtect(string $CSIPProtect) Set "Free"      
+   //Free edition
+   "Advanced"   //Advanced edition "Enterprise" //Enterprise edition "Ultimate"  
+   //Ultimate edition
+ * @method integer getQuotaConsumer() Obtain 1 indicates the quota consumer
+ * @method void setQuotaConsumer(integer $QuotaConsumer) Set 1 indicates the quota consumer
+ * @method integer getCloudType() Obtain Account type: 0 for Tencent Cloud account, 1 for AWS account
+ * @method void setCloudType(integer $CloudType) Set Account type: 0 for Tencent Cloud account, 1 for AWS account
+ * @method integer getSyncFrequency() Obtain 0 indicates the default value; 1 indicates 10 minutes; 2 indicates 1 hour; 3 indicates 24 hours
+ * @method void setSyncFrequency(integer $SyncFrequency) Set 0 indicates the default value; 1 indicates 10 minutes; 2 indicates 1 hour; 3 indicates 24 hours
+ * @method boolean getIsExpired() Obtain Whether the multi-cloud account has expired
+ * @method void setIsExpired(boolean $IsExpired) Set Whether the multi-cloud account has expired
+ * @method array getPermissionList() Obtain Multi-cloud account permissions list
+ * @method void setPermissionList(array $PermissionList) Set Multi-cloud account permissions list
  * @method integer getAuthType() Obtain 1
  * @method void setAuthType(integer $AuthType) Set 1
- * @method integer getTcMemberType() Obtain 
- * @method void setTcMemberType(integer $TcMemberType) Set 
- * @method integer getSubUserCount() Obtain 
- * @method void setSubUserCount(integer $SubUserCount) Set 
- * @method string getJoinTypeInfo() Obtain 
- * @method void setJoinTypeInfo(string $JoinTypeInfo) Set 
+ * @method integer getTcMemberType() Obtain 0 Tencent Cloud group account
+1 Tencent Cloud access account
+2 non-Tencent Cloud
+ * @method void setTcMemberType(integer $TcMemberType) Set 0 Tencent Cloud group account
+1 Tencent Cloud access account
+2 non-Tencent Cloud
+ * @method integer getSubUserCount() Obtain Sub-account count
+ * @method void setSubUserCount(integer $SubUserCount) Set Sub-account count
+ * @method string getJoinTypeInfo() Obtain Joining method details
+ * @method void setJoinTypeInfo(string $JoinTypeInfo) Set Joining method details
  */
 class OrganizationUserInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Member account Uin
      */
     public $Uin;
 
     /**
-     * @var string 
+     * @var string Member account name
      */
     public $NickName;
 
     /**
-     * @var string 
+     * @var string Department node name, department of account
      */
     public $NodeName;
 
     /**
-     * @var integer 
+     * @var integer Asset Quantity
      */
     public $AssetCount;
 
     /**
-     * @var integer 
+     * @var integer Risk Quantity
      */
     public $RiskCount;
 
     /**
-     * @var integer 
+     * @var integer Attack Quantity
      */
     public $AttackCount;
 
     /**
-     * @var string 
+     * @var string Member/Admin/;Member or Administrator
      */
     public $Role;
 
     /**
-     * @var string 
+     * @var string Member account id
      */
     public $MemberId;
 
     /**
-     * @var string 
+     * @var string Member account Appid
      */
     public $AppId;
 
     /**
-     * @var string 
+     * @var string account joining method,create/invite
      */
     public $JoinType;
 
     /**
-     * @var string 
+     * @var string If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
      */
     public $CFWProtect;
 
     /**
-     * @var string 
+     * @var string If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
      */
     public $WAFProtect;
 
     /**
-     * @var string 
+     * @var string If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
      */
     public $CWPProtect;
 
     /**
-     * @var integer 
+     * @var integer 1 enable, 0 not enabled
      */
     public $Enable;
 
     /**
-     * @var string 
+     * @var string "Free"      
+   //Free edition
+   "Advanced"   //Advanced edition "Enterprise" //Enterprise edition "Ultimate"  
+   //Ultimate edition
      */
     public $CSIPProtect;
 
     /**
-     * @var integer 
+     * @var integer 1 indicates the quota consumer
      */
     public $QuotaConsumer;
 
     /**
-     * @var integer 
+     * @var integer Account type: 0 for Tencent Cloud account, 1 for AWS account
      */
     public $CloudType;
 
     /**
-     * @var integer 
+     * @var integer 0 indicates the default value; 1 indicates 10 minutes; 2 indicates 1 hour; 3 indicates 24 hours
      */
     public $SyncFrequency;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the multi-cloud account has expired
      */
     public $IsExpired;
 
     /**
-     * @var array 
+     * @var array Multi-cloud account permissions list
      */
     public $PermissionList;
 
@@ -177,45 +190,52 @@ class OrganizationUserInfo extends AbstractModel
     public $AuthType;
 
     /**
-     * @var integer 
+     * @var integer 0 Tencent Cloud group account
+1 Tencent Cloud access account
+2 non-Tencent Cloud
      */
     public $TcMemberType;
 
     /**
-     * @var integer 
+     * @var integer Sub-account count
      */
     public $SubUserCount;
 
     /**
-     * @var string 
+     * @var string Joining method details
      */
     public $JoinTypeInfo;
 
     /**
-     * @param string $Uin 
-     * @param string $NickName 
-     * @param string $NodeName 
-     * @param integer $AssetCount 
-     * @param integer $RiskCount 
-     * @param integer $AttackCount 
-     * @param string $Role 
-     * @param string $MemberId 
-     * @param string $AppId 
-     * @param string $JoinType 
-     * @param string $CFWProtect 
-     * @param string $WAFProtect 
-     * @param string $CWPProtect 
-     * @param integer $Enable 
-     * @param string $CSIPProtect 
-     * @param integer $QuotaConsumer 
-     * @param integer $CloudType 
-     * @param integer $SyncFrequency 
-     * @param boolean $IsExpired 
-     * @param array $PermissionList 
+     * @param string $Uin Member account Uin
+     * @param string $NickName Member account name
+     * @param string $NodeName Department node name, department of account
+     * @param integer $AssetCount Asset Quantity
+     * @param integer $RiskCount Risk Quantity
+     * @param integer $AttackCount Attack Quantity
+     * @param string $Role Member/Admin/;Member or Administrator
+     * @param string $MemberId Member account id
+     * @param string $AppId Member account Appid
+     * @param string $JoinType account joining method,create/invite
+     * @param string $CFWProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * @param string $WAFProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * @param string $CWPProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * @param integer $Enable 1 enable, 0 not enabled
+     * @param string $CSIPProtect "Free"      
+   //Free edition
+   "Advanced"   //Advanced edition "Enterprise" //Enterprise edition "Ultimate"  
+   //Ultimate edition
+     * @param integer $QuotaConsumer 1 indicates the quota consumer
+     * @param integer $CloudType Account type: 0 for Tencent Cloud account, 1 for AWS account
+     * @param integer $SyncFrequency 0 indicates the default value; 1 indicates 10 minutes; 2 indicates 1 hour; 3 indicates 24 hours
+     * @param boolean $IsExpired Whether the multi-cloud account has expired
+     * @param array $PermissionList Multi-cloud account permissions list
      * @param integer $AuthType 1
-     * @param integer $TcMemberType 
-     * @param integer $SubUserCount 
-     * @param string $JoinTypeInfo 
+     * @param integer $TcMemberType 0 Tencent Cloud group account
+1 Tencent Cloud access account
+2 non-Tencent Cloud
+     * @param integer $SubUserCount Sub-account count
+     * @param string $JoinTypeInfo Joining method details
      */
     function __construct()
     {

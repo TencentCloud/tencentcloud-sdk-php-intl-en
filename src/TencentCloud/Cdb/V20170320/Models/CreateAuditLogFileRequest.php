@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAuditLogFile request structure.
  *
- * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/236/15872?from_cn_redirect=1) API.
- * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/236/15872?from_cn_redirect=1) API.
+ * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
  * @method string getStartTime() Obtain Start time. We recommend that the interval between start and end time does not exceed 7 days.
  * @method void setStartTime(string $StartTime) Set Start time. We recommend that the interval between start and end time does not exceed 7 days.
  * @method string getEndTime() Obtain End time. We recommend that the interval between start and end time does not exceed 7 days.
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAuditLogFileRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/236/15872?from_cn_redirect=1) API.
+     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
@@ -81,7 +81,7 @@ class CreateAuditLogFileRequest extends AbstractModel
     public $ColumnFilter;
 
     /**
-     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/236/15872?from_cn_redirect=1) API.
+     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      * @param string $StartTime Start time. We recommend that the interval between start and end time does not exceed 7 days.
      * @param string $EndTime End time. We recommend that the interval between start and end time does not exceed 7 days.
      * @param string $Order Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".

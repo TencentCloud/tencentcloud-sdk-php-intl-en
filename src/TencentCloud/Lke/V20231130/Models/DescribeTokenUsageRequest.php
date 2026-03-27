@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppBizIds(array $AppBizIds) Set Application ID list.
  * @method array getSubScenes() Obtain Filter sub-scenario (used in document parsing scenario).
  * @method void setSubScenes(array $SubScenes) Set Filter sub-scenario (used in document parsing scenario).
- * @method string getAppType() Obtain 
- * @method void setAppType(string $AppType) Set 
- * @method string getSpaceId() Obtain 
- * @method void setSpaceId(string $SpaceId) Set 
+ * @method string getAppType() Obtain Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
+ * @method void setAppType(string $AppType) Set Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
+ * @method string getSpaceId() Obtain Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
+ * @method void setSpaceId(string $SpaceId) Set Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
  */
 class DescribeTokenUsageRequest extends AbstractModel
 {
@@ -91,12 +91,12 @@ class DescribeTokenUsageRequest extends AbstractModel
     public $SubScenes;
 
     /**
-     * @var string 
+     * @var string Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
      */
     public $AppType;
 
     /**
-     * @var string 
+     * @var string Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
      */
     public $SpaceId;
 
@@ -110,8 +110,8 @@ class DescribeTokenUsageRequest extends AbstractModel
      * @param string $EndTime End timestamp, in seconds (default value: 0, must be greater than the start timestamp).
      * @param array $AppBizIds Application ID list.
      * @param array $SubScenes Filter sub-scenario (used in document parsing scenario).
-     * @param string $AppType 
-     * @param string $SpaceId 
+     * @param string $AppType Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
+     * @param string $SpaceId Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
      */
     function __construct()
     {

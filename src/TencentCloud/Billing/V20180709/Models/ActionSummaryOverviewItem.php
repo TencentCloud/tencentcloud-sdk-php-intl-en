@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getActionType() Obtain Transaction type code
  * @method void setActionType(string $ActionType) Set Transaction type code
- * @method string getActionTypeName() Obtain Transaction type, which can be yearly/monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
- * @method void setActionTypeName(string $ActionTypeName) Set Transaction type, which can be yearly/monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+ * @method string getActionTypeName() Obtain Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
+ * @method void setActionTypeName(string $ActionTypeName) Set Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
  * @method string getRealTotalCostRatio() Obtain Cost ratio, to two decimal points
  * @method void setRealTotalCostRatio(string $RealTotalCostRatio) Set Cost ratio, to two decimal points
  * @method string getRealTotalCost() Obtain Total amount after discount
@@ -49,7 +49,7 @@ class ActionSummaryOverviewItem extends AbstractModel
     public $ActionType;
 
     /**
-     * @var string Transaction type, which can be yearly/monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * @var string Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
      */
     public $ActionTypeName;
 
@@ -95,7 +95,7 @@ class ActionSummaryOverviewItem extends AbstractModel
 
     /**
      * @param string $ActionType Transaction type code
-     * @param string $ActionTypeName Transaction type, which can be yearly/monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * @param string $ActionTypeName Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
      * @param string $RealTotalCostRatio Cost ratio, to two decimal points
      * @param string $RealTotalCost Total amount after discount
      * @param string $CashPayAmount Cash credit: The amount paid from the user's cash account

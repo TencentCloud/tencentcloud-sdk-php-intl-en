@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRefreshTask request structure.
  *
- * @method array getClusterIDs() Obtain 
- * @method void setClusterIDs(array $ClusterIDs) Set 
- * @method boolean getIsSyncListOnly() Obtain 
- * @method void setIsSyncListOnly(boolean $IsSyncListOnly) Set 
+ * @method array getClusterIDs() Obtain Specify the cluster list. If empty, it indicates synchronization of all clusters.
+ * @method void setClusterIDs(array $ClusterIDs) Set Specify the cluster list. If empty, it indicates synchronization of all clusters.
+ * @method boolean getIsSyncListOnly() Obtain Whether to synchronize only the list
+ * @method void setIsSyncListOnly(boolean $IsSyncListOnly) Set Whether to synchronize only the list
  */
 class CreateRefreshTaskRequest extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Specify the cluster list. If empty, it indicates synchronization of all clusters.
      */
     public $ClusterIDs;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to synchronize only the list
      */
     public $IsSyncListOnly;
 
     /**
-     * @param array $ClusterIDs 
-     * @param boolean $IsSyncListOnly 
+     * @param array $ClusterIDs Specify the cluster list. If empty, it indicates synchronization of all clusters.
+     * @param boolean $IsSyncListOnly Whether to synchronize only the list
      */
     function __construct()
     {

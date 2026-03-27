@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupFreq(array $BackupFreq) Set Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
  * @method string getBackupType() Obtain Currently, this parameter does not support modification and is not required.
  * @method void setBackupType(string $BackupType) Set Currently, this parameter does not support modification and is not required.
- * @method LogicBackupConfigInfo getLogicBackupConfig() Obtain 
- * @method void setLogicBackupConfig(LogicBackupConfigInfo $LogicBackupConfig) Set 
- * @method boolean getDeleteAutoLogicBackup() Obtain 
- * @method void setDeleteAutoLogicBackup(boolean $DeleteAutoLogicBackup) Set 
+ * @method LogicBackupConfigInfo getLogicBackupConfig() Obtain Logical Backup Configuration
+ * @method void setLogicBackupConfig(LogicBackupConfigInfo $LogicBackupConfig) Set Logical Backup Configuration
+ * @method boolean getDeleteAutoLogicBackup() Obtain Whether to delete the automatic logical backup
+ * @method void setDeleteAutoLogicBackup(boolean $DeleteAutoLogicBackup) Set Whether to delete the automatic logical backup
  */
 class ModifyBackupConfigRequest extends AbstractModel
 {
@@ -70,12 +70,12 @@ class ModifyBackupConfigRequest extends AbstractModel
     public $BackupType;
 
     /**
-     * @var LogicBackupConfigInfo 
+     * @var LogicBackupConfigInfo Logical Backup Configuration
      */
     public $LogicBackupConfig;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to delete the automatic logical backup
      */
     public $DeleteAutoLogicBackup;
 
@@ -86,8 +86,8 @@ class ModifyBackupConfigRequest extends AbstractModel
      * @param integer $ReserveDuration Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
      * @param array $BackupFreq Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
      * @param string $BackupType Currently, this parameter does not support modification and is not required.
-     * @param LogicBackupConfigInfo $LogicBackupConfig 
-     * @param boolean $DeleteAutoLogicBackup 
+     * @param LogicBackupConfigInfo $LogicBackupConfig Logical Backup Configuration
+     * @param boolean $DeleteAutoLogicBackup Whether to delete the automatic logical backup
      */
     function __construct()
     {

@@ -18,36 +18,40 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Multi-cloud account statistics
  *
- * @method integer getCloudType() Obtain 
- * @method void setCloudType(integer $CloudType) Set 
- * @method integer getCloudCount() Obtain 
- * @method void setCloudCount(integer $CloudCount) Set 
- * @method string getCloudDesc() Obtain 
- * @method void setCloudDesc(string $CloudDesc) Set 
+ * @method integer getCloudType() Obtain 0 represents Tencent Cloud
+1 represents AWS
+ * @method void setCloudType(integer $CloudType) Set 0 represents Tencent Cloud
+1 represents AWS
+ * @method integer getCloudCount() Obtain Account quantity
+ * @method void setCloudCount(integer $CloudCount) Set Account quantity
+ * @method string getCloudDesc() Obtain The cloud account type description
+ * @method void setCloudDesc(string $CloudDesc) Set The cloud account type description
  */
 class CloudCountDesc extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer 0 represents Tencent Cloud
+1 represents AWS
      */
     public $CloudType;
 
     /**
-     * @var integer 
+     * @var integer Account quantity
      */
     public $CloudCount;
 
     /**
-     * @var string 
+     * @var string The cloud account type description
      */
     public $CloudDesc;
 
     /**
-     * @param integer $CloudType 
-     * @param integer $CloudCount 
-     * @param string $CloudDesc 
+     * @param integer $CloudType 0 represents Tencent Cloud
+1 represents AWS
+     * @param integer $CloudCount Account quantity
+     * @param string $CloudDesc The cloud account type description
      */
     function __construct()
     {

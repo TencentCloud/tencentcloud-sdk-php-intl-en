@@ -18,7 +18,7 @@ namespace TencentCloud\Mdp\V20200527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Channel-associated domain information list.
  *
  * @method integer getTotalSize() Obtain Total list size.
  * @method void setTotalSize(integer $TotalSize) Set Total list size.

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDataEngineConfigCommand() Obtain Operation commands of engine configuration. UpdateSparkSQLLakefsPath updates the path of managed tables, and UpdateSparkSQLResultPath updates the path of result buckets.
  * @method void setDataEngineConfigCommand(string $DataEngineConfigCommand) Set Operation commands of engine configuration. UpdateSparkSQLLakefsPath updates the path of managed tables, and UpdateSparkSQLResultPath updates the path of result buckets.
- * @method boolean getUseLakeFs() Obtain 
- * @method void setUseLakeFs(boolean $UseLakeFs) Set 
- * @method string getCustomResultPath() Obtain 
- * @method void setCustomResultPath(string $CustomResultPath) Set 
+ * @method boolean getUseLakeFs() Obtain Whether to use managed storage as result storage
+ * @method void setUseLakeFs(boolean $UseLakeFs) Set Whether to use managed storage as result storage
+ * @method string getCustomResultPath() Obtain User-defined Result Storage Path
+ * @method void setCustomResultPath(string $CustomResultPath) Set User-defined Result Storage Path
  */
 class DescribeUpdatableDataEnginesRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeUpdatableDataEnginesRequest extends AbstractModel
     public $DataEngineConfigCommand;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to use managed storage as result storage
      */
     public $UseLakeFs;
 
     /**
-     * @var string 
+     * @var string User-defined Result Storage Path
      */
     public $CustomResultPath;
 
     /**
      * @param string $DataEngineConfigCommand Operation commands of engine configuration. UpdateSparkSQLLakefsPath updates the path of managed tables, and UpdateSparkSQLResultPath updates the path of result buckets.
-     * @param boolean $UseLakeFs 
-     * @param string $CustomResultPath 
+     * @param boolean $UseLakeFs Whether to use managed storage as result storage
+     * @param string $CustomResultPath User-defined Result Storage Path
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Rollback RO Group Information
  *
  * @method string getInstanceGroupId() Obtain Instance group ID
  * @method void setInstanceGroupId(string $InstanceGroupId) Set Instance group ID

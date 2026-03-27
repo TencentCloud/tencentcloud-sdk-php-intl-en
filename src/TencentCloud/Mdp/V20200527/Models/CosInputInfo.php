@@ -18,7 +18,7 @@ namespace TencentCloud\Mdp\V20200527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * cos input information
  *
  * @method string getBucket() Obtain COS bucket name
  * @method void setBucket(string $Bucket) Set COS bucket name

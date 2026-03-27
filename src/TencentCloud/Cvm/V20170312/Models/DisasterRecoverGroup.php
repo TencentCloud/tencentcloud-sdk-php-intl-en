@@ -44,8 +44,8 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value is found.
  * @method void setCreateTime(string $CreateTime) Set Creation time of a spread placement group.
 Note: This field may return null, indicating that no valid value is found.
- * @method integer getAffinity() Obtain 
- * @method void setAffinity(integer $Affinity) Set 
+ * @method integer getAffinity() Obtain placement group affinity
+ * @method void setAffinity(integer $Affinity) Set placement group affinity
  * @method array getTags() Obtain List of tags associated with the placement group.
  * @method void setTags(array $Tags) Set List of tags associated with the placement group.
  */
@@ -92,7 +92,7 @@ Note: This field may return null, indicating that no valid value is found.
     public $CreateTime;
 
     /**
-     * @var integer 
+     * @var integer placement group affinity
      */
     public $Affinity;
 
@@ -114,7 +114,7 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $CreateTime Creation time of a spread placement group.
 Note: This field may return null, indicating that no valid value is found.
-     * @param integer $Affinity 
+     * @param integer $Affinity placement group affinity
      * @param array $Tags List of tags associated with the placement group.
      */
     function __construct()

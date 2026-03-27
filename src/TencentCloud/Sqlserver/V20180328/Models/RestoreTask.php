@@ -18,108 +18,156 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Rollback Task Record
  *
- * @method string getTargetInstanceId() Obtain 
- * @method void setTargetInstanceId(string $TargetInstanceId) Set 
- * @method string getTargetInstanceName() Obtain 
- * @method void setTargetInstanceName(string $TargetInstanceName) Set 
- * @method integer getTargetInstanceStatus() Obtain 
- * @method void setTargetInstanceStatus(integer $TargetInstanceStatus) Set 
- * @method string getTargetRegion() Obtain 
- * @method void setTargetRegion(string $TargetRegion) Set 
- * @method integer getRestoreId() Obtain 
- * @method void setRestoreId(integer $RestoreId) Set 
- * @method integer getTargetType() Obtain 
- * @method void setTargetType(integer $TargetType) Set 
- * @method integer getRestoreType() Obtain 
- * @method void setRestoreType(integer $RestoreType) Set 
- * @method string getRestoreTime() Obtain 
- * @method void setRestoreTime(string $RestoreTime) Set 
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
- * @method integer getStatus() Obtain 
- * @method void setStatus(integer $Status) Set 
- * @method integer getFlowId() Obtain 
- * @method void setFlowId(integer $FlowId) Set 
+ * @method string getTargetInstanceId() Obtain Target Instance ID
+ * @method void setTargetInstanceId(string $TargetInstanceId) Set Target Instance ID
+ * @method string getTargetInstanceName() Obtain Target Instance Name
+ * @method void setTargetInstanceName(string $TargetInstanceName) Set Target Instance Name
+ * @method integer getTargetInstanceStatus() Obtain Target Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+11: Read-Only
+12: Restarting
+ * @method void setTargetInstanceStatus(integer $TargetInstanceStatus) Set Target Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+11: Read-Only
+12: Restarting
+ * @method string getTargetRegion() Obtain Target Instance Region
+ * @method void setTargetRegion(string $TargetRegion) Set Target Instance Region
+ * @method integer getRestoreId() Obtain Rollback Record ID
+ * @method void setRestoreId(integer $RestoreId) Set Rollback Record ID
+ * @method integer getTargetType() Obtain Restoration target instance type: 0 - current instance, 1 - existing instance, 2 - new instance
+ * @method void setTargetType(integer $TargetType) Set Restoration target instance type: 0 - current instance, 1 - existing instance, 2 - new instance
+ * @method integer getRestoreType() Obtain Rollback method: 0 - by point-in-time, 1 - by backup set
+ * @method void setRestoreType(integer $RestoreType) Set Rollback method: 0 - by point-in-time, 1 - by backup set
+ * @method string getRestoreTime() Obtain Rollback Target Time
+ * @method void setRestoreTime(string $RestoreTime) Set Rollback Target Time
+ * @method string getStartTime() Obtain Start Time
+ * @method void setStartTime(string $StartTime) Set Start Time
+ * @method string getEndTime() Obtain End Time
+ * @method void setEndTime(string $EndTime) Set End Time
+ * @method integer getStatus() Obtain Rollback status: 0 - Initialization, 1 - Running, 2 - Success, 3 - Failure
+ * @method void setStatus(integer $Status) Set Rollback status: 0 - Initialization, 1 - Running, 2 - Success, 3 - Failure
+ * @method integer getFlowId() Obtain Rollback Asynchronous Task ID
+ * @method void setFlowId(integer $FlowId) Set Rollback Asynchronous Task ID
  */
 class RestoreTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Target Instance ID
      */
     public $TargetInstanceId;
 
     /**
-     * @var string 
+     * @var string Target Instance Name
      */
     public $TargetInstanceName;
 
     /**
-     * @var integer 
+     * @var integer Target Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+11: Read-Only
+12: Restarting
      */
     public $TargetInstanceStatus;
 
     /**
-     * @var string 
+     * @var string Target Instance Region
      */
     public $TargetRegion;
 
     /**
-     * @var integer 
+     * @var integer Rollback Record ID
      */
     public $RestoreId;
 
     /**
-     * @var integer 
+     * @var integer Restoration target instance type: 0 - current instance, 1 - existing instance, 2 - new instance
      */
     public $TargetType;
 
     /**
-     * @var integer 
+     * @var integer Rollback method: 0 - by point-in-time, 1 - by backup set
      */
     public $RestoreType;
 
     /**
-     * @var string 
+     * @var string Rollback Target Time
      */
     public $RestoreTime;
 
     /**
-     * @var string 
+     * @var string Start Time
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string End Time
      */
     public $EndTime;
 
     /**
-     * @var integer 
+     * @var integer Rollback status: 0 - Initialization, 1 - Running, 2 - Success, 3 - Failure
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Rollback Asynchronous Task ID
      */
     public $FlowId;
 
     /**
-     * @param string $TargetInstanceId 
-     * @param string $TargetInstanceName 
-     * @param integer $TargetInstanceStatus 
-     * @param string $TargetRegion 
-     * @param integer $RestoreId 
-     * @param integer $TargetType 
-     * @param integer $RestoreType 
-     * @param string $RestoreTime 
-     * @param string $StartTime 
-     * @param string $EndTime 
-     * @param integer $Status 
-     * @param integer $FlowId 
+     * @param string $TargetInstanceId Target Instance ID
+     * @param string $TargetInstanceName Target Instance Name
+     * @param integer $TargetInstanceStatus Target Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+11: Read-Only
+12: Restarting
+     * @param string $TargetRegion Target Instance Region
+     * @param integer $RestoreId Rollback Record ID
+     * @param integer $TargetType Restoration target instance type: 0 - current instance, 1 - existing instance, 2 - new instance
+     * @param integer $RestoreType Rollback method: 0 - by point-in-time, 1 - by backup set
+     * @param string $RestoreTime Rollback Target Time
+     * @param string $StartTime Start Time
+     * @param string $EndTime End Time
+     * @param integer $Status Rollback status: 0 - Initialization, 1 - Running, 2 - Success, 3 - Failure
+     * @param integer $FlowId Rollback Asynchronous Task ID
      */
     function __construct()
     {

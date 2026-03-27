@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditRuleTemplateModifyHistory request structure.
  *
- * @method array getRuleTemplateIds() Obtain Audit rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.comom/document/api/236/101811?from_cn_redirect=1) API.
- * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Audit rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.comom/document/api/236/101811?from_cn_redirect=1) API.
+ * @method array getRuleTemplateIds() Obtain Audit rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.com/document/api/236/101811?from_cn_redirect=1) API.
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Audit rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.com/document/api/236/101811?from_cn_redirect=1) API.
  * @method string getStartTime() Obtain Start time of the query range.
  * @method void setStartTime(string $StartTime) Set Start time of the query range.
  * @method string getEndTime() Obtain End time of the query range.
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAuditRuleTemplateModifyHistoryRequest extends AbstractModel
 {
     /**
-     * @var array Audit rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.comom/document/api/236/101811?from_cn_redirect=1) API.
+     * @var array Audit rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.com/document/api/236/101811?from_cn_redirect=1) API.
      */
     public $RuleTemplateIds;
 
@@ -66,7 +66,7 @@ class DescribeAuditRuleTemplateModifyHistoryRequest extends AbstractModel
     public $Order;
 
     /**
-     * @param array $RuleTemplateIds Audit rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.comom/document/api/236/101811?from_cn_redirect=1) API.
+     * @param array $RuleTemplateIds Audit rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.com/document/api/236/101811?from_cn_redirect=1) API.
      * @param string $StartTime Start time of the query range.
      * @param string $EndTime End time of the query range.
      * @param integer $Limit Number of entries to return. Default value: 20. Maximum value: 1000.

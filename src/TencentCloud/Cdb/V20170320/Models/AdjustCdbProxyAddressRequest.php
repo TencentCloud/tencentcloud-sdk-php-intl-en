@@ -44,10 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectionPool(boolean $ConnectionPool) Set Whether to enable the connection pool
  * @method array getProxyAllocation() Obtain Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
  * @method void setProxyAllocation(array $ProxyAllocation) Set Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
- * @method boolean getAutoLoadBalance() Obtain 
- * @method void setAutoLoadBalance(boolean $AutoLoadBalance) Set 
- * @method string getAccessMode() Obtain 
- * @method void setAccessMode(string $AccessMode) Set 
+ * @method boolean getAutoLoadBalance() Obtain Whether to enable adaptive load balancing. Disabled by default.
+ * @method void setAutoLoadBalance(boolean $AutoLoadBalance) Set Whether to enable adaptive load balancing. Disabled by default.
+ * @method string getAccessMode() Obtain Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
+ * @method void setAccessMode(string $AccessMode) Set Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
  */
 class AdjustCdbProxyAddressRequest extends AbstractModel
 {
@@ -112,12 +112,12 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
     public $ProxyAllocation;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to enable adaptive load balancing. Disabled by default.
      */
     public $AutoLoadBalance;
 
     /**
-     * @var string 
+     * @var string Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
      */
     public $AccessMode;
 
@@ -134,8 +134,8 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
      * @param boolean $TransSplit Whether to enable transaction splitting. Valid values: `true`, `false`.
      * @param boolean $ConnectionPool Whether to enable the connection pool
      * @param array $ProxyAllocation Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
-     * @param boolean $AutoLoadBalance 
-     * @param string $AccessMode 
+     * @param boolean $AutoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
+     * @param string $AccessMode Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessKeyId(string $AccessKeyId) Set Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
  * @method string getAccessKeySecret() Obtain Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
  * @method void setAccessKeySecret(string $AccessKeySecret) Set Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
+ * @method array getTags() Obtain Tag
+ * @method void setTags(array $Tags) Set Tag
  */
 class CreateApiKeyRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class CreateApiKeyRequest extends AbstractModel
     public $AccessKeySecret;
 
     /**
-     * @var array 
+     * @var array Tag
      */
     public $Tags;
 
@@ -63,7 +63,7 @@ class CreateApiKeyRequest extends AbstractModel
      * @param string $AccessKeyType Key type. Valid values: auto, manual (custom key). Default value: auto.
      * @param string $AccessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
      * @param string $AccessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
-     * @param array $Tags 
+     * @param array $Tags Tag
      */
     function __construct()
     {

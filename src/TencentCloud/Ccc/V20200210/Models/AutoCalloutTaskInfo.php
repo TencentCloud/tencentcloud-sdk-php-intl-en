@@ -37,19 +37,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method integer getIvrId() Obtain IvrId used by the task.
  * @method void setIvrId(integer $IvrId) Set IvrId used by the task.
  * @method integer getState() Obtain Task status:.
-0 initial: task creation, call not started.
-1 running.
-2 completed: all calls in the task are completed.
-3 ending: the task has expired, but there are still some calls not ended.
-4 ended: task terminated due to expiration.
+0 initial: task created, call not started.
+1: running.
+2 completed: all calls in the task are done.
+3 ending: the task expires, but some calls are not ended.
+4 stopped: the task expired and ended.
+5 paused: recoverable to continue execution.
  * @method void setState(integer $State) Set Task status:.
-0 initial: task creation, call not started.
-1 running.
-2 completed: all calls in the task are completed.
-3 ending: the task has expired, but there are still some calls not ended.
-4 ended: task terminated due to expiration.
+0 initial: task created, call not started.
+1: running.
+2 completed: all calls in the task are done.
+3 ending: the task expires, but some calls are not ended.
+4 stopped: the task expired and ended.
+5 paused: recoverable to continue execution.
  * @method integer getTaskId() Obtain <Task id>.
  * @method void setTaskId(integer $TaskId) Set <Task id>.
+ * @method integer getMaxRingTimeoutSecond() Obtain Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+ * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) Set Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
  */
 class AutoCalloutTaskInfo extends AbstractModel
 {
@@ -87,11 +91,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var integer Task status:.
-0 initial: task creation, call not started.
-1 running.
-2 completed: all calls in the task are completed.
-3 ending: the task has expired, but there are still some calls not ended.
-4 ended: task terminated due to expiration.
+0 initial: task created, call not started.
+1: running.
+2 completed: all calls in the task are done.
+3 ending: the task expires, but some calls are not ended.
+4 stopped: the task expired and ended.
+5 paused: recoverable to continue execution.
      */
     public $State;
 
@@ -99,6 +104,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var integer <Task id>.
      */
     public $TaskId;
+
+    /**
+     * @var integer Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+     */
+    public $MaxRingTimeoutSecond;
 
     /**
      * @param string $Name Task name.
@@ -110,12 +120,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $IvrId IvrId used by the task.
      * @param integer $State Task status:.
-0 initial: task creation, call not started.
-1 running.
-2 completed: all calls in the task are completed.
-3 ending: the task has expired, but there are still some calls not ended.
-4 ended: task terminated due to expiration.
+0 initial: task created, call not started.
+1: running.
+2 completed: all calls in the task are done.
+3 ending: the task expires, but some calls are not ended.
+4 stopped: the task expired and ended.
+5 paused: recoverable to continue execution.
      * @param integer $TaskId <Task id>.
+     * @param integer $MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
      */
     function __construct()
     {
@@ -160,6 +172,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("MaxRingTimeoutSecond",$param) and $param["MaxRingTimeoutSecond"] !== null) {
+            $this->MaxRingTimeoutSecond = $param["MaxRingTimeoutSecond"];
         }
     }
 }

@@ -102,10 +102,10 @@ hi: Hindi
  * @method void setProjectId(integer $ProjectId) Set The project ID, which can be obtained from **Console -> Account Center -> Project Management**. If no one is set, enter the default project ID `0`.
  * @method string getUntranslatedText() Obtain The parameter used to mark the text content that needs to remain untranslated, such as special symbols and names of people and places. You can set only one word for this parameter in each request. Only nouns (like names of people and places) are supported, and verbs or phrases may cause poor translation outcomes.
  * @method void setUntranslatedText(string $UntranslatedText) Set The parameter used to mark the text content that needs to remain untranslated, such as special symbols and names of people and places. You can set only one word for this parameter in each request. Only nouns (like names of people and places) are supported, and verbs or phrases may cause poor translation outcomes.
- * @method array getTermRepoIDList() Obtain 
- * @method void setTermRepoIDList(array $TermRepoIDList) Set 
- * @method array getSentRepoIDList() Obtain 
- * @method void setSentRepoIDList(array $SentRepoIDList) Set 
+ * @method array getTermRepoIDList() Obtain Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926).
+ * @method void setTermRepoIDList(array $TermRepoIDList) Set Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926).
+ * @method array getSentRepoIDList() Obtain The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927).
+ * @method void setSentRepoIDList(array $SentRepoIDList) Set The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927).
  */
 class TextTranslateRequest extends AbstractModel
 {
@@ -171,12 +171,12 @@ hi: Hindi
     public $UntranslatedText;
 
     /**
-     * @var array 
+     * @var array Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926).
      */
     public $TermRepoIDList;
 
     /**
-     * @var array 
+     * @var array The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927).
      */
     public $SentRepoIDList;
 
@@ -222,8 +222,8 @@ hi: Hindi
 <li>hi (Hindi): en (English)</li>
      * @param integer $ProjectId The project ID, which can be obtained from **Console -> Account Center -> Project Management**. If no one is set, enter the default project ID `0`.
      * @param string $UntranslatedText The parameter used to mark the text content that needs to remain untranslated, such as special symbols and names of people and places. You can set only one word for this parameter in each request. Only nouns (like names of people and places) are supported, and verbs or phrases may cause poor translation outcomes.
-     * @param array $TermRepoIDList 
-     * @param array $SentRepoIDList 
+     * @param array $TermRepoIDList Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926).
+     * @param array $SentRepoIDList The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927).
      */
     function __construct()
     {

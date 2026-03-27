@@ -18,28 +18,28 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Database Account Permission Modification Information
  *
- * @method string getDataBaseName() Obtain 
- * @method void setDataBaseName(string $DataBaseName) Set 
- * @method array getAccountPrivileges() Obtain 
- * @method void setAccountPrivileges(array $AccountPrivileges) Set 
+ * @method string getDataBaseName() Obtain Database Name
+ * @method void setDataBaseName(string $DataBaseName) Set Database Name
+ * @method array getAccountPrivileges() Obtain Database Permission Modification Information
+ * @method void setAccountPrivileges(array $AccountPrivileges) Set Database Permission Modification Information
  */
 class DataBasePrivilegeModifyInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Database Name
      */
     public $DataBaseName;
 
     /**
-     * @var array 
+     * @var array Database Permission Modification Information
      */
     public $AccountPrivileges;
 
     /**
-     * @param string $DataBaseName 
-     * @param array $AccountPrivileges 
+     * @param string $DataBaseName Database Name
+     * @param array $AccountPrivileges Database Permission Modification Information
      */
     function __construct()
     {

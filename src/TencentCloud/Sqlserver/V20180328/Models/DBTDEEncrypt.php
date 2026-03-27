@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * This example shows you how to enable or disable TDE of a database.
  *
- * @method string getDBName() Obtain 
- * @method void setDBName(string $DBName) Set 
+ * @method string getDBName() Obtain Database Name
+ * @method void setDBName(string $DBName) Set Database Name
  * @method string getEncryption() Obtain TDE status. Valid values: `enable` (enabled), `disable` (disabled).
  * @method void setEncryption(string $Encryption) Set TDE status. Valid values: `enable` (enabled), `disable` (disabled).
  */
 class DBTDEEncrypt extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Database Name
      */
     public $DBName;
 
@@ -38,7 +38,7 @@ class DBTDEEncrypt extends AbstractModel
     public $Encryption;
 
     /**
-     * @param string $DBName 
+     * @param string $DBName Database Name
      * @param string $Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
      */
     function __construct()

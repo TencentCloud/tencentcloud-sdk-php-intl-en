@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRestoreTimeRange request structure.
  *
- * @method string getInstanceId() Obtain 
- * @method void setInstanceId(string $InstanceId) Set 
- * @method string getTargetInstanceId() Obtain 
- * @method void setTargetInstanceId(string $TargetInstanceId) Set 
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getTargetInstanceId() Obtain Target instance ID for restoration; if left blank, defaults to restoring to the original instance.
+ * @method void setTargetInstanceId(string $TargetInstanceId) Set Target instance ID for restoration; if left blank, defaults to restoring to the original instance.
  */
 class DescribeRestoreTimeRangeRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Instance ID
      */
     public $InstanceId;
 
     /**
-     * @var string 
+     * @var string Target instance ID for restoration; if left blank, defaults to restoring to the original instance.
      */
     public $TargetInstanceId;
 
     /**
-     * @param string $InstanceId 
-     * @param string $TargetInstanceId 
+     * @param string $InstanceId Instance ID
+     * @param string $TargetInstanceId Target instance ID for restoration; if left blank, defaults to restoring to the original instance.
      */
     function __construct()
     {

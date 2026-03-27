@@ -140,8 +140,8 @@ For more information on creating `KeyId`, see [Enabling TDE](https://www.tencent
 For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tencent.com/document/product/409/71749?from_cn_redirect=1).
  * @method void setKMSRegion(string $KMSRegion) Set The region where the KMS service is enabled. When `KMSRegion` is left empty, the current region will be selected by default.  If the current region does not support KMS, you must select another region that does.
 For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tencent.com/document/product/409/71749?from_cn_redirect=1).
- * @method string getKMSClusterId() Obtain 
- * @method void setKMSClusterId(string $KMSClusterId) Set 
+ * @method string getKMSClusterId() Obtain <p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p>
+ * @method void setKMSClusterId(string $KMSClusterId) Set <p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p>
  * @method string getDBEngine() Obtain Database engine, which supports:
 <li>`postgresql`: TencentDB for PostgreSQL</li>
 <li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
@@ -352,7 +352,7 @@ For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tence
     public $KMSRegion;
 
     /**
-     * @var string 
+     * @var string <p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p>
      */
     public $KMSClusterId;
 
@@ -454,7 +454,7 @@ Default value: 0See [Overview of Data Transparent Encryption](https://intl.cloud
 For more information on creating `KeyId`, see [Enabling TDE](https://www.tencentcloud.com/document/product/409/47762).
      * @param string $KMSRegion The region where the KMS service is enabled. When `KMSRegion` is left empty, the current region will be selected by default.  If the current region does not support KMS, you must select another region that does.
 For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tencent.com/document/product/409/71749?from_cn_redirect=1).
-     * @param string $KMSClusterId 
+     * @param string $KMSClusterId <p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p>
      * @param string $DBEngine Database engine, which supports:
 <li>`postgresql`: TencentDB for PostgreSQL</li>
 <li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>

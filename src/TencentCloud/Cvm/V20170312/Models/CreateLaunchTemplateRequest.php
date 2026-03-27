@@ -86,8 +86,8 @@ false (default): sends a normal request. after passing the check, creates an ins
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Prepaid mode, that is, annual and monthly subscription related parameter settings. Through this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to set auto-renewal, etc. If the specified instance's billing mode is the prepaid mode, this parameter must be passed.
  * @method boolean getDisableApiTermination() Obtain Instance destruction protection flag: indicates whether an instance is allowed to be deleted through an api. value ranges from: - **TRUE**: indicates that instance protection is enabled, deletion through apis is not allowed. - **FALSE**: indicates that instance protection is disabled, deletion through apis is allowed.  default value: FALSE.
  * @method void setDisableApiTermination(boolean $DisableApiTermination) Set Instance destruction protection flag: indicates whether an instance is allowed to be deleted through an api. value ranges from: - **TRUE**: indicates that instance protection is enabled, deletion through apis is not allowed. - **FALSE**: indicates that instance protection is disabled, deletion through apis is allowed.  default value: FALSE.
- * @method boolean getEnableJumboFrame() Obtain 
- * @method void setEnableJumboFrame(boolean $EnableJumboFrame) Set 
+ * @method boolean getEnableJumboFrame() Obtain Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+ * @method void setEnableJumboFrame(boolean $EnableJumboFrame) Set Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
  * @method array getLaunchTemplateTagSpecification() Obtain Description list of tags. by specifying this parameter, tags can be bound to the instance launch template.
  * @method void setLaunchTemplateTagSpecification(array $LaunchTemplateTagSpecification) Set Description list of tags. by specifying this parameter, tags can be bound to the instance launch template.
  * @method Metadata getMetadata() Obtain Custom metadata. specifies that custom metadata key-value pairs can be added when creating a CVM.
@@ -249,7 +249,7 @@ false (default): sends a normal request. after passing the check, creates an ins
     public $DisableApiTermination;
 
     /**
-     * @var boolean 
+     * @var boolean Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
      */
     public $EnableJumboFrame;
 
@@ -307,7 +307,7 @@ false (default): sends a normal request. after passing the check, creates an ins
      * @param string $InstanceChargeType Instance [billing mode](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1).<br><li>PREPAID: prepaid, that is, monthly subscription.</li><li>POSTPAID_BY_HOUR: pay-as-you-go by hour.</li><li>CDHPAID: CDH instance (created based on CDH; the resources of the host are free of charge).</li><li>SPOTPAID: spot payment.</li>Default value: POSTPAID_BY_HOUR.
      * @param InstanceChargePrepaid $InstanceChargePrepaid Prepaid mode, that is, annual and monthly subscription related parameter settings. Through this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to set auto-renewal, etc. If the specified instance's billing mode is the prepaid mode, this parameter must be passed.
      * @param boolean $DisableApiTermination Instance destruction protection flag: indicates whether an instance is allowed to be deleted through an api. value ranges from: - **TRUE**: indicates that instance protection is enabled, deletion through apis is not allowed. - **FALSE**: indicates that instance protection is disabled, deletion through apis is allowed.  default value: FALSE.
-     * @param boolean $EnableJumboFrame 
+     * @param boolean $EnableJumboFrame Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
      * @param array $LaunchTemplateTagSpecification Description list of tags. by specifying this parameter, tags can be bound to the instance launch template.
      * @param Metadata $Metadata Custom metadata. specifies that custom metadata key-value pairs can be added when creating a CVM.
 Note: this field is in beta test.

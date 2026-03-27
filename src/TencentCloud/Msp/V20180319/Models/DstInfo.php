@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRegion() Obtain Migration destination region
  * @method void setRegion(string $Region) Set Migration destination region
- * @method string getIp() Obtain 
- * @method void setIp(string $Ip) Set 
+ * @method string getIp() Obtain Migration destination Ip
+ * @method void setIp(string $Ip) Set Migration destination Ip
  * @method string getPort() Obtain Migration destination port
  * @method void setPort(string $Port) Set Migration destination port
  * @method string getInstanceId() Obtain Migration destination instance ID
@@ -37,7 +37,7 @@ class DstInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var string 
+     * @var string Migration destination Ip
      */
     public $Ip;
 
@@ -53,7 +53,7 @@ class DstInfo extends AbstractModel
 
     /**
      * @param string $Region Migration destination region
-     * @param string $Ip 
+     * @param string $Ip Migration destination Ip
      * @param string $Port Migration destination port
      * @param string $InstanceId Migration destination instance ID
      */

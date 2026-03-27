@@ -18,60 +18,68 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Instance Resizing Inspection Items
  *
- * @method string getCheckName() Obtain 
- * @method void setCheckName(string $CheckName) Set 
- * @method string getCurrentValue() Obtain 
- * @method void setCurrentValue(string $CurrentValue) Set 
- * @method integer getPassed() Obtain 
- * @method void setPassed(integer $Passed) Set 
- * @method integer getIsAffect() Obtain 
- * @method void setIsAffect(integer $IsAffect) Set 
- * @method string getMsg() Obtain 
- * @method void setMsg(string $Msg) Set 
- * @method integer getMsgCode() Obtain 
- * @method void setMsgCode(integer $MsgCode) Set 
+ * @method string getCheckName() Obtain Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check;
+ * @method void setCheckName(string $CheckName) Set Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check;
+ * @method string getCurrentValue() Obtain Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
+
+CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing;
+ * @method void setCurrentValue(string $CurrentValue) Set Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
+
+CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing;
+ * @method integer getPassed() Obtain Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed
+ * @method void setPassed(integer $Passed) Set Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed
+ * @method integer getIsAffect() Obtain Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists
+ * @method void setIsAffect(integer $IsAffect) Set Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists
+ * @method string getMsg() Obtain Required description when impact exists or the check is not passed
+ * @method void setMsg(string $Msg) Set Required description when impact exists or the check is not passed
+ * @method integer getMsgCode() Obtain Describe the corresponding code
+ * @method void setMsgCode(integer $MsgCode) Set Describe the corresponding code
  */
 class CheckItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check;
      */
     public $CheckName;
 
     /**
-     * @var string 
+     * @var string Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
+
+CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing;
      */
     public $CurrentValue;
 
     /**
-     * @var integer 
+     * @var integer Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed
      */
     public $Passed;
 
     /**
-     * @var integer 
+     * @var integer Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists
      */
     public $IsAffect;
 
     /**
-     * @var string 
+     * @var string Required description when impact exists or the check is not passed
      */
     public $Msg;
 
     /**
-     * @var integer 
+     * @var integer Describe the corresponding code
      */
     public $MsgCode;
 
     /**
-     * @param string $CheckName 
-     * @param string $CurrentValue 
-     * @param integer $Passed 
-     * @param integer $IsAffect 
-     * @param string $Msg 
-     * @param integer $MsgCode 
+     * @param string $CheckName Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check;
+     * @param string $CurrentValue Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
+
+CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing;
+     * @param integer $Passed Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed
+     * @param integer $IsAffect Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists
+     * @param string $Msg Required description when impact exists or the check is not passed
+     * @param integer $MsgCode Describe the corresponding code
      */
     function __construct()
     {

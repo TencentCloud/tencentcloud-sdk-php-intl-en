@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getLabelId() Obtain The label ID.
  * @method void setLabelId(integer $LabelId) Set The label ID.
- * @method string getDid() Obtain 
- * @method void setDid(string $Did) Set 
+ * @method string getDid() Obtain tdid
+ * @method void setDid(string $Did) Set tdid
  */
 class AddLabelRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AddLabelRequest extends AbstractModel
     public $LabelId;
 
     /**
-     * @var string 
+     * @var string tdid
      */
     public $Did;
 
     /**
      * @param integer $LabelId The label ID.
-     * @param string $Did 
+     * @param string $Did tdid
      */
     function __construct()
     {

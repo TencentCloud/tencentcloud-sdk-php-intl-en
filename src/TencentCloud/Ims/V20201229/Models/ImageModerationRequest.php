@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUser(User $User) Set This field indicates the information of the user that corresponds to the object to be detected. It can be passed in to identify the user involved in the violation.
  * @method Device getDevice() Obtain This field indicates the information of the device that corresponds to the object to be detected. It can be passed in to identify the device involved in the violation.
  * @method void setDevice(Device $Device) Set This field indicates the information of the device that corresponds to the object to be detected. It can be passed in to identify the device involved in the violation.
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getType() Obtain This field indicates the input image auditing type, with values including: IMAGE (Content Security) and IMAGE_AIGC (AI-generated content recognition). The default value is IMAGE.
+ * @method void setType(string $Type) Set This field indicates the input image auditing type, with values including: IMAGE (Content Security) and IMAGE_AIGC (AI-generated content recognition). The default value is IMAGE.
  */
 class ImageModerationRequest extends AbstractModel
 {
@@ -82,7 +82,7 @@ class ImageModerationRequest extends AbstractModel
     public $Device;
 
     /**
-     * @var string 
+     * @var string This field indicates the input image auditing type, with values including: IMAGE (Content Security) and IMAGE_AIGC (AI-generated content recognition). The default value is IMAGE.
      */
     public $Type;
 
@@ -95,7 +95,7 @@ class ImageModerationRequest extends AbstractModel
      * @param integer $MaxFrames **For GIF/long image detection only**. This field indicates the maximum number of frames that can be captured. The default value is 1, where only the first frame of the input GIF image will be detected, and the long image will not be split (which may cause a processing timeout).<br>Note: the `Interval` and `MaxFrames` parameters need to be used in combination; for example, if `Interval` is `3` and `MaxFrames` is `400`, the GIF/long image will be detected once every two frames for up to 400 frames.
      * @param User $User This field indicates the information of the user that corresponds to the object to be detected. It can be passed in to identify the user involved in the violation.
      * @param Device $Device This field indicates the information of the device that corresponds to the object to be detected. It can be passed in to identify the device involved in the violation.
-     * @param string $Type 
+     * @param string $Type This field indicates the input image auditing type, with values including: IMAGE (Content Security) and IMAGE_AIGC (AI-generated content recognition). The default value is IMAGE.
      */
     function __construct()
     {

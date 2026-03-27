@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Region
  * @method string getZone() Obtain AZ
  * @method void setZone(string $Zone) Set AZ
- * @method string getOssProxyNodeName() Obtain 
- * @method void setOssProxyNodeName(string $OssProxyNodeName) Set 
+ * @method string getOssProxyNodeName() Obtain Database Proxy Node Name
+ * @method void setOssProxyNodeName(string $OssProxyNodeName) Set Database Proxy Node Name
  */
 class ProxyNodeInfo extends AbstractModel
 {
@@ -96,7 +96,7 @@ class ProxyNodeInfo extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 
+     * @var string Database Proxy Node Name
      */
     public $OssProxyNodeName;
 
@@ -111,7 +111,7 @@ class ProxyNodeInfo extends AbstractModel
      * @param integer $AppId User AppID
      * @param string $Region Region
      * @param string $Zone AZ
-     * @param string $OssProxyNodeName 
+     * @param string $OssProxyNodeName Database Proxy Node Name
      */
     function __construct()
     {

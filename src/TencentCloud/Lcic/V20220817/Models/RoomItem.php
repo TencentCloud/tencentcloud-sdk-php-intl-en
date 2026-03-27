@@ -76,28 +76,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value was found.
  * @method void setEnableDirectControl(integer $EnableDirectControl) Set Whether the students' consent is required to control their cameras/microphones.
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getInteractionMode() Obtain 
- * @method void setInteractionMode(integer $InteractionMode) Set 
- * @method integer getVideoOrientation() Obtain 
- * @method void setVideoOrientation(integer $VideoOrientation) Set 
- * @method integer getIsGradingRequiredPostClass() Obtain 
- * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) Set 
+ * @method integer getInteractionMode() Obtain Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA
+ * @method void setInteractionMode(integer $InteractionMode) Set Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA
+ * @method integer getVideoOrientation() Obtain Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices.
+ * @method void setVideoOrientation(integer $VideoOrientation) Set Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices.
+ * @method integer getIsGradingRequiredPostClass() Obtain Enable post-class evaluation. 0: Disable (default) 1: Enable
+ * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) Set Enable post-class evaluation. 0: Disable (default) 1: Enable
  * @method integer getRoomType() Obtain Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
  * @method void setRoomType(integer $RoomType) Set Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
- * @method integer getEndDelayTime() Obtain 
- * @method void setEndDelayTime(integer $EndDelayTime) Set 
- * @method integer getLiveType() Obtain 
- * @method void setLiveType(integer $LiveType) Set 
- * @method string getRecordLiveUrl() Obtain 
- * @method void setRecordLiveUrl(string $RecordLiveUrl) Set 
- * @method integer getEnableAutoStart() Obtain 
- * @method void setEnableAutoStart(integer $EnableAutoStart) Set 
- * @method string getRecordBackground() Obtain 
- * @method void setRecordBackground(string $RecordBackground) Set 
- * @method string getRecordScene() Obtain 
- * @method void setRecordScene(string $RecordScene) Set 
- * @method string getRecordLang() Obtain 
- * @method void setRecordLang(string $RecordLang) Set 
+ * @method integer getEndDelayTime() Obtain Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes
+ * @method void setEndDelayTime(integer $EndDelayTime) Set Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes
+ * @method integer getLiveType() Obtain Live Streaming Type: 0: Regular (default) 1: Simulated Live
+ * @method void setLiveType(integer $LiveType) Set Live Streaming Type: 0: Regular (default) 1: Simulated Live
+ * @method string getRecordLiveUrl() Obtain Simulated Live Playback Link
+ * @method void setRecordLiveUrl(string $RecordLiveUrl) Set Simulated Live Playback Link
+ * @method integer getEnableAutoStart() Obtain Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1
+ * @method void setEnableAutoStart(integer $EnableAutoStart) Set Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1
+ * @method string getRecordBackground() Obtain Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported.
+ * @method void setRecordBackground(string $RecordBackground) Set Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported.
+ * @method string getRecordScene() Obtain Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type.
+ * @method void setRecordScene(string $RecordScene) Set Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type.
+ * @method string getRecordLang() Obtain Recording custom language. This parameter is valid only when recordlayout=9.
+ * @method void setRecordLang(string $RecordLang) Set Recording custom language. This parameter is valid only when recordlayout=9.
  */
 class RoomItem extends AbstractModel
 {
@@ -182,17 +182,17 @@ Note: This field may return null, indicating that no valid value was found.
     public $EnableDirectControl;
 
     /**
-     * @var integer 
+     * @var integer Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA
      */
     public $InteractionMode;
 
     /**
-     * @var integer 
+     * @var integer Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices.
      */
     public $VideoOrientation;
 
     /**
-     * @var integer 
+     * @var integer Enable post-class evaluation. 0: Disable (default) 1: Enable
      */
     public $IsGradingRequiredPostClass;
 
@@ -202,37 +202,37 @@ Note: This field may return null, indicating that no valid value was found.
     public $RoomType;
 
     /**
-     * @var integer 
+     * @var integer Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes
      */
     public $EndDelayTime;
 
     /**
-     * @var integer 
+     * @var integer Live Streaming Type: 0: Regular (default) 1: Simulated Live
      */
     public $LiveType;
 
     /**
-     * @var string 
+     * @var string Simulated Live Playback Link
      */
     public $RecordLiveUrl;
 
     /**
-     * @var integer 
+     * @var integer Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1
      */
     public $EnableAutoStart;
 
     /**
-     * @var string 
+     * @var string Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported.
      */
     public $RecordBackground;
 
     /**
-     * @var string 
+     * @var string Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type.
      */
     public $RecordScene;
 
     /**
-     * @var string 
+     * @var string Recording custom language. This parameter is valid only when recordlayout=9.
      */
     public $RecordLang;
 
@@ -265,17 +265,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
 Note: This field may return null, indicating that no valid value was found.
-     * @param integer $InteractionMode 
-     * @param integer $VideoOrientation 
-     * @param integer $IsGradingRequiredPostClass 
+     * @param integer $InteractionMode Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA
+     * @param integer $VideoOrientation Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices.
+     * @param integer $IsGradingRequiredPostClass Enable post-class evaluation. 0: Disable (default) 1: Enable
      * @param integer $RoomType Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
-     * @param integer $EndDelayTime 
-     * @param integer $LiveType 
-     * @param string $RecordLiveUrl 
-     * @param integer $EnableAutoStart 
-     * @param string $RecordBackground 
-     * @param string $RecordScene 
-     * @param string $RecordLang 
+     * @param integer $EndDelayTime Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes
+     * @param integer $LiveType Live Streaming Type: 0: Regular (default) 1: Simulated Live
+     * @param string $RecordLiveUrl Simulated Live Playback Link
+     * @param integer $EnableAutoStart Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1
+     * @param string $RecordBackground Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported.
+     * @param string $RecordScene Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type.
+     * @param string $RecordLang Recording custom language. This parameter is valid only when recordlayout=9.
      */
     function __construct()
     {

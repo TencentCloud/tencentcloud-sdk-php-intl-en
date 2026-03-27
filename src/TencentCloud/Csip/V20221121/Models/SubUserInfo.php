@@ -18,156 +18,156 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Sub-account details
  *
- * @method integer getID() Obtain 
- * @method void setID(integer $ID) Set 
- * @method string getAppID() Obtain 
- * @method void setAppID(string $AppID) Set 
- * @method string getUin() Obtain 
- * @method void setUin(string $Uin) Set 
- * @method string getNickName() Obtain 
- * @method void setNickName(string $NickName) Set 
- * @method string getOwnerAppID() Obtain 
- * @method void setOwnerAppID(string $OwnerAppID) Set 
- * @method string getOwnerUin() Obtain 
- * @method void setOwnerUin(string $OwnerUin) Set 
- * @method string getOwnerNickName() Obtain 
- * @method void setOwnerNickName(string $OwnerNickName) Set 
- * @method string getOwnerMemberID() Obtain 
- * @method void setOwnerMemberID(string $OwnerMemberID) Set 
- * @method integer getCloudType() Obtain 
- * @method void setCloudType(integer $CloudType) Set 
- * @method integer getServiceCount() Obtain 
- * @method void setServiceCount(integer $ServiceCount) Set 
- * @method integer getInterfaceCount() Obtain 
- * @method void setInterfaceCount(integer $InterfaceCount) Set 
- * @method integer getAssetCount() Obtain 
- * @method void setAssetCount(integer $AssetCount) Set 
- * @method integer getLogCount() Obtain 
- * @method void setLogCount(integer $LogCount) Set 
- * @method integer getConfigRiskCount() Obtain 
- * @method void setConfigRiskCount(integer $ConfigRiskCount) Set 
- * @method integer getActionRiskCount() Obtain 
- * @method void setActionRiskCount(integer $ActionRiskCount) Set 
- * @method boolean getIsAccessCloudAudit() Obtain 
- * @method void setIsAccessCloudAudit(boolean $IsAccessCloudAudit) Set 
- * @method boolean getIsAccessCheck() Obtain 
- * @method void setIsAccessCheck(boolean $IsAccessCheck) Set 
- * @method boolean getIsAccessUeba() Obtain 
- * @method void setIsAccessUeba(boolean $IsAccessUeba) Set 
+ * @method integer getID() Obtain Primary key ID, which has no business meaning and serves solely as a unique identifier
+ * @method void setID(integer $ID) Set Primary key ID, which has no business meaning and serves solely as a unique identifier
+ * @method string getAppID() Obtain sub-account Appid
+ * @method void setAppID(string $AppID) Set sub-account Appid
+ * @method string getUin() Obtain sub-account UIn
+ * @method void setUin(string $Uin) Set sub-account UIn
+ * @method string getNickName() Obtain Sub-account name
+ * @method void setNickName(string $NickName) Set Sub-account name
+ * @method string getOwnerAppID() Obtain master account Appid
+ * @method void setOwnerAppID(string $OwnerAppID) Set master account Appid
+ * @method string getOwnerUin() Obtain master account Uin
+ * @method void setOwnerUin(string $OwnerUin) Set master account Uin
+ * @method string getOwnerNickName() Obtain master account name
+ * @method void setOwnerNickName(string $OwnerNickName) Set master account name
+ * @method string getOwnerMemberID() Obtain master account's memberId information
+ * @method void setOwnerMemberID(string $OwnerMemberID) Set master account's memberId information
+ * @method integer getCloudType() Obtain Account type: 0 for Tencent Cloud account, 1 for AWS account
+ * @method void setCloudType(integer $CloudType) Set Account type: 0 for Tencent Cloud account, 1 for AWS account
+ * @method integer getServiceCount() Obtain Accessible services count
+ * @method void setServiceCount(integer $ServiceCount) Set Accessible services count
+ * @method integer getInterfaceCount() Obtain Accessible API count
+ * @method void setInterfaceCount(integer $InterfaceCount) Set Accessible API count
+ * @method integer getAssetCount() Obtain Accessible resources count
+ * @method void setAssetCount(integer $AssetCount) Set Accessible resources count
+ * @method integer getLogCount() Obtain Access/Behavior Logs Count
+ * @method void setLogCount(integer $LogCount) Set Access/Behavior Logs Count
+ * @method integer getConfigRiskCount() Obtain Permissions configuration risk
+ * @method void setConfigRiskCount(integer $ConfigRiskCount) Set Permissions configuration risk
+ * @method integer getActionRiskCount() Obtain Dangerous behavior alarm
+ * @method void setActionRiskCount(integer $ActionRiskCount) Set Dangerous behavior alarm
+ * @method boolean getIsAccessCloudAudit() Obtain whether to enable CloudAudit logs
+ * @method void setIsAccessCloudAudit(boolean $IsAccessCloudAudit) Set whether to enable CloudAudit logs
+ * @method boolean getIsAccessCheck() Obtain whether risk configuration security assessment
+ * @method void setIsAccessCheck(boolean $IsAccessCheck) Set whether risk configuration security assessment
+ * @method boolean getIsAccessUeba() Obtain whether to configure user behavior management policies
+ * @method void setIsAccessUeba(boolean $IsAccessUeba) Set whether to configure user behavior management policies
  */
 class SubUserInfo extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Primary key ID, which has no business meaning and serves solely as a unique identifier
      */
     public $ID;
 
     /**
-     * @var string 
+     * @var string sub-account Appid
      */
     public $AppID;
 
     /**
-     * @var string 
+     * @var string sub-account UIn
      */
     public $Uin;
 
     /**
-     * @var string 
+     * @var string Sub-account name
      */
     public $NickName;
 
     /**
-     * @var string 
+     * @var string master account Appid
      */
     public $OwnerAppID;
 
     /**
-     * @var string 
+     * @var string master account Uin
      */
     public $OwnerUin;
 
     /**
-     * @var string 
+     * @var string master account name
      */
     public $OwnerNickName;
 
     /**
-     * @var string 
+     * @var string master account's memberId information
      */
     public $OwnerMemberID;
 
     /**
-     * @var integer 
+     * @var integer Account type: 0 for Tencent Cloud account, 1 for AWS account
      */
     public $CloudType;
 
     /**
-     * @var integer 
+     * @var integer Accessible services count
      */
     public $ServiceCount;
 
     /**
-     * @var integer 
+     * @var integer Accessible API count
      */
     public $InterfaceCount;
 
     /**
-     * @var integer 
+     * @var integer Accessible resources count
      */
     public $AssetCount;
 
     /**
-     * @var integer 
+     * @var integer Access/Behavior Logs Count
      */
     public $LogCount;
 
     /**
-     * @var integer 
+     * @var integer Permissions configuration risk
      */
     public $ConfigRiskCount;
 
     /**
-     * @var integer 
+     * @var integer Dangerous behavior alarm
      */
     public $ActionRiskCount;
 
     /**
-     * @var boolean 
+     * @var boolean whether to enable CloudAudit logs
      */
     public $IsAccessCloudAudit;
 
     /**
-     * @var boolean 
+     * @var boolean whether risk configuration security assessment
      */
     public $IsAccessCheck;
 
     /**
-     * @var boolean 
+     * @var boolean whether to configure user behavior management policies
      */
     public $IsAccessUeba;
 
     /**
-     * @param integer $ID 
-     * @param string $AppID 
-     * @param string $Uin 
-     * @param string $NickName 
-     * @param string $OwnerAppID 
-     * @param string $OwnerUin 
-     * @param string $OwnerNickName 
-     * @param string $OwnerMemberID 
-     * @param integer $CloudType 
-     * @param integer $ServiceCount 
-     * @param integer $InterfaceCount 
-     * @param integer $AssetCount 
-     * @param integer $LogCount 
-     * @param integer $ConfigRiskCount 
-     * @param integer $ActionRiskCount 
-     * @param boolean $IsAccessCloudAudit 
-     * @param boolean $IsAccessCheck 
-     * @param boolean $IsAccessUeba 
+     * @param integer $ID Primary key ID, which has no business meaning and serves solely as a unique identifier
+     * @param string $AppID sub-account Appid
+     * @param string $Uin sub-account UIn
+     * @param string $NickName Sub-account name
+     * @param string $OwnerAppID master account Appid
+     * @param string $OwnerUin master account Uin
+     * @param string $OwnerNickName master account name
+     * @param string $OwnerMemberID master account's memberId information
+     * @param integer $CloudType Account type: 0 for Tencent Cloud account, 1 for AWS account
+     * @param integer $ServiceCount Accessible services count
+     * @param integer $InterfaceCount Accessible API count
+     * @param integer $AssetCount Accessible resources count
+     * @param integer $LogCount Access/Behavior Logs Count
+     * @param integer $ConfigRiskCount Permissions configuration risk
+     * @param integer $ActionRiskCount Dangerous behavior alarm
+     * @param boolean $IsAccessCloudAudit whether to enable CloudAudit logs
+     * @param boolean $IsAccessCheck whether risk configuration security assessment
+     * @param boolean $IsAccessUeba whether to configure user behavior management policies
      */
     function __construct()
     {

@@ -46,8 +46,20 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
 <li>once: no longer appears after watermark playback ends.</li>
 <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
 <li>repeat (default): repeats the playback until the video ends.</li>
- * @method integer getTransparency() Obtain 
- * @method void setTransparency(integer $Transparency) Set 
+ * @method integer getTransparency() Obtain Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent</li>
+
+Default value: 0.
+ * @method void setTransparency(integer $Transparency) Set Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent</li>
+
+Default value: 0.
  */
 class ImageWatermarkInput extends AbstractModel
 {
@@ -81,7 +93,13 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
     public $RepeatType;
 
     /**
-     * @var integer 
+     * @var integer Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent</li>
+
+Default value: 0.
      */
     public $Transparency;
 
@@ -99,7 +117,13 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
 <li>once: no longer appears after watermark playback ends.</li>
 <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
 <li>repeat (default): repeats the playback until the video ends.</li>
-     * @param integer $Transparency 
+     * @param integer $Transparency Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent</li>
+
+Default value: 0.
      */
     function __construct()
     {

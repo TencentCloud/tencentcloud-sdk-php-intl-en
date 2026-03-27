@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results per page; default value: 20; maximum value: 100.
  * @method array getEndPointServiceIds() Obtain Endpoint service ID `EndPointServiceIds` and `Filters` cannot be both passed in. 
  * @method void setEndPointServiceIds(array $EndPointServiceIds) Set Endpoint service ID `EndPointServiceIds` and `Filters` cannot be both passed in. 
- * @method boolean getIsListAuthorizedEndPointService() Obtain 
- * @method void setIsListAuthorizedEndPointService(boolean $IsListAuthorizedEndPointService) Set 
+ * @method boolean getIsListAuthorizedEndPointService() Obtain <li>Does not support passing the parameter Filters simultaneously.</li> <li>Lists the endpoint service information authorized to the current account. Can be filtered using the EndPointServiceIds parameter to determine which endpoint services are authorized to the account.</li>
+ * @method void setIsListAuthorizedEndPointService(boolean $IsListAuthorizedEndPointService) Set <li>Does not support passing the parameter Filters simultaneously.</li> <li>Lists the endpoint service information authorized to the current account. Can be filtered using the EndPointServiceIds parameter to determine which endpoint services are authorized to the account.</li>
  */
 class DescribeVpcEndPointServiceRequest extends AbstractModel
 {
@@ -66,7 +66,7 @@ class DescribeVpcEndPointServiceRequest extends AbstractModel
     public $EndPointServiceIds;
 
     /**
-     * @var boolean 
+     * @var boolean <li>Does not support passing the parameter Filters simultaneously.</li> <li>Lists the endpoint service information authorized to the current account. Can be filtered using the EndPointServiceIds parameter to determine which endpoint services are authorized to the account.</li>
      */
     public $IsListAuthorizedEndPointService;
 
@@ -79,7 +79,7 @@ class DescribeVpcEndPointServiceRequest extends AbstractModel
      * @param integer $Offset Offset. Default value: 0.
      * @param integer $Limit Number of results per page; default value: 20; maximum value: 100.
      * @param array $EndPointServiceIds Endpoint service ID `EndPointServiceIds` and `Filters` cannot be both passed in. 
-     * @param boolean $IsListAuthorizedEndPointService 
+     * @param boolean $IsListAuthorizedEndPointService <li>Does not support passing the parameter Filters simultaneously.</li> <li>Lists the endpoint service information authorized to the current account. Can be filtered using the EndPointServiceIds parameter to determine which endpoint services are authorized to the account.</li>
      */
     function __construct()
     {

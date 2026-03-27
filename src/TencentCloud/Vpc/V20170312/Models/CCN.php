@@ -54,8 +54,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRouteTableFlag(boolean $RouteTableFlag) Set Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getIsSecurityLock() Obtain 
- * @method void setIsSecurityLock(boolean $IsSecurityLock) Set 
+ * @method boolean getIsSecurityLock() Obtain `true`: instance is blocked, traffic is blocked, `false`: unblocked.
+ * @method void setIsSecurityLock(boolean $IsSecurityLock) Set `true`: instance is blocked, traffic is blocked, `false`: unblocked.
  * @method boolean getRouteBroadcastPolicyFlag() Obtain Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setRouteBroadcastPolicyFlag(boolean $RouteBroadcastPolicyFlag) Set Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
@@ -133,7 +133,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RouteTableFlag;
 
     /**
-     * @var boolean 
+     * @var boolean `true`: instance is blocked, traffic is blocked, `false`: unblocked.
      */
     public $IsSecurityLock;
 
@@ -161,7 +161,7 @@ Note: This field may return null, indicating no valid value.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $RouteTableFlag Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $IsSecurityLock 
+     * @param boolean $IsSecurityLock `true`: instance is blocked, traffic is blocked, `false`: unblocked.
      * @param boolean $RouteBroadcastPolicyFlag Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */

@@ -20,23 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Billing details
  *
- * @method integer getTotalPrice() Obtain Resource total price under prepaid mode, excluding discounts. unit: cent.
- * @method void setTotalPrice(integer $TotalPrice) Set Resource total price under prepaid mode, excluding discounts. unit: cent.
+ * @method integer getTotalPrice() Obtain Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
+ * @method void setTotalPrice(integer $TotalPrice) Set Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
  * @method float getDiscount() Obtain Total discount. `100` means no discount.
  * @method void setDiscount(float $Discount) Set Total discount. `100` means no discount.
- * @method integer getTotalPriceDiscount() Obtain Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
- * @method void setTotalPriceDiscount(integer $TotalPriceDiscount) Set Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
- * @method integer getUnitPrice() Obtain Unit resource price in postpaid mode, excluding discounts. unit: cent.
- * @method void setUnitPrice(integer $UnitPrice) Set Unit resource price in postpaid mode, excluding discounts. unit: cent.
- * @method integer getUnitPriceDiscount() Obtain Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
- * @method void setUnitPriceDiscount(integer $UnitPriceDiscount) Set Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
+ * @method integer getTotalPriceDiscount() Obtain Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
+ * @method void setTotalPriceDiscount(integer $TotalPriceDiscount) Set Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
+ * @method integer getUnitPrice() Obtain Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
+ * @method void setUnitPrice(integer $UnitPrice) Set Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
+ * @method integer getUnitPriceDiscount() Obtain Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
+ * @method void setUnitPriceDiscount(integer $UnitPriceDiscount) Set Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
  * @method string getChargeUnit() Obtain Price unit
  * @method void setChargeUnit(string $ChargeUnit) Set Price unit
+ * @method string getUnitPriceHighPrecision() Obtain Excludes discounted rates under high precision.
+ * @method void setUnitPriceHighPrecision(string $UnitPriceHighPrecision) Set Excludes discounted rates under high precision.
+ * @method string getUnitPriceDiscountHighPrecision() Obtain Discounted price under high precision.
+ * @method void setUnitPriceDiscountHighPrecision(string $UnitPriceDiscountHighPrecision) Set Discounted price under high precision.
+ * @method string getAmountUnit() Obtain Currency unit.
+ * @method void setAmountUnit(string $AmountUnit) Set Currency unit.
  */
 class TradePrice extends AbstractModel
 {
     /**
-     * @var integer Resource total price under prepaid mode, excluding discounts. unit: cent.
+     * @var integer Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
      */
     public $TotalPrice;
 
@@ -46,17 +52,17 @@ class TradePrice extends AbstractModel
     public $Discount;
 
     /**
-     * @var integer Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
+     * @var integer Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
      */
     public $TotalPriceDiscount;
 
     /**
-     * @var integer Unit resource price in postpaid mode, excluding discounts. unit: cent.
+     * @var integer Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
      */
     public $UnitPrice;
 
     /**
-     * @var integer Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
+     * @var integer Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
      */
     public $UnitPriceDiscount;
 
@@ -66,12 +72,30 @@ class TradePrice extends AbstractModel
     public $ChargeUnit;
 
     /**
-     * @param integer $TotalPrice Resource total price under prepaid mode, excluding discounts. unit: cent.
+     * @var string Excludes discounted rates under high precision.
+     */
+    public $UnitPriceHighPrecision;
+
+    /**
+     * @var string Discounted price under high precision.
+     */
+    public $UnitPriceDiscountHighPrecision;
+
+    /**
+     * @var string Currency unit.
+     */
+    public $AmountUnit;
+
+    /**
+     * @param integer $TotalPrice Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
      * @param float $Discount Total discount. `100` means no discount.
-     * @param integer $TotalPriceDiscount Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
-     * @param integer $UnitPrice Unit resource price in postpaid mode, excluding discounts. unit: cent.
-     * @param integer $UnitPriceDiscount Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
+     * @param integer $TotalPriceDiscount Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
+     * @param integer $UnitPrice Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
+     * @param integer $UnitPriceDiscount Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
      * @param string $ChargeUnit Price unit
+     * @param string $UnitPriceHighPrecision Excludes discounted rates under high precision.
+     * @param string $UnitPriceDiscountHighPrecision Discounted price under high precision.
+     * @param string $AmountUnit Currency unit.
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class TradePrice extends AbstractModel
 
         if (array_key_exists("ChargeUnit",$param) and $param["ChargeUnit"] !== null) {
             $this->ChargeUnit = $param["ChargeUnit"];
+        }
+
+        if (array_key_exists("UnitPriceHighPrecision",$param) and $param["UnitPriceHighPrecision"] !== null) {
+            $this->UnitPriceHighPrecision = $param["UnitPriceHighPrecision"];
+        }
+
+        if (array_key_exists("UnitPriceDiscountHighPrecision",$param) and $param["UnitPriceDiscountHighPrecision"] !== null) {
+            $this->UnitPriceDiscountHighPrecision = $param["UnitPriceDiscountHighPrecision"];
+        }
+
+        if (array_key_exists("AmountUnit",$param) and $param["AmountUnit"] !== null) {
+            $this->AmountUnit = $param["AmountUnit"];
         }
     }
 }

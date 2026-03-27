@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method string getStaffEmail() Obtain Agent email.
  * @method void setStaffEmail(string $StaffEmail) Set Agent email.
- * @method array getSkillGroupList() Obtain Bound skill group list.
- * @method void setSkillGroupList(array $SkillGroupList) Set Bound skill group list.
  * @method array getStaffSkillGroupList() Obtain Bound skill group list (required).
  * @method void setStaffSkillGroupList(array $StaffSkillGroupList) Set Bound skill group list (required).
+ * @method array getSkillGroupList() Obtain Bound skill group list.
+ * @method void setSkillGroupList(array $SkillGroupList) Set Bound skill group list.
  */
 class BindStaffSkillGroupListRequest extends AbstractModel
 {
@@ -42,21 +42,21 @@ class BindStaffSkillGroupListRequest extends AbstractModel
     public $StaffEmail;
 
     /**
+     * @var array Bound skill group list (required).
+     */
+    public $StaffSkillGroupList;
+
+    /**
      * @var array Bound skill group list.
      * @deprecated
      */
     public $SkillGroupList;
 
     /**
-     * @var array Bound skill group list (required).
-     */
-    public $StaffSkillGroupList;
-
-    /**
      * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $StaffEmail Agent email.
-     * @param array $SkillGroupList Bound skill group list.
      * @param array $StaffSkillGroupList Bound skill group list (required).
+     * @param array $SkillGroupList Bound skill group list.
      */
     function __construct()
     {
@@ -79,10 +79,6 @@ class BindStaffSkillGroupListRequest extends AbstractModel
             $this->StaffEmail = $param["StaffEmail"];
         }
 
-        if (array_key_exists("SkillGroupList",$param) and $param["SkillGroupList"] !== null) {
-            $this->SkillGroupList = $param["SkillGroupList"];
-        }
-
         if (array_key_exists("StaffSkillGroupList",$param) and $param["StaffSkillGroupList"] !== null) {
             $this->StaffSkillGroupList = [];
             foreach ($param["StaffSkillGroupList"] as $key => $value){
@@ -90,6 +86,10 @@ class BindStaffSkillGroupListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->StaffSkillGroupList, $obj);
             }
+        }
+
+        if (array_key_exists("SkillGroupList",$param) and $param["SkillGroupList"] !== null) {
+            $this->SkillGroupList = $param["SkillGroupList"];
         }
     }
 }

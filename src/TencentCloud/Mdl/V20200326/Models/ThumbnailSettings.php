@@ -18,7 +18,7 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Thumbnail configuration
  *
  * @method integer getThumbnailEnabled() Obtain Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
  * @method void setThumbnailEnabled(integer $ThumbnailEnabled) Set Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNegativePrompt(string $NegativePrompt) Set Prevent the model from generating image generation prompts.
  * @method string getEnhancePrompt() Obtain Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
  * @method void setEnhancePrompt(string $EnhancePrompt) Set Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
- * @method string getGenerationMode() Obtain 
- * @method void setGenerationMode(string $GenerationMode) Set 
+ * @method string getGenerationMode() Obtain Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
+ * @method void setGenerationMode(string $GenerationMode) Set Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
  * @method AigcImageOutputConfig getOutputConfig() Obtain Output media file configuration for the task.
  * @method void setOutputConfig(AigcImageOutputConfig $OutputConfig) Set Output media file configuration for the task.
  */
@@ -70,7 +70,7 @@ class AigcImageTaskInput extends AbstractModel
     public $EnhancePrompt;
 
     /**
-     * @var string 
+     * @var string Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
      */
     public $GenerationMode;
 
@@ -86,7 +86,7 @@ class AigcImageTaskInput extends AbstractModel
      * @param string $Prompt The prompt content for image generation.
      * @param string $NegativePrompt Prevent the model from generating image generation prompts.
      * @param string $EnhancePrompt Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
-     * @param string $GenerationMode 
+     * @param string $GenerationMode Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
      * @param AigcImageOutputConfig $OutputConfig Output media file configuration for the task.
      */
     function __construct()

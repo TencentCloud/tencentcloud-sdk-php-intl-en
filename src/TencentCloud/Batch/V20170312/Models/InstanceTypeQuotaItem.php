@@ -64,8 +64,8 @@ Note: this field may return null, indicating that no valid value is obtained.
  * @method void setFpga(integer $Fpga) Set Number of FPGAs of the instance.
  * @method string getRemark() Obtain Descriptive information of the instance.
  * @method void setRemark(string $Remark) Set Descriptive information of the instance.
- * @method float getGpuCount() Obtain 
- * @method void setGpuCount(float $GpuCount) Set 
+ * @method float getGpuCount() Obtain The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances.
+ * @method void setGpuCount(float $GpuCount) Set The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances.
  * @method string getFrequency() Obtain CPU clock rate of the instance
  * @method void setFrequency(string $Frequency) Set CPU clock rate of the instance
  */
@@ -174,7 +174,7 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $Remark;
 
     /**
-     * @var float 
+     * @var float The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances.
      */
     public $GpuCount;
 
@@ -206,7 +206,7 @@ Note: this field may return null, indicating that no valid value is obtained.
      * @param integer $Gpu Number of GPUs of the instance.
      * @param integer $Fpga Number of FPGAs of the instance.
      * @param string $Remark Descriptive information of the instance.
-     * @param float $GpuCount 
+     * @param float $GpuCount The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances.
      * @param string $Frequency CPU clock rate of the instance
      */
     function __construct()

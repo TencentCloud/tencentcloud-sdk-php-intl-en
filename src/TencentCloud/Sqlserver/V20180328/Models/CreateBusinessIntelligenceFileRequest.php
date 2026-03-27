@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getFileURL() Obtain 
- * @method void setFileURL(string $FileURL) Set 
+ * @method string getFileURL() Obtain COS_URL
+ * @method void setFileURL(string $FileURL) Set COS_URL
  * @method string getFileType() Obtain File type. Valid values: `FLAT` (flat file as data source), `SSIS` (.ispac SSIS package file)
  * @method void setFileType(string $FileType) Set File type. Valid values: `FLAT` (flat file as data source), `SSIS` (.ispac SSIS package file)
  * @method string getRemark() Obtain Remarks
@@ -37,7 +37,7 @@ class CreateBusinessIntelligenceFileRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 
+     * @var string COS_URL
      */
     public $FileURL;
 
@@ -53,7 +53,7 @@ class CreateBusinessIntelligenceFileRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID
-     * @param string $FileURL 
+     * @param string $FileURL COS_URL
      * @param string $FileType File type. Valid values: `FLAT` (flat file as data source), `SSIS` (.ispac SSIS package file)
      * @param string $Remark Remarks
      */

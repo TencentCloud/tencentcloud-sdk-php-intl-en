@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
 - if there are multiple `Filter`s, the logical relationship between them is `AND`.
 - if there are multiple Values in the same Filter, the relationship between Values under the same Filter is logical OR.
 > 
-Take the `Filters` of the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api as an example. if we need to query commands with the `command-name` "print working directory" and the `command-type` "POWERSHELL" or "BAT", it can be implemented as follows:.
+Take the `Filters` of the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api as an example. if we need to query commands with the `command-name` "print working directory" and the `command-type` "POWERSHELL" or "BAT", it can be implemented as follows:.
 ```
 Filters.0.Name=command-name
 &Filters.0.Values.0=Print working directory.
