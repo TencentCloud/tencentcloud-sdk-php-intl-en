@@ -20,134 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendEmail request structure.
  *
- * @method string getFromEmailAddress() Obtain Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
- * @method void setFromEmailAddress(string $FromEmailAddress) Set Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
- * @method string getSubject() Obtain Email subject.
- * @method void setSubject(string $Subject) Set Email subject.
- * @method array getDestination() Obtain Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
- * @method void setDestination(array $Destination) Set Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
- * @method string getReplyToAddresses() Obtain The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
- * @method void setReplyToAddresses(string $ReplyToAddresses) Set The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
- * @method array getCc() Obtain Cc recipient email address, supports up to 20 carbon copies.
- * @method void setCc(array $Cc) Set Cc recipient email address, supports up to 20 carbon copies.
- * @method array getBcc() Obtain Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
- * @method void setBcc(array $Bcc) Set Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
- * @method Template getTemplate() Obtain Use template for sending and fill in related parameters.
-<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
- * @method void setTemplate(Template $Template) Set Use template for sending and fill in related parameters.
-<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
- * @method Simple getSimple() Obtain This parameter has been deprecated.
-<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
- * @method void setSimple(Simple $Simple) Set This parameter has been deprecated.
-<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
- * @method array getAttachments() Obtain When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
- * @method void setAttachments(array $Attachments) Set When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
- * @method string getUnsubscribe() Obtain Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
- * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
- * @method integer getTriggerType() Obtain Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
- * @method void setTriggerType(integer $TriggerType) Set Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
- * @method string getSmtpMessageId() Obtain Message-Id field in the smtp header.
- * @method void setSmtpMessageId(string $SmtpMessageId) Set Message-Id field in the smtp header.
- * @method string getSmtpHeaders() Obtain Other fields that can be set in the smtp header.
- * @method void setSmtpHeaders(string $SmtpHeaders) Set Other fields that can be set in the smtp header.
- * @method string getHeaderFrom() Obtain from field in the smtp header. the domain name should be consistent with FromEmailAddress.
- * @method void setHeaderFrom(string $HeaderFrom) Set from field in the smtp header. the domain name should be consistent with FromEmailAddress.
+ * @method string getFromEmailAddress() Obtain <p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p>
+ * @method void setFromEmailAddress(string $FromEmailAddress) Set <p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p>
+ * @method string getSubject() Obtain <p>Email Subject</p>
+ * @method void setSubject(string $Subject) Set <p>Email Subject</p>
+ * @method array getDestination() Obtain <p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p>
+ * @method void setDestination(array $Destination) Set <p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p>
+ * @method string getReplyToAddresses() Obtain <p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
+ * @method void setReplyToAddresses(string $ReplyToAddresses) Set <p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
+ * @method array getCc() Obtain <p>Email address of CC recipients, supports up to 20 carbon copies.</p>
+ * @method void setCc(array $Cc) Set <p>Email address of CC recipients, supports up to 20 carbon copies.</p>
+ * @method array getBcc() Obtain <p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p>
+ * @method void setBcc(array $Bcc) Set <p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p>
+ * @method Template getTemplate() Obtain <p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
+ * @method void setTemplate(Template $Template) Set <p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
+ * @method Simple getSimple() Obtain <p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote>
+ * @method void setSimple(Simple $Simple) Set <p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote>
+ * @method array getAttachments() Obtain <p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p>
+ * @method void setAttachments(array $Attachments) Set <p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p>
+ * @method string getUnsubscribe() Obtain Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian.
+ * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian.
+ * @method integer getTriggerType() Obtain <p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p>
+ * @method void setTriggerType(integer $TriggerType) Set <p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p>
+ * @method string getSmtpMessageId() Obtain <p>Message-Id field in the smtp header</p>
+ * @method void setSmtpMessageId(string $SmtpMessageId) Set <p>Message-Id field in the smtp header</p>
+ * @method string getSmtpHeaders() Obtain <p>Other fields that can be set in the smtp header</p>
+ * @method void setSmtpHeaders(string $SmtpHeaders) Set <p>Other fields that can be set in the smtp header</p>
+ * @method string getHeaderFrom() Obtain <p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p>
+ * @method void setHeaderFrom(string $HeaderFrom) Set <p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p>
  */
 class SendEmailRequest extends AbstractModel
 {
     /**
-     * @var string Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
+     * @var string <p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p>
      */
     public $FromEmailAddress;
 
     /**
-     * @var string Email subject.
+     * @var string <p>Email Subject</p>
      */
     public $Subject;
 
     /**
-     * @var array Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+     * @var array <p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p>
      */
     public $Destination;
 
     /**
-     * @var string The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+     * @var string <p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
      */
     public $ReplyToAddresses;
 
     /**
-     * @var array Cc recipient email address, supports up to 20 carbon copies.
+     * @var array <p>Email address of CC recipients, supports up to 20 carbon copies.</p>
      */
     public $Cc;
 
     /**
-     * @var array Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
+     * @var array <p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p>
      */
     public $Bcc;
 
     /**
-     * @var Template Use template for sending and fill in related parameters.
-<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+     * @var Template <p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
      */
     public $Template;
 
     /**
-     * @var Simple This parameter has been deprecated.
-<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+     * @var Simple <p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote>
      */
     public $Simple;
 
     /**
-     * @var array When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
+     * @var array <p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p>
      */
     public $Attachments;
 
     /**
-     * @var string Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+     * @var string Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian.
      */
     public $Unsubscribe;
 
     /**
-     * @var integer Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
+     * @var integer <p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p>
      */
     public $TriggerType;
 
     /**
-     * @var string Message-Id field in the smtp header.
+     * @var string <p>Message-Id field in the smtp header</p>
      */
     public $SmtpMessageId;
 
     /**
-     * @var string Other fields that can be set in the smtp header.
+     * @var string <p>Other fields that can be set in the smtp header</p>
      */
     public $SmtpHeaders;
 
     /**
-     * @var string from field in the smtp header. the domain name should be consistent with FromEmailAddress.
+     * @var string <p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p>
      */
     public $HeaderFrom;
 
     /**
-     * @param string $FromEmailAddress Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
-     * @param string $Subject Email subject.
-     * @param array $Destination Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
-     * @param string $ReplyToAddresses The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
-     * @param array $Cc Cc recipient email address, supports up to 20 carbon copies.
-     * @param array $Bcc Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
-     * @param Template $Template Use template for sending and fill in related parameters.
-<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
-     * @param Simple $Simple This parameter has been deprecated.
-<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
-     * @param array $Attachments When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
-     * @param string $Unsubscribe Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
-     * @param integer $TriggerType Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
-     * @param string $SmtpMessageId Message-Id field in the smtp header.
-     * @param string $SmtpHeaders Other fields that can be set in the smtp header.
-     * @param string $HeaderFrom from field in the smtp header. the domain name should be consistent with FromEmailAddress.
+     * @param string $FromEmailAddress <p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p>
+     * @param string $Subject <p>Email Subject</p>
+     * @param array $Destination <p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p>
+     * @param string $ReplyToAddresses <p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
+     * @param array $Cc <p>Email address of CC recipients, supports up to 20 carbon copies.</p>
+     * @param array $Bcc <p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p>
+     * @param Template $Template <p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
+     * @param Simple $Simple <p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote>
+     * @param array $Attachments <p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p>
+     * @param string $Unsubscribe Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian.
+     * @param integer $TriggerType <p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p>
+     * @param string $SmtpMessageId <p>Message-Id field in the smtp header</p>
+     * @param string $SmtpHeaders <p>Other fields that can be set in the smtp header</p>
+     * @param string $HeaderFrom <p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p>
      */
     function __construct()
     {

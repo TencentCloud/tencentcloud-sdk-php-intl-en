@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEndPointId() Obtain Endpoint ID
  * @method void setEndPointId(string $EndPointId) Set Endpoint ID
- * @method string getVpcId() Obtain VPC ID
- * @method void setVpcId(string $VpcId) Set VPC ID
+ * @method string getVpcId() Obtain The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+ * @method void setVpcId(string $VpcId) Set The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
  * @method string getSubnetId() Obtain Subnet ID
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
  * @method string getEndPointOwner() Obtain APP ID
@@ -40,14 +40,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndPointVip(string $EndPointVip) Set Endpoint VIP
  * @method string getState() Obtain Endpoint status. Valid values: `ACTIVE` (available), `PENDING` (to be accepted), `ACCEPTING` (being accepted), `REJECTED` (rejected), and `FAILED` (failed).
  * @method void setState(string $State) Set Endpoint status. Valid values: `ACTIVE` (available), `PENDING` (to be accepted), `ACCEPTING` (being accepted), `REJECTED` (rejected), and `FAILED` (failed).
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method string getCreateTime() Obtain Creation time. format: YYYY-MM-DD HH:MM:SS.
+ * @method void setCreateTime(string $CreateTime) Set Creation time. format: YYYY-MM-DD HH:MM:SS.
  * @method array getGroupSet() Obtain ID list of security group instances bound with endpoints
  * @method void setGroupSet(array $GroupSet) Set ID list of security group instances bound with endpoints
- * @method string getServiceName() Obtain Endpoint service name
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setServiceName(string $ServiceName) Set Endpoint service name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getServiceName() Obtain Endpoint service name.
+ * @method void setServiceName(string $ServiceName) Set Endpoint service name.
+ * @method string getCdcId() Obtain CDC cluster unique ID.
+ * @method void setCdcId(string $CdcId) Set CDC cluster unique ID.
+ * @method array getTagSet() Obtain Tag key-value pair.		
+ * @method void setTagSet(array $TagSet) Set Tag key-value pair.		
  */
 class EndPoint extends AbstractModel
 {
@@ -57,7 +59,7 @@ class EndPoint extends AbstractModel
     public $EndPointId;
 
     /**
-     * @var string VPC ID
+     * @var string The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
      */
     public $VpcId;
 
@@ -102,7 +104,7 @@ class EndPoint extends AbstractModel
     public $State;
 
     /**
-     * @var string Creation time
+     * @var string Creation time. format: YYYY-MM-DD HH:MM:SS.
      */
     public $CreateTime;
 
@@ -112,14 +114,23 @@ class EndPoint extends AbstractModel
     public $GroupSet;
 
     /**
-     * @var string Endpoint service name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Endpoint service name.
      */
     public $ServiceName;
 
     /**
+     * @var string CDC cluster unique ID.
+     */
+    public $CdcId;
+
+    /**
+     * @var array Tag key-value pair.		
+     */
+    public $TagSet;
+
+    /**
      * @param string $EndPointId Endpoint ID
-     * @param string $VpcId VPC ID
+     * @param string $VpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
      * @param string $SubnetId Subnet ID
      * @param string $EndPointOwner APP ID
      * @param string $EndPointName Endpoint name
@@ -128,10 +139,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $EndPointServiceId Endpoint service ID
      * @param string $EndPointVip Endpoint VIP
      * @param string $State Endpoint status. Valid values: `ACTIVE` (available), `PENDING` (to be accepted), `ACCEPTING` (being accepted), `REJECTED` (rejected), and `FAILED` (failed).
-     * @param string $CreateTime Creation time
+     * @param string $CreateTime Creation time. format: YYYY-MM-DD HH:MM:SS.
      * @param array $GroupSet ID list of security group instances bound with endpoints
-     * @param string $ServiceName Endpoint service name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ServiceName Endpoint service name.
+     * @param string $CdcId CDC cluster unique ID.
+     * @param array $TagSet Tag key-value pair.		
      */
     function __construct()
     {
@@ -196,6 +208,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
             $this->ServiceName = $param["ServiceName"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

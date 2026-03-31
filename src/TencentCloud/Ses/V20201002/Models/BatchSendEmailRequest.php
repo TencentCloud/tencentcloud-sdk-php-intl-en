@@ -20,118 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchSendEmail request structure.
  *
- * @method string getFromEmailAddress() Obtain Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-Sender &lt;email address&gt; via fill in, such as:.
-Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
- * @method void setFromEmailAddress(string $FromEmailAddress) Set Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-Sender &lt;email address&gt; via fill in, such as:.
-Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
- * @method integer getReceiverId() Obtain Recipient list ID.
- * @method void setReceiverId(integer $ReceiverId) Set Recipient list ID.
- * @method string getSubject() Obtain Email subject.
- * @method void setSubject(string $Subject) Set Email subject.
- * @method integer getTaskType() Obtain Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
- * @method void setTaskType(integer $TaskType) Set Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
- * @method string getReplyToAddresses() Obtain The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
- * @method void setReplyToAddresses(string $ReplyToAddresses) Set The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
- * @method Template getTemplate() Obtain When using a template to send, fill in the related parameters of the template.
-<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
- * @method void setTemplate(Template $Template) Set When using a template to send, fill in the related parameters of the template.
-<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
- * @method Simple getSimple() Obtain Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
- * @method void setSimple(Simple $Simple) Set Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
- * @method array getAttachments() Obtain Send attachment when required. fill in related parameters (not supported).
- * @method void setAttachments(array $Attachments) Set Send attachment when required. fill in related parameters (not supported).
- * @method CycleEmailParam getCycleParam() Obtain Required parameter for sending tasks periodically.
- * @method void setCycleParam(CycleEmailParam $CycleParam) Set Required parameter for sending tasks periodically.
- * @method TimedEmailParam getTimedParam() Obtain Required parameter for scheduled task assignment.
- * @method void setTimedParam(TimedEmailParam $TimedParam) Set Required parameter for scheduled task assignment.
- * @method string getUnsubscribe() Obtain Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
- * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
- * @method integer getADLocation() Obtain Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
- * @method void setADLocation(integer $ADLocation) Set Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
+ * @method string getFromEmailAddress() Obtain <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
+ * @method void setFromEmailAddress(string $FromEmailAddress) Set <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
+ * @method integer getReceiverId() Obtain <p>Recipient list ID</p>
+ * @method void setReceiverId(integer $ReceiverId) Set <p>Recipient list ID</p>
+ * @method string getSubject() Obtain <p>Email Subject</p>
+ * @method void setSubject(string $Subject) Set <p>Email Subject</p>
+ * @method integer getTaskType() Obtain <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
+ * @method void setTaskType(integer $TaskType) Set <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
+ * @method string getReplyToAddresses() Obtain <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
+ * @method void setReplyToAddresses(string $ReplyToAddresses) Set <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
+ * @method Template getTemplate() Obtain <p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
+ * @method void setTemplate(Template $Template) Set <p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
+ * @method Simple getSimple() Obtain <p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p>
+ * @method void setSimple(Simple $Simple) Set <p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p>
+ * @method array getAttachments() Obtain <p>When you need to send an attachment, fill in the related parameters (not supported).</p>
+ * @method void setAttachments(array $Attachments) Set <p>When you need to send an attachment, fill in the related parameters (not supported).</p>
+ * @method CycleEmailParam getCycleParam() Obtain <p>Required parameter for sending tasks periodically</p>
+ * @method void setCycleParam(CycleEmailParam $CycleParam) Set <p>Required parameter for sending tasks periodically</p>
+ * @method TimedEmailParam getTimedParam() Obtain <p>Required parameter of scheduled task assignment</p>
+ * @method void setTimedParam(TimedEmailParam $TimedParam) Set <p>Required parameter of scheduled task assignment</p>
+ * @method string getUnsubscribe() Obtain Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian.
+ * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian.
+ * @method integer getADLocation() Obtain <p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p>
+ * @method void setADLocation(integer $ADLocation) Set <p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p>
  */
 class BatchSendEmailRequest extends AbstractModel
 {
     /**
-     * @var string Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-Sender &lt;email address&gt; via fill in, such as:.
-Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
+     * @var string <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
      */
     public $FromEmailAddress;
 
     /**
-     * @var integer Recipient list ID.
+     * @var integer <p>Recipient list ID</p>
      */
     public $ReceiverId;
 
     /**
-     * @var string Email subject.
+     * @var string <p>Email Subject</p>
      */
     public $Subject;
 
     /**
-     * @var integer Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
+     * @var integer <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
      */
     public $TaskType;
 
     /**
-     * @var string The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+     * @var string <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
      */
     public $ReplyToAddresses;
 
     /**
-     * @var Template When using a template to send, fill in the related parameters of the template.
-<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+     * @var Template <p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
      */
     public $Template;
 
     /**
-     * @var Simple Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+     * @var Simple <p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p>
      */
     public $Simple;
 
     /**
-     * @var array Send attachment when required. fill in related parameters (not supported).
+     * @var array <p>When you need to send an attachment, fill in the related parameters (not supported).</p>
      */
     public $Attachments;
 
     /**
-     * @var CycleEmailParam Required parameter for sending tasks periodically.
+     * @var CycleEmailParam <p>Required parameter for sending tasks periodically</p>
      */
     public $CycleParam;
 
     /**
-     * @var TimedEmailParam Required parameter for scheduled task assignment.
+     * @var TimedEmailParam <p>Required parameter of scheduled task assignment</p>
      */
     public $TimedParam;
 
     /**
-     * @var string Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+     * @var string Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian.
      */
     public $Unsubscribe;
 
     /**
-     * @var integer Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
+     * @var integer <p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p>
      */
     public $ADLocation;
 
     /**
-     * @param string $FromEmailAddress Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-Sender &lt;email address&gt; via fill in, such as:.
-Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
-     * @param integer $ReceiverId Recipient list ID.
-     * @param string $Subject Email subject.
-     * @param integer $TaskType Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
-     * @param string $ReplyToAddresses The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
-     * @param Template $Template When using a template to send, fill in the related parameters of the template.
-<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
-     * @param Simple $Simple Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
-     * @param array $Attachments Send attachment when required. fill in related parameters (not supported).
-     * @param CycleEmailParam $CycleParam Required parameter for sending tasks periodically.
-     * @param TimedEmailParam $TimedParam Required parameter for scheduled task assignment.
-     * @param string $Unsubscribe Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
-     * @param integer $ADLocation Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
+     * @param string $FromEmailAddress <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
+     * @param integer $ReceiverId <p>Recipient list ID</p>
+     * @param string $Subject <p>Email Subject</p>
+     * @param integer $TaskType <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
+     * @param string $ReplyToAddresses <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
+     * @param Template $Template <p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
+     * @param Simple $Simple <p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p>
+     * @param array $Attachments <p>When you need to send an attachment, fill in the related parameters (not supported).</p>
+     * @param CycleEmailParam $CycleParam <p>Required parameter for sending tasks periodically</p>
+     * @param TimedEmailParam $TimedParam <p>Required parameter of scheduled task assignment</p>
+     * @param string $Unsubscribe Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian.
+     * @param integer $ADLocation <p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p>
      */
     function __construct()
     {

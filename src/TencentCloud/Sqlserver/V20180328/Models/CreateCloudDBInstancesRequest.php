@@ -22,18 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
  * @method void setZone(string $Zone) Set Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
- * @method integer getMemory() Obtain Instance memory size in GB
- * @method void setMemory(integer $Memory) Set Instance memory size in GB
- * @method integer getStorage() Obtain Instance disk size in GB
- * @method void setStorage(integer $Storage) Set Instance disk size in GB
- * @method integer getCpu() Obtain Number of CPU cores
- * @method void setCpu(integer $Cpu) Set Number of CPU cores
+ * @method integer getMemory() Obtain Instance memory size in GB.
+ * @method void setMemory(integer $Memory) Set Instance memory size in GB.
+ * @method integer getStorage() Obtain Instance disk size in GB.
+ * @method void setStorage(integer $Storage) Set Instance disk size in GB.
+ * @method integer getCpu() Obtain Number of CPU cores.
+ * @method void setCpu(integer $Cpu) Set Number of CPU cores.
  * @method string getMachineType() Obtain The host type of the purchased instance. Valid values: `CLOUD_HSSD` (virtual machine with enhanced SSD), `CLOUD_TSSD` (virtual machine with ulTra SSD), `CLOUD_BSSD` (virtual machine with balanced SSD).
  * @method void setMachineType(string $MachineType) Set The host type of the purchased instance. Valid values: `CLOUD_HSSD` (virtual machine with enhanced SSD), `CLOUD_TSSD` (virtual machine with ulTra SSD), `CLOUD_BSSD` (virtual machine with balanced SSD).
- * @method string getInstanceChargeType() Obtain Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method string getInstanceChargeType() Obtain Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
+ * @method integer getProjectId() Obtain Project ID.
+ * @method void setProjectId(integer $ProjectId) Set Project ID.
  * @method integer getGoodsNum() Obtain Number of instances purchased this time. Default value: `1`.  Maximum value: `10`.
  * @method void setGoodsNum(integer $GoodsNum) Set Number of instances purchased this time. Default value: `1`.  Maximum value: `10`.
  * @method string getSubnetId() Obtain VPC subnet ID in the format of `subnet-bdoe83fa`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
@@ -44,28 +44,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) Set The purchase period of an instance. Default value: `1` (one month).  Maximum value: `48`.
  * @method integer getAutoVoucher() Obtain Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
- * @method array getVoucherIds() Obtain Array of voucher IDs (currently, only one voucher can be used per order)
- * @method void setVoucherIds(array $VoucherIds) Set Array of voucher IDs (currently, only one voucher can be used per order)
+ * @method array getVoucherIds() Obtain Array of voucher IDs (currently, only one voucher can be used per order).
+ * @method void setVoucherIds(array $VoucherIds) Set Array of voucher IDs (currently, only one voucher can be used per order).
  * @method string getDBVersion() Obtain SQL Server version. Valid values:  `2008R2` (SQL Server 2008 R2 Enterprise), `2012SP3` (SQL Server 2012 Enterprise), `201202` (SQL Server 2012 Standard), `2014SP2` (SQL Server 2014 Enterprise), 201402 (SQL Server 2014 Standard), `2016SP1` (SQL Server 2016 Enterprise), `201602` (SQL Server 2016 Standard), `2017` (SQL Server 2017 Enterprise), `201702` (SQL Server 2017 Standard), `2019` (SQL Server 2019 Enterprise), `201902` (SQL Server 2019 Standard).  Default value: `2008R2`.  The available version varies by region, and you can pull the version information through the `DescribeProductConfig` API.
  * @method void setDBVersion(string $DBVersion) Set SQL Server version. Valid values:  `2008R2` (SQL Server 2008 R2 Enterprise), `2012SP3` (SQL Server 2012 Enterprise), `201202` (SQL Server 2012 Standard), `2014SP2` (SQL Server 2014 Enterprise), 201402 (SQL Server 2014 Standard), `2016SP1` (SQL Server 2016 Enterprise), `201602` (SQL Server 2016 Standard), `2017` (SQL Server 2017 Enterprise), `201702` (SQL Server 2017 Standard), `2019` (SQL Server 2019 Enterprise), `201902` (SQL Server 2019 Standard).  Default value: `2008R2`.  The available version varies by region, and you can pull the version information through the `DescribeProductConfig` API.
- * @method integer getAutoRenewFlag() Obtain Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
+ * @method integer getAutoRenewFlag() Obtain Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
  * @method array getSecurityGroupList() Obtain Security group list, which contains security group IDs in the format of `sg-xxx`.
  * @method void setSecurityGroupList(array $SecurityGroupList) Set Security group list, which contains security group IDs in the format of `sg-xxx`.
  * @method array getWeekly() Obtain Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: `1` (Monday), `2` (Tuesday), `3` (Wednesday), `4` (Thursday), `5` (Friday), `6` (Saturday), `7` (Sunday).
  * @method void setWeekly(array $Weekly) Set Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: `1` (Monday), `2` (Tuesday), `3` (Wednesday), `4` (Thursday), `5` (Friday), `6` (Saturday), `7` (Sunday).
  * @method string getStartTime() Obtain Configuration of the maintenance window, which specifies the start time of daily maintenance.
  * @method void setStartTime(string $StartTime) Set Configuration of the maintenance window, which specifies the start time of daily maintenance.
- * @method integer getSpan() Obtain Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour
- * @method void setSpan(integer $Span) Set Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour
+ * @method integer getSpan() Obtain Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour.
+ * @method void setSpan(integer $Span) Set Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour.
  * @method boolean getMultiZones() Obtain Whether to deploy across AZs. Default value: `false`.
  * @method void setMultiZones(boolean $MultiZones) Set Whether to deploy across AZs. Default value: `false`.
- * @method array getResourceTags() Obtain Tags associated with the instances to be created
- * @method void setResourceTags(array $ResourceTags) Set Tags associated with the instances to be created
+ * @method array getResourceTags() Obtain Tags associated with the instances to be created.
+ * @method void setResourceTags(array $ResourceTags) Set Tags associated with the instances to be created.
  * @method string getCollation() Obtain Collation of system character sets. Default value:  `Chinese_PRC_CI_AS`.
  * @method void setCollation(string $Collation) Set Collation of system character sets. Default value:  `Chinese_PRC_CI_AS`.
  * @method string getTimeZone() Obtain System time zone. Default value:  `China Standard Time`.
  * @method void setTimeZone(string $TimeZone) Set System time zone. Default value:  `China Standard Time`.
+ * @method boolean getMultiNodes() Obtain Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+ * @method void setMultiNodes(boolean $MultiNodes) Set Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+ * @method array getDrZones() Obtain The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+ * @method void setDrZones(array $DrZones) Set The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+ * @method integer getDiskEncryptFlag() Obtain Disk encryption identifier, 0-unencrypted, 1-encrypted.
+ * @method void setDiskEncryptFlag(integer $DiskEncryptFlag) Set Disk encryption identifier, 0-unencrypted, 1-encrypted.
  */
 class CreateCloudDBInstancesRequest extends AbstractModel
 {
@@ -75,17 +81,17 @@ class CreateCloudDBInstancesRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer Instance memory size in GB
+     * @var integer Instance memory size in GB.
      */
     public $Memory;
 
     /**
-     * @var integer Instance disk size in GB
+     * @var integer Instance disk size in GB.
      */
     public $Storage;
 
     /**
-     * @var integer Number of CPU cores
+     * @var integer Number of CPU cores.
      */
     public $Cpu;
 
@@ -95,12 +101,12 @@ class CreateCloudDBInstancesRequest extends AbstractModel
     public $MachineType;
 
     /**
-     * @var string Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+     * @var string Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
      */
     public $InstanceChargeType;
 
     /**
-     * @var integer Project ID
+     * @var integer Project ID.
      */
     public $ProjectId;
 
@@ -130,7 +136,7 @@ class CreateCloudDBInstancesRequest extends AbstractModel
     public $AutoVoucher;
 
     /**
-     * @var array Array of voucher IDs (currently, only one voucher can be used per order)
+     * @var array Array of voucher IDs (currently, only one voucher can be used per order).
      */
     public $VoucherIds;
 
@@ -140,7 +146,7 @@ class CreateCloudDBInstancesRequest extends AbstractModel
     public $DBVersion;
 
     /**
-     * @var integer Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
+     * @var integer Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
      */
     public $AutoRenewFlag;
 
@@ -160,7 +166,7 @@ class CreateCloudDBInstancesRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var integer Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour
+     * @var integer Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour.
      */
     public $Span;
 
@@ -170,7 +176,7 @@ class CreateCloudDBInstancesRequest extends AbstractModel
     public $MultiZones;
 
     /**
-     * @var array Tags associated with the instances to be created
+     * @var array Tags associated with the instances to be created.
      */
     public $ResourceTags;
 
@@ -185,29 +191,47 @@ class CreateCloudDBInstancesRequest extends AbstractModel
     public $TimeZone;
 
     /**
+     * @var boolean Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+     */
+    public $MultiNodes;
+
+    /**
+     * @var array The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+     */
+    public $DrZones;
+
+    /**
+     * @var integer Disk encryption identifier, 0-unencrypted, 1-encrypted.
+     */
+    public $DiskEncryptFlag;
+
+    /**
      * @param string $Zone Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
-     * @param integer $Memory Instance memory size in GB
-     * @param integer $Storage Instance disk size in GB
-     * @param integer $Cpu Number of CPU cores
+     * @param integer $Memory Instance memory size in GB.
+     * @param integer $Storage Instance disk size in GB.
+     * @param integer $Cpu Number of CPU cores.
      * @param string $MachineType The host type of the purchased instance. Valid values: `CLOUD_HSSD` (virtual machine with enhanced SSD), `CLOUD_TSSD` (virtual machine with ulTra SSD), `CLOUD_BSSD` (virtual machine with balanced SSD).
-     * @param string $InstanceChargeType Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
-     * @param integer $ProjectId Project ID
+     * @param string $InstanceChargeType Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
+     * @param integer $ProjectId Project ID.
      * @param integer $GoodsNum Number of instances purchased this time. Default value: `1`.  Maximum value: `10`.
      * @param string $SubnetId VPC subnet ID in the format of `subnet-bdoe83fa`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
      * @param string $VpcId VPC ID in the format of `vpc-dsp338hz`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
      * @param integer $Period The purchase period of an instance. Default value: `1` (one month).  Maximum value: `48`.
      * @param integer $AutoVoucher Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
-     * @param array $VoucherIds Array of voucher IDs (currently, only one voucher can be used per order)
+     * @param array $VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
      * @param string $DBVersion SQL Server version. Valid values:  `2008R2` (SQL Server 2008 R2 Enterprise), `2012SP3` (SQL Server 2012 Enterprise), `201202` (SQL Server 2012 Standard), `2014SP2` (SQL Server 2014 Enterprise), 201402 (SQL Server 2014 Standard), `2016SP1` (SQL Server 2016 Enterprise), `201602` (SQL Server 2016 Standard), `2017` (SQL Server 2017 Enterprise), `201702` (SQL Server 2017 Standard), `2019` (SQL Server 2019 Enterprise), `201902` (SQL Server 2019 Standard).  Default value: `2008R2`.  The available version varies by region, and you can pull the version information through the `DescribeProductConfig` API.
-     * @param integer $AutoRenewFlag Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
+     * @param integer $AutoRenewFlag Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
      * @param array $SecurityGroupList Security group list, which contains security group IDs in the format of `sg-xxx`.
      * @param array $Weekly Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: `1` (Monday), `2` (Tuesday), `3` (Wednesday), `4` (Thursday), `5` (Friday), `6` (Saturday), `7` (Sunday).
      * @param string $StartTime Configuration of the maintenance window, which specifies the start time of daily maintenance.
-     * @param integer $Span Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour
+     * @param integer $Span Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour.
      * @param boolean $MultiZones Whether to deploy across AZs. Default value: `false`.
-     * @param array $ResourceTags Tags associated with the instances to be created
+     * @param array $ResourceTags Tags associated with the instances to be created.
      * @param string $Collation Collation of system character sets. Default value:  `Chinese_PRC_CI_AS`.
      * @param string $TimeZone System time zone. Default value:  `China Standard Time`.
+     * @param boolean $MultiNodes Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+     * @param array $DrZones The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+     * @param integer $DiskEncryptFlag Disk encryption identifier, 0-unencrypted, 1-encrypted.
      */
     function __construct()
     {
@@ -317,6 +341,18 @@ class CreateCloudDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
             $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("MultiNodes",$param) and $param["MultiNodes"] !== null) {
+            $this->MultiNodes = $param["MultiNodes"];
+        }
+
+        if (array_key_exists("DrZones",$param) and $param["DrZones"] !== null) {
+            $this->DrZones = $param["DrZones"];
+        }
+
+        if (array_key_exists("DiskEncryptFlag",$param) and $param["DiskEncryptFlag"] !== null) {
+            $this->DiskEncryptFlag = $param["DiskEncryptFlag"];
         }
     }
 }
