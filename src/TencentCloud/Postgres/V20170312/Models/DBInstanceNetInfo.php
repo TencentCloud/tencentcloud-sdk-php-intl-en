@@ -30,18 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetType(string $NetType) Set Network type. 1: inner (private network address), 2: public (public network address)
  * @method string getStatus() Obtain Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
  * @method void setStatus(string $Status) Set Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
- * @method string getVpcId() Obtain VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setVpcId(string $VpcId) Set VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getSubnetId() Obtain Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getProtocolType() Obtain Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProtocolType(string $ProtocolType) Set Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVpcId() Obtain VPC ID. specifies the ID of the virtual private cloud.
+ * @method void setVpcId(string $VpcId) Set VPC ID. specifies the ID of the virtual private cloud.
+ * @method string getSubnetId() Obtain Subnet ID.
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID.
+ * @method string getProtocolType() Obtain Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax).
+ * @method void setProtocolType(string $ProtocolType) Set Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax).
  */
 class DBInstanceNetInfo extends AbstractModel
 {
@@ -71,20 +65,17 @@ class DBInstanceNetInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var string VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string VPC ID. specifies the ID of the virtual private cloud.
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Subnet ID.
      */
     public $SubnetId;
 
     /**
-     * @var string Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax).
      */
     public $ProtocolType;
 
@@ -94,12 +85,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Port Connection port address
      * @param string $NetType Network type. 1: inner (private network address), 2: public (public network address)
      * @param string $Status Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
-     * @param string $VpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $SubnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ProtocolType Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VpcId VPC ID. specifies the ID of the virtual private cloud.
+     * @param string $SubnetId Subnet ID.
+     * @param string $ProtocolType Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax).
      */
     function __construct()
     {

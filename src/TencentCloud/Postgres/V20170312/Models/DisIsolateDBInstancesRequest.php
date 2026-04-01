@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisIsolateDBInstances request structure.
  *
- * @method array getDBInstanceIdSet() Obtain Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
- * @method integer getPeriod() Obtain Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
- * @method void setPeriod(integer $Period) Set Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
- * @method boolean getAutoVoucher() Obtain Whether to use vouchers. Valid values:
-<li>`true`: Yes.
-u200c<li>`false`: No.
+ * @method array getDBInstanceIdSet() Obtain Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
+ * @method integer getPeriod() Obtain Purchase duration, in months.
+<Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
+ * @method void setPeriod(integer $Period) Set Purchase duration, in months.
+<Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
+ * @method boolean getAutoVoucher() Obtain Whether to use vouchers.
+<li>true: use.</li>.
+<li>false: non-use.</li>.
 Default value: `false`.
- * @method void setAutoVoucher(boolean $AutoVoucher) Set Whether to use vouchers. Valid values:
-<li>`true`: Yes.
-u200c<li>`false`: No.
+ * @method void setAutoVoucher(boolean $AutoVoucher) Set Whether to use vouchers.
+<li>true: use.</li>.
+<li>false: non-use.</li>.
 Default value: `false`.
  * @method array getVoucherIds() Obtain Voucher ID list
  * @method void setVoucherIds(array $VoucherIds) Set Voucher ID list
@@ -42,21 +42,21 @@ Default value: `false`.
 class DisIsolateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
+     * @var array Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
      */
     public $DBInstanceIdSet;
 
     /**
-     * @var integer Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+     * @var integer Purchase duration, in months.
+<Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
      */
     public $Period;
 
     /**
-     * @var boolean Whether to use vouchers. Valid values:
-<li>`true`: Yes.
-u200c<li>`false`: No.
+     * @var boolean Whether to use vouchers.
+<li>true: use.</li>.
+<li>false: non-use.</li>.
 Default value: `false`.
      */
     public $AutoVoucher;
@@ -67,13 +67,13 @@ Default value: `false`.
     public $VoucherIds;
 
     /**
-     * @param array $DBInstanceIdSet Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
-     * @param integer $Period Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
-     * @param boolean $AutoVoucher Whether to use vouchers. Valid values:
-<li>`true`: Yes.
-u200c<li>`false`: No.
+     * @param array $DBInstanceIdSet Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
+     * @param integer $Period Purchase duration, in months.
+<Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
+     * @param boolean $AutoVoucher Whether to use vouchers.
+<li>true: use.</li>.
+<li>false: non-use.</li>.
 Default value: `false`.
      * @param array $VoucherIds Voucher ID list
      */

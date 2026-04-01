@@ -20,94 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceChargeType request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID in the format of `postgres-6fego161`
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of `postgres-6fego161`
- * @method string getInstanceChargeType() Obtain Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
- * @method integer getPeriod() Obtain Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
- * @method void setPeriod(integer $Period) Set Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
- * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
- * @method integer getAutoVoucher() Obtain Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
- * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+ * @method string getDBInstanceId() Obtain Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+ * @method string getInstanceChargeType() Obtain Instance billing type, which currently supports:.
+<Li>PREPAID: prepaid, i.e., yearly/monthly subscription</li>.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+Default value: PREPAID
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type, which currently supports:.
+<Li>PREPAID: prepaid, i.e., yearly/monthly subscription</li>.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+Default value: PREPAID
+ * @method integer getPeriod() Obtain Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<li>Pay-as-you-go: Only supports `1`.</li>
+ * @method void setPeriod(integer $Period) Set Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<li>Pay-as-you-go: Only supports `1`.</li>
+ * @method integer getAutoRenewFlag() Obtain Specifies the auto-renewal flag.
+<Li>`0`: manual renewal.</li>.
+<Li>`1`: auto-renewal</li>.
+Default value: 0
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Specifies the auto-renewal flag.
+<Li>`0`: manual renewal.</li>.
+<Li>`1`: auto-renewal</li>.
+Default value: 0
+ * @method integer getAutoVoucher() Obtain Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
+ * @method void setAutoVoucher(integer $AutoVoucher) Set Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
  */
 class ModifyDBInstanceChargeTypeRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of `postgres-6fego161`
+     * @var string Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
     /**
-     * @var string Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
+     * @var string Instance billing type, which currently supports:.
+<Li>PREPAID: prepaid, i.e., yearly/monthly subscription</li>.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+Default value: PREPAID
      */
     public $InstanceChargeType;
 
     /**
-     * @var integer Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+     * @var integer Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<li>Pay-as-you-go: Only supports `1`.</li>
      */
     public $Period;
 
     /**
-     * @var integer Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+     * @var integer Specifies the auto-renewal flag.
+<Li>`0`: manual renewal.</li>.
+<Li>`1`: auto-renewal</li>.
+Default value: 0
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+     * @var integer Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
      */
     public $AutoVoucher;
 
     /**
-     * @param string $DBInstanceId Instance ID in the format of `postgres-6fego161`
-     * @param string $InstanceChargeType Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
-     * @param integer $Period Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
-     * @param integer $AutoRenewFlag Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
-     * @param integer $AutoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+     * @param string $DBInstanceId Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+     * @param string $InstanceChargeType Instance billing type, which currently supports:.
+<Li>PREPAID: prepaid, i.e., yearly/monthly subscription</li>.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+Default value: PREPAID
+     * @param integer $Period Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<li>Pay-as-you-go: Only supports `1`.</li>
+     * @param integer $AutoRenewFlag Specifies the auto-renewal flag.
+<Li>`0`: manual renewal.</li>.
+<Li>`1`: auto-renewal</li>.
+Default value: 0
+     * @param integer $AutoVoucher Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
      */
     function __construct()
     {

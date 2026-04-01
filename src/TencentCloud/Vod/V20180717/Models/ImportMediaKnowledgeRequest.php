@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAppId(integer $SubAppId) Set <b>Specifies the VOD application ID.</b>
  * @method string getFileId() Obtain media file ID, the globally unique identifier of the file in vod, is assigned by the vod backend after successful upload. can be obtained from the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.tencentcloud.com//vod/media).
  * @method void setFileId(string $FileId) Set media file ID, the globally unique identifier of the file in vod, is assigned by the vod backend after successful upload. can be obtained from the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.tencentcloud.com//vod/media).
+ * @method integer getDefinition() Obtain Unique identifier of the Large Model Comprehend Template
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the Large Model Comprehend Template
  * @method array getImportTasks() Obtain Specifies the task type for importing the knowledge base. valid values:.
 - AiAnalysis.DescriptionTask
 - SmartSubtitle.AsrFullTextTask
@@ -44,15 +46,22 @@ class ImportMediaKnowledgeRequest extends AbstractModel
     public $FileId;
 
     /**
+     * @var integer Unique identifier of the Large Model Comprehend Template
+     */
+    public $Definition;
+
+    /**
      * @var array Specifies the task type for importing the knowledge base. valid values:.
 - AiAnalysis.DescriptionTask
 - SmartSubtitle.AsrFullTextTask
+     * @deprecated
      */
     public $ImportTasks;
 
     /**
      * @param integer $SubAppId <b>Specifies the VOD application ID.</b>
      * @param string $FileId media file ID, the globally unique identifier of the file in vod, is assigned by the vod backend after successful upload. can be obtained from the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.tencentcloud.com//vod/media).
+     * @param integer $Definition Unique identifier of the Large Model Comprehend Template
      * @param array $ImportTasks Specifies the task type for importing the knowledge base. valid values:.
 - AiAnalysis.DescriptionTask
 - SmartSubtitle.AsrFullTextTask
@@ -76,6 +85,10 @@ class ImportMediaKnowledgeRequest extends AbstractModel
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
         }
 
         if (array_key_exists("ImportTasks",$param) and $param["ImportTasks"] !== null) {

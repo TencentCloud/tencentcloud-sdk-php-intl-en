@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScore(float $Score) Set Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
  * @method float getStartTimeOffset() Obtain Specifies the start time of the video clip, in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Specifies the start time of the video clip, in seconds.
- * @method float getEndTimeOffset() Obtain Specifies the end time of the video clip, in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set Specifies the end time of the video clip, in seconds.
+ * @method float getEndTimeOffset() Obtain Segment end time of the video, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set Segment end time of the video, in seconds.
  */
 class SemanticsSearchResult extends AbstractModel
 {
@@ -47,7 +47,7 @@ class SemanticsSearchResult extends AbstractModel
     public $StartTimeOffset;
 
     /**
-     * @var float Specifies the end time of the video clip, in seconds.
+     * @var float Segment end time of the video, in seconds.
      */
     public $EndTimeOffset;
 
@@ -55,7 +55,7 @@ class SemanticsSearchResult extends AbstractModel
      * @param string $FileId Specifies the unique identifier of the media file.
      * @param float $Score Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
      * @param float $StartTimeOffset Specifies the start time of the video clip, in seconds.
-     * @param float $EndTimeOffset Specifies the end time of the video clip, in seconds.
+     * @param float $EndTimeOffset Segment end time of the video, in seconds.
      */
     function __construct()
     {

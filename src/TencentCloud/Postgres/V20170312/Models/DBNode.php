@@ -18,7 +18,7 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance node information including node type and AZ.
+ * Describes the instance node information, including the node type, availability zone where the node is located, and dedicated cluster where the node resides.
  *
  * @method string getRole() Obtain Node type. Valid values:
 `Primary`;
@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 `Standby`.
  * @method string getZone() Obtain AZ where the node resides, such as ap-guangzhou-1.
  * @method void setZone(string $Zone) Set AZ where the node resides, such as ap-guangzhou-1.
+ * @method string getDedicatedClusterId() Obtain CDC ID.
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set CDC ID.
  */
 class DBNode extends AbstractModel
 {
@@ -44,10 +46,16 @@ class DBNode extends AbstractModel
     public $Zone;
 
     /**
+     * @var string CDC ID.
+     */
+    public $DedicatedClusterId;
+
+    /**
      * @param string $Role Node type. Valid values:
 `Primary`;
 `Standby`.
      * @param string $Zone AZ where the node resides, such as ap-guangzhou-1.
+     * @param string $DedicatedClusterId CDC ID.
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ class DBNode extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
     }
 }

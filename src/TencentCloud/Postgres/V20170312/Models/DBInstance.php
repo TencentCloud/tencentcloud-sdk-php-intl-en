@@ -20,478 +20,354 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance details
  *
- * @method string getRegion() Obtain Instance region such as ap-guangzhou, which corresponds to the`Region` field in `RegionSet`.
- * @method void setRegion(string $Region) Set Instance region such as ap-guangzhou, which corresponds to the`Region` field in `RegionSet`.
- * @method string getZone() Obtain Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`.
- * @method void setZone(string $Zone) Set Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`.
- * @method string getVpcId() Obtain VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778) API.
- * @method void setVpcId(string $VpcId) Set VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778) API.
- * @method string getSubnetId() Obtain VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets ](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
- * @method void setSubnetId(string $SubnetId) Set VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets ](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
- * @method string getDBInstanceId() Obtain Instance ID
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
- * @method string getDBInstanceName() Obtain Instance name
- * @method void setDBInstanceName(string $DBInstanceName) Set Instance name
- * @method string getDBInstanceStatus() Obtain Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), and `primary-switching` (primary-secondary switching)
- * @method void setDBInstanceStatus(string $DBInstanceStatus) Set Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), and `primary-switching` (primary-secondary switching)
- * @method integer getDBInstanceMemory() Obtain Assigned instance memory size in GB
- * @method void setDBInstanceMemory(integer $DBInstanceMemory) Set Assigned instance memory size in GB
- * @method integer getDBInstanceStorage() Obtain Assigned instance storage capacity in GB
- * @method void setDBInstanceStorage(integer $DBInstanceStorage) Set Assigned instance storage capacity in GB
- * @method integer getDBInstanceCpu() Obtain Number of assigned CPUs
- * @method void setDBInstanceCpu(integer $DBInstanceCpu) Set Number of assigned CPUs
- * @method string getDBInstanceClass() Obtain Purchasable specification ID
- * @method void setDBInstanceClass(string $DBInstanceClass) Set Purchasable specification ID
- * @method string getDBMajorVersion() Obtain The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
+ * @method string getRegion() Obtain <p>Region of the instance, for example: ap-guangzhou, corresponds to the region field in RegionSet.</p>
+ * @method void setRegion(string $Region) Set <p>Region of the instance, for example: ap-guangzhou, corresponds to the region field in RegionSet.</p>
+ * @method string getZone() Obtain <p>Availability zone to which the instance belongs, for example: ap-guangzhou-3, corresponds to the Zone field in ZoneSet.</p>
+ * @method void setZone(string $Zone) Set <p>Availability zone to which the instance belongs, for example: ap-guangzhou-3, corresponds to the Zone field in ZoneSet.</p>
+ * @method string getVpcId() Obtain <p>VPC ID, such as vpc-e6w23k31. A valid VPC ID can be obtained by logging in to the console to query or by calling the API <a href="https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1">DescribeVpcs</a> and acquiring the unVpcId field in API return.</p>
+ * @method void setVpcId(string $VpcId) Set <p>VPC ID, such as vpc-e6w23k31. A valid VPC ID can be obtained by logging in to the console to query or by calling the API <a href="https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1">DescribeVpcs</a> and acquiring the unVpcId field in API return.</p>
+ * @method string getSubnetId() Obtain <p>VPC subnet ID, such as subnet-51lcif9y. An effective VPC subnet ID can be obtained by logging in to the console to query. You can also call API <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> and get it from the unSubnetId field in API return.</p>
+ * @method void setSubnetId(string $SubnetId) Set <p>VPC subnet ID, such as subnet-51lcif9y. An effective VPC subnet ID can be obtained by logging in to the console to query. You can also call API <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> and get it from the unSubnetId field in API return.</p>
+ * @method string getDBInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setDBInstanceId(string $DBInstanceId) Set <p>Instance ID.</p>
+ * @method string getDBInstanceName() Obtain <p>Instance name.</p>
+ * @method void setDBInstanceName(string $DBInstanceName) Set <p>Instance name.</p>
+ * @method string getDBInstanceStatus() Obtain <p>Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), `primary-switching` (primary-secondary switching), `offlining` (offline), `deployment changing` (modify AZ), `cloning` (recovering data), `parameter modifying` (parameter modification in progress), `log-switching` (log status change), `restoring` (recovering), and `expanding` (scaling out)</p>
+ * @method void setDBInstanceStatus(string $DBInstanceStatus) Set <p>Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), `primary-switching` (primary-secondary switching), `offlining` (offline), `deployment changing` (modify AZ), `cloning` (recovering data), `parameter modifying` (parameter modification in progress), `log-switching` (log status change), `restoring` (recovering), and `expanding` (scaling out)</p>
+ * @method integer getDBInstanceMemory() Obtain <p>Memory size allocated to the instance, measurement unit: GB</p>
+ * @method void setDBInstanceMemory(integer $DBInstanceMemory) Set <p>Memory size allocated to the instance, measurement unit: GB</p>
+ * @method integer getDBInstanceStorage() Obtain <p>Storage space size allocated to the instance, measurement unit: GB</p>
+ * @method void setDBInstanceStorage(integer $DBInstanceStorage) Set <p>Storage space size allocated to the instance, measurement unit: GB</p>
+ * @method integer getDBInstanceCpu() Obtain <p>Number of CPUs allocated to the instance, unit: piece</p>
+ * @method void setDBInstanceCpu(integer $DBInstanceCpu) Set <p>Number of CPUs allocated to the instance, unit: piece</p>
+ * @method string getDBInstanceClass() Obtain <p>Purchasable specification ID.</p>
+ * @method void setDBInstanceClass(string $DBInstanceClass) Set <p>Purchasable specification ID.</p>
+ * @method string getDBMajorVersion() Obtain <p>PostgreSQL major version number. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>. Currently supports major versions 10, 11, 12, 13, 14, and 15.</p>
+ * @method void setDBMajorVersion(string $DBMajorVersion) Set <p>PostgreSQL major version number. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>. Currently supports major versions 10, 11, 12, 13, 14, and 15.</p>
+ * @method string getDBVersion() Obtain <p>PostgreSQL community major version + minor version number, such as 12.4. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
+ * @method void setDBVersion(string $DBVersion) Set <p>PostgreSQL community major version + minor version number, such as 12.4. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
+ * @method string getDBKernelVersion() Obtain <p>PostgreSQL Kernel Version, for example v12.7_r1.8. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
+ * @method void setDBKernelVersion(string $DBKernelVersion) Set <p>PostgreSQL Kernel Version, for example v12.7_r1.8. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
+ * @method string getDBInstanceType() Obtain <p>Instance types:</p><li>primary: Primary instance</li><li>readonly: Read-only instance</li><li>guard: Disaster recovery instance</li><li>temp: Temporary instance</li>
+ * @method void setDBInstanceType(string $DBInstanceType) Set <p>Instance types:</p><li>primary: Primary instance</li><li>readonly: Read-only instance</li><li>guard: Disaster recovery instance</li><li>temp: Temporary instance</li>
+ * @method string getDBInstanceVersion() Obtain <p>Instance version currently only supports standard (dual-server high-availability edition, one master and one slave).</p>
+ * @method void setDBInstanceVersion(string $DBInstanceVersion) Set <p>Instance version currently only supports standard (dual-server high-availability edition, one master and one slave).</p>
+ * @method string getDBCharset() Obtain <p>Instance character set, which currently supports only:</p><li>UTF8</li><li>LATIN1</li>
+ * @method void setDBCharset(string $DBCharset) Set <p>Instance character set, which currently supports only:</p><li>UTF8</li><li>LATIN1</li>
+ * @method string getCreateTime() Obtain <p>Instance creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Instance creation time.</p>
+ * @method string getUpdateTime() Obtain <p>The time when the instance executed the last update.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>The time when the instance executed the last update.</p>
+ * @method string getExpireTime() Obtain <p>Instance expiration time.</p>
+ * @method void setExpireTime(string $ExpireTime) Set <p>Instance expiration time.</p>
+ * @method string getIsolatedTime() Obtain <p>Instance isolation time.</p>
+ * @method void setIsolatedTime(string $IsolatedTime) Set <p>Instance isolation time.</p>
+ * @method string getPayType() Obtain <p>Billing mode:</p><li>prepaid: Yearly/monthly subscription, prepayment</li><li>postpaid: Pay-as-you-go, postpaid</li>
+ * @method void setPayType(string $PayType) Set <p>Billing mode:</p><li>prepaid: Yearly/monthly subscription, prepayment</li><li>postpaid: Pay-as-you-go, postpaid</li>
+ * @method integer getAutoRenew() Obtain <p>Auto-renewal or not:</p><li>0: Manual renewal</li><li>1: Auto renewal</li>Default value: 0
+ * @method void setAutoRenew(integer $AutoRenew) Set <p>Auto-renewal or not:</p><li>0: Manual renewal</li><li>1: Auto renewal</li>Default value: 0
+ * @method array getDBInstanceNetInfo() Obtain <p>Instance network connection information.</p>
+ * @method void setDBInstanceNetInfo(array $DBInstanceNetInfo) Set <p>Instance network connection information.</p>
+ * @method string getType() Obtain <p>Machine type.</p>
+ * @method void setType(string $Type) Set <p>Machine type.</p>
+ * @method integer getAppId() Obtain <p>User's app id.</p>
+ * @method void setAppId(integer $AppId) Set <p>User's app id.</p>
+ * @method integer getUid() Obtain <p>Uid of the instance.</p>
+ * @method void setUid(integer $Uid) Set <p>Uid of the instance.</p>
+ * @method integer getProjectId() Obtain <p>Project ID.</p>
+ * @method void setProjectId(integer $ProjectId) Set <p>Project ID.</p>
+ * @method array getTagList() Obtain <p>Tag information associated with the instance.</p>
+ * @method void setTagList(array $TagList) Set <p>Tag information associated with the instance.</p>
+ * @method string getMasterDBInstanceId() Obtain <p>Primary instance information. Returned only when the instance is a read-only instance.</p>
+ * @method void setMasterDBInstanceId(string $MasterDBInstanceId) Set <p>Primary instance information. Returned only when the instance is a read-only instance.</p>
+ * @method integer getReadOnlyInstanceNum() Obtain <p>Number of read-only instances.</p>
+ * @method void setReadOnlyInstanceNum(integer $ReadOnlyInstanceNum) Set <p>Number of read-only instances.</p>
+ * @method string getStatusInReadonlyGroup() Obtain <p>State of the read-only instance in the read-only group.</p>
+ * @method void setStatusInReadonlyGroup(string $StatusInReadonlyGroup) Set <p>State of the read-only instance in the read-only group.</p>
+ * @method string getOfflineTime() Obtain <p>Offline time.</p>
+ * @method void setOfflineTime(string $OfflineTime) Set <p>Offline time.</p>
+ * @method array getDBNodeSet() Obtain <p>Instance node information.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDBMajorVersion(string $DBMajorVersion) Set The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
+ * @method void setDBNodeSet(array $DBNodeSet) Set <p>Instance node information.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDBVersion() Obtain Number of the major PostgreSQL community version and minor version, such as 12.4, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
- * @method void setDBVersion(string $DBVersion) Set Number of the major PostgreSQL community version and minor version, such as 12.4, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
- * @method string getDBKernelVersion() Obtain PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
+ * @method integer getIsSupportTDE() Obtain <p>Whether the instance supports TDE data encryption:</p><li>0: Not supported</li><li>1: Supported</li>Default value: 0. For TDE data encryption, see [Overview of Data Transparent Encryption](https://www.tencentcloud.com/document/product/409/71748?from_cn_redirect=1).
+ * @method void setIsSupportTDE(integer $IsSupportTDE) Set <p>Whether the instance supports TDE data encryption:</p><li>0: Not supported</li><li>1: Supported</li>Default value: 0. For TDE data encryption, see [Overview of Data Transparent Encryption](https://www.tencentcloud.com/document/product/409/71748?from_cn_redirect=1).
+ * @method string getDBEngine() Obtain <p>Database engine, support:</p><li>`postgresql`: TencentDB for PostgreSQL</li><li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>Default value: postgresql
+ * @method void setDBEngine(string $DBEngine) Set <p>Database engine, support:</p><li>`postgresql`: TencentDB for PostgreSQL</li><li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>Default value: postgresql
+ * @method string getDBEngineConfig() Obtain <p>Configuration information for the database engine. The configuration format is as follows:<br>{&quot;$key1&quot;:&quot;$value1&quot;, &quot;$key2&quot;:&quot;$value2&quot;}<br>Supported engines:<br>mssql_compatible engine:</p><li>migrationMode: Database schema, optional parameter. Valid values: single-db (single-database mode), multi-db (multi-database mode). Default is single-db.</li><li>defaultLocale: Sorting area rule, optional parameter, cannot be modified after initialization. Default is en_US. Valid values include: "af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".</li><li>serverCollationName: Collation name, optional parameter, cannot be modified after initialization. Default is sql_latin1_general_cp1_ci_as. Valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as".</li>
+ * @method void setDBEngineConfig(string $DBEngineConfig) Set <p>Configuration information for the database engine. The configuration format is as follows:<br>{&quot;$key1&quot;:&quot;$value1&quot;, &quot;$key2&quot;:&quot;$value2&quot;}<br>Supported engines:<br>mssql_compatible engine:</p><li>migrationMode: Database schema, optional parameter. Valid values: single-db (single-database mode), multi-db (multi-database mode). Default is single-db.</li><li>defaultLocale: Sorting area rule, optional parameter, cannot be modified after initialization. Default is en_US. Valid values include: "af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".</li><li>serverCollationName: Collation name, optional parameter, cannot be modified after initialization. Default is sql_latin1_general_cp1_ci_as. Valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as".</li>
+ * @method array getNetworkAccessList() Obtain <p>Instance network information list (deprecated)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDBKernelVersion(string $DBKernelVersion) Set PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
+ * @method void setNetworkAccessList(array $NetworkAccessList) Set <p>Instance network information list (deprecated)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDBInstanceType() Obtain Instance type, which includes:
-<li>primary: primary instance </li>
-<li>readonly: read-only instance</li>
-<li>guard: disaster recovery instance</li>
-<li>temp: temporary instance</li>
- * @method void setDBInstanceType(string $DBInstanceType) Set Instance type, which includes:
-<li>primary: primary instance </li>
-<li>readonly: read-only instance</li>
-<li>guard: disaster recovery instance</li>
-<li>temp: temporary instance</li>
- * @method string getDBInstanceVersion() Obtain Instance version. Valid value: `standard` (dual-server high-availability; one-primary-one-standby).
- * @method void setDBInstanceVersion(string $DBInstanceVersion) Set Instance version. Valid value: `standard` (dual-server high-availability; one-primary-one-standby).
- * @method string getDBCharset() Obtain Instance character set, which currently supports only:
-<li>UTF8</li>
-<li>LATIN1</li>
- * @method void setDBCharset(string $DBCharset) Set Instance character set, which currently supports only:
-<li>UTF8</li>
-<li>LATIN1</li>
- * @method string getCreateTime() Obtain Instance creation time
- * @method void setCreateTime(string $CreateTime) Set Instance creation time
- * @method string getUpdateTime() Obtain Last updated time of the instance attribute
- * @method void setUpdateTime(string $UpdateTime) Set Last updated time of the instance attribute
- * @method string getExpireTime() Obtain Instance expiration time
- * @method void setExpireTime(string $ExpireTime) Set Instance expiration time
- * @method string getIsolatedTime() Obtain Instance isolation time
- * @method void setIsolatedTime(string $IsolatedTime) Set Instance isolation time
- * @method string getPayType() Obtain Billing mode:
-<li>prepaid: monthly subscription, prepaid</li>
-<li>postpaid: pay-as-you-go, postpaid</li>
- * @method void setPayType(string $PayType) Set Billing mode:
-<li>prepaid: monthly subscription, prepaid</li>
-<li>postpaid: pay-as-you-go, postpaid</li>
- * @method integer getAutoRenew() Obtain Auto-renewal or not:
-<li>`0`: manual renewal</li>
-<li>`1`: auto-renewal</li>
-Default value: 0
- * @method void setAutoRenew(integer $AutoRenew) Set Auto-renewal or not:
-<li>`0`: manual renewal</li>
-<li>`1`: auto-renewal</li>
-Default value: 0
- * @method array getDBInstanceNetInfo() Obtain Instance network connection information
- * @method void setDBInstanceNetInfo(array $DBInstanceNetInfo) Set Instance network connection information
- * @method string getType() Obtain Machine type
- * @method void setType(string $Type) Set Machine type
- * @method integer getAppId() Obtain User `AppId`
- * @method void setAppId(integer $AppId) Set User `AppId`
- * @method integer getUid() Obtain Instance `Uid`
- * @method void setUid(integer $Uid) Set Instance `Uid`
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method array getTagList() Obtain The information of tags associated with instances
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTagList(array $TagList) Set The information of tags associated with instances
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMasterDBInstanceId() Obtain Primary instance information, which is returned only when the instance is read-only.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMasterDBInstanceId(string $MasterDBInstanceId) Set Primary instance information, which is returned only when the instance is read-only.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getReadOnlyInstanceNum() Obtain Number of read-only instances
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReadOnlyInstanceNum(integer $ReadOnlyInstanceNum) Set Number of read-only instances
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatusInReadonlyGroup() Obtain The status of a read-only instance in a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatusInReadonlyGroup(string $StatusInReadonlyGroup) Set The status of a read-only instance in a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOfflineTime() Obtain Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOfflineTime(string $OfflineTime) Set Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDBNodeSet() Obtain Instance node information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDBNodeSet(array $DBNodeSet) Set Instance node information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsSupportTDE() Obtain Whether the instance supports TDE data encryption:
-<li>0: not supported</li>
-<li>1: supported</li>
-Default value: 0For TDE data encryption, see [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsSupportTDE(integer $IsSupportTDE) Set Whether the instance supports TDE data encryption:
-<li>0: not supported</li>
-<li>1: supported</li>
-Default value: 0For TDE data encryption, see [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDBEngine() Obtain Database engine, which supports:
-<li>`postgresql`: TencentDB for PostgreSQL</li>
-<li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
-Default value: `postgresql`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDBEngine(string $DBEngine) Set Database engine, which supports:
-<li>`postgresql`: TencentDB for PostgreSQL</li>
-<li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
-Default value: `postgresql`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDBEngineConfig() Obtain Configuration information for the database engine, and the configuration format is as follows:
-{"$key1":"$value1", "$key2":"$value2"}
-Supported engines include:
-mssql_compatible engine:
-<li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
-<li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
-<li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDBEngineConfig(string $DBEngineConfig) Set Configuration information for the database engine, and the configuration format is as follows:
-{"$key1":"$value1", "$key2":"$value2"}
-Supported engines include:
-mssql_compatible engine:
-<li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
-<li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
-<li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getNetworkAccessList() Obtain Network access list of the instance (this field has been deprecated)
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setNetworkAccessList(array $NetworkAccessList) Set Network access list of the instance (this field has been deprecated)
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getSupportIpv6() Obtain Whether the instance supports IPv6:
-<li>`0`: no</li>
-<li>`1`: yes</li>
-Default value: 0
- * @method void setSupportIpv6(integer $SupportIpv6) Set Whether the instance supports IPv6:
-<li>`0`: no</li>
-<li>`1`: yes</li>
-Default value: 0
+ * @method integer getSupportIpv6() Obtain <p>Whether the instance supports Ipv6:</p><li>0: No</li><li>1: Yes</li>Default value: 0
+ * @method void setSupportIpv6(integer $SupportIpv6) Set <p>Whether the instance supports Ipv6:</p><li>0: No</li><li>1: Yes</li>Default value: 0
+ * @method integer getExpandedCpu() Obtain <p>Number of cpu cores that have been elastically scaled out for the instance</p>
+ * @method void setExpandedCpu(integer $ExpandedCpu) Set <p>Number of cpu cores that have been elastically scaled out for the instance</p>
+ * @method boolean getDeletionProtection() Obtain <p>Whether to enable deletion protection for the instance, values as follows:</p><ul><li>true: enable deletion protection</li><li>false: disable deletion protection</li></ul>
+ * @method void setDeletionProtection(boolean $DeletionProtection) Set <p>Whether to enable deletion protection for the instance, values as follows:</p><ul><li>true: enable deletion protection</li><li>false: disable deletion protection</li></ul>
+ * @method string getDBInstanceStorageType() Obtain <p>Instance storage type. Available values: PHYSICAL_LOCAL_SSD: LOCAL SSD hard disk of PHYSICAL machine; CLOUD_PREMIUM: high-performance CLOUD block storage; CLOUD_SSD: SSD CLOUD disk; CLOUD_HSSD: enhanced SSD CLOUD disk.</p>
+ * @method void setDBInstanceStorageType(string $DBInstanceStorageType) Set <p>Instance storage type. Available values: PHYSICAL_LOCAL_SSD: LOCAL SSD hard disk of PHYSICAL machine; CLOUD_PREMIUM: high-performance CLOUD block storage; CLOUD_SSD: SSD CLOUD disk; CLOUD_HSSD: enhanced SSD CLOUD disk.</p>
  */
 class DBInstance extends AbstractModel
 {
     /**
-     * @var string Instance region such as ap-guangzhou, which corresponds to the`Region` field in `RegionSet`.
+     * @var string <p>Region of the instance, for example: ap-guangzhou, corresponds to the region field in RegionSet.</p>
      */
     public $Region;
 
     /**
-     * @var string Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`.
+     * @var string <p>Availability zone to which the instance belongs, for example: ap-guangzhou-3, corresponds to the Zone field in ZoneSet.</p>
      */
     public $Zone;
 
     /**
-     * @var string VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778) API.
+     * @var string <p>VPC ID, such as vpc-e6w23k31. A valid VPC ID can be obtained by logging in to the console to query or by calling the API <a href="https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1">DescribeVpcs</a> and acquiring the unVpcId field in API return.</p>
      */
     public $VpcId;
 
     /**
-     * @var string VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets ](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+     * @var string <p>VPC subnet ID, such as subnet-51lcif9y. An effective VPC subnet ID can be obtained by logging in to the console to query. You can also call API <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> and get it from the unSubnetId field in API return.</p>
      */
     public $SubnetId;
 
     /**
-     * @var string Instance ID
+     * @var string <p>Instance ID.</p>
      */
     public $DBInstanceId;
 
     /**
-     * @var string Instance name
+     * @var string <p>Instance name.</p>
      */
     public $DBInstanceName;
 
     /**
-     * @var string Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), and `primary-switching` (primary-secondary switching)
+     * @var string <p>Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), `primary-switching` (primary-secondary switching), `offlining` (offline), `deployment changing` (modify AZ), `cloning` (recovering data), `parameter modifying` (parameter modification in progress), `log-switching` (log status change), `restoring` (recovering), and `expanding` (scaling out)</p>
      */
     public $DBInstanceStatus;
 
     /**
-     * @var integer Assigned instance memory size in GB
+     * @var integer <p>Memory size allocated to the instance, measurement unit: GB</p>
      */
     public $DBInstanceMemory;
 
     /**
-     * @var integer Assigned instance storage capacity in GB
+     * @var integer <p>Storage space size allocated to the instance, measurement unit: GB</p>
      */
     public $DBInstanceStorage;
 
     /**
-     * @var integer Number of assigned CPUs
+     * @var integer <p>Number of CPUs allocated to the instance, unit: piece</p>
      */
     public $DBInstanceCpu;
 
     /**
-     * @var string Purchasable specification ID
+     * @var string <p>Purchasable specification ID.</p>
      */
     public $DBInstanceClass;
 
     /**
-     * @var string The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>PostgreSQL major version number. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>. Currently supports major versions 10, 11, 12, 13, 14, and 15.</p>
      */
     public $DBMajorVersion;
 
     /**
-     * @var string Number of the major PostgreSQL community version and minor version, such as 12.4, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
+     * @var string <p>PostgreSQL community major version + minor version number, such as 12.4. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
      */
     public $DBVersion;
 
     /**
-     * @var string PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>PostgreSQL Kernel Version, for example v12.7_r1.8. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
      */
     public $DBKernelVersion;
 
     /**
-     * @var string Instance type, which includes:
-<li>primary: primary instance </li>
-<li>readonly: read-only instance</li>
-<li>guard: disaster recovery instance</li>
-<li>temp: temporary instance</li>
+     * @var string <p>Instance types:</p><li>primary: Primary instance</li><li>readonly: Read-only instance</li><li>guard: Disaster recovery instance</li><li>temp: Temporary instance</li>
      */
     public $DBInstanceType;
 
     /**
-     * @var string Instance version. Valid value: `standard` (dual-server high-availability; one-primary-one-standby).
+     * @var string <p>Instance version currently only supports standard (dual-server high-availability edition, one master and one slave).</p>
      */
     public $DBInstanceVersion;
 
     /**
-     * @var string Instance character set, which currently supports only:
-<li>UTF8</li>
-<li>LATIN1</li>
+     * @var string <p>Instance character set, which currently supports only:</p><li>UTF8</li><li>LATIN1</li>
      */
     public $DBCharset;
 
     /**
-     * @var string Instance creation time
+     * @var string <p>Instance creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Last updated time of the instance attribute
+     * @var string <p>The time when the instance executed the last update.</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string Instance expiration time
+     * @var string <p>Instance expiration time.</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string Instance isolation time
+     * @var string <p>Instance isolation time.</p>
      */
     public $IsolatedTime;
 
     /**
-     * @var string Billing mode:
-<li>prepaid: monthly subscription, prepaid</li>
-<li>postpaid: pay-as-you-go, postpaid</li>
+     * @var string <p>Billing mode:</p><li>prepaid: Yearly/monthly subscription, prepayment</li><li>postpaid: Pay-as-you-go, postpaid</li>
      */
     public $PayType;
 
     /**
-     * @var integer Auto-renewal or not:
-<li>`0`: manual renewal</li>
-<li>`1`: auto-renewal</li>
-Default value: 0
+     * @var integer <p>Auto-renewal or not:</p><li>0: Manual renewal</li><li>1: Auto renewal</li>Default value: 0
      */
     public $AutoRenew;
 
     /**
-     * @var array Instance network connection information
+     * @var array <p>Instance network connection information.</p>
      */
     public $DBInstanceNetInfo;
 
     /**
-     * @var string Machine type
+     * @var string <p>Machine type.</p>
      */
     public $Type;
 
     /**
-     * @var integer User `AppId`
+     * @var integer <p>User's app id.</p>
      */
     public $AppId;
 
     /**
-     * @var integer Instance `Uid`
+     * @var integer <p>Uid of the instance.</p>
      */
     public $Uid;
 
     /**
-     * @var integer Project ID
+     * @var integer <p>Project ID.</p>
      */
     public $ProjectId;
 
     /**
-     * @var array The information of tags associated with instances
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Tag information associated with the instance.</p>
      */
     public $TagList;
 
     /**
-     * @var string Primary instance information, which is returned only when the instance is read-only.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Primary instance information. Returned only when the instance is a read-only instance.</p>
      */
     public $MasterDBInstanceId;
 
     /**
-     * @var integer Number of read-only instances
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Number of read-only instances.</p>
      */
     public $ReadOnlyInstanceNum;
 
     /**
-     * @var string The status of a read-only instance in a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>State of the read-only instance in the read-only group.</p>
      */
     public $StatusInReadonlyGroup;
 
     /**
-     * @var string Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Offline time.</p>
      */
     public $OfflineTime;
 
     /**
-     * @var array Instance node information
+     * @var array <p>Instance node information.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DBNodeSet;
 
     /**
-     * @var integer Whether the instance supports TDE data encryption:
-<li>0: not supported</li>
-<li>1: supported</li>
-Default value: 0For TDE data encryption, see [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Whether the instance supports TDE data encryption:</p><li>0: Not supported</li><li>1: Supported</li>Default value: 0. For TDE data encryption, see [Overview of Data Transparent Encryption](https://www.tencentcloud.com/document/product/409/71748?from_cn_redirect=1).
      */
     public $IsSupportTDE;
 
     /**
-     * @var string Database engine, which supports:
-<li>`postgresql`: TencentDB for PostgreSQL</li>
-<li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
-Default value: `postgresql`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Database engine, support:</p><li>`postgresql`: TencentDB for PostgreSQL</li><li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>Default value: postgresql
      */
     public $DBEngine;
 
     /**
-     * @var string Configuration information for the database engine, and the configuration format is as follows:
-{"$key1":"$value1", "$key2":"$value2"}
-Supported engines include:
-mssql_compatible engine:
-<li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
-<li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
-<li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Configuration information for the database engine. The configuration format is as follows:<br>{&quot;$key1&quot;:&quot;$value1&quot;, &quot;$key2&quot;:&quot;$value2&quot;}<br>Supported engines:<br>mssql_compatible engine:</p><li>migrationMode: Database schema, optional parameter. Valid values: single-db (single-database mode), multi-db (multi-database mode). Default is single-db.</li><li>defaultLocale: Sorting area rule, optional parameter, cannot be modified after initialization. Default is en_US. Valid values include: "af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".</li><li>serverCollationName: Collation name, optional parameter, cannot be modified after initialization. Default is sql_latin1_general_cp1_ci_as. Valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as".</li>
      */
     public $DBEngineConfig;
 
     /**
-     * @var array Network access list of the instance (this field has been deprecated)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array <p>Instance network information list (deprecated)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NetworkAccessList;
 
     /**
-     * @var integer Whether the instance supports IPv6:
-<li>`0`: no</li>
-<li>`1`: yes</li>
-Default value: 0
+     * @var integer <p>Whether the instance supports Ipv6:</p><li>0: No</li><li>1: Yes</li>Default value: 0
      */
     public $SupportIpv6;
 
     /**
-     * @param string $Region Instance region such as ap-guangzhou, which corresponds to the`Region` field in `RegionSet`.
-     * @param string $Zone Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`.
-     * @param string $VpcId VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778) API.
-     * @param string $SubnetId VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets ](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
-     * @param string $DBInstanceId Instance ID
-     * @param string $DBInstanceName Instance name
-     * @param string $DBInstanceStatus Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), and `primary-switching` (primary-secondary switching)
-     * @param integer $DBInstanceMemory Assigned instance memory size in GB
-     * @param integer $DBInstanceStorage Assigned instance storage capacity in GB
-     * @param integer $DBInstanceCpu Number of assigned CPUs
-     * @param string $DBInstanceClass Purchasable specification ID
-     * @param string $DBMajorVersion The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
+     * @var integer <p>Number of cpu cores that have been elastically scaled out for the instance</p>
+     */
+    public $ExpandedCpu;
+
+    /**
+     * @var boolean <p>Whether to enable deletion protection for the instance, values as follows:</p><ul><li>true: enable deletion protection</li><li>false: disable deletion protection</li></ul>
+     */
+    public $DeletionProtection;
+
+    /**
+     * @var string <p>Instance storage type. Available values: PHYSICAL_LOCAL_SSD: LOCAL SSD hard disk of PHYSICAL machine; CLOUD_PREMIUM: high-performance CLOUD block storage; CLOUD_SSD: SSD CLOUD disk; CLOUD_HSSD: enhanced SSD CLOUD disk.</p>
+     */
+    public $DBInstanceStorageType;
+
+    /**
+     * @param string $Region <p>Region of the instance, for example: ap-guangzhou, corresponds to the region field in RegionSet.</p>
+     * @param string $Zone <p>Availability zone to which the instance belongs, for example: ap-guangzhou-3, corresponds to the Zone field in ZoneSet.</p>
+     * @param string $VpcId <p>VPC ID, such as vpc-e6w23k31. A valid VPC ID can be obtained by logging in to the console to query or by calling the API <a href="https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1">DescribeVpcs</a> and acquiring the unVpcId field in API return.</p>
+     * @param string $SubnetId <p>VPC subnet ID, such as subnet-51lcif9y. An effective VPC subnet ID can be obtained by logging in to the console to query. You can also call API <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> and get it from the unSubnetId field in API return.</p>
+     * @param string $DBInstanceId <p>Instance ID.</p>
+     * @param string $DBInstanceName <p>Instance name.</p>
+     * @param string $DBInstanceStatus <p>Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), `primary-switching` (primary-secondary switching), `offlining` (offline), `deployment changing` (modify AZ), `cloning` (recovering data), `parameter modifying` (parameter modification in progress), `log-switching` (log status change), `restoring` (recovering), and `expanding` (scaling out)</p>
+     * @param integer $DBInstanceMemory <p>Memory size allocated to the instance, measurement unit: GB</p>
+     * @param integer $DBInstanceStorage <p>Storage space size allocated to the instance, measurement unit: GB</p>
+     * @param integer $DBInstanceCpu <p>Number of CPUs allocated to the instance, unit: piece</p>
+     * @param string $DBInstanceClass <p>Purchasable specification ID.</p>
+     * @param string $DBMajorVersion <p>PostgreSQL major version number. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>. Currently supports major versions 10, 11, 12, 13, 14, and 15.</p>
+     * @param string $DBVersion <p>PostgreSQL community major version + minor version number, such as 12.4. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
+     * @param string $DBKernelVersion <p>PostgreSQL Kernel Version, for example v12.7_r1.8. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
+     * @param string $DBInstanceType <p>Instance types:</p><li>primary: Primary instance</li><li>readonly: Read-only instance</li><li>guard: Disaster recovery instance</li><li>temp: Temporary instance</li>
+     * @param string $DBInstanceVersion <p>Instance version currently only supports standard (dual-server high-availability edition, one master and one slave).</p>
+     * @param string $DBCharset <p>Instance character set, which currently supports only:</p><li>UTF8</li><li>LATIN1</li>
+     * @param string $CreateTime <p>Instance creation time.</p>
+     * @param string $UpdateTime <p>The time when the instance executed the last update.</p>
+     * @param string $ExpireTime <p>Instance expiration time.</p>
+     * @param string $IsolatedTime <p>Instance isolation time.</p>
+     * @param string $PayType <p>Billing mode:</p><li>prepaid: Yearly/monthly subscription, prepayment</li><li>postpaid: Pay-as-you-go, postpaid</li>
+     * @param integer $AutoRenew <p>Auto-renewal or not:</p><li>0: Manual renewal</li><li>1: Auto renewal</li>Default value: 0
+     * @param array $DBInstanceNetInfo <p>Instance network connection information.</p>
+     * @param string $Type <p>Machine type.</p>
+     * @param integer $AppId <p>User's app id.</p>
+     * @param integer $Uid <p>Uid of the instance.</p>
+     * @param integer $ProjectId <p>Project ID.</p>
+     * @param array $TagList <p>Tag information associated with the instance.</p>
+     * @param string $MasterDBInstanceId <p>Primary instance information. Returned only when the instance is a read-only instance.</p>
+     * @param integer $ReadOnlyInstanceNum <p>Number of read-only instances.</p>
+     * @param string $StatusInReadonlyGroup <p>State of the read-only instance in the read-only group.</p>
+     * @param string $OfflineTime <p>Offline time.</p>
+     * @param array $DBNodeSet <p>Instance node information.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DBVersion Number of the major PostgreSQL community version and minor version, such as 12.4, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-     * @param string $DBKernelVersion PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
+     * @param integer $IsSupportTDE <p>Whether the instance supports TDE data encryption:</p><li>0: Not supported</li><li>1: Supported</li>Default value: 0. For TDE data encryption, see [Overview of Data Transparent Encryption](https://www.tencentcloud.com/document/product/409/71748?from_cn_redirect=1).
+     * @param string $DBEngine <p>Database engine, support:</p><li>`postgresql`: TencentDB for PostgreSQL</li><li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>Default value: postgresql
+     * @param string $DBEngineConfig <p>Configuration information for the database engine. The configuration format is as follows:<br>{&quot;$key1&quot;:&quot;$value1&quot;, &quot;$key2&quot;:&quot;$value2&quot;}<br>Supported engines:<br>mssql_compatible engine:</p><li>migrationMode: Database schema, optional parameter. Valid values: single-db (single-database mode), multi-db (multi-database mode). Default is single-db.</li><li>defaultLocale: Sorting area rule, optional parameter, cannot be modified after initialization. Default is en_US. Valid values include: "af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".</li><li>serverCollationName: Collation name, optional parameter, cannot be modified after initialization. Default is sql_latin1_general_cp1_ci_as. Valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as".</li>
+     * @param array $NetworkAccessList <p>Instance network information list (deprecated)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DBInstanceType Instance type, which includes:
-<li>primary: primary instance </li>
-<li>readonly: read-only instance</li>
-<li>guard: disaster recovery instance</li>
-<li>temp: temporary instance</li>
-     * @param string $DBInstanceVersion Instance version. Valid value: `standard` (dual-server high-availability; one-primary-one-standby).
-     * @param string $DBCharset Instance character set, which currently supports only:
-<li>UTF8</li>
-<li>LATIN1</li>
-     * @param string $CreateTime Instance creation time
-     * @param string $UpdateTime Last updated time of the instance attribute
-     * @param string $ExpireTime Instance expiration time
-     * @param string $IsolatedTime Instance isolation time
-     * @param string $PayType Billing mode:
-<li>prepaid: monthly subscription, prepaid</li>
-<li>postpaid: pay-as-you-go, postpaid</li>
-     * @param integer $AutoRenew Auto-renewal or not:
-<li>`0`: manual renewal</li>
-<li>`1`: auto-renewal</li>
-Default value: 0
-     * @param array $DBInstanceNetInfo Instance network connection information
-     * @param string $Type Machine type
-     * @param integer $AppId User `AppId`
-     * @param integer $Uid Instance `Uid`
-     * @param integer $ProjectId Project ID
-     * @param array $TagList The information of tags associated with instances
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MasterDBInstanceId Primary instance information, which is returned only when the instance is read-only.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ReadOnlyInstanceNum Number of read-only instances
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StatusInReadonlyGroup The status of a read-only instance in a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OfflineTime Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $DBNodeSet Instance node information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsSupportTDE Whether the instance supports TDE data encryption:
-<li>0: not supported</li>
-<li>1: supported</li>
-Default value: 0For TDE data encryption, see [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DBEngine Database engine, which supports:
-<li>`postgresql`: TencentDB for PostgreSQL</li>
-<li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
-Default value: `postgresql`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DBEngineConfig Configuration information for the database engine, and the configuration format is as follows:
-{"$key1":"$value1", "$key2":"$value2"}
-Supported engines include:
-mssql_compatible engine:
-<li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
-<li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
-<li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $NetworkAccessList Network access list of the instance (this field has been deprecated)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $SupportIpv6 Whether the instance supports IPv6:
-<li>`0`: no</li>
-<li>`1`: yes</li>
-Default value: 0
+     * @param integer $SupportIpv6 <p>Whether the instance supports Ipv6:</p><li>0: No</li><li>1: Yes</li>Default value: 0
+     * @param integer $ExpandedCpu <p>Number of cpu cores that have been elastically scaled out for the instance</p>
+     * @param boolean $DeletionProtection <p>Whether to enable deletion protection for the instance, values as follows:</p><ul><li>true: enable deletion protection</li><li>false: disable deletion protection</li></ul>
+     * @param string $DBInstanceStorageType <p>Instance storage type. Available values: PHYSICAL_LOCAL_SSD: LOCAL SSD hard disk of PHYSICAL machine; CLOUD_PREMIUM: high-performance CLOUD block storage; CLOUD_SSD: SSD CLOUD disk; CLOUD_HSSD: enhanced SSD CLOUD disk.</p>
      */
     function __construct()
     {
@@ -680,6 +556,18 @@ Default value: 0
 
         if (array_key_exists("SupportIpv6",$param) and $param["SupportIpv6"] !== null) {
             $this->SupportIpv6 = $param["SupportIpv6"];
+        }
+
+        if (array_key_exists("ExpandedCpu",$param) and $param["ExpandedCpu"] !== null) {
+            $this->ExpandedCpu = $param["ExpandedCpu"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("DBInstanceStorageType",$param) and $param["DBInstanceStorageType"] !== null) {
+            $this->DBInstanceStorageType = $param["DBInstanceStorageType"];
         }
     }
 }

@@ -20,106 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Network information. (This parameter structure has been deprecated. Please use `DBInstanceNetInfo` to query network information.)
  *
- * @method string getResourceId() Obtain Network resource ID, instance ID, or RO group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setResourceId(string $ResourceId) Set Network resource ID, instance ID, or RO group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getResourceType() Obtain Resource type. Valid values: `1` (instance), `2` (RO group)
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setResourceType(integer $ResourceType) Set Resource type. Valid values: `1` (instance), `2` (RO group)
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getVpcId() Obtain VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setVpcId(string $VpcId) Set VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getVip() Obtain IPv4 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setVip(string $Vip) Set IPv4 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getVip6() Obtain IPv6 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setVip6(string $Vip6) Set IPv6 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getVport() Obtain Access port
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setVport(integer $Vport) Set Access port
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getSubnetId() Obtain Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getVpcStatus() Obtain Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setVpcStatus(integer $VpcStatus) Set Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getResourceId() Obtain Network resource id, instance id, or RO group id.
+ * @method void setResourceId(string $ResourceId) Set Network resource id, instance id, or RO group id.
+ * @method integer getResourceType() Obtain Resource type. valid values: 1 (instance), 2 (RO group).
+ * @method void setResourceType(integer $ResourceType) Set Resource type. valid values: 1 (instance), 2 (RO group).
+ * @method string getVpcId() Obtain VPC ID. specifies the ID of the virtual private cloud.
+ * @method void setVpcId(string $VpcId) Set VPC ID. specifies the ID of the virtual private cloud.
+ * @method string getVip() Obtain IPv4 Address
+ * @method void setVip(string $Vip) Set IPv4 Address
+ * @method string getVip6() Obtain IPv6 Address
+ * @method void setVip6(string $Vip6) Set IPv6 Address
+ * @method integer getVport() Obtain Specifies the access port.
+ * @method void setVport(integer $Vport) Set Specifies the access port.
+ * @method string getSubnetId() Obtain Subnet ID.
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID.
+ * @method integer getVpcStatus() Obtain Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted.
+ * @method void setVpcStatus(integer $VpcStatus) Set Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted.
  */
 class NetworkAccess extends AbstractModel
 {
     /**
-     * @var string Network resource ID, instance ID, or RO group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Network resource id, instance id, or RO group id.
      */
     public $ResourceId;
 
     /**
-     * @var integer Resource type. Valid values: `1` (instance), `2` (RO group)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Resource type. valid values: 1 (instance), 2 (RO group).
      */
     public $ResourceType;
 
     /**
-     * @var string VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string VPC ID. specifies the ID of the virtual private cloud.
      */
     public $VpcId;
 
     /**
-     * @var string IPv4 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string IPv4 Address
      */
     public $Vip;
 
     /**
-     * @var string IPv6 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string IPv6 Address
      */
     public $Vip6;
 
     /**
-     * @var integer Access port
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Specifies the access port.
      */
     public $Vport;
 
     /**
-     * @var string Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Subnet ID.
      */
     public $SubnetId;
 
     /**
-     * @var integer Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted.
      */
     public $VpcStatus;
 
     /**
-     * @param string $ResourceId Network resource ID, instance ID, or RO group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $ResourceType Resource type. Valid values: `1` (instance), `2` (RO group)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $VpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Vip IPv4 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Vip6 IPv6 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $Vport Access port
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $SubnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $VpcStatus Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ResourceId Network resource id, instance id, or RO group id.
+     * @param integer $ResourceType Resource type. valid values: 1 (instance), 2 (RO group).
+     * @param string $VpcId VPC ID. specifies the ID of the virtual private cloud.
+     * @param string $Vip IPv4 Address
+     * @param string $Vip6 IPv6 Address
+     * @param integer $Vport Specifies the access port.
+     * @param string $SubnetId Subnet ID.
+     * @param integer $VpcStatus Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted.
      */
     function __construct()
     {
