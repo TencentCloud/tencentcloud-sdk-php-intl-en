@@ -47,24 +47,38 @@ Default API request rate limit: 20 requests/sec.
  * @method Models\DeleteStarProjectResponse DeleteStarProject(Models\DeleteStarProjectRequest $req) This API is used to delete a starred project for the specified user.
  * @method Models\DeleteWhitelistResponse DeleteWhitelist(Models\DeleteWhitelistRequest $req) This API is used to delete an allowlist.
  * @method Models\DescribeDataResponse DescribeData(Models\DescribeDataRequest $req) This API is used to query the forwarding monitor.
+ * @method Models\DescribeDataBridgeUrlV2Response DescribeDataBridgeUrlV2(Models\DescribeDataBridgeUrlV2Request $req) This API is used to obtain DescribeDataBridgeUrl information.
  * @method Models\DescribeDataCustomUrlResponse DescribeDataCustomUrl(Models\DescribeDataCustomUrlRequest $req) This API is used to get the DescribeDataCustomUrl information.
+ * @method Models\DescribeDataCustomUrlV2Response DescribeDataCustomUrlV2(Models\DescribeDataCustomUrlV2Request $req) This API is used to obtain DescribeDataCustomUrl information.
  * @method Models\DescribeDataEventUrlResponse DescribeDataEventUrl(Models\DescribeDataEventUrlRequest $req) This API is used to get the DescribeDataEventUrl information.
+ * @method Models\DescribeDataEventUrlV2Response DescribeDataEventUrlV2(Models\DescribeDataEventUrlV2Request $req) This API is used to obtain DescribeDataEventUrl information.
  * @method Models\DescribeDataFetchProjectResponse DescribeDataFetchProject(Models\DescribeDataFetchProjectRequest $req) This API is used to get the `DescribeDataFetchProject` information and has been deprecated. Use `DescribeDataFetchUrl` instead.
  * @method Models\DescribeDataFetchUrlResponse DescribeDataFetchUrl(Models\DescribeDataFetchUrlRequest $req) This API is used to get the DescribeDataFetchUrl information.
  * @method Models\DescribeDataFetchUrlInfoResponse DescribeDataFetchUrlInfo(Models\DescribeDataFetchUrlInfoRequest $req) This API is used to get the DescribeDataFetchUrlInfo information.
+ * @method Models\DescribeDataFetchUrlV2Response DescribeDataFetchUrlV2(Models\DescribeDataFetchUrlV2Request $req) This API is used to obtain DescribeDataFetchUrl information.
  * @method Models\DescribeDataLogUrlInfoResponse DescribeDataLogUrlInfo(Models\DescribeDataLogUrlInfoRequest $req) This API is used to get the loginfo information.
  * @method Models\DescribeDataLogUrlStatisticsResponse DescribeDataLogUrlStatistics(Models\DescribeDataLogUrlStatisticsRequest $req) This API is used to get the LogUrlStatistics information.
+ * @method Models\DescribeDataLogUrlStatisticsV2Response DescribeDataLogUrlStatisticsV2(Models\DescribeDataLogUrlStatisticsV2Request $req) This API is used to obtain LogUrlStatistics information.
  * @method Models\DescribeDataPerformancePageResponse DescribeDataPerformancePage(Models\DescribeDataPerformancePageRequest $req) This API is used to get the PerformancePage information.
+ * @method Models\DescribeDataPerformancePageV2Response DescribeDataPerformancePageV2(Models\DescribeDataPerformancePageV2Request $req) This API is used to obtain PerformancePage information.
  * @method Models\DescribeDataPerformanceProjectResponse DescribeDataPerformanceProject(Models\DescribeDataPerformanceProjectRequest $req) This API is used to get the PerformanceProject information.
  * @method Models\DescribeDataPvUrlInfoResponse DescribeDataPvUrlInfo(Models\DescribeDataPvUrlInfoRequest $req) This API is used to get the PvUrlInfo information.
  * @method Models\DescribeDataPvUrlStatisticsResponse DescribeDataPvUrlStatistics(Models\DescribeDataPvUrlStatisticsRequest $req) This API is used to get the DescribeDataPvUrlStatistics information.
+ * @method Models\DescribeDataPvUrlStatisticsV2Response DescribeDataPvUrlStatisticsV2(Models\DescribeDataPvUrlStatisticsV2Request $req) This API is used to obtain DescribeDataPvUrlStatistics information.
  * @method Models\DescribeDataReportCountResponse DescribeDataReportCount(Models\DescribeDataReportCountRequest $req) This API is used to get the number of reported data entries for a project.
+ * @method Models\DescribeDataReportCountV2Response DescribeDataReportCountV2(Models\DescribeDataReportCountV2Request $req) This API is used to obtain the project reporting volume.
  * @method Models\DescribeDataSetUrlStatisticsResponse DescribeDataSetUrlStatistics(Models\DescribeDataSetUrlStatisticsRequest $req) This API is used to get the DescribeDataSetUrlStatistics information.
+ * @method Models\DescribeDataSetUrlStatisticsV2Response DescribeDataSetUrlStatisticsV2(Models\DescribeDataSetUrlStatisticsV2Request $req) This API is used to obtain DescribeDataSetUrlStatistics information.
  * @method Models\DescribeDataStaticProjectResponse DescribeDataStaticProject(Models\DescribeDataStaticProjectRequest $req) This API is used to get the DescribeDataStaticProject information.
+ * @method Models\DescribeDataStaticProjectV2Response DescribeDataStaticProjectV2(Models\DescribeDataStaticProjectV2Request $req) This API is used to obtain DescribeDataStaticProject information.
  * @method Models\DescribeDataStaticResourceResponse DescribeDataStaticResource(Models\DescribeDataStaticResourceRequest $req) This API is used to get the DescribeDataStaticResource information.
+ * @method Models\DescribeDataStaticResourceV2Response DescribeDataStaticResourceV2(Models\DescribeDataStaticResourceV2Request $req) This API is used to obtain DescribeDataStaticResource information.
  * @method Models\DescribeDataStaticUrlResponse DescribeDataStaticUrl(Models\DescribeDataStaticUrlRequest $req) This API is used to get the DescribeDataStaticUrl information.
+ * @method Models\DescribeDataStaticUrlV2Response DescribeDataStaticUrlV2(Models\DescribeDataStaticUrlV2Request $req) This API is used to obtain DescribeDataStaticUrl information.
  * @method Models\DescribeDataWebVitalsPageResponse DescribeDataWebVitalsPage(Models\DescribeDataWebVitalsPageRequest $req) This API is used to get the DescribeDataWebVitalsPage information, which is about core user activities.
 It includes the Web Vitals metric for the page loading performance.
+ * @method Models\DescribeDataWebVitalsPageV2Response DescribeDataWebVitalsPageV2(Models\DescribeDataWebVitalsPageV2Request $req) This API is used to obtain DescribeDataWebVitalsPage information, which is the core user activity information.
+Web Vitals for page loading performance are key performance metrics.
  * @method Models\DescribeErrorResponse DescribeError(Models\DescribeErrorRequest $req) This API is used to get the homepage error information.
  * @method Models\DescribeLogExportsResponse DescribeLogExports(Models\DescribeLogExportsRequest $req) API domain name: `rum.tencentcloudapi.com`.
 
@@ -86,6 +100,7 @@ Default API request rate limit: 20 requests/sec.
  * @method Models\DescribeRumLogListResponse DescribeRumLogList(Models\DescribeRumLogListRequest $req) This API is used to get the list of logs in a project (created by an instance).
  * @method Models\DescribeRumStatsLogListResponse DescribeRumStatsLogList(Models\DescribeRumStatsLogListRequest $req) This API is used to get the list of logs in a project every minute.
  * @method Models\DescribeScoresResponse DescribeScores(Models\DescribeScoresRequest $req) This API is used to get the list of homepage scores.
+ * @method Models\DescribeScoresV2Response DescribeScoresV2(Models\DescribeScoresV2Request $req) This API is used to obtain the home page score list.
  * @method Models\DescribeTawAreasResponse DescribeTawAreas(Models\DescribeTawAreasRequest $req) This API is used to query region information.
  * @method Models\DescribeUvListResponse DescribeUvList(Models\DescribeUvListRequest $req) This API is used to get the list of UVs under a project.
  * @method Models\DescribeWhitelistsResponse DescribeWhitelists(Models\DescribeWhitelistsRequest $req) This API is used to get the list of allowlists.

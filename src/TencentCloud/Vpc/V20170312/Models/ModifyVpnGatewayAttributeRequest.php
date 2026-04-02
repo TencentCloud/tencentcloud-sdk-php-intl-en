@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpnGatewayId(string $VpnGatewayId) Set The ID of the VPN gateway instance.
  * @method string getVpnGatewayName() Obtain The VPN gateway name. The maximum length is 60 bytes.
  * @method void setVpnGatewayName(string $VpnGatewayName) Set The VPN gateway name. The maximum length is 60 bytes.
- * @method string getInstanceChargeType() Obtain VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
- * @method void setInstanceChargeType(string $InstanceChargeType) Set VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+ * @method string getInstanceChargeType() Obtain VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+ * @method integer getBgpAsn() Obtain 
+ * @method void setBgpAsn(integer $BgpAsn) Set 
+ * @method integer getMaxConnection() Obtain 
+ * @method void setMaxConnection(integer $MaxConnection) Set 
  */
 class ModifyVpnGatewayAttributeRequest extends AbstractModel
 {
@@ -40,14 +44,26 @@ class ModifyVpnGatewayAttributeRequest extends AbstractModel
     public $VpnGatewayName;
 
     /**
-     * @var string VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+     * @var string VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
      */
     public $InstanceChargeType;
 
     /**
+     * @var integer 
+     */
+    public $BgpAsn;
+
+    /**
+     * @var integer 
+     */
+    public $MaxConnection;
+
+    /**
      * @param string $VpnGatewayId The ID of the VPN gateway instance.
      * @param string $VpnGatewayName The VPN gateway name. The maximum length is 60 bytes.
-     * @param string $InstanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+     * @param string $InstanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+     * @param integer $BgpAsn 
+     * @param integer $MaxConnection 
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class ModifyVpnGatewayAttributeRequest extends AbstractModel
 
         if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
             $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("BgpAsn",$param) and $param["BgpAsn"] !== null) {
+            $this->BgpAsn = $param["BgpAsn"];
+        }
+
+        if (array_key_exists("MaxConnection",$param) and $param["MaxConnection"] !== null) {
+            $this->MaxConnection = $param["MaxConnection"];
         }
     }
 }

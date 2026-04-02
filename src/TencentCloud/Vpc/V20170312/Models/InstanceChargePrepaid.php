@@ -18,7 +18,7 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Prepaid (monthly subscription) billing object.
+ * Prepaid (yearly/monthly subscription) billing object.
  *
  * @method integer getPeriod() Obtain Purchased usage period (in month). Value range: [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36].
  * @method void setPeriod(integer $Period) Set Purchased usage period (in month). Value range: [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36].

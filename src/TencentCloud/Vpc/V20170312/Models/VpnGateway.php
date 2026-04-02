@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpiredTime(string $ExpiredTime) Set Expiration time of the prepaid gateway.
  * @method boolean getIsAddressBlocked() Obtain Whether the public IP is blocked.
  * @method void setIsAddressBlocked(boolean $IsAddressBlocked) Set Whether the public IP is blocked.
- * @method string getNewPurchasePlan() Obtain Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
- * @method void setNewPurchasePlan(string $NewPurchasePlan) Set Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
+ * @method string getNewPurchasePlan() Obtain Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour.
+ * @method void setNewPurchasePlan(string $NewPurchasePlan) Set Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour.
  * @method string getRestrictState() Obtain Gateway billing status. PROTECTIVELY_ISOLATED: Instance is isolated; NORMAL: Normal.
  * @method void setRestrictState(string $RestrictState) Set Gateway billing status. PROTECTIVELY_ISOLATED: Instance is isolated; NORMAL: Normal.
  * @method string getZone() Obtain The availability zone, such as `ap-guangzhou-2`
@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCdcId(string $CdcId) Set CDC instance ID
  * @method integer getMaxConnection() Obtain Maximum number of connected clients allowed for the SSL VPN gateway.
  * @method void setMaxConnection(integer $MaxConnection) Set Maximum number of connected clients allowed for the SSL VPN gateway.
+ * @method integer getBgpAsn() Obtain 
+ * @method void setBgpAsn(integer $BgpAsn) Set 
  */
 class VpnGateway extends AbstractModel
 {
@@ -124,7 +126,7 @@ class VpnGateway extends AbstractModel
     public $IsAddressBlocked;
 
     /**
-     * @var string Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
+     * @var string Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour.
      */
     public $NewPurchasePlan;
 
@@ -164,6 +166,11 @@ class VpnGateway extends AbstractModel
     public $MaxConnection;
 
     /**
+     * @var integer 
+     */
+    public $BgpAsn;
+
+    /**
      * @param string $VpnGatewayId Gateway instance ID.
      * @param string $VpcId VPC instance ID.
      * @param string $VpnGatewayName Gateway instance name.
@@ -176,7 +183,7 @@ class VpnGateway extends AbstractModel
      * @param string $CreatedTime Creation Time.
      * @param string $ExpiredTime Expiration time of the prepaid gateway.
      * @param boolean $IsAddressBlocked Whether the public IP is blocked.
-     * @param string $NewPurchasePlan Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
+     * @param string $NewPurchasePlan Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour.
      * @param string $RestrictState Gateway billing status. PROTECTIVELY_ISOLATED: Instance is isolated; NORMAL: Normal.
      * @param string $Zone The availability zone, such as `ap-guangzhou-2`
      * @param array $VpnGatewayQuotaSet Gateway bandwidth quota information.
@@ -184,6 +191,7 @@ class VpnGateway extends AbstractModel
      * @param string $NetworkInstanceId CCN instance ID when the value of Type is CCN.
      * @param string $CdcId CDC instance ID
      * @param integer $MaxConnection Maximum number of connected clients allowed for the SSL VPN gateway.
+     * @param integer $BgpAsn 
      */
     function __construct()
     {
@@ -281,6 +289,10 @@ class VpnGateway extends AbstractModel
 
         if (array_key_exists("MaxConnection",$param) and $param["MaxConnection"] !== null) {
             $this->MaxConnection = $param["MaxConnection"];
+        }
+
+        if (array_key_exists("BgpAsn",$param) and $param["BgpAsn"] !== null) {
+            $this->BgpAsn = $param["BgpAsn"];
         }
     }
 }

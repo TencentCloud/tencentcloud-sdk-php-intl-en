@@ -1,0 +1,317 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Rum\V20210622\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * DescribeDataWebVitalsPageV2 request structure.
+ *
+ * @method integer getStartTime() Obtain Start time.
+ * @method void setStartTime(integer $StartTime) Set Start time.
+ * @method integer getEndTime() Obtain End time.
+ * @method void setEndTime(integer $EndTime) Set End time.
+ * @method integer getID() Obtain Project ID.
+ * @method void setID(integer $ID) Set Project ID.
+ * @method string getExtSecond() Obtain Custom parameter 2.
+ * @method void setExtSecond(string $ExtSecond) Set Custom parameter 2.
+ * @method string getEngine() Obtain Browser engine.
+ * @method void setEngine(string $Engine) Set Browser engine.
+ * @method string getIsp() Obtain Internet service provider.
+ * @method void setIsp(string $Isp) Set Internet service provider.
+ * @method string getFrom() Obtain Source page.
+ * @method void setFrom(string $From) Set Source page.
+ * @method string getLevel() Obtain Log level.
+ * @method void setLevel(string $Level) Set Log level.
+ * @method string getType() Obtain No type.
+ * @method void setType(string $Type) Set No type.
+ * @method string getBrand() Obtain Brand.
+ * @method void setBrand(string $Brand) Set Brand.
+ * @method string getArea() Obtain Region.
+ * @method void setArea(string $Area) Set Region.
+ * @method string getVersionNum() Obtain Version.
+ * @method void setVersionNum(string $VersionNum) Set Version.
+ * @method string getPlatform() Obtain Platform.
+ * @method void setPlatform(string $Platform) Set Platform.
+ * @method string getExtThird() Obtain Custom parameter 3.
+ * @method void setExtThird(string $ExtThird) Set Custom parameter 3.
+ * @method string getExtFirst() Obtain Custom parameter 1.
+ * @method void setExtFirst(string $ExtFirst) Set Custom parameter 1.
+ * @method string getNetType() Obtain Network type.
+ * @method void setNetType(string $NetType) Set Network type.
+ * @method string getDevice() Obtain Model.
+ * @method void setDevice(string $Device) Set Model.
+ * @method string getIsAbroad() Obtain Indicates whether to query global data. 1 indicates global. 0 indicates not global. This is empty by default, which means to query all data.
+ * @method void setIsAbroad(string $IsAbroad) Set Indicates whether to query global data. 1 indicates global. 0 indicates not global. This is empty by default, which means to query all data.
+ * @method string getOs() Obtain Operating system.
+ * @method void setOs(string $Os) Set Operating system.
+ * @method string getBrowser() Obtain Browser.
+ * @method void setBrowser(string $Browser) Set Browser.
+ * @method string getCostType() Obtain Duration calculation.
+ * @method void setCostType(string $CostType) Set Duration calculation.
+ * @method string getEnv() Obtain Environment.
+ * @method void setEnv(string $Env) Set Environment.
+ * @method string getGranularity() Obtain Time period.
+ * @method void setGranularity(string $Granularity) Set Time period.
+ */
+class DescribeDataWebVitalsPageV2Request extends AbstractModel
+{
+    /**
+     * @var integer Start time.
+     */
+    public $StartTime;
+
+    /**
+     * @var integer End time.
+     */
+    public $EndTime;
+
+    /**
+     * @var integer Project ID.
+     */
+    public $ID;
+
+    /**
+     * @var string Custom parameter 2.
+     */
+    public $ExtSecond;
+
+    /**
+     * @var string Browser engine.
+     */
+    public $Engine;
+
+    /**
+     * @var string Internet service provider.
+     */
+    public $Isp;
+
+    /**
+     * @var string Source page.
+     */
+    public $From;
+
+    /**
+     * @var string Log level.
+     */
+    public $Level;
+
+    /**
+     * @var string No type.
+     */
+    public $Type;
+
+    /**
+     * @var string Brand.
+     */
+    public $Brand;
+
+    /**
+     * @var string Region.
+     */
+    public $Area;
+
+    /**
+     * @var string Version.
+     */
+    public $VersionNum;
+
+    /**
+     * @var string Platform.
+     */
+    public $Platform;
+
+    /**
+     * @var string Custom parameter 3.
+     */
+    public $ExtThird;
+
+    /**
+     * @var string Custom parameter 1.
+     */
+    public $ExtFirst;
+
+    /**
+     * @var string Network type.
+     */
+    public $NetType;
+
+    /**
+     * @var string Model.
+     */
+    public $Device;
+
+    /**
+     * @var string Indicates whether to query global data. 1 indicates global. 0 indicates not global. This is empty by default, which means to query all data.
+     */
+    public $IsAbroad;
+
+    /**
+     * @var string Operating system.
+     */
+    public $Os;
+
+    /**
+     * @var string Browser.
+     */
+    public $Browser;
+
+    /**
+     * @var string Duration calculation.
+     */
+    public $CostType;
+
+    /**
+     * @var string Environment.
+     */
+    public $Env;
+
+    /**
+     * @var string Time period.
+     */
+    public $Granularity;
+
+    /**
+     * @param integer $StartTime Start time.
+     * @param integer $EndTime End time.
+     * @param integer $ID Project ID.
+     * @param string $ExtSecond Custom parameter 2.
+     * @param string $Engine Browser engine.
+     * @param string $Isp Internet service provider.
+     * @param string $From Source page.
+     * @param string $Level Log level.
+     * @param string $Type No type.
+     * @param string $Brand Brand.
+     * @param string $Area Region.
+     * @param string $VersionNum Version.
+     * @param string $Platform Platform.
+     * @param string $ExtThird Custom parameter 3.
+     * @param string $ExtFirst Custom parameter 1.
+     * @param string $NetType Network type.
+     * @param string $Device Model.
+     * @param string $IsAbroad Indicates whether to query global data. 1 indicates global. 0 indicates not global. This is empty by default, which means to query all data.
+     * @param string $Os Operating system.
+     * @param string $Browser Browser.
+     * @param string $CostType Duration calculation.
+     * @param string $Env Environment.
+     * @param string $Granularity Time period.
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+            $this->ID = $param["ID"];
+        }
+
+        if (array_key_exists("ExtSecond",$param) and $param["ExtSecond"] !== null) {
+            $this->ExtSecond = $param["ExtSecond"];
+        }
+
+        if (array_key_exists("Engine",$param) and $param["Engine"] !== null) {
+            $this->Engine = $param["Engine"];
+        }
+
+        if (array_key_exists("Isp",$param) and $param["Isp"] !== null) {
+            $this->Isp = $param["Isp"];
+        }
+
+        if (array_key_exists("From",$param) and $param["From"] !== null) {
+            $this->From = $param["From"];
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Brand",$param) and $param["Brand"] !== null) {
+            $this->Brand = $param["Brand"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("VersionNum",$param) and $param["VersionNum"] !== null) {
+            $this->VersionNum = $param["VersionNum"];
+        }
+
+        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
+            $this->Platform = $param["Platform"];
+        }
+
+        if (array_key_exists("ExtThird",$param) and $param["ExtThird"] !== null) {
+            $this->ExtThird = $param["ExtThird"];
+        }
+
+        if (array_key_exists("ExtFirst",$param) and $param["ExtFirst"] !== null) {
+            $this->ExtFirst = $param["ExtFirst"];
+        }
+
+        if (array_key_exists("NetType",$param) and $param["NetType"] !== null) {
+            $this->NetType = $param["NetType"];
+        }
+
+        if (array_key_exists("Device",$param) and $param["Device"] !== null) {
+            $this->Device = $param["Device"];
+        }
+
+        if (array_key_exists("IsAbroad",$param) and $param["IsAbroad"] !== null) {
+            $this->IsAbroad = $param["IsAbroad"];
+        }
+
+        if (array_key_exists("Os",$param) and $param["Os"] !== null) {
+            $this->Os = $param["Os"];
+        }
+
+        if (array_key_exists("Browser",$param) and $param["Browser"] !== null) {
+            $this->Browser = $param["Browser"];
+        }
+
+        if (array_key_exists("CostType",$param) and $param["CostType"] !== null) {
+            $this->CostType = $param["CostType"];
+        }
+
+        if (array_key_exists("Env",$param) and $param["Env"] !== null) {
+            $this->Env = $param["Env"];
+        }
+
+        if (array_key_exists("Granularity",$param) and $param["Granularity"] !== null) {
+            $this->Granularity = $param["Granularity"];
+        }
+    }
+}

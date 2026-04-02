@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpnGatewayName(string $VpnGatewayName) Set The VPN gateway name. The maximum length is 60 bytes.
  * @method integer getInternetMaxBandwidthOut() Obtain The public network bandwidth configuration. Available bandwidth specifications: 5, 10, 20, 50, and 100. Unit: Mbps
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set The public network bandwidth configuration. Available bandwidth specifications: 5, 10, 20, 50, and 100. Unit: Mbps
- * @method string getInstanceChargeType() Obtain The VPN gateway billing mode. PREPAID: prepaid means monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
- * @method void setInstanceChargeType(string $InstanceChargeType) Set The VPN gateway billing mode. PREPAID: prepaid means monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
- * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+ * @method string getInstanceChargeType() Obtain The VPN gateway billing mode. PREPAID: prepaid means yearly/monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set The VPN gateway billing mode. PREPAID: prepaid means yearly/monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Parameter settings for prepaid billing mode, also known as yearly/monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Parameter settings for prepaid billing mode, also known as yearly/monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
  * @method string getZone() Obtain The availability zone, such as `ap-guangzhou-2`.
  * @method void setZone(string $Zone) Set The availability zone, such as `ap-guangzhou-2`.
  * @method string getType() Obtain VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCdcId(string $CdcId) Set CDC instance ID
  * @method integer getMaxConnection() Obtain Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
  * @method void setMaxConnection(integer $MaxConnection) Set Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
+ * @method integer getBgpAsn() Obtain 
+ * @method void setBgpAsn(integer $BgpAsn) Set 
  */
 class CreateVpnGatewayRequest extends AbstractModel
 {
@@ -59,12 +61,12 @@ class CreateVpnGatewayRequest extends AbstractModel
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var string The VPN gateway billing mode. PREPAID: prepaid means monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
+     * @var string The VPN gateway billing mode. PREPAID: prepaid means yearly/monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
      */
     public $InstanceChargeType;
 
     /**
-     * @var InstanceChargePrepaid Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+     * @var InstanceChargePrepaid Parameter settings for prepaid billing mode, also known as yearly/monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
      */
     public $InstanceChargePrepaid;
 
@@ -94,16 +96,22 @@ class CreateVpnGatewayRequest extends AbstractModel
     public $MaxConnection;
 
     /**
+     * @var integer 
+     */
+    public $BgpAsn;
+
+    /**
      * @param string $VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
      * @param string $VpnGatewayName The VPN gateway name. The maximum length is 60 bytes.
      * @param integer $InternetMaxBandwidthOut The public network bandwidth configuration. Available bandwidth specifications: 5, 10, 20, 50, and 100. Unit: Mbps
-     * @param string $InstanceChargeType The VPN gateway billing mode. PREPAID: prepaid means monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
-     * @param InstanceChargePrepaid $InstanceChargePrepaid Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+     * @param string $InstanceChargeType The VPN gateway billing mode. PREPAID: prepaid means yearly/monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
+     * @param InstanceChargePrepaid $InstanceChargePrepaid Parameter settings for prepaid billing mode, also known as yearly/monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
      * @param string $Zone The availability zone, such as `ap-guangzhou-2`.
      * @param string $Type VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      * @param string $CdcId CDC instance ID
      * @param integer $MaxConnection Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
+     * @param integer $BgpAsn 
      */
     function __construct()
     {
@@ -162,6 +170,10 @@ class CreateVpnGatewayRequest extends AbstractModel
 
         if (array_key_exists("MaxConnection",$param) and $param["MaxConnection"] !== null) {
             $this->MaxConnection = $param["MaxConnection"];
+        }
+
+        if (array_key_exists("BgpAsn",$param) and $param["BgpAsn"] !== null) {
+            $this->BgpAsn = $param["BgpAsn"];
         }
     }
 }
