@@ -54,6 +54,7 @@ This API is used to create an instance launch template. After the initial creati
 * If the [ImageState](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image) of an image is `CREATING` or `USING`, the image cannot be deleted. Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API to query the image status.
 * Up to 10 custom images are allowed in each region. If you have run out of the quota, delete unused images to create new ones.
 * A shared image cannot be deleted.
+ * @method Models\DeleteInstancesDisasterRecoverGroupsResponse DeleteInstancesDisasterRecoverGroups(Models\DeleteInstancesDisasterRecoverGroupsRequest $req) This API is used to batch remove CVM instances from specified placement groups.
  * @method Models\DeleteKeyPairsResponse DeleteKeyPairs(Models\DeleteKeyPairsRequest $req) This API is used to delete the key pairs hosted in Tencent Cloud.
 
 * You can delete multiple key pairs at the same time.
