@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTextContent(string $TextContent) Set Text content of the digital watermark template. The length cannot exceed 64 characters.
  * @method string getComment() Obtain Description information of the digital watermark template.
  * @method void setComment(string $Comment) Set Description information of the digital watermark template.
- * @method string getCreateTime() Obtain Creation time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
- * @method void setCreateTime(string $CreateTime) Set Creation time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
- * @method string getUpdateTime() Obtain Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
- * @method void setUpdateTime(string $UpdateTime) Set Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getCreateTime() Obtain Creation time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setCreateTime(string $CreateTime) Set Creation time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getUpdateTime() Obtain Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setUpdateTime(string $UpdateTime) Set Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
  * @method string getStrength() Obtain Digital watermark strength. 
 default: default, balance between hd video quality and resilience. 
 stronger: clear image quality, strong resilience. 
@@ -71,12 +71,12 @@ class BlindWatermarkTemplate extends AbstractModel
     public $Comment;
 
     /**
-     * @var string Creation time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @var string Creation time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $CreateTime;
 
     /**
-     * @var string Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @var string Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $UpdateTime;
 
@@ -94,8 +94,8 @@ strongest: normal video quality, strongest resilience.
      * @param string $Name Digital watermark template name.
      * @param string $TextContent Text content of the digital watermark template. The length cannot exceed 64 characters.
      * @param string $Comment Description information of the digital watermark template.
-     * @param string $CreateTime Creation time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
-     * @param string $UpdateTime Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $CreateTime Creation time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $UpdateTime Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $Strength Digital watermark strength. 
 default: default, balance between hd video quality and resilience. 
 stronger: clear image quality, strong resilience. 

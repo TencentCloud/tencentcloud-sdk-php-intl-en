@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent translation result information.
  *
- * @method string getVideoPath() Obtain Specifies the video path for translation.
- * @method void setVideoPath(string $VideoPath) Set Specifies the video path for translation.
- * @method string getSpeakerPath() Obtain Specifies the file path of the tag.
-
- * @method void setSpeakerPath(string $SpeakerPath) Set Specifies the file path of the tag.
-
- * @method string getVoiceId() Obtain Voice type ID.
- * @method void setVoiceId(string $VoiceId) Set Voice type ID.
- * @method TaskOutputStorage getOutputStorage() Obtain Specifies the storage location of the transcoded video.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Specifies the storage location of the transcoded video.
+ * @method string getVideoPath() Obtain <p>Dubbed video path.</p>
+ * @method void setVideoPath(string $VideoPath) Set <p>Dubbed video path.</p>
+ * @method string getSpeakerPath() Obtain <p>Tag file path</p>
+ * @method void setSpeakerPath(string $SpeakerPath) Set <p>Tag file path</p>
+ * @method string getVoiceId() Obtain <p>Voice type id</p>
+ * @method void setVoiceId(string $VoiceId) Set <p>Voice type id</p>
+ * @method TaskOutputStorage getOutputStorage() Obtain <p>Storage location of the dubbed video.</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Storage location of the dubbed video.</p>
  */
 class AiAnalysisTaskDubbingOutput extends AbstractModel
 {
     /**
-     * @var string Specifies the video path for translation.
+     * @var string <p>Dubbed video path.</p>
      */
     public $VideoPath;
 
     /**
-     * @var string Specifies the file path of the tag.
-
+     * @var string <p>Tag file path</p>
      */
     public $SpeakerPath;
 
     /**
-     * @var string Voice type ID.
+     * @var string <p>Voice type id</p>
      */
     public $VoiceId;
 
     /**
-     * @var TaskOutputStorage Specifies the storage location of the transcoded video.
+     * @var TaskOutputStorage <p>Storage location of the dubbed video.</p>
      */
     public $OutputStorage;
 
     /**
-     * @param string $VideoPath Specifies the video path for translation.
-     * @param string $SpeakerPath Specifies the file path of the tag.
-
-     * @param string $VoiceId Voice type ID.
-     * @param TaskOutputStorage $OutputStorage Specifies the storage location of the transcoded video.
+     * @param string $VideoPath <p>Dubbed video path.</p>
+     * @param string $SpeakerPath <p>Tag file path</p>
+     * @param string $VoiceId <p>Voice type id</p>
+     * @param TaskOutputStorage $OutputStorage <p>Storage location of the dubbed video.</p>
      */
     function __construct()
     {

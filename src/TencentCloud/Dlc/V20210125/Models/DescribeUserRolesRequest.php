@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortBy(string $SortBy) Set The field for sorting the returned results.
  * @method string getSorting() Obtain The sorting order, descending or ascending, such as `desc`.
  * @method void setSorting(string $Sorting) Set The sorting order, descending or ascending, such as `desc`.
+ * @method integer getIsDefault() Obtain 
+ * @method void setIsDefault(integer $IsDefault) Set 
  */
 class DescribeUserRolesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeUserRolesRequest extends AbstractModel
     public $Sorting;
 
     /**
+     * @var integer 
+     */
+    public $IsDefault;
+
+    /**
      * @param integer $Limit The number limit of enumerated user roles.
      * @param integer $Offset The offset for starting enumeration. 
      * @param string $Fuzzy Fuzzy enumeration by arn.
      * @param string $SortBy The field for sorting the returned results.
      * @param string $Sorting The sorting order, descending or ascending, such as `desc`.
+     * @param integer $IsDefault 
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeUserRolesRequest extends AbstractModel
 
         if (array_key_exists("Sorting",$param) and $param["Sorting"] !== null) {
             $this->Sorting = $param["Sorting"];
+        }
+
+        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
+            $this->IsDefault = $param["IsDefault"];
         }
     }
 }

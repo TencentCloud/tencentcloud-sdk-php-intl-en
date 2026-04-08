@@ -112,10 +112,14 @@ sl: Slovenian.
  * @method void setVoiceId(string $VoiceId) Set Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
  * @method string getAudioData() Obtain Base64-encoded audio for cloning.
  * @method void setAudioData(string $AudioData) Set Base64-encoded audio for cloning.
+ * @method string getAudioUrl() Obtain 
+ * @method void setAudioUrl(string $AudioUrl) Set 
  * @method string getAudioLang() Obtain Cloning audio language. The default language is Chinese.
 Supported languages are the same as those for TextLang.
  * @method void setAudioLang(string $AudioLang) Set Cloning audio language. The default language is Chinese.
 Supported languages are the same as those for TextLang.
+ * @method SyncDubbingOutputOption getOutput() Obtain 
+ * @method void setOutput(SyncDubbingOutputOption $Output) Set 
  * @method string getExtParam() Obtain Extended parameters in the format of a JSON string.
  * @method void setExtParam(string $ExtParam) Set Extended parameters in the format of a JSON string.
  */
@@ -184,10 +188,20 @@ sl: Slovenian.
     public $AudioData;
 
     /**
+     * @var string 
+     */
+    public $AudioUrl;
+
+    /**
      * @var string Cloning audio language. The default language is Chinese.
 Supported languages are the same as those for TextLang.
      */
     public $AudioLang;
+
+    /**
+     * @var SyncDubbingOutputOption 
+     */
+    public $Output;
 
     /**
      * @var string Extended parameters in the format of a JSON string.
@@ -241,8 +255,10 @@ sl: Slovenian.
 
      * @param string $VoiceId Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
      * @param string $AudioData Base64-encoded audio for cloning.
+     * @param string $AudioUrl 
      * @param string $AudioLang Cloning audio language. The default language is Chinese.
 Supported languages are the same as those for TextLang.
+     * @param SyncDubbingOutputOption $Output 
      * @param string $ExtParam Extended parameters in the format of a JSON string.
      */
     function __construct()
@@ -274,8 +290,17 @@ Supported languages are the same as those for TextLang.
             $this->AudioData = $param["AudioData"];
         }
 
+        if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
+            $this->AudioUrl = $param["AudioUrl"];
+        }
+
         if (array_key_exists("AudioLang",$param) and $param["AudioLang"] !== null) {
             $this->AudioLang = $param["AudioLang"];
+        }
+
+        if (array_key_exists("Output",$param) and $param["Output"] !== null) {
+            $this->Output = new SyncDubbingOutputOption();
+            $this->Output->deserialize($param["Output"]);
         }
 
         if (array_key_exists("ExtParam",$param) and $param["ExtParam"] !== null) {

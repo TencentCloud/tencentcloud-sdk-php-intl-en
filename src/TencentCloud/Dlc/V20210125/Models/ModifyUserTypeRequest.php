@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) Set User ID
  * @method string getUserType() Obtain Types that users modify. ADMIN: administrators; COMMON: general users.
  * @method void setUserType(string $UserType) Set Types that users modify. ADMIN: administrators; COMMON: general users.
+ * @method string getAccountType() Obtain 
+ * @method void setAccountType(string $AccountType) Set 
  */
 class ModifyUserTypeRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyUserTypeRequest extends AbstractModel
     public $UserType;
 
     /**
+     * @var string 
+     */
+    public $AccountType;
+
+    /**
      * @param string $UserId User ID
      * @param string $UserType Types that users modify. ADMIN: administrators; COMMON: general users.
+     * @param string $AccountType 
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyUserTypeRequest extends AbstractModel
 
         if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
             $this->UserType = $param["UserType"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

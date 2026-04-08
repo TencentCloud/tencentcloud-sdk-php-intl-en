@@ -64,8 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTransTextRecognitionResultSet(array $TransTextRecognitionResultSet) Set The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
  * @method array getObjectRecognitionResultSet() Obtain Object recognition result, which is valid when Type is ObjectRecognition.
  * @method void setObjectRecognitionResultSet(array $ObjectRecognitionResultSet) Set Object recognition result, which is valid when Type is ObjectRecognition.
- * @method array getTagRecognitionResultSet() Obtain Tagging results are valid when Type is TagRecognition.
- * @method void setTagRecognitionResultSet(array $TagRecognitionResultSet) Set Tagging results are valid when Type is TagRecognition.
+ * @method array getTagRecognitionResultSet() Obtain 
+ * @method void setTagRecognitionResultSet(array $TagRecognitionResultSet) Set 
  */
 class LiveStreamAiRecognitionResultItem extends AbstractModel
 {
@@ -124,7 +124,7 @@ class LiveStreamAiRecognitionResultItem extends AbstractModel
     public $ObjectRecognitionResultSet;
 
     /**
-     * @var array Tagging results are valid when Type is TagRecognition.
+     * @var array 
      */
     public $TagRecognitionResultSet;
 
@@ -151,7 +151,7 @@ class LiveStreamAiRecognitionResultItem extends AbstractModel
 `OcrFullTextRecognition`.
      * @param array $TransTextRecognitionResultSet The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
      * @param array $ObjectRecognitionResultSet Object recognition result, which is valid when Type is ObjectRecognition.
-     * @param array $TagRecognitionResultSet Tagging results are valid when Type is TagRecognition.
+     * @param array $TagRecognitionResultSet 
      */
     function __construct()
     {

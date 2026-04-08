@@ -18,14 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Smart segmentation clips.
+ * 
  *
- * @method float getConfidence() Obtain Confidence.
- * @method void setConfidence(float $Confidence) Set Confidence.
- * @method float getStartTimeOffset() Obtain Segment start time offset.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Segment start time offset.
- * @method float getEndTimeOffset() Obtain Segment end time offset.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set Segment end time offset.
+ * @method float getConfidence() Obtain 
+ * @method void setConfidence(float $Confidence) Set 
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
  * @method string getSegmentUrl() Obtain Specifies the split segment URL.
  * @method void setSegmentUrl(string $SegmentUrl) Set Specifies the split segment URL.
  * @method string getCovImgUrl() Obtain Specifies the segment cover.
@@ -46,17 +46,17 @@ use TencentCloud\Common\AbstractModel;
 class SegmentRecognitionItem extends AbstractModel
 {
     /**
-     * @var float Confidence.
+     * @var float 
      */
     public $Confidence;
 
     /**
-     * @var float Segment start time offset.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float Segment end time offset.
+     * @var float 
      */
     public $EndTimeOffset;
 
@@ -101,9 +101,9 @@ class SegmentRecognitionItem extends AbstractModel
     public $PersonId;
 
     /**
-     * @param float $Confidence Confidence.
-     * @param float $StartTimeOffset Segment start time offset.
-     * @param float $EndTimeOffset Segment end time offset.
+     * @param float $Confidence 
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
      * @param string $SegmentUrl Specifies the split segment URL.
      * @param string $CovImgUrl Specifies the segment cover.
      * @param string $Title Segment title.

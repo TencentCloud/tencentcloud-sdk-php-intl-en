@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWrittenEnable(string $WrittenEnable) Set none/enable/disable/default
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method WrittenAdvancePolicy getAdvancePolicy() Obtain 
+ * @method void setAdvancePolicy(WrittenAdvancePolicy $AdvancePolicy) Set 
  */
 class SmartOptimizerWrittenPolicy extends AbstractModel
 {
@@ -34,8 +36,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $WrittenEnable;
 
     /**
+     * @var WrittenAdvancePolicy 
+     */
+    public $AdvancePolicy;
+
+    /**
      * @param string $WrittenEnable none/enable/disable/default
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param WrittenAdvancePolicy $AdvancePolicy 
      */
     function __construct()
     {
@@ -52,6 +60,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (array_key_exists("WrittenEnable",$param) and $param["WrittenEnable"] !== null) {
             $this->WrittenEnable = $param["WrittenEnable"];
+        }
+
+        if (array_key_exists("AdvancePolicy",$param) and $param["AdvancePolicy"] !== null) {
+            $this->AdvancePolicy = new WrittenAdvancePolicy();
+            $this->AdvancePolicy->deserialize($param["AdvancePolicy"]);
         }
     }
 }

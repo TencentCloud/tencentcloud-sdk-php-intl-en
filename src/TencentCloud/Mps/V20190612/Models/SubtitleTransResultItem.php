@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Subtitle translation output result.
  *
- * @method string getStatus() Obtain Translation marker.
-- Success
-- Error
- * @method void setStatus(string $Status) Set Translation marker.
-- Success
-- Error
- * @method string getTransSrc() Obtain Source language (such as "en").
- * @method void setTransSrc(string $TransSrc) Set Source language (such as "en").
- * @method string getTransDst() Obtain Target language (such as "zh").
- * @method void setTransDst(string $TransDst) Set Target language (such as "zh").
- * @method string getPath() Obtain Subtitle file URL.
- * @method void setPath(string $Path) Set Subtitle file URL.
+ * @method string getStatus() Obtain <p>Translation flag:</p><ul><li>Success</li><li>Error</li></ul>
+ * @method void setStatus(string $Status) Set <p>Translation flag:</p><ul><li>Success</li><li>Error</li></ul>
+ * @method string getTransSrc() Obtain <p>Source language (such as "en")</p>
+ * @method void setTransSrc(string $TransSrc) Set <p>Source language (such as "en")</p>
+ * @method string getTransDst() Obtain <p>Target language (such as "zh")</p>
+ * @method void setTransDst(string $TransDst) Set <p>Target language (such as "zh")</p>
+ * @method string getPath() Obtain <p>Subtitle file URL</p>
+ * @method void setPath(string $Path) Set <p>Subtitle file URL</p>
+ * @method string getSubtitleEmbedPath() Obtain <p>Subtitle translation suppression video path.</p>
+ * @method void setSubtitleEmbedPath(string $SubtitleEmbedPath) Set <p>Subtitle translation suppression video path.</p>
  */
 class SubtitleTransResultItem extends AbstractModel
 {
     /**
-     * @var string Translation marker.
-- Success
-- Error
+     * @var string <p>Translation flag:</p><ul><li>Success</li><li>Error</li></ul>
      */
     public $Status;
 
     /**
-     * @var string Source language (such as "en").
+     * @var string <p>Source language (such as "en")</p>
      */
     public $TransSrc;
 
     /**
-     * @var string Target language (such as "zh").
+     * @var string <p>Target language (such as "zh")</p>
      */
     public $TransDst;
 
     /**
-     * @var string Subtitle file URL.
+     * @var string <p>Subtitle file URL</p>
      */
     public $Path;
 
     /**
-     * @param string $Status Translation marker.
-- Success
-- Error
-     * @param string $TransSrc Source language (such as "en").
-     * @param string $TransDst Target language (such as "zh").
-     * @param string $Path Subtitle file URL.
+     * @var string <p>Subtitle translation suppression video path.</p>
+     */
+    public $SubtitleEmbedPath;
+
+    /**
+     * @param string $Status <p>Translation flag:</p><ul><li>Success</li><li>Error</li></ul>
+     * @param string $TransSrc <p>Source language (such as "en")</p>
+     * @param string $TransDst <p>Target language (such as "zh")</p>
+     * @param string $Path <p>Subtitle file URL</p>
+     * @param string $SubtitleEmbedPath <p>Subtitle translation suppression video path.</p>
      */
     function __construct()
     {
@@ -92,6 +92,10 @@ class SubtitleTransResultItem extends AbstractModel
 
         if (array_key_exists("Path",$param) and $param["Path"] !== null) {
             $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("SubtitleEmbedPath",$param) and $param["SubtitleEmbedPath"] !== null) {
+            $this->SubtitleEmbedPath = $param["SubtitleEmbedPath"];
         }
     }
 }

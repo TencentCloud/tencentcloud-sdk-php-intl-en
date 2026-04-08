@@ -45,23 +45,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setFontFileInput(MediaInputInfo $FontFileInput) Set Input information of the font file of the burned-in subtitle. URL and COS are supported. If both are specified, the URL information is used. If FontFileInput is specified, FontFileInput takes precedence over FontType.
 
  * @method string getFontType() Obtain Font type. Valid values:
-<li>hei.ttf: SimHei.</li>
+<li>hei.ttf: SimHei</li>
 <li>song.ttf: SimSun.</li>
-<li>kai.ttf (recommend) or simkai.ttf: SimKai.</li>
+<li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
 <li>hkjgt.ttf: DynaFont King Gothic.</li>
 <li>dhttx.ttf: DianHei Extra Light.</li>
 <li>xqgdzt.ttf: XiQue GuZiDian.</li>
-<li>qpcyt.ttf: QiaoPin ChaoYuan.</li>
+<li>qpcyt.ttf: Smart Splice Super Round Body</li>
 <li>arial.ttf: English only.</li>
-<li>dinalternate.ttf: DIN Alternate Bold.</li>
-<li>helveticalt.ttf: Helvetica.</li>
-<li>helveticains.ttf: Helvetica Inserat.</li>
-<li>trajanpro.ttf: TrajanPro-Bold.</li>
+<li>dinalternate.ttf:DIN Alternate Bold</li>
+<li>helveticalt.ttf:Helvetica</li>
+<li>helveticains.ttf:Helvetica Inserat</li>
+<li>trajanpro.ttf:TrajanPro-Bold</li>
 <li>korean.ttf: Korean.</li>
 <li>japanese.ttf: Japanese.</li>
 <li>thai.ttf: Thai.</li>
+<li>roboto.ttf:Roboto</li>
+<li>notosans.ttf:NotoSans</li>
+<li>notosansthai.ttf: Thai NotoSansThai</li>
+<li>sarabun.ttf: Thai Sarabun</li>
+<li>kanit.ttf: Thai Kanit</li>
+<li>charmonman.ttf: Thai Charmonman.</li>
+<li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
+<li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
+<li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
+<li>notosanskr.ttf: Korean NotoSansKR.</li>
+<li>gothica1.ttf: Korean GothicA1.</li>
+<li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
+<li>notosansjp.ttf: Japanese NotoSansJP.</li>
+<li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
+<li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
 Default value: hei.ttf.
 <br>Note:
 <li>kai.ttf is recommended for SimKai.</li>
@@ -69,23 +84,38 @@ Default value: hei.ttf.
 
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFontType(string $FontType) Set Font type. Valid values:
-<li>hei.ttf: SimHei.</li>
+<li>hei.ttf: SimHei</li>
 <li>song.ttf: SimSun.</li>
-<li>kai.ttf (recommend) or simkai.ttf: SimKai.</li>
+<li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
 <li>hkjgt.ttf: DynaFont King Gothic.</li>
 <li>dhttx.ttf: DianHei Extra Light.</li>
 <li>xqgdzt.ttf: XiQue GuZiDian.</li>
-<li>qpcyt.ttf: QiaoPin ChaoYuan.</li>
+<li>qpcyt.ttf: Smart Splice Super Round Body</li>
 <li>arial.ttf: English only.</li>
-<li>dinalternate.ttf: DIN Alternate Bold.</li>
-<li>helveticalt.ttf: Helvetica.</li>
-<li>helveticains.ttf: Helvetica Inserat.</li>
-<li>trajanpro.ttf: TrajanPro-Bold.</li>
+<li>dinalternate.ttf:DIN Alternate Bold</li>
+<li>helveticalt.ttf:Helvetica</li>
+<li>helveticains.ttf:Helvetica Inserat</li>
+<li>trajanpro.ttf:TrajanPro-Bold</li>
 <li>korean.ttf: Korean.</li>
 <li>japanese.ttf: Japanese.</li>
 <li>thai.ttf: Thai.</li>
+<li>roboto.ttf:Roboto</li>
+<li>notosans.ttf:NotoSans</li>
+<li>notosansthai.ttf: Thai NotoSansThai</li>
+<li>sarabun.ttf: Thai Sarabun</li>
+<li>kanit.ttf: Thai Kanit</li>
+<li>charmonman.ttf: Thai Charmonman.</li>
+<li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
+<li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
+<li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
+<li>notosanskr.ttf: Korean NotoSansKR.</li>
+<li>gothica1.ttf: Korean GothicA1.</li>
+<li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
+<li>notosansjp.ttf: Japanese NotoSansJP.</li>
+<li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
+<li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
 Default value: hei.ttf.
 <br>Note:
 <li>kai.ttf is recommended for SimKai.</li>
@@ -302,23 +332,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Font type. Valid values:
-<li>hei.ttf: SimHei.</li>
+<li>hei.ttf: SimHei</li>
 <li>song.ttf: SimSun.</li>
-<li>kai.ttf (recommend) or simkai.ttf: SimKai.</li>
+<li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
 <li>hkjgt.ttf: DynaFont King Gothic.</li>
 <li>dhttx.ttf: DianHei Extra Light.</li>
 <li>xqgdzt.ttf: XiQue GuZiDian.</li>
-<li>qpcyt.ttf: QiaoPin ChaoYuan.</li>
+<li>qpcyt.ttf: Smart Splice Super Round Body</li>
 <li>arial.ttf: English only.</li>
-<li>dinalternate.ttf: DIN Alternate Bold.</li>
-<li>helveticalt.ttf: Helvetica.</li>
-<li>helveticains.ttf: Helvetica Inserat.</li>
-<li>trajanpro.ttf: TrajanPro-Bold.</li>
+<li>dinalternate.ttf:DIN Alternate Bold</li>
+<li>helveticalt.ttf:Helvetica</li>
+<li>helveticains.ttf:Helvetica Inserat</li>
+<li>trajanpro.ttf:TrajanPro-Bold</li>
 <li>korean.ttf: Korean.</li>
 <li>japanese.ttf: Japanese.</li>
 <li>thai.ttf: Thai.</li>
+<li>roboto.ttf:Roboto</li>
+<li>notosans.ttf:NotoSans</li>
+<li>notosansthai.ttf: Thai NotoSansThai</li>
+<li>sarabun.ttf: Thai Sarabun</li>
+<li>kanit.ttf: Thai Kanit</li>
+<li>charmonman.ttf: Thai Charmonman.</li>
+<li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
+<li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
+<li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
+<li>notosanskr.ttf: Korean NotoSansKR.</li>
+<li>gothica1.ttf: Korean GothicA1.</li>
+<li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
+<li>notosansjp.ttf: Japanese NotoSansJP.</li>
+<li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
+<li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
 Default value: hei.ttf.
 <br>Note:
 <li>kai.ttf is recommended for SimKai.</li>
@@ -519,23 +564,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param MediaInputInfo $FontFileInput Input information of the font file of the burned-in subtitle. URL and COS are supported. If both are specified, the URL information is used. If FontFileInput is specified, FontFileInput takes precedence over FontType.
 
      * @param string $FontType Font type. Valid values:
-<li>hei.ttf: SimHei.</li>
+<li>hei.ttf: SimHei</li>
 <li>song.ttf: SimSun.</li>
-<li>kai.ttf (recommend) or simkai.ttf: SimKai.</li>
+<li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
 <li>hkjgt.ttf: DynaFont King Gothic.</li>
 <li>dhttx.ttf: DianHei Extra Light.</li>
 <li>xqgdzt.ttf: XiQue GuZiDian.</li>
-<li>qpcyt.ttf: QiaoPin ChaoYuan.</li>
+<li>qpcyt.ttf: Smart Splice Super Round Body</li>
 <li>arial.ttf: English only.</li>
-<li>dinalternate.ttf: DIN Alternate Bold.</li>
-<li>helveticalt.ttf: Helvetica.</li>
-<li>helveticains.ttf: Helvetica Inserat.</li>
-<li>trajanpro.ttf: TrajanPro-Bold.</li>
+<li>dinalternate.ttf:DIN Alternate Bold</li>
+<li>helveticalt.ttf:Helvetica</li>
+<li>helveticains.ttf:Helvetica Inserat</li>
+<li>trajanpro.ttf:TrajanPro-Bold</li>
 <li>korean.ttf: Korean.</li>
 <li>japanese.ttf: Japanese.</li>
 <li>thai.ttf: Thai.</li>
+<li>roboto.ttf:Roboto</li>
+<li>notosans.ttf:NotoSans</li>
+<li>notosansthai.ttf: Thai NotoSansThai</li>
+<li>sarabun.ttf: Thai Sarabun</li>
+<li>kanit.ttf: Thai Kanit</li>
+<li>charmonman.ttf: Thai Charmonman.</li>
+<li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
+<li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
+<li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
+<li>notosanskr.ttf: Korean NotoSansKR.</li>
+<li>gothica1.ttf: Korean GothicA1.</li>
+<li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
+<li>notosansjp.ttf: Japanese NotoSansJP.</li>
+<li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
+<li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
 Default value: hei.ttf.
 <br>Note:
 <li>kai.ttf is recommended for SimKai.</li>

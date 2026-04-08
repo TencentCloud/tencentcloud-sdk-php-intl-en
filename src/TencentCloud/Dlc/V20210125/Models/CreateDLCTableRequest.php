@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataEngineName(string $DataEngineName) Set Engine name
  * @method string getResourceGroupname() Obtain Resource group name
  * @method void setResourceGroupname(string $ResourceGroupname) Set Resource group name
+ * @method string getCatalog() Obtain 
+ * @method void setCatalog(string $Catalog) Set 
  */
 class CreateDLCTableRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateDLCTableRequest extends AbstractModel
     public $ResourceGroupname;
 
     /**
+     * @var string 
+     */
+    public $Catalog;
+
+    /**
      * @param TableBaseInfo $TableBaseInfo Data table configuration information
      * @param string $TableType Table type
      * @param array $Columns Data table column information
@@ -88,6 +95,7 @@ class CreateDLCTableRequest extends AbstractModel
      * @param ExternalDataConfiguration $ExternalDataConfiguration External table configuration information
      * @param string $DataEngineName Engine name
      * @param string $ResourceGroupname Resource group name
+     * @param string $Catalog 
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class CreateDLCTableRequest extends AbstractModel
 
         if (array_key_exists("ResourceGroupname",$param) and $param["ResourceGroupname"] !== null) {
             $this->ResourceGroupname = $param["ResourceGroupname"];
+        }
+
+        if (array_key_exists("Catalog",$param) and $param["Catalog"] !== null) {
+            $this->Catalog = $param["Catalog"];
         }
     }
 }

@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of recognized segment in seconds.
  * @method float getConfidence() Obtain Confidence of recognized segment. Value range: 0–100.
  * @method void setConfidence(float $Confidence) Set Confidence of recognized segment. Value range: 0–100.
- * @method string getStartTime() Obtain Recognition start UTC time.
- * @method void setStartTime(string $StartTime) Set Recognition start UTC time.
- * @method string getEndTime() Obtain Recognition end UTC time.
- * @method void setEndTime(string $EndTime) Set Recognition end UTC time.
- * @method boolean getSteadyState() Obtain Steady state marker.
- * @method void setSteadyState(boolean $SteadyState) Set Steady state marker.
+ * @method string getStartTime() Obtain 
+ * @method void setStartTime(string $StartTime) Set 
+ * @method string getEndTime() Obtain 
+ * @method void setEndTime(string $EndTime) Set 
+ * @method boolean getSteadyState() Obtain 
+ * @method void setSteadyState(boolean $SteadyState) Set 
  * @method string getUserId() Obtain User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setUserId(string $UserId) Set User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
  */
@@ -60,17 +60,17 @@ class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
     public $Confidence;
 
     /**
-     * @var string Recognition start UTC time.
+     * @var string 
      */
     public $StartTime;
 
     /**
-     * @var string Recognition end UTC time.
+     * @var string 
      */
     public $EndTime;
 
     /**
-     * @var boolean Steady state marker.
+     * @var boolean 
      */
     public $SteadyState;
 
@@ -84,9 +84,9 @@ class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
      * @param float $StartPtsTime Start PTS time of recognized segment in seconds.
      * @param float $EndPtsTime End PTS time of recognized segment in seconds.
      * @param float $Confidence Confidence of recognized segment. Value range: 0–100.
-     * @param string $StartTime Recognition start UTC time.
-     * @param string $EndTime Recognition end UTC time.
-     * @param boolean $SteadyState Steady state marker.
+     * @param string $StartTime 
+     * @param string $EndTime 
+     * @param boolean $SteadyState 
      * @param string $UserId User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()

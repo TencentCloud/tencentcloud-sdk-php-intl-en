@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsc(boolean $Asc) Set Sorting rules: true for ascending order; false for descending order
  * @method string getTableFormat() Obtain Data format type: hive, iceberg, etc.
  * @method void setTableFormat(string $TableFormat) Set Data format type: hive, iceberg, etc.
+ * @method string getDatasourceConnectionName() Obtain 
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) Set 
  */
 class DescribeDLCTableListRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class DescribeDLCTableListRequest extends AbstractModel
     public $TableFormat;
 
     /**
+     * @var string 
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $DbName Database name
      * @param string $Catalog Catalog name
      * @param Filter $Filters Query the list's filter criteria.
@@ -112,6 +119,7 @@ class DescribeDLCTableListRequest extends AbstractModel
      * @param string $Sort Sorting fields
      * @param boolean $Asc Sorting rules: true for ascending order; false for descending order
      * @param string $TableFormat Data format type: hive, iceberg, etc.
+     * @param string $DatasourceConnectionName 
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ class DescribeDLCTableListRequest extends AbstractModel
 
         if (array_key_exists("TableFormat",$param) and $param["TableFormat"] !== null) {
             $this->TableFormat = $param["TableFormat"];
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

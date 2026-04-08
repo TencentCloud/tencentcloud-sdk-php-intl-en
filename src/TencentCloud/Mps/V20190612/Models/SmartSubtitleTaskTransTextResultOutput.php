@@ -20,54 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Translation result.
  *
- * @method array getSegmentSet() Obtain List of segments for translation.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSegmentSet(array $SegmentSet) Set List of segments for translation.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getSubtitlePath() Obtain Subtitle file path.
- * @method void setSubtitlePath(string $SubtitlePath) Set Subtitle file path.
- * @method TaskOutputStorage getOutputStorage() Obtain Subtitle file storage location.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Subtitle file storage location.
- * @method string getPath() Obtain Subtitle file URL.
- * @method void setPath(string $Path) Set Subtitle file URL.
- * @method array getSubtitleResults() Obtain Returned translation result during multilingual translation.	
- * @method void setSubtitleResults(array $SubtitleResults) Set Returned translation result during multilingual translation.	
+ * @method array getSegmentSet() Obtain <p>List of segments for translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSegmentSet(array $SegmentSet) Set <p>List of segments for translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSubtitlePath() Obtain <p>Subtitle file URL.</p>
+ * @method void setSubtitlePath(string $SubtitlePath) Set <p>Subtitle file URL.</p>
+ * @method TaskOutputStorage getOutputStorage() Obtain <p>Smart subtitling result storage information.</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Smart subtitling result storage information.</p>
+ * @method string getPath() Obtain <p>Subtitle file path</p>
+ * @method void setPath(string $Path) Set <p>Subtitle file path</p>
+ * @method array getSubtitleResults() Obtain <p>Returned translation result during multilingual translation.</p>
+ * @method void setSubtitleResults(array $SubtitleResults) Set <p>Returned translation result during multilingual translation.</p>
  */
 class SmartSubtitleTaskTransTextResultOutput extends AbstractModel
 {
     /**
-     * @var array List of segments for translation.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array <p>List of segments for translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SegmentSet;
 
     /**
-     * @var string Subtitle file path.
+     * @var string <p>Subtitle file URL.</p>
      */
     public $SubtitlePath;
 
     /**
-     * @var TaskOutputStorage Subtitle file storage location.
+     * @var TaskOutputStorage <p>Smart subtitling result storage information.</p>
      */
     public $OutputStorage;
 
     /**
-     * @var string Subtitle file URL.
+     * @var string <p>Subtitle file path</p>
      */
     public $Path;
 
     /**
-     * @var array Returned translation result during multilingual translation.	
+     * @var array <p>Returned translation result during multilingual translation.</p>
      */
     public $SubtitleResults;
 
     /**
-     * @param array $SegmentSet List of segments for translation.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $SubtitlePath Subtitle file path.
-     * @param TaskOutputStorage $OutputStorage Subtitle file storage location.
-     * @param string $Path Subtitle file URL.
-     * @param array $SubtitleResults Returned translation result during multilingual translation.	
+     * @param array $SegmentSet <p>List of segments for translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SubtitlePath <p>Subtitle file URL.</p>
+     * @param TaskOutputStorage $OutputStorage <p>Smart subtitling result storage information.</p>
+     * @param string $Path <p>Subtitle file path</p>
+     * @param array $SubtitleResults <p>Returned translation result during multilingual translation.</p>
      */
     function __construct()
     {

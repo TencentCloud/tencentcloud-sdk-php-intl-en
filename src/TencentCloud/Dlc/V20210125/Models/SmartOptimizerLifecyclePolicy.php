@@ -58,6 +58,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var boolean Whether to delete the table
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $DropTable;
 

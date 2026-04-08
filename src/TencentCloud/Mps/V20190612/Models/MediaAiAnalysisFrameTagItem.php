@@ -22,12 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTag() Obtain Frame-specific tag name.
  * @method void setTag(string $Tag) Set Frame-specific tag name.
- * @method array getCategorySet() Obtain Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
-
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture".
- * @method void setCategorySet(array $CategorySet) Set Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
-
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture".
+ * @method array getCategorySet() Obtain 
+ * @method void setCategorySet(array $CategorySet) Set 
  * @method float getConfidence() Obtain Confidence of intelligently generated frame-specific tag between 0 and 100.
  * @method void setConfidence(float $Confidence) Set Confidence of intelligently generated frame-specific tag between 0 and 100.
  */
@@ -39,9 +35,7 @@ class MediaAiAnalysisFrameTagItem extends AbstractModel
     public $Tag;
 
     /**
-     * @var array Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
-
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture".
+     * @var array 
      */
     public $CategorySet;
 
@@ -52,9 +46,7 @@ For example, when the Tag is "tower", CategorySet contains two elements: Categor
 
     /**
      * @param string $Tag Frame-specific tag name.
-     * @param array $CategorySet Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
-
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture".
+     * @param array $CategorySet 
      * @param float $Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
      */
     function __construct()

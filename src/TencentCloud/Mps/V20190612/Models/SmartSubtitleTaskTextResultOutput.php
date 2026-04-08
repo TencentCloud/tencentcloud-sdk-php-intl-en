@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Smart subtitle recognition result.
  *
- * @method array getRecognizeSubtitleResult() Obtain Subtitle recognition result.
+ * @method array getRecognizeSubtitleResult() Obtain <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRecognizeSubtitleResult(array $RecognizeSubtitleResult) Set Subtitle recognition result.
+ * @method void setRecognizeSubtitleResult(array $RecognizeSubtitleResult) Set <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTransSubtitleResult() Obtain Subtitle translation result.
+ * @method array getTransSubtitleResult() Obtain <p>Translated subtitles</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransSubtitleResult(array $TransSubtitleResult) Set Subtitle translation result.
+ * @method void setTransSubtitleResult(array $TransSubtitleResult) Set <p>Translated subtitles</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method TaskOutputStorage getOutputStorage() Obtain Storage location of the subtitle file.
+ * @method TaskOutputStorage getOutputStorage() Obtain <p>Storage location of the subtitle file</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of the subtitle file.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Storage location of the subtitle file</p>
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SmartSubtitleTaskTextResultOutput extends AbstractModel
 {
     /**
-     * @var array Subtitle recognition result.
+     * @var array <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RecognizeSubtitleResult;
 
     /**
-     * @var array Subtitle translation result.
+     * @var array <p>Translated subtitles</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TransSubtitleResult;
 
     /**
-     * @var TaskOutputStorage Storage location of the subtitle file.
+     * @var TaskOutputStorage <p>Storage location of the subtitle file</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OutputStorage;
 
     /**
-     * @param array $RecognizeSubtitleResult Subtitle recognition result.
+     * @param array $RecognizeSubtitleResult <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $TransSubtitleResult Subtitle translation result.
+     * @param array $TransSubtitleResult <p>Translated subtitles</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskOutputStorage $OutputStorage Storage location of the subtitle file.
+     * @param TaskOutputStorage $OutputStorage <p>Storage location of the subtitle file</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

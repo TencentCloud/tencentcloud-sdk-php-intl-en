@@ -20,78 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySmartEraseTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique identifier of the smart erasing template.
- * @method void setDefinition(integer $Definition) Set Unique identifier of the smart erasing template.
- * @method string getName() Obtain Length limit for the smart erasing template name: 64 characters.
- * @method void setName(string $Name) Set Length limit for the smart erasing template name: 64 characters.
- * @method string getComment() Obtain Length limit for the description information of the smart erasing template: 256 characters.
- * @method void setComment(string $Comment) Set Length limit for the description information of the smart erasing template: 256 characters.
- * @method string getEraseType() Obtain Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
- * @method void setEraseType(string $EraseType) Set Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
- * @method SmartEraseSubtitleConfig getEraseSubtitleConfig() Obtain Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.
- * @method void setEraseSubtitleConfig(SmartEraseSubtitleConfig $EraseSubtitleConfig) Set Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.
- * @method SmartEraseWatermarkConfig getEraseWatermarkConfig() Obtain Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.
- * @method void setEraseWatermarkConfig(SmartEraseWatermarkConfig $EraseWatermarkConfig) Set Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.
- * @method SmartErasePrivacyConfig getErasePrivacyConfig() Obtain Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.
- * @method void setErasePrivacyConfig(SmartErasePrivacyConfig $ErasePrivacyConfig) Set Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.
+ * @method integer getDefinition() Obtain <p>Unique identifier of the intelligent erasure template</p>
+ * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the intelligent erasure template</p>
+ * @method string getName() Obtain <p>Length limit for the smart erasing template name: 64 characters.</p>
+ * @method void setName(string $Name) Set <p>Length limit for the smart erasing template name: 64 characters.</p>
+ * @method string getComment() Obtain <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
+ * @method void setComment(string $Comment) Set <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
+ * @method string getEraseType() Obtain <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+ * @method void setEraseType(string $EraseType) Set <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+ * @method SmartEraseSubtitleConfig getEraseSubtitleConfig() Obtain <p>Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.</p>
+ * @method void setEraseSubtitleConfig(SmartEraseSubtitleConfig $EraseSubtitleConfig) Set <p>Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.</p>
+ * @method SmartEraseWatermarkConfig getEraseWatermarkConfig() Obtain <p>Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.</p>
+ * @method void setEraseWatermarkConfig(SmartEraseWatermarkConfig $EraseWatermarkConfig) Set <p>Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.</p>
+ * @method SmartErasePrivacyConfig getErasePrivacyConfig() Obtain <p>Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.</p>
+ * @method void setErasePrivacyConfig(SmartErasePrivacyConfig $ErasePrivacyConfig) Set <p>Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.</p>
  */
 class ModifySmartEraseTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique identifier of the smart erasing template.
+     * @var integer <p>Unique identifier of the intelligent erasure template</p>
      */
     public $Definition;
 
     /**
-     * @var string Length limit for the smart erasing template name: 64 characters.
+     * @var string <p>Length limit for the smart erasing template name: 64 characters.</p>
      */
     public $Name;
 
     /**
-     * @var string Length limit for the description information of the smart erasing template: 256 characters.
+     * @var string <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
      */
     public $Comment;
 
     /**
-     * @var string Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
+     * @var string <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
      */
     public $EraseType;
 
     /**
-     * @var SmartEraseSubtitleConfig Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.
+     * @var SmartEraseSubtitleConfig <p>Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.</p>
      */
     public $EraseSubtitleConfig;
 
     /**
-     * @var SmartEraseWatermarkConfig Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.
+     * @var SmartEraseWatermarkConfig <p>Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.</p>
      */
     public $EraseWatermarkConfig;
 
     /**
-     * @var SmartErasePrivacyConfig Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.
+     * @var SmartErasePrivacyConfig <p>Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.</p>
      */
     public $ErasePrivacyConfig;
 
     /**
-     * @param integer $Definition Unique identifier of the smart erasing template.
-     * @param string $Name Length limit for the smart erasing template name: 64 characters.
-     * @param string $Comment Length limit for the description information of the smart erasing template: 256 characters.
-     * @param string $EraseType Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
-     * @param SmartEraseSubtitleConfig $EraseSubtitleConfig Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.
-     * @param SmartEraseWatermarkConfig $EraseWatermarkConfig Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.
-     * @param SmartErasePrivacyConfig $ErasePrivacyConfig Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.
+     * @param integer $Definition <p>Unique identifier of the intelligent erasure template</p>
+     * @param string $Name <p>Length limit for the smart erasing template name: 64 characters.</p>
+     * @param string $Comment <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
+     * @param string $EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * @param SmartEraseSubtitleConfig $EraseSubtitleConfig <p>Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.</p>
+     * @param SmartEraseWatermarkConfig $EraseWatermarkConfig <p>Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.</p>
+     * @param SmartErasePrivacyConfig $ErasePrivacyConfig <p>Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.</p>
      */
     function __construct()
     {

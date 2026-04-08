@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Smart subtitle task result.
  *
- * @method string getLanguage() Obtain Language of the subtitle file.
- * @method void setLanguage(string $Language) Set Language of the subtitle file.
- * @method string getStatus() Obtain Whether the processing is successful.
- * @method void setStatus(string $Status) Set Whether the processing is successful.
- * @method string getPath() Obtain Subtitle file URL.
- * @method void setPath(string $Path) Set Subtitle file URL.
+ * @method string getLanguage() Obtain <p>Language of the subtitle file</p>
+ * @method void setLanguage(string $Language) Set <p>Language of the subtitle file</p>
+ * @method string getStatus() Obtain <p>Whether the processing is successful.</p>
+ * @method void setStatus(string $Status) Set <p>Whether the processing is successful.</p>
+ * @method string getPath() Obtain <p>Subtitle file path</p>
+ * @method void setPath(string $Path) Set <p>Subtitle file path</p>
+ * @method string getSubtitleEmbedPath() Obtain <p>Subtitle suppression video path.</p>
+ * @method void setSubtitleEmbedPath(string $SubtitleEmbedPath) Set <p>Subtitle suppression video path.</p>
  */
 class SubtitleResult extends AbstractModel
 {
     /**
-     * @var string Language of the subtitle file.
+     * @var string <p>Language of the subtitle file</p>
      */
     public $Language;
 
     /**
-     * @var string Whether the processing is successful.
+     * @var string <p>Whether the processing is successful.</p>
      */
     public $Status;
 
     /**
-     * @var string Subtitle file URL.
+     * @var string <p>Subtitle file path</p>
      */
     public $Path;
 
     /**
-     * @param string $Language Language of the subtitle file.
-     * @param string $Status Whether the processing is successful.
-     * @param string $Path Subtitle file URL.
+     * @var string <p>Subtitle suppression video path.</p>
+     */
+    public $SubtitleEmbedPath;
+
+    /**
+     * @param string $Language <p>Language of the subtitle file</p>
+     * @param string $Status <p>Whether the processing is successful.</p>
+     * @param string $Path <p>Subtitle file path</p>
+     * @param string $SubtitleEmbedPath <p>Subtitle suppression video path.</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class SubtitleResult extends AbstractModel
 
         if (array_key_exists("Path",$param) and $param["Path"] !== null) {
             $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("SubtitleEmbedPath",$param) and $param["SubtitleEmbedPath"] !== null) {
+            $this->SubtitleEmbedPath = $param["SubtitleEmbedPath"];
         }
     }
 }

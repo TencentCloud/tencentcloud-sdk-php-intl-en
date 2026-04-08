@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQualityControlResults(array $QualityControlResults) Set Content quality inspection result list.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDiagnoseResults() Obtain Format diagnostic results list.
- * @method void setDiagnoseResults(array $DiagnoseResults) Set Format diagnostic results list.
+ * @method array getDiagnoseResults() Obtain 
+ * @method void setDiagnoseResults(array $DiagnoseResults) Set 
  * @method array getQualityControlResultSet() Obtain Content quality inspection result list.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQualityControlResultSet(array $QualityControlResultSet) Set Content quality inspection result list.
@@ -45,7 +45,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $QualityControlResults;
 
     /**
-     * @var array Format diagnostic results list.
+     * @var array 
      * @deprecated
      */
     public $DiagnoseResults;
@@ -65,7 +65,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param array $QualityControlResults Content quality inspection result list.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $DiagnoseResults Format diagnostic results list.
+     * @param array $DiagnoseResults 
      * @param array $QualityControlResultSet Content quality inspection result list.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $DiagnoseResultSet Format diagnostic result list.

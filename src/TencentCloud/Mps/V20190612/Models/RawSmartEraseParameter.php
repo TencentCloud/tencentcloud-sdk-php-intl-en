@@ -20,78 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Smart erasure custom parameter.
  *
- * @method string getEraseType() Obtain Specifies the removal type.
--subtitle removal.
--Remove watermark.
--privacy protection.
- * @method void setEraseType(string $EraseType) Set Specifies the removal type.
--subtitle removal.
--Remove watermark.
--privacy protection.
- * @method SmartEraseSubtitleConfig getEraseSubtitleConfig() Obtain Subtitle erasure configuration.
-When EraseType is subtitle, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setEraseSubtitleConfig(SmartEraseSubtitleConfig $EraseSubtitleConfig) Set Subtitle erasure configuration.
-When EraseType is subtitle, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method SmartEraseWatermarkConfig getEraseWatermarkConfig() Obtain Specifies the watermark removal configuration.
-When EraseType is watermark, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setEraseWatermarkConfig(SmartEraseWatermarkConfig $EraseWatermarkConfig) Set Specifies the watermark removal configuration.
-When EraseType is watermark, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method SmartErasePrivacyConfig getErasePrivacyConfig() Obtain Privacy protection configuration.
-When EraseType is privacy, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setErasePrivacyConfig(SmartErasePrivacyConfig $ErasePrivacyConfig) Set Privacy protection configuration.
-When EraseType is privacy, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getEraseType() Obtain <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+ * @method void setEraseType(string $EraseType) Set <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+ * @method SmartEraseSubtitleConfig getEraseSubtitleConfig() Obtain <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEraseSubtitleConfig(SmartEraseSubtitleConfig $EraseSubtitleConfig) Set <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SmartEraseWatermarkConfig getEraseWatermarkConfig() Obtain <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEraseWatermarkConfig(SmartEraseWatermarkConfig $EraseWatermarkConfig) Set <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SmartErasePrivacyConfig getErasePrivacyConfig() Obtain <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setErasePrivacyConfig(SmartErasePrivacyConfig $ErasePrivacyConfig) Set <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSubtitleEmbedId() Obtain <p>id of the subtitle removal suppression template.</p>
+ * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) Set <p>id of the subtitle removal suppression template.</p>
+ * @method integer getUseOriginalPos() Obtain <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+ * @method void setUseOriginalPos(integer $UseOriginalPos) Set <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+ * @method integer getUseOriginalSize() Obtain <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+ * @method void setUseOriginalSize(integer $UseOriginalSize) Set <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
  */
 class RawSmartEraseParameter extends AbstractModel
 {
     /**
-     * @var string Specifies the removal type.
--subtitle removal.
--Remove watermark.
--privacy protection.
+     * @var string <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
      */
     public $EraseType;
 
     /**
-     * @var SmartEraseSubtitleConfig Subtitle erasure configuration.
-When EraseType is subtitle, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var SmartEraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EraseSubtitleConfig;
 
     /**
-     * @var SmartEraseWatermarkConfig Specifies the watermark removal configuration.
-When EraseType is watermark, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var SmartEraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EraseWatermarkConfig;
 
     /**
-     * @var SmartErasePrivacyConfig Privacy protection configuration.
-When EraseType is privacy, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var SmartErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ErasePrivacyConfig;
 
     /**
-     * @param string $EraseType Specifies the removal type.
--subtitle removal.
--Remove watermark.
--privacy protection.
-     * @param SmartEraseSubtitleConfig $EraseSubtitleConfig Subtitle erasure configuration.
-When EraseType is subtitle, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SmartEraseWatermarkConfig $EraseWatermarkConfig Specifies the watermark removal configuration.
-When EraseType is watermark, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SmartErasePrivacyConfig $ErasePrivacyConfig Privacy protection configuration.
-When EraseType is privacy, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer <p>id of the subtitle removal suppression template.</p>
+     */
+    public $SubtitleEmbedId;
+
+    /**
+     * @var integer <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+     */
+    public $UseOriginalPos;
+
+    /**
+     * @var integer <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+     */
+    public $UseOriginalSize;
+
+    /**
+     * @param string $EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * @param SmartEraseSubtitleConfig $EraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SmartEraseWatermarkConfig $EraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SmartErasePrivacyConfig $ErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
+     * @param integer $UseOriginalPos <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+     * @param integer $UseOriginalSize <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
      */
     function __construct()
     {
@@ -123,6 +123,18 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("ErasePrivacyConfig",$param) and $param["ErasePrivacyConfig"] !== null) {
             $this->ErasePrivacyConfig = new SmartErasePrivacyConfig();
             $this->ErasePrivacyConfig->deserialize($param["ErasePrivacyConfig"]);
+        }
+
+        if (array_key_exists("SubtitleEmbedId",$param) and $param["SubtitleEmbedId"] !== null) {
+            $this->SubtitleEmbedId = $param["SubtitleEmbedId"];
+        }
+
+        if (array_key_exists("UseOriginalPos",$param) and $param["UseOriginalPos"] !== null) {
+            $this->UseOriginalPos = $param["UseOriginalPos"];
+        }
+
+        if (array_key_exists("UseOriginalSize",$param) and $param["UseOriginalSize"] !== null) {
+            $this->UseOriginalSize = $param["UseOriginalSize"];
         }
     }
 }

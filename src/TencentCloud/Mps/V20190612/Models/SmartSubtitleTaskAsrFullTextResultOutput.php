@@ -20,46 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Full speech recognition result.
  *
- * @method array getSegmentSet() Obtain List of segments for full speech recognition.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSegmentSet(array $SegmentSet) Set List of segments for full speech recognition.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getPath() Obtain Subtitle file path.
- * @method void setPath(string $Path) Set Subtitle file path.
- * @method string getSubtitlePath() Obtain Subtitle file path.
- * @method void setSubtitlePath(string $SubtitlePath) Set Subtitle file path.
- * @method TaskOutputStorage getOutputStorage() Obtain Subtitle file storage location.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Subtitle file storage location.
+ * @method array getSegmentSet() Obtain <p>List of segments for full speech recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSegmentSet(array $SegmentSet) Set <p>List of segments for full speech recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPath() Obtain <p>Subtitle file path</p>
+ * @method void setPath(string $Path) Set <p>Subtitle file path</p>
+ * @method string getSubtitlePath() Obtain <p>Subtitle file URL.</p>
+ * @method void setSubtitlePath(string $SubtitlePath) Set <p>Subtitle file URL.</p>
+ * @method SubtitleResult getSubtitleInfo() Obtain <p>Subtitle recognition result info.</p>
+ * @method void setSubtitleInfo(SubtitleResult $SubtitleInfo) Set <p>Subtitle recognition result info.</p>
+ * @method TaskOutputStorage getOutputStorage() Obtain <p>Storage location of the subtitle file.</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Storage location of the subtitle file.</p>
  */
 class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel
 {
     /**
-     * @var array List of segments for full speech recognition.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array <p>List of segments for full speech recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SegmentSet;
 
     /**
-     * @var string Subtitle file path.
+     * @var string <p>Subtitle file path</p>
      */
     public $Path;
 
     /**
-     * @var string Subtitle file path.
+     * @var string <p>Subtitle file URL.</p>
      */
     public $SubtitlePath;
 
     /**
-     * @var TaskOutputStorage Subtitle file storage location.
+     * @var SubtitleResult <p>Subtitle recognition result info.</p>
+     */
+    public $SubtitleInfo;
+
+    /**
+     * @var TaskOutputStorage <p>Storage location of the subtitle file.</p>
      */
     public $OutputStorage;
 
     /**
-     * @param array $SegmentSet List of segments for full speech recognition.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Path Subtitle file path.
-     * @param string $SubtitlePath Subtitle file path.
-     * @param TaskOutputStorage $OutputStorage Subtitle file storage location.
+     * @param array $SegmentSet <p>List of segments for full speech recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Path <p>Subtitle file path</p>
+     * @param string $SubtitlePath <p>Subtitle file URL.</p>
+     * @param SubtitleResult $SubtitleInfo <p>Subtitle recognition result info.</p>
+     * @param TaskOutputStorage $OutputStorage <p>Storage location of the subtitle file.</p>
      */
     function __construct()
     {
@@ -89,6 +97,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("SubtitlePath",$param) and $param["SubtitlePath"] !== null) {
             $this->SubtitlePath = $param["SubtitlePath"];
+        }
+
+        if (array_key_exists("SubtitleInfo",$param) and $param["SubtitleInfo"] !== null) {
+            $this->SubtitleInfo = new SubtitleResult();
+            $this->SubtitleInfo->deserialize($param["SubtitleInfo"]);
         }
 
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
