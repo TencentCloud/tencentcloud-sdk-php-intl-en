@@ -107,6 +107,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ModifyInstanceAccountResponse ModifyInstanceAccount(Models\ModifyInstanceAccountRequest $req) This API is used to modify an instance account.
  * @method Models\ModifyInstanceAvailabilityZonesResponse ModifyInstanceAvailabilityZones(Models\ModifyInstanceAvailabilityZonesRequest $req) This API is used to change the availability zone of the instance.
  * @method Models\ModifyInstanceBackupModeResponse ModifyInstanceBackupMode(Models\ModifyInstanceBackupModeRequest $req) This API is used to modify the backup mode of an instance.
+ * @method Models\ModifyInstanceChargeTypeResponse ModifyInstanceChargeType(Models\ModifyInstanceChargeTypeRequest $req) This API is used to change the billing type of an instance.
  * @method Models\ModifyInstanceEventResponse ModifyInstanceEvent(Models\ModifyInstanceEventRequest $req) This API is used to modify the operations event execution schedule of an instance.
  * @method Models\ModifyInstanceLogDeliveryResponse ModifyInstanceLogDelivery(Models\ModifyInstanceLogDeliveryRequest $req) This API is used to enable or disable the shipping of instance logs to CLS.
  * @method Models\ModifyInstanceParamsResponse ModifyInstanceParams(Models\ModifyInstanceParamsRequest $req) This API is used to modify the parameter configuration of a Redis instance.

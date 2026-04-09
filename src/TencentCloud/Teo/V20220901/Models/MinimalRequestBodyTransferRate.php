@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Minimum minimum body transfer rate threshold configuration. ```.
+ * Minimum minimum body transfer rate threshold configuration.
  *
  * @method string getMinimalAvgTransferRateThreshold() Obtain Minimum body transfer rate threshold, the measurement unit is only supported in bps.
  * @method void setMinimalAvgTransferRateThreshold(string $MinimalAvgTransferRateThreshold) Set Minimum body transfer rate threshold, the measurement unit is only supported in bps.

@@ -38,14 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) Set The start time of the validity period.
  * @method string getEndTime() Obtain The end time of the validity period.
  * @method void setEndTime(string $EndTime) Set The end time of the validity period.
- * @method ApplicableProducts getApplicableProducts() Obtain The products that are applicable.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setApplicableProducts(ApplicableProducts $ApplicableProducts) Set The products that are applicable.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method array getExcludedProducts() Obtain The products that are not applicable.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setExcludedProducts(array $ExcludedProducts) Set The products that are not applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method ApplicableProducts getApplicableProducts() Obtain Product information applies to
+ * @method void setApplicableProducts(ApplicableProducts $ApplicableProducts) Set Product information applies to
+ * @method array getExcludedProducts() Obtain Product information not applicable
+ * @method void setExcludedProducts(array $ExcludedProducts) Set Product information not applicable
+ * @method string getPolicyRemark() Obtain Instructions/Batch Remarks
+ * @method void setPolicyRemark(string $PolicyRemark) Set Instructions/Batch Remarks
+ * @method string getCreateTime() Obtain Coupon issuance time
+ * @method void setCreateTime(string $CreateTime) Set Coupon issuance time
  */
 class VoucherInfos extends AbstractModel
 {
@@ -95,16 +95,24 @@ class VoucherInfos extends AbstractModel
     public $EndTime;
 
     /**
-     * @var ApplicableProducts The products that are applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var ApplicableProducts Product information applies to
      */
     public $ApplicableProducts;
 
     /**
-     * @var array The products that are not applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array Product information not applicable
      */
     public $ExcludedProducts;
+
+    /**
+     * @var string Instructions/Batch Remarks
+     */
+    public $PolicyRemark;
+
+    /**
+     * @var string Coupon issuance time
+     */
+    public $CreateTime;
 
     /**
      * @param string $OwnerUin The owner of the voucher.
@@ -116,10 +124,10 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $PayScene If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
      * @param string $BeginTime The start time of the validity period.
      * @param string $EndTime The end time of the validity period.
-     * @param ApplicableProducts $ApplicableProducts The products that are applicable.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param array $ExcludedProducts The products that are not applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param ApplicableProducts $ApplicableProducts Product information applies to
+     * @param array $ExcludedProducts Product information not applicable
+     * @param string $PolicyRemark Instructions/Batch Remarks
+     * @param string $CreateTime Coupon issuance time
      */
     function __construct()
     {
@@ -182,6 +190,14 @@ Note: This field may return `null`, indicating that no valid value was found.
                 $obj->deserialize($value);
                 array_push($this->ExcludedProducts, $obj);
             }
+        }
+
+        if (array_key_exists("PolicyRemark",$param) and $param["PolicyRemark"] !== null) {
+            $this->PolicyRemark = $param["PolicyRemark"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

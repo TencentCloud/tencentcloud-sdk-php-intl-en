@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoUpdate(ManagedRuleAutoUpdate $AutoUpdate) Set Managed rule automatic update option.
  * @method array getManagedRuleGroups() Obtain Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
  * @method void setManagedRuleGroups(array $ManagedRuleGroups) Set Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
+ * @method FrequentScanningProtection getFrequentScanningProtection() Obtain High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+ * @method void setFrequentScanningProtection(FrequentScanningProtection $FrequentScanningProtection) Set High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
  */
 class ManagedRules extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ManagedRules extends AbstractModel
     public $ManagedRuleGroups;
 
     /**
+     * @var FrequentScanningProtection High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+     */
+    public $FrequentScanningProtection;
+
+    /**
      * @param string $Enabled The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
      * @param string $DetectionOnly Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
      * @param string $SemanticAnalysis Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
      * @param ManagedRuleAutoUpdate $AutoUpdate Managed rule automatic update option.
      * @param array $ManagedRuleGroups Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
+     * @param FrequentScanningProtection $FrequentScanningProtection High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
      */
     function __construct()
     {
@@ -102,6 +110,11 @@ class ManagedRules extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ManagedRuleGroups, $obj);
             }
+        }
+
+        if (array_key_exists("FrequentScanningProtection",$param) and $param["FrequentScanningProtection"] !== null) {
+            $this->FrequentScanningProtection = new FrequentScanningProtection();
+            $this->FrequentScanningProtection->deserialize($param["FrequentScanningProtection"]);
         }
     }
 }

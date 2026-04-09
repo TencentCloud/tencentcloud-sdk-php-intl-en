@@ -36,6 +36,8 @@ Note: This field may return null, indicating that no valid value can be obtained
  * @method void setExceptionRules(ExceptionRules $ExceptionRules) Set Exception rule configuration.
  * @method BotManagement getBotManagement() Obtain Bot management configuration.
  * @method void setBotManagement(BotManagement $BotManagement) Set Bot management configuration.
+ * @method BotManagementLite getBotManagementLite() Obtain Basic Bot management configuration.
+ * @method void setBotManagementLite(BotManagementLite $BotManagementLite) Set Basic Bot management configuration.
  */
 class SecurityPolicy extends AbstractModel
 {
@@ -72,6 +74,11 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $BotManagement;
 
     /**
+     * @var BotManagementLite Basic Bot management configuration.
+     */
+    public $BotManagementLite;
+
+    /**
      * @param CustomRules $CustomRules Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param ManagedRules $ManagedRules Managed. If the parameter is null or not filled, the configuration last set will be used by default.
@@ -80,6 +87,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param RateLimitingRules $RateLimitingRules Configures the rate limiting rule.
      * @param ExceptionRules $ExceptionRules Exception rule configuration.
      * @param BotManagement $BotManagement Bot management configuration.
+     * @param BotManagementLite $BotManagementLite Basic Bot management configuration.
      */
     function __construct()
     {
@@ -122,6 +130,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("BotManagement",$param) and $param["BotManagement"] !== null) {
             $this->BotManagement = new BotManagement();
             $this->BotManagement->deserialize($param["BotManagement"]);
+        }
+
+        if (array_key_exists("BotManagementLite",$param) and $param["BotManagementLite"] !== null) {
+            $this->BotManagementLite = new BotManagementLite();
+            $this->BotManagementLite->deserialize($param["BotManagementLite"]);
         }
     }
 }

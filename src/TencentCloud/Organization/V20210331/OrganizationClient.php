@@ -113,6 +113,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\ListOrganizationIdentityResponse ListOrganizationIdentity(Models\ListOrganizationIdentityRequest $req) This API is used to get the list of access identities of an organization member.
  * @method Models\ListOrganizationServiceResponse ListOrganizationService(Models\ListOrganizationServiceRequest $req) This API is used to obtain the list of organization service settings.
  * @method Models\ListPermissionPoliciesInRoleConfigurationResponse ListPermissionPoliciesInRoleConfiguration(Models\ListPermissionPoliciesInRoleConfigurationRequest $req) This API is used to obtain the policy list in permission configurations.
+ * @method Models\ListPoliciesResponse ListPolicies(Models\ListPoliciesRequest $req) This API is used to query and view the policy list data.
  * @method Models\ListPoliciesForTargetResponse ListPoliciesForTarget(Models\ListPoliciesForTargetRequest $req) This API is used to query the list of policies associated with a target.
  * @method Models\ListRoleAssignmentsResponse ListRoleAssignments(Models\ListRoleAssignmentsRequest $req) This API is used to query the authorization list.
  * @method Models\ListRoleConfigurationProvisioningsResponse ListRoleConfigurationProvisionings(Models\ListRoleConfigurationProvisioningsRequest $req) This API is used to query the permission configuration deployment list.

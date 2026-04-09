@@ -20,146 +20,202 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVoucherInfo request structure.
  *
- * @method integer getLimit() Obtain The number of records per page. The default is 20, and the maximum is 1,000.
- * @method void setLimit(integer $Limit) Set The number of records per page. The default is 20, and the maximum is 1,000.
- * @method integer getOffset() Obtain The page number the records start from. The default is 1.
- * @method void setOffset(integer $Offset) Set The page number the records start from. The default is 1.
- * @method string getStatus() Obtain The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
- * @method void setStatus(string $Status) Set The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
- * @method string getVoucherId() Obtain The voucher ID.
- * @method void setVoucherId(string $VoucherId) Set The voucher ID.
- * @method string getCodeId() Obtain The voucher order ID.
- * @method void setCodeId(string $CodeId) Set The voucher order ID.
- * @method string getProductCode() Obtain The product code.
- * @method void setProductCode(string $ProductCode) Set The product code.
- * @method string getActivityId() Obtain The campaign ID.
- * @method void setActivityId(string $ActivityId) Set The campaign ID.
- * @method string getVoucherName() Obtain The voucher name.
- * @method void setVoucherName(string $VoucherName) Set The voucher name.
- * @method string getTimeFrom() Obtain The start date of the voucher issuance, such as `2021-01-01`.
- * @method void setTimeFrom(string $TimeFrom) Set The start date of the voucher issuance, such as `2021-01-01`.
- * @method string getTimeTo() Obtain The end date of the voucher issuance, such as `2021-01-01`.
- * @method void setTimeTo(string $TimeTo) Set The end date of the voucher issuance, such as `2021-01-01`.
- * @method string getSortField() Obtain The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
- * @method void setSortField(string $SortField) Set The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
- * @method string getSortOrder() Obtain Whether to sort the records in ascending or descending order. Valid values: desc, asc.
- * @method void setSortOrder(string $SortOrder) Set Whether to sort the records in ascending or descending order. Valid values: desc, asc.
- * @method string getPayMode() Obtain The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
- * @method void setPayMode(string $PayMode) Set The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
- * @method string getPayScene() Obtain If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
- * @method void setPayScene(string $PayScene) Set If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
- * @method string getOperator() Obtain The operator. The default is the UIN of the current user.
- * @method void setOperator(string $Operator) Set The operator. The default is the UIN of the current user.
- * @method string getVoucherMainType() Obtain The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
- * @method void setVoucherMainType(string $VoucherMainType) Set The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
- * @method string getVoucherSubType() Obtain Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
- * @method void setVoucherSubType(string $VoucherSubType) Set Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+ * @method integer getLimit() Obtain <p>How many data entries per page, 20 is selected by default, maximum not exceeding 1000</p>
+ * @method void setLimit(integer $Limit) Set <p>How many data entries per page, 20 is selected by default, maximum not exceeding 1000</p>
+ * @method integer getOffset() Obtain <p>Page number, starts from 1 by default</p>
+ * @method void setOffset(integer $Offset) Set <p>Page number, starts from 1 by default</p>
+ * @method string getStatus() Obtain <p>Voucher status: pending use: unUsed, Used: used, delivered: delivered, discarded: cancel, expired: overdue</p>
+ * @method void setStatus(string $Status) Set <p>Voucher status: pending use: unUsed, Used: used, delivered: delivered, discarded: cancel, expired: overdue</p>
+ * @method string getVoucherId() Obtain <p>Voucher id</p>
+ * @method void setVoucherId(string $VoucherId) Set <p>Voucher id</p>
+ * @method string getCodeId() Obtain <p>Voucher order id</p>
+ * @method void setCodeId(string $CodeId) Set <p>Voucher order id</p>
+ * @method string getProductCode() Obtain <p>product code</p>
+ * @method void setProductCode(string $ProductCode) Set <p>product code</p>
+ * @method string getActivityId() Obtain <p>Activity id</p>
+ * @method void setActivityId(string $ActivityId) Set <p>Activity id</p>
+ * @method string getVoucherName() Obtain <p>Voucher name</p>
+ * @method void setVoucherName(string $VoucherName) Set <p>Voucher name</p>
+ * @method string getTimeFrom() Obtain <p>Start time of delivery. Example: 2021-01-01</p>
+ * @method void setTimeFrom(string $TimeFrom) Set <p>Start time of delivery. Example: 2021-01-01</p>
+ * @method string getTimeTo() Obtain <p>Delivery end time. Example: 2021-01-01</p>
+ * @method void setTimeTo(string $TimeTo) Set <p>Delivery end time. Example: 2021-01-01</p>
+ * @method string getSortField() Obtain <p>Specified sorting field: BeginTime start time, EndTime expiry time, CreateTime creation time</p>
+ * @method void setSortField(string $SortField) Set <p>Specified sorting field: BeginTime start time, EndTime expiry time, CreateTime creation time</p>
+ * @method string getSortOrder() Obtain <p>Specify ascending/descending order: desc, asc</p>
+ * @method void setSortOrder(string $SortOrder) Set <p>Specify ascending/descending order: desc, asc</p>
+ * @method string getPayMode() Obtain <p>Payment mode, postPay (postpaid)/prePay (prepaid)/riPay (reserved instance)/"" or "*" means all modes. If payMode is "" or "*", productCode and subProductCode must be empty.</p>
+ * @method void setPayMode(string $PayMode) Set <p>Payment mode, postPay (postpaid)/prePay (prepaid)/riPay (reserved instance)/"" or "*" means all modes. If payMode is "" or "*", productCode and subProductCode must be empty.</p>
+ * @method string getPayScene() Obtain <p>Payment scenario PayMode=postPay: spotpay - spot instance, "settle account" - standard post-paid. PayMode=prePay: purchase - monthly subscription new purchase, renew - annual and monthly renewal (auto renewal), modify - monthly subscription configuration change. PayMode=riPay: oneOffFee - prepayment of reserved instance, hourlyFee - hourly charge for reserved instance, * - support all payment scenarios.</p>
+ * @method void setPayScene(string $PayScene) Set <p>Payment scenario PayMode=postPay: spotpay - spot instance, "settle account" - standard post-paid. PayMode=prePay: purchase - monthly subscription new purchase, renew - annual and monthly renewal (auto renewal), modify - monthly subscription configuration change. PayMode=riPay: oneOffFee - prepayment of reserved instance, hourlyFee - hourly charge for reserved instance, * - support all payment scenarios.</p>
+ * @method string getOperator() Obtain <p>Operator is used by default as user uin</p>
+ * @method void setOperator(string $Operator) Set <p>Operator is used by default as user uin</p>
+ * @method string getVoucherMainType() Obtain <p>The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.</p>
+ * @method void setVoucherMainType(string $VoucherMainType) Set <p>The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.</p>
+ * @method string getVoucherSubType() Obtain <p>Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.</p>
+ * @method void setVoucherSubType(string $VoucherSubType) Set <p>Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.</p>
+ * @method string getStartTimeFrom() Obtain <p>Voucher validity start time</p>
+ * @method void setStartTimeFrom(string $StartTimeFrom) Set <p>Voucher validity start time</p>
+ * @method string getStartTimeTo() Obtain <p>Voucher validity time end time</p>
+ * @method void setStartTimeTo(string $StartTimeTo) Set <p>Voucher validity time end time</p>
+ * @method string getEndTimeFrom() Obtain <p>Voucher expiration time start time</p>
+ * @method void setEndTimeFrom(string $EndTimeFrom) Set <p>Voucher expiration time start time</p>
+ * @method string getEndTimeTo() Obtain <p>Voucher expiration time end time</p>
+ * @method void setEndTimeTo(string $EndTimeTo) Set <p>Voucher expiration time end time</p>
+ * @method string getCreateTimeFrom() Obtain <p>Voucher issuance start time</p>
+ * @method void setCreateTimeFrom(string $CreateTimeFrom) Set <p>Voucher issuance start time</p>
+ * @method string getCreateTimeTo() Obtain <p>Voucher issuance time end time</p>
+ * @method void setCreateTimeTo(string $CreateTimeTo) Set <p>Voucher issuance time end time</p>
+ * @method string getLang() Obtain <p>Language parameter</p><p>Default value: zh</p><p>Expect the product name to return in Chinese or other languages. Currently only support Chinese and English. Return in Chinese when "zh" is entered or left blank; return in English in other cases.</p>
+ * @method void setLang(string $Lang) Set <p>Language parameter</p><p>Default value: zh</p><p>Expect the product name to return in Chinese or other languages. Currently only support Chinese and English. Return in Chinese when "zh" is entered or left blank; return in English in other cases.</p>
  */
 class DescribeVoucherInfoRequest extends AbstractModel
 {
     /**
-     * @var integer The number of records per page. The default is 20, and the maximum is 1,000.
+     * @var integer <p>How many data entries per page, 20 is selected by default, maximum not exceeding 1000</p>
      */
     public $Limit;
 
     /**
-     * @var integer The page number the records start from. The default is 1.
+     * @var integer <p>Page number, starts from 1 by default</p>
      */
     public $Offset;
 
     /**
-     * @var string The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
+     * @var string <p>Voucher status: pending use: unUsed, Used: used, delivered: delivered, discarded: cancel, expired: overdue</p>
      */
     public $Status;
 
     /**
-     * @var string The voucher ID.
+     * @var string <p>Voucher id</p>
      */
     public $VoucherId;
 
     /**
-     * @var string The voucher order ID.
+     * @var string <p>Voucher order id</p>
      */
     public $CodeId;
 
     /**
-     * @var string The product code.
+     * @var string <p>product code</p>
      */
     public $ProductCode;
 
     /**
-     * @var string The campaign ID.
+     * @var string <p>Activity id</p>
      */
     public $ActivityId;
 
     /**
-     * @var string The voucher name.
+     * @var string <p>Voucher name</p>
      */
     public $VoucherName;
 
     /**
-     * @var string The start date of the voucher issuance, such as `2021-01-01`.
+     * @var string <p>Start time of delivery. Example: 2021-01-01</p>
      */
     public $TimeFrom;
 
     /**
-     * @var string The end date of the voucher issuance, such as `2021-01-01`.
+     * @var string <p>Delivery end time. Example: 2021-01-01</p>
      */
     public $TimeTo;
 
     /**
-     * @var string The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
+     * @var string <p>Specified sorting field: BeginTime start time, EndTime expiry time, CreateTime creation time</p>
      */
     public $SortField;
 
     /**
-     * @var string Whether to sort the records in ascending or descending order. Valid values: desc, asc.
+     * @var string <p>Specify ascending/descending order: desc, asc</p>
      */
     public $SortOrder;
 
     /**
-     * @var string The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
+     * @var string <p>Payment mode, postPay (postpaid)/prePay (prepaid)/riPay (reserved instance)/"" or "*" means all modes. If payMode is "" or "*", productCode and subProductCode must be empty.</p>
      */
     public $PayMode;
 
     /**
-     * @var string If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
+     * @var string <p>Payment scenario PayMode=postPay: spotpay - spot instance, "settle account" - standard post-paid. PayMode=prePay: purchase - monthly subscription new purchase, renew - annual and monthly renewal (auto renewal), modify - monthly subscription configuration change. PayMode=riPay: oneOffFee - prepayment of reserved instance, hourlyFee - hourly charge for reserved instance, * - support all payment scenarios.</p>
      */
     public $PayScene;
 
     /**
-     * @var string The operator. The default is the UIN of the current user.
+     * @var string <p>Operator is used by default as user uin</p>
      */
     public $Operator;
 
     /**
-     * @var string The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+     * @var string <p>The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.</p>
      */
     public $VoucherMainType;
 
     /**
-     * @var string Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+     * @var string <p>Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.</p>
      */
     public $VoucherSubType;
 
     /**
-     * @param integer $Limit The number of records per page. The default is 20, and the maximum is 1,000.
-     * @param integer $Offset The page number the records start from. The default is 1.
-     * @param string $Status The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
-     * @param string $VoucherId The voucher ID.
-     * @param string $CodeId The voucher order ID.
-     * @param string $ProductCode The product code.
-     * @param string $ActivityId The campaign ID.
-     * @param string $VoucherName The voucher name.
-     * @param string $TimeFrom The start date of the voucher issuance, such as `2021-01-01`.
-     * @param string $TimeTo The end date of the voucher issuance, such as `2021-01-01`.
-     * @param string $SortField The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
-     * @param string $SortOrder Whether to sort the records in ascending or descending order. Valid values: desc, asc.
-     * @param string $PayMode The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
-     * @param string $PayScene If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
-     * @param string $Operator The operator. The default is the UIN of the current user.
-     * @param string $VoucherMainType The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
-     * @param string $VoucherSubType Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+     * @var string <p>Voucher validity start time</p>
+     */
+    public $StartTimeFrom;
+
+    /**
+     * @var string <p>Voucher validity time end time</p>
+     */
+    public $StartTimeTo;
+
+    /**
+     * @var string <p>Voucher expiration time start time</p>
+     */
+    public $EndTimeFrom;
+
+    /**
+     * @var string <p>Voucher expiration time end time</p>
+     */
+    public $EndTimeTo;
+
+    /**
+     * @var string <p>Voucher issuance start time</p>
+     */
+    public $CreateTimeFrom;
+
+    /**
+     * @var string <p>Voucher issuance time end time</p>
+     */
+    public $CreateTimeTo;
+
+    /**
+     * @var string <p>Language parameter</p><p>Default value: zh</p><p>Expect the product name to return in Chinese or other languages. Currently only support Chinese and English. Return in Chinese when "zh" is entered or left blank; return in English in other cases.</p>
+     */
+    public $Lang;
+
+    /**
+     * @param integer $Limit <p>How many data entries per page, 20 is selected by default, maximum not exceeding 1000</p>
+     * @param integer $Offset <p>Page number, starts from 1 by default</p>
+     * @param string $Status <p>Voucher status: pending use: unUsed, Used: used, delivered: delivered, discarded: cancel, expired: overdue</p>
+     * @param string $VoucherId <p>Voucher id</p>
+     * @param string $CodeId <p>Voucher order id</p>
+     * @param string $ProductCode <p>product code</p>
+     * @param string $ActivityId <p>Activity id</p>
+     * @param string $VoucherName <p>Voucher name</p>
+     * @param string $TimeFrom <p>Start time of delivery. Example: 2021-01-01</p>
+     * @param string $TimeTo <p>Delivery end time. Example: 2021-01-01</p>
+     * @param string $SortField <p>Specified sorting field: BeginTime start time, EndTime expiry time, CreateTime creation time</p>
+     * @param string $SortOrder <p>Specify ascending/descending order: desc, asc</p>
+     * @param string $PayMode <p>Payment mode, postPay (postpaid)/prePay (prepaid)/riPay (reserved instance)/"" or "*" means all modes. If payMode is "" or "*", productCode and subProductCode must be empty.</p>
+     * @param string $PayScene <p>Payment scenario PayMode=postPay: spotpay - spot instance, "settle account" - standard post-paid. PayMode=prePay: purchase - monthly subscription new purchase, renew - annual and monthly renewal (auto renewal), modify - monthly subscription configuration change. PayMode=riPay: oneOffFee - prepayment of reserved instance, hourlyFee - hourly charge for reserved instance, * - support all payment scenarios.</p>
+     * @param string $Operator <p>Operator is used by default as user uin</p>
+     * @param string $VoucherMainType <p>The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.</p>
+     * @param string $VoucherSubType <p>Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.</p>
+     * @param string $StartTimeFrom <p>Voucher validity start time</p>
+     * @param string $StartTimeTo <p>Voucher validity time end time</p>
+     * @param string $EndTimeFrom <p>Voucher expiration time start time</p>
+     * @param string $EndTimeTo <p>Voucher expiration time end time</p>
+     * @param string $CreateTimeFrom <p>Voucher issuance start time</p>
+     * @param string $CreateTimeTo <p>Voucher issuance time end time</p>
+     * @param string $Lang <p>Language parameter</p><p>Default value: zh</p><p>Expect the product name to return in Chinese or other languages. Currently only support Chinese and English. Return in Chinese when "zh" is entered or left blank; return in English in other cases.</p>
      */
     function __construct()
     {
@@ -240,6 +296,34 @@ class DescribeVoucherInfoRequest extends AbstractModel
 
         if (array_key_exists("VoucherSubType",$param) and $param["VoucherSubType"] !== null) {
             $this->VoucherSubType = $param["VoucherSubType"];
+        }
+
+        if (array_key_exists("StartTimeFrom",$param) and $param["StartTimeFrom"] !== null) {
+            $this->StartTimeFrom = $param["StartTimeFrom"];
+        }
+
+        if (array_key_exists("StartTimeTo",$param) and $param["StartTimeTo"] !== null) {
+            $this->StartTimeTo = $param["StartTimeTo"];
+        }
+
+        if (array_key_exists("EndTimeFrom",$param) and $param["EndTimeFrom"] !== null) {
+            $this->EndTimeFrom = $param["EndTimeFrom"];
+        }
+
+        if (array_key_exists("EndTimeTo",$param) and $param["EndTimeTo"] !== null) {
+            $this->EndTimeTo = $param["EndTimeTo"];
+        }
+
+        if (array_key_exists("CreateTimeFrom",$param) and $param["CreateTimeFrom"] !== null) {
+            $this->CreateTimeFrom = $param["CreateTimeFrom"];
+        }
+
+        if (array_key_exists("CreateTimeTo",$param) and $param["CreateTimeTo"] !== null) {
+            $this->CreateTimeTo = $param["CreateTimeTo"];
+        }
+
+        if (array_key_exists("Lang",$param) and $param["Lang"] !== null) {
+            $this->Lang = $param["Lang"];
         }
     }
 }

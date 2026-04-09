@@ -20,18 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Web security BOT managed rules architecture.
  *
- * @method ClientAttestationRules getClientAttestationRules() Obtain Definition list of client authentication rules. feature in beta test. submit a ticket or contact smart customer service if needed.
- * @method void setClientAttestationRules(ClientAttestationRules $ClientAttestationRules) Set Definition list of client authentication rules. feature in beta test. submit a ticket or contact smart customer service if needed.
+ * @method string getEnabled() Obtain Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+ * @method void setEnabled(string $Enabled) Set Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+ * @method BotManagementCustomRules getCustomRules() Obtain Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
+ * @method void setCustomRules(BotManagementCustomRules $CustomRules) Set Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
+ * @method BasicBotSettings getBasicBotSettings() Obtain Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
+ * @method void setBasicBotSettings(BasicBotSettings $BasicBotSettings) Set Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
+ * @method ClientAttestationRules getClientAttestationRules() Obtain Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
+ * @method void setClientAttestationRules(ClientAttestationRules $ClientAttestationRules) Set Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
+ * @method BrowserImpersonationDetection getBrowserImpersonationDetection() Obtain Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
+ * @method void setBrowserImpersonationDetection(BrowserImpersonationDetection $BrowserImpersonationDetection) Set Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
  */
 class BotManagement extends AbstractModel
 {
     /**
-     * @var ClientAttestationRules Definition list of client authentication rules. feature in beta test. submit a ticket or contact smart customer service if needed.
+     * @var string Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+     */
+    public $Enabled;
+
+    /**
+     * @var BotManagementCustomRules Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
+     */
+    public $CustomRules;
+
+    /**
+     * @var BasicBotSettings Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
+     */
+    public $BasicBotSettings;
+
+    /**
+     * @var ClientAttestationRules Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
      */
     public $ClientAttestationRules;
 
     /**
-     * @param ClientAttestationRules $ClientAttestationRules Definition list of client authentication rules. feature in beta test. submit a ticket or contact smart customer service if needed.
+     * @var BrowserImpersonationDetection Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
+     */
+    public $BrowserImpersonationDetection;
+
+    /**
+     * @param string $Enabled Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+     * @param BotManagementCustomRules $CustomRules Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
+     * @param BasicBotSettings $BasicBotSettings Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
+     * @param ClientAttestationRules $ClientAttestationRules Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
+     * @param BrowserImpersonationDetection $BrowserImpersonationDetection Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
      */
     function __construct()
     {
@@ -46,9 +78,28 @@ class BotManagement extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
+        }
+
+        if (array_key_exists("CustomRules",$param) and $param["CustomRules"] !== null) {
+            $this->CustomRules = new BotManagementCustomRules();
+            $this->CustomRules->deserialize($param["CustomRules"]);
+        }
+
+        if (array_key_exists("BasicBotSettings",$param) and $param["BasicBotSettings"] !== null) {
+            $this->BasicBotSettings = new BasicBotSettings();
+            $this->BasicBotSettings->deserialize($param["BasicBotSettings"]);
+        }
+
         if (array_key_exists("ClientAttestationRules",$param) and $param["ClientAttestationRules"] !== null) {
             $this->ClientAttestationRules = new ClientAttestationRules();
             $this->ClientAttestationRules->deserialize($param["ClientAttestationRules"]);
+        }
+
+        if (array_key_exists("BrowserImpersonationDetection",$param) and $param["BrowserImpersonationDetection"] !== null) {
+            $this->BrowserImpersonationDetection = new BrowserImpersonationDetection();
+            $this->BrowserImpersonationDetection->deserialize($param["BrowserImpersonationDetection"]);
         }
     }
 }
