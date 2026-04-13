@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupDownloadURL request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID.
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID.
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
  * @method string getBackupType() Obtain Backup type. Valid values: `LogBackup`, `BaseBackup`.
  * @method void setBackupType(string $BackupType) Set Backup type. Valid values: `LogBackup`, `BaseBackup`.
  * @method string getBackupId() Obtain Unique backup ID.
  * @method void setBackupId(string $BackupId) Set Unique backup ID.
- * @method integer getURLExpireTime() Obtain Validity period of a URL, which is 12 hours by default.
- * @method void setURLExpireTime(integer $URLExpireTime) Set Validity period of a URL, which is 12 hours by default.
+ * @method integer getURLExpireTime() Obtain Validity time of the connection. value range: [0,36]. default value: 12 hours.
+ * @method void setURLExpireTime(integer $URLExpireTime) Set Validity time of the connection. value range: [0,36]. default value: 12 hours.
  * @method BackupDownloadRestriction getBackupDownloadRestriction() Obtain Backup download restriction
  * @method void setBackupDownloadRestriction(BackupDownloadRestriction $BackupDownloadRestriction) Set Backup download restriction
  */
 class DescribeBackupDownloadURLRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public $DBInstanceId;
 
@@ -49,7 +49,7 @@ class DescribeBackupDownloadURLRequest extends AbstractModel
     public $BackupId;
 
     /**
-     * @var integer Validity period of a URL, which is 12 hours by default.
+     * @var integer Validity time of the connection. value range: [0,36]. default value: 12 hours.
      */
     public $URLExpireTime;
 
@@ -59,10 +59,10 @@ class DescribeBackupDownloadURLRequest extends AbstractModel
     public $BackupDownloadRestriction;
 
     /**
-     * @param string $DBInstanceId Instance ID.
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      * @param string $BackupType Backup type. Valid values: `LogBackup`, `BaseBackup`.
      * @param string $BackupId Unique backup ID.
-     * @param integer $URLExpireTime Validity period of a URL, which is 12 hours by default.
+     * @param integer $URLExpireTime Validity time of the connection. value range: [0,36]. default value: 12 hours.
      * @param BackupDownloadRestriction $BackupDownloadRestriction Backup download restriction
      */
     function __construct()

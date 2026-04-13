@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskName(string $TaskName) Set Name of a real-time log shipping task.
  * @method string getDeliveryStatus() Obtain Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li>
  * @method void setDeliveryStatus(string $DeliveryStatus) Set Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li>
- * @method string getTaskType() Obtain Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
- * @method void setTaskType(string $TaskType) Set Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
+ * @method string getTaskType() Obtain Type of a real-time log shipping task. valid values:<li>cls: push to tencent cloud cls;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>S3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analysis.</li>.
+ * @method void setTaskType(string $TaskType) Set Type of a real-time log shipping task. valid values:<li>cls: push to tencent cloud cls;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>S3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analysis.</li>.
  * @method array getEntityList() Obtain List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples: <li>L7 domain name: domain.example.com;</li><li>L4 proxy instance: sid-2s69eb5wcms7.</li>	
  * @method void setEntityList(array $EntityList) Set List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples: <li>L7 domain name: domain.example.com;</li><li>L4 proxy instance: sid-2s69eb5wcms7.</li>	
  * @method string getLogType() Obtain Data shipping type. Valid values: <li>domain: site acceleration logs;</li><li>application: L4 proxy logs;</li><li>web-rateLiming: rate limiting and CC attack defense logs;</li><li>web-attack: managed rule logs;</li><li>web-rule: custom rule logs;</li><li>web-bot: Bot management logs.</li>
@@ -85,7 +85,7 @@ class RealtimeLogDeliveryTask extends AbstractModel
     public $DeliveryStatus;
 
     /**
-     * @var string Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
+     * @var string Type of a real-time log shipping task. valid values:<li>cls: push to tencent cloud cls;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>S3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analysis.</li>.
      */
     public $TaskType;
 
@@ -164,7 +164,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
      * @param string $TaskId ID of a real-time log shipping task.
      * @param string $TaskName Name of a real-time log shipping task.
      * @param string $DeliveryStatus Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li>
-     * @param string $TaskType Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
+     * @param string $TaskType Type of a real-time log shipping task. valid values:<li>cls: push to tencent cloud cls;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>S3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analysis.</li>.
      * @param array $EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples: <li>L7 domain name: domain.example.com;</li><li>L4 proxy instance: sid-2s69eb5wcms7.</li>	
      * @param string $LogType Data shipping type. Valid values: <li>domain: site acceleration logs;</li><li>application: L4 proxy logs;</li><li>web-rateLiming: rate limiting and CC attack defense logs;</li><li>web-attack: managed rule logs;</li><li>web-rule: custom rule logs;</li><li>web-bot: Bot management logs.</li>
      * @param string $Area Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li>

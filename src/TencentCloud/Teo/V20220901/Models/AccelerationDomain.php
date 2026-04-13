@@ -24,68 +24,72 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set ID of the site.
  * @method string getDomainName() Obtain Accelerated domain name
  * @method void setDomainName(string $DomainName) Set Accelerated domain name
- * @method string getDomainStatus() Obtain Status of the accelerated domain name. Values:
-<li>`online`: Activated</li>
-<li>`process`: Being deployed</li>
-<li>`offline`: Disabled</li>
-<li>`forbidden`: Blocked</li>
-<li>`init`: Pending activation</li>
- * @method void setDomainStatus(string $DomainStatus) Set Status of the accelerated domain name. Values:
-<li>`online`: Activated</li>
-<li>`process`: Being deployed</li>
-<li>`offline`: Disabled</li>
-<li>`forbidden`: Blocked</li>
-<li>`init`: Pending activation</li>
+ * @method string getDomainStatus() Obtain Accelerated domain name status. valid values:.
+<li>online: in effect;</li>.
+<li>process: deployment in progress.</li>.
+<li>offline: disabled;</li>.
+<li>`forbidden`: banned.</li>.
+<li>init: not applied, site to be activated.</li>.
+ * @method void setDomainStatus(string $DomainStatus) Set Accelerated domain name status. valid values:.
+<li>online: in effect;</li>.
+<li>process: deployment in progress.</li>.
+<li>offline: disabled;</li>.
+<li>`forbidden`: banned.</li>.
+<li>init: not applied, site to be activated.</li>.
+ * @method string getCname() Obtain The CNAME address.
+ * @method void setCname(string $Cname) Set The CNAME address.
+ * @method string getIPv6Status() Obtain IPv6 status. valid values:.
+<li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
+<li>on: enabled status.</li>.
+<li>off: disabled.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setIPv6Status(string $IPv6Status) Set IPv6 status. valid values:.
+<li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
+<li>on: enabled status.</li>.
+<li>off: disabled.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method string getIdentificationStatus() Obtain Acceleration domain ownership verification status. valid values:. 
+<li>pending: to be verified.</li>.
+<li>finished: verified.</li>.	
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setIdentificationStatus(string $IdentificationStatus) Set Acceleration domain ownership verification status. valid values:. 
+<li>pending: to be verified.</li>.
+<li>finished: verified.</li>.	
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method OwnershipVerification getOwnershipVerification() Obtain Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
+Note: This field may return null, which indicates a failure to obtain a valid value.
  * @method OriginDetail getOriginDetail() Obtain Details of the origin.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOriginDetail(OriginDetail $OriginDetail) Set Details of the origin.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginProtocol() Obtain Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setOriginProtocol(string $OriginProtocol) Set Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getHttpOriginPort() Obtain The port used for HTTP origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setHttpOriginPort(integer $HttpOriginPort) Set The port used for HTTP origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getHttpsOriginPort() Obtain The port used for HTTPS origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setHttpsOriginPort(integer $HttpsOriginPort) Set The port used for HTTPS origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getIPv6Status() Obtain IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIPv6Status(string $IPv6Status) Set IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getCname() Obtain The CNAME address.
- * @method void setCname(string $Cname) Set The CNAME address.
- * @method string getIdentificationStatus() Obtain Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIdentificationStatus(string $IdentificationStatus) Set Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOriginProtocol() Obtain Origin-Pull protocol. valid values:.
+<Li>FOLLOW: follow protocol.</li>.
+<Li>HTTP: specifies the http protocol for origin-pull.</li>.
+<Li>HTTPS: specifies the https protocol for origin-pull.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setOriginProtocol(string $OriginProtocol) Set Origin-Pull protocol. valid values:.
+<Li>FOLLOW: follow protocol.</li>.
+<Li>HTTP: specifies the http protocol for origin-pull.</li>.
+<Li>HTTPS: specifies the https protocol for origin-pull.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method integer getHttpOriginPort() Obtain Specifies the HTTP origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setHttpOriginPort(integer $HttpOriginPort) Set Specifies the HTTP origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method integer getHttpsOriginPort() Obtain Specifies the HTTPS origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setHttpsOriginPort(integer $HttpsOriginPort) Set Specifies the HTTPS origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method AccelerationDomainCertificate getCertificate() Obtain Accelerates domain name certificate information.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setCertificate(AccelerationDomainCertificate $Certificate) Set Accelerates domain name certificate information.
+Note: This field may return null, which indicates a failure to obtain a valid value.
  * @method string getCreatedOn() Obtain Creation time of the accelerated domain name.
  * @method void setCreatedOn(string $CreatedOn) Set Creation time of the accelerated domain name.
  * @method string getModifiedOn() Obtain Modification time of the accelerated domain name.
  * @method void setModifiedOn(string $ModifiedOn) Set Modification time of the accelerated domain name.
- * @method OwnershipVerification getOwnershipVerification() Obtain Information required to verify the ownership of a domain name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Information required to verify the ownership of a domain name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method AccelerationDomainCertificate getCertificate() Obtain Domain name certificate information
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setCertificate(AccelerationDomainCertificate $Certificate) Set Domain name certificate information
-Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class AccelerationDomain extends AbstractModel
 {
@@ -100,14 +104,42 @@ class AccelerationDomain extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string Status of the accelerated domain name. Values:
-<li>`online`: Activated</li>
-<li>`process`: Being deployed</li>
-<li>`offline`: Disabled</li>
-<li>`forbidden`: Blocked</li>
-<li>`init`: Pending activation</li>
+     * @var string Accelerated domain name status. valid values:.
+<li>online: in effect;</li>.
+<li>process: deployment in progress.</li>.
+<li>offline: disabled;</li>.
+<li>`forbidden`: banned.</li>.
+<li>init: not applied, site to be activated.</li>.
      */
     public $DomainStatus;
+
+    /**
+     * @var string The CNAME address.
+     */
+    public $Cname;
+
+    /**
+     * @var string IPv6 status. valid values:.
+<li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
+<li>on: enabled status.</li>.
+<li>off: disabled.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     */
+    public $IPv6Status;
+
+    /**
+     * @var string Acceleration domain ownership verification status. valid values:. 
+<li>pending: to be verified.</li>.
+<li>finished: verified.</li>.	
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     */
+    public $IdentificationStatus;
+
+    /**
+     * @var OwnershipVerification Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     */
+    public $OwnershipVerification;
 
     /**
      * @var OriginDetail Details of the origin.
@@ -116,45 +148,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OriginDetail;
 
     /**
-     * @var string Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Origin-Pull protocol. valid values:.
+<Li>FOLLOW: follow protocol.</li>.
+<Li>HTTP: specifies the http protocol for origin-pull.</li>.
+<Li>HTTPS: specifies the https protocol for origin-pull.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $OriginProtocol;
 
     /**
-     * @var integer The port used for HTTP origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Specifies the HTTP origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $HttpOriginPort;
 
     /**
-     * @var integer The port used for HTTPS origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Specifies the HTTPS origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $HttpsOriginPort;
 
     /**
-     * @var string IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var AccelerationDomainCertificate Accelerates domain name certificate information.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
-    public $IPv6Status;
-
-    /**
-     * @var string The CNAME address.
-     */
-    public $Cname;
-
-    /**
-     * @var string Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $IdentificationStatus;
+    public $Certificate;
 
     /**
      * @var string Creation time of the accelerated domain name.
@@ -167,51 +185,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ModifiedOn;
 
     /**
-     * @var OwnershipVerification Information required to verify the ownership of a domain name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     */
-    public $OwnershipVerification;
-
-    /**
-     * @var AccelerationDomainCertificate Domain name certificate information
-Note: This field may return·null, indicating that no valid values can be obtained.
-     */
-    public $Certificate;
-
-    /**
      * @param string $ZoneId ID of the site.
      * @param string $DomainName Accelerated domain name
-     * @param string $DomainStatus Status of the accelerated domain name. Values:
-<li>`online`: Activated</li>
-<li>`process`: Being deployed</li>
-<li>`offline`: Disabled</li>
-<li>`forbidden`: Blocked</li>
-<li>`init`: Pending activation</li>
+     * @param string $DomainStatus Accelerated domain name status. valid values:.
+<li>online: in effect;</li>.
+<li>process: deployment in progress.</li>.
+<li>offline: disabled;</li>.
+<li>`forbidden`: banned.</li>.
+<li>init: not applied, site to be activated.</li>.
+     * @param string $Cname The CNAME address.
+     * @param string $IPv6Status IPv6 status. valid values:.
+<li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
+<li>on: enabled status.</li>.
+<li>off: disabled.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param string $IdentificationStatus Acceleration domain ownership verification status. valid values:. 
+<li>pending: to be verified.</li>.
+<li>finished: verified.</li>.	
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param OwnershipVerification $OwnershipVerification Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param OriginDetail $OriginDetail Details of the origin.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginProtocol Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $HttpOriginPort The port used for HTTP origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $HttpsOriginPort The port used for HTTPS origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $IPv6Status IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Cname The CNAME address.
-     * @param string $IdentificationStatus Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OriginProtocol Origin-Pull protocol. valid values:.
+<Li>FOLLOW: follow protocol.</li>.
+<Li>HTTP: specifies the http protocol for origin-pull.</li>.
+<Li>HTTPS: specifies the https protocol for origin-pull.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param integer $HttpOriginPort Specifies the HTTP origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param integer $HttpsOriginPort Specifies the HTTPS origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param AccelerationDomainCertificate $Certificate Accelerates domain name certificate information.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param string $CreatedOn Creation time of the accelerated domain name.
      * @param string $ModifiedOn Modification time of the accelerated domain name.
-     * @param OwnershipVerification $OwnershipVerification Information required to verify the ownership of a domain name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AccelerationDomainCertificate $Certificate Domain name certificate information
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -238,6 +246,23 @@ Note: This field may return·null, indicating that no valid values can be obtain
             $this->DomainStatus = $param["DomainStatus"];
         }
 
+        if (array_key_exists("Cname",$param) and $param["Cname"] !== null) {
+            $this->Cname = $param["Cname"];
+        }
+
+        if (array_key_exists("IPv6Status",$param) and $param["IPv6Status"] !== null) {
+            $this->IPv6Status = $param["IPv6Status"];
+        }
+
+        if (array_key_exists("IdentificationStatus",$param) and $param["IdentificationStatus"] !== null) {
+            $this->IdentificationStatus = $param["IdentificationStatus"];
+        }
+
+        if (array_key_exists("OwnershipVerification",$param) and $param["OwnershipVerification"] !== null) {
+            $this->OwnershipVerification = new OwnershipVerification();
+            $this->OwnershipVerification->deserialize($param["OwnershipVerification"]);
+        }
+
         if (array_key_exists("OriginDetail",$param) and $param["OriginDetail"] !== null) {
             $this->OriginDetail = new OriginDetail();
             $this->OriginDetail->deserialize($param["OriginDetail"]);
@@ -255,16 +280,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
             $this->HttpsOriginPort = $param["HttpsOriginPort"];
         }
 
-        if (array_key_exists("IPv6Status",$param) and $param["IPv6Status"] !== null) {
-            $this->IPv6Status = $param["IPv6Status"];
-        }
-
-        if (array_key_exists("Cname",$param) and $param["Cname"] !== null) {
-            $this->Cname = $param["Cname"];
-        }
-
-        if (array_key_exists("IdentificationStatus",$param) and $param["IdentificationStatus"] !== null) {
-            $this->IdentificationStatus = $param["IdentificationStatus"];
+        if (array_key_exists("Certificate",$param) and $param["Certificate"] !== null) {
+            $this->Certificate = new AccelerationDomainCertificate();
+            $this->Certificate->deserialize($param["Certificate"]);
         }
 
         if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
@@ -273,16 +291,6 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
         if (array_key_exists("ModifiedOn",$param) and $param["ModifiedOn"] !== null) {
             $this->ModifiedOn = $param["ModifiedOn"];
-        }
-
-        if (array_key_exists("OwnershipVerification",$param) and $param["OwnershipVerification"] !== null) {
-            $this->OwnershipVerification = new OwnershipVerification();
-            $this->OwnershipVerification->deserialize($param["OwnershipVerification"]);
-        }
-
-        if (array_key_exists("Certificate",$param) and $param["Certificate"] !== null) {
-            $this->Certificate = new AccelerationDomainCertificate();
-            $this->Certificate->deserialize($param["Certificate"]);
         }
     }
 }

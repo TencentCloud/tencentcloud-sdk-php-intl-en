@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Describes the client device configuration.
  *
- * @method string getClientType() Obtain Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>.
- * @method void setClientType(string $ClientType) Set Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>.
+ * @method string getClientType() Obtain Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
+ * @method void setClientType(string $ClientType) Set Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
  * @method integer getHighRiskMinScore() Obtain The minimum value to determine a request as high-risk ranges from 1–99. the larger the value, the higher the request risk, and the closer it resembles a request initiated by a Bot client. the default value is 50, corresponding to high-risk for values 51–100.
  * @method void setHighRiskMinScore(integer $HighRiskMinScore) Set The minimum value to determine a request as high-risk ranges from 1–99. the larger the value, the higher the request risk, and the closer it resembles a request initiated by a Bot client. the default value is 50, corresponding to high-risk for values 51–100.
  * @method SecurityAction getHighRiskRequestAction() Obtain Handling method for high-risk requests. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DeviceProfile extends AbstractModel
 {
     /**
-     * @var string Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>.
+     * @var string Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
      */
     public $ClientType;
 
@@ -59,7 +59,7 @@ class DeviceProfile extends AbstractModel
     public $MediumRiskRequestAction;
 
     /**
-     * @param string $ClientType Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>.
+     * @param string $ClientType Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
      * @param integer $HighRiskMinScore The minimum value to determine a request as high-risk ranges from 1–99. the larger the value, the higher the request risk, and the closer it resembles a request initiated by a Bot client. the default value is 50, corresponding to high-risk for values 51–100.
      * @param SecurityAction $HighRiskRequestAction Handling method for high-risk requests. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
      * @param integer $MediumRiskMinScore Specifies the minimum value to determine a request as medium-risk. value range: 1–99. the larger the value, the higher the request risk, resembling requests initiated by a Bot client. default value: 15, corresponding to medium-risk for values 16–50.

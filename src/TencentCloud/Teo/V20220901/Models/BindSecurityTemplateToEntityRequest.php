@@ -25,12 +25,12 @@ use TencentCloud\Common\AbstractModel;
  * @method array getEntities() Obtain List of domain names to bind to/unbind from a policy template
  * @method void setEntities(array $Entities) Set List of domain names to bind to/unbind from a policy template
  * @method string getOperate() Obtain Bind or unbind operation option. valid values:.
-<Li>`Bind`: bind the domain name to the policy template.</li>.
-<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>.
+<Li>bind: bind the domain name to the policy template.</li>
+<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>
 <li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name.
  * @method void setOperate(string $Operate) Set Bind or unbind operation option. valid values:.
-<Li>`Bind`: bind the domain name to the policy template.</li>.
-<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>.
+<Li>bind: bind the domain name to the policy template.</li>
+<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>
 <li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name.
  * @method string getTemplateId() Obtain Specifies the ID of the policy template or the site global policy to be bound or unbound.
 <li>To bind to a policy template, or unbind from it, specify the policy template ID.</li>.
@@ -59,8 +59,8 @@ class BindSecurityTemplateToEntityRequest extends AbstractModel
 
     /**
      * @var string Bind or unbind operation option. valid values:.
-<Li>`Bind`: bind the domain name to the policy template.</li>.
-<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>.
+<Li>bind: bind the domain name to the policy template.</li>
+<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>
 <li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name.
      */
     public $Operate;
@@ -83,8 +83,8 @@ Note: After unbinding, the domain name will use an independent policy and rule q
      * @param string $ZoneId Site ID of the policy template to be bound to or unbound from.
      * @param array $Entities List of domain names to bind to/unbind from a policy template
      * @param string $Operate Bind or unbind operation option. valid values:.
-<Li>`Bind`: bind the domain name to the policy template.</li>.
-<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>.
+<Li>bind: bind the domain name to the policy template.</li>
+<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>
 <li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name.
      * @param string $TemplateId Specifies the ID of the policy template or the site global policy to be bound or unbound.
 <li>To bind to a policy template, or unbind from it, specify the policy template ID.</li>.

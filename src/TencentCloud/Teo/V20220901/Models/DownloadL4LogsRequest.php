@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set The start time.
  * @method string getEndTime() Obtain The end time.
  * @method void setEndTime(string $EndTime) Set The end time.
- * @method array getZoneIds() Obtain ZoneId set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).
- * @method void setZoneIds(array $ZoneIds) Set ZoneId set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).
+ * @method array getZoneIds() Obtain The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
+ * @method void setZoneIds(array $ZoneIds) Set The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
  * @method array getProxyIds() Obtain List of L4 proxy instance IDs.
  * @method void setProxyIds(array $ProxyIds) Set List of L4 proxy instance IDs.
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 300.
@@ -46,7 +46,7 @@ class DownloadL4LogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array ZoneId set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).
+     * @var array The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
      */
     public $ZoneIds;
 
@@ -68,7 +68,7 @@ class DownloadL4LogsRequest extends AbstractModel
     /**
      * @param string $StartTime The start time.
      * @param string $EndTime The end time.
-     * @param array $ZoneIds ZoneId set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).
+     * @param array $ZoneIds The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
      * @param array $ProxyIds List of L4 proxy instance IDs.
      * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 300.
      * @param integer $Offset The page offset. Default value: 0.

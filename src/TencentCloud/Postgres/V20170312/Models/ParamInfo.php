@@ -21,83 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * Parameter details
  *
  * @method integer getID() Obtain Parameter ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setID(integer $ID) Set Parameter ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getName() Obtain Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getParamValueType() Obtain Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-For a `bool` parameter, the valid values include `true` and `false`; 
-For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setParamValueType(string $ParamValueType) Set Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-For a `bool` parameter, the valid values include `true` and `false`; 
-For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getUnit() Obtain Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUnit(string $Unit) Set Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDefaultValue() Obtain Default value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setDefaultValue(string $DefaultValue) Set Default value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getCurrentValue() Obtain Current value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setCurrentValue(string $CurrentValue) Set Current value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method float getMax() Obtain The maximum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setMax(float $Max) Set The maximum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getName() Obtain Parameter name.
+ * @method void setName(string $Name) Set Parameter name.
+ * @method string getParamValueType() Obtain Parameter value type: integer, real, bool, enum, mutil_enum.
+When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+When the parameter type is boolean, the valid values are true or false. 
+When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value.
+ * @method void setParamValueType(string $ParamValueType) Set Parameter value type: integer, real, bool, enum, mutil_enum.
+When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+When the parameter type is boolean, the valid values are true or false. 
+When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value.
+ * @method string getUnit() Obtain Parameter value unit. returns null if the parameter has no units.
+ * @method void setUnit(string $Unit) Set Parameter value unit. returns null if the parameter has no units.
+ * @method string getDefaultValue() Obtain Default parameter value. returns in string form.
+ * @method void setDefaultValue(string $DefaultValue) Set Default parameter value. returns in string form.
+ * @method string getCurrentValue() Obtain Specifies the current value in string form.
+ * @method void setCurrentValue(string $CurrentValue) Set Specifies the current value in string form.
+ * @method float getMax() Obtain Specifies the numerical type (integer, real) parameter and its lower bound.
+ * @method void setMax(float $Max) Set Specifies the numerical type (integer, real) parameter and its lower bound.
  * @method array getEnumValue() Obtain Value range of the enum parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setEnumValue(array $EnumValue) Set Value range of the enum parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method float getMin() Obtain The minimum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setMin(float $Min) Set The minimum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getParamDescriptionCH() Obtain Parameter description in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setParamDescriptionCH(string $ParamDescriptionCH) Set Parameter description in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getParamDescriptionEN() Obtain Parameter description in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setParamDescriptionEN(string $ParamDescriptionEN) Set Parameter description in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getNeedReboot() Obtain Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setNeedReboot(boolean $NeedReboot) Set Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getClassificationCN() Obtain Parameter category in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setClassificationCN(string $ClassificationCN) Set Parameter category in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getClassificationEN() Obtain Parameter category in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setClassificationEN(string $ClassificationEN) Set Parameter category in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getSpecRelated() Obtain Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSpecRelated(boolean $SpecRelated) Set Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getAdvanced() Obtain Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setAdvanced(boolean $Advanced) Set Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getLastModifyTime() Obtain The last modified time of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setLastModifyTime(string $LastModifyTime) Set The last modified time of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getStandbyRelated() Obtain Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStandbyRelated(integer $StandbyRelated) Set Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getMin() Obtain Numerical type (integer, real) parameter specifies the upper bound.
+ * @method void setMin(float $Min) Set Numerical type (integer, real) parameter specifies the upper bound.
+ * @method string getParamDescriptionCH() Obtain Chinese description.
+ * @method void setParamDescriptionCH(string $ParamDescriptionCH) Set Chinese description.
+ * @method string getParamDescriptionEN() Obtain Specifies the english description of the parameter.
+ * @method void setParamDescriptionEN(string $ParamDescriptionEN) Set Specifies the english description of the parameter.
+ * @method boolean getNeedReboot() Obtain Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required).
+ * @method void setNeedReboot(boolean $NeedReboot) Set Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required).
+ * @method string getClassificationCN() Obtain Parameter chinese category.
+ * @method void setClassificationCN(string $ClassificationCN) Set Parameter chinese category.
+ * @method string getClassificationEN() Obtain Parameter english category.
+ * @method void setClassificationEN(string $ClassificationEN) Set Parameter english category.
+ * @method boolean getSpecRelated() Obtain Specifies whether it is related to the specification (true for related, false for unrelated).
+ * @method void setSpecRelated(boolean $SpecRelated) Set Specifies whether it is related to the specification (true for related, false for unrelated).
+ * @method boolean getAdvanced() Obtain Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance).
+ * @method void setAdvanced(boolean $Advanced) Set Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance).
+ * @method string getLastModifyTime() Obtain Specifies the last modified time.
+ * @method void setLastModifyTime(string $LastModifyTime) Set Specifies the last modified time.
+ * @method integer getStandbyRelated() Obtain Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine.
+ * @method void setStandbyRelated(integer $StandbyRelated) Set Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine.
  * @method array getVersionRelationSet() Obtain Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVersionRelationSet(array $VersionRelationSet) Set Parameter version association information, containing detailed parameter information for the respective kernel version
@@ -111,46 +77,39 @@ class ParamInfo extends AbstractModel
 {
     /**
      * @var integer Parameter ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ID;
 
     /**
-     * @var string Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Parameter name.
      */
     public $Name;
 
     /**
-     * @var string Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-For a `bool` parameter, the valid values include `true` and `false`; 
-For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Parameter value type: integer, real, bool, enum, mutil_enum.
+When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+When the parameter type is boolean, the valid values are true or false. 
+When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value.
      */
     public $ParamValueType;
 
     /**
-     * @var string Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Parameter value unit. returns null if the parameter has no units.
      */
     public $Unit;
 
     /**
-     * @var string Default value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Default parameter value. returns in string form.
      */
     public $DefaultValue;
 
     /**
-     * @var string Current value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Specifies the current value in string form.
      */
     public $CurrentValue;
 
     /**
-     * @var float The maximum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var float Specifies the numerical type (integer, real) parameter and its lower bound.
      */
     public $Max;
 
@@ -161,62 +120,52 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $EnumValue;
 
     /**
-     * @var float The minimum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var float Numerical type (integer, real) parameter specifies the upper bound.
      */
     public $Min;
 
     /**
-     * @var string Parameter description in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Chinese description.
      */
     public $ParamDescriptionCH;
 
     /**
-     * @var string Parameter description in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Specifies the english description of the parameter.
      */
     public $ParamDescriptionEN;
 
     /**
-     * @var boolean Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var boolean Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required).
      */
     public $NeedReboot;
 
     /**
-     * @var string Parameter category in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Parameter chinese category.
      */
     public $ClassificationCN;
 
     /**
-     * @var string Parameter category in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Parameter english category.
      */
     public $ClassificationEN;
 
     /**
-     * @var boolean Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var boolean Specifies whether it is related to the specification (true for related, false for unrelated).
      */
     public $SpecRelated;
 
     /**
-     * @var boolean Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var boolean Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance).
      */
     public $Advanced;
 
     /**
-     * @var string The last modified time of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Specifies the last modified time.
      */
     public $LastModifyTime;
 
     /**
-     * @var integer Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine.
      */
     public $StandbyRelated;
 
@@ -234,44 +183,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $ID Parameter ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Name Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ParamValueType Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-For a `bool` parameter, the valid values include `true` and `false`; 
-For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DefaultValue Default value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $CurrentValue Current value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param float $Max The maximum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Name Parameter name.
+     * @param string $ParamValueType Parameter value type: integer, real, bool, enum, mutil_enum.
+When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+When the parameter type is boolean, the valid values are true or false. 
+When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value.
+     * @param string $Unit Parameter value unit. returns null if the parameter has no units.
+     * @param string $DefaultValue Default parameter value. returns in string form.
+     * @param string $CurrentValue Specifies the current value in string form.
+     * @param float $Max Specifies the numerical type (integer, real) parameter and its lower bound.
      * @param array $EnumValue Value range of the enum parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param float $Min The minimum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ParamDescriptionCH Parameter description in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ParamDescriptionEN Parameter description in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $NeedReboot Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ClassificationCN Parameter category in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ClassificationEN Parameter category in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $SpecRelated Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $Advanced Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $LastModifyTime The last modified time of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $StandbyRelated Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $Min Numerical type (integer, real) parameter specifies the upper bound.
+     * @param string $ParamDescriptionCH Chinese description.
+     * @param string $ParamDescriptionEN Specifies the english description of the parameter.
+     * @param boolean $NeedReboot Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required).
+     * @param string $ClassificationCN Parameter chinese category.
+     * @param string $ClassificationEN Parameter english category.
+     * @param boolean $SpecRelated Specifies whether it is related to the specification (true for related, false for unrelated).
+     * @param boolean $Advanced Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance).
+     * @param string $LastModifyTime Specifies the last modified time.
+     * @param integer $StandbyRelated Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine.
      * @param array $VersionRelationSet Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $SpecRelationSet Parameter specification association information, containing detailed parameter information for the respective specification

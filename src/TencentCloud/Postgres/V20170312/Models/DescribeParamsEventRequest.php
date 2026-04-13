@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeParamsEvent request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
  */
 class DescribeParamsEventRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public $DBInstanceId;
 
     /**
-     * @param string $DBInstanceId Instance ID
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     function __construct()
     {

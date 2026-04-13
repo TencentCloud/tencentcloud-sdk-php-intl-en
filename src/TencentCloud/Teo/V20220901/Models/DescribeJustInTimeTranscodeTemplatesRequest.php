@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Specifies the site ID.
  * @method void setZoneId(string $ZoneId) Set Specifies the site ID.
- * @method array getFilters() Obtain The maximum number of Filters is 20. the upper limit for Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria: <li>template-name: filter by template name in batch. example: mytemplate;</li> <li>template-type: filter by template type in batch. example: preset or custom.</li> <li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li> empty by default.
- * @method void setFilters(array $Filters) Set The maximum number of Filters is 20. the upper limit for Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria: <li>template-name: filter by template name in batch. example: mytemplate;</li> <li>template-type: filter by template type in batch. example: preset or custom.</li> <li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li> empty by default.
+ * @method array getFilters() Obtain Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
+ * @method void setFilters(array $Filters) Set Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
  * @method string getSortBy() Obtain Sorting field. valid values: <li>createTime: template creation time.</li> default value: createTime.
  * @method void setSortBy(string $SortBy) Set Sorting field. valid values: <li>createTime: template creation time.</li> default value: createTime.
  * @method string getSortOrder() Obtain Sorting method. valid values: <li>`asc`: ascending order;</li><li>`desc`: descending order.</li> default value: `desc`.
@@ -41,7 +41,7 @@ class DescribeJustInTimeTranscodeTemplatesRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array The maximum number of Filters is 20. the upper limit for Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria: <li>template-name: filter by template name in batch. example: mytemplate;</li> <li>template-type: filter by template type in batch. example: preset or custom.</li> <li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li> empty by default.
+     * @var array Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
      */
     public $Filters;
 
@@ -67,7 +67,7 @@ class DescribeJustInTimeTranscodeTemplatesRequest extends AbstractModel
 
     /**
      * @param string $ZoneId Specifies the site ID.
-     * @param array $Filters The maximum number of Filters is 20. the upper limit for Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria: <li>template-name: filter by template name in batch. example: mytemplate;</li> <li>template-type: filter by template type in batch. example: preset or custom.</li> <li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li> empty by default.
+     * @param array $Filters Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
      * @param string $SortBy Sorting field. valid values: <li>createTime: template creation time.</li> default value: createTime.
      * @param string $SortOrder Sorting method. valid values: <li>`asc`: ascending order;</li><li>`desc`: descending order.</li> default value: `desc`.
      * @param integer $Offset Paging offset. Default value: 0.

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBaseBackupExpireTime request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
- * @method string getBaseBackupId() Obtain Data Backup ID.
- * @method void setBaseBackupId(string $BaseBackupId) Set Data Backup ID.
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method string getBaseBackupId() Obtain Data backup ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en).
+ * @method void setBaseBackupId(string $BaseBackupId) Set Data backup ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en).
  * @method string getNewExpireTime() Obtain New expiration time
  * @method void setNewExpireTime(string $NewExpireTime) Set New expiration time
  */
 class ModifyBaseBackupExpireTimeRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public $DBInstanceId;
 
     /**
-     * @var string Data Backup ID.
+     * @var string Data backup ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en).
      */
     public $BaseBackupId;
 
@@ -45,8 +45,8 @@ class ModifyBaseBackupExpireTimeRequest extends AbstractModel
     public $NewExpireTime;
 
     /**
-     * @param string $DBInstanceId Instance ID
-     * @param string $BaseBackupId Data Backup ID.
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+     * @param string $BaseBackupId Data backup ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en).
      * @param string $NewExpireTime New expiration time
      */
     function __construct()

@@ -38,6 +38,8 @@ Note: This field may return null, indicating that no valid value can be obtained
  * @method void setBotManagement(BotManagement $BotManagement) Set Bot management configuration.
  * @method BotManagementLite getBotManagementLite() Obtain Basic Bot management configuration.
  * @method void setBotManagementLite(BotManagementLite $BotManagementLite) Set Basic Bot management configuration.
+ * @method DefaultDenySecurityActionParameters getDefaultDenySecurityActionParameters() Obtain Default intercept action configuration.
+ * @method void setDefaultDenySecurityActionParameters(DefaultDenySecurityActionParameters $DefaultDenySecurityActionParameters) Set Default intercept action configuration.
  */
 class SecurityPolicy extends AbstractModel
 {
@@ -79,6 +81,11 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $BotManagementLite;
 
     /**
+     * @var DefaultDenySecurityActionParameters Default intercept action configuration.
+     */
+    public $DefaultDenySecurityActionParameters;
+
+    /**
      * @param CustomRules $CustomRules Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param ManagedRules $ManagedRules Managed. If the parameter is null or not filled, the configuration last set will be used by default.
@@ -88,6 +95,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param ExceptionRules $ExceptionRules Exception rule configuration.
      * @param BotManagement $BotManagement Bot management configuration.
      * @param BotManagementLite $BotManagementLite Basic Bot management configuration.
+     * @param DefaultDenySecurityActionParameters $DefaultDenySecurityActionParameters Default intercept action configuration.
      */
     function __construct()
     {
@@ -135,6 +143,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("BotManagementLite",$param) and $param["BotManagementLite"] !== null) {
             $this->BotManagementLite = new BotManagementLite();
             $this->BotManagementLite->deserialize($param["BotManagementLite"]);
+        }
+
+        if (array_key_exists("DefaultDenySecurityActionParameters",$param) and $param["DefaultDenySecurityActionParameters"] !== null) {
+            $this->DefaultDenySecurityActionParameters = new DefaultDenySecurityActionParameters();
+            $this->DefaultDenySecurityActionParameters->deserialize($param["DefaultDenySecurityActionParameters"]);
         }
     }
 }

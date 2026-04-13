@@ -24,8 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Zone ID.
  * @method array getFunctionRuleConditions() Obtain Rule condition list. There is an OR relationship between different conditions of the same trigger rule.
  * @method void setFunctionRuleConditions(array $FunctionRuleConditions) Set Rule condition list. There is an OR relationship between different conditions of the same trigger rule.
- * @method string getFunctionId() Obtain Function ID, specifying a function executed when a trigger rule condition is met.
- * @method void setFunctionId(string $FunctionId) Set Function ID, specifying a function executed when a trigger rule condition is met.
+ * @method string getTriggerType() Obtain Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+Specifies the default value as direct when left blank.
+ * @method void setTriggerType(string $TriggerType) Set Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+Specifies the default value as direct when left blank.
+ * @method string getFunctionId() Obtain Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
+ * @method void setFunctionId(string $FunctionId) Set Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
+ * @method array getRegionMappingSelections() Obtain Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+ * @method void setRegionMappingSelections(array $RegionMappingSelections) Set Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+ * @method array getWeightedSelections() Obtain Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+ * @method void setWeightedSelections(array $WeightedSelections) Set Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
  * @method string getRemark() Obtain Rule description, which can contain up to 60 characters.
  * @method void setRemark(string $Remark) Set Rule description, which can contain up to 60 characters.
  */
@@ -42,9 +56,28 @@ class CreateFunctionRuleRequest extends AbstractModel
     public $FunctionRuleConditions;
 
     /**
-     * @var string Function ID, specifying a function executed when a trigger rule condition is met.
+     * @var string Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+Specifies the default value as direct when left blank.
+     */
+    public $TriggerType;
+
+    /**
+     * @var string Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
      */
     public $FunctionId;
+
+    /**
+     * @var array Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+     */
+    public $RegionMappingSelections;
+
+    /**
+     * @var array Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+     */
+    public $WeightedSelections;
 
     /**
      * @var string Rule description, which can contain up to 60 characters.
@@ -54,7 +87,14 @@ class CreateFunctionRuleRequest extends AbstractModel
     /**
      * @param string $ZoneId Zone ID.
      * @param array $FunctionRuleConditions Rule condition list. There is an OR relationship between different conditions of the same trigger rule.
-     * @param string $FunctionId Function ID, specifying a function executed when a trigger rule condition is met.
+     * @param string $TriggerType Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+Specifies the default value as direct when left blank.
+     * @param string $FunctionId Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
+     * @param array $RegionMappingSelections Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+     * @param array $WeightedSelections Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
      * @param string $Remark Rule description, which can contain up to 60 characters.
      */
     function __construct()
@@ -83,8 +123,30 @@ class CreateFunctionRuleRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("TriggerType",$param) and $param["TriggerType"] !== null) {
+            $this->TriggerType = $param["TriggerType"];
+        }
+
         if (array_key_exists("FunctionId",$param) and $param["FunctionId"] !== null) {
             $this->FunctionId = $param["FunctionId"];
+        }
+
+        if (array_key_exists("RegionMappingSelections",$param) and $param["RegionMappingSelections"] !== null) {
+            $this->RegionMappingSelections = [];
+            foreach ($param["RegionMappingSelections"] as $key => $value){
+                $obj = new FunctionRegionSelection();
+                $obj->deserialize($value);
+                array_push($this->RegionMappingSelections, $obj);
+            }
+        }
+
+        if (array_key_exists("WeightedSelections",$param) and $param["WeightedSelections"] !== null) {
+            $this->WeightedSelections = [];
+            foreach ($param["WeightedSelections"] as $key => $value){
+                $obj = new FunctionWeightedSelection();
+                $obj->deserialize($value);
+                array_push($this->WeightedSelections, $obj);
+            }
         }
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {

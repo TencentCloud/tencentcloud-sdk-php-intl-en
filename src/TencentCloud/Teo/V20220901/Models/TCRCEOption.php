@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getChannel() Obtain Channel information.
  * @method void setChannel(string $Channel) Set Channel information.
+ * @method string getRegion() Obtain Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
+ * @method void setRegion(string $Region) Set Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
  */
 class TCRCEOption extends AbstractModel
 {
@@ -31,7 +33,13 @@ class TCRCEOption extends AbstractModel
     public $Channel;
 
     /**
+     * @var string Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
+     */
+    public $Region;
+
+    /**
      * @param string $Channel Channel information.
+     * @param string $Region Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class TCRCEOption extends AbstractModel
         }
         if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
             $this->Channel = $param["Channel"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

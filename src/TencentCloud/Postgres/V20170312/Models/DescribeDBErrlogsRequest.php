@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBErrlogs request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID	
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID	
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
  * @method string getStartTime() Obtain u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
  * @method void setStartTime(string $StartTime) Set u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
  * @method string getEndTime() Obtain u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBErrlogsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID	
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public $DBInstanceId;
 
@@ -73,7 +73,7 @@ class DescribeDBErrlogsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $DBInstanceId Instance ID	
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      * @param string $StartTime u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
      * @param string $EndTime u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
      * @param string $DatabaseName Database name

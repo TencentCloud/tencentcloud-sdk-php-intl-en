@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Purging/Pre-warming available usage and quota
  *
- * @method integer getBatch() Obtain Single batch submission quota limit.
- * @method void setBatch(integer $Batch) Set Single batch submission quota limit.
+ * @method integer getBatch() Obtain 
+ * @method void setBatch(integer $Batch) Set 
  * @method integer getDaily() Obtain Daily submission quota limit.
  * @method void setDaily(integer $Daily) Set Daily submission quota limit.
  * @method integer getDailyAvailable() Obtain Remaining daily submission quota.
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class Quota extends AbstractModel
 {
     /**
-     * @var integer Single batch submission quota limit.
+     * @var integer 
      */
     public $Batch;
 
@@ -67,7 +67,7 @@ class Quota extends AbstractModel
     public $Type;
 
     /**
-     * @param integer $Batch Single batch submission quota limit.
+     * @param integer $Batch 
      * @param integer $Daily Daily submission quota limit.
      * @param integer $DailyAvailable Remaining daily submission quota.
      * @param string $Type Type of cache purging/pre-warming. Values:

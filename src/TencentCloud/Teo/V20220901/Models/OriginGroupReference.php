@@ -20,29 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Services referencing this origin group
  *
- * @method string getInstanceType() Obtain Services referencing the origin group. Values:
-<li>`AccelerationDomain`: Acceleration domain name</li>
-<li>`RuleEngine`: Rules engine</li>
-<li>`Loadbalance`: Load balancer</li>
-<li>`ApplicationProxy`: L4 proxy</li>
- * @method void setInstanceType(string $InstanceType) Set Services referencing the origin group. Values:
-<li>`AccelerationDomain`: Acceleration domain name</li>
-<li>`RuleEngine`: Rules engine</li>
-<li>`Loadbalance`: Load balancer</li>
-<li>`ApplicationProxy`: L4 proxy</li>
+ * @method string getInstanceType() Obtain Reference service type. valid values:.
+<Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
+<Li>Rule-Engine: specifies the rule engine.</li>.
+<Li>Load-Balancer: specifies the cloud load balancer.</li>.
+<li>application-proxy: layer 4 proxy.</li>.
+ * @method void setInstanceType(string $InstanceType) Set Reference service type. valid values:.
+<Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
+<Li>Rule-Engine: specifies the rule engine.</li>.
+<Li>Load-Balancer: specifies the cloud load balancer.</li>.
+<li>application-proxy: layer 4 proxy.</li>.
  * @method string getInstanceId() Obtain ID of the instances referencing the origin group
  * @method void setInstanceId(string $InstanceId) Set ID of the instances referencing the origin group
- * @method string getInstanceName() Obtain Name of the instance referencing the origin group
- * @method void setInstanceName(string $InstanceName) Set Name of the instance referencing the origin group
+ * @method string getInstanceName() Obtain Specifies the instance name of the reference type.
+ * @method void setInstanceName(string $InstanceName) Set Specifies the instance name of the reference type.
+ * @method string getZoneId() Obtain Referer ID.
+ * @method void setZoneId(string $ZoneId) Set Referer ID.
+ * @method string getZoneName() Obtain Refers to the site name.
+ * @method void setZoneName(string $ZoneName) Set Refers to the site name.
+ * @method string getAliasZoneName() Obtain Refers to the site alias.
+ * @method void setAliasZoneName(string $AliasZoneName) Set Refers to the site alias.
  */
 class OriginGroupReference extends AbstractModel
 {
     /**
-     * @var string Services referencing the origin group. Values:
-<li>`AccelerationDomain`: Acceleration domain name</li>
-<li>`RuleEngine`: Rules engine</li>
-<li>`Loadbalance`: Load balancer</li>
-<li>`ApplicationProxy`: L4 proxy</li>
+     * @var string Reference service type. valid values:.
+<Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
+<Li>Rule-Engine: specifies the rule engine.</li>.
+<Li>Load-Balancer: specifies the cloud load balancer.</li>.
+<li>application-proxy: layer 4 proxy.</li>.
      */
     public $InstanceType;
 
@@ -52,18 +58,36 @@ class OriginGroupReference extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Name of the instance referencing the origin group
+     * @var string Specifies the instance name of the reference type.
      */
     public $InstanceName;
 
     /**
-     * @param string $InstanceType Services referencing the origin group. Values:
-<li>`AccelerationDomain`: Acceleration domain name</li>
-<li>`RuleEngine`: Rules engine</li>
-<li>`Loadbalance`: Load balancer</li>
-<li>`ApplicationProxy`: L4 proxy</li>
+     * @var string Referer ID.
+     */
+    public $ZoneId;
+
+    /**
+     * @var string Refers to the site name.
+     */
+    public $ZoneName;
+
+    /**
+     * @var string Refers to the site alias.
+     */
+    public $AliasZoneName;
+
+    /**
+     * @param string $InstanceType Reference service type. valid values:.
+<Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
+<Li>Rule-Engine: specifies the rule engine.</li>.
+<Li>Load-Balancer: specifies the cloud load balancer.</li>.
+<li>application-proxy: layer 4 proxy.</li>.
      * @param string $InstanceId ID of the instances referencing the origin group
-     * @param string $InstanceName Name of the instance referencing the origin group
+     * @param string $InstanceName Specifies the instance name of the reference type.
+     * @param string $ZoneId Referer ID.
+     * @param string $ZoneName Refers to the site name.
+     * @param string $AliasZoneName Refers to the site alias.
      */
     function __construct()
     {
@@ -88,6 +112,18 @@ class OriginGroupReference extends AbstractModel
 
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
+            $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("AliasZoneName",$param) and $param["AliasZoneName"] !== null) {
+            $this->AliasZoneName = $param["AliasZoneName"];
         }
     }
 }

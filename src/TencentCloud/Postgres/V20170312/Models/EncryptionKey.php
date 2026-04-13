@@ -20,82 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * KMS key information
  *
- * @method string getKeyId() Obtain Encrypted KeyId of KMS instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setKeyId(string $KeyId) Set Encrypted KeyId of KMS instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getKeyAlias() Obtain Encryption key alias of KMS instance 
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setKeyAlias(string $KeyAlias) Set Encryption key alias of KMS instance 
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getDEKCipherTextBlob() Obtain Instance DEK ciphertext
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setDEKCipherTextBlob(string $DEKCipherTextBlob) Set Instance DEK ciphertext
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getIsEnabled() Obtain Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setIsEnabled(integer $IsEnabled) Set Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getKeyRegion() Obtain Region where KMS key resides
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setKeyRegion(string $KeyRegion) Set Region where KMS key resides
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getCreateTime() Obtain DEK key creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setCreateTime(string $CreateTime) Set DEK key creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getKeyId() Obtain Specifies the KeyId for KMS instance encryption.
+ * @method void setKeyId(string $KeyId) Set Specifies the KeyId for KMS instance encryption.
+ * @method string getKeyAlias() Obtain Alias name of the KMS instance encryption Key.
+ * @method void setKeyAlias(string $KeyAlias) Set Alias name of the KMS instance encryption Key.
+ * @method string getDEKCipherTextBlob() Obtain Specifies the ciphertext of the instance encryption key DEK.
+ * @method void setDEKCipherTextBlob(string $DEKCipherTextBlob) Set Specifies the ciphertext of the instance encryption key DEK.
+ * @method integer getIsEnabled() Obtain Whether the key is enabled. valid values: 1 (enabled), 0 (disabled).
+ * @method void setIsEnabled(integer $IsEnabled) Set Whether the key is enabled. valid values: 1 (enabled), 0 (disabled).
+ * @method string getKeyRegion() Obtain Specifies the region of the KMS key.
+ * @method void setKeyRegion(string $KeyRegion) Set Specifies the region of the KMS key.
+ * @method string getCreateTime() Obtain Creation time of the DEK key.
+ * @method void setCreateTime(string $CreateTime) Set Creation time of the DEK key.
+ * @method string getKMSClusterId() Obtain Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster.
+ * @method void setKMSClusterId(string $KMSClusterId) Set Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster.
  */
 class EncryptionKey extends AbstractModel
 {
     /**
-     * @var string Encrypted KeyId of KMS instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Specifies the KeyId for KMS instance encryption.
      */
     public $KeyId;
 
     /**
-     * @var string Encryption key alias of KMS instance 
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Alias name of the KMS instance encryption Key.
      */
     public $KeyAlias;
 
     /**
-     * @var string Instance DEK ciphertext
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Specifies the ciphertext of the instance encryption key DEK.
      */
     public $DEKCipherTextBlob;
 
     /**
-     * @var integer Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Whether the key is enabled. valid values: 1 (enabled), 0 (disabled).
      */
     public $IsEnabled;
 
     /**
-     * @var string Region where KMS key resides
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Specifies the region of the KMS key.
      */
     public $KeyRegion;
 
     /**
-     * @var string DEK key creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Creation time of the DEK key.
      */
     public $CreateTime;
 
     /**
-     * @param string $KeyId Encrypted KeyId of KMS instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $KeyAlias Encryption key alias of KMS instance 
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $DEKCipherTextBlob Instance DEK ciphertext
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $IsEnabled Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $KeyRegion Region where KMS key resides
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $CreateTime DEK key creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster.
+     */
+    public $KMSClusterId;
+
+    /**
+     * @param string $KeyId Specifies the KeyId for KMS instance encryption.
+     * @param string $KeyAlias Alias name of the KMS instance encryption Key.
+     * @param string $DEKCipherTextBlob Specifies the ciphertext of the instance encryption key DEK.
+     * @param integer $IsEnabled Whether the key is enabled. valid values: 1 (enabled), 0 (disabled).
+     * @param string $KeyRegion Specifies the region of the KMS key.
+     * @param string $CreateTime Creation time of the DEK key.
+     * @param string $KMSClusterId Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster.
      */
     function __construct()
     {
@@ -132,6 +116,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("KMSClusterId",$param) and $param["KMSClusterId"] !== null) {
+            $this->KMSClusterId = $param["KMSClusterId"];
         }
     }
 }

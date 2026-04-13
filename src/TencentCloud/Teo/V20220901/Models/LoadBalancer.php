@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setL4UsedList(array $L4UsedList) Set Specifies the list of l4 proxy instances bound to the load balancing instance.
  * @method array getL7UsedList() Obtain List of Layer-7 domain names bound to a LoadBalancer.
  * @method void setL7UsedList(array $L7UsedList) Set List of Layer-7 domain names bound to a LoadBalancer.
+ * @method array getReferences() Obtain Specifies the list of instances referenced by cloud load balancer.
+ * @method void setReferences(array $References) Set Specifies the list of instances referenced by cloud load balancer.
  */
 class LoadBalancer extends AbstractModel
 {
@@ -118,6 +120,11 @@ class LoadBalancer extends AbstractModel
     public $L7UsedList;
 
     /**
+     * @var array Specifies the list of instances referenced by cloud load balancer.
+     */
+    public $References;
+
+    /**
      * @param string $InstanceId LoadBalancer ID.
      * @param string $Name LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).	
      * @param string $Type LoadBalancer type. Valid values:
@@ -136,6 +143,7 @@ class LoadBalancer extends AbstractModel
 <li>Running: effective.</li>
      * @param array $L4UsedList Specifies the list of l4 proxy instances bound to the load balancing instance.
      * @param array $L7UsedList List of Layer-7 domain names bound to a LoadBalancer.
+     * @param array $References Specifies the list of instances referenced by cloud load balancer.
      */
     function __construct()
     {
@@ -194,6 +202,15 @@ class LoadBalancer extends AbstractModel
 
         if (array_key_exists("L7UsedList",$param) and $param["L7UsedList"] !== null) {
             $this->L7UsedList = $param["L7UsedList"];
+        }
+
+        if (array_key_exists("References",$param) and $param["References"] !== null) {
+            $this->References = [];
+            foreach ($param["References"] as $key => $value){
+                $obj = new OriginGroupReference();
+                $obj->deserialize($value);
+                array_push($this->References, $obj);
+            }
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyParameterTemplate request structure.
  *
- * @method string getTemplateId() Obtain Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
- * @method void setTemplateId(string $TemplateId) Set Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
+ * @method string getTemplateId() Obtain Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en).
+ * @method void setTemplateId(string $TemplateId) Set Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en).
  * @method string getTemplateName() Obtain Parameter template name, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this field is empty, the original parameter template name will be used.
  * @method void setTemplateName(string $TemplateName) Set Parameter template name, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this field is empty, the original parameter template name will be used.
  * @method string getTemplateDescription() Obtain Parameter template description, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this parameter is not passed in, the original parameter template description will be used.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyParameterTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
+     * @var string Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en).
      */
     public $TemplateId;
 
@@ -59,7 +59,7 @@ class ModifyParameterTemplateRequest extends AbstractModel
     public $DeleteParamSet;
 
     /**
-     * @param string $TemplateId Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
+     * @param string $TemplateId Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en).
      * @param string $TemplateName Parameter template name, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this field is empty, the original parameter template name will be used.
      * @param string $TemplateDescription Parameter template description, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this parameter is not passed in, the original parameter template description will be used.
      * @param array $ModifyParamEntrySet The set of parameters to be modified or added. A parameter cannot be put to `ModifyParamEntrySet` and `DeleteParamSet` at the same time, that is, it cannot be modified/added and deleted at the same time.

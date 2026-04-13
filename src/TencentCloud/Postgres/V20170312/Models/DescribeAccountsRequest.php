@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccounts request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-6fego161
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-6fego161
- * @method integer getLimit() Obtain Number of entries returned per page. Default value: 10. Value range: 1–100.
- * @method void setLimit(integer $Limit) Set Number of entries returned per page. Default value: 10. Value range: 1–100.
+ * @method string getDBInstanceId() Obtain Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method integer getLimit() Obtain Pagination return. maximum return per page. default 20. value range 1-100.
+ * @method void setLimit(integer $Limit) Set Pagination return. maximum return per page. default 20. value range 1-100.
  * @method integer getOffset() Obtain Data offset, which starts from 0.
  * @method void setOffset(integer $Offset) Set Data offset, which starts from 0.
- * @method string getOrderBy() Obtain Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
- * @method void setOrderBy(string $OrderBy) Set Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
- * @method string getOrderByType() Obtain Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
- * @method void setOrderByType(string $OrderByType) Set Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
+ * @method string getOrderBy() Obtain Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+Default value: createTime.
+ * @method void setOrderBy(string $OrderBy) Set Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+Default value: createTime.
+ * @method string getOrderByType() Obtain Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+Default value: desc.
+ * @method void setOrderByType(string $OrderByType) Set Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+Default value: desc.
  */
 class DescribeAccountsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of postgres-6fego161
+     * @var string Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public $DBInstanceId;
 
     /**
-     * @var integer Number of entries returned per page. Default value: 10. Value range: 1–100.
+     * @var integer Pagination return. maximum return per page. default 20. value range 1-100.
      */
     public $Limit;
 
@@ -49,21 +53,25 @@ class DescribeAccountsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
+     * @var string Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+Default value: createTime.
      */
     public $OrderBy;
 
     /**
-     * @var string Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
+     * @var string Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+Default value: desc.
      */
     public $OrderByType;
 
     /**
-     * @param string $DBInstanceId Instance ID in the format of postgres-6fego161
-     * @param integer $Limit Number of entries returned per page. Default value: 10. Value range: 1–100.
+     * @param string $DBInstanceId Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en).
+     * @param integer $Limit Pagination return. maximum return per page. default 20. value range 1-100.
      * @param integer $Offset Data offset, which starts from 0.
-     * @param string $OrderBy Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
-     * @param string $OrderByType Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
+     * @param string $OrderBy Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+Default value: createTime.
+     * @param string $OrderByType Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+Default value: desc.
      */
     function __construct()
     {

@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(string $RegionId) Set Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
  * @method array getLines() Obtain Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
  * @method void setLines(array $Lines) Set Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
+ * @method string getNeedConfirm() Obtain Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+ * @method void setNeedConfirm(string $NeedConfirm) Set Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
  */
 class MultiPathGateway extends AbstractModel
 {
@@ -98,6 +100,11 @@ class MultiPathGateway extends AbstractModel
     public $Lines;
 
     /**
+     * @var string Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+     */
+    public $NeedConfirm;
+
+    /**
      * @param string $GatewayId Specifies the gateway ID.
      * @param string $GatewayName Gateway name.
      * @param string $GatewayType Gateway type. valid values:
@@ -112,6 +119,7 @@ class MultiPathGateway extends AbstractModel
      * @param string $GatewayIP Gateway IP, in IPv4 format.
      * @param string $RegionId Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
      * @param array $Lines Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
+     * @param string $NeedConfirm Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ class MultiPathGateway extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Lines, $obj);
             }
+        }
+
+        if (array_key_exists("NeedConfirm",$param) and $param["NeedConfirm"] !== null) {
+            $this->NeedConfirm = $param["NeedConfirm"];
         }
     }
 }

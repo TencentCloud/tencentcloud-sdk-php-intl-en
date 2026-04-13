@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceParameters request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID.
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID.
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
  * @method array getParamList() Obtain Parameters to be modified and expected values.
  * @method void setParamList(array $ParamList) Set Parameters to be modified and expected values.
  */
 class ModifyDBInstanceParametersRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public $DBInstanceId;
 
@@ -38,7 +38,7 @@ class ModifyDBInstanceParametersRequest extends AbstractModel
     public $ParamList;
 
     /**
-     * @param string $DBInstanceId Instance ID.
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      * @param array $ParamList Parameters to be modified and expected values.
      */
     function __construct()

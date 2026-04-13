@@ -24,14 +24,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(string $RuleId) Set Rule ID.
  * @method array getFunctionRuleConditions() Obtain Rule condition list. There is an OR relationship between items in the list.
  * @method void setFunctionRuleConditions(array $FunctionRuleConditions) Set Rule condition list. There is an OR relationship between items in the list.
- * @method string getFunctionId() Obtain Function ID, specifying a function executed when a trigger rule condition is met.
- * @method void setFunctionId(string $FunctionId) Set Function ID, specifying a function executed when a trigger rule condition is met.
- * @method string getRemark() Obtain Rule description.
- * @method void setRemark(string $Remark) Set Rule description.
- * @method string getFunctionName() Obtain Function name.
- * @method void setFunctionName(string $FunctionName) Set Function name.
+ * @method string getTriggerType() Obtain Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+
+ * @method void setTriggerType(string $TriggerType) Set Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+
+ * @method string getFunctionId() Obtain Specifies the function ID to be executed. valid only when TriggerType is direct.
+ * @method void setFunctionId(string $FunctionId) Set Specifies the function ID to be executed. valid only when TriggerType is direct.
+ * @method string getFunctionName() Obtain Specifies the name of the function executed.
+ * @method void setFunctionName(string $FunctionName) Set Specifies the name of the function executed.
+ * @method array getRegionMappingSelections() Obtain Function selection configuration based on client IP country/region.
+ * @method void setRegionMappingSelections(array $RegionMappingSelections) Set Function selection configuration based on client IP country/region.
+ * @method array getWeightedSelections() Obtain Describes the function selection configuration based on weight.
+ * @method void setWeightedSelections(array $WeightedSelections) Set Describes the function selection configuration based on weight.
  * @method integer getPriority() Obtain Priority of a trigger rule for a function. The larger the value, the higher the priority.
  * @method void setPriority(integer $Priority) Set Priority of a trigger rule for a function. The larger the value, the higher the priority.
+ * @method string getRemark() Obtain Rule description.
+ * @method void setRemark(string $Remark) Set Rule description.
  * @method string getCreateTime() Obtain Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
  * @method void setCreateTime(string $CreateTime) Set Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
  * @method string getUpdateTime() Obtain Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
@@ -50,24 +64,43 @@ class FunctionRule extends AbstractModel
     public $FunctionRuleConditions;
 
     /**
-     * @var string Function ID, specifying a function executed when a trigger rule condition is met.
+     * @var string Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+
+     */
+    public $TriggerType;
+
+    /**
+     * @var string Specifies the function ID to be executed. valid only when TriggerType is direct.
      */
     public $FunctionId;
 
     /**
-     * @var string Rule description.
-     */
-    public $Remark;
-
-    /**
-     * @var string Function name.
+     * @var string Specifies the name of the function executed.
      */
     public $FunctionName;
+
+    /**
+     * @var array Function selection configuration based on client IP country/region.
+     */
+    public $RegionMappingSelections;
+
+    /**
+     * @var array Describes the function selection configuration based on weight.
+     */
+    public $WeightedSelections;
 
     /**
      * @var integer Priority of a trigger rule for a function. The larger the value, the higher the priority.
      */
     public $Priority;
+
+    /**
+     * @var string Rule description.
+     */
+    public $Remark;
 
     /**
      * @var string Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
@@ -82,10 +115,17 @@ class FunctionRule extends AbstractModel
     /**
      * @param string $RuleId Rule ID.
      * @param array $FunctionRuleConditions Rule condition list. There is an OR relationship between items in the list.
-     * @param string $FunctionId Function ID, specifying a function executed when a trigger rule condition is met.
-     * @param string $Remark Rule description.
-     * @param string $FunctionName Function name.
+     * @param string $TriggerType Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+
+     * @param string $FunctionId Specifies the function ID to be executed. valid only when TriggerType is direct.
+     * @param string $FunctionName Specifies the name of the function executed.
+     * @param array $RegionMappingSelections Function selection configuration based on client IP country/region.
+     * @param array $WeightedSelections Describes the function selection configuration based on weight.
      * @param integer $Priority Priority of a trigger rule for a function. The larger the value, the higher the priority.
+     * @param string $Remark Rule description.
      * @param string $CreateTime Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      * @param string $UpdateTime Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
@@ -115,20 +155,42 @@ class FunctionRule extends AbstractModel
             }
         }
 
-        if (array_key_exists("FunctionId",$param) and $param["FunctionId"] !== null) {
-            $this->FunctionId = $param["FunctionId"];
+        if (array_key_exists("TriggerType",$param) and $param["TriggerType"] !== null) {
+            $this->TriggerType = $param["TriggerType"];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists("FunctionId",$param) and $param["FunctionId"] !== null) {
+            $this->FunctionId = $param["FunctionId"];
         }
 
         if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
             $this->FunctionName = $param["FunctionName"];
         }
 
+        if (array_key_exists("RegionMappingSelections",$param) and $param["RegionMappingSelections"] !== null) {
+            $this->RegionMappingSelections = [];
+            foreach ($param["RegionMappingSelections"] as $key => $value){
+                $obj = new FunctionRegionSelection();
+                $obj->deserialize($value);
+                array_push($this->RegionMappingSelections, $obj);
+            }
+        }
+
+        if (array_key_exists("WeightedSelections",$param) and $param["WeightedSelections"] !== null) {
+            $this->WeightedSelections = [];
+            foreach ($param["WeightedSelections"] as $key => $value){
+                $obj = new FunctionWeightedSelection();
+                $obj->deserialize($value);
+                array_push($this->WeightedSelections, $obj);
+            }
+        }
+
         if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
             $this->Priority = $param["Priority"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

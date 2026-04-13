@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Modification details of one parameter
  *
- * @method string getParamName() Obtain Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setParamName(string $ParamName) Set Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getEventCount() Obtain The number of modification events
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setEventCount(integer $EventCount) Set The number of modification events
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getEventDetail() Obtain Modification event details
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setEventDetail(array $EventDetail) Set Modification event details
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getParamName() Obtain Parameter name.
+ * @method void setParamName(string $ParamName) Set Parameter name.
+ * @method integer getEventCount() Obtain Number of modified events.
+ * @method void setEventCount(integer $EventCount) Set Number of modified events.
+ * @method array getEventDetail() Obtain Last modification time.
+ * @method void setEventDetail(array $EventDetail) Set Last modification time.
  */
 class EventItem extends AbstractModel
 {
     /**
-     * @var string Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Parameter name.
      */
     public $ParamName;
 
     /**
-     * @var integer The number of modification events
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Number of modified events.
      */
     public $EventCount;
 
     /**
-     * @var array Modification event details
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Last modification time.
      */
     public $EventDetail;
 
     /**
-     * @param string $ParamName Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $EventCount The number of modification events
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $EventDetail Modification event details
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ParamName Parameter name.
+     * @param integer $EventCount Number of modified events.
+     * @param array $EventDetail Last modification time.
      */
     function __construct()
     {

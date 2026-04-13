@@ -20,106 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameter modification event information
  *
- * @method string getParamName() Obtain Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setParamName(string $ParamName) Set Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getOldValue() Obtain Original parameter value
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setOldValue(string $OldValue) Set Original parameter value
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getNewValue() Obtain New parameter value in this modification event
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setNewValue(string $NewValue) Set New parameter value in this modification event
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getModifyTime() Obtain Start time of parameter modification
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setModifyTime(string $ModifyTime) Set Start time of parameter modification
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getEffectiveTime() Obtain Start time when the modified parameter takes effect
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setEffectiveTime(string $EffectiveTime) Set Start time when the modified parameter takes effect
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getState() Obtain Modification status
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setState(string $State) Set Modification status
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getOperator() Obtain Operator (generally, the value is the UIN of a sub-user)
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setOperator(string $Operator) Set Operator (generally, the value is the UIN of a sub-user)
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getEventLog() Obtain Event log
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setEventLog(string $EventLog) Set Event log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getParamName() Obtain Parameter name.
+ * @method void setParamName(string $ParamName) Set Parameter name.
+ * @method string getOldValue() Obtain Original parameter value.
+ * @method void setOldValue(string $OldValue) Set Original parameter value.
+ * @method string getNewValue() Obtain This modification specifies the expected parameter value.
+ * @method void setNewValue(string $NewValue) Set This modification specifies the expected parameter value.
+ * @method string getModifyTime() Obtain Specifies the start time for backend parameter modification.
+ * @method void setModifyTime(string $ModifyTime) Set Specifies the start time for backend parameter modification.
+ * @method string getEffectiveTime() Obtain Specifies the start of effective time for the backend parameter.
+ * @method void setEffectiveTime(string $EffectiveTime) Set Specifies the start of effective time for the backend parameter.
+ * @method string getState() Obtain Modification status. valid values: in progress, success, paused.
+ * @method void setState(string $State) Set Modification status. valid values: in progress, success, paused.
+ * @method string getOperator() Obtain Operator (normal: user sub UIN).
+ * @method void setOperator(string $Operator) Set Operator (normal: user sub UIN).
+ * @method string getEventLog() Obtain Time log.
+ * @method void setEventLog(string $EventLog) Set Time log.
  */
 class EventInfo extends AbstractModel
 {
     /**
-     * @var string Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Parameter name.
      */
     public $ParamName;
 
     /**
-     * @var string Original parameter value
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Original parameter value.
      */
     public $OldValue;
 
     /**
-     * @var string New parameter value in this modification event
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string This modification specifies the expected parameter value.
      */
     public $NewValue;
 
     /**
-     * @var string Start time of parameter modification
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Specifies the start time for backend parameter modification.
      */
     public $ModifyTime;
 
     /**
-     * @var string Start time when the modified parameter takes effect
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Specifies the start of effective time for the backend parameter.
      */
     public $EffectiveTime;
 
     /**
-     * @var string Modification status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Modification status. valid values: in progress, success, paused.
      */
     public $State;
 
     /**
-     * @var string Operator (generally, the value is the UIN of a sub-user)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Operator (normal: user sub UIN).
      */
     public $Operator;
 
     /**
-     * @var string Event log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Time log.
      */
     public $EventLog;
 
     /**
-     * @param string $ParamName Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $OldValue Original parameter value
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $NewValue New parameter value in this modification event
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ModifyTime Start time of parameter modification
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $EffectiveTime Start time when the modified parameter takes effect
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $State Modification status
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Operator Operator (generally, the value is the UIN of a sub-user)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $EventLog Event log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ParamName Parameter name.
+     * @param string $OldValue Original parameter value.
+     * @param string $NewValue This modification specifies the expected parameter value.
+     * @param string $ModifyTime Specifies the start time for backend parameter modification.
+     * @param string $EffectiveTime Specifies the start of effective time for the backend parameter.
+     * @param string $State Modification status. valid values: in progress, success, paused.
+     * @param string $Operator Operator (normal: user sub UIN).
+     * @param string $EventLog Time log.
      */
     function __construct()
     {

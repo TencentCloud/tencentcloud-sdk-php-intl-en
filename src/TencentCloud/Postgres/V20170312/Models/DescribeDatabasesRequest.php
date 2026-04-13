@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatabases request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?from_cn_redirect=1).
  * @method array getFilters() Obtain Query using one or more filter criteria. Filter criteria currently supported include: database-name: filter by database name (in string format). Fuzzy matching is used to search for databases that meet the criteria.
  * @method void setFilters(array $Filters) Set Query using one or more filter criteria. Filter criteria currently supported include: database-name: filter by database name (in string format). Fuzzy matching is used to search for databases that meet the criteria.
  * @method integer getOffset() Obtain Data offset, which starts from 0.
  * @method void setOffset(integer $Offset) Set Data offset, which starts from 0.
- * @method integer getLimit() Obtain Number of items displayed at a time
- * @method void setLimit(integer $Limit) Set Number of items displayed at a time
+ * @method integer getLimit() Obtain Number of items displayed at a time. the maximum value is recommended to be 100.
+Default value: 20.
+ * @method void setLimit(integer $Limit) Set Number of items displayed at a time. the maximum value is recommended to be 100.
+Default value: 20.
  */
 class DescribeDatabasesRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
@@ -47,15 +49,17 @@ class DescribeDatabasesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of items displayed at a time
+     * @var integer Number of items displayed at a time. the maximum value is recommended to be 100.
+Default value: 20.
      */
     public $Limit;
 
     /**
-     * @param string $DBInstanceId Instance ID
+     * @param string $DBInstanceId Instance ID. obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?from_cn_redirect=1).
      * @param array $Filters Query using one or more filter criteria. Filter criteria currently supported include: database-name: filter by database name (in string format). Fuzzy matching is used to search for databases that meet the criteria.
      * @param integer $Offset Data offset, which starts from 0.
-     * @param integer $Limit Number of items displayed at a time
+     * @param integer $Limit Number of items displayed at a time. the maximum value is recommended to be 100.
+Default value: 20.
      */
     function __construct()
     {

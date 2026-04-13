@@ -1,0 +1,65 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Teo\V20220901\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * Region policy configuration.
+ *
+ * @method string getFunctionId() Obtain Function ID.
+ * @method void setFunctionId(string $FunctionId) Set Function ID.
+ * @method array getRegions() Obtain List of countries/regions. example value: CN: china, CN.GD: guangdong, china. for values, see: [country/region and corresponding code enumeration](https://www.tencentcloud.comom/document/product/1552/112542?from_cn_redirect=1).
+ * @method void setRegions(array $Regions) Set List of countries/regions. example value: CN: china, CN.GD: guangdong, china. for values, see: [country/region and corresponding code enumeration](https://www.tencentcloud.comom/document/product/1552/112542?from_cn_redirect=1).
+ */
+class FunctionRegionSelection extends AbstractModel
+{
+    /**
+     * @var string Function ID.
+     */
+    public $FunctionId;
+
+    /**
+     * @var array List of countries/regions. example value: CN: china, CN.GD: guangdong, china. for values, see: [country/region and corresponding code enumeration](https://www.tencentcloud.comom/document/product/1552/112542?from_cn_redirect=1).
+     */
+    public $Regions;
+
+    /**
+     * @param string $FunctionId Function ID.
+     * @param array $Regions List of countries/regions. example value: CN: china, CN.GD: guangdong, china. for values, see: [country/region and corresponding code enumeration](https://www.tencentcloud.comom/document/product/1552/112542?from_cn_redirect=1).
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("FunctionId",$param) and $param["FunctionId"] !== null) {
+            $this->FunctionId = $param["FunctionId"];
+        }
+
+        if (array_key_exists("Regions",$param) and $param["Regions"] !== null) {
+            $this->Regions = $param["Regions"];
+        }
+    }
+}

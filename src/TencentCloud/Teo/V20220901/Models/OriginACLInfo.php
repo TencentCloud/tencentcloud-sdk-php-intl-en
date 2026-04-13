@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The binding relationship between L7 acceleration domains/L4 proxy instances and origin IP ranges, as well as origin IP range details.
+ * The binding relationship between L7 acceleration domains/layer-4 proxy instances and origin IP ranges contains both origin IP range details and a switchable origin IP range list.
  *
  * @method array getL7Hosts() Obtain The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
  * @method void setL7Hosts(array $L7Hosts) Set The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
@@ -40,6 +40,8 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 - online: in effect;
 - offline: disabled;
 - updating: configuration deployment in progress.
+ * @method string getOriginACLFamily() Obtain Origin protection back-to-origin ACL control domain.
+ * @method void setOriginACLFamily(string $OriginACLFamily) Set Origin protection back-to-origin ACL control domain.
  */
 class OriginACLInfo extends AbstractModel
 {
@@ -74,6 +76,11 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     public $Status;
 
     /**
+     * @var string Origin protection back-to-origin ACL control domain.
+     */
+    public $OriginACLFamily;
+
+    /**
      * @param array $L7Hosts The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
      * @param array $L4ProxyIds The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
      * @param CurrentOriginACL $CurrentOriginACL Currently effective origin ACLs. This field is empty when origin protection is not enabled.
@@ -84,6 +91,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 - online: in effect;
 - offline: disabled;
 - updating: configuration deployment in progress.
+     * @param string $OriginACLFamily Origin protection back-to-origin ACL control domain.
      */
     function __construct()
     {
@@ -118,6 +126,10 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("OriginACLFamily",$param) and $param["OriginACLFamily"] !== null) {
+            $this->OriginACLFamily = $param["OriginACLFamily"];
         }
     }
 }

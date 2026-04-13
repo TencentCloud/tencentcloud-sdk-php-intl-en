@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloneDBInstanceSpec request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID.
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID.
- * @method string getBackupSetId() Obtain Basic backup set ID. Either this parameter or `RecoveryTargetTime` must be passed in. If both are passed in, only this parameter takes effect.
- * @method void setBackupSetId(string $BackupSetId) Set Basic backup set ID. Either this parameter or `RecoveryTargetTime` must be passed in. If both are passed in, only this parameter takes effect.
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method string getBackupSetId() Obtain Basic backup set ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en). this parameter and RecoveryTargetTime must be selected. if set simultaneously with RecoveryTargetTime, this parameter takes precedence.
+ * @method void setBackupSetId(string $BackupSetId) Set Basic backup set ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en). this parameter and RecoveryTargetTime must be selected. if set simultaneously with RecoveryTargetTime, this parameter takes precedence.
  * @method string getRecoveryTargetTime() Obtain Restoration time (UTC+8). Either this parameter or `BackupSetId` must be passed in.
  * @method void setRecoveryTargetTime(string $RecoveryTargetTime) Set Restoration time (UTC+8). Either this parameter or `BackupSetId` must be passed in.
  */
 class DescribeCloneDBInstanceSpecRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public $DBInstanceId;
 
     /**
-     * @var string Basic backup set ID. Either this parameter or `RecoveryTargetTime` must be passed in. If both are passed in, only this parameter takes effect.
+     * @var string Basic backup set ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en). this parameter and RecoveryTargetTime must be selected. if set simultaneously with RecoveryTargetTime, this parameter takes precedence.
      */
     public $BackupSetId;
 
@@ -45,8 +45,8 @@ class DescribeCloneDBInstanceSpecRequest extends AbstractModel
     public $RecoveryTargetTime;
 
     /**
-     * @param string $DBInstanceId Instance ID.
-     * @param string $BackupSetId Basic backup set ID. Either this parameter or `RecoveryTargetTime` must be passed in. If both are passed in, only this parameter takes effect.
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+     * @param string $BackupSetId Basic backup set ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en). this parameter and RecoveryTargetTime must be selected. if set simultaneously with RecoveryTargetTime, this parameter takes precedence.
      * @param string $RecoveryTargetTime Restoration time (UTC+8). Either this parameter or `BackupSetId` must be passed in.
      */
     function __construct()

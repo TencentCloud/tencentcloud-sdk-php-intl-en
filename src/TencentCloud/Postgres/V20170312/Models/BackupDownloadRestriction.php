@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Restriction information for downloading a backup
  *
- * @method string getRestrictionType() Obtain Type of the network restrictions for downloading backup files. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs).
- * @method void setRestrictionType(string $RestrictionType) Set Type of the network restrictions for downloading backup files. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs).
+ * @method string getRestrictionType() Obtain Backup file download limit type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc or ip information.
+ * @method void setRestrictionType(string $RestrictionType) Set Backup file download limit type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc or ip information.
  * @method string getVpcRestrictionEffect() Obtain Whether VPC is allowed. Valid values: `ALLOW` (allow), `DENY` (deny).
  * @method void setVpcRestrictionEffect(string $VpcRestrictionEffect) Set Whether VPC is allowed. Valid values: `ALLOW` (allow), `DENY` (deny).
  * @method array getVpcIdSet() Obtain Whether it is allowed to download the VPC ID list of the backup files.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class BackupDownloadRestriction extends AbstractModel
 {
     /**
-     * @var string Type of the network restrictions for downloading backup files. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs).
+     * @var string Backup file download limit type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc or ip information.
      */
     public $RestrictionType;
 
@@ -59,7 +59,7 @@ class BackupDownloadRestriction extends AbstractModel
     public $IpSet;
 
     /**
-     * @param string $RestrictionType Type of the network restrictions for downloading backup files. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs).
+     * @param string $RestrictionType Backup file download limit type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc or ip information.
      * @param string $VpcRestrictionEffect Whether VPC is allowed. Valid values: `ALLOW` (allow), `DENY` (deny).
      * @param array $VpcIdSet Whether it is allowed to download the VPC ID list of the backup files.
      * @param string $IpRestrictionEffect Whether IP is allowed. Valid values: `ALLOW` (allow), `DENY` (deny).

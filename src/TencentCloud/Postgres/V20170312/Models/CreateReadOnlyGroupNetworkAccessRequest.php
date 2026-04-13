@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReadOnlyGroupNetworkAccess request structure.
  *
- * @method string getReadOnlyGroupId() Obtain RO group ID in the format of pgro-4t9c6g7k.
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set RO group ID in the format of pgro-4t9c6g7k.
+ * @method string getReadOnlyGroupId() Obtain ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en).
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en).
  * @method string getVpcId() Obtain Unified VPC ID.
  * @method void setVpcId(string $VpcId) Set Unified VPC ID.
  * @method string getSubnetId() Obtain Subnet ID.
  * @method void setSubnetId(string $SubnetId) Set Subnet ID.
  * @method boolean getIsAssignVip() Obtain Whether to manually assign the VIP. Valid values: `true` (manually assign), `false` (automatically assign).
  * @method void setIsAssignVip(boolean $IsAssignVip) Set Whether to manually assign the VIP. Valid values: `true` (manually assign), `false` (automatically assign).
- * @method string getVip() Obtain Target VIP.
- * @method void setVip(string $Vip) Set Target VIP.
+ * @method string getVip() Obtain Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
+ * @method void setVip(string $Vip) Set Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
  */
 class CreateReadOnlyGroupNetworkAccessRequest extends AbstractModel
 {
     /**
-     * @var string RO group ID in the format of pgro-4t9c6g7k.
+     * @var string ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en).
      */
     public $ReadOnlyGroupId;
 
@@ -54,16 +54,16 @@ class CreateReadOnlyGroupNetworkAccessRequest extends AbstractModel
     public $IsAssignVip;
 
     /**
-     * @var string Target VIP.
+     * @var string Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
      */
     public $Vip;
 
     /**
-     * @param string $ReadOnlyGroupId RO group ID in the format of pgro-4t9c6g7k.
+     * @param string $ReadOnlyGroupId ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en).
      * @param string $VpcId Unified VPC ID.
      * @param string $SubnetId Subnet ID.
      * @param boolean $IsAssignVip Whether to manually assign the VIP. Valid values: `true` (manually assign), `false` (automatically assign).
-     * @param string $Vip Target VIP.
+     * @param string $Vip Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
      */
     function __construct()
     {

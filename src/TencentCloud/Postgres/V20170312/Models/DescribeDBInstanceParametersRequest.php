@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceParameters request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
  * @method string getParamName() Obtain Name of the parameter to be queried. If `ParamName` is left empty or not passed in, the list of all parameters will be returned.
  * @method void setParamName(string $ParamName) Set Name of the parameter to be queried. If `ParamName` is left empty or not passed in, the list of all parameters will be returned.
  */
 class DescribeDBInstanceParametersRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public $DBInstanceId;
 
@@ -38,7 +38,7 @@ class DescribeDBInstanceParametersRequest extends AbstractModel
     public $ParamName;
 
     /**
-     * @param string $DBInstanceId Instance ID
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      * @param string $ParamName Name of the parameter to be queried. If `ParamName` is left empty or not passed in, the list of all parameters will be returned.
      */
     function __construct()

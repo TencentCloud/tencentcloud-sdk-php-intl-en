@@ -24,6 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Specifies the site ID.
  * @method array getOriginACLEntities() Obtain Specifies the instance that needs to configurate origin ACLs.
  * @method void setOriginACLEntities(array $OriginACLEntities) Set Specifies the instance that needs to configurate origin ACLs.
+ * @method string getOriginACLFamily() Obtain The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+Valid values are as follows:
+<li>gaz: Standard global availability zone control domain;</li>
+<li>mlc: Standard Chinese mainland availability zone control domain;</li>
+<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+<li>plat-gaz: Simplify global availability zone control domain;</li>
+<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+ * @method void setOriginACLFamily(string $OriginACLFamily) Set The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+Valid values are as follows:
+<li>gaz: Standard global availability zone control domain;</li>
+<li>mlc: Standard Chinese mainland availability zone control domain;</li>
+<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+<li>plat-gaz: Simplify global availability zone control domain;</li>
+<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
  */
 class ModifyOriginACLRequest extends AbstractModel
 {
@@ -38,8 +54,28 @@ class ModifyOriginACLRequest extends AbstractModel
     public $OriginACLEntities;
 
     /**
+     * @var string The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+Valid values are as follows:
+<li>gaz: Standard global availability zone control domain;</li>
+<li>mlc: Standard Chinese mainland availability zone control domain;</li>
+<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+<li>plat-gaz: Simplify global availability zone control domain;</li>
+<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+     */
+    public $OriginACLFamily;
+
+    /**
      * @param string $ZoneId Specifies the site ID.
      * @param array $OriginACLEntities Specifies the instance that needs to configurate origin ACLs.
+     * @param string $OriginACLFamily The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+Valid values are as follows:
+<li>gaz: Standard global availability zone control domain;</li>
+<li>mlc: Standard Chinese mainland availability zone control domain;</li>
+<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+<li>plat-gaz: Simplify global availability zone control domain;</li>
+<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
      */
     function __construct()
     {
@@ -65,6 +101,10 @@ class ModifyOriginACLRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->OriginACLEntities, $obj);
             }
+        }
+
+        if (array_key_exists("OriginACLFamily",$param) and $param["OriginACLFamily"] !== null) {
+            $this->OriginACLFamily = $param["OriginACLFamily"];
         }
     }
 }

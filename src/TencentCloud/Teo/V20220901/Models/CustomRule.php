@@ -18,22 +18,22 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom rule configuration.
+ * Custom rule under Web protection feature.
  *
  * @method string getName() Obtain The custom rule name.
  * @method void setName(string $Name) Set The custom rule name.
- * @method string getCondition() Obtain The specifics of the custom rule, must comply with the expression grammar, please refer to product documentation for details.
- * @method void setCondition(string $Condition) Set The specifics of the custom rule, must comply with the expression grammar, please refer to product documentation for details.
- * @method SecurityAction getAction() Obtain Action for custom rules. The Name parameter of SecurityAction supports: <li>`Deny`: block;</li> <li>`Monitor`: observe;</li> <li>`ReturnCustomPage`: block with customized page;</li> <li>`Redirect`: Redirect to URL;</li> <li>`BlockIP`: IP blocking;</li> <li>`JSChallenge`: JavaScript challenge;</li> <li>`ManagedChallenge`: managed challenge;</li> <li>`Allow`: Allow.</li>.
- * @method void setAction(SecurityAction $Action) Set Action for custom rules. The Name parameter of SecurityAction supports: <li>`Deny`: block;</li> <li>`Monitor`: observe;</li> <li>`ReturnCustomPage`: block with customized page;</li> <li>`Redirect`: Redirect to URL;</li> <li>`BlockIP`: IP blocking;</li> <li>`JSChallenge`: JavaScript challenge;</li> <li>`ManagedChallenge`: managed challenge;</li> <li>`Allow`: Allow.</li>.
- * @method string getEnabled() Obtain The custom rule status. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
- * @method void setEnabled(string $Enabled) Set The custom rule status. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
- * @method string getId() Obtain Custom rule ID. <br>Different rule configuration operations are supported by rule ID : <br> - Add a new rule: ID is empty or the ID parameter is not specified; <br> - Modify an existing rule: specify the rule ID that needs to be updated/modified; <br> - Delete an existing rule: existing rules not included in the Rules parameter will be deleted.
- * @method void setId(string $Id) Set Custom rule ID. <br>Different rule configuration operations are supported by rule ID : <br> - Add a new rule: ID is empty or the ID parameter is not specified; <br> - Modify an existing rule: specify the rule ID that needs to be updated/modified; <br> - Delete an existing rule: existing rules not included in the Rules parameter will be deleted.
- * @method string getRuleType() Obtain Type of custom rule. Values: <li>`BasicAccessRule`: basic access control;</li> <li>`PreciseMatchRule`: exact custom rule, default;</li> <li>`ManagedAccessRule`: expert customized rule, output parameter only.</li>The default value is PreciseMatchRule.
- * @method void setRuleType(string $RuleType) Set Type of custom rule. Values: <li>`BasicAccessRule`: basic access control;</li> <li>`PreciseMatchRule`: exact custom rule, default;</li> <li>`ManagedAccessRule`: expert customized rule, output parameter only.</li>The default value is PreciseMatchRule.
- * @method integer getPriority() Obtain Customize the priority of custom rule. Range: 0-100, the default value is 0, this parameter only supports PreciseMatchRule.
- * @method void setPriority(integer $Priority) Set Customize the priority of custom rule. Range: 0-100, the default value is 0, this parameter only supports PreciseMatchRule.
+ * @method string getCondition() Obtain The specific content of custom rules must comply with expression grammar. For detailed specifications, please refer to the product document (https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1).
+ * @method void setCondition(string $Condition) Set The specific content of custom rules must comply with expression grammar. For detailed specifications, please refer to the product document (https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1).
+ * @method SecurityAction getAction() Obtain The handling action of custom rules. The value range of SecurityAction.Name is as follows:<ul><li>Deny: blocking;</li><li>Monitor: observation;</li><li>ReturnCustomPage: use specified page to block;</li><li>Redirect: redirect to URL;</li><li>BlockIP: IP blocking;</li><li>JSChallenge: JavaScript challenge;</li><li>ManagedChallenge: managed challenge;</li><li>Allow: allowing.</li></ul>
+ * @method void setAction(SecurityAction $Action) Set The handling action of custom rules. The value range of SecurityAction.Name is as follows:<ul><li>Deny: blocking;</li><li>Monitor: observation;</li><li>ReturnCustomPage: use specified page to block;</li><li>Redirect: redirect to URL;</li><li>BlockIP: IP blocking;</li><li>JSChallenge: JavaScript challenge;</li><li>ManagedChallenge: managed challenge;</li><li>Allow: allowing.</li></ul>
+ * @method string getEnabled() Obtain Whether the custom rule is enabled. Valid values: <ul><li>on: enable</li><li>off: disable</li></ul>
+ * @method void setEnabled(string $Enabled) Set Whether the custom rule is enabled. Valid values: <ul><li>on: enable</li><li>off: disable</li></ul>
+ * @method string getId() Obtain ID of the custom rule. Different rule configuration operations are supported by rule ID:<ul><li>Add a new rule: The ID is empty or the ID parameter is not specified.</li><li>Modify an existing rule: Specify the rule ID that needs to be updated or modified.</li><li>Delete an existing rule: Existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul>
+ * @method void setId(string $Id) Set ID of the custom rule. Different rule configuration operations are supported by rule ID:<ul><li>Add a new rule: The ID is empty or the ID parameter is not specified.</li><li>Modify an existing rule: Specify the rule ID that needs to be updated or modified.</li><li>Delete an existing rule: Existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul>
+ * @method string getRuleType() Obtain Type of custom rule. Valid values: <ul><li>BasicAccessRule: basic access control;</li><li>PreciseMatchRule: exact matching rule;</li><li>ManagedAccessRule: expert customized rule, only supported in output parameters.</li></ul>Description: When RuleType is not specified, it defaults to `PreciseMatchRule`.
+ * @method void setRuleType(string $RuleType) Set Type of custom rule. Valid values: <ul><li>BasicAccessRule: basic access control;</li><li>PreciseMatchRule: exact matching rule;</li><li>ManagedAccessRule: expert customized rule, only supported in output parameters.</li></ul>Description: When RuleType is not specified, it defaults to `PreciseMatchRule`.
+ * @method integer getPriority() Obtain Priority of custom rules, ranging from 0 to 100, defaults to 0, and only supports exact matching rules (`PreciseMatchRule`).
+ * @method void setPriority(integer $Priority) Set Priority of custom rules, ranging from 0 to 100, defaults to 0, and only supports exact matching rules (`PreciseMatchRule`).
  */
 class CustomRule extends AbstractModel
 {
@@ -43,43 +43,43 @@ class CustomRule extends AbstractModel
     public $Name;
 
     /**
-     * @var string The specifics of the custom rule, must comply with the expression grammar, please refer to product documentation for details.
+     * @var string The specific content of custom rules must comply with expression grammar. For detailed specifications, please refer to the product document (https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1).
      */
     public $Condition;
 
     /**
-     * @var SecurityAction Action for custom rules. The Name parameter of SecurityAction supports: <li>`Deny`: block;</li> <li>`Monitor`: observe;</li> <li>`ReturnCustomPage`: block with customized page;</li> <li>`Redirect`: Redirect to URL;</li> <li>`BlockIP`: IP blocking;</li> <li>`JSChallenge`: JavaScript challenge;</li> <li>`ManagedChallenge`: managed challenge;</li> <li>`Allow`: Allow.</li>.
+     * @var SecurityAction The handling action of custom rules. The value range of SecurityAction.Name is as follows:<ul><li>Deny: blocking;</li><li>Monitor: observation;</li><li>ReturnCustomPage: use specified page to block;</li><li>Redirect: redirect to URL;</li><li>BlockIP: IP blocking;</li><li>JSChallenge: JavaScript challenge;</li><li>ManagedChallenge: managed challenge;</li><li>Allow: allowing.</li></ul>
      */
     public $Action;
 
     /**
-     * @var string The custom rule status. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
+     * @var string Whether the custom rule is enabled. Valid values: <ul><li>on: enable</li><li>off: disable</li></ul>
      */
     public $Enabled;
 
     /**
-     * @var string Custom rule ID. <br>Different rule configuration operations are supported by rule ID : <br> - Add a new rule: ID is empty or the ID parameter is not specified; <br> - Modify an existing rule: specify the rule ID that needs to be updated/modified; <br> - Delete an existing rule: existing rules not included in the Rules parameter will be deleted.
+     * @var string ID of the custom rule. Different rule configuration operations are supported by rule ID:<ul><li>Add a new rule: The ID is empty or the ID parameter is not specified.</li><li>Modify an existing rule: Specify the rule ID that needs to be updated or modified.</li><li>Delete an existing rule: Existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul>
      */
     public $Id;
 
     /**
-     * @var string Type of custom rule. Values: <li>`BasicAccessRule`: basic access control;</li> <li>`PreciseMatchRule`: exact custom rule, default;</li> <li>`ManagedAccessRule`: expert customized rule, output parameter only.</li>The default value is PreciseMatchRule.
+     * @var string Type of custom rule. Valid values: <ul><li>BasicAccessRule: basic access control;</li><li>PreciseMatchRule: exact matching rule;</li><li>ManagedAccessRule: expert customized rule, only supported in output parameters.</li></ul>Description: When RuleType is not specified, it defaults to `PreciseMatchRule`.
      */
     public $RuleType;
 
     /**
-     * @var integer Customize the priority of custom rule. Range: 0-100, the default value is 0, this parameter only supports PreciseMatchRule.
+     * @var integer Priority of custom rules, ranging from 0 to 100, defaults to 0, and only supports exact matching rules (`PreciseMatchRule`).
      */
     public $Priority;
 
     /**
      * @param string $Name The custom rule name.
-     * @param string $Condition The specifics of the custom rule, must comply with the expression grammar, please refer to product documentation for details.
-     * @param SecurityAction $Action Action for custom rules. The Name parameter of SecurityAction supports: <li>`Deny`: block;</li> <li>`Monitor`: observe;</li> <li>`ReturnCustomPage`: block with customized page;</li> <li>`Redirect`: Redirect to URL;</li> <li>`BlockIP`: IP blocking;</li> <li>`JSChallenge`: JavaScript challenge;</li> <li>`ManagedChallenge`: managed challenge;</li> <li>`Allow`: Allow.</li>.
-     * @param string $Enabled The custom rule status. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
-     * @param string $Id Custom rule ID. <br>Different rule configuration operations are supported by rule ID : <br> - Add a new rule: ID is empty or the ID parameter is not specified; <br> - Modify an existing rule: specify the rule ID that needs to be updated/modified; <br> - Delete an existing rule: existing rules not included in the Rules parameter will be deleted.
-     * @param string $RuleType Type of custom rule. Values: <li>`BasicAccessRule`: basic access control;</li> <li>`PreciseMatchRule`: exact custom rule, default;</li> <li>`ManagedAccessRule`: expert customized rule, output parameter only.</li>The default value is PreciseMatchRule.
-     * @param integer $Priority Customize the priority of custom rule. Range: 0-100, the default value is 0, this parameter only supports PreciseMatchRule.
+     * @param string $Condition The specific content of custom rules must comply with expression grammar. For detailed specifications, please refer to the product document (https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1).
+     * @param SecurityAction $Action The handling action of custom rules. The value range of SecurityAction.Name is as follows:<ul><li>Deny: blocking;</li><li>Monitor: observation;</li><li>ReturnCustomPage: use specified page to block;</li><li>Redirect: redirect to URL;</li><li>BlockIP: IP blocking;</li><li>JSChallenge: JavaScript challenge;</li><li>ManagedChallenge: managed challenge;</li><li>Allow: allowing.</li></ul>
+     * @param string $Enabled Whether the custom rule is enabled. Valid values: <ul><li>on: enable</li><li>off: disable</li></ul>
+     * @param string $Id ID of the custom rule. Different rule configuration operations are supported by rule ID:<ul><li>Add a new rule: The ID is empty or the ID parameter is not specified.</li><li>Modify an existing rule: Specify the rule ID that needs to be updated or modified.</li><li>Delete an existing rule: Existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul>
+     * @param string $RuleType Type of custom rule. Valid values: <ul><li>BasicAccessRule: basic access control;</li><li>PreciseMatchRule: exact matching rule;</li><li>ManagedAccessRule: expert customized rule, only supported in output parameters.</li></ul>Description: When RuleType is not specified, it defaults to `PreciseMatchRule`.
+     * @param integer $Priority Priority of custom rules, ranging from 0 to 100, defaults to 0, and only supports exact matching rules (`PreciseMatchRule`).
      */
     function __construct()
     {

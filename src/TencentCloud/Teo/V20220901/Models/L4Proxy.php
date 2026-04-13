@@ -50,10 +50,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStaticIp(string $StaticIp) Set Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
  * @method string getAccelerateMainland() Obtain Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
  * @method void setAccelerateMainland(string $AccelerateMainland) Set Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
- * @method DDosProtectionConfig getDDosProtectionConfig() Obtain Security protection configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setDDosProtectionConfig(DDosProtectionConfig $DDosProtectionConfig) Set Security protection configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method DDosProtectionConfig getDDosProtectionConfig() Obtain Security protection settings.
+This field is deprecated.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setDDosProtectionConfig(DDosProtectionConfig $DDosProtectionConfig) Set Security protection settings.
+This field is deprecated.
+Note: This field may return null, which indicates a failure to obtain a valid value.
  * @method integer getL4ProxyRuleCount() Obtain Number of forwarding rules under the Layer 4 proxy instance.
  * @method void setL4ProxyRuleCount(integer $L4ProxyRuleCount) Set Number of forwarding rules under the Layer 4 proxy instance.
  * @method string getUpdateTime() Obtain Latest modification time.
@@ -117,8 +119,10 @@ class L4Proxy extends AbstractModel
     public $AccelerateMainland;
 
     /**
-     * @var DDosProtectionConfig Security protection configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var DDosProtectionConfig Security protection settings.
+This field is deprecated.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @deprecated
      */
     public $DDosProtectionConfig;
 
@@ -148,8 +152,9 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $Ipv6 Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
      * @param string $StaticIp Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
      * @param string $AccelerateMainland Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
-     * @param DDosProtectionConfig $DDosProtectionConfig Security protection configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param DDosProtectionConfig $DDosProtectionConfig Security protection settings.
+This field is deprecated.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param integer $L4ProxyRuleCount Number of forwarding rules under the Layer 4 proxy instance.
      * @param string $UpdateTime Latest modification time.
      */

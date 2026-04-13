@@ -26,38 +26,52 @@ If you wish to quickly submit Targets urls under different sites, you can fill i
  * @method void setZoneId(string $ZoneId) Set Zone ID.
 
 If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account.
- * @method array getTargets() Obtain List of resources to be preheated. Each element format is similar to the following:
-http://www.example.com/example.txt. The parameter value is currently required.
-Note: The number of tasks that can be submitted is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
- * @method void setTargets(array $Targets) Set List of resources to be preheated. Each element format is similar to the following:
-http://www.example.com/example.txt. The parameter value is currently required.
-Note: The number of tasks that can be submitted is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+ * @method array getTargets() Obtain List of resources to be preheated. required. each element format is as follows:.
+http://www.example.com/example.txt.
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+ * @method void setTargets(array $Targets) Set List of resources to be preheated. required. each element format is as follows:.
+http://www.example.com/example.txt.
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+ * @method string getMode() Obtain Preheat mode. valid values:.
+<Li>Default: default mode, which preheats to the middle layer.</li>.
+<Li>Edge: specifies edge preheating mode, which preheats to both edge and middle layer.</li> if left empty, the default value is default.
+Notes:.
+Preheating to the edge generates edge layer traffic, which is included in billing traffic.
+2. specifies the default allocation of edge preheating as a separate preheating amount of 1000 per day, which does not consume the standard preheating amount.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+ * @method void setMode(string $Mode) Set Preheat mode. valid values:.
+<Li>Default: default mode, which preheats to the middle layer.</li>.
+<Li>Edge: specifies edge preheating mode, which preheats to both edge and middle layer.</li> if left empty, the default value is default.
+Notes:.
+Preheating to the edge generates edge layer traffic, which is included in billing traffic.
+2. specifies the default allocation of edge preheating as a separate preheating amount of 1000 per day, which does not consume the standard preheating amount.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
  * @method boolean getEncodeUrl() Obtain Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
  * @method void setEncodeUrl(boolean $EncodeUrl) Set Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
- * @method array getHeaders() Obtain HTTP header information
- * @method void setHeaders(array $Headers) Set HTTP header information
+ * @method array getHeaders() Obtain Specifies whether to carry HTTP header information for preheating. leave it empty otherwise.
+ * @method void setHeaders(array $Headers) Set Specifies whether to carry HTTP header information for preheating. leave it empty otherwise.
  * @method string getPrefetchMediaSegments() Obtain Media fragment preheating control. valid values:.
 <Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
-<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
-
+<Li>Off: only preheats the submitted description file.</li>default value: off if left empty.
 Notes:.
-1. the supported description file is M3U8, and the corresponding shard is TS.
-Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
-Recursive resolution depth is no more than 3.
-Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
-
-This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+Supported description file is M3U8; corresponding shard is TS.
+Specifies the description file must support normal requests and describe sharding paths as per industry standards.
+Specifies the recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the limit, silent processing is triggered and preheating is no longer executed.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
  * @method void setPrefetchMediaSegments(string $PrefetchMediaSegments) Set Media fragment preheating control. valid values:.
 <Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
-<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
-
+<Li>Off: only preheats the submitted description file.</li>default value: off if left empty.
 Notes:.
-1. the supported description file is M3U8, and the corresponding shard is TS.
-Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
-Recursive resolution depth is no more than 3.
-Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
-
-This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+Supported description file is M3U8; corresponding shard is TS.
+Specifies the description file must support normal requests and describe sharding paths as per industry standards.
+Specifies the recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the limit, silent processing is triggered and preheating is no longer executed.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
  */
 class CreatePrefetchTaskRequest extends AbstractModel
 {
@@ -69,11 +83,23 @@ If you wish to quickly submit Targets urls under different sites, you can fill i
     public $ZoneId;
 
     /**
-     * @var array List of resources to be preheated. Each element format is similar to the following:
-http://www.example.com/example.txt. The parameter value is currently required.
-Note: The number of tasks that can be submitted is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+     * @var array List of resources to be preheated. required. each element format is as follows:.
+http://www.example.com/example.txt.
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
      */
     public $Targets;
+
+    /**
+     * @var string Preheat mode. valid values:.
+<Li>Default: default mode, which preheats to the middle layer.</li>.
+<Li>Edge: specifies edge preheating mode, which preheats to both edge and middle layer.</li> if left empty, the default value is default.
+Notes:.
+Preheating to the edge generates edge layer traffic, which is included in billing traffic.
+2. specifies the default allocation of edge preheating as a separate preheating amount of 1000 per day, which does not consume the standard preheating amount.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+     */
+    public $Mode;
 
     /**
      * @var boolean Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
@@ -82,22 +108,21 @@ Note: The number of tasks that can be submitted is limited by the quota of a bil
     public $EncodeUrl;
 
     /**
-     * @var array HTTP header information
+     * @var array Specifies whether to carry HTTP header information for preheating. leave it empty otherwise.
      */
     public $Headers;
 
     /**
      * @var string Media fragment preheating control. valid values:.
 <Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
-<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
-
+<Li>Off: only preheats the submitted description file.</li>default value: off if left empty.
 Notes:.
-1. the supported description file is M3U8, and the corresponding shard is TS.
-Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
-Recursive resolution depth is no more than 3.
-Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
-
-This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+Supported description file is M3U8; corresponding shard is TS.
+Specifies the description file must support normal requests and describe sharding paths as per industry standards.
+Specifies the recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the limit, silent processing is triggered and preheating is no longer executed.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
      */
     public $PrefetchMediaSegments;
 
@@ -105,22 +130,29 @@ This parameter specifies the allowlist feature. if necessary, contact tencent cl
      * @param string $ZoneId Zone ID.
 
 If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account.
-     * @param array $Targets List of resources to be preheated. Each element format is similar to the following:
-http://www.example.com/example.txt. The parameter value is currently required.
-Note: The number of tasks that can be submitted is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+     * @param array $Targets List of resources to be preheated. required. each element format is as follows:.
+http://www.example.com/example.txt.
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+     * @param string $Mode Preheat mode. valid values:.
+<Li>Default: default mode, which preheats to the middle layer.</li>.
+<Li>Edge: specifies edge preheating mode, which preheats to both edge and middle layer.</li> if left empty, the default value is default.
+Notes:.
+Preheating to the edge generates edge layer traffic, which is included in billing traffic.
+2. specifies the default allocation of edge preheating as a separate preheating amount of 1000 per day, which does not consume the standard preheating amount.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
      * @param boolean $EncodeUrl Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
-     * @param array $Headers HTTP header information
+     * @param array $Headers Specifies whether to carry HTTP header information for preheating. leave it empty otherwise.
      * @param string $PrefetchMediaSegments Media fragment preheating control. valid values:.
 <Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
-<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
-
+<Li>Off: only preheats the submitted description file.</li>default value: off if left empty.
 Notes:.
-1. the supported description file is M3U8, and the corresponding shard is TS.
-Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
-Recursive resolution depth is no more than 3.
-Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
-
-This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+Supported description file is M3U8; corresponding shard is TS.
+Specifies the description file must support normal requests and describe sharding paths as per industry standards.
+Specifies the recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the limit, silent processing is triggered and preheating is no longer executed.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
      */
     function __construct()
     {
@@ -141,6 +173,10 @@ This parameter specifies the allowlist feature. if necessary, contact tencent cl
 
         if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
             $this->Targets = $param["Targets"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
 
         if (array_key_exists("EncodeUrl",$param) and $param["EncodeUrl"] !== null) {

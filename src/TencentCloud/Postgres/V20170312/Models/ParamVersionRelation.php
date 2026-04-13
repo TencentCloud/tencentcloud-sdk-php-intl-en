@@ -20,30 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameter information for each version
  *
- * @method string getName() Obtain Parameter name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set Parameter name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDBKernelVersion() Obtain The kernel version that corresponds to the parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDBKernelVersion(string $DBKernelVersion) Set The kernel version that corresponds to the parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getValue() Obtain Default parameter value under the kernel version and specification of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setValue(string $Value) Set Default parameter value under the kernel version and specification of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUnit() Obtain Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUnit(string $Unit) Set Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getMax() Obtain The maximum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMax(float $Max) Set The maximum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getMin() Obtain The minimum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMin(float $Min) Set The minimum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain Parameter name.
+ * @method void setName(string $Name) Set Parameter name.
+ * @method string getDBKernelVersion() Obtain Parameter information belonging to kernel version.
+ * @method void setDBKernelVersion(string $DBKernelVersion) Set Parameter information belonging to kernel version.
+ * @method string getValue() Obtain Default value of the parameter for this version and specification.
+ * @method void setValue(string $Value) Set Default value of the parameter for this version and specification.
+ * @method string getUnit() Obtain Parameter value unit. returns null if the parameter has no units.
+ * @method void setUnit(string $Unit) Set Parameter value unit. returns null if the parameter has no units.
+ * @method float getMax() Obtain Numerical type (integer, real) parameter specifies the upper bound.
+ * @method void setMax(float $Max) Set Numerical type (integer, real) parameter specifies the upper bound.
+ * @method float getMin() Obtain Specifies the numerical type (integer, real) parameter and its lower bound.
+ * @method void setMin(float $Min) Set Specifies the numerical type (integer, real) parameter and its lower bound.
  * @method array getEnumValue() Obtain Value range of the enum parameter
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEnumValue(array $EnumValue) Set Value range of the enum parameter
@@ -52,38 +40,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class ParamVersionRelation extends AbstractModel
 {
     /**
-     * @var string Parameter name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Parameter name.
      */
     public $Name;
 
     /**
-     * @var string The kernel version that corresponds to the parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Parameter information belonging to kernel version.
      */
     public $DBKernelVersion;
 
     /**
-     * @var string Default parameter value under the kernel version and specification of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Default value of the parameter for this version and specification.
      */
     public $Value;
 
     /**
-     * @var string Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Parameter value unit. returns null if the parameter has no units.
      */
     public $Unit;
 
     /**
-     * @var float The maximum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Numerical type (integer, real) parameter specifies the upper bound.
      */
     public $Max;
 
     /**
-     * @var float The minimum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Specifies the numerical type (integer, real) parameter and its lower bound.
      */
     public $Min;
 
@@ -94,18 +76,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EnumValue;
 
     /**
-     * @param string $Name Parameter name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DBKernelVersion The kernel version that corresponds to the parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Value Default parameter value under the kernel version and specification of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Max The maximum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Min The minimum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name Parameter name.
+     * @param string $DBKernelVersion Parameter information belonging to kernel version.
+     * @param string $Value Default value of the parameter for this version and specification.
+     * @param string $Unit Parameter value unit. returns null if the parameter has no units.
+     * @param float $Max Numerical type (integer, real) parameter specifies the upper bound.
+     * @param float $Min Specifies the numerical type (integer, real) parameter and its lower bound.
      * @param array $EnumValue Value range of the enum parameter
 Note: This field may return null, indicating that no valid values can be obtained.
      */

@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set The offset of paginated query. Default value: 0.
  * @method integer getLimit() Obtain The limit of paginated query. Default value: 20. Maximum value: 1000.
  * @method void setLimit(integer $Limit) Set The limit of paginated query. Default value: 20. Maximum value: 1000.
- * @method array getFilters() Obtain Filter conditions. The maximum value for Filters.Values is 20. If this field is not filled in, all the real-time log delivery task information under the current zone-id will be returned. Detailed filter conditions are as follows:
-<li>task-id: Filter by real-time log delivery task ID. Fuzzy search is not supported.</li>
-<li>task-name: Filter by real-time log delivery task name. Fuzzy search is supported, but only one real-time log delivery task name can be filled in for fuzzy search.</li>
-<li>entity-list: Filter by entity corresponding to the real-time log delivery task. Fuzzy search is not supported. Example values: domain.example.com or sid-2s69eb5wcms7.</li>
-<li>task-type: Filter by real-time log delivery task type. Fuzzy search is not supported. Optional values:<br>cls: Push to Tencent Cloud CLS;<br>custom_endpoint: Push to a user-defined HTTP(S) address;<br>s3: Push to an AWS S3-compatible bucket address.</li>
- * @method void setFilters(array $Filters) Set Filter conditions. The maximum value for Filters.Values is 20. If this field is not filled in, all the real-time log delivery task information under the current zone-id will be returned. Detailed filter conditions are as follows:
-<li>task-id: Filter by real-time log delivery task ID. Fuzzy search is not supported.</li>
-<li>task-name: Filter by real-time log delivery task name. Fuzzy search is supported, but only one real-time log delivery task name can be filled in for fuzzy search.</li>
-<li>entity-list: Filter by entity corresponding to the real-time log delivery task. Fuzzy search is not supported. Example values: domain.example.com or sid-2s69eb5wcms7.</li>
-<li>task-type: Filter by real-time log delivery task type. Fuzzy search is not supported. Optional values:<br>cls: Push to Tencent Cloud CLS;<br>custom_endpoint: Push to a user-defined HTTP(S) address;<br>s3: Push to an AWS S3-compatible bucket address.</li>
+ * @method array getFilters() Obtain Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, all real-time log delivery task information under the current zone-id will be returned. the detailed filter criteria are as follows:.
+<li>task-id: filters by real-time log delivery task id. fuzzy queries are not supported.</li>.
+<Li>Task-Name: filters by real-time log delivery task name. supports fuzzy query. when fuzzy search is used, only one real-time log delivery task name can be filled in.</li>.
+<li>entity-list: filters by the entity corresponding to the real-time log delivery task. fuzzy queries are not supported. example value: domain.example.com or sid-2s69eb5wcms7.</li>.
+<li>task-type: specifies the filter by real-time log delivery task type. fuzzy queries are not supported. valid values:<br> cls: push to tencent cloud cls;<br> custom_endpoint: push to a custom HTTP(S) address;<br> S3: push to an AWS S3-compatible bucket address;<br> log_analysis: push to EdgeOne log analytics.</li>.
+ * @method void setFilters(array $Filters) Set Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, all real-time log delivery task information under the current zone-id will be returned. the detailed filter criteria are as follows:.
+<li>task-id: filters by real-time log delivery task id. fuzzy queries are not supported.</li>.
+<Li>Task-Name: filters by real-time log delivery task name. supports fuzzy query. when fuzzy search is used, only one real-time log delivery task name can be filled in.</li>.
+<li>entity-list: filters by the entity corresponding to the real-time log delivery task. fuzzy queries are not supported. example value: domain.example.com or sid-2s69eb5wcms7.</li>.
+<li>task-type: specifies the filter by real-time log delivery task type. fuzzy queries are not supported. valid values:<br> cls: push to tencent cloud cls;<br> custom_endpoint: push to a custom HTTP(S) address;<br> S3: push to an AWS S3-compatible bucket address;<br> log_analysis: push to EdgeOne log analytics.</li>.
  */
 class DescribeRealtimeLogDeliveryTasksRequest extends AbstractModel
 {
@@ -55,11 +55,11 @@ class DescribeRealtimeLogDeliveryTasksRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array Filter conditions. The maximum value for Filters.Values is 20. If this field is not filled in, all the real-time log delivery task information under the current zone-id will be returned. Detailed filter conditions are as follows:
-<li>task-id: Filter by real-time log delivery task ID. Fuzzy search is not supported.</li>
-<li>task-name: Filter by real-time log delivery task name. Fuzzy search is supported, but only one real-time log delivery task name can be filled in for fuzzy search.</li>
-<li>entity-list: Filter by entity corresponding to the real-time log delivery task. Fuzzy search is not supported. Example values: domain.example.com or sid-2s69eb5wcms7.</li>
-<li>task-type: Filter by real-time log delivery task type. Fuzzy search is not supported. Optional values:<br>cls: Push to Tencent Cloud CLS;<br>custom_endpoint: Push to a user-defined HTTP(S) address;<br>s3: Push to an AWS S3-compatible bucket address.</li>
+     * @var array Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, all real-time log delivery task information under the current zone-id will be returned. the detailed filter criteria are as follows:.
+<li>task-id: filters by real-time log delivery task id. fuzzy queries are not supported.</li>.
+<Li>Task-Name: filters by real-time log delivery task name. supports fuzzy query. when fuzzy search is used, only one real-time log delivery task name can be filled in.</li>.
+<li>entity-list: filters by the entity corresponding to the real-time log delivery task. fuzzy queries are not supported. example value: domain.example.com or sid-2s69eb5wcms7.</li>.
+<li>task-type: specifies the filter by real-time log delivery task type. fuzzy queries are not supported. valid values:<br> cls: push to tencent cloud cls;<br> custom_endpoint: push to a custom HTTP(S) address;<br> S3: push to an AWS S3-compatible bucket address;<br> log_analysis: push to EdgeOne log analytics.</li>.
      */
     public $Filters;
 
@@ -67,11 +67,11 @@ class DescribeRealtimeLogDeliveryTasksRequest extends AbstractModel
      * @param string $ZoneId Zone ID.
      * @param integer $Offset The offset of paginated query. Default value: 0.
      * @param integer $Limit The limit of paginated query. Default value: 20. Maximum value: 1000.
-     * @param array $Filters Filter conditions. The maximum value for Filters.Values is 20. If this field is not filled in, all the real-time log delivery task information under the current zone-id will be returned. Detailed filter conditions are as follows:
-<li>task-id: Filter by real-time log delivery task ID. Fuzzy search is not supported.</li>
-<li>task-name: Filter by real-time log delivery task name. Fuzzy search is supported, but only one real-time log delivery task name can be filled in for fuzzy search.</li>
-<li>entity-list: Filter by entity corresponding to the real-time log delivery task. Fuzzy search is not supported. Example values: domain.example.com or sid-2s69eb5wcms7.</li>
-<li>task-type: Filter by real-time log delivery task type. Fuzzy search is not supported. Optional values:<br>cls: Push to Tencent Cloud CLS;<br>custom_endpoint: Push to a user-defined HTTP(S) address;<br>s3: Push to an AWS S3-compatible bucket address.</li>
+     * @param array $Filters Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, all real-time log delivery task information under the current zone-id will be returned. the detailed filter criteria are as follows:.
+<li>task-id: filters by real-time log delivery task id. fuzzy queries are not supported.</li>.
+<Li>Task-Name: filters by real-time log delivery task name. supports fuzzy query. when fuzzy search is used, only one real-time log delivery task name can be filled in.</li>.
+<li>entity-list: filters by the entity corresponding to the real-time log delivery task. fuzzy queries are not supported. example value: domain.example.com or sid-2s69eb5wcms7.</li>.
+<li>task-type: specifies the filter by real-time log delivery task type. fuzzy queries are not supported. valid values:<br> cls: push to tencent cloud cls;<br> custom_endpoint: push to a custom HTTP(S) address;<br> S3: push to an AWS S3-compatible bucket address;<br> log_analysis: push to EdgeOne log analytics.</li>.
      */
     function __construct()
     {

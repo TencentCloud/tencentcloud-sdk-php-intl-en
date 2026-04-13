@@ -30,12 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Authentication rule type. only returned in the response. valid values:.
 <li>PRESET: system PRESET rule. only AttesterDuration can be modified.</li>.
 <Li>CUSTOM: user-defined rules.</li>.
- * @method string getAttesterSource() Obtain Authentication method. valid values:.
-<Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-<Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>.
- * @method void setAttesterSource(string $AttesterSource) Set Authentication method. valid values:.
-<Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-<Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>.
+ * @method string getAttesterSource() Obtain Authentication method. Valid values:
+<li>TC-RCE: Authentication with RCE risk identification;</li>
+<li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+<li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li>
+ * @method void setAttesterSource(string $AttesterSource) Set Authentication method. Valid values:
+<li>TC-RCE: Authentication with RCE risk identification;</li>
+<li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+<li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li>
  * @method string getAttesterDuration() Obtain Validity time of the authentication. defaults to 60s. supported measurement units:.
 <Li>S: specifies seconds. value range: 60–43200.</li>.
 <Li>M: specifies minutes. value range: 1–720.</li>.
@@ -52,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 <li>Specifies the required field when the AttesterSource parameter value is TC-CAPTCHA.</li>.
  * @method void setTCCaptchaOption(TCCaptchaOption $TCCaptchaOption) Set Specifies the configuration message for TC-CAPTCHA certification.
 <li>Specifies the required field when the AttesterSource parameter value is TC-CAPTCHA.</li>.
+ * @method TCEOCaptchaOption getTCEOCaptchaOption() Obtain Configuration message of TC-EO-CAPTCHA authentication.
+<li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+ * @method void setTCEOCaptchaOption(TCEOCaptchaOption $TCEOCaptchaOption) Set Configuration message of TC-EO-CAPTCHA authentication.
+<li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
  */
 class ClientAttester extends AbstractModel
 {
@@ -73,9 +79,10 @@ class ClientAttester extends AbstractModel
     public $Type;
 
     /**
-     * @var string Authentication method. valid values:.
-<Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-<Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>.
+     * @var string Authentication method. Valid values:
+<li>TC-RCE: Authentication with RCE risk identification;</li>
+<li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+<li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li>
      */
     public $AttesterSource;
 
@@ -100,14 +107,21 @@ class ClientAttester extends AbstractModel
     public $TCCaptchaOption;
 
     /**
+     * @var TCEOCaptchaOption Configuration message of TC-EO-CAPTCHA authentication.
+<li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+     */
+    public $TCEOCaptchaOption;
+
+    /**
      * @param string $Id Authentication option ID.
      * @param string $Name Specifies the authentication option name.
      * @param string $Type Authentication rule type. only returned in the response. valid values:.
 <li>PRESET: system PRESET rule. only AttesterDuration can be modified.</li>.
 <Li>CUSTOM: user-defined rules.</li>.
-     * @param string $AttesterSource Authentication method. valid values:.
-<Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-<Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>.
+     * @param string $AttesterSource Authentication method. Valid values:
+<li>TC-RCE: Authentication with RCE risk identification;</li>
+<li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+<li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li>
      * @param string $AttesterDuration Validity time of the authentication. defaults to 60s. supported measurement units:.
 <Li>S: specifies seconds. value range: 60–43200.</li>.
 <Li>M: specifies minutes. value range: 1–720.</li>.
@@ -116,6 +130,8 @@ class ClientAttester extends AbstractModel
 <li>Specifies the required field when the AttesterSource parameter value is TC-RCE.</li>.
      * @param TCCaptchaOption $TCCaptchaOption Specifies the configuration message for TC-CAPTCHA certification.
 <li>Specifies the required field when the AttesterSource parameter value is TC-CAPTCHA.</li>.
+     * @param TCEOCaptchaOption $TCEOCaptchaOption Configuration message of TC-EO-CAPTCHA authentication.
+<li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
      */
     function __construct()
     {
@@ -158,6 +174,11 @@ class ClientAttester extends AbstractModel
         if (array_key_exists("TCCaptchaOption",$param) and $param["TCCaptchaOption"] !== null) {
             $this->TCCaptchaOption = new TCCaptchaOption();
             $this->TCCaptchaOption->deserialize($param["TCCaptchaOption"]);
+        }
+
+        if (array_key_exists("TCEOCaptchaOption",$param) and $param["TCEOCaptchaOption"] !== null) {
+            $this->TCEOCaptchaOption = new TCEOCaptchaOption();
+            $this->TCEOCaptchaOption->deserialize($param["TCEOCaptchaOption"]);
         }
     }
 }

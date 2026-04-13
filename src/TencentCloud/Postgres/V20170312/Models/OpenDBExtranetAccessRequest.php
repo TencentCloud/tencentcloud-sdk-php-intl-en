@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenDBExtranetAccess request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-hez4fh0v
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-hez4fh0v
- * @method integer getIsIpv6() Obtain Whether to enable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
- * @method void setIsIpv6(integer $IsIpv6) Set Whether to enable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+ * @method string getDBInstanceId() Obtain Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method integer getIsIpv6() Obtain Specifies whether to enable public network Ipv6. valid values: 1 (yes), 0 (no).
+Default value: 0
+ * @method void setIsIpv6(integer $IsIpv6) Set Specifies whether to enable public network Ipv6. valid values: 1 (yes), 0 (no).
+Default value: 0
  */
 class OpenDBExtranetAccessRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of postgres-hez4fh0v
+     * @var string Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public $DBInstanceId;
 
     /**
-     * @var integer Whether to enable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+     * @var integer Specifies whether to enable public network Ipv6. valid values: 1 (yes), 0 (no).
+Default value: 0
      */
     public $IsIpv6;
 
     /**
-     * @param string $DBInstanceId Instance ID in the format of postgres-hez4fh0v
-     * @param integer $IsIpv6 Whether to enable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+     * @param string $DBInstanceId Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+     * @param integer $IsIpv6 Specifies whether to enable public network Ipv6. valid values: 1 (yes), 0 (no).
+Default value: 0
      */
     function __construct()
     {

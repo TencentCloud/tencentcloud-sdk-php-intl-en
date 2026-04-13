@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloseDBExtranetAccess request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-6r233v55
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-6r233v55
- * @method integer getIsIpv6() Obtain Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
- * @method void setIsIpv6(integer $IsIpv6) Set Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+ * @method string getDBInstanceId() Obtain Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55.
+ * @method void setDBInstanceId(string $DBInstanceId) Set Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55.
+ * @method integer getIsIpv6() Obtain Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0.
+ * @method void setIsIpv6(integer $IsIpv6) Set Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0.
  */
 class CloseDBExtranetAccessRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of postgres-6r233v55
+     * @var string Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55.
      */
     public $DBInstanceId;
 
     /**
-     * @var integer Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+     * @var integer Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0.
      */
     public $IsIpv6;
 
     /**
-     * @param string $DBInstanceId Instance ID in the format of postgres-6r233v55
-     * @param integer $IsIpv6 Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+     * @param string $DBInstanceId Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55.
+     * @param integer $IsIpv6 Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0.
      */
     function __construct()
     {

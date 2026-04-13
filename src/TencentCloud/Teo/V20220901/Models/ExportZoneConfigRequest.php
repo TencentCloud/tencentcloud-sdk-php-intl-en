@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method array getTypes() Obtain It indicates exporting the type list of configuration . If it is left blank, all types of configurations will be exported. Currently supported valid values:<li>L7AccelerationConfig: It indicates exporting the Layer-7 acceleration configuration, corresponding to the console's "Site Acceleration - Global Acceleration Configuration" and "Site Acceleration - Rule Engine".</li>
-Note: The types that will be supported for export in the future will increase with iterations. When exporting all types, pay attention to the export file size. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
- * @method void setTypes(array $Types) Set It indicates exporting the type list of configuration . If it is left blank, all types of configurations will be exported. Currently supported valid values:<li>L7AccelerationConfig: It indicates exporting the Layer-7 acceleration configuration, corresponding to the console's "Site Acceleration - Global Acceleration Configuration" and "Site Acceleration - Rule Engine".</li>
-Note: The types that will be supported for export in the future will increase with iterations. When exporting all types, pay attention to the export file size. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
+ * @method array getTypes() Obtain Export the type list of configuration items. Leave it blank to export all types of configurations. Currently supported values include: <li>L7AccelerationConfig: means exporting the Layer-7 acceleration configuration, corresponding to the console "Site Acceleration - Global Acceleration Configuration" and "Site Acceleration - Rule Engine".</li><li>WebSecurity: refers to exporting the Web protection configuration.</li> Note: Types supported for future export will increase with iterations. When exporting all types, pay attention to export file size. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
+ * @method void setTypes(array $Types) Set Export the type list of configuration items. Leave it blank to export all types of configurations. Currently supported values include: <li>L7AccelerationConfig: means exporting the Layer-7 acceleration configuration, corresponding to the console "Site Acceleration - Global Acceleration Configuration" and "Site Acceleration - Rule Engine".</li><li>WebSecurity: refers to exporting the Web protection configuration.</li> Note: Types supported for future export will increase with iterations. When exporting all types, pay attention to export file size. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
  */
 class ExportZoneConfigRequest extends AbstractModel
 {
@@ -35,15 +33,13 @@ class ExportZoneConfigRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array It indicates exporting the type list of configuration . If it is left blank, all types of configurations will be exported. Currently supported valid values:<li>L7AccelerationConfig: It indicates exporting the Layer-7 acceleration configuration, corresponding to the console's "Site Acceleration - Global Acceleration Configuration" and "Site Acceleration - Rule Engine".</li>
-Note: The types that will be supported for export in the future will increase with iterations. When exporting all types, pay attention to the export file size. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
+     * @var array Export the type list of configuration items. Leave it blank to export all types of configurations. Currently supported values include: <li>L7AccelerationConfig: means exporting the Layer-7 acceleration configuration, corresponding to the console "Site Acceleration - Global Acceleration Configuration" and "Site Acceleration - Rule Engine".</li><li>WebSecurity: refers to exporting the Web protection configuration.</li> Note: Types supported for future export will increase with iterations. When exporting all types, pay attention to export file size. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
      */
     public $Types;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param array $Types It indicates exporting the type list of configuration . If it is left blank, all types of configurations will be exported. Currently supported valid values:<li>L7AccelerationConfig: It indicates exporting the Layer-7 acceleration configuration, corresponding to the console's "Site Acceleration - Global Acceleration Configuration" and "Site Acceleration - Rule Engine".</li>
-Note: The types that will be supported for export in the future will increase with iterations. When exporting all types, pay attention to the export file size. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
+     * @param array $Types Export the type list of configuration items. Leave it blank to export all types of configurations. Currently supported values include: <li>L7AccelerationConfig: means exporting the Layer-7 acceleration configuration, corresponding to the console "Site Acceleration - Global Acceleration Configuration" and "Site Acceleration - Rule Engine".</li><li>WebSecurity: refers to exporting the Web protection configuration.</li> Note: Types supported for future export will increase with iterations. When exporting all types, pay attention to export file size. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
      */
     function __construct()
     {

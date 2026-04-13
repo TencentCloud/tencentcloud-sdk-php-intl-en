@@ -20,16 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateZone request structure.
  *
- * @method string getType() Obtain Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-<li>partial: CNAME access;</li>
-<li>full: NS access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
- * @method void setType(string $Type) Set Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-<li>partial: CNAME access;</li>
-<li>full: NS access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
+ * @method string getType() Obtain Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+<li>partial: CNAME access;</li>.
+<li>full: NS access;</li>.
+<li>noDomainAccess: access with no domain name.</li>.
+<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+<li>ai: edge reasoning integration.</li>.
+ * @method void setType(string $Type) Set Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+<li>partial: CNAME access;</li>.
+<li>full: NS access;</li>.
+<li>noDomainAccess: access with no domain name.</li>.
+<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+<li>ai: edge reasoning integration.</li>.
  * @method string getZoneName() Obtain Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
  * @method void setZoneName(string $ZoneName) Set Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
  * @method string getArea() Obtain The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
@@ -64,11 +66,12 @@ Note: if this parameter is not specified, a site in "init" status will be create
 class CreateZoneRequest extends AbstractModel
 {
     /**
-     * @var string Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-<li>partial: CNAME access;</li>
-<li>full: NS access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
+     * @var string Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+<li>partial: CNAME access;</li>.
+<li>full: NS access;</li>.
+<li>noDomainAccess: access with no domain name.</li>.
+<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+<li>ai: edge reasoning integration.</li>.
      */
     public $Type;
 
@@ -118,11 +121,12 @@ Note: if this parameter is not specified, a site in "init" status will be create
     public $JumpStart;
 
     /**
-     * @param string $Type Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-<li>partial: CNAME access;</li>
-<li>full: NS access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
+     * @param string $Type Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+<li>partial: CNAME access;</li>.
+<li>full: NS access;</li>.
+<li>noDomainAccess: access with no domain name.</li>.
+<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+<li>ai: edge reasoning integration.</li>.
      * @param string $ZoneName Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
      * @param string $Area The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
 <li>`global`: Global AZs</li>

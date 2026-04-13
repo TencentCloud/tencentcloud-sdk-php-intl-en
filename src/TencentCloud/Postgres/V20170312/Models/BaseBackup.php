@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) Set Unique ID of a backup file
  * @method string getName() Obtain Backup file name.
  * @method void setName(string $Name) Set Backup file name.
- * @method string getBackupMethod() Obtain Backup method, including physical and logical.
- * @method void setBackupMethod(string $BackupMethod) Set Backup method, including physical and logical.
- * @method string getBackupMode() Obtain Backup mode, including automatic and manual.
- * @method void setBackupMode(string $BackupMode) Set Backup mode, including automatic and manual.
- * @method string getState() Obtain Backup task status
- * @method void setState(string $State) Set Backup task status
+ * @method string getBackupMethod() Obtain Specifies the backup method: physical - physical backup, logical - logical backup.
+ * @method void setBackupMethod(string $BackupMethod) Set Specifies the backup method: physical - physical backup, logical - logical backup.
+ * @method string getBackupMode() Obtain Backup mode: automatic - automatic backup, manual - manual backup.
+ * @method void setBackupMode(string $BackupMode) Set Backup mode: automatic - automatic backup, manual - manual backup.
+ * @method string getState() Obtain Backup task status. valid values: init, running, finished, failed, canceled.
+ * @method void setState(string $State) Set Backup task status. valid values: init, running, finished, failed, canceled.
  * @method integer getSize() Obtain Backup set size in bytes
  * @method void setSize(integer $Size) Set Backup set size in bytes
  * @method string getStartTime() Obtain Backup start time
@@ -59,17 +59,17 @@ class BaseBackup extends AbstractModel
     public $Name;
 
     /**
-     * @var string Backup method, including physical and logical.
+     * @var string Specifies the backup method: physical - physical backup, logical - logical backup.
      */
     public $BackupMethod;
 
     /**
-     * @var string Backup mode, including automatic and manual.
+     * @var string Backup mode: automatic - automatic backup, manual - manual backup.
      */
     public $BackupMode;
 
     /**
-     * @var string Backup task status
+     * @var string Backup task status. valid values: init, running, finished, failed, canceled.
      */
     public $State;
 
@@ -97,9 +97,9 @@ class BaseBackup extends AbstractModel
      * @param string $DBInstanceId Instance ID
      * @param string $Id Unique ID of a backup file
      * @param string $Name Backup file name.
-     * @param string $BackupMethod Backup method, including physical and logical.
-     * @param string $BackupMode Backup mode, including automatic and manual.
-     * @param string $State Backup task status
+     * @param string $BackupMethod Specifies the backup method: physical - physical backup, logical - logical backup.
+     * @param string $BackupMode Backup mode: automatic - automatic backup, manual - manual backup.
+     * @param string $State Backup task status. valid values: init, running, finished, failed, canceled.
      * @param integer $Size Backup set size in bytes
      * @param string $StartTime Backup start time
      * @param string $FinishTime Backup end time

@@ -27,17 +27,22 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\CloneDBInstanceResponse CloneDBInstance(Models\CloneDBInstanceRequest $req) This API is used to clone an instance by specifying a backup set or a point in time.
  * @method Models\CloseDBExtranetAccessResponse CloseDBExtranetAccess(Models\CloseDBExtranetAccessRequest $req) This API is used to disable the public network address of an instance.
  * @method Models\CloseServerlessDBExtranetAccessResponse CloseServerlessDBExtranetAccess(Models\CloseServerlessDBExtranetAccessRequest $req) This API is used to disable the public network address of a PostgreSQL for Serverless instance.
+ * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) This API is used to create a data account. The returned Oid is the unique identifier of the account, which matches the oid recorded in the database system table pg_roles.
+ * @method Models\CreateBackupPlanResponse CreateBackupPlan(Models\CreateBackupPlanRequest $req) This API is used to create a backup policy.
  * @method Models\CreateBaseBackupResponse CreateBaseBackup(Models\CreateBaseBackupRequest $req) This API is used to create a data backup of an instance.
- * @method Models\CreateDBInstanceNetworkAccessResponse CreateDBInstanceNetworkAccess(Models\CreateDBInstanceNetworkAccessRequest $req) This API is used to create a network for an instance.
+ * @method Models\CreateDBInstanceNetworkAccessResponse CreateDBInstanceNetworkAccess(Models\CreateDBInstanceNetworkAccessRequest $req) This API is used to create instance networks. Each instance allows a maximum of 2 network configurations and a minimum of 1.
  * @method Models\CreateDBInstancesResponse CreateDBInstances(Models\CreateDBInstancesRequest $req) This API is used to create (but not initialize) one or more TencentDB for PostgreSQL instances. This API is disused and replaced by the [CreateInstances](https://intl.cloud.tencent.com/document/api/409/56107?from_cn_redirect=1) API.
+ * @method Models\CreateDatabaseResponse CreateDatabase(Models\CreateDatabaseRequest $req) This API is used to create a database, requiring the specified database name and owner.
  * @method Models\CreateInstancesResponse CreateInstances(Models\CreateInstancesRequest $req) This API is used to create one or more PostgreSQL instances. Instances created through this interface do not need to be initialized and can be used directly.
 <li>After an instance is successfully created, it will automatically start up, and its status changes to "Running".</li>
 <li>For prepaid instances, the required amount for the instance purchase will be deducted in advance. For post-paid hourly instances, the amount required for the purchase within the first hour will be temporarily frozen. Please ensure that your account balance is sufficient before calling this interface.</li>
  * @method Models\CreateParameterTemplateResponse CreateParameterTemplate(Models\CreateParameterTemplateRequest $req) This API is used to create a parameter template.
  * @method Models\CreateReadOnlyDBInstanceResponse CreateReadOnlyDBInstance(Models\CreateReadOnlyDBInstanceRequest $req) This API is used to create read-only replicas.
  * @method Models\CreateReadOnlyGroupResponse CreateReadOnlyGroup(Models\CreateReadOnlyGroupRequest $req) This API is used to create an RO group.
- * @method Models\CreateReadOnlyGroupNetworkAccessResponse CreateReadOnlyGroupNetworkAccess(Models\CreateReadOnlyGroupNetworkAccessRequest $req) This API is used to create a network for an RO group.
+ * @method Models\CreateReadOnlyGroupNetworkAccessResponse CreateReadOnlyGroupNetworkAccess(Models\CreateReadOnlyGroupNetworkAccessRequest $req) This API is used to create network for RO groups. The largest quantity of networks to create is 2.
  * @method Models\CreateServerlessDBInstanceResponse CreateServerlessDBInstance(Models\CreateServerlessDBInstanceRequest $req) This API is used to create a PostgreSQL for Serverless instance. If the creation succeeds, the instance ID will be returned.
+ * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) This API is used to delete a database account. Oid and UserName must be input simultaneously to avoid accidental deletion. Note: This API is reentrant. If the account no longer exists, calling this API to delete it will not trigger an error.
+ * @method Models\DeleteBackupPlanResponse DeleteBackupPlan(Models\DeleteBackupPlanRequest $req) This API is used to delete a backup policy.
  * @method Models\DeleteBaseBackupResponse DeleteBaseBackup(Models\DeleteBaseBackupRequest $req) This API is used to delete a specified data backup for an instance.
  * @method Models\DeleteDBInstanceNetworkAccessResponse DeleteDBInstanceNetworkAccess(Models\DeleteDBInstanceNetworkAccessRequest $req) This API is used to delete a network of an instance.
  * @method Models\DeleteLogBackupResponse DeleteLogBackup(Models\DeleteLogBackupRequest $req) This API is used to delete the specified log backup of an instance.
@@ -45,6 +50,7 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\DeleteReadOnlyGroupResponse DeleteReadOnlyGroup(Models\DeleteReadOnlyGroupRequest $req) This API is used to delete an RO group.
  * @method Models\DeleteReadOnlyGroupNetworkAccessResponse DeleteReadOnlyGroupNetworkAccess(Models\DeleteReadOnlyGroupNetworkAccessRequest $req) This API is used to delete a network of an RO group.
  * @method Models\DeleteServerlessDBInstanceResponse DeleteServerlessDBInstance(Models\DeleteServerlessDBInstanceRequest $req) This API is used to delete a PostgreSQL for Serverless instance.
+ * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) This API is used to query the permission list of a database account on a database object.
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) This API is used to query the list of the database accounts for an instance.
  * @method Models\DescribeAvailableRecoveryTimeResponse DescribeAvailableRecoveryTime(Models\DescribeAvailableRecoveryTimeRequest $req) This API is used to query the available restoration time of an instance.
  * @method Models\DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(Models\DescribeBackupDownloadRestrictionRequest $req) This API is used to query the backup download restrictions.
@@ -62,15 +68,19 @@ use TencentCloud\Postgres\V20170312\Models as Models;
 <li>Allow a standby node to promote to a primary node.
 <li>Allow a semi-sync instance to adopt sync or async replication.
  * @method Models\DescribeDBInstanceParametersResponse DescribeDBInstanceParameters(Models\DescribeDBInstanceParametersRequest $req) This API is used to query the parameters of an instance.
+ * @method Models\DescribeDBInstanceSSLConfigResponse DescribeDBInstanceSSLConfig(Models\DescribeDBInstanceSSLConfigRequest $req) This API is used to query the SSL status of an instance.
  * @method Models\DescribeDBInstanceSecurityGroupsResponse DescribeDBInstanceSecurityGroups(Models\DescribeDBInstanceSecurityGroupsRequest $req) This API is used to query the security group of an instance.
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) This API is used to query the details of one or more instances.
  * @method Models\DescribeDBSlowlogsResponse DescribeDBSlowlogs(Models\DescribeDBSlowlogsRequest $req) This API is used to get a slow query log. Since it was deprecated on September 1, 2021, it has no longer returned data. You need to use the [DescribeSlowQueryList](https://intl.cloud.tencent.com/document/product/409/60540?from_cn_redirect=1) API instead to get slow query logs.
  * @method Models\DescribeDBVersionsResponse DescribeDBVersions(Models\DescribeDBVersionsRequest $req) This API is used to query the list of supported database versions.
  * @method Models\DescribeDBXlogsResponse DescribeDBXlogs(Models\DescribeDBXlogsRequest $req) This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://www.tencentcloud.com/zh/document/product/409/54343) API.
+ * @method Models\DescribeDatabaseObjectsResponse DescribeDatabaseObjects(Models\DescribeDatabaseObjectsRequest $req) This API is used to query database object list, such as the mode list in test database.
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) This API is used to query the database list of an instance.
+ * @method Models\DescribeDedicatedClustersResponse DescribeDedicatedClusters(Models\DescribeDedicatedClustersRequest $req) This API is used to query an exclusive cluster.
  * @method Models\DescribeDefaultParametersResponse DescribeDefaultParameters(Models\DescribeDefaultParametersRequest $req) This API is used to query all parameters supported by a database version and engine.
  * @method Models\DescribeEncryptionKeysResponse DescribeEncryptionKeys(Models\DescribeEncryptionKeysRequest $req) This API is used to query the instance key list.
  * @method Models\DescribeLogBackupsResponse DescribeLogBackups(Models\DescribeLogBackupsRequest $req) This API is used to query the list of log backups.
+ * @method Models\DescribeMaintainTimeWindowResponse DescribeMaintainTimeWindow(Models\DescribeMaintainTimeWindowRequest $req) This API is used to query instance maintenance window.
  * @method Models\DescribeOrdersResponse DescribeOrders(Models\DescribeOrdersRequest $req) This API is used to query the order information.
  * @method Models\DescribeParameterTemplateAttributesResponse DescribeParameterTemplateAttributes(Models\DescribeParameterTemplateAttributesRequest $req) This API is used to query the details of a parameter template, including basic information and parameter information.
  * @method Models\DescribeParameterTemplatesResponse DescribeParameterTemplates(Models\DescribeParameterTemplatesRequest $req) This API is used to query the list of parameter templates.
@@ -81,6 +91,8 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\DescribeServerlessDBInstancesResponse DescribeServerlessDBInstances(Models\DescribeServerlessDBInstancesRequest $req) This API is used to query the details of one or more PostgreSQL for Serverless instances.
  * @method Models\DescribeSlowQueryAnalysisResponse DescribeSlowQueryAnalysis(Models\DescribeSlowQueryAnalysisRequest $req) This API is used to count and analyze slow query statements during the specified period of time and return aggregated statistical analysis results which are classified by statement with abstract parameter values.
  * @method Models\DescribeSlowQueryListResponse DescribeSlowQueryList(Models\DescribeSlowQueryListRequest $req) This API is used to get the slow queries during the specified period of time.
+ * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) This API is used to query the task list and show the progress of async task execution.
+This API is used to show summarized steps, which may be adjusted during version iteration. It is not recommended for key logic usage.
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) This API is used to query the supported AZs.
  * @method Models\DestroyDBInstanceResponse DestroyDBInstance(Models\DestroyDBInstanceRequest $req) This API is used to terminate an isolated instance by specifying the `DBInstanceId` parameter. The data of a terminated instance will be deleted and cannot be recovered. Be cautious with this API calling. Only the instance in isolation can be terminated.
  * @method Models\DisIsolateDBInstancesResponse DisIsolateDBInstances(Models\DisIsolateDBInstancesRequest $req) This API is used to remove one or more instances from isolation.
@@ -89,6 +101,8 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\InquiryPriceRenewDBInstanceResponse InquiryPriceRenewDBInstance(Models\InquiryPriceRenewDBInstanceRequest $req) This API is used to query the renewal price of an instance.
  * @method Models\InquiryPriceUpgradeDBInstanceResponse InquiryPriceUpgradeDBInstance(Models\InquiryPriceUpgradeDBInstanceRequest $req) This API is used to query the fees of upgrading a specified database instance. Only pay-as-you-go instance is supported.
  * @method Models\IsolateDBInstancesResponse IsolateDBInstances(Models\IsolateDBInstancesRequest $req) This API is used to isolate an instance.
+ * @method Models\LockAccountResponse LockAccount(Models\LockAccountRequest $req) This API is used to lock a database account. After being locked, the current connection will disconnect and unable to establish a new connection.
+ * @method Models\ModifyAccountPrivilegesResponse ModifyAccountPrivileges(Models\ModifyAccountPrivilegesRequest $req) This API is used to modify the permission of an account on a database object and modify the account type.
  * @method Models\ModifyAccountRemarkResponse ModifyAccountRemark(Models\ModifyAccountRemarkRequest $req) This API is used to modify account remarks.
  * @method Models\ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(Models\ModifyBackupDownloadRestrictionRequest $req) This API is used to modify the backup download restrictions.
  * @method Models\ModifyBackupPlanResponse ModifyBackupPlan(Models\ModifyBackupPlanRequest $req) This API is used to modify the backup plan of an instance, such as modifying the backup start time. By default, a full backup starts at midnight every day and the generated backup files will be retained for seven days.
@@ -101,10 +115,14 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) This API is used to rename a TencentDB for PostgreSQL instance.
  * @method Models\ModifyDBInstanceParametersResponse ModifyDBInstanceParameters(Models\ModifyDBInstanceParametersRequest $req) This API is used to modify instance parameters.
  * @method Models\ModifyDBInstanceReadOnlyGroupResponse ModifyDBInstanceReadOnlyGroup(Models\ModifyDBInstanceReadOnlyGroupRequest $req) This API is used to modify the RO group of an instance.
+ * @method Models\ModifyDBInstanceSSLConfigResponse ModifyDBInstanceSSLConfig(Models\ModifyDBInstanceSSLConfigRequest $req) This API is used to modify the SSL configuration of an instance, including enabling, disabling, and modifying the connection address protected by an SSL certificate.
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) This API is used to modify the security group of an instance.
  * @method Models\ModifyDBInstanceSpecResponse ModifyDBInstanceSpec(Models\ModifyDBInstanceSpecRequest $req) This API is used to modify instance specifications, including memory and disk size.
  * @method Models\ModifyDBInstancesProjectResponse ModifyDBInstancesProject(Models\ModifyDBInstancesProjectRequest $req) This API is used to modify the project of an instance.
+ * @method Models\ModifyDatabaseOwnerResponse ModifyDatabaseOwner(Models\ModifyDatabaseOwnerRequest $req) This API is used to change database owner.
+ * @method Models\ModifyMaintainTimeWindowResponse ModifyMaintainTimeWindow(Models\ModifyMaintainTimeWindowRequest $req) This API is used to modify the instance maintenance window.
  * @method Models\ModifyParameterTemplateResponse ModifyParameterTemplate(Models\ModifyParameterTemplateRequest $req) This API is used to modify the configurations, such as parameter template name and description. It can also be used to manage the parameter list in the parameter template.
+ * @method Models\ModifyReadOnlyDBInstanceWeightResponse ModifyReadOnlyDBInstanceWeight(Models\ModifyReadOnlyDBInstanceWeightRequest $req) This API is used to modify the read-only instance weight.
  * @method Models\ModifyReadOnlyGroupConfigResponse ModifyReadOnlyGroupConfig(Models\ModifyReadOnlyGroupConfigRequest $req) This API is used to modify RO group configuration.
  * @method Models\ModifySwitchTimePeriodResponse ModifySwitchTimePeriod(Models\ModifySwitchTimePeriodRequest $req) This API is used to perform a primary-standby switch for an instance waiting for the switch after it is upgraded.
  * @method Models\OpenDBExtranetAccessResponse OpenDBExtranetAccess(Models\OpenDBExtranetAccessRequest $req) This API is used to enable the public network access of an instance.
@@ -120,6 +138,7 @@ use TencentCloud\Postgres\V20170312\Models as Models;
 <li>By initiating a switch, you can verify whether the primary-standby switch is performed correctly.
 <li>By using forced switch, you can forcibly initiate the primary-standby switch when the delay of replica node failed to meet the switch requirement.
 <li>This operation can only be performed for the primary instance.
+ * @method Models\UnlockAccountResponse UnlockAccount(Models\UnlockAccountRequest $req) This API is used to unlock a database account. The account can log in to the database after being unlocked.
  * @method Models\UpgradeDBInstanceResponse UpgradeDBInstance(Models\UpgradeDBInstanceRequest $req) This API is used to upgrade instance configurations. u200cThis API is disused and replaced by the [ModifyDBInstanceSpec](https://intl.cloud.tencent.com/document/api/409/63689?from_cn_redirect=1) API.
  * @method Models\UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersion(Models\UpgradeDBInstanceKernelVersionRequest $req) This API is used to upgrade the kernel version of an instance.
  * @method Models\UpgradeDBInstanceMajorVersionResponse UpgradeDBInstanceMajorVersion(Models\UpgradeDBInstanceMajorVersionRequest $req) This API is used to upgrade the major kernel version of an instance, for example, from PostgreSQL 12 to PostgreSQL 15.

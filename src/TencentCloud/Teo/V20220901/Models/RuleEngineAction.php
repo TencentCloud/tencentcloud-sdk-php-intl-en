@@ -20,80 +20,84 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule engine operations.
  *
- * @method string getName() Obtain Operation Name. the Name must correspond to the parameter structure, for example, if Name=Cache, CacheParameters is required.
+ * @method string getName() Obtain Operation Name. the Name must correspond to the parameter structure, such as Name=Cache, then CacheParameters is required.
 <li>Cache: specifies the node Cache TTL.</li>.
 <Li>CacheKey: specifies the custom cache key.</li>.
-<Li>CachePrefresh: cache pre-refresh;</li>.
-<Li>AccessURLRedirect: url redirection;</li>.
+<Li>CachePrefresh: specifies cache pre-refresh.</li>.
+<Li>AccessURLRedirect: specifies access url redirection.</li>.
 <Li>UpstreamURLRewrite: specifies the origin-pull url rewrite.</li>.
 <li>QUIC:QUIC;</li>
 <li>WebSocket:WebSocket;</li>
 <li>Authentication: Token Authentication;</li>.
-<li>MaxAge: browser caching TTL;</li>.
+<li>MaxAge: specifies the browser cache TTL.</li>.
 <li>StatusCodeCache: specifies the status code cache TTL.</li>.
-<Li>OfflineCache: offline caching;</li>.
-<Li>SmartRouting: smart acceleration;</li>.
-<Li>RangeOriginPull: range-based origin pull;</li>.
-<Li>UpstreamHTTP2: http/2 origin pull;</li>.
-<Li>HostHeader: host header rewrite;</li>.
-<Li>`ForceRedirectHTTPS`: force https redirect configuration for access protocol.</li>.
-<li>OriginPullProtocol: HTTPS origin pull;</li>.
-<Li>Compression: intelligent compression configuration;</li>.
+<Li>OfflineCache: specifies the offline cache.</li>.
+<Li>SmartRouting: specifies smart acceleration.</li>.
+<Li>RangeOriginPull: specifies range-based origin pull.</li>.
+<Li>UpstreamHTTP2: specifies http/2 origin pull.</li>.
+<Li>HostHeader: specifies the host header rewrite.</li>.
+<Li>ForceRedirectHTTPS: specifies the forced https redirect configuration for access protocol.</li>.
+<li>OriginPullProtocol: specifies HTTPS origin pull.</li>.
+<Li>Compression: specifies the intelligent compression configuration.</li>.
 <li>HSTS:HSTS;</li>
-<Li>ClientIPHeader: configuration for storing client request ip in header information;</li>.
-<Li>OCSPStapling: ocsp stapling;</li>.
-<Li>HTTP2: http/2 integration;</li>.
-<li>PostMaxSize: maximum size of the file uploaded for streaming via a POST request;</li>.
-<Li>ClientIPCountry: region of the client ip during origin-pull;</li>.
+<Li>ClientIPHeader: specifies the header information configuration for storing client request ip.</li>.
+<Li>OCSPStapling: specifies ocsp stapling.</li>.
+<Li>HTTP2: specifies http/2 integration.</li>.
+<li>PostMaxSize: specifies the maximum limit for file streaming transmission in POST request upload.</li>.
+<Li>ClientIPCountry: specifies the regional information of the client ip carried during origin-pull.</li>.
 <Li>UpstreamFollowRedirect: specifies the parameter configuration for redirection during origin pull.</li>.
-<Li>UpstreamRequest: origin pull request parameter;</li>.
+<Li>UpstreamRequest: specifies the origin-pull request parameters.</li>.
 <li>TLSConfig: specifies SSL/TLS security.</li>.
-<Li>ModifyOrigin: modify origin server;</li>.
-<Li>HTTPUpstreamTimeout: specifies the layer 7 origin pull timeout configuration.</li>.
-<li>HttpResponse: HTTP response;</li>.
+<Li>ModifyOrigin: modifies the origin server.</li>.
+<Li>HTTPUpstreamTimeout: specifies the layer-7 origin-pull timeout configuration.</li>.
+<li>HttpResponse: HTTP response.</li>.
 <Li>ErrorPage: specifies the custom error page.</li>.
 <li>ModifyResponseHeader: modifies the HTTP node response header.</li>.
-<li>ModifyRequestHeader: modifies the HTTP node request header.</li>.
-<Li>ResponseSpeedLimit: download speed limit for a single connection;</li>.
-<Li>SetContentIdentifier: sets the content identifier;</li>.
-<Li>Vary: vary feature configuration.</li>.
- * @method void setName(string $Name) Set Operation Name. the Name must correspond to the parameter structure, for example, if Name=Cache, CacheParameters is required.
+<li>ModifyRequestHeader: modifies the request header of an HTTP node.</li>.
+<Li>ResponseSpeedLimit: specifies the download speed limit for a single connection.</li>.
+<Li>SetContentIdentifier: specifies the content identifier.</li>.
+<Li>Vary: specifies the vary feature configuration.</li>.
+<Li>ContentCompression: specifies the content compression configuration.</li>.
+<Li>OriginAuthentication. specifies the origin authentication configuration.</li>.
+ * @method void setName(string $Name) Set Operation Name. the Name must correspond to the parameter structure, such as Name=Cache, then CacheParameters is required.
 <li>Cache: specifies the node Cache TTL.</li>.
 <Li>CacheKey: specifies the custom cache key.</li>.
-<Li>CachePrefresh: cache pre-refresh;</li>.
-<Li>AccessURLRedirect: url redirection;</li>.
+<Li>CachePrefresh: specifies cache pre-refresh.</li>.
+<Li>AccessURLRedirect: specifies access url redirection.</li>.
 <Li>UpstreamURLRewrite: specifies the origin-pull url rewrite.</li>.
 <li>QUIC:QUIC;</li>
 <li>WebSocket:WebSocket;</li>
 <li>Authentication: Token Authentication;</li>.
-<li>MaxAge: browser caching TTL;</li>.
+<li>MaxAge: specifies the browser cache TTL.</li>.
 <li>StatusCodeCache: specifies the status code cache TTL.</li>.
-<Li>OfflineCache: offline caching;</li>.
-<Li>SmartRouting: smart acceleration;</li>.
-<Li>RangeOriginPull: range-based origin pull;</li>.
-<Li>UpstreamHTTP2: http/2 origin pull;</li>.
-<Li>HostHeader: host header rewrite;</li>.
-<Li>`ForceRedirectHTTPS`: force https redirect configuration for access protocol.</li>.
-<li>OriginPullProtocol: HTTPS origin pull;</li>.
-<Li>Compression: intelligent compression configuration;</li>.
+<Li>OfflineCache: specifies the offline cache.</li>.
+<Li>SmartRouting: specifies smart acceleration.</li>.
+<Li>RangeOriginPull: specifies range-based origin pull.</li>.
+<Li>UpstreamHTTP2: specifies http/2 origin pull.</li>.
+<Li>HostHeader: specifies the host header rewrite.</li>.
+<Li>ForceRedirectHTTPS: specifies the forced https redirect configuration for access protocol.</li>.
+<li>OriginPullProtocol: specifies HTTPS origin pull.</li>.
+<Li>Compression: specifies the intelligent compression configuration.</li>.
 <li>HSTS:HSTS;</li>
-<Li>ClientIPHeader: configuration for storing client request ip in header information;</li>.
-<Li>OCSPStapling: ocsp stapling;</li>.
-<Li>HTTP2: http/2 integration;</li>.
-<li>PostMaxSize: maximum size of the file uploaded for streaming via a POST request;</li>.
-<Li>ClientIPCountry: region of the client ip during origin-pull;</li>.
+<Li>ClientIPHeader: specifies the header information configuration for storing client request ip.</li>.
+<Li>OCSPStapling: specifies ocsp stapling.</li>.
+<Li>HTTP2: specifies http/2 integration.</li>.
+<li>PostMaxSize: specifies the maximum limit for file streaming transmission in POST request upload.</li>.
+<Li>ClientIPCountry: specifies the regional information of the client ip carried during origin-pull.</li>.
 <Li>UpstreamFollowRedirect: specifies the parameter configuration for redirection during origin pull.</li>.
-<Li>UpstreamRequest: origin pull request parameter;</li>.
+<Li>UpstreamRequest: specifies the origin-pull request parameters.</li>.
 <li>TLSConfig: specifies SSL/TLS security.</li>.
-<Li>ModifyOrigin: modify origin server;</li>.
-<Li>HTTPUpstreamTimeout: specifies the layer 7 origin pull timeout configuration.</li>.
-<li>HttpResponse: HTTP response;</li>.
+<Li>ModifyOrigin: modifies the origin server.</li>.
+<Li>HTTPUpstreamTimeout: specifies the layer-7 origin-pull timeout configuration.</li>.
+<li>HttpResponse: HTTP response.</li>.
 <Li>ErrorPage: specifies the custom error page.</li>.
 <li>ModifyResponseHeader: modifies the HTTP node response header.</li>.
-<li>ModifyRequestHeader: modifies the HTTP node request header.</li>.
-<Li>ResponseSpeedLimit: download speed limit for a single connection;</li>.
-<Li>SetContentIdentifier: sets the content identifier;</li>.
-<Li>Vary: vary feature configuration.</li>.
+<li>ModifyRequestHeader: modifies the request header of an HTTP node.</li>.
+<Li>ResponseSpeedLimit: specifies the download speed limit for a single connection.</li>.
+<Li>SetContentIdentifier: specifies the content identifier.</li>.
+<Li>Vary: specifies the vary feature configuration.</li>.
+<Li>ContentCompression: specifies the content compression configuration.</li>.
+<Li>OriginAuthentication. specifies the origin authentication configuration.</li>.
  * @method CacheParameters getCacheParameters() Obtain Node cache ttl configuration parameter. when name is cache, this parameter is required.
 Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setCacheParameters(CacheParameters $CacheParameters) Set Node cache ttl configuration parameter. when name is cache, this parameter is required.
@@ -158,8 +162,10 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setForceRedirectHTTPSParameters(ForceRedirectHTTPSParameters $ForceRedirectHTTPSParameters) Set Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
 Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method OriginPullProtocolParameters getOriginPullProtocolParameters() Obtain Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required.
- * @method void setOriginPullProtocolParameters(OriginPullProtocolParameters $OriginPullProtocolParameters) Set Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required.
+ * @method OriginPullProtocolParameters getOriginPullProtocolParameters() Obtain HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setOriginPullProtocolParameters(OriginPullProtocolParameters $OriginPullProtocolParameters) Set HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
+Note: This field may return null, which indicates a failure to obtain a valid value.
  * @method CompressionParameters getCompressionParameters() Obtain Intelligent compression configuration. this parameter is required when name is set to compression.
 Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setCompressionParameters(CompressionParameters $CompressionParameters) Set Intelligent compression configuration. this parameter is required when name is set to compression.
@@ -236,47 +242,53 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 Note: This field may return null, which indicates a failure to obtain a valid value.
  * @method VaryParameters getVaryParameters() Obtain Vary feature configuration parameter. when Name value is Vary, this parameter is required.
  * @method void setVaryParameters(VaryParameters $VaryParameters) Set Vary feature configuration parameter. when Name value is Vary, this parameter is required.
+ * @method ContentCompressionParameters getContentCompressionParameters() Obtain The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers.
+ * @method void setContentCompressionParameters(ContentCompressionParameters $ContentCompressionParameters) Set The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers.
+ * @method OriginAuthenticationParameters getOriginAuthenticationParameters() Obtain The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+ * @method void setOriginAuthenticationParameters(OriginAuthenticationParameters $OriginAuthenticationParameters) Set The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers.
  */
 class RuleEngineAction extends AbstractModel
 {
     /**
-     * @var string Operation Name. the Name must correspond to the parameter structure, for example, if Name=Cache, CacheParameters is required.
+     * @var string Operation Name. the Name must correspond to the parameter structure, such as Name=Cache, then CacheParameters is required.
 <li>Cache: specifies the node Cache TTL.</li>.
 <Li>CacheKey: specifies the custom cache key.</li>.
-<Li>CachePrefresh: cache pre-refresh;</li>.
-<Li>AccessURLRedirect: url redirection;</li>.
+<Li>CachePrefresh: specifies cache pre-refresh.</li>.
+<Li>AccessURLRedirect: specifies access url redirection.</li>.
 <Li>UpstreamURLRewrite: specifies the origin-pull url rewrite.</li>.
 <li>QUIC:QUIC;</li>
 <li>WebSocket:WebSocket;</li>
 <li>Authentication: Token Authentication;</li>.
-<li>MaxAge: browser caching TTL;</li>.
+<li>MaxAge: specifies the browser cache TTL.</li>.
 <li>StatusCodeCache: specifies the status code cache TTL.</li>.
-<Li>OfflineCache: offline caching;</li>.
-<Li>SmartRouting: smart acceleration;</li>.
-<Li>RangeOriginPull: range-based origin pull;</li>.
-<Li>UpstreamHTTP2: http/2 origin pull;</li>.
-<Li>HostHeader: host header rewrite;</li>.
-<Li>`ForceRedirectHTTPS`: force https redirect configuration for access protocol.</li>.
-<li>OriginPullProtocol: HTTPS origin pull;</li>.
-<Li>Compression: intelligent compression configuration;</li>.
+<Li>OfflineCache: specifies the offline cache.</li>.
+<Li>SmartRouting: specifies smart acceleration.</li>.
+<Li>RangeOriginPull: specifies range-based origin pull.</li>.
+<Li>UpstreamHTTP2: specifies http/2 origin pull.</li>.
+<Li>HostHeader: specifies the host header rewrite.</li>.
+<Li>ForceRedirectHTTPS: specifies the forced https redirect configuration for access protocol.</li>.
+<li>OriginPullProtocol: specifies HTTPS origin pull.</li>.
+<Li>Compression: specifies the intelligent compression configuration.</li>.
 <li>HSTS:HSTS;</li>
-<Li>ClientIPHeader: configuration for storing client request ip in header information;</li>.
-<Li>OCSPStapling: ocsp stapling;</li>.
-<Li>HTTP2: http/2 integration;</li>.
-<li>PostMaxSize: maximum size of the file uploaded for streaming via a POST request;</li>.
-<Li>ClientIPCountry: region of the client ip during origin-pull;</li>.
+<Li>ClientIPHeader: specifies the header information configuration for storing client request ip.</li>.
+<Li>OCSPStapling: specifies ocsp stapling.</li>.
+<Li>HTTP2: specifies http/2 integration.</li>.
+<li>PostMaxSize: specifies the maximum limit for file streaming transmission in POST request upload.</li>.
+<Li>ClientIPCountry: specifies the regional information of the client ip carried during origin-pull.</li>.
 <Li>UpstreamFollowRedirect: specifies the parameter configuration for redirection during origin pull.</li>.
-<Li>UpstreamRequest: origin pull request parameter;</li>.
+<Li>UpstreamRequest: specifies the origin-pull request parameters.</li>.
 <li>TLSConfig: specifies SSL/TLS security.</li>.
-<Li>ModifyOrigin: modify origin server;</li>.
-<Li>HTTPUpstreamTimeout: specifies the layer 7 origin pull timeout configuration.</li>.
-<li>HttpResponse: HTTP response;</li>.
+<Li>ModifyOrigin: modifies the origin server.</li>.
+<Li>HTTPUpstreamTimeout: specifies the layer-7 origin-pull timeout configuration.</li>.
+<li>HttpResponse: HTTP response.</li>.
 <Li>ErrorPage: specifies the custom error page.</li>.
 <li>ModifyResponseHeader: modifies the HTTP node response header.</li>.
-<li>ModifyRequestHeader: modifies the HTTP node request header.</li>.
-<Li>ResponseSpeedLimit: download speed limit for a single connection;</li>.
-<Li>SetContentIdentifier: sets the content identifier;</li>.
-<Li>Vary: vary feature configuration.</li>.
+<li>ModifyRequestHeader: modifies the request header of an HTTP node.</li>.
+<Li>ResponseSpeedLimit: specifies the download speed limit for a single connection.</li>.
+<Li>SetContentIdentifier: specifies the content identifier.</li>.
+<Li>Vary: specifies the vary feature configuration.</li>.
+<Li>ContentCompression: specifies the content compression configuration.</li>.
+<Li>OriginAuthentication. specifies the origin authentication configuration.</li>.
      */
     public $Name;
 
@@ -377,7 +389,8 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     public $ForceRedirectHTTPSParameters;
 
     /**
-     * @var OriginPullProtocolParameters Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required.
+     * @var OriginPullProtocolParameters HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $OriginPullProtocolParameters;
 
@@ -496,43 +509,55 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     public $VaryParameters;
 
     /**
-     * @param string $Name Operation Name. the Name must correspond to the parameter structure, for example, if Name=Cache, CacheParameters is required.
+     * @var ContentCompressionParameters The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers.
+     */
+    public $ContentCompressionParameters;
+
+    /**
+     * @var OriginAuthenticationParameters The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+     */
+    public $OriginAuthenticationParameters;
+
+    /**
+     * @param string $Name Operation Name. the Name must correspond to the parameter structure, such as Name=Cache, then CacheParameters is required.
 <li>Cache: specifies the node Cache TTL.</li>.
 <Li>CacheKey: specifies the custom cache key.</li>.
-<Li>CachePrefresh: cache pre-refresh;</li>.
-<Li>AccessURLRedirect: url redirection;</li>.
+<Li>CachePrefresh: specifies cache pre-refresh.</li>.
+<Li>AccessURLRedirect: specifies access url redirection.</li>.
 <Li>UpstreamURLRewrite: specifies the origin-pull url rewrite.</li>.
 <li>QUIC:QUIC;</li>
 <li>WebSocket:WebSocket;</li>
 <li>Authentication: Token Authentication;</li>.
-<li>MaxAge: browser caching TTL;</li>.
+<li>MaxAge: specifies the browser cache TTL.</li>.
 <li>StatusCodeCache: specifies the status code cache TTL.</li>.
-<Li>OfflineCache: offline caching;</li>.
-<Li>SmartRouting: smart acceleration;</li>.
-<Li>RangeOriginPull: range-based origin pull;</li>.
-<Li>UpstreamHTTP2: http/2 origin pull;</li>.
-<Li>HostHeader: host header rewrite;</li>.
-<Li>`ForceRedirectHTTPS`: force https redirect configuration for access protocol.</li>.
-<li>OriginPullProtocol: HTTPS origin pull;</li>.
-<Li>Compression: intelligent compression configuration;</li>.
+<Li>OfflineCache: specifies the offline cache.</li>.
+<Li>SmartRouting: specifies smart acceleration.</li>.
+<Li>RangeOriginPull: specifies range-based origin pull.</li>.
+<Li>UpstreamHTTP2: specifies http/2 origin pull.</li>.
+<Li>HostHeader: specifies the host header rewrite.</li>.
+<Li>ForceRedirectHTTPS: specifies the forced https redirect configuration for access protocol.</li>.
+<li>OriginPullProtocol: specifies HTTPS origin pull.</li>.
+<Li>Compression: specifies the intelligent compression configuration.</li>.
 <li>HSTS:HSTS;</li>
-<Li>ClientIPHeader: configuration for storing client request ip in header information;</li>.
-<Li>OCSPStapling: ocsp stapling;</li>.
-<Li>HTTP2: http/2 integration;</li>.
-<li>PostMaxSize: maximum size of the file uploaded for streaming via a POST request;</li>.
-<Li>ClientIPCountry: region of the client ip during origin-pull;</li>.
+<Li>ClientIPHeader: specifies the header information configuration for storing client request ip.</li>.
+<Li>OCSPStapling: specifies ocsp stapling.</li>.
+<Li>HTTP2: specifies http/2 integration.</li>.
+<li>PostMaxSize: specifies the maximum limit for file streaming transmission in POST request upload.</li>.
+<Li>ClientIPCountry: specifies the regional information of the client ip carried during origin-pull.</li>.
 <Li>UpstreamFollowRedirect: specifies the parameter configuration for redirection during origin pull.</li>.
-<Li>UpstreamRequest: origin pull request parameter;</li>.
+<Li>UpstreamRequest: specifies the origin-pull request parameters.</li>.
 <li>TLSConfig: specifies SSL/TLS security.</li>.
-<Li>ModifyOrigin: modify origin server;</li>.
-<Li>HTTPUpstreamTimeout: specifies the layer 7 origin pull timeout configuration.</li>.
-<li>HttpResponse: HTTP response;</li>.
+<Li>ModifyOrigin: modifies the origin server.</li>.
+<Li>HTTPUpstreamTimeout: specifies the layer-7 origin-pull timeout configuration.</li>.
+<li>HttpResponse: HTTP response.</li>.
 <Li>ErrorPage: specifies the custom error page.</li>.
 <li>ModifyResponseHeader: modifies the HTTP node response header.</li>.
-<li>ModifyRequestHeader: modifies the HTTP node request header.</li>.
-<Li>ResponseSpeedLimit: download speed limit for a single connection;</li>.
-<Li>SetContentIdentifier: sets the content identifier;</li>.
-<Li>Vary: vary feature configuration.</li>.
+<li>ModifyRequestHeader: modifies the request header of an HTTP node.</li>.
+<Li>ResponseSpeedLimit: specifies the download speed limit for a single connection.</li>.
+<Li>SetContentIdentifier: specifies the content identifier.</li>.
+<Li>Vary: specifies the vary feature configuration.</li>.
+<Li>ContentCompression: specifies the content compression configuration.</li>.
+<Li>OriginAuthentication. specifies the origin authentication configuration.</li>.
      * @param CacheParameters $CacheParameters Node cache ttl configuration parameter. when name is cache, this parameter is required.
 Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param CacheKeyParameters $CacheKeyParameters Custom cache key configuration parameter. when name is cachekey, this parameter is required.
@@ -565,7 +590,8 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param ForceRedirectHTTPSParameters $ForceRedirectHTTPSParameters Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
 Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param OriginPullProtocolParameters $OriginPullProtocolParameters Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required.
+     * @param OriginPullProtocolParameters $OriginPullProtocolParameters HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param CompressionParameters $CompressionParameters Intelligent compression configuration. this parameter is required when name is set to compression.
 Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param HSTSParameters $HSTSParameters HSTS configuration parameter. this parameter is required when name is hsts.
@@ -604,6 +630,8 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
 Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param VaryParameters $VaryParameters Vary feature configuration parameter. when Name value is Vary, this parameter is required.
+     * @param ContentCompressionParameters $ContentCompressionParameters The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers.
+     * @param OriginAuthenticationParameters $OriginAuthenticationParameters The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers.
      */
     function __construct()
     {
@@ -800,6 +828,16 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         if (array_key_exists("VaryParameters",$param) and $param["VaryParameters"] !== null) {
             $this->VaryParameters = new VaryParameters();
             $this->VaryParameters->deserialize($param["VaryParameters"]);
+        }
+
+        if (array_key_exists("ContentCompressionParameters",$param) and $param["ContentCompressionParameters"] !== null) {
+            $this->ContentCompressionParameters = new ContentCompressionParameters();
+            $this->ContentCompressionParameters->deserialize($param["ContentCompressionParameters"]);
+        }
+
+        if (array_key_exists("OriginAuthenticationParameters",$param) and $param["OriginAuthenticationParameters"] !== null) {
+            $this->OriginAuthenticationParameters = new OriginAuthenticationParameters();
+            $this->OriginAuthenticationParameters->deserialize($param["OriginAuthenticationParameters"]);
         }
     }
 }

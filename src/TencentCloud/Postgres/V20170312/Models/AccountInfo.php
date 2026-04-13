@@ -24,14 +24,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-lnp6j617
  * @method string getUserName() Obtain Account
  * @method void setUserName(string $UserName) Set Account
- * @method string getRemark() Obtain Account remarks
- * @method void setRemark(string $Remark) Set Account remarks
- * @method integer getStatus() Obtain Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
- * @method void setStatus(integer $Status) Set Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
- * @method string getCreateTime() Obtain Account creation time
- * @method void setCreateTime(string $CreateTime) Set Account creation time
- * @method string getUpdateTime() Obtain Account last modified time
- * @method void setUpdateTime(string $UpdateTime) Set Account last modified time
+ * @method string getRemark() Obtain Specifies the account remark.
+ * @method void setRemark(string $Remark) Set Specifies the account remark.
+ * @method integer getStatus() Obtain Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting.
+ * @method void setStatus(integer $Status) Set Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method string getUpdateTime() Obtain Last update time of the account.
+ * @method void setUpdateTime(string $UpdateTime) Set Last update time of the account.
+ * @method string getPasswordUpdateTime() Obtain Specifies the last modified time of the account.
+
+This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+Indicates that this field is updated only when the password is modified via the cloud API or the console.
+ * @method void setPasswordUpdateTime(string $PasswordUpdateTime) Set Specifies the last modified time of the account.
+
+This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+Indicates that this field is updated only when the password is modified via the cloud API or the console.
+ * @method string getUserType() Obtain Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role.
+ * @method void setUserType(string $UserType) Set Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role.
+ * @method boolean getOpenCam() Obtain Specifies whether CAM verification is enabled for the user account.
+ * @method void setOpenCam(boolean $OpenCam) Set Specifies whether CAM verification is enabled for the user account.
  */
 class AccountInfo extends AbstractModel
 {
@@ -46,32 +58,56 @@ class AccountInfo extends AbstractModel
     public $UserName;
 
     /**
-     * @var string Account remarks
+     * @var string Specifies the account remark.
      */
     public $Remark;
 
     /**
-     * @var integer Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
+     * @var integer Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting.
      */
     public $Status;
 
     /**
-     * @var string Account creation time
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Account last modified time
+     * @var string Last update time of the account.
      */
     public $UpdateTime;
 
     /**
+     * @var string Specifies the last modified time of the account.
+
+This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+Indicates that this field is updated only when the password is modified via the cloud API or the console.
+     */
+    public $PasswordUpdateTime;
+
+    /**
+     * @var string Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role.
+     */
+    public $UserType;
+
+    /**
+     * @var boolean Specifies whether CAM verification is enabled for the user account.
+     */
+    public $OpenCam;
+
+    /**
      * @param string $DBInstanceId Instance ID in the format of postgres-lnp6j617
      * @param string $UserName Account
-     * @param string $Remark Account remarks
-     * @param integer $Status Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
-     * @param string $CreateTime Account creation time
-     * @param string $UpdateTime Account last modified time
+     * @param string $Remark Specifies the account remark.
+     * @param integer $Status Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting.
+     * @param string $CreateTime Creation time.
+     * @param string $UpdateTime Last update time of the account.
+     * @param string $PasswordUpdateTime Specifies the last modified time of the account.
+
+This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+Indicates that this field is updated only when the password is modified via the cloud API or the console.
+     * @param string $UserType Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role.
+     * @param boolean $OpenCam Specifies whether CAM verification is enabled for the user account.
      */
     function __construct()
     {
@@ -108,6 +144,18 @@ class AccountInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("PasswordUpdateTime",$param) and $param["PasswordUpdateTime"] !== null) {
+            $this->PasswordUpdateTime = $param["PasswordUpdateTime"];
+        }
+
+        if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
+            $this->UserType = $param["UserType"];
+        }
+
+        if (array_key_exists("OpenCam",$param) and $param["OpenCam"] !== null) {
+            $this->OpenCam = $param["OpenCam"];
         }
     }
 }

@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDBInstanceNetworkAccess request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-6bwgamo3.
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-6bwgamo3.
+ * @method string getDBInstanceId() Obtain Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773).
  * @method string getVpcId() Obtain Unified VPC ID.
  * @method void setVpcId(string $VpcId) Set Unified VPC ID.
  * @method string getSubnetId() Obtain Subnet ID.
  * @method void setSubnetId(string $SubnetId) Set Subnet ID.
  * @method boolean getIsAssignVip() Obtain Whether to manually assign the VIP. Valid values: `true` (manually assign), `false` (automatically assign).
  * @method void setIsAssignVip(boolean $IsAssignVip) Set Whether to manually assign the VIP. Valid values: `true` (manually assign), `false` (automatically assign).
- * @method string getVip() Obtain Target VIP.
- * @method void setVip(string $Vip) Set Target VIP.
+ * @method string getVip() Obtain Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
+ * @method void setVip(string $Vip) Set Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
  */
 class CreateDBInstanceNetworkAccessRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of postgres-6bwgamo3.
+     * @var string Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773).
      */
     public $DBInstanceId;
 
@@ -54,16 +54,16 @@ class CreateDBInstanceNetworkAccessRequest extends AbstractModel
     public $IsAssignVip;
 
     /**
-     * @var string Target VIP.
+     * @var string Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
      */
     public $Vip;
 
     /**
-     * @param string $DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+     * @param string $DBInstanceId Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773).
      * @param string $VpcId Unified VPC ID.
      * @param string $SubnetId Subnet ID.
      * @param boolean $IsAssignVip Whether to manually assign the VIP. Valid values: `true` (manually assign), `false` (automatically assign).
-     * @param string $Vip Target VIP.
+     * @param string $Vip Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteBaseBackup request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
- * @method string getBaseBackupId() Obtain Data Backup ID.
- * @method void setBaseBackupId(string $BaseBackupId) Set Data Backup ID.
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+ * @method string getBaseBackupId() Obtain Data backup ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en). automatic backup sets cannot be deleted within 7 days.
+ * @method void setBaseBackupId(string $BaseBackupId) Set Data backup ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en). automatic backup sets cannot be deleted within 7 days.
  */
 class DeleteBaseBackupRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public $DBInstanceId;
 
     /**
-     * @var string Data Backup ID.
+     * @var string Data backup ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en). automatic backup sets cannot be deleted within 7 days.
      */
     public $BaseBackupId;
 
     /**
-     * @param string $DBInstanceId Instance ID
-     * @param string $BaseBackupId Data Backup ID.
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+     * @param string $BaseBackupId Data backup ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en). automatic backup sets cannot be deleted within 7 days.
      */
     function __construct()
     {

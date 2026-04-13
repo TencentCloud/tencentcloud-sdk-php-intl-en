@@ -26,18 +26,18 @@ If you want to quickly submit targets urls under different sites, you can set it
  * @method void setZoneId(string $ZoneId) Set Zone id.
 .
 If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
- * @method string getType() Obtain Type of cache purging. Values:
-<li>`purge_url`: Purge by the URL</li>
-<li>`purge_prefix`: Purge by the directory</li>
-<li>`purge_host`: Purge by the hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
- * @method void setType(string $Type) Set Type of cache purging. Values:
-<li>`purge_url`: Purge by the URL</li>
-<li>`purge_prefix`: Purge by the directory</li>
-<li>`purge_host`: Purge by the hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+ * @method string getType() Obtain Node cache clearing type, valid values:
+<li>purge_url: URL refresh;</li>
+<li>purge_prefix: Directory refresh.</li>
+<li>purge_host: Hostname refresh;</li>
+<li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
+<li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
+ * @method void setType(string $Type) Set Node cache clearing type, valid values:
+<li>purge_url: URL refresh;</li>
+<li>purge_prefix: Directory refresh.</li>
+<li>purge_host: Hostname refresh;</li>
+<li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
+<li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
  * @method string getMethod() Obtain Node cache clearing method is valid for directory refresh, Hostname refresh, and refresh all cache types. valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li> <li> delete: refresh node resources regardless of whether resources under the directory are updated.</li> default value: invalidate.
  * @method void setMethod(string $Method) Set Node cache clearing method is valid for directory refresh, Hostname refresh, and refresh all cache types. valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li> <li> delete: refresh node resources regardless of whether resources under the directory are updated.</li> default value: invalidate.
  * @method array getTargets() Obtain The list of resources to purge cache, such as https://www.example.com/example.jpg, must carry protocol information. the format for multi-elements depends on the type of cache purging. refer to the following API call example.  <li>the number of tasks that can be submitted at a time is limited by the billing package quota. check [EO billing package](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>.
@@ -59,12 +59,12 @@ If you want to quickly submit targets urls under different sites, you can set it
     public $ZoneId;
 
     /**
-     * @var string Type of cache purging. Values:
-<li>`purge_url`: Purge by the URL</li>
-<li>`purge_prefix`: Purge by the directory</li>
-<li>`purge_host`: Purge by the hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+     * @var string Node cache clearing type, valid values:
+<li>purge_url: URL refresh;</li>
+<li>purge_prefix: Directory refresh.</li>
+<li>purge_host: Hostname refresh;</li>
+<li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
+<li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
      */
     public $Type;
 
@@ -94,12 +94,12 @@ Note that if it’s enabled, the purging is based on the converted URLs.
      * @param string $ZoneId Zone id.
 .
 If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
-     * @param string $Type Type of cache purging. Values:
-<li>`purge_url`: Purge by the URL</li>
-<li>`purge_prefix`: Purge by the directory</li>
-<li>`purge_host`: Purge by the hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+     * @param string $Type Node cache clearing type, valid values:
+<li>purge_url: URL refresh;</li>
+<li>purge_prefix: Directory refresh.</li>
+<li>purge_host: Hostname refresh;</li>
+<li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
+<li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
      * @param string $Method Node cache clearing method is valid for directory refresh, Hostname refresh, and refresh all cache types. valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li> <li> delete: refresh node resources regardless of whether resources under the directory are updated.</li> default value: invalidate.
      * @param array $Targets The list of resources to purge cache, such as https://www.example.com/example.jpg, must carry protocol information. the format for multi-elements depends on the type of cache purging. refer to the following API call example.  <li>the number of tasks that can be submitted at a time is limited by the billing package quota. check [EO billing package](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>.
      * @param boolean $EncodeUrl Specifies whether to transcode non-ASCII URLs according to RFC3986.

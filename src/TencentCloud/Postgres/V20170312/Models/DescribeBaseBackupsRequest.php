@@ -24,16 +24,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinFinishTime(string $MinFinishTime) Set Minimum end time of a backup in the format of `2018-01-01 00:00:00`. It is 7 days ago by default.
  * @method string getMaxFinishTime() Obtain Maximum end time of a backup in the format of `2018-01-01 00:00:00`. It is the current time by default.
  * @method void setMaxFinishTime(string $MaxFinishTime) Set Maximum end time of a backup in the format of `2018-01-01 00:00:00`. It is the current time by default.
- * @method array getFilters() Obtain Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
- * @method void setFilters(array $Filters) Set Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
+ * @method array getFilters() Obtain Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+base-backup-id: filter by backup set id (in string format).
+db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/product/409/16778#dbinstance).
+ * @method void setFilters(array $Filters) Set Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+base-backup-id: filter by backup set id (in string format).
+db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/product/409/16778#dbinstance).
  * @method integer getLimit() Obtain The maximum number of results returned per page. Value range: 1-100. Default: `10`
  * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Value range: 1-100. Default: `10`
  * @method integer getOffset() Obtain Data offset, which starts from 0.
  * @method void setOffset(integer $Offset) Set Data offset, which starts from 0.
- * @method string getOrderBy() Obtain Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
- * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
- * @method string getOrderByType() Obtain Sorting order. Valid values: `asc` (ascending), `desc` (descending).
- * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+ * @method string getOrderBy() Obtain Specifies the sorting field, supports StartTime, FinishTime, and Size. default value: StartTime.
+ * @method void setOrderBy(string $OrderBy) Set Specifies the sorting field, supports StartTime, FinishTime, and Size. default value: StartTime.
+ * @method string getOrderByType() Obtain Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`.
+ * @method void setOrderByType(string $OrderByType) Set Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`.
  */
 class DescribeBaseBackupsRequest extends AbstractModel
 {
@@ -48,7 +58,12 @@ class DescribeBaseBackupsRequest extends AbstractModel
     public $MaxFinishTime;
 
     /**
-     * @var array Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
+     * @var array Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+base-backup-id: filter by backup set id (in string format).
+db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/product/409/16778#dbinstance).
      */
     public $Filters;
 
@@ -63,23 +78,28 @@ class DescribeBaseBackupsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
+     * @var string Specifies the sorting field, supports StartTime, FinishTime, and Size. default value: StartTime.
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+     * @var string Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`.
      */
     public $OrderByType;
 
     /**
      * @param string $MinFinishTime Minimum end time of a backup in the format of `2018-01-01 00:00:00`. It is 7 days ago by default.
      * @param string $MaxFinishTime Maximum end time of a backup in the format of `2018-01-01 00:00:00`. It is the current time by default.
-     * @param array $Filters Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
+     * @param array $Filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+base-backup-id: filter by backup set id (in string format).
+db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/product/409/16778#dbinstance).
      * @param integer $Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
      * @param integer $Offset Data offset, which starts from 0.
-     * @param string $OrderBy Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
-     * @param string $OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+     * @param string $OrderBy Specifies the sorting field, supports StartTime, FinishTime, and Size. default value: StartTime.
+     * @param string $OrderByType Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`.
      */
     function __construct()
     {

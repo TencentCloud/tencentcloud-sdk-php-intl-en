@@ -52,14 +52,14 @@ use TencentCloud\Common\AbstractModel;
 <li>`2`: Disable auto-renewal.</li>
  * @method string getPlanId() Obtain ID of the resource associated with the plan.
  * @method void setPlanId(string $PlanId) Set ID of the resource associated with the plan.
- * @method string getArea() Obtain Applicable area. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`global`: Global</li>
- * @method void setArea(string $Area) Set Applicable area. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`global`: Global</li>
+ * @method string getArea() Obtain Region. valid values:.
+<Li>Mainland: within the chinese mainland;</li>.
+<li>overseas: outside the chinese mainland.</li>.
+<Li>Global: global.</li>.
+ * @method void setArea(string $Area) Set Region. valid values:.
+<Li>Mainland: within the chinese mainland;</li>.
+<li>overseas: outside the chinese mainland.</li>.
+<Li>Global: global.</li>.
  * @method string getGroup() Obtain The resource type. Values:
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
@@ -134,10 +134,10 @@ class Resource extends AbstractModel
     public $PlanId;
 
     /**
-     * @var string Applicable area. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`global`: Global</li>
+     * @var string Region. valid values:.
+<Li>Mainland: within the chinese mainland;</li>.
+<li>overseas: outside the chinese mainland.</li>.
+<Li>Global: global.</li>.
      */
     public $Area;
 
@@ -179,10 +179,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`1`: Enable auto-renewal.</li>
 <li>`2`: Disable auto-renewal.</li>
      * @param string $PlanId ID of the resource associated with the plan.
-     * @param string $Area Applicable area. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`global`: Global</li>
+     * @param string $Area Region. valid values:.
+<Li>Mainland: within the chinese mainland;</li>.
+<li>overseas: outside the chinese mainland.</li>.
+<Li>Global: global.</li>.
      * @param string $Group The resource type. Values:
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
