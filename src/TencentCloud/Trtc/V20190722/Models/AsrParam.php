@@ -20,58 +20,60 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameters used in speech recognition
  *
- * @method string getLang() Obtain The model type used for the transcription service. Example: `"zh"`.
+ * @method string getLang() Obtain The model type used for the transcription service. Example: <code>"zh"</code>.
 
 Supported languages for speech-to-text:
 
-- `"zh"`: Chinese (Simplified) - Powered by the latest 16k large model engine. Supports Mandarin, English, multiple Chinese regional accents, and code-switching between Chinese and English.
-- `"zh-TW"`: Chinese (Traditional)
-- `"vi"`: Vietnamese
-- `"ja"`: Japanese
-- `"ko"`: Korean
-- `"id"`: Indonesian
-- `"th"`: Thai
-- `"pt"`: Portuguese
-- `"tr"`: Turkish
-- `"ar"`: Arabic
-- `"es"`: Spanish
-- `"hi"`: Hindi
-- `"fr"`: French
-- `"ms"`: Malay
-- `"fil"`: Filipino
-- `"de"`: German
-- `"it"`: Italian
-- `"ru"`: Russian
-- `"sv"`: Swedish
-- `"da"`: Danish
-- `"no"`: Norwegian
+- <code>"zh"</code>: Chinese (Simplified) - Powered by the latest 16k large model engine. Supports Mandarin, English, multiple Chinese regional accents, and code-switching between Chinese and English.
+- <code>"zh-TW"</code>: Chinese (Traditional)
+- <code>"en"</code>: English
+- <code>"vi"</code>: Vietnamese
+- <code>"ja"</code>: Japanese
+- <code>"ko"</code>: Korean
+- <code>"id"</code>: Indonesian
+- <code>"th"</code>: Thai
+- <code>"pt"</code>: Portuguese
+- <code>"tr"</code>: Turkish
+- <code>"ar"</code>: Arabic
+- <code>"es"</code>: Spanish
+- <code>"hi"</code>: Hindi
+- <code>"fr"</code>: French
+- <code>"ms"</code>: Malay
+- <code>"fil"</code>: Filipino
+- <code>"de"</code>: German
+- <code>"it"</code>: Italian
+- <code>"ru"</code>: Russian
+- <code>"sv"</code>: Swedish
+- <code>"da"</code>: Danish
+- <code>"no"</code>: Norwegian
 
 > **Note:** If the language you need is not listed, please contact our support team.
- * @method void setLang(string $Lang) Set The model type used for the transcription service. Example: `"zh"`.
+ * @method void setLang(string $Lang) Set The model type used for the transcription service. Example: <code>"zh"</code>.
 
 Supported languages for speech-to-text:
 
-- `"zh"`: Chinese (Simplified) - Powered by the latest 16k large model engine. Supports Mandarin, English, multiple Chinese regional accents, and code-switching between Chinese and English.
-- `"zh-TW"`: Chinese (Traditional)
-- `"vi"`: Vietnamese
-- `"ja"`: Japanese
-- `"ko"`: Korean
-- `"id"`: Indonesian
-- `"th"`: Thai
-- `"pt"`: Portuguese
-- `"tr"`: Turkish
-- `"ar"`: Arabic
-- `"es"`: Spanish
-- `"hi"`: Hindi
-- `"fr"`: French
-- `"ms"`: Malay
-- `"fil"`: Filipino
-- `"de"`: German
-- `"it"`: Italian
-- `"ru"`: Russian
-- `"sv"`: Swedish
-- `"da"`: Danish
-- `"no"`: Norwegian
+- <code>"zh"</code>: Chinese (Simplified) - Powered by the latest 16k large model engine. Supports Mandarin, English, multiple Chinese regional accents, and code-switching between Chinese and English.
+- <code>"zh-TW"</code>: Chinese (Traditional)
+- <code>"en"</code>: English
+- <code>"vi"</code>: Vietnamese
+- <code>"ja"</code>: Japanese
+- <code>"ko"</code>: Korean
+- <code>"id"</code>: Indonesian
+- <code>"th"</code>: Thai
+- <code>"pt"</code>: Portuguese
+- <code>"tr"</code>: Turkish
+- <code>"ar"</code>: Arabic
+- <code>"es"</code>: Spanish
+- <code>"hi"</code>: Hindi
+- <code>"fr"</code>: French
+- <code>"ms"</code>: Malay
+- <code>"fil"</code>: Filipino
+- <code>"de"</code>: German
+- <code>"it"</code>: Italian
+- <code>"ru"</code>: Russian
+- <code>"sv"</code>: Swedish
+- <code>"da"</code>: Danish
+- <code>"no"</code>: Norwegian
 
 > **Note:** If the language you need is not listed, please contact our support team.
  * @method integer getVadSilenceTime() Obtain The time for speech recognition vad ranges (ms) from 240 to 2000, with a default of 1000. A smaller value enables faster sentence segmentation in speech recognition.Example value: 1000.
@@ -110,31 +112,32 @@ Supported languages for speech-to-text:
 class AsrParam extends AbstractModel
 {
     /**
-     * @var string The model type used for the transcription service. Example: `"zh"`.
+     * @var string The model type used for the transcription service. Example: <code>"zh"</code>.
 
 Supported languages for speech-to-text:
 
-- `"zh"`: Chinese (Simplified) - Powered by the latest 16k large model engine. Supports Mandarin, English, multiple Chinese regional accents, and code-switching between Chinese and English.
-- `"zh-TW"`: Chinese (Traditional)
-- `"vi"`: Vietnamese
-- `"ja"`: Japanese
-- `"ko"`: Korean
-- `"id"`: Indonesian
-- `"th"`: Thai
-- `"pt"`: Portuguese
-- `"tr"`: Turkish
-- `"ar"`: Arabic
-- `"es"`: Spanish
-- `"hi"`: Hindi
-- `"fr"`: French
-- `"ms"`: Malay
-- `"fil"`: Filipino
-- `"de"`: German
-- `"it"`: Italian
-- `"ru"`: Russian
-- `"sv"`: Swedish
-- `"da"`: Danish
-- `"no"`: Norwegian
+- <code>"zh"</code>: Chinese (Simplified) - Powered by the latest 16k large model engine. Supports Mandarin, English, multiple Chinese regional accents, and code-switching between Chinese and English.
+- <code>"zh-TW"</code>: Chinese (Traditional)
+- <code>"en"</code>: English
+- <code>"vi"</code>: Vietnamese
+- <code>"ja"</code>: Japanese
+- <code>"ko"</code>: Korean
+- <code>"id"</code>: Indonesian
+- <code>"th"</code>: Thai
+- <code>"pt"</code>: Portuguese
+- <code>"tr"</code>: Turkish
+- <code>"ar"</code>: Arabic
+- <code>"es"</code>: Spanish
+- <code>"hi"</code>: Hindi
+- <code>"fr"</code>: French
+- <code>"ms"</code>: Malay
+- <code>"fil"</code>: Filipino
+- <code>"de"</code>: German
+- <code>"it"</code>: Italian
+- <code>"ru"</code>: Russian
+- <code>"sv"</code>: Swedish
+- <code>"da"</code>: Danish
+- <code>"no"</code>: Norwegian
 
 > **Note:** If the language you need is not listed, please contact our support team.
      */
@@ -173,31 +176,32 @@ Supported languages for speech-to-text:
     public $VadLevel;
 
     /**
-     * @param string $Lang The model type used for the transcription service. Example: `"zh"`.
+     * @param string $Lang The model type used for the transcription service. Example: <code>"zh"</code>.
 
 Supported languages for speech-to-text:
 
-- `"zh"`: Chinese (Simplified) - Powered by the latest 16k large model engine. Supports Mandarin, English, multiple Chinese regional accents, and code-switching between Chinese and English.
-- `"zh-TW"`: Chinese (Traditional)
-- `"vi"`: Vietnamese
-- `"ja"`: Japanese
-- `"ko"`: Korean
-- `"id"`: Indonesian
-- `"th"`: Thai
-- `"pt"`: Portuguese
-- `"tr"`: Turkish
-- `"ar"`: Arabic
-- `"es"`: Spanish
-- `"hi"`: Hindi
-- `"fr"`: French
-- `"ms"`: Malay
-- `"fil"`: Filipino
-- `"de"`: German
-- `"it"`: Italian
-- `"ru"`: Russian
-- `"sv"`: Swedish
-- `"da"`: Danish
-- `"no"`: Norwegian
+- <code>"zh"</code>: Chinese (Simplified) - Powered by the latest 16k large model engine. Supports Mandarin, English, multiple Chinese regional accents, and code-switching between Chinese and English.
+- <code>"zh-TW"</code>: Chinese (Traditional)
+- <code>"en"</code>: English
+- <code>"vi"</code>: Vietnamese
+- <code>"ja"</code>: Japanese
+- <code>"ko"</code>: Korean
+- <code>"id"</code>: Indonesian
+- <code>"th"</code>: Thai
+- <code>"pt"</code>: Portuguese
+- <code>"tr"</code>: Turkish
+- <code>"ar"</code>: Arabic
+- <code>"es"</code>: Spanish
+- <code>"hi"</code>: Hindi
+- <code>"fr"</code>: French
+- <code>"ms"</code>: Malay
+- <code>"fil"</code>: Filipino
+- <code>"de"</code>: German
+- <code>"it"</code>: Italian
+- <code>"ru"</code>: Russian
+- <code>"sv"</code>: Swedish
+- <code>"da"</code>: Danish
+- <code>"no"</code>: Norwegian
 
 > **Note:** If the language you need is not listed, please contact our support team.
      * @param integer $VadSilenceTime The time for speech recognition vad ranges (ms) from 240 to 2000, with a default of 1000. A smaller value enables faster sentence segmentation in speech recognition.Example value: 1000.

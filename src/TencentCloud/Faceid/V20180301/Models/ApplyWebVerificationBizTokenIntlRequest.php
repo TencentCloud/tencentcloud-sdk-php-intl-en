@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyWebVerificationBizTokenIntl request structure.
  *
- * @method string getRedirectURL() Obtain The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+ * @method string getRedirectURL() Obtain Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
 Example: https://www.tencentcloud.com/products/faceid.
- * @method void setRedirectURL(string $RedirectURL) Set The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+ * @method void setRedirectURL(string $RedirectURL) Set Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
 Example: https://www.tencentcloud.com/products/faceid.
  * @method string getCompareImageBase64() Obtain The Base64-encoded string (max 8 MB in size) of the photo to be compared.The Data URI scheme header needs to be removed from the encoded string
@@ -42,7 +42,7 @@ Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
 class ApplyWebVerificationBizTokenIntlRequest extends AbstractModel
 {
     /**
-     * @var string The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+     * @var string Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
 Example: https://www.tencentcloud.com/products/faceid.
      */
@@ -71,7 +71,7 @@ Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
     public $Config;
 
     /**
-     * @param string $RedirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+     * @param string $RedirectURL Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
 Example: https://www.tencentcloud.com/products/faceid.
      * @param string $CompareImageBase64 The Base64-encoded string (max 8 MB in size) of the photo to be compared.The Data URI scheme header needs to be removed from the encoded string

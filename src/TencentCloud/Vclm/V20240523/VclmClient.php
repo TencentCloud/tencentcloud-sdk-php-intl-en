@@ -25,6 +25,7 @@ use TencentCloud\Vclm\V20240523\Models as Models;
 /**
  * @method Models\DescribeImageAnimateJobResponse DescribeImageAnimateJob(Models\DescribeImageAnimateJobRequest $req) This API is used to query image animation tasks. The image animation feature supports generating videos based on dance movements and images to meet the needs of scenarios such as social entertainment and interactive marketing.
  * @method Models\SubmitImageAnimateJobResponse SubmitImageAnimateJob(Models\SubmitImageAnimateJobRequest $req) This API is used to submit image animation tasks. The image animation feature supports generating videos based on dance movements and images to meet the needs of scenarios such as social entertainment and interactive marketing.
+ * @method Models\SubmitImageToVideoViduJobResponse SubmitImageToVideoViduJob(Models\SubmitImageToVideoViduJobRequest $req) Submit a Vidu image-to-video task API
  */
 
 class VclmClient extends AbstractClient

@@ -79,14 +79,16 @@ Example: false
 2:Action mode;
 3:Lighting mode;
 4:Action+Lighting mode;
-5:Action+Lighting(High security) mode.
+5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+
 Example: 4
  * @method void setSecurityLevel(integer $SecurityLevel) Set Liveness security level, the default value is 3. The currently supported security level are as follows:
 1:Silent mode;
 2:Action mode;
 3:Lighting mode;
 4:Action+Lighting mode;
-5:Action+Lighting(High security) mode.
+5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+
 Example: 4
  * @method boolean getSkipPrivacyPolicy() Obtain Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
 Example: false
@@ -166,6 +168,14 @@ false : Expired HKID is rejected and cannot enter the liveness process.
  * @method void setAllowExpiredDocument(boolean $AllowExpiredDocument) Set Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
 true (default value): Expired HKID is allowed to enter the liveness process.
 false : Expired HKID is rejected and cannot enter the liveness process.
+ * @method string getVersion() Obtain Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+BASIC: Basic version.
+PLUS: PLUS version.
+The default value is BASIC.
+ * @method void setVersion(string $Version) Set Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+BASIC: Basic version.
+PLUS: PLUS version.
+The default value is BASIC.
  */
 class WebVerificationConfigIntl extends AbstractModel
 {
@@ -222,7 +232,8 @@ Example: false
 2:Action mode;
 3:Lighting mode;
 4:Action+Lighting mode;
-5:Action+Lighting(High security) mode.
+5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+
 Example: 4
      */
     public $SecurityLevel;
@@ -307,6 +318,14 @@ false : Expired HKID is rejected and cannot enter the liveness process.
     public $AllowExpiredDocument;
 
     /**
+     * @var string Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+BASIC: Basic version.
+PLUS: PLUS version.
+The default value is BASIC.
+     */
+    public $Version;
+
+    /**
      * @param boolean $AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
 Example: false
      * @param boolean $AutoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
@@ -339,7 +358,8 @@ Example: false
 2:Action mode;
 3:Lighting mode;
 4:Action+Lighting mode;
-5:Action+Lighting(High security) mode.
+5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+
 Example: 4
      * @param boolean $SkipPrivacyPolicy Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
 Example: false
@@ -380,6 +400,10 @@ The default value is 45.
      * @param boolean $AllowExpiredDocument Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
 true (default value): Expired HKID is allowed to enter the liveness process.
 false : Expired HKID is rejected and cannot enter the liveness process.
+     * @param string $Version Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+BASIC: Basic version.
+PLUS: PLUS version.
+The default value is BASIC.
      */
     function __construct()
     {
@@ -456,6 +480,10 @@ false : Expired HKID is rejected and cannot enter the liveness process.
 
         if (array_key_exists("AllowExpiredDocument",$param) and $param["AllowExpiredDocument"] !== null) {
             $this->AllowExpiredDocument = $param["AllowExpiredDocument"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
     }
 }
