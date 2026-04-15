@@ -18,59 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom Cache Key configuration parameters. The FullURLCache and QueryString parameters are combined. For specific examples, refer to:
-- Retain all query strings. Enable ignore case.
-```
-{
-  "CacheKey": {
-    "FullURLCache": "on",
-    "QueryString": {
-      "Switch": "off"
-    },
-    "IgnoreCase": "on"
-  }
-}
-```
-- Ignore all query strings. Enable ignore case.
-```
-{
-  "CacheKey": {
-    "FullURLCache": "off",
-    "QueryString": {
-      "Switch": "off"
-    },
-    "IgnoreCase": "on"
-  }
-}
-```
-- Retain specified query string parameters. Disable ignore case.
-```
-{
-  "CacheKey": {
-    "FullURLCache": "off",
-    "QueryString": {
-        "Switch": "on",
-        "Action": "includeCustom",
-        "Values": ["name1","name2","name3"]
-    },
-    "IgnoreCase": "off"
-  }
-}
-```
--Query string ignore specified parameters. Disable ignore case.
-```
-{
-  "CacheKey": {
-    "FullURLCache": "off",
-    "QueryString": {
-        "Switch": "on",
-        "Action": "excludeCustom",
-        "Values": ["name1","name2","name3"]
-    },
-    "IgnoreCase": "off"
-  }
-}
-```
+ * Custom Cache Key configuration parameters.
  *
  * @method string getFullURLCache() Obtain Switch for retaining the complete query string. values:.
 <Li>`On`: enable;</li>
