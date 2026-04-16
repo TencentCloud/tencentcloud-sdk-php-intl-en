@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Message\V20181225\Models as Models;
 
 /**
- * @method Models\ModifySendChannelOnMsgTypesResponse ModifySendChannelOnMsgTypes(Models\ModifySendChannelOnMsgTypesRequest $req) This API is used to batch modify delivery methods.
+ * @method Models\ModifySendChannelOnMsgTypesResponse ModifySendChannelOnMsgTypes(Models\ModifySendChannelOnMsgTypesRequest $req) This API is used to batch modify delivery methods
  */
 
 class MessageClient extends AbstractClient

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudDedicatedZoneResourceSummary request structure.
  *
- * @method string getCdzId() Obtain Unique id of the cloud dedicated zone.
- * @method void setCdzId(string $CdzId) Set Unique id of the cloud dedicated zone.
+ * @method string getCdzId() Obtain Unique id of the cloud dedicated zone
+ * @method void setCdzId(string $CdzId) Set Unique id of the cloud dedicated zone
  */
 class DescribeCloudDedicatedZoneResourceSummaryRequest extends AbstractModel
 {
     /**
-     * @var string Unique id of the cloud dedicated zone.
+     * @var string Unique id of the cloud dedicated zone
      */
     public $CdzId;
 
     /**
-     * @param string $CdzId Unique id of the cloud dedicated zone.
+     * @param string $CdzId Unique id of the cloud dedicated zone
      */
     function __construct()
     {

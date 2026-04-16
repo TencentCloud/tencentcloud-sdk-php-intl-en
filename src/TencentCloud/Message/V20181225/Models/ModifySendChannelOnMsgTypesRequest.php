@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySendChannelOnMsgTypes request structure.
  *
- * @method array getSendTypes() Obtain Message sending channel.
- * @method void setSendTypes(array $SendTypes) Set Message sending channel.
+ * @method array getSendTypes() Obtain Message sending channel
+ * @method void setSendTypes(array $SendTypes) Set Message sending channel
  */
 class ModifySendChannelOnMsgTypesRequest extends AbstractModel
 {
     /**
-     * @var array Message sending channel.
+     * @var array Message sending channel
      */
     public $SendTypes;
 
     /**
-     * @param array $SendTypes Message sending channel.
+     * @param array $SendTypes Message sending channel
      */
     function __construct()
     {

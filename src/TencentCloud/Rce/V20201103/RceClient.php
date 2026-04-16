@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Rce\V20201103\Models as Models;
 
 /**
- * @method Models\DescribeRiskAssessmentResponse DescribeRiskAssessment(Models\DescribeRiskAssessmentRequest $req) This API is used to query risk assessment results.
+ * @method Models\DescribeRiskAssessmentResponse DescribeRiskAssessment(Models\DescribeRiskAssessmentRequest $req) This API is used to query risk assessment results
  */
 
 class RceClient extends AbstractClient

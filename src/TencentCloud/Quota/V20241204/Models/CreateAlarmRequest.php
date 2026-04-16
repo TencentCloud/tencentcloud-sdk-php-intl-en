@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlarm request structure.
  *
- * @method string getName() Obtain Alarm rule name. specifies the name of the Alarm rule.
- * @method void setName(string $Name) Set Alarm rule name. specifies the name of the Alarm rule.
+ * @method string getName() Obtain Alarm rule name. specifies the name of the Alarm rule
+ * @method void setName(string $Name) Set Alarm rule name. specifies the name of the Alarm rule
  * @method integer getProductId() Obtain Product ID.
  * @method void setProductId(integer $ProductId) Set Product ID.
  * @method integer getQuotaId() Obtain Quota ID.
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAlarmRequest extends AbstractModel
 {
     /**
-     * @var string Alarm rule name. specifies the name of the Alarm rule.
+     * @var string Alarm rule name. specifies the name of the Alarm rule
      */
     public $Name;
 
@@ -73,7 +73,7 @@ class CreateAlarmRequest extends AbstractModel
     public $MemberUin;
 
     /**
-     * @param string $Name Alarm rule name. specifies the name of the Alarm rule.
+     * @param string $Name Alarm rule name. specifies the name of the Alarm rule
      * @param integer $ProductId Product ID.
      * @param integer $QuotaId Quota ID.
      * @param integer $Metrics Alert metrics 1: quota usage 2: quota usage rate 3: remaining quota 4: remaining quota rate.
