@@ -18,7 +18,7 @@ namespace TencentCloud\Mdp\V20200527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Ad insertion channel configuration information.
+ * 
  *
  * @method string getID() Obtain SSAI configuration ID, globally unique identifier
  * @method void setID(string $ID) Set SSAI configuration ID, globally unique identifier

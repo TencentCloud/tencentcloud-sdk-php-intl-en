@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlaybackConf(PlaybackInfoReq $PlaybackConf) Set PlaybackConf.
  * @method array getAdBreaks() Obtain AdBreaks.
  * @method void setAdBreaks(array $AdBreaks) Set AdBreaks.
+ * @method string getVodAcquisitionMethod() Obtain VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported.
+ * @method void setVodAcquisitionMethod(string $VodAcquisitionMethod) Set VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported.
  */
 class ModifyStreamPackageLinearAssemblyProgramRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyStreamPackageLinearAssemblyProgramRequest extends AbstractModel
     public $AdBreaks;
 
     /**
+     * @var string VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported.
+     */
+    public $VodAcquisitionMethod;
+
+    /**
      * @param string $Id Program ID.
      * @param string $Name Modified name.
      * @param string $SourceType The type of the arrangement target source, divided into live broadcast and on-demand.
@@ -80,6 +87,7 @@ class ModifyStreamPackageLinearAssemblyProgramRequest extends AbstractModel
      * @param string $SourceName The associated live broadcast or on-demand broadcast, source name, and location are globally unique.
      * @param PlaybackInfoReq $PlaybackConf PlaybackConf.
      * @param array $AdBreaks AdBreaks.
+     * @param string $VodAcquisitionMethod VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported.
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class ModifyStreamPackageLinearAssemblyProgramRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AdBreaks, $obj);
             }
+        }
+
+        if (array_key_exists("VodAcquisitionMethod",$param) and $param["VodAcquisitionMethod"] !== null) {
+            $this->VodAcquisitionMethod = $param["VodAcquisitionMethod"];
         }
     }
 }

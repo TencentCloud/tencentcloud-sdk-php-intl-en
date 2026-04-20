@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Region.
  * @method string getSourceLocationName() Obtain SourceLocation name.
  * @method void setSourceLocationName(string $SourceLocationName) Set SourceLocation name.
+ * @method string getVodAcquisitionMethod() Obtain VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported
+ * @method void setVodAcquisitionMethod(string $VodAcquisitionMethod) Set VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported
  */
 class LinearAssemblyProgramInfo extends AbstractModel
 {
@@ -101,6 +103,11 @@ class LinearAssemblyProgramInfo extends AbstractModel
     public $SourceLocationName;
 
     /**
+     * @var string VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported
+     */
+    public $VodAcquisitionMethod;
+
+    /**
      * @param string $Name Channel linear assembly program information.
      * @param string $SourceType The type of the arrangement target source, divided into live broadcast and on-demand.
      * @param string $SourceLocationId The associated source location id.
@@ -112,6 +119,7 @@ class LinearAssemblyProgramInfo extends AbstractModel
      * @param string $Id ID.
      * @param string $Region Region.
      * @param string $SourceLocationName SourceLocation name.
+     * @param string $VodAcquisitionMethod VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported
      */
     function __construct()
     {
@@ -174,6 +182,10 @@ class LinearAssemblyProgramInfo extends AbstractModel
 
         if (array_key_exists("SourceLocationName",$param) and $param["SourceLocationName"] !== null) {
             $this->SourceLocationName = $param["SourceLocationName"];
+        }
+
+        if (array_key_exists("VodAcquisitionMethod",$param) and $param["VodAcquisitionMethod"] !== null) {
+            $this->VodAcquisitionMethod = $param["VodAcquisitionMethod"];
         }
     }
 }

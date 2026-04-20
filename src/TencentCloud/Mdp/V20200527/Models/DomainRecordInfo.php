@@ -18,7 +18,7 @@ namespace TencentCloud\Mdp\V20200527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Channel-associated domain record information.
+ * 
  *
  * @method string getCdnDomain() Obtain Associated playback domain name.
  * @method void setCdnDomain(string $CdnDomain) Set Associated playback domain name.
