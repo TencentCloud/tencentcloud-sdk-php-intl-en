@@ -18,7 +18,7 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Motion Graphic Setting
+ * 
  *
  * @method integer getMotionGraphicsOverlayEnabled() Obtain Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
  * @method void setMotionGraphicsOverlayEnabled(integer $MotionGraphicsOverlayEnabled) Set Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.

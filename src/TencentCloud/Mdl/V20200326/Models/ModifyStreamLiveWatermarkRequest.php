@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageSettings(CreateImageSettings $ImageSettings) Set Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
  * @method CreateTextSettings getTextSettings() Obtain Watermark text settings. This parameter is valid if `Type` is `TEXT`.
  * @method void setTextSettings(CreateTextSettings $TextSettings) Set Watermark text settings. This parameter is valid if `Type` is `TEXT`.
- * @method AbWatermarkSettingsReq getAbWatermarkSettings() Obtain AB watermark configuration.
- * @method void setAbWatermarkSettings(AbWatermarkSettingsReq $AbWatermarkSettings) Set AB watermark configuration.
+ * @method AbWatermarkSettingsReq getAbWatermarkSettings() Obtain 
+ * @method void setAbWatermarkSettings(AbWatermarkSettingsReq $AbWatermarkSettings) Set 
  */
 class ModifyStreamLiveWatermarkRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ModifyStreamLiveWatermarkRequest extends AbstractModel
     public $TextSettings;
 
     /**
-     * @var AbWatermarkSettingsReq AB watermark configuration.
+     * @var AbWatermarkSettingsReq 
      */
     public $AbWatermarkSettings;
 
@@ -63,7 +63,7 @@ class ModifyStreamLiveWatermarkRequest extends AbstractModel
      * @param string $Name Watermark name
      * @param CreateImageSettings $ImageSettings Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
      * @param CreateTextSettings $TextSettings Watermark text settings. This parameter is valid if `Type` is `TEXT`.
-     * @param AbWatermarkSettingsReq $AbWatermarkSettings AB watermark configuration.
+     * @param AbWatermarkSettingsReq $AbWatermarkSettings 
      */
     function __construct()
     {

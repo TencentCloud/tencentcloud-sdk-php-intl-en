@@ -148,6 +148,7 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\ListTaskVersionsResponse ListTaskVersions(Models\ListTaskVersionsRequest $req) This API is used to list saved task versions.
  * @method Models\ListTasksResponse ListTasks(Models\ListTasksRequest $req) This API is used to query pagination information of tasks.
  * @method Models\ListTenantRolesResponse ListTenantRoles(Models\ListTenantRolesRequest $req) Get the role list of all root accounts.
+ * @method Models\ListTriggerTaskRunsResponse ListTriggerTaskRuns(Models\ListTriggerTaskRunsRequest $req) Query workflow operation
  * @method Models\ListTriggerTaskVersionsResponse ListTriggerTaskVersions(Models\ListTriggerTaskVersionsRequest $req) Task save version list.
  * @method Models\ListTriggerTasksResponse ListTriggerTasks(Models\ListTriggerTasksRequest $req) Query job pagination information.
  * @method Models\ListTriggerWorkflowRunsResponse ListTriggerWorkflowRuns(Models\ListTriggerWorkflowRunsRequest $req) Query workflow operation.

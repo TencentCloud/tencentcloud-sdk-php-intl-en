@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Transparent transmission of meta information plan configuration.
  *
- * @method string getID3() Obtain Base64-encoded id3 metadata information, with a maximum limit of 1024 characters.
- * @method void setID3(string $ID3) Set Base64-encoded id3 metadata information, with a maximum limit of 1024 characters.
+ * @method string getID3() Obtain Base64-encoded ID3 metadata information, with a maximum limit of 1024 characters. When both ID3 and Tag have values, the ID3 value takes precedence
+ * @method void setID3(string $ID3) Set Base64-encoded ID3 metadata information, with a maximum limit of 1024 characters. When both ID3 and Tag have values, the ID3 value takes precedence
+ * @method string getTag() Obtain Label, the maximum supported length is 1024 characters for the label, 
+ * @method void setTag(string $Tag) Set Label, the maximum supported length is 1024 characters for the label, 
  */
 class TimedMetadataInfo extends AbstractModel
 {
     /**
-     * @var string Base64-encoded id3 metadata information, with a maximum limit of 1024 characters.
+     * @var string Base64-encoded ID3 metadata information, with a maximum limit of 1024 characters. When both ID3 and Tag have values, the ID3 value takes precedence
      */
     public $ID3;
 
     /**
-     * @param string $ID3 Base64-encoded id3 metadata information, with a maximum limit of 1024 characters.
+     * @var string Label, the maximum supported length is 1024 characters for the label, 
+     */
+    public $Tag;
+
+    /**
+     * @param string $ID3 Base64-encoded ID3 metadata information, with a maximum limit of 1024 characters. When both ID3 and Tag have values, the ID3 value takes precedence
+     * @param string $Tag Label, the maximum supported length is 1024 characters for the label, 
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class TimedMetadataInfo extends AbstractModel
         }
         if (array_key_exists("ID3",$param) and $param["ID3"] !== null) {
             $this->ID3 = $param["ID3"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
         }
     }
 }
