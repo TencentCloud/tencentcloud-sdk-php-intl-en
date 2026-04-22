@@ -18,7 +18,7 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Overseas Document Address
+ * 
  *
  * @method string getCountry() Obtain Nationality.
  * @method void setCountry(string $Country) Set Nationality.

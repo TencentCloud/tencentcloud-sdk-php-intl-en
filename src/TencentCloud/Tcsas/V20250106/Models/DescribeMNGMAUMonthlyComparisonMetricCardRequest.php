@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetMonth(integer $TargetMonth) Set End time in YYYYMMDD format
  * @method string getApplicationId() Obtain Superapp ID starting with App
  * @method void setApplicationId(string $ApplicationId) Set Superapp ID starting with App
- * @method string getMNPId() Obtain Mini program appid, required. When provided, the query is performed based on the mini program.
- * @method void setMNPId(string $MNPId) Set Mini program appid, required. When provided, the query is performed based on the mini program.
+ * @method string getMNPId() Obtain Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
  * @method integer getMNPTeamId() Obtain Mini program team ID, required. When provided, the query is performed based on the mini program team.
  * @method void setMNPTeamId(integer $MNPTeamId) Set Mini program team ID, required. When provided, the query is performed based on the mini program team.
  */
@@ -63,7 +63,7 @@ class DescribeMNGMAUMonthlyComparisonMetricCardRequest extends AbstractModel
     public $ApplicationId;
 
     /**
-     * @var string Mini program appid, required. When provided, the query is performed based on the mini program.
+     * @var string Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
      */
     public $MNPId;
 
@@ -78,7 +78,7 @@ class DescribeMNGMAUMonthlyComparisonMetricCardRequest extends AbstractModel
      * @param string $PlatformId Tenant ID
      * @param integer $TargetMonth End time in YYYYMMDD format
      * @param string $ApplicationId Superapp ID starting with App
-     * @param string $MNPId Mini program appid, required. When provided, the query is performed based on the mini program.
+     * @param string $MNPId Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
      * @param integer $MNPTeamId Mini program team ID, required. When provided, the query is performed based on the mini program team.
      */
     function __construct()

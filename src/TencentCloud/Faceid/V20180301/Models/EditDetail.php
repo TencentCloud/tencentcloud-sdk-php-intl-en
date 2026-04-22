@@ -18,7 +18,7 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EKYC ID Document OCR Result Modification Details
+ * 
  *
  * @method string getFieldName() Obtain Modified Field Name
  * @method void setFieldName(string $FieldName) Set Modified Field Name

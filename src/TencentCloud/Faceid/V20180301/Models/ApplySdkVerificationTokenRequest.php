@@ -124,6 +124,10 @@ false : Expired HKID is rejected and cannot enter the liveness process.
  * @method void setAllowExpiredDocument(boolean $AllowExpiredDocument) Set Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
 true (default value): Expired HKID is allowed to enter the liveness process.
 false : Expired HKID is rejected and cannot enter the liveness process.
+ * @method boolean getSkipResultPage() Obtain 
+ * @method void setSkipResultPage(boolean $SkipResultPage) Set 
+ * @method array getCardOcrDisplayFields() Obtain 
+ * @method void setCardOcrDisplayFields(array $CardOcrDisplayFields) Set 
  */
 class ApplySdkVerificationTokenRequest extends AbstractModel
 {
@@ -229,6 +233,16 @@ false : Expired HKID is rejected and cannot enter the liveness process.
     public $AllowExpiredDocument;
 
     /**
+     * @var boolean 
+     */
+    public $SkipResultPage;
+
+    /**
+     * @var array 
+     */
+    public $CardOcrDisplayFields;
+
+    /**
      * @param integer $CheckMode The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
@@ -281,6 +295,8 @@ The default value is blink. The different action types passed in this parameter 
      * @param boolean $AllowExpiredDocument Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
 true (default value): Expired HKID is allowed to enter the liveness process.
 false : Expired HKID is rejected and cannot enter the liveness process.
+     * @param boolean $SkipResultPage 
+     * @param array $CardOcrDisplayFields 
      */
     function __construct()
     {
@@ -341,6 +357,14 @@ false : Expired HKID is rejected and cannot enter the liveness process.
 
         if (array_key_exists("AllowExpiredDocument",$param) and $param["AllowExpiredDocument"] !== null) {
             $this->AllowExpiredDocument = $param["AllowExpiredDocument"];
+        }
+
+        if (array_key_exists("SkipResultPage",$param) and $param["SkipResultPage"] !== null) {
+            $this->SkipResultPage = $param["SkipResultPage"];
+        }
+
+        if (array_key_exists("CardOcrDisplayFields",$param) and $param["CardOcrDisplayFields"] !== null) {
+            $this->CardOcrDisplayFields = $param["CardOcrDisplayFields"];
         }
     }
 }
