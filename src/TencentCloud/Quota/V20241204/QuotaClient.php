@@ -25,7 +25,9 @@ use TencentCloud\Quota\V20241204\Models as Models;
 /**
  * @method Models\CreateAlarmResponse CreateAlarm(Models\CreateAlarmRequest $req) Add alarm rules
  * @method Models\DeleteAlarmResponse DeleteAlarm(Models\DeleteAlarmRequest $req) Deletes alarm rules
+ * @method Models\DescribeAggregateUserQuotasResponse DescribeAggregateUserQuotas(Models\DescribeAggregateUserQuotasRequest $req) user quota list
  * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) This API is used to query the alarm rule list.
+ * @method Models\DescribeUserQuotaResponse DescribeUserQuota(Models\DescribeUserQuotaRequest $req) Query a user quota
  * @method Models\EnableAlarmResponse EnableAlarm(Models\EnableAlarmRequest $req) This API is used to enable alarm rules.
  * @method Models\UpdateAlarmResponse UpdateAlarm(Models\UpdateAlarmRequest $req) Modifies alarm rules
  */

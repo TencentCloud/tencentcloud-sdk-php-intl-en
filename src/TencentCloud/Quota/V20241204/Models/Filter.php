@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Quota\V20241204\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  
+ * Filter
  *
- * @method array getMiniProgramReviewList() Obtain Audit information list.
- * @method void setMiniProgramReviewList(array $MiniProgramReviewList) Set Audit information list.
+ * @method string getName() Obtain Filter name
+ * @method void setName(string $Name) Set Filter name
+ * @method string getValue() Obtain Values after filtering
+ * @method void setValue(string $Value) Set Values after filtering
  */
-class MediaMiniProgramReviewInfo extends AbstractModel
+class Filter extends AbstractModel
 {
     /**
-     * @var array Audit information list.
+     * @var string Filter name
      */
-    public $MiniProgramReviewList;
+    public $Name;
 
     /**
-     * @param array $MiniProgramReviewList Audit information list.
+     * @var string Values after filtering
+     */
+    public $Value;
+
+    /**
+     * @param string $Name Filter name
+     * @param string $Value Values after filtering
      */
     function __construct()
     {
@@ -46,13 +54,12 @@ class MediaMiniProgramReviewInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MiniProgramReviewList",$param) and $param["MiniProgramReviewList"] !== null) {
-            $this->MiniProgramReviewList = [];
-            foreach ($param["MiniProgramReviewList"] as $key => $value){
-                $obj = new MediaMiniProgramReviewInfoItem();
-                $obj->deserialize($value);
-                array_push($this->MiniProgramReviewList, $obj);
-            }
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

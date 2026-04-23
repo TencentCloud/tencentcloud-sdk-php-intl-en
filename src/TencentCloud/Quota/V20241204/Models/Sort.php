@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Quota\V20241204\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  
+ * Order.
  *
- * @method array getMiniProgramReviewList() Obtain Audit information list.
- * @method void setMiniProgramReviewList(array $MiniProgramReviewList) Set Audit information list.
+ * @method string getType() Obtain Ascending Descending Order
+ * @method void setType(string $Type) Set Ascending Descending Order
+ * @method string getField() Obtain Field
+ * @method void setField(string $Field) Set Field
  */
-class MediaMiniProgramReviewInfo extends AbstractModel
+class Sort extends AbstractModel
 {
     /**
-     * @var array Audit information list.
+     * @var string Ascending Descending Order
      */
-    public $MiniProgramReviewList;
+    public $Type;
 
     /**
-     * @param array $MiniProgramReviewList Audit information list.
+     * @var string Field
+     */
+    public $Field;
+
+    /**
+     * @param string $Type Ascending Descending Order
+     * @param string $Field Field
      */
     function __construct()
     {
@@ -46,13 +54,12 @@ class MediaMiniProgramReviewInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MiniProgramReviewList",$param) and $param["MiniProgramReviewList"] !== null) {
-            $this->MiniProgramReviewList = [];
-            foreach ($param["MiniProgramReviewList"] as $key => $value){
-                $obj = new MediaMiniProgramReviewInfoItem();
-                $obj->deserialize($value);
-                array_push($this->MiniProgramReviewList, $obj);
-            }
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Field",$param) and $param["Field"] !== null) {
+            $this->Field = $param["Field"];
         }
     }
 }

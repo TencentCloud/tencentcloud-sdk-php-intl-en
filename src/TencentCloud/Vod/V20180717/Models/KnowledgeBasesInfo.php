@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  
+ * Intelligent knowledge base info for media assets
  *
- * @method array getMiniProgramReviewList() Obtain Audit information list.
- * @method void setMiniProgramReviewList(array $MiniProgramReviewList) Set Audit information list.
+ * @method array getBases() Obtain <p>Current library list of media assets to import</p>
+ * @method void setBases(array $Bases) Set <p>Current library list of media assets to import</p>
  */
-class MediaMiniProgramReviewInfo extends AbstractModel
+class KnowledgeBasesInfo extends AbstractModel
 {
     /**
-     * @var array Audit information list.
+     * @var array <p>Current library list of media assets to import</p>
      */
-    public $MiniProgramReviewList;
+    public $Bases;
 
     /**
-     * @param array $MiniProgramReviewList Audit information list.
+     * @param array $Bases <p>Current library list of media assets to import</p>
      */
     function __construct()
     {
@@ -46,13 +46,8 @@ class MediaMiniProgramReviewInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MiniProgramReviewList",$param) and $param["MiniProgramReviewList"] !== null) {
-            $this->MiniProgramReviewList = [];
-            foreach ($param["MiniProgramReviewList"] as $key => $value){
-                $obj = new MediaMiniProgramReviewInfoItem();
-                $obj->deserialize($value);
-                array_push($this->MiniProgramReviewList, $obj);
-            }
+        if (array_key_exists("Bases",$param) and $param["Bases"] !== null) {
+            $this->Bases = $param["Bases"];
         }
     }
 }

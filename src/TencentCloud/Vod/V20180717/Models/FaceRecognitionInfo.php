@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  
+ * Face recognition media information
  *
- * @method array getMiniProgramReviewList() Obtain Audit information list.
- * @method void setMiniProgramReviewList(array $MiniProgramReviewList) Set Audit information list.
+ * @method array getFaceRecognitionTasks() Obtain <p>Face recognition task list</p>
+ * @method void setFaceRecognitionTasks(array $FaceRecognitionTasks) Set <p>Face recognition task list</p>
  */
-class MediaMiniProgramReviewInfo extends AbstractModel
+class FaceRecognitionInfo extends AbstractModel
 {
     /**
-     * @var array Audit information list.
+     * @var array <p>Face recognition task list</p>
      */
-    public $MiniProgramReviewList;
+    public $FaceRecognitionTasks;
 
     /**
-     * @param array $MiniProgramReviewList Audit information list.
+     * @param array $FaceRecognitionTasks <p>Face recognition task list</p>
      */
     function __construct()
     {
@@ -46,12 +46,12 @@ class MediaMiniProgramReviewInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MiniProgramReviewList",$param) and $param["MiniProgramReviewList"] !== null) {
-            $this->MiniProgramReviewList = [];
-            foreach ($param["MiniProgramReviewList"] as $key => $value){
-                $obj = new MediaMiniProgramReviewInfoItem();
+        if (array_key_exists("FaceRecognitionTasks",$param) and $param["FaceRecognitionTasks"] !== null) {
+            $this->FaceRecognitionTasks = [];
+            foreach ($param["FaceRecognitionTasks"] as $key => $value){
+                $obj = new FaceRecognitionTask();
                 $obj->deserialize($value);
-                array_push($this->MiniProgramReviewList, $obj);
+                array_push($this->FaceRecognitionTasks, $obj);
             }
         }
     }

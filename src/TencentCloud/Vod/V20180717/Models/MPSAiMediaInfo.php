@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  
+ * Intelligent media information processed with MPS
  *
- * @method array getMiniProgramReviewList() Obtain Audit information list.
- * @method void setMiniProgramReviewList(array $MiniProgramReviewList) Set Audit information list.
+ * @method array getAiMediaList() Obtain List of intelligent media information processed by MPS
+ * @method void setAiMediaList(array $AiMediaList) Set List of intelligent media information processed by MPS
  */
-class MediaMiniProgramReviewInfo extends AbstractModel
+class MPSAiMediaInfo extends AbstractModel
 {
     /**
-     * @var array Audit information list.
+     * @var array List of intelligent media information processed by MPS
      */
-    public $MiniProgramReviewList;
+    public $AiMediaList;
 
     /**
-     * @param array $MiniProgramReviewList Audit information list.
+     * @param array $AiMediaList List of intelligent media information processed by MPS
      */
     function __construct()
     {
@@ -46,12 +46,12 @@ class MediaMiniProgramReviewInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MiniProgramReviewList",$param) and $param["MiniProgramReviewList"] !== null) {
-            $this->MiniProgramReviewList = [];
-            foreach ($param["MiniProgramReviewList"] as $key => $value){
-                $obj = new MediaMiniProgramReviewInfoItem();
+        if (array_key_exists("AiMediaList",$param) and $param["AiMediaList"] !== null) {
+            $this->AiMediaList = [];
+            foreach ($param["AiMediaList"] as $key => $value){
+                $obj = new MPSAiMediaItem();
                 $obj->deserialize($value);
-                array_push($this->MiniProgramReviewList, $obj);
+                array_push($this->AiMediaList, $obj);
             }
         }
     }

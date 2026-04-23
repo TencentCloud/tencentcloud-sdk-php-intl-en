@@ -70,8 +70,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setDigitalWatermarkType(string $DigitalWatermarkType) Set The watermark type. Valid values:
 <li>Trace: Digital watermark</li>
 <li>None: Regular watermark</li>
- * @method string getCopyRightWatermarkText() Obtain Copyright information.
- * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) Set Copyright information.
+ * @method string getCopyRightWatermarkText() Obtain 
+ * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) Set 
+ * @method integer getBlindWatermarkDefinition() Obtain Digital watermark template id.
+ * @method void setBlindWatermarkDefinition(integer $BlindWatermarkDefinition) Set Digital watermark template id.
  */
 class MediaTranscodeItem extends AbstractModel
 {
@@ -149,9 +151,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DigitalWatermarkType;
 
     /**
-     * @var string Copyright information.
+     * @var string 
      */
     public $CopyRightWatermarkText;
+
+    /**
+     * @var integer Digital watermark template id.
+     */
+    public $BlindWatermarkDefinition;
 
     /**
      * @param string $Url Address of output video file.
@@ -179,7 +186,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $DigitalWatermarkType The watermark type. Valid values:
 <li>Trace: Digital watermark</li>
 <li>None: Regular watermark</li>
-     * @param string $CopyRightWatermarkText Copyright information.
+     * @param string $CopyRightWatermarkText 
+     * @param integer $BlindWatermarkDefinition Digital watermark template id.
      */
     function __construct()
     {
@@ -254,6 +262,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CopyRightWatermarkText",$param) and $param["CopyRightWatermarkText"] !== null) {
             $this->CopyRightWatermarkText = $param["CopyRightWatermarkText"];
+        }
+
+        if (array_key_exists("BlindWatermarkDefinition",$param) and $param["BlindWatermarkDefinition"] !== null) {
+            $this->BlindWatermarkDefinition = $param["BlindWatermarkDefinition"];
         }
     }
 }

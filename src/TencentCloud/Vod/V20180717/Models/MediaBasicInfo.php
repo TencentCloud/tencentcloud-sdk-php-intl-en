@@ -70,6 +70,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getStorageRegion() Obtain Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
  * @method void setStorageRegion(string $StorageRegion) Set Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
+ * @method string getStoragePath() Obtain Media storage path.
+ * @method void setStoragePath(string $StoragePath) Set Media storage path.
  * @method array getTagSet() Obtain Tag information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTagSet(array $TagSet) Set Tag information of media file.
@@ -177,6 +179,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $StorageRegion;
 
     /**
+     * @var string Media storage path.
+     */
+    public $StoragePath;
+
+    /**
      * @var array Tag information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -235,6 +242,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param MediaSourceData $SourceInfo Source information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $StorageRegion Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
+     * @param string $StoragePath Media storage path.
      * @param array $TagSet Tag information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Vid Unique ID of an LVB recording file.
@@ -313,6 +321,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("StorageRegion",$param) and $param["StorageRegion"] !== null) {
             $this->StorageRegion = $param["StorageRegion"];
+        }
+
+        if (array_key_exists("StoragePath",$param) and $param["StoragePath"] !== null) {
+            $this->StoragePath = $param["StoragePath"];
         }
 
         if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {

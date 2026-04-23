@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  
+ * Image understanding information.
  *
- * @method array getMiniProgramReviewList() Obtain Audit information list.
- * @method void setMiniProgramReviewList(array $MiniProgramReviewList) Set Audit information list.
+ * @method array getImageUnderstandingSet() Obtain Image understanding collection.
+ * @method void setImageUnderstandingSet(array $ImageUnderstandingSet) Set Image understanding collection.
  */
-class MediaMiniProgramReviewInfo extends AbstractModel
+class ImageUnderstandingInfo extends AbstractModel
 {
     /**
-     * @var array Audit information list.
+     * @var array Image understanding collection.
      */
-    public $MiniProgramReviewList;
+    public $ImageUnderstandingSet;
 
     /**
-     * @param array $MiniProgramReviewList Audit information list.
+     * @param array $ImageUnderstandingSet Image understanding collection.
      */
     function __construct()
     {
@@ -46,12 +46,12 @@ class MediaMiniProgramReviewInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MiniProgramReviewList",$param) and $param["MiniProgramReviewList"] !== null) {
-            $this->MiniProgramReviewList = [];
-            foreach ($param["MiniProgramReviewList"] as $key => $value){
-                $obj = new MediaMiniProgramReviewInfoItem();
+        if (array_key_exists("ImageUnderstandingSet",$param) and $param["ImageUnderstandingSet"] !== null) {
+            $this->ImageUnderstandingSet = [];
+            foreach ($param["ImageUnderstandingSet"] as $key => $value){
+                $obj = new ImageUnderstandingItem();
                 $obj->deserialize($value);
-                array_push($this->MiniProgramReviewList, $obj);
+                array_push($this->ImageUnderstandingSet, $obj);
             }
         }
     }

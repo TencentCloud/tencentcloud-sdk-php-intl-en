@@ -18,20 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  
+ * Image understanding information item.
  *
- * @method array getMiniProgramReviewList() Obtain Audit information list.
- * @method void setMiniProgramReviewList(array $MiniProgramReviewList) Set Audit information list.
+ * @method integer getDefinition() Obtain Template id.
+ * @method void setDefinition(integer $Definition) Set Template id.
+ * @method array getOutputFile() Obtain Task output file.
+ * @method void setOutputFile(array $OutputFile) Set Task output file.
  */
-class MediaMiniProgramReviewInfo extends AbstractModel
+class ImageUnderstandingItem extends AbstractModel
 {
     /**
-     * @var array Audit information list.
+     * @var integer Template id.
      */
-    public $MiniProgramReviewList;
+    public $Definition;
 
     /**
-     * @param array $MiniProgramReviewList Audit information list.
+     * @var array Task output file.
+     */
+    public $OutputFile;
+
+    /**
+     * @param integer $Definition Template id.
+     * @param array $OutputFile Task output file.
      */
     function __construct()
     {
@@ -46,12 +54,16 @@ class MediaMiniProgramReviewInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MiniProgramReviewList",$param) and $param["MiniProgramReviewList"] !== null) {
-            $this->MiniProgramReviewList = [];
-            foreach ($param["MiniProgramReviewList"] as $key => $value){
-                $obj = new MediaMiniProgramReviewInfoItem();
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("OutputFile",$param) and $param["OutputFile"] !== null) {
+            $this->OutputFile = [];
+            foreach ($param["OutputFile"] as $key => $value){
+                $obj = new MPSOutputFileInfo();
                 $obj->deserialize($value);
-                array_push($this->MiniProgramReviewList, $obj);
+                array_push($this->OutputFile, $obj);
             }
         }
     }

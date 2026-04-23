@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of audio stream in VOD file
  *
- * @method integer getBitrate() Obtain Bitrate of audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setBitrate(integer $Bitrate) Set Bitrate of audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getSamplingRate() Obtain Sample rate of audio stream in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSamplingRate(integer $SamplingRate) Set Sample rate of audio stream in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCodec() Obtain Audio stream encoder, such as aac.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCodec(string $Codec) Set Audio stream encoder, such as aac.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getBitrate() Obtain <p>Bitrate of the audio stream. Measurement unit: bps.</p>
+ * @method void setBitrate(integer $Bitrate) Set <p>Bitrate of the audio stream. Measurement unit: bps.</p>
+ * @method integer getSamplingRate() Obtain <p>Sampling rate of the audio stream, unit: hz.</p>
+ * @method void setSamplingRate(integer $SamplingRate) Set <p>Sampling rate of the audio stream, unit: hz.</p>
+ * @method string getCodec() Obtain <p>Audio stream encoding format, such as aac.</p>
+ * @method void setCodec(string $Codec) Set <p>Audio stream encoding format, such as aac.</p>
  */
 class MediaAudioStreamItem extends AbstractModel
 {
     /**
-     * @var integer Bitrate of audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Bitrate of the audio stream. Measurement unit: bps.</p>
      */
     public $Bitrate;
 
     /**
-     * @var integer Sample rate of audio stream in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Sampling rate of the audio stream, unit: hz.</p>
      */
     public $SamplingRate;
 
     /**
-     * @var string Audio stream encoder, such as aac.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Audio stream encoding format, such as aac.</p>
      */
     public $Codec;
 
     /**
-     * @param integer $Bitrate Bitrate of audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $SamplingRate Sample rate of audio stream in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Codec Audio stream encoder, such as aac.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Bitrate <p>Bitrate of the audio stream. Measurement unit: bps.</p>
+     * @param integer $SamplingRate <p>Sampling rate of the audio stream, unit: hz.</p>
+     * @param string $Codec <p>Audio stream encoding format, such as aac.</p>
      */
     function __construct()
     {

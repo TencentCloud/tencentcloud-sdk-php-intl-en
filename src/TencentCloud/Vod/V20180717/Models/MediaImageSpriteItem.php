@@ -20,26 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Image sprite information
  *
- * @method integer getDefinition() Obtain Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDefinition(integer $Definition) Set Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getHeight() Obtain Subimage height of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setHeight(integer $Height) Set Subimage height of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getWidth() Obtain Subimage width of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setWidth(integer $Width) Set Subimage width of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getTotalCount() Obtain Total number of subimages in each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Total number of subimages in each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getImageUrlSet() Obtain Address of each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setImageUrlSet(array $ImageUrlSet) Set Address of each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDefinition() Obtain <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
+ * @method integer getHeight() Obtain <p>Height of the sprite sheet.</p>
+ * @method void setHeight(integer $Height) Set <p>Height of the sprite sheet.</p>
+ * @method integer getWidth() Obtain <p>Width of the sprite sheet.</p>
+ * @method void setWidth(integer $Width) Set <p>Width of the sprite sheet.</p>
+ * @method integer getTotalCount() Obtain <p>The number of small images in each sprite sheet.</p>
+ * @method void setTotalCount(integer $TotalCount) Set <p>The number of small images in each sprite sheet.</p>
+ * @method array getImageUrlSet() Obtain <p>The domain names or IP addresses of each sprite sheet.</p>
+ * @method void setImageUrlSet(array $ImageUrlSet) Set <p>The domain names or IP addresses of each sprite sheet.</p>
  * @method string getWebVttUrl() Obtain Address of WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWebVttUrl(string $WebVttUrl) Set Address of WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
@@ -48,32 +38,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class MediaImageSpriteItem extends AbstractModel
 {
     /**
-     * @var integer Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
      */
     public $Definition;
 
     /**
-     * @var integer Subimage height of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Height of the sprite sheet.</p>
      */
     public $Height;
 
     /**
-     * @var integer Subimage width of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Width of the sprite sheet.</p>
      */
     public $Width;
 
     /**
-     * @var integer Total number of subimages in each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>The number of small images in each sprite sheet.</p>
      */
     public $TotalCount;
 
     /**
-     * @var array Address of each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array <p>The domain names or IP addresses of each sprite sheet.</p>
      */
     public $ImageUrlSet;
 
@@ -84,16 +69,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $WebVttUrl;
 
     /**
-     * @param integer $Definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Height Subimage height of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Width Subimage width of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $TotalCount Total number of subimages in each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $ImageUrlSet Address of each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Definition <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
+     * @param integer $Height <p>Height of the sprite sheet.</p>
+     * @param integer $Width <p>Width of the sprite sheet.</p>
+     * @param integer $TotalCount <p>The number of small images in each sprite sheet.</p>
+     * @param array $ImageUrlSet <p>The domain names or IP addresses of each sprite sheet.</p>
      * @param string $WebVttUrl Address of WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
