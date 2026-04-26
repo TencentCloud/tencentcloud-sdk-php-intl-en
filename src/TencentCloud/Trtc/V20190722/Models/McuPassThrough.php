@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPayloadContent() Obtain The payload of the pass-through SEI.
  * @method void setPayloadContent(string $PayloadContent) Set The payload of the pass-through SEI.
- * @method integer getPayloadType() Obtain The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
- * @method void setPayloadType(integer $PayloadType) Set The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
+ * @method integer getPayloadType() Obtain PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType.
+ * @method void setPayloadType(integer $PayloadType) Set PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType.
  * @method string getPayloadUuid() Obtain This parameter is required only if `PayloadType` is 5. It must be a 32-character hexadecimal string. If `PayloadType` is not 5, this parameter will be ignored.
  * @method void setPayloadUuid(string $PayloadUuid) Set This parameter is required only if `PayloadType` is 5. It must be a 32-character hexadecimal string. If `PayloadType` is not 5, this parameter will be ignored.
  * @method integer getInterval() Obtain The SEI sending interval (milliseconds). The default value is 1000.
@@ -39,7 +41,8 @@ class McuPassThrough extends AbstractModel
     public $PayloadContent;
 
     /**
-     * @var integer The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
+     * @var integer PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType.
      */
     public $PayloadType;
 
@@ -60,7 +63,8 @@ class McuPassThrough extends AbstractModel
 
     /**
      * @param string $PayloadContent The payload of the pass-through SEI.
-     * @param integer $PayloadType The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
+     * @param integer $PayloadType PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType.
      * @param string $PayloadUuid This parameter is required only if `PayloadType` is 5. It must be a 32-character hexadecimal string. If `PayloadType` is not 5, this parameter will be ignored.
      * @param integer $Interval The SEI sending interval (milliseconds). The default value is 1000.
      * @param integer $FollowIdr Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.

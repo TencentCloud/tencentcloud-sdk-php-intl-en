@@ -18,12 +18,12 @@ namespace TencentCloud\Sms\V20210111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SMS delivery status
+ * SMS send status
  *
  * @method string getSerialNo() Obtain Delivery serial number.
  * @method void setSerialNo(string $SerialNo) Set Delivery serial number.
- * @method string getPhoneNumber() Obtain Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
- * @method void setPhoneNumber(string $PhoneNumber) Set Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+ * @method string getPhoneNumber() Obtain Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
+ * @method void setPhoneNumber(string $PhoneNumber) Set Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
  * @method integer getFee() Obtain Number of billable SMS messages. For billing rules, see Billing Policy.
  * @method void setFee(integer $Fee) Set Number of billable SMS messages. For billing rules, see Billing Policy.
  * @method string getSessionContext() Obtain User session content.
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCode(string $Code) Set SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
  * @method string getMessage() Obtain SMS request error message.
  * @method void setMessage(string $Message) Set SMS request error message.
- * @method string getIsoCode() Obtain Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
- * @method void setIsoCode(string $IsoCode) Set Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+ * @method string getIsoCode() Obtain Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+ * @method void setIsoCode(string $IsoCode) Set Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
  */
 class SendStatus extends AbstractModel
 {
@@ -43,7 +43,7 @@ class SendStatus extends AbstractModel
     public $SerialNo;
 
     /**
-     * @var string Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+     * @var string Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
      */
     public $PhoneNumber;
 
@@ -68,18 +68,18 @@ class SendStatus extends AbstractModel
     public $Message;
 
     /**
-     * @var string Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+     * @var string Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
      */
     public $IsoCode;
 
     /**
      * @param string $SerialNo Delivery serial number.
-     * @param string $PhoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+     * @param string $PhoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
      * @param integer $Fee Number of billable SMS messages. For billing rules, see Billing Policy.
      * @param string $SessionContext User session content.
      * @param string $Code SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
      * @param string $Message SMS request error message.
-     * @param string $IsoCode Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+     * @param string $IsoCode Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
      */
     function __construct()
     {

@@ -18,140 +18,72 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mcu Relay Recording and Tencent VOD Parameters
+ * Mcu relay recording. tencent cloud video on demand (vod) related parameters.
  *
- * @method string getProcedure() Obtain Post-Upload Task Processing
-Automatically initiates task flows after media uploads complete. Value = Task flow template name.
-VOD supports creating and naming task flow templates.
-Example: template_name
- * @method void setProcedure(string $Procedure) Set Post-Upload Task Processing
-Automatically initiates task flows after media uploads complete. Value = Task flow template name.
-VOD supports creating and naming task flow templates.
-Example: template_name
- * @method integer getExpireTime() Obtain Media File Expiration Time
-Absolute expiration time from current timestamp.
-86400 = 1 day retention
-0 = permanent storage (default)
-Example: 86400
- * @method void setExpireTime(integer $ExpireTime) Set Media File Expiration Time
-Absolute expiration time from current timestamp.
-86400 = 1 day retention
-0 = permanent storage (default)
-Example: 86400
- * @method string getStorageRegion() Obtain Upload Region Specification
-For users requiring specific upload regions.
-Example: ap-shanghai
- * @method void setStorageRegion(string $StorageRegion) Set Upload Region Specification
-For users requiring specific upload regions.
-Example: ap-shanghai
- * @method integer getClassId() Obtain Category ID
-Manages media classification. Obtain via category creation API.
-Default: 0 (Other category)
-Example: 0
- * @method void setClassId(integer $ClassId) Set Category ID
-Manages media classification. Obtain via category creation API.
-Default: 0 (Other category)
-Example: 0
- * @method integer getSubAppId() Obtain VOD SubAppId
-Required when accessing sub-application resources. Leave empty otherwise.
-Example: 0
- * @method void setSubAppId(integer $SubAppId) Set VOD SubAppId
-Required when accessing sub-application resources. Leave empty otherwise.
-Example: 0
- * @method string getSessionContext() Obtain Task Flow Context
-Passed through in task completion callbacks.
-Example: user_custom
- * @method void setSessionContext(string $SessionContext) Set Task Flow Context
-Passed through in task completion callbacks.
-Example: user_custom
- * @method string getSourceContext() Obtain Upload Context
-Passed through in upload completion callbacks.
-Example: user_custom
- * @method void setSourceContext(string $SourceContext) Set Upload Context
-Passed through in upload completion callbacks.
-Example: user_custom
+ * @method string getProcedure() Obtain Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
+ * @method void setProcedure(string $Procedure) Set Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
+ * @method integer getExpireTime() Obtain Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
+ * @method void setExpireTime(integer $ExpireTime) Set Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
+ * @method string getStorageRegion() Obtain Specify the upload park, applicable only to the user with special requirement for upload region.
+ * @method void setStorageRegion(string $StorageRegion) Set Specify the upload park, applicable only to the user with special requirement for upload region.
+ * @method integer getClassId() Obtain Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
+ * @method void setClassId(integer $ClassId) Set Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
+ * @method integer getSubAppId() Obtain Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
+ * @method void setSubAppId(integer $SubAppId) Set Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
+ * @method string getSessionContext() Obtain Task flow context, passed through when task complete.
+ * @method void setSessionContext(string $SessionContext) Set Task flow context, passed through when task complete.
+ * @method string getSourceContext() Obtain Upload context, passed through on upload completion callback.
+ * @method void setSourceContext(string $SourceContext) Set Upload context, passed through on upload completion callback.
  */
 class McuTencentVod extends AbstractModel
 {
     /**
-     * @var string Post-Upload Task Processing
-Automatically initiates task flows after media uploads complete. Value = Task flow template name.
-VOD supports creating and naming task flow templates.
-Example: template_name
+     * @var string Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
      */
     public $Procedure;
 
     /**
-     * @var integer Media File Expiration Time
-Absolute expiration time from current timestamp.
-86400 = 1 day retention
-0 = permanent storage (default)
-Example: 86400
+     * @var integer Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
      */
     public $ExpireTime;
 
     /**
-     * @var string Upload Region Specification
-For users requiring specific upload regions.
-Example: ap-shanghai
+     * @var string Specify the upload park, applicable only to the user with special requirement for upload region.
      */
     public $StorageRegion;
 
     /**
-     * @var integer Category ID
-Manages media classification. Obtain via category creation API.
-Default: 0 (Other category)
-Example: 0
+     * @var integer Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
      */
     public $ClassId;
 
     /**
-     * @var integer VOD SubAppId
-Required when accessing sub-application resources. Leave empty otherwise.
-Example: 0
+     * @var integer Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
      */
     public $SubAppId;
 
     /**
-     * @var string Task Flow Context
-Passed through in task completion callbacks.
-Example: user_custom
+     * @var string Task flow context, passed through when task complete.
      */
     public $SessionContext;
 
     /**
-     * @var string Upload Context
-Passed through in upload completion callbacks.
-Example: user_custom
+     * @var string Upload context, passed through on upload completion callback.
      */
     public $SourceContext;
 
     /**
-     * @param string $Procedure Post-Upload Task Processing
-Automatically initiates task flows after media uploads complete. Value = Task flow template name.
-VOD supports creating and naming task flow templates.
-Example: template_name
-     * @param integer $ExpireTime Media File Expiration Time
-Absolute expiration time from current timestamp.
-86400 = 1 day retention
-0 = permanent storage (default)
-Example: 86400
-     * @param string $StorageRegion Upload Region Specification
-For users requiring specific upload regions.
-Example: ap-shanghai
-     * @param integer $ClassId Category ID
-Manages media classification. Obtain via category creation API.
-Default: 0 (Other category)
-Example: 0
-     * @param integer $SubAppId VOD SubAppId
-Required when accessing sub-application resources. Leave empty otherwise.
-Example: 0
-     * @param string $SessionContext Task Flow Context
-Passed through in task completion callbacks.
-Example: user_custom
-     * @param string $SourceContext Upload Context
-Passed through in upload completion callbacks.
-Example: user_custom
+     * @param string $Procedure Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
+     * @param integer $ExpireTime Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
+     * @param string $StorageRegion Specify the upload park, applicable only to the user with special requirement for upload region.
+     * @param integer $ClassId Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
+     * @param integer $SubAppId Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
+     * @param string $SessionContext Task flow context, passed through when task complete.
+     * @param string $SourceContext Upload context, passed through on upload completion callback.
      */
     function __construct()
     {

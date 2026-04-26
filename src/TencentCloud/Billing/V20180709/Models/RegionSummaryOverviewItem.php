@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * Detailed summary of purchases by region
  *
  * @method string getRegionId() Obtain Region ID
-Note: This field may return null, indicating that no valid value was found.
  * @method void setRegionId(string $RegionId) Set Region ID
-Note: This field may return null, indicating that no valid value was found.
  * @method string getRegionName() Obtain Region: The region to which a resource belongs, such as South China (Guangzhou).
  * @method void setRegionName(string $RegionName) Set Region: The region to which a resource belongs, such as South China (Guangzhou).
  * @method string getRealTotalCostRatio() Obtain Cost ratio, to two decimal points
@@ -47,7 +45,6 @@ class RegionSummaryOverviewItem extends AbstractModel
 {
     /**
      * @var string Region ID
-Note: This field may return null, indicating that no valid value was found.
      */
     public $RegionId;
 
@@ -98,7 +95,6 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * @param string $RegionId Region ID
-Note: This field may return null, indicating that no valid value was found.
      * @param string $RegionName Region: The region to which a resource belongs, such as South China (Guangzhou).
      * @param string $RealTotalCostRatio Cost ratio, to two decimal points
      * @param string $RealTotalCost Total amount after discount

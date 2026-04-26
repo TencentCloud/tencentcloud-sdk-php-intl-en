@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Bill details configuration descriptions
  *
  * @method string getName() Obtain Configuration description name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Configuration description name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getValue() Obtain Configuration description value
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setValue(string $Value) Set Configuration description value
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BillDetailComponentConfig extends AbstractModel
 {
     /**
      * @var string Configuration description name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
      * @var string Configuration description value
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Value;
 
     /**
      * @param string $Name Configuration description name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Value Configuration description value
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

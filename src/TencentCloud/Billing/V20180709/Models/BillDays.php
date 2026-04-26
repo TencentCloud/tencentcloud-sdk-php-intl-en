@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAudit request structure.
+ * Date filter list
  *
- * @method string getAuditName() Obtain Tracking set name
- * @method void setAuditName(string $AuditName) Set Tracking set name
+ * @method string getBillDay() Obtain Date: Settlement date
+ * @method void setBillDay(string $BillDay) Set Date: Settlement date
  */
-class DeleteAuditRequest extends AbstractModel
+class BillDays extends AbstractModel
 {
     /**
-     * @var string Tracking set name
+     * @var string Date: Settlement date
      */
-    public $AuditName;
+    public $BillDay;
 
     /**
-     * @param string $AuditName Tracking set name
+     * @param string $BillDay Date: Settlement date
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteAuditRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AuditName",$param) and $param["AuditName"] !== null) {
-            $this->AuditName = $param["AuditName"];
+        if (array_key_exists("BillDay",$param) and $param["BillDay"] !== null) {
+            $this->BillDay = $param["BillDay"];
         }
     }
 }

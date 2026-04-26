@@ -18,40 +18,28 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mcu relay recording; third-party storage parameters.
+ * Mcu relay recording. third-party object storage parameters.
  *
- * @method CloudStorage getCloudStorage() Obtain Third-Party Cloud Storage Account Information
-(Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]}
- * @method void setCloudStorage(CloudStorage $CloudStorage) Set Third-Party Cloud Storage Account Information
-(Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]}
- * @method McuCloudVod getMcuCloudVod() Obtain Tencent Cloud VOD Account Information
-Example:{"McuTencentVod":{"ExpireTime":86400}}
- * @method void setMcuCloudVod(McuCloudVod $McuCloudVod) Set Tencent Cloud VOD Account Information
-Example:{"McuTencentVod":{"ExpireTime":86400}}
+ * @method CloudStorage getCloudStorage() Obtain Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.).
+ * @method void setCloudStorage(CloudStorage $CloudStorage) Set Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.).
+ * @method McuCloudVod getMcuCloudVod() Obtain Account information of tencent cloud vod.
+ * @method void setMcuCloudVod(McuCloudVod $McuCloudVod) Set Account information of tencent cloud vod.
  */
 class McuStorageParams extends AbstractModel
 {
     /**
-     * @var CloudStorage Third-Party Cloud Storage Account Information
-(Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]}
+     * @var CloudStorage Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.).
      */
     public $CloudStorage;
 
     /**
-     * @var McuCloudVod Tencent Cloud VOD Account Information
-Example:{"McuTencentVod":{"ExpireTime":86400}}
+     * @var McuCloudVod Account information of tencent cloud vod.
      */
     public $McuCloudVod;
 
     /**
-     * @param CloudStorage $CloudStorage Third-Party Cloud Storage Account Information
-(Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]}
-     * @param McuCloudVod $McuCloudVod Tencent Cloud VOD Account Information
-Example:{"McuTencentVod":{"ExpireTime":86400}}
+     * @param CloudStorage $CloudStorage Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.).
+     * @param McuCloudVod $McuCloudVod Account information of tencent cloud vod.
      */
     function __construct()
     {

@@ -70,16 +70,16 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit: The amount paid with the user's free credit
 
- * @method string getTransferPayAmount() Obtain Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTransferPayAmount() Obtain Royalty account expenditure: The amount paid through the royalty account
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Royalty account expenditure: The amount paid through the royalty account
  * @method string getExtendField3() Obtain Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
  * @method void setExtendField3(string $ExtendField3) Set Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
  * @method string getExtendField4() Obtain Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only.
  * @method void setExtendField4(string $ExtendField4) Set Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only.
  * @method string getExtendField5() Obtain Extended field 5: Extended attribute information of a product, which is displayed on the resource bill only.
  * @method void setExtendField5(string $ExtendField5) Set Extended field 5: Extended attribute information of a product, which is displayed on the resource bill only.
- * @method array getTags() Obtain Tag information. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Tag information.
+ * @method void setTags(array $Tags) Set Tag information.
  * @method string getPayerUin() Obtain Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
  * @method void setPayerUin(string $PayerUin) Set Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
  * @method string getOwnerUin() Obtain Owner account ID: The account ID of the actual resource user
@@ -100,8 +100,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSPDeduction(string $SPDeduction) Set Cost deduction by SP. This parameter has been deprecated.
  * @method string getOriginalCostWithSP() Obtain SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
  * @method void setOriginalCostWithSP(string $OriginalCostWithSP) Set SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
- * @method string getBillMonth() Obtain Billing monthNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setBillMonth(string $BillMonth) Set Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBillMonth() Obtain Billing month
+ * @method void setBillMonth(string $BillMonth) Set Billing month
  */
 class BillResourceSummary extends AbstractModel
 {
@@ -223,7 +223,7 @@ class BillResourceSummary extends AbstractModel
     public $IncentivePayAmount;
 
     /**
-     * @var string Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Royalty account expenditure: The amount paid through the royalty account
      */
     public $TransferPayAmount;
 
@@ -243,7 +243,7 @@ class BillResourceSummary extends AbstractModel
     public $ExtendField5;
 
     /**
-     * @var array Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Tag information.
      */
     public $Tags;
 
@@ -299,7 +299,7 @@ class BillResourceSummary extends AbstractModel
     public $OriginalCostWithSP;
 
     /**
-     * @var string Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Billing month
      */
     public $BillMonth;
 
@@ -329,11 +329,11 @@ class BillResourceSummary extends AbstractModel
 
      * @param string $IncentivePayAmount Free credit: The amount paid with the user's free credit
 
-     * @param string $TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      * @param string $ExtendField3 Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
      * @param string $ExtendField4 Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only.
      * @param string $ExtendField5 Extended field 5: Extended attribute information of a product, which is displayed on the resource bill only.
-     * @param array $Tags Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Tag information.
      * @param string $PayerUin Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
      * @param string $OwnerUin Owner account ID: The account ID of the actual resource user
      * @param string $OperateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource.
@@ -344,7 +344,7 @@ class BillResourceSummary extends AbstractModel
      * @param string $OriginalCostWithRI RI deduction (cost): The amount deducted from the original cost by RI	
      * @param string $SPDeduction Cost deduction by SP. This parameter has been deprecated.
      * @param string $OriginalCostWithSP SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
-     * @param string $BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BillMonth Billing month
      */
     function __construct()
     {

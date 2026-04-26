@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cost analysis availability zone complex type
  *
- * @method string getZoneId() Obtain Availability zone IDNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneId(string $ZoneId) Set Availability zone IDNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getZoneName() Obtain Availability zone nameNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneName(string $ZoneName) Set Availability zone nameNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getZoneId() Obtain AZ ID.
+ * @method void setZoneId(string $ZoneId) Set AZ ID.
+ * @method string getZoneName() Obtain Available zone Name
+ * @method void setZoneName(string $ZoneName) Set Available zone Name
  */
 class AnalyseZoneDetail extends AbstractModel
 {
     /**
-     * @var string Availability zone IDNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string AZ ID.
      */
     public $ZoneId;
 
     /**
-     * @var string Availability zone nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Available zone Name
      */
     public $ZoneName;
 
     /**
-     * @param string $ZoneId Availability zone IDNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ZoneName Availability zone nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ZoneId AZ ID.
+     * @param string $ZoneName Available zone Name
      */
     function __construct()
     {

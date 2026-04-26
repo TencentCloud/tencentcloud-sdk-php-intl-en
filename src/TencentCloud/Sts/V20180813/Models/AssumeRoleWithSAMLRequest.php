@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleArn(string $RoleArn) Set Role access description name
  * @method string getRoleSessionName() Obtain Session name
  * @method void setRoleSessionName(string $RoleSessionName) Set Session name
- * @method integer getDurationSeconds() Obtain The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
- * @method void setDurationSeconds(integer $DurationSeconds) Set The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+ * @method integer getDurationSeconds() Obtain Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+ * @method void setDurationSeconds(integer $DurationSeconds) Set Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
  */
 class AssumeRoleWithSAMLRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class AssumeRoleWithSAMLRequest extends AbstractModel
     public $RoleSessionName;
 
     /**
-     * @var integer The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+     * @var integer Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
      */
     public $DurationSeconds;
 
@@ -63,7 +63,7 @@ class AssumeRoleWithSAMLRequest extends AbstractModel
      * @param string $PrincipalArn Principal access description name
      * @param string $RoleArn Role access description name
      * @param string $RoleSessionName Session name
-     * @param integer $DurationSeconds The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+     * @param integer $DurationSeconds Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
      */
     function __construct()
     {

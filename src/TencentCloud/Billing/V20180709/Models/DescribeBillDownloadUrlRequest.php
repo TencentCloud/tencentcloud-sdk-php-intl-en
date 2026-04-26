@@ -20,62 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillDownloadUrl request structure.
  *
- * @method string getFileType() Obtain Bill type. Valid values:
-`billOverview` (L0: PDF bills)
-`billSummary` (L1: Bill summary)	
-`billResource` (L2: Bill by instance)	
-`billDetail` (L3: Bill details)	
-`billPack` (Bill packs)
- * @method void setFileType(string $FileType) Set Bill type. Valid values:
-`billOverview` (L0: PDF bills)
-`billSummary` (L1: Bill summary)	
-`billResource` (L2: Bill by instance)	
-`billDetail` (L3: Bill details)	
-`billPack` (Bill packs)
- * @method string getMonth() Obtain Bill month.
-The earliest month that can be queried is January 2021.
-L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month.
- * @method void setMonth(string $Month) Set Bill month.
-The earliest month that can be queried is January 2021.
-L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month.
- * @method array getChildUin() Obtain List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter.
- * @method void setChildUin(array $ChildUin) Set List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter.
+ * @method string getFileType() Obtain Billing mode. Enumeration values
+billOverview=L0-PDF Bill
+Bill Summary=L1-Summary Bill	
+billResource=L2-Resource bill	
+billDetail=L3-Detailed Bill	
+billPack
+ * @method void setFileType(string $FileType) Set Billing mode. Enumeration values
+billOverview=L0-PDF Bill
+Bill Summary=L1-Summary Bill	
+billResource=L2-Resource bill	
+billDetail=L3-Detailed Bill	
+billPack
+ * @method string getMonth() Obtain Billing month
+Earliest start month supported is 2021-01
+L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00.
+ * @method void setMonth(string $Month) Set Billing month
+Earliest start month supported is 2021-01
+L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00.
+ * @method array getChildUin() Obtain Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field.
+ * @method void setChildUin(array $ChildUin) Set Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field.
  */
 class DescribeBillDownloadUrlRequest extends AbstractModel
 {
     /**
-     * @var string Bill type. Valid values:
-`billOverview` (L0: PDF bills)
-`billSummary` (L1: Bill summary)	
-`billResource` (L2: Bill by instance)	
-`billDetail` (L3: Bill details)	
-`billPack` (Bill packs)
+     * @var string Billing mode. Enumeration values
+billOverview=L0-PDF Bill
+Bill Summary=L1-Summary Bill	
+billResource=L2-Resource bill	
+billDetail=L3-Detailed Bill	
+billPack
      */
     public $FileType;
 
     /**
-     * @var string Bill month.
-The earliest month that can be queried is January 2021.
-L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month.
+     * @var string Billing month
+Earliest start month supported is 2021-01
+L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00.
      */
     public $Month;
 
     /**
-     * @var array List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter.
+     * @var array Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field.
      */
     public $ChildUin;
 
     /**
-     * @param string $FileType Bill type. Valid values:
-`billOverview` (L0: PDF bills)
-`billSummary` (L1: Bill summary)	
-`billResource` (L2: Bill by instance)	
-`billDetail` (L3: Bill details)	
-`billPack` (Bill packs)
-     * @param string $Month Bill month.
-The earliest month that can be queried is January 2021.
-L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month.
-     * @param array $ChildUin List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter.
+     * @param string $FileType Billing mode. Enumeration values
+billOverview=L0-PDF Bill
+Bill Summary=L1-Summary Bill	
+billResource=L2-Resource bill	
+billDetail=L3-Detailed Bill	
+billPack
+     * @param string $Month Billing month
+Earliest start month supported is 2021-01
+L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00.
+     * @param array $ChildUin Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field.
      */
     function __construct()
     {

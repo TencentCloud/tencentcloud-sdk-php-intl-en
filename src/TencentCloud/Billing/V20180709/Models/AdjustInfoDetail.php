@@ -18,120 +18,72 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * This API is used to view UIN exception adjustment details.
+ * Abnormal adjustment details of UIN
  *
- * @method string getPayerUin() Obtain Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-Note: This field may return null, indicating that no valid values can be obtained.
-Example value: 909619400.
- * @method void setPayerUin(string $PayerUin) Set Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-Note: This field may return null, indicating that no valid values can be obtained.
-Example value: 909619400.
- * @method string getMonth() Obtain Bill month. Format: yyyy-MM.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2024-10.
- * @method void setMonth(string $Month) Set Bill month. Format: yyyy-MM.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2024-10.
- * @method string getAdjustType() Obtain Adjustment type.
-Adjustment: manualAdjustment.
-Supplementary settlement: supplementarySettlement.
-Re-settlement: reSettlement.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: manualAdjustment.
- * @method void setAdjustType(string $AdjustType) Set Adjustment type.
-Adjustment: manualAdjustment.
-Supplementary settlement: supplementarySettlement.
-Re-settlement: reSettlement.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: manualAdjustment.
- * @method string getAdjustNum() Obtain Adjustment order number.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2220726096135.
- * @method void setAdjustNum(string $AdjustNum) Set Adjustment order number.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2220726096135.
- * @method string getAdjustCompletionTime() Obtain Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2022-12-02 12:39:04.
- * @method void setAdjustCompletionTime(string $AdjustCompletionTime) Set Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2022-12-02 12:39:04.
- * @method float getAdjustAmount() Obtain Adjustment amount.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 333.00000000.
- * @method void setAdjustAmount(float $AdjustAmount) Set Adjustment amount.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 333.00000000.
+ * @method string getPayerUin() Obtain Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
+ * @method void setPayerUin(string $PayerUin) Set Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
+ * @method string getMonth() Obtain Bill month, formatted as yyyy-MM.
+ * @method void setMonth(string $Month) Set Bill month, formatted as yyyy-MM.
+ * @method string getAdjustType() Obtain Adjustment type
+Bill adjustment: manualAdjustment
+Supplementary settlement: supplementarySettlement
+Re-settlement
+ * @method void setAdjustType(string $AdjustType) Set Adjustment type
+Bill adjustment: manualAdjustment
+Supplementary settlement: supplementarySettlement
+Re-settlement
+ * @method string getAdjustNum() Obtain Adjustment Number
+ * @method void setAdjustNum(string $AdjustNum) Set Adjustment Number
+ * @method string getAdjustCompletionTime() Obtain Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss
+ * @method void setAdjustCompletionTime(string $AdjustCompletionTime) Set Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss
+ * @method float getAdjustAmount() Obtain Adjustment Amount
+ * @method void setAdjustAmount(float $AdjustAmount) Set Adjustment Amount
  */
 class AdjustInfoDetail extends AbstractModel
 {
     /**
-     * @var string Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-Note: This field may return null, indicating that no valid values can be obtained.
-Example value: 909619400.
+     * @var string Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
      */
     public $PayerUin;
 
     /**
-     * @var string Bill month. Format: yyyy-MM.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2024-10.
+     * @var string Bill month, formatted as yyyy-MM.
      */
     public $Month;
 
     /**
-     * @var string Adjustment type.
-Adjustment: manualAdjustment.
-Supplementary settlement: supplementarySettlement.
-Re-settlement: reSettlement.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: manualAdjustment.
+     * @var string Adjustment type
+Bill adjustment: manualAdjustment
+Supplementary settlement: supplementarySettlement
+Re-settlement
      */
     public $AdjustType;
 
     /**
-     * @var string Adjustment order number.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2220726096135.
+     * @var string Adjustment Number
      */
     public $AdjustNum;
 
     /**
-     * @var string Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2022-12-02 12:39:04.
+     * @var string Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss
      */
     public $AdjustCompletionTime;
 
     /**
-     * @var float Adjustment amount.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 333.00000000.
+     * @var float Adjustment Amount
      */
     public $AdjustAmount;
 
     /**
-     * @param string $PayerUin Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-Note: This field may return null, indicating that no valid values can be obtained.
-Example value: 909619400.
-     * @param string $Month Bill month. Format: yyyy-MM.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2024-10.
-     * @param string $AdjustType Adjustment type.
-Adjustment: manualAdjustment.
-Supplementary settlement: supplementarySettlement.
-Re-settlement: reSettlement.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: manualAdjustment.
-     * @param string $AdjustNum Adjustment order number.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2220726096135.
-     * @param string $AdjustCompletionTime Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2022-12-02 12:39:04.
-     * @param float $AdjustAmount Adjustment amount.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 333.00000000.
+     * @param string $PayerUin Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
+     * @param string $Month Bill month, formatted as yyyy-MM.
+     * @param string $AdjustType Adjustment type
+Bill adjustment: manualAdjustment
+Supplementary settlement: supplementarySettlement
+Re-settlement
+     * @param string $AdjustNum Adjustment Number
+     * @param string $AdjustCompletionTime Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss
+     * @param float $AdjustAmount Adjustment Amount
      */
     function __construct()
     {

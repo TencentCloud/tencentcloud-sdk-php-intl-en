@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddOrganizationNode request structure.
  *
- * @method integer getParentNodeId() Obtain Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
- * @method void setParentNodeId(integer $ParentNodeId) Set Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+ * @method integer getParentNodeId() Obtain Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1)
+ * @method void setParentNodeId(integer $ParentNodeId) Set Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1)
  * @method string getName() Obtain Node name, which can contain up to 40 letters, digits, and symbols `+@&._[]-`.
  * @method void setName(string $Name) Set Node name, which can contain up to 40 letters, digits, and symbols `+@&._[]-`.
  * @method string getRemark() Obtain Remarks.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class AddOrganizationNodeRequest extends AbstractModel
 {
     /**
-     * @var integer Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+     * @var integer Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1)
      */
     public $ParentNodeId;
 
@@ -52,7 +52,7 @@ class AddOrganizationNodeRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param integer $ParentNodeId Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+     * @param integer $ParentNodeId Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1)
      * @param string $Name Node name, which can contain up to 40 letters, digits, and symbols `+@&._[]-`.
      * @param string $Remark Remarks.
      * @param array $Tags Department tag list, with a maximum of 10.

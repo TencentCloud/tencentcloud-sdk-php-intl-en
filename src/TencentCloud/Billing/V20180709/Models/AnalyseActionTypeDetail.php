@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cost analysis transaction type complex type
  *
- * @method string getActionType() Obtain Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setActionType(string $ActionType) Set Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getActionTypeName() Obtain Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setActionTypeName(string $ActionTypeName) Set Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getActionType() Obtain Transaction type code
+ * @method void setActionType(string $ActionType) Set Transaction type code
+ * @method string getActionTypeName() Obtain Transaction type Name
+ * @method void setActionTypeName(string $ActionTypeName) Set Transaction type Name
  */
 class AnalyseActionTypeDetail extends AbstractModel
 {
     /**
-     * @var string Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Transaction type code
      */
     public $ActionType;
 
     /**
-     * @var string Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Transaction type Name
      */
     public $ActionTypeName;
 
     /**
-     * @param string $ActionType Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ActionTypeName Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ActionType Transaction type code
+     * @param string $ActionTypeName Transaction type Name
      */
     function __construct()
     {

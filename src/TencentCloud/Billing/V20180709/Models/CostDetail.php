@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) Set Resource ID
  * @method string getResourceName() Obtain Resource name
  * @method void setResourceName(string $ResourceName) Set Resource name
- * @method string getActionTypeName() Obtain Type nameNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setActionTypeName(string $ActionTypeName) Set Type nameNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getActionTypeName() Obtain Type name
+ * @method void setActionTypeName(string $ActionTypeName) Set Type name
  * @method string getOrderId() Obtain Order ID
  * @method void setOrderId(string $OrderId) Set Order ID
  * @method string getBillId() Obtain Transaction ID
@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComponentSet(array $ComponentSet) Set Component details
  * @method string getProductCode() Obtain Subproduct name code
  * @method void setProductCode(string $ProductCode) Set Subproduct name code
+ * @method array getTags() Obtain Tag information.	
+ * @method void setTags(array $Tags) Set Tag information.	
  */
 class CostDetail extends AbstractModel
 {
@@ -101,7 +103,7 @@ class CostDetail extends AbstractModel
     public $ResourceName;
 
     /**
-     * @var string Type nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Type name
      */
     public $ActionTypeName;
 
@@ -136,6 +138,11 @@ class CostDetail extends AbstractModel
     public $ProductCode;
 
     /**
+     * @var array Tag information.	
+     */
+    public $Tags;
+
+    /**
      * @param string $PayerUin Payer UIN
      * @param string $BusinessCodeName Product name
      * @param string $ProductCodeName Subproduct name
@@ -145,13 +152,14 @@ class CostDetail extends AbstractModel
      * @param string $ZoneName Zone name
      * @param string $ResourceId Resource ID
      * @param string $ResourceName Resource name
-     * @param string $ActionTypeName Type nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ActionTypeName Type name
      * @param string $OrderId Order ID
      * @param string $BillId Transaction ID
      * @param string $FeeBeginTime Start time of fees
      * @param string $FeeEndTime End time of fees
      * @param array $ComponentSet Component details
      * @param string $ProductCode Subproduct name code
+     * @param array $Tags Tag information.	
      */
     function __construct()
     {
@@ -233,6 +241,15 @@ class CostDetail extends AbstractModel
 
         if (array_key_exists("ProductCode",$param) and $param["ProductCode"] !== null) {
             $this->ProductCode = $param["ProductCode"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new BillTagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

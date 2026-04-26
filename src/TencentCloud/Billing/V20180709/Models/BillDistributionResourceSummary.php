@@ -66,10 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit payment: The amount paid through the user's cash account.
  * @method string getIncentivePayAmount() Obtain Free credit payment: The amount paid with the user's free credit.
  * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit payment: The amount paid with the user's free credit.
- * @method string getTransferPayAmount() Obtain Commission credit payment: The amount paid with the user's commission credit.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit payment: The amount paid with the user's commission credit.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTransferPayAmount() Obtain Royalty account expenditure: The amount paid through the royalty account
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Royalty account expenditure: The amount paid through the royalty account
  * @method string getExtendField3() Obtain Extended field 3: The extended attribute information of a product, which is displayed on the resource bill only.
  * @method void setExtendField3(string $ExtendField3) Set Extended field 3: The extended attribute information of a product, which is displayed on the resource bill only.
  * @method string getExtendField4() Obtain Extended field 4: The extended attribute information of a product, which is displayed on the resource bill only.
@@ -77,9 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method string getExtendField5() Obtain Extended field 5: The extended attribute information of a product, which is displayed on the resource bill only.
  * @method void setExtendField5(string $ExtendField5) Set Extended field 5: The extended attribute information of a product, which is displayed on the resource bill only.
  * @method array getTags() Obtain Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getOwnerUin() Obtain Owner account ID: The account ID of the actual resource user.
  * @method void setOwnerUin(string $OwnerUin) Set Owner account ID: The account ID of the actual resource user.
  * @method string getOperateUin() Obtain Operator account ID: The account or role ID of the operator who purchases or activates a resource.
@@ -98,8 +94,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setSPDeduction(string $SPDeduction) Set Savings plan deduction (disused).
  * @method string getOriginalCostWithSP() Obtain SP deduction (cost): The amount of cost deducted by a savings plan based on the component's original cost. SP deduction (cost) = Cost deduction by SP / SP deduction rate	
  * @method void setOriginalCostWithSP(string $OriginalCostWithSP) Set SP deduction (cost): The amount of cost deducted by a savings plan based on the component's original cost. SP deduction (cost) = Cost deduction by SP / SP deduction rate	
- * @method string getBillMonth() Obtain Billing monthNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setBillMonth(string $BillMonth) Set Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBillMonth() Obtain Billing month
+ * @method void setBillMonth(string $BillMonth) Set Billing month
  */
 class BillDistributionResourceSummary extends AbstractModel
 {
@@ -219,8 +215,7 @@ class BillDistributionResourceSummary extends AbstractModel
     public $IncentivePayAmount;
 
     /**
-     * @var string Commission credit payment: The amount paid with the user's commission credit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Royalty account expenditure: The amount paid through the royalty account
      */
     public $TransferPayAmount;
 
@@ -241,7 +236,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var array Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
@@ -292,7 +286,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OriginalCostWithSP;
 
     /**
-     * @var string Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Billing month
      */
     public $BillMonth;
 
@@ -320,13 +314,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $VoucherPayAmount Voucher payment: The voucher deduction amount.
      * @param string $CashPayAmount Cash credit payment: The amount paid through the user's cash account.
      * @param string $IncentivePayAmount Free credit payment: The amount paid with the user's free credit.
-     * @param string $TransferPayAmount Commission credit payment: The amount paid with the user's commission credit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      * @param string $ExtendField3 Extended field 3: The extended attribute information of a product, which is displayed on the resource bill only.
      * @param string $ExtendField4 Extended field 4: The extended attribute information of a product, which is displayed on the resource bill only.
      * @param string $ExtendField5 Extended field 5: The extended attribute information of a product, which is displayed on the resource bill only.
      * @param array $Tags Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OwnerUin Owner account ID: The account ID of the actual resource user.
      * @param string $OperateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource.
      * @param string $BusinessCode Product code.
@@ -336,7 +328,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $OriginalCostWithRI RI deduction (cost): The amount deducted from the original cost by RI.	
      * @param string $SPDeduction Savings plan deduction (disused).
      * @param string $OriginalCostWithSP SP deduction (cost): The amount of cost deducted by a savings plan based on the component's original cost. SP deduction (cost) = Cost deduction by SP / SP deduction rate	
-     * @param string $BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BillMonth Billing month
      */
     function __construct()
     {

@@ -34,17 +34,21 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920, qcs::ca
 It can contain 2-128 letters, digits, and symbols (=,.@_-). Regex: [\w+=,.@_-]*
  * @method void setRoleSessionName(string $RoleSessionName) Set User-defined temporary session name.
 It can contain 2-128 letters, digits, and symbols (=,.@_-). Regex: [\w+=,.@_-]*
- * @method integer getDurationSeconds() Obtain Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 43200
- * @method void setDurationSeconds(integer $DurationSeconds) Set Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 43200
+ * @method integer getDurationSeconds() Obtain Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+ * @method void setDurationSeconds(integer $DurationSeconds) Set Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
  * @method string getPolicy() Obtain Policy description
+
 Note:
-1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
+
+This parameter needs to be URL-encoded. The server will URL-decode this field and grant temporary access credentials based on the processed policy. Please pass the parameter according to the specification. (If you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+The policy syntax refers to [CAM's Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
 3. The policy cannot contain the `principal` element.
  * @method void setPolicy(string $Policy) Set Policy description
+
 Note:
-1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
+
+This parameter needs to be URL-encoded. The server will URL-decode this field and grant temporary access credentials based on the processed policy. Please pass the parameter according to the specification. (If you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+The policy syntax refers to [CAM's Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
 3. The policy cannot contain the `principal` element.
  * @method string getExternalId() Obtain External role ID, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
 It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-]*
@@ -54,6 +58,10 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
  * @method void setTags(array $Tags) Set List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
  * @method string getSourceIdentity() Obtain UIN of the initiator
  * @method void setSourceIdentity(string $SourceIdentity) Set UIN of the initiator
+ * @method string getSerialNumber() Obtain 
+ * @method void setSerialNumber(string $SerialNumber) Set 
+ * @method string getTokenCode() Obtain 
+ * @method void setTokenCode(string $TokenCode) Set 
  */
 class AssumeRoleRequest extends AbstractModel
 {
@@ -73,15 +81,17 @@ It can contain 2-128 letters, digits, and symbols (=,.@_-). Regex: [\w+=,.@_-]*
     public $RoleSessionName;
 
     /**
-     * @var integer Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 43200
+     * @var integer Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
      */
     public $DurationSeconds;
 
     /**
      * @var string Policy description
+
 Note:
-1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
+
+This parameter needs to be URL-encoded. The server will URL-decode this field and grant temporary access credentials based on the processed policy. Please pass the parameter according to the specification. (If you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+The policy syntax refers to [CAM's Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
 3. The policy cannot contain the `principal` element.
      */
     public $Policy;
@@ -103,6 +113,16 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
     public $SourceIdentity;
 
     /**
+     * @var string 
+     */
+    public $SerialNumber;
+
+    /**
+     * @var string 
+     */
+    public $TokenCode;
+
+    /**
      * @param string $RoleArn Resource descriptions of a role, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
 General role:
 qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName
@@ -110,16 +130,20 @@ Service role:
 qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920, qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName
      * @param string $RoleSessionName User-defined temporary session name.
 It can contain 2-128 letters, digits, and symbols (=,.@_-). Regex: [\w+=,.@_-]*
-     * @param integer $DurationSeconds Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 43200
+     * @param integer $DurationSeconds Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
      * @param string $Policy Policy description
+
 Note:
-1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
+
+This parameter needs to be URL-encoded. The server will URL-decode this field and grant temporary access credentials based on the processed policy. Please pass the parameter according to the specification. (If you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+The policy syntax refers to [CAM's Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
 3. The policy cannot contain the `principal` element.
      * @param string $ExternalId External role ID, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
 It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-]*
      * @param array $Tags List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
      * @param string $SourceIdentity UIN of the initiator
+     * @param string $SerialNumber 
+     * @param string $TokenCode 
      */
     function __construct()
     {
@@ -165,6 +189,14 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
 
         if (array_key_exists("SourceIdentity",$param) and $param["SourceIdentity"] !== null) {
             $this->SourceIdentity = $param["SourceIdentity"];
+        }
+
+        if (array_key_exists("SerialNumber",$param) and $param["SerialNumber"] !== null) {
+            $this->SerialNumber = $param["SerialNumber"];
+        }
+
+        if (array_key_exists("TokenCode",$param) and $param["TokenCode"] !== null) {
+            $this->TokenCode = $param["TokenCode"];
         }
     }
 }

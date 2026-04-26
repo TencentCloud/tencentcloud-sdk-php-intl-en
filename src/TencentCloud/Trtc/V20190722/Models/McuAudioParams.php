@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method AudioEncode getAudioEncode() Obtain The audio encoding parameters.
  * @method void setAudioEncode(AudioEncode $AudioEncode) Set The audio encoding parameters.
- * @method array getSubscribeAudioList() Obtain The audio mix allowlist. For the `StartPublishCdnStream` API, if you do not pass this parameter or leave it empty, the audios of all anchors will be mixed. For the `UpdatePublishCdnStream` API, if you do not pass this parameter, no changes will be made to the current allowlist; if you pass in an empty string, the audios of all anchors will be mixed.
-In cases where `SubscribeAudioList` and `UnSubscribeAudioList` are used at the same time, you need to specify both parameters. If you pass neither `SubscribeAudioList` nor `UnSubscribeAudioList`, no changes will be made. If a user is included in both parameters, the user’s audio will not be mixed.
- * @method void setSubscribeAudioList(array $SubscribeAudioList) Set The audio mix allowlist. For the `StartPublishCdnStream` API, if you do not pass this parameter or leave it empty, the audios of all anchors will be mixed. For the `UpdatePublishCdnStream` API, if you do not pass this parameter, no changes will be made to the current allowlist; if you pass in an empty string, the audios of all anchors will be mixed.
-In cases where `SubscribeAudioList` and `UnSubscribeAudioList` are used at the same time, you need to specify both parameters. If you pass neither `SubscribeAudioList` nor `UnSubscribeAudioList`, no changes will be made. If a user is included in both parameters, the user’s audio will not be mixed.
+ * @method array getSubscribeAudioList() Obtain The audio user allowlist. for start, being empty or not filled means mixing all anchor audio; filling a specific value means mixing specified anchor audio. for update, not filling means does not update; being empty means update to mixing all anchor audio; filling a specific value means update to mixing specified anchor audio.
+When using blocklist and allowlist, both must be filled in simultaneously. if left empty, it means the list does not update. if the same user is in both lists, the blocklist takes precedence.
+Note: if it is cross-room pk, the cross-room mix requires specifying the audio allowlist, otherwise the pk host's audio uplink will be pulled twice, causing accent.
+ * @method void setSubscribeAudioList(array $SubscribeAudioList) Set The audio user allowlist. for start, being empty or not filled means mixing all anchor audio; filling a specific value means mixing specified anchor audio. for update, not filling means does not update; being empty means update to mixing all anchor audio; filling a specific value means update to mixing specified anchor audio.
+When using blocklist and allowlist, both must be filled in simultaneously. if left empty, it means the list does not update. if the same user is in both lists, the blocklist takes precedence.
+Note: if it is cross-room pk, the cross-room mix requires specifying the audio allowlist, otherwise the pk host's audio uplink will be pulled twice, causing accent.
  * @method array getUnSubscribeAudioList() Obtain The audio mix blocklist. If you do not pass this parameter or leave it empty, there won’t be a blocklist. For the `UpdatePublishCdnStream` API, if you do not pass this parameter, no changes will be made to the current blocklist; if you pass in an empty string, the blocklist will be reset.
 In cases where `SubscribeAudioList` and `UnSubscribeAudioList` are used at the same time, you need to specify both parameters. If you pass neither `SubscribeAudioList` nor `UnSubscribeAudioList`, no changes will be made. If a user is included in both parameters, the user’s audio will not be mixed.
  * @method void setUnSubscribeAudioList(array $UnSubscribeAudioList) Set The audio mix blocklist. If you do not pass this parameter or leave it empty, there won’t be a blocklist. For the `UpdatePublishCdnStream` API, if you do not pass this parameter, no changes will be made to the current blocklist; if you pass in an empty string, the blocklist will be reset.
@@ -39,8 +41,9 @@ class McuAudioParams extends AbstractModel
     public $AudioEncode;
 
     /**
-     * @var array The audio mix allowlist. For the `StartPublishCdnStream` API, if you do not pass this parameter or leave it empty, the audios of all anchors will be mixed. For the `UpdatePublishCdnStream` API, if you do not pass this parameter, no changes will be made to the current allowlist; if you pass in an empty string, the audios of all anchors will be mixed.
-In cases where `SubscribeAudioList` and `UnSubscribeAudioList` are used at the same time, you need to specify both parameters. If you pass neither `SubscribeAudioList` nor `UnSubscribeAudioList`, no changes will be made. If a user is included in both parameters, the user’s audio will not be mixed.
+     * @var array The audio user allowlist. for start, being empty or not filled means mixing all anchor audio; filling a specific value means mixing specified anchor audio. for update, not filling means does not update; being empty means update to mixing all anchor audio; filling a specific value means update to mixing specified anchor audio.
+When using blocklist and allowlist, both must be filled in simultaneously. if left empty, it means the list does not update. if the same user is in both lists, the blocklist takes precedence.
+Note: if it is cross-room pk, the cross-room mix requires specifying the audio allowlist, otherwise the pk host's audio uplink will be pulled twice, causing accent.
      */
     public $SubscribeAudioList;
 
@@ -52,8 +55,9 @@ In cases where `SubscribeAudioList` and `UnSubscribeAudioList` are used at the s
 
     /**
      * @param AudioEncode $AudioEncode The audio encoding parameters.
-     * @param array $SubscribeAudioList The audio mix allowlist. For the `StartPublishCdnStream` API, if you do not pass this parameter or leave it empty, the audios of all anchors will be mixed. For the `UpdatePublishCdnStream` API, if you do not pass this parameter, no changes will be made to the current allowlist; if you pass in an empty string, the audios of all anchors will be mixed.
-In cases where `SubscribeAudioList` and `UnSubscribeAudioList` are used at the same time, you need to specify both parameters. If you pass neither `SubscribeAudioList` nor `UnSubscribeAudioList`, no changes will be made. If a user is included in both parameters, the user’s audio will not be mixed.
+     * @param array $SubscribeAudioList The audio user allowlist. for start, being empty or not filled means mixing all anchor audio; filling a specific value means mixing specified anchor audio. for update, not filling means does not update; being empty means update to mixing all anchor audio; filling a specific value means update to mixing specified anchor audio.
+When using blocklist and allowlist, both must be filled in simultaneously. if left empty, it means the list does not update. if the same user is in both lists, the blocklist takes precedence.
+Note: if it is cross-room pk, the cross-room mix requires specifying the audio allowlist, otherwise the pk host's audio uplink will be pulled twice, causing accent.
      * @param array $UnSubscribeAudioList The audio mix blocklist. If you do not pass this parameter or leave it empty, there won’t be a blocklist. For the `UpdatePublishCdnStream` API, if you do not pass this parameter, no changes will be made to the current blocklist; if you pass in an empty string, the blocklist will be reset.
 In cases where `SubscribeAudioList` and `UnSubscribeAudioList` are used at the same time, you need to specify both parameters. If you pass neither `SubscribeAudioList` nor `UnSubscribeAudioList`, no changes will be made. If a user is included in both parameters, the user’s audio will not be mixed.
      */

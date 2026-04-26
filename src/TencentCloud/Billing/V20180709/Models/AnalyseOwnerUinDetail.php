@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cost analysis user UIN complex type
  *
- * @method string getOwnerUin() Obtain User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOwnerUin(string $OwnerUin) Set User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOwnerUin() Obtain User uin
+ * @method void setOwnerUin(string $OwnerUin) Set User uin
  */
 class AnalyseOwnerUinDetail extends AbstractModel
 {
     /**
-     * @var string User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string User uin
      */
     public $OwnerUin;
 
     /**
-     * @param string $OwnerUin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OwnerUin User uin
      */
     function __construct()
     {

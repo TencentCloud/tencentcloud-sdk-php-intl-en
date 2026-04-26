@@ -18,36 +18,36 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Template search details
+ * 
  *
- * @method string getHitGroup() Obtain Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library.
- * @method void setHitGroup(string $HitGroup) Set Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library.
- * @method float getSimilarityScore() Obtain Matched Similarity
- * @method void setSimilarityScore(float $SimilarityScore) Set Matched Similarity
- * @method string getHitTemplate() Obtain Matched Template id
- * @method void setHitTemplate(string $HitTemplate) Set Matched Template id
+ * @method string getHitGroup() Obtain 
+ * @method void setHitGroup(string $HitGroup) Set 
+ * @method float getSimilarityScore() Obtain 
+ * @method void setSimilarityScore(float $SimilarityScore) Set 
+ * @method string getHitTemplate() Obtain 
+ * @method void setHitTemplate(string $HitTemplate) Set 
  */
 class RetrievalLivenessExtraInfo extends AbstractModel
 {
     /**
-     * @var string Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library.
+     * @var string 
      */
     public $HitGroup;
 
     /**
-     * @var float Matched Similarity
+     * @var float 
      */
     public $SimilarityScore;
 
     /**
-     * @var string Matched Template id
+     * @var string 
      */
     public $HitTemplate;
 
     /**
-     * @param string $HitGroup Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library.
-     * @param float $SimilarityScore Matched Similarity
-     * @param string $HitTemplate Matched Template id
+     * @param string $HitGroup 
+     * @param float $SimilarityScore 
+     * @param string $HitTemplate 
      */
     function __construct()
     {

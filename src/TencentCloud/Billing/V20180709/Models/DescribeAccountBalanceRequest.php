@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccountBalance request structure.
  *
-
+ * @method boolean getTempCredit() Obtain Query the temporary limit
+ * @method void setTempCredit(boolean $TempCredit) Set Query the temporary limit
  */
 class DescribeAccountBalanceRequest extends AbstractModel
 {
-
+    /**
+     * @var boolean Query the temporary limit
+     */
+    public $TempCredit;
 
     /**
-
+     * @param boolean $TempCredit Query the temporary limit
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeAccountBalanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("TempCredit",$param) and $param["TempCredit"] !== null) {
+            $this->TempCredit = $param["TempCredit"];
+        }
     }
 }

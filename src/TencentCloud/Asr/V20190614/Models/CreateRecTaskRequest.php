@@ -86,10 +86,10 @@ If this parameter is set to 4, make sure that a [semantics-based segmentation re
 If this parameter is set to 5, make sure that an [oral-to-written resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. ** If post-payment is enabled and this parameter is set to 5, [automatic billing] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply **.
  * @method integer getSourceType() Obtain Audio source.
 0: Audio URL.
-1: Local audio file (body of the POST request).
+1: Local audio file (body of the POST request)
  * @method void setSourceType(integer $SourceType) Set Audio source.
 0: Audio URL.
-1: Local audio file (body of the POST request).
+1: Local audio file (body of the POST request)
  * @method string getData() Obtain Audio file Base64 code.
 ** This parameter is required if SourceType is set to 1. Otherwise, it can be left blank. **
 
@@ -98,8 +98,8 @@ Note: The audio data size cannot exceed 5 MB.
 ** This parameter is required if SourceType is set to 1. Otherwise, it can be left blank. **
 
 Note: The audio data size cannot exceed 5 MB.
- * @method integer getDataLen() Obtain Data length (before Base64 encoding).
- * @method void setDataLen(integer $DataLen) Set Data length (before Base64 encoding).
+ * @method integer getDataLen() Obtain Data length (before Base64 encoding)
+ * @method void setDataLen(integer $DataLen) Set Data length (before Base64 encoding)
  * @method string getUrl() Obtain Audio URL. (The audio should be downloadable via a public network browser.)
 ** This parameter is required if SourceType is set to 0. Otherwise, it can be left blank. **
 
@@ -267,6 +267,9 @@ Notes:
  * @method array getKeyWordLibIdList() Obtain List of keyword IDs for recognition. This parameter is left blank by default, indicating that no keyword is recognized. You can enter up to 10 IDs.
 
  * @method void setKeyWordLibIdList(array $KeyWordLibIdList) Set List of keyword IDs for recognition. This parameter is left blank by default, indicating that no keyword is recognized. You can enter up to 10 IDs.
+
+ * @method string getReplaceTextId() Obtain 
+ * @method void setReplaceTextId(string $ReplaceTextId) Set 
  */
 class CreateRecTaskRequest extends AbstractModel
 {
@@ -317,7 +320,7 @@ If this parameter is set to 5, make sure that an [oral-to-written resource packa
     /**
      * @var integer Audio source.
 0: Audio URL.
-1: Local audio file (body of the POST request).
+1: Local audio file (body of the POST request)
      */
     public $SourceType;
 
@@ -330,7 +333,7 @@ Note: The audio data size cannot exceed 5 MB.
     public $Data;
 
     /**
-     * @var integer Data length (before Base64 encoding).
+     * @var integer Data length (before Base64 encoding)
      */
     public $DataLen;
 
@@ -488,6 +491,11 @@ Notes:
     public $KeyWordLibIdList;
 
     /**
+     * @var string 
+     */
+    public $ReplaceTextId;
+
+    /**
      * @param string $EngineModelType Engine model type.
 Each recognition engine adopts a specific billing plan. Engines marked with "large model version" adopt the large model billing plan. For product billing instructions, [click here] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1).
 
@@ -522,12 +530,12 @@ If this parameter is set to 4, make sure that a [semantics-based segmentation re
 If this parameter is set to 5, make sure that an [oral-to-written resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. ** If post-payment is enabled and this parameter is set to 5, [automatic billing] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply **.
      * @param integer $SourceType Audio source.
 0: Audio URL.
-1: Local audio file (body of the POST request).
+1: Local audio file (body of the POST request)
      * @param string $Data Audio file Base64 code.
 ** This parameter is required if SourceType is set to 1. Otherwise, it can be left blank. **
 
 Note: The audio data size cannot exceed 5 MB.
-     * @param integer $DataLen Data length (before Base64 encoding).
+     * @param integer $DataLen Data length (before Base64 encoding)
      * @param string $Url Audio URL. (The audio should be downloadable via a public network browser.)
 ** This parameter is required if SourceType is set to 0. Otherwise, it can be left blank. **
 
@@ -611,6 +619,8 @@ Notes:
 
 - When the weight of a term is set to 100, the term enhancement feature is enabled to replace homophones of this term. (This feature is supported only for 8k_zh and 16k_zh engines.) For example, if you configure "mizhi 1|100", the recognized word "mizhi 2", which is a homophone of "mizhi 2", will be forcibly replaced with "mizhi 2". It is recommended that you enable this feature based on the actual needs. You can set the weight to 100 for only critical and necessary terms. The overall accuracy will be affected if the weight is set to 100 for too many terms.
      * @param array $KeyWordLibIdList List of keyword IDs for recognition. This parameter is left blank by default, indicating that no keyword is recognized. You can enter up to 10 IDs.
+
+     * @param string $ReplaceTextId 
      */
     function __construct()
     {
@@ -715,6 +725,10 @@ Notes:
 
         if (array_key_exists("KeyWordLibIdList",$param) and $param["KeyWordLibIdList"] !== null) {
             $this->KeyWordLibIdList = $param["KeyWordLibIdList"];
+        }
+
+        if (array_key_exists("ReplaceTextId",$param) and $param["ReplaceTextId"] !== null) {
+            $this->ReplaceTextId = $param["ReplaceTextId"];
         }
     }
 }

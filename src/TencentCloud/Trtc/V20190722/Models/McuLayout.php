@@ -20,126 +20,204 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The layout parameters.
  *
- * @method UserMediaStream getUserMediaStream() Obtain The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence.
- * @method void setUserMediaStream(UserMediaStream $UserMediaStream) Set The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence.
- * @method integer getImageWidth() Obtain The video width (pixels). If you do not pass this parameter, 0 will be used.
- * @method void setImageWidth(integer $ImageWidth) Set The video width (pixels). If you do not pass this parameter, 0 will be used.
- * @method integer getImageHeight() Obtain The video height (pixels). If you do not pass this parameter, 0 will be used.
- * @method void setImageHeight(integer $ImageHeight) Set The video height (pixels). If you do not pass this parameter, 0 will be used.
- * @method integer getLocationX() Obtain The horizontal offset (pixels) of the video. The sum of `LocationX` and `ImageWidth` cannot exceed the width of the canvas. If you do not pass this parameter, 0 will be used.
- * @method void setLocationX(integer $LocationX) Set The horizontal offset (pixels) of the video. The sum of `LocationX` and `ImageWidth` cannot exceed the width of the canvas. If you do not pass this parameter, 0 will be used.
- * @method integer getLocationY() Obtain The vertical offset of the video. The sum of `LocationY` and `ImageHeight` cannot exceed the height of the canvas. If you do not pass this parameter, 0 will be used.
- * @method void setLocationY(integer $LocationY) Set The vertical offset of the video. The sum of `LocationY` and `ImageHeight` cannot exceed the height of the canvas. If you do not pass this parameter, 0 will be used.
- * @method integer getZOrder() Obtain The image layer of the video. If you do not pass this parameter, 0 will be used.
- * @method void setZOrder(integer $ZOrder) Set The image layer of the video. If you do not pass this parameter, 0 will be used.
- * @method integer getRenderMode() Obtain The rendering mode of the video. 0 (the video is scaled and the excess parts are cropped), 1 (the video is scaled), 2 (the video is scaled and the blank spaces are filled with black bars). If you do not pass this parameter, 0 will be used.
- * @method void setRenderMode(integer $RenderMode) Set The rendering mode of the video. 0 (the video is scaled and the excess parts are cropped), 1 (the video is scaled), 2 (the video is scaled and the blank spaces are filled with black bars). If you do not pass this parameter, 0 will be used.
- * @method string getBackGroundColor() Obtain (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
-Red: `0xcc0033`
-Yellow: `0xcc9900`
-Green: `0xcccc33`
-Blue: `0x99CCFF`
-Black: `0x000000`
-White: `0xFFFFFF`
-Grey: `0x999999`
- * @method void setBackGroundColor(string $BackGroundColor) Set (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
-Red: `0xcc0033`
-Yellow: `0xcc9900`
-Green: `0xcccc33`
-Blue: `0x99CCFF`
-Black: `0x000000`
-White: `0xFFFFFF`
-Grey: `0x999999`
- * @method string getBackgroundImageUrl() Obtain The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
- * @method void setBackgroundImageUrl(string $BackgroundImageUrl) Set The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
- * @method McuCustomCrop getCustomCrop() Obtain Custom cropping.
- * @method void setCustomCrop(McuCustomCrop $CustomCrop) Set Custom cropping.
- * @method integer getBackgroundRenderMode() Obtain The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
- * @method void setBackgroundRenderMode(integer $BackgroundRenderMode) Set The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+ * @method UserMediaStream getUserMediaStream() Obtain User media stream parameters. if left blank, tencent cloud backend fills them automatically by the room entry sequence of the uplink host.
+ * @method void setUserMediaStream(UserMediaStream $UserMediaStream) Set User media stream parameters. if left blank, tencent cloud backend fills them automatically by the room entry sequence of the uplink host.
+ * @method integer getImageWidth() Obtain The width of the sub-screen in the output, unit: pixel value. defaults to 0 if left blank.
+ * @method void setImageWidth(integer $ImageWidth) Set The width of the sub-screen in the output, unit: pixel value. defaults to 0 if left blank.
+ * @method integer getImageHeight() Obtain The height of the sub-screen in the output, in pixel values. default is 0.
+ * @method void setImageHeight(integer $ImageHeight) Set The height of the sub-screen in the output, in pixel values. default is 0.
+ * @method integer getLocationX() Obtain The X-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationX and ImageWidth must not exceed the total width of the mixed stream output. default is 0.
+ * @method void setLocationX(integer $LocationX) Set The X-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationX and ImageWidth must not exceed the total width of the mixed stream output. default is 0.
+ * @method integer getLocationY() Obtain The Y-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationY and ImageHeight must not exceed the total height of the mixed stream output. default is 0 if left blank.
+ * @method void setLocationY(integer $LocationY) Set The Y-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationY and ImageHeight must not exceed the total height of the mixed stream output. default is 0 if left blank.
+ * @method integer getZOrder() Obtain The hierarchy of the sub-screen in the output. default is 0.
+ * @method void setZOrder(integer $ZOrder) Set The hierarchy of the sub-screen in the output. default is 0.
+ * @method integer getRenderMode() Obtain The display mode of the sub-screen in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background. defaults to 0 if left blank.
+ * @method void setRenderMode(integer $RenderMode) Set The display mode of the sub-screen in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background. defaults to 0 if left blank.
+ * @method string getBackGroundColor() Obtain [This parameter configuration is invalid and not currently supported] the background color of the sub-picture. commonly used colors are:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
+ * @method void setBackGroundColor(string $BackGroundColor) Set [This parameter configuration is invalid and not currently supported] the background color of the sub-picture. commonly used colors are:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
+ * @method string getBackgroundImageUrl() Obtain The url of the placeholder image for the sub-window. fill in this parameter to specify the image displayed in the layout position when the user turns the camera off or has not joined the TRTC room. if the specified image has a different size ratio from the layout position, it will be stretched. this parameter has a higher priority than BackGroundColor. supported formats include png, jpg, jpeg, bmp, gif, and webm. the image size limit is no more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the placeholder image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the placeholder image will not take effect.
+ * @method void setBackgroundImageUrl(string $BackgroundImageUrl) Set The url of the placeholder image for the sub-window. fill in this parameter to specify the image displayed in the layout position when the user turns the camera off or has not joined the TRTC room. if the specified image has a different size ratio from the layout position, it will be stretched. this parameter has a higher priority than BackGroundColor. supported formats include png, jpg, jpeg, bmp, gif, and webm. the image size limit is no more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the placeholder image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the placeholder image will not take effect.
+ * @method McuCustomCrop getCustomCrop() Obtain Customer custom crop, targeting the input stream.
+ * @method void setCustomCrop(McuCustomCrop $CustomCrop) Set Customer custom crop, targeting the input stream.
+ * @method integer getBackgroundRenderMode() Obtain The display mode of the sub-background image in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background, 3 for variable-scale scaling, 4 for custom rendering. defaults to 3 if left blank.
+ * @method void setBackgroundRenderMode(integer $BackgroundRenderMode) Set The display mode of the sub-background image in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background, 3 for variable-scale scaling, 4 for custom rendering. defaults to 3 if left blank.
+ * @method string getTransparentUrl() Obtain The sub-screen template url points to a template image with an alpha channel. fill in this parameter, and the backend will extract the alpha channel of the template image during compositing, scale it as the alpha channel of the target frame, and mix it with other frames. you can use the transparent template to achieve a semi-transparent effect and arbitrary shape cropping (such as rounded corners, stars, hearts) for the target frame. png format is supported. the image size limit is no more than 5MB.
+Note:.
+1. the image aspect ratio of the template should be close to the target frame aspect ratio to avoid deformation of the template effect when scaling to fit the target frame. 2. the transparent template only takes effect when RenderMode is 0 (crop). 3. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the transparent template will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the transparent template will not take effect.
+ * @method void setTransparentUrl(string $TransparentUrl) Set The sub-screen template url points to a template image with an alpha channel. fill in this parameter, and the backend will extract the alpha channel of the template image during compositing, scale it as the alpha channel of the target frame, and mix it with other frames. you can use the transparent template to achieve a semi-transparent effect and arbitrary shape cropping (such as rounded corners, stars, hearts) for the target frame. png format is supported. the image size limit is no more than 5MB.
+Note:.
+1. the image aspect ratio of the template should be close to the target frame aspect ratio to avoid deformation of the template effect when scaling to fit the target frame. 2. the transparent template only takes effect when RenderMode is 0 (crop). 3. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the transparent template will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the transparent template will not take effect.
+ * @method McuBackgroundCustomRender getBackgroundCustomRender() Obtain 
+ * @method void setBackgroundCustomRender(McuBackgroundCustomRender $BackgroundCustomRender) Set 
+ * @method integer getBackGroundColorMode() Obtain Sub-Background color effective mode. default value 0 means disabled.
+bit0 specifies whether placeholder image scaling takes effect.
+bit1 specifies whether upstream flow scaling takes effect.
+You can set the corresponding bit position to 1 to start up and take effect, such as:.
+0(00) means the sub background color is disabled.
+1(01) indicates the sub-background color is valid only when placeholder image scaling is enabled.
+2(10) means the sub background color is valid only when upstream flow scaling.
+3(11) indicates the sub-background color takes effect in both placeholder image scaling and upstream flow scaling.
+
+ * @method void setBackGroundColorMode(integer $BackGroundColorMode) Set Sub-Background color effective mode. default value 0 means disabled.
+bit0 specifies whether placeholder image scaling takes effect.
+bit1 specifies whether upstream flow scaling takes effect.
+You can set the corresponding bit position to 1 to start up and take effect, such as:.
+0(00) means the sub background color is disabled.
+1(01) indicates the sub-background color is valid only when placeholder image scaling is enabled.
+2(10) means the sub background color is valid only when upstream flow scaling.
+3(11) indicates the sub-background color takes effect in both placeholder image scaling and upstream flow scaling.
  */
 class McuLayout extends AbstractModel
 {
     /**
-     * @var UserMediaStream The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence.
+     * @var UserMediaStream User media stream parameters. if left blank, tencent cloud backend fills them automatically by the room entry sequence of the uplink host.
      */
     public $UserMediaStream;
 
     /**
-     * @var integer The video width (pixels). If you do not pass this parameter, 0 will be used.
+     * @var integer The width of the sub-screen in the output, unit: pixel value. defaults to 0 if left blank.
      */
     public $ImageWidth;
 
     /**
-     * @var integer The video height (pixels). If you do not pass this parameter, 0 will be used.
+     * @var integer The height of the sub-screen in the output, in pixel values. default is 0.
      */
     public $ImageHeight;
 
     /**
-     * @var integer The horizontal offset (pixels) of the video. The sum of `LocationX` and `ImageWidth` cannot exceed the width of the canvas. If you do not pass this parameter, 0 will be used.
+     * @var integer The X-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationX and ImageWidth must not exceed the total width of the mixed stream output. default is 0.
      */
     public $LocationX;
 
     /**
-     * @var integer The vertical offset of the video. The sum of `LocationY` and `ImageHeight` cannot exceed the height of the canvas. If you do not pass this parameter, 0 will be used.
+     * @var integer The Y-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationY and ImageHeight must not exceed the total height of the mixed stream output. default is 0 if left blank.
      */
     public $LocationY;
 
     /**
-     * @var integer The image layer of the video. If you do not pass this parameter, 0 will be used.
+     * @var integer The hierarchy of the sub-screen in the output. default is 0.
      */
     public $ZOrder;
 
     /**
-     * @var integer The rendering mode of the video. 0 (the video is scaled and the excess parts are cropped), 1 (the video is scaled), 2 (the video is scaled and the blank spaces are filled with black bars). If you do not pass this parameter, 0 will be used.
+     * @var integer The display mode of the sub-screen in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background. defaults to 0 if left blank.
      */
     public $RenderMode;
 
     /**
-     * @var string (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
-Red: `0xcc0033`
-Yellow: `0xcc9900`
-Green: `0xcccc33`
-Blue: `0x99CCFF`
-Black: `0x000000`
-White: `0xFFFFFF`
-Grey: `0x999999`
+     * @var string [This parameter configuration is invalid and not currently supported] the background color of the sub-picture. commonly used colors are:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
      */
     public $BackGroundColor;
 
     /**
-     * @var string The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
+     * @var string The url of the placeholder image for the sub-window. fill in this parameter to specify the image displayed in the layout position when the user turns the camera off or has not joined the TRTC room. if the specified image has a different size ratio from the layout position, it will be stretched. this parameter has a higher priority than BackGroundColor. supported formats include png, jpg, jpeg, bmp, gif, and webm. the image size limit is no more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the placeholder image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the placeholder image will not take effect.
      */
     public $BackgroundImageUrl;
 
     /**
-     * @var McuCustomCrop Custom cropping.
+     * @var McuCustomCrop Customer custom crop, targeting the input stream.
      */
     public $CustomCrop;
 
     /**
-     * @var integer The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+     * @var integer The display mode of the sub-background image in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background, 3 for variable-scale scaling, 4 for custom rendering. defaults to 3 if left blank.
      */
     public $BackgroundRenderMode;
 
     /**
-     * @param UserMediaStream $UserMediaStream The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence.
-     * @param integer $ImageWidth The video width (pixels). If you do not pass this parameter, 0 will be used.
-     * @param integer $ImageHeight The video height (pixels). If you do not pass this parameter, 0 will be used.
-     * @param integer $LocationX The horizontal offset (pixels) of the video. The sum of `LocationX` and `ImageWidth` cannot exceed the width of the canvas. If you do not pass this parameter, 0 will be used.
-     * @param integer $LocationY The vertical offset of the video. The sum of `LocationY` and `ImageHeight` cannot exceed the height of the canvas. If you do not pass this parameter, 0 will be used.
-     * @param integer $ZOrder The image layer of the video. If you do not pass this parameter, 0 will be used.
-     * @param integer $RenderMode The rendering mode of the video. 0 (the video is scaled and the excess parts are cropped), 1 (the video is scaled), 2 (the video is scaled and the blank spaces are filled with black bars). If you do not pass this parameter, 0 will be used.
-     * @param string $BackGroundColor (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
-Red: `0xcc0033`
-Yellow: `0xcc9900`
-Green: `0xcccc33`
-Blue: `0x99CCFF`
-Black: `0x000000`
-White: `0xFFFFFF`
-Grey: `0x999999`
-     * @param string $BackgroundImageUrl The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
-     * @param McuCustomCrop $CustomCrop Custom cropping.
-     * @param integer $BackgroundRenderMode The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+     * @var string The sub-screen template url points to a template image with an alpha channel. fill in this parameter, and the backend will extract the alpha channel of the template image during compositing, scale it as the alpha channel of the target frame, and mix it with other frames. you can use the transparent template to achieve a semi-transparent effect and arbitrary shape cropping (such as rounded corners, stars, hearts) for the target frame. png format is supported. the image size limit is no more than 5MB.
+Note:.
+1. the image aspect ratio of the template should be close to the target frame aspect ratio to avoid deformation of the template effect when scaling to fit the target frame. 2. the transparent template only takes effect when RenderMode is 0 (crop). 3. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the transparent template will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the transparent template will not take effect.
+     */
+    public $TransparentUrl;
+
+    /**
+     * @var McuBackgroundCustomRender 
+     */
+    public $BackgroundCustomRender;
+
+    /**
+     * @var integer Sub-Background color effective mode. default value 0 means disabled.
+bit0 specifies whether placeholder image scaling takes effect.
+bit1 specifies whether upstream flow scaling takes effect.
+You can set the corresponding bit position to 1 to start up and take effect, such as:.
+0(00) means the sub background color is disabled.
+1(01) indicates the sub-background color is valid only when placeholder image scaling is enabled.
+2(10) means the sub background color is valid only when upstream flow scaling.
+3(11) indicates the sub-background color takes effect in both placeholder image scaling and upstream flow scaling.
+
+     */
+    public $BackGroundColorMode;
+
+    /**
+     * @param UserMediaStream $UserMediaStream User media stream parameters. if left blank, tencent cloud backend fills them automatically by the room entry sequence of the uplink host.
+     * @param integer $ImageWidth The width of the sub-screen in the output, unit: pixel value. defaults to 0 if left blank.
+     * @param integer $ImageHeight The height of the sub-screen in the output, in pixel values. default is 0.
+     * @param integer $LocationX The X-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationX and ImageWidth must not exceed the total width of the mixed stream output. default is 0.
+     * @param integer $LocationY The Y-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationY and ImageHeight must not exceed the total height of the mixed stream output. default is 0 if left blank.
+     * @param integer $ZOrder The hierarchy of the sub-screen in the output. default is 0.
+     * @param integer $RenderMode The display mode of the sub-screen in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background. defaults to 0 if left blank.
+     * @param string $BackGroundColor [This parameter configuration is invalid and not currently supported] the background color of the sub-picture. commonly used colors are:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
+     * @param string $BackgroundImageUrl The url of the placeholder image for the sub-window. fill in this parameter to specify the image displayed in the layout position when the user turns the camera off or has not joined the TRTC room. if the specified image has a different size ratio from the layout position, it will be stretched. this parameter has a higher priority than BackGroundColor. supported formats include png, jpg, jpeg, bmp, gif, and webm. the image size limit is no more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the placeholder image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the placeholder image will not take effect.
+     * @param McuCustomCrop $CustomCrop Customer custom crop, targeting the input stream.
+     * @param integer $BackgroundRenderMode The display mode of the sub-background image in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background, 3 for variable-scale scaling, 4 for custom rendering. defaults to 3 if left blank.
+     * @param string $TransparentUrl The sub-screen template url points to a template image with an alpha channel. fill in this parameter, and the backend will extract the alpha channel of the template image during compositing, scale it as the alpha channel of the target frame, and mix it with other frames. you can use the transparent template to achieve a semi-transparent effect and arbitrary shape cropping (such as rounded corners, stars, hearts) for the target frame. png format is supported. the image size limit is no more than 5MB.
+Note:.
+1. the image aspect ratio of the template should be close to the target frame aspect ratio to avoid deformation of the template effect when scaling to fit the target frame. 2. the transparent template only takes effect when RenderMode is 0 (crop). 3. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the transparent template will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the transparent template will not take effect.
+     * @param McuBackgroundCustomRender $BackgroundCustomRender 
+     * @param integer $BackGroundColorMode Sub-Background color effective mode. default value 0 means disabled.
+bit0 specifies whether placeholder image scaling takes effect.
+bit1 specifies whether upstream flow scaling takes effect.
+You can set the corresponding bit position to 1 to start up and take effect, such as:.
+0(00) means the sub background color is disabled.
+1(01) indicates the sub-background color is valid only when placeholder image scaling is enabled.
+2(10) means the sub background color is valid only when upstream flow scaling.
+3(11) indicates the sub-background color takes effect in both placeholder image scaling and upstream flow scaling.
      */
     function __construct()
     {
@@ -198,6 +276,19 @@ Grey: `0x999999`
 
         if (array_key_exists("BackgroundRenderMode",$param) and $param["BackgroundRenderMode"] !== null) {
             $this->BackgroundRenderMode = $param["BackgroundRenderMode"];
+        }
+
+        if (array_key_exists("TransparentUrl",$param) and $param["TransparentUrl"] !== null) {
+            $this->TransparentUrl = $param["TransparentUrl"];
+        }
+
+        if (array_key_exists("BackgroundCustomRender",$param) and $param["BackgroundCustomRender"] !== null) {
+            $this->BackgroundCustomRender = new McuBackgroundCustomRender();
+            $this->BackgroundCustomRender->deserialize($param["BackgroundCustomRender"]);
+        }
+
+        if (array_key_exists("BackGroundColorMode",$param) and $param["BackGroundColorMode"] !== null) {
+            $this->BackGroundColorMode = $param["BackGroundColorMode"];
         }
     }
 }

@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * Information about assessment items
  *
  * @method integer getStrategyId() Obtain Assessment item ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStrategyId(integer $StrategyId) Set Assessment item ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getName() Obtain Assessment item name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set Assessment item name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDesc() Obtain Assessment item description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDesc(string $Desc) Set Assessment item description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProduct() Obtain Product ID corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProduct(string $Product) Set Product ID corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProductDesc() Obtain Product name corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProductDesc(string $ProductDesc) Set Product name corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRepair() Obtain Optimization suggestions for the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRepair(string $Repair) Set Optimization suggestions for the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getGroupId() Obtain Category ID of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupId(integer $GroupId) Set Category ID of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGroupName() Obtain Category name of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupName(string $GroupName) Set Category name of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getConditions() Obtain Risk list of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConditions(array $Conditions) Set Risk list of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain Assessment item name.
+ * @method void setName(string $Name) Set Assessment item name.
+ * @method string getDesc() Obtain Assessment item description.
+ * @method void setDesc(string $Desc) Set Assessment item description.
+ * @method string getProduct() Obtain Product ID corresponding to the assessment item.
+ * @method void setProduct(string $Product) Set Product ID corresponding to the assessment item.
+ * @method string getProductDesc() Obtain Assessment item corresponding product name.
+ * @method void setProductDesc(string $ProductDesc) Set Assessment item corresponding product name.
+ * @method string getRepair() Obtain Specifies optimization suggestions for the assessment item.
+ * @method void setRepair(string $Repair) Set Specifies optimization suggestions for the assessment item.
+ * @method integer getGroupId() Obtain Assessment item category ID.
+ * @method void setGroupId(integer $GroupId) Set Assessment item category ID.
+ * @method string getGroupName() Obtain Specifies the category name of the assessment item.
+ * @method void setGroupName(string $GroupName) Set Specifies the category name of the assessment item.
+ * @method array getConditions() Obtain Specifies the evaluation item risk list.
+ * @method void setConditions(array $Conditions) Set Specifies the evaluation item risk list.
  */
 class Strategies extends AbstractModel
 {
     /**
      * @var integer Assessment item ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StrategyId;
 
     /**
-     * @var string Assessment item name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Assessment item name.
      */
     public $Name;
 
     /**
-     * @var string Assessment item description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Assessment item description.
      */
     public $Desc;
 
     /**
-     * @var string Product ID corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Product ID corresponding to the assessment item.
      */
     public $Product;
 
     /**
-     * @var string Product name corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Assessment item corresponding product name.
      */
     public $ProductDesc;
 
     /**
-     * @var string Optimization suggestions for the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies optimization suggestions for the assessment item.
      */
     public $Repair;
 
     /**
-     * @var integer Category ID of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Assessment item category ID.
      */
     public $GroupId;
 
     /**
-     * @var string Category name of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the category name of the assessment item.
      */
     public $GroupName;
 
     /**
-     * @var array Risk list of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the evaluation item risk list.
      */
     public $Conditions;
 
     /**
      * @param integer $StrategyId Assessment item ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Name Assessment item name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Desc Assessment item description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Product Product ID corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProductDesc Product name corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Repair Optimization suggestions for the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $GroupId Category ID of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $GroupName Category name of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Conditions Risk list of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name Assessment item name.
+     * @param string $Desc Assessment item description.
+     * @param string $Product Product ID corresponding to the assessment item.
+     * @param string $ProductDesc Assessment item corresponding product name.
+     * @param string $Repair Specifies optimization suggestions for the assessment item.
+     * @param integer $GroupId Assessment item category ID.
+     * @param string $GroupName Specifies the category name of the assessment item.
+     * @param array $Conditions Specifies the evaluation item risk list.
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom text watermark data structure
+ * 
  *
  * @method integer getTop() Obtain The Y coordinate of the text watermark from the top left.
  * @method void setTop(integer $Top) Set The Y coordinate of the text watermark from the top left.

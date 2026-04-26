@@ -18,24 +18,20 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mcu relay recording; video on demand (VOD) related parameters.
+ * Mcu relay recording. on-demand video related parameters.
  *
- * @method McuTencentVod getMcuTencentVod() Obtain Tencent VOD Parameters
-Example :{"ExpireTime":86400}
- * @method void setMcuTencentVod(McuTencentVod $McuTencentVod) Set Tencent VOD Parameters
-Example :{"ExpireTime":86400}
+ * @method McuTencentVod getMcuTencentVod() Obtain Parameters of tencent cloud video on demand (vod).	
+ * @method void setMcuTencentVod(McuTencentVod $McuTencentVod) Set Parameters of tencent cloud video on demand (vod).	
  */
 class McuCloudVod extends AbstractModel
 {
     /**
-     * @var McuTencentVod Tencent VOD Parameters
-Example :{"ExpireTime":86400}
+     * @var McuTencentVod Parameters of tencent cloud video on demand (vod).	
      */
     public $McuTencentVod;
 
     /**
-     * @param McuTencentVod $McuTencentVod Tencent VOD Parameters
-Example :{"ExpireTime":86400}
+     * @param McuTencentVod $McuTencentVod Parameters of tencent cloud video on demand (vod).	
      */
     function __construct()
     {

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit: The amount paid with the user's free credit
  * @method string getVoucherPayAmount() Obtain Voucher payment: The voucher deduction amount
  * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment: The voucher deduction amount
- * @method string getTransferPayAmount() Obtain Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTransferPayAmount() Obtain Royalty account expenditure: The amount paid through the royalty account
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Royalty account expenditure: The amount paid through the royalty account
  * @method string getBillMonth() Obtain Billing month, e.g. `2019-08`
  * @method void setBillMonth(string $BillMonth) Set Billing month, e.g. `2019-08`
  * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
@@ -79,7 +79,7 @@ class ActionSummaryOverviewItem extends AbstractModel
     public $VoucherPayAmount;
 
     /**
-     * @var string Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Royalty account expenditure: The amount paid through the royalty account
      */
     public $TransferPayAmount;
 
@@ -101,7 +101,7 @@ class ActionSummaryOverviewItem extends AbstractModel
      * @param string $CashPayAmount Cash credit: The amount paid from the user's cash account
      * @param string $IncentivePayAmount Free credit: The amount paid with the user's free credit
      * @param string $VoucherPayAmount Voucher payment: The voucher deduction amount
-     * @param string $TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      * @param string $BillMonth Billing month, e.g. `2019-08`
      * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
      */

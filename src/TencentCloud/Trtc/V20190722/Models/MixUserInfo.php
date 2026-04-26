@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) Set User ID.
  * @method string getRoomId() Obtain If a dynamic layout is used, the value of this parameter should be the ID of the main room. If a custom layout is used, the value of this parameter should be the same as the room ID in `MixLayoutList`.
  * @method void setRoomId(string $RoomId) Set If a dynamic layout is used, the value of this parameter should be the ID of the main room. If a custom layout is used, the value of this parameter should be the same as the room ID in `MixLayoutList`.
- * @method integer getRoomIdType() Obtain The type of the `RoomId` parameter. 0: integer; 1: string.
- * @method void setRoomIdType(integer $RoomIdType) Set The type of the `RoomId` parameter. 0: integer; 1: string.
+ * @method integer getRoomIdType() Obtain Room id type. 0 indicates integer room number. 1 indicates string room number.
+ * @method void setRoomIdType(integer $RoomIdType) Set Room id type. 0 indicates integer room number. 1 indicates string room number.
  */
 class MixUserInfo extends AbstractModel
 {
@@ -40,14 +40,14 @@ class MixUserInfo extends AbstractModel
     public $RoomId;
 
     /**
-     * @var integer The type of the `RoomId` parameter. 0: integer; 1: string.
+     * @var integer Room id type. 0 indicates integer room number. 1 indicates string room number.
      */
     public $RoomIdType;
 
     /**
      * @param string $UserId User ID.
      * @param string $RoomId If a dynamic layout is used, the value of this parameter should be the ID of the main room. If a custom layout is used, the value of this parameter should be the same as the room ID in `MixLayoutList`.
-     * @param integer $RoomIdType The type of the `RoomId` parameter. 0: integer; 1: string.
+     * @param integer $RoomIdType Room id type. 0 indicates integer room number. 1 indicates string room number.
      */
     function __construct()
     {

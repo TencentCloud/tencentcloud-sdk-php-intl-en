@@ -20,114 +20,134 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cost analysis query conditions
  *
- * @method string getBusinessCodes() Obtain Product name codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setBusinessCodes(string $BusinessCodes) Set Product name codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getProductCodes() Obtain Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setProductCodes(string $ProductCodes) Set Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getComponentCode() Obtain Component type codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setComponentCode(string $ComponentCode) Set Component type codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getZoneIds() Obtain Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneIds(string $ZoneIds) Set Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegionIds() Obtain Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegionIds(string $RegionIds) Set Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getProjectIds() Obtain Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setProjectIds(string $ProjectIds) Set Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getPayModes() Obtain Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayModes(string $PayModes) Set Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getActionTypes() Obtain Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setActionTypes(string $ActionTypes) Set Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTags() Obtain Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(string $Tags) Set Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getFeeType() Obtain Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setFeeType(string $FeeType) Set Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getPayerUins() Obtain User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayerUins(string $PayerUins) Set User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getOwnerUins() Obtain User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setOwnerUins(string $OwnerUins) Set User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getConsumptionTypes() Obtain Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConsumptionTypes(string $ConsumptionTypes) Set Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBusinessCodes() Obtain Product name code
+ * @method void setBusinessCodes(string $BusinessCodes) Set Product name code
+ * @method string getProductCodes() Obtain Subproduct name code
+ * @method void setProductCodes(string $ProductCodes) Set Subproduct name code
+ * @method string getComponentCode() Obtain Component type code
+ * @method void setComponentCode(string $ComponentCode) Set Component type code
+ * @method string getZoneIds() Obtain Availability zone ID: The availability zone ID where the resource is located.
+ * @method void setZoneIds(string $ZoneIds) Set Availability zone ID: The availability zone ID where the resource is located.
+ * @method string getRegionIds() Obtain Region ID: Resource region ID
+ * @method void setRegionIds(string $RegionIds) Set Region ID: Resource region ID
+ * @method string getProjectIds() Obtain Project ID: Project ID of the resource
+ * @method void setProjectIds(string $ProjectIds) Set Project ID: Project ID of the resource
+ * @method string getPayModes() Obtain Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+ * @method void setPayModes(string $PayModes) Set Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+ * @method string getActionTypes() Obtain Transaction type. Query transaction type (please use transaction type code as input parameter).
+ * @method void setActionTypes(string $ActionTypes) Set Transaction type. Query transaction type (please use transaction type code as input parameter).
+ * @method string getTags() Obtain Cost allocation tag key
+ * @method void setTags(string $Tags) Set Cost allocation tag key
+ * @method string getFeeType() Obtain Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+cashPayAmount: Cash 
+incentivePayAmount: Bonus 
+voucherPayAmount: Coupon 
+tax: tax. 
+costBeforeTax: pre-tax price
+ * @method void setFeeType(string $FeeType) Set Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+cashPayAmount: Cash 
+incentivePayAmount: Bonus 
+voucherPayAmount: Coupon 
+tax: tax. 
+costBeforeTax: pre-tax price
+ * @method string getPayerUins() Obtain User UIN for querying cost analysis data
+ * @method void setPayerUins(string $PayerUins) Set User UIN for querying cost analysis data
+ * @method string getOwnerUins() Obtain User UIN for using resources
+ * @method void setOwnerUins(string $OwnerUins) Set User UIN for using resources
+ * @method string getConsumptionTypes() Obtain Consumption type. Query consumption type (please use consumption type code input parameter).
+ * @method void setConsumptionTypes(string $ConsumptionTypes) Set Consumption type. Query consumption type (please use consumption type code input parameter).
  */
 class AnalyseConditions extends AbstractModel
 {
     /**
-     * @var string Product name codeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Product name code
      */
     public $BusinessCodes;
 
     /**
-     * @var string Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Subproduct name code
      */
     public $ProductCodes;
 
     /**
-     * @var string Component type codeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Component type code
      */
     public $ComponentCode;
 
     /**
-     * @var string Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Availability zone ID: The availability zone ID where the resource is located.
      */
     public $ZoneIds;
 
     /**
-     * @var string Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Region ID: Resource region ID
      */
     public $RegionIds;
 
     /**
-     * @var string Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Project ID: Project ID of the resource
      */
     public $ProjectIds;
 
     /**
-     * @var string Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
      */
     public $PayModes;
 
     /**
-     * @var string Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Transaction type. Query transaction type (please use transaction type code as input parameter).
      */
     public $ActionTypes;
 
     /**
-     * @var string Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Cost allocation tag key
      */
     public $Tags;
 
     /**
-     * @var string Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+cashPayAmount: Cash 
+incentivePayAmount: Bonus 
+voucherPayAmount: Coupon 
+tax: tax. 
+costBeforeTax: pre-tax price
      */
     public $FeeType;
 
     /**
-     * @var string User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string User UIN for querying cost analysis data
      */
     public $PayerUins;
 
     /**
-     * @var string User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string User UIN for using resources
      */
     public $OwnerUins;
 
     /**
-     * @var string Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Consumption type. Query consumption type (please use consumption type code input parameter).
      */
     public $ConsumptionTypes;
 
     /**
-     * @param string $BusinessCodes Product name codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProductCodes Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ComponentCode Component type codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ZoneIds Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RegionIds Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProjectIds Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PayModes Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ActionTypes Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Tags Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FeeType Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PayerUins User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OwnerUins User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ConsumptionTypes Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BusinessCodes Product name code
+     * @param string $ProductCodes Subproduct name code
+     * @param string $ComponentCode Component type code
+     * @param string $ZoneIds Availability zone ID: The availability zone ID where the resource is located.
+     * @param string $RegionIds Region ID: Resource region ID
+     * @param string $ProjectIds Project ID: Project ID of the resource
+     * @param string $PayModes Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+     * @param string $ActionTypes Transaction type. Query transaction type (please use transaction type code as input parameter).
+     * @param string $Tags Cost allocation tag key
+     * @param string $FeeType Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+cashPayAmount: Cash 
+incentivePayAmount: Bonus 
+voucherPayAmount: Coupon 
+tax: tax. 
+costBeforeTax: pre-tax price
+     * @param string $PayerUins User UIN for querying cost analysis data
+     * @param string $OwnerUins User UIN for using resources
+     * @param string $ConsumptionTypes Consumption type. Query consumption type (please use consumption type code input parameter).
      */
     function __construct()
     {

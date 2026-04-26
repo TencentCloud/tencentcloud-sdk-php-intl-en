@@ -55,47 +55,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOperateUin() Obtain Operator account ID: The account or role ID of the operator who purchases or activates a resource.
  * @method void setOperateUin(string $OperateUin) Set Operator account ID: The account or role ID of the operator who purchases or activates a resource.
  * @method array getTags() Obtain Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBusinessCode() Obtain Product code.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBusinessCode(string $BusinessCode) Set Product code.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProductCode() Obtain Subproduct code.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProductCode(string $ProductCode) Set Subproduct code.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getActionType() Obtain Transaction type code.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setActionType(string $ActionType) Set Transaction type code.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegionId() Obtain Region ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegionId(string $RegionId) Set Region ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBusinessCode() Obtain Product code
+ * @method void setBusinessCode(string $BusinessCode) Set Product code
+ * @method string getProductCode() Obtain Subproduct code
+ * @method void setProductCode(string $ProductCode) Set Subproduct code
+ * @method string getActionType() Obtain Transaction type code
+ * @method void setActionType(string $ActionType) Set Transaction type code
+ * @method string getRegionId() Obtain Region ID
+ * @method void setRegionId(string $RegionId) Set Region ID
  * @method integer getProjectId() Obtain Project ID.
  * @method void setProjectId(integer $ProjectId) Set Project ID.
- * @method array getPriceInfo() Obtain Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPriceInfo(array $PriceInfo) Set Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method BillDetailAssociatedOrder getAssociatedOrder() Obtain Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAssociatedOrder(BillDetailAssociatedOrder $AssociatedOrder) Set Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFormula() Obtain Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFormula(string $Formula) Set Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFormulaUrl() Obtain Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFormulaUrl(string $FormulaUrl) Set Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBillMonth() Obtain Billing monthNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setBillMonth(string $BillMonth) Set Billing monthNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getBillDay() Obtain Billing dayNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setBillDay(string $BillDay) Set Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+ * @method array getPriceInfo() Obtain Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
+ * @method void setPriceInfo(array $PriceInfo) Set Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
+ * @method BillDetailAssociatedOrder getAssociatedOrder() Obtain Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
+ * @method void setAssociatedOrder(BillDetailAssociatedOrder $AssociatedOrder) Set Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
+ * @method string getFormula() Obtain Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
+ * @method void setFormula(string $Formula) Set Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
+ * @method string getFormulaUrl() Obtain Billing Rules: The detailed billing rules for each product shown in the portal explanation link
+ * @method void setFormulaUrl(string $FormulaUrl) Set Billing Rules: The detailed billing rules for each product shown in the portal explanation link
+ * @method string getBillMonth() Obtain Billing month
+ * @method void setBillMonth(string $BillMonth) Set Billing month
+ * @method string getBillDay() Obtain Billing day
+ * @method void setBillDay(string $BillDay) Set Billing day
  */
 class DistributionBillDetail extends AbstractModel
 {
@@ -186,31 +168,26 @@ class DistributionBillDetail extends AbstractModel
 
     /**
      * @var array Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
     /**
-     * @var string Product code.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Product code
      */
     public $BusinessCode;
 
     /**
-     * @var string Subproduct code.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Subproduct code
      */
     public $ProductCode;
 
     /**
-     * @var string Transaction type code.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Transaction type code
      */
     public $ActionType;
 
     /**
-     * @var string Region ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Region ID
      */
     public $RegionId;
 
@@ -220,36 +197,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ProjectId;
 
     /**
-     * @var array Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
      */
     public $PriceInfo;
 
     /**
-     * @var BillDetailAssociatedOrder Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var BillDetailAssociatedOrder Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
      */
     public $AssociatedOrder;
 
     /**
-     * @var string Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
      */
     public $Formula;
 
     /**
-     * @var string Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Billing Rules: The detailed billing rules for each product shown in the portal explanation link
      */
     public $FormulaUrl;
 
     /**
-     * @var string Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Billing month
      */
     public $BillMonth;
 
     /**
-     * @var string Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Billing day
      */
     public $BillDay;
 
@@ -272,26 +245,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $OwnerUin Owner account ID: The account ID of the actual resource user.
      * @param string $OperateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource.
      * @param array $Tags Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BusinessCode Product code.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProductCode Subproduct code.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ActionType Transaction type code.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RegionId Region ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BusinessCode Product code
+     * @param string $ProductCode Subproduct code
+     * @param string $ActionType Transaction type code
+     * @param string $RegionId Region ID
      * @param integer $ProjectId Project ID.
-     * @param array $PriceInfo Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BillDetailAssociatedOrder $AssociatedOrder Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Formula Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FormulaUrl Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BillDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+     * @param array $PriceInfo Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
+     * @param BillDetailAssociatedOrder $AssociatedOrder Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
+     * @param string $Formula Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
+     * @param string $FormulaUrl Billing Rules: The detailed billing rules for each product shown in the portal explanation link
+     * @param string $BillMonth Billing month
+     * @param string $BillDay Billing day
      */
     function __construct()
     {

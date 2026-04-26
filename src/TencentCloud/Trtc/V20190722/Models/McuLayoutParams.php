@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The layout parameters.
  *
- * @method integer getMixLayoutMode() Obtain The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
- * @method void setMixLayoutMode(integer $MixLayoutMode) Set The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
+ * @method integer getMixLayoutMode() Obtain Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream.
+ * @method void setMixLayoutMode(integer $MixLayoutMode) Set Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream.
  * @method integer getPureAudioHoldPlaceMode() Obtain Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
  * @method void setPureAudioHoldPlaceMode(integer $PureAudioHoldPlaceMode) Set Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
- * @method array getMixLayoutList() Obtain The details of a custom layout.
- * @method void setMixLayoutList(array $MixLayoutList) Set The details of a custom layout.
+ * @method array getMixLayoutList() Obtain Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams.
+ * @method void setMixLayoutList(array $MixLayoutList) Set Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams.
  * @method MaxVideoUser getMaxVideoUser() Obtain The information of the large video in screen sharing or floating layout mode.
  * @method void setMaxVideoUser(MaxVideoUser $MaxVideoUser) Set The information of the large video in screen sharing or floating layout mode.
  * @method integer getRenderMode() Obtain The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class McuLayoutParams extends AbstractModel
 {
     /**
-     * @var integer The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
+     * @var integer Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream.
      */
     public $MixLayoutMode;
 
@@ -44,7 +44,7 @@ class McuLayoutParams extends AbstractModel
     public $PureAudioHoldPlaceMode;
 
     /**
-     * @var array The details of a custom layout.
+     * @var array Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams.
      */
     public $MixLayoutList;
 
@@ -59,9 +59,9 @@ class McuLayoutParams extends AbstractModel
     public $RenderMode;
 
     /**
-     * @param integer $MixLayoutMode The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
+     * @param integer $MixLayoutMode Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream.
      * @param integer $PureAudioHoldPlaceMode Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
-     * @param array $MixLayoutList The details of a custom layout.
+     * @param array $MixLayoutList Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams.
      * @param MaxVideoUser $MaxVideoUser The information of the large video in screen sharing or floating layout mode.
      * @param integer $RenderMode The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
      */

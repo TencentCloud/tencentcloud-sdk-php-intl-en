@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFontColor(string $FontColor) Set The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
  * @method string getBackGroundColor() Obtain The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
  * @method void setBackGroundColor(string $BackGroundColor) Set The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
+ * @method integer getDynamicPosType() Obtain 
+ * @method void setDynamicPosType(integer $DynamicPosType) Set 
+ * @method integer getZOrder() Obtain 
+ * @method void setZOrder(integer $ZOrder) Set 
+ * @method string getFont() Obtain Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans.
+ * @method void setFont(string $Font) Set Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans.
  */
 class McuWaterMarkText extends AbstractModel
 {
@@ -80,6 +86,21 @@ class McuWaterMarkText extends AbstractModel
     public $BackGroundColor;
 
     /**
+     * @var integer 
+     */
+    public $DynamicPosType;
+
+    /**
+     * @var integer 
+     */
+    public $ZOrder;
+
+    /**
+     * @var string Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans.
+     */
+    public $Font;
+
+    /**
      * @param string $Text The text.
      * @param integer $WaterMarkWidth The watermark width (pixels).
      * @param integer $WaterMarkHeight The watermark height (pixels).
@@ -88,6 +109,9 @@ class McuWaterMarkText extends AbstractModel
      * @param integer $FontSize The font size.
      * @param string $FontColor The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
      * @param string $BackGroundColor The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
+     * @param integer $DynamicPosType 
+     * @param integer $ZOrder 
+     * @param string $Font Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans.
      */
     function __construct()
     {
@@ -132,6 +156,18 @@ class McuWaterMarkText extends AbstractModel
 
         if (array_key_exists("BackGroundColor",$param) and $param["BackGroundColor"] !== null) {
             $this->BackGroundColor = $param["BackGroundColor"];
+        }
+
+        if (array_key_exists("DynamicPosType",$param) and $param["DynamicPosType"] !== null) {
+            $this->DynamicPosType = $param["DynamicPosType"];
+        }
+
+        if (array_key_exists("ZOrder",$param) and $param["ZOrder"] !== null) {
+            $this->ZOrder = $param["ZOrder"];
+        }
+
+        if (array_key_exists("Font",$param) and $param["Font"] !== null) {
+            $this->Font = $param["Font"];
         }
     }
 }

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cost analysis header data complex type
  *
- * @method array getHeadDetail() Obtain Header dateNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setHeadDetail(array $HeadDetail) Set Header dateNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getName() Obtain TimeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set TimeNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getTotal() Obtain TotalNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotal(string $Total) Set TotalNote: This field may return null, indicating that no valid values can be obtained.
+ * @method array getHeadDetail() Obtain Header date
+ * @method void setHeadDetail(array $HeadDetail) Set Header date
+ * @method string getName() Obtain Time
+ * @method void setName(string $Name) Set Time
+ * @method string getTotal() Obtain total
+ * @method void setTotal(string $Total) Set total
  */
 class AnalyseHeaderDetail extends AbstractModel
 {
     /**
-     * @var array Header dateNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array Header date
      */
     public $HeadDetail;
 
     /**
-     * @var string TimeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Time
      */
     public $Name;
 
     /**
-     * @var string TotalNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string total
      */
     public $Total;
 
     /**
-     * @param array $HeadDetail Header dateNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Name TimeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Total TotalNote: This field may return null, indicating that no valid values can be obtained.
+     * @param array $HeadDetail Header date
+     * @param string $Name Time
+     * @param string $Total total
      */
     function __construct()
     {

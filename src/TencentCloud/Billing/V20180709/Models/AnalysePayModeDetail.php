@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cost analysis payment method complex type
  *
- * @method string getPayMode() Obtain Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayMode(string $PayMode) Set Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getPayModeName() Obtain Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayModeName(string $PayModeName) Set Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPayMode() Obtain Billing mode code
+ * @method void setPayMode(string $PayMode) Set Billing mode code
+ * @method string getPayModeName() Obtain Billing mode Name
+ * @method void setPayModeName(string $PayModeName) Set Billing mode Name
  */
 class AnalysePayModeDetail extends AbstractModel
 {
     /**
-     * @var string Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Billing mode code
      */
     public $PayMode;
 
     /**
-     * @var string Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Billing mode Name
      */
     public $PayModeName;
 
     /**
-     * @param string $PayMode Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PayModeName Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PayMode Billing mode code
+     * @param string $PayModeName Billing mode Name
      */
     function __construct()
     {

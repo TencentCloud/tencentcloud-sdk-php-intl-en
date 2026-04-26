@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsedAmount(string $UsedAmount) Set Component usage: The actually settled usage of a component, which is "Raw usage - Deducted usage (including packages)".
  * @method string getUsedAmountUnit() Obtain Component usage unit: The unit of measurement for component usage
  * @method void setUsedAmountUnit(string $UsedAmountUnit) Set Component usage unit: The unit of measurement for component usage
- * @method string getRealTotalMeasure() Obtain Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealTotalMeasure(string $RealTotalMeasure) Set Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDeductedMeasure() Obtain Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDeductedMeasure(string $DeductedMeasure) Set Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRealTotalMeasure() Obtain Original usage/duration: The original usage of the component before deduction by resource packages.
+ * @method void setRealTotalMeasure(string $RealTotalMeasure) Set Original usage/duration: The original usage of the component before deduction by resource packages.
+ * @method string getDeductedMeasure() Obtain Deduction of usage/duration (including resource packages): The amount of usage/duration deducted by resource packages
+ * @method void setDeductedMeasure(string $DeductedMeasure) Set Deduction of usage/duration (including resource packages): The amount of usage/duration deducted by resource packages
  * @method string getTimeSpan() Obtain Usage duration: The resource usage duration
  * @method void setTimeSpan(string $TimeSpan) Set Usage duration: The resource usage duration
  * @method string getTimeUnitName() Obtain Duration unit: The unit of measurement for usage duration
@@ -60,38 +60,36 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit: The amount paid with the user's free credit
 
- * @method string getTransferPayAmount() Obtain Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getItemCode() Obtain Component type code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setItemCode(string $ItemCode) Set Component type code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getComponentCode() Obtain Component name code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComponentCode(string $ComponentCode) Set Component name code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContractPrice() Obtain Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContractPrice(string $ContractPrice) Set Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceType() Obtain Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceType(string $InstanceType) Set Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRiTimeSpan() Obtain RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRiTimeSpan(string $RiTimeSpan) Set RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginalCostWithRI() Obtain RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginalCostWithRI(string $OriginalCostWithRI) Set RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSPDeductionRate() Obtain Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSPDeductionRate(string $SPDeductionRate) Set Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTransferPayAmount() Obtain Royalty account expenditure: The amount paid through the royalty account
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Royalty account expenditure: The amount paid through the royalty account
+ * @method string getItemCode() Obtain Component type code
+ * @method void setItemCode(string $ItemCode) Set Component type code
+ * @method string getComponentCode() Obtain Component name code
+ * @method void setComponentCode(string $ComponentCode) Set Component name code
+ * @method string getContractPrice() Obtain Component unit price: Discounted unit price of the component. Component unit price = list price * discount.
+ * @method void setContractPrice(string $ContractPrice) Set Component unit price: Discounted unit price of the component. Component unit price = list price * discount.
+ * @method string getInstanceType() Obtain Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. Normal instance display is not displayed by default.
+ * @method void setInstanceType(string $InstanceType) Set Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. Normal instance display is not displayed by default.
+ * @method string getRiTimeSpan() Obtain RI deduction duration: The duration of use deducted by reserved instances for this product or service.
+ * @method void setRiTimeSpan(string $RiTimeSpan) Set RI deduction duration: The duration of use deducted by reserved instances for this product or service.
+ * @method string getOriginalCostWithRI() Obtain Reserved Instance Deduction Component Original Price: The original price of a component deducted by reserved instances for this product or service
+ * @method void setOriginalCostWithRI(string $OriginalCostWithRI) Set Reserved Instance Deduction Component Original Price: The original price of a component deducted by reserved instances for this product or service
+ * @method string getSPDeductionRate() Obtain Savings plan deduction rate: The discount rate for this component within the available balance limit of the savings plan
+ * @method void setSPDeductionRate(string $SPDeductionRate) Set Savings plan deduction rate: The discount rate for this component within the available balance limit of the savings plan
  * @method string getSPDeduction() Obtain Cost deduction by SP. This parameter has been deprecated. Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSPDeduction(string $SPDeduction) Set Cost deduction by SP. This parameter has been deprecated. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginalCostWithSP() Obtain SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginalCostWithSP(string $OriginalCostWithSP) Set SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBlendedDiscount() Obtain Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBlendedDiscount(string $BlendedDiscount) Set Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getComponentConfig() Obtain Configuration description: The specification configuration of an instance.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComponentConfig(array $ComponentConfig) Set Configuration description: The specification configuration of an instance.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTaxRate() Obtain The tax rate.
- * @method void setTaxRate(string $TaxRate) Set The tax rate.
- * @method string getTaxAmount() Obtain The tax amount.
- * @method void setTaxAmount(string $TaxAmount) Set The tax amount.
- * @method string getCurrency() Obtain The currency used for the settlement of a component.
- * @method void setCurrency(string $Currency) Set The currency used for the settlement of a component.
+ * @method string getOriginalCostWithSP() Obtain Original Price of Savings Plan Deduction Component: Savings Plan Deduction from Original Price = Deduction Amount of Savings Plan Package / Savings Plan Deduction Rate
+ * @method void setOriginalCostWithSP(string $OriginalCostWithSP) Set Original Price of Savings Plan Deduction Component: Savings Plan Deduction from Original Price = Deduction Amount of Savings Plan Package / Savings Plan Deduction Rate
+ * @method string getBlendedDiscount() Obtain Mixed discount rate: The final discount rate after integrating various discount deductions. Mixed Discount Rate = Discounted total price/Component original price.
+ * @method void setBlendedDiscount(string $BlendedDiscount) Set Mixed discount rate: The final discount rate after integrating various discount deductions. Mixed Discount Rate = Discounted total price/Component original price.
+ * @method array getComponentConfig() Obtain Configuration description: Information on specification of resource configuration
+ * @method void setComponentConfig(array $ComponentConfig) Set Configuration description: Information on specification of resource configuration
+ * @method string getTaxRate() Obtain tax rate
+ * @method void setTaxRate(string $TaxRate) Set tax rate
+ * @method string getTaxAmount() Obtain Tax.
+ * @method void setTaxAmount(string $TaxAmount) Set Tax.
+ * @method string getCurrency() Obtain Currency.
+ * @method void setCurrency(string $Currency) Set Currency.
  */
 class BillDetailComponent extends AbstractModel
 {
@@ -132,12 +130,12 @@ class BillDetailComponent extends AbstractModel
     public $UsedAmountUnit;
 
     /**
-     * @var string Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Original usage/duration: The original usage of the component before deduction by resource packages.
      */
     public $RealTotalMeasure;
 
     /**
-     * @var string Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Deduction of usage/duration (including resource packages): The amount of usage/duration deducted by resource packages
      */
     public $DeductedMeasure;
 
@@ -189,42 +187,42 @@ class BillDetailComponent extends AbstractModel
     public $IncentivePayAmount;
 
     /**
-     * @var string Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Royalty account expenditure: The amount paid through the royalty account
      */
     public $TransferPayAmount;
 
     /**
-     * @var string Component type code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Component type code
      */
     public $ItemCode;
 
     /**
-     * @var string Component name code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Component name code
      */
     public $ComponentCode;
 
     /**
-     * @var string Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Component unit price: Discounted unit price of the component. Component unit price = list price * discount.
      */
     public $ContractPrice;
 
     /**
-     * @var string Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. Normal instance display is not displayed by default.
      */
     public $InstanceType;
 
     /**
-     * @var string RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string RI deduction duration: The duration of use deducted by reserved instances for this product or service.
      */
     public $RiTimeSpan;
 
     /**
-     * @var string RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Reserved Instance Deduction Component Original Price: The original price of a component deducted by reserved instances for this product or service
      */
     public $OriginalCostWithRI;
 
     /**
-     * @var string Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Savings plan deduction rate: The discount rate for this component within the available balance limit of the savings plan
      */
     public $SPDeductionRate;
 
@@ -235,33 +233,32 @@ class BillDetailComponent extends AbstractModel
     public $SPDeduction;
 
     /**
-     * @var string SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Original Price of Savings Plan Deduction Component: Savings Plan Deduction from Original Price = Deduction Amount of Savings Plan Package / Savings Plan Deduction Rate
      */
     public $OriginalCostWithSP;
 
     /**
-     * @var string Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Mixed discount rate: The final discount rate after integrating various discount deductions. Mixed Discount Rate = Discounted total price/Component original price.
      */
     public $BlendedDiscount;
 
     /**
-     * @var array Configuration description: The specification configuration of an instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Configuration description: Information on specification of resource configuration
      */
     public $ComponentConfig;
 
     /**
-     * @var string The tax rate.
+     * @var string tax rate
      */
     public $TaxRate;
 
     /**
-     * @var string The tax amount.
+     * @var string Tax.
      */
     public $TaxAmount;
 
     /**
-     * @var string The currency used for the settlement of a component.
+     * @var string Currency.
      */
     public $Currency;
 
@@ -273,8 +270,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $PriceUnit Component price measurement unit: The unit of measurement for a component price, which is composed of USD, usage unit, and duration unit.
      * @param string $UsedAmount Component usage: The actually settled usage of a component, which is "Raw usage - Deducted usage (including packages)".
      * @param string $UsedAmountUnit Component usage unit: The unit of measurement for component usage
-     * @param string $RealTotalMeasure Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DeductedMeasure Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RealTotalMeasure Original usage/duration: The original usage of the component before deduction by resource packages.
+     * @param string $DeductedMeasure Deduction of usage/duration (including resource packages): The amount of usage/duration deducted by resource packages
      * @param string $TimeSpan Usage duration: The resource usage duration
      * @param string $TimeUnitName Duration unit: The unit of measurement for usage duration
      * @param string $Cost Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
@@ -286,22 +283,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
      * @param string $IncentivePayAmount Free credit: The amount paid with the user's free credit
 
-     * @param string $TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ItemCode Component type code. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ComponentCode Component name code. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ContractPrice Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceType Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RiTimeSpan RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginalCostWithRI RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SPDeductionRate Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
+     * @param string $ItemCode Component type code
+     * @param string $ComponentCode Component name code
+     * @param string $ContractPrice Component unit price: Discounted unit price of the component. Component unit price = list price * discount.
+     * @param string $InstanceType Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. Normal instance display is not displayed by default.
+     * @param string $RiTimeSpan RI deduction duration: The duration of use deducted by reserved instances for this product or service.
+     * @param string $OriginalCostWithRI Reserved Instance Deduction Component Original Price: The original price of a component deducted by reserved instances for this product or service
+     * @param string $SPDeductionRate Savings plan deduction rate: The discount rate for this component within the available balance limit of the savings plan
      * @param string $SPDeduction Cost deduction by SP. This parameter has been deprecated. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginalCostWithSP SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BlendedDiscount Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ComponentConfig Configuration description: The specification configuration of an instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TaxRate The tax rate.
-     * @param string $TaxAmount The tax amount.
-     * @param string $Currency The currency used for the settlement of a component.
+     * @param string $OriginalCostWithSP Original Price of Savings Plan Deduction Component: Savings Plan Deduction from Original Price = Deduction Amount of Savings Plan Package / Savings Plan Deduction Rate
+     * @param string $BlendedDiscount Mixed discount rate: The final discount rate after integrating various discount deductions. Mixed Discount Rate = Discounted total price/Component original price.
+     * @param array $ComponentConfig Configuration description: Information on specification of resource configuration
+     * @param string $TaxRate tax rate
+     * @param string $TaxAmount Tax.
+     * @param string $Currency Currency.
      */
     function __construct()
     {

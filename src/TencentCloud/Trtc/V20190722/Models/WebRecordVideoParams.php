@@ -18,56 +18,56 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Page recording control parameters
+ * Recording control parameters.
  *
- * @method integer getWidth() Obtain Recording screen width, defaults to 1280, value range [0, 1920]
- * @method void setWidth(integer $Width) Set Recording screen width, defaults to 1280, value range [0, 1920]
- * @method integer getHeight() Obtain Recording screen height, defaults to 720, value range [0, 1080]
- * @method void setHeight(integer $Height) Set Recording screen height, defaults to 720, value range [0, 1080]
- * @method string getFormat() Obtain Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
- 
- * @method void setFormat(string $Format) Set Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
- 
- * @method integer getMaxMediaFileDuration() Obtain If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-This parameter does not take effect for Hls format recordings.
-Sample value: 1440
- * @method void setMaxMediaFileDuration(integer $MaxMediaFileDuration) Set If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-This parameter does not take effect for Hls format recordings.
-Sample value: 1440
+ * @method integer getWidth() Obtain Recording image width defaults to 1280, with a value range of [0, 1920].
+ * @method void setWidth(integer $Width) Set Recording image width defaults to 1280, with a value range of [0, 1920].
+ * @method integer getHeight() Obtain Recording image height, defaults to 720, in the range of [0, 1080].
+ * @method void setHeight(integer $Height) Set Recording image height, defaults to 720, in the range of [0, 1080].
+ * @method string getFormat() Obtain Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+
+ * @method void setFormat(string $Format) Set Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+
+ * @method integer getMaxMediaFileDuration() Obtain If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+Example value: 1440.
+ * @method void setMaxMediaFileDuration(integer $MaxMediaFileDuration) Set If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+Example value: 1440.
  */
 class WebRecordVideoParams extends AbstractModel
 {
     /**
-     * @var integer Recording screen width, defaults to 1280, value range [0, 1920]
+     * @var integer Recording image width defaults to 1280, with a value range of [0, 1920].
      */
     public $Width;
 
     /**
-     * @var integer Recording screen height, defaults to 720, value range [0, 1080]
+     * @var integer Recording image height, defaults to 720, in the range of [0, 1080].
      */
     public $Height;
 
     /**
-     * @var string Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
- 
+     * @var string Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+
      */
     public $Format;
 
     /**
-     * @var integer If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-This parameter does not take effect for Hls format recordings.
-Sample value: 1440
+     * @var integer If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+Example value: 1440.
      */
     public $MaxMediaFileDuration;
 
     /**
-     * @param integer $Width Recording screen width, defaults to 1280, value range [0, 1920]
-     * @param integer $Height Recording screen height, defaults to 720, value range [0, 1080]
-     * @param string $Format Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
- 
-     * @param integer $MaxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-This parameter does not take effect for Hls format recordings.
-Sample value: 1440
+     * @param integer $Width Recording image width defaults to 1280, with a value range of [0, 1920].
+     * @param integer $Height Recording image height, defaults to 720, in the range of [0, 1080].
+     * @param string $Format Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+
+     * @param integer $MaxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+Example value: 1440.
      */
     function __construct()
     {

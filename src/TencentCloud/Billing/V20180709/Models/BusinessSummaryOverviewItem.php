@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Summarize product details by product
  *
- * @method string getBusinessCode() Obtain Product code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBusinessCode(string $BusinessCode) Set Product code. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBusinessCode() Obtain Product code
+ * @method void setBusinessCode(string $BusinessCode) Set Product code
  * @method string getBusinessCodeName() Obtain Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
  * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
  * @method string getRealTotalCostRatio() Obtain Cost ratio, to two decimal points
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class BusinessSummaryOverviewItem extends AbstractModel
 {
     /**
-     * @var string Product code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Product code
      */
     public $BusinessCode;
 
@@ -94,7 +94,7 @@ class BusinessSummaryOverviewItem extends AbstractModel
     public $TotalCost;
 
     /**
-     * @param string $BusinessCode Product code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BusinessCode Product code
      * @param string $BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      * @param string $RealTotalCostRatio Cost ratio, to two decimal points
      * @param string $RealTotalCost Total amount after discount

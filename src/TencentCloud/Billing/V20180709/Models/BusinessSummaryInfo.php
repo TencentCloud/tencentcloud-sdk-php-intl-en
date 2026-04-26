@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessCode(string $BusinessCode) Set Product code
  * @method string getBusinessCodeName() Obtain Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
  * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
- * @method string getTotalCost() Obtain Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCost(string $TotalCost) Set Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTotalCost() Obtain Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
+ * @method void setTotalCost(string $TotalCost) Set Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
  * @method string getRealTotalCost() Obtain Total amount after discount
  * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount
  * @method string getCashPayAmount() Obtain Cash credit: The amount paid from the user’s cash account
@@ -36,8 +34,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit: The amount paid with the user’s free credit
  * @method string getVoucherPayAmount() Obtain Voucher payment: The voucher deduction amount
  * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment: The voucher deduction amount
- * @method string getTransferPayAmount() Obtain Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTransferPayAmount() Obtain Royalty account expenditure: The amount paid through the royalty account
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Royalty account expenditure: The amount paid through the royalty account
  */
 class BusinessSummaryInfo extends AbstractModel
 {
@@ -52,8 +50,7 @@ class BusinessSummaryInfo extends AbstractModel
     public $BusinessCodeName;
 
     /**
-     * @var string Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
      */
     public $TotalCost;
 
@@ -78,20 +75,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VoucherPayAmount;
 
     /**
-     * @var string Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Royalty account expenditure: The amount paid through the royalty account
      */
     public $TransferPayAmount;
 
     /**
      * @param string $BusinessCode Product code
      * @param string $BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
-     * @param string $TotalCost Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TotalCost Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
      * @param string $RealTotalCost Total amount after discount
      * @param string $CashPayAmount Cash credit: The amount paid from the user’s cash account
      * @param string $IncentivePayAmount Free credit: The amount paid with the user’s free credit
      * @param string $VoucherPayAmount Voucher payment: The voucher deduction amount
-     * @param string $TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      */
     function __construct()
     {

@@ -24,10 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsedAmount(integer $UsedAmount) Set The amount used. The value of this parameter is the amount used (USD, rounded to 8 decimal places) multiplied by 100,000,000.
  * @method string getUsedTime() Obtain The time when the voucher was used.
  * @method void setUsedTime(string $UsedTime) Set The time when the voucher was used.
- * @method array getUsageDetails() Obtain The details of the product purchased.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setUsageDetails(array $UsageDetails) Set The details of the product purchased.
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method array getUsageDetails() Obtain Usage record details
+ * @method void setUsageDetails(array $UsageDetails) Set Usage record details
+ * @method string getPayMode() Obtain Payment mode
+ * @method void setPayMode(string $PayMode) Set Payment mode
+ * @method string getVoucherId() Obtain Queried coupon id
+ * @method void setVoucherId(string $VoucherId) Set Queried coupon id
+ * @method string getPayScene() Obtain Transaction scene: (adjust: adjust accounts, common: normal transaction scene)
+ * @method void setPayScene(string $PayScene) Set Transaction scene: (adjust: adjust accounts, common: normal transaction scene)
+ * @method string getSeqId() Obtain Unique ID, corresponding to transaction: prepaid dealName, bill adjustment/postpaid outTradeNo
+ * @method void setSeqId(string $SeqId) Set Unique ID, corresponding to transaction: prepaid dealName, bill adjustment/postpaid outTradeNo
  */
 class UsageRecords extends AbstractModel
 {
@@ -42,16 +48,38 @@ class UsageRecords extends AbstractModel
     public $UsedTime;
 
     /**
-     * @var array The details of the product purchased.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array Usage record details
      */
     public $UsageDetails;
 
     /**
+     * @var string Payment mode
+     */
+    public $PayMode;
+
+    /**
+     * @var string Queried coupon id
+     */
+    public $VoucherId;
+
+    /**
+     * @var string Transaction scene: (adjust: adjust accounts, common: normal transaction scene)
+     */
+    public $PayScene;
+
+    /**
+     * @var string Unique ID, corresponding to transaction: prepaid dealName, bill adjustment/postpaid outTradeNo
+     */
+    public $SeqId;
+
+    /**
      * @param integer $UsedAmount The amount used. The value of this parameter is the amount used (USD, rounded to 8 decimal places) multiplied by 100,000,000.
      * @param string $UsedTime The time when the voucher was used.
-     * @param array $UsageDetails The details of the product purchased.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param array $UsageDetails Usage record details
+     * @param string $PayMode Payment mode
+     * @param string $VoucherId Queried coupon id
+     * @param string $PayScene Transaction scene: (adjust: adjust accounts, common: normal transaction scene)
+     * @param string $SeqId Unique ID, corresponding to transaction: prepaid dealName, bill adjustment/postpaid outTradeNo
      */
     function __construct()
     {
@@ -81,6 +109,22 @@ Note: This field may return `null`, indicating that no valid value was found.
                 $obj->deserialize($value);
                 array_push($this->UsageDetails, $obj);
             }
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("VoucherId",$param) and $param["VoucherId"] !== null) {
+            $this->VoucherId = $param["VoucherId"];
+        }
+
+        if (array_key_exists("PayScene",$param) and $param["PayScene"] !== null) {
+            $this->PayScene = $param["PayScene"];
+        }
+
+        if (array_key_exists("SeqId",$param) and $param["SeqId"] !== null) {
+            $this->SeqId = $param["SeqId"];
         }
     }
 }

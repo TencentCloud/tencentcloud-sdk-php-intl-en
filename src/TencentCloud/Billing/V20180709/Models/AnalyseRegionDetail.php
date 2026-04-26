@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cost analysis region return complex type
  *
- * @method string getRegionId() Obtain Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegionId(string $RegionId) Set Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegionName() Obtain Region nameNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegionName(string $RegionName) Set Region nameNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRegionId() Obtain Region ID.
+ * @method void setRegionId(string $RegionId) Set Region ID.
+ * @method string getRegionName() Obtain Region name
+ * @method void setRegionName(string $RegionName) Set Region name
  */
 class AnalyseRegionDetail extends AbstractModel
 {
     /**
-     * @var string Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Region ID.
      */
     public $RegionId;
 
     /**
-     * @var string Region nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Region name
      */
     public $RegionName;
 
     /**
-     * @param string $RegionId Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RegionName Region nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RegionId Region ID.
+     * @param string $RegionName Region name
      */
     function __construct()
     {

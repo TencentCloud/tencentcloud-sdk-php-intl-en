@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCashPayAmount(string $CashPayAmount) Set Cash payment amount
  * @method string getIncentivePayAmount() Obtain Bonus payment amount
  * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Bonus payment amount
+ * @method string getTax() Obtain Tax
+ * @method void setTax(string $Tax) Set Tax
+ * @method string getTaxRate() Obtain tax rate
+ * @method void setTaxRate(string $TaxRate) Set tax rate
  */
 class CostComponentSet extends AbstractModel
 {
@@ -108,6 +112,16 @@ class CostComponentSet extends AbstractModel
     public $IncentivePayAmount;
 
     /**
+     * @var string Tax
+     */
+    public $Tax;
+
+    /**
+     * @var string tax rate
+     */
+    public $TaxRate;
+
+    /**
      * @param string $ComponentCodeName Component type name
      * @param string $ItemCodeName Component name
      * @param string $SinglePrice List price
@@ -120,6 +134,8 @@ class CostComponentSet extends AbstractModel
      * @param string $VoucherPayAmount Voucher payment amount
      * @param string $CashPayAmount Cash payment amount
      * @param string $IncentivePayAmount Bonus payment amount
+     * @param string $Tax Tax
+     * @param string $TaxRate tax rate
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class CostComponentSet extends AbstractModel
 
         if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
             $this->IncentivePayAmount = $param["IncentivePayAmount"];
+        }
+
+        if (array_key_exists("Tax",$param) and $param["Tax"] !== null) {
+            $this->Tax = $param["Tax"];
+        }
+
+        if (array_key_exists("TaxRate",$param) and $param["TaxRate"] !== null) {
+            $this->TaxRate = $param["TaxRate"];
         }
     }
 }

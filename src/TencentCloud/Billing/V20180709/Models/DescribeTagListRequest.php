@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTagList request structure.
  *
- * @method integer getLimit() Obtain The number of entries returned at a time. The maximum value is `1000`.
- * @method void setLimit(integer $Limit) Set The number of entries returned at a time. The maximum value is `1000`.
- * @method integer getOffset() Obtain Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
- * @method void setOffset(integer $Offset) Set Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
- * @method string getTagKey() Obtain Cost allocation tag key, used for fuzzy search.
- * @method void setTagKey(string $TagKey) Set Cost allocation tag key, used for fuzzy search.
- * @method integer getStatus() Obtain Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried.
- * @method void setStatus(integer $Status) Set Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried.
- * @method string getOrderType() Obtain Sorting order. Valid values: `asc` (ascending order), `desc` (descending order).
- * @method void setOrderType(string $OrderType) Set Sorting order. Valid values: `asc` (ascending order), `desc` (descending order).
+ * @method integer getLimit() Obtain Quantity, with the maximum value of 1,000
+ * @method void setLimit(integer $Limit) Set Quantity, with the maximum value of 1,000
+ * @method integer getOffset() Obtain Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
+ * @method string getTagKey() Obtain Cost allocation tag key, used as fuzzy search
+ * @method void setTagKey(string $TagKey) Set Cost allocation tag key, used as fuzzy search
+ * @method integer getStatus() Obtain Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys.
+ * @method void setStatus(integer $Status) Set Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys.
+ * @method string getOrderType() Obtain Sorting method, enumeration value: asc for ascending order, desc for descending order.
+ * @method void setOrderType(string $OrderType) Set Sorting method, enumeration value: asc for ascending order, desc for descending order.
  */
 class DescribeTagListRequest extends AbstractModel
 {
     /**
-     * @var integer The number of entries returned at a time. The maximum value is `1000`.
+     * @var integer Quantity, with the maximum value of 1,000
      */
     public $Limit;
 
     /**
-     * @var integer Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+     * @var integer Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
      */
     public $Offset;
 
     /**
-     * @var string Cost allocation tag key, used for fuzzy search.
+     * @var string Cost allocation tag key, used as fuzzy search
      */
     public $TagKey;
 
     /**
-     * @var integer Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried.
+     * @var integer Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys.
      */
     public $Status;
 
     /**
-     * @var string Sorting order. Valid values: `asc` (ascending order), `desc` (descending order).
+     * @var string Sorting method, enumeration value: asc for ascending order, desc for descending order.
      */
     public $OrderType;
 
     /**
-     * @param integer $Limit The number of entries returned at a time. The maximum value is `1000`.
-     * @param integer $Offset Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
-     * @param string $TagKey Cost allocation tag key, used for fuzzy search.
-     * @param integer $Status Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried.
-     * @param string $OrderType Sorting order. Valid values: `asc` (ascending order), `desc` (descending order).
+     * @param integer $Limit Quantity, with the maximum value of 1,000
+     * @param integer $Offset Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
+     * @param string $TagKey Cost allocation tag key, used as fuzzy search
+     * @param integer $Status Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys.
+     * @param string $OrderType Sorting method, enumeration value: asc for ascending order, desc for descending order.
      */
     function __construct()
     {

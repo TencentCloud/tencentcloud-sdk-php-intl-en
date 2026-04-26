@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() Obtain Trend type, upward for rising, downward for falling, none for no change
  * @method void setType(string $Type) Set Trend type, upward for rising, downward for falling, none for no change
- * @method string getValue() Obtain Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setValue(string $Value) Set Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getValue() Obtain Trend value. The value of this field is null when Type is none.
+ * @method void setValue(string $Value) Set Trend value. The value of this field is null when Type is none.
  */
 class ConsumptionSummaryTrend extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ConsumptionSummaryTrend extends AbstractModel
     public $Type;
 
     /**
-     * @var string Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Trend value. The value of this field is null when Type is none.
      */
     public $Value;
 
     /**
      * @param string $Type Trend type, upward for rising, downward for falling, none for no change
-     * @param string $Value Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Value Trend value. The value of this field is null when Type is none.
      */
     function __construct()
     {

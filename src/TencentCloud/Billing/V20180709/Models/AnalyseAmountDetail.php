@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cost analysis amount return data model
  *
- * @method string getKey() Obtain Fee typeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setKey(string $Key) Set Fee typeNote: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDisplay() Obtain Whether to displayNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setDisplay(integer $Display) Set Whether to displayNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getKey() Obtain Fee type
+ * @method void setKey(string $Key) Set Fee type
+ * @method integer getDisplay() Obtain Indicates whether to display
+ * @method void setDisplay(integer $Display) Set Indicates whether to display
  */
 class AnalyseAmountDetail extends AbstractModel
 {
     /**
-     * @var string Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Fee type
      */
     public $Key;
 
     /**
-     * @var integer Whether to displayNote: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Indicates whether to display
      */
     public $Display;
 
     /**
-     * @param string $Key Fee typeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Display Whether to displayNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Key Fee type
+     * @param integer $Display Indicates whether to display
      */
     function __construct()
     {

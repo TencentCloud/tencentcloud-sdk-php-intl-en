@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getWidth() Obtain The width of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1920].
  * @method void setWidth(integer $Width) Set The width of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1920].
- * @method integer getHeight() Obtain The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
- * @method void setHeight(integer $Height) Set The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
+ * @method integer getHeight() Obtain Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value.
+ * @method void setHeight(integer $Height) Set Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value.
  * @method integer getFps() Obtain The frame rate (fps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 60].
  * @method void setFps(integer $Fps) Set The frame rate (fps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 60].
  * @method integer getBitRate() Obtain The bitrate (Kbps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 10000].
@@ -39,7 +39,7 @@ class VideoEncode extends AbstractModel
     public $Width;
 
     /**
-     * @var integer The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
+     * @var integer Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value.
      */
     public $Height;
 
@@ -60,7 +60,7 @@ class VideoEncode extends AbstractModel
 
     /**
      * @param integer $Width The width of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1920].
-     * @param integer $Height The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
+     * @param integer $Height Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value.
      * @param integer $Fps The frame rate (fps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 60].
      * @param integer $BitRate The bitrate (Kbps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 10000].
      * @param integer $Gop The GOP (seconds) of the output stream. This parameter is required if audio and video are relayed. Value range: [1, 5].

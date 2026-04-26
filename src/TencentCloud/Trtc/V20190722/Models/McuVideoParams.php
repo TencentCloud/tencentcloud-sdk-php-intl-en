@@ -20,86 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The video parameters for relaying.
  *
- * @method VideoEncode getVideoEncode() Obtain The video encoding parameters.
- * @method void setVideoEncode(VideoEncode $VideoEncode) Set The video encoding parameters.
- * @method McuLayoutParams getLayoutParams() Obtain The layout parameters.
- * @method void setLayoutParams(McuLayoutParams $LayoutParams) Set The layout parameters.
- * @method string getBackGroundColor() Obtain The canvas color. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
- * @method void setBackGroundColor(string $BackGroundColor) Set The canvas color. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
- * @method string getBackgroundImageUrl() Obtain The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
- * @method void setBackgroundImageUrl(string $BackgroundImageUrl) Set The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
- * @method array getWaterMarkList() Obtain The watermark information for the mixed stream.
- * @method void setWaterMarkList(array $WaterMarkList) Set The watermark information for the mixed stream.
- * @method integer getBackgroundRenderMode() Obtain Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
- * @method void setBackgroundRenderMode(integer $BackgroundRenderMode) Set Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+ * @method VideoEncode getVideoEncode() Obtain Video encoding parameter for the output stream.
+ * @method void setVideoEncode(VideoEncode $VideoEncode) Set Video encoding parameter for the output stream.
+ * @method McuLayoutParams getLayoutParams() Obtain Stream mixing layout parameter.
+ * @method void setLayoutParams(McuLayoutParams $LayoutParams) Set Stream mixing layout parameter.
+ * @method string getBackGroundColor() Obtain The entire canvas background color. commonly used colors:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
+ * @method void setBackGroundColor(string $BackGroundColor) Set The entire canvas background color. commonly used colors:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
+ * @method string getBackgroundImageUrl() Obtain The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect.
+ * @method void setBackgroundImageUrl(string $BackgroundImageUrl) Set The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect.
+ * @method array getWaterMarkList() Obtain Watermark parameters for the stream mixing layout.
+ * @method void setWaterMarkList(array $WaterMarkList) Set Watermark parameters for the stream mixing layout.
+ * @method integer getBackgroundRenderMode() Obtain The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling.
+ * @method void setBackgroundRenderMode(integer $BackgroundRenderMode) Set The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling.
  */
 class McuVideoParams extends AbstractModel
 {
     /**
-     * @var VideoEncode The video encoding parameters.
+     * @var VideoEncode Video encoding parameter for the output stream.
      */
     public $VideoEncode;
 
     /**
-     * @var McuLayoutParams The layout parameters.
+     * @var McuLayoutParams Stream mixing layout parameter.
      */
     public $LayoutParams;
 
     /**
-     * @var string The canvas color. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
+     * @var string The entire canvas background color. commonly used colors:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
      */
     public $BackGroundColor;
 
     /**
-     * @var string The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
+     * @var string The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect.
      */
     public $BackgroundImageUrl;
 
     /**
-     * @var array The watermark information for the mixed stream.
+     * @var array Watermark parameters for the stream mixing layout.
      */
     public $WaterMarkList;
 
     /**
-     * @var integer Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+     * @var integer The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling.
      */
     public $BackgroundRenderMode;
 
     /**
-     * @param VideoEncode $VideoEncode The video encoding parameters.
-     * @param McuLayoutParams $LayoutParams The layout parameters.
-     * @param string $BackGroundColor The canvas color. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
-     * @param string $BackgroundImageUrl The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
-     * @param array $WaterMarkList The watermark information for the mixed stream.
-     * @param integer $BackgroundRenderMode Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+     * @param VideoEncode $VideoEncode Video encoding parameter for the output stream.
+     * @param McuLayoutParams $LayoutParams Stream mixing layout parameter.
+     * @param string $BackGroundColor The entire canvas background color. commonly used colors:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
+     * @param string $BackgroundImageUrl The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect.
+     * @param array $WaterMarkList Watermark parameters for the stream mixing layout.
+     * @param integer $BackgroundRenderMode The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling.
      */
     function __construct()
     {

@@ -20,38 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Warning conditions of the assessment item
  *
- * @method integer getConditionId() Obtain Warning condition ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConditionId(integer $ConditionId) Set Warning condition ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getConditionId() Obtain Warning condition ID.
+ * @method void setConditionId(integer $ConditionId) Set Warning condition ID.
  * @method integer getLevel() Obtain Warning level. 2: medium risk; 3: high risk.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLevel(integer $Level) Set Warning level. 2: medium risk; 3: high risk.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLevelDesc() Obtain Warning level description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLevelDesc(string $LevelDesc) Set Warning level description
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLevelDesc() Obtain Describes the warning level.
+ * @method void setLevelDesc(string $LevelDesc) Set Describes the warning level.
  * @method string getDesc() Obtain Warning condition description
  * @method void setDesc(string $Desc) Set Warning condition description
  */
 class Conditions extends AbstractModel
 {
     /**
-     * @var integer Warning condition ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Warning condition ID.
      */
     public $ConditionId;
 
     /**
      * @var integer Warning level. 2: medium risk; 3: high risk.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Level;
 
     /**
-     * @var string Warning level description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Describes the warning level.
      */
     public $LevelDesc;
 
@@ -61,12 +52,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Desc;
 
     /**
-     * @param integer $ConditionId Warning condition ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ConditionId Warning condition ID.
      * @param integer $Level Warning level. 2: medium risk; 3: high risk.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LevelDesc Warning level description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LevelDesc Describes the warning level.
      * @param string $Desc Warning condition description
      */
     function __construct()

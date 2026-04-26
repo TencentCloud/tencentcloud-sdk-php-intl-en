@@ -31,17 +31,17 @@ use TencentCloud\Common\AbstractModel;
  * @method array getBusiness() Obtain Product consumption details
  * @method void setBusiness(array $Business) Set Product consumption details
  * @method string getCashPayAmount() Obtain Cash
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCashPayAmount(string $CashPayAmount) Set Cash
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getIncentivePayAmount() Obtain Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVoucherPayAmount() Obtain VoucherNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set VoucherNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getTransferPayAmount() Obtain Share revenueNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVoucherPayAmount() Obtain Voucher
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher
+ * @method string getTransferPayAmount() Obtain Royalty amount
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Royalty amount
+ * @method string getTax() Obtain Tax
+ * @method void setTax(string $Tax) Set Tax
+ * @method string getAmountBeforeTax() Obtain Cash payment (pre-tax)
+ * @method void setAmountBeforeTax(string $AmountBeforeTax) Set Cash payment (pre-tax)
  */
 class ConsumptionProjectSummaryDataItem extends AbstractModel
 {
@@ -72,25 +72,33 @@ class ConsumptionProjectSummaryDataItem extends AbstractModel
 
     /**
      * @var string Cash
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CashPayAmount;
 
     /**
      * @var string Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string VoucherNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Voucher
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Royalty amount
      */
     public $TransferPayAmount;
+
+    /**
+     * @var string Tax
+     */
+    public $Tax;
+
+    /**
+     * @var string Cash payment (pre-tax)
+     */
+    public $AmountBeforeTax;
 
     /**
      * @param string $ProjectId Project ID
@@ -99,11 +107,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param ConsumptionSummaryTrend $Trend Trend
      * @param array $Business Product consumption details
      * @param string $CashPayAmount Cash
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IncentivePayAmount Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VoucherPayAmount VoucherNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransferPayAmount Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VoucherPayAmount Voucher
+     * @param string $TransferPayAmount Royalty amount
+     * @param string $Tax Tax
+     * @param string $AmountBeforeTax Cash payment (pre-tax)
      */
     function __construct()
     {
@@ -158,6 +166,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
             $this->TransferPayAmount = $param["TransferPayAmount"];
+        }
+
+        if (array_key_exists("Tax",$param) and $param["Tax"] !== null) {
+            $this->Tax = $param["Tax"];
+        }
+
+        if (array_key_exists("AmountBeforeTax",$param) and $param["AmountBeforeTax"] !== null) {
+            $this->AmountBeforeTax = $param["AmountBeforeTax"];
         }
     }
 }

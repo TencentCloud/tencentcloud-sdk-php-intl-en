@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cost analysis return value complex type
  *
- * @method string getTime() Obtain DateNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setTime(string $Time) Set DateNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getMoney() Obtain AmountNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setMoney(string $Money) Set AmountNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTime() Obtain Date
+ * @method void setTime(string $Time) Set Date
+ * @method string getMoney() Obtain Amount
+ * @method void setMoney(string $Money) Set Amount
  */
 class AnalyseTimeDetail extends AbstractModel
 {
     /**
-     * @var string DateNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Date
      */
     public $Time;
 
     /**
-     * @var string AmountNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Amount
      */
     public $Money;
 
     /**
-     * @param string $Time DateNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Money AmountNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Time Date
+     * @param string $Money Amount
      */
     function __construct()
     {

@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKmsRegion(string $KmsRegion) Set KMS region. Currently supported regions can be obtained through `ListKmsEnableRegion`. This must be the same as the COS region.
  * @method integer getIsEnableKmsEncry() Obtain Whether to enable KMS encryption. 1: Yes, 0: No. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
  * @method void setIsEnableKmsEncry(integer $IsEnableKmsEncry) Set Whether to enable KMS encryption. 1: Yes, 0: No. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
- * @method string getCosBucketName() Obtain User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
- * @method void setCosBucketName(string $CosBucketName) Set User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+ * @method string getCosBucketName() Obtain User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+ * @method void setCosBucketName(string $CosBucketName) Set User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
  * @method string getCmqRegion() Obtain Region where the queue is located. Supported CMQ regions can be queried through the `ListCmqEnableRegion` API. This field is required if the value of `IsEnableCmqNotify` is 1.
  * @method void setCmqRegion(string $CmqRegion) Set Region where the queue is located. Supported CMQ regions can be queried through the `ListCmqEnableRegion` API. This field is required if the value of `IsEnableCmqNotify` is 1.
- * @method string getLogFilePrefix() Obtain Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
- * @method void setLogFilePrefix(string $LogFilePrefix) Set Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
+ * @method string getLogFilePrefix() Obtain Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
+ * @method void setLogFilePrefix(string $LogFilePrefix) Set Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
  * @method integer getIsCreateNewQueue() Obtain Whether to create a queue. 1: Yes; 0: No. This field is required if the value of `IsEnableCmqNotify` is 1.
  * @method void setIsCreateNewQueue(integer $IsCreateNewQueue) Set Whether to create a queue. 1: Yes; 0: No. This field is required if the value of `IsEnableCmqNotify` is 1.
  */
@@ -95,7 +95,7 @@ class UpdateAuditRequest extends AbstractModel
     public $IsEnableKmsEncry;
 
     /**
-     * @var string User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+     * @var string User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
      */
     public $CosBucketName;
 
@@ -105,7 +105,7 @@ class UpdateAuditRequest extends AbstractModel
     public $CmqRegion;
 
     /**
-     * @var string Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
+     * @var string Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
      */
     public $LogFilePrefix;
 
@@ -124,9 +124,9 @@ class UpdateAuditRequest extends AbstractModel
      * @param integer $IsCreateNewBucket Whether to create a COS bucket. 1: Yes; 0: No.
      * @param string $KmsRegion KMS region. Currently supported regions can be obtained through `ListKmsEnableRegion`. This must be the same as the COS region.
      * @param integer $IsEnableKmsEncry Whether to enable KMS encryption. 1: Yes, 0: No. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
-     * @param string $CosBucketName User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+     * @param string $CosBucketName User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
      * @param string $CmqRegion Region where the queue is located. Supported CMQ regions can be queried through the `ListCmqEnableRegion` API. This field is required if the value of `IsEnableCmqNotify` is 1.
-     * @param string $LogFilePrefix Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
+     * @param string $LogFilePrefix Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
      * @param integer $IsCreateNewQueue Whether to create a queue. 1: Yes; 0: No. This field is required if the value of `IsEnableCmqNotify` is 1.
      */
     function __construct()

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventNames(array $EventNames) Set The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
  * @method Storage getStorage() Obtain Storage type of shipped data. Valid values: `cos`, `cls`.
  * @method void setStorage(Storage $Storage) Set Storage type of shipped data. Valid values: `cos`, `cls`.
- * @method integer getTrackForAllMembers() Obtain Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
- * @method void setTrackForAllMembers(integer $TrackForAllMembers) Set Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+ * @method integer getTrackForAllMembers() Obtain Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+ * @method void setTrackForAllMembers(integer $TrackForAllMembers) Set Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
  */
 class ModifyAuditTrackRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class ModifyAuditTrackRequest extends AbstractModel
     public $Storage;
 
     /**
-     * @var integer Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+     * @var integer Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
      */
     public $TrackForAllMembers;
 
@@ -87,7 +87,7 @@ class ModifyAuditTrackRequest extends AbstractModel
      * @param integer $Status Tracking set status (0: Not enabled; 1: Enabled)
      * @param array $EventNames The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
      * @param Storage $Storage Storage type of shipped data. Valid values: `cos`, `cls`.
-     * @param integer $TrackForAllMembers Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+     * @param integer $TrackForAllMembers Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
      */
     function __construct()
     {

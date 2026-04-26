@@ -21,85 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * Details about cost distribution over different tags.
  *
  * @method string getTagValue() Obtain Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTagValue(string $TagValue) Set Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRealTotalCostRatio() Obtain Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealTotalCostRatio(string $RealTotalCostRatio) Set Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRealTotalCost() Obtain Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCashPayAmount() Obtain Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIncentivePayAmount() Obtain Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVoucherPayAmount() Obtain Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTransferPayAmount() Obtain Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTotalCost(string $TotalCost) Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getRealTotalCostRatio() Obtain Percentage of the fee, with 2 decimal places.
+ * @method void setRealTotalCostRatio(string $RealTotalCostRatio) Set Percentage of the fee, with 2 decimal places.
+ * @method string getRealTotalCost() Obtain discounted total price
+ * @method void setRealTotalCost(string $RealTotalCost) Set discounted total price
+ * @method string getCashPayAmount() Obtain Cash account expenditure: The amount paid through the cash account
+ * @method void setCashPayAmount(string $CashPayAmount) Set Cash account expenditure: The amount paid through the cash account
+ * @method string getIncentivePayAmount() Obtain Gift account expenditure: The amount paid using free credits
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Gift account expenditure: The amount paid using free credits
+ * @method string getVoucherPayAmount() Obtain Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers)
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers)
+ * @method string getTransferPayAmount() Obtain Royalty account expenditure: The amount paid through the royalty account
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Royalty account expenditure: The amount paid through the royalty account
+ * @method string getTotalCost() Obtain Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
+ * @method void setTotalCost(string $TotalCost) Set Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
  */
 class TagSummaryOverviewItem extends AbstractModel
 {
     /**
      * @var string Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TagValue;
 
     /**
-     * @var string Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Percentage of the fee, with 2 decimal places.
      */
     public $RealTotalCostRatio;
 
     /**
-     * @var string Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string discounted total price
      */
     public $RealTotalCost;
 
     /**
-     * @var string Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Cash account expenditure: The amount paid through the cash account
      */
     public $CashPayAmount;
 
     /**
-     * @var string Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Gift account expenditure: The amount paid using free credits
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers)
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Royalty account expenditure: The amount paid through the royalty account
      */
     public $TransferPayAmount;
 
     /**
-     * @var string The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
      */
     public $TotalCost;
 
     /**
      * @param string $TagValue Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RealTotalCostRatio Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RealTotalCost Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CashPayAmount Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IncentivePayAmount Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VoucherPayAmount Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $RealTotalCostRatio Percentage of the fee, with 2 decimal places.
+     * @param string $RealTotalCost discounted total price
+     * @param string $CashPayAmount Cash account expenditure: The amount paid through the cash account
+     * @param string $IncentivePayAmount Gift account expenditure: The amount paid using free credits
+     * @param string $VoucherPayAmount Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers)
+     * @param string $TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
+     * @param string $TotalCost Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
      */
     function __construct()
     {

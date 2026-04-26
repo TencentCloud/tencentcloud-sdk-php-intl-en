@@ -20,82 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of the document associated with bill details
  *
- * @method string getPrepayPurchase() Obtain Purchase order.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrepayPurchase(string $PrepayPurchase) Set Purchase order.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPrepayRenew() Obtain Renewal order.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrepayRenew(string $PrepayRenew) Set Renewal order.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPrepayModifyUp() Obtain Upgrade order.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrepayModifyUp(string $PrepayModifyUp) Set Upgrade order.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getReverseOrder() Obtain Write-off order.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReverseOrder(string $ReverseOrder) Set Write-off order.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNewOrder() Obtain The order after discount.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNewOrder(string $NewOrder) Set The order after discount.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginal() Obtain The original order before discount.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginal(string $Original) Set The original order before discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPrepayPurchase() Obtain Newly purchased order
+ * @method void setPrepayPurchase(string $PrepayPurchase) Set Newly purchased order
+ * @method string getPrepayRenew() Obtain Renewal order
+ * @method void setPrepayRenew(string $PrepayRenew) Set Renewal order
+ * @method string getPrepayModifyUp() Obtain Configuration upgrade order
+ * @method void setPrepayModifyUp(string $PrepayModifyUp) Set Configuration upgrade order
+ * @method string getReverseOrder() Obtain Write-off order
+ * @method void setReverseOrder(string $ReverseOrder) Set Write-off order
+ * @method string getNewOrder() Obtain Order after discount adjustment
+ * @method void setNewOrder(string $NewOrder) Set Order after discount adjustment
+ * @method string getOriginal() Obtain Order before discount adjustment
+ * @method void setOriginal(string $Original) Set Order before discount adjustment
  */
 class BillDetailAssociatedOrder extends AbstractModel
 {
     /**
-     * @var string Purchase order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Newly purchased order
      */
     public $PrepayPurchase;
 
     /**
-     * @var string Renewal order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Renewal order
      */
     public $PrepayRenew;
 
     /**
-     * @var string Upgrade order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Configuration upgrade order
      */
     public $PrepayModifyUp;
 
     /**
-     * @var string Write-off order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Write-off order
      */
     public $ReverseOrder;
 
     /**
-     * @var string The order after discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Order after discount adjustment
      */
     public $NewOrder;
 
     /**
-     * @var string The original order before discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Order before discount adjustment
      */
     public $Original;
 
     /**
-     * @param string $PrepayPurchase Purchase order.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PrepayRenew Renewal order.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PrepayModifyUp Upgrade order.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ReverseOrder Write-off order.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $NewOrder The order after discount.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Original The original order before discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PrepayPurchase Newly purchased order
+     * @param string $PrepayRenew Renewal order
+     * @param string $PrepayModifyUp Configuration upgrade order
+     * @param string $ReverseOrder Write-off order
+     * @param string $NewOrder Order after discount adjustment
+     * @param string $Original Order before discount adjustment
      */
     function __construct()
     {

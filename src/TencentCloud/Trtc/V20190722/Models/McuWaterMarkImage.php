@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The information of the watermark image.
  *
- * @method string getWaterMarkUrl() Obtain The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
- * @method void setWaterMarkUrl(string $WaterMarkUrl) Set The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
+ * @method string getWaterMarkUrl() Obtain Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+Note:.
+Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect.
+ * @method void setWaterMarkUrl(string $WaterMarkUrl) Set Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+Note:.
+Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect.
  * @method integer getWaterMarkWidth() Obtain The watermark width (pixels).
  * @method void setWaterMarkWidth(integer $WaterMarkWidth) Set The watermark width (pixels).
  * @method integer getWaterMarkHeight() Obtain The watermark height (pixels).
@@ -32,11 +38,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocationY(integer $LocationY) Set The vertical offset (pixels) of the watermark.
  * @method integer getZOrder() Obtain The image layer of the watermark. If you do not pass this parameter, 0 will be used.
  * @method void setZOrder(integer $ZOrder) Set The image layer of the watermark. If you do not pass this parameter, 0 will be used.
+ * @method integer getDynamicPosType() Obtain 
+ * @method void setDynamicPosType(integer $DynamicPosType) Set 
  */
 class McuWaterMarkImage extends AbstractModel
 {
     /**
-     * @var string The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
+     * @var string Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+Note:.
+Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect.
      */
     public $WaterMarkUrl;
 
@@ -66,12 +77,21 @@ class McuWaterMarkImage extends AbstractModel
     public $ZOrder;
 
     /**
-     * @param string $WaterMarkUrl The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
+     * @var integer 
+     */
+    public $DynamicPosType;
+
+    /**
+     * @param string $WaterMarkUrl Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+Note:.
+Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect.
      * @param integer $WaterMarkWidth The watermark width (pixels).
      * @param integer $WaterMarkHeight The watermark height (pixels).
      * @param integer $LocationX The horizontal offset (pixels) of the watermark.
      * @param integer $LocationY The vertical offset (pixels) of the watermark.
      * @param integer $ZOrder The image layer of the watermark. If you do not pass this parameter, 0 will be used.
+     * @param integer $DynamicPosType 
      */
     function __construct()
     {
@@ -108,6 +128,10 @@ class McuWaterMarkImage extends AbstractModel
 
         if (array_key_exists("ZOrder",$param) and $param["ZOrder"] !== null) {
             $this->ZOrder = $param["ZOrder"];
+        }
+
+        if (array_key_exists("DynamicPosType",$param) and $param["DynamicPosType"] !== null) {
+            $this->DynamicPosType = $param["DynamicPosType"];
         }
     }
 }

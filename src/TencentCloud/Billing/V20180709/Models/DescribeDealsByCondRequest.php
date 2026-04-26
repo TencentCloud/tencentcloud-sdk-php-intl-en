@@ -74,6 +74,8 @@ Example: 202202021234566
 Example:ins-a2bb34
  * @method void setResourceId(string $ResourceId) Set Resource ID
 Example:ins-a2bb34
+ * @method array getStatusSet() Obtain Order status
+ * @method void setStatusSet(array $StatusSet) Set Order status
  */
 class DescribeDealsByCondRequest extends AbstractModel
 {
@@ -137,6 +139,11 @@ Example:ins-a2bb34
     public $ResourceId;
 
     /**
+     * @var array Order status
+     */
+    public $StatusSet;
+
+    /**
      * @param string $StartTime Start time 
 Example :2016-01-01 00:00:00
      * @param string $EndTime End time 
@@ -164,6 +171,7 @@ Example: 202202021234567
 Example: 202202021234566
      * @param string $ResourceId Resource ID
 Example:ins-a2bb34
+     * @param array $StatusSet Order status
      */
     function __construct()
     {
@@ -208,6 +216,10 @@ Example:ins-a2bb34
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("StatusSet",$param) and $param["StatusSet"] !== null) {
+            $this->StatusSet = $param["StatusSet"];
         }
     }
 }

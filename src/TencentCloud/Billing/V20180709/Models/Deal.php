@@ -100,6 +100,8 @@ postMoveIn specifies the pay-as-you-go resources for inbound migration.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setResourceId(array $ResourceId) Set The resource ID corresponding to the order. If the query parameter `Limit` exceeds 200, null will be returned.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getZoneCode() Obtain Availability zone Id corresponding to the order
+ * @method void setZoneCode(string $ZoneCode) Set Availability zone Id corresponding to the order
  */
 class Deal extends AbstractModel
 {
@@ -248,6 +250,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ResourceId;
 
     /**
+     * @var string Availability zone Id corresponding to the order
+     */
+    public $ZoneCode;
+
+    /**
      * @param string $OrderId Order ID.
      * @param integer $Status The status of the order. 1: unpaid; 2: paid; 3: shipping; 4: shipped; 5: shipment failed; 6: refunded; 7: closed case; 8: order expired; 9: order invalidated; 10: product invalidated; 11: third-party payment refused; 12: payment in process
      * @param string $Payer Payer
@@ -288,6 +295,7 @@ postMoveIn specifies the pay-as-you-go resources for inbound migration.
      * @param string $SubProductName Sub-Product code chinese name.
      * @param array $ResourceId The resource ID corresponding to the order. If the query parameter `Limit` exceeds 200, null will be returned.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ZoneCode Availability zone Id corresponding to the order
      */
     function __construct()
     {
@@ -409,6 +417,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("ZoneCode",$param) and $param["ZoneCode"] !== null) {
+            $this->ZoneCode = $param["ZoneCode"];
         }
     }
 }

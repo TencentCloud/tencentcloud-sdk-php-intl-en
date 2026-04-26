@@ -46,64 +46,66 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name
  * @method string getConsumptionTypeName() Obtain Consumption type
  * @method void setConsumptionTypeName(string $ConsumptionTypeName) Set Consumption type
- * @method string getRealCost() Obtain Pre-discount priceNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealCost(string $RealCost) Set Pre-discount priceNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getFeeBeginTime() Obtain Start time of feesNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setFeeBeginTime(string $FeeBeginTime) Set Start time of feesNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getFeeEndTime() Obtain End time of feesNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setFeeEndTime(string $FeeEndTime) Set End time of feesNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRealCost() Obtain Original price
+ * @method void setRealCost(string $RealCost) Set Original price
+ * @method string getFeeBeginTime() Obtain Fee start time
+ * @method void setFeeBeginTime(string $FeeBeginTime) Set Fee start time
+ * @method string getFeeEndTime() Obtain End time of fees
+ * @method void setFeeEndTime(string $FeeEndTime) Set End time of fees
  * @method string getDayDiff() Obtain Days
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDayDiff(string $DayDiff) Set Days
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDailyTotalCost() Obtain Daily consumptionNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setDailyTotalCost(string $DailyTotalCost) Set Daily consumptionNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getOrderId() Obtain Order numberNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setOrderId(string $OrderId) Set Order numberNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getVoucherPayAmount() Obtain VoucherNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set VoucherNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDailyTotalCost() Obtain Daily consumption
+ * @method void setDailyTotalCost(string $DailyTotalCost) Set Daily consumption
+ * @method string getOrderId() Obtain Order ID
+ * @method void setOrderId(string $OrderId) Set Order ID
+ * @method string getVoucherPayAmount() Obtain Voucher
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher
  * @method string getIncentivePayAmount() Obtain Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTransferPayAmount() Obtain Share revenueNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Share revenueNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getPayerUin() Obtain Payer UIN: the account ID of the payer, which is the unique identifier of a Tencent Cloud userNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayerUin(string $PayerUin) Set Payer UIN: the account ID of the payer, which is the unique identifier of a Tencent Cloud userNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getOwnerUin() Obtain User UIN: the account ID of the actual resource userNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setOwnerUin(string $OwnerUin) Set User UIN: the account ID of the actual resource userNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getOperateUin() Obtain Operator UIN: the account ID or role ID of the operator who places orders for prepaid resources or activates postpaid resourcesNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setOperateUin(string $OperateUin) Set Operator UIN: the account ID or role ID of the operator who places orders for prepaid resources or activates postpaid resourcesNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getProductCode() Obtain Subproduct codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setProductCode(string $ProductCode) Set Subproduct codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getProductCodeName() Obtain Subproduct name: the subcategory of a product purchased by the user, such as CVM – Standard S1Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProductCodeName(string $ProductCodeName) Set Subproduct name: the subcategory of a product purchased by the user, such as CVM – Standard S1Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegionType() Obtain Region typeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegionType(string $RegionType) Set Region typeNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegionTypeName() Obtain Region type nameNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegionTypeName(string $RegionTypeName) Set Region type nameNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getExtend1() Obtain Extended field 1Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtend1(string $Extend1) Set Extended field 1Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExtend2() Obtain Extended field 2Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtend2(string $Extend2) Set Extended field 2Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExtend3() Obtain Extended field 3Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtend3(string $Extend3) Set Extended field 3Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExtend4() Obtain Extended field 4Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtend4(string $Extend4) Set Extended field 4Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExtend5() Obtain Extended field 5Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtend5(string $Extend5) Set Extended field 5Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceType() Obtain Instance typeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceType(string $InstanceType) Set Instance typeNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceTypeName() Obtain Instance type nameNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceTypeName(string $InstanceTypeName) Set Instance type nameNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getPayTime() Obtain Deduction time: the time at which a payment is deductedNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayTime(string $PayTime) Set Deduction time: the time at which a payment is deductedNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getZoneName() Obtain Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneName(string $ZoneName) Set Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getComponentConfig() Obtain Configuration descriptionNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setComponentConfig(string $ComponentConfig) Set Configuration descriptionNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getTags() Obtain Tag information.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(string $Tags) Set Tag information.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTransferPayAmount() Obtain Royalty amount
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Royalty amount
+ * @method string getTax() Obtain Tax
+ * @method void setTax(string $Tax) Set Tax
+ * @method string getTaxRate() Obtain tax rate
+ * @method void setTaxRate(string $TaxRate) Set tax rate
+ * @method string getAmountBeforeTax() Obtain Cash payment (pre-tax)
+ * @method void setAmountBeforeTax(string $AmountBeforeTax) Set Cash payment (pre-tax)
+ * @method string getPayerUin() Obtain Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
+ * @method void setPayerUin(string $PayerUin) Set Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
+ * @method string getOwnerUin() Obtain User UIN: Account ID of the actual resource user
+ * @method void setOwnerUin(string $OwnerUin) Set User UIN: Account ID of the actual resource user
+ * @method string getOperateUin() Obtain Operator UIN: Operator account ID (ID of the operator who places orders for prepaid resources or activates postpaid resource account, or role ID).
+ * @method void setOperateUin(string $OperateUin) Set Operator UIN: Operator account ID (ID of the operator who places orders for prepaid resources or activates postpaid resource account, or role ID).
+ * @method string getProductCode() Obtain Subproduct code
+ * @method void setProductCode(string $ProductCode) Set Subproduct code
+ * @method string getProductCodeName() Obtain Subproduct name: Product subdivision type purchased by the user, such as Cloud Virtual Machine (CVM)-Standard Type S1
+ * @method void setProductCodeName(string $ProductCodeName) Set Subproduct name: Product subdivision type purchased by the user, such as Cloud Virtual Machine (CVM)-Standard Type S1
+ * @method string getRegionType() Obtain Region type
+ * @method void setRegionType(string $RegionType) Set Region type
+ * @method string getRegionTypeName() Obtain Region type name.
+ * @method void setRegionTypeName(string $RegionTypeName) Set Region type name.
+ * @method string getExtend1() Obtain Extension Field 1
+ * @method void setExtend1(string $Extend1) Set Extension Field 1
+ * @method string getExtend2() Obtain Extension Field 2
+ * @method void setExtend2(string $Extend2) Set Extension Field 2
+ * @method string getExtend3() Obtain Extension Field 3
+ * @method void setExtend3(string $Extend3) Set Extension Field 3
+ * @method string getExtend4() Obtain Extension Field 4
+ * @method void setExtend4(string $Extend4) Set Extension Field 4
+ * @method string getExtend5() Obtain Extension Field 5
+ * @method void setExtend5(string $Extend5) Set Extension Field 5
+ * @method string getInstanceType() Obtain Instance type
+ * @method void setInstanceType(string $InstanceType) Set Instance type
+ * @method string getInstanceTypeName() Obtain Instance Type Name
+ * @method void setInstanceTypeName(string $InstanceTypeName) Set Instance Type Name
+ * @method string getPayTime() Obtain Deduction time: Deduction time
+ * @method void setPayTime(string $PayTime) Set Deduction time: Deduction time
+ * @method string getZoneName() Obtain Availability zone: The availability zone where the resource is located, such as Guangzhou Zone 3.
+ * @method void setZoneName(string $ZoneName) Set Availability zone: The availability zone where the resource is located, such as Guangzhou Zone 3.
+ * @method string getComponentConfig() Obtain Describing Configurations
+ * @method void setComponentConfig(string $ComponentConfig) Set Describing Configurations
+ * @method string getTags() Obtain Tag information.
+ * @method void setTags(string $Tags) Set Tag information.
  */
 class ConsumptionResourceSummaryDataItem extends AbstractModel
 {
@@ -173,139 +175,152 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
     public $ConsumptionTypeName;
 
     /**
-     * @var string Pre-discount priceNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Original price
      */
     public $RealCost;
 
     /**
-     * @var string Start time of feesNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Fee start time
      */
     public $FeeBeginTime;
 
     /**
-     * @var string End time of feesNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string End time of fees
      */
     public $FeeEndTime;
 
     /**
      * @var string Days
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DayDiff;
 
     /**
-     * @var string Daily consumptionNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Daily consumption
      */
     public $DailyTotalCost;
 
     /**
-     * @var string Order numberNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Order ID
      */
     public $OrderId;
 
     /**
-     * @var string VoucherNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Voucher
      */
     public $VoucherPayAmount;
 
     /**
      * @var string Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Royalty amount
      */
     public $TransferPayAmount;
 
     /**
-     * @var string Payer UIN: the account ID of the payer, which is the unique identifier of a Tencent Cloud userNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Tax
+     */
+    public $Tax;
+
+    /**
+     * @var string tax rate
+     */
+    public $TaxRate;
+
+    /**
+     * @var string Cash payment (pre-tax)
+     */
+    public $AmountBeforeTax;
+
+    /**
+     * @var string Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
      */
     public $PayerUin;
 
     /**
-     * @var string User UIN: the account ID of the actual resource userNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string User UIN: Account ID of the actual resource user
      */
     public $OwnerUin;
 
     /**
-     * @var string Operator UIN: the account ID or role ID of the operator who places orders for prepaid resources or activates postpaid resourcesNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Operator UIN: Operator account ID (ID of the operator who places orders for prepaid resources or activates postpaid resource account, or role ID).
      */
     public $OperateUin;
 
     /**
-     * @var string Subproduct codeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Subproduct code
      */
     public $ProductCode;
 
     /**
-     * @var string Subproduct name: the subcategory of a product purchased by the user, such as CVM – Standard S1Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Subproduct name: Product subdivision type purchased by the user, such as Cloud Virtual Machine (CVM)-Standard Type S1
      */
     public $ProductCodeName;
 
     /**
-     * @var string Region typeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Region type
      */
     public $RegionType;
 
     /**
-     * @var string Region type nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Region type name.
      */
     public $RegionTypeName;
 
     /**
-     * @var string Extended field 1Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Extension Field 1
      */
     public $Extend1;
 
     /**
-     * @var string Extended field 2Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Extension Field 2
      */
     public $Extend2;
 
     /**
-     * @var string Extended field 3Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Extension Field 3
      */
     public $Extend3;
 
     /**
-     * @var string Extended field 4Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Extension Field 4
      */
     public $Extend4;
 
     /**
-     * @var string Extended field 5Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Extension Field 5
      */
     public $Extend5;
 
     /**
-     * @var string Instance typeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance type
      */
     public $InstanceType;
 
     /**
-     * @var string Instance type nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance Type Name
      */
     public $InstanceTypeName;
 
     /**
-     * @var string Deduction time: the time at which a payment is deductedNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Deduction time: Deduction time
      */
     public $PayTime;
 
     /**
-     * @var string Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Availability zone: The availability zone where the resource is located, such as Guangzhou Zone 3.
      */
     public $ZoneName;
 
     /**
-     * @var string Configuration descriptionNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Describing Configurations
      */
     public $ComponentConfig;
 
     /**
-     * @var string Tag information.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Tag information.
      */
     public $Tags;
 
@@ -323,35 +338,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $BusinessCode Product name code
      * @param string $BusinessCodeName Product name
      * @param string $ConsumptionTypeName Consumption type
-     * @param string $RealCost Pre-discount priceNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FeeBeginTime Start time of feesNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FeeEndTime End time of feesNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RealCost Original price
+     * @param string $FeeBeginTime Fee start time
+     * @param string $FeeEndTime End time of fees
      * @param string $DayDiff Days
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DailyTotalCost Daily consumptionNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OrderId Order numberNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VoucherPayAmount VoucherNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DailyTotalCost Daily consumption
+     * @param string $OrderId Order ID
+     * @param string $VoucherPayAmount Voucher
      * @param string $IncentivePayAmount Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransferPayAmount Share revenueNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PayerUin Payer UIN: the account ID of the payer, which is the unique identifier of a Tencent Cloud userNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OwnerUin User UIN: the account ID of the actual resource userNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OperateUin Operator UIN: the account ID or role ID of the operator who places orders for prepaid resources or activates postpaid resourcesNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProductCode Subproduct codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProductCodeName Subproduct name: the subcategory of a product purchased by the user, such as CVM – Standard S1Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RegionType Region typeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RegionTypeName Region type nameNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Extend1 Extended field 1Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Extend2 Extended field 2Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Extend3 Extended field 3Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Extend4 Extended field 4Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Extend5 Extended field 5Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceType Instance typeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceTypeName Instance type nameNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PayTime Deduction time: the time at which a payment is deductedNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ZoneName Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ComponentConfig Configuration descriptionNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Tags Tag information.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TransferPayAmount Royalty amount
+     * @param string $Tax Tax
+     * @param string $TaxRate tax rate
+     * @param string $AmountBeforeTax Cash payment (pre-tax)
+     * @param string $PayerUin Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
+     * @param string $OwnerUin User UIN: Account ID of the actual resource user
+     * @param string $OperateUin Operator UIN: Operator account ID (ID of the operator who places orders for prepaid resources or activates postpaid resource account, or role ID).
+     * @param string $ProductCode Subproduct code
+     * @param string $ProductCodeName Subproduct name: Product subdivision type purchased by the user, such as Cloud Virtual Machine (CVM)-Standard Type S1
+     * @param string $RegionType Region type
+     * @param string $RegionTypeName Region type name.
+     * @param string $Extend1 Extension Field 1
+     * @param string $Extend2 Extension Field 2
+     * @param string $Extend3 Extension Field 3
+     * @param string $Extend4 Extension Field 4
+     * @param string $Extend5 Extension Field 5
+     * @param string $InstanceType Instance type
+     * @param string $InstanceTypeName Instance Type Name
+     * @param string $PayTime Deduction time: Deduction time
+     * @param string $ZoneName Availability zone: The availability zone where the resource is located, such as Guangzhou Zone 3.
+     * @param string $ComponentConfig Describing Configurations
+     * @param string $Tags Tag information.
      */
     function __construct()
     {
@@ -452,6 +468,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
             $this->TransferPayAmount = $param["TransferPayAmount"];
+        }
+
+        if (array_key_exists("Tax",$param) and $param["Tax"] !== null) {
+            $this->Tax = $param["Tax"];
+        }
+
+        if (array_key_exists("TaxRate",$param) and $param["TaxRate"] !== null) {
+            $this->TaxRate = $param["TaxRate"];
+        }
+
+        if (array_key_exists("AmountBeforeTax",$param) and $param["AmountBeforeTax"] !== null) {
+            $this->AmountBeforeTax = $param["AmountBeforeTax"];
         }
 
         if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {

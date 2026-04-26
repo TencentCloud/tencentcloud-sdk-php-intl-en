@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cost analysis header data
  *
- * @method string getName() Obtain DateNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set DateNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain Date
+ * @method void setName(string $Name) Set Date
  */
 class AnalyseHeaderTimeDetail extends AbstractModel
 {
     /**
-     * @var string DateNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Date
      */
     public $Name;
 
     /**
-     * @param string $Name DateNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name Date
      */
     function __construct()
     {

@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cost analysis filter box complex type
  *
- * @method array getBusiness() Obtain ProductNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setBusiness(array $Business) Set ProductNote: This field may return null, indicating that no valid values can be obtained.
- * @method array getProject() Obtain ItemNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setProject(array $Project) Set ItemNote: This field may return null, indicating that no valid values can be obtained.
- * @method array getRegion() Obtain RegionNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegion(array $Region) Set RegionNote: This field may return null, indicating that no valid values can be obtained.
- * @method array getPayMode() Obtain Billing modeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayMode(array $PayMode) Set Billing modeNote: This field may return null, indicating that no valid values can be obtained.
- * @method array getActionType() Obtain Transaction typeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setActionType(array $ActionType) Set Transaction typeNote: This field may return null, indicating that no valid values can be obtained.
- * @method array getZone() Obtain Availability zoneNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setZone(array $Zone) Set Availability zoneNote: This field may return null, indicating that no valid values can be obtained.
- * @method array getOwnerUin() Obtain Resource owner UINNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setOwnerUin(array $OwnerUin) Set Resource owner UINNote: This field may return null, indicating that no valid values can be obtained.
- * @method array getAmount() Obtain Fee typeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setAmount(array $Amount) Set Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+ * @method array getBusiness() Obtain product
+ * @method void setBusiness(array $Business) Set product
+ * @method array getProject() Obtain Project
+ * @method void setProject(array $Project) Set Project
+ * @method array getRegion() Obtain Region.
+ * @method void setRegion(array $Region) Set Region.
+ * @method array getPayMode() Obtain Billing mode.
+ * @method void setPayMode(array $PayMode) Set Billing mode.
+ * @method array getActionType() Obtain Transaction type
+ * @method void setActionType(array $ActionType) Set Transaction type
+ * @method array getZone() Obtain Availability zone
+ * @method void setZone(array $Zone) Set Availability zone
+ * @method array getOwnerUin() Obtain Resource owner Uin
+ * @method void setOwnerUin(array $OwnerUin) Set Resource owner Uin
+ * @method array getAmount() Obtain Fee type
+ * @method void setAmount(array $Amount) Set Fee type
  */
 class AnalyseConditionDetail extends AbstractModel
 {
     /**
-     * @var array ProductNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array product
      */
     public $Business;
 
     /**
-     * @var array ItemNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array Project
      */
     public $Project;
 
     /**
-     * @var array RegionNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array Region.
      */
     public $Region;
 
     /**
-     * @var array Billing modeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array Billing mode.
      */
     public $PayMode;
 
     /**
-     * @var array Transaction typeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array Transaction type
      */
     public $ActionType;
 
     /**
-     * @var array Availability zoneNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array Availability zone
      */
     public $Zone;
 
     /**
-     * @var array Resource owner UINNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array Resource owner Uin
      */
     public $OwnerUin;
 
     /**
-     * @var array Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array Fee type
      */
     public $Amount;
 
     /**
-     * @param array $Business ProductNote: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Project ItemNote: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Region RegionNote: This field may return null, indicating that no valid values can be obtained.
-     * @param array $PayMode Billing modeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ActionType Transaction typeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Zone Availability zoneNote: This field may return null, indicating that no valid values can be obtained.
-     * @param array $OwnerUin Resource owner UINNote: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Amount Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Business product
+     * @param array $Project Project
+     * @param array $Region Region.
+     * @param array $PayMode Billing mode.
+     * @param array $ActionType Transaction type
+     * @param array $Zone Availability zone
+     * @param array $OwnerUin Resource owner Uin
+     * @param array $Amount Fee type
      */
     function __construct()
     {

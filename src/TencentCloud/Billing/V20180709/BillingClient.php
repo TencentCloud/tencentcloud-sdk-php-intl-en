@@ -34,11 +34,20 @@ Currently, the integrated and supported product for purchase includes: Cloud Fir
  * @method Models\DeleteAllocationUnitResponse DeleteAllocationUnit(Models\DeleteAllocationUnitRequest $req) Delete a cost allocation unit.
  * @method Models\DeleteGatherRuleResponse DeleteGatherRule(Models\DeleteGatherRuleRequest $req) Delete a collection rule.
  * @method Models\DescribeAccountBalanceResponse DescribeAccountBalance(Models\DescribeAccountBalanceRequest $req) This API is used to check the Tencent Cloud account balance.
+ * @method Models\DescribeAllocateConditionsResponse DescribeAllocateConditions(Models\DescribeAllocateConditionsRequest $req) This API is used to query the filter conditions of a resource directory.
+ * @method Models\DescribeAllocationBillConditionsResponse DescribeAllocationBillConditions(Models\DescribeAllocationBillConditionsRequest $req) This API is used to query the filter conditions of a cost allocation bill.
+ * @method Models\DescribeAllocationBillDetailResponse DescribeAllocationBillDetail(Models\DescribeAllocationBillDetailRequest $req) This API is used to query the details of a cost allocation bill.
+ * @method Models\DescribeAllocationMonthOverviewResponse DescribeAllocationMonthOverview(Models\DescribeAllocationMonthOverviewRequest $req) This API is used to query the monthly overview of a cost allocation bill.
+ * @method Models\DescribeAllocationOverviewResponse DescribeAllocationOverview(Models\DescribeAllocationOverviewRequest $req) This API is used to query the daily overview of a cost allocation bill.
  * @method Models\DescribeAllocationRuleDetailResponse DescribeAllocationRuleDetail(Models\DescribeAllocationRuleDetailRequest $req) This API is used to query sharing rule details.
  * @method Models\DescribeAllocationRuleSummaryResponse DescribeAllocationRuleSummary(Models\DescribeAllocationRuleSummaryRequest $req) This API is used to query all sharing rule overviews.
+ * @method Models\DescribeAllocationSummaryByBusinessResponse DescribeAllocationSummaryByBusiness(Models\DescribeAllocationSummaryByBusinessRequest $req) This API is used to query the details of a cost allocation bill by product.
+ * @method Models\DescribeAllocationSummaryByItemResponse DescribeAllocationSummaryByItem(Models\DescribeAllocationSummaryByItemRequest $req) This API is used to query the details of a cost allocation bill by item.
+ * @method Models\DescribeAllocationSummaryByResourceResponse DescribeAllocationSummaryByResource(Models\DescribeAllocationSummaryByResourceRequest $req) This API is used to query the details of a cost allocation bill by resource.
  * @method Models\DescribeAllocationTreeResponse DescribeAllocationTree(Models\DescribeAllocationTreeRequest $req) This API is used to query the cost tree.
+ * @method Models\DescribeAllocationTrendByMonthResponse DescribeAllocationTrendByMonth(Models\DescribeAllocationTrendByMonthRequest $req) This API is used to query the cost trend of a cost allocation bill.
  * @method Models\DescribeAllocationUnitDetailResponse DescribeAllocationUnitDetail(Models\DescribeAllocationUnitDetailRequest $req) Query the details of a cost allocation unit.
- * @method Models\DescribeBillAdjustInfoResponse DescribeBillAdjustInfo(Models\DescribeBillAdjustInfoRequest $req) This API is used to check whether the current UIN has any adjustment, enabling customers to proactively obtain the adjustment status faster.
+ * @method Models\DescribeBillAdjustInfoResponse DescribeBillAdjustInfo(Models\DescribeBillAdjustInfoRequest $req) This API is used to query whether there is a bill adjustment for the current UIN through API. Customers can obtain bill adjustment status faster and proactively.
  * @method Models\DescribeBillDetailResponse DescribeBillDetail(Models\DescribeBillDetailRequest $req) u200cThis API is used to get bill details.
 Note:
 1. The API request may fail due to network instability or other exceptions. In this case, we recommend you manually retry the request when the API request fails.
@@ -55,7 +64,11 @@ Note: The API request may fail due to network instability or other exceptions. I
  * @method Models\DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(Models\DescribeBillSummaryByRegionRequest $req) Gets the bill summarized according to region
  * @method Models\DescribeBillSummaryByTagResponse DescribeBillSummaryByTag(Models\DescribeBillSummaryByTagRequest $req) This API is used to get the cost distribution over different tags.
  * @method Models\DescribeBillSummaryForOrganizationResponse DescribeBillSummaryForOrganization(Models\DescribeBillSummaryForOrganizationRequest $req) This API is used to get bills summarized by product, project, region, billing mode, and tag by passing in parameters.
+ * @method Models\DescribeCPQBillingMappingResponse DescribeCPQBillingMapping(Models\DescribeCPQBillingMappingRequest $req) Query the four-layer matching relationship between the quoted product name and billing products
  * @method Models\DescribeCostDetailResponse DescribeCostDetail(Models\DescribeCostDetailRequest $req) This API is used to query consumption details.
+
+Notes:
+For customers with large-scale consumption detail (for example, monthly consumption detail exceeding 1M), there will be a timeout risk when retrieving detailed data via API call. It is recommended to enable the billing data storage function and analyze bill files obtained in a bucket. [Store bills to COS](https://www.tencentcloud.com/document/product/555/61275?from_cn_redirect=1)
  * @method Models\DescribeCostExplorerSummaryResponse DescribeCostExplorerSummary(Models\DescribeCostExplorerSummaryRequest $req) This API is used to view cost analysis details.
  * @method Models\DescribeCostSummaryByProductResponse DescribeCostSummaryByProduct(Models\DescribeCostSummaryByProductRequest $req) This API is used to obtain consumption details summarized by product.
  * @method Models\DescribeCostSummaryByProjectResponse DescribeCostSummaryByProject(Models\DescribeCostSummaryByProjectRequest $req) This API is used to obtain consumption details summarized by project.
@@ -63,6 +76,7 @@ Note: The API request may fail due to network instability or other exceptions. I
  * @method Models\DescribeCostSummaryByResourceResponse DescribeCostSummaryByResource(Models\DescribeCostSummaryByResourceRequest $req) This API is used to obtain consumption details summarized by resource.
  * @method Models\DescribeDealsByCondResponse DescribeDealsByCond(Models\DescribeDealsByCondRequest $req) Querying orders
  * @method Models\DescribeDosageCosDetailByDateResponse DescribeDosageCosDetailByDate(Models\DescribeDosageCosDetailByDateRequest $req) This API is used to query COS usage details.
+ * @method Models\DescribeGatherResourceResponse DescribeGatherResource(Models\DescribeGatherResourceRequest $req) This API is used to query the details of a cost allocation bill by resource.
  * @method Models\DescribeGatherRuleDetailResponse DescribeGatherRuleDetail(Models\DescribeGatherRuleDetailRequest $req) This API is used to query the collection rule details.
  * @method Models\DescribeRenewInstancesResponse DescribeRenewInstances(Models\DescribeRenewInstancesRequest $req) Notes:
 1. This API supports querying annual and monthly subscription instances integrated into the renewal management page, including running and isolated instances (some products unsupported).

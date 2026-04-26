@@ -29,21 +29,19 @@ use TencentCloud\Common\AbstractModel;
  * @method ConsumptionSummaryTrend getTrend() Obtain Cost trend
  * @method void setTrend(ConsumptionSummaryTrend $Trend) Set Cost trend
  * @method string getCashPayAmount() Obtain Cash
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCashPayAmount(string $CashPayAmount) Set Cash
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getIncentivePayAmount() Obtain Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVoucherPayAmount() Obtain VoucherNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set VoucherNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getTransferPayAmount() Obtain Share revenueNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVoucherPayAmount() Obtain Voucher
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher
+ * @method string getTransferPayAmount() Obtain Royalty amount
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Royalty amount
+ * @method string getAmountBeforeTax() Obtain Cash payment (pre-tax)
+ * @method void setAmountBeforeTax(string $AmountBeforeTax) Set Cash payment (pre-tax)
+ * @method string getTax() Obtain Tax
+ * @method void setTax(string $Tax) Set Tax
  * @method string getRegionName() Obtain Region name (only shown in regional summary)
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRegionName(string $RegionName) Set Region name (only shown in regional summary)
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ConsumptionBusinessSummaryDataItem extends AbstractModel
 {
@@ -69,29 +67,36 @@ class ConsumptionBusinessSummaryDataItem extends AbstractModel
 
     /**
      * @var string Cash
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CashPayAmount;
 
     /**
      * @var string Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string VoucherNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Voucher
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Royalty amount
      */
     public $TransferPayAmount;
 
     /**
+     * @var string Cash payment (pre-tax)
+     */
+    public $AmountBeforeTax;
+
+    /**
+     * @var string Tax
+     */
+    public $Tax;
+
+    /**
      * @var string Region name (only shown in regional summary)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RegionName;
 
@@ -101,13 +106,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $RealTotalCost Discounted total price
      * @param ConsumptionSummaryTrend $Trend Cost trend
      * @param string $CashPayAmount Cash
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IncentivePayAmount Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VoucherPayAmount VoucherNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransferPayAmount Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VoucherPayAmount Voucher
+     * @param string $TransferPayAmount Royalty amount
+     * @param string $AmountBeforeTax Cash payment (pre-tax)
+     * @param string $Tax Tax
      * @param string $RegionName Region name (only shown in regional summary)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -153,6 +157,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
             $this->TransferPayAmount = $param["TransferPayAmount"];
+        }
+
+        if (array_key_exists("AmountBeforeTax",$param) and $param["AmountBeforeTax"] !== null) {
+            $this->AmountBeforeTax = $param["AmountBeforeTax"];
+        }
+
+        if (array_key_exists("Tax",$param) and $param["Tax"] !== null) {
+            $this->Tax = $param["Tax"];
         }
 
         if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {

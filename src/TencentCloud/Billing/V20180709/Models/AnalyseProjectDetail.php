@@ -21,29 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Cost analysis project return complex type
  *
  * @method string getProjectId() Obtain Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProjectId(string $ProjectId) Set Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProjectName() Obtain Default projectNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setProjectName(string $ProjectName) Set Default projectNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProjectName() Obtain default project
+ * @method void setProjectName(string $ProjectName) Set default project
  */
 class AnalyseProjectDetail extends AbstractModel
 {
     /**
      * @var string Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProjectId;
 
     /**
-     * @var string Default projectNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string default project
      */
     public $ProjectName;
 
     /**
      * @param string $ProjectId Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProjectName Default projectNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProjectName default project
      */
     function __construct()
     {

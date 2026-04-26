@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKey(string $TagKey) Set Cost allocation tag key.
  * @method integer getStatus() Obtain Tag type. Valid values: `0` (general tags), `1` (cost allocation tags).
  * @method void setStatus(integer $Status) Set Tag type. Valid values: `0` (general tags), `1` (cost allocation tags).
- * @method string getUpdateTime() Obtain Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUpdateTime() Obtain Set the allocation tag time. Ordinary tags do not return.
+ * @method void setUpdateTime(string $UpdateTime) Set Set the allocation tag time. Ordinary tags do not return.
  */
 class TagDataInfo extends AbstractModel
 {
@@ -42,16 +40,14 @@ class TagDataInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var string Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Set the allocation tag time. Ordinary tags do not return.
      */
     public $UpdateTime;
 
     /**
      * @param string $TagKey Cost allocation tag key.
      * @param integer $Status Tag type. Valid values: `0` (general tags), `1` (cost allocation tags).
-     * @param string $UpdateTime Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UpdateTime Set the allocation tag time. Ordinary tags do not return.
      */
     function __construct()
     {

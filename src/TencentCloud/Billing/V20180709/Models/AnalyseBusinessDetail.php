@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cost analysis product return complex type
  *
- * @method string getBusinessCode() Obtain Product codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setBusinessCode(string $BusinessCode) Set Product codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getBusinessCodeName() Obtain Product nameNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setBusinessCodeName(string $BusinessCodeName) Set Product nameNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBusinessCode() Obtain Product code
+ * @method void setBusinessCode(string $BusinessCode) Set Product code
+ * @method string getBusinessCodeName() Obtain Product name
+ * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name
  */
 class AnalyseBusinessDetail extends AbstractModel
 {
     /**
-     * @var string Product codeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Product code
      */
     public $BusinessCode;
 
     /**
-     * @var string Product nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Product name
      */
     public $BusinessCodeName;
 
     /**
-     * @param string $BusinessCode Product codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BusinessCodeName Product nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BusinessCode Product code
+     * @param string $BusinessCodeName Product name
      */
     function __construct()
     {

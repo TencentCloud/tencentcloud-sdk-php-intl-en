@@ -24,11 +24,11 @@ use TencentCloud\Common\AbstractModel;
 `0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
  * @method void setVendor(integer $Vendor) Set The cloud storage provider.
 `0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
- * @method string getRegion() Obtain [Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+ * @method string getRegion() Obtain [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
 Example value: cn-shanghai-1.
 
 [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
- * @method void setRegion(string $Region) Set [Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+ * @method void setRegion(string $Region) Set [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
 Example value: cn-shanghai-1.
 
 [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
@@ -44,6 +44,8 @@ To store files to tencent cloud object storage (COS), visit https://console.clou
 To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretKey value corresponding to the key fields in the link.
  * @method array getFileNamePrefix() Obtain The specified position of the cloud storage bucket consists of an array of strings. valid values: az, az, 0-9, '_', and '-'. for example, the recording file xxx.m3u8 becomes prefix1/prefix2/TaskId/xxx.m3u8 under the function of ["prefix1", "prefix2"].
  * @method void setFileNamePrefix(array $FileNamePrefix) Set The specified position of the cloud storage bucket consists of an array of strings. valid values: az, az, 0-9, '_', and '-'. for example, the recording file xxx.m3u8 becomes prefix1/prefix2/TaskId/xxx.m3u8 under the function of ["prefix1", "prefix2"].
+ * @method string getEndpointUrl() Obtain If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com"
+ * @method void setEndpointUrl(string $EndpointUrl) Set If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com"
  */
 class CloudStorage extends AbstractModel
 {
@@ -54,7 +56,7 @@ class CloudStorage extends AbstractModel
     public $Vendor;
 
     /**
-     * @var string [Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+     * @var string [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
 Example value: cn-shanghai-1.
 
 [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
@@ -84,9 +86,14 @@ To store files to tencent cloud object storage (COS), visit https://console.clou
     public $FileNamePrefix;
 
     /**
+     * @var string If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com"
+     */
+    public $EndpointUrl;
+
+    /**
      * @param integer $Vendor The cloud storage provider.
 `0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
-     * @param string $Region [Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+     * @param string $Region [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
 Example value: cn-shanghai-1.
 
 [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
@@ -96,6 +103,7 @@ To store files to tencent cloud object storage (COS), visit https://console.clou
      * @param string $SecretKey secret_key account information of the cloud storage.
 To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretKey value corresponding to the key fields in the link.
      * @param array $FileNamePrefix The specified position of the cloud storage bucket consists of an array of strings. valid values: az, az, 0-9, '_', and '-'. for example, the recording file xxx.m3u8 becomes prefix1/prefix2/TaskId/xxx.m3u8 under the function of ["prefix1", "prefix2"].
+     * @param string $EndpointUrl If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com"
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ To store files to tencent cloud object storage (COS), visit https://console.clou
 
         if (array_key_exists("FileNamePrefix",$param) and $param["FileNamePrefix"] !== null) {
             $this->FileNamePrefix = $param["FileNamePrefix"];
+        }
+
+        if (array_key_exists("EndpointUrl",$param) and $param["EndpointUrl"] !== null) {
+            $this->EndpointUrl = $param["EndpointUrl"];
         }
     }
 }

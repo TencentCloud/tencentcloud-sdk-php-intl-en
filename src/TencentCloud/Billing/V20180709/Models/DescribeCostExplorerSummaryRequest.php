@@ -36,8 +36,8 @@ zone = Availability zoneactionType = Transaction typepayMode = Billing modetags 
 feeType = Fee typebillType = Bill typebusiness = Product
 product = Sub-productregion=Region
 zone = Availability zoneactionType = Transaction typepayMode = Billing modetags = Tagproject = ProjectpayerUin = Payer accountownerUin = User account
- * @method string getFeeType() Obtain Fee type: cost-total cost, totalCost-original price cost
- * @method void setFeeType(string $FeeType) Set Fee type: cost-total cost, totalCost-original price cost
+ * @method string getFeeType() Obtain Fee type: cost-discounted total cost, totalCost-original price cost
+ * @method void setFeeType(string $FeeType) Set Fee type: cost-discounted total cost, totalCost-original price cost
  * @method integer getPageSize() Obtain Quantity. The maximum value per page is 100.
  * @method void setPageSize(integer $PageSize) Set Quantity. The maximum value per page is 100.
  * @method integer getPageNo() Obtain Starting page, where PageNo=1 indicates the first page, PageNo=2 indicates the second page, and so on.
@@ -80,7 +80,7 @@ zone = Availability zoneactionType = Transaction typepayMode = Billing modetags 
     public $Dimensions;
 
     /**
-     * @var string Fee type: cost-total cost, totalCost-original price cost
+     * @var string Fee type: cost-discounted total cost, totalCost-original price cost
      */
     public $FeeType;
 
@@ -118,7 +118,7 @@ zone = Availability zoneactionType = Transaction typepayMode = Billing modetags 
 feeType = Fee typebillType = Bill typebusiness = Product
 product = Sub-productregion=Region
 zone = Availability zoneactionType = Transaction typepayMode = Billing modetags = Tagproject = ProjectpayerUin = Payer accountownerUin = User account
-     * @param string $FeeType Fee type: cost-total cost, totalCost-original price cost
+     * @param string $FeeType Fee type: cost-discounted total cost, totalCost-original price cost
      * @param integer $PageSize Quantity. The maximum value per page is 100.
      * @param integer $PageNo Starting page, where PageNo=1 indicates the first page, PageNo=2 indicates the second page, and so on.
      * @param string $TagKeyStr Cost allocation tag value

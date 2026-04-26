@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAllocationRule request structure.
  *
- * @method AllocationRulesSummary getRuleList() Obtain List of sharing rules.
- * @method void setRuleList(AllocationRulesSummary $RuleList) Set List of sharing rules.
+ * @method AllocationRulesSummary getRuleList() Obtain List of sharing rules
+ * @method void setRuleList(AllocationRulesSummary $RuleList) Set List of sharing rules
  * @method string getMonth() Obtain Month, the current month by default if not provided.
  * @method void setMonth(string $Month) Set Month, the current month by default if not provided.
  */
 class CreateAllocationRuleRequest extends AbstractModel
 {
     /**
-     * @var AllocationRulesSummary List of sharing rules.
+     * @var AllocationRulesSummary List of sharing rules
      */
     public $RuleList;
 
@@ -38,7 +38,7 @@ class CreateAllocationRuleRequest extends AbstractModel
     public $Month;
 
     /**
-     * @param AllocationRulesSummary $RuleList List of sharing rules.
+     * @param AllocationRulesSummary $RuleList List of sharing rules
      * @param string $Month Month, the current month by default if not provided.
      */
     function __construct()

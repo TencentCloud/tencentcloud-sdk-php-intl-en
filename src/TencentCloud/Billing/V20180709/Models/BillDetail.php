@@ -38,8 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceName(string $ResourceName) Set Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
  * @method string getActionTypeName() Obtain Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
  * @method void setActionTypeName(string $ActionTypeName) Set Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
- * @method string getOrderId() Obtain Order ID: The order number for a monthly subscription purchase
- * @method void setOrderId(string $OrderId) Set Order ID: The order number for a monthly subscription purchase
+ * @method string getOrderId() Obtain Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+
+ * @method void setOrderId(string $OrderId) Set Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+
  * @method string getBillId() Obtain Transaction ID: The bill number for a deducted payment
  * @method void setBillId(string $BillId) Set Transaction ID: The bill number for a deducted payment
  * @method string getPayTime() Obtain Transaction time: The time at which a payment was deducted
@@ -56,54 +58,44 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUin(string $OwnerUin) Set Owner account ID: The account ID of the actual resource user
  * @method string getOperateUin() Obtain Operator account ID: The account or role ID of the operator who purchases or activates a resource
  * @method void setOperateUin(string $OperateUin) Set Operator account ID: The account or role ID of the operator who purchases or activates a resource
- * @method array getTags() Obtain Tag information. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag information. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBusinessCode() Obtain Product code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBusinessCode(string $BusinessCode) Set Product code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProductCode() Obtain Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProductCode(string $ProductCode) Set Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getActionType() Obtain Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setActionType(string $ActionType) Set Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegionId() Obtain Region ID. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegionId(string $RegionId) Set Region ID. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Tag information.
+ * @method void setTags(array $Tags) Set Tag information.
+ * @method string getBusinessCode() Obtain Product code
+ * @method void setBusinessCode(string $BusinessCode) Set Product code
+ * @method string getProductCode() Obtain Subproduct code
+ * @method void setProductCode(string $ProductCode) Set Subproduct code
+ * @method string getActionType() Obtain Transaction type code
+ * @method void setActionType(string $ActionType) Set Transaction type code
+ * @method string getRegionId() Obtain Region ID
+ * @method void setRegionId(string $RegionId) Set Region ID
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method array getPriceInfo() Obtain Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPriceInfo(array $PriceInfo) Set Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method BillDetailAssociatedOrder getAssociatedOrder() Obtain Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAssociatedOrder(BillDetailAssociatedOrder $AssociatedOrder) Set Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFormula() Obtain Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFormula(string $Formula) Set Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFormulaUrl() Obtain Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFormulaUrl(string $FormulaUrl) Set Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBillDay() Obtain Billing dayNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setBillDay(string $BillDay) Set Billing dayNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getBillMonth() Obtain Billing monthNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setBillMonth(string $BillMonth) Set Billing monthNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getId() Obtain Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setId(string $Id) Set Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegionType() Obtain Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegionType(string $RegionType) Set Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegionTypeName() Obtain Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegionTypeName(string $RegionTypeName) Set Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getReserveDetail() Obtain Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReserveDetail(string $ReserveDetail) Set Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDiscountObject() Obtain the discount object for the current consumption item, such as official website discount, user discount, and event discount.
- * @method void setDiscountObject(string $DiscountObject) Set the discount object for the current consumption item, such as official website discount, user discount, and event discount.
- * @method string getDiscountType() Obtain the discount type for the current consumption item, such as discount and contract price.
-
- * @method void setDiscountType(string $DiscountType) Set the discount type for the current consumption item, such as discount and contract price.
-
- * @method string getDiscountContent() Obtain supplementary description of the discount type, such as 0.2.
- * @method void setDiscountContent(string $DiscountContent) Set supplementary description of the discount type, such as 0.2.
+ * @method array getPriceInfo() Obtain Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
+ * @method void setPriceInfo(array $PriceInfo) Set Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
+ * @method BillDetailAssociatedOrder getAssociatedOrder() Obtain Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
+ * @method void setAssociatedOrder(BillDetailAssociatedOrder $AssociatedOrder) Set Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
+ * @method string getFormula() Obtain Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
+ * @method void setFormula(string $Formula) Set Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
+ * @method string getFormulaUrl() Obtain Billing Rules: The detailed billing rules for each product shown in the portal explanation link
+ * @method void setFormulaUrl(string $FormulaUrl) Set Billing Rules: The detailed billing rules for each product shown in the portal explanation link
+ * @method string getBillDay() Obtain Billing day
+ * @method void setBillDay(string $BillDay) Set Billing day
+ * @method string getBillMonth() Obtain Billing month
+ * @method void setBillMonth(string $BillMonth) Set Billing month
+ * @method string getId() Obtain Billing record ID
+ * @method void setId(string $Id) Set Billing record ID
+ * @method string getRegionType() Obtain Domestic and international codes
+ * @method void setRegionType(string $RegionType) Set Domestic and international codes
+ * @method string getRegionTypeName() Obtain Domestic and international: Resource region type (domestic, international)
+ * @method void setRegionTypeName(string $RegionTypeName) Set Domestic and international: Resource region type (domestic, international)
+ * @method string getReserveDetail() Obtain Remark attribute (instance configuration): Additional remark information, such as reserved instance type and transaction type for reserved instances, regional information of both ends for CCN products.
+ * @method void setReserveDetail(string $ReserveDetail) Set Remark attribute (instance configuration): Additional remark information, such as reserved instance type and transaction type for reserved instances, regional information of both ends for CCN products.
+ * @method string getDiscountObject() Obtain discount object
+ * @method void setDiscountObject(string $DiscountObject) Set discount object
+ * @method string getDiscountType() Obtain Offer type
+ * @method void setDiscountType(string $DiscountType) Set Offer type
+ * @method string getDiscountContent() Obtain discount content
+ * @method void setDiscountContent(string $DiscountContent) Set discount content
  */
 class BillDetail extends AbstractModel
 {
@@ -153,7 +145,8 @@ class BillDetail extends AbstractModel
     public $ActionTypeName;
 
     /**
-     * @var string Order ID: The order number for a monthly subscription purchase
+     * @var string Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+
      */
     public $OrderId;
 
@@ -198,27 +191,27 @@ class BillDetail extends AbstractModel
     public $OperateUin;
 
     /**
-     * @var array Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Tag information.
      */
     public $Tags;
 
     /**
-     * @var string Product code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Product code
      */
     public $BusinessCode;
 
     /**
-     * @var string Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Subproduct code
      */
     public $ProductCode;
 
     /**
-     * @var string Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Transaction type code
      */
     public $ActionType;
 
     /**
-     * @var string Region ID. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Region ID
      */
     public $RegionId;
 
@@ -228,72 +221,67 @@ class BillDetail extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
      */
     public $PriceInfo;
 
     /**
-     * @var BillDetailAssociatedOrder Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var BillDetailAssociatedOrder Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
      */
     public $AssociatedOrder;
 
     /**
-     * @var string Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
      */
     public $Formula;
 
     /**
-     * @var string Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Billing Rules: The detailed billing rules for each product shown in the portal explanation link
      */
     public $FormulaUrl;
 
     /**
-     * @var string Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Billing day
      */
     public $BillDay;
 
     /**
-     * @var string Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Billing month
      */
     public $BillMonth;
 
     /**
-     * @var string Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Billing record ID
      */
     public $Id;
 
     /**
-     * @var string Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Domestic and international codes
      */
     public $RegionType;
 
     /**
-     * @var string Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Domestic and international: Resource region type (domestic, international)
      */
     public $RegionTypeName;
 
     /**
-     * @var string Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Remark attribute (instance configuration): Additional remark information, such as reserved instance type and transaction type for reserved instances, regional information of both ends for CCN products.
      */
     public $ReserveDetail;
 
     /**
-     * @var string the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+     * @var string discount object
      */
     public $DiscountObject;
 
     /**
-     * @var string the discount type for the current consumption item, such as discount and contract price.
-
+     * @var string Offer type
      */
     public $DiscountType;
 
     /**
-     * @var string supplementary description of the discount type, such as 0.2.
+     * @var string discount content
      */
     public $DiscountContent;
 
@@ -307,7 +295,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ResourceId Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
      * @param string $ResourceName Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
      * @param string $ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
-     * @param string $OrderId Order ID: The order number for a monthly subscription purchase
+     * @param string $OrderId Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+
      * @param string $BillId Transaction ID: The bill number for a deducted payment
      * @param string $PayTime Transaction time: The time at which a payment was deducted
      * @param string $FeeBeginTime Usage start time: The time at which product or service usage starts
@@ -316,30 +305,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $PayerUin Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
      * @param string $OwnerUin Owner account ID: The account ID of the actual resource user
      * @param string $OperateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource
-     * @param array $Tags Tag information. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BusinessCode Product code. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProductCode Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ActionType Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RegionId Region ID. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Tag information.
+     * @param string $BusinessCode Product code
+     * @param string $ProductCode Subproduct code
+     * @param string $ActionType Transaction type code
+     * @param string $RegionId Region ID
      * @param integer $ProjectId Project ID
-     * @param array $PriceInfo Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BillDetailAssociatedOrder $AssociatedOrder Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Formula Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FormulaUrl Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BillDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Id Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RegionType Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RegionTypeName Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ReserveDetail Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DiscountObject the discount object for the current consumption item, such as official website discount, user discount, and event discount.
-     * @param string $DiscountType the discount type for the current consumption item, such as discount and contract price.
-
-     * @param string $DiscountContent supplementary description of the discount type, such as 0.2.
+     * @param array $PriceInfo Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
+     * @param BillDetailAssociatedOrder $AssociatedOrder Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
+     * @param string $Formula Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
+     * @param string $FormulaUrl Billing Rules: The detailed billing rules for each product shown in the portal explanation link
+     * @param string $BillDay Billing day
+     * @param string $BillMonth Billing month
+     * @param string $Id Billing record ID
+     * @param string $RegionType Domestic and international codes
+     * @param string $RegionTypeName Domestic and international: Resource region type (domestic, international)
+     * @param string $ReserveDetail Remark attribute (instance configuration): Additional remark information, such as reserved instance type and transaction type for reserved instances, regional information of both ends for CCN products.
+     * @param string $DiscountObject discount object
+     * @param string $DiscountType Offer type
+     * @param string $DiscountContent discount content
      */
     function __construct()
     {

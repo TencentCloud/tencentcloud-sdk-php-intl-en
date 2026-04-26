@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Time
  * @method string getTotal() Obtain Amount
  * @method void setTotal(string $Total) Set Amount
- * @method array getTimeDetail() Obtain Date detailed amountNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setTimeDetail(array $TimeDetail) Set Date detailed amountNote: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTimeDetail() Obtain Date Detail Amount
+ * @method void setTimeDetail(array $TimeDetail) Set Date Detail Amount
  */
 class AnalyseDetail extends AbstractModel
 {
@@ -40,14 +40,14 @@ class AnalyseDetail extends AbstractModel
     public $Total;
 
     /**
-     * @var array Date detailed amountNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array Date Detail Amount
      */
     public $TimeDetail;
 
     /**
      * @param string $Name Time
      * @param string $Total Amount
-     * @param array $TimeDetail Date detailed amountNote: This field may return null, indicating that no valid values can be obtained.
+     * @param array $TimeDetail Date Detail Amount
      */
     function __construct()
     {

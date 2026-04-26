@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method MixUserInfo getUserInfo() Obtain The user information.
  * @method void setUserInfo(MixUserInfo $UserInfo) Set The user information.
+ * @method integer getSoundLevel() Obtain Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios.
+ * @method void setSoundLevel(integer $SoundLevel) Set Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios.
  */
 class McuUserInfoParams extends AbstractModel
 {
@@ -31,7 +35,15 @@ class McuUserInfoParams extends AbstractModel
     public $UserInfo;
 
     /**
+     * @var integer Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios.
+     */
+    public $SoundLevel;
+
+    /**
      * @param MixUserInfo $UserInfo The user information.
+     * @param integer $SoundLevel Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios.
      */
     function __construct()
     {
@@ -49,6 +61,10 @@ class McuUserInfoParams extends AbstractModel
         if (array_key_exists("UserInfo",$param) and $param["UserInfo"] !== null) {
             $this->UserInfo = new MixUserInfo();
             $this->UserInfo->deserialize($param["UserInfo"]);
+        }
+
+        if (array_key_exists("SoundLevel",$param) and $param["SoundLevel"] !== null) {
+            $this->SoundLevel = $param["SoundLevel"];
         }
     }
 }
