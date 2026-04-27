@@ -38,6 +38,7 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\CreateMNPResponse CreateMNP(Models\CreateMNPRequest $req) This API is used to create a mini program.
  * @method Models\CreateMNPApprovalResponse CreateMNPApproval(Models\CreateMNPApprovalRequest $req) This API is used to create a mini program approval request.
  * @method Models\CreateMNPDomainACLResponse CreateMNPDomainACL(Models\CreateMNPDomainACLRequest $req) This API is used to add a domain name to the allowlist / blocklist of a mini program.
+ * @method Models\CreateMNPSecretKeyResponse CreateMNPSecretKey(Models\CreateMNPSecretKeyRequest $req) This API is used to create a secret key for a mini program or mini game.
  * @method Models\CreateMNPSensitiveAPIPermissionApprovalResponse CreateMNPSensitiveAPIPermissionApproval(Models\CreateMNPSensitiveAPIPermissionApprovalRequest $req) This API is used to create a permission request to allow a mini program to call sensitive APIs.
  * @method Models\CreateMNPVersionResponse CreateMNPVersion(Models\CreateMNPVersionRequest $req) This API is used to create a mini program version.
  * @method Models\CreatePresetKeyResponse CreatePresetKey(Models\CreatePresetKeyRequest $req) This API is used to obtain the encryption key.

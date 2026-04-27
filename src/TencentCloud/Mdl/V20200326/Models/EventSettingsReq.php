@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEventType() Obtain Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used.
  * @method void setEventType(string $EventType) Set Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used.
- * @method string getInputAttachment() Obtain ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
- * @method void setInputAttachment(string $InputAttachment) Set ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
+ * @method string getInputAttachment() Obtain ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`.
+ * @method void setInputAttachment(string $InputAttachment) Set ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`.
  * @method integer getPipelineId() Obtain When the type is FIXED_PTS, it is mandatory and defaults to 0
  * @method void setPipelineId(integer $PipelineId) Set When the type is FIXED_PTS, it is mandatory and defaults to 0
  * @method string getOutputGroupName() Obtain Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.
@@ -57,7 +57,7 @@ class EventSettingsReq extends AbstractModel
     public $EventType;
 
     /**
-     * @var string ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
+     * @var string ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`.
      */
     public $InputAttachment;
 
@@ -123,7 +123,7 @@ class EventSettingsReq extends AbstractModel
 
     /**
      * @param string $EventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used.
-     * @param string $InputAttachment ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
+     * @param string $InputAttachment ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`.
      * @param integer $PipelineId When the type is FIXED_PTS, it is mandatory and defaults to 0
      * @param string $OutputGroupName Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.
      * @param string $ManifestName Name of the manifest file for timed recording, which must end with `.m3u8` for HLS and `.mpd` for DASH. This parameter is required if `EventType` is `TIMED_RECORD`.

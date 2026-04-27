@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStreamLivePlan request structure.
  *
- * @method string getChannelId() Obtain ID of the channel for which you want to configure an event
- * @method void setChannelId(string $ChannelId) Set ID of the channel for which you want to configure an event
- * @method PlanReq getPlan() Obtain Event configuration
- * @method void setPlan(PlanReq $Plan) Set Event configuration
+ * @method string getChannelId() Obtain ID of the channel for which you want to configure an event.
+ * @method void setChannelId(string $ChannelId) Set ID of the channel for which you want to configure an event.
+ * @method PlanReq getPlan() Obtain Event configuration.
+ * @method void setPlan(PlanReq $Plan) Set Event configuration.
  */
 class CreateStreamLivePlanRequest extends AbstractModel
 {
     /**
-     * @var string ID of the channel for which you want to configure an event
+     * @var string ID of the channel for which you want to configure an event.
      */
     public $ChannelId;
 
     /**
-     * @var PlanReq Event configuration
+     * @var PlanReq Event configuration.
      */
     public $Plan;
 
     /**
-     * @param string $ChannelId ID of the channel for which you want to configure an event
-     * @param PlanReq $Plan Event configuration
+     * @param string $ChannelId ID of the channel for which you want to configure an event.
+     * @param PlanReq $Plan Event configuration.
      */
     function __construct()
     {
