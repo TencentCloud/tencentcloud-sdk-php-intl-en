@@ -1,0 +1,142 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Tse\V20201207\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * Preview Information of Cloud-Native Gateway Service
+ *
+ * @method string getID() Obtain service ID
+ * @method void setID(string $ID) Set service ID
+ * @method string getName() Obtain Service name.
+ * @method void setName(string $Name) Set Service name.
+ * @method array getTags() Obtain Tag.
+ * @method void setTags(array $Tags) Set Tag.
+ * @method KongUpstreamInfo getUpstreamInfo() Obtain backend configuration
+ * @method void setUpstreamInfo(KongUpstreamInfo $UpstreamInfo) Set backend configuration
+ * @method string getUpstreamType() Obtain Backend type
+ * @method void setUpstreamType(string $UpstreamType) Set Backend type
+ * @method string getCreatedTime() Obtain Creation time.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time.
+ * @method boolean getEditable() Obtain Whether it is editable.
+ * @method void setEditable(boolean $Editable) Set Whether it is editable.
+ * @method string getPath() Obtain request path
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPath(string $Path) Set request path
+Note: This field may return null, indicating that no valid values can be obtained.
+ */
+class KongServicePreview extends AbstractModel
+{
+    /**
+     * @var string service ID
+     */
+    public $ID;
+
+    /**
+     * @var string Service name.
+     */
+    public $Name;
+
+    /**
+     * @var array Tag.
+     */
+    public $Tags;
+
+    /**
+     * @var KongUpstreamInfo backend configuration
+     */
+    public $UpstreamInfo;
+
+    /**
+     * @var string Backend type
+     */
+    public $UpstreamType;
+
+    /**
+     * @var string Creation time.
+     */
+    public $CreatedTime;
+
+    /**
+     * @var boolean Whether it is editable.
+     */
+    public $Editable;
+
+    /**
+     * @var string request path
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Path;
+
+    /**
+     * @param string $ID service ID
+     * @param string $Name Service name.
+     * @param array $Tags Tag.
+     * @param KongUpstreamInfo $UpstreamInfo backend configuration
+     * @param string $UpstreamType Backend type
+     * @param string $CreatedTime Creation time.
+     * @param boolean $Editable Whether it is editable.
+     * @param string $Path request path
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+            $this->ID = $param["ID"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = $param["Tags"];
+        }
+
+        if (array_key_exists("UpstreamInfo",$param) and $param["UpstreamInfo"] !== null) {
+            $this->UpstreamInfo = new KongUpstreamInfo();
+            $this->UpstreamInfo->deserialize($param["UpstreamInfo"]);
+        }
+
+        if (array_key_exists("UpstreamType",$param) and $param["UpstreamType"] !== null) {
+            $this->UpstreamType = $param["UpstreamType"];
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("Editable",$param) and $param["Editable"] !== null) {
+            $this->Editable = $param["Editable"];
+        }
+
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
+        }
+    }
+}
