@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeImageTaskDetail request structure.
+ * DescribeDesignTask request structure.
  *
- * @method string getTaskId() Obtain <p>ID of the image processing task.</p>
- * @method void setTaskId(string $TaskId) Set <p>ID of the image processing task.</p>
+ * @method string getTaskId() Obtain <p>Task ID.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
  */
-class DescribeImageTaskDetailRequest extends AbstractModel
+class DescribeDesignTaskRequest extends AbstractModel
 {
     /**
-     * @var string <p>ID of the image processing task.</p>
+     * @var string <p>Task ID.</p>
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId <p>ID of the image processing task.</p>
+     * @param string $TaskId <p>Task ID.</p>
      */
     function __construct()
     {

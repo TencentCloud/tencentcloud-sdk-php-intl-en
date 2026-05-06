@@ -65,13 +65,13 @@ use TencentCloud\Common\AbstractModel;
 <li>mainland: within the Chinese mainland;</li>
 <li>overseas: global (excluding the Chinese mainland).</li>
  * @method array getFields() Obtain Predefined fields for delivery. valid values:.
-<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.comom/document/product/1552/105791?from_cn_redirect=1)</li>.
-<Li><A href="https://www.tencentcloud.comom/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-<Li>Specifies the edge function logs (https://www.tencentcloud.comom/document/product/1552/115585?from_cn_redirect=1).</li>.
+<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
+<Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
+<Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
  * @method void setFields(array $Fields) Set Predefined fields for delivery. valid values:.
-<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.comom/document/product/1552/105791?from_cn_redirect=1)</li>.
-<Li><A href="https://www.tencentcloud.comom/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-<Li>Specifies the edge function logs (https://www.tencentcloud.comom/document/product/1552/115585?from_cn_redirect=1).</li>.
+<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
+<Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
+<Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
  * @method array getCustomFields() Obtain The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (`LogType`=`domain`) support custom fields.
  * @method void setCustomFields(array $CustomFields) Set The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (`LogType`=`domain`) support custom fields.
  * @method array getDeliveryConditions() Obtain Filter criteria of log delivery. If this parameter is not specified, all logs will be delivered.
@@ -141,9 +141,9 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
 
     /**
      * @var array Predefined fields for delivery. valid values:.
-<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.comom/document/product/1552/105791?from_cn_redirect=1)</li>.
-<Li><A href="https://www.tencentcloud.comom/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-<Li>Specifies the edge function logs (https://www.tencentcloud.comom/document/product/1552/115585?from_cn_redirect=1).</li>.
+<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
+<Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
+<Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
      */
     public $Fields;
 
@@ -208,9 +208,9 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
 <li>mainland: within the Chinese mainland;</li>
 <li>overseas: global (excluding the Chinese mainland).</li>
      * @param array $Fields Predefined fields for delivery. valid values:.
-<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.comom/document/product/1552/105791?from_cn_redirect=1)</li>.
-<Li><A href="https://www.tencentcloud.comom/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-<Li>Specifies the edge function logs (https://www.tencentcloud.comom/document/product/1552/115585?from_cn_redirect=1).</li>.
+<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
+<Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
+<Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
      * @param array $CustomFields The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (`LogType`=`domain`) support custom fields.
      * @param array $DeliveryConditions Filter criteria of log delivery. If this parameter is not specified, all logs will be delivered.
      * @param integer $Sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not specified, the sampling ratio is 100%.

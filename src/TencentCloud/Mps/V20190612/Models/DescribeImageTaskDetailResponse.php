@@ -20,93 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeImageTaskDetail response structure.
  *
- * @method string getTaskType() Obtain Task type. Currently, the valid values include:
-<li>WorkflowTask: workflow processing task.</li>
+ * @method string getTaskType() Obtain <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskType(string $TaskType) Set Task type. Currently, the valid values include:
-<li>WorkflowTask: workflow processing task.</li>
+ * @method void setTaskType(string $TaskType) Set <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain Task status. Valid values:
-<Li>WAITING: waiting.</li>
-<Li>PROCESSING: processing.</li>
-<li>FINISH: completed.</li>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setStatus(string $Status) Set Task status. Valid values:
-<Li>WAITING: waiting.</li>
-<Li>PROCESSING: processing.</li>
-<li>FINISH: completed.</li>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getErrCode() Obtain Error code when the task fails.
- * @method void setErrCode(integer $ErrCode) Set Error code when the task fails.
- * @method string getErrMsg() Obtain Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method void setErrMsg(string $ErrMsg) Set Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method string getMessage() Obtain Task exception message.
- * @method void setMessage(string $Message) Set Task exception message.
- * @method array getImageProcessTaskResultSet() Obtain Execution status and results of the image processing task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setImageProcessTaskResultSet(array $ImageProcessTaskResultSet) Set Execution status and results of the image processing task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getCreateTime() Obtain Task creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Task creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getFinishTime() Obtain Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setFinishTime(string $FinishTime) Set Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getStatus() Obtain <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(string $Status) Set <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getErrCode() Obtain <p>Error code for task failures.</p>
+ * @method void setErrCode(integer $ErrCode) Set <p>Error code for task failures.</p>
+ * @method string getErrMsg() Obtain <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+ * @method void setErrMsg(string $ErrMsg) Set <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+ * @method string getMessage() Obtain <p>Task exception message.</p>
+ * @method void setMessage(string $Message) Set <p>Task exception message.</p>
+ * @method array getImageProcessTaskResultSet() Obtain <p>Execution status and result of the image processing task.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setImageProcessTaskResultSet(array $ImageProcessTaskResultSet) Set <p>Execution status and result of the image processing task.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreateTime() Obtain <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCreateTime(string $CreateTime) Set <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFinishTime() Obtain <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFinishTime(string $FinishTime) Set <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDefinition() Obtain <p>Unique template identifier.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Unique template identifier.</p>
+ * @method ImageTaskInput getImageTask() Obtain <p>Task initiation parameter.</p>
+ * @method void setImageTask(ImageTaskInput $ImageTask) Set <p>Task initiation parameter.</p>
+ * @method MediaInputInfo getInputInfo() Obtain <p>Image task input information.</p>
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set <p>Image task input information.</p>
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeImageTaskDetailResponse extends AbstractModel
 {
     /**
-     * @var string Task type. Currently, the valid values include:
-<li>WorkflowTask: workflow processing task.</li>
+     * @var string <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TaskType;
 
     /**
-     * @var string Task status. Valid values:
-<Li>WAITING: waiting.</li>
-<Li>PROCESSING: processing.</li>
-<li>FINISH: completed.</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @var integer Error code when the task fails.
+     * @var integer <p>Error code for task failures.</p>
      */
     public $ErrCode;
 
     /**
-     * @var string Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @var string <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
      */
     public $ErrMsg;
 
     /**
-     * @var string Task exception message.
+     * @var string <p>Task exception message.</p>
      */
     public $Message;
 
     /**
-     * @var array Execution status and results of the image processing task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array <p>Execution status and result of the image processing task.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ImageProcessTaskResultSet;
 
     /**
-     * @var string Task creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var string Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FinishTime;
+
+    /**
+     * @var integer <p>Unique template identifier.</p>
+     */
+    public $Definition;
+
+    /**
+     * @var ImageTaskInput <p>Task initiation parameter.</p>
+     */
+    public $ImageTask;
+
+    /**
+     * @var MediaInputInfo <p>Image task input information.</p>
+     */
+    public $InputInfo;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -114,23 +123,22 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $RequestId;
 
     /**
-     * @param string $TaskType Task type. Currently, the valid values include:
-<li>WorkflowTask: workflow processing task.</li>
+     * @param string $TaskType <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status Task status. Valid values:
-<Li>WAITING: waiting.</li>
-<Li>PROCESSING: processing.</li>
-<li>FINISH: completed.</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $ErrCode Error code when the task fails.
-     * @param string $ErrMsg Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param string $Message Task exception message.
-     * @param array $ImageProcessTaskResultSet Execution status and results of the image processing task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $CreateTime Task creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Status <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ErrCode <p>Error code for task failures.</p>
+     * @param string $ErrMsg <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+     * @param string $Message <p>Task exception message.</p>
+     * @param array $ImageProcessTaskResultSet <p>Execution status and result of the image processing task.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreateTime <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FinishTime <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Definition <p>Unique template identifier.</p>
+     * @param ImageTaskInput $ImageTask <p>Task initiation parameter.</p>
+     * @param MediaInputInfo $InputInfo <p>Image task input information.</p>
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -181,6 +189,20 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
             $this->FinishTime = $param["FinishTime"];
+        }
+
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ImageTask",$param) and $param["ImageTask"] !== null) {
+            $this->ImageTask = new ImageTaskInput();
+            $this->ImageTask->deserialize($param["ImageTask"]);
+        }
+
+        if (array_key_exists("InputInfo",$param) and $param["InputInfo"] !== null) {
+            $this->InputInfo = new MediaInputInfo();
+            $this->InputInfo->deserialize($param["InputInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

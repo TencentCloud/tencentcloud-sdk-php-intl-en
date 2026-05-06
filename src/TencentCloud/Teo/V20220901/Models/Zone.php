@@ -122,8 +122,8 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 Note: This field may return null, which indicates a failure to obtain a valid value.
  * @method void setVanityNameServersIps(array $VanityNameServersIps) Set User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
 Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method array getWorkModeInfos() Obtain Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
- * @method void setWorkModeInfos(array $WorkModeInfos) Set Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+ * @method array getWorkModeInfos() Obtain Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
+ * @method void setWorkModeInfos(array $WorkModeInfos) Set Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
  */
 class Zone extends AbstractModel
 {
@@ -275,7 +275,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     public $VanityNameServersIps;
 
     /**
-     * @var array Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+     * @var array Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
      */
     public $WorkModeInfos;
 
@@ -331,7 +331,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param array $VanityNameServersIps User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
 Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param array $WorkModeInfos Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+     * @param array $WorkModeInfos Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
      */
     function __construct()
     {

@@ -28,10 +28,10 @@ If you wish to quickly submit Targets urls under different sites, you can fill i
 If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account.
  * @method array getTargets() Obtain List of resources to be preheated. required. each element format is as follows:.
 http://www.example.com/example.txt.
-Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).
  * @method void setTargets(array $Targets) Set List of resources to be preheated. required. each element format is as follows:.
 http://www.example.com/example.txt.
-Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).
  * @method string getMode() Obtain Preheat mode. valid values:.
 <Li>Default: default mode, which preheats to the middle layer.</li>.
 <Li>Edge: specifies edge preheating mode, which preheats to both edge and middle layer.</li> if left empty, the default value is default.
@@ -85,7 +85,7 @@ If you wish to quickly submit Targets urls under different sites, you can fill i
     /**
      * @var array List of resources to be preheated. required. each element format is as follows:.
 http://www.example.com/example.txt.
-Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).
      */
     public $Targets;
 
@@ -132,7 +132,7 @@ This parameter is the allowlist feature. if needed, contact tencent cloud engine
 If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account.
      * @param array $Targets List of resources to be preheated. required. each element format is as follows:.
 http://www.example.com/example.txt.
-Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).
      * @param string $Mode Preheat mode. valid values:.
 <Li>Default: default mode, which preheats to the middle layer.</li>.
 <Li>Edge: specifies edge preheating mode, which preheats to both edge and middle layer.</li> if left empty, the default value is default.

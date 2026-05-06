@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method array getWorkModeInfos() Obtain Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
- * @method void setWorkModeInfos(array $WorkModeInfos) Set Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+ * @method array getWorkModeInfos() Obtain Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
+ * @method void setWorkModeInfos(array $WorkModeInfos) Set Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
  */
 class ModifyZoneWorkModeRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyZoneWorkModeRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+     * @var array Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
      */
     public $WorkModeInfos;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param array $WorkModeInfos Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+     * @param array $WorkModeInfos Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
      */
     function __construct()
     {

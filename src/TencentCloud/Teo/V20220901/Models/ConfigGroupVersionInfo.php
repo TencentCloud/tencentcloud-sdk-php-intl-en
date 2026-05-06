@@ -26,12 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersionNumber(string $VersionNumber) Set Version No.
  * @method string getGroupId() Obtain Configuraration group ID.
  * @method void setGroupId(string $GroupId) Set Configuraration group ID.
- * @method string getGroupType() Obtain Configuration group type. Valid values: 
-<li>l7_acceleration: L7 acceleration configuration group. </li>
-<li>edge_functions: Edge function configuration group. </li>
- * @method void setGroupType(string $GroupType) Set Configuration group type. Valid values: 
-<li>l7_acceleration: L7 acceleration configuration group. </li>
-<li>edge_functions: Edge function configuration group. </li>
+ * @method string getGroupType() Obtain Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
+ * @method void setGroupType(string $GroupType) Set Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
  * @method string getDescription() Obtain Version description.
  * @method void setDescription(string $Description) Set Version description.
  * @method string getStatus() Obtain Version status. Valid values: 
@@ -63,9 +59,7 @@ class ConfigGroupVersionInfo extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string Configuration group type. Valid values: 
-<li>l7_acceleration: L7 acceleration configuration group. </li>
-<li>edge_functions: Edge function configuration group. </li>
+     * @var string Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
      */
     public $GroupType;
 
@@ -91,9 +85,7 @@ class ConfigGroupVersionInfo extends AbstractModel
      * @param string $VersionId Version ID.
      * @param string $VersionNumber Version No.
      * @param string $GroupId Configuraration group ID.
-     * @param string $GroupType Configuration group type. Valid values: 
-<li>l7_acceleration: L7 acceleration configuration group. </li>
-<li>edge_functions: Edge function configuration group. </li>
+     * @param string $GroupType Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
      * @param string $Description Version description.
      * @param string $Status Version status. Valid values: 
 <li>creating: Being created.</li>

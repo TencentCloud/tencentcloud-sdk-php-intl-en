@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getDomain() Obtain Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1).
- * @method void setDomain(string $Domain) Set Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1).
+ * @method string getDomain() Obtain Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1).
+ * @method void setDomain(string $Domain) Set Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1).
  */
 class CheckFreeCertificateVerificationRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CheckFreeCertificateVerificationRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1).
+     * @var string Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1).
      */
     public $Domain;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $Domain Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1).
+     * @param string $Domain Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1).
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFunctionRule request structure.
  *
- * @method string getZoneId() Obtain Zone ID.
- * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method string getZoneId() Obtain Zone ID
+ * @method void setZoneId(string $ZoneId) Set Zone ID
  * @method array getFunctionRuleConditions() Obtain Rule condition list. There is an OR relationship between different conditions of the same trigger rule.
  * @method void setFunctionRuleConditions(array $FunctionRuleConditions) Set Rule condition list. There is an OR relationship between different conditions of the same trigger rule.
  * @method string getTriggerType() Obtain Function selection configuration type.
@@ -46,7 +46,7 @@ Specifies the default value as direct when left blank.
 class CreateFunctionRuleRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID.
+     * @var string Zone ID
      */
     public $ZoneId;
 
@@ -85,7 +85,7 @@ Specifies the default value as direct when left blank.
     public $Remark;
 
     /**
-     * @param string $ZoneId Zone ID.
+     * @param string $ZoneId Zone ID
      * @param array $FunctionRuleConditions Rule condition list. There is an OR relationship between different conditions of the same trigger rule.
      * @param string $TriggerType Function selection configuration type.
 <Li>Direct: specifies the execution function directly.</li>.

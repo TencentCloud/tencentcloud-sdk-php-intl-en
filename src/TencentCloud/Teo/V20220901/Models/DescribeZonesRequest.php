@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeZones request structure.
  *
- * @method integer getOffset() Obtain The page offset. Default value: 0
- * @method void setOffset(integer $Offset) Set The page offset. Default value: 0
+ * @method integer getOffset() Obtain The page offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set The page offset. Default value: 0.
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 100.
  * @method array getFilters() Obtain Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, it returns all authorized site information under the current appid. the detailed filter criteria are as follows: <li>zone-name: filter by site name.</li><li>zone-type: filter by website type. options:<br>??full: NS access type;<br>??partial: CNAME-based;<br>??partialComposite: no domain access;<br>??dnsPodAccess: DNSPod managed access;<br>??pages: pages access type;<br>??ai: edge reasoning access type.</li><li>zone-id: filter by site id in the format like zone-2noz78a8ev6k.</li><li>status: filter by site status. options:<br>??active: NS switchover completed;<br>??pending: NS to be switched;<br>??deleted: has been deleted.</li><li>tag-key: filter according to the tag key.</li><li>tag-value: filter by tag value.</li><li>alias-zone-name: filter by identical site identifier.</li>fuzzy query supports filtering fields named zone-name or alias-zone-name.
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeZonesRequest extends AbstractModel
 {
     /**
-     * @var integer The page offset. Default value: 0
+     * @var integer The page offset. Default value: 0.
      */
     public $Offset;
 
@@ -83,7 +83,7 @@ class DescribeZonesRequest extends AbstractModel
     public $Direction;
 
     /**
-     * @param integer $Offset The page offset. Default value: 0
+     * @param integer $Offset The page offset. Default value: 0.
      * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 100.
      * @param array $Filters Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, it returns all authorized site information under the current appid. the detailed filter criteria are as follows: <li>zone-name: filter by site name.</li><li>zone-type: filter by website type. options:<br>??full: NS access type;<br>??partial: CNAME-based;<br>??partialComposite: no domain access;<br>??dnsPodAccess: DNSPod managed access;<br>??pages: pages access type;<br>??ai: edge reasoning access type.</li><li>zone-id: filter by site id in the format like zone-2noz78a8ev6k.</li><li>status: filter by site status. options:<br>??active: NS switchover completed;<br>??pending: NS to be switched;<br>??deleted: has been deleted.</li><li>tag-key: filter according to the tag key.</li><li>tag-value: filter by tag value.</li><li>alias-zone-name: filter by identical site identifier.</li>fuzzy query supports filtering fields named zone-name or alias-zone-name.
      * @param string $Order Sort the returned results according to this field. Values include:

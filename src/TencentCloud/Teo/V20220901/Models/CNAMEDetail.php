@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 <Li>0: non-fake site.</li>.
 <Li>1: fake site.</li>.
 
- * @method OwnershipVerification getOwnershipVerification() Obtain Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1).
- * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1).
+ * @method OwnershipVerification getOwnershipVerification() Obtain Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+ * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
  */
 class CNAMEDetail extends AbstractModel
 {
@@ -42,7 +42,7 @@ class CNAMEDetail extends AbstractModel
     public $IsFake;
 
     /**
-     * @var OwnershipVerification Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1).
+     * @var OwnershipVerification Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      */
     public $OwnershipVerification;
 
@@ -51,7 +51,7 @@ class CNAMEDetail extends AbstractModel
 <Li>0: non-fake site.</li>.
 <Li>1: fake site.</li>.
 
-     * @param OwnershipVerification $OwnershipVerification Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1).
+     * @param OwnershipVerification $OwnershipVerification Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      */
     function __construct()
     {

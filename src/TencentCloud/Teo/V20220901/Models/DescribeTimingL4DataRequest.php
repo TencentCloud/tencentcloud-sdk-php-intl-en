@@ -22,48 +22,42 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() Obtain The start time.
  * @method void setStartTime(string $StartTime) Set The start time.
- * @method string getEndTime() Obtain End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
- * @method void setEndTime(string $EndTime) Set End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
- * @method array getMetricNames() Obtain Query metrics. valid values:.
-<ul><li>**l4Flow_flux**: specifies the total access traffic. measurement unit: Byte. metric value type: Integer.</li>.
-<li>**l4Flow_inFlux**: specifies access inbound traffic. measurement unit: Byte. metric value type: Integer.</li>.
-<li>**l4Flow_outFlux**: access outbound traffic. measurement unit: Byte. metric value type: Integer.</li>.
-<li>**l4Flow_inBandwidth**: specifies the inbound bandwidth peak of the visit. measurement unit: bps. metric value type: Integer.</li>.
-<li>**l4Flow_outBandwidth**: specifies the outbound bandwidth peak. measurement unit: bps. metric value type: Integer.</li>.
-<li>**l4Flow_connections**: specifies the number of concurrent connections, measurement unit: unit, metric value type: Integer.</li>.
-<li>**l4Flow_newConnectionsRate**: the rate of new connections, measurement unit: per second, metric value type: Float, rounded to two decimal places.</li></ul>**note**:<ul><li>metrics of <code>Integer</code> type will return corresponding time series Data from <code>Data.N.TypeValue</code>;</li>.
-<li>Metrics with <code>Float</code> value type will return corresponding time series Data from <code>Data.N.FloatTypeValue</code>.</li></ul>.
- * @method void setMetricNames(array $MetricNames) Set Query metrics. valid values:.
-<ul><li>**l4Flow_flux**: specifies the total access traffic. measurement unit: Byte. metric value type: Integer.</li>.
-<li>**l4Flow_inFlux**: specifies access inbound traffic. measurement unit: Byte. metric value type: Integer.</li>.
-<li>**l4Flow_outFlux**: access outbound traffic. measurement unit: Byte. metric value type: Integer.</li>.
-<li>**l4Flow_inBandwidth**: specifies the inbound bandwidth peak of the visit. measurement unit: bps. metric value type: Integer.</li>.
-<li>**l4Flow_outBandwidth**: specifies the outbound bandwidth peak. measurement unit: bps. metric value type: Integer.</li>.
-<li>**l4Flow_connections**: specifies the number of concurrent connections, measurement unit: unit, metric value type: Integer.</li>.
-<li>**l4Flow_newConnectionsRate**: the rate of new connections, measurement unit: per second, metric value type: Float, rounded to two decimal places.</li></ul>**note**:<ul><li>metrics of <code>Integer</code> type will return corresponding time series Data from <code>Data.N.TypeValue</code>;</li>.
-<li>Metrics with <code>Float</code> value type will return corresponding time series Data from <code>Data.N.FloatTypeValue</code>.</li></ul>.
- * @method array getZoneIds() Obtain Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
-Import up to 100 site ids. to query all site data under the tencent cloud root account, use `*` as a replacement. querying account-level data requires permission for all site resources of this api.
- * @method void setZoneIds(array $ZoneIds) Set Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
-Import up to 100 site ids. to query all site data under the tencent cloud root account, use `*` as a replacement. querying account-level data requires permission for all site resources of this api.
+ * @method string getEndTime() Obtain The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+ * @method void setEndTime(string $EndTime) Set The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+ * @method array getMetricNames() Obtain Metric list. Valid values:
+<ul><li>**l4Flow_flux**: Total client traffic. Unit: Byte. Value type: Integer.</li>
+<li>**l4Flow_inFlux**: Inbound client traffic. Unit: Byte. Value type: Integer.</li>
+<li>**l4Flow_outFlux**: Outbound client traffic. Unit: Byte. Value type: Integer.</li>
+<li>**l4Flow_inBandwidth**: Peak inbound client bandwidth. Unit: bps. Value type: Integer.</li>
+<li>**l4Flow_outBandwidth**: Peak outbound client bandwidth. Unit: bps. Value type: Integer.</li>
+<li>**l4Flow_connections**: Concurrent client connections. Unit: count. Value type: Integer.</li>
+<li>**l4Flow_newConnectionsRate**: New connection rate. Unit: connections/second. Value type: Float. Rounded to two decimal places.</li></ul>**Note**:<ul><li>Metrics with an <code>Integer</code> value type return time-series data via <code>Data.N.TypeValue</code>;</li>
+<li>Metrics with a <code>Float</code> value type return time-series data via <code>Data.N.FloatTypeValue</code>.</li></ul>
+ * @method void setMetricNames(array $MetricNames) Set Metric list. Valid values:
+<ul><li>**l4Flow_flux**: Total client traffic. Unit: Byte. Value type: Integer.</li>
+<li>**l4Flow_inFlux**: Inbound client traffic. Unit: Byte. Value type: Integer.</li>
+<li>**l4Flow_outFlux**: Outbound client traffic. Unit: Byte. Value type: Integer.</li>
+<li>**l4Flow_inBandwidth**: Peak inbound client bandwidth. Unit: bps. Value type: Integer.</li>
+<li>**l4Flow_outBandwidth**: Peak outbound client bandwidth. Unit: bps. Value type: Integer.</li>
+<li>**l4Flow_connections**: Concurrent client connections. Unit: count. Value type: Integer.</li>
+<li>**l4Flow_newConnectionsRate**: New connection rate. Unit: connections/second. Value type: Float. Rounded to two decimal places.</li></ul>**Note**:<ul><li>Metrics with an <code>Integer</code> value type return time-series data via <code>Data.N.TypeValue</code>;</li>
+<li>Metrics with a <code>Float</code> value type return time-series data via <code>Data.N.FloatTypeValue</code>.</li></ul>
+ * @method array getZoneIds() Obtain Site ID. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne: Tencent Cloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+Import up to 100 zone-ids. To query all site data under the Tencent Cloud root account, use `*` as a replacement. Querying account-level data requires permission for all site resources of this API.
+ * @method void setZoneIds(array $ZoneIds) Set Site ID. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne: Tencent Cloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+Import up to 100 zone-ids. To query all site data under the Tencent Cloud root account, use `*` as a replacement. Querying account-level data requires permission for all site resources of this API.
  * @method array getProxyIds() Obtain List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
  * @method void setProxyIds(array $ProxyIds) Set List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
- * @method string getInterval() Obtain Time granularity of the query. valid values:.
-<ul><li>**min**: 1 minute;</li>.
-<Li>**5min**: 5 minutes;</li>.
-<Li>**Hour**: 1 hour;</li>.
-<Li>**Day**: 1 day.</li></ul>if this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. specifically, data will be queried with a granularity of <code>min</code>, <code>5min</code>, <code>hour</code>, and <code>day</code> respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
- * @method void setInterval(string $Interval) Set Time granularity of the query. valid values:.
-<ul><li>**min**: 1 minute;</li>.
-<Li>**5min**: 5 minutes;</li>.
-<Li>**Hour**: 1 hour;</li>.
-<Li>**Day**: 1 day.</li></ul>if this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. specifically, data will be queried with a granularity of <code>min</code>, <code>5min</code>, <code>hour</code>, and <code>day</code> respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
- * @method array getFilters() Obtain Filter criteria. the detailed Key values of filter criteria are as follows:.
-<ul><li>**ruleId**: filter by forwarding rule ID.</li>.
-<li>**proxyId**: filters by l4 proxy instance ID.</li></ul>.
- * @method void setFilters(array $Filters) Set Filter criteria. the detailed Key values of filter criteria are as follows:.
-<ul><li>**ruleId**: filter by forwarding rule ID.</li>.
-<li>**proxyId**: filters by l4 proxy instance ID.</li></ul>.
+ * @method string getInterval() Obtain Time granularity of the query. Valid values:
+<ul><li>**min**: 1 minute;</li><Li>**5min**: 5 minutes;</li><Li>**hour**: 1 hour;</li><Li>**day**: 1 day.</li></ul>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, data will be queried with a granularity of <code>min</code>, <code>5min</code>, <code>hour</code>, and <code>day</code> respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
+ * @method void setInterval(string $Interval) Set Time granularity of the query. Valid values:
+<ul><li>**min**: 1 minute;</li><Li>**5min**: 5 minutes;</li><Li>**hour**: 1 hour;</li><Li>**day**: 1 day.</li></ul>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, data will be queried with a granularity of <code>min</code>, <code>5min</code>, <code>hour</code>, and <code>day</code> respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
+ * @method array getFilters() Obtain Filter criteria. The detailed key values of filter criteria are as follows:.
+<ul><li>**ruleId**: filter by forwarding rule ID.</li>
+<li>**proxyId**: filter by L4 proxy instance ID.</li></ul>
+ * @method void setFilters(array $Filters) Set Filter criteria. The detailed key values of filter criteria are as follows:.
+<ul><li>**ruleId**: filter by forwarding rule ID.</li>
+<li>**proxyId**: filter by L4 proxy instance ID.</li></ul>
  * @method string getArea() Obtain Data ownership region. This parameter is deprecated. Please filter data by client region in Filters.country.
  * @method void setArea(string $Area) Set Data ownership region. This parameter is deprecated. Please filter data by client region in Filters.country.
  */
@@ -75,26 +69,26 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @var string The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public $EndTime;
 
     /**
-     * @var array Query metrics. valid values:.
-<ul><li>**l4Flow_flux**: specifies the total access traffic. measurement unit: Byte. metric value type: Integer.</li>.
-<li>**l4Flow_inFlux**: specifies access inbound traffic. measurement unit: Byte. metric value type: Integer.</li>.
-<li>**l4Flow_outFlux**: access outbound traffic. measurement unit: Byte. metric value type: Integer.</li>.
-<li>**l4Flow_inBandwidth**: specifies the inbound bandwidth peak of the visit. measurement unit: bps. metric value type: Integer.</li>.
-<li>**l4Flow_outBandwidth**: specifies the outbound bandwidth peak. measurement unit: bps. metric value type: Integer.</li>.
-<li>**l4Flow_connections**: specifies the number of concurrent connections, measurement unit: unit, metric value type: Integer.</li>.
-<li>**l4Flow_newConnectionsRate**: the rate of new connections, measurement unit: per second, metric value type: Float, rounded to two decimal places.</li></ul>**note**:<ul><li>metrics of <code>Integer</code> type will return corresponding time series Data from <code>Data.N.TypeValue</code>;</li>.
-<li>Metrics with <code>Float</code> value type will return corresponding time series Data from <code>Data.N.FloatTypeValue</code>.</li></ul>.
+     * @var array Metric list. Valid values:
+<ul><li>**l4Flow_flux**: Total client traffic. Unit: Byte. Value type: Integer.</li>
+<li>**l4Flow_inFlux**: Inbound client traffic. Unit: Byte. Value type: Integer.</li>
+<li>**l4Flow_outFlux**: Outbound client traffic. Unit: Byte. Value type: Integer.</li>
+<li>**l4Flow_inBandwidth**: Peak inbound client bandwidth. Unit: bps. Value type: Integer.</li>
+<li>**l4Flow_outBandwidth**: Peak outbound client bandwidth. Unit: bps. Value type: Integer.</li>
+<li>**l4Flow_connections**: Concurrent client connections. Unit: count. Value type: Integer.</li>
+<li>**l4Flow_newConnectionsRate**: New connection rate. Unit: connections/second. Value type: Float. Rounded to two decimal places.</li></ul>**Note**:<ul><li>Metrics with an <code>Integer</code> value type return time-series data via <code>Data.N.TypeValue</code>;</li>
+<li>Metrics with a <code>Float</code> value type return time-series data via <code>Data.N.FloatTypeValue</code>.</li></ul>
      */
     public $MetricNames;
 
     /**
-     * @var array Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
-Import up to 100 site ids. to query all site data under the tencent cloud root account, use `*` as a replacement. querying account-level data requires permission for all site resources of this api.
+     * @var array Site ID. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne: Tencent Cloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+Import up to 100 zone-ids. To query all site data under the Tencent Cloud root account, use `*` as a replacement. Querying account-level data requires permission for all site resources of this API.
      */
     public $ZoneIds;
 
@@ -104,18 +98,15 @@ Import up to 100 site ids. to query all site data under the tencent cloud root a
     public $ProxyIds;
 
     /**
-     * @var string Time granularity of the query. valid values:.
-<ul><li>**min**: 1 minute;</li>.
-<Li>**5min**: 5 minutes;</li>.
-<Li>**Hour**: 1 hour;</li>.
-<Li>**Day**: 1 day.</li></ul>if this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. specifically, data will be queried with a granularity of <code>min</code>, <code>5min</code>, <code>hour</code>, and <code>day</code> respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
+     * @var string Time granularity of the query. Valid values:
+<ul><li>**min**: 1 minute;</li><Li>**5min**: 5 minutes;</li><Li>**hour**: 1 hour;</li><Li>**day**: 1 day.</li></ul>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, data will be queried with a granularity of <code>min</code>, <code>5min</code>, <code>hour</code>, and <code>day</code> respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
      */
     public $Interval;
 
     /**
-     * @var array Filter criteria. the detailed Key values of filter criteria are as follows:.
-<ul><li>**ruleId**: filter by forwarding rule ID.</li>.
-<li>**proxyId**: filters by l4 proxy instance ID.</li></ul>.
+     * @var array Filter criteria. The detailed key values of filter criteria are as follows:.
+<ul><li>**ruleId**: filter by forwarding rule ID.</li>
+<li>**proxyId**: filter by L4 proxy instance ID.</li></ul>
      */
     public $Filters;
 
@@ -127,27 +118,24 @@ Import up to 100 site ids. to query all site data under the tencent cloud root a
 
     /**
      * @param string $StartTime The start time.
-     * @param string $EndTime End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
-     * @param array $MetricNames Query metrics. valid values:.
-<ul><li>**l4Flow_flux**: specifies the total access traffic. measurement unit: Byte. metric value type: Integer.</li>.
-<li>**l4Flow_inFlux**: specifies access inbound traffic. measurement unit: Byte. metric value type: Integer.</li>.
-<li>**l4Flow_outFlux**: access outbound traffic. measurement unit: Byte. metric value type: Integer.</li>.
-<li>**l4Flow_inBandwidth**: specifies the inbound bandwidth peak of the visit. measurement unit: bps. metric value type: Integer.</li>.
-<li>**l4Flow_outBandwidth**: specifies the outbound bandwidth peak. measurement unit: bps. metric value type: Integer.</li>.
-<li>**l4Flow_connections**: specifies the number of concurrent connections, measurement unit: unit, metric value type: Integer.</li>.
-<li>**l4Flow_newConnectionsRate**: the rate of new connections, measurement unit: per second, metric value type: Float, rounded to two decimal places.</li></ul>**note**:<ul><li>metrics of <code>Integer</code> type will return corresponding time series Data from <code>Data.N.TypeValue</code>;</li>.
-<li>Metrics with <code>Float</code> value type will return corresponding time series Data from <code>Data.N.FloatTypeValue</code>.</li></ul>.
-     * @param array $ZoneIds Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
-Import up to 100 site ids. to query all site data under the tencent cloud root account, use `*` as a replacement. querying account-level data requires permission for all site resources of this api.
+     * @param string $EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @param array $MetricNames Metric list. Valid values:
+<ul><li>**l4Flow_flux**: Total client traffic. Unit: Byte. Value type: Integer.</li>
+<li>**l4Flow_inFlux**: Inbound client traffic. Unit: Byte. Value type: Integer.</li>
+<li>**l4Flow_outFlux**: Outbound client traffic. Unit: Byte. Value type: Integer.</li>
+<li>**l4Flow_inBandwidth**: Peak inbound client bandwidth. Unit: bps. Value type: Integer.</li>
+<li>**l4Flow_outBandwidth**: Peak outbound client bandwidth. Unit: bps. Value type: Integer.</li>
+<li>**l4Flow_connections**: Concurrent client connections. Unit: count. Value type: Integer.</li>
+<li>**l4Flow_newConnectionsRate**: New connection rate. Unit: connections/second. Value type: Float. Rounded to two decimal places.</li></ul>**Note**:<ul><li>Metrics with an <code>Integer</code> value type return time-series data via <code>Data.N.TypeValue</code>;</li>
+<li>Metrics with a <code>Float</code> value type return time-series data via <code>Data.N.FloatTypeValue</code>.</li></ul>
+     * @param array $ZoneIds Site ID. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne: Tencent Cloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+Import up to 100 zone-ids. To query all site data under the Tencent Cloud root account, use `*` as a replacement. Querying account-level data requires permission for all site resources of this API.
      * @param array $ProxyIds List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
-     * @param string $Interval Time granularity of the query. valid values:.
-<ul><li>**min**: 1 minute;</li>.
-<Li>**5min**: 5 minutes;</li>.
-<Li>**Hour**: 1 hour;</li>.
-<Li>**Day**: 1 day.</li></ul>if this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. specifically, data will be queried with a granularity of <code>min</code>, <code>5min</code>, <code>hour</code>, and <code>day</code> respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
-     * @param array $Filters Filter criteria. the detailed Key values of filter criteria are as follows:.
-<ul><li>**ruleId**: filter by forwarding rule ID.</li>.
-<li>**proxyId**: filters by l4 proxy instance ID.</li></ul>.
+     * @param string $Interval Time granularity of the query. Valid values:
+<ul><li>**min**: 1 minute;</li><Li>**5min**: 5 minutes;</li><Li>**hour**: 1 hour;</li><Li>**day**: 1 day.</li></ul>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, data will be queried with a granularity of <code>min</code>, <code>5min</code>, <code>hour</code>, and <code>day</code> respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
+     * @param array $Filters Filter criteria. The detailed key values of filter criteria are as follows:.
+<ul><li>**ruleId**: filter by forwarding rule ID.</li>
+<li>**proxyId**: filter by L4 proxy instance ID.</li></ul>
      * @param string $Area Data ownership region. This parameter is deprecated. Please filter data by client region in Filters.country.
      */
     function __construct()

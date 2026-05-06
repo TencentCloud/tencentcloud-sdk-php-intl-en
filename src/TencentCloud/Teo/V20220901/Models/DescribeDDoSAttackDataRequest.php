@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`ddos_attackMaxPackageRate`: Peak attack packet rate;</li>
 <li>`ddos_attackBandwidth`: Time-series data of attack bandwidth;</li>
 <li>`ddos_attackPackageRate`: Time-series data of attack packet rate.</li>
- * @method array getZoneIds() Obtain Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
- * @method void setZoneIds(array $ZoneIds) Set Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+ * @method array getZoneIds() Obtain Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+ * @method void setZoneIds(array $ZoneIds) Set Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
  * @method array getPolicyIds() Obtain IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
  * @method void setPolicyIds(array $PolicyIds) Set IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
  * @method string getInterval() Obtain Query period granularity. Valid values:
@@ -79,7 +79,7 @@ class DescribeDDoSAttackDataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+     * @var array Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
      */
     public $ZoneIds;
 
@@ -113,7 +113,7 @@ class DescribeDDoSAttackDataRequest extends AbstractModel
 <li>`ddos_attackMaxPackageRate`: Peak attack packet rate;</li>
 <li>`ddos_attackBandwidth`: Time-series data of attack bandwidth;</li>
 <li>`ddos_attackPackageRate`: Time-series data of attack packet rate.</li>
-     * @param array $ZoneIds Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+     * @param array $ZoneIds Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
      * @param array $PolicyIds IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
      * @param string $Interval Query period granularity. Valid values:
 <li>min: 1 minute;</li>

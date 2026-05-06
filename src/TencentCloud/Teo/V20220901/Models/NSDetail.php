@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsFake(integer $IsFake) Set Existence of a site with the same name. valid values:.
 <Li>0: no site with the same name exists.</li>.
 <Li>Specifies the name already exists.</li>.
- * @method OwnershipVerification getOwnershipVerification() Obtain Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1).
- * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1).
+ * @method OwnershipVerification getOwnershipVerification() Obtain Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+ * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
  * @method array getOriginalNameServers() Obtain Lists the NS servers currently in use by the selected site detected by EdgeOne.
  * @method void setOriginalNameServers(array $OriginalNameServers) Set Lists the NS servers currently in use by the selected site detected by EdgeOne.
  * @method array getNameServers() Obtain Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
@@ -60,7 +60,7 @@ class NSDetail extends AbstractModel
     public $IsFake;
 
     /**
-     * @var OwnershipVerification Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1).
+     * @var OwnershipVerification Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      */
     public $OwnershipVerification;
 
@@ -91,7 +91,7 @@ class NSDetail extends AbstractModel
      * @param integer $IsFake Existence of a site with the same name. valid values:.
 <Li>0: no site with the same name exists.</li>.
 <Li>Specifies the name already exists.</li>.
-     * @param OwnershipVerification $OwnershipVerification Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1).
+     * @param OwnershipVerification $OwnershipVerification Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      * @param array $OriginalNameServers Lists the NS servers currently in use by the selected site detected by EdgeOne.
      * @param array $NameServers Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
      * @param VanityNameServers $VanityNameServers Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.

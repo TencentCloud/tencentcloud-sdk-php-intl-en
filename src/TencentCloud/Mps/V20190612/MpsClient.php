@@ -38,6 +38,7 @@ Smart subtitle (full speech, speech hotword, and speech translation)
  * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) This API is used to create a live recording template.
  * @method Models\CreatePersonSampleResponse CreatePersonSample(Models\CreatePersonSampleRequest $req) This API is used to create image samples for video processing operations such as content recognition and inappropriate information detection with the help of technologies such as facial feature positioning.
  * @method Models\CreateProcessImageTemplateResponse CreateProcessImageTemplate(Models\CreateProcessImageTemplateRequest $req) This API is used to create an image processing template.
+ * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) This API is used to create an episode project.
  * @method Models\CreateQualityControlTemplateResponse CreateQualityControlTemplate(Models\CreateQualityControlTemplateRequest $req) This API is used to create a media quality inspection template. Up to 50 templates can be created.
  * @method Models\CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(Models\CreateSampleSnapshotTemplateRequest $req) This API is used to create a custom sampled screencapturing template. Up to 16 templates can be created.
  * @method Models\CreateScheduleResponse CreateSchedule(Models\CreateScheduleRequest $req) This API is used to set processing rules for uploaded media files under the specified Bucket directory in COS, including:.
@@ -89,6 +90,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplate(Models\DeleteLiveRecordTemplateRequest $req) This API is used to delete a live recording template.
  * @method Models\DeletePersonSampleResponse DeletePersonSample(Models\DeletePersonSampleRequest $req) This API is used to delete image samples by image ID.
  * @method Models\DeleteProcessImageTemplateResponse DeleteProcessImageTemplate(Models\DeleteProcessImageTemplateRequest $req) This API is used to delete an image processing template.
+ * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) This API is used to delete an episode project.
  * @method Models\DeleteQualityControlTemplateResponse DeleteQualityControlTemplate(Models\DeleteQualityControlTemplateRequest $req) This API is used to delete a media quality inspection template.
  * @method Models\DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(Models\DeleteSampleSnapshotTemplateRequest $req) This API is used to delete a custom sampled screencapturing template.
  * @method Models\DeleteScheduleResponse DeleteSchedule(Models\DeleteScheduleRequest $req) This API is used to delete a scheme.
@@ -111,6 +113,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DescribeBatchTaskDetailResponse DescribeBatchTaskDetail(Models\DescribeBatchTaskDetailRequest $req) This API is used to query the details of the task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
  * @method Models\DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplates(Models\DescribeBlindWatermarkTemplatesRequest $req) This API is used to query a user-defined digital watermark template, and the pagination query is supported based on conditions.
  * @method Models\DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(Models\DescribeContentReviewTemplatesRequest $req) This API is used to query content moderation templates by template ID. Both custom and preset templates that match the template IDs passed in will be returned.
+ * @method Models\DescribeDesignTaskResponse DescribeDesignTask(Models\DescribeDesignTaskRequest $req) This API is used to query the result of an asynchronous voice design task.
  * @method Models\DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(Models\DescribeImageSpriteTemplatesRequest $req) This API is used to query the list of image sprite generating templates and supports paged queries by filters.
  * @method Models\DescribeImageTaskDetailResponse DescribeImageTaskDetail(Models\DescribeImageTaskDetailRequest $req) This API is used to query the details of the task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
  * @method Models\DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(Models\DescribeLiveRecordTemplatesRequest $req) This API is used to get a live recording template.

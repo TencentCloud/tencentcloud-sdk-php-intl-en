@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeImageTaskDetail request structure.
+ * DeleteProject request structure.
  *
- * @method string getTaskId() Obtain <p>ID of the image processing task.</p>
- * @method void setTaskId(string $TaskId) Set <p>ID of the image processing task.</p>
+ * @method string getProjectId() Obtain <p>Project ID.</p>
+ * @method void setProjectId(string $ProjectId) Set <p>Project ID.</p>
  */
-class DescribeImageTaskDetailRequest extends AbstractModel
+class DeleteProjectRequest extends AbstractModel
 {
     /**
-     * @var string <p>ID of the image processing task.</p>
+     * @var string <p>Project ID.</p>
      */
-    public $TaskId;
+    public $ProjectId;
 
     /**
-     * @param string $TaskId <p>ID of the image processing task.</p>
+     * @param string $ProjectId <p>Project ID.</p>
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeImageTaskDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

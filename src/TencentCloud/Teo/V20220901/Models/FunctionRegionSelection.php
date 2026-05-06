@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFunctionId() Obtain Function ID.
  * @method void setFunctionId(string $FunctionId) Set Function ID.
- * @method array getRegions() Obtain List of countries/regions. example value: CN: china, CN.GD: guangdong, china. for values, see: [country/region and corresponding code enumeration](https://www.tencentcloud.comom/document/product/1552/112542?from_cn_redirect=1).
- * @method void setRegions(array $Regions) Set List of countries/regions. example value: CN: china, CN.GD: guangdong, china. for values, see: [country/region and corresponding code enumeration](https://www.tencentcloud.comom/document/product/1552/112542?from_cn_redirect=1).
+ * @method array getRegions() Obtain List of countries/regions. example value: CN: china, CN.GD: guangdong, china. for values, see: [country/region and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
+ * @method void setRegions(array $Regions) Set List of countries/regions. example value: CN: china, CN.GD: guangdong, china. for values, see: [country/region and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
  */
 class FunctionRegionSelection extends AbstractModel
 {
@@ -33,13 +33,13 @@ class FunctionRegionSelection extends AbstractModel
     public $FunctionId;
 
     /**
-     * @var array List of countries/regions. example value: CN: china, CN.GD: guangdong, china. for values, see: [country/region and corresponding code enumeration](https://www.tencentcloud.comom/document/product/1552/112542?from_cn_redirect=1).
+     * @var array List of countries/regions. example value: CN: china, CN.GD: guangdong, china. for values, see: [country/region and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
      */
     public $Regions;
 
     /**
      * @param string $FunctionId Function ID.
-     * @param array $Regions List of countries/regions. example value: CN: china, CN.GD: guangdong, china. for values, see: [country/region and corresponding code enumeration](https://www.tencentcloud.comom/document/product/1552/112542?from_cn_redirect=1).
+     * @param array $Regions List of countries/regions. example value: CN: china, CN.GD: guangdong, china. for values, see: [country/region and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
      */
     function __construct()
     {
