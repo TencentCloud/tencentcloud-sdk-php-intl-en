@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method InputFile3D getFile() Obtain File URL of the 3D model requiring UV unfold
 Supported formats: FBX, OBJ, GLB
-3D model limit: less than 30000 faces
+3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100
  * @method void setFile(InputFile3D $File) Set File URL of the 3D model requiring UV unfold
 Supported formats: FBX, OBJ, GLB
-3D model limit: less than 30000 faces
+3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100
  */
 class SubmitHunyuanTo3DUVJobRequest extends AbstractModel
 {
     /**
      * @var InputFile3D File URL of the 3D model requiring UV unfold
 Supported formats: FBX, OBJ, GLB
-3D model limit: less than 30000 faces
+3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100
      */
     public $File;
 
     /**
      * @param InputFile3D $File File URL of the 3D model requiring UV unfold
 Supported formats: FBX, OBJ, GLB
-3D model limit: less than 30000 faces
+3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100
      */
     function __construct()
     {

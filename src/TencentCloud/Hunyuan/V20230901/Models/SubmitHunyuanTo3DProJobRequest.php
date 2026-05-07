@@ -104,13 +104,13 @@ Specifies the supported face count generation range. value range: 3000-1500000
 Specifies the supported face count generation range. value range: 3000-1500000
  * @method string getGenerateType() Obtain Generation task type. default: Normal. valid values:
 Normal: generates a geometric model with textures
-LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+LowPoly: specifies the model generated after intelligent polygon reduction
+Geometry: specifies whether to generate a Geometry model without textures (white model). When this parameter is enabled, only GLB will be output andthe EnablePBR parameter does not take effect
 Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
  * @method void setGenerateType(string $GenerateType) Set Generation task type. default: Normal. valid values:
 Normal: generates a geometric model with textures
-LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+LowPoly: specifies the model generated after intelligent polygon reduction
+Geometry: specifies whether to generate a Geometry model without textures (white model). When this parameter is enabled, only GLB will be output andthe EnablePBR parameter does not take effect
 Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
  * @method string getPolygonType() Obtain This parameter only takes effect when LowPoly mode is selected from GenerateType
 
@@ -197,8 +197,8 @@ Specifies the supported face count generation range. value range: 3000-1500000
     /**
      * @var string Generation task type. default: Normal. valid values:
 Normal: generates a geometric model with textures
-LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+LowPoly: specifies the model generated after intelligent polygon reduction
+Geometry: specifies whether to generate a Geometry model without textures (white model). When this parameter is enabled, only GLB will be output andthe EnablePBR parameter does not take effect
 Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
      */
     public $GenerateType;
@@ -256,8 +256,8 @@ Supported image format: JPG or PNG
 Specifies the supported face count generation range. value range: 3000-1500000
      * @param string $GenerateType Generation task type. default: Normal. valid values:
 Normal: generates a geometric model with textures
-LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+LowPoly: specifies the model generated after intelligent polygon reduction
+Geometry: specifies whether to generate a Geometry model without textures (white model). When this parameter is enabled, only GLB will be output andthe EnablePBR parameter does not take effect
 Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
      * @param string $PolygonType This parameter only takes effect when LowPoly mode is selected from GenerateType
 

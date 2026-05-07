@@ -23,14 +23,34 @@ use TencentCloud\Common\AbstractModel;
 `VoiceMessage`: Voice Messaging;
 `GMECloudApi`: GME cloud APIs
  *
-
+ * @method string getSceneId() Obtain 
+ * @method void setSceneId(string $SceneId) Set 
+ * @method boolean getStatus() Obtain 
+ * @method void setStatus(boolean $Status) Set 
+ * @method string getCallbackUrl() Obtain 
+ * @method void setCallbackUrl(string $CallbackUrl) Set 
  */
 class SceneInfo extends AbstractModel
 {
-
+    /**
+     * @var string 
+     */
+    public $SceneId;
 
     /**
+     * @var boolean 
+     */
+    public $Status;
 
+    /**
+     * @var string 
+     */
+    public $CallbackUrl;
+
+    /**
+     * @param string $SceneId 
+     * @param boolean $Status 
+     * @param string $CallbackUrl 
      */
     function __construct()
     {
@@ -45,6 +65,16 @@ class SceneInfo extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SceneId",$param) and $param["SceneId"] !== null) {
+            $this->SceneId = $param["SceneId"];
+        }
 
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
+        }
     }
 }

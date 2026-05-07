@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tcsas\V20250106\Models as Models;
 
 /**
- * @method Models\AddTeamMemberResponse AddTeamMember(Models\AddTeamMemberRequest $req) This API is used to add a team member.
+ * @method Models\AddTeamMemberResponse AddTeamMember(Models\AddTeamMemberRequest $req) This API is used to add a team member
  * @method Models\ConfigureMNGPreviewResponse ConfigureMNGPreview(Models\ConfigureMNGPreviewRequest $req) This API is used to configure the preview of a mini game.
  * @method Models\ConfigureMNPPreviewResponse ConfigureMNPPreview(Models\ConfigureMNPPreviewRequest $req) This API is used to configure the preview of a mini program.
  * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) This API is used to create an application.

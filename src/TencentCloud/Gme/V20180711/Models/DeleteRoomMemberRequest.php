@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRoomId() Obtain ID of the target room
  * @method void setRoomId(string $RoomId) Set ID of the target room
- * @method array getUids() Obtain List of the members to remove
- * @method void setUids(array $Uids) Set List of the members to remove
  * @method integer getDeleteType() Obtain Operation type. `1`: Delete a room; `2`: Remove members
  * @method void setDeleteType(integer $DeleteType) Set Operation type. `1`: Delete a room; `2`: Remove members
  * @method integer getBizId() Obtain Application ID
  * @method void setBizId(integer $BizId) Set Application ID
+ * @method array getUids() Obtain List of the members to remove
+ * @method void setUids(array $Uids) Set List of the members to remove
  */
 class DeleteRoomMemberRequest extends AbstractModel
 {
@@ -35,11 +35,6 @@ class DeleteRoomMemberRequest extends AbstractModel
      * @var string ID of the target room
      */
     public $RoomId;
-
-    /**
-     * @var array List of the members to remove
-     */
-    public $Uids;
 
     /**
      * @var integer Operation type. `1`: Delete a room; `2`: Remove members
@@ -52,10 +47,15 @@ class DeleteRoomMemberRequest extends AbstractModel
     public $BizId;
 
     /**
+     * @var array List of the members to remove
+     */
+    public $Uids;
+
+    /**
      * @param string $RoomId ID of the target room
-     * @param array $Uids List of the members to remove
      * @param integer $DeleteType Operation type. `1`: Delete a room; `2`: Remove members
      * @param integer $BizId Application ID
+     * @param array $Uids List of the members to remove
      */
     function __construct()
     {
@@ -74,16 +74,16 @@ class DeleteRoomMemberRequest extends AbstractModel
             $this->RoomId = $param["RoomId"];
         }
 
-        if (array_key_exists("Uids",$param) and $param["Uids"] !== null) {
-            $this->Uids = $param["Uids"];
-        }
-
         if (array_key_exists("DeleteType",$param) and $param["DeleteType"] !== null) {
             $this->DeleteType = $param["DeleteType"];
         }
 
         if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
             $this->BizId = $param["BizId"];
+        }
+
+        if (array_key_exists("Uids",$param) and $param["Uids"] !== null) {
+            $this->Uids = $param["Uids"];
         }
     }
 }

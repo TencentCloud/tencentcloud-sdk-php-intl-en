@@ -78,6 +78,8 @@ Filipino: fil, hindi: hi, polish: pl, czech: cs, dutch: nl, khmer: km, burmese: 
  * @method void setField(string $Field) Set Domain of the text to be translated, such as game plot.
  * @method array getReferences() Obtain Reference example, up to 10.
  * @method void setReferences(array $References) Set Reference example, up to 10.
+ * @method array getGlossaryIDs() Obtain 
+ * @method void setGlossaryIDs(array $GlossaryIDs) Set 
  */
 class ChatTranslationsRequest extends AbstractModel
 {
@@ -139,6 +141,11 @@ Filipino: fil, hindi: hi, polish: pl, czech: cs, dutch: nl, khmer: km, burmese: 
     public $References;
 
     /**
+     * @var array 
+     */
+    public $GlossaryIDs;
+
+    /**
      * @param string $Model Model name. optional values include hunyuan-translation.
 Please read the introduction in [the product overview](https://www.tencentcloud.com/document/product/1284/75277) for model descriptions.
 
@@ -168,6 +175,7 @@ The following languages are supported only by the hunyuan-translation model:.
 Filipino: fil, hindi: hi, polish: pl, czech: cs, dutch: nl, khmer: km, burmese: my, persian: fa, gujarati: gu, urdu: ur, telugu: te, marathi: mr, hebrew: he, bengali: bn, tamil: ta, ukrainian: uk, tibetan: bo, kazakh: kk, mongolian: mn, uyghur: ug.
      * @param string $Field Domain of the text to be translated, such as game plot.
      * @param array $References Reference example, up to 10.
+     * @param array $GlossaryIDs 
      */
     function __construct()
     {
@@ -213,6 +221,10 @@ Filipino: fil, hindi: hi, polish: pl, czech: cs, dutch: nl, khmer: km, burmese: 
                 $obj->deserialize($value);
                 array_push($this->References, $obj);
             }
+        }
+
+        if (array_key_exists("GlossaryIDs",$param) and $param["GlossaryIDs"] !== null) {
+            $this->GlossaryIDs = $param["GlossaryIDs"];
         }
     }
 }
