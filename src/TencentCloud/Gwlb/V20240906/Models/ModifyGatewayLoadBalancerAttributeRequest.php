@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set Unique GWLB ID.
  * @method string getLoadBalancerName() Obtain GWLB instance name. It supports input of 1 to 60 characters.
  * @method void setLoadBalancerName(string $LoadBalancerName) Set GWLB instance name. It supports input of 1 to 60 characters.
+ * @method boolean getDeleteProtect() Obtain 
+ * @method void setDeleteProtect(boolean $DeleteProtect) Set 
  */
 class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel
     public $LoadBalancerName;
 
     /**
+     * @var boolean 
+     */
+    public $DeleteProtect;
+
+    /**
      * @param string $LoadBalancerId Unique GWLB ID.
      * @param string $LoadBalancerName GWLB instance name. It supports input of 1 to 60 characters.
+     * @param boolean $DeleteProtect 
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel
 
         if (array_key_exists("LoadBalancerName",$param) and $param["LoadBalancerName"] !== null) {
             $this->LoadBalancerName = $param["LoadBalancerName"];
+        }
+
+        if (array_key_exists("DeleteProtect",$param) and $param["DeleteProtect"] !== null) {
+            $this->DeleteProtect = $param["DeleteProtect"];
         }
     }
 }

@@ -24,7 +24,7 @@ use TencentCloud\Dc\V20180410\Models as Models;
 
 /**
  * @method Models\AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnel(Models\AcceptDirectConnectTunnelRequest $req) This API is used to accept an application for a dedicated tunnel.
- * @method Models\ApplyInternetAddressResponse ApplyInternetAddress(Models\ApplyInternetAddressRequest $req) This API is used to apply for an internet tunnel’s CIDR block.
+ * @method Models\ApplyInternetAddressResponse ApplyInternetAddress(Models\ApplyInternetAddressRequest $req) This API is used to apply for an internet tunnel's CIDR block.
  * @method Models\CreateDirectConnectResponse CreateDirectConnect(Models\CreateDirectConnectRequest $req) This API is used to apply for a connection.
 When calling this API, please note that:
 You need to complete identity verification for your account; otherwise, you cannot apply for a connection;
@@ -34,7 +34,6 @@ If there is any connection in arrears under your account, you cannot apply for m
 Only connected connections can be deleted.
  * @method Models\DeleteDirectConnectTunnelResponse DeleteDirectConnectTunnel(Models\DeleteDirectConnectTunnelRequest $req) This API is used to delete a dedicated tunnel.
  * @method Models\DescribeAccessPointsResponse DescribeAccessPoints(Models\DescribeAccessPointsRequest $req) This API is used to query connection access points.
-
  * @method Models\DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(Models\DescribeDirectConnectTunnelsRequest $req) This API is used to query the list of dedicated tunnels.
  * @method Models\DescribeDirectConnectsResponse DescribeDirectConnects(Models\DescribeDirectConnectsRequest $req) This API is used to query the list of connections.
  * @method Models\DescribeInternetAddressResponse DescribeInternetAddress(Models\DescribeInternetAddressRequest $req) This API is used to obtain the public IP address of an internet tunnel.

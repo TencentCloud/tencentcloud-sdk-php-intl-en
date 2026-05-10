@@ -30,6 +30,8 @@ You can call `DescribeRegions` to get the region ID.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  * @method integer getLimit() Obtain Number of results to be returned. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: 20. Maximum value: 100.
+ * @method array getFilters() Obtain 
+ * @method void setFilters(array $Filters) Set 
  */
 class DescribeAccessPointsRequest extends AbstractModel
 {
@@ -51,11 +53,17 @@ You can call `DescribeRegions` to get the region ID.
     public $Limit;
 
     /**
+     * @var array 
+     */
+    public $Filters;
+
+    /**
      * @param string $RegionId Access point region, which can be queried through `DescribeRegions`.
 
 You can call `DescribeRegions` to get the region ID.
      * @param integer $Offset Offset. Default value: 0.
      * @param integer $Limit Number of results to be returned. Default value: 20. Maximum value: 100.
+     * @param array $Filters 
      */
     function __construct()
     {
@@ -80,6 +88,15 @@ You can call `DescribeRegions` to get the region ID.
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

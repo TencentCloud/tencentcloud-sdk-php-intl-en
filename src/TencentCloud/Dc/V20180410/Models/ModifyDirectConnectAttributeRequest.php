@@ -42,10 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaultReportContactPerson(string $FaultReportContactPerson) Set Fault reporting contact person.
  * @method string getFaultReportContactNumber() Obtain Fault reporting contact number.
  * @method void setFaultReportContactNumber(string $FaultReportContactNumber) Set Fault reporting contact number.
+ * @method string getFaultReportContactEmail() Obtain Fault reporting contact email
+ * @method void setFaultReportContactEmail(string $FaultReportContactEmail) Set Fault reporting contact email
  * @method boolean getSignLaw() Obtain Whether the connection applicant has signed the service agreement.
  * @method void setSignLaw(boolean $SignLaw) Set Whether the connection applicant has signed the service agreement.
- * @method integer getBandwidth() Obtain Connection’s bandwidth
- * @method void setBandwidth(integer $Bandwidth) Set Connection’s bandwidth
+ * @method integer getBandwidth() Obtain Connection's bandwidth
+ * @method void setBandwidth(integer $Bandwidth) Set Connection's bandwidth
  */
 class ModifyDirectConnectAttributeRequest extends AbstractModel
 {
@@ -105,12 +107,17 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
     public $FaultReportContactNumber;
 
     /**
+     * @var string Fault reporting contact email
+     */
+    public $FaultReportContactEmail;
+
+    /**
      * @var boolean Whether the connection applicant has signed the service agreement.
      */
     public $SignLaw;
 
     /**
-     * @var integer Connection’s bandwidth
+     * @var integer Connection's bandwidth
      */
     public $Bandwidth;
 
@@ -126,8 +133,9 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
      * @param string $CustomerContactNumber Contact number of connection applicant, which is obtained from the account system by default.
      * @param string $FaultReportContactPerson Fault reporting contact person.
      * @param string $FaultReportContactNumber Fault reporting contact number.
+     * @param string $FaultReportContactEmail Fault reporting contact email
      * @param boolean $SignLaw Whether the connection applicant has signed the service agreement.
-     * @param integer $Bandwidth Connection’s bandwidth
+     * @param integer $Bandwidth Connection's bandwidth
      */
     function __construct()
     {
@@ -184,6 +192,10 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
 
         if (array_key_exists("FaultReportContactNumber",$param) and $param["FaultReportContactNumber"] !== null) {
             $this->FaultReportContactNumber = $param["FaultReportContactNumber"];
+        }
+
+        if (array_key_exists("FaultReportContactEmail",$param) and $param["FaultReportContactEmail"] !== null) {
+            $this->FaultReportContactEmail = $param["FaultReportContactEmail"];
         }
 
         if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {

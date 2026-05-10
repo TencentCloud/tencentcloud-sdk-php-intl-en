@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dc\V20180410\Models;
+namespace TencentCloud\Hunyuan\V20230901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EnableInternetAddress request structure.
+ * DescribeAutoRiggingJob request structure.
  *
- * @method string getInstanceId() Obtain ID of the internet tunnel's public IP address
- * @method void setInstanceId(string $InstanceId) Set ID of the internet tunnel's public IP address
+ * @method string getJobId() Obtain Task ID (valid period: 24 hours).
+ * @method void setJobId(string $JobId) Set Task ID (valid period: 24 hours).
  */
-class EnableInternetAddressRequest extends AbstractModel
+class DescribeAutoRiggingJobRequest extends AbstractModel
 {
     /**
-     * @var string ID of the internet tunnel's public IP address
+     * @var string Task ID (valid period: 24 hours).
      */
-    public $InstanceId;
+    public $JobId;
 
     /**
-     * @param string $InstanceId ID of the internet tunnel's public IP address
+     * @param string $JobId Task ID (valid period: 24 hours).
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class EnableInternetAddressRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
     }
 }

@@ -75,6 +75,8 @@ Callable roles: Distributor, Second-level reseller, Reseller
 Invocation roles: reseller, first-level distributor.
  * @method Models\DescribeCustomerOwnVoucherListResponse DescribeCustomerOwnVoucherList(Models\DescribeCustomerOwnVoucherListRequest $req) This API is used to query the voucher list by Customer. 
 Callable roles: Customer.
+ * @method Models\DescribeCustomerOwnVoucherUsageDetailsResponse DescribeCustomerOwnVoucherUsageDetails(Models\DescribeCustomerOwnVoucherUsageDetailsRequest $req) Description: The current API is used to query usage details of customer's own voucher by the customer self.
+Call role: End customer.
  * @method Models\DescribeCustomerUinResponse DescribeCustomerUin(Models\DescribeCustomerUinRequest $req) This API is used to query the list of customer UINs.
  * @method Models\DescribeCustomerVoucherListResponse DescribeCustomerVoucherList(Models\DescribeCustomerVoucherListRequest $req) This API is used to query the customer voucher list by Reseller, Second-level Reseller or Distributor.
 Callable roles: Reseller, Second-level Reseller or Distributor.

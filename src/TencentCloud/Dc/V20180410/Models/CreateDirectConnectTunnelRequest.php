@@ -78,6 +78,9 @@ Default value: Non-zero.
  * @method void setBfdInfo(BFDInfo $BfdInfo) Set BFD configuration information
  * @method NQAInfo getNqaInfo() Obtain NQA configuration information
  * @method void setNqaInfo(NQAInfo $NqaInfo) Set NQA configuration information
+ * @method array getTags() Obtain Tag key-value pair
+
+ * @method void setTags(array $Tags) Set Tag key-value pair
  */
 class CreateDirectConnectTunnelRequest extends AbstractModel
 {
@@ -191,6 +194,12 @@ Default value: Non-zero.
     public $NqaInfo;
 
     /**
+     * @var array Tag key-value pair
+
+     */
+    public $Tags;
+
+    /**
      * @param string $DirectConnectId Direct Connect ID, such as `dc-kd7d06of`.
      * @param string $DirectConnectTunnelName Dedicated tunnel name.
      * @param string $DirectConnectOwnerAccount Connection owner, who is the current customer by default.
@@ -220,6 +229,7 @@ Default value: Non-zero.
      * @param integer $NqaEnable Whether to enable NQA
      * @param BFDInfo $BfdInfo BFD configuration information
      * @param NQAInfo $NqaInfo NQA configuration information
+     * @param array $Tags Tag key-value pair
      */
     function __construct()
     {
@@ -320,6 +330,15 @@ Default value: Non-zero.
         if (array_key_exists("NqaInfo",$param) and $param["NqaInfo"] !== null) {
             $this->NqaInfo = new NQAInfo();
             $this->NqaInfo->deserialize($param["NqaInfo"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

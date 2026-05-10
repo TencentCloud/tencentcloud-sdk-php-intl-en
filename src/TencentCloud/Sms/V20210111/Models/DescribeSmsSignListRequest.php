@@ -20,25 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSmsSignList request structure.
  *
- * @method array getSignIdSet() Obtain Signature ID array.
-Note: the maximum length of the array is 100 by default.
- * @method void setSignIdSet(array $SignIdSet) Set Signature ID array.
-Note: the maximum length of the array is 100 by default.
  * @method integer getInternational() Obtain Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
  * @method void setInternational(integer $International) Set Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+ * @method array getSignIdSet() Obtain Signature ID array.
+Note: the maximum length of the array is 100 by default.
+ * @method void setSignIdSet(array $SignIdSet) Set Signature ID array.
+Note: the maximum length of the array is 100 by default.
+ * @method integer getLimit() Obtain Upper limit. Maximum value: 100.
+Note: it is 10 by default and is enabled when SignIdSet is empty.
+ * @method void setLimit(integer $Limit) Set Upper limit. Maximum value: 100.
+Note: it is 10 by default and is enabled when SignIdSet is empty.
+ * @method integer getOffset() Obtain Offset.
+Note: it is 0 by default and is enabled when SignIdSet is empty.
+ * @method void setOffset(integer $Offset) Set Offset.
+Note: it is 0 by default and is enabled when SignIdSet is empty.
  */
 class DescribeSmsSignListRequest extends AbstractModel
 {
-    /**
-     * @var array Signature ID array.
-Note: the maximum length of the array is 100 by default.
-     */
-    public $SignIdSet;
-
     /**
      * @var integer Whether it is Global SMS:
 0: Mainland China SMS.
@@ -47,11 +49,33 @@ Note: the maximum length of the array is 100 by default.
     public $International;
 
     /**
-     * @param array $SignIdSet Signature ID array.
+     * @var array Signature ID array.
 Note: the maximum length of the array is 100 by default.
+     */
+    public $SignIdSet;
+
+    /**
+     * @var integer Upper limit. Maximum value: 100.
+Note: it is 10 by default and is enabled when SignIdSet is empty.
+     */
+    public $Limit;
+
+    /**
+     * @var integer Offset.
+Note: it is 0 by default and is enabled when SignIdSet is empty.
+     */
+    public $Offset;
+
+    /**
      * @param integer $International Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+     * @param array $SignIdSet Signature ID array.
+Note: the maximum length of the array is 100 by default.
+     * @param integer $Limit Upper limit. Maximum value: 100.
+Note: it is 10 by default and is enabled when SignIdSet is empty.
+     * @param integer $Offset Offset.
+Note: it is 0 by default and is enabled when SignIdSet is empty.
      */
     function __construct()
     {
@@ -66,12 +90,20 @@ Note: the maximum length of the array is 100 by default.
         if ($param === null) {
             return;
         }
+        if (array_key_exists("International",$param) and $param["International"] !== null) {
+            $this->International = $param["International"];
+        }
+
         if (array_key_exists("SignIdSet",$param) and $param["SignIdSet"] !== null) {
             $this->SignIdSet = $param["SignIdSet"];
         }
 
-        if (array_key_exists("International",$param) and $param["International"] !== null) {
-            $this->International = $param["International"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

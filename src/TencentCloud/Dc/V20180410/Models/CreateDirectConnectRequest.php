@@ -54,8 +54,14 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
  * @method void setFaultReportContactPerson(string $FaultReportContactPerson) Set Fault reporting contact person.
  * @method string getFaultReportContactNumber() Obtain Fault reporting contact number.
  * @method void setFaultReportContactNumber(string $FaultReportContactNumber) Set Fault reporting contact number.
+ * @method string getFaultReportContactEmail() Obtain 
+ * @method void setFaultReportContactEmail(string $FaultReportContactEmail) Set 
  * @method boolean getSignLaw() Obtain Whether the connection applicant has signed the service agreement. Default value: true.
  * @method void setSignLaw(boolean $SignLaw) Set Whether the connection applicant has signed the service agreement. Default value: true.
+ * @method array getTags() Obtain Tag key-value pair
+ * @method void setTags(array $Tags) Set Tag key-value pair
+ * @method boolean getIsMacSec() Obtain Is MACsec required
+ * @method void setIsMacSec(boolean $IsMacSec) Set Is MACsec required
  */
 class CreateDirectConnectRequest extends AbstractModel
 {
@@ -141,9 +147,24 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
     public $FaultReportContactNumber;
 
     /**
+     * @var string 
+     */
+    public $FaultReportContactEmail;
+
+    /**
      * @var boolean Whether the connection applicant has signed the service agreement. Default value: true.
      */
     public $SignLaw;
+
+    /**
+     * @var array Tag key-value pair
+     */
+    public $Tags;
+
+    /**
+     * @var boolean Is MACsec required
+     */
+    public $IsMacSec;
 
     /**
      * @param string $DirectConnectName Connection name.
@@ -163,7 +184,10 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
      * @param string $CustomerContactNumber Contact number of connection applicant, which is obtained from the account system by default.
      * @param string $FaultReportContactPerson Fault reporting contact person.
      * @param string $FaultReportContactNumber Fault reporting contact number.
+     * @param string $FaultReportContactEmail 
      * @param boolean $SignLaw Whether the connection applicant has signed the service agreement. Default value: true.
+     * @param array $Tags Tag key-value pair
+     * @param boolean $IsMacSec Is MACsec required
      */
     function __construct()
     {
@@ -242,8 +266,25 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
             $this->FaultReportContactNumber = $param["FaultReportContactNumber"];
         }
 
+        if (array_key_exists("FaultReportContactEmail",$param) and $param["FaultReportContactEmail"] !== null) {
+            $this->FaultReportContactEmail = $param["FaultReportContactEmail"];
+        }
+
         if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {
             $this->SignLaw = $param["SignLaw"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("IsMacSec",$param) and $param["IsMacSec"] !== null) {
+            $this->IsMacSec = $param["IsMacSec"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyFreeCertificate request structure.
  *
- * @method string getZoneId() Obtain Site ID.
- * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getZoneId() Obtain Site ID
+ * @method void setZoneId(string $ZoneId) Set Site ID
  * @method string getDomain() Obtain Specifies the target domain name for free certificate application.
  * @method void setDomain(string $Domain) Set Specifies the target domain name for free certificate application.
  * @method string getVerificationMethod() Obtain Specifies the verification method for applying for a free certificate. for detailed verification methods, refer to the [free certificate application documentation](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). valid values:.
@@ -38,7 +38,7 @@ Note: after triggering this api, you need to complete the verification content c
 class ApplyFreeCertificateRequest extends AbstractModel
 {
     /**
-     * @var string Site ID.
+     * @var string Site ID
      */
     public $ZoneId;
 
@@ -57,7 +57,7 @@ Note: after triggering this api, you need to complete the verification content c
     public $VerificationMethod;
 
     /**
-     * @param string $ZoneId Site ID.
+     * @param string $ZoneId Site ID
      * @param string $Domain Specifies the target domain name for free certificate application.
      * @param string $VerificationMethod Specifies the verification method for applying for a free certificate. for detailed verification methods, refer to the [free certificate application documentation](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). valid values:.
 <li>http_challenge: specifies the file validation mode for http access. verifies by getting file information from the specified URL of the access domain to complete free certificate application.</li>

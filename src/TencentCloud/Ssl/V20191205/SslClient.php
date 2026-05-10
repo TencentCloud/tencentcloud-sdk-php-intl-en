@@ -27,6 +27,8 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\BatchDeleteCSRResponse BatchDeleteCSR(Models\BatchDeleteCSRRequest $req) This API is used to batch delete CSRs.
  * @method Models\CancelAuditCertificateResponse CancelAuditCertificate(Models\CancelAuditCertificateRequest $req) This API is used to cancel certificate review.
  * @method Models\CancelCertificateOrderResponse CancelCertificateOrder(Models\CancelCertificateOrderRequest $req) This API is used to cancel a certificate order.
+ * @method Models\CertificateInfoSubmitResponse CertificateInfoSubmit(Models\CertificateInfoSubmitRequest $req) Submit certificate information for payment
+ * @method Models\CertificateOrderSubmitResponse CertificateOrderSubmit(Models\CertificateOrderSubmitRequest $req) Submit a certificate order
  * @method Models\CommitCertificateInformationResponse CommitCertificateInformation(Models\CommitCertificateInformationRequest $req) Submit payment certificate orders; This API does not maintain new features, and you can use the new API to submit orders. [CertificateOrderSubmit](https://intl.cloud.tencent.com/document/product/400/116032?from_cn_redirect=1).
  * @method Models\CreateCSRResponse CreateCSR(Models\CreateCSRRequest $req) This API is used to create a CSR.
  * @method Models\CreateCertificateResponse CreateCertificate(Models\CreateCertificateRequest $req) This API is used to purchase a certificate.

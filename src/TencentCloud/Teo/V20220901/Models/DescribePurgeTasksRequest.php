@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePurgeTasks request structure.
  *
- * @method string getZoneId() Obtain Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne] tencentcloud API change notification (https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
- * @method void setZoneId(string $ZoneId) Set Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne] tencentcloud API change notification (https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
+ * @method string getZoneId() Obtain Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne] tencentcloud API change notification (https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+ * @method void setZoneId(string $ZoneId) Set Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne] tencentcloud API change notification (https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
  * @method string getStartTime() Obtain Start time of the query. Either time or job-id is required.
  * @method void setStartTime(string $StartTime) Set Start time of the query. Either time or job-id is required.
  * @method string getEndTime() Obtain End time of the query. Either time or job-id is required.
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribePurgeTasksRequest extends AbstractModel
 {
     /**
-     * @var string Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne] tencentcloud API change notification (https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
+     * @var string Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne] tencentcloud API change notification (https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
      */
     public $ZoneId;
 
@@ -81,7 +81,7 @@ class DescribePurgeTasksRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $ZoneId Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne] tencentcloud API change notification (https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
+     * @param string $ZoneId Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne] tencentcloud API change notification (https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
      * @param string $StartTime Start time of the query. Either time or job-id is required.
      * @param string $EndTime End time of the query. Either time or job-id is required.
      * @param integer $Offset Offset of paginated query. Default value: 0.

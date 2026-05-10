@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) Set Health check details.
  * @method boolean getAllDeadToAlive() Obtain Whether "All Dead, All Alive" is supported.
  * @method void setAllDeadToAlive(boolean $AllDeadToAlive) Set Whether "All Dead, All Alive" is supported.
+ * @method boolean getRescheduleUnbindRs() Obtain 
+ * @method void setRescheduleUnbindRs(boolean $RescheduleUnbindRs) Set 
+ * @method integer getRescheduleUnbindRsStartTime() Obtain 
+ * @method void setRescheduleUnbindRsStartTime(integer $RescheduleUnbindRsStartTime) Set 
+ * @method boolean getRescheduleUnhealthy() Obtain 
+ * @method void setRescheduleUnhealthy(boolean $RescheduleUnhealthy) Set 
+ * @method integer getRescheduleUnhealthyStartTime() Obtain 
+ * @method void setRescheduleUnhealthyStartTime(integer $RescheduleUnhealthyStartTime) Set 
  */
 class ModifyTargetGroupAttributeRequest extends AbstractModel
 {
@@ -52,10 +60,34 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
     public $AllDeadToAlive;
 
     /**
+     * @var boolean 
+     */
+    public $RescheduleUnbindRs;
+
+    /**
+     * @var integer 
+     */
+    public $RescheduleUnbindRsStartTime;
+
+    /**
+     * @var boolean 
+     */
+    public $RescheduleUnhealthy;
+
+    /**
+     * @var integer 
+     */
+    public $RescheduleUnhealthyStartTime;
+
+    /**
      * @param string $TargetGroupId Target group ID.
      * @param string $TargetGroupName New name of target group.
      * @param TargetGroupHealthCheck $HealthCheck Health check details.
      * @param boolean $AllDeadToAlive Whether "All Dead, All Alive" is supported.
+     * @param boolean $RescheduleUnbindRs 
+     * @param integer $RescheduleUnbindRsStartTime 
+     * @param boolean $RescheduleUnhealthy 
+     * @param integer $RescheduleUnhealthyStartTime 
      */
     function __construct()
     {
@@ -85,6 +117,22 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
 
         if (array_key_exists("AllDeadToAlive",$param) and $param["AllDeadToAlive"] !== null) {
             $this->AllDeadToAlive = $param["AllDeadToAlive"];
+        }
+
+        if (array_key_exists("RescheduleUnbindRs",$param) and $param["RescheduleUnbindRs"] !== null) {
+            $this->RescheduleUnbindRs = $param["RescheduleUnbindRs"];
+        }
+
+        if (array_key_exists("RescheduleUnbindRsStartTime",$param) and $param["RescheduleUnbindRsStartTime"] !== null) {
+            $this->RescheduleUnbindRsStartTime = $param["RescheduleUnbindRsStartTime"];
+        }
+
+        if (array_key_exists("RescheduleUnhealthy",$param) and $param["RescheduleUnhealthy"] !== null) {
+            $this->RescheduleUnhealthy = $param["RescheduleUnhealthy"];
+        }
+
+        if (array_key_exists("RescheduleUnhealthyStartTime",$param) and $param["RescheduleUnhealthyStartTime"] !== null) {
+            $this->RescheduleUnhealthyStartTime = $param["RescheduleUnhealthyStartTime"];
         }
     }
 }

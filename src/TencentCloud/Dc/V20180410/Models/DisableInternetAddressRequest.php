@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisableInternetAddress request structure.
  *
- * @method string getInstanceId() Obtain ID of the internet tunnel’s public IP address
- * @method void setInstanceId(string $InstanceId) Set ID of the internet tunnel’s public IP address
+ * @method string getInstanceId() Obtain ID of the internet tunnel's public IP address
+ * @method void setInstanceId(string $InstanceId) Set ID of the internet tunnel's public IP address
  */
 class DisableInternetAddressRequest extends AbstractModel
 {
     /**
-     * @var string ID of the internet tunnel’s public IP address
+     * @var string ID of the internet tunnel's public IP address
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId ID of the internet tunnel’s public IP address
+     * @param string $InstanceId ID of the internet tunnel's public IP address
      */
     function __construct()
     {

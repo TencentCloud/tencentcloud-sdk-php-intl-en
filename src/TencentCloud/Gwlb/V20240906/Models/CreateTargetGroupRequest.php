@@ -44,6 +44,26 @@ use TencentCloud\Common\AbstractModel;
 - IP_HASH_3_ELASTIC: elastic hashing
  * @method boolean getAllDeadToAlive() Obtain Whether "All Dead, All Alive" is supported. It is supported by default.
  * @method void setAllDeadToAlive(boolean $AllDeadToAlive) Set Whether "All Dead, All Alive" is supported. It is supported by default.
+ * @method array getTags() Obtain Tags
+ * @method void setTags(array $Tags) Set Tags
+ * @method string getForwardingMode() Obtain Traffic Distribution Mode
+<ul>
+<li>STATELESS: Stateless</li>
+<li>STATEFUL: Stateful</li>
+</ul>
+ * @method void setForwardingMode(string $ForwardingMode) Set Traffic Distribution Mode
+<ul>
+<li>STATELESS: Stateless</li>
+<li>STATEFUL: Stateful</li>
+</ul>
+ * @method boolean getRescheduleUnbindRs() Obtain <p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p>
+ * @method void setRescheduleUnbindRs(boolean $RescheduleUnbindRs) Set <p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p>
+ * @method integer getRescheduleUnbindRsStartTime() Obtain <p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p>
+ * @method void setRescheduleUnbindRsStartTime(integer $RescheduleUnbindRsStartTime) Set <p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p>
+ * @method boolean getRescheduleUnhealthy() Obtain <p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p>
+ * @method void setRescheduleUnhealthy(boolean $RescheduleUnhealthy) Set <p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p>
+ * @method integer getRescheduleUnhealthyStartTime() Obtain <p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p>
+ * @method void setRescheduleUnhealthyStartTime(integer $RescheduleUnhealthyStartTime) Set <p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p>
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
@@ -92,6 +112,40 @@ class CreateTargetGroupRequest extends AbstractModel
     public $AllDeadToAlive;
 
     /**
+     * @var array Tags
+     */
+    public $Tags;
+
+    /**
+     * @var string Traffic Distribution Mode
+<ul>
+<li>STATELESS: Stateless</li>
+<li>STATEFUL: Stateful</li>
+</ul>
+     */
+    public $ForwardingMode;
+
+    /**
+     * @var boolean <p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p>
+     */
+    public $RescheduleUnbindRs;
+
+    /**
+     * @var integer <p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p>
+     */
+    public $RescheduleUnbindRsStartTime;
+
+    /**
+     * @var boolean <p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p>
+     */
+    public $RescheduleUnhealthy;
+
+    /**
+     * @var integer <p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p>
+     */
+    public $RescheduleUnhealthyStartTime;
+
+    /**
      * @param string $TargetGroupName Target group name, limited to 60 characters.
      * @param string $VpcId VPCID attribute of target group. If this parameter is left blank, the default VPC will be used.
      * @param integer $Port Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
@@ -104,6 +158,16 @@ class CreateTargetGroupRequest extends AbstractModel
      * @param string $ScheduleAlgorithm Load balancing algorithm.
 - IP_HASH_3_ELASTIC: elastic hashing
      * @param boolean $AllDeadToAlive Whether "All Dead, All Alive" is supported. It is supported by default.
+     * @param array $Tags Tags
+     * @param string $ForwardingMode Traffic Distribution Mode
+<ul>
+<li>STATELESS: Stateless</li>
+<li>STATEFUL: Stateful</li>
+</ul>
+     * @param boolean $RescheduleUnbindRs <p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p>
+     * @param integer $RescheduleUnbindRsStartTime <p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p>
+     * @param boolean $RescheduleUnhealthy <p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p>
+     * @param integer $RescheduleUnhealthyStartTime <p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p>
      */
     function __construct()
     {
@@ -154,6 +218,35 @@ class CreateTargetGroupRequest extends AbstractModel
 
         if (array_key_exists("AllDeadToAlive",$param) and $param["AllDeadToAlive"] !== null) {
             $this->AllDeadToAlive = $param["AllDeadToAlive"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("ForwardingMode",$param) and $param["ForwardingMode"] !== null) {
+            $this->ForwardingMode = $param["ForwardingMode"];
+        }
+
+        if (array_key_exists("RescheduleUnbindRs",$param) and $param["RescheduleUnbindRs"] !== null) {
+            $this->RescheduleUnbindRs = $param["RescheduleUnbindRs"];
+        }
+
+        if (array_key_exists("RescheduleUnbindRsStartTime",$param) and $param["RescheduleUnbindRsStartTime"] !== null) {
+            $this->RescheduleUnbindRsStartTime = $param["RescheduleUnbindRsStartTime"];
+        }
+
+        if (array_key_exists("RescheduleUnhealthy",$param) and $param["RescheduleUnhealthy"] !== null) {
+            $this->RescheduleUnhealthy = $param["RescheduleUnhealthy"];
+        }
+
+        if (array_key_exists("RescheduleUnhealthyStartTime",$param) and $param["RescheduleUnhealthyStartTime"] !== null) {
+            $this->RescheduleUnhealthyStartTime = $param["RescheduleUnhealthyStartTime"];
         }
     }
 }
