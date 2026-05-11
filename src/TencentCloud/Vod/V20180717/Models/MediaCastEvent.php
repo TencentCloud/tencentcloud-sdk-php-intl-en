@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Media relay event notification message.
+ * 
  *
- * @method string getCastId() Obtain Media relay ID.
- * @method void setCastId(string $CastId) Set Media relay ID.
- * @method string getStatus() Obtain Relay status. Valid values:
-<li>Working: Running;</li>
-<li>Scheduled: To be started after the scheduled time arrives;</li>
-<li>Stopped: Relay stopped;</li>
-<li>Idle: Idle.</li>
- * @method void setStatus(string $Status) Set Relay status. Valid values:
-<li>Working: Running;</li>
-<li>Scheduled: To be started after the scheduled time arrives;</li>
-<li>Stopped: Relay stopped;</li>
-<li>Idle: Idle.</li>
+ * @method string getCastId() Obtain 
+ * @method void setCastId(string $CastId) Set 
+ * @method string getStatus() Obtain Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: start up after reaching the scheduled time;</li>
+<li>Stopped: relay has been stopped;</li>
+<li>Idle: idle.</li>
+ * @method void setStatus(string $Status) Set Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: start up after reaching the scheduled time;</li>
+<li>Stopped: relay has been stopped;</li>
+<li>Idle: idle.</li>
  */
 class MediaCastEvent extends AbstractModel
 {
     /**
-     * @var string Media relay ID.
+     * @var string 
      */
     public $CastId;
 
     /**
-     * @var string Relay status. Valid values:
-<li>Working: Running;</li>
-<li>Scheduled: To be started after the scheduled time arrives;</li>
-<li>Stopped: Relay stopped;</li>
-<li>Idle: Idle.</li>
+     * @var string Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: start up after reaching the scheduled time;</li>
+<li>Stopped: relay has been stopped;</li>
+<li>Idle: idle.</li>
      */
     public $Status;
 
     /**
-     * @param string $CastId Media relay ID.
-     * @param string $Status Relay status. Valid values:
-<li>Working: Running;</li>
-<li>Scheduled: To be started after the scheduled time arrives;</li>
-<li>Stopped: Relay stopped;</li>
-<li>Idle: Idle.</li>
+     * @param string $CastId 
+     * @param string $Status Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: start up after reaching the scheduled time;</li>
+<li>Stopped: relay has been stopped;</li>
+<li>Idle: idle.</li>
      */
     function __construct()
     {

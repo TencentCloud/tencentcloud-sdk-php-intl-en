@@ -20,22 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent landscape-to-portrait task input type.
  *
- * @method integer getDefinition() Obtain Intelligent landscape-to-portrait template ID.
+ * @method integer getDefinition() Obtain <p>ID of the horizontal-to-vertical video transformation template.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefinition(integer $Definition) Set Intelligent landscape-to-portrait template ID.
+ * @method void setDefinition(integer $Definition) Set <p>ID of the horizontal-to-vertical video transformation template.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExtendedParameter() Obtain <p>Extended parameter.</p>
+ * @method void setExtendedParameter(string $ExtendedParameter) Set <p>Extended parameter.</p>
  */
 class AiAnalysisTaskHorizontalToVerticalInput extends AbstractModel
 {
     /**
-     * @var integer Intelligent landscape-to-portrait template ID.
+     * @var integer <p>ID of the horizontal-to-vertical video transformation template.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Intelligent landscape-to-portrait template ID.
+     * @var string <p>Extended parameter.</p>
+     */
+    public $ExtendedParameter;
+
+    /**
+     * @param integer $Definition <p>ID of the horizontal-to-vertical video transformation template.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ExtendedParameter <p>Extended parameter.</p>
      */
     function __construct()
     {
@@ -52,6 +60,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ExtendedParameter",$param) and $param["ExtendedParameter"] !== null) {
+            $this->ExtendedParameter = $param["ExtendedParameter"];
         }
     }
 }

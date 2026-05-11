@@ -32,10 +32,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method AiReviewPoliticalTaskInput getInput() Obtain Input for intelligent recognition of politically sensitive content
  * @method void setInput(AiReviewPoliticalTaskInput $Input) Set Input for intelligent recognition of politically sensitive content
- * @method AiReviewPoliticalTaskOutput getOutput() Obtain Output for intelligent recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setOutput(AiReviewPoliticalTaskOutput $Output) Set Output for intelligent recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiReviewPoliticalTaskOutput getOutput() Obtain Video moderation involves inappropriate information in task output.
+ * @method void setOutput(AiReviewPoliticalTaskOutput $Output) Set Video moderation involves inappropriate information in task output.
  * @method integer getProgress() Obtain The progress of a moderation task (politically sensitive content). Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of a moderation task (politically sensitive content). Value range: 0-100.
  */
@@ -68,8 +66,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Input;
 
     /**
-     * @var AiReviewPoliticalTaskOutput Output for intelligent recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var AiReviewPoliticalTaskOutput Video moderation involves inappropriate information in task output.
      */
     public $Output;
 
@@ -85,8 +82,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
      * @param string $Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AiReviewPoliticalTaskInput $Input Input for intelligent recognition of politically sensitive content
-     * @param AiReviewPoliticalTaskOutput $Output Output for intelligent recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiReviewPoliticalTaskOutput $Output Video moderation involves inappropriate information in task output.
      * @param integer $Progress The progress of a moderation task (politically sensitive content). Value range: 0-100.
      */
     function __construct()

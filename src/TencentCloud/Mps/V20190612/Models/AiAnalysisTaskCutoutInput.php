@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input type of the intelligent video matting task.
  *
- * @method integer getDefinition() Obtain ID of the intelligent video matting template.
- * @method void setDefinition(integer $Definition) Set ID of the intelligent video matting template.
+ * @method integer getDefinition() Obtain <p>ID of the intelligent video matting template.</p>
+ * @method void setDefinition(integer $Definition) Set <p>ID of the intelligent video matting template.</p>
+ * @method string getExtendedParameter() Obtain <p>Extended parameter.</p>
+ * @method void setExtendedParameter(string $ExtendedParameter) Set <p>Extended parameter.</p>
  */
 class AiAnalysisTaskCutoutInput extends AbstractModel
 {
     /**
-     * @var integer ID of the intelligent video matting template.
+     * @var integer <p>ID of the intelligent video matting template.</p>
      */
     public $Definition;
 
     /**
-     * @param integer $Definition ID of the intelligent video matting template.
+     * @var string <p>Extended parameter.</p>
+     */
+    public $ExtendedParameter;
+
+    /**
+     * @param integer $Definition <p>ID of the intelligent video matting template.</p>
+     * @param string $ExtendedParameter <p>Extended parameter.</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class AiAnalysisTaskCutoutInput extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ExtendedParameter",$param) and $param["ExtendedParameter"] !== null) {
+            $this->ExtendedParameter = $param["ExtendedParameter"];
         }
     }
 }

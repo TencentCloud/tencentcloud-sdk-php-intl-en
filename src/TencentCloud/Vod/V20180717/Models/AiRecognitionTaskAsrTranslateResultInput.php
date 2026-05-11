@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of voice translation.
+ * Input for voice translation.
  *
- * @method integer getDefinition() Obtain Voice translation template ID.
- * @method void setDefinition(integer $Definition) Set Voice translation template ID.
+ * @method integer getDefinition() Obtain Speech translation template ID.
+ * @method void setDefinition(integer $Definition) Set Speech translation template ID.
  */
 class AiRecognitionTaskAsrTranslateResultInput extends AbstractModel
 {
     /**
-     * @var integer Voice translation template ID.
+     * @var integer Speech translation template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Voice translation template ID.
+     * @param integer $Definition Speech translation template ID.
      */
     function __construct()
     {

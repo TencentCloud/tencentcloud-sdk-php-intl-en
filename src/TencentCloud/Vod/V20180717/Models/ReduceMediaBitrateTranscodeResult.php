@@ -28,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set The error message.
  * @method TranscodeTaskInput getInput() Obtain The input of a transcoding task.
  * @method void setInput(TranscodeTaskInput $Input) Set The input of a transcoding task.
- * @method MediaTranscodeItem getOutput() Obtain The output of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(MediaTranscodeItem $Output) Set The output of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method MediaTranscodeItem getOutput() Obtain Transcoding task output.
+ * @method void setOutput(MediaTranscodeItem $Output) Set Transcoding task output.
  * @method integer getProgress() Obtain The transcoding progress. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The transcoding progress. Value range: 0-100.
  * @method string getBeginProcessTime() Obtain The start time of the transcoding task, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
@@ -62,8 +60,7 @@ class ReduceMediaBitrateTranscodeResult extends AbstractModel
     public $Input;
 
     /**
-     * @var MediaTranscodeItem The output of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaTranscodeItem Transcoding task output.
      */
     public $Output;
 
@@ -87,8 +84,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
      * @param string $Message The error message.
      * @param TranscodeTaskInput $Input The input of a transcoding task.
-     * @param MediaTranscodeItem $Output The output of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MediaTranscodeItem $Output Transcoding task output.
      * @param integer $Progress The transcoding progress. Value range: 0-100.
      * @param string $BeginProcessTime The start time of the transcoding task, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      * @param string $FinishTime The end time of the transcoding task, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).

@@ -20,114 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input parameter type of a time point screenshot task
  *
- * @method integer getDefinition() Obtain ID of a time point screenshot template.
- * @method void setDefinition(integer $Definition) Set ID of a time point screenshot template.
- * @method array getExtTimeOffsetSet() Obtain List of screenshot time points in the format of `s` or `%`:
-<li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
-<li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>
- * @method void setExtTimeOffsetSet(array $ExtTimeOffsetSet) Set List of screenshot time points in the format of `s` or `%`:
-<li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
-<li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>
- * @method array getTimeOffsetSet() Obtain List of time points of screenshots in <font color=red>seconds</font>.
- * @method void setTimeOffsetSet(array $TimeOffsetSet) Set List of time points of screenshots in <font color=red>seconds</font>.
- * @method array getWatermarkSet() Obtain List of up to 10 image or text watermarks.
+ * @method integer getDefinition() Obtain <p>Time point screenshot template ID.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Time point screenshot template ID.</p>
+ * @method array getExtTimeOffsetSet() Obtain <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
+ * @method void setExtTimeOffsetSet(array $ExtTimeOffsetSet) Set <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
+ * @method array getTimeOffsetSet() Obtain <p>List of screenshot time points, in <font color="red">seconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+ * @method void setTimeOffsetSet(array $TimeOffsetSet) Set <p>List of screenshot time points, in <font color="red">seconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+ * @method array getWatermarkSet() Obtain <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+ * @method void setWatermarkSet(array $WatermarkSet) Set <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+ * @method TaskOutputStorage getOutputStorage() Obtain <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method TaskOutputStorage getOutputStorage() Obtain Target bucket of a generated time point screenshot file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+ * @method string getOutputObjectPath() Obtain <p>Output path of the image file after the time point screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}</code>.
+ * @method void setOutputObjectPath(string $OutputObjectPath) Set <p>Output path of the image file after the time point screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}</code>.
+ * @method NumberFormat getObjectNumberFormat() Obtain <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target bucket of a generated time point screenshot file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+ * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) Set <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOutputObjectPath() Obtain Output path for an image file of screenshots taken at specific time points, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`.
- * @method void setOutputObjectPath(string $OutputObjectPath) Set Output path for an image file of screenshots taken at specific time points, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`.
- * @method NumberFormat getObjectNumberFormat() Obtain Rule of the `{number}` variable in the time point screenshot output path.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) Set Rule of the `{number}` variable in the time point screenshot output path.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExtInfo() Obtain <p>Extended parameter.</p>
+ * @method void setExtInfo(string $ExtInfo) Set <p>Extended parameter.</p>
  */
 class SnapshotByTimeOffsetTaskInput extends AbstractModel
 {
     /**
-     * @var integer ID of a time point screenshot template.
+     * @var integer <p>Time point screenshot template ID.</p>
      */
     public $Definition;
 
     /**
-     * @var array List of screenshot time points in the format of `s` or `%`:
-<li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
-<li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>
+     * @var array <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
      */
     public $ExtTimeOffsetSet;
 
     /**
-     * @var array List of time points of screenshots in <font color=red>seconds</font>.
+     * @var array <p>List of screenshot time points, in <font color="red">seconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
      */
     public $TimeOffsetSet;
 
     /**
-     * @var array List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
      */
     public $WatermarkSet;
 
     /**
-     * @var TaskOutputStorage Target bucket of a generated time point screenshot file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+     * @var TaskOutputStorage <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OutputStorage;
 
     /**
-     * @var string Output path for an image file of screenshots taken at specific time points, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`.
+     * @var string <p>Output path of the image file after the time point screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}</code>.
      */
     public $OutputObjectPath;
 
     /**
-     * @var NumberFormat Rule of the `{number}` variable in the time point screenshot output path.
+     * @var NumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ObjectNumberFormat;
 
     /**
-     * @param integer $Definition ID of a time point screenshot template.
-     * @param array $ExtTimeOffsetSet List of screenshot time points in the format of `s` or `%`:
-<li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
-<li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>
-     * @param array $TimeOffsetSet List of time points of screenshots in <font color=red>seconds</font>.
-     * @param array $WatermarkSet List of up to 10 image or text watermarks.
+     * @var string <p>Extended parameter.</p>
+     */
+    public $ExtInfo;
+
+    /**
+     * @param integer $Definition <p>Time point screenshot template ID.</p>
+     * @param array $ExtTimeOffsetSet <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
+     * @param array $TimeOffsetSet <p>List of screenshot time points, in <font color="red">seconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+     * @param array $WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+     * @param TaskOutputStorage $OutputStorage <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskOutputStorage $OutputStorage Target bucket of a generated time point screenshot file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+     * @param string $OutputObjectPath <p>Output path of the image file after the time point screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}</code>.
+     * @param NumberFormat $ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OutputObjectPath Output path for an image file of screenshots taken at specific time points, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`.
-     * @param NumberFormat $ObjectNumberFormat Rule of the `{number}` variable in the time point screenshot output path.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ExtInfo <p>Extended parameter.</p>
      */
     function __construct()
     {
@@ -175,6 +143,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("ObjectNumberFormat",$param) and $param["ObjectNumberFormat"] !== null) {
             $this->ObjectNumberFormat = new NumberFormat();
             $this->ObjectNumberFormat->deserialize($param["ObjectNumberFormat"]);
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
     }
 }

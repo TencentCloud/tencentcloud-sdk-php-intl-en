@@ -30,6 +30,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) Set Digital watermark.
  * @method CopyRightWatermarkInput getCopyRightWatermark() Obtain CopyRight Watermark.
  * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) Set CopyRight Watermark.
+ * @method BlindWatermarkInput getBlindWatermark() Obtain Digital watermark.
+ * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set Digital watermark.
  * @method array getSubtitleSet() Obtain List of subtitle IDs (maximum: 16)
  * @method void setSubtitleSet(array $SubtitleSet) Set List of subtitle IDs (maximum: 16)
  */
@@ -57,6 +59,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CopyRightWatermark;
 
     /**
+     * @var BlindWatermarkInput Digital watermark.
+     */
+    public $BlindWatermark;
+
+    /**
      * @var array List of subtitle IDs (maximum: 16)
      */
     public $SubtitleSet;
@@ -67,6 +74,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param TraceWatermarkInput $TraceWatermark Digital watermark.
      * @param CopyRightWatermarkInput $CopyRightWatermark CopyRight Watermark.
+     * @param BlindWatermarkInput $BlindWatermark Digital watermark.
      * @param array $SubtitleSet List of subtitle IDs (maximum: 16)
      */
     function __construct()
@@ -103,6 +111,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("CopyRightWatermark",$param) and $param["CopyRightWatermark"] !== null) {
             $this->CopyRightWatermark = new CopyRightWatermarkInput();
             $this->CopyRightWatermark->deserialize($param["CopyRightWatermark"]);
+        }
+
+        if (array_key_exists("BlindWatermark",$param) and $param["BlindWatermark"] !== null) {
+            $this->BlindWatermark = new BlindWatermarkInput();
+            $this->BlindWatermark->deserialize($param["BlindWatermark"]);
         }
 
         if (array_key_exists("SubtitleSet",$param) and $param["SubtitleSet"] !== null) {

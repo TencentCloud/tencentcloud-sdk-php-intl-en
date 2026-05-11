@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiRecognitionTaskHeadTailResultInput getInput() Obtain Input information of video opening and ending credits recognition task.
  * @method void setInput(AiRecognitionTaskHeadTailResultInput $Input) Set Input information of video opening and ending credits recognition task.
- * @method AiRecognitionTaskHeadTailResultOutput getOutput() Obtain Output information of video opening and ending credits recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiRecognitionTaskHeadTailResultOutput $Output) Set Output information of video opening and ending credits recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiRecognitionTaskHeadTailResultOutput getOutput() Obtain Video opening and closing credits recognition task output information.
+ * @method void setOutput(AiRecognitionTaskHeadTailResultOutput $Output) Set Video opening and closing credits recognition task output information.
  * @method integer getProgress() Obtain The progress of an opening/closing segment recognition task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of an opening/closing segment recognition task. Value range: 0-100.
  * @method string getBeginProcessTime() Obtain The time when the video start and end recognition task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
@@ -69,8 +67,7 @@ class AiRecognitionTaskHeadTailResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiRecognitionTaskHeadTailResultOutput Output information of video opening and ending credits recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskHeadTailResultOutput Video opening and closing credits recognition task output information.
      */
     public $Output;
 
@@ -95,8 +92,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
      * @param AiRecognitionTaskHeadTailResultInput $Input Input information of video opening and ending credits recognition task.
-     * @param AiRecognitionTaskHeadTailResultOutput $Output Output information of video opening and ending credits recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiRecognitionTaskHeadTailResultOutput $Output Video opening and closing credits recognition task output information.
      * @param integer $Progress The progress of an opening/closing segment recognition task. Value range: 0-100.
      * @param string $BeginProcessTime The time when the video start and end recognition task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      * @param string $FinishTime The time when the video start and end recognition task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).

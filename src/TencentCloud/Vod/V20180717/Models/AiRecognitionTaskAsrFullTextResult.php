@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiRecognitionTaskAsrFullTextResultInput getInput() Obtain Input information of full speech recognition task.
  * @method void setInput(AiRecognitionTaskAsrFullTextResultInput $Input) Set Input information of full speech recognition task.
- * @method AiRecognitionTaskAsrFullTextResultOutput getOutput() Obtain Output information of full speech recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiRecognitionTaskAsrFullTextResultOutput $Output) Set Output information of full speech recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiRecognitionTaskAsrFullTextResultOutput getOutput() Obtain Output information on the speech full-text recognition task.
+ * @method void setOutput(AiRecognitionTaskAsrFullTextResultOutput $Output) Set Output information on the speech full-text recognition task.
  * @method integer getProgress() Obtain Speech full-text recognition task progress, value range [0-100].
  * @method void setProgress(integer $Progress) Set Speech full-text recognition task progress, value range [0-100].
  * @method string getBeginProcessTime() Obtain The time when the full-text speech recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
@@ -69,8 +67,7 @@ class AiRecognitionTaskAsrFullTextResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiRecognitionTaskAsrFullTextResultOutput Output information of full speech recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskAsrFullTextResultOutput Output information on the speech full-text recognition task.
      */
     public $Output;
 
@@ -95,8 +92,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
      * @param AiRecognitionTaskAsrFullTextResultInput $Input Input information of full speech recognition task.
-     * @param AiRecognitionTaskAsrFullTextResultOutput $Output Output information of full speech recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiRecognitionTaskAsrFullTextResultOutput $Output Output information on the speech full-text recognition task.
      * @param integer $Progress Speech full-text recognition task progress, value range [0-100].
      * @param string $BeginProcessTime The time when the full-text speech recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      * @param string $FinishTime The time when the speech full-text recognition task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).

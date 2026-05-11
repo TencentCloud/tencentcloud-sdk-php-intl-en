@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskTagInput getInput() Obtain Input of intelligent tagging task.
  * @method void setInput(AiAnalysisTaskTagInput $Input) Set Input of intelligent tagging task.
- * @method AiAnalysisTaskTagOutput getOutput() Obtain Output of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskTagOutput $Output) Set Output of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskTagOutput getOutput() Obtain Intelligent tag task output.
+ * @method void setOutput(AiAnalysisTaskTagOutput $Output) Set Intelligent tag task output.
  * @method integer getProgress() Obtain The progress of an intelligent labeling task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of an intelligent labeling task. Value range: 0-100.
  * @method string getBeginProcessTime() Obtain The time when the smart label task started executing, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
@@ -69,8 +67,7 @@ class AiAnalysisTaskTagResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskTagOutput Output of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskTagOutput Intelligent tag task output.
      */
     public $Output;
 
@@ -95,8 +92,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
      * @param AiAnalysisTaskTagInput $Input Input of intelligent tagging task.
-     * @param AiAnalysisTaskTagOutput $Output Output of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskTagOutput $Output Intelligent tag task output.
      * @param integer $Progress The progress of an intelligent labeling task. Value range: 0-100.
      * @param string $BeginProcessTime The time when the smart label task started executing, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      * @param string $FinishTime The time when the smart label task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).

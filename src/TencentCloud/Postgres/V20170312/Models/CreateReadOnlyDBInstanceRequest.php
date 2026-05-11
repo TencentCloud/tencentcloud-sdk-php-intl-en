@@ -20,251 +20,187 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReadOnlyDBInstance request structure.
  *
- * @method string getZone() Obtain Primary AZ of an instance, such as "ap-guangzhou-3".
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
- * @method void setZone(string $Zone) Set Primary AZ of an instance, such as "ap-guangzhou-3".
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
- * @method string getMasterDBInstanceId() Obtain Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
- * @method void setMasterDBInstanceId(string $MasterDBInstanceId) Set Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
- * @method string getSpecCode() Obtain Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
- * @method void setSpecCode(string $SpecCode) Set Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
- * @method integer getStorage() Obtain Instance disk capacity size in GB. specifies the step length for parameter settings as 10.
- * @method void setStorage(integer $Storage) Set Instance disk capacity size in GB. specifies the step length for parameter settings as 10.
- * @method integer getInstanceCount() Obtain Number of instances to purchase. value range: [1-6]. maximum allowed number is 6.
- * @method void setInstanceCount(integer $InstanceCount) Set Number of instances to purchase. value range: [1-6]. maximum allowed number is 6.
- * @method integer getPeriod() Obtain Purchase duration, in months.
-<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-<li>Pay-as-you-go: Only supports `1`.</li>
- * @method void setPeriod(integer $Period) Set Purchase duration, in months.
-<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-<li>Pay-as-you-go: Only supports `1`.</li>
- * @method string getVpcId() Obtain VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
- * @method void setVpcId(string $VpcId) Set VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
- * @method string getSubnetId() Obtain VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
- * @method void setSubnetId(string $SubnetId) Set VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
- * @method string getInstanceChargeType() Obtain Instance billing type, which currently supports:.
-<Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
-Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid.
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type, which currently supports:.
-<Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
-Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid.
- * @method integer getAutoVoucher() Obtain Specifies whether to automatically use a voucher.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
- * @method void setAutoVoucher(integer $AutoVoucher) Set Specifies whether to automatically use a voucher.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
- * @method array getVoucherIds() Obtain Voucher ID list. Currently, you can specify only one voucher.
- * @method void setVoucherIds(array $VoucherIds) Set Voucher ID list. Currently, you can specify only one voucher.
- * @method integer getAutoRenewFlag() Obtain Specifies the auto-renewal flag.
-<Li>`0`: manual renewal.</li>.
-<Li>`1`: auto-renewal</li>.
-Default value: 0
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Specifies the auto-renewal flag.
-<Li>`0`: manual renewal.</li>.
-<Li>`1`: auto-renewal</li>.
-Default value: 0
- * @method integer getProjectId() Obtain Project ID. default value is 0, means it belongs to the default project.
- * @method void setProjectId(integer $ProjectId) Set Project ID. default value is 0, means it belongs to the default project.
- * @method integer getActivityId() Obtain Special offer ID
- * @method void setActivityId(integer $ActivityId) Set Special offer ID
- * @method string getReadOnlyGroupId() Obtain RO group ID
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set RO group ID
- * @method Tag getTagList() Obtain The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
- * @method void setTagList(Tag $TagList) Set The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
- * @method array getSecurityGroupIds() Obtain Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
-
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
-
- * @method integer getNeedSupportIpv6() Obtain Specifies whether to support Ipv6.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
- * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) Set Specifies whether to support Ipv6.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
- * @method string getName() Obtain Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters.
- * @method void setName(string $Name) Set Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters.
- * @method string getDBVersion() Obtain Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified.
- * @method void setDBVersion(string $DBVersion) Set Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified.
- * @method string getDedicatedClusterId() Obtain CDC ID.
- * @method void setDedicatedClusterId(string $DedicatedClusterId) Set CDC ID.
- * @method boolean getDeletionProtection() Obtain Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
- * @method void setDeletionProtection(boolean $DeletionProtection) Set Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+ * @method string getZone() Obtain <p>Primary availability zone of the instance, such as: ap-guangzhou-3.<br>The availability zone can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
+ * @method void setZone(string $Zone) Set <p>Primary availability zone of the instance, such as: ap-guangzhou-3.<br>The availability zone can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
+ * @method string getMasterDBInstanceId() Obtain <p>Primary instance ID of the read-only instance, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+ * @method void setMasterDBInstanceId(string $MasterDBInstanceId) Set <p>Primary instance ID of the read-only instance, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+ * @method string getSpecCode() Obtain <p>Purchasable specification code. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/api/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
+ * @method void setSpecCode(string $SpecCode) Set <p>Purchasable specification code. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/api/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
+ * @method integer getStorage() Obtain <p>Instance disk capacity, in GB. The value for this parameter must be set in increments of 10.</p>
+ * @method void setStorage(integer $Storage) Set <p>Instance disk capacity, in GB. The value for this parameter must be set in increments of 10.</p>
+ * @method integer getInstanceCount() Obtain <p>Number of instances to purchase. Value range: [1-6]. The maximum allowed number is 6.</p>
+ * @method void setInstanceCount(integer $InstanceCount) Set <p>Number of instances to purchase. Value range: [1-6]. The maximum allowed number is 6.</p>
+ * @method integer getPeriod() Obtain <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: supports only 1.</li>
+ * @method void setPeriod(integer $Period) Set <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: supports only 1.</li>
+ * @method string getVpcId() Obtain <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> API to obtain it from the unVpcId field in the return value.</p>
+ * @method void setVpcId(string $VpcId) Set <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> API to obtain it from the unVpcId field in the return value.</p>
+ * @method string getSubnetId() Obtain <p>VPC subnet ID, such as subnet-xxxxxxxx (this parameter is required). A valid VPC subnet ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> API and obtain it from the unSubnetId field in the return value.</p>
+ * @method void setSubnetId(string $SubnetId) Set <p>VPC subnet ID, such as subnet-xxxxxxxx (this parameter is required). A valid VPC subnet ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> API and obtain it from the unSubnetId field in the return value.</p>
+ * @method string getInstanceChargeType() Obtain <p>Instance billing type. Valid values:</p><li>PREPAID: prepaid (yearly/monthly subscription).</li><li>POSTPAID_BY_HOUR: postpaid (pay-as-you-go).</li>Default value: PREPAID. If the primary instance is postpaid, the read-only instance must also be postpaid.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set <p>Instance billing type. Valid values:</p><li>PREPAID: prepaid (yearly/monthly subscription).</li><li>POSTPAID_BY_HOUR: postpaid (pay-as-you-go).</li>Default value: PREPAID. If the primary instance is postpaid, the read-only instance must also be postpaid.
+ * @method integer getAutoVoucher() Obtain <p>Indicates whether to use vouchers automatically:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
+ * @method void setAutoVoucher(integer $AutoVoucher) Set <p>Indicates whether to use vouchers automatically:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
+ * @method array getVoucherIds() Obtain <p>Voucher ID list. Only one voucher can be specified.</p>
+ * @method void setVoucherIds(array $VoucherIds) Set <p>Voucher ID list. Only one voucher can be specified.</p>
+ * @method integer getAutoRenewFlag() Obtain <p>Renewal flag:</p><li>0: manual renewal.</li><li>1: auto-renewal.</li>Default value: 0.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set <p>Renewal flag:</p><li>0: manual renewal.</li><li>1: auto-renewal.</li>Default value: 0.
+ * @method integer getProjectId() Obtain <p>Project ID. The default value is 0, which means it belongs to the default project.</p>
+ * @method void setProjectId(integer $ProjectId) Set <p>Project ID. The default value is 0, which means it belongs to the default project.</p>
+ * @method integer getActivityId() Obtain <p>Discount offer ID.</p>
+ * @method void setActivityId(integer $ActivityId) Set <p>Discount offer ID.</p>
+ * @method string getReadOnlyGroupId() Obtain <p>Read-only group ID.</p>
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set <p>Read-only group ID.</p>
+ * @method Tag getTagList() Obtain <p>Tags to be bound to the instance. This is empty by default. Tags can be obtained from the returned Tags field of the <a href="https://www.tencentcloud.com/document/api/651/35316?from_cn_redirect=1">DescribeTags</a> API.</p>
+ * @method void setTagList(Tag $TagList) Set <p>Tags to be bound to the instance. This is empty by default. Tags can be obtained from the returned Tags field of the <a href="https://www.tencentcloud.com/document/api/651/35316?from_cn_redirect=1">DescribeTags</a> API.</p>
+ * @method array getSecurityGroupIds() Obtain <p>Security group to which the instance belongs. The value of this parameter can be obtained from the returned sgId field of the <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API. If this parameter is not specified, the default security group is bound.</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>Security group to which the instance belongs. The value of this parameter can be obtained from the returned sgId field of the <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API. If this parameter is not specified, the default security group is bound.</p>
+ * @method integer getNeedSupportIpv6() Obtain <p>Indicates whether to support IPv6:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
+ * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) Set <p>Indicates whether to support IPv6:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
+ * @method string getName() Obtain <p>Instance name. The name can contain only Chinese characters, letters, digits, underscores (&quot;_&quot;), and hyphens (&quot;-&quot;), with a length of less than 60.</p>
+ * @method void setName(string $Name) Set <p>Instance name. The name can contain only Chinese characters, letters, digits, underscores (&quot;_&quot;), and hyphens (&quot;-&quot;), with a length of less than 60.</p>
+ * @method string getDBVersion() Obtain <p>Not required anymore. The kernel version is consistent with that of the primary instance.</p>
+ * @method void setDBVersion(string $DBVersion) Set <p>Not required anymore. The kernel version is consistent with that of the primary instance.</p>
+ * @method string getDedicatedClusterId() Obtain <p>Dedicated cluster ID.</p>
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set <p>Dedicated cluster ID.</p>
+ * @method boolean getDeletionProtection() Obtain <p>Indicates whether to enable deletion protection for the instance: true - enables deletion protection. false - disables deletion protection.</p>
+ * @method void setDeletionProtection(boolean $DeletionProtection) Set <p>Indicates whether to enable deletion protection for the instance: true - enables deletion protection. false - disables deletion protection.</p>
  */
 class CreateReadOnlyDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Primary AZ of an instance, such as "ap-guangzhou-3".
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+     * @var string <p>Primary availability zone of the instance, such as: ap-guangzhou-3.<br>The availability zone can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
      */
     public $Zone;
 
     /**
-     * @var string Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+     * @var string <p>Primary instance ID of the read-only instance, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
      */
     public $MasterDBInstanceId;
 
     /**
-     * @var string Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
+     * @var string <p>Purchasable specification code. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/api/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
      */
     public $SpecCode;
 
     /**
-     * @var integer Instance disk capacity size in GB. specifies the step length for parameter settings as 10.
+     * @var integer <p>Instance disk capacity, in GB. The value for this parameter must be set in increments of 10.</p>
      */
     public $Storage;
 
     /**
-     * @var integer Number of instances to purchase. value range: [1-6]. maximum allowed number is 6.
+     * @var integer <p>Number of instances to purchase. Value range: [1-6]. The maximum allowed number is 6.</p>
      */
     public $InstanceCount;
 
     /**
-     * @var integer Purchase duration, in months.
-<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-<li>Pay-as-you-go: Only supports `1`.</li>
+     * @var integer <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: supports only 1.</li>
      */
     public $Period;
 
     /**
-     * @var string VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+     * @var string <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> API to obtain it from the unVpcId field in the return value.</p>
      */
     public $VpcId;
 
     /**
-     * @var string VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+     * @var string <p>VPC subnet ID, such as subnet-xxxxxxxx (this parameter is required). A valid VPC subnet ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> API and obtain it from the unSubnetId field in the return value.</p>
      */
     public $SubnetId;
 
     /**
-     * @var string Instance billing type, which currently supports:.
-<Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
-Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid.
+     * @var string <p>Instance billing type. Valid values:</p><li>PREPAID: prepaid (yearly/monthly subscription).</li><li>POSTPAID_BY_HOUR: postpaid (pay-as-you-go).</li>Default value: PREPAID. If the primary instance is postpaid, the read-only instance must also be postpaid.
      */
     public $InstanceChargeType;
 
     /**
-     * @var integer Specifies whether to automatically use a voucher.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
+     * @var integer <p>Indicates whether to use vouchers automatically:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
      */
     public $AutoVoucher;
 
     /**
-     * @var array Voucher ID list. Currently, you can specify only one voucher.
+     * @var array <p>Voucher ID list. Only one voucher can be specified.</p>
      */
     public $VoucherIds;
 
     /**
-     * @var integer Specifies the auto-renewal flag.
-<Li>`0`: manual renewal.</li>.
-<Li>`1`: auto-renewal</li>.
-Default value: 0
+     * @var integer <p>Renewal flag:</p><li>0: manual renewal.</li><li>1: auto-renewal.</li>Default value: 0.
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer Project ID. default value is 0, means it belongs to the default project.
+     * @var integer <p>Project ID. The default value is 0, which means it belongs to the default project.</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer Special offer ID
+     * @var integer <p>Discount offer ID.</p>
      */
     public $ActivityId;
 
     /**
-     * @var string RO group ID
+     * @var string <p>Read-only group ID.</p>
      */
     public $ReadOnlyGroupId;
 
     /**
-     * @var Tag The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
+     * @var Tag <p>Tags to be bound to the instance. This is empty by default. Tags can be obtained from the returned Tags field of the <a href="https://www.tencentcloud.com/document/api/651/35316?from_cn_redirect=1">DescribeTags</a> API.</p>
      */
     public $TagList;
 
     /**
-     * @var array Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
-
+     * @var array <p>Security group to which the instance belongs. The value of this parameter can be obtained from the returned sgId field of the <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API. If this parameter is not specified, the default security group is bound.</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var integer Specifies whether to support Ipv6.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
+     * @var integer <p>Indicates whether to support IPv6:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
      */
     public $NeedSupportIpv6;
 
     /**
-     * @var string Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters.
+     * @var string <p>Instance name. The name can contain only Chinese characters, letters, digits, underscores (&quot;_&quot;), and hyphens (&quot;-&quot;), with a length of less than 60.</p>
      */
     public $Name;
 
     /**
-     * @var string Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified.
+     * @var string <p>Not required anymore. The kernel version is consistent with that of the primary instance.</p>
      * @deprecated
      */
     public $DBVersion;
 
     /**
-     * @var string CDC ID.
+     * @var string <p>Dedicated cluster ID.</p>
      */
     public $DedicatedClusterId;
 
     /**
-     * @var boolean Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+     * @var boolean <p>Indicates whether to enable deletion protection for the instance: true - enables deletion protection. false - disables deletion protection.</p>
      */
     public $DeletionProtection;
 
     /**
-     * @param string $Zone Primary AZ of an instance, such as "ap-guangzhou-3".
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
-     * @param string $MasterDBInstanceId Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
-     * @param string $SpecCode Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
-     * @param integer $Storage Instance disk capacity size in GB. specifies the step length for parameter settings as 10.
-     * @param integer $InstanceCount Number of instances to purchase. value range: [1-6]. maximum allowed number is 6.
-     * @param integer $Period Purchase duration, in months.
-<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-<li>Pay-as-you-go: Only supports `1`.</li>
-     * @param string $VpcId VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
-     * @param string $SubnetId VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
-     * @param string $InstanceChargeType Instance billing type, which currently supports:.
-<Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
-Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid.
-     * @param integer $AutoVoucher Specifies whether to automatically use a voucher.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
-     * @param array $VoucherIds Voucher ID list. Currently, you can specify only one voucher.
-     * @param integer $AutoRenewFlag Specifies the auto-renewal flag.
-<Li>`0`: manual renewal.</li>.
-<Li>`1`: auto-renewal</li>.
-Default value: 0
-     * @param integer $ProjectId Project ID. default value is 0, means it belongs to the default project.
-     * @param integer $ActivityId Special offer ID
-     * @param string $ReadOnlyGroupId RO group ID
-     * @param Tag $TagList The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
-     * @param array $SecurityGroupIds Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
-
-     * @param integer $NeedSupportIpv6 Specifies whether to support Ipv6.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
-     * @param string $Name Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters.
-     * @param string $DBVersion Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified.
-     * @param string $DedicatedClusterId CDC ID.
-     * @param boolean $DeletionProtection Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+     * @param string $Zone <p>Primary availability zone of the instance, such as: ap-guangzhou-3.<br>The availability zone can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
+     * @param string $MasterDBInstanceId <p>Primary instance ID of the read-only instance, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+     * @param string $SpecCode <p>Purchasable specification code. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/api/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
+     * @param integer $Storage <p>Instance disk capacity, in GB. The value for this parameter must be set in increments of 10.</p>
+     * @param integer $InstanceCount <p>Number of instances to purchase. Value range: [1-6]. The maximum allowed number is 6.</p>
+     * @param integer $Period <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: supports only 1.</li>
+     * @param string $VpcId <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> API to obtain it from the unVpcId field in the return value.</p>
+     * @param string $SubnetId <p>VPC subnet ID, such as subnet-xxxxxxxx (this parameter is required). A valid VPC subnet ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> API and obtain it from the unSubnetId field in the return value.</p>
+     * @param string $InstanceChargeType <p>Instance billing type. Valid values:</p><li>PREPAID: prepaid (yearly/monthly subscription).</li><li>POSTPAID_BY_HOUR: postpaid (pay-as-you-go).</li>Default value: PREPAID. If the primary instance is postpaid, the read-only instance must also be postpaid.
+     * @param integer $AutoVoucher <p>Indicates whether to use vouchers automatically:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
+     * @param array $VoucherIds <p>Voucher ID list. Only one voucher can be specified.</p>
+     * @param integer $AutoRenewFlag <p>Renewal flag:</p><li>0: manual renewal.</li><li>1: auto-renewal.</li>Default value: 0.
+     * @param integer $ProjectId <p>Project ID. The default value is 0, which means it belongs to the default project.</p>
+     * @param integer $ActivityId <p>Discount offer ID.</p>
+     * @param string $ReadOnlyGroupId <p>Read-only group ID.</p>
+     * @param Tag $TagList <p>Tags to be bound to the instance. This is empty by default. Tags can be obtained from the returned Tags field of the <a href="https://www.tencentcloud.com/document/api/651/35316?from_cn_redirect=1">DescribeTags</a> API.</p>
+     * @param array $SecurityGroupIds <p>Security group to which the instance belongs. The value of this parameter can be obtained from the returned sgId field of the <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API. If this parameter is not specified, the default security group is bound.</p>
+     * @param integer $NeedSupportIpv6 <p>Indicates whether to support IPv6:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
+     * @param string $Name <p>Instance name. The name can contain only Chinese characters, letters, digits, underscores (&quot;_&quot;), and hyphens (&quot;-&quot;), with a length of less than 60.</p>
+     * @param string $DBVersion <p>Not required anymore. The kernel version is consistent with that of the primary instance.</p>
+     * @param string $DedicatedClusterId <p>Dedicated cluster ID.</p>
+     * @param boolean $DeletionProtection <p>Indicates whether to enable deletion protection for the instance: true - enables deletion protection. false - disables deletion protection.</p>
      */
     function __construct()
     {

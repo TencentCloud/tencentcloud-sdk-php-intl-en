@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskHighlightInput getInput() Obtain Input for an intelligent highlight generating task.
  * @method void setInput(AiAnalysisTaskHighlightInput $Input) Set Input for an intelligent highlight generating task.
- * @method AiAnalysisTaskHighlightOutput getOutput() Obtain Output of an intelligent highlight generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskHighlightOutput $Output) Set Output of an intelligent highlight generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskHighlightOutput getOutput() Obtain Intelligent Highlight Task output.
+ * @method void setOutput(AiAnalysisTaskHighlightOutput $Output) Set Intelligent Highlight Task output.
  * @method integer getProgress() Obtain The progress of an intelligent highlight generation task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of an intelligent highlight generation task. Value range: 0-100.
  * @method string getBeginProcessTime() Obtain The time when the smart highlight task started execution, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
@@ -69,8 +67,7 @@ class AiAnalysisTaskHighlightResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskHighlightOutput Output of an intelligent highlight generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskHighlightOutput Intelligent Highlight Task output.
      */
     public $Output;
 
@@ -95,8 +92,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
      * @param AiAnalysisTaskHighlightInput $Input Input for an intelligent highlight generating task.
-     * @param AiAnalysisTaskHighlightOutput $Output Output of an intelligent highlight generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskHighlightOutput $Output Intelligent Highlight Task output.
      * @param integer $Progress The progress of an intelligent highlight generation task. Value range: 0-100.
      * @param string $BeginProcessTime The time when the smart highlight task started execution, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      * @param string $FinishTime The time the smart highlight task completed, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).

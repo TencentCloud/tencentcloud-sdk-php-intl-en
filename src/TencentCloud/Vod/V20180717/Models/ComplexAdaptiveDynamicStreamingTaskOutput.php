@@ -18,68 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output of the adaptive bitrate streaming task.
+ * Output result of adaptive bitrate streaming.
  *
- * @method integer getDefinition() Obtain Adaptive bitrate streaming template ID.
- * @method void setDefinition(integer $Definition) Set Adaptive bitrate streaming template ID.
- * @method string getFormat() Obtain The adaptive bitrate streaming format. Valid values:
+ * @method integer getDefinition() Obtain Adaptive bitrate template ID.
+ * @method void setDefinition(integer $Definition) Set Adaptive bitrate template ID.
+ * @method string getFormat() Obtain Adaptive bitrate stream packaging format. Optional values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-
- * @method void setFormat(string $Format) Set The adaptive bitrate streaming format. Valid values:
+ * @method void setFormat(string $Format) Set Adaptive bitrate stream packaging format. Optional values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-
- * @method string getDrmType() Obtain DRM scheme type, value range:
+ * @method string getDrmType() Obtain DRM solution type. Available values:
+<li>Empty string: Unencrypted.</li>
+<li>SimpleAES;</li>
 <li>Widevine;</li>
 <li>FairPlay.</li>
-The default value is an empty string, indicating that the video will not be DRM protected.
- * @method void setDrmType(string $DrmType) Set DRM scheme type, value range:
+ * @method void setDrmType(string $DrmType) Set DRM solution type. Available values:
+<li>Empty string: Unencrypted.</li>
+<li>SimpleAES;</li>
 <li>Widevine;</li>
 <li>FairPlay.</li>
-The default value is an empty string, indicating that the video will not be DRM protected.
- * @method string getUrl() Obtain Playback address of the output manifest.
- * @method void setUrl(string $Url) Set Playback address of the output manifest.
+ * @method string getUrl() Obtain Playback address of the adaptive bitrate stream.
+ * @method void setUrl(string $Url) Set Playback address of the adaptive bitrate stream.
  */
 class ComplexAdaptiveDynamicStreamingTaskOutput extends AbstractModel
 {
     /**
-     * @var integer Adaptive bitrate streaming template ID.
+     * @var integer Adaptive bitrate template ID.
      */
     public $Definition;
 
     /**
-     * @var string The adaptive bitrate streaming format. Valid values:
+     * @var string Adaptive bitrate stream packaging format. Optional values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-
      */
     public $Format;
 
     /**
-     * @var string DRM scheme type, value range:
+     * @var string DRM solution type. Available values:
+<li>Empty string: Unencrypted.</li>
+<li>SimpleAES;</li>
 <li>Widevine;</li>
 <li>FairPlay.</li>
-The default value is an empty string, indicating that the video will not be DRM protected.
      */
     public $DrmType;
 
     /**
-     * @var string Playback address of the output manifest.
+     * @var string Playback address of the adaptive bitrate stream.
      */
     public $Url;
 
     /**
-     * @param integer $Definition Adaptive bitrate streaming template ID.
-     * @param string $Format The adaptive bitrate streaming format. Valid values:
+     * @param integer $Definition Adaptive bitrate template ID.
+     * @param string $Format Adaptive bitrate stream packaging format. Optional values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-
-     * @param string $DrmType DRM scheme type, value range:
+     * @param string $DrmType DRM solution type. Available values:
+<li>Empty string: Unencrypted.</li>
+<li>SimpleAES;</li>
 <li>Widevine;</li>
 <li>FairPlay.</li>
-The default value is an empty string, indicating that the video will not be DRM protected.
-     * @param string $Url Playback address of the output manifest.
+     * @param string $Url Playback address of the adaptive bitrate stream.
      */
     function __construct()
     {

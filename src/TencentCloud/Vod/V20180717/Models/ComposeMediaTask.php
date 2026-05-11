@@ -44,14 +44,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getProgress() Obtain Progress of a media file composing task. Value range: [0, 100]
  * @method void setProgress(integer $Progress) Set Progress of a media file composing task. Value range: [0, 100]
- * @method ComposeMediaTaskInput getInput() Obtain Input of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setInput(ComposeMediaTaskInput $Input) Set Input of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method ComposeMediaTaskOutput getOutput() Obtain Output of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(ComposeMediaTaskOutput $Output) Set Output of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method ComposeMediaTaskInput getInput() Obtain Input of the media file creation task.
+ * @method void setInput(ComposeMediaTaskInput $Input) Set Input of the media file creation task.
+ * @method ComposeMediaTaskOutput getOutput() Obtain Output of the media file creation task.
+ * @method void setOutput(ComposeMediaTaskOutput $Output) Set Output of the media file creation task.
  * @method MediaMetaData getMetaData() Obtain The metadata of the output video.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setMetaData(MediaMetaData $MetaData) Set The metadata of the output video.
@@ -96,14 +92,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Progress;
 
     /**
-     * @var ComposeMediaTaskInput Input of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ComposeMediaTaskInput Input of the media file creation task.
      */
     public $Input;
 
     /**
-     * @var ComposeMediaTaskOutput Output of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ComposeMediaTaskOutput Output of the media file creation task.
      */
     public $Output;
 
@@ -136,10 +130,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Progress Progress of a media file composing task. Value range: [0, 100]
-     * @param ComposeMediaTaskInput $Input Input of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ComposeMediaTaskOutput $Output Output of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ComposeMediaTaskInput $Input Input of the media file creation task.
+     * @param ComposeMediaTaskOutput $Output Output of the media file creation task.
      * @param MediaMetaData $MetaData The metadata of the output video.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.

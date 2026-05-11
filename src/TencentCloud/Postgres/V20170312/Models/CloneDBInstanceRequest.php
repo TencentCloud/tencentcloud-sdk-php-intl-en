@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloneDBInstance request structure.
  *
- * @method string getDBInstanceId() Obtain The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
- * @method void setDBInstanceId(string $DBInstanceId) Set The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+ * @method string getDBInstanceId() Obtain The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method string getSpecCode() Obtain Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
  * @method void setSpecCode(string $SpecCode) Set Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
  * @method integer getStorage() Obtain Instance disk capacity size. set step size to 10. unit: GB.
@@ -68,18 +68,18 @@ Default value: PREPAID
 - POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
 
 Default value: PREPAID
- * @method array getSecurityGroupIds() Obtain Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
+ * @method array getSecurityGroupIds() Obtain Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
  * @method integer getProjectId() Obtain Project ID. default value is 0, which means it belongs to the default project.
  * @method void setProjectId(integer $ProjectId) Set Project ID. default value is 0, which means it belongs to the default project.
  * @method array getTagList() Obtain The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
  * @method void setTagList(array $TagList) Set The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
  * @method array getDBNodeSet() Obtain Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
-AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
  * @method void setDBNodeSet(array $DBNodeSet) Set Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
-AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
  * @method integer getAutoVoucher() Obtain Whether to automatically use coupons:
 
 - 0: No
@@ -116,7 +116,7 @@ Default value for the read-only instance: Async
 class CloneDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+     * @var string The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
@@ -176,7 +176,7 @@ Default value: PREPAID
     public $InstanceChargeType;
 
     /**
-     * @var array Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
+     * @var array Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
      */
     public $SecurityGroupIds;
@@ -193,7 +193,7 @@ Default value: PREPAID
 
     /**
      * @var array Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
-AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
      */
     public $DBNodeSet;
 
@@ -242,7 +242,7 @@ Default value for the read-only instance: Async
     public $DeletionProtection;
 
     /**
-     * @param string $DBInstanceId The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+     * @param string $DBInstanceId The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      * @param string $SpecCode Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
      * @param integer $Storage Instance disk capacity size. set step size to 10. unit: GB.
      * @param integer $Period Purchase duration, in months.
@@ -266,12 +266,12 @@ Default value: 0
 - POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
 
 Default value: PREPAID
-     * @param array $SecurityGroupIds Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
+     * @param array $SecurityGroupIds Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
      * @param integer $ProjectId Project ID. default value is 0, which means it belongs to the default project.
      * @param array $TagList The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
      * @param array $DBNodeSet Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
-AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
      * @param integer $AutoVoucher Whether to automatically use coupons:
 
 - 0: No

@@ -24,7 +24,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 
 /**
  * @method Models\BatchProcessMediaResponse BatchProcessMedia(Models\BatchProcessMediaRequest $req) This API is used to initiate batch processing tasks for URL video links, with features including:
-Smart subtitle (full speech, speech hotword, and speech translation)
+Smart subtitle (full speech, speech hotword, and speech translation).
  * @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) This API is used to create a custom content analysis template. Up to 50 templates can be created.
  * @method Models\CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(Models\CreateAIRecognitionTemplateRequest $req) This API is used to create a custom content recognition template. Up to 50 templates can be created.
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) This API is used to create an adaptive bitrate streaming template. Up up to 100 such templates can be created.
@@ -132,13 +132,16 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) * This API is used to query tasks.
 * If the data is large, one API call may not be able to obtain all the tasks in the query. You can use the `ScrollToken` parameter to query tasks with multiple calls.
 * Only tasks in the last seven days (168 hours) can be queried.
+ * @method Models\DescribeTextToSpeechAsyncTaskResponse DescribeTextToSpeechAsyncTask(Models\DescribeTextToSpeechAsyncTaskRequest $req) This API is used to query the result of an asynchronous text to speech task.
  * @method Models\DescribeTranscodeTemplatesResponse DescribeTranscodeTemplates(Models\DescribeTranscodeTemplatesRequest $req) This API is used to get the list of transcoding templates based on unique template ID. The return result includes all eligible custom and [preset transcoding templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
  * @method Models\DescribeUsageDataResponse DescribeUsageData(Models\DescribeUsageDataRequest $req) This API is used to return the daily Media Processing Service (MPS) usage information within the specified query time range.
    1. MPS statistical data from the last 365 days can be queried.
    2. The query time span should not exceed 90 days.
+ * @method Models\DescribeVoicesResponse DescribeVoices(Models\DescribeVoicesRequest $req) This synchronous API is used to query available voices. It supports filtering voices by type, tag, language, and other criteria.
  * @method Models\DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(Models\DescribeWatermarkTemplatesRequest $req) This API is used to query custom watermarking templates and supports paged queries by filters.
  * @method Models\DescribeWordSamplesResponse DescribeWordSamples(Models\DescribeWordSamplesRequest $req) This API is used to perform paged queries of keyword sample information by use case, keyword, and tag.
  * @method Models\DescribeWorkflowsResponse DescribeWorkflows(Models\DescribeWorkflowsRequest $req) This API is used to get the list of workflow details by workflow ID.
+ * @method Models\DesignVoiceAsyncResponse DesignVoiceAsync(Models\DesignVoiceAsyncRequest $req) This API is used to design a voice. It generates a voice ID based on a prompt.
  * @method Models\DisableScheduleResponse DisableSchedule(Models\DisableScheduleRequest $req) This API is used to disable a scheme.
  * @method Models\DisableWorkflowResponse DisableWorkflow(Models\DisableWorkflowRequest $req) This API is used to disable a workflow.
  * @method Models\EditMediaResponse EditMedia(Models\EditMediaRequest $req) This API is used to edit a video to generate a new one. Editing features include:
@@ -212,10 +215,13 @@ Live stream processing event notification supports HTTP callback and also suppor
 - Smart content moderation (such as pornography detection and sensitive information detection).
 - Smart content analysis (such as tags, classifications, covers, frame tags, video splitting, highlights, opening and ending clips, and marking points for games).
 - Smart content recognition (such as human faces, full texts, text keywords, full speech, speech keywords, speech translation, and object recognition).
+ * @method Models\QueryProjectResponse QueryProject(Models\QueryProjectRequest $req) This API is used to query an episode project.
  * @method Models\RecognizeAudioResponse RecognizeAudio(Models\RecognizeAudioRequest $req) This API is used to return the speech recognition results synchronously.
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) This API is used to reset an existing workflow that is disabled.
  * @method Models\SyncDubbingResponse SyncDubbing(Models\SyncDubbingRequest $req) This API is used to return the clone voice type Id or synthetic audio results synchronously.
- * @method Models\TextTranslationResponse TextTranslation(Models\TextTranslationRequest $req) This API is used to translate text.
+ * @method Models\TextToSpeechAsyncResponse TextToSpeechAsync(Models\TextToSpeechAsyncRequest $req) This API is used to convert text to speech asynchronously and supports long text to speech.
+ * @method Models\TextTranslationResponse TextTranslation(Models\TextTranslationRequest $req) 
+ * @method Models\UpdateProjectResponse UpdateProject(Models\UpdateProjectRequest $req) This API is used to update an episode project.
  */
 
 class MpsClient extends AbstractClient

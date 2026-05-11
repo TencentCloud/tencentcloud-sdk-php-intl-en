@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileIds(array $FileIds) Set Media file unique identifier list, maximum length: 100.
  * @method integer getRestoreDay() Obtain The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
  * @method void setRestoreDay(integer $RestoreDay) Set The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method string getRestoreTier() Obtain The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
 <li>Expedited: The files are made available in five minutes.</li>
 <li>Standard: The files are made available in five hours.</li>
@@ -54,7 +54,7 @@ class RestoreMediaRequest extends AbstractModel
     public $RestoreDay;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
@@ -72,7 +72,7 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
     /**
      * @param array $FileIds Media file unique identifier list, maximum length: 100.
      * @param integer $RestoreDay The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param string $RestoreTier The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
 <li>Expedited: The files are made available in five minutes.</li>
 <li>Standard: The files are made available in five hours.</li>

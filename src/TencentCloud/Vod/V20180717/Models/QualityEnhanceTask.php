@@ -42,18 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
  * @method integer getProgress() Obtain Media quality enhance task progress, value range [0-100].
  * @method void setProgress(integer $Progress) Set Media quality enhance task progress, value range [0-100].
- * @method QualityEnhanceTaskInput getInput() Obtain Input for media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setInput(QualityEnhanceTaskInput $Input) Set Input for media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method QualityEnhanceTaskOutput getOutput() Obtain Output of the media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setOutput(QualityEnhanceTaskOutput $Output) Set Output of the media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method MediaMetaData getMetaData() Obtain Media quality enhance outputs meta-information of the video.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setMetaData(MediaMetaData $MetaData) Set Media quality enhance outputs meta-information of the video.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method QualityEnhanceTaskInput getInput() Obtain Input of the audio and video quality regeneration task.
+ * @method void setInput(QualityEnhanceTaskInput $Input) Set Input of the audio and video quality regeneration task.
+ * @method QualityEnhanceTaskOutput getOutput() Obtain Output of the audio and video quality regeneration task.
+ * @method void setOutput(QualityEnhanceTaskOutput $Output) Set Output of the audio and video quality regeneration task.
+ * @method MediaMetaData getMetaData() Obtain Metadata of the output video after audio and video quality revival.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of the output video after audio and video quality revival.
  * @method string getSessionId() Obtain Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
  * @method void setSessionId(string $SessionId) Set Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
  * @method string getSessionContext() Obtain Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
@@ -97,20 +91,17 @@ class QualityEnhanceTask extends AbstractModel
     public $Progress;
 
     /**
-     * @var QualityEnhanceTaskInput Input for media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var QualityEnhanceTaskInput Input of the audio and video quality regeneration task.
      */
     public $Input;
 
     /**
-     * @var QualityEnhanceTaskOutput Output of the media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var QualityEnhanceTaskOutput Output of the audio and video quality regeneration task.
      */
     public $Output;
 
     /**
-     * @var MediaMetaData Media quality enhance outputs meta-information of the video.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var MediaMetaData Metadata of the output video after audio and video quality revival.
      */
     public $MetaData;
 
@@ -136,12 +127,9 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $Message Error message.
      * @param string $ErrCodeExt Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
      * @param integer $Progress Media quality enhance task progress, value range [0-100].
-     * @param QualityEnhanceTaskInput $Input Input for media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param QualityEnhanceTaskOutput $Output Output of the media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param MediaMetaData $MetaData Media quality enhance outputs meta-information of the video.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param QualityEnhanceTaskInput $Input Input of the audio and video quality regeneration task.
+     * @param QualityEnhanceTaskOutput $Output Output of the audio and video quality regeneration task.
+     * @param MediaMetaData $MetaData Metadata of the output video after audio and video quality revival.
      * @param string $SessionId Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
      * @param string $SessionContext Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
      */

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisIsolateDBInstances request structure.
  *
- * @method array getDBInstanceIdSet() Obtain Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
+ * @method array getDBInstanceIdSet() Obtain Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
  * @method integer getPeriod() Obtain Purchase duration, in months.
 <Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
 <Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
@@ -42,7 +42,7 @@ Default value: `false`.
 class DisIsolateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
+     * @var array Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
      */
     public $DBInstanceIdSet;
 
@@ -67,7 +67,7 @@ Default value: `false`.
     public $VoucherIds;
 
     /**
-     * @param array $DBInstanceIdSet Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
+     * @param array $DBInstanceIdSet Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
      * @param integer $Period Purchase duration, in months.
 <Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
 <Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.

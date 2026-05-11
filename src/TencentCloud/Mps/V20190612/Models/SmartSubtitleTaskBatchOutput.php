@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output information for smart subtitle tasks.
  *
- * @method integer getProgress() Obtain Task progress.
- * @method void setProgress(integer $Progress) Set Task progress.
- * @method string getStatus() Obtain Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method void setStatus(string $Status) Set Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
- * @method SmartSubtitleTaskTransTextResultOutput getTransTextTask() Obtain Translation task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setTransTextTask(SmartSubtitleTaskTransTextResultOutput $TransTextTask) Set Translation task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method SmartSubtitleTaskAsrFullTextResultOutput getAsrFullTextTask() Obtain Output information on the full speech recognition task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setAsrFullTextTask(SmartSubtitleTaskAsrFullTextResultOutput $AsrFullTextTask) Set Output information on the full speech recognition task.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getProgress() Obtain <p>Task progress.</p>
+ * @method void setProgress(integer $Progress) Set <p>Task progress.</p>
+ * @method string getStatus() Obtain <p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
+ * @method void setStatus(string $Status) Set <p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
+ * @method string getErrCodeExt() Obtain <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+ * @method string getMessage() Obtain <p>Error message.</p>
+ * @method void setMessage(string $Message) Set <p>Error message.</p>
+ * @method SmartSubtitleTaskTransTextResultOutput getTransTextTask() Obtain <p>Translation task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTransTextTask(SmartSubtitleTaskTransTextResultOutput $TransTextTask) Set <p>Translation task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SmartSubtitleTaskAsrFullTextResultOutput getAsrFullTextTask() Obtain <p>Full speech recognition task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAsrFullTextTask(SmartSubtitleTaskAsrFullTextResultOutput $AsrFullTextTask) Set <p>Full speech recognition task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SmartSubtitleTaskBatchOutput extends AbstractModel
 {
     /**
-     * @var integer Task progress.
+     * @var integer <p>Task progress.</p>
      */
     public $Progress;
 
     /**
-     * @var string Task status, including PROCESSING, SUCCESS, and FAIL.
+     * @var string <p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
      */
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @var string <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
      */
     public $ErrCodeExt;
 
     /**
-     * @var string Error message.
+     * @var string <p>Error message.</p>
      */
     public $Message;
 
     /**
-     * @var SmartSubtitleTaskTransTextResultOutput Translation task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var SmartSubtitleTaskTransTextResultOutput <p>Translation task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TransTextTask;
 
     /**
-     * @var SmartSubtitleTaskAsrFullTextResultOutput Output information on the full speech recognition task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var SmartSubtitleTaskAsrFullTextResultOutput <p>Full speech recognition task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AsrFullTextTask;
 
     /**
-     * @param integer $Progress Task progress.
-     * @param string $Status Task status, including PROCESSING, SUCCESS, and FAIL.
-     * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param string $Message Error message.
-     * @param SmartSubtitleTaskTransTextResultOutput $TransTextTask Translation task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SmartSubtitleTaskAsrFullTextResultOutput $AsrFullTextTask Output information on the full speech recognition task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $Progress <p>Task progress.</p>
+     * @param string $Status <p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
+     * @param string $ErrCodeExt <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+     * @param string $Message <p>Error message.</p>
+     * @param SmartSubtitleTaskTransTextResultOutput $TransTextTask <p>Translation task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SmartSubtitleTaskAsrFullTextResultOutput $AsrFullTextTask <p>Full speech recognition task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

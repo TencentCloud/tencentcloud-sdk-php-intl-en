@@ -20,16 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Super resolution configuration.
  *
- * @method string getSwitch() Obtain Whether to enable super resolution. Valid values:
-<li>ON</li>
-<li>`OFF`</li>
-If super resolution is enabled, the output resolution will double.
-Default value: `OFF`.
- * @method void setSwitch(string $Switch) Set Whether to enable super resolution. Valid values:
-<li>ON</li>
-<li>`OFF`</li>
-If super resolution is enabled, the output resolution will double.
-Default value: `OFF`.
+ * @method string getSwitch() Obtain Super resolution control switch. Optional values:
+<li>ON: Enable super resolution;</li>
+<li>OFF: Disable screen super resolution.</li>
+ * @method void setSwitch(string $Switch) Set Super resolution control switch. Optional values:
+<li>ON: Enable super resolution;</li>
+<li>OFF: Disable screen super resolution.</li>
  * @method string getType() Obtain The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
 <li>`lq`: For low-resolution videos with obvious noise</li>
 <li>`hq`: For high-resolution videos</li>
@@ -46,11 +42,9 @@ Default value: `2`.
 class SuperResolutionInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable super resolution. Valid values:
-<li>ON</li>
-<li>`OFF`</li>
-If super resolution is enabled, the output resolution will double.
-Default value: `OFF`.
+     * @var string Super resolution control switch. Optional values:
+<li>ON: Enable super resolution;</li>
+<li>OFF: Disable screen super resolution.</li>
      */
     public $Switch;
 
@@ -69,11 +63,9 @@ Default value: `2`.
     public $Size;
 
     /**
-     * @param string $Switch Whether to enable super resolution. Valid values:
-<li>ON</li>
-<li>`OFF`</li>
-If super resolution is enabled, the output resolution will double.
-Default value: `OFF`.
+     * @param string $Switch Super resolution control switch. Optional values:
+<li>ON: Enable super resolution;</li>
+<li>OFF: Disable screen super resolution.</li>
      * @param string $Type The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
 <li>`lq`: For low-resolution videos with obvious noise</li>
 <li>`hq`: For high-resolution videos</li>

@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiRecognitionTaskFaceResultInput getInput() Obtain Input information of face recognition task.
  * @method void setInput(AiRecognitionTaskFaceResultInput $Input) Set Input information of face recognition task.
- * @method AiRecognitionTaskFaceResultOutput getOutput() Obtain Output information of face recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiRecognitionTaskFaceResultOutput $Output) Set Output information of face recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiRecognitionTaskFaceResultOutput getOutput() Obtain Face recognition task output information.
+ * @method void setOutput(AiRecognitionTaskFaceResultOutput $Output) Set Face recognition task output information.
  * @method integer getProgress() Obtain The progress of a face recognition task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of a face recognition task. Value range: 0-100.
  * @method string getBeginProcessTime() Obtain The time when the face recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
@@ -69,8 +67,7 @@ class AiRecognitionTaskFaceResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiRecognitionTaskFaceResultOutput Output information of face recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskFaceResultOutput Face recognition task output information.
      */
     public $Output;
 
@@ -95,8 +92,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
      * @param AiRecognitionTaskFaceResultInput $Input Input information of face recognition task.
-     * @param AiRecognitionTaskFaceResultOutput $Output Output information of face recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiRecognitionTaskFaceResultOutput $Output Face recognition task output information.
      * @param integer $Progress The progress of a face recognition task. Value range: 0-100.
      * @param string $BeginProcessTime The time when the face recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      * @param string $FinishTime The time when the face recognition task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).

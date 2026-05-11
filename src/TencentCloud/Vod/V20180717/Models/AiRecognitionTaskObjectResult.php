@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiRecognitionTaskObjectResultInput getInput() Obtain Input information of object recognition task.
  * @method void setInput(AiRecognitionTaskObjectResultInput $Input) Set Input information of object recognition task.
- * @method AiRecognitionTaskObjectResultOutput getOutput() Obtain Output information of object recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiRecognitionTaskObjectResultOutput $Output) Set Output information of object recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiRecognitionTaskObjectResultOutput getOutput() Obtain Object recognition task output information.
+ * @method void setOutput(AiRecognitionTaskObjectResultOutput $Output) Set Object recognition task output information.
  * @method integer getProgress() Obtain The progress of an object recognition task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of an object recognition task. Value range: 0-100.
  * @method string getBeginProcessTime() Obtain The time when the object recognition task started execution, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
@@ -69,8 +67,7 @@ class AiRecognitionTaskObjectResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiRecognitionTaskObjectResultOutput Output information of object recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskObjectResultOutput Object recognition task output information.
      */
     public $Output;
 
@@ -95,8 +92,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
      * @param AiRecognitionTaskObjectResultInput $Input Input information of object recognition task.
-     * @param AiRecognitionTaskObjectResultOutput $Output Output information of object recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiRecognitionTaskObjectResultOutput $Output Object recognition task output information.
      * @param integer $Progress The progress of an object recognition task. Value range: 0-100.
      * @param string $BeginProcessTime The time when the object recognition task started execution, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      * @param string $FinishTime The time when the object recognition task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).

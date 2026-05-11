@@ -102,6 +102,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @var AiRecognitionTaskInput Type parameter of AI-based content recognition task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $AiRecognitionTask;
 

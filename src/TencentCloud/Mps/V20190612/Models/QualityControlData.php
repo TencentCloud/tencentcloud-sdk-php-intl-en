@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Media quality inspection result output.
  *
- * @method boolean getNoAudio() Obtain When this field is set to true, it indicates that the video has no audio track.
- * @method void setNoAudio(boolean $NoAudio) Set When this field is set to true, it indicates that the video has no audio track.
- * @method boolean getNoVideo() Obtain When this field is set to true, it indicates that the video has no video track.
- * @method void setNoVideo(boolean $NoVideo) Set When this field is set to true, it indicates that the video has no video track.
- * @method integer getQualityEvaluationScore() Obtain No-reference quality score of the video (100 points in total).
- * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) Set No-reference quality score of the video (100 points in total).
- * @method float getQualityEvaluationMeanOpinionScore() Obtain No-reference quality score of the video (MOS).
- * @method void setQualityEvaluationMeanOpinionScore(float $QualityEvaluationMeanOpinionScore) Set No-reference quality score of the video (MOS).
- * @method array getQualityControlResultSet() Obtain Exception items identified in content quality inspection.
- * @method void setQualityControlResultSet(array $QualityControlResultSet) Set Exception items identified in content quality inspection.
- * @method array getContainerDiagnoseResultSet() Obtain Exception items identified in format diagnosis.
- * @method void setContainerDiagnoseResultSet(array $ContainerDiagnoseResultSet) Set Exception items identified in format diagnosis.
+ * @method boolean getNoAudio() Obtain <p>A value of true indicates that the video has no audio track.</p>
+ * @method void setNoAudio(boolean $NoAudio) Set <p>A value of true indicates that the video has no audio track.</p>
+ * @method boolean getNoVideo() Obtain <p>A value of true indicates that the video has no video track.</p>
+ * @method void setNoVideo(boolean $NoVideo) Set <p>A value of true indicates that the video has no video track.</p>
+ * @method integer getQualityEvaluationScore() Obtain <p>No-reference quality score of the video, on a scale of 0 to 100.</p>
+ * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) Set <p>No-reference quality score of the video, on a scale of 0 to 100.</p>
+ * @method float getQualityEvaluationMeanOpinionScore() Obtain <p>No-reference quality score of the video (MOS).</p>
+ * @method void setQualityEvaluationMeanOpinionScore(float $QualityEvaluationMeanOpinionScore) Set <p>No-reference quality score of the video (MOS).</p>
+ * @method integer getAestheticEvaluationScore() Obtain <p>Video aesthetic score. Value range: [0, 100].</p>
+ * @method void setAestheticEvaluationScore(integer $AestheticEvaluationScore) Set <p>Video aesthetic score. Value range: [0, 100].</p>
+ * @method array getQualityControlResultSet() Obtain <p>Exception items detected in content quality inspection.</p>
+ * @method void setQualityControlResultSet(array $QualityControlResultSet) Set <p>Exception items detected in content quality inspection.</p>
+ * @method array getContainerDiagnoseResultSet() Obtain <p>Exception items detected in format diagnosis.</p>
+ * @method void setContainerDiagnoseResultSet(array $ContainerDiagnoseResultSet) Set <p>Exception items detected in format diagnosis.</p>
  */
 class QualityControlData extends AbstractModel
 {
     /**
-     * @var boolean When this field is set to true, it indicates that the video has no audio track.
+     * @var boolean <p>A value of true indicates that the video has no audio track.</p>
      */
     public $NoAudio;
 
     /**
-     * @var boolean When this field is set to true, it indicates that the video has no video track.
+     * @var boolean <p>A value of true indicates that the video has no video track.</p>
      */
     public $NoVideo;
 
     /**
-     * @var integer No-reference quality score of the video (100 points in total).
+     * @var integer <p>No-reference quality score of the video, on a scale of 0 to 100.</p>
      */
     public $QualityEvaluationScore;
 
     /**
-     * @var float No-reference quality score of the video (MOS).
+     * @var float <p>No-reference quality score of the video (MOS).</p>
      */
     public $QualityEvaluationMeanOpinionScore;
 
     /**
-     * @var array Exception items identified in content quality inspection.
+     * @var integer <p>Video aesthetic score. Value range: [0, 100].</p>
+     */
+    public $AestheticEvaluationScore;
+
+    /**
+     * @var array <p>Exception items detected in content quality inspection.</p>
      */
     public $QualityControlResultSet;
 
     /**
-     * @var array Exception items identified in format diagnosis.
+     * @var array <p>Exception items detected in format diagnosis.</p>
      */
     public $ContainerDiagnoseResultSet;
 
     /**
-     * @param boolean $NoAudio When this field is set to true, it indicates that the video has no audio track.
-     * @param boolean $NoVideo When this field is set to true, it indicates that the video has no video track.
-     * @param integer $QualityEvaluationScore No-reference quality score of the video (100 points in total).
-     * @param float $QualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
-     * @param array $QualityControlResultSet Exception items identified in content quality inspection.
-     * @param array $ContainerDiagnoseResultSet Exception items identified in format diagnosis.
+     * @param boolean $NoAudio <p>A value of true indicates that the video has no audio track.</p>
+     * @param boolean $NoVideo <p>A value of true indicates that the video has no video track.</p>
+     * @param integer $QualityEvaluationScore <p>No-reference quality score of the video, on a scale of 0 to 100.</p>
+     * @param float $QualityEvaluationMeanOpinionScore <p>No-reference quality score of the video (MOS).</p>
+     * @param integer $AestheticEvaluationScore <p>Video aesthetic score. Value range: [0, 100].</p>
+     * @param array $QualityControlResultSet <p>Exception items detected in content quality inspection.</p>
+     * @param array $ContainerDiagnoseResultSet <p>Exception items detected in format diagnosis.</p>
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class QualityControlData extends AbstractModel
 
         if (array_key_exists("QualityEvaluationMeanOpinionScore",$param) and $param["QualityEvaluationMeanOpinionScore"] !== null) {
             $this->QualityEvaluationMeanOpinionScore = $param["QualityEvaluationMeanOpinionScore"];
+        }
+
+        if (array_key_exists("AestheticEvaluationScore",$param) and $param["AestheticEvaluationScore"] !== null) {
+            $this->AestheticEvaluationScore = $param["AestheticEvaluationScore"];
         }
 
         if (array_key_exists("QualityControlResultSet",$param) and $param["QualityControlResultSet"] !== null) {

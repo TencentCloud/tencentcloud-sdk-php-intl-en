@@ -44,16 +44,8 @@ use TencentCloud\Common\AbstractModel;
 <li>once: no longer appears after watermark playback ends.</li>
 <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
 <li>repeat (default): repeats the playback until the video ends.</li>
- * @method integer getTransparency() Obtain Image transparency, value range: [0, 100]
-
-<li>0: Completely opaque</li>
-
-<li>100: Completely transparent.</li>
- * @method void setTransparency(integer $Transparency) Set Image transparency, value range: [0, 100]
-
-<li>0: Completely opaque</li>
-
-<li>100: Completely transparent.</li>
+ * @method integer getTransparency() Obtain 
+ * @method void setTransparency(integer $Transparency) Set 
  */
 class ImageWatermarkTemplate extends AbstractModel
 {
@@ -86,11 +78,7 @@ class ImageWatermarkTemplate extends AbstractModel
     public $RepeatType;
 
     /**
-     * @var integer Image transparency, value range: [0, 100]
-
-<li>0: Completely opaque</li>
-
-<li>100: Completely transparent.</li>
+     * @var integer 
      */
     public $Transparency;
 
@@ -107,11 +95,7 @@ class ImageWatermarkTemplate extends AbstractModel
 <li>once: no longer appears after watermark playback ends.</li>
 <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
 <li>repeat (default): repeats the playback until the video ends.</li>
-     * @param integer $Transparency Image transparency, value range: [0, 100]
-
-<li>0: Completely opaque</li>
-
-<li>100: Completely transparent.</li>
+     * @param integer $Transparency 
      */
     function __construct()
     {

@@ -52,8 +52,8 @@ Only return the final result once (return value takes the value from Choices[n].
 
 Note:.
 When making an SDK call, streaming and non-streaming calls require **different ways** to obtain the return value. refer to the comments or sample code in the SDK (in the examples/hunyuan/v20230901/ directory of each language SDK code repository).
- * @method string getText() Obtain Text to be translated.
- * @method void setText(string $Text) Set Text to be translated.
+ * @method string getText() Obtain Text to be translated
+ * @method void setText(string $Text) Set Text to be translated
  * @method string getSource() Obtain Source language.
 Supported language list:. 
 Simplified chinese: zh, traditional chinese: zh-TR, cantonese: yue, english: en, french: fr, portuguese: pt, spanish: es, japanese: ja, turkish: TR, russian: ru, arabic: ar, korean: ko, thai: th, italian: it, german: de, vietnamese: vi, malay: ms, indonesian: id.
@@ -108,7 +108,7 @@ When making an SDK call, streaming and non-streaming calls require **different w
     public $Stream;
 
     /**
-     * @var string Text to be translated.
+     * @var string Text to be translated
      */
     public $Text;
 
@@ -162,7 +162,7 @@ Only return the final result once (return value takes the value from Choices[n].
 
 Note:.
 When making an SDK call, streaming and non-streaming calls require **different ways** to obtain the return value. refer to the comments or sample code in the SDK (in the examples/hunyuan/v20230901/ directory of each language SDK code repository).
-     * @param string $Text Text to be translated.
+     * @param string $Text Text to be translated
      * @param string $Source Source language.
 Supported language list:. 
 Simplified chinese: zh, traditional chinese: zh-TR, cantonese: yue, english: en, french: fr, portuguese: pt, spanish: es, japanese: ja, turkish: TR, russian: ru, arabic: ar, korean: ko, thai: th, italian: it, german: de, vietnamese: vi, malay: ms, indonesian: id.

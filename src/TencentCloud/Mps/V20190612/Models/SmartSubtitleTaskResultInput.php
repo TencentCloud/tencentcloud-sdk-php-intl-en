@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Smart subtitle translation input.
  *
- * @method integer getDefinition() Obtain Smart subtitle template ID.
- * @method void setDefinition(integer $Definition) Set Smart subtitle template ID.
- * @method RawSmartSubtitleParameter getRawParameter() Obtain Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setRawParameter(RawSmartSubtitleParameter $RawParameter) Set Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getDefinition() Obtain <p>Smart subtitle template ID.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Smart subtitle template ID.</p>
+ * @method RawSmartSubtitleParameter getRawParameter() Obtain <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRawParameter(RawSmartSubtitleParameter $RawParameter) Set <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUserExtPara() Obtain <p>Extended parameter.</p>
+ * @method void setUserExtPara(string $UserExtPara) Set <p>Extended parameter.</p>
  */
 class SmartSubtitleTaskResultInput extends AbstractModel
 {
     /**
-     * @var integer Smart subtitle template ID.
+     * @var integer <p>Smart subtitle template ID.</p>
      */
     public $Definition;
 
     /**
-     * @var RawSmartSubtitleParameter Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var RawSmartSubtitleParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RawParameter;
 
     /**
-     * @param integer $Definition Smart subtitle template ID.
-     * @param RawSmartSubtitleParameter $RawParameter Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string <p>Extended parameter.</p>
+     */
+    public $UserExtPara;
+
+    /**
+     * @param integer $Definition <p>Smart subtitle template ID.</p>
+     * @param RawSmartSubtitleParameter $RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UserExtPara <p>Extended parameter.</p>
      */
     function __construct()
     {
@@ -69,6 +73,10 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("RawParameter",$param) and $param["RawParameter"] !== null) {
             $this->RawParameter = new RawSmartSubtitleParameter();
             $this->RawParameter->deserialize($param["RawParameter"]);
+        }
+
+        if (array_key_exists("UserExtPara",$param) and $param["UserExtPara"] !== null) {
+            $this->UserExtPara = $param["UserExtPara"];
         }
     }
 }

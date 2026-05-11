@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskCoverInput getInput() Obtain Input of intelligent cover generating task.
  * @method void setInput(AiAnalysisTaskCoverInput $Input) Set Input of intelligent cover generating task.
- * @method AiAnalysisTaskCoverOutput getOutput() Obtain Output of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskCoverOutput $Output) Set Output of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskCoverOutput getOutput() Obtain Intelligent Cover Task output.
+ * @method void setOutput(AiAnalysisTaskCoverOutput $Output) Set Intelligent Cover Task output.
  * @method integer getProgress() Obtain The progress of an intelligent thumbnail generation task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of an intelligent thumbnail generation task. Value range: 0-100.
  * @method string getBeginProcessTime() Obtain The time when the smart cover task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
@@ -69,8 +67,7 @@ class AiAnalysisTaskCoverResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskCoverOutput Output of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskCoverOutput Intelligent Cover Task output.
      */
     public $Output;
 
@@ -95,8 +92,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
      * @param AiAnalysisTaskCoverInput $Input Input of intelligent cover generating task.
-     * @param AiAnalysisTaskCoverOutput $Output Output of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskCoverOutput $Output Intelligent Cover Task output.
      * @param integer $Progress The progress of an intelligent thumbnail generation task. Value range: 0-100.
      * @param string $BeginProcessTime The time when the smart cover task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      * @param string $FinishTime The time when the smart cover task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).

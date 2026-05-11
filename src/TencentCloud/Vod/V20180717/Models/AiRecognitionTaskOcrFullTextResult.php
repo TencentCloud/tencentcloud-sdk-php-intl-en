@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiRecognitionTaskOcrFullTextResultInput getInput() Obtain Input information of full text recognition task.
  * @method void setInput(AiRecognitionTaskOcrFullTextResultInput $Input) Set Input information of full text recognition task.
- * @method AiRecognitionTaskOcrFullTextResultOutput getOutput() Obtain Output information of full text recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiRecognitionTaskOcrFullTextResultOutput $Output) Set Output information of full text recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiRecognitionTaskOcrFullTextResultOutput getOutput() Obtain Full text recognition task output information.
+ * @method void setOutput(AiRecognitionTaskOcrFullTextResultOutput $Output) Set Full text recognition task output information.
  * @method integer getProgress() Obtain The progress of a full text recognition task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of a full text recognition task. Value range: 0-100.
  * @method string getBeginProcessTime() Obtain The time when the full text recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
@@ -69,8 +67,7 @@ class AiRecognitionTaskOcrFullTextResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiRecognitionTaskOcrFullTextResultOutput Output information of full text recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskOcrFullTextResultOutput Full text recognition task output information.
      */
     public $Output;
 
@@ -95,8 +92,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
      * @param AiRecognitionTaskOcrFullTextResultInput $Input Input information of full text recognition task.
-     * @param AiRecognitionTaskOcrFullTextResultOutput $Output Output information of full text recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiRecognitionTaskOcrFullTextResultOutput $Output Full text recognition task output information.
      * @param integer $Progress The progress of a full text recognition task. Value range: 0-100.
      * @param string $BeginProcessTime The time when the full text recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      * @param string $FinishTime The time when the full text recognition task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).

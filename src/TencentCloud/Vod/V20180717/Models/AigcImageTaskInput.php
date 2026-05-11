@@ -18,76 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of AIGC image task.
+ * Input of the AIGC image generation task.
  *
- * @method string getModelName() Obtain Model name. 
- * @method void setModelName(string $ModelName) Set Model name. 
- * @method string getModelVersion() Obtain Model version. 
- * @method void setModelVersion(string $ModelVersion) Set Model version. 
- * @method array getFileInfos() Obtain File information of the input image for the AIGC image generation task.
- * @method void setFileInfos(array $FileInfos) Set File information of the input image for the AIGC image generation task.
- * @method string getPrompt() Obtain The prompt content for image generation.
- * @method void setPrompt(string $Prompt) Set The prompt content for image generation.
- * @method string getNegativePrompt() Obtain Prevent the model from generating image generation prompts.
- * @method void setNegativePrompt(string $NegativePrompt) Set Prevent the model from generating image generation prompts.
- * @method string getEnhancePrompt() Obtain Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
- * @method void setEnhancePrompt(string $EnhancePrompt) Set Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
- * @method string getGenerationMode() Obtain Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
- * @method void setGenerationMode(string $GenerationMode) Set Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
- * @method AigcImageOutputConfig getOutputConfig() Obtain Output media file configuration for the task.
- * @method void setOutputConfig(AigcImageOutputConfig $OutputConfig) Set Output media file configuration for the task.
+ * @method string getModelName() Obtain Model name.
+ * @method void setModelName(string $ModelName) Set Model name.
+ * @method string getModelVersion() Obtain Model version.
+ * @method void setModelVersion(string $ModelVersion) Set Model version.
+ * @method array getFileInfos() Obtain Input file of the AIGC image generation task.
+ * @method void setFileInfos(array $FileInfos) Set Input file of the AIGC image generation task.
+ * @method string getPrompt() Obtain Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
+ * @method void setPrompt(string $Prompt) Set Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
+ * @method string getNegativePrompt() Obtain To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
+ * @method void setNegativePrompt(string $NegativePrompt) Set To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
+ * @method string getEnhancePrompt() Obtain Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
+ * @method void setEnhancePrompt(string $EnhancePrompt) Set Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
+ * @method string getGenerationMode() Obtain Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
+ * @method void setGenerationMode(string $GenerationMode) Set Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
+ * @method AigcImageOutputConfig getOutputConfig() Obtain Output the result file of the AIGC image generation.
+ * @method void setOutputConfig(AigcImageOutputConfig $OutputConfig) Set Output the result file of the AIGC image generation.
  */
 class AigcImageTaskInput extends AbstractModel
 {
     /**
-     * @var string Model name. 
+     * @var string Model name.
      */
     public $ModelName;
 
     /**
-     * @var string Model version. 
+     * @var string Model version.
      */
     public $ModelVersion;
 
     /**
-     * @var array File information of the input image for the AIGC image generation task.
+     * @var array Input file of the AIGC image generation task.
      */
     public $FileInfos;
 
     /**
-     * @var string The prompt content for image generation.
+     * @var string Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
      */
     public $Prompt;
 
     /**
-     * @var string Prevent the model from generating image generation prompts.
+     * @var string To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
      */
     public $NegativePrompt;
 
     /**
-     * @var string Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
+     * @var string Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
      */
     public $EnhancePrompt;
 
     /**
-     * @var string Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
+     * @var string Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
      */
     public $GenerationMode;
 
     /**
-     * @var AigcImageOutputConfig Output media file configuration for the task.
+     * @var AigcImageOutputConfig Output the result file of the AIGC image generation.
      */
     public $OutputConfig;
 
     /**
-     * @param string $ModelName Model name. 
-     * @param string $ModelVersion Model version. 
-     * @param array $FileInfos File information of the input image for the AIGC image generation task.
-     * @param string $Prompt The prompt content for image generation.
-     * @param string $NegativePrompt Prevent the model from generating image generation prompts.
-     * @param string $EnhancePrompt Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
-     * @param string $GenerationMode Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
-     * @param AigcImageOutputConfig $OutputConfig Output media file configuration for the task.
+     * @param string $ModelName Model name.
+     * @param string $ModelVersion Model version.
+     * @param array $FileInfos Input file of the AIGC image generation task.
+     * @param string $Prompt Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
+     * @param string $NegativePrompt To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
+     * @param string $EnhancePrompt Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
+     * @param string $GenerationMode Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
+     * @param AigcImageOutputConfig $OutputConfig Output the result file of the AIGC image generation.
      */
     function __construct()
     {

@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Image moderation results.
  *
- * @method string getSuggestion() Obtain The suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method void setSuggestion(string $Suggestion) Set The suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+ * @method string getSuggestion() Obtain Image review result suggestion. Value ranges from...to...
+<li>pass: it is recommended to pass;</li>
+<li>review: suggest re-examination;</li>
+<li>block: Suggest banning.</li>
+ * @method void setSuggestion(string $Suggestion) Set Image review result suggestion. Value ranges from...to...
+<li>pass: it is recommended to pass;</li>
+<li>review: suggest re-examination;</li>
+<li>block: Suggest banning.</li>
  * @method string getLabel() Obtain The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
  * @method void setLabel(string $Label) Set The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
- * @method string getForm() Obtain The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
- * @method void setForm(string $Form) Set The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
- * @method array getSegmentSet() Obtain A list of the suspicious segments detected.
-<font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
- * @method void setSegmentSet(array $SegmentSet) Set A list of the suspicious segments detected.
-<font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
- * @method string getSegmentSetFileUrl() Obtain The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
- * @method string getSegmentSetFileUrlExpireTime() Obtain The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+ * @method string getForm() Obtain Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on the screen.</li>
+ * @method void setForm(string $Form) Set Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on the screen.</li>
+ * @method array getSegmentSet() Obtain Video clips suspected of containing violation information.
+<font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+ * @method void setSegmentSet(array $SegmentSet) Set Video clips suspected of containing violation information.
+<font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+ * @method string getSegmentSetFileUrl() Obtain URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+ * @method string getSegmentSetFileUrlExpireTime() Obtain URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class ReviewImageResult extends AbstractModel
 {
     /**
-     * @var string The suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * @var string Image review result suggestion. Value ranges from...to...
+<li>pass: it is recommended to pass;</li>
+<li>review: suggest re-examination;</li>
+<li>block: Suggest banning.</li>
      */
     public $Suggestion;
 
@@ -61,41 +61,41 @@ class ReviewImageResult extends AbstractModel
     public $Label;
 
     /**
-     * @var string The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
+     * @var string Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on the screen.</li>
      */
     public $Form;
 
     /**
-     * @var array A list of the suspicious segments detected.
-<font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
+     * @var array Video clips suspected of containing violation information.
+<font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
      */
     public $SegmentSet;
 
     /**
-     * @var string The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
+     * @var string URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+     * @var string URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @param string $Suggestion The suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * @param string $Suggestion Image review result suggestion. Value ranges from...to...
+<li>pass: it is recommended to pass;</li>
+<li>review: suggest re-examination;</li>
+<li>block: Suggest banning.</li>
      * @param string $Label The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
-     * @param string $Form The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
-     * @param array $SegmentSet A list of the suspicious segments detected.
-<font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
-     * @param string $SegmentSetFileUrl The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
-     * @param string $SegmentSetFileUrlExpireTime The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+     * @param string $Form Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on the screen.</li>
+     * @param array $SegmentSet Video clips suspected of containing violation information.
+<font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+     * @param string $SegmentSetFileUrl URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+     * @param string $SegmentSetFileUrlExpireTime URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

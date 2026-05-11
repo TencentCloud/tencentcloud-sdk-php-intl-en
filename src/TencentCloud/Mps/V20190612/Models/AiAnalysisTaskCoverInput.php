@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input type of intelligent categorization task
  *
- * @method integer getDefinition() Obtain Intelligent video cover generating template ID.
- * @method void setDefinition(integer $Definition) Set Intelligent video cover generating template ID.
+ * @method integer getDefinition() Obtain <p>ID of the intelligent video cover template.</p>
+ * @method void setDefinition(integer $Definition) Set <p>ID of the intelligent video cover template.</p>
+ * @method string getExtendedParameter() Obtain <p>Extended parameter.</p>
+ * @method void setExtendedParameter(string $ExtendedParameter) Set <p>Extended parameter.</p>
  */
 class AiAnalysisTaskCoverInput extends AbstractModel
 {
     /**
-     * @var integer Intelligent video cover generating template ID.
+     * @var integer <p>ID of the intelligent video cover template.</p>
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Intelligent video cover generating template ID.
+     * @var string <p>Extended parameter.</p>
+     */
+    public $ExtendedParameter;
+
+    /**
+     * @param integer $Definition <p>ID of the intelligent video cover template.</p>
+     * @param string $ExtendedParameter <p>Extended parameter.</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class AiAnalysisTaskCoverInput extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ExtendedParameter",$param) and $param["ExtendedParameter"] !== null) {
+            $this->ExtendedParameter = $param["ExtendedParameter"];
         }
     }
 }

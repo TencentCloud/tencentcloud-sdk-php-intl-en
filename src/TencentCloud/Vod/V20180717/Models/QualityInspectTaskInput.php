@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() Obtain Media file ID.
  * @method void setFileId(string $FileId) Set Media file ID.
- * @method integer getDefinition() Obtain Media quality inspect template ID.
- * @method void setDefinition(integer $Definition) Set Media quality inspect template ID.
+ * @method integer getDefinition() Obtain Audio and video quality inspection template ID.
+ * @method void setDefinition(integer $Definition) Set Audio and video quality inspection template ID.
  */
 class QualityInspectTaskInput extends AbstractModel
 {
@@ -33,13 +33,13 @@ class QualityInspectTaskInput extends AbstractModel
     public $FileId;
 
     /**
-     * @var integer Media quality inspect template ID.
+     * @var integer Audio and video quality inspection template ID.
      */
     public $Definition;
 
     /**
      * @param string $FileId Media file ID.
-     * @param integer $Definition Media quality inspect template ID.
+     * @param integer $Definition Audio and video quality inspection template ID.
      */
     function __construct()
     {

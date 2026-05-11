@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartPublishCdnStream request structure.
  *
- * @method integer getSdkAppId() Obtain [SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
- * @method void setSdkAppId(integer $SdkAppId) Set [SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
+ * @method integer getSdkAppId() Obtain [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
+ * @method void setSdkAppId(integer $SdkAppId) Set [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
  * @method string getRoomId() Obtain Main room information RoomId, the RoomId corresponding to the TRTC room for relay.
  * @method void setRoomId(string $RoomId) Set Main room information RoomId, the RoomId corresponding to the TRTC room for relay.
  * @method integer getRoomIdType() Obtain Main room information RoomType must be the same as the RoomId type of the relayed room. 0 indicates integer type room id, and 1 indicates string room number.
@@ -44,13 +44,13 @@ Note: transcoding is required for stream mixing, and this parameter must be set 
  * @method void setSeiParams(McuSeiParams $SeiParams) Set Stream mixing SEI parameter.
  * @method array getFeedBackRoomParams() Obtain Push back room information. a task supports up to 10 push rooms, and there must be one forward CDN parameter. note: use SDK version 10.4 or higher to push room. if you need assistance, contact tencent cloud technical support.
  * @method void setFeedBackRoomParams(array $FeedBackRoomParams) Set Push back room information. a task supports up to 10 push rooms, and there must be one forward CDN parameter. note: use SDK version 10.4 or higher to push room. if you need assistance, contact tencent cloud technical support.
- * @method McuRecordParams getRecordParams() Obtain Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1).
- * @method void setRecordParams(McuRecordParams $RecordParams) Set Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1).
+ * @method McuRecordParams getRecordParams() Obtain Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1).
+ * @method void setRecordParams(McuRecordParams $RecordParams) Set Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1).
  */
 class StartPublishCdnStreamRequest extends AbstractModel
 {
     /**
-     * @var integer [SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
+     * @var integer [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
      */
     public $SdkAppId;
 
@@ -106,12 +106,12 @@ Note: transcoding is required for stream mixing, and this parameter must be set 
     public $FeedBackRoomParams;
 
     /**
-     * @var McuRecordParams Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1).
+     * @var McuRecordParams Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1).
      */
     public $RecordParams;
 
     /**
-     * @param integer $SdkAppId [SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
+     * @param integer $SdkAppId [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
      * @param string $RoomId Main room information RoomId, the RoomId corresponding to the TRTC room for relay.
      * @param integer $RoomIdType Main room information RoomType must be the same as the RoomId type of the relayed room. 0 indicates integer type room id, and 1 indicates string room number.
      * @param AgentParams $AgentParams Relay service bot parameters for joining TRTC room.
@@ -123,7 +123,7 @@ Note: transcoding is required for stream mixing, and this parameter must be set 
      * @param array $PublishCdnParams The CDN parameters for relay push support up to 10 push urls for a task. there must be one pushback room parameter.
      * @param McuSeiParams $SeiParams Stream mixing SEI parameter.
      * @param array $FeedBackRoomParams Push back room information. a task supports up to 10 push rooms, and there must be one forward CDN parameter. note: use SDK version 10.4 or higher to push room. if you need assistance, contact tencent cloud technical support.
-     * @param McuRecordParams $RecordParams Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1).
+     * @param McuRecordParams $RecordParams Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1).
      */
     function __construct()
     {

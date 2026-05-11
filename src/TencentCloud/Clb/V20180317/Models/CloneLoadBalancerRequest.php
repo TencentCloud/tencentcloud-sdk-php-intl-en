@@ -54,8 +54,8 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
  * @method void setSnatPro(boolean $SnatPro) Set Specifies whether the cross-regional or cross-Vpc IP binding feature is supported.
  * @method array getSnatIps() Obtain Enables cross-regional or cross-Vpc IP binding and creates a SnatIp.
  * @method void setSnatIps(array $SnatIps) Set Enables cross-regional or cross-Vpc IP binding and creates a SnatIp.
- * @method array getClusterIds() Obtain Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.com/document/product/214/49278?from_cn_redirect=1) api.
- * @method void setClusterIds(array $ClusterIds) Set Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.com/document/product/214/49278?from_cn_redirect=1) api.
+ * @method array getClusterIds() Obtain Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
+ * @method void setClusterIds(array $ClusterIds) Set Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
  * @method string getSlaType() Obtain Performance capacity specification. <li>clb.c2.medium (standard type)</li> <li>clb.c3.small (advanced type 1)</li> <li>clb.c3.medium (advanced type 2)</li> <li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li>.
  * @method void setSlaType(string $SlaType) Set Performance capacity specification. <li>clb.c2.medium (standard type)</li> <li>clb.c3.small (advanced type 1)</li> <li>clb.c3.medium (advanced type 2)</li> <li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li>.
  * @method string getClusterTag() Obtain Specifies the Tag of the Stgw exclusive cluster.
@@ -141,7 +141,7 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
     public $SnatIps;
 
     /**
-     * @var array Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.com/document/product/214/49278?from_cn_redirect=1) api.
+     * @var array Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
      */
     public $ClusterIds;
 
@@ -183,7 +183,7 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
      * @param string $BandwidthPackageId BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.com/document/api/215/19209?from_cn_redirect=1) api. specifies this parameter indicates the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE).
      * @param boolean $SnatPro Specifies whether the cross-regional or cross-Vpc IP binding feature is supported.
      * @param array $SnatIps Enables cross-regional or cross-Vpc IP binding and creates a SnatIp.
-     * @param array $ClusterIds Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.com/document/product/214/49278?from_cn_redirect=1) api.
+     * @param array $ClusterIds Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
      * @param string $SlaType Performance capacity specification. <li>clb.c2.medium (standard type)</li> <li>clb.c3.small (advanced type 1)</li> <li>clb.c3.medium (advanced type 2)</li> <li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li>.
      * @param string $ClusterTag Specifies the Tag of the Stgw exclusive cluster.
      * @param array $Zones Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.

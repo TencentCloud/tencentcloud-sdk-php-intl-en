@@ -18,84 +18,116 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Aigc video task input.
+ * Input of the AIGC video generation task.
  *
- * @method string getModelName() Obtain Model name.
- * @method void setModelName(string $ModelName) Set Model name.
- * @method string getModelVersion() Obtain Model version. 
- * @method void setModelVersion(string $ModelVersion) Set Model version. 
- * @method array getFileInfos() Obtain File information of the input video for the AIGC video generation task. 
- * @method void setFileInfos(array $FileInfos) Set File information of the input video for the AIGC video generation task. 
- * @method string getLastFrameFileId() Obtain The media file ID used as the end frame to generate video. 
- * @method void setLastFrameFileId(string $LastFrameFileId) Set The media file ID used as the end frame to generate video. 
- * @method string getPrompt() Obtain Prompt content for video generation. 
- * @method void setPrompt(string $Prompt) Set Prompt content for video generation. 
- * @method string getNegativePrompt() Obtain Prevent the model from generating video prompts.
- * @method void setNegativePrompt(string $NegativePrompt) Set Prevent the model from generating video prompts.
- * @method string getEnhancePrompt() Obtain Whether to optimize Prompt content automatically. when Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>.
- * @method void setEnhancePrompt(string $EnhancePrompt) Set Whether to optimize Prompt content automatically. when Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>.
- * @method string getGenerationMode() Obtain Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
- * @method void setGenerationMode(string $GenerationMode) Set Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
- * @method AigcVideoOutputConfig getOutputConfig() Obtain Specifies the output media file configuration for the video task.
- * @method void setOutputConfig(AigcVideoOutputConfig $OutputConfig) Set Specifies the output media file configuration for the video task.
+ * @method string getModelName() Obtain <p>Model name.</p>
+ * @method void setModelName(string $ModelName) Set <p>Model name.</p>
+ * @method string getModelVersion() Obtain <p>Model version.</p>
+ * @method void setModelVersion(string $ModelVersion) Set <p>Model version.</p>
+ * @method array getFileInfos() Obtain <p>Input file information of the AIGC video generation task.</p>
+ * @method void setFileInfos(array $FileInfos) Set <p>Input file information of the AIGC video generation task.</p>
+ * @method array getSubjectInfos() Obtain <p>Fixed entity input information for AIGC tasks.</p>
+ * @method void setSubjectInfos(array $SubjectInfos) Set <p>Fixed entity input information for AIGC tasks.</p>
+ * @method string getLastFrameFileId() Obtain <p>Media file ID used as the end frame to generate video. This file has a globally unique ID on VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+ * @method void setLastFrameFileId(string $LastFrameFileId) Set <p>Media file ID used as the end frame to generate video. This file has a globally unique ID on VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+ * @method string getLastFrameUrl() Obtain <p>Media file URL used as the tail frame to generate video. Description:</p><ol><li>Only support models GV, Kling, and Vidu. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must simultaneously specify FileInfos as the head frame for video generation. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is specified as 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format value: jpeg, jpg, png, webp.</li></ol></li></ol>
+ * @method void setLastFrameUrl(string $LastFrameUrl) Set <p>Media file URL used as the tail frame to generate video. Description:</p><ol><li>Only support models GV, Kling, and Vidu. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must simultaneously specify FileInfos as the head frame for video generation. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is specified as 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format value: jpeg, jpg, png, webp.</li></ol></li></ol>
+ * @method string getPrompt() Obtain <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
+ * @method void setPrompt(string $Prompt) Set <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
+ * @method string getNegativePrompt() Obtain <p>To prevent the model from generating video prompts. Supports a maximum of 1000 characters.</p>
+ * @method void setNegativePrompt(string $NegativePrompt) Set <p>To prevent the model from generating video prompts. Supports a maximum of 1000 characters.</p>
+ * @method string getEnhancePrompt() Obtain <p>Whether to optimize Prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+ * @method void setEnhancePrompt(string $EnhancePrompt) Set <p>Whether to optimize Prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+ * @method string getGenerationMode() Obtain <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
+ * @method void setGenerationMode(string $GenerationMode) Set <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
+ * @method AigcVideoOutputConfig getOutputConfig() Obtain <p>Output the result file of the AIGC image generation.</p>
+ * @method void setOutputConfig(AigcVideoOutputConfig $OutputConfig) Set <p>Output the result file of the AIGC image generation.</p>
+ * @method string getInputRegion() Obtain <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+ * @method void setInputRegion(string $InputRegion) Set <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+ * @method string getSceneType() Obtain <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li><li>Other ModelName not currently supported.</li></p>
+ * @method void setSceneType(string $SceneType) Set <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li><li>Other ModelName not currently supported.</li></p>
  */
 class AigcVideoTaskInput extends AbstractModel
 {
     /**
-     * @var string Model name.
+     * @var string <p>Model name.</p>
      */
     public $ModelName;
 
     /**
-     * @var string Model version. 
+     * @var string <p>Model version.</p>
      */
     public $ModelVersion;
 
     /**
-     * @var array File information of the input video for the AIGC video generation task. 
+     * @var array <p>Input file information of the AIGC video generation task.</p>
      */
     public $FileInfos;
 
     /**
-     * @var string The media file ID used as the end frame to generate video. 
+     * @var array <p>Fixed entity input information for AIGC tasks.</p>
+     */
+    public $SubjectInfos;
+
+    /**
+     * @var string <p>Media file ID used as the end frame to generate video. This file has a globally unique ID on VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
      */
     public $LastFrameFileId;
 
     /**
-     * @var string Prompt content for video generation. 
+     * @var string <p>Media file URL used as the tail frame to generate video. Description:</p><ol><li>Only support models GV, Kling, and Vidu. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must simultaneously specify FileInfos as the head frame for video generation. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is specified as 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format value: jpeg, jpg, png, webp.</li></ol></li></ol>
+     */
+    public $LastFrameUrl;
+
+    /**
+     * @var string <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
      */
     public $Prompt;
 
     /**
-     * @var string Prevent the model from generating video prompts.
+     * @var string <p>To prevent the model from generating video prompts. Supports a maximum of 1000 characters.</p>
      */
     public $NegativePrompt;
 
     /**
-     * @var string Whether to optimize Prompt content automatically. when Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>.
+     * @var string <p>Whether to optimize Prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
      */
     public $EnhancePrompt;
 
     /**
-     * @var string Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
+     * @var string <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
      */
     public $GenerationMode;
 
     /**
-     * @var AigcVideoOutputConfig Specifies the output media file configuration for the video task.
+     * @var AigcVideoOutputConfig <p>Output the result file of the AIGC image generation.</p>
      */
     public $OutputConfig;
 
     /**
-     * @param string $ModelName Model name.
-     * @param string $ModelVersion Model version. 
-     * @param array $FileInfos File information of the input video for the AIGC video generation task. 
-     * @param string $LastFrameFileId The media file ID used as the end frame to generate video. 
-     * @param string $Prompt Prompt content for video generation. 
-     * @param string $NegativePrompt Prevent the model from generating video prompts.
-     * @param string $EnhancePrompt Whether to optimize Prompt content automatically. when Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>.
-     * @param string $GenerationMode Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
-     * @param AigcVideoOutputConfig $OutputConfig Specifies the output media file configuration for the video task.
+     * @var string <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+     */
+    public $InputRegion;
+
+    /**
+     * @var string <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li><li>Other ModelName not currently supported.</li></p>
+     */
+    public $SceneType;
+
+    /**
+     * @param string $ModelName <p>Model name.</p>
+     * @param string $ModelVersion <p>Model version.</p>
+     * @param array $FileInfos <p>Input file information of the AIGC video generation task.</p>
+     * @param array $SubjectInfos <p>Fixed entity input information for AIGC tasks.</p>
+     * @param string $LastFrameFileId <p>Media file ID used as the end frame to generate video. This file has a globally unique ID on VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+     * @param string $LastFrameUrl <p>Media file URL used as the tail frame to generate video. Description:</p><ol><li>Only support models GV, Kling, and Vidu. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must simultaneously specify FileInfos as the head frame for video generation. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is specified as 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format value: jpeg, jpg, png, webp.</li></ol></li></ol>
+     * @param string $Prompt <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
+     * @param string $NegativePrompt <p>To prevent the model from generating video prompts. Supports a maximum of 1000 characters.</p>
+     * @param string $EnhancePrompt <p>Whether to optimize Prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+     * @param string $GenerationMode <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
+     * @param AigcVideoOutputConfig $OutputConfig <p>Output the result file of the AIGC image generation.</p>
+     * @param string $InputRegion <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+     * @param string $SceneType <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li><li>Other ModelName not currently supported.</li></p>
      */
     function __construct()
     {
@@ -127,8 +159,21 @@ class AigcVideoTaskInput extends AbstractModel
             }
         }
 
+        if (array_key_exists("SubjectInfos",$param) and $param["SubjectInfos"] !== null) {
+            $this->SubjectInfos = [];
+            foreach ($param["SubjectInfos"] as $key => $value){
+                $obj = new AigcVideoTaskInputSubjectInfo();
+                $obj->deserialize($value);
+                array_push($this->SubjectInfos, $obj);
+            }
+        }
+
         if (array_key_exists("LastFrameFileId",$param) and $param["LastFrameFileId"] !== null) {
             $this->LastFrameFileId = $param["LastFrameFileId"];
+        }
+
+        if (array_key_exists("LastFrameUrl",$param) and $param["LastFrameUrl"] !== null) {
+            $this->LastFrameUrl = $param["LastFrameUrl"];
         }
 
         if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {
@@ -150,6 +195,14 @@ class AigcVideoTaskInput extends AbstractModel
         if (array_key_exists("OutputConfig",$param) and $param["OutputConfig"] !== null) {
             $this->OutputConfig = new AigcVideoOutputConfig();
             $this->OutputConfig->deserialize($param["OutputConfig"]);
+        }
+
+        if (array_key_exists("InputRegion",$param) and $param["InputRegion"] !== null) {
+            $this->InputRegion = $param["InputRegion"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
     }
 }

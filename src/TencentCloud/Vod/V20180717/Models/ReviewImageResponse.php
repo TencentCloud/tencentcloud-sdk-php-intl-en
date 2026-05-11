@@ -33,6 +33,7 @@ class ReviewImageResponse extends AbstractModel
 {
     /**
      * @var array The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
+     * @deprecated
      */
     public $ReviewResultSet;
 

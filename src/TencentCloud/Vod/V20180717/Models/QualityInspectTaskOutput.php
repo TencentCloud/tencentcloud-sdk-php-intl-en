@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Media quality inspection task generates.
  *
- * @method integer getNoAudio() Obtain Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li>
- * @method void setNoAudio(integer $NoAudio) Set Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li>
- * @method integer getNoVideo() Obtain Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li>
- * @method void setNoVideo(integer $NoVideo) Set Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li>
- * @method integer getQualityEvaluationScore() Obtain Quality score, value range: [0, 100].
- * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) Set Quality score, value range: [0, 100].
- * @method array getQualityInspectResultSet() Obtain Abnormal items list detected of media quality inspection task
- * @method void setQualityInspectResultSet(array $QualityInspectResultSet) Set Abnormal items list detected of media quality inspection task
+ * @method integer getNoAudio() Obtain Whether there is no audio track in the media file. Value ranges from...to...
+<li>0: No, have audio tracks;</li>
+<li>1: Yes, no audio track.</li>
+ * @method void setNoAudio(integer $NoAudio) Set Whether there is no audio track in the media file. Value ranges from...to...
+<li>0: No, have audio tracks;</li>
+<li>1: Yes, no audio track.</li>
+ * @method integer getNoVideo() Obtain Whether there is no video track in the media file. Value ranges from...to...
+<li>0: No, meaning there is a video track;</li>
+<li>1: Yes, no video track.</li>
+ * @method void setNoVideo(integer $NoVideo) Set Whether there is no video track in the media file. Value ranges from...to...
+<li>0: No, meaning there is a video track;</li>
+<li>1: Yes, no video track.</li>
+ * @method integer getQualityEvaluationScore() Obtain Video picture quality score, value ranges from 0 to 100.
+ * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) Set Video picture quality score, value ranges from 0 to 100.
+ * @method array getQualityInspectResultSet() Obtain List of abnormalities detected in audio and video quality.
+ * @method void setQualityInspectResultSet(array $QualityInspectResultSet) Set List of abnormalities detected in audio and video quality.
  */
 class QualityInspectTaskOutput extends AbstractModel
 {
     /**
-     * @var integer Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li>
+     * @var integer Whether there is no audio track in the media file. Value ranges from...to...
+<li>0: No, have audio tracks;</li>
+<li>1: Yes, no audio track.</li>
      */
     public $NoAudio;
 
     /**
-     * @var integer Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li>
+     * @var integer Whether there is no video track in the media file. Value ranges from...to...
+<li>0: No, meaning there is a video track;</li>
+<li>1: Yes, no video track.</li>
      */
     public $NoVideo;
 
     /**
-     * @var integer Quality score, value range: [0, 100].
+     * @var integer Video picture quality score, value ranges from 0 to 100.
      */
     public $QualityEvaluationScore;
 
     /**
-     * @var array Abnormal items list detected of media quality inspection task
+     * @var array List of abnormalities detected in audio and video quality.
      */
     public $QualityInspectResultSet;
 
     /**
-     * @param integer $NoAudio Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li>
-     * @param integer $NoVideo Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li>
-     * @param integer $QualityEvaluationScore Quality score, value range: [0, 100].
-     * @param array $QualityInspectResultSet Abnormal items list detected of media quality inspection task
+     * @param integer $NoAudio Whether there is no audio track in the media file. Value ranges from...to...
+<li>0: No, have audio tracks;</li>
+<li>1: Yes, no audio track.</li>
+     * @param integer $NoVideo Whether there is no video track in the media file. Value ranges from...to...
+<li>0: No, meaning there is a video track;</li>
+<li>1: Yes, no video track.</li>
+     * @param integer $QualityEvaluationScore Video picture quality score, value ranges from 0 to 100.
+     * @param array $QualityInspectResultSet List of abnormalities detected in audio and video quality.
      */
     function __construct()
     {

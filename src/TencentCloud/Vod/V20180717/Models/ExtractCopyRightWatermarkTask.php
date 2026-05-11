@@ -40,14 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method string getErrCodeExt() Obtain Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
  * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
- * @method ExtractCopyRightWatermarkTaskInput getInput() Obtain Extract copyright watermark task input information.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setInput(ExtractCopyRightWatermarkTaskInput $Input) Set Extract copyright watermark task input information.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method ExtractCopyRightWatermarkTaskOutput getOutput() Obtain Extract copyright watermark task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setOutput(ExtractCopyRightWatermarkTaskOutput $Output) Set Extract copyright watermark task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method ExtractCopyRightWatermarkTaskInput getInput() Obtain Input of the copyright watermark extraction task.
+ * @method void setInput(ExtractCopyRightWatermarkTaskInput $Input) Set Input of the copyright watermark extraction task.
+ * @method ExtractCopyRightWatermarkTaskOutput getOutput() Obtain Output message of the Copyright Watermark Extraction Task.
+ * @method void setOutput(ExtractCopyRightWatermarkTaskOutput $Output) Set Output message of the Copyright Watermark Extraction Task.
  * @method string getSessionId() Obtain Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
  * @method void setSessionId(string $SessionId) Set Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
  * @method string getSessionContext() Obtain Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
@@ -86,14 +82,12 @@ class ExtractCopyRightWatermarkTask extends AbstractModel
     public $ErrCodeExt;
 
     /**
-     * @var ExtractCopyRightWatermarkTaskInput Extract copyright watermark task input information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var ExtractCopyRightWatermarkTaskInput Input of the copyright watermark extraction task.
      */
     public $Input;
 
     /**
-     * @var ExtractCopyRightWatermarkTaskOutput Extract copyright watermark task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var ExtractCopyRightWatermarkTaskOutput Output message of the Copyright Watermark Extraction Task.
      */
     public $Output;
 
@@ -118,10 +112,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>70000: Internal service error, it is recommended to try again. </li>
      * @param string $Message Error message.
      * @param string $ErrCodeExt Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
-     * @param ExtractCopyRightWatermarkTaskInput $Input Extract copyright watermark task input information.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ExtractCopyRightWatermarkTaskOutput $Output Extract copyright watermark task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ExtractCopyRightWatermarkTaskInput $Input Input of the copyright watermark extraction task.
+     * @param ExtractCopyRightWatermarkTaskOutput $Output Output message of the Copyright Watermark Extraction Task.
      * @param string $SessionId Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
      * @param string $SessionContext Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
      */

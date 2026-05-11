@@ -76,8 +76,14 @@ Note:
 Note:
 1. when the selected resolution exceeds the resolution the model can generate, enhancement is enabled by default.
 2. for resolutions that the model can directly output, you can also proactively select the model to directly output low-resolution images and use enhancement to obtain the specified resolution.
+ * @method string getOffPeak() Obtain 
+ * @method void setOffPeak(string $OffPeak) Set 
  * @method string getFrameInterpolate() Obtain Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
  * @method void setFrameInterpolate(string $FrameInterpolate) Set Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
+ * @method string getLogoAdd() Obtain Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+Currently supported models include Vidu. Other models are not currently supported.
+ * @method void setLogoAdd(string $LogoAdd) Set Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+Currently supported models include Vidu. Other models are not currently supported.
  */
 class AigcVideoOutputConfig extends AbstractModel
 {
@@ -158,9 +164,20 @@ Note:
     public $EnhanceSwitch;
 
     /**
+     * @var string 
+     */
+    public $OffPeak;
+
+    /**
      * @var string Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
      */
     public $FrameInterpolate;
+
+    /**
+     * @var string Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+Currently supported models include Vidu. Other models are not currently supported.
+     */
+    public $LogoAdd;
 
     /**
      * @param string $StorageMode Storage mode. valid values: <li>Permanent: Permanent storage. the generated video file will be stored in vod, and the FileId can be obtained from the event notification.</li> <li>Temporary: Temporary storage. the generated video file will not be stored in vod, and a Temporary access URL can be obtained from the event notification.</li>
@@ -191,7 +208,10 @@ Default value: Disabled.
 Note:
 1. when the selected resolution exceeds the resolution the model can generate, enhancement is enabled by default.
 2. for resolutions that the model can directly output, you can also proactively select the model to directly output low-resolution images and use enhancement to obtain the specified resolution.
+     * @param string $OffPeak 
      * @param string $FrameInterpolate Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
+     * @param string $LogoAdd Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+Currently supported models include Vidu. Other models are not currently supported.
      */
     function __construct()
     {
@@ -254,8 +274,16 @@ Note:
             $this->EnhanceSwitch = $param["EnhanceSwitch"];
         }
 
+        if (array_key_exists("OffPeak",$param) and $param["OffPeak"] !== null) {
+            $this->OffPeak = $param["OffPeak"];
+        }
+
         if (array_key_exists("FrameInterpolate",$param) and $param["FrameInterpolate"] !== null) {
             $this->FrameInterpolate = $param["FrameInterpolate"];
+        }
+
+        if (array_key_exists("LogoAdd",$param) and $param["LogoAdd"] !== null) {
+            $this->LogoAdd = $param["LogoAdd"];
         }
     }
 }

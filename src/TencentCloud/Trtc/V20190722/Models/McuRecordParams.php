@@ -23,12 +23,12 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getUniRecord() Obtain Retweet recording mode. 
 0/Leave blank: not currently supported; behavior is undefined.
 1: disable recording.
-2: enable recording (via console automatic recording template parameters, see: [redirection document](https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1#.E5.BD.95.E5.88.B6.E6.8E.A7.E5.88.B6.E6.96.B9.E6.A1.88));.
+2: enable recording (via console automatic recording template parameters, see: [redirection document](https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1#.E5.BD.95.E5.88.B6.E6.8E.A7.E5.88.B6.E6.96.B9.E6.A1.88));.
 3: enable recording (use API to specify parameter).
  * @method void setUniRecord(integer $UniRecord) Set Retweet recording mode. 
 0/Leave blank: not currently supported; behavior is undefined.
 1: disable recording.
-2: enable recording (via console automatic recording template parameters, see: [redirection document](https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1#.E5.BD.95.E5.88.B6.E6.8E.A7.E5.88.B6.E6.96.B9.E6.A1.88));.
+2: enable recording (via console automatic recording template parameters, see: [redirection document](https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1#.E5.BD.95.E5.88.B6.E6.8E.A7.E5.88.B6.E6.96.B9.E6.A1.88));.
 3: enable recording (use API to specify parameter).
  * @method string getRecordKey() Obtain Recording task key, identifies a recording task. you can record multiple relay tasks into a file by specifying this parameter. if this parameter is not specified, only the current relay task is recorded.
 Limit length to 128 bytes, only allow a combination of uppercase and lowercase letters (a-zA-Z), digits (0-9), underscores (_), and hyphens (-).
@@ -67,7 +67,7 @@ class McuRecordParams extends AbstractModel
      * @var integer Retweet recording mode. 
 0/Leave blank: not currently supported; behavior is undefined.
 1: disable recording.
-2: enable recording (via console automatic recording template parameters, see: [redirection document](https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1#.E5.BD.95.E5.88.B6.E6.8E.A7.E5.88.B6.E6.96.B9.E6.A1.88));.
+2: enable recording (via console automatic recording template parameters, see: [redirection document](https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1#.E5.BD.95.E5.88.B6.E6.8E.A7.E5.88.B6.E6.96.B9.E6.A1.88));.
 3: enable recording (use API to specify parameter).
      */
     public $UniRecord;
@@ -119,7 +119,7 @@ Recording files storage parameters, corresponding console "storage location" and
      * @param integer $UniRecord Retweet recording mode. 
 0/Leave blank: not currently supported; behavior is undefined.
 1: disable recording.
-2: enable recording (via console automatic recording template parameters, see: [redirection document](https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1#.E5.BD.95.E5.88.B6.E6.8E.A7.E5.88.B6.E6.96.B9.E6.A1.88));.
+2: enable recording (via console automatic recording template parameters, see: [redirection document](https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1#.E5.BD.95.E5.88.B6.E6.8E.A7.E5.88.B6.E6.96.B9.E6.A1.88));.
 3: enable recording (use API to specify parameter).
      * @param string $RecordKey Recording task key, identifies a recording task. you can record multiple relay tasks into a file by specifying this parameter. if this parameter is not specified, only the current relay task is recorded.
 Limit length to 128 bytes, only allow a combination of uppercase and lowercase letters (a-zA-Z), digits (0-9), underscores (_), and hyphens (-).

@@ -34,10 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileName(string $FileName) Set The name of the media file.
  * @method string getFileUrl() Obtain The address of the media file.
  * @method void setFileUrl(string $FileUrl) Set The address of the media file.
- * @method MediaMetaData getMetaData() Obtain The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMetaData(MediaMetaData $MetaData) Set The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method MediaMetaData getMetaData() Obtain Metadata of the original video.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of the original video.
  * @method array getMediaProcessResultSet() Obtain The execution status and result of the bitrate reduction task.
  * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set The execution status and result of the bitrate reduction task.
  * @method integer getTasksPriority() Obtain The task priority, which can be a value from -10 to 10.
@@ -83,8 +81,7 @@ class ReduceMediaBitrateTask extends AbstractModel
     public $FileUrl;
 
     /**
-     * @var MediaMetaData The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaMetaData Metadata of the original video.
      */
     public $MetaData;
 
@@ -123,8 +120,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $FileId The ID of the media file.
      * @param string $FileName The name of the media file.
      * @param string $FileUrl The address of the media file.
-     * @param MediaMetaData $MetaData The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MediaMetaData $MetaData Metadata of the original video.
      * @param array $MediaProcessResultSet The execution status and result of the bitrate reduction task.
      * @param integer $TasksPriority The task priority, which can be a value from -10 to 10.
      * @param string $TasksNotifyMode The notification mode for the change of task status. Valid values:

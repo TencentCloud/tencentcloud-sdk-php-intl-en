@@ -20,246 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SyncDubbing request structure.
  *
- * @method string getText() Obtain Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.
- * @method void setText(string $Text) Set Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.
- * @method string getTextLang() Obtain Text language. This defaults to zh (Chinese) if left empty.
-Supported languages:
-zh: Chinese.
-en: English.
-ja: Japanese.
-de: German.
-fr: French.
-ko: Korean.
-ru: Russian.
-uk: Ukrainian.
-pt: Portuguese.
-it: Italian.
-es: Spanish.
-id: Indonesian.
-nl: Dutch.
-tr: Turkish.
-fil: Filipino.
-ms: Malay.
-el: Greek.
-fi: Finnish.
-hr: Croatian.
-sk: Slovak.
-pl: Polish.
-sv: Swedish.
-hi: Hindi.
-bg: Bulgarian.
-ro: Romanian.
-ar: Arabic.
-cs: Czech.
-da: Danish.
-ta: Tamil.
-hun: Hungarian.
-vi: Vietnamese.
-no: Norwegian.
-yue: Cantonese.
-th: Thai.
-he: Hebrew.
-ca: Catalan.
-nn: Nynorsk.
-af: Afrikaans.
-fa: Persian.
-sl: Slovenian.
-
- * @method void setTextLang(string $TextLang) Set Text language. This defaults to zh (Chinese) if left empty.
-Supported languages:
-zh: Chinese.
-en: English.
-ja: Japanese.
-de: German.
-fr: French.
-ko: Korean.
-ru: Russian.
-uk: Ukrainian.
-pt: Portuguese.
-it: Italian.
-es: Spanish.
-id: Indonesian.
-nl: Dutch.
-tr: Turkish.
-fil: Filipino.
-ms: Malay.
-el: Greek.
-fi: Finnish.
-hr: Croatian.
-sk: Slovak.
-pl: Polish.
-sv: Swedish.
-hi: Hindi.
-bg: Bulgarian.
-ro: Romanian.
-ar: Arabic.
-cs: Czech.
-da: Danish.
-ta: Tamil.
-hun: Hungarian.
-vi: Vietnamese.
-no: Norwegian.
-yue: Cantonese.
-th: Thai.
-he: Hebrew.
-ca: Catalan.
-nn: Nynorsk.
-af: Afrikaans.
-fa: Persian.
-sl: Slovenian.
-
- * @method string getVoiceId() Obtain Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
- * @method void setVoiceId(string $VoiceId) Set Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
- * @method string getAudioData() Obtain Base64-encoded audio for cloning.
- * @method void setAudioData(string $AudioData) Set Base64-encoded audio for cloning.
- * @method string getAudioUrl() Obtain 
- * @method void setAudioUrl(string $AudioUrl) Set 
- * @method string getAudioLang() Obtain Cloning audio language. The default language is Chinese.
-Supported languages are the same as those for TextLang.
- * @method void setAudioLang(string $AudioLang) Set Cloning audio language. The default language is Chinese.
-Supported languages are the same as those for TextLang.
- * @method SyncDubbingOutputOption getOutput() Obtain 
- * @method void setOutput(SyncDubbingOutputOption $Output) Set 
- * @method string getExtParam() Obtain Extended parameters in the format of a JSON string.
- * @method void setExtParam(string $ExtParam) Set Extended parameters in the format of a JSON string.
+ * @method string getText() Obtain <p>Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.</p>
+ * @method void setText(string $Text) Set <p>Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.</p>
+ * @method string getTextLang() Obtain <p>Text language. This defaults to Chinese if left empty.<br>Supported languages:<br>zh    Chinese<br>en    English<br>ja    Japanese<br>de    German<br>fr    French<br>ko    Korean<br>ru    Russian<br>uk    Ukrainian<br>pt    Portuguese<br>it    Italian<br>es    Spanish<br>id    Indonesian<br>nl    Dutch<br>tr    Turkish<br>fil    Filipino<br>ms    Malay<br>el    Greek<br>fi    Finnish<br>hr    Croatian<br>sk    Slovak<br>pl    Polish<br>sv    Swedish<br>hi    Hindi<br>bg    Bulgarian<br>ro    Romanian<br>ar    Arabic<br>cs    Czech<br>da    Danish<br>ta    Tamil<br>hun    Hungarian<br>vi    Vietnamese<br>no    Norwegian<br>yue    Cantonese<br>th    Thai<br>he    Hebrew<br>ca    Catalan<br>nn    Nynorsk<br>af    Afrikaans<br>fa    Persian<br>sl    Slovenian</p>
+ * @method void setTextLang(string $TextLang) Set <p>Text language. This defaults to Chinese if left empty.<br>Supported languages:<br>zh    Chinese<br>en    English<br>ja    Japanese<br>de    German<br>fr    French<br>ko    Korean<br>ru    Russian<br>uk    Ukrainian<br>pt    Portuguese<br>it    Italian<br>es    Spanish<br>id    Indonesian<br>nl    Dutch<br>tr    Turkish<br>fil    Filipino<br>ms    Malay<br>el    Greek<br>fi    Finnish<br>hr    Croatian<br>sk    Slovak<br>pl    Polish<br>sv    Swedish<br>hi    Hindi<br>bg    Bulgarian<br>ro    Romanian<br>ar    Arabic<br>cs    Czech<br>da    Danish<br>ta    Tamil<br>hun    Hungarian<br>vi    Vietnamese<br>no    Norwegian<br>yue    Cantonese<br>th    Thai<br>he    Hebrew<br>ca    Catalan<br>nn    Nynorsk<br>af    Afrikaans<br>fa    Persian<br>sl    Slovenian</p>
+ * @method string getVoiceId() Obtain <p>Voice ID. This is required for synthesis with a specific voice. System voice and voice cloning are supported.</p>
+ * @method void setVoiceId(string $VoiceId) Set <p>Voice ID. This is required for synthesis with a specific voice. System voice and voice cloning are supported.</p>
+ * @method string getAudioData() Obtain <p>Base64-encoded audio for cloning.</p>
+ * @method void setAudioData(string $AudioData) Set <p>Base64-encoded audio for cloning.</p>
+ * @method string getAudioUrl() Obtain <p>Cloning audio URL. Valid when AudioData is empty.</p>
+ * @method void setAudioUrl(string $AudioUrl) Set <p>Cloning audio URL. Valid when AudioData is empty.</p>
+ * @method string getAudioLang() Obtain <p>Cloning audio language. The default language is Chinese. <br>Supported languages are the same as those for TextLang.</p>
+ * @method void setAudioLang(string $AudioLang) Set <p>Cloning audio language. The default language is Chinese. <br>Supported languages are the same as those for TextLang.</p>
+ * @method SyncDubbingOutputOption getOutput() Obtain <p>Output parameters.</p><p>Specifies the output format, etc.</p>
+ * @method void setOutput(SyncDubbingOutputOption $Output) Set <p>Output parameters.</p><p>Specifies the output format, etc.</p>
+ * @method string getExtParam() Obtain <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
+ * @method void setExtParam(string $ExtParam) Set <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
  */
 class SyncDubbingRequest extends AbstractModel
 {
     /**
-     * @var string Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.
+     * @var string <p>Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.</p>
      */
     public $Text;
 
     /**
-     * @var string Text language. This defaults to zh (Chinese) if left empty.
-Supported languages:
-zh: Chinese.
-en: English.
-ja: Japanese.
-de: German.
-fr: French.
-ko: Korean.
-ru: Russian.
-uk: Ukrainian.
-pt: Portuguese.
-it: Italian.
-es: Spanish.
-id: Indonesian.
-nl: Dutch.
-tr: Turkish.
-fil: Filipino.
-ms: Malay.
-el: Greek.
-fi: Finnish.
-hr: Croatian.
-sk: Slovak.
-pl: Polish.
-sv: Swedish.
-hi: Hindi.
-bg: Bulgarian.
-ro: Romanian.
-ar: Arabic.
-cs: Czech.
-da: Danish.
-ta: Tamil.
-hun: Hungarian.
-vi: Vietnamese.
-no: Norwegian.
-yue: Cantonese.
-th: Thai.
-he: Hebrew.
-ca: Catalan.
-nn: Nynorsk.
-af: Afrikaans.
-fa: Persian.
-sl: Slovenian.
-
+     * @var string <p>Text language. This defaults to Chinese if left empty.<br>Supported languages:<br>zh    Chinese<br>en    English<br>ja    Japanese<br>de    German<br>fr    French<br>ko    Korean<br>ru    Russian<br>uk    Ukrainian<br>pt    Portuguese<br>it    Italian<br>es    Spanish<br>id    Indonesian<br>nl    Dutch<br>tr    Turkish<br>fil    Filipino<br>ms    Malay<br>el    Greek<br>fi    Finnish<br>hr    Croatian<br>sk    Slovak<br>pl    Polish<br>sv    Swedish<br>hi    Hindi<br>bg    Bulgarian<br>ro    Romanian<br>ar    Arabic<br>cs    Czech<br>da    Danish<br>ta    Tamil<br>hun    Hungarian<br>vi    Vietnamese<br>no    Norwegian<br>yue    Cantonese<br>th    Thai<br>he    Hebrew<br>ca    Catalan<br>nn    Nynorsk<br>af    Afrikaans<br>fa    Persian<br>sl    Slovenian</p>
      */
     public $TextLang;
 
     /**
-     * @var string Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
+     * @var string <p>Voice ID. This is required for synthesis with a specific voice. System voice and voice cloning are supported.</p>
      */
     public $VoiceId;
 
     /**
-     * @var string Base64-encoded audio for cloning.
+     * @var string <p>Base64-encoded audio for cloning.</p>
      */
     public $AudioData;
 
     /**
-     * @var string 
+     * @var string <p>Cloning audio URL. Valid when AudioData is empty.</p>
      */
     public $AudioUrl;
 
     /**
-     * @var string Cloning audio language. The default language is Chinese.
-Supported languages are the same as those for TextLang.
+     * @var string <p>Cloning audio language. The default language is Chinese. <br>Supported languages are the same as those for TextLang.</p>
      */
     public $AudioLang;
 
     /**
-     * @var SyncDubbingOutputOption 
+     * @var SyncDubbingOutputOption <p>Output parameters.</p><p>Specifies the output format, etc.</p>
      */
     public $Output;
 
     /**
-     * @var string Extended parameters in the format of a JSON string.
+     * @var string <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
      */
     public $ExtParam;
 
     /**
-     * @param string $Text Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.
-     * @param string $TextLang Text language. This defaults to zh (Chinese) if left empty.
-Supported languages:
-zh: Chinese.
-en: English.
-ja: Japanese.
-de: German.
-fr: French.
-ko: Korean.
-ru: Russian.
-uk: Ukrainian.
-pt: Portuguese.
-it: Italian.
-es: Spanish.
-id: Indonesian.
-nl: Dutch.
-tr: Turkish.
-fil: Filipino.
-ms: Malay.
-el: Greek.
-fi: Finnish.
-hr: Croatian.
-sk: Slovak.
-pl: Polish.
-sv: Swedish.
-hi: Hindi.
-bg: Bulgarian.
-ro: Romanian.
-ar: Arabic.
-cs: Czech.
-da: Danish.
-ta: Tamil.
-hun: Hungarian.
-vi: Vietnamese.
-no: Norwegian.
-yue: Cantonese.
-th: Thai.
-he: Hebrew.
-ca: Catalan.
-nn: Nynorsk.
-af: Afrikaans.
-fa: Persian.
-sl: Slovenian.
-
-     * @param string $VoiceId Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
-     * @param string $AudioData Base64-encoded audio for cloning.
-     * @param string $AudioUrl 
-     * @param string $AudioLang Cloning audio language. The default language is Chinese.
-Supported languages are the same as those for TextLang.
-     * @param SyncDubbingOutputOption $Output 
-     * @param string $ExtParam Extended parameters in the format of a JSON string.
+     * @param string $Text <p>Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.</p>
+     * @param string $TextLang <p>Text language. This defaults to Chinese if left empty.<br>Supported languages:<br>zh    Chinese<br>en    English<br>ja    Japanese<br>de    German<br>fr    French<br>ko    Korean<br>ru    Russian<br>uk    Ukrainian<br>pt    Portuguese<br>it    Italian<br>es    Spanish<br>id    Indonesian<br>nl    Dutch<br>tr    Turkish<br>fil    Filipino<br>ms    Malay<br>el    Greek<br>fi    Finnish<br>hr    Croatian<br>sk    Slovak<br>pl    Polish<br>sv    Swedish<br>hi    Hindi<br>bg    Bulgarian<br>ro    Romanian<br>ar    Arabic<br>cs    Czech<br>da    Danish<br>ta    Tamil<br>hun    Hungarian<br>vi    Vietnamese<br>no    Norwegian<br>yue    Cantonese<br>th    Thai<br>he    Hebrew<br>ca    Catalan<br>nn    Nynorsk<br>af    Afrikaans<br>fa    Persian<br>sl    Slovenian</p>
+     * @param string $VoiceId <p>Voice ID. This is required for synthesis with a specific voice. System voice and voice cloning are supported.</p>
+     * @param string $AudioData <p>Base64-encoded audio for cloning.</p>
+     * @param string $AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
+     * @param string $AudioLang <p>Cloning audio language. The default language is Chinese. <br>Supported languages are the same as those for TextLang.</p>
+     * @param SyncDubbingOutputOption $Output <p>Output parameters.</p><p>Specifies the output format, etc.</p>
+     * @param string $ExtParam <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
      */
     function __construct()
     {

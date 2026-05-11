@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskClassificationInput getInput() Obtain Input of intelligent categorization task.
  * @method void setInput(AiAnalysisTaskClassificationInput $Input) Set Input of intelligent categorization task.
- * @method AiAnalysisTaskClassificationOutput getOutput() Obtain Output of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskClassificationOutput $Output) Set Output of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskClassificationOutput getOutput() Obtain Intelligent classification task output.
+ * @method void setOutput(AiAnalysisTaskClassificationOutput $Output) Set Intelligent classification task output.
  * @method integer getProgress() Obtain The progress of an intelligent categorization task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of an intelligent categorization task. Value range: 0-100.
  * @method string getBeginProcessTime() Obtain The time when the intelligent classification task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
@@ -69,8 +67,7 @@ class AiAnalysisTaskClassificationResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskClassificationOutput Output of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskClassificationOutput Intelligent classification task output.
      */
     public $Output;
 
@@ -95,8 +92,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
      * @param AiAnalysisTaskClassificationInput $Input Input of intelligent categorization task.
-     * @param AiAnalysisTaskClassificationOutput $Output Output of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskClassificationOutput $Output Intelligent classification task output.
      * @param integer $Progress The progress of an intelligent categorization task. Value range: 0-100.
      * @param string $BeginProcessTime The time when the intelligent classification task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      * @param string $FinishTime The time when the intelligent classification task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).

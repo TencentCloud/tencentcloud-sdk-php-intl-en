@@ -32,14 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCodeExt(string $ErrCodeExt) Set The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
  * @method string getMessage() Obtain The error message.
  * @method void setMessage(string $Message) Set The error message.
- * @method ReviewAudioVideoTaskInput getInput() Obtain The input of a moderation task.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setInput(ReviewAudioVideoTaskInput $Input) Set The input of a moderation task.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method ReviewAudioVideoTaskOutput getOutput() Obtain The output of a moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(ReviewAudioVideoTaskOutput $Output) Set The output of a moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ReviewAudioVideoTaskInput getInput() Obtain Audio/video moderation task input.
+ * @method void setInput(ReviewAudioVideoTaskInput $Input) Set Audio/video moderation task input.
+ * @method ReviewAudioVideoTaskOutput getOutput() Obtain Audio/video moderation task output.
+ * @method void setOutput(ReviewAudioVideoTaskOutput $Output) Set Audio/video moderation task output.
  * @method string getSessionId() Obtain The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
  * @method void setSessionId(string $SessionId) Set The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
  * @method string getSessionContext() Obtain The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters.
@@ -70,14 +66,12 @@ class ReviewAudioVideoTask extends AbstractModel
     public $Message;
 
     /**
-     * @var ReviewAudioVideoTaskInput The input of a moderation task.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var ReviewAudioVideoTaskInput Audio/video moderation task input.
      */
     public $Input;
 
     /**
-     * @var ReviewAudioVideoTaskOutput The output of a moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ReviewAudioVideoTaskOutput Audio/video moderation task output.
      */
     public $Output;
 
@@ -98,10 +92,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>FINISH</li>
      * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
      * @param string $Message The error message.
-     * @param ReviewAudioVideoTaskInput $Input The input of a moderation task.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param ReviewAudioVideoTaskOutput $Output The output of a moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReviewAudioVideoTaskInput $Input Audio/video moderation task input.
+     * @param ReviewAudioVideoTaskOutput $Output Audio/video moderation task output.
      * @param string $SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
      * @param string $SessionContext The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters.
      */

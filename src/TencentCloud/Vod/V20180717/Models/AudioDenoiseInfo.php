@@ -28,12 +28,12 @@ Default value: `OFF`.
 <li>`ON`</li>
 <li>`OFF`</li>
 Default value: `OFF`.
- * @method string getType() Obtain The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
- * @method void setType(string $Type) Set The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+ * @method string getType() Obtain Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: normal audio noise reduction.</li>
+Default value: normal.
+ * @method void setType(string $Type) Set Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: normal audio noise reduction.</li>
+Default value: normal.
  */
 class AudioDenoiseInfo extends AbstractModel
 {
@@ -46,9 +46,9 @@ Default value: `OFF`.
     public $Switch;
 
     /**
-     * @var string The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+     * @var string Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: normal audio noise reduction.</li>
+Default value: normal.
      */
     public $Type;
 
@@ -57,9 +57,9 @@ Default value: `normal`.
 <li>`ON`</li>
 <li>`OFF`</li>
 Default value: `OFF`.
-     * @param string $Type The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+     * @param string $Type Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: normal audio noise reduction.</li>
+Default value: normal.
      */
     function __construct()
     {

@@ -32,10 +32,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method AiReviewTerrorismTaskInput getInput() Obtain Input for intelligent recognition of terrorism content
  * @method void setInput(AiReviewTerrorismTaskInput $Input) Set Input for intelligent recognition of terrorism content
- * @method AiReviewTerrorismTaskOutput getOutput() Obtain Output for intelligent recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setOutput(AiReviewTerrorismTaskOutput $Output) Set Output for intelligent recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiReviewTerrorismTaskOutput getOutput() Obtain Video moderation involves unsafe information in task output.
+ * @method void setOutput(AiReviewTerrorismTaskOutput $Output) Set Video moderation involves unsafe information in task output.
  * @method integer getProgress() Obtain The progress of a moderation task (terrorist content). Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of a moderation task (terrorist content). Value range: 0-100.
  */
@@ -68,8 +66,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Input;
 
     /**
-     * @var AiReviewTerrorismTaskOutput Output for intelligent recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var AiReviewTerrorismTaskOutput Video moderation involves unsafe information in task output.
      */
     public $Output;
 
@@ -85,8 +82,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
      * @param string $Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AiReviewTerrorismTaskInput $Input Input for intelligent recognition of terrorism content
-     * @param AiReviewTerrorismTaskOutput $Output Output for intelligent recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiReviewTerrorismTaskOutput $Output Video moderation involves unsafe information in task output.
      * @param integer $Progress The progress of a moderation task (terrorist content). Value range: 0-100.
      */
     function __construct()

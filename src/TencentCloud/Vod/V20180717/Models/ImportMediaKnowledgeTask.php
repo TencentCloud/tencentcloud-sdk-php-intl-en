@@ -18,14 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Media import knowledge base task
+ * Import knowledge base task for media
  *
  * @method string getTaskId() Obtain Task ID.
  * @method void setTaskId(string $TaskId) Set Task ID.
- * @method string getStatus() Obtain Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
- * @method void setStatus(string $Status) Set Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
- * @method integer getErrCode() Obtain Error code; 0 indicates success, other values indicate failure
- * @method void setErrCode(integer $ErrCode) Set Error code; 0 indicates success, other values indicate failure
+ * @method string getStatus() Obtain Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+ * @method void setStatus(string $Status) Set Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+ * @method integer getErrCode() Obtain Error code. 0 indicates success, other values indicate failure.
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates success, other values indicate failure.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  */
@@ -37,12 +37,12 @@ class ImportMediaKnowledgeTask extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+     * @var string Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
      */
     public $Status;
 
     /**
-     * @var integer Error code; 0 indicates success, other values indicate failure
+     * @var integer Error code. 0 indicates success, other values indicate failure.
      */
     public $ErrCode;
 
@@ -53,8 +53,8 @@ class ImportMediaKnowledgeTask extends AbstractModel
 
     /**
      * @param string $TaskId Task ID.
-     * @param string $Status Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
-     * @param integer $ErrCode Error code; 0 indicates success, other values indicate failure
+     * @param string $Status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+     * @param integer $ErrCode Error code. 0 indicates success, other values indicate failure.
      * @param string $Message Error message.
      */
     function __construct()

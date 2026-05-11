@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiRecognitionTaskOcrWordsResultInput getInput() Obtain Input information of text keyword recognition task.
  * @method void setInput(AiRecognitionTaskOcrWordsResultInput $Input) Set Input information of text keyword recognition task.
- * @method AiRecognitionTaskOcrWordsResultOutput getOutput() Obtain Output information of text keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiRecognitionTaskOcrWordsResultOutput $Output) Set Output information of text keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiRecognitionTaskOcrWordsResultOutput getOutput() Obtain Text keyword recognition task output information.
+ * @method void setOutput(AiRecognitionTaskOcrWordsResultOutput $Output) Set Text keyword recognition task output information.
  * @method integer getProgress() Obtain The progress of a text keyword recognition task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of a text keyword recognition task. Value range: 0-100.
  * @method string getBeginProcessTime() Obtain The time when the text keyword recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
@@ -69,8 +67,7 @@ class AiRecognitionTaskOcrWordsResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiRecognitionTaskOcrWordsResultOutput Output information of text keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskOcrWordsResultOutput Text keyword recognition task output information.
      */
     public $Output;
 
@@ -95,8 +92,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
      * @param AiRecognitionTaskOcrWordsResultInput $Input Input information of text keyword recognition task.
-     * @param AiRecognitionTaskOcrWordsResultOutput $Output Output information of text keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiRecognitionTaskOcrWordsResultOutput $Output Text keyword recognition task output information.
      * @param integer $Progress The progress of a text keyword recognition task. Value range: 0-100.
      * @param string $BeginProcessTime The time when the text keyword recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      * @param string $FinishTime The time when the text keyword recognition task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).

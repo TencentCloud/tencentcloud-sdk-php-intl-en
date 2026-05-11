@@ -32,10 +32,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method AiReviewPornAsrTaskInput getInput() Obtain Input for ASR-based recognition of pornographic content
  * @method void setInput(AiReviewPornAsrTaskInput $Input) Set Input for ASR-based recognition of pornographic content
- * @method AiReviewPornAsrTaskOutput getOutput() Obtain Output for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setOutput(AiReviewPornAsrTaskOutput $Output) Set Output for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiReviewPornAsrTaskOutput getOutput() Obtain Video moderation involves offensive content in Asr text task output.
+ * @method void setOutput(AiReviewPornAsrTaskOutput $Output) Set Video moderation involves offensive content in Asr text task output.
  * @method integer getProgress() Obtain The progress of an ASR-based moderation task (pornographic content). Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of an ASR-based moderation task (pornographic content). Value range: 0-100.
  */
@@ -68,8 +66,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Input;
 
     /**
-     * @var AiReviewPornAsrTaskOutput Output for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var AiReviewPornAsrTaskOutput Video moderation involves offensive content in Asr text task output.
      */
     public $Output;
 
@@ -85,8 +82,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
      * @param string $Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AiReviewPornAsrTaskInput $Input Input for ASR-based recognition of pornographic content
-     * @param AiReviewPornAsrTaskOutput $Output Output for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiReviewPornAsrTaskOutput $Output Video moderation involves offensive content in Asr text task output.
      * @param integer $Progress The progress of an ASR-based moderation task (pornographic content). Value range: 0-100.
      */
     function __construct()

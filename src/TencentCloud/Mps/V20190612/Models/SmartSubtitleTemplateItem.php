@@ -20,394 +20,202 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Smart subtitle template details.
  *
- * @method integer getDefinition() Obtain Unique identifier of the smart subtitle template.
- * @method void setDefinition(integer $Definition) Set Unique identifier of the smart subtitle template.
- * @method string getName() Obtain Smart subtitle template name.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setName(string $Name) Set Smart subtitle template name.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getComment() Obtain Smart subtitle template description.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setComment(string $Comment) Set Smart subtitle template description.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getType() Obtain Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setType(string $Type) Set Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method AsrHotWordsConfigure getAsrHotWordsConfigure() Obtain ASR hotword lexicon parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setAsrHotWordsConfigure(AsrHotWordsConfigure $AsrHotWordsConfigure) Set ASR hotword lexicon parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getAsrHotWordsLibraryName() Obtain Name of the hotword lexicon associated with the template.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setAsrHotWordsLibraryName(string $AsrHotWordsLibraryName) Set Name of the hotword lexicon associated with the template.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getVideoSrcLanguage() Obtain List of source languages of the video with smart subtitles.
-`zh`: Simplified Chinese.
-`yue`: Cantonese.
-`zh-PY`: Chinese, English, and Cantonese.
-`zh_medical`: Chinese (medical scenario).
-`zh_dialect`: Chinese dialect.
-`prime_zh`: Chinese, English, and Chinese dialects.
-`zh_en`: Chinese and English.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-`auto`: automatic recognition (it is only supported in pure subtitle translation).
- * @method void setVideoSrcLanguage(string $VideoSrcLanguage) Set List of source languages of the video with smart subtitles.
-`zh`: Simplified Chinese.
-`yue`: Cantonese.
-`zh-PY`: Chinese, English, and Cantonese.
-`zh_medical`: Chinese (medical scenario).
-`zh_dialect`: Chinese dialect.
-`prime_zh`: Chinese, English, and Chinese dialects.
-`zh_en`: Chinese and English.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-`auto`: automatic recognition (it is only supported in pure subtitle translation).
- * @method string getSubtitleFormat() Obtain Smart subtitle file format.
-- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubtitleFormat(string $SubtitleFormat) Set Smart subtitle file format.
-- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSubtitleType() Obtain Smart subtitle language type.
-0: source language1: target language
-2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
- * @method void setSubtitleType(integer $SubtitleType) Set Smart subtitle language type.
-0: source language1: target language
-2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
- * @method string getTranslateSwitch() Obtain Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setTranslateSwitch(string $TranslateSwitch) Set Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getTranslateDstLanguage() Obtain Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON.
-`zh`: Simplified Chinese.
-`zh-TW`: Traditional Chinese.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+ * @method integer getDefinition() Obtain <p>Unique identifier of the smart subtitle template.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the smart subtitle template.</p>
+ * @method string getName() Obtain <p>Smart subtitle template name.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTranslateDstLanguage(string $TranslateDstLanguage) Set Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON.
-`zh`: Simplified Chinese.
-`zh-TW`: Traditional Chinese.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+ * @method void setName(string $Name) Set <p>Smart subtitle template name.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Template creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
- * @method void setCreateTime(string $CreateTime) Set Template creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
- * @method string getUpdateTime() Obtain Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
- * @method void setUpdateTime(string $UpdateTime) Set Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
- * @method string getAliasName() Obtain Alias of the preset smart subtitle template.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setAliasName(string $AliasName) Set Alias of the preset smart subtitle template.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getProcessType() Obtain Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
- * @method void setProcessType(integer $ProcessType) Set Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
- * @method SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() Obtain Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig) Set Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getComment() Obtain <p>Smart subtitle template description.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setComment(string $Comment) Set <p>Smart subtitle template description.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain <p>Template type. Valid values:</p><ul><li>Preset: preset template.</li><li>Custom: custom template.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setType(string $Type) Set <p>Template type. Valid values:</p><ul><li>Preset: preset template.</li><li>Custom: custom template.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AsrHotWordsConfigure getAsrHotWordsConfigure() Obtain <p>ASR hotword lexicon parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAsrHotWordsConfigure(AsrHotWordsConfigure $AsrHotWordsConfigure) Set <p>ASR hotword lexicon parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAsrHotWordsLibraryName() Obtain <p>Name of the hotword lexicon associated with the template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAsrHotWordsLibraryName(string $AsrHotWordsLibraryName) Set <p>Name of the hotword lexicon associated with the template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVideoSrcLanguage() Obtain <p>Video source language list for smart subtitle:</p><p><code>zh</code>: Simplified Chinese<br><code>yue</code>: Cantonese<br><code>zh-PY</code>: Chinese, English, and Cantonese<br><code>zh_medical</code>: Chinese healthcare<br><code>zh_dialect</code>: Chinese dialect<br><code>prime_zh</code>: Chinese and English dialects<br><code>zh_en</code>: Chinese and English<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino<br><code>auto</code>: Automatic identification (only supported for subtitle translation)</p>
+ * @method void setVideoSrcLanguage(string $VideoSrcLanguage) Set <p>Video source language list for smart subtitle:</p><p><code>zh</code>: Simplified Chinese<br><code>yue</code>: Cantonese<br><code>zh-PY</code>: Chinese, English, and Cantonese<br><code>zh_medical</code>: Chinese healthcare<br><code>zh_dialect</code>: Chinese dialect<br><code>prime_zh</code>: Chinese and English dialects<br><code>zh_en</code>: Chinese and English<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino<br><code>auto</code>: Automatic identification (only supported for subtitle translation)</p>
+ * @method string getSubtitleFormat() Obtain <p>Smart subtitle file format.</p><ul><li>vtt: WebVTT.</li><li>srt: SRT.</li><li>original: same as the source subtitle file (for subtitle translation templates).</li><li>Not specified or empty: no subtitle file generated.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubtitleFormat(string $SubtitleFormat) Set <p>Smart subtitle file format.</p><ul><li>vtt: WebVTT.</li><li>srt: SRT.</li><li>original: same as the source subtitle file (for subtitle translation templates).</li><li>Not specified or empty: no subtitle file generated.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSubtitleType() Obtain <p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p>
+ * @method void setSubtitleType(integer $SubtitleType) Set <p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p>
+ * @method string getTranslateSwitch() Obtain <p>Subtitle translation switch.<br>ON: enables translation.<br>OFF: disables translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTranslateSwitch(string $TranslateSwitch) Set <p>Subtitle translation switch.<br>ON: enables translation.<br>OFF: disables translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTranslateDstLanguage() Obtain <p>Target language for subtitle translation.<br>This parameter takes effect when TranslateSwitch is ON.<br><code>zh</code>: Simplified Chinese<br><code>zh-TW</code>: Traditional Chinese<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino</p><p><strong>Note</strong>: Use <code>/</code> to separate multiple languages, such as <code>en/ja</code>, which indicates English and Japanese.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTranslateDstLanguage(string $TranslateDstLanguage) Set <p>Target language for subtitle translation.<br>This parameter takes effect when TranslateSwitch is ON.<br><code>zh</code>: Simplified Chinese<br><code>zh-TW</code>: Traditional Chinese<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino</p><p><strong>Note</strong>: Use <code>/</code> to separate multiple languages, such as <code>en/ja</code>, which indicates English and Japanese.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreateTime() Obtain <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
+ * @method string getUpdateTime() Obtain <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
+ * @method string getAliasName() Obtain <p>Preset template alias for smart subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAliasName(string $AliasName) Set <p>Preset template alias for smart subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getProcessType() Obtain <p>Subtitle processing type:</p><ul><li>0: ASR.</li><li>1: subtitle translation.</li><li>2: OCR.</li></ul>
+ * @method void setProcessType(integer $ProcessType) Set <p>Subtitle processing type:</p><ul><li>0: ASR.</li><li>1: subtitle translation.</li><li>2: OCR.</li></ul>
+ * @method SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() Obtain <p>Area configurations for the subtitle OCR extraction box.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig) Set <p>Area configurations for the subtitle OCR extraction box.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSubtitleEmbedId() Obtain <p>Subtitle burn-in template ID.</p>
+ * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) Set <p>Subtitle burn-in template ID.</p>
+ * @method integer getSpeakerMode() Obtain <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+ * @method void setSpeakerMode(integer $SpeakerMode) Set <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+ * @method integer getSpeakerLabel() Obtain <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+ * @method void setSpeakerLabel(integer $SpeakerLabel) Set <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
  */
 class SmartSubtitleTemplateItem extends AbstractModel
 {
     /**
-     * @var integer Unique identifier of the smart subtitle template.
+     * @var integer <p>Unique identifier of the smart subtitle template.</p>
      */
     public $Definition;
 
     /**
-     * @var string Smart subtitle template name.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string <p>Smart subtitle template name.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
-     * @var string Smart subtitle template description.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string <p>Smart subtitle template description.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Comment;
 
     /**
-     * @var string Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string <p>Template type. Valid values:</p><ul><li>Preset: preset template.</li><li>Custom: custom template.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
     /**
-     * @var AsrHotWordsConfigure ASR hotword lexicon parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var AsrHotWordsConfigure <p>ASR hotword lexicon parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AsrHotWordsConfigure;
 
     /**
-     * @var string Name of the hotword lexicon associated with the template.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string <p>Name of the hotword lexicon associated with the template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AsrHotWordsLibraryName;
 
     /**
-     * @var string List of source languages of the video with smart subtitles.
-`zh`: Simplified Chinese.
-`yue`: Cantonese.
-`zh-PY`: Chinese, English, and Cantonese.
-`zh_medical`: Chinese (medical scenario).
-`zh_dialect`: Chinese dialect.
-`prime_zh`: Chinese, English, and Chinese dialects.
-`zh_en`: Chinese and English.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-`auto`: automatic recognition (it is only supported in pure subtitle translation).
+     * @var string <p>Video source language list for smart subtitle:</p><p><code>zh</code>: Simplified Chinese<br><code>yue</code>: Cantonese<br><code>zh-PY</code>: Chinese, English, and Cantonese<br><code>zh_medical</code>: Chinese healthcare<br><code>zh_dialect</code>: Chinese dialect<br><code>prime_zh</code>: Chinese and English dialects<br><code>zh_en</code>: Chinese and English<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino<br><code>auto</code>: Automatic identification (only supported for subtitle translation)</p>
      */
     public $VideoSrcLanguage;
 
     /**
-     * @var string Smart subtitle file format.
-- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Smart subtitle file format.</p><ul><li>vtt: WebVTT.</li><li>srt: SRT.</li><li>original: same as the source subtitle file (for subtitle translation templates).</li><li>Not specified or empty: no subtitle file generated.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubtitleFormat;
 
     /**
-     * @var integer Smart subtitle language type.
-0: source language1: target language
-2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+     * @var integer <p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p>
      */
     public $SubtitleType;
 
     /**
-     * @var string Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string <p>Subtitle translation switch.<br>ON: enables translation.<br>OFF: disables translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TranslateSwitch;
 
     /**
-     * @var string Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON.
-`zh`: Simplified Chinese.
-`zh-TW`: Traditional Chinese.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+     * @var string <p>Target language for subtitle translation.<br>This parameter takes effect when TranslateSwitch is ON.<br><code>zh</code>: Simplified Chinese<br><code>zh-TW</code>: Traditional Chinese<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino</p><p><strong>Note</strong>: Use <code>/</code> to separate multiple languages, such as <code>en/ja</code>, which indicates English and Japanese.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TranslateDstLanguage;
 
     /**
-     * @var string Template creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @var string <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @var string <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string Alias of the preset smart subtitle template.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string <p>Preset template alias for smart subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AliasName;
 
     /**
-     * @var integer Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
+     * @var integer <p>Subtitle processing type:</p><ul><li>0: ASR.</li><li>1: subtitle translation.</li><li>2: OCR.</li></ul>
      */
     public $ProcessType;
 
     /**
-     * @var SelectingSubtitleAreasConfig Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SelectingSubtitleAreasConfig <p>Area configurations for the subtitle OCR extraction box.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SelectingSubtitleAreasConfig;
 
     /**
-     * @param integer $Definition Unique identifier of the smart subtitle template.
-     * @param string $Name Smart subtitle template name.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Comment Smart subtitle template description.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Type Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param AsrHotWordsConfigure $AsrHotWordsConfigure ASR hotword lexicon parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $AsrHotWordsLibraryName Name of the hotword lexicon associated with the template.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $VideoSrcLanguage List of source languages of the video with smart subtitles.
-`zh`: Simplified Chinese.
-`yue`: Cantonese.
-`zh-PY`: Chinese, English, and Cantonese.
-`zh_medical`: Chinese (medical scenario).
-`zh_dialect`: Chinese dialect.
-`prime_zh`: Chinese, English, and Chinese dialects.
-`zh_en`: Chinese and English.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-`auto`: automatic recognition (it is only supported in pure subtitle translation).
-     * @param string $SubtitleFormat Smart subtitle file format.
-- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SubtitleType Smart subtitle language type.
-0: source language1: target language
-2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
-     * @param string $TranslateSwitch Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $TranslateDstLanguage Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON.
-`zh`: Simplified Chinese.
-`zh-TW`: Traditional Chinese.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+     * @var integer <p>Subtitle burn-in template ID.</p>
+     */
+    public $SubtitleEmbedId;
+
+    /**
+     * @var integer <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+     */
+    public $SpeakerMode;
+
+    /**
+     * @var integer <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+     */
+    public $SpeakerLabel;
+
+    /**
+     * @param integer $Definition <p>Unique identifier of the smart subtitle template.</p>
+     * @param string $Name <p>Smart subtitle template name.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Template creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-     * @param string $UpdateTime Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-     * @param string $AliasName Alias of the preset smart subtitle template.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $ProcessType Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
-     * @param SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Comment <p>Smart subtitle template description.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Type <p>Template type. Valid values:</p><ul><li>Preset: preset template.</li><li>Custom: custom template.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AsrHotWordsConfigure $AsrHotWordsConfigure <p>ASR hotword lexicon parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AsrHotWordsLibraryName <p>Name of the hotword lexicon associated with the template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VideoSrcLanguage <p>Video source language list for smart subtitle:</p><p><code>zh</code>: Simplified Chinese<br><code>yue</code>: Cantonese<br><code>zh-PY</code>: Chinese, English, and Cantonese<br><code>zh_medical</code>: Chinese healthcare<br><code>zh_dialect</code>: Chinese dialect<br><code>prime_zh</code>: Chinese and English dialects<br><code>zh_en</code>: Chinese and English<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino<br><code>auto</code>: Automatic identification (only supported for subtitle translation)</p>
+     * @param string $SubtitleFormat <p>Smart subtitle file format.</p><ul><li>vtt: WebVTT.</li><li>srt: SRT.</li><li>original: same as the source subtitle file (for subtitle translation templates).</li><li>Not specified or empty: no subtitle file generated.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SubtitleType <p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p>
+     * @param string $TranslateSwitch <p>Subtitle translation switch.<br>ON: enables translation.<br>OFF: disables translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TranslateDstLanguage <p>Target language for subtitle translation.<br>This parameter takes effect when TranslateSwitch is ON.<br><code>zh</code>: Simplified Chinese<br><code>zh-TW</code>: Traditional Chinese<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino</p><p><strong>Note</strong>: Use <code>/</code> to separate multiple languages, such as <code>en/ja</code>, which indicates English and Japanese.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
+     * @param string $UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
+     * @param string $AliasName <p>Preset template alias for smart subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ProcessType <p>Subtitle processing type:</p><ul><li>0: ASR.</li><li>1: subtitle translation.</li><li>2: OCR.</li></ul>
+     * @param SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig <p>Area configurations for the subtitle OCR extraction box.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SubtitleEmbedId <p>Subtitle burn-in template ID.</p>
+     * @param integer $SpeakerMode <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+     * @param integer $SpeakerLabel <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
      */
     function __construct()
     {
@@ -486,6 +294,18 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("SelectingSubtitleAreasConfig",$param) and $param["SelectingSubtitleAreasConfig"] !== null) {
             $this->SelectingSubtitleAreasConfig = new SelectingSubtitleAreasConfig();
             $this->SelectingSubtitleAreasConfig->deserialize($param["SelectingSubtitleAreasConfig"]);
+        }
+
+        if (array_key_exists("SubtitleEmbedId",$param) and $param["SubtitleEmbedId"] !== null) {
+            $this->SubtitleEmbedId = $param["SubtitleEmbedId"];
+        }
+
+        if (array_key_exists("SpeakerMode",$param) and $param["SpeakerMode"] !== null) {
+            $this->SpeakerMode = $param["SpeakerMode"];
+        }
+
+        if (array_key_exists("SpeakerLabel",$param) and $param["SpeakerLabel"] !== null) {
+            $this->SpeakerLabel = $param["SpeakerLabel"];
         }
     }
 }

@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Subtitle information.
  *
- * @method string getId() Obtain Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
- * @method void setId(string $Id) Set Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
- * @method string getName() Obtain Media asset subtitle name, used for player display, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
- * @method void setName(string $Name) Set Media asset subtitle name, used for player display, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
- * @method string getLanguage() Obtain Subtitle Language.
- * @method void setLanguage(string $Language) Set Subtitle Language.
+ * @method string getId() Obtain Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+ * @method void setId(string $Id) Set Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+ * @method string getName() Obtain Media Asset Subtitle Name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+ * @method void setName(string $Name) Set Media Asset Subtitle Name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+ * @method string getLanguage() Obtain Subtitle language.
+ * @method void setLanguage(string $Language) Set Subtitle language.
  * @method string getFormat() Obtain The format of the subtitle files. Valid values:
 <li>vtt</li>
 <li>srt</li>
@@ -42,19 +42,19 @@ use TencentCloud\Common\AbstractModel;
 class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends AbstractModel
 {
     /**
-     * @var string Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+     * @var string Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
      */
     public $Id;
 
     /**
-     * @var string Media asset subtitle name, used for player display, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+     * @var string Media Asset Subtitle Name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
      */
     public $Name;
 
     /**
-     * @var string Subtitle Language.
+     * @var string Subtitle language.
      */
     public $Language;
 
@@ -71,11 +71,11 @@ class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends AbstractModel
     public $Url;
 
     /**
-     * @param string $Id Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
-     * @param string $Name Media asset subtitle name, used for player display, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
-     * @param string $Language Subtitle Language.
+     * @param string $Id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+     * @param string $Name Media Asset Subtitle Name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+     * @param string $Language Subtitle language.
      * @param string $Format The format of the subtitle files. Valid values:
 <li>vtt</li>
 <li>srt</li>

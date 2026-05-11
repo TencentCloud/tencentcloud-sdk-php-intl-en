@@ -60,6 +60,7 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+     * @deprecated
      */
     public $SubtitleFormat;
 

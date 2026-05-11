@@ -20,82 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Type of an animated image generating task.
  *
- * @method integer getDefinition() Obtain Animated image generating template ID.
- * @method void setDefinition(integer $Definition) Set Animated image generating template ID.
- * @method float getStartTimeOffset() Obtain Start time of an animated image in a video in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time of an animated image in a video in seconds.
- * @method float getEndTimeOffset() Obtain End time of an animated image in a video in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time of an animated image in a video in seconds.
- * @method TaskOutputStorage getOutputStorage() Obtain Target bucket of a generated animated image file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+ * @method integer getDefinition() Obtain <p>Video-to-GIF conversion template ID.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Video-to-GIF conversion template ID.</p>
+ * @method float getStartTimeOffset() Obtain <p>Start time of the GIF in the video, in seconds.</p>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Start time of the GIF in the video, in seconds.</p>
+ * @method float getEndTimeOffset() Obtain <p>End time of the GIF in the video, in seconds.</p>
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set <p>End time of the GIF in the video, in seconds.</p>
+ * @method TaskOutputStorage getOutputStorage() Obtain <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target bucket of a generated animated image file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOutputObjectPath() Obtain Output path of a file after animated image generating, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
- * @method void setOutputObjectPath(string $OutputObjectPath) Set Output path of a file after animated image generating, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
+ * @method string getOutputObjectPath() Obtain <p>Output path of the file after GIF conversion, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_animatedGraphic_{definition}.{format}</code>.
+ * @method void setOutputObjectPath(string $OutputObjectPath) Set <p>Output path of the file after GIF conversion, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_animatedGraphic_{definition}.{format}</code>.
+ * @method string getExtInfo() Obtain <p>Extended parameter.</p>
+ * @method void setExtInfo(string $ExtInfo) Set <p>Extended parameter.</p>
  */
 class AnimatedGraphicTaskInput extends AbstractModel
 {
     /**
-     * @var integer Animated image generating template ID.
+     * @var integer <p>Video-to-GIF conversion template ID.</p>
      */
     public $Definition;
 
     /**
-     * @var float Start time of an animated image in a video in seconds.
+     * @var float <p>Start time of the GIF in the video, in seconds.</p>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time of an animated image in a video in seconds.
+     * @var float <p>End time of the GIF in the video, in seconds.</p>
      */
     public $EndTimeOffset;
 
     /**
-     * @var TaskOutputStorage Target bucket of a generated animated image file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+     * @var TaskOutputStorage <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OutputStorage;
 
     /**
-     * @var string Output path of a file after animated image generating, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
+     * @var string <p>Output path of the file after GIF conversion, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_animatedGraphic_{definition}.{format}</code>.
      */
     public $OutputObjectPath;
 
     /**
-     * @param integer $Definition Animated image generating template ID.
-     * @param float $StartTimeOffset Start time of an animated image in a video in seconds.
-     * @param float $EndTimeOffset End time of an animated image in a video in seconds.
-     * @param TaskOutputStorage $OutputStorage Target bucket of a generated animated image file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+     * @var string <p>Extended parameter.</p>
+     */
+    public $ExtInfo;
+
+    /**
+     * @param integer $Definition <p>Video-to-GIF conversion template ID.</p>
+     * @param float $StartTimeOffset <p>Start time of the GIF in the video, in seconds.</p>
+     * @param float $EndTimeOffset <p>End time of the GIF in the video, in seconds.</p>
+     * @param TaskOutputStorage $OutputStorage <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OutputObjectPath Output path of a file after animated image generating, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
+     * @param string $OutputObjectPath <p>Output path of the file after GIF conversion, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_animatedGraphic_{definition}.{format}</code>.
+     * @param string $ExtInfo <p>Extended parameter.</p>
      */
     function __construct()
     {
@@ -129,6 +109,10 @@ If left empty, a relative path is used by default: `{inputName}_animatedGraphic_
 
         if (array_key_exists("OutputObjectPath",$param) and $param["OutputObjectPath"] !== null) {
             $this->OutputObjectPath = $param["OutputObjectPath"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
     }
 }

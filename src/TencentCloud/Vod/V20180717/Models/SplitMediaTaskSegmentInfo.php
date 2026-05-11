@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method SplitMediaTaskInput getInput() Obtain Input information of a video splitting task.
  * @method void setInput(SplitMediaTaskInput $Input) Set Input information of a video splitting task.
- * @method TaskOutputMediaInfo getOutput() Obtain Output information of a video splitting task.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setOutput(TaskOutputMediaInfo $Output) Set Output information of a video splitting task.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method TaskOutputMediaInfo getOutput() Obtain Video splitting task output information.
+ * @method void setOutput(TaskOutputMediaInfo $Output) Set Video splitting task output information.
  * @method string getProcedureTaskId() Obtain The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
  * @method void setProcedureTaskId(string $ProcedureTaskId) Set The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
  * @method string getReviewAudioVideoTaskId() Obtain The task ID for the task type `ReviewAudioVideo`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
@@ -39,8 +37,7 @@ class SplitMediaTaskSegmentInfo extends AbstractModel
     public $Input;
 
     /**
-     * @var TaskOutputMediaInfo Output information of a video splitting task.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var TaskOutputMediaInfo Video splitting task output information.
      */
     public $Output;
 
@@ -56,8 +53,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @param SplitMediaTaskInput $Input Input information of a video splitting task.
-     * @param TaskOutputMediaInfo $Output Output information of a video splitting task.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param TaskOutputMediaInfo $Output Video splitting task output information.
      * @param string $ProcedureTaskId The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
      * @param string $ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
      */

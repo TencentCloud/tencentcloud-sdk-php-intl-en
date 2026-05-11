@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Scenario-Based AIGC image generation configuration.
  *
- * @method string getType() Obtain AI image generation scenario type. valid values:
+ * @method string getType() Obtain Scenario type of AI image generation. Available values:
 -change_clothes: AI clothing change.
--product_image: AI-generated product image.
- * @method void setType(string $Type) Set AI image generation scenario type. valid values:
+-Product image: AI-generated product image.
+-outpainting: AI image expansion.
+ * @method void setType(string $Type) Set Scenario type of AI image generation. Available values:
 -change_clothes: AI clothing change.
--product_image: AI-generated product image.
+-Product image: AI-generated product image.
+-outpainting: AI image expansion.
  * @method ChangeClothesConfig getChangeClothesConfig() Obtain Valid when Type is change_clothes. this item is required and indicates the AI clothes-changing image generation config.
  * @method void setChangeClothesConfig(ChangeClothesConfig $ChangeClothesConfig) Set Valid when Type is change_clothes. this item is required and indicates the AI clothes-changing image generation config.
  * @method ProductImageConfig getProductImageConfig() Obtain Valid when Type is product_image. indicates the AI-generated product image config.
@@ -34,9 +36,10 @@ use TencentCloud\Common\AbstractModel;
 class AigcImageSceneInfo extends AbstractModel
 {
     /**
-     * @var string AI image generation scenario type. valid values:
+     * @var string Scenario type of AI image generation. Available values:
 -change_clothes: AI clothing change.
--product_image: AI-generated product image.
+-Product image: AI-generated product image.
+-outpainting: AI image expansion.
      */
     public $Type;
 
@@ -51,9 +54,10 @@ class AigcImageSceneInfo extends AbstractModel
     public $ProductImageConfig;
 
     /**
-     * @param string $Type AI image generation scenario type. valid values:
+     * @param string $Type Scenario type of AI image generation. Available values:
 -change_clothes: AI clothing change.
--product_image: AI-generated product image.
+-Product image: AI-generated product image.
+-outpainting: AI image expansion.
      * @param ChangeClothesConfig $ChangeClothesConfig Valid when Type is change_clothes. this item is required and indicates the AI clothes-changing image generation config.
      * @param ProductImageConfig $ProductImageConfig Valid when Type is product_image. indicates the AI-generated product image config.
      */

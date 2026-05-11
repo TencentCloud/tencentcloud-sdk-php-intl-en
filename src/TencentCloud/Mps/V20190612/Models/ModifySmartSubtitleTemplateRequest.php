@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig) Set <p>Area configurations for the subtitle OCR extraction box</p>
  * @method integer getSubtitleEmbedId() Obtain <p>Suppression Template id. Only allowed to fill in when ProcessType is 0 or 2 (task type is ASR or OCR). Cannot fill in when multiple target languages are enabled.</p>
  * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) Set <p>Suppression Template id. Only allowed to fill in when ProcessType is 0 or 2 (task type is ASR or OCR). Cannot fill in when multiple target languages are enabled.</p>
+ * @method integer getSpeakerMode() Obtain <p>Speaker identification switch. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.</p>
+ * @method void setSpeakerMode(integer $SpeakerMode) Set <p>Speaker identification switch. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.</p>
+ * @method integer getSpeakerLabel() Obtain <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.</p>
+ * @method void setSpeakerLabel(integer $SpeakerLabel) Set <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.</p>
  */
 class ModifySmartSubtitleTemplateRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class ModifySmartSubtitleTemplateRequest extends AbstractModel
     public $SubtitleEmbedId;
 
     /**
+     * @var integer <p>Speaker identification switch. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.</p>
+     */
+    public $SpeakerMode;
+
+    /**
+     * @var integer <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.</p>
+     */
+    public $SpeakerLabel;
+
+    /**
      * @param integer $Definition <p>Unique identifier of the smart subtitle template.</p>
      * @param string $TranslateSwitch <p>Subtitle translation switch<br><code>ON</code>: Enable translation<br><code>OFF</code>: Disable translation</p><p><strong>Note</strong>: For pure subtitle translation mode, the default value is enabled if the field is unspecified. The field cannot be left blank or set to <code>OFF</code>.</p>
      * @param string $Name <p>Intelligent subtitle template name<br>Length limit: 64 characters.</p>
@@ -120,6 +134,8 @@ class ModifySmartSubtitleTemplateRequest extends AbstractModel
      * @param integer $ProcessType <p>Subtitle processing type:</p><ul><li>0: ASR recognition subtitle</li><li>1: Pure caption translation</li><li>2: OCR recognition subtitle</li></ul><p><strong>Note</strong>: ASR is selected by default if the field is unspecified.</p>
      * @param SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig <p>Area configurations for the subtitle OCR extraction box</p>
      * @param integer $SubtitleEmbedId <p>Suppression Template id. Only allowed to fill in when ProcessType is 0 or 2 (task type is ASR or OCR). Cannot fill in when multiple target languages are enabled.</p>
+     * @param integer $SpeakerMode <p>Speaker identification switch. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.</p>
+     * @param integer $SpeakerLabel <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.</p>
      */
     function __construct()
     {
@@ -182,6 +198,14 @@ class ModifySmartSubtitleTemplateRequest extends AbstractModel
 
         if (array_key_exists("SubtitleEmbedId",$param) and $param["SubtitleEmbedId"] !== null) {
             $this->SubtitleEmbedId = $param["SubtitleEmbedId"];
+        }
+
+        if (array_key_exists("SpeakerMode",$param) and $param["SpeakerMode"] !== null) {
+            $this->SpeakerMode = $param["SpeakerMode"];
+        }
+
+        if (array_key_exists("SpeakerLabel",$param) and $param["SpeakerLabel"] !== null) {
+            $this->SpeakerLabel = $param["SpeakerLabel"];
         }
     }
 }

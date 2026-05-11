@@ -30,6 +30,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) Set Digital watermark.
  * @method CopyRightWatermarkInput getCopyRightWatermark() Obtain Copyright watermark.
  * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) Set Copyright watermark.
+ * @method BlindWatermarkInput getBlindWatermark() Obtain Digital watermark.
+ * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set Digital watermark.
  * @method array getMosaicSet() Obtain List of blurs. Up to 10 ones can be supported.
  * @method void setMosaicSet(array $MosaicSet) Set List of blurs. Up to 10 ones can be supported.
  * @method array getHeadTailSet() Obtain List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
@@ -75,6 +77,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CopyRightWatermark;
 
     /**
+     * @var BlindWatermarkInput Digital watermark.
+     */
+    public $BlindWatermark;
+
+    /**
      * @var array List of blurs. Up to 10 ones can be supported.
      */
     public $MosaicSet;
@@ -106,6 +113,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param TraceWatermarkInput $TraceWatermark Digital watermark.
      * @param CopyRightWatermarkInput $CopyRightWatermark Copyright watermark.
+     * @param BlindWatermarkInput $BlindWatermark Digital watermark.
      * @param array $MosaicSet List of blurs. Up to 10 ones can be supported.
      * @param array $HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
      * @param float $StartTimeOffset Start time offset of a transcoded video, in seconds.
@@ -151,6 +159,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("CopyRightWatermark",$param) and $param["CopyRightWatermark"] !== null) {
             $this->CopyRightWatermark = new CopyRightWatermarkInput();
             $this->CopyRightWatermark->deserialize($param["CopyRightWatermark"]);
+        }
+
+        if (array_key_exists("BlindWatermark",$param) and $param["BlindWatermark"] !== null) {
+            $this->BlindWatermark = new BlindWatermarkInput();
+            $this->BlindWatermark->deserialize($param["BlindWatermark"]);
         }
 
         if (array_key_exists("MosaicSet",$param) and $param["MosaicSet"] !== null) {

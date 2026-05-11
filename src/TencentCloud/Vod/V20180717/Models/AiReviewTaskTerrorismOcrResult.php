@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiReviewTerrorismOcrTaskInput getInput() Obtain Input for OCR-based recognition of terrorism content
  * @method void setInput(AiReviewTerrorismOcrTaskInput $Input) Set Input for OCR-based recognition of terrorism content
- * @method AiReviewTerrorismOcrTaskOutput getOutput() Obtain Output for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setOutput(AiReviewTerrorismOcrTaskOutput $Output) Set Output for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiReviewTerrorismOcrTaskOutput getOutput() Obtain Video moderation Ocr text involves unsafe information in task output.
+ * @method void setOutput(AiReviewTerrorismOcrTaskOutput $Output) Set Video moderation Ocr text involves unsafe information in task output.
  * @method integer getProgress() Obtain The progress of an OCR-based moderation task (terrorist content). Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of an OCR-based moderation task (terrorist content). Value range: 0-100.
  */
@@ -65,8 +63,7 @@ class AiReviewTaskTerrorismOcrResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiReviewTerrorismOcrTaskOutput Output for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var AiReviewTerrorismOcrTaskOutput Video moderation Ocr text involves unsafe information in task output.
      */
     public $Output;
 
@@ -81,8 +78,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
      * @param AiReviewTerrorismOcrTaskInput $Input Input for OCR-based recognition of terrorism content
-     * @param AiReviewTerrorismOcrTaskOutput $Output Output for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiReviewTerrorismOcrTaskOutput $Output Video moderation Ocr text involves unsafe information in task output.
      * @param integer $Progress The progress of an OCR-based moderation task (terrorist content). Value range: 0-100.
      */
     function __construct()

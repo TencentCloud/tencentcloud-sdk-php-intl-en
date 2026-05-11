@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getCaptchaType() Obtain Fill with fixed value: 9.
  * @method void setCaptchaType(integer $CaptchaType) Set Fill with fixed value: 9.
- * @method string getTicket() Obtain The user verification ticket returned by the frontend callback function
- * @method void setTicket(string $Ticket) Set The user verification ticket returned by the frontend callback function
- * @method string getUserIp() Obtain The user public IP obtained from the customer backend server
- * @method void setUserIp(string $UserIp) Set The user public IP obtained from the customer backend server
+ * @method string getTicket() Obtain The user verification ticket returned by the frontend callback function.
+ * @method void setTicket(string $Ticket) Set The user verification ticket returned by the frontend callback function.
+ * @method string getUserIp() Obtain The user public IP obtained from the customer backend server.
+ * @method void setUserIp(string $UserIp) Set The user public IP obtained from the customer backend server.
  * @method string getRandstr() Obtain A random string returned by the frontend callback function
  * @method void setRandstr(string $Randstr) Set A random string returned by the frontend callback function
  * @method integer getCaptchaAppId() Obtain CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
@@ -51,12 +51,12 @@ class DescribeCaptchaResultRequest extends AbstractModel
     public $CaptchaType;
 
     /**
-     * @var string The user verification ticket returned by the frontend callback function
+     * @var string The user verification ticket returned by the frontend callback function.
      */
     public $Ticket;
 
     /**
-     * @var string The user public IP obtained from the customer backend server
+     * @var string The user public IP obtained from the customer backend server.
      */
     public $UserIp;
 
@@ -102,8 +102,8 @@ class DescribeCaptchaResultRequest extends AbstractModel
 
     /**
      * @param integer $CaptchaType Fill with fixed value: 9.
-     * @param string $Ticket The user verification ticket returned by the frontend callback function
-     * @param string $UserIp The user public IP obtained from the customer backend server
+     * @param string $Ticket The user verification ticket returned by the frontend callback function.
+     * @param string $UserIp The user public IP obtained from the customer backend server.
      * @param string $Randstr A random string returned by the frontend callback function
      * @param integer $CaptchaAppId CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
      * @param string $AppSecretKey CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.

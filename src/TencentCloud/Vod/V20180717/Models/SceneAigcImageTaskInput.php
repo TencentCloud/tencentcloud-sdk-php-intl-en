@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Scene AIGC image task input.
+ * Scenario-based AIGC image generation task info
  *
- * @method AigcImageSceneInfo getSceneInfo() Obtain Scenario-based Image Generation Parameter Configuration.
- * @method void setSceneInfo(AigcImageSceneInfo $SceneInfo) Set Scenario-based Image Generation Parameter Configuration.
- * @method array getFileInfos() Obtain File information of the input image.
- * @method void setFileInfos(array $FileInfos) Set File information of the input image.
- * @method SceneAigcImageOutputConfig getOutputConfig() Obtain Output media file configuration for the task.
- * @method void setOutputConfig(SceneAigcImageOutputConfig $OutputConfig) Set Output media file configuration for the task.
+ * @method AigcImageSceneInfo getSceneInfo() Obtain Scenario-based image generation parameter configuration.
+ * @method void setSceneInfo(AigcImageSceneInfo $SceneInfo) Set Scenario-based image generation parameter configuration.
+ * @method array getFileInfos() Obtain Input image list.
+ * @method void setFileInfos(array $FileInfos) Set Input image list.
+ * @method SceneAigcImageOutputConfig getOutputConfig() Obtain Output media file configuration for scenario-based image generation tasks.
+ * @method void setOutputConfig(SceneAigcImageOutputConfig $OutputConfig) Set Output media file configuration for scenario-based image generation tasks.
  */
 class SceneAigcImageTaskInput extends AbstractModel
 {
     /**
-     * @var AigcImageSceneInfo Scenario-based Image Generation Parameter Configuration.
+     * @var AigcImageSceneInfo Scenario-based image generation parameter configuration.
      */
     public $SceneInfo;
 
     /**
-     * @var array File information of the input image.
+     * @var array Input image list.
      */
     public $FileInfos;
 
     /**
-     * @var SceneAigcImageOutputConfig Output media file configuration for the task.
+     * @var SceneAigcImageOutputConfig Output media file configuration for scenario-based image generation tasks.
      */
     public $OutputConfig;
 
     /**
-     * @param AigcImageSceneInfo $SceneInfo Scenario-based Image Generation Parameter Configuration.
-     * @param array $FileInfos File information of the input image.
-     * @param SceneAigcImageOutputConfig $OutputConfig Output media file configuration for the task.
+     * @param AigcImageSceneInfo $SceneInfo Scenario-based image generation parameter configuration.
+     * @param array $FileInfos Input image list.
+     * @param SceneAigcImageOutputConfig $OutputConfig Output media file configuration for scenario-based image generation tasks.
      */
     function __construct()
     {

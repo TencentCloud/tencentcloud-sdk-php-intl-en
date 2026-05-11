@@ -48,14 +48,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getProgress() Obtain Progress of a video editing task. Value range: [0, 100]
  * @method void setProgress(integer $Progress) Set Progress of a video editing task. Value range: [0, 100]
- * @method EditMediaTaskInput getInput() Obtain Input of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setInput(EditMediaTaskInput $Input) Set Input of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method EditMediaTaskOutput getOutput() Obtain Output of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(EditMediaTaskOutput $Output) Set Output of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method EditMediaTaskInput getInput() Obtain Video editing task input.
+ * @method void setInput(EditMediaTaskInput $Input) Set Video editing task input.
+ * @method EditMediaTaskOutput getOutput() Obtain Output of the video editing task.
+ * @method void setOutput(EditMediaTaskOutput $Output) Set Output of the video editing task.
  * @method MediaMetaData getMetaData() Obtain The metadata of the output video.
  * @method void setMetaData(MediaMetaData $MetaData) Set The metadata of the output video.
  * @method string getProcedureTaskId() Obtain The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [EditMedia](https://intl.cloud.tencent.com/document/api/266/34783?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
@@ -112,14 +108,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Progress;
 
     /**
-     * @var EditMediaTaskInput Input of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var EditMediaTaskInput Video editing task input.
      */
     public $Input;
 
     /**
-     * @var EditMediaTaskOutput Output of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var EditMediaTaskOutput Output of the video editing task.
      */
     public $Output;
 
@@ -165,10 +159,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Progress Progress of a video editing task. Value range: [0, 100]
-     * @param EditMediaTaskInput $Input Input of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EditMediaTaskOutput $Output Output of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param EditMediaTaskInput $Input Video editing task input.
+     * @param EditMediaTaskOutput $Output Output of the video editing task.
      * @param MediaMetaData $MetaData The metadata of the output video.
      * @param string $ProcedureTaskId The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [EditMedia](https://intl.cloud.tencent.com/document/api/266/34783?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
      * @param string $ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`. If a task flow (`ProcedureName`) is specified by [EditMedia](https://intl.cloud.tencent.com/document/api/266/34783?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
  * @method void setStreamInfos(array $StreamInfos) Set Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
 Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method string getName() Obtain Template name. Length limit: 64 characters.
  * @method void setName(string $Name) Set Template name. Length limit: 64 characters.
  * @method string getDrmType() Obtain DRM scheme type, value range:
@@ -52,6 +52,8 @@ The default is `VOD`.
 <li>SDMC</li>
 <li>VOD</li>
 The default is `VOD`.
+ * @method string getDrmEncryptType() Obtain 
+ * @method void setDrmEncryptType(string $DrmEncryptType) Set 
  * @method integer getDisableHigherVideoBitrate() Obtain Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
@@ -95,7 +97,7 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
     public $StreamInfos;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
@@ -120,6 +122,11 @@ The default value is an empty string. It is an empty string, indicating that the
 The default is `VOD`.
      */
     public $DrmKeyProvider;
+
+    /**
+     * @var string 
+     */
+    public $DrmEncryptType;
 
     /**
      * @var integer Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
@@ -156,7 +163,7 @@ Default: ts
 <li>MPEG-DASH</li>
      * @param array $StreamInfos Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
 Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param string $Name Template name. Length limit: 64 characters.
      * @param string $DrmType DRM scheme type, value range:
 <li>SimpleAES</li>
@@ -167,6 +174,7 @@ The default value is an empty string. It is an empty string, indicating that the
 <li>SDMC</li>
 <li>VOD</li>
 The default is `VOD`.
+     * @param string $DrmEncryptType 
      * @param integer $DisableHigherVideoBitrate Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
@@ -221,6 +229,10 @@ Default: ts
 
         if (array_key_exists("DrmKeyProvider",$param) and $param["DrmKeyProvider"] !== null) {
             $this->DrmKeyProvider = $param["DrmKeyProvider"];
+        }
+
+        if (array_key_exists("DrmEncryptType",$param) and $param["DrmEncryptType"] !== null) {
+            $this->DrmEncryptType = $param["DrmEncryptType"];
         }
 
         if (array_key_exists("DisableHigherVideoBitrate",$param) and $param["DisableHigherVideoBitrate"] !== null) {

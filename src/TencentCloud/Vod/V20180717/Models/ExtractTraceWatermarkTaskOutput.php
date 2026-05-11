@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The output of digital watermark extraction.
  *
- * @method string getUv() Obtain The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
- * @method void setUv(string $Uv) Set The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
+ * @method string getUv() Obtain Player's ID, represented in hexadecimal, 6 digits in total.
+ * @method void setUv(string $Uv) Set Player's ID, represented in hexadecimal, 6 digits in total.
  * @method string getUid() Obtain This parameter has been deprecated.
  * @method void setUid(string $Uid) Set This parameter has been deprecated.
  */
 class ExtractTraceWatermarkTaskOutput extends AbstractModel
 {
     /**
-     * @var string The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
+     * @var string Player's ID, represented in hexadecimal, 6 digits in total.
      */
     public $Uv;
 
@@ -39,7 +39,7 @@ class ExtractTraceWatermarkTaskOutput extends AbstractModel
     public $Uid;
 
     /**
-     * @param string $Uv The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
+     * @param string $Uv Player's ID, represented in hexadecimal, 6 digits in total.
      * @param string $Uid This parameter has been deprecated.
      */
     function __construct()

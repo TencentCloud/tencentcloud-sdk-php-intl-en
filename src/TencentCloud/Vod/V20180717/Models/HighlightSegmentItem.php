@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * List of intelligently generated highlights.
  *
- * @method float getConfidence() Obtain Confidence.
- * @method void setConfidence(float $Confidence) Set Confidence.
- * @method float getStartTimeOffset() Obtain Start time offset of a segment.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a segment.
- * @method float getEndTimeOffset() Obtain End time offset of a segment.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a segment.
+ * @method float getConfidence() Obtain <p>Confidence degree.</p>
+ * @method void setConfidence(float $Confidence) Set <p>Confidence degree.</p>
+ * @method float getStartTimeOffset() Obtain <p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
+ * @method float getEndTimeOffset() Obtain <p>Segment end time offset.</p><p>Unit: seconds</p>
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set <p>Segment end time offset.</p><p>Unit: seconds</p>
  */
 class HighlightSegmentItem extends AbstractModel
 {
     /**
-     * @var float Confidence.
+     * @var float <p>Confidence degree.</p>
      */
     public $Confidence;
 
     /**
-     * @var float Start time offset of a segment.
+     * @var float <p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of a segment.
+     * @var float <p>Segment end time offset.</p><p>Unit: seconds</p>
      */
     public $EndTimeOffset;
 
     /**
-     * @param float $Confidence Confidence.
-     * @param float $StartTimeOffset Start time offset of a segment.
-     * @param float $EndTimeOffset End time offset of a segment.
+     * @param float $Confidence <p>Confidence degree.</p>
+     * @param float $StartTimeOffset <p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
+     * @param float $EndTimeOffset <p>Segment end time offset.</p><p>Unit: seconds</p>
      */
     function __construct()
     {

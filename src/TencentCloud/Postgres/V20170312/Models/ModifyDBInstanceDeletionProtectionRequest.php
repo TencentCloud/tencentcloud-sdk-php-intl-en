@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceDeletionProtection request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+ * @method string getDBInstanceId() Obtain Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method boolean getDeletionProtection() Obtain Specifies whether to enable instance deletion protection. valid values: true (enable), false (disable).
  * @method void setDeletionProtection(boolean $DeletionProtection) Set Specifies whether to enable instance deletion protection. valid values: true (enable), false (disable).
  */
 class ModifyDBInstanceDeletionProtectionRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+     * @var string Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
@@ -38,7 +38,7 @@ class ModifyDBInstanceDeletionProtectionRequest extends AbstractModel
     public $DeletionProtection;
 
     /**
-     * @param string $DBInstanceId Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+     * @param string $DBInstanceId Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      * @param boolean $DeletionProtection Specifies whether to enable instance deletion protection. valid values: true (enable), false (disable).
      */
     function __construct()

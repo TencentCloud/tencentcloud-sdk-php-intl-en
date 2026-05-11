@@ -28,14 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiRecognitionTaskSegmentResultInput getInput() Obtain Input information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setInput(AiRecognitionTaskSegmentResultInput $Input) Set Input information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiRecognitionTaskSegmentResultOutput getOutput() Obtain Output information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiRecognitionTaskSegmentResultOutput $Output) Set Output information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiRecognitionTaskSegmentResultInput getInput() Obtain Video splitting task input.
+ * @method void setInput(AiRecognitionTaskSegmentResultInput $Input) Set Video splitting task input.
+ * @method AiRecognitionTaskSegmentResultOutput getOutput() Obtain Video splitting task output information.
+ * @method void setOutput(AiRecognitionTaskSegmentResultOutput $Output) Set Video splitting task output information.
  * @method integer getProgress() Obtain The progress of a video splitting task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of a video splitting task. Value range: 0-100.
  * @method string getBeginProcessTime() Obtain The time when the video detachment task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
@@ -66,14 +62,12 @@ class AiRecognitionTaskSegmentResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiRecognitionTaskSegmentResultInput Input information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskSegmentResultInput Video splitting task input.
      */
     public $Input;
 
     /**
-     * @var AiRecognitionTaskSegmentResultOutput Output information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskSegmentResultOutput Video splitting task output information.
      */
     public $Output;
 
@@ -97,10 +91,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
-     * @param AiRecognitionTaskSegmentResultInput $Input Input information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiRecognitionTaskSegmentResultOutput $Output Output information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiRecognitionTaskSegmentResultInput $Input Video splitting task input.
+     * @param AiRecognitionTaskSegmentResultOutput $Output Video splitting task output information.
      * @param integer $Progress The progress of a video splitting task. Value range: 0-100.
      * @param string $BeginProcessTime The time when the video detachment task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      * @param string $FinishTime The time when the video stripping task is completed is in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).

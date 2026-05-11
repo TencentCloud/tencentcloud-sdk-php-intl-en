@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceChargeType request structure.
  *
- * @method string getDBInstanceId() Obtain Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
- * @method void setDBInstanceId(string $DBInstanceId) Set Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+ * @method string getDBInstanceId() Obtain Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method string getInstanceChargeType() Obtain Instance billing type, which currently supports:.
 <Li>PREPAID: prepaid, i.e., yearly/monthly subscription</li>.
 <Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
@@ -56,7 +56,7 @@ Default value: 0
 class ModifyDBInstanceChargeTypeRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+     * @var string Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
@@ -92,7 +92,7 @@ Default value: 0
     public $AutoVoucher;
 
     /**
-     * @param string $DBInstanceId Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+     * @param string $DBInstanceId Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      * @param string $InstanceChargeType Instance billing type, which currently supports:.
 <Li>PREPAID: prepaid, i.e., yearly/monthly subscription</li>.
 <Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.

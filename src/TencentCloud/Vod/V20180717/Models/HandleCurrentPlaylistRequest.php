@@ -20,21 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HandleCurrentPlaylist request structure.
  *
- * @method integer getSubAppId() Obtain <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>.
- * @method void setSubAppId(integer $SubAppId) Set <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>.
+ * @method integer getSubAppId() Obtain <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
+ * @method void setSubAppId(integer $SubAppId) Set <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
  * @method string getRoundPlayId() Obtain The unique identifier of the playlist.
  * @method void setRoundPlayId(string $RoundPlayId) Set The unique identifier of the playlist.
  * @method string getOperation() Obtain Operation type, available options:<li>insert: insert program into the current playlist.</li> <li>inserttemporary: temporarily insert program into the current playlist. can only be inserted after the currently playing program. temporarily inserted programs are only effective during this carousel process.</li><li>delete: delete program from the playlist. cannot delete currently playing programs.</li>.
  * @method void setOperation(string $Operation) Set Operation type, available options:<li>insert: insert program into the current playlist.</li> <li>inserttemporary: temporarily insert program into the current playlist. can only be inserted after the currently playing program. temporarily inserted programs are only effective during this carousel process.</li><li>delete: delete program from the playlist. cannot delete currently playing programs.</li>.
  * @method string getItemId() Obtain Playlist program id. required when operation is insert, indicating the program list will be inserted after this program. the insertion position must be after the currently playing program.
  * @method void setItemId(string $ItemId) Set Playlist program id. required when operation is insert, indicating the program list will be inserted after this program. the insertion position must be after the currently playing program.
+ * @method integer getSegmentIndex() Obtain 
+ * @method void setSegmentIndex(integer $SegmentIndex) Set 
  * @method array getRoundPlaylist() Obtain Program list. required when operation is insert, inserttemporary, delete, indicating the list of programs to be operated on. the list length can be up to a maximum of 10.
  * @method void setRoundPlaylist(array $RoundPlaylist) Set Program list. required when operation is insert, inserttemporary, delete, indicating the list of programs to be operated on. the list length can be up to a maximum of 10.
  */
 class HandleCurrentPlaylistRequest extends AbstractModel
 {
     /**
-     * @var integer <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>.
+     * @var integer <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
      */
     public $SubAppId;
 
@@ -54,15 +56,21 @@ class HandleCurrentPlaylistRequest extends AbstractModel
     public $ItemId;
 
     /**
+     * @var integer 
+     */
+    public $SegmentIndex;
+
+    /**
      * @var array Program list. required when operation is insert, inserttemporary, delete, indicating the list of programs to be operated on. the list length can be up to a maximum of 10.
      */
     public $RoundPlaylist;
 
     /**
-     * @param integer $SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>.
+     * @param integer $SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
      * @param string $RoundPlayId The unique identifier of the playlist.
      * @param string $Operation Operation type, available options:<li>insert: insert program into the current playlist.</li> <li>inserttemporary: temporarily insert program into the current playlist. can only be inserted after the currently playing program. temporarily inserted programs are only effective during this carousel process.</li><li>delete: delete program from the playlist. cannot delete currently playing programs.</li>.
      * @param string $ItemId Playlist program id. required when operation is insert, indicating the program list will be inserted after this program. the insertion position must be after the currently playing program.
+     * @param integer $SegmentIndex 
      * @param array $RoundPlaylist Program list. required when operation is insert, inserttemporary, delete, indicating the list of programs to be operated on. the list length can be up to a maximum of 10.
      */
     function __construct()
@@ -92,6 +100,10 @@ class HandleCurrentPlaylistRequest extends AbstractModel
 
         if (array_key_exists("ItemId",$param) and $param["ItemId"] !== null) {
             $this->ItemId = $param["ItemId"];
+        }
+
+        if (array_key_exists("SegmentIndex",$param) and $param["SegmentIndex"] !== null) {
+            $this->SegmentIndex = $param["SegmentIndex"];
         }
 
         if (array_key_exists("RoundPlaylist",$param) and $param["RoundPlaylist"] !== null) {

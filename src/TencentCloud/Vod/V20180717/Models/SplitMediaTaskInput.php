@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
- * @method string getProcedureName() Obtain [Task flow template](https://intl.cloud.tencent.com/document/product/266/33931?lang=en&pg=) name, which should be entered if you want to perform a task flow on the generated new video.
- * @method void setProcedureName(string $ProcedureName) Set [Task flow template](https://intl.cloud.tencent.com/document/product/266/33931?lang=en&pg=) name, which should be entered if you want to perform a task flow on the generated new video.
+ * @method string getProcedureName() Obtain [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you need to execute task flow on the generated new video.
+ * @method void setProcedureName(string $ProcedureName) Set [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you need to execute task flow on the generated new video.
  * @method SplitMediaOutputConfig getOutputConfig() Obtain Output information of a video splitting task.
  * @method void setOutputConfig(SplitMediaOutputConfig $OutputConfig) Set Output information of a video splitting task.
  */
@@ -67,7 +67,7 @@ class SplitMediaTaskInput extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var string [Task flow template](https://intl.cloud.tencent.com/document/product/266/33931?lang=en&pg=) name, which should be entered if you want to perform a task flow on the generated new video.
+     * @var string [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you need to execute task flow on the generated new video.
      */
     public $ProcedureName;
 
@@ -86,7 +86,7 @@ class SplitMediaTaskInput extends AbstractModel
 <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
-     * @param string $ProcedureName [Task flow template](https://intl.cloud.tencent.com/document/product/266/33931?lang=en&pg=) name, which should be entered if you want to perform a task flow on the generated new video.
+     * @param string $ProcedureName [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you need to execute task flow on the generated new video.
      * @param SplitMediaOutputConfig $OutputConfig Output information of a video splitting task.
      */
     function __construct()

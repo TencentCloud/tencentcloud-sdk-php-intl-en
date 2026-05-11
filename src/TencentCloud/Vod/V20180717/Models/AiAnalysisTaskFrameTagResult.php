@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskFrameTagInput getInput() Obtain Input of intelligent frame-specific tagging task.
  * @method void setInput(AiAnalysisTaskFrameTagInput $Input) Set Input of intelligent frame-specific tagging task.
- * @method AiAnalysisTaskFrameTagOutput getOutput() Obtain Output of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskFrameTagOutput $Output) Set Output of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskFrameTagOutput getOutput() Obtain Intelligent frame-specific tagging task output.
+ * @method void setOutput(AiAnalysisTaskFrameTagOutput $Output) Set Intelligent frame-specific tagging task output.
  * @method integer getProgress() Obtain The progress of an intelligent labeling by frame task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of an intelligent labeling by frame task. Value range: 0-100.
  * @method string getBeginProcessTime() Obtain The time when the intelligent frame labeling task started execution, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
@@ -69,8 +67,7 @@ class AiAnalysisTaskFrameTagResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskFrameTagOutput Output of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskFrameTagOutput Intelligent frame-specific tagging task output.
      */
     public $Output;
 
@@ -95,8 +92,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
      * @param AiAnalysisTaskFrameTagInput $Input Input of intelligent frame-specific tagging task.
-     * @param AiAnalysisTaskFrameTagOutput $Output Output of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskFrameTagOutput $Output Intelligent frame-specific tagging task output.
      * @param integer $Progress The progress of an intelligent labeling by frame task. Value range: 0-100.
      * @param string $BeginProcessTime The time when the intelligent frame labeling task started execution, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      * @param string $FinishTime The time when the intelligent frame labeling task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).

@@ -32,10 +32,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method AiReviewPoliticalOcrTaskInput getInput() Obtain Input for OCR-based recognition of politically sensitive content
  * @method void setInput(AiReviewPoliticalOcrTaskInput $Input) Set Input for OCR-based recognition of politically sensitive content
- * @method AiReviewPoliticalOcrTaskOutput getOutput() Obtain Output for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setOutput(AiReviewPoliticalOcrTaskOutput $Output) Set Output for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiReviewPoliticalOcrTaskOutput getOutput() Obtain Video moderation Ocr text involves inappropriate information in task output.
+ * @method void setOutput(AiReviewPoliticalOcrTaskOutput $Output) Set Video moderation Ocr text involves inappropriate information in task output.
  * @method integer getProgress() Obtain Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
  * @method void setProgress(integer $Progress) Set Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
  */
@@ -68,8 +66,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Input;
 
     /**
-     * @var AiReviewPoliticalOcrTaskOutput Output for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var AiReviewPoliticalOcrTaskOutput Video moderation Ocr text involves inappropriate information in task output.
      */
     public $Output;
 
@@ -85,8 +82,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
      * @param string $Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AiReviewPoliticalOcrTaskInput $Input Input for OCR-based recognition of politically sensitive content
-     * @param AiReviewPoliticalOcrTaskOutput $Output Output for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiReviewPoliticalOcrTaskOutput $Output Video moderation Ocr text involves inappropriate information in task output.
      * @param integer $Progress Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AIGC image generation task input file information.
  *
- * @method string getType() Obtain Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>.
- * @method void setType(string $Type) Set Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>.
+ * @method string getType() Obtain Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+ * @method void setType(string $Type) Set Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
  * @method string getFileId() Obtain The media File ID of the image File, which is the globally unique identifier of the File in vod, is assigned by the vod backend after successful upload. you can get this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). this parameter is valid when the Type value is File.
 Description:.
 1. recommended for use: image less than 7 mb.
@@ -44,7 +44,7 @@ Description:.
 class AigcImageTaskInputFileInfo extends AbstractModel
 {
     /**
-     * @var string Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>.
+     * @var string Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
      */
     public $Type;
 
@@ -70,7 +70,7 @@ Description:.
     public $Text;
 
     /**
-     * @param string $Type Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>.
+     * @param string $Type Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
      * @param string $FileId The media File ID of the image File, which is the globally unique identifier of the File in vod, is assigned by the vod backend after successful upload. you can get this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). this parameter is valid when the Type value is File.
 Description:.
 1. recommended for use: image less than 7 mb.

@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent classification task input type.
  *
- * @method integer getDefinition() Obtain Intelligent description template ID.
- * @method void setDefinition(integer $Definition) Set Intelligent description template ID.
+ * @method integer getDefinition() Obtain <p>ID of the intelligent video description template.</p>
+ * @method void setDefinition(integer $Definition) Set <p>ID of the intelligent video description template.</p>
+ * @method string getExtendedParameter() Obtain <p>Extended parameter.</p>
+ * @method void setExtendedParameter(string $ExtendedParameter) Set <p>Extended parameter.</p>
  */
 class AiAnalysisTaskDescriptionInput extends AbstractModel
 {
     /**
-     * @var integer Intelligent description template ID.
+     * @var integer <p>ID of the intelligent video description template.</p>
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Intelligent description template ID.
+     * @var string <p>Extended parameter.</p>
+     */
+    public $ExtendedParameter;
+
+    /**
+     * @param integer $Definition <p>ID of the intelligent video description template.</p>
+     * @param string $ExtendedParameter <p>Extended parameter.</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class AiAnalysisTaskDescriptionInput extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ExtendedParameter",$param) and $param["ExtendedParameter"] !== null) {
+            $this->ExtendedParameter = $param["ExtendedParameter"];
         }
     }
 }

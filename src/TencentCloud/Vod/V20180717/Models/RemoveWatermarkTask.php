@@ -40,10 +40,8 @@ use TencentCloud\Common\AbstractModel;
 <li>70000: Internal server error. Please try again.</li>
  * @method string getMessage() Obtain The error message.
  * @method void setMessage(string $Message) Set The error message.
- * @method RemoveWaterMarkTaskInput getInput() Obtain The input of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInput(RemoveWaterMarkTaskInput $Input) Set The input of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method RemoveWaterMarkTaskInput getInput() Obtain Input of the intelligent watermark removal task.
+ * @method void setInput(RemoveWaterMarkTaskInput $Input) Set Input of the intelligent watermark removal task.
  * @method RemoveWaterMarkTaskOutput getOutput() Obtain The output of a watermark removal task.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(RemoveWaterMarkTaskOutput $Output) Set The output of a watermark removal task.
@@ -86,8 +84,7 @@ class RemoveWatermarkTask extends AbstractModel
     public $Message;
 
     /**
-     * @var RemoveWaterMarkTaskInput The input of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RemoveWaterMarkTaskInput Input of the intelligent watermark removal task.
      */
     public $Input;
 
@@ -118,8 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>60000: Source file error (e.g., video data is corrupted).</li>
 <li>70000: Internal server error. Please try again.</li>
      * @param string $Message The error message.
-     * @param RemoveWaterMarkTaskInput $Input The input of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RemoveWaterMarkTaskInput $Input Input of the intelligent watermark removal task.
      * @param RemoveWaterMarkTaskOutput $Output The output of a watermark removal task.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.

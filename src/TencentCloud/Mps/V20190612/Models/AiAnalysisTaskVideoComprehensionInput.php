@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input file for the video (audio) recognition task.
  *
- * @method integer getDefinition() Obtain Video (audio) recognition template ID.
- * @method void setDefinition(integer $Definition) Set Video (audio) recognition template ID.
+ * @method integer getDefinition() Obtain <p>ID of the video (audio) understanding template.</p>
+ * @method void setDefinition(integer $Definition) Set <p>ID of the video (audio) understanding template.</p>
+ * @method string getExtendedParameter() Obtain <p>Extended parameter.</p>
+ * @method void setExtendedParameter(string $ExtendedParameter) Set <p>Extended parameter.</p>
  */
 class AiAnalysisTaskVideoComprehensionInput extends AbstractModel
 {
     /**
-     * @var integer Video (audio) recognition template ID.
+     * @var integer <p>ID of the video (audio) understanding template.</p>
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Video (audio) recognition template ID.
+     * @var string <p>Extended parameter.</p>
+     */
+    public $ExtendedParameter;
+
+    /**
+     * @param integer $Definition <p>ID of the video (audio) understanding template.</p>
+     * @param string $ExtendedParameter <p>Extended parameter.</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class AiAnalysisTaskVideoComprehensionInput extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ExtendedParameter",$param) and $param["ExtendedParameter"] !== null) {
+            $this->ExtendedParameter = $param["ExtendedParameter"];
         }
     }
 }

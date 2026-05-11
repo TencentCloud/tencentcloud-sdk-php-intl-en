@@ -42,18 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCodeExt(string $ErrCodeExt) Set The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
  * @method integer getProgress() Obtain The task progress. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The task progress. Value range: 0-100.
- * @method RebuildMediaTaskInput getInput() Obtain The input parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInput(RebuildMediaTaskInput $Input) Set The input parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method RebuildMediaTaskOutput getOutput() Obtain The output parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(RebuildMediaTaskOutput $Output) Set The output parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method MediaMetaData getMetaData() Obtain The metadata of the output file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMetaData(MediaMetaData $MetaData) Set The metadata of the output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method RebuildMediaTaskInput getInput() Obtain Input of the audio and video quality regeneration task.
+ * @method void setInput(RebuildMediaTaskInput $Input) Set Input of the audio and video quality regeneration task.
+ * @method RebuildMediaTaskOutput getOutput() Obtain Output of the audio and video quality regeneration task.
+ * @method void setOutput(RebuildMediaTaskOutput $Output) Set Output of the audio and video quality regeneration task.
+ * @method MediaMetaData getMetaData() Obtain Metadata of the output video after audio and video quality revival.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of the output video after audio and video quality revival.
  * @method string getSessionId() Obtain The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
  * @method void setSessionId(string $SessionId) Set The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
  * @method string getSessionContext() Obtain The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
@@ -97,20 +91,17 @@ class RebuildMediaTask extends AbstractModel
     public $Progress;
 
     /**
-     * @var RebuildMediaTaskInput The input parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RebuildMediaTaskInput Input of the audio and video quality regeneration task.
      */
     public $Input;
 
     /**
-     * @var RebuildMediaTaskOutput The output parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RebuildMediaTaskOutput Output of the audio and video quality regeneration task.
      */
     public $Output;
 
     /**
-     * @var MediaMetaData The metadata of the output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaMetaData Metadata of the output video after audio and video quality revival.
      */
     public $MetaData;
 
@@ -136,12 +127,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Message The error message.
      * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
      * @param integer $Progress The task progress. Value range: 0-100.
-     * @param RebuildMediaTaskInput $Input The input parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RebuildMediaTaskOutput $Output The output parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaMetaData $MetaData The metadata of the output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RebuildMediaTaskInput $Input Input of the audio and video quality regeneration task.
+     * @param RebuildMediaTaskOutput $Output Output of the audio and video quality regeneration task.
+     * @param MediaMetaData $MetaData Metadata of the output video after audio and video quality revival.
      * @param string $SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
      * @param string $SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
      */

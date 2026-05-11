@@ -20,130 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAigcImageTask request structure.
  *
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getModelName() Obtain Model name. valid values:.
-<li>GEM:Gemini;</li>
-<Li>Qwen: qianwen.</li>
-<Li>Hunyuan: hunyuan.</li>
- * @method void setModelName(string $ModelName) Set Model name. valid values:.
-<li>GEM:Gemini;</li>
-<Li>Qwen: qianwen.</li>
-<Li>Hunyuan: hunyuan.</li>
- * @method string getModelVersion() Obtain Model version. valid values:.
-<li>When ModelName is GEM, optional values are 2.5, 3.0;</li>
-<li>When ModelName is Qwen, optional values are 0925.</li>
-<li>When ModelName is Hunyuan, the optional values are 3.0.</li>
- * @method void setModelVersion(string $ModelVersion) Set Model version. valid values:.
-<li>When ModelName is GEM, optional values are 2.5, 3.0;</li>
-<li>When ModelName is Qwen, optional values are 0925.</li>
-<li>When ModelName is Hunyuan, the optional values are 3.0.</li>
- * @method array getFileInfos() Obtain File information of the input image for the AIGC image generation task. By default only one image can be specified; when using the GEM model, version 2.5 supports up to 3 images and version 3.0 supports up to 14 images.
- * @method void setFileInfos(array $FileInfos) Set File information of the input image for the AIGC image generation task. By default only one image can be specified; when using the GEM model, version 2.5 supports up to 3 images and version 3.0 supports up to 14 images.
- * @method string getPrompt() Obtain The prompt content for image generation. this parameter is required when FileInfos is empty.
- * @method void setPrompt(string $Prompt) Set The prompt content for image generation. this parameter is required when FileInfos is empty.
- * @method string getNegativePrompt() Obtain Prevent the model from generating image generation prompts.
- * @method void setNegativePrompt(string $NegativePrompt) Set Prevent the model from generating image generation prompts.
- * @method string getEnhancePrompt() Obtain Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
- * @method void setEnhancePrompt(string $EnhancePrompt) Set Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
- * @method AigcImageOutputConfig getOutputConfig() Obtain Output media file configuration for the task.
- * @method void setOutputConfig(AigcImageOutputConfig $OutputConfig) Set Output media file configuration for the task.
- * @method string getSessionId() Obtain An identifier for deduplication. if there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. the maximum length is 50 characters. leaving it blank or using an empty string indicates no deduplication.
- * @method void setSessionId(string $SessionId) Set An identifier for deduplication. if there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. the maximum length is 50 characters. leaving it blank or using an empty string indicates no deduplication.
- * @method string getSessionContext() Obtain Source context, used to pass through user request information. the audio and video quality revival complete callback will return the value of this field. longest 1000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context, used to pass through user request information. the audio and video quality revival complete callback will return the value of this field. longest 1000 characters.
- * @method integer getTasksPriority() Obtain Task priority. the higher the value, the higher the priority. value range is from -10 to 10. if left blank, the default value is 0.
- * @method void setTasksPriority(integer $TasksPriority) Set Task priority. the higher the value, the higher the priority. value range is from -10 to 10. if left blank, the default value is 0.
- * @method string getExtInfo() Obtain Reserved field, used when special purpose.
- * @method void setExtInfo(string $ExtInfo) Set Reserved field, used when special purpose.
+ * @method integer getSubAppId() Obtain <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b></p>
+ * @method string getModelName() Obtain <p>Model name. Value:</p><li>Qwen: Qianwen.</li><li>Hunyuan: Hunyuan.</li><li>Vidu: Shengshu.</li><li>Kling: Keling.</li>
+ * @method void setModelName(string $ModelName) Set <p>Model name. Value:</p><li>Qwen: Qianwen.</li><li>Hunyuan: Hunyuan.</li><li>Vidu: Shengshu.</li><li>Kling: Keling.</li>
+ * @method string getModelVersion() Obtain <p>Model version. Parameter Value: <li>When ModelName is Qwen, optional values: 0925;</li><li>When ModelName is Hunyuan, optional values: 3.0;</li><li>When ModelName is Vidu, optional values: q2;</li><li>When ModelName is Kling, optional values: 2.1;</li></p>
+ * @method void setModelVersion(string $ModelVersion) Set <p>Model version. Parameter Value: <li>When ModelName is Qwen, optional values: 0925;</li><li>When ModelName is Hunyuan, optional values: 3.0;</li><li>When ModelName is Vidu, optional values: q2;</li><li>When ModelName is Kling, optional values: 2.1;</li></p>
+ * @method array getFileInfos() Obtain <p>File information of the input image for the AIGC image generation task. Only one is supported by default. The following models can accept multiple reference images: <li>GEM 2.5: 0 to 3 images;</li><li>Vidu q2: 0 to 7 images. Supported formats include png, jpeg, jpg, and webp. The image pixel size cannot be less than 128x128, and the ratio must be less than 1:4 or 4:1.</li></p>
+ * @method void setFileInfos(array $FileInfos) Set <p>File information of the input image for the AIGC image generation task. Only one is supported by default. The following models can accept multiple reference images: <li>GEM 2.5: 0 to 3 images;</li><li>Vidu q2: 0 to 7 images. Supported formats include png, jpeg, jpg, and webp. The image pixel size cannot be less than 128x128, and the ratio must be less than 1:4 or 4:1.</li></p>
+ * @method string getPrompt() Obtain <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+ * @method void setPrompt(string $Prompt) Set <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+ * @method string getNegativePrompt() Obtain <p>To prevent the model from generating image prompts.</p>
+ * @method void setNegativePrompt(string $NegativePrompt) Set <p>To prevent the model from generating image prompts.</p>
+ * @method string getEnhancePrompt() Obtain <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+ * @method void setEnhancePrompt(string $EnhancePrompt) Set <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+ * @method AigcImageOutputConfig getOutputConfig() Obtain <p>Output media file configuration for the image generation task.</p>
+ * @method void setOutputConfig(AigcImageOutputConfig $OutputConfig) Set <p>Output media file configuration for the image generation task.</p>
+ * @method string getInputRegion() Obtain <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+ * @method void setInputRegion(string $InputRegion) Set <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+ * @method string getSceneType() Obtain 
+ * @method void setSceneType(string $SceneType) Set 
+ * @method integer getSeed() Obtain 
+ * @method void setSeed(integer $Seed) Set 
+ * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+ * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+ * @method string getSessionContext() Obtain <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method void setSessionContext(string $SessionContext) Set <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method integer getTasksPriority() Obtain <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+ * @method void setTasksPriority(integer $TasksPriority) Set <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+ * @method string getExtInfo() Obtain <p>Reserved field, used for special purpose.</p>
+ * @method void setExtInfo(string $ExtInfo) Set <p>Reserved field, used for special purpose.</p>
  */
 class CreateAigcImageTaskRequest extends AbstractModel
 {
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string Model name. valid values:.
-<li>GEM:Gemini;</li>
-<Li>Qwen: qianwen.</li>
-<Li>Hunyuan: hunyuan.</li>
+     * @var string <p>Model name. Value:</p><li>Qwen: Qianwen.</li><li>Hunyuan: Hunyuan.</li><li>Vidu: Shengshu.</li><li>Kling: Keling.</li>
      */
     public $ModelName;
 
     /**
-     * @var string Model version. valid values:.
-<li>When ModelName is GEM, optional values are 2.5, 3.0;</li>
-<li>When ModelName is Qwen, optional values are 0925.</li>
-<li>When ModelName is Hunyuan, the optional values are 3.0.</li>
+     * @var string <p>Model version. Parameter Value: <li>When ModelName is Qwen, optional values: 0925;</li><li>When ModelName is Hunyuan, optional values: 3.0;</li><li>When ModelName is Vidu, optional values: q2;</li><li>When ModelName is Kling, optional values: 2.1;</li></p>
      */
     public $ModelVersion;
 
     /**
-     * @var array File information of the input image for the AIGC image generation task. By default only one image can be specified; when using the GEM model, version 2.5 supports up to 3 images and version 3.0 supports up to 14 images.
+     * @var array <p>File information of the input image for the AIGC image generation task. Only one is supported by default. The following models can accept multiple reference images: <li>GEM 2.5: 0 to 3 images;</li><li>Vidu q2: 0 to 7 images. Supported formats include png, jpeg, jpg, and webp. The image pixel size cannot be less than 128x128, and the ratio must be less than 1:4 or 4:1.</li></p>
      */
     public $FileInfos;
 
     /**
-     * @var string The prompt content for image generation. this parameter is required when FileInfos is empty.
+     * @var string <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
      */
     public $Prompt;
 
     /**
-     * @var string Prevent the model from generating image generation prompts.
+     * @var string <p>To prevent the model from generating image prompts.</p>
      */
     public $NegativePrompt;
 
     /**
-     * @var string Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
+     * @var string <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
      */
     public $EnhancePrompt;
 
     /**
-     * @var AigcImageOutputConfig Output media file configuration for the task.
+     * @var AigcImageOutputConfig <p>Output media file configuration for the image generation task.</p>
      */
     public $OutputConfig;
 
     /**
-     * @var string An identifier for deduplication. if there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. the maximum length is 50 characters. leaving it blank or using an empty string indicates no deduplication.
+     * @var string <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+     */
+    public $InputRegion;
+
+    /**
+     * @var string 
+     */
+    public $SceneType;
+
+    /**
+     * @var integer 
+     */
+    public $Seed;
+
+    /**
+     * @var string <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public $SessionId;
 
     /**
-     * @var string Source context, used to pass through user request information. the audio and video quality revival complete callback will return the value of this field. longest 1000 characters.
+     * @var string <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public $SessionContext;
 
     /**
-     * @var integer Task priority. the higher the value, the higher the priority. value range is from -10 to 10. if left blank, the default value is 0.
+     * @var integer <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      */
     public $TasksPriority;
 
     /**
-     * @var string Reserved field, used when special purpose.
+     * @var string <p>Reserved field, used for special purpose.</p>
      */
     public $ExtInfo;
 
     /**
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $ModelName Model name. valid values:.
-<li>GEM:Gemini;</li>
-<Li>Qwen: qianwen.</li>
-<Li>Hunyuan: hunyuan.</li>
-     * @param string $ModelVersion Model version. valid values:.
-<li>When ModelName is GEM, optional values are 2.5, 3.0;</li>
-<li>When ModelName is Qwen, optional values are 0925.</li>
-<li>When ModelName is Hunyuan, the optional values are 3.0.</li>
-     * @param array $FileInfos File information of the input image for the AIGC image generation task. By default only one image can be specified; when using the GEM model, version 2.5 supports up to 3 images and version 3.0 supports up to 14 images.
-     * @param string $Prompt The prompt content for image generation. this parameter is required when FileInfos is empty.
-     * @param string $NegativePrompt Prevent the model from generating image generation prompts.
-     * @param string $EnhancePrompt Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
-     * @param AigcImageOutputConfig $OutputConfig Output media file configuration for the task.
-     * @param string $SessionId An identifier for deduplication. if there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. the maximum length is 50 characters. leaving it blank or using an empty string indicates no deduplication.
-     * @param string $SessionContext Source context, used to pass through user request information. the audio and video quality revival complete callback will return the value of this field. longest 1000 characters.
-     * @param integer $TasksPriority Task priority. the higher the value, the higher the priority. value range is from -10 to 10. if left blank, the default value is 0.
-     * @param string $ExtInfo Reserved field, used when special purpose.
+     * @param integer $SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b></p>
+     * @param string $ModelName <p>Model name. Value:</p><li>Qwen: Qianwen.</li><li>Hunyuan: Hunyuan.</li><li>Vidu: Shengshu.</li><li>Kling: Keling.</li>
+     * @param string $ModelVersion <p>Model version. Parameter Value: <li>When ModelName is Qwen, optional values: 0925;</li><li>When ModelName is Hunyuan, optional values: 3.0;</li><li>When ModelName is Vidu, optional values: q2;</li><li>When ModelName is Kling, optional values: 2.1;</li></p>
+     * @param array $FileInfos <p>File information of the input image for the AIGC image generation task. Only one is supported by default. The following models can accept multiple reference images: <li>GEM 2.5: 0 to 3 images;</li><li>Vidu q2: 0 to 7 images. Supported formats include png, jpeg, jpg, and webp. The image pixel size cannot be less than 128x128, and the ratio must be less than 1:4 or 4:1.</li></p>
+     * @param string $Prompt <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+     * @param string $NegativePrompt <p>To prevent the model from generating image prompts.</p>
+     * @param string $EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+     * @param AigcImageOutputConfig $OutputConfig <p>Output media file configuration for the image generation task.</p>
+     * @param string $InputRegion <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+     * @param string $SceneType 
+     * @param integer $Seed 
+     * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @param string $SessionContext <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param integer $TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+     * @param string $ExtInfo <p>Reserved field, used for special purpose.</p>
      */
     function __construct()
     {
@@ -194,6 +194,18 @@ class CreateAigcImageTaskRequest extends AbstractModel
         if (array_key_exists("OutputConfig",$param) and $param["OutputConfig"] !== null) {
             $this->OutputConfig = new AigcImageOutputConfig();
             $this->OutputConfig->deserialize($param["OutputConfig"]);
+        }
+
+        if (array_key_exists("InputRegion",$param) and $param["InputRegion"] !== null) {
+            $this->InputRegion = $param["InputRegion"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
+        }
+
+        if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {
+            $this->Seed = $param["Seed"];
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {

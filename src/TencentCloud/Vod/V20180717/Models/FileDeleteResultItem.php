@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() Obtain The ID of the file deleted.
  * @method void setFileId(string $FileId) Set The ID of the file deleted.
- * @method array getDeleteParts() Obtain The type of the file deleted.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setDeleteParts(array $DeleteParts) Set The type of the file deleted.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getDeleteParts() Obtain Part of the file deleted this time.
+ * @method void setDeleteParts(array $DeleteParts) Set Part of the file deleted this time.
  */
 class FileDeleteResultItem extends AbstractModel
 {
@@ -35,15 +33,13 @@ class FileDeleteResultItem extends AbstractModel
     public $FileId;
 
     /**
-     * @var array The type of the file deleted.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Part of the file deleted this time.
      */
     public $DeleteParts;
 
     /**
      * @param string $FileId The ID of the file deleted.
-     * @param array $DeleteParts The type of the file deleted.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $DeleteParts Part of the file deleted this time.
      */
     function __construct()
     {

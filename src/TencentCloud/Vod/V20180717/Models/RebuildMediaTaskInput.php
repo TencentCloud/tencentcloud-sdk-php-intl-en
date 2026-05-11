@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) Set The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
  * @method float getEndTimeOffset() Obtain The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
- * @method integer getDefinition() Obtain The ID of the remaster template.
- * @method void setDefinition(integer $Definition) Set The ID of the remaster template.
+ * @method integer getDefinition() Obtain Audio and video quality rebirth template number.
+ * @method void setDefinition(integer $Definition) Set Audio and video quality rebirth template number.
  * @method RepairInfo getRepairInfo() Obtain The video quality remastering parameters.
  * @method void setRepairInfo(RepairInfo $RepairInfo) Set The video quality remastering parameters.
  * @method VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() Obtain The smart frame interpolation parameters.
@@ -73,7 +73,7 @@ class RebuildMediaTaskInput extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var integer The ID of the remaster template.
+     * @var integer Audio and video quality rebirth template number.
      */
     public $Definition;
 
@@ -146,7 +146,7 @@ class RebuildMediaTaskInput extends AbstractModel
      * @param string $FileId The file ID.
      * @param float $StartTimeOffset The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
      * @param float $EndTimeOffset The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
-     * @param integer $Definition The ID of the remaster template.
+     * @param integer $Definition Audio and video quality rebirth template number.
      * @param RepairInfo $RepairInfo The video quality remastering parameters.
      * @param VideoFrameInterpolationInfo $VideoFrameInterpolationInfo The smart frame interpolation parameters.
      * @param SuperResolutionInfo $SuperResolutionInfo The super resolution parameters.

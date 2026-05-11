@@ -28,20 +28,20 @@ Default value: `OFF`.
 <li>`ON`</li>
 <li>`OFF`</li>
 Default value: `OFF`.
- * @method string getType() Obtain The HDR type. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
+ * @method string getType() Obtain High dynamic range type. Valid values:
+<li>hdr10: means the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
 
 Note:
-<li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
- * @method void setType(string $Type) Set The HDR type. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
+<li>Valid only when the high dynamic range type control switch is ON.</li>
+<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
+ * @method void setType(string $Type) Set High dynamic range type. Valid values:
+<li>hdr10: means the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
 
 Note:
-<li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
+<li>Valid only when the high dynamic range type control switch is ON.</li>
+<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
  */
 class HDRInfo extends AbstractModel
 {
@@ -54,13 +54,13 @@ Default value: `OFF`.
     public $Switch;
 
     /**
-     * @var string The HDR type. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
+     * @var string High dynamic range type. Valid values:
+<li>hdr10: means the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
 
 Note:
-<li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
+<li>Valid only when the high dynamic range type control switch is ON.</li>
+<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
      */
     public $Type;
 
@@ -69,13 +69,13 @@ Note:
 <li>`ON`</li>
 <li>`OFF`</li>
 Default value: `OFF`.
-     * @param string $Type The HDR type. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
+     * @param string $Type High dynamic range type. Valid values:
+<li>hdr10: means the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
 
 Note:
-<li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
+<li>Valid only when the high dynamic range type control switch is ON.</li>
+<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
      */
     function __construct()
     {

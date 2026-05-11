@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Opening and closing segments recognition task input type.
  *
- * @method integer getDefinition() Obtain Opening and closing segments recognition template ID.
- * @method void setDefinition(integer $Definition) Set Opening and closing segments recognition template ID.
+ * @method integer getDefinition() Obtain <p>ID of the intro and outro recognition template.</p>
+ * @method void setDefinition(integer $Definition) Set <p>ID of the intro and outro recognition template.</p>
+ * @method string getExtendedParameter() Obtain <p>Extended parameter.</p>
+ * @method void setExtendedParameter(string $ExtendedParameter) Set <p>Extended parameter.</p>
  */
 class AiAnalysisTaskHeadTailInput extends AbstractModel
 {
     /**
-     * @var integer Opening and closing segments recognition template ID.
+     * @var integer <p>ID of the intro and outro recognition template.</p>
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Opening and closing segments recognition template ID.
+     * @var string <p>Extended parameter.</p>
+     */
+    public $ExtendedParameter;
+
+    /**
+     * @param integer $Definition <p>ID of the intro and outro recognition template.</p>
+     * @param string $ExtendedParameter <p>Extended parameter.</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class AiAnalysisTaskHeadTailInput extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ExtendedParameter",$param) and $param["ExtendedParameter"] !== null) {
+            $this->ExtendedParameter = $param["ExtendedParameter"];
         }
     }
 }
