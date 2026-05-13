@@ -83,7 +83,6 @@ The snapshot must be in `NORMAL` status. To query the status of a snapshot, you 
  * @method Models\DescribeFirewallRulesTemplateResponse DescribeFirewallRulesTemplate(Models\DescribeFirewallRulesTemplateRequest $req) This API is used to query a firewall rule template.
  * @method Models\DescribeGeneralResourceQuotasResponse DescribeGeneralResourceQuotas(Models\DescribeGeneralResourceQuotasRequest $req) This API is used to query the quota information of general resources.
  * @method Models\DescribeImagesToShareResponse DescribeImagesToShare(Models\DescribeImagesToShareRequest $req) This API is used to query the list of Cloud Virtual Machine (CVM) custom images and share the images to Tencent Cloud Lighthouse (Lighthouse).
- * @method Models\DescribeInstanceLoginKeyPairAttributeResponse DescribeInstanceLoginKeyPairAttribute(Models\DescribeInstanceLoginKeyPairAttributeRequest $req) This API is used to query the attributes of the default login key of an instance.
  * @method Models\DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(Models\DescribeInstanceVncUrlRequest $req) This API is used to query the URL for VNC login.
 
 * It does not support `STOPPED` CVMs.
@@ -182,9 +181,6 @@ Sharing CVM images to Lighthouse requires the following conditions to be met:
 * Only `RUNNING` and `STOPPED` instances can be changed. 
 * Batch operations are supported. The maximum number of instances in each request is 30. 
 * This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
- * @method Models\ModifyInstancesLoginKeyPairAttributeResponse ModifyInstancesLoginKeyPairAttribute(Models\ModifyInstancesLoginKeyPairAttributeRequest $req) This API is used to set the attributes of the default login key pair of an instance.
-
-
  * @method Models\ModifyInstancesRenewFlagResponse ModifyInstancesRenewFlag(Models\ModifyInstancesRenewFlagRequest $req) This API is used to change the auto-renewal setting of monthly-subscribed instances. 
 
 * Instances with auto-renewal enabled are automatically renewed on a monthly basis upon the expiration. 

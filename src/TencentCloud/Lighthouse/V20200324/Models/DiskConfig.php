@@ -20,74 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cloud disk configuration
  *
- * @method string getZone() Obtain Availability zone.
- * @method void setZone(string $Zone) Set Availability zone.
- * @method string getDiskType() Obtain Cloud disk type. valid values are as follows:.
-
-<Li>CLOUD_BASIC: basic cloud disk.</li>.
-<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
- * @method void setDiskType(string $DiskType) Set Cloud disk type. valid values are as follows:.
-
-<Li>CLOUD_BASIC: basic cloud disk.</li>.
-<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
- * @method string getDiskSalesState() Obtain Cloud disk sale status.
- * @method void setDiskSalesState(string $DiskSalesState) Set Cloud disk sale status.
- * @method integer getMaxDiskSize() Obtain Maximum cloud disk size.
- * @method void setMaxDiskSize(integer $MaxDiskSize) Set Maximum cloud disk size.
- * @method integer getMinDiskSize() Obtain Minimum cloud disk size.
- * @method void setMinDiskSize(integer $MinDiskSize) Set Minimum cloud disk size.
- * @method integer getDiskStepSize() Obtain Cloud disk increment.
- * @method void setDiskStepSize(integer $DiskStepSize) Set Cloud disk increment.
+ * @method string getZone() Obtain <P>Availability zone.</p>.
+ * @method void setZone(string $Zone) Set <P>Availability zone.</p>.
+ * @method string getDiskType() Obtain <p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>.
+ * @method void setDiskType(string $DiskType) Set <p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>.
+ * @method string getDiskSalesState() Obtain <P>Cloud block storage (cbs) saleable state.</p>.
+ * @method void setDiskSalesState(string $DiskSalesState) Set <P>Cloud block storage (cbs) saleable state.</p>.
+ * @method integer getMaxDiskSize() Obtain <p>Maximum CBS size.</p><p>unit: GB</p>.
+ * @method void setMaxDiskSize(integer $MaxDiskSize) Set <p>Maximum CBS size.</p><p>unit: GB</p>.
+ * @method integer getMinDiskSize() Obtain <p>Minimum CBS disk size.</p><p>unit: GB</p>.
+ * @method void setMinDiskSize(integer $MinDiskSize) Set <p>Minimum CBS disk size.</p><p>unit: GB</p>.
+ * @method integer getDiskStepSize() Obtain <p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>.
+ * @method void setDiskStepSize(integer $DiskStepSize) Set <p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>.
  */
 class DiskConfig extends AbstractModel
 {
     /**
-     * @var string Availability zone.
+     * @var string <P>Availability zone.</p>.
      */
     public $Zone;
 
     /**
-     * @var string Cloud disk type. valid values are as follows:.
-
-<Li>CLOUD_BASIC: basic cloud disk.</li>.
-<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
+     * @var string <p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>.
      */
     public $DiskType;
 
     /**
-     * @var string Cloud disk sale status.
+     * @var string <P>Cloud block storage (cbs) saleable state.</p>.
      */
     public $DiskSalesState;
 
     /**
-     * @var integer Maximum cloud disk size.
+     * @var integer <p>Maximum CBS size.</p><p>unit: GB</p>.
      */
     public $MaxDiskSize;
 
     /**
-     * @var integer Minimum cloud disk size.
+     * @var integer <p>Minimum CBS disk size.</p><p>unit: GB</p>.
      */
     public $MinDiskSize;
 
     /**
-     * @var integer Cloud disk increment.
+     * @var integer <p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>.
      */
     public $DiskStepSize;
 
     /**
-     * @param string $Zone Availability zone.
-     * @param string $DiskType Cloud disk type. valid values are as follows:.
-
-<Li>CLOUD_BASIC: basic cloud disk.</li>.
-<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
-     * @param string $DiskSalesState Cloud disk sale status.
-     * @param integer $MaxDiskSize Maximum cloud disk size.
-     * @param integer $MinDiskSize Minimum cloud disk size.
-     * @param integer $DiskStepSize Cloud disk increment.
+     * @param string $Zone <P>Availability zone.</p>.
+     * @param string $DiskType <p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>.
+     * @param string $DiskSalesState <P>Cloud block storage (cbs) saleable state.</p>.
+     * @param integer $MaxDiskSize <p>Maximum CBS size.</p><p>unit: GB</p>.
+     * @param integer $MinDiskSize <p>Minimum CBS disk size.</p><p>unit: GB</p>.
+     * @param integer $DiskStepSize <p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>.
      */
     function __construct()
     {

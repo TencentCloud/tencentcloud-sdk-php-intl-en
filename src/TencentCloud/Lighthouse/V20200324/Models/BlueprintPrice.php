@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginalBlueprintPrice(float $OriginalBlueprintPrice) Set Original image unit price in USD.
  * @method float getOriginalPrice() Obtain Original image total price in USD.
  * @method void setOriginalPrice(float $OriginalPrice) Set Original image total price in USD.
- * @method integer getDiscount() Obtain Discount.
- * @method void setDiscount(integer $Discount) Set Discount.
+ * @method float getDiscount() Obtain Discount.
+ * @method void setDiscount(float $Discount) Set Discount.
  * @method float getDiscountPrice() Obtain Discounted image total price in USD.
  * @method void setDiscountPrice(float $DiscountPrice) Set Discounted image total price in USD.
  */
@@ -42,7 +42,7 @@ class BlueprintPrice extends AbstractModel
     public $OriginalPrice;
 
     /**
-     * @var integer Discount.
+     * @var float Discount.
      */
     public $Discount;
 
@@ -54,7 +54,7 @@ class BlueprintPrice extends AbstractModel
     /**
      * @param float $OriginalBlueprintPrice Original image unit price in USD.
      * @param float $OriginalPrice Original image total price in USD.
-     * @param integer $Discount Discount.
+     * @param float $Discount Discount.
      * @param float $DiscountPrice Discounted image total price in USD.
      */
     function __construct()

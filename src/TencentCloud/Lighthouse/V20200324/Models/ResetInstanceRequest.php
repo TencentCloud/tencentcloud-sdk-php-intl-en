@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
  * @method string getBlueprintId() Obtain Image ID, which can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
  * @method void setBlueprintId(string $BlueprintId) Set Image ID, which can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
+ * @method array getContainers() Obtain 
+ * @method void setContainers(array $Containers) Set 
  */
 class ResetInstanceRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ResetInstanceRequest extends AbstractModel
     public $BlueprintId;
 
     /**
+     * @var array 
+     */
+    public $Containers;
+
+    /**
      * @param string $InstanceId Instance ID, which can be obtained from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
      * @param string $BlueprintId Image ID, which can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
+     * @param array $Containers 
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class ResetInstanceRequest extends AbstractModel
 
         if (array_key_exists("BlueprintId",$param) and $param["BlueprintId"] !== null) {
             $this->BlueprintId = $param["BlueprintId"];
+        }
+
+        if (array_key_exists("Containers",$param) and $param["Containers"] !== null) {
+            $this->Containers = [];
+            foreach ($param["Containers"] as $key => $value){
+                $obj = new DockerContainerConfiguration();
+                $obj->deserialize($value);
+                array_push($this->Containers, $obj);
+            }
         }
     }
 }
