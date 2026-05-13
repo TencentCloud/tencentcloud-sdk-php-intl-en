@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID.
  * @method void setClusterId(string $ClusterId) Set Cluster ID.
- * @method string getNamespaceId() Obtain Namespace.
- * @method void setNamespaceId(string $NamespaceId) Set Namespace.
+ * @method string getNamespaceId() Obtain Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) Set Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
  * @method integer getOffset() Obtain Offset.
  * @method void setOffset(integer $Offset) Set Offset.
- * @method integer getLimit() Obtain The max number of returned results.
- * @method void setLimit(integer $Limit) Set The max number of returned results.
+ * @method integer getLimit() Obtain Maximum number of entries per request. Range: [0–100]. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Maximum number of entries per request. Range: [0–100]. Default value: 20.
  * @method string getFilterTopic() Obtain Topic name, which can be used to query all subscription groups under the topic
  * @method void setFilterTopic(string $FilterTopic) Set Topic name, which can be used to query all subscription groups under the topic
  * @method string getFilterGroup() Obtain Consumer group query by consumer group name. Fuzzy query is supported
@@ -51,7 +51,7 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Namespace.
+     * @var string Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public $NamespaceId;
 
@@ -61,7 +61,7 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer The max number of returned results.
+     * @var integer Maximum number of entries per request. Range: [0–100]. Default value: 20.
      */
     public $Limit;
 
@@ -102,9 +102,9 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID.
-     * @param string $NamespaceId Namespace.
+     * @param string $NamespaceId Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
      * @param integer $Offset Offset.
-     * @param integer $Limit The max number of returned results.
+     * @param integer $Limit Maximum number of entries per request. Range: [0–100]. Default value: 20.
      * @param string $FilterTopic Topic name, which can be used to query all subscription groups under the topic
      * @param string $FilterGroup Consumer group query by consumer group name. Fuzzy query is supported
      * @param string $SortedBy Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics.

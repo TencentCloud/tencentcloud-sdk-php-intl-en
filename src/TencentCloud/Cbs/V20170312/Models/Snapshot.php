@@ -22,12 +22,44 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Placement getPlacement() Obtain Location of the snapshot.
  * @method void setPlacement(Placement $Placement) Set Location of the snapshot.
- * @method boolean getCopyFromRemote() Obtain Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
- * @method void setCopyFromRemote(boolean $CopyFromRemote) Set Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
- * @method string getSnapshotState() Obtain Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
- * @method void setSnapshotState(string $SnapshotState) Set Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
- * @method boolean getIsPermanent() Obtain Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
- * @method void setIsPermanent(boolean $IsPermanent) Set Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
+ * @method boolean getCopyFromRemote() Obtain Specifies whether the snapshot is for cross-region replication. value range:.
+<ul>
+<li>true: indicates a snapshot for cross-region replication.</li>.
+<li>false: snapshot of the local region.</li>.
+</ul>
+ * @method void setCopyFromRemote(boolean $CopyFromRemote) Set Specifies whether the snapshot is for cross-region replication. value range:.
+<ul>
+<li>true: indicates a snapshot for cross-region replication.</li>.
+<li>false: snapshot of the local region.</li>.
+</ul>
+ * @method string getSnapshotState() Obtain Snapshot status. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is normal.</li>.
+<Li>CREATING: creating</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+<Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+<Li>CHECKING_COPIED: copying check in progress.</li>.
+<Li>TORECYCLE: to be recycled.</li>.
+</ul>
+ * @method void setSnapshotState(string $SnapshotState) Set Snapshot status. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is normal.</li>.
+<Li>CREATING: creating</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+<Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+<Li>CHECKING_COPIED: copying check in progress.</li>.
+<Li>TORECYCLE: to be recycled.</li>.
+</ul>
+ * @method boolean getIsPermanent() Obtain Whether it is a permanent snapshot. valid values:.
+<ul>
+<li>true: permanent snapshot.</li>.
+<li>false: non-permanent snapshot.</li>.
+</ul>
+ * @method void setIsPermanent(boolean $IsPermanent) Set Whether it is a permanent snapshot. valid values:.
+<ul>
+<li>true: permanent snapshot.</li>.
+<li>false: non-permanent snapshot.</li>.
+</ul>
  * @method string getSnapshotName() Obtain Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
  * @method void setSnapshotName(string $SnapshotName) Set Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
  * @method string getDeadlineTime() Obtain The expiration time of the snapshot. If the snapshot is permanently retained, this field is blank.
@@ -38,22 +70,40 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImages(array $Images) Set List of images associated with snapshot.
  * @method integer getShareReference() Obtain Number of snapshots currently shared
  * @method void setShareReference(integer $ShareReference) Set Number of snapshots currently shared
- * @method string getSnapshotType() Obtain Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
- * @method void setSnapshotType(string $SnapshotType) Set Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
- * @method integer getDiskSize() Obtain Size of the cloud disk used to create this snapshot (in GB).
- * @method void setDiskSize(integer $DiskSize) Set Size of the cloud disk used to create this snapshot (in GB).
+ * @method string getSnapshotType() Obtain Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT).
+ * @method void setSnapshotType(string $SnapshotType) Set Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT).
+ * @method integer getDiskSize() Obtain Specifies the disk capacity of the CBS for creating this snapshot, in GiB.
+ * @method void setDiskSize(integer $DiskSize) Set Specifies the disk capacity of the CBS for creating this snapshot, in GiB.
  * @method string getDiskId() Obtain ID of the cloud disk used to create this snapshot.
  * @method void setDiskId(string $DiskId) Set ID of the cloud disk used to create this snapshot.
- * @method array getCopyingToRegions() Obtain The destination region to which the snapshot is being replicated. Default value is [ ].
- * @method void setCopyingToRegions(array $CopyingToRegions) Set The destination region to which the snapshot is being replicated. Default value is [ ].
- * @method boolean getEncrypt() Obtain Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
- * @method void setEncrypt(boolean $Encrypt) Set Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
+ * @method array getCopyingToRegions() Obtain Destination region of the snapshot currently under cross region replication. if not, return `[]`.
+ * @method void setCopyingToRegions(array $CopyingToRegions) Set Destination region of the snapshot currently under cross region replication. if not, return `[]`.
+ * @method boolean getEncrypt() Obtain Indicates whether the snapshot is created for an encrypted disk. valid values:.
+<ul>
+<li>true: specifies the snapshot is created by encrypted disks.</li>.
+<li>false: snapshot created for non-encrypted disk.</li>.
+</ul>
+ * @method void setEncrypt(boolean $Encrypt) Set Indicates whether the snapshot is created for an encrypted disk. valid values:.
+<ul>
+<li>true: specifies the snapshot is created by encrypted disks.</li>.
+<li>false: snapshot created for non-encrypted disk.</li>.
+</ul>
  * @method string getCreateTime() Obtain Creation time of the snapshot.
  * @method void setCreateTime(string $CreateTime) Set Creation time of the snapshot.
  * @method integer getImageCount() Obtain Number of images associated with snapshot.
  * @method void setImageCount(integer $ImageCount) Set Number of images associated with snapshot.
- * @method string getDiskUsage() Obtain The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
- * @method void setDiskUsage(string $DiskUsage) Set The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+ * @method string getDiskUsage() Obtain Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+<ul>
+<Li>SYSTEM_DISK: system disk</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+</ul>
+
+ * @method void setDiskUsage(string $DiskUsage) Set Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+<ul>
+<Li>SYSTEM_DISK: system disk</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+</ul>
+
  * @method string getSnapshotId() Obtain Snapshot ID.
  * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID.
  * @method string getTimeStartShare() Obtain The time when the snapshot sharing starts
@@ -69,17 +119,33 @@ class Snapshot extends AbstractModel
     public $Placement;
 
     /**
-     * @var boolean Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
+     * @var boolean Specifies whether the snapshot is for cross-region replication. value range:.
+<ul>
+<li>true: indicates a snapshot for cross-region replication.</li>.
+<li>false: snapshot of the local region.</li>.
+</ul>
      */
     public $CopyFromRemote;
 
     /**
-     * @var string Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
+     * @var string Snapshot status. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is normal.</li>.
+<Li>CREATING: creating</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+<Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+<Li>CHECKING_COPIED: copying check in progress.</li>.
+<Li>TORECYCLE: to be recycled.</li>.
+</ul>
      */
     public $SnapshotState;
 
     /**
-     * @var boolean Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
+     * @var boolean Whether it is a permanent snapshot. valid values:.
+<ul>
+<li>true: permanent snapshot.</li>.
+<li>false: non-permanent snapshot.</li>.
+</ul>
      */
     public $IsPermanent;
 
@@ -109,12 +175,12 @@ class Snapshot extends AbstractModel
     public $ShareReference;
 
     /**
-     * @var string Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
+     * @var string Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT).
      */
     public $SnapshotType;
 
     /**
-     * @var integer Size of the cloud disk used to create this snapshot (in GB).
+     * @var integer Specifies the disk capacity of the CBS for creating this snapshot, in GiB.
      */
     public $DiskSize;
 
@@ -124,12 +190,16 @@ class Snapshot extends AbstractModel
     public $DiskId;
 
     /**
-     * @var array The destination region to which the snapshot is being replicated. Default value is [ ].
+     * @var array Destination region of the snapshot currently under cross region replication. if not, return `[]`.
      */
     public $CopyingToRegions;
 
     /**
-     * @var boolean Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
+     * @var boolean Indicates whether the snapshot is created for an encrypted disk. valid values:.
+<ul>
+<li>true: specifies the snapshot is created by encrypted disks.</li>.
+<li>false: snapshot created for non-encrypted disk.</li>.
+</ul>
      */
     public $Encrypt;
 
@@ -144,7 +214,12 @@ class Snapshot extends AbstractModel
     public $ImageCount;
 
     /**
-     * @var string The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+     * @var string Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+<ul>
+<Li>SYSTEM_DISK: system disk</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+</ul>
+
      */
     public $DiskUsage;
 
@@ -165,22 +240,47 @@ class Snapshot extends AbstractModel
 
     /**
      * @param Placement $Placement Location of the snapshot.
-     * @param boolean $CopyFromRemote Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
-     * @param string $SnapshotState Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
-     * @param boolean $IsPermanent Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
+     * @param boolean $CopyFromRemote Specifies whether the snapshot is for cross-region replication. value range:.
+<ul>
+<li>true: indicates a snapshot for cross-region replication.</li>.
+<li>false: snapshot of the local region.</li>.
+</ul>
+     * @param string $SnapshotState Snapshot status. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is normal.</li>.
+<Li>CREATING: creating</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+<Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+<Li>CHECKING_COPIED: copying check in progress.</li>.
+<Li>TORECYCLE: to be recycled.</li>.
+</ul>
+     * @param boolean $IsPermanent Whether it is a permanent snapshot. valid values:.
+<ul>
+<li>true: permanent snapshot.</li>.
+<li>false: non-permanent snapshot.</li>.
+</ul>
      * @param string $SnapshotName Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
      * @param string $DeadlineTime The expiration time of the snapshot. If the snapshot is permanently retained, this field is blank.
      * @param integer $Percent The progress percentage for snapshot creation. This field is always 100 after the snapshot is created successfully.
      * @param array $Images List of images associated with snapshot.
      * @param integer $ShareReference Number of snapshots currently shared
-     * @param string $SnapshotType Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
-     * @param integer $DiskSize Size of the cloud disk used to create this snapshot (in GB).
+     * @param string $SnapshotType Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT).
+     * @param integer $DiskSize Specifies the disk capacity of the CBS for creating this snapshot, in GiB.
      * @param string $DiskId ID of the cloud disk used to create this snapshot.
-     * @param array $CopyingToRegions The destination region to which the snapshot is being replicated. Default value is [ ].
-     * @param boolean $Encrypt Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
+     * @param array $CopyingToRegions Destination region of the snapshot currently under cross region replication. if not, return `[]`.
+     * @param boolean $Encrypt Indicates whether the snapshot is created for an encrypted disk. valid values:.
+<ul>
+<li>true: specifies the snapshot is created by encrypted disks.</li>.
+<li>false: snapshot created for non-encrypted disk.</li>.
+</ul>
      * @param string $CreateTime Creation time of the snapshot.
      * @param integer $ImageCount Number of images associated with snapshot.
-     * @param string $DiskUsage The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+     * @param string $DiskUsage Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+<ul>
+<Li>SYSTEM_DISK: system disk</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+</ul>
+
      * @param string $SnapshotId Snapshot ID.
      * @param string $TimeStartShare The time when the snapshot sharing starts
      * @param array $Tags List of tags associated with the snapshot.

@@ -18,28 +18,36 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Agent Debugging Information
+ * 
  *
- * @method string getInput() Obtain Input Information for Tools and Large Models, json
- * @method void setInput(string $Input) Set Input Information for Tools and Large Models, json
- * @method string getOutput() Obtain Output Information for Tools and Large Models, json
- * @method void setOutput(string $Output) Set Output Information for Tools and Large Models, json
+ * @method string getInput() Obtain 
+ * @method void setInput(string $Input) Set 
+ * @method string getOutput() Obtain 
+ * @method void setOutput(string $Output) Set 
+ * @method string getModelName() Obtain 
+ * @method void setModelName(string $ModelName) Set 
  */
 class AgentDebugInfo extends AbstractModel
 {
     /**
-     * @var string Input Information for Tools and Large Models, json
+     * @var string 
      */
     public $Input;
 
     /**
-     * @var string Output Information for Tools and Large Models, json
+     * @var string 
      */
     public $Output;
 
     /**
-     * @param string $Input Input Information for Tools and Large Models, json
-     * @param string $Output Output Information for Tools and Large Models, json
+     * @var string 
+     */
+    public $ModelName;
+
+    /**
+     * @param string $Input 
+     * @param string $Output 
+     * @param string $ModelName 
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class AgentDebugInfo extends AbstractModel
 
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = $param["Output"];
+        }
+
+        if (array_key_exists("ModelName",$param) and $param["ModelName"] !== null) {
+            $this->ModelName = $param["ModelName"];
         }
     }
 }

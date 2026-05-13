@@ -18,36 +18,44 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Digital Human Configuration
+ * 
  *
- * @method string getAssetKey() Obtain Digital Human Asset key
- * @method void setAssetKey(string $AssetKey) Set Digital Human Asset key
- * @method string getName() Obtain Digital Human Name
- * @method void setName(string $Name) Set Digital Human Name
- * @method string getAvatar() Obtain Image
- * @method void setAvatar(string $Avatar) Set Image
+ * @method string getAssetKey() Obtain 
+ * @method void setAssetKey(string $AssetKey) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getAvatar() Obtain 
+ * @method void setAvatar(string $Avatar) Set 
+ * @method string getPreviewUrl() Obtain 
+ * @method void setPreviewUrl(string $PreviewUrl) Set 
  */
 class DigitalHumanConfig extends AbstractModel
 {
     /**
-     * @var string Digital Human Asset key
+     * @var string 
      */
     public $AssetKey;
 
     /**
-     * @var string Digital Human Name
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Image
+     * @var string 
      */
     public $Avatar;
 
     /**
-     * @param string $AssetKey Digital Human Asset key
-     * @param string $Name Digital Human Name
-     * @param string $Avatar Image
+     * @var string 
+     */
+    public $PreviewUrl;
+
+    /**
+     * @param string $AssetKey 
+     * @param string $Name 
+     * @param string $Avatar 
+     * @param string $PreviewUrl 
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DigitalHumanConfig extends AbstractModel
 
         if (array_key_exists("Avatar",$param) and $param["Avatar"] !== null) {
             $this->Avatar = $param["Avatar"];
+        }
+
+        if (array_key_exists("PreviewUrl",$param) and $param["PreviewUrl"] !== null) {
+            $this->PreviewUrl = $param["PreviewUrl"];
         }
     }
 }

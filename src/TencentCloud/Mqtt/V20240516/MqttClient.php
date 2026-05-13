@@ -25,27 +25,43 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
 /**
  * @method Models\AddClientSubscriptionResponse AddClientSubscription(Models\AddClientSubscriptionRequest $req) This API is used to add a subscription for an MQTT client.
  * @method Models\CreateAuthorizationPolicyResponse CreateAuthorizationPolicy(Models\CreateAuthorizationPolicyRequest $req) This API is used to create a performance test task for an MQTT instance.
+ * @method Models\CreateDeviceIdentityResponse CreateDeviceIdentity(Models\CreateDeviceIdentityRequest $req) Create a device signature for per-device secret
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) This API is used to purchase a new MQTT instance.
  * @method Models\CreateMessageEnrichmentRuleResponse CreateMessageEnrichmentRule(Models\CreateMessageEnrichmentRuleRequest $req) This API is used to create a message enrichment rule.
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) This API is used to add an MQTT role.
  * @method Models\DeleteAuthorizationPolicyResponse DeleteAuthorizationPolicy(Models\DeleteAuthorizationPolicyRequest $req) This API is used to delete policy rules.
  * @method Models\DeleteClientSubscriptionResponse DeleteClientSubscription(Models\DeleteClientSubscriptionRequest $req) This API is used to delete a subscription of an MQTT client.
+ * @method Models\DeleteDeviceIdentityResponse DeleteDeviceIdentity(Models\DeleteDeviceIdentityRequest $req) Delete a device signature
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) This API is used to delete an MQTT instance.
  * @method Models\DeleteMessageEnrichmentRuleResponse DeleteMessageEnrichmentRule(Models\DeleteMessageEnrichmentRuleRequest $req) This API is used to delete the message enrichment rule.
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) This API is used to delete an MQTT topic.
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) This API is used to delete an MQTT user.
  * @method Models\DescribeAuthorizationPoliciesResponse DescribeAuthorizationPolicies(Models\DescribeAuthorizationPoliciesRequest $req) This API is used to query authorization rules.
  * @method Models\DescribeClientListResponse DescribeClientList(Models\DescribeClientListRequest $req) This API is used to query the MQTT client details.
+ * @method Models\DescribeDeviceCertificatesResponse DescribeDeviceCertificates(Models\DescribeDeviceCertificatesRequest $req) Query device certificates with paging
+ * @method Models\DescribeDeviceIdentitiesResponse DescribeDeviceIdentities(Models\DescribeDeviceIdentitiesRequest $req) Query the list of device identifiers in a cluster
+ * @method Models\DescribeDeviceIdentityResponse DescribeDeviceIdentity(Models\DescribeDeviceIdentityRequest $req) Query device identification
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) This API is used to query instance information.
+ * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) Get instance list. Description of the Filters parameter use is as follows:
+1. InstanceName, fuzzy search by name
+2. InstanceId, query by instance ID
+3. InstanceStatus, instance status query, supports multiple selections
+
+When using the TagFilters parameter for search, the filters parameter is invalid.
  * @method Models\DescribeMessageByTopicResponse DescribeMessageByTopic(Models\DescribeMessageByTopicRequest $req) This API is used to query messages based on subscription.
  * @method Models\DescribeMessageDetailsResponse DescribeMessageDetails(Models\DescribeMessageDetailsRequest $req) This API is used to query the MQTT message details.
  * @method Models\DescribeMessageEnrichmentRulesResponse DescribeMessageEnrichmentRules(Models\DescribeMessageEnrichmentRulesRequest $req) This API is used to query message enrichment rules.
+ * @method Models\DescribeProductSKUListResponse DescribeProductSKUList(Models\DescribeProductSKUListRequest $req) This API is used to obtain product sales specifications.
+ * @method Models\DescribeSharedSubscriptionClientResponse DescribeSharedSubscriptionClient(Models\DescribeSharedSubscriptionClientRequest $req) Query shared subscription group detailed information
+ * @method Models\DescribeSharedSubscriptionGroupsResponse DescribeSharedSubscriptionGroups(Models\DescribeSharedSubscriptionGroupsRequest $req) This API is used to query the subscription group list shared within the cluster.
+ * @method Models\DescribeSharedSubscriptionsResponse DescribeSharedSubscriptions(Models\DescribeSharedSubscriptionsRequest $req) Query the subscription list of a shared subscription group
  * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) This API is used to query the MQTT topic details.
  * @method Models\DescribeUserListResponse DescribeUserList(Models\DescribeUserListRequest $req) This API is used to query the user list. Filter parameter usage instructions are as follows:.
 
 This API is used to perform Username fuzzy search.
  * @method Models\KickOutClientResponse KickOutClient(Models\KickOutClientRequest $req) This API is used to kick out a client.
  * @method Models\ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicy(Models\ModifyAuthorizationPolicyRequest $req) This API is used to modify policy rules. See the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+ * @method Models\ModifyDeviceIdentityResponse ModifyDeviceIdentity(Models\ModifyDeviceIdentityRequest $req) Modify the device signature
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) This API is used to modify instance attributes. Only running clusters can call this API to perform configuration change.
  * @method Models\ModifyMessageEnrichmentRuleResponse ModifyMessageEnrichmentRule(Models\ModifyMessageEnrichmentRuleRequest $req) This API is used to modify message enrichment rules.
 Note: All attributes of the current rule must be submitted, even if specific fields are not modified.

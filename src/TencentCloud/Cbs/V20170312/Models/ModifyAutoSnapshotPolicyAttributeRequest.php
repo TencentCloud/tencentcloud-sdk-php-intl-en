@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAutoSnapshotPolicyAttribute request structure.
  *
- * @method string getAutoSnapshotPolicyId() Obtain Scheduled snapshot policy ID.
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set Scheduled snapshot policy ID.
- * @method boolean getIsActivated() Obtain Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
- * @method void setIsActivated(boolean $IsActivated) Set Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
- * @method boolean getIsPermanent() Obtain Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
- * @method void setIsPermanent(boolean $IsPermanent) Set Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
+ * @method string getAutoSnapshotPolicyId() Obtain Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1).
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1).
+ * @method boolean getIsActivated() Obtain Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`.
+ * @method void setIsActivated(boolean $IsActivated) Set Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`.
+ * @method boolean getIsPermanent() Obtain Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`.
+ * @method void setIsPermanent(boolean $IsPermanent) Set Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`.
  * @method string getAutoSnapshotPolicyName() Obtain The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
  * @method void setAutoSnapshotPolicyName(string $AutoSnapshotPolicyName) Set The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
  * @method array getPolicy() Obtain The policy for executing the scheduled snapshot.
@@ -36,17 +36,17 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
 {
     /**
-     * @var string Scheduled snapshot policy ID.
+     * @var string Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1).
      */
     public $AutoSnapshotPolicyId;
 
     /**
-     * @var boolean Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
+     * @var boolean Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`.
      */
     public $IsActivated;
 
     /**
-     * @var boolean Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
+     * @var boolean Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`.
      */
     public $IsPermanent;
 
@@ -66,9 +66,9 @@ class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
     public $RetentionDays;
 
     /**
-     * @param string $AutoSnapshotPolicyId Scheduled snapshot policy ID.
-     * @param boolean $IsActivated Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
-     * @param boolean $IsPermanent Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
+     * @param string $AutoSnapshotPolicyId Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1).
+     * @param boolean $IsActivated Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`.
+     * @param boolean $IsPermanent Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`.
      * @param string $AutoSnapshotPolicyName The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
      * @param array $Policy The policy for executing the scheduled snapshot.
      * @param integer $RetentionDays Number of days to retain the snapshots created according to this scheduled snapshot policy. If this parameter is specified, `IsPermanent` cannot be specified as `TRUE`; otherwise, they will conflict with each other.

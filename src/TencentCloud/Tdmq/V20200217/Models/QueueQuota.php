@@ -18,17 +18,17 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * queue usage quota information
+ * 
  *
- * @method integer getMaxQueue() Obtain Maximum number of creatable queues
- * @method void setMaxQueue(integer $MaxQueue) Set Maximum number of creatable queues
+ * @method integer getMaxQueue() Obtain 
+ * @method void setMaxQueue(integer $MaxQueue) Set 
  * @method integer getUsedQueue() Obtain Number of created Queues.
  * @method void setUsedQueue(integer $UsedQueue) Set Number of created Queues.
  */
 class QueueQuota extends AbstractModel
 {
     /**
-     * @var integer Maximum number of creatable queues
+     * @var integer 
      */
     public $MaxQueue;
 
@@ -38,7 +38,7 @@ class QueueQuota extends AbstractModel
     public $UsedQueue;
 
     /**
-     * @param integer $MaxQueue Maximum number of creatable queues
+     * @param integer $MaxQueue 
      * @param integer $UsedQueue Number of created Queues.
      */
     function __construct()

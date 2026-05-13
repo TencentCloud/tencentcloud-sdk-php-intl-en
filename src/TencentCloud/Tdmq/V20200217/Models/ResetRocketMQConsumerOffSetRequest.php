@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID.
  * @method void setClusterId(string $ClusterId) Set Cluster ID.
- * @method string getNamespaceId() Obtain Namespace name.
- * @method void setNamespaceId(string $NamespaceId) Set Namespace name.
+ * @method string getNamespaceId() Obtain namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) Set namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
  * @method string getGroupId() Obtain Consumer group name.
  * @method void setGroupId(string $GroupId) Set Consumer group name.
  * @method integer getType() Obtain Reset method. 0: Start from the latest offset; 1: Start from specified time point.
  * @method void setType(integer $Type) Set Reset method. 0: Start from the latest offset; 1: Start from specified time point.
  * @method string getTopic() Obtain Topic name.
  * @method void setTopic(string $Topic) Set Topic name.
- * @method integer getResetTimestamp() Obtain The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
- * @method void setResetTimestamp(integer $ResetTimestamp) Set The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
+ * @method integer getResetTimestamp() Obtain Reset the specified timestamp. This parameter is valid only when Type is 1, in milliseconds.
+ * @method void setResetTimestamp(integer $ResetTimestamp) Set Reset the specified timestamp. This parameter is valid only when Type is 1, in milliseconds.
  * @method boolean getRetryFlag() Obtain Whether the reset flag is retry topic.
  * @method void setRetryFlag(boolean $RetryFlag) Set Whether the reset flag is retry topic.
  */
@@ -43,7 +43,7 @@ class ResetRocketMQConsumerOffSetRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Namespace name.
+     * @var string namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public $NamespaceId;
 
@@ -63,7 +63,7 @@ class ResetRocketMQConsumerOffSetRequest extends AbstractModel
     public $Topic;
 
     /**
-     * @var integer The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
+     * @var integer Reset the specified timestamp. This parameter is valid only when Type is 1, in milliseconds.
      */
     public $ResetTimestamp;
 
@@ -74,11 +74,11 @@ class ResetRocketMQConsumerOffSetRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID.
-     * @param string $NamespaceId Namespace name.
+     * @param string $NamespaceId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      * @param string $GroupId Consumer group name.
      * @param integer $Type Reset method. 0: Start from the latest offset; 1: Start from specified time point.
      * @param string $Topic Topic name.
-     * @param integer $ResetTimestamp The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
+     * @param integer $ResetTimestamp Reset the specified timestamp. This parameter is valid only when Type is 1, in milliseconds.
      * @param boolean $RetryFlag Whether the reset flag is retry topic.
      */
     function __construct()

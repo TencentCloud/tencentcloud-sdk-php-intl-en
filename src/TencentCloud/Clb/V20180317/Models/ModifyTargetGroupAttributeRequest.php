@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeepaliveEnable(boolean $KeepaliveEnable) Set Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. true: disable; false: enable. this feature is off by default.
  * @method integer getSessionExpireTime() Obtain Specifies the session persistence time in seconds. value range: 30-3600. default: 0 (disabled). this parameter is unsupported for TCP/UDP target groups.
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Specifies the session persistence time in seconds. value range: 30-3600. default: 0 (disabled). this parameter is unsupported for TCP/UDP target groups.
+ * @method boolean getSnatEnable() Obtain 
+ * @method void setSnatEnable(boolean $SnatEnable) Set 
  */
 class ModifyTargetGroupAttributeRequest extends AbstractModel
 {
@@ -83,6 +85,11 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
     public $SessionExpireTime;
 
     /**
+     * @var boolean 
+     */
+    public $SnatEnable;
+
+    /**
      * @param string $TargetGroupId Target group ID
      * @param string $TargetGroupName New name of target group
      * @param integer $Port The new default port of the target group. this parameter is not supported for full listen target groups.
@@ -92,6 +99,7 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
      * @param integer $Weight Default Weight for backend service. among them: <ul><li>value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
      * @param boolean $KeepaliveEnable Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. true: disable; false: enable. this feature is off by default.
      * @param integer $SessionExpireTime Specifies the session persistence time in seconds. value range: 30-3600. default: 0 (disabled). this parameter is unsupported for TCP/UDP target groups.
+     * @param boolean $SnatEnable 
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
 
         if (array_key_exists("SessionExpireTime",$param) and $param["SessionExpireTime"] !== null) {
             $this->SessionExpireTime = $param["SessionExpireTime"];
+        }
+
+        if (array_key_exists("SnatEnable",$param) and $param["SnatEnable"] !== null) {
+            $this->SnatEnable = $param["SnatEnable"];
         }
     }
 }

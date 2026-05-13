@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getEnvironmentId() Obtain Namespace ID
- * @method void setEnvironmentId(string $EnvironmentId) Set Namespace ID
+ * @method string getEnvironmentId() Obtain namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
+ * @method void setEnvironmentId(string $EnvironmentId) Set namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
  * @method string getTopicName() Obtain Topic name. Pass in the group ID when querying a dead letter queue.
  * @method void setTopicName(string $TopicName) Set Topic name. Pass in the group ID when querying a dead letter queue.
  * @method string getMsgId() Obtain Message ID
@@ -49,7 +49,7 @@ class DescribeRocketMQMsgRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Namespace ID
+     * @var string namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public $EnvironmentId;
 
@@ -96,7 +96,7 @@ class DescribeRocketMQMsgRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $EnvironmentId Namespace ID
+     * @param string $EnvironmentId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      * @param string $TopicName Topic name. Pass in the group ID when querying a dead letter queue.
      * @param string $MsgId Message ID
      * @param string $PulsarMsgId ID of a TDMQ for Pulsar message

@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain The ID of the [Availability Zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) to which the cloud disk belongs. This parameter can be obtained from the Zone field in the returned values of [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
  * @method void setZone(string $Zone) Set The ID of the [Availability Zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) to which the cloud disk belongs. This parameter can be obtained from the Zone field in the returned values of [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
- * @method string getCageId() Obtain Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setCageId(string $CageId) Set Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
- * @method integer getProjectId() Obtain ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
- * @method void setProjectId(integer $ProjectId) Set ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
- * @method string getProjectName() Obtain Project name of the instance.
+ * @method string getCageId() Obtain CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProjectName(string $ProjectName) Set Project name of the instance.
+ * @method void setCageId(string $CageId) Set CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getProjectId() Obtain Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project.
+ * @method void setProjectId(integer $ProjectId) Set Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project.
+ * @method string getProjectName() Obtain Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProjectName(string $ProjectName) Set Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCdcName() Obtain Dedicated cluster name. When it is an input parameter, it is ignored.  When it is an output parameter, it is the name of the dedicated cluster the cloud disk belongs to, and it can be left blank.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setCdcName(string $CdcName) Set Dedicated cluster name. When it is an input parameter, it is ignored.  When it is an output parameter, it is the name of the dedicated cluster the cloud disk belongs to, and it can be left blank.
 Note: This field may return null, indicating that no valid value was found.
- * @method string getCdcId() Obtain ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setCdcId(string $CdcId) Set ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+ * @method string getCdcId() Obtain The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCdcId(string $CdcId) Set The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDedicatedClusterId() Obtain Dedicated cluster ID
  * @method void setDedicatedClusterId(string $DedicatedClusterId) Set Dedicated cluster ID
  */
@@ -51,18 +51,18 @@ class Placement extends AbstractModel
     public $Zone;
 
     /**
-     * @var string Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+     * @var string CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CageId;
 
     /**
-     * @var integer ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+     * @var integer Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project.
      */
     public $ProjectId;
 
     /**
-     * @var string Project name of the instance.
+     * @var string Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProjectName;
@@ -74,8 +74,8 @@ Note: This field may return null, indicating that no valid value was found.
     public $CdcName;
 
     /**
-     * @var string ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+     * @var string The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CdcId;
 
@@ -86,15 +86,15 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * @param string $Zone The ID of the [Availability Zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) to which the cloud disk belongs. This parameter can be obtained from the Zone field in the returned values of [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
-     * @param string $CageId Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
-     * @param integer $ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
-     * @param string $ProjectName Project name of the instance.
+     * @param string $CageId CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ProjectId Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project.
+     * @param string $ProjectName Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CdcName Dedicated cluster name. When it is an input parameter, it is ignored.  When it is an output parameter, it is the name of the dedicated cluster the cloud disk belongs to, and it can be left blank.
 Note: This field may return null, indicating that no valid value was found.
-     * @param string $CdcId ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+     * @param string $CdcId The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DedicatedClusterId Dedicated cluster ID
      */
     function __construct()

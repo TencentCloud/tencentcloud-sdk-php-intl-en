@@ -20,67 +20,67 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances request structure.
  *
- * @method string getInstanceId() Obtain (Query condition) filter by the ckafka cluster instance Id.
- * @method void setInstanceId(string $InstanceId) Set (Query condition) filter by the ckafka cluster instance Id.
- * @method string getSearchWord() Obtain Search term. example: (query condition) filter by instance name. fuzzy query is supported.
- * @method void setSearchWord(string $SearchWord) Set Search term. example: (query condition) filter by instance name. fuzzy query is supported.
- * @method array getStatus() Obtain Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
- * @method void setStatus(array $Status) Set Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
- * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default
- * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default
- * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
- * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
- * @method string getTagKey() Obtain Tag key value (this field has been deprecated).
- * @method void setTagKey(string $TagKey) Set Tag key value (this field has been deprecated).
- * @method string getVpcId() Obtain (Query condition) VPC Id.
- * @method void setVpcId(string $VpcId) Set (Query condition) VPC Id.
+ * @method string getInstanceId() Obtain <p>(Query Conditions) Filter by cluster instance Id</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>(Query Conditions) Filter by cluster instance Id</p>
+ * @method string getSearchWord() Obtain <p>Search term  ex: (Query condition) Filter by instance name. Fuzzy query is supported.</p>
+ * @method void setSearchWord(string $SearchWord) Set <p>Search term  ex: (Query condition) Filter by instance name. Fuzzy query is supported.</p>
+ * @method array getStatus() Obtain <p>(Query condition) Instance status. Returns all by default if left blank.</p><p>Enumeration value:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
+ * @method void setStatus(array $Status) Set <p>(Query condition) Instance status. Returns all by default if left blank.</p><p>Enumeration value:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
+ * @method integer getOffset() Obtain <p>Offset, which is 0 by default</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset, which is 0 by default</p>
+ * @method integer getLimit() Obtain <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
+ * @method string getTagKey() Obtain <p>Abandoned. Match the tag key.</p>
+ * @method void setTagKey(string $TagKey) Set <p>Abandoned. Match the tag key.</p>
+ * @method string getVpcId() Obtain <p>(Query condition) VPC Id</p>
+ * @method void setVpcId(string $VpcId) Set <p>(Query condition) VPC Id</p>
  */
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var string (Query condition) filter by the ckafka cluster instance Id.
+     * @var string <p>(Query Conditions) Filter by cluster instance Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Search term. example: (query condition) filter by instance name. fuzzy query is supported.
+     * @var string <p>Search term  ex: (Query condition) Filter by instance name. Fuzzy query is supported.</p>
      */
     public $SearchWord;
 
     /**
-     * @var array Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
+     * @var array <p>(Query condition) Instance status. Returns all by default if left blank.</p><p>Enumeration value:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer Offset. If this parameter is left empty, 0 will be used by default
+     * @var integer <p>Offset, which is 0 by default</p>
      */
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
+     * @var integer <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
      */
     public $Limit;
 
     /**
-     * @var string Tag key value (this field has been deprecated).
+     * @var string <p>Abandoned. Match the tag key.</p>
      * @deprecated
      */
     public $TagKey;
 
     /**
-     * @var string (Query condition) VPC Id.
+     * @var string <p>(Query condition) VPC Id</p>
      */
     public $VpcId;
 
     /**
-     * @param string $InstanceId (Query condition) filter by the ckafka cluster instance Id.
-     * @param string $SearchWord Search term. example: (query condition) filter by instance name. fuzzy query is supported.
-     * @param array $Status Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
-     * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default
-     * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
-     * @param string $TagKey Tag key value (this field has been deprecated).
-     * @param string $VpcId (Query condition) VPC Id.
+     * @param string $InstanceId <p>(Query Conditions) Filter by cluster instance Id</p>
+     * @param string $SearchWord <p>Search term  ex: (Query condition) Filter by instance name. Fuzzy query is supported.</p>
+     * @param array $Status <p>(Query condition) Instance status. Returns all by default if left blank.</p><p>Enumeration value:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
+     * @param integer $Offset <p>Offset, which is 0 by default</p>
+     * @param integer $Limit <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
+     * @param string $TagKey <p>Abandoned. Match the tag key.</p>
+     * @param string $VpcId <p>(Query condition) VPC Id</p>
      */
     function __construct()
     {

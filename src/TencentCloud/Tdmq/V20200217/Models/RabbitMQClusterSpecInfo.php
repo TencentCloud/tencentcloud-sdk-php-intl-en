@@ -18,60 +18,60 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RabbitMQ Cluster Specifications Information
+ * 
  *
- * @method string getSpecName() Obtain Cluster Specification Name
- * @method void setSpecName(string $SpecName) Set Cluster Specification Name
- * @method integer getNodeCount() Obtain Number of Nodes
- * @method void setNodeCount(integer $NodeCount) Set Number of Nodes
- * @method integer getMaxTps() Obtain Peak tps
- * @method void setMaxTps(integer $MaxTps) Set Peak tps
- * @method integer getMaxBandWidth() Obtain Peak bandwidth Unit: mbps
- * @method void setMaxBandWidth(integer $MaxBandWidth) Set Peak bandwidth Unit: mbps
- * @method integer getMaxStorage() Obtain Storage capacity Unit: GB
- * @method void setMaxStorage(integer $MaxStorage) Set Storage capacity Unit: GB
- * @method integer getPublicNetworkTps() Obtain public network bandwidth tps. Unit: Mbps
- * @method void setPublicNetworkTps(integer $PublicNetworkTps) Set public network bandwidth tps. Unit: Mbps
+ * @method string getSpecName() Obtain 
+ * @method void setSpecName(string $SpecName) Set 
+ * @method integer getNodeCount() Obtain 
+ * @method void setNodeCount(integer $NodeCount) Set 
+ * @method integer getMaxTps() Obtain 
+ * @method void setMaxTps(integer $MaxTps) Set 
+ * @method integer getMaxBandWidth() Obtain 
+ * @method void setMaxBandWidth(integer $MaxBandWidth) Set 
+ * @method integer getMaxStorage() Obtain 
+ * @method void setMaxStorage(integer $MaxStorage) Set 
+ * @method integer getPublicNetworkTps() Obtain 
+ * @method void setPublicNetworkTps(integer $PublicNetworkTps) Set 
  */
 class RabbitMQClusterSpecInfo extends AbstractModel
 {
     /**
-     * @var string Cluster Specification Name
+     * @var string 
      */
     public $SpecName;
 
     /**
-     * @var integer Number of Nodes
+     * @var integer 
      */
     public $NodeCount;
 
     /**
-     * @var integer Peak tps
+     * @var integer 
      */
     public $MaxTps;
 
     /**
-     * @var integer Peak bandwidth Unit: mbps
+     * @var integer 
      */
     public $MaxBandWidth;
 
     /**
-     * @var integer Storage capacity Unit: GB
+     * @var integer 
      */
     public $MaxStorage;
 
     /**
-     * @var integer public network bandwidth tps. Unit: Mbps
+     * @var integer 
      */
     public $PublicNetworkTps;
 
     /**
-     * @param string $SpecName Cluster Specification Name
-     * @param integer $NodeCount Number of Nodes
-     * @param integer $MaxTps Peak tps
-     * @param integer $MaxBandWidth Peak bandwidth Unit: mbps
-     * @param integer $MaxStorage Storage capacity Unit: GB
-     * @param integer $PublicNetworkTps public network bandwidth tps. Unit: Mbps
+     * @param string $SpecName 
+     * @param integer $NodeCount 
+     * @param integer $MaxTps 
+     * @param integer $MaxBandWidth 
+     * @param integer $MaxStorage 
+     * @param integer $PublicNetworkTps 
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Data structure returned by monthly subscribed instance APIs
+ * Data structure returned by yearly/monthly subscribed instance APIs
  *
  * @method string getReturnCode() Obtain Returned code. 0: Normal; other values: Error.
  * @method void setReturnCode(string $ReturnCode) Set Returned code. 0: Normal; other values: Error.

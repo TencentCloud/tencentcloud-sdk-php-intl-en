@@ -18,33 +18,35 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VPC Access Point Information
+ * 
  *
- * @method string getVpcId() Obtain vpc id
- * @method void setVpcId(string $VpcId) Set vpc id
- * @method string getSubnetId() Obtain subnet id
- * @method void setSubnetId(string $SubnetId) Set subnet id
- * @method string getVpcEndpoint() Obtain vpc Access Point Information
- * @method void setVpcEndpoint(string $VpcEndpoint) Set vpc Access Point Information
+ * @method string getVpcId() Obtain 
+ * @method void setVpcId(string $VpcId) Set 
+ * @method string getSubnetId() Obtain 
+ * @method void setSubnetId(string $SubnetId) Set 
+ * @method string getVpcEndpoint() Obtain 
+ * @method void setVpcEndpoint(string $VpcEndpoint) Set 
  * @method string getVpcDataStreamEndpointStatus() Obtain Access point status. valid values: OFF, ON, CREATING, DELETING.
  * @method void setVpcDataStreamEndpointStatus(string $VpcDataStreamEndpointStatus) Set Access point status. valid values: OFF, ON, CREATING, DELETING.
  * @method string getVpcTlsEndpoint() Obtain Encrypted TLS data stream access point.
  * @method void setVpcTlsEndpoint(string $VpcTlsEndpoint) Set Encrypted TLS data stream access point.
+ * @method string getVpcErrorMessage() Obtain Error message for VPC access point operations.
+ * @method void setVpcErrorMessage(string $VpcErrorMessage) Set Error message for VPC access point operations.
  */
 class VpcEndpointInfo extends AbstractModel
 {
     /**
-     * @var string vpc id
+     * @var string 
      */
     public $VpcId;
 
     /**
-     * @var string subnet id
+     * @var string 
      */
     public $SubnetId;
 
     /**
-     * @var string vpc Access Point Information
+     * @var string 
      */
     public $VpcEndpoint;
 
@@ -59,11 +61,17 @@ class VpcEndpointInfo extends AbstractModel
     public $VpcTlsEndpoint;
 
     /**
-     * @param string $VpcId vpc id
-     * @param string $SubnetId subnet id
-     * @param string $VpcEndpoint vpc Access Point Information
+     * @var string Error message for VPC access point operations.
+     */
+    public $VpcErrorMessage;
+
+    /**
+     * @param string $VpcId 
+     * @param string $SubnetId 
+     * @param string $VpcEndpoint 
      * @param string $VpcDataStreamEndpointStatus Access point status. valid values: OFF, ON, CREATING, DELETING.
      * @param string $VpcTlsEndpoint Encrypted TLS data stream access point.
+     * @param string $VpcErrorMessage Error message for VPC access point operations.
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class VpcEndpointInfo extends AbstractModel
 
         if (array_key_exists("VpcTlsEndpoint",$param) and $param["VpcTlsEndpoint"] !== null) {
             $this->VpcTlsEndpoint = $param["VpcTlsEndpoint"];
+        }
+
+        if (array_key_exists("VpcErrorMessage",$param) and $param["VpcErrorMessage"] !== null) {
+            $this->VpcErrorMessage = $param["VpcErrorMessage"];
         }
     }
 }

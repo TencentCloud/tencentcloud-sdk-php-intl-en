@@ -24,18 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyType(integer $ModifyType) Set Specifies the renewal type.
  * @method boolean getMigrateFlag() Obtain Specifies whether to migrate.
  * @method void setMigrateFlag(boolean $MigrateFlag) Set Specifies whether to migrate.
- * @method integer getMigrateCostTime() Obtain Estimated duration of migration in stable mode (seconds).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMigrateCostTime(integer $MigrateCostTime) Set Estimated duration of migration in stable mode (seconds).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getUpgradeStrategy() Obtain Upgrade mode (1: stable mode, 2: high-speed mode).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpgradeStrategy(integer $UpgradeStrategy) Set Upgrade mode (1: stable mode, 2: high-speed mode).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMigrateCostTimeHighSpeed() Obtain Indicates the estimated time for migration in high-speed mode, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMigrateCostTimeHighSpeed(integer $MigrateCostTimeHighSpeed) Set Indicates the estimated time for migration in high-speed mode, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DescModifyType extends AbstractModel
 {
@@ -50,32 +38,8 @@ class DescModifyType extends AbstractModel
     public $MigrateFlag;
 
     /**
-     * @var integer Estimated duration of migration in stable mode (seconds).
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $MigrateCostTime;
-
-    /**
-     * @var integer Upgrade mode (1: stable mode, 2: high-speed mode).
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $UpgradeStrategy;
-
-    /**
-     * @var integer Indicates the estimated time for migration in high-speed mode, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $MigrateCostTimeHighSpeed;
-
-    /**
      * @param integer $ModifyType Specifies the renewal type.
      * @param boolean $MigrateFlag Specifies whether to migrate.
-     * @param integer $MigrateCostTime Estimated duration of migration in stable mode (seconds).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $UpgradeStrategy Upgrade mode (1: stable mode, 2: high-speed mode).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MigrateCostTimeHighSpeed Indicates the estimated time for migration in high-speed mode, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -96,18 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MigrateFlag",$param) and $param["MigrateFlag"] !== null) {
             $this->MigrateFlag = $param["MigrateFlag"];
-        }
-
-        if (array_key_exists("MigrateCostTime",$param) and $param["MigrateCostTime"] !== null) {
-            $this->MigrateCostTime = $param["MigrateCostTime"];
-        }
-
-        if (array_key_exists("UpgradeStrategy",$param) and $param["UpgradeStrategy"] !== null) {
-            $this->UpgradeStrategy = $param["UpgradeStrategy"];
-        }
-
-        if (array_key_exists("MigrateCostTimeHighSpeed",$param) and $param["MigrateCostTimeHighSpeed"] !== null) {
-            $this->MigrateCostTimeHighSpeed = $param["MigrateCostTimeHighSpeed"];
         }
     }
 }

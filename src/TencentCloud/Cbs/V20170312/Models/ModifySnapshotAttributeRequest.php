@@ -20,26 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySnapshotAttribute request structure.
  *
- * @method string getSnapshotId() Obtain Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
- * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
- * @method string getSnapshotName() Obtain Name of new snapshot. Maximum length is 60 bytes.
- * @method void setSnapshotName(string $SnapshotName) Set Name of new snapshot. Maximum length is 60 bytes.
+ * @method string getSnapshotId() Obtain Snapshot ID. can be queried via DescribeSnapshots (https://www.tencentcloud.com/document/api/362/15647?from_cn_redirect=1).
+ * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID. can be queried via DescribeSnapshots (https://www.tencentcloud.com/document/api/362/15647?from_cn_redirect=1).
  * @method boolean getIsPermanent() Obtain Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
  * @method void setIsPermanent(boolean $IsPermanent) Set Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
- * @method string getDeadline() Obtain Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
- * @method void setDeadline(string $Deadline) Set Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+ * @method string getSnapshotName() Obtain Name of new snapshot. Maximum length is 60 bytes.
+ * @method void setSnapshotName(string $SnapshotName) Set Name of new snapshot. Maximum length is 60 bytes.
+ * @method string getDeadline() Obtain Specifies the snapshot expiration time. the snapshot will be simultaneously set to the non-permanent retention method. snapshots exceeding the expiry time will be automatically deleted. note: this parameter is valid only when IsPermanent is False.
+ * @method void setDeadline(string $Deadline) Set Specifies the snapshot expiration time. the snapshot will be simultaneously set to the non-permanent retention method. snapshots exceeding the expiry time will be automatically deleted. note: this parameter is valid only when IsPermanent is False.
  */
 class ModifySnapshotAttributeRequest extends AbstractModel
 {
     /**
-     * @var string Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+     * @var string Snapshot ID. can be queried via DescribeSnapshots (https://www.tencentcloud.com/document/api/362/15647?from_cn_redirect=1).
      */
     public $SnapshotId;
-
-    /**
-     * @var string Name of new snapshot. Maximum length is 60 bytes.
-     */
-    public $SnapshotName;
 
     /**
      * @var boolean Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
@@ -47,15 +42,20 @@ class ModifySnapshotAttributeRequest extends AbstractModel
     public $IsPermanent;
 
     /**
-     * @var string Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+     * @var string Name of new snapshot. Maximum length is 60 bytes.
+     */
+    public $SnapshotName;
+
+    /**
+     * @var string Specifies the snapshot expiration time. the snapshot will be simultaneously set to the non-permanent retention method. snapshots exceeding the expiry time will be automatically deleted. note: this parameter is valid only when IsPermanent is False.
      */
     public $Deadline;
 
     /**
-     * @param string $SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
-     * @param string $SnapshotName Name of new snapshot. Maximum length is 60 bytes.
+     * @param string $SnapshotId Snapshot ID. can be queried via DescribeSnapshots (https://www.tencentcloud.com/document/api/362/15647?from_cn_redirect=1).
      * @param boolean $IsPermanent Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
-     * @param string $Deadline Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+     * @param string $SnapshotName Name of new snapshot. Maximum length is 60 bytes.
+     * @param string $Deadline Specifies the snapshot expiration time. the snapshot will be simultaneously set to the non-permanent retention method. snapshots exceeding the expiry time will be automatically deleted. note: this parameter is valid only when IsPermanent is False.
      */
     function __construct()
     {
@@ -74,12 +74,12 @@ class ModifySnapshotAttributeRequest extends AbstractModel
             $this->SnapshotId = $param["SnapshotId"];
         }
 
-        if (array_key_exists("SnapshotName",$param) and $param["SnapshotName"] !== null) {
-            $this->SnapshotName = $param["SnapshotName"];
-        }
-
         if (array_key_exists("IsPermanent",$param) and $param["IsPermanent"] !== null) {
             $this->IsPermanent = $param["IsPermanent"];
+        }
+
+        if (array_key_exists("SnapshotName",$param) and $param["SnapshotName"] !== null) {
+            $this->SnapshotName = $param["SnapshotName"];
         }
 
         if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {

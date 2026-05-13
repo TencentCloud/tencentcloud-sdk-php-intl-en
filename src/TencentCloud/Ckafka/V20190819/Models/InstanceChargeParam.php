@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance billing parameters
  *
- * @method string getInstanceChargeType() Obtain Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+ * @method string getInstanceChargeType() Obtain Instance billing mode (`PREPAID`: Yearly/monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing mode (`PREPAID`: Yearly/monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
  * @method integer getInstanceChargePeriod() Obtain Validity period, which is only required for the monthly subscription billing mode
  * @method void setInstanceChargePeriod(integer $InstanceChargePeriod) Set Validity period, which is only required for the monthly subscription billing mode
  */
 class InstanceChargeParam extends AbstractModel
 {
     /**
-     * @var string Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+     * @var string Instance billing mode (`PREPAID`: Yearly/monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
      */
     public $InstanceChargeType;
 
@@ -38,7 +38,7 @@ class InstanceChargeParam extends AbstractModel
     public $InstanceChargePeriod;
 
     /**
-     * @param string $InstanceChargeType Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+     * @param string $InstanceChargeType Instance billing mode (`PREPAID`: Yearly/monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
      * @param integer $InstanceChargePeriod Validity period, which is only required for the monthly subscription billing mode
      */
     function __construct()

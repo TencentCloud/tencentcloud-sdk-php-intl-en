@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateDisks request structure.
  *
- * @method array getDiskIds() Obtain List of cloud disk IDs required to be returned.
- * @method void setDiskIds(array $DiskIds) Set List of cloud disk IDs required to be returned.
+ * @method array getDiskIds() Obtain List of cloud disk ids to be returned, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+ * @method void setDiskIds(array $DiskIds) Set List of cloud disk ids to be returned, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
  * @method integer getDeleteSnapshot() Obtain Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
  * @method void setDeleteSnapshot(integer $DeleteSnapshot) Set Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
  */
 class TerminateDisksRequest extends AbstractModel
 {
     /**
-     * @var array List of cloud disk IDs required to be returned.
+     * @var array List of cloud disk ids to be returned, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
      */
     public $DiskIds;
 
@@ -38,7 +38,7 @@ class TerminateDisksRequest extends AbstractModel
     public $DeleteSnapshot;
 
     /**
-     * @param array $DiskIds List of cloud disk IDs required to be returned.
+     * @param array $DiskIds List of cloud disk ids to be returned, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
      * @param integer $DeleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
      */
     function __construct()

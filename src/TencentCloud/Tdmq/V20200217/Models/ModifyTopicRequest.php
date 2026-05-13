@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsolateConsumerEnable(boolean $IsolateConsumerEnable) Set Whether exception consumer isolation is enabled.
  * @method integer getAckTimeOut() Obtain Consumer Ack timeout period in seconds. value range: 60-(3600*24).
  * @method void setAckTimeOut(integer $AckTimeOut) Set Consumer Ack timeout period in seconds. value range: 60-(3600*24).
+ * @method string getDelayMessagePolicy() Obtain defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+ * @method void setDelayMessagePolicy(string $DelayMessagePolicy) Set defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -90,6 +92,11 @@ class ModifyTopicRequest extends AbstractModel
     public $AckTimeOut;
 
     /**
+     * @var string defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+     */
+    public $DelayMessagePolicy;
+
+    /**
      * @param string $EnvironmentId Environment (namespace) name.
      * @param string $TopicName Topic name.
      * @param integer $Partitions Specifies the number of partitions, which must be greater than or equal to the original partition count. if you want to maintain the original number of partitions, please enter the original number. changing the number of partitions is only effective for non-global sequential messages and cannot exceed 32 partitions.
@@ -100,6 +107,7 @@ class ModifyTopicRequest extends AbstractModel
      * @param string $UnackPolicy Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy refers to dynamically adjusting the maximum unacknowledged messages under the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
      * @param boolean $IsolateConsumerEnable Whether exception consumer isolation is enabled.
      * @param integer $AckTimeOut Consumer Ack timeout period in seconds. value range: 60-(3600*24).
+     * @param string $DelayMessagePolicy defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ class ModifyTopicRequest extends AbstractModel
 
         if (array_key_exists("AckTimeOut",$param) and $param["AckTimeOut"] !== null) {
             $this->AckTimeOut = $param["AckTimeOut"];
+        }
+
+        if (array_key_exists("DelayMessagePolicy",$param) and $param["DelayMessagePolicy"] !== null) {
+            $this->DelayMessagePolicy = $param["DelayMessagePolicy"];
         }
     }
 }

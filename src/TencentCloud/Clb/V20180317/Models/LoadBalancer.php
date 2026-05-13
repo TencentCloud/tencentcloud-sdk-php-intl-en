@@ -106,9 +106,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExpireTime(string $ExpireTime) Set CLB instance expiration time, which takes effect only for prepaid instances
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getChargeType() Obtain Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+ * @method string getChargeType() Obtain Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setChargeType(string $ChargeType) Set Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+ * @method void setChargeType(string $ChargeType) Set Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method InternetAccessible getNetworkAttributes() Obtain CLB instance network attributes
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -240,6 +240,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTargetCount(integer $TargetCount) Set Specifies the number of bound backend services.
  * @method string getAssociateEndpoint() Obtain Specifies the Endpoint id associated with the clb instance.
  * @method void setAssociateEndpoint(string $AssociateEndpoint) Set Specifies the Endpoint id associated with the clb instance.
+ * @method AvailableZoneAffinityInfo getAvailableZoneAffinityInfo() Obtain 
+ * @method void setAvailableZoneAffinityInfo(AvailableZoneAffinityInfo $AvailableZoneAffinityInfo) Set 
  */
 class LoadBalancer extends AbstractModel
 {
@@ -396,7 +398,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ExpireTime;
 
     /**
-     * @var string Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+     * @var string Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ChargeType;
@@ -587,6 +589,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AssociateEndpoint;
 
     /**
+     * @var AvailableZoneAffinityInfo 
+     */
+    public $AvailableZoneAffinityInfo;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType Network type of the load balancing instance.
@@ -630,7 +637,7 @@ Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ExpireTime CLB instance expiration time, which takes effect only for prepaid instances
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ChargeType Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+     * @param string $ChargeType Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param InternetAccessible $NetworkAttributes CLB instance network attributes
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -697,6 +704,7 @@ ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP op
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TargetCount Specifies the number of bound backend services.
      * @param string $AssociateEndpoint Specifies the Endpoint id associated with the clb instance.
+     * @param AvailableZoneAffinityInfo $AvailableZoneAffinityInfo 
      */
     function __construct()
     {
@@ -962,6 +970,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("AssociateEndpoint",$param) and $param["AssociateEndpoint"] !== null) {
             $this->AssociateEndpoint = $param["AssociateEndpoint"];
+        }
+
+        if (array_key_exists("AvailableZoneAffinityInfo",$param) and $param["AvailableZoneAffinityInfo"] !== null) {
+            $this->AvailableZoneAffinityInfo = new AvailableZoneAffinityInfo();
+            $this->AvailableZoneAffinityInfo->deserialize($param["AvailableZoneAffinityInfo"]);
         }
     }
 }

@@ -36,6 +36,8 @@ Specifies no modification if left blank.
 Enable pass-through (true): verify security groups on CLB only.
 Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
 Specifies no modification if left blank.
+ * @method integer getSwitchFlag() Obtain 
+ * @method void setSwitchFlag(integer $SwitchFlag) Set 
  * @method boolean getSnatPro() Obtain Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
  * @method void setSnatPro(boolean $SnatPro) Set Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
  * @method boolean getDeleteProtect() Obtain Specifies whether to enable deletion protection. leave it blank to keep the current setting.
@@ -76,6 +78,11 @@ Specifies no modification if left blank.
     public $LoadBalancerPassToTarget;
 
     /**
+     * @var integer 
+     */
+    public $SwitchFlag;
+
+    /**
      * @var boolean Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
      */
     public $SnatPro;
@@ -104,6 +111,7 @@ Specifies no modification if left blank.
 Enable pass-through (true): verify security groups on CLB only.
 Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
 Specifies no modification if left blank.
+     * @param integer $SwitchFlag 
      * @param boolean $SnatPro Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
      * @param boolean $DeleteProtect Specifies whether to enable deletion protection. leave it blank to keep the current setting.
      * @param boolean $ModifyClassicDomain Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
@@ -142,6 +150,10 @@ Specifies no modification if left blank.
 
         if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
             $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
+        }
+
+        if (array_key_exists("SwitchFlag",$param) and $param["SwitchFlag"] !== null) {
+            $this->SwitchFlag = $param["SwitchFlag"];
         }
 
         if (array_key_exists("SnatPro",$param) and $param["SnatPro"] !== null) {

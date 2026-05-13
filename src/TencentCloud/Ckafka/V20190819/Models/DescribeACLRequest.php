@@ -62,6 +62,7 @@ class DescribeACLRequest extends AbstractModel
 
     /**
      * @var string Keyword match
+     * @deprecated
      */
     public $SearchWord;
 

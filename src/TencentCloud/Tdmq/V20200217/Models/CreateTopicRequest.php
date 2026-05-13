@@ -60,6 +60,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsolateConsumerEnable(boolean $IsolateConsumerEnable) Set Whether exception consumer isolation is enabled.
  * @method integer getAckTimeOut() Obtain Specifies the consumer Ack timeout period in seconds. value range: 60-(3600*24).
  * @method void setAckTimeOut(integer $AckTimeOut) Set Specifies the consumer Ack timeout period in seconds. value range: 60-(3600*24).
+ * @method integer getPulsarTopicMessageType() Obtain Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+ * @method void setPulsarTopicMessageType(integer $PulsarTopicMessageType) Set Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+ * @method array getTags() Obtain Theme tag
+ * @method void setTags(array $Tags) Set Theme tag
+ * @method string getDelayMessagePolicy() Obtain defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+ * @method void setDelayMessagePolicy(string $DelayMessagePolicy) Set defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -128,6 +134,21 @@ class CreateTopicRequest extends AbstractModel
     public $AckTimeOut;
 
     /**
+     * @var integer Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+     */
+    public $PulsarTopicMessageType;
+
+    /**
+     * @var array Theme tag
+     */
+    public $Tags;
+
+    /**
+     * @var string defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+     */
+    public $DelayMessagePolicy;
+
+    /**
      * @param string $EnvironmentId Environment (namespace) name.
      * @param string $TopicName Topic name, which can contain up to 64 letters, digits, hyphens, and underscores.
      * @param integer $Partitions The input parameter is 1, which means creating a non-partitioned topic with no partition. if the input parameter is greater than 1, it indicates the number of partitions for a partitioned topic, and the maximum cannot exceed 32.
@@ -148,6 +169,9 @@ class CreateTopicRequest extends AbstractModel
      * @param string $UnackPolicy Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy means dynamically adjust the maximum unacknowledged messages of the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
      * @param boolean $IsolateConsumerEnable Whether exception consumer isolation is enabled.
      * @param integer $AckTimeOut Specifies the consumer Ack timeout period in seconds. value range: 60-(3600*24).
+     * @param integer $PulsarTopicMessageType Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+     * @param array $Tags Theme tag
+     * @param string $DelayMessagePolicy defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
      */
     function __construct()
     {
@@ -204,6 +228,23 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("AckTimeOut",$param) and $param["AckTimeOut"] !== null) {
             $this->AckTimeOut = $param["AckTimeOut"];
+        }
+
+        if (array_key_exists("PulsarTopicMessageType",$param) and $param["PulsarTopicMessageType"] !== null) {
+            $this->PulsarTopicMessageType = $param["PulsarTopicMessageType"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("DelayMessagePolicy",$param) and $param["DelayMessagePolicy"] !== null) {
+            $this->DelayMessagePolicy = $param["DelayMessagePolicy"];
         }
     }
 }

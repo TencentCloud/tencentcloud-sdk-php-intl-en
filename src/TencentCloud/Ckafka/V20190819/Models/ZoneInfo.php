@@ -20,91 +20,91 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Zone information entity
  *
- * @method string getZoneId() Obtain Availability zone
- * @method void setZoneId(string $ZoneId) Set Availability zone
- * @method integer getIsInternalApp() Obtain Whether it is an internal application.
- * @method void setIsInternalApp(integer $IsInternalApp) Set Whether it is an internal application.
- * @method integer getAppId() Obtain Application identifier
- * @method void setAppId(integer $AppId) Set Application identifier
- * @method boolean getFlag() Obtain Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
- * @method void setFlag(boolean $Flag) Set Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
- * @method string getZoneName() Obtain Availability zone name.
- * @method void setZoneName(string $ZoneName) Set Availability zone name.
- * @method integer getZoneStatus() Obtain Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
- * @method void setZoneStatus(integer $ZoneStatus) Set Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
- * @method string getExflag() Obtain Extra flag
- * @method void setExflag(string $Exflag) Set Extra flag
- * @method string getSoldOut() Obtain Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
- * @method void setSoldOut(string $SoldOut) Set Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
- * @method array getSalesInfo() Obtain Specifies the sell-out information of the standard version.
- * @method void setSalesInfo(array $SalesInfo) Set Specifies the sell-out information of the standard version.
- * @method string getExtraFlag() Obtain Additional flag.
- * @method void setExtraFlag(string $ExtraFlag) Set Additional flag.
+ * @method string getZoneId() Obtain <p>Availability zone</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Availability zone</p>
+ * @method integer getIsInternalApp() Obtain <p>Whether the APP is internal</p><p>Enumeration value:</p><ul><li>0: Public</li><li>1: Internal</li></ul><p>Default value: 0</p>
+ * @method void setIsInternalApp(integer $IsInternalApp) Set <p>Whether the APP is internal</p><p>Enumeration value:</p><ul><li>0: Public</li><li>1: Internal</li></ul><p>Default value: 0</p>
+ * @method integer getAppId() Obtain <p>AppID</p>
+ * @method void setAppId(integer $AppId) Set <p>AppID</p>
+ * @method boolean getFlag() Obtain <p>Flag indicating whether the availability zone is sold out. true indicates sold out, false indicates not sold out.</p>
+ * @method void setFlag(boolean $Flag) Set <p>Flag indicating whether the availability zone is sold out. true indicates sold out, false indicates not sold out.</p>
+ * @method string getZoneName() Obtain <p>Availability zone name</p>
+ * @method void setZoneName(string $ZoneName) Set <p>Availability zone name</p>
+ * @method integer getZoneStatus() Obtain <p>Availability zone status</p><p>Enumeration value:</p><ul><li>3: Enable</li><li>4: Disable</li></ul><p>AZ status is subject to SoldOut</p>
+ * @method void setZoneStatus(integer $ZoneStatus) Set <p>Availability zone status</p><p>Enumeration value:</p><ul><li>3: Enable</li><li>4: Disable</li></ul><p>AZ status is subject to SoldOut</p>
+ * @method string getExflag() Obtain <p>Additional flag</p>
+ * @method void setExflag(string $Exflag) Set <p>Additional flag</p>
+ * @method string getSoldOut() Obtain <p>true indicates sold out, false indicates not sold out.</p>
+ * @method void setSoldOut(string $SoldOut) Set <p>true indicates sold out, false indicates not sold out.</p>
+ * @method array getSalesInfo() Obtain <p>Standard version sell-out information</p>
+ * @method void setSalesInfo(array $SalesInfo) Set <p>Standard version sell-out information</p>
+ * @method string getExtraFlag() Obtain <p>Additional flag</p>
+ * @method void setExtraFlag(string $ExtraFlag) Set <p>Additional flag</p>
  */
 class ZoneInfo extends AbstractModel
 {
     /**
-     * @var string Availability zone
+     * @var string <p>Availability zone</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer Whether it is an internal application.
+     * @var integer <p>Whether the APP is internal</p><p>Enumeration value:</p><ul><li>0: Public</li><li>1: Internal</li></ul><p>Default value: 0</p>
      */
     public $IsInternalApp;
 
     /**
-     * @var integer Application identifier
+     * @var integer <p>AppID</p>
      */
     public $AppId;
 
     /**
-     * @var boolean Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
+     * @var boolean <p>Flag indicating whether the availability zone is sold out. true indicates sold out, false indicates not sold out.</p>
      */
     public $Flag;
 
     /**
-     * @var string Availability zone name.
+     * @var string <p>Availability zone name</p>
      */
     public $ZoneName;
 
     /**
-     * @var integer Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
+     * @var integer <p>Availability zone status</p><p>Enumeration value:</p><ul><li>3: Enable</li><li>4: Disable</li></ul><p>AZ status is subject to SoldOut</p>
      */
     public $ZoneStatus;
 
     /**
-     * @var string Extra flag
+     * @var string <p>Additional flag</p>
      * @deprecated
      */
     public $Exflag;
 
     /**
-     * @var string Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
+     * @var string <p>true indicates sold out, false indicates not sold out.</p>
      */
     public $SoldOut;
 
     /**
-     * @var array Specifies the sell-out information of the standard version.
+     * @var array <p>Standard version sell-out information</p>
      */
     public $SalesInfo;
 
     /**
-     * @var string Additional flag.
+     * @var string <p>Additional flag</p>
      */
     public $ExtraFlag;
 
     /**
-     * @param string $ZoneId Availability zone
-     * @param integer $IsInternalApp Whether it is an internal application.
-     * @param integer $AppId Application identifier
-     * @param boolean $Flag Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
-     * @param string $ZoneName Availability zone name.
-     * @param integer $ZoneStatus Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
-     * @param string $Exflag Extra flag
-     * @param string $SoldOut Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
-     * @param array $SalesInfo Specifies the sell-out information of the standard version.
-     * @param string $ExtraFlag Additional flag.
+     * @param string $ZoneId <p>Availability zone</p>
+     * @param integer $IsInternalApp <p>Whether the APP is internal</p><p>Enumeration value:</p><ul><li>0: Public</li><li>1: Internal</li></ul><p>Default value: 0</p>
+     * @param integer $AppId <p>AppID</p>
+     * @param boolean $Flag <p>Flag indicating whether the availability zone is sold out. true indicates sold out, false indicates not sold out.</p>
+     * @param string $ZoneName <p>Availability zone name</p>
+     * @param integer $ZoneStatus <p>Availability zone status</p><p>Enumeration value:</p><ul><li>3: Enable</li><li>4: Disable</li></ul><p>AZ status is subject to SoldOut</p>
+     * @param string $Exflag <p>Additional flag</p>
+     * @param string $SoldOut <p>true indicates sold out, false indicates not sold out.</p>
+     * @param array $SalesInfo <p>Standard version sell-out information</p>
+     * @param string $ExtraFlag <p>Additional flag</p>
      */
     function __construct()
     {

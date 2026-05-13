@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InitializeDisks request structure.
  *
- * @method array getDiskIds() Obtain ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
- * @method void setDiskIds(array $DiskIds) Set ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
+ * @method array getDiskIds() Obtain List of cloud disk ids to be reinitialized. can be accessed through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. the initialization is limited to not exceeding 20 disks.
+ * @method void setDiskIds(array $DiskIds) Set List of cloud disk ids to be reinitialized. can be accessed through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. the initialization is limited to not exceeding 20 disks.
  */
 class InitializeDisksRequest extends AbstractModel
 {
     /**
-     * @var array ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
+     * @var array List of cloud disk ids to be reinitialized. can be accessed through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. the initialization is limited to not exceeding 20 disks.
      */
     public $DiskIds;
 
     /**
-     * @param array $DiskIds ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
+     * @param array $DiskIds List of cloud disk ids to be reinitialized. can be accessed through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. the initialization is limited to not exceeding 20 disks.
      */
     function __construct()
     {

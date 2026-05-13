@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Public network bandwidth parameters
  *
- * @method string getPublicNetworkChargeType() Obtain Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
- * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) Set Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+ * @method string getPublicNetworkChargeType() Obtain Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+ * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) Set Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
  * @method integer getPublicNetworkMonthly() Obtain Public network bandwidth, in MB. value must be 0 or a multiple of 3.
  * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) Set Public network bandwidth, in MB. value must be 0 or a multiple of 3.
  */
 class InquiryPublicNetworkParam extends AbstractModel
 {
     /**
-     * @var string Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+     * @var string Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
      */
     public $PublicNetworkChargeType;
 
@@ -38,7 +38,7 @@ class InquiryPublicNetworkParam extends AbstractModel
     public $PublicNetworkMonthly;
 
     /**
-     * @param string $PublicNetworkChargeType Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+     * @param string $PublicNetworkChargeType Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
      * @param integer $PublicNetworkMonthly Public network bandwidth, in MB. value must be 0 or a multiple of 3.
      */
     function __construct()

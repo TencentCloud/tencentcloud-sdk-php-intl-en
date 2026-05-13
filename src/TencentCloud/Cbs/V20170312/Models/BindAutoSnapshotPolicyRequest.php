@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindAutoSnapshotPolicy request structure.
  *
- * @method string getAutoSnapshotPolicyId() Obtain ID of scheduled snapshot policy to be bound.
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set ID of scheduled snapshot policy to be bound.
+ * @method string getAutoSnapshotPolicyId() Obtain Specifies the ID of the regular snapshot policy to bind. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set Specifies the ID of the regular snapshot policy to bind. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
  * @method array getDiskIds() Obtain List of cloud disk IDs to be bound. Maximum of 80 cloud disks can be bound per request.
  * @method void setDiskIds(array $DiskIds) Set List of cloud disk IDs to be bound. Maximum of 80 cloud disks can be bound per request.
  */
 class BindAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string ID of scheduled snapshot policy to be bound.
+     * @var string Specifies the ID of the regular snapshot policy to bind. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
      */
     public $AutoSnapshotPolicyId;
 
@@ -38,7 +38,7 @@ class BindAutoSnapshotPolicyRequest extends AbstractModel
     public $DiskIds;
 
     /**
-     * @param string $AutoSnapshotPolicyId ID of scheduled snapshot policy to be bound.
+     * @param string $AutoSnapshotPolicyId Specifies the ID of the regular snapshot policy to bind. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
      * @param array $DiskIds List of cloud disk IDs to be bound. Maximum of 80 cloud disks can be bound per request.
      */
     function __construct()

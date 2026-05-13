@@ -20,162 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTopicAttributes request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
- * @method string getTopicName() Obtain Topic name
- * @method void setTopicName(string $TopicName) Set Topic name
- * @method string getNote() Obtain Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
- * @method void setNote(string $Note) Set Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
- * @method integer getEnableWhiteList() Obtain IP allowlist switch. 1: enabled, 0: disabled.
- * @method void setEnableWhiteList(integer $EnableWhiteList) Set IP allowlist switch. 1: enabled, 0: disabled.
- * @method integer getMinInsyncReplicas() Obtain Default value: 1.
- * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) Set Default value: 1.
- * @method integer getUncleanLeaderElectionEnable() Obtain 0: false, 1: true. Default value: 0.
- * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set 0: false, 1: true. Default value: 0.
- * @method integer getRetentionMs() Obtain Message retention period in ms. The current minimum value is 60,000 ms.
- * @method void setRetentionMs(integer $RetentionMs) Set Message retention period in ms. The current minimum value is 60,000 ms.
- * @method integer getMaxMessageBytes() Obtain Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
- * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
- * @method integer getSegmentMs() Obtain Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
- * @method void setSegmentMs(integer $SegmentMs) Set Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
- * @method string getCleanUpPolicy() Obtain Message deletion policy. Valid values: delete, compact
- * @method void setCleanUpPolicy(string $CleanUpPolicy) Set Message deletion policy. Valid values: delete, compact
- * @method array getIpWhiteList() Obtain IP allowlist, which is required if the value of `enableWhileList` is 1.
- * @method void setIpWhiteList(array $IpWhiteList) Set IP allowlist, which is required if the value of `enableWhileList` is 1.
- * @method integer getEnableAclRule() Obtain Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
- * @method void setEnableAclRule(integer $EnableAclRule) Set Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
- * @method string getAclRuleName() Obtain ACL rule name.
- * @method void setAclRuleName(string $AclRuleName) Set ACL rule name.
- * @method integer getRetentionBytes() Obtain Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
- * @method void setRetentionBytes(integer $RetentionBytes) Set Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
- * @method array getTags() Obtain Tag list.
- * @method void setTags(array $Tags) Set Tag list.
- * @method integer getQuotaProducerByteRate() Obtain Production traffic throttling in MB/s. set to -1 to disable throttling.
- * @method void setQuotaProducerByteRate(integer $QuotaProducerByteRate) Set Production traffic throttling in MB/s. set to -1 to disable throttling.
- * @method integer getQuotaConsumerByteRate() Obtain Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
- * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) Set Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
- * @method integer getReplicaNum() Obtain Number of topic replicas. valid values: 1, 3.
- * @method void setReplicaNum(integer $ReplicaNum) Set Number of topic replicas. valid values: 1, 3.
- * @method string getLogMsgTimestampType() Obtain Specifies the time type for message saving: CreateTime/LogAppendTime.
- * @method void setLogMsgTimestampType(string $LogMsgTimestampType) Set Specifies the time type for message saving: CreateTime/LogAppendTime.
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method string getTopicName() Obtain <p>Topic name</p>
+ * @method void setTopicName(string $TopicName) Set <p>Topic name</p>
+ * @method string getNote() Obtain <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p>
+ * @method void setNote(string $Note) Set <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p>
+ * @method integer getEnableWhiteList() Obtain <p>IP allowlist switch, 1: on; 0: off.</p>
+ * @method void setEnableWhiteList(integer $EnableWhiteList) Set <p>IP allowlist switch, 1: on; 0: off.</p>
+ * @method integer getMinInsyncReplicas() Obtain <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
+ * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) Set <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
+ * @method integer getUncleanLeaderElectionEnable() Obtain <p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p>
+ * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set <p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p>
+ * @method integer getRetentionMs() Obtain <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
+ * @method void setRetentionMs(integer $RetentionMs) Set <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
+ * @method integer getMaxMessageBytes() Obtain <p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p>
+ * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set <p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p>
+ * @method integer getSegmentMs() Obtain <p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p>
+ * @method void setSegmentMs(integer $SegmentMs) Set <p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p>
+ * @method string getCleanUpPolicy() Obtain <p>Message deletion strategy: choose delete or compact</p>
+ * @method void setCleanUpPolicy(string $CleanUpPolicy) Set <p>Message deletion strategy: choose delete or compact</p>
+ * @method array getIpWhiteList() Obtain <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
+ * @method void setIpWhiteList(array $IpWhiteList) Set <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
+ * @method integer getEnableAclRule() Obtain <p>Preset ACL rule, 1: on 0: off, default is off</p>
+ * @method void setEnableAclRule(integer $EnableAclRule) Set <p>Preset ACL rule, 1: on 0: off, default is off</p>
+ * @method string getAclRuleName() Obtain <p>ACL rule name</p>
+ * @method void setAclRuleName(string $AclRuleName) Set <p>ACL rule name</p>
+ * @method integer getRetentionBytes() Obtain <p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p>
+ * @method void setRetentionBytes(integer $RetentionBytes) Set <p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p>
+ * @method array getTags() Obtain <p>Tag list</p>
+ * @method void setTags(array $Tags) Set <p>Tag list</p>
+ * @method integer getQuotaProducerByteRate() Obtain <p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p>
+ * @method void setQuotaProducerByteRate(integer $QuotaProducerByteRate) Set <p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p>
+ * @method integer getQuotaConsumerByteRate() Obtain <p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p>
+ * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) Set <p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p>
+ * @method integer getReplicaNum() Obtain <p>topic replica count Minimum value: 1, Maximum value: 3</p>
+ * @method void setReplicaNum(integer $ReplicaNum) Set <p>topic replica count Minimum value: 1, Maximum value: 3</p>
+ * @method string getLogMsgTimestampType() Obtain <p>Time type for message saving: CreateTime/LogAppendTime</p>
+ * @method void setLogMsgTimestampType(string $LogMsgTimestampType) Set <p>Time type for message saving: CreateTime/LogAppendTime</p>
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id.
+     * @var string <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string Topic name
+     * @var string <p>Topic name</p>
      */
     public $TopicName;
 
     /**
-     * @var string Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
+     * @var string <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p>
      */
     public $Note;
 
     /**
-     * @var integer IP allowlist switch. 1: enabled, 0: disabled.
+     * @var integer <p>IP allowlist switch, 1: on; 0: off.</p>
      */
     public $EnableWhiteList;
 
     /**
-     * @var integer Default value: 1.
+     * @var integer <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
      */
     public $MinInsyncReplicas;
 
     /**
-     * @var integer 0: false, 1: true. Default value: 0.
+     * @var integer <p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p>
      */
     public $UncleanLeaderElectionEnable;
 
     /**
-     * @var integer Message retention period in ms. The current minimum value is 60,000 ms.
+     * @var integer <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
      */
     public $RetentionMs;
 
     /**
-     * @var integer Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
+     * @var integer <p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p>
      */
     public $MaxMessageBytes;
 
     /**
-     * @var integer Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+     * @var integer <p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p>
      */
     public $SegmentMs;
 
     /**
-     * @var string Message deletion policy. Valid values: delete, compact
+     * @var string <p>Message deletion strategy: choose delete or compact</p>
      */
     public $CleanUpPolicy;
 
     /**
-     * @var array IP allowlist, which is required if the value of `enableWhileList` is 1.
+     * @var array <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
      */
     public $IpWhiteList;
 
     /**
-     * @var integer Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     * @var integer <p>Preset ACL rule, 1: on 0: off, default is off</p>
      */
     public $EnableAclRule;
 
     /**
-     * @var string ACL rule name.
+     * @var string <p>ACL rule name</p>
      */
     public $AclRuleName;
 
     /**
-     * @var integer Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+     * @var integer <p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p>
      */
     public $RetentionBytes;
 
     /**
-     * @var array Tag list.
+     * @var array <p>Tag list</p>
      */
     public $Tags;
 
     /**
-     * @var integer Production traffic throttling in MB/s. set to -1 to disable throttling.
+     * @var integer <p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p>
      */
     public $QuotaProducerByteRate;
 
     /**
-     * @var integer Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
+     * @var integer <p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p>
      */
     public $QuotaConsumerByteRate;
 
     /**
-     * @var integer Number of topic replicas. valid values: 1, 3.
+     * @var integer <p>topic replica count Minimum value: 1, Maximum value: 3</p>
      */
     public $ReplicaNum;
 
     /**
-     * @var string Specifies the time type for message saving: CreateTime/LogAppendTime.
+     * @var string <p>Time type for message saving: CreateTime/LogAppendTime</p>
      */
     public $LogMsgTimestampType;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id.
-     * @param string $TopicName Topic name
-     * @param string $Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
-     * @param integer $EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled.
-     * @param integer $MinInsyncReplicas Default value: 1.
-     * @param integer $UncleanLeaderElectionEnable 0: false, 1: true. Default value: 0.
-     * @param integer $RetentionMs Message retention period in ms. The current minimum value is 60,000 ms.
-     * @param integer $MaxMessageBytes Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
-     * @param integer $SegmentMs Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
-     * @param string $CleanUpPolicy Message deletion policy. Valid values: delete, compact
-     * @param array $IpWhiteList IP allowlist, which is required if the value of `enableWhileList` is 1.
-     * @param integer $EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
-     * @param string $AclRuleName ACL rule name.
-     * @param integer $RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
-     * @param array $Tags Tag list.
-     * @param integer $QuotaProducerByteRate Production traffic throttling in MB/s. set to -1 to disable throttling.
-     * @param integer $QuotaConsumerByteRate Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
-     * @param integer $ReplicaNum Number of topic replicas. valid values: 1, 3.
-     * @param string $LogMsgTimestampType Specifies the time type for message saving: CreateTime/LogAppendTime.
+     * @param string $InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param string $TopicName <p>Topic name</p>
+     * @param string $Note <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p>
+     * @param integer $EnableWhiteList <p>IP allowlist switch, 1: on; 0: off.</p>
+     * @param integer $MinInsyncReplicas <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
+     * @param integer $UncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p>
+     * @param integer $RetentionMs <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
+     * @param integer $MaxMessageBytes <p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p>
+     * @param integer $SegmentMs <p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p>
+     * @param string $CleanUpPolicy <p>Message deletion strategy: choose delete or compact</p>
+     * @param array $IpWhiteList <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
+     * @param integer $EnableAclRule <p>Preset ACL rule, 1: on 0: off, default is off</p>
+     * @param string $AclRuleName <p>ACL rule name</p>
+     * @param integer $RetentionBytes <p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p>
+     * @param array $Tags <p>Tag list</p>
+     * @param integer $QuotaProducerByteRate <p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p>
+     * @param integer $QuotaConsumerByteRate <p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p>
+     * @param integer $ReplicaNum <p>topic replica count Minimum value: 1, Maximum value: 3</p>
+     * @param string $LogMsgTimestampType <p>Time type for message saving: CreateTime/LogAppendTime</p>
      */
     function __construct()
     {

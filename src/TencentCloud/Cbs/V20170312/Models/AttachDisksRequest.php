@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskIds(array $DiskIds) Set ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be mounted in a single request.
  * @method boolean getDeleteWithInstance() Obtain Optional parameter. If this is not passed only the mount operation is executed. If `True` is passed, the cloud disk will be configured to be terminated when the server it is mounted to is terminated. This is only valid for pay-as-you-go cloud disks.
  * @method void setDeleteWithInstance(boolean $DeleteWithInstance) Set Optional parameter. If this is not passed only the mount operation is executed. If `True` is passed, the cloud disk will be configured to be terminated when the server it is mounted to is terminated. This is only valid for pay-as-you-go cloud disks.
- * @method string getAttachMode() Obtain (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
- * @method void setAttachMode(string $AttachMode) Set (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+ * @method string getAttachMode() Obtain Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>.
+ * @method void setAttachMode(string $AttachMode) Set Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>.
  */
 class AttachDisksRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class AttachDisksRequest extends AbstractModel
     public $DeleteWithInstance;
 
     /**
-     * @var string (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+     * @var string Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>.
      */
     public $AttachMode;
 
@@ -55,7 +55,7 @@ class AttachDisksRequest extends AbstractModel
      * @param string $InstanceId ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
      * @param array $DiskIds ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be mounted in a single request.
      * @param boolean $DeleteWithInstance Optional parameter. If this is not passed only the mount operation is executed. If `True` is passed, the cloud disk will be configured to be terminated when the server it is mounted to is terminated. This is only valid for pay-as-you-go cloud disks.
-     * @param string $AttachMode (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+     * @param string $AttachMode Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>.
      */
     function __construct()
     {

@@ -56,10 +56,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPublicEndPoint(string $PublicEndPoint) Set Public network access point
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getOldPublicEndPoint() Obtain Old public network access point
+ * @method void setOldPublicEndPoint(string $OldPublicEndPoint) Set Old public network access point
  * @method string getVpcEndPoint() Obtain VPC access point
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVpcEndPoint(string $VpcEndPoint) Set VPC access point
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getOldVpcEndPoint() Obtain Old VPC access point
+ * @method void setOldVpcEndPoint(string $OldVpcEndPoint) Set Old VPC access point
  * @method integer getNamespaceNum() Obtain Number of namespaces
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setNamespaceNum(integer $NamespaceNum) Set Number of namespaces
@@ -100,13 +104,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getOldInternalPulsarEndPoint() Obtain Old support network Pulsar access point
+ * @method void setOldInternalPulsarEndPoint(string $OldInternalPulsarEndPoint) Set Old support network Pulsar access point
+ * @method string getOldInternalHttpEndPoint() Obtain Old support network HTTP access point
+ * @method void setOldInternalHttpEndPoint(string $OldInternalHttpEndPoint) Set Old support network HTTP access point
  * @method integer getPayMode() Obtain Billing mode:
 `0`: Pay-as-you-go
-`1`: Monthly subscription
+`1`: Yearly/Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setPayMode(integer $PayMode) Set Billing mode:
 `0`: Pay-as-you-go
-`1`: Monthly subscription
+`1`: Yearly/Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method integer getProjectId() Obtain Project ID.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -200,10 +208,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $PublicEndPoint;
 
     /**
+     * @var string Old public network access point
+     */
+    public $OldPublicEndPoint;
+
+    /**
      * @var string VPC access point
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $VpcEndPoint;
+
+    /**
+     * @var string Old VPC access point
+     */
+    public $OldVpcEndPoint;
 
     /**
      * @var integer Number of namespaces
@@ -266,9 +284,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Tags;
 
     /**
+     * @var string Old support network Pulsar access point
+     */
+    public $OldInternalPulsarEndPoint;
+
+    /**
+     * @var string Old support network HTTP access point
+     */
+    public $OldInternalHttpEndPoint;
+
+    /**
      * @var integer Billing mode:
 `0`: Pay-as-you-go
-`1`: Monthly subscription
+`1`: Yearly/Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $PayMode;
@@ -309,8 +337,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $PublicEndPoint Public network access point
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $OldPublicEndPoint Old public network access point
      * @param string $VpcEndPoint VPC access point
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $OldVpcEndPoint Old VPC access point
      * @param integer $NamespaceNum Number of namespaces
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $UsedStorageBudget Limit of used storage in MB
@@ -331,9 +361,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Tag
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $OldInternalPulsarEndPoint Old support network Pulsar access point
+     * @param string $OldInternalHttpEndPoint Old support network HTTP access point
      * @param integer $PayMode Billing mode:
 `0`: Pay-as-you-go
-`1`: Monthly subscription
+`1`: Yearly/Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $ProjectId Project ID.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -414,8 +446,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->PublicEndPoint = $param["PublicEndPoint"];
         }
 
+        if (array_key_exists("OldPublicEndPoint",$param) and $param["OldPublicEndPoint"] !== null) {
+            $this->OldPublicEndPoint = $param["OldPublicEndPoint"];
+        }
+
         if (array_key_exists("VpcEndPoint",$param) and $param["VpcEndPoint"] !== null) {
             $this->VpcEndPoint = $param["VpcEndPoint"];
+        }
+
+        if (array_key_exists("OldVpcEndPoint",$param) and $param["OldVpcEndPoint"] !== null) {
+            $this->OldVpcEndPoint = $param["OldVpcEndPoint"];
         }
 
         if (array_key_exists("NamespaceNum",$param) and $param["NamespaceNum"] !== null) {
@@ -461,6 +501,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("OldInternalPulsarEndPoint",$param) and $param["OldInternalPulsarEndPoint"] !== null) {
+            $this->OldInternalPulsarEndPoint = $param["OldInternalPulsarEndPoint"];
+        }
+
+        if (array_key_exists("OldInternalHttpEndPoint",$param) and $param["OldInternalHttpEndPoint"] !== null) {
+            $this->OldInternalHttpEndPoint = $param["OldInternalHttpEndPoint"];
         }
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {

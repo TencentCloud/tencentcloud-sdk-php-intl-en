@@ -24,20 +24,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskBackupId(string $DiskBackupId) Set Cloud disk backup point ID.
  * @method string getDiskId() Obtain ID of the cloud disk with which the backup point is associated.
  * @method void setDiskId(string $DiskId) Set ID of the cloud disk with which the backup point is associated.
- * @method integer getDiskSize() Obtain Cloud disk size in GB.
- * @method void setDiskSize(integer $DiskSize) Set Cloud disk size in GB.
- * @method string getDiskUsage() Obtain Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk
- * @method void setDiskUsage(string $DiskUsage) Set Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk
+ * @method integer getDiskSize() Obtain Specifies the disk capacity in GiB.
+ * @method void setDiskSize(integer $DiskSize) Set Specifies the disk capacity in GiB.
+ * @method string getDiskUsage() Obtain Cloud disk type. value ranges from...to...<br>.
+<Li>SYSTEM_DISK: specifies the system disk.</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+ * @method void setDiskUsage(string $DiskUsage) Set Cloud disk type. value ranges from...to...<br>.
+<Li>SYSTEM_DISK: specifies the system disk.</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
  * @method string getDiskBackupName() Obtain Backup point name.
  * @method void setDiskBackupName(string $DiskBackupName) Set Backup point name.
- * @method string getDiskBackupState() Obtain Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back
- * @method void setDiskBackupState(string $DiskBackupState) Set Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back
- * @method integer getPercent() Obtain Cloud disk creation progress in percentage.
- * @method void setPercent(integer $Percent) Set Cloud disk creation progress in percentage.
+ * @method string getDiskBackupState() Obtain <P>Specifies the status of the cloud disk backup point. valid values:</p>.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>CREATING: creating.</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+</ul>
+ * @method void setDiskBackupState(string $DiskBackupState) Set <P>Specifies the status of the cloud disk backup point. valid values:</p>.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>CREATING: creating.</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+</ul>
+ * @method integer getPercent() Obtain Specifies the creation percentage of the cloud disk backup point.
+ * @method void setPercent(integer $Percent) Set Specifies the creation percentage of the cloud disk backup point.
  * @method string getCreateTime() Obtain Creation time of the cloud disk backup point.
  * @method void setCreateTime(string $CreateTime) Set Creation time of the cloud disk backup point.
- * @method boolean getEncrypt() Obtain Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted
- * @method void setEncrypt(boolean $Encrypt) Set Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted
+ * @method boolean getEncrypt() Obtain Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
+ * @method void setEncrypt(boolean $Encrypt) Set Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
  */
 class DiskBackup extends AbstractModel
 {
@@ -52,12 +66,14 @@ class DiskBackup extends AbstractModel
     public $DiskId;
 
     /**
-     * @var integer Cloud disk size in GB.
+     * @var integer Specifies the disk capacity in GiB.
      */
     public $DiskSize;
 
     /**
-     * @var string Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk
+     * @var string Cloud disk type. value ranges from...to...<br>.
+<Li>SYSTEM_DISK: specifies the system disk.</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
      */
     public $DiskUsage;
 
@@ -67,12 +83,17 @@ class DiskBackup extends AbstractModel
     public $DiskBackupName;
 
     /**
-     * @var string Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back
+     * @var string <P>Specifies the status of the cloud disk backup point. valid values:</p>.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>CREATING: creating.</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+</ul>
      */
     public $DiskBackupState;
 
     /**
-     * @var integer Cloud disk creation progress in percentage.
+     * @var integer Specifies the creation percentage of the cloud disk backup point.
      */
     public $Percent;
 
@@ -82,20 +103,27 @@ class DiskBackup extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var boolean Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted
+     * @var boolean Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
      */
     public $Encrypt;
 
     /**
      * @param string $DiskBackupId Cloud disk backup point ID.
      * @param string $DiskId ID of the cloud disk with which the backup point is associated.
-     * @param integer $DiskSize Cloud disk size in GB.
-     * @param string $DiskUsage Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk
+     * @param integer $DiskSize Specifies the disk capacity in GiB.
+     * @param string $DiskUsage Cloud disk type. value ranges from...to...<br>.
+<Li>SYSTEM_DISK: specifies the system disk.</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
      * @param string $DiskBackupName Backup point name.
-     * @param string $DiskBackupState Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back
-     * @param integer $Percent Cloud disk creation progress in percentage.
+     * @param string $DiskBackupState <P>Specifies the status of the cloud disk backup point. valid values:</p>.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>CREATING: creating.</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+</ul>
+     * @param integer $Percent Specifies the creation percentage of the cloud disk backup point.
      * @param string $CreateTime Creation time of the cloud disk backup point.
-     * @param boolean $Encrypt Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted
+     * @param boolean $Encrypt Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
      */
     function __construct()
     {

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicSubscribeGroup request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
- * @method string getTopicName() Obtain Topic name
- * @method void setTopicName(string $TopicName) Set Topic name
- * @method integer getOffset() Obtain Starting position of paging
- * @method void setOffset(integer $Offset) Set Starting position of paging
- * @method integer getLimit() Obtain Number of results per page
- * @method void setLimit(integer $Limit) Set Number of results per page
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method string getTopicName() Obtain <p>Topic name</p>
+ * @method void setTopicName(string $TopicName) Set <p>Topic name</p>
+ * @method integer getOffset() Obtain <p>Starting position for pagination</p>
+ * @method void setOffset(integer $Offset) Set <p>Starting position for pagination</p>
+ * @method integer getLimit() Obtain <p>Count per page</p><p>Default value: 20</p>
+ * @method void setLimit(integer $Limit) Set <p>Count per page</p><p>Default value: 20</p>
  */
 class DescribeTopicSubscribeGroupRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id.
+     * @var string <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string Topic name
+     * @var string <p>Topic name</p>
      */
     public $TopicName;
 
     /**
-     * @var integer Starting position of paging
+     * @var integer <p>Starting position for pagination</p>
      */
     public $Offset;
 
     /**
-     * @var integer Number of results per page
+     * @var integer <p>Count per page</p><p>Default value: 20</p>
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id.
-     * @param string $TopicName Topic name
-     * @param integer $Offset Starting position of paging
-     * @param integer $Limit Number of results per page
+     * @param string $InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param string $TopicName <p>Topic name</p>
+     * @param integer $Offset <p>Starting position for pagination</p>
+     * @param integer $Limit <p>Count per page</p><p>Default value: 20</p>
      */
     function __construct()
     {

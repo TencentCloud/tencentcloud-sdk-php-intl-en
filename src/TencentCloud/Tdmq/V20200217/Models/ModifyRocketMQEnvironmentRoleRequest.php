@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRocketMQEnvironmentRole request structure.
  *
- * @method string getEnvironmentId() Obtain Environment (namespace) name.
- * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
+ * @method string getEnvironmentId() Obtain namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
+ * @method void setEnvironmentId(string $EnvironmentId) Set namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
  * @method string getRoleName() Obtain Role name.
  * @method void setRoleName(string $RoleName) Set Role name.
  * @method array getPermissions() Obtain Authorization item, which can contain a non-empty character array of up to 2 items including produce and consume.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyRocketMQEnvironmentRoleRequest extends AbstractModel
 {
     /**
-     * @var string Environment (namespace) name.
+     * @var string namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public $EnvironmentId;
 
@@ -59,7 +59,7 @@ class ModifyRocketMQEnvironmentRoleRequest extends AbstractModel
     public $DetailedPerms;
 
     /**
-     * @param string $EnvironmentId Environment (namespace) name.
+     * @param string $EnvironmentId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      * @param string $RoleName Role name.
      * @param array $Permissions Authorization item, which can contain a non-empty character array of up to 2 items including produce and consume.
      * @param string $ClusterId Required field, cluster ID

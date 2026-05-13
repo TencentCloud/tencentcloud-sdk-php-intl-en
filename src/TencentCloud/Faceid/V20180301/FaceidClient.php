@@ -53,7 +53,7 @@ The data generated with the SDK must be stored in COS, and the region of the COS
 This API on the legacy version will continue to serve existing users but will be unavailable to new users. We recommend you use `VideoLivenessCompare` for better service quality.
  * @method Models\MobileNetworkTimeVerificationResponse MobileNetworkTimeVerification(Models\MobileNetworkTimeVerificationRequest $req) This API is used to query the duration of a mobile number. Enter mobile number to query.
  * @method Models\MobileStatusResponse MobileStatus(Models\MobileStatusRequest $req) This API is used to verify phone number status. You can enter mobile number to query.
- * @method Models\PhoneVerificationResponse PhoneVerification(Models\PhoneVerificationRequest $req) This API is used to validate the authenticity and consistency of the mobile number, name, and identity card number. For details on supported mobile number segments, see the <a href="https://www.tencentcloud.com/document/product/1007/46063?from_cn_redirect=1">carrier</a> document.
+ * @method Models\PhoneVerificationResponse PhoneVerification(Models\PhoneVerificationRequest $req) This API is used to validate the authenticity and consistency of the mobile number, name, and identity card number. For details on supported mobile number segments, see the <a href="https://www.tencentcloud.com/document/product/1061/79689">carrier</a> document.
  * @method Models\VideoLivenessCompareResponse VideoLivenessCompare(Models\VideoLivenessCompareRequest $req) This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
  */
 

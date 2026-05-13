@@ -57,6 +57,7 @@ How to Obtain It:</br>
 
     /**
      * @var array Knowledge label, used for search filter in the knowledge base. This field is about to be deactivated. Please use the custom_variables field in the dialogue endpoint API to replace this field.
+     * @deprecated
      */
     public $VisitorLabels;
 

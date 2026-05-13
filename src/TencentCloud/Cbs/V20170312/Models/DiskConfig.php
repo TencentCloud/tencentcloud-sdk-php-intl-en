@@ -22,20 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getAvailable() Obtain Whether the configuration is available.
  * @method void setAvailable(boolean $Available) Set Whether the configuration is available.
- * @method string getDiskChargeType() Obtain Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
- * @method void setDiskChargeType(string $DiskChargeType) Set Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+ * @method string getDiskChargeType() Obtain Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
+ * @method void setDiskChargeType(string $DiskChargeType) Set Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
  * @method string getZone() Obtain The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
  * @method void setZone(string $Zone) Set The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
  * @method string getInstanceFamily() Obtain Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
  * @method void setInstanceFamily(string $InstanceFamily) Set Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
- * @method string getDiskType() Obtain Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
- * @method void setDiskType(string $DiskType) Set Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
- * @method integer getStepSize() Obtain Minimum increment of cloud disk size adjustment in GB.
-Note: This field might return null, indicating that no valid values can be obtained.
- * @method void setStepSize(integer $StepSize) Set Minimum increment of cloud disk size adjustment in GB.
-Note: This field might return null, indicating that no valid values can be obtained.
+ * @method string getDiskType() Obtain Cloud disk media type. valid values: <br>.
+CLOUD_BASIC: specifies the BASIC CLOUD disk.
+CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+CLOUD_SSD: indicates SSD CLOUD disk.
+CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+CLOUD_TSSD: indicates ultra-fast ssd cbs.
+ * @method void setDiskType(string $DiskType) Set Cloud disk media type. valid values: <br>.
+CLOUD_BASIC: specifies the BASIC CLOUD disk.
+CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+CLOUD_SSD: indicates SSD CLOUD disk.
+CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+CLOUD_TSSD: indicates ultra-fast ssd cbs.
+ * @method integer getStepSize() Obtain Specifies the minimum step size for disk size change in GiB.
+ * @method void setStepSize(integer $StepSize) Set Specifies the minimum step size for disk size change in GiB.
  * @method array getExtraPerformanceRange() Obtain Additional performance range.
 Note: This field might return null, indicating that no valid values can be obtained.
  * @method void setExtraPerformanceRange(array $ExtraPerformanceRange) Set Additional performance range.
@@ -44,16 +54,14 @@ Note: This field might return null, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid value was found.
  * @method void setDeviceClass(string $DeviceClass) Set Instance model.
 Note: This field may return null, indicating that no valid value was found.
- * @method string getDiskUsage() Obtain Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
- * @method void setDiskUsage(string $DiskUsage) Set Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
- * @method integer getMinDiskSize() Obtain The minimum configurable cloud disk size (in GB).
- * @method void setMinDiskSize(integer $MinDiskSize) Set The minimum configurable cloud disk size (in GB).
- * @method integer getMaxDiskSize() Obtain The maximum configurable cloud disk size (in GB).
- * @method void setMaxDiskSize(integer $MaxDiskSize) Set The maximum configurable cloud disk size (in GB).
- * @method Price getPrice() Obtain Price of a monthly subscribed or pay-as-you-go cloud disk.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrice(Price $Price) Set Price of a monthly subscribed or pay-as-you-go cloud disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDiskUsage() Obtain Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>.
+ * @method void setDiskUsage(string $DiskUsage) Set Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>.
+ * @method integer getMinDiskSize() Obtain Specifies the minimum configurable cloud disk size in GiB.
+ * @method void setMinDiskSize(integer $MinDiskSize) Set Specifies the minimum configurable cloud disk size in GiB.
+ * @method integer getMaxDiskSize() Obtain Specifies the maximum configurable cloud disk size in GiB.
+ * @method void setMaxDiskSize(integer $MaxDiskSize) Set Specifies the maximum configurable cloud disk size in GiB.
+ * @method Price getPrice() Obtain Price of a prepaid or postpaid cloud disk.
+ * @method void setPrice(Price $Price) Set Price of a prepaid or postpaid cloud disk.
  */
 class DiskConfig extends AbstractModel
 {
@@ -63,7 +71,7 @@ class DiskConfig extends AbstractModel
     public $Available;
 
     /**
-     * @var string Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+     * @var string Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
      */
     public $DiskChargeType;
 
@@ -79,13 +87,18 @@ Note: This field may return null, indicating that no valid value was found.
     public $InstanceFamily;
 
     /**
-     * @var string Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+     * @var string Cloud disk media type. valid values: <br>.
+CLOUD_BASIC: specifies the BASIC CLOUD disk.
+CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+CLOUD_SSD: indicates SSD CLOUD disk.
+CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+CLOUD_TSSD: indicates ultra-fast ssd cbs.
      */
     public $DiskType;
 
     /**
-     * @var integer Minimum increment of cloud disk size adjustment in GB.
-Note: This field might return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the minimum step size for disk size change in GiB.
      */
     public $StepSize;
 
@@ -102,44 +115,47 @@ Note: This field may return null, indicating that no valid value was found.
     public $DeviceClass;
 
     /**
-     * @var string Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+     * @var string Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>.
      */
     public $DiskUsage;
 
     /**
-     * @var integer The minimum configurable cloud disk size (in GB).
+     * @var integer Specifies the minimum configurable cloud disk size in GiB.
      */
     public $MinDiskSize;
 
     /**
-     * @var integer The maximum configurable cloud disk size (in GB).
+     * @var integer Specifies the maximum configurable cloud disk size in GiB.
      */
     public $MaxDiskSize;
 
     /**
-     * @var Price Price of a monthly subscribed or pay-as-you-go cloud disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var Price Price of a prepaid or postpaid cloud disk.
      */
     public $Price;
 
     /**
      * @param boolean $Available Whether the configuration is available.
-     * @param string $DiskChargeType Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+     * @param string $DiskChargeType Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
      * @param string $Zone The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
      * @param string $InstanceFamily Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
-     * @param string $DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-     * @param integer $StepSize Minimum increment of cloud disk size adjustment in GB.
-Note: This field might return null, indicating that no valid values can be obtained.
+     * @param string $DiskType Cloud disk media type. valid values: <br>.
+CLOUD_BASIC: specifies the BASIC CLOUD disk.
+CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+CLOUD_SSD: indicates SSD CLOUD disk.
+CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+CLOUD_TSSD: indicates ultra-fast ssd cbs.
+     * @param integer $StepSize Specifies the minimum step size for disk size change in GiB.
      * @param array $ExtraPerformanceRange Additional performance range.
 Note: This field might return null, indicating that no valid values can be obtained.
      * @param string $DeviceClass Instance model.
 Note: This field may return null, indicating that no valid value was found.
-     * @param string $DiskUsage Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-     * @param integer $MinDiskSize The minimum configurable cloud disk size (in GB).
-     * @param integer $MaxDiskSize The maximum configurable cloud disk size (in GB).
-     * @param Price $Price Price of a monthly subscribed or pay-as-you-go cloud disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DiskUsage Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>.
+     * @param integer $MinDiskSize Specifies the minimum configurable cloud disk size in GiB.
+     * @param integer $MaxDiskSize Specifies the maximum configurable cloud disk size in GiB.
+     * @param Price $Price Price of a prepaid or postpaid cloud disk.
      */
     function __construct()
     {

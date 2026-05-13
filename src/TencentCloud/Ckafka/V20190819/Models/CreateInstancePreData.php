@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Data returned by the `CreateInstancePre` API.
  *
- * @method integer getFlowId() Obtain CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
- * @method void setFlowId(integer $FlowId) Set CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
- * @method array getDealNames() Obtain Order ID list
- * @method void setDealNames(array $DealNames) Set Order ID list
- * @method string getInstanceId() Obtain The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
- * @method array getDealNameInstanceIdMapping() Obtain Order and purchase mapping list corresponding to the instance.
- * @method void setDealNameInstanceIdMapping(array $DealNameInstanceIdMapping) Set Order and purchase mapping list corresponding to the instance.
+ * @method integer getFlowId() Obtain <p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p>
+ * @method void setFlowId(integer $FlowId) Set <p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p>
+ * @method array getDealNames() Obtain <p>Order number list</p>
+ * @method void setDealNames(array $DealNames) Set <p>Order number list</p>
+ * @method string getInstanceId() Obtain <p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p>
+ * @method array getDealNameInstanceIdMapping() Obtain <p>Order and purchase mapping list corresponding to the instance</p>
+ * @method void setDealNameInstanceIdMapping(array $DealNameInstanceIdMapping) Set <p>Order and purchase mapping list corresponding to the instance</p>
+ * @method string getEventId() Obtain <p>Event ID returned by CAM authentication</p>
+ * @method void setEventId(string $EventId) Set <p>Event ID returned by CAM authentication</p>
  */
 class CreateInstancePreData extends AbstractModel
 {
     /**
-     * @var integer CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
+     * @var integer <p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p>
      */
     public $FlowId;
 
     /**
-     * @var array Order ID list
+     * @var array <p>Order number list</p>
      */
     public $DealNames;
 
     /**
-     * @var string The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
+     * @var string <p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p>
      */
     public $InstanceId;
 
     /**
-     * @var array Order and purchase mapping list corresponding to the instance.
+     * @var array <p>Order and purchase mapping list corresponding to the instance</p>
      */
     public $DealNameInstanceIdMapping;
 
     /**
-     * @param integer $FlowId CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
-     * @param array $DealNames Order ID list
-     * @param string $InstanceId The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
-     * @param array $DealNameInstanceIdMapping Order and purchase mapping list corresponding to the instance.
+     * @var string <p>Event ID returned by CAM authentication</p>
+     */
+    public $EventId;
+
+    /**
+     * @param integer $FlowId <p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p>
+     * @param array $DealNames <p>Order number list</p>
+     * @param string $InstanceId <p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p>
+     * @param array $DealNameInstanceIdMapping <p>Order and purchase mapping list corresponding to the instance</p>
+     * @param string $EventId <p>Event ID returned by CAM authentication</p>
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class CreateInstancePreData extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DealNameInstanceIdMapping, $obj);
             }
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
         }
     }
 }

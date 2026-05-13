@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubBizType(string $SubBizType) Set Sub-business type.
  * @method array getAppBizIds() Obtain Application ID list.
  * @method void setAppBizIds(array $AppBizIds) Set Application ID list.
+ * @method string getSpaceId() Obtain Space ID
+ * @method void setSpaceId(string $SpaceId) Set Space ID
+ * @method integer getStatStartTime() Obtain Start timestamp, unit: seconds
+ * @method void setStatStartTime(integer $StatStartTime) Set Start timestamp, unit: seconds
+ * @method integer getStatEndTime() Obtain End timestamp, unit: seconds
+ * @method void setStatEndTime(integer $StatEndTime) Set End timestamp, unit: seconds
  */
 class DescribeConcurrencyUsageGraphRequest extends AbstractModel
 {
@@ -80,6 +86,21 @@ class DescribeConcurrencyUsageGraphRequest extends AbstractModel
     public $AppBizIds;
 
     /**
+     * @var string Space ID
+     */
+    public $SpaceId;
+
+    /**
+     * @var integer Start timestamp, unit: seconds
+     */
+    public $StatStartTime;
+
+    /**
+     * @var integer End timestamp, unit: seconds
+     */
+    public $StatEndTime;
+
+    /**
      * @param string $ModelName Model identifier.
      * @param string $StartTime Start timestamp, in seconds.
      * @param string $EndTime End timestamp, in seconds.
@@ -88,6 +109,9 @@ class DescribeConcurrencyUsageGraphRequest extends AbstractModel
      * @param string $LoginSubAccountUin Login to user's sub-account (required in integrator mode).
      * @param string $SubBizType Sub-business type.
      * @param array $AppBizIds Application ID list.
+     * @param string $SpaceId Space ID
+     * @param integer $StatStartTime Start timestamp, unit: seconds
+     * @param integer $StatEndTime End timestamp, unit: seconds
      */
     function __construct()
     {
@@ -132,6 +156,18 @@ class DescribeConcurrencyUsageGraphRequest extends AbstractModel
 
         if (array_key_exists("AppBizIds",$param) and $param["AppBizIds"] !== null) {
             $this->AppBizIds = $param["AppBizIds"];
+        }
+
+        if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
+            $this->SpaceId = $param["SpaceId"];
+        }
+
+        if (array_key_exists("StatStartTime",$param) and $param["StatStartTime"] !== null) {
+            $this->StatStartTime = $param["StatStartTime"];
+        }
+
+        if (array_key_exists("StatEndTime",$param) and $param["StatEndTime"] !== null) {
+            $this->StatEndTime = $param["StatEndTime"];
         }
     }
 }

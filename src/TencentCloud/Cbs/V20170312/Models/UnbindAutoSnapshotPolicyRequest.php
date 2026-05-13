@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UnbindAutoSnapshotPolicy request structure.
  *
- * @method array getDiskIds() Obtain List of cloud disk IDs scheduled snapshot policy to be unbound from.
- * @method void setDiskIds(array $DiskIds) Set List of cloud disk IDs scheduled snapshot policy to be unbound from.
  * @method string getAutoSnapshotPolicyId() Obtain ID of scheduled snapshot policy to be unbound.
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set ID of scheduled snapshot policy to be unbound.
+ * @method array getDiskIds() Obtain ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required.
+ * @method void setDiskIds(array $DiskIds) Set ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required.
+ * @method array getInstanceIds() Obtain Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input.
  */
 class UnbindAutoSnapshotPolicyRequest extends AbstractModel
 {
-    /**
-     * @var array List of cloud disk IDs scheduled snapshot policy to be unbound from.
-     */
-    public $DiskIds;
-
     /**
      * @var string ID of scheduled snapshot policy to be unbound.
      */
     public $AutoSnapshotPolicyId;
 
     /**
-     * @param array $DiskIds List of cloud disk IDs scheduled snapshot policy to be unbound from.
+     * @var array ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required.
+     */
+    public $DiskIds;
+
+    /**
+     * @var array Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input.
+     */
+    public $InstanceIds;
+
+    /**
      * @param string $AutoSnapshotPolicyId ID of scheduled snapshot policy to be unbound.
+     * @param array $DiskIds ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required.
+     * @param array $InstanceIds Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input.
      */
     function __construct()
     {
@@ -54,12 +62,16 @@ class UnbindAutoSnapshotPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AutoSnapshotPolicyId",$param) and $param["AutoSnapshotPolicyId"] !== null) {
+            $this->AutoSnapshotPolicyId = $param["AutoSnapshotPolicyId"];
+        }
+
         if (array_key_exists("DiskIds",$param) and $param["DiskIds"] !== null) {
             $this->DiskIds = $param["DiskIds"];
         }
 
-        if (array_key_exists("AutoSnapshotPolicyId",$param) and $param["AutoSnapshotPolicyId"] !== null) {
-            $this->AutoSnapshotPolicyId = $param["AutoSnapshotPolicyId"];
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
         }
     }
 }

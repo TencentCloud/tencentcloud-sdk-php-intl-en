@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getNamespaceId() Obtain Specifies the namespace name.
- * @method void setNamespaceId(string $NamespaceId) Set Specifies the namespace name.
+ * @method string getNamespaceId() Obtain Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) Set Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
  * @method string getGroupId() Obtain Consumer group name.
  * @method void setGroupId(string $GroupId) Set Consumer group name.
  * @method integer getOffset() Obtain Offset.
@@ -39,7 +39,7 @@ class DescribeRocketMQTopicsByGroupRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Specifies the namespace name.
+     * @var string Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public $NamespaceId;
 
@@ -60,7 +60,7 @@ class DescribeRocketMQTopicsByGroupRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $NamespaceId Specifies the namespace name.
+     * @param string $NamespaceId Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
      * @param string $GroupId Consumer group name.
      * @param integer $Offset Offset.
      * @param integer $Limit Limit of Items

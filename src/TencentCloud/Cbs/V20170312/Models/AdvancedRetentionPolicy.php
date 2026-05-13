@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Retention policy for scheduled snapshots. All four parameters are required.
  *
- * @method integer getDays() Obtain Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDays(integer $Days) Set Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getWeeks() Obtain Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWeeks(integer $Weeks) Set Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMonths() Obtain Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMonths(integer $Months) Set Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getYears() Obtain Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setYears(integer $Years) Set Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDays() Obtain Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100].
+ * @method void setDays(integer $Days) Set Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100].
+ * @method integer getWeeks() Obtain Reserve the latest snapshot of each week for Weeks. value range: [0, 100].
+ * @method void setWeeks(integer $Weeks) Set Reserve the latest snapshot of each week for Weeks. value range: [0, 100].
+ * @method integer getMonths() Obtain Reserve the latest snapshot of each month within Months Months. value range: [0, 100].
+ * @method void setMonths(integer $Months) Set Reserve the latest snapshot of each month within Months Months. value range: [0, 100].
+ * @method integer getYears() Obtain Reserve the latest snapshot of each year within Years Years. value range: [0, 100].
+ * @method void setYears(integer $Years) Set Reserve the latest snapshot of each year within Years Years. value range: [0, 100].
  */
 class AdvancedRetentionPolicy extends AbstractModel
 {
     /**
-     * @var integer Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100].
      */
     public $Days;
 
     /**
-     * @var integer Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Reserve the latest snapshot of each week for Weeks. value range: [0, 100].
      */
     public $Weeks;
 
     /**
-     * @var integer Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Reserve the latest snapshot of each month within Months Months. value range: [0, 100].
      */
     public $Months;
 
     /**
-     * @var integer Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Reserve the latest snapshot of each year within Years Years. value range: [0, 100].
      */
     public $Years;
 
     /**
-     * @param integer $Days Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Weeks Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Months Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Years Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Days Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100].
+     * @param integer $Weeks Reserve the latest snapshot of each week for Weeks. value range: [0, 100].
+     * @param integer $Months Reserve the latest snapshot of each month within Months Months. value range: [0, 100].
+     * @param integer $Years Reserve the latest snapshot of each year within Years Years. value range: [0, 100].
      */
     function __construct()
     {

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FetchMessageListByOffset request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
- * @method string getTopic() Obtain Topic name
- * @method void setTopic(string $Topic) Set Topic name
- * @method integer getPartition() Obtain Partition ID
- * @method void setPartition(integer $Partition) Set Partition ID
- * @method integer getOffset() Obtain Offset information
- * @method void setOffset(integer $Offset) Set Offset information
- * @method integer getSinglePartitionRecordNumber() Obtain The maximum number of messages that can be queried. Default value: 20. Maximum value: 20.
- * @method void setSinglePartitionRecordNumber(integer $SinglePartitionRecordNumber) Set The maximum number of messages that can be queried. Default value: 20. Maximum value: 20.
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method string getTopic() Obtain <p>Topic name</p>
+ * @method void setTopic(string $Topic) Set <p>Topic name</p>
+ * @method integer getPartition() Obtain <p>Partition id</p>
+ * @method void setPartition(integer $Partition) Set <p>Partition id</p>
+ * @method integer getOffset() Obtain <p>Location info</p>
+ * @method void setOffset(integer $Offset) Set <p>Location info</p>
+ * @method integer getSinglePartitionRecordNumber() Obtain <p>Maximum number of query results. Default value: 20. Maximum value: 20.</p>
+ * @method void setSinglePartitionRecordNumber(integer $SinglePartitionRecordNumber) Set <p>Maximum number of query results. Default value: 20. Maximum value: 20.</p>
  */
 class FetchMessageListByOffsetRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id.
+     * @var string <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string Topic name
+     * @var string <p>Topic name</p>
      */
     public $Topic;
 
     /**
-     * @var integer Partition ID
+     * @var integer <p>Partition id</p>
      */
     public $Partition;
 
     /**
-     * @var integer Offset information
+     * @var integer <p>Location info</p>
      */
     public $Offset;
 
     /**
-     * @var integer The maximum number of messages that can be queried. Default value: 20. Maximum value: 20.
+     * @var integer <p>Maximum number of query results. Default value: 20. Maximum value: 20.</p>
      */
     public $SinglePartitionRecordNumber;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id.
-     * @param string $Topic Topic name
-     * @param integer $Partition Partition ID
-     * @param integer $Offset Offset information
-     * @param integer $SinglePartitionRecordNumber The maximum number of messages that can be queried. Default value: 20. Maximum value: 20.
+     * @param string $InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param string $Topic <p>Topic name</p>
+     * @param integer $Partition <p>Partition id</p>
+     * @param integer $Offset <p>Location info</p>
+     * @param integer $SinglePartitionRecordNumber <p>Maximum number of query results. Default value: 20. Maximum value: 20.</p>
      */
     function __construct()
     {

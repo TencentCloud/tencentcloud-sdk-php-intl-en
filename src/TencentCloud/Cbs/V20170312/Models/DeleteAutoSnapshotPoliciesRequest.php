@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAutoSnapshotPolicies request structure.
  *
- * @method array getAutoSnapshotPolicyIds() Obtain List of scheduled snapshot policy IDs to be deleted.
- * @method void setAutoSnapshotPolicyIds(array $AutoSnapshotPolicyIds) Set List of scheduled snapshot policy IDs to be deleted.
+ * @method array getAutoSnapshotPolicyIds() Obtain Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
+ * @method void setAutoSnapshotPolicyIds(array $AutoSnapshotPolicyIds) Set Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
  */
 class DeleteAutoSnapshotPoliciesRequest extends AbstractModel
 {
     /**
-     * @var array List of scheduled snapshot policy IDs to be deleted.
+     * @var array Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
      */
     public $AutoSnapshotPolicyIds;
 
     /**
-     * @param array $AutoSnapshotPolicyIds List of scheduled snapshot policy IDs to be deleted.
+     * @param array $AutoSnapshotPolicyIds Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
      */
     function __construct()
     {

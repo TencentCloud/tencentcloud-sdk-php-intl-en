@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDiskBackups request structure.
  *
- * @method array getDiskBackupIds() Obtain ID of the cloud disk backup point to be deleted.
- * @method void setDiskBackupIds(array $DiskBackupIds) Set ID of the cloud disk backup point to be deleted.
+ * @method array getDiskBackupIds() Obtain Cloud disk backup point ID to be deleted. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
+ * @method void setDiskBackupIds(array $DiskBackupIds) Set Cloud disk backup point ID to be deleted. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
  */
 class DeleteDiskBackupsRequest extends AbstractModel
 {
     /**
-     * @var array ID of the cloud disk backup point to be deleted.
+     * @var array Cloud disk backup point ID to be deleted. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
      */
     public $DiskBackupIds;
 
     /**
-     * @param array $DiskBackupIds ID of the cloud disk backup point to be deleted.
+     * @param array $DiskBackupIds Cloud disk backup point ID to be deleted. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
      */
     function __construct()
     {

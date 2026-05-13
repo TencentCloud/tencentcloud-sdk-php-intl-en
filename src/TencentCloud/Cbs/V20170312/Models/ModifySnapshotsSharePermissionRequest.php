@@ -20,17 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySnapshotsSharePermission request structure.
  *
- * @method array getAccountIds() Obtain List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
- * @method void setAccountIds(array $AccountIds) Set List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
- * @method string getPermission() Obtain Operations. Valid values: `SHARE`, sharing an image; `CANCEL`, cancelling the sharing of an image.
- * @method void setPermission(string $Permission) Set Operations. Valid values: `SHARE`, sharing an image; `CANCEL`, cancelling the sharing of an image.
  * @method array getSnapshotIds() Obtain The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
  * @method void setSnapshotIds(array $SnapshotIds) Set The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+ * @method array getAccountIds() Obtain Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer).
+ * @method void setAccountIds(array $AccountIds) Set Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer).
+ * @method string getPermission() Obtain Operations. Valid values: `SHARE`, sharing an image; `CANCEL`, cancelling the sharing of an image.
+ * @method void setPermission(string $Permission) Set Operations. Valid values: `SHARE`, sharing an image; `CANCEL`, cancelling the sharing of an image.
  */
 class ModifySnapshotsSharePermissionRequest extends AbstractModel
 {
     /**
-     * @var array List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
+     * @var array The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+     */
+    public $SnapshotIds;
+
+    /**
+     * @var array Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer).
      */
     public $AccountIds;
 
@@ -40,14 +45,9 @@ class ModifySnapshotsSharePermissionRequest extends AbstractModel
     public $Permission;
 
     /**
-     * @var array The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
-     */
-    public $SnapshotIds;
-
-    /**
-     * @param array $AccountIds List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
-     * @param string $Permission Operations. Valid values: `SHARE`, sharing an image; `CANCEL`, cancelling the sharing of an image.
      * @param array $SnapshotIds The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+     * @param array $AccountIds Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer).
+     * @param string $Permission Operations. Valid values: `SHARE`, sharing an image; `CANCEL`, cancelling the sharing of an image.
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class ModifySnapshotsSharePermissionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SnapshotIds",$param) and $param["SnapshotIds"] !== null) {
+            $this->SnapshotIds = $param["SnapshotIds"];
+        }
+
         if (array_key_exists("AccountIds",$param) and $param["AccountIds"] !== null) {
             $this->AccountIds = $param["AccountIds"];
         }
 
         if (array_key_exists("Permission",$param) and $param["Permission"] !== null) {
             $this->Permission = $param["Permission"];
-        }
-
-        if (array_key_exists("SnapshotIds",$param) and $param["SnapshotIds"] !== null) {
-            $this->SnapshotIds = $param["SnapshotIds"];
         }
     }
 }

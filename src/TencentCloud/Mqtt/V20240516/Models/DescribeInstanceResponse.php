@@ -20,270 +20,263 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstance response structure.
  *
- * @method string getInstanceType() Obtain Instance type
-BASIC: basic edition.
-PRO edition.
-PLATINUM edition.
- * @method void setInstanceType(string $InstanceType) Set Instance type
-BASIC: basic edition.
-PRO edition.
-PLATINUM edition.
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method integer getTopicNum() Obtain Number of topics
- * @method void setTopicNum(integer $TopicNum) Set Number of topics
- * @method integer getTopicNumLimit() Obtain Maximum number of topics per instance
- * @method void setTopicNumLimit(integer $TopicNumLimit) Set Maximum number of topics per instance
- * @method integer getTpsLimit() Obtain TPS throttle value
- * @method void setTpsLimit(integer $TpsLimit) Set TPS throttle value
- * @method integer getCreatedTime() Obtain Creation time, in seconds
- * @method void setCreatedTime(integer $CreatedTime) Set Creation time, in seconds
- * @method string getRemark() Obtain Remarks
- * @method void setRemark(string $Remark) Set Remarks
- * @method string getInstanceStatus() Obtain Instance status. RUNNING: running; MAINTAINING: maintaining; ABNORMAL: abnormal; OVERDUE: in arrears; DESTROYED: deleted; CREATING: creating; MODIFYING: adjusting the configuration; CREATE_FAILURE: creation failed; MODIFY_FAILURE: configuration adjustment failed; DELETING: deleting.
- * @method void setInstanceStatus(string $InstanceStatus) Set Instance status. RUNNING: running; MAINTAINING: maintaining; ABNORMAL: abnormal; OVERDUE: in arrears; DESTROYED: deleted; CREATING: creating; MODIFYING: adjusting the configuration; CREATE_FAILURE: creation failed; MODIFY_FAILURE: configuration adjustment failed; DELETING: deleting.
- * @method string getSkuCode() Obtain Specifies the instance specification.
- * @method void setSkuCode(string $SkuCode) Set Specifies the instance specification.
- * @method integer getMaxSubscriptionPerClient() Obtain Maximum number of subscriptions for a single client.
- * @method void setMaxSubscriptionPerClient(integer $MaxSubscriptionPerClient) Set Maximum number of subscriptions for a single client.
- * @method integer getAuthorizationPolicyLimit() Obtain Number of authorization rules.
- * @method void setAuthorizationPolicyLimit(integer $AuthorizationPolicyLimit) Set Number of authorization rules.
- * @method integer getClientNumLimit() Obtain Maximum number of clients.
- * @method void setClientNumLimit(integer $ClientNumLimit) Set Maximum number of clients.
- * @method string getDeviceCertificateProvisionType() Obtain Specifies the registration method for the client certificate.
-JITP: automatically register.
-API: register manually through api.
- * @method void setDeviceCertificateProvisionType(string $DeviceCertificateProvisionType) Set Specifies the registration method for the client certificate.
-JITP: automatically register.
-API: register manually through api.
- * @method boolean getAutomaticActivation() Obtain Specifies whether to automatically activate the device certificate during automatic registration.
- * @method void setAutomaticActivation(boolean $AutomaticActivation) Set Specifies whether to automatically activate the device certificate during automatic registration.
- * @method integer getRenewFlag() Obtain Whether the instance is automatically renewed. this parameter is valid only for monthly subscription clusters. valid values: 1 (auto-renewal), 0 (non-automatic renewal).
- * @method void setRenewFlag(integer $RenewFlag) Set Whether the instance is automatically renewed. this parameter is valid only for monthly subscription clusters. valid values: 1 (auto-renewal), 0 (non-automatic renewal).
- * @method string getPayMode() Obtain Billing mode. POSTPAID: pay-as-you-go billing. PREPAID: monthly subscription.
- * @method void setPayMode(string $PayMode) Set Billing mode. POSTPAID: pay-as-you-go billing. PREPAID: monthly subscription.
- * @method integer getExpiryTime() Obtain Expiry time. millisecond-level timestamp.
- * @method void setExpiryTime(integer $ExpiryTime) Set Expiry time. millisecond-level timestamp.
- * @method integer getDestroyTime() Obtain Scheduled destruction time. millisecond-level timestamp.
- * @method void setDestroyTime(integer $DestroyTime) Set Scheduled destruction time. millisecond-level timestamp.
- * @method string getX509Mode() Obtain TLS, one-way authentication. mTLS, mutual authentication. BYOC, one certificate per device.
- * @method void setX509Mode(string $X509Mode) Set TLS, one-way authentication. mTLS, mutual authentication. BYOC, one certificate per device.
- * @method integer getMaxCaNum() Obtain Specifies the maximum Ca quota.
- * @method void setMaxCaNum(integer $MaxCaNum) Set Specifies the maximum Ca quota.
- * @method string getRegistrationCode() Obtain FPS cert registration code.
- * @method void setRegistrationCode(string $RegistrationCode) Set FPS cert registration code.
- * @method integer getMaxSubscription() Obtain Maximum number of subscriptions for a cluster.
- * @method void setMaxSubscription(integer $MaxSubscription) Set Maximum number of subscriptions for a cluster.
- * @method boolean getAuthorizationPolicy() Obtain Authorization policy switch.
- * @method void setAuthorizationPolicy(boolean $AuthorizationPolicy) Set Authorization policy switch.
- * @method integer getSharedSubscriptionGroupLimit() Obtain Maximum limit of shared subscription groups.
- * @method void setSharedSubscriptionGroupLimit(integer $SharedSubscriptionGroupLimit) Set Maximum limit of shared subscription groups.
- * @method integer getMaxTopicFilterPerSharedSubscriptionGroup() Obtain Specifies the topic filter number limit for each shared subscription group.
- * @method void setMaxTopicFilterPerSharedSubscriptionGroup(integer $MaxTopicFilterPerSharedSubscriptionGroup) Set Specifies the topic filter number limit for each shared subscription group.
- * @method integer getAutoSubscriptionPolicyLimit() Obtain Specifies the limit on number of auto-subscription rules.
- * @method void setAutoSubscriptionPolicyLimit(integer $AutoSubscriptionPolicyLimit) Set Specifies the limit on number of auto-subscription rules.
- * @method integer getMaxTopicFilterPerAutoSubscriptionPolicy() Obtain Specifies the number limit of TopicFilter in a single auto-subscription rule.
- * @method void setMaxTopicFilterPerAutoSubscriptionPolicy(integer $MaxTopicFilterPerAutoSubscriptionPolicy) Set Specifies the number limit of TopicFilter in a single auto-subscription rule.
- * @method boolean getUseDefaultServerCert() Obtain Specifies whether to use the default server certificate.
- * @method void setUseDefaultServerCert(boolean $UseDefaultServerCert) Set Specifies whether to use the default server certificate.
- * @method integer getTrustedCaLimit() Obtain Maximum allowed number of server cas.
- * @method void setTrustedCaLimit(integer $TrustedCaLimit) Set Maximum allowed number of server cas.
- * @method integer getServerCertLimit() Obtain Specifies the maximum allowed number of server certificates.
- * @method void setServerCertLimit(integer $ServerCertLimit) Set Specifies the maximum allowed number of server certificates.
- * @method integer getTopicPrefixSlashLimit() Obtain Specifies the max level of the topic prefix.
- * @method void setTopicPrefixSlashLimit(integer $TopicPrefixSlashLimit) Set Specifies the max level of the topic prefix.
- * @method integer getMessageRate() Obtain Specifies the speed limit for sending messages by a single client in messages per second.
- * @method void setMessageRate(integer $MessageRate) Set Specifies the speed limit for sending messages by a single client in messages per second.
- * @method string getTransportLayerSecurity() Obtain Specifies the protocols supported by the server tls, separated by ",". example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1.
- * @method void setTransportLayerSecurity(string $TransportLayerSecurity) Set Specifies the protocols supported by the server tls, separated by ",". example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1.
- * @method integer getMessageEnrichmentRuleLimit() Obtain Specifies the message property enrichment rule quota.
- * @method void setMessageEnrichmentRuleLimit(integer $MessageEnrichmentRuleLimit) Set Specifies the message property enrichment rule quota.
+ * @method string getInstanceType() Obtain <p>Instance type<br>BASIC Basic version<br>PRO Professional Edition<br>PLATINUM Platinum version</p>
+ * @method void setInstanceType(string $InstanceType) Set <p>Instance type<br>BASIC Basic version<br>PRO Professional Edition<br>PLATINUM Platinum version</p>
+ * @method string getInstanceId() Obtain <p>Instance ID</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID</p>
+ * @method string getInstanceName() Obtain <p>Instance name</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
+ * @method integer getTopicNum() Obtain <p>Number of topics</p>
+ * @method void setTopicNum(integer $TopicNum) Set <p>Number of topics</p>
+ * @method integer getTopicNumLimit() Obtain <p>Maximum number of topics per instance</p>
+ * @method void setTopicNumLimit(integer $TopicNumLimit) Set <p>Maximum number of topics per instance</p>
+ * @method integer getTpsLimit() Obtain <p>TPS throttle value</p>
+ * @method void setTpsLimit(integer $TpsLimit) Set <p>TPS throttle value</p>
+ * @method integer getCreatedTime() Obtain <p>createTime, in seconds</p>
+ * @method void setCreatedTime(integer $CreatedTime) Set <p>createTime, in seconds</p>
+ * @method string getRemark() Obtain <p>Remarks</p>
+ * @method void setRemark(string $Remark) Set <p>Remarks</p>
+ * @method string getInstanceStatus() Obtain <p>Instance status, RUNNING, running MAINTAINING, maintaining ABNORMAL, abnormal OVERDUE, arrears DESTROYED, deleted CREATING, creating MODIFYING, modifying CREATE_FAILURE, creation failure MODIFY_FAILURE, configuration change failed DELETING, deleting</p>
+ * @method void setInstanceStatus(string $InstanceStatus) Set <p>Instance status, RUNNING, running MAINTAINING, maintaining ABNORMAL, abnormal OVERDUE, arrears DESTROYED, deleted CREATING, creating MODIFYING, modifying CREATE_FAILURE, creation failure MODIFY_FAILURE, configuration change failed DELETING, deleting</p>
+ * @method string getSkuCode() Obtain <p>Instance specification</p>
+ * @method void setSkuCode(string $SkuCode) Set <p>Instance specification</p>
+ * @method integer getMaxSubscriptionPerClient() Obtain <p>Maximum number of subscriptions for a single client</p>
+ * @method void setMaxSubscriptionPerClient(integer $MaxSubscriptionPerClient) Set <p>Maximum number of subscriptions for a single client</p>
+ * @method integer getAuthorizationPolicyLimit() Obtain <p>Number of authorization rule entries</p>
+ * @method void setAuthorizationPolicyLimit(integer $AuthorizationPolicyLimit) Set <p>Number of authorization rule entries</p>
+ * @method integer getClientNumLimit() Obtain <p>Number of clients cap</p>
+ * @method void setClientNumLimit(integer $ClientNumLimit) Set <p>Number of clients cap</p>
+ * @method string getDeviceCertificateProvisionType() Obtain <p>Client certificate registration method:<br>JITP: Automatic sign-up<br>API: Manually register through API</p>
+ * @method void setDeviceCertificateProvisionType(string $DeviceCertificateProvisionType) Set <p>Client certificate registration method:<br>JITP: Automatic sign-up<br>API: Manually register through API</p>
+ * @method boolean getAutomaticActivation() Obtain <p>Whether to automatically activate when automatically registering a device certificate</p>
+ * @method void setAutomaticActivation(boolean $AutomaticActivation) Set <p>Whether to automatically activate when automatically registering a device certificate</p>
+ * @method integer getRenewFlag() Obtain <p>Whether it is automatically renewed. Only applicable to monthly subscription clusters. 1: Automatic renewal 0: Non-automatic renewal</p>
+ * @method void setRenewFlag(integer $RenewFlag) Set <p>Whether it is automatically renewed. Only applicable to monthly subscription clusters. 1: Automatic renewal 0: Non-automatic renewal</p>
+ * @method string getPayMode() Obtain <p>Billing mode, POSTPAID, pay-as-you-go PREPAID, annual/monthly subscription</p>
+ * @method void setPayMode(string $PayMode) Set <p>Billing mode, POSTPAID, pay-as-you-go PREPAID, annual/monthly subscription</p>
+ * @method integer getExpiryTime() Obtain <p>Expiry time, millisecond-level timestamp</p>
+ * @method void setExpiryTime(integer $ExpiryTime) Set <p>Expiry time, millisecond-level timestamp</p>
+ * @method integer getDestroyTime() Obtain <p>Predestruction time, millisecond-level timestamp</p>
+ * @method void setDestroyTime(integer $DestroyTime) Set <p>Predestruction time, millisecond-level timestamp</p>
+ * @method string getX509Mode() Obtain <p>TLS, one-way authentication    mTLS, mutual authentication    BYOC; one certificate per device</p>
+ * @method void setX509Mode(string $X509Mode) Set <p>TLS, one-way authentication    mTLS, mutual authentication    BYOC; one certificate per device</p>
+ * @method integer getMaxCaNum() Obtain <p>Maximum Ca quota</p>
+ * @method void setMaxCaNum(integer $MaxCaNum) Set <p>Maximum Ca quota</p>
+ * @method string getRegistrationCode() Obtain <p>FPS Cert Registration Code</p>
+ * @method void setRegistrationCode(string $RegistrationCode) Set <p>FPS Cert Registration Code</p>
+ * @method integer getMaxSubscription() Obtain <p>Maximum number of subscriptions for a cluster</p>
+ * @method void setMaxSubscription(integer $MaxSubscription) Set <p>Maximum number of subscriptions for a cluster</p>
+ * @method boolean getAuthorizationPolicy() Obtain <p>Authorization policy switch</p>
+ * @method void setAuthorizationPolicy(boolean $AuthorizationPolicy) Set <p>Authorization policy switch</p>
+ * @method integer getSharedSubscriptionGroupLimit() Obtain <p>Maximum limit of shared subscription groups</p>
+ * @method void setSharedSubscriptionGroupLimit(integer $SharedSubscriptionGroupLimit) Set <p>Maximum limit of shared subscription groups</p>
+ * @method integer getMaxTopicFilterPerSharedSubscriptionGroup() Obtain <p>Number limit of TopicFilter in one shared subscription group</p>
+ * @method void setMaxTopicFilterPerSharedSubscriptionGroup(integer $MaxTopicFilterPerSharedSubscriptionGroup) Set <p>Number limit of TopicFilter in one shared subscription group</p>
+ * @method integer getAutoSubscriptionPolicyLimit() Obtain <p>Limit on number of auto subscription rules</p>
+ * @method void setAutoSubscriptionPolicyLimit(integer $AutoSubscriptionPolicyLimit) Set <p>Limit on number of auto subscription rules</p>
+ * @method integer getMaxTopicFilterPerAutoSubscriptionPolicy() Obtain <p>Number limit of TopicFilter in a single auto subscription rule</p>
+ * @method void setMaxTopicFilterPerAutoSubscriptionPolicy(integer $MaxTopicFilterPerAutoSubscriptionPolicy) Set <p>Number limit of TopicFilter in a single auto subscription rule</p>
+ * @method boolean getUseDefaultServerCert() Obtain <p>Whether to use the default server certificate</p>
+ * @method void setUseDefaultServerCert(boolean $UseDefaultServerCert) Set <p>Whether to use the default server certificate</p>
+ * @method integer getTrustedCaLimit() Obtain <p>Maximum number of server CAs</p>
+ * @method void setTrustedCaLimit(integer $TrustedCaLimit) Set <p>Maximum number of server CAs</p>
+ * @method integer getServerCertLimit() Obtain <p>Maximum number of server certificates</p>
+ * @method void setServerCertLimit(integer $ServerCertLimit) Set <p>Maximum number of server certificates</p>
+ * @method integer getTopicPrefixSlashLimit() Obtain <p>Max level of topic prefix</p>
+ * @method void setTopicPrefixSlashLimit(integer $TopicPrefixSlashLimit) Set <p>Max level of topic prefix</p>
+ * @method integer getMessageRate() Obtain <p>Single client send message rate limiting, unit messages/second</p>
+ * @method void setMessageRate(integer $MessageRate) Set <p>Single client send message rate limiting, unit messages/second</p>
+ * @method string getTransportLayerSecurity() Obtain <p>Server-side tls supported protocols, separated by ",". Example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
+ * @method void setTransportLayerSecurity(string $TransportLayerSecurity) Set <p>Server-side tls supported protocols, separated by ",". Example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
+ * @method integer getMessageEnrichmentRuleLimit() Obtain <p>Message property enhancement rule quota</p>
+ * @method void setMessageEnrichmentRuleLimit(integer $MessageEnrichmentRuleLimit) Set <p>Message property enhancement rule quota</p>
+ * @method integer getBlockRuleLimit() Obtain <p>Maximum allowed number of blocking rules</p>
+ * @method void setBlockRuleLimit(integer $BlockRuleLimit) Set <p>Maximum allowed number of blocking rules</p>
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeInstanceResponse extends AbstractModel
 {
     /**
-     * @var string Instance type
-BASIC: basic edition.
-PRO edition.
-PLATINUM edition.
+     * @var string <p>Instance type<br>BASIC Basic version<br>PRO Professional Edition<br>PLATINUM Platinum version</p>
      */
     public $InstanceType;
 
     /**
-     * @var string Instance ID.
+     * @var string <p>Instance ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string <p>Instance name</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer Number of topics
+     * @var integer <p>Number of topics</p>
      */
     public $TopicNum;
 
     /**
-     * @var integer Maximum number of topics per instance
+     * @var integer <p>Maximum number of topics per instance</p>
      */
     public $TopicNumLimit;
 
     /**
-     * @var integer TPS throttle value
+     * @var integer <p>TPS throttle value</p>
      */
     public $TpsLimit;
 
     /**
-     * @var integer Creation time, in seconds
+     * @var integer <p>createTime, in seconds</p>
      */
     public $CreatedTime;
 
     /**
-     * @var string Remarks
+     * @var string <p>Remarks</p>
      */
     public $Remark;
 
     /**
-     * @var string Instance status. RUNNING: running; MAINTAINING: maintaining; ABNORMAL: abnormal; OVERDUE: in arrears; DESTROYED: deleted; CREATING: creating; MODIFYING: adjusting the configuration; CREATE_FAILURE: creation failed; MODIFY_FAILURE: configuration adjustment failed; DELETING: deleting.
+     * @var string <p>Instance status, RUNNING, running MAINTAINING, maintaining ABNORMAL, abnormal OVERDUE, arrears DESTROYED, deleted CREATING, creating MODIFYING, modifying CREATE_FAILURE, creation failure MODIFY_FAILURE, configuration change failed DELETING, deleting</p>
      */
     public $InstanceStatus;
 
     /**
-     * @var string Specifies the instance specification.
+     * @var string <p>Instance specification</p>
      */
     public $SkuCode;
 
     /**
-     * @var integer Maximum number of subscriptions for a single client.
+     * @var integer <p>Maximum number of subscriptions for a single client</p>
      */
     public $MaxSubscriptionPerClient;
 
     /**
-     * @var integer Number of authorization rules.
+     * @var integer <p>Number of authorization rule entries</p>
      */
     public $AuthorizationPolicyLimit;
 
     /**
-     * @var integer Maximum number of clients.
+     * @var integer <p>Number of clients cap</p>
      */
     public $ClientNumLimit;
 
     /**
-     * @var string Specifies the registration method for the client certificate.
-JITP: automatically register.
-API: register manually through api.
+     * @var string <p>Client certificate registration method:<br>JITP: Automatic sign-up<br>API: Manually register through API</p>
      */
     public $DeviceCertificateProvisionType;
 
     /**
-     * @var boolean Specifies whether to automatically activate the device certificate during automatic registration.
+     * @var boolean <p>Whether to automatically activate when automatically registering a device certificate</p>
      */
     public $AutomaticActivation;
 
     /**
-     * @var integer Whether the instance is automatically renewed. this parameter is valid only for monthly subscription clusters. valid values: 1 (auto-renewal), 0 (non-automatic renewal).
+     * @var integer <p>Whether it is automatically renewed. Only applicable to monthly subscription clusters. 1: Automatic renewal 0: Non-automatic renewal</p>
      */
     public $RenewFlag;
 
     /**
-     * @var string Billing mode. POSTPAID: pay-as-you-go billing. PREPAID: monthly subscription.
+     * @var string <p>Billing mode, POSTPAID, pay-as-you-go PREPAID, annual/monthly subscription</p>
      */
     public $PayMode;
 
     /**
-     * @var integer Expiry time. millisecond-level timestamp.
+     * @var integer <p>Expiry time, millisecond-level timestamp</p>
      */
     public $ExpiryTime;
 
     /**
-     * @var integer Scheduled destruction time. millisecond-level timestamp.
+     * @var integer <p>Predestruction time, millisecond-level timestamp</p>
      */
     public $DestroyTime;
 
     /**
-     * @var string TLS, one-way authentication. mTLS, mutual authentication. BYOC, one certificate per device.
+     * @var string <p>TLS, one-way authentication    mTLS, mutual authentication    BYOC; one certificate per device</p>
      */
     public $X509Mode;
 
     /**
-     * @var integer Specifies the maximum Ca quota.
+     * @var integer <p>Maximum Ca quota</p>
      */
     public $MaxCaNum;
 
     /**
-     * @var string FPS cert registration code.
+     * @var string <p>FPS Cert Registration Code</p>
      */
     public $RegistrationCode;
 
     /**
-     * @var integer Maximum number of subscriptions for a cluster.
+     * @var integer <p>Maximum number of subscriptions for a cluster</p>
      */
     public $MaxSubscription;
 
     /**
-     * @var boolean Authorization policy switch.
+     * @var boolean <p>Authorization policy switch</p>
      */
     public $AuthorizationPolicy;
 
     /**
-     * @var integer Maximum limit of shared subscription groups.
+     * @var integer <p>Maximum limit of shared subscription groups</p>
      */
     public $SharedSubscriptionGroupLimit;
 
     /**
-     * @var integer Specifies the topic filter number limit for each shared subscription group.
+     * @var integer <p>Number limit of TopicFilter in one shared subscription group</p>
+     * @deprecated
      */
     public $MaxTopicFilterPerSharedSubscriptionGroup;
 
     /**
-     * @var integer Specifies the limit on number of auto-subscription rules.
+     * @var integer <p>Limit on number of auto subscription rules</p>
      */
     public $AutoSubscriptionPolicyLimit;
 
     /**
-     * @var integer Specifies the number limit of TopicFilter in a single auto-subscription rule.
+     * @var integer <p>Number limit of TopicFilter in a single auto subscription rule</p>
      */
     public $MaxTopicFilterPerAutoSubscriptionPolicy;
 
     /**
-     * @var boolean Specifies whether to use the default server certificate.
+     * @var boolean <p>Whether to use the default server certificate</p>
      */
     public $UseDefaultServerCert;
 
     /**
-     * @var integer Maximum allowed number of server cas.
+     * @var integer <p>Maximum number of server CAs</p>
      */
     public $TrustedCaLimit;
 
     /**
-     * @var integer Specifies the maximum allowed number of server certificates.
+     * @var integer <p>Maximum number of server certificates</p>
      */
     public $ServerCertLimit;
 
     /**
-     * @var integer Specifies the max level of the topic prefix.
+     * @var integer <p>Max level of topic prefix</p>
      */
     public $TopicPrefixSlashLimit;
 
     /**
-     * @var integer Specifies the speed limit for sending messages by a single client in messages per second.
+     * @var integer <p>Single client send message rate limiting, unit messages/second</p>
      */
     public $MessageRate;
 
     /**
-     * @var string Specifies the protocols supported by the server tls, separated by ",". example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1.
+     * @var string <p>Server-side tls supported protocols, separated by ",". Example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
      */
     public $TransportLayerSecurity;
 
     /**
-     * @var integer Specifies the message property enrichment rule quota.
+     * @var integer <p>Message property enhancement rule quota</p>
      */
     public $MessageEnrichmentRuleLimit;
+
+    /**
+     * @var integer <p>Maximum allowed number of blocking rules</p>
+     */
+    public $BlockRuleLimit;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -291,46 +284,42 @@ API: register manually through api.
     public $RequestId;
 
     /**
-     * @param string $InstanceType Instance type
-BASIC: basic edition.
-PRO edition.
-PLATINUM edition.
-     * @param string $InstanceId Instance ID.
-     * @param string $InstanceName Instance name
-     * @param integer $TopicNum Number of topics
-     * @param integer $TopicNumLimit Maximum number of topics per instance
-     * @param integer $TpsLimit TPS throttle value
-     * @param integer $CreatedTime Creation time, in seconds
-     * @param string $Remark Remarks
-     * @param string $InstanceStatus Instance status. RUNNING: running; MAINTAINING: maintaining; ABNORMAL: abnormal; OVERDUE: in arrears; DESTROYED: deleted; CREATING: creating; MODIFYING: adjusting the configuration; CREATE_FAILURE: creation failed; MODIFY_FAILURE: configuration adjustment failed; DELETING: deleting.
-     * @param string $SkuCode Specifies the instance specification.
-     * @param integer $MaxSubscriptionPerClient Maximum number of subscriptions for a single client.
-     * @param integer $AuthorizationPolicyLimit Number of authorization rules.
-     * @param integer $ClientNumLimit Maximum number of clients.
-     * @param string $DeviceCertificateProvisionType Specifies the registration method for the client certificate.
-JITP: automatically register.
-API: register manually through api.
-     * @param boolean $AutomaticActivation Specifies whether to automatically activate the device certificate during automatic registration.
-     * @param integer $RenewFlag Whether the instance is automatically renewed. this parameter is valid only for monthly subscription clusters. valid values: 1 (auto-renewal), 0 (non-automatic renewal).
-     * @param string $PayMode Billing mode. POSTPAID: pay-as-you-go billing. PREPAID: monthly subscription.
-     * @param integer $ExpiryTime Expiry time. millisecond-level timestamp.
-     * @param integer $DestroyTime Scheduled destruction time. millisecond-level timestamp.
-     * @param string $X509Mode TLS, one-way authentication. mTLS, mutual authentication. BYOC, one certificate per device.
-     * @param integer $MaxCaNum Specifies the maximum Ca quota.
-     * @param string $RegistrationCode FPS cert registration code.
-     * @param integer $MaxSubscription Maximum number of subscriptions for a cluster.
-     * @param boolean $AuthorizationPolicy Authorization policy switch.
-     * @param integer $SharedSubscriptionGroupLimit Maximum limit of shared subscription groups.
-     * @param integer $MaxTopicFilterPerSharedSubscriptionGroup Specifies the topic filter number limit for each shared subscription group.
-     * @param integer $AutoSubscriptionPolicyLimit Specifies the limit on number of auto-subscription rules.
-     * @param integer $MaxTopicFilterPerAutoSubscriptionPolicy Specifies the number limit of TopicFilter in a single auto-subscription rule.
-     * @param boolean $UseDefaultServerCert Specifies whether to use the default server certificate.
-     * @param integer $TrustedCaLimit Maximum allowed number of server cas.
-     * @param integer $ServerCertLimit Specifies the maximum allowed number of server certificates.
-     * @param integer $TopicPrefixSlashLimit Specifies the max level of the topic prefix.
-     * @param integer $MessageRate Specifies the speed limit for sending messages by a single client in messages per second.
-     * @param string $TransportLayerSecurity Specifies the protocols supported by the server tls, separated by ",". example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1.
-     * @param integer $MessageEnrichmentRuleLimit Specifies the message property enrichment rule quota.
+     * @param string $InstanceType <p>Instance type<br>BASIC Basic version<br>PRO Professional Edition<br>PLATINUM Platinum version</p>
+     * @param string $InstanceId <p>Instance ID</p>
+     * @param string $InstanceName <p>Instance name</p>
+     * @param integer $TopicNum <p>Number of topics</p>
+     * @param integer $TopicNumLimit <p>Maximum number of topics per instance</p>
+     * @param integer $TpsLimit <p>TPS throttle value</p>
+     * @param integer $CreatedTime <p>createTime, in seconds</p>
+     * @param string $Remark <p>Remarks</p>
+     * @param string $InstanceStatus <p>Instance status, RUNNING, running MAINTAINING, maintaining ABNORMAL, abnormal OVERDUE, arrears DESTROYED, deleted CREATING, creating MODIFYING, modifying CREATE_FAILURE, creation failure MODIFY_FAILURE, configuration change failed DELETING, deleting</p>
+     * @param string $SkuCode <p>Instance specification</p>
+     * @param integer $MaxSubscriptionPerClient <p>Maximum number of subscriptions for a single client</p>
+     * @param integer $AuthorizationPolicyLimit <p>Number of authorization rule entries</p>
+     * @param integer $ClientNumLimit <p>Number of clients cap</p>
+     * @param string $DeviceCertificateProvisionType <p>Client certificate registration method:<br>JITP: Automatic sign-up<br>API: Manually register through API</p>
+     * @param boolean $AutomaticActivation <p>Whether to automatically activate when automatically registering a device certificate</p>
+     * @param integer $RenewFlag <p>Whether it is automatically renewed. Only applicable to monthly subscription clusters. 1: Automatic renewal 0: Non-automatic renewal</p>
+     * @param string $PayMode <p>Billing mode, POSTPAID, pay-as-you-go PREPAID, annual/monthly subscription</p>
+     * @param integer $ExpiryTime <p>Expiry time, millisecond-level timestamp</p>
+     * @param integer $DestroyTime <p>Predestruction time, millisecond-level timestamp</p>
+     * @param string $X509Mode <p>TLS, one-way authentication    mTLS, mutual authentication    BYOC; one certificate per device</p>
+     * @param integer $MaxCaNum <p>Maximum Ca quota</p>
+     * @param string $RegistrationCode <p>FPS Cert Registration Code</p>
+     * @param integer $MaxSubscription <p>Maximum number of subscriptions for a cluster</p>
+     * @param boolean $AuthorizationPolicy <p>Authorization policy switch</p>
+     * @param integer $SharedSubscriptionGroupLimit <p>Maximum limit of shared subscription groups</p>
+     * @param integer $MaxTopicFilterPerSharedSubscriptionGroup <p>Number limit of TopicFilter in one shared subscription group</p>
+     * @param integer $AutoSubscriptionPolicyLimit <p>Limit on number of auto subscription rules</p>
+     * @param integer $MaxTopicFilterPerAutoSubscriptionPolicy <p>Number limit of TopicFilter in a single auto subscription rule</p>
+     * @param boolean $UseDefaultServerCert <p>Whether to use the default server certificate</p>
+     * @param integer $TrustedCaLimit <p>Maximum number of server CAs</p>
+     * @param integer $ServerCertLimit <p>Maximum number of server certificates</p>
+     * @param integer $TopicPrefixSlashLimit <p>Max level of topic prefix</p>
+     * @param integer $MessageRate <p>Single client send message rate limiting, unit messages/second</p>
+     * @param string $TransportLayerSecurity <p>Server-side tls supported protocols, separated by ",". Example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
+     * @param integer $MessageEnrichmentRuleLimit <p>Message property enhancement rule quota</p>
+     * @param integer $BlockRuleLimit <p>Maximum allowed number of blocking rules</p>
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -484,6 +473,10 @@ API: register manually through api.
 
         if (array_key_exists("MessageEnrichmentRuleLimit",$param) and $param["MessageEnrichmentRuleLimit"] !== null) {
             $this->MessageEnrichmentRuleLimit = $param["MessageEnrichmentRuleLimit"];
+        }
+
+        if (array_key_exists("BlockRuleLimit",$param) and $param["BlockRuleLimit"] !== null) {
+            $this->BlockRuleLimit = $param["BlockRuleLimit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

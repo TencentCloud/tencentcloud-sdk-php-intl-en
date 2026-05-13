@@ -27,13 +27,9 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\CheckAttributeLabelReferResponse CheckAttributeLabelRefer(Models\CheckAttributeLabelReferRequest $req) This API is used to check attribute label references.
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) This API is used to create knowledge engine applications.
  * @method Models\CreateAttributeLabelResponse CreateAttributeLabel(Models\CreateAttributeLabelRequest $req) This API is used to create attributes.
- * @method Models\CreateCorpResponse CreateCorp(Models\CreateCorpRequest $req) This API is used to create enterprises.
  * @method Models\CreateDocCateResponse CreateDocCate(Models\CreateDocCateRequest $req) This API is used to create doc categories.
  * @method Models\CreateQAResponse CreateQA(Models\CreateQARequest $req) This API is used to enter Q&As.
  * @method Models\CreateQACateResponse CreateQACate(Models\CreateQACateRequest $req) This API is used to create Q&A categories.
- * @method Models\CreateReconstructDocumentFlowResponse CreateReconstructDocumentFlow(Models\CreateReconstructDocumentFlowRequest $req) This API is used to initiate requests for this asynchronous API, for initiating document parsing tasks.
-Document parsing supports converting images or PDF files into Markdown format files, and can parse content elements including tables, formulas, images, headings, paragraphs, headers, and footers, and intelligently convert the content into reading order.
-During the trial period, the QPS limit for a single account is only 1. If you need to access officially, please contact our R&D team.
  * @method Models\CreateRejectedQuestionResponse CreateRejectedQuestion(Models\CreateRejectedQuestionRequest $req) This API is used to create rejected questions.
  * @method Models\CreateReleaseResponse CreateRelease(Models\CreateReleaseRequest $req) This API is used to create a release.
  * @method Models\DeleteAppResponse DeleteApp(Models\DeleteAppRequest $req) This API is used to delete applications.
@@ -48,7 +44,6 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
  * @method Models\DescribeCallStatsGraphResponse DescribeCallStatsGraph(Models\DescribeCallStatsGraphRequest $req) This API is used to show line chart of API calls.
  * @method Models\DescribeConcurrencyUsageResponse DescribeConcurrencyUsage(Models\DescribeConcurrencyUsageRequest $req) This API is used to response to concurrent calls.
  * @method Models\DescribeConcurrencyUsageGraphResponse DescribeConcurrencyUsageGraph(Models\DescribeConcurrencyUsageGraphRequest $req) This API is used to show line chart of concurrent calls.
- * @method Models\DescribeCorpResponse DescribeCorp(Models\DescribeCorpRequest $req) This API is used to query corporate details.
  * @method Models\DescribeDocResponse DescribeDoc(Models\DescribeDocRequest $req) This API is used to query document details.
  * @method Models\DescribeKnowledgeUsageResponse DescribeKnowledgeUsage(Models\DescribeKnowledgeUsageRequest $req) This API is used to query the knowledge library usage.
  * @method Models\DescribeKnowledgeUsagePieGraphResponse DescribeKnowledgeUsagePieGraph(Models\DescribeKnowledgeUsagePieGraphRequest $req) This API is used to query pie chart of the enterprise knowledge base capacity .
@@ -73,14 +68,13 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
  * @method Models\GetDocPreviewResponse GetDocPreview(Models\GetDocPreviewRequest $req) This API is used to get document preview information.
  * @method Models\GetLikeDataCountResponse GetLikeDataCount(Models\GetLikeDataCountRequest $req) This API is used to get likes and dislikes data statistics.
  * @method Models\GetMsgRecordResponse GetMsgRecord(Models\GetMsgRecordRequest $req) This API is used to obtain chat history based on the session ID (only historical session data within the past 180 days will be retained).
- * @method Models\GetReconstructDocumentResultResponse GetReconstructDocumentResult(Models\GetReconstructDocumentResultRequest $req) This is an asynchronous APIs, used to get document parsing task results.
  * @method Models\GetTaskStatusResponse GetTaskStatus(Models\GetTaskStatusRequest $req) This API is used to get the task status.
  * @method Models\GetWsTokenResponse GetWsToken(Models\GetWsTokenRequest $req) This API is used to get ws token.
  * @method Models\GroupDocResponse GroupDoc(Models\GroupDocRequest $req) DocGroup.
  * @method Models\GroupQAResponse GroupQA(Models\GroupQARequest $req) Q&A Group.
  * @method Models\IgnoreUnsatisfiedReplyResponse IgnoreUnsatisfiedReply(Models\IgnoreUnsatisfiedReplyRequest $req) This API is used to ignore dissatisfied responses.
+ * @method Models\IsTransferIntentResponse IsTransferIntent(Models\IsTransferIntentRequest $req) This API is used to determine whether to transfer to human service.
  * @method Models\ListAppResponse ListApp(Models\ListAppRequest $req) This API is used to get the application list under the corporate.
- * @method Models\ListAppCategoryResponse ListAppCategory(Models\ListAppCategoryRequest $req) This API is used to get list of application types.
  * @method Models\ListAppKnowledgeDetailResponse ListAppKnowledgeDetail(Models\ListAppKnowledgeDetailRequest $req) This API is used to query the knowledge base capacity details in a list.
  * @method Models\ListAttributeLabelResponse ListAttributeLabel(Models\ListAttributeLabelRequest $req) This API is used to query attribute label lists.
  * @method Models\ListDocResponse ListDoc(Models\ListDocRequest $req) This API is used to get document list.

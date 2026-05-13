@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceType() Obtain Chinese site standard version fill in standards2 international site standard version fill in standard pro edition fill in profession advanced edition fill in premium.
  * @method void setInstanceType(string $InstanceType) Set Chinese site standard version fill in standards2 international site standard version fill in standard pro edition fill in profession advanced edition fill in premium.
- * @method InstanceChargeParam getInstanceChargeParam() Obtain Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
- * @method void setInstanceChargeParam(InstanceChargeParam $InstanceChargeParam) Set Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
+ * @method InstanceChargeParam getInstanceChargeParam() Obtain Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default.
+ * @method void setInstanceChargeParam(InstanceChargeParam $InstanceChargeParam) Set Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default.
  * @method integer getInstanceNum() Obtain The number of instances to be purchased or renewed. If this parameter is left empty, the default value is `1`.
  * @method void setInstanceNum(integer $InstanceNum) Set The number of instances to be purchased or renewed. If this parameter is left empty, the default value is `1`.
  * @method integer getBandwidth() Obtain Specifies the internal network bandwidth size of the instance, in MB/s (required when purchased; bandwidth information is required for pro edition/advanced edition inquiries).
@@ -63,7 +63,7 @@ class InquireCkafkaPriceRequest extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var InstanceChargeParam Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
+     * @var InstanceChargeParam Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default.
      */
     public $InstanceChargeParam;
 
@@ -128,7 +128,7 @@ Specifies the specifications and limits that can be viewed through the following
 
     /**
      * @param string $InstanceType Chinese site standard version fill in standards2 international site standard version fill in standard pro edition fill in profession advanced edition fill in premium.
-     * @param InstanceChargeParam $InstanceChargeParam Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
+     * @param InstanceChargeParam $InstanceChargeParam Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default.
      * @param integer $InstanceNum The number of instances to be purchased or renewed. If this parameter is left empty, the default value is `1`.
      * @param integer $Bandwidth Specifies the internal network bandwidth size of the instance, in MB/s (required when purchased; bandwidth information is required for pro edition/advanced edition inquiries).
      * @param InquiryDiskParam $InquiryDiskParam Specifies the purchase type and size of the hard disk of the instance. required when purchased. disk information is required for pro edition or advanced edition inquiries.

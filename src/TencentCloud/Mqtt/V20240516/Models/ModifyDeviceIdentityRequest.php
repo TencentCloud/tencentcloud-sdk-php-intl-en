@@ -1,0 +1,122 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Mqtt\V20240516\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * ModifyDeviceIdentity request structure.
+ *
+ * @method string getInstanceId() Obtain Tencent Cloud MQTT instance ID can be obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or the console.
+ * @method void setInstanceId(string $InstanceId) Set Tencent Cloud MQTT instance ID can be obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or the console.
+ * @method string getDeviceId() Obtain Device ID
+ * @method void setDeviceId(string $DeviceId) Set Device ID
+ * @method string getStatus() Obtain 1:ENABLED-Available
+2: DISABLED - Unavailable
+ * @method void setStatus(string $Status) Set 1:ENABLED-Available
+2: DISABLED - Unavailable
+ * @method string getPrimaryKey() Obtain Primary signature key, Base64 encode is required.
+ * @method void setPrimaryKey(string $PrimaryKey) Set Primary signature key, Base64 encode is required.
+ * @method string getSecondaryKey() Obtain Secondary signature key, must be Base64 encoded.
+ * @method void setSecondaryKey(string $SecondaryKey) Set Secondary signature key, must be Base64 encoded.
+ * @method array getPropagatingProperties() Obtain Device id spread attribute setting	
+ * @method void setPropagatingProperties(array $PropagatingProperties) Set Device id spread attribute setting	
+ */
+class ModifyDeviceIdentityRequest extends AbstractModel
+{
+    /**
+     * @var string Tencent Cloud MQTT instance ID can be obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or the console.
+     */
+    public $InstanceId;
+
+    /**
+     * @var string Device ID
+     */
+    public $DeviceId;
+
+    /**
+     * @var string 1:ENABLED-Available
+2: DISABLED - Unavailable
+     */
+    public $Status;
+
+    /**
+     * @var string Primary signature key, Base64 encode is required.
+     */
+    public $PrimaryKey;
+
+    /**
+     * @var string Secondary signature key, must be Base64 encoded.
+     */
+    public $SecondaryKey;
+
+    /**
+     * @var array Device id spread attribute setting	
+     */
+    public $PropagatingProperties;
+
+    /**
+     * @param string $InstanceId Tencent Cloud MQTT instance ID can be obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or the console.
+     * @param string $DeviceId Device ID
+     * @param string $Status 1:ENABLED-Available
+2: DISABLED - Unavailable
+     * @param string $PrimaryKey Primary signature key, Base64 encode is required.
+     * @param string $SecondaryKey Secondary signature key, must be Base64 encoded.
+     * @param array $PropagatingProperties Device id spread attribute setting	
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
+            $this->DeviceId = $param["DeviceId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("PrimaryKey",$param) and $param["PrimaryKey"] !== null) {
+            $this->PrimaryKey = $param["PrimaryKey"];
+        }
+
+        if (array_key_exists("SecondaryKey",$param) and $param["SecondaryKey"] !== null) {
+            $this->SecondaryKey = $param["SecondaryKey"];
+        }
+
+        if (array_key_exists("PropagatingProperties",$param) and $param["PropagatingProperties"] !== null) {
+            $this->PropagatingProperties = [];
+            foreach ($param["PropagatingProperties"] as $key => $value){
+                $obj = new PropagatingProperty();
+                $obj->deserialize($value);
+                array_push($this->PropagatingProperties, $obj);
+            }
+        }
+    }
+}

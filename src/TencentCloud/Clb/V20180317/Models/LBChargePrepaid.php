@@ -18,7 +18,7 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Monthly subscription configuration of a CLB instance
+ * Yearly/monthly subscription configuration of a CLB instance
  *
  * @method string getRenewFlag() Obtain Reserved field.
  * @method void setRenewFlag(string $RenewFlag) Set Reserved field.

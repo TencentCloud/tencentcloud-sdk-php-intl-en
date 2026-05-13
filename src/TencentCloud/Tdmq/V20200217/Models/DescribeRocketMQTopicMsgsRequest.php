@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getEnvironmentId() Obtain Namespace
- * @method void setEnvironmentId(string $EnvironmentId) Set Namespace
+ * @method string getEnvironmentId() Obtain namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
+ * @method void setEnvironmentId(string $EnvironmentId) Set namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
  * @method string getTopicName() Obtain Topic name, which is groupId when the system queries dead letters.
  * @method void setTopicName(string $TopicName) Set Topic name, which is groupId when the system queries dead letters.
  * @method string getStartTime() Obtain Start time.
@@ -57,7 +57,7 @@ class DescribeRocketMQTopicMsgsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Namespace
+     * @var string namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public $EnvironmentId;
 
@@ -124,7 +124,7 @@ class DescribeRocketMQTopicMsgsRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $EnvironmentId Namespace
+     * @param string $EnvironmentId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      * @param string $TopicName Topic name, which is groupId when the system queries dead letters.
      * @param string $StartTime Start time.
      * @param string $EndTime End time.

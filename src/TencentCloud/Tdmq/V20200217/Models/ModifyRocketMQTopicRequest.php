@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getNamespaceId() Obtain Namespace name
- * @method void setNamespaceId(string $NamespaceId) Set Namespace name
+ * @method string getNamespaceId() Obtain Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) Set Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
  * @method string getTopic() Obtain Topic name
  * @method void setTopic(string $Topic) Set Topic name
  * @method string getRemark() Obtain Remarks (up to 128 characters)
@@ -39,7 +39,7 @@ class ModifyRocketMQTopicRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Namespace name
+     * @var string Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
      */
     public $NamespaceId;
 
@@ -60,7 +60,7 @@ class ModifyRocketMQTopicRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $NamespaceId Namespace name
+     * @param string $NamespaceId Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
      * @param string $Topic Topic name
      * @param string $Remark Remarks (up to 128 characters)
      * @param integer $PartitionNum Number of partitions, which is invalid for globally sequential messages and cannot be less than the current number of partitions.

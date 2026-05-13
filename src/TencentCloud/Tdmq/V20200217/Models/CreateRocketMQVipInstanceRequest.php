@@ -24,8 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Instance name
  * @method string getSpec() Obtain Cluster specification. Supported specifications: 1. 	General: rocket-vip-basic-0; 2. Basic: rocket-vip-basic-1; 3. Standard: rocket-vip-basic-2; 4. Advanced I: rocket-vip-basic-3; 5. Advanced II: rocket-vip-basic-4.
  * @method void setSpec(string $Spec) Set Cluster specification. Supported specifications: 1. 	General: rocket-vip-basic-0; 2. Basic: rocket-vip-basic-1; 3. Standard: rocket-vip-basic-2; 4. Advanced I: rocket-vip-basic-3; 5. Advanced II: rocket-vip-basic-4.
- * @method integer getNodeCount() Obtain Number of nodes. Value range: 2–20.
- * @method void setNodeCount(integer $NodeCount) Set Number of nodes. Value range: 2–20.
  * @method integer getStorageSize() Obtain Single-node storage space, in GB. The minimum space is 200 GB.
  * @method void setStorageSize(integer $StorageSize) Set Single-node storage space, in GB. The minimum space is 200 GB.
  * @method array getZoneIds() Obtain The zone ID list for node deployment. For example, the ID of Guangzhou Zone 1 is 100001. For details, see the official website of the cloud platform.
@@ -34,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcInfo(VpcInfo $VpcInfo) Set Describes the VPC information.
  * @method integer getTimeSpan() Obtain Purchase duration, in months.
  * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration, in months.
+ * @method integer getNodeCount() Obtain Node count, required when creating a dedicated cluster
+ * @method void setNodeCount(integer $NodeCount) Set Node count, required when creating a dedicated cluster
+ * @method string getGeneralSkuCode() Obtain Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1).
+ * @method void setGeneralSkuCode(string $GeneralSkuCode) Set Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1).
  * @method boolean getSupportsMigrateToCloud() Obtain Whether it is used for cloud migration. The default value is false.
  * @method void setSupportsMigrateToCloud(boolean $SupportsMigrateToCloud) Set Whether it is used for cloud migration. The default value is false.
  * @method boolean getEnablePublic() Obtain Specifies whether public network access is enabled.
@@ -58,11 +60,6 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
     public $Spec;
 
     /**
-     * @var integer Number of nodes. Value range: 2–20.
-     */
-    public $NodeCount;
-
-    /**
      * @var integer Single-node storage space, in GB. The minimum space is 200 GB.
      */
     public $StorageSize;
@@ -81,6 +78,16 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
      * @var integer Purchase duration, in months.
      */
     public $TimeSpan;
+
+    /**
+     * @var integer Node count, required when creating a dedicated cluster
+     */
+    public $NodeCount;
+
+    /**
+     * @var string Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1).
+     */
+    public $GeneralSkuCode;
 
     /**
      * @var boolean Whether it is used for cloud migration. The default value is false.
@@ -110,11 +117,12 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
     /**
      * @param string $Name Instance name
      * @param string $Spec Cluster specification. Supported specifications: 1. 	General: rocket-vip-basic-0; 2. Basic: rocket-vip-basic-1; 3. Standard: rocket-vip-basic-2; 4. Advanced I: rocket-vip-basic-3; 5. Advanced II: rocket-vip-basic-4.
-     * @param integer $NodeCount Number of nodes. Value range: 2–20.
      * @param integer $StorageSize Single-node storage space, in GB. The minimum space is 200 GB.
      * @param array $ZoneIds The zone ID list for node deployment. For example, the ID of Guangzhou Zone 1 is 100001. For details, see the official website of the cloud platform.
      * @param VpcInfo $VpcInfo Describes the VPC information.
      * @param integer $TimeSpan Purchase duration, in months.
+     * @param integer $NodeCount Node count, required when creating a dedicated cluster
+     * @param string $GeneralSkuCode Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1).
      * @param boolean $SupportsMigrateToCloud Whether it is used for cloud migration. The default value is false.
      * @param boolean $EnablePublic Specifies whether public network access is enabled.
      * @param integer $Bandwidth Public network bandwidth, a required field when the public network is enabled.
@@ -142,10 +150,6 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
             $this->Spec = $param["Spec"];
         }
 
-        if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
-            $this->NodeCount = $param["NodeCount"];
-        }
-
         if (array_key_exists("StorageSize",$param) and $param["StorageSize"] !== null) {
             $this->StorageSize = $param["StorageSize"];
         }
@@ -161,6 +165,14 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
 
         if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
             $this->TimeSpan = $param["TimeSpan"];
+        }
+
+        if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
+            $this->NodeCount = $param["NodeCount"];
+        }
+
+        if (array_key_exists("GeneralSkuCode",$param) and $param["GeneralSkuCode"] !== null) {
+            $this->GeneralSkuCode = $param["GeneralSkuCode"];
         }
 
         if (array_key_exists("SupportsMigrateToCloud",$param) and $param["SupportsMigrateToCloud"] !== null) {

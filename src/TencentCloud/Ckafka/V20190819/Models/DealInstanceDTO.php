@@ -18,7 +18,7 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mapping between orders and CKafka instances for monthly subscribed and pay-as-you-go instance APIs.
+ * Mapping between orders and CKafka instances for yearly/monthly subscribed and pay-as-you-go instance APIs.
  *
  * @method string getDealName() Obtain Order transaction.
  * @method void setDealName(string $DealName) Set Order transaction.

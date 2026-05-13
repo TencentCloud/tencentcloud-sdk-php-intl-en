@@ -18,7 +18,7 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Key-value pair filters for conditional filtering queries.
+ * Filter criteria
  *
  * @method string getName() Obtain Name of filter key.
  * @method void setName(string $Name) Set Name of filter key.

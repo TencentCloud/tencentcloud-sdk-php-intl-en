@@ -26,8 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPermWrite(boolean $PermWrite) Set Whether to enable production permission
  * @method boolean getPermRead() Obtain Whether to enable consumption permission
  * @method void setPermRead(boolean $PermRead) Set Whether to enable consumption permission
- * @method string getResourceType() Obtain Authorized resource type (Topic: topic; Group: consumer group).
- * @method void setResourceType(string $ResourceType) Set Authorized resource type (Topic: topic; Group: consumer group).
+ * @method string getResourceType() Obtain Authorized resource type. Enumeration values are as follows:
+-Topic: Topic dimension
+-Group: Consumer group dimension
+-Cluster: cluster-level (default value)
+ * @method void setResourceType(string $ResourceType) Set Authorized resource type. Enumeration values are as follows:
+-Topic: Topic dimension
+-Group: Consumer group dimension
+-Cluster: cluster-level (default value)
  * @method string getRemark() Obtain Resource remarks.
  * @method void setRemark(string $Remark) Set Resource remarks.
  */
@@ -49,7 +55,10 @@ class DetailedRolePerm extends AbstractModel
     public $PermRead;
 
     /**
-     * @var string Authorized resource type (Topic: topic; Group: consumer group).
+     * @var string Authorized resource type. Enumeration values are as follows:
+-Topic: Topic dimension
+-Group: Consumer group dimension
+-Cluster: cluster-level (default value)
      */
     public $ResourceType;
 
@@ -62,7 +71,10 @@ class DetailedRolePerm extends AbstractModel
      * @param string $Resource Resources corresponding to permissions.
      * @param boolean $PermWrite Whether to enable production permission
      * @param boolean $PermRead Whether to enable consumption permission
-     * @param string $ResourceType Authorized resource type (Topic: topic; Group: consumer group).
+     * @param string $ResourceType Authorized resource type. Enumeration values are as follows:
+-Topic: Topic dimension
+-Group: Consumer group dimension
+-Cluster: cluster-level (default value)
      * @param string $Remark Resource remarks.
      */
     function __construct()

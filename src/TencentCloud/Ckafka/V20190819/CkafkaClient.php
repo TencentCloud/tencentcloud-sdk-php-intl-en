@@ -30,7 +30,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\CreateAclRuleResponse CreateAclRule(Models\CreateAclRuleRequest $req) This API shows you how to create an ACL rule.
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) This API is used to create a consumer group.
  * @method Models\CreateDatahubTopicResponse CreateDatahubTopic(Models\CreateDatahubTopicRequest $req) This API is used to create a DIP topic.
- * @method Models\CreateInstancePreResponse CreateInstancePre(Models\CreateInstancePreRequest $req) This API is used to create prepaid annual and monthly instances. It only supports creating Pro Edition instances.
+ * @method Models\CreateInstancePreResponse CreateInstancePre(Models\CreateInstancePreRequest $req) This API is used to create prepaid yearly/monthly subscribed instances. It only supports creating Pro Edition instances.
  * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) This API is used to add a partition in a topic.
  * @method Models\CreatePostPaidInstanceResponse CreatePostPaidInstance(Models\CreatePostPaidInstanceRequest $req) This API is used to replace `CreateInstancePost`  to create a pay-as-you-go instance.  You can call this API via SDK or the TencentCloud API console to create a pay-as-you-go CKafka instance,  which is an alternate option for making a purchase in the console.
  * @method Models\CreateRouteResponse CreateRoute(Models\CreateRouteRequest $req) This API is used to add instance routes.
@@ -63,7 +63,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to search for a list of TDMQ CKafka instances under a user account.
  * @method Models\DescribeInstancesDetailResponse DescribeInstancesDetail(Models\DescribeInstancesDetailRequest $req) This API is used to get instance list details under a user account.
  * @method Models\DescribeModifyTypeResponse DescribeModifyType(Models\DescribeModifyTypeRequest $req) This API is used to query instance specification change types.
- * @method Models\DescribeRegionResponse DescribeRegion(Models\DescribeRegionRequest $req) This API is used to enumerate regions, and can be called only in Guangzhou.
+ * @method Models\DescribeRegionResponse DescribeRegion(Models\DescribeRegionRequest $req) Enumerate regional information
  * @method Models\DescribeRouteResponse DescribeRoute(Models\DescribeRouteRequest $req) This API is used to view route information.
  * @method Models\DescribeSecurityGroupRoutesResponse DescribeSecurityGroupRoutes(Models\DescribeSecurityGroupRoutesRequest $req) This API is used to retrieve the security group route information list.
  * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) This API is used to query the task status.

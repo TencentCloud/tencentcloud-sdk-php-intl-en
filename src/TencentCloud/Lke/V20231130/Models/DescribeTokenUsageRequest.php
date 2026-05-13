@@ -38,10 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppBizIds(array $AppBizIds) Set Application ID list.
  * @method array getSubScenes() Obtain Filter sub-scenario (used in document parsing scenario).
  * @method void setSubScenes(array $SubScenes) Set Filter sub-scenario (used in document parsing scenario).
- * @method string getAppType() Obtain Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
- * @method void setAppType(string $AppType) Set Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
- * @method string getSpaceId() Obtain Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
- * @method void setSpaceId(string $SpaceId) Set Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
+ * @method string getAppType() Obtain Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+ * @method void setAppType(string $AppType) Set Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+ * @method string getSpaceId() Obtain Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+ * @method void setSpaceId(string $SpaceId) Set Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+ * @method integer getStatStartTime() Obtain Start time. Unix timestamp in seconds, empty by default.
+ * @method void setStatStartTime(integer $StatStartTime) Set Start time. Unix timestamp in seconds, empty by default.
+ * @method integer getStatEndTime() Obtain End time. Unix timestamp in seconds, empty by default.
+ * @method void setStatEndTime(integer $StatEndTime) Set End time. Unix timestamp in seconds, empty by default.
  */
 class DescribeTokenUsageRequest extends AbstractModel
 {
@@ -72,11 +76,13 @@ class DescribeTokenUsageRequest extends AbstractModel
 
     /**
      * @var string Start timestamp, in seconds (default value: 0).
+     * @deprecated
      */
     public $StartTime;
 
     /**
      * @var string End timestamp, in seconds (default value: 0, must be greater than the start timestamp).
+     * @deprecated
      */
     public $EndTime;
 
@@ -91,14 +97,24 @@ class DescribeTokenUsageRequest extends AbstractModel
     public $SubScenes;
 
     /**
-     * @var string Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
+     * @var string Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
      */
     public $AppType;
 
     /**
-     * @var string Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
+     * @var string Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
      */
     public $SpaceId;
+
+    /**
+     * @var integer Start time. Unix timestamp in seconds, empty by default.
+     */
+    public $StatStartTime;
+
+    /**
+     * @var integer End time. Unix timestamp in seconds, empty by default.
+     */
+    public $StatEndTime;
 
     /**
      * @param array $UinAccount Root account of Tencent Cloud.
@@ -110,8 +126,10 @@ class DescribeTokenUsageRequest extends AbstractModel
      * @param string $EndTime End timestamp, in seconds (default value: 0, must be greater than the start timestamp).
      * @param array $AppBizIds Application ID list.
      * @param array $SubScenes Filter sub-scenario (used in document parsing scenario).
-     * @param string $AppType Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
-     * @param string $SpaceId Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
+     * @param string $AppType Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+     * @param string $SpaceId Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+     * @param integer $StatStartTime Start time. Unix timestamp in seconds, empty by default.
+     * @param integer $StatEndTime End time. Unix timestamp in seconds, empty by default.
      */
     function __construct()
     {
@@ -168,6 +186,14 @@ class DescribeTokenUsageRequest extends AbstractModel
 
         if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
             $this->SpaceId = $param["SpaceId"];
+        }
+
+        if (array_key_exists("StatStartTime",$param) and $param["StatStartTime"] !== null) {
+            $this->StatStartTime = $param["StatStartTime"];
+        }
+
+        if (array_key_exists("StatEndTime",$param) and $param["StatEndTime"] !== null) {
+            $this->StatEndTime = $param["StatEndTime"];
         }
     }
 }

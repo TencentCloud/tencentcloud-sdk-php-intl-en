@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session hold time, unit: second. value range: 30-3600. default: 0, disabled. this parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.
  * @method string getIpVersion() Obtain IP version type.
  * @method void setIpVersion(string $IpVersion) Set IP version type.
+ * @method boolean getSnatEnable() Obtain 
+ * @method void setSnatEnable(boolean $SnatEnable) Set 
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
@@ -131,6 +133,11 @@ class CreateTargetGroupRequest extends AbstractModel
     public $IpVersion;
 
     /**
+     * @var boolean 
+     */
+    public $SnatEnable;
+
+    /**
      * @param string $TargetGroupName Target group name (up to 50 characters)
      * @param string $VpcId Specifies the vpc id attribute of the target group. uses the default vpc if left empty.
      * @param integer $Port Specifies the default Port of the target group. the default Port can be used when servers are added subsequently. this parameter is not supported for full-listen target groups. for non-full-listen target groups, either Port or Port in TargetGroupInstances.N is required.
@@ -148,6 +155,7 @@ class CreateTargetGroupRequest extends AbstractModel
      * @param boolean $KeepaliveEnable Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. 0: disable; 1: enable. this feature is off by default.
      * @param integer $SessionExpireTime Session hold time, unit: second. value range: 30-3600. default: 0, disabled. this parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.
      * @param string $IpVersion IP version type.
+     * @param boolean $SnatEnable 
      */
     function __construct()
     {
@@ -227,6 +235,10 @@ class CreateTargetGroupRequest extends AbstractModel
 
         if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
             $this->IpVersion = $param["IpVersion"];
+        }
+
+        if (array_key_exists("SnatEnable",$param) and $param["SnatEnable"] !== null) {
+            $this->SnatEnable = $param["SnatEnable"];
         }
     }
 }

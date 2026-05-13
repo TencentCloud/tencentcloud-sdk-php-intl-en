@@ -18,7 +18,7 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Execution policy for scheduled snapshot. It indicates that a scheduled snapshot policy is executed at the specified `Hour` in the days specified by `DayOfWeek` or `DayOfMonth` or once every `IntervalDays` days. Note: `DayOfWeek`, `DayOfMonth`, and `IntervalDays` are mutually exclusive, and only one policy rule can be set.
+ * Describes the execution strategy of regular snapshots. it can be understood as executing this scheduled snapshot policy at the moment specified by Hour on the days designated by DayOfWeek/DayOfMonth or at the interval set by IntervalDays. note: DayOfWeek/DayOfMonth/IntervalDays are mutual exclusion rules, required and only one policy rule can be set. if mutual exclusion rules are imported at the same time, only one takes effect, with priority following the sequence listed in the previous context: for example, if all three rules are set, only DayOfWeek comes into effect.
  *
  * @method array getHour() Obtain Specifies the time that that the scheduled snapshot policy will be triggered. The unit is hour. The value range is [0-23]. 00:00-23:00 is a total of 24 time points that can be selected. 1 indicates 01:00, and so on.
  * @method void setHour(array $Hour) Set Specifies the time that that the scheduled snapshot policy will be triggered. The unit is hour. The value range is [0-23]. 00:00-23:00 is a total of 24 time points that can be selected. 1 indicates 01:00, and so on.

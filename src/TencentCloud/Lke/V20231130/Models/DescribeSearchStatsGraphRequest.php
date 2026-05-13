@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End timestamp, in seconds.
  * @method array getAppBizIds() Obtain Application id list.
  * @method void setAppBizIds(array $AppBizIds) Set Application id list.
+ * @method string getSpaceId() Obtain Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+ * @method void setSpaceId(string $SpaceId) Set Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+ * @method integer getStatStartTime() Obtain Start time. Unix timestamp in seconds, empty by default.
+ * @method void setStatStartTime(integer $StatStartTime) Set Start time. Unix timestamp in seconds, empty by default.
+ * @method integer getStatEndTime() Obtain End time. Unix timestamp in seconds, empty by default.
+ * @method void setStatEndTime(integer $StatEndTime) Set End time. Unix timestamp in seconds, empty by default.
  */
 class DescribeSearchStatsGraphRequest extends AbstractModel
 {
@@ -66,11 +72,13 @@ class DescribeSearchStatsGraphRequest extends AbstractModel
 
     /**
      * @var string Start timestamp, in seconds.
+     * @deprecated
      */
     public $StartTime;
 
     /**
      * @var string End timestamp, in seconds.
+     * @deprecated
      */
     public $EndTime;
 
@@ -78,6 +86,21 @@ class DescribeSearchStatsGraphRequest extends AbstractModel
      * @var array Application id list.
      */
     public $AppBizIds;
+
+    /**
+     * @var string Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+     */
+    public $SpaceId;
+
+    /**
+     * @var integer Start time. Unix timestamp in seconds, empty by default.
+     */
+    public $StatStartTime;
+
+    /**
+     * @var integer End time. Unix timestamp in seconds, empty by default.
+     */
+    public $StatEndTime;
 
     /**
      * @param string $LoginUin Login to user's root account (required in integrator mode).
@@ -88,6 +111,9 @@ class DescribeSearchStatsGraphRequest extends AbstractModel
      * @param string $StartTime Start timestamp, in seconds.
      * @param string $EndTime End timestamp, in seconds.
      * @param array $AppBizIds Application id list.
+     * @param string $SpaceId Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+     * @param integer $StatStartTime Start time. Unix timestamp in seconds, empty by default.
+     * @param integer $StatEndTime End time. Unix timestamp in seconds, empty by default.
      */
     function __construct()
     {
@@ -132,6 +158,18 @@ class DescribeSearchStatsGraphRequest extends AbstractModel
 
         if (array_key_exists("AppBizIds",$param) and $param["AppBizIds"] !== null) {
             $this->AppBizIds = $param["AppBizIds"];
+        }
+
+        if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
+            $this->SpaceId = $param["SpaceId"];
+        }
+
+        if (array_key_exists("StatStartTime",$param) and $param["StatStartTime"] !== null) {
+            $this->StatStartTime = $param["StatStartTime"];
+        }
+
+        if (array_key_exists("StatEndTime",$param) and $param["StatEndTime"] !== null) {
+            $this->StatEndTime = $param["StatEndTime"];
         }
     }
 }

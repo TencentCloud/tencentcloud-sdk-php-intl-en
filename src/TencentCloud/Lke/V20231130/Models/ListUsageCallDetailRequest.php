@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModelName() Obtain Model identifier.
  * @method void setModelName(string $ModelName) Set Model identifier.
- * @method string getStartTime() Obtain Start time.
- * @method void setStartTime(string $StartTime) Set Start time.
- * @method string getEndTime() Obtain End time.
- * @method void setEndTime(string $EndTime) Set End time.
  * @method integer getPageNumber() Obtain Page number.
  * @method void setPageNumber(integer $PageNumber) Set Page number.
  * @method integer getPageSize() Obtain Number of items per page.
  * @method void setPageSize(integer $PageSize) Set Number of items per page.
+ * @method string getStartTime() Obtain Start time.
+ * @method void setStartTime(string $StartTime) Set Start time.
+ * @method string getEndTime() Obtain End time.
+ * @method void setEndTime(string $EndTime) Set End time.
  * @method array getUinAccount() Obtain Uin list.
  * @method void setUinAccount(array $UinAccount) Set Uin list.
  * @method array getAppBizIds() Obtain Application ID list.
@@ -38,6 +38,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallType(string $CallType) Set Call type list.
  * @method array getSubScenes() Obtain Filter sub-scenario.
  * @method void setSubScenes(array $SubScenes) Set Filter sub-scenario.
+ * @method string getAppType() Obtain Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+ * @method void setAppType(string $AppType) Set Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+ * @method string getBillingTag() Obtain Custom tag corresponding to bill details
+ * @method void setBillingTag(string $BillingTag) Set Custom tag corresponding to bill details
+ * @method string getSpaceId() Obtain Space ID
+ * @method void setSpaceId(string $SpaceId) Set Space ID
+ * @method integer getStatStartTime() Obtain Start timestamp, unit: seconds
+ * @method void setStatStartTime(integer $StatStartTime) Set Start timestamp, unit: seconds
+ * @method integer getStatEndTime() Obtain Start timestamp, unit: seconds
+ * @method void setStatEndTime(integer $StatEndTime) Set Start timestamp, unit: seconds
  */
 class ListUsageCallDetailRequest extends AbstractModel
 {
@@ -45,16 +55,6 @@ class ListUsageCallDetailRequest extends AbstractModel
      * @var string Model identifier.
      */
     public $ModelName;
-
-    /**
-     * @var string Start time.
-     */
-    public $StartTime;
-
-    /**
-     * @var string End time.
-     */
-    public $EndTime;
 
     /**
      * @var integer Page number.
@@ -65,6 +65,16 @@ class ListUsageCallDetailRequest extends AbstractModel
      * @var integer Number of items per page.
      */
     public $PageSize;
+
+    /**
+     * @var string Start time.
+     */
+    public $StartTime;
+
+    /**
+     * @var string End time.
+     */
+    public $EndTime;
 
     /**
      * @var array Uin list.
@@ -87,15 +97,45 @@ class ListUsageCallDetailRequest extends AbstractModel
     public $SubScenes;
 
     /**
+     * @var string Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+     */
+    public $AppType;
+
+    /**
+     * @var string Custom tag corresponding to bill details
+     */
+    public $BillingTag;
+
+    /**
+     * @var string Space ID
+     */
+    public $SpaceId;
+
+    /**
+     * @var integer Start timestamp, unit: seconds
+     */
+    public $StatStartTime;
+
+    /**
+     * @var integer Start timestamp, unit: seconds
+     */
+    public $StatEndTime;
+
+    /**
      * @param string $ModelName Model identifier.
-     * @param string $StartTime Start time.
-     * @param string $EndTime End time.
      * @param integer $PageNumber Page number.
      * @param integer $PageSize Number of items per page.
+     * @param string $StartTime Start time.
+     * @param string $EndTime End time.
      * @param array $UinAccount Uin list.
      * @param array $AppBizIds Application ID list.
      * @param string $CallType Call type list.
      * @param array $SubScenes Filter sub-scenario.
+     * @param string $AppType Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+     * @param string $BillingTag Custom tag corresponding to bill details
+     * @param string $SpaceId Space ID
+     * @param integer $StatStartTime Start timestamp, unit: seconds
+     * @param integer $StatEndTime Start timestamp, unit: seconds
      */
     function __construct()
     {
@@ -114,20 +154,20 @@ class ListUsageCallDetailRequest extends AbstractModel
             $this->ModelName = $param["ModelName"];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
-        }
-
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
-        }
-
         if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
             $this->PageNumber = $param["PageNumber"];
         }
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
 
         if (array_key_exists("UinAccount",$param) and $param["UinAccount"] !== null) {
@@ -144,6 +184,26 @@ class ListUsageCallDetailRequest extends AbstractModel
 
         if (array_key_exists("SubScenes",$param) and $param["SubScenes"] !== null) {
             $this->SubScenes = $param["SubScenes"];
+        }
+
+        if (array_key_exists("AppType",$param) and $param["AppType"] !== null) {
+            $this->AppType = $param["AppType"];
+        }
+
+        if (array_key_exists("BillingTag",$param) and $param["BillingTag"] !== null) {
+            $this->BillingTag = $param["BillingTag"];
+        }
+
+        if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
+            $this->SpaceId = $param["SpaceId"];
+        }
+
+        if (array_key_exists("StatStartTime",$param) and $param["StatStartTime"] !== null) {
+            $this->StatStartTime = $param["StatStartTime"];
+        }
+
+        if (array_key_exists("StatEndTime",$param) and $param["StatEndTime"] !== null) {
+            $this->StatEndTime = $param["StatEndTime"];
         }
     }
 }

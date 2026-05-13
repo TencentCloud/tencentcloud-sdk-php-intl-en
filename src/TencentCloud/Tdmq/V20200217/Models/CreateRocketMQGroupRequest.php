@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupId() Obtain Group name (8–64 characters)
  * @method void setGroupId(string $GroupId) Set Group name (8–64 characters)
- * @method array getNamespaces() Obtain Namespace. Currently, only one namespace is supported
- * @method void setNamespaces(array $Namespaces) Set Namespace. Currently, only one namespace is supported
+ * @method array getNamespaces() Obtain Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
+ * @method void setNamespaces(array $Namespaces) Set Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
  * @method boolean getReadEnable() Obtain Whether to enable consumption
  * @method void setReadEnable(boolean $ReadEnable) Set Whether to enable consumption
  * @method boolean getBroadcastEnable() Obtain Whether to enable broadcast consumption
@@ -45,7 +45,7 @@ class CreateRocketMQGroupRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var array Namespace. Currently, only one namespace is supported
+     * @var array Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public $Namespaces;
 
@@ -81,7 +81,7 @@ class CreateRocketMQGroupRequest extends AbstractModel
 
     /**
      * @param string $GroupId Group name (8–64 characters)
-     * @param array $Namespaces Namespace. Currently, only one namespace is supported
+     * @param array $Namespaces Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
      * @param boolean $ReadEnable Whether to enable consumption
      * @param boolean $BroadcastEnable Whether to enable broadcast consumption
      * @param string $ClusterId Cluster ID

@@ -76,6 +76,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTls(boolean $Tls) Set Specifies whether TLS encryption is enabled.
  * @method string getCustomUrl() Obtain Access point custom domain name.
  * @method void setCustomUrl(string $CustomUrl) Set Access point custom domain name.
+ * @method array getSecurityGroupIds() Obtain id list of the bound security group for the access point. Only valid for vpc access points.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set id list of the bound security group for the access point. Only valid for vpc access points.
  */
 class PulsarNetworkAccessPointInfo extends AbstractModel
 {
@@ -160,6 +162,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CustomUrl;
 
     /**
+     * @var array id list of the bound security group for the access point. Only valid for vpc access points.
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $VpcId VPC ID. This field is left empty for supporting network and public network access points.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SubnetId Subnet ID. This field is left empty for supporting network and public network access points.
@@ -188,6 +195,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $Tls Specifies whether TLS encryption is enabled.
      * @param string $CustomUrl Access point custom domain name.
+     * @param array $SecurityGroupIds id list of the bound security group for the access point. Only valid for vpc access points.
      */
     function __construct()
     {
@@ -257,6 +265,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CustomUrl",$param) and $param["CustomUrl"] !== null) {
             $this->CustomUrl = $param["CustomUrl"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

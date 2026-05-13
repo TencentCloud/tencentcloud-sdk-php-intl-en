@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoute request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
- * @method integer getRouteId() Obtain Route ID
- * @method void setRouteId(integer $RouteId) Set Route ID
- * @method boolean getMainRouteFlag() Obtain Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
- * @method void setMainRouteFlag(boolean $MainRouteFlag) Set Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method integer getRouteId() Obtain <p>Route Id</p>
+ * @method void setRouteId(integer $RouteId) Set <p>Route Id</p>
+ * @method boolean getMainRouteFlag() Obtain <p>Whether to display the primary route. If true, the primary route information during instance creation will additionally be displayed on the basis of the original routing list (and will not be affected by parameter filtering such as InternalFlag or UsedFor).</p>
+ * @method void setMainRouteFlag(boolean $MainRouteFlag) Set <p>Whether to display the primary route. If true, the primary route information during instance creation will additionally be displayed on the basis of the original routing list (and will not be affected by parameter filtering such as InternalFlag or UsedFor).</p>
  */
 class DescribeRouteRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id.
+     * @var string <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var integer Route ID
+     * @var integer <p>Route Id</p>
      */
     public $RouteId;
 
     /**
-     * @var boolean Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+     * @var boolean <p>Whether to display the primary route. If true, the primary route information during instance creation will additionally be displayed on the basis of the original routing list (and will not be affected by parameter filtering such as InternalFlag or UsedFor).</p>
      */
     public $MainRouteFlag;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id.
-     * @param integer $RouteId Route ID
-     * @param boolean $MainRouteFlag Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+     * @param string $InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param integer $RouteId <p>Route Id</p>
+     * @param boolean $MainRouteFlag <p>Whether to display the primary route. If true, the primary route information during instance creation will additionally be displayed on the basis of the original routing list (and will not be affected by parameter filtering such as InternalFlag or UsedFor).</p>
      */
     function __construct()
     {

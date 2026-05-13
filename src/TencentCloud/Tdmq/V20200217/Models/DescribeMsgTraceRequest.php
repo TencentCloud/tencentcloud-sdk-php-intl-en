@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubscriptionName(string $SubscriptionName) Set Fuzzy matching of consumer group name.
  * @method string getClusterId() Obtain Pulsar cluster ID
  * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID
+ * @method string getTopicName() Obtain topic name
+ * @method void setTopicName(string $TopicName) Set topic name
  */
 class DescribeMsgTraceRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeMsgTraceRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var string topic name
+     */
+    public $TopicName;
+
+    /**
      * @param string $EnvironmentId Environment (namespace).
      * @param string $MsgId Message ID.
      * @param string $ProduceTime Message production time.
@@ -80,6 +87,7 @@ class DescribeMsgTraceRequest extends AbstractModel
      * @param integer $Limit Number of returns, default to 10 if not specified, maximum value: 20.
      * @param string $SubscriptionName Fuzzy matching of consumer group name.
      * @param string $ClusterId Pulsar cluster ID
+     * @param string $TopicName topic name
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeMsgTraceRequest extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
+            $this->TopicName = $param["TopicName"];
         }
     }
 }

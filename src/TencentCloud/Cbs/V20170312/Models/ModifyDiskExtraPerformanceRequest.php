@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDiskExtraPerformance request structure.
  *
- * @method string getDiskId() Obtain ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
- * @method void setDiskId(string $DiskId) Set ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
- * @method integer getThroughputPerformance() Obtain The extra throughput to purchase, in MB/s
- * @method void setThroughputPerformance(integer $ThroughputPerformance) Set The extra throughput to purchase, in MB/s
+ * @method integer getThroughputPerformance() Obtain Specifies the hard disk performance of the additional CBS purchase in MiB/s.
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) Set Specifies the hard disk performance of the additional CBS purchase in MiB/s.
+ * @method string getDiskId() Obtain The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+ * @method void setDiskId(string $DiskId) Set The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
  */
 class ModifyDiskExtraPerformanceRequest extends AbstractModel
 {
     /**
-     * @var string ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
-     */
-    public $DiskId;
-
-    /**
-     * @var integer The extra throughput to purchase, in MB/s
+     * @var integer Specifies the hard disk performance of the additional CBS purchase in MiB/s.
      */
     public $ThroughputPerformance;
 
     /**
-     * @param string $DiskId ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
-     * @param integer $ThroughputPerformance The extra throughput to purchase, in MB/s
+     * @var string The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+     */
+    public $DiskId;
+
+    /**
+     * @param integer $ThroughputPerformance Specifies the hard disk performance of the additional CBS purchase in MiB/s.
+     * @param string $DiskId The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ModifyDiskExtraPerformanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
-            $this->DiskId = $param["DiskId"];
-        }
-
         if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
             $this->ThroughputPerformance = $param["ThroughputPerformance"];
+        }
+
+        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
+            $this->DiskId = $param["DiskId"];
         }
     }
 }

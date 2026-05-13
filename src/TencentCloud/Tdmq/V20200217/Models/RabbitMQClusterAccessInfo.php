@@ -18,24 +18,24 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RabbitMQ Cluster Access Information
+ * 
  *
- * @method string getPublicAccessEndpoint() Obtain Cluster Public Network Access Address
- * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) Set Cluster Public Network Access Address
- * @method string getWebConsoleEndpoint() Obtain Cluster Console Access Address
- * @method void setWebConsoleEndpoint(string $WebConsoleEndpoint) Set Cluster Console Access Address
- * @method string getWebConsoleUsername() Obtain Cluster Console Login Username
- * @method void setWebConsoleUsername(string $WebConsoleUsername) Set Cluster Console Login Username
- * @method string getWebConsolePassword() Obtain Cluster Console Login Password
- * @method void setWebConsolePassword(string $WebConsolePassword) Set Cluster Console Login Password
- * @method boolean getPublicAccessEndpointStatus() Obtain Deprecated
- * @method void setPublicAccessEndpointStatus(boolean $PublicAccessEndpointStatus) Set Deprecated
- * @method boolean getPublicControlConsoleSwitchStatus() Obtain Deprecated
- * @method void setPublicControlConsoleSwitchStatus(boolean $PublicControlConsoleSwitchStatus) Set Deprecated
- * @method boolean getVpcControlConsoleSwitchStatus() Obtain Deprecated
- * @method void setVpcControlConsoleSwitchStatus(boolean $VpcControlConsoleSwitchStatus) Set Deprecated
- * @method string getVpcWebConsoleEndpoint() Obtain Vpc management console access address, example value: http://1.1.1.1:15672
- * @method void setVpcWebConsoleEndpoint(string $VpcWebConsoleEndpoint) Set Vpc management console access address, example value: http://1.1.1.1:15672
+ * @method string getPublicAccessEndpoint() Obtain 
+ * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) Set 
+ * @method string getWebConsoleEndpoint() Obtain 
+ * @method void setWebConsoleEndpoint(string $WebConsoleEndpoint) Set 
+ * @method string getWebConsoleUsername() Obtain 
+ * @method void setWebConsoleUsername(string $WebConsoleUsername) Set 
+ * @method string getWebConsolePassword() Obtain 
+ * @method void setWebConsolePassword(string $WebConsolePassword) Set 
+ * @method boolean getPublicAccessEndpointStatus() Obtain 
+ * @method void setPublicAccessEndpointStatus(boolean $PublicAccessEndpointStatus) Set 
+ * @method boolean getPublicControlConsoleSwitchStatus() Obtain 
+ * @method void setPublicControlConsoleSwitchStatus(boolean $PublicControlConsoleSwitchStatus) Set 
+ * @method boolean getVpcControlConsoleSwitchStatus() Obtain 
+ * @method void setVpcControlConsoleSwitchStatus(boolean $VpcControlConsoleSwitchStatus) Set 
+ * @method string getVpcWebConsoleEndpoint() Obtain 
+ * @method void setVpcWebConsoleEndpoint(string $VpcWebConsoleEndpoint) Set 
  * @method string getPublicWebConsoleSwitchStatus() Obtain Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
  * @method void setPublicWebConsoleSwitchStatus(string $PublicWebConsoleSwitchStatus) Set Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
  * @method string getVpcWebConsoleSwitchStatus() Obtain Vpc console switch state. example value.
@@ -54,46 +54,52 @@ OFF/ON/CREATING/DELETING
  * @method void setPublicTlsAccessEndpoint(string $PublicTlsAccessEndpoint) Set Encrypted TLS data stream public network access point.
  * @method boolean getPublicIpReused() Obtain Specifies whether to reuse the public IP address.
  * @method void setPublicIpReused(boolean $PublicIpReused) Set Specifies whether to reuse the public IP address.
+ * @method string getPublicWebConsoleErrorMessage() Obtain Error message for public network console access point operations.
+ * @method void setPublicWebConsoleErrorMessage(string $PublicWebConsoleErrorMessage) Set Error message for public network console access point operations.
+ * @method string getVpcWebConsoleErrorMessage() Obtain Error message for private network console access point operations.
+ * @method void setVpcWebConsoleErrorMessage(string $VpcWebConsoleErrorMessage) Set Error message for private network console access point operations.
+ * @method string getPublicDataStreamErrorMessage() Obtain Error message for public network access point operation failure.
+ * @method void setPublicDataStreamErrorMessage(string $PublicDataStreamErrorMessage) Set Error message for public network access point operation failure.
  */
 class RabbitMQClusterAccessInfo extends AbstractModel
 {
     /**
-     * @var string Cluster Public Network Access Address
+     * @var string 
      */
     public $PublicAccessEndpoint;
 
     /**
-     * @var string Cluster Console Access Address
+     * @var string 
      */
     public $WebConsoleEndpoint;
 
     /**
-     * @var string Cluster Console Login Username
+     * @var string 
      */
     public $WebConsoleUsername;
 
     /**
-     * @var string Cluster Console Login Password
+     * @var string 
      */
     public $WebConsolePassword;
 
     /**
-     * @var boolean Deprecated
+     * @var boolean 
      */
     public $PublicAccessEndpointStatus;
 
     /**
-     * @var boolean Deprecated
+     * @var boolean 
      */
     public $PublicControlConsoleSwitchStatus;
 
     /**
-     * @var boolean Deprecated
+     * @var boolean 
      */
     public $VpcControlConsoleSwitchStatus;
 
     /**
-     * @var string Vpc management console access address, example value: http://1.1.1.1:15672
+     * @var string 
      */
     public $VpcWebConsoleEndpoint;
 
@@ -139,14 +145,29 @@ OFF/ON/CREATING/DELETING
     public $PublicIpReused;
 
     /**
-     * @param string $PublicAccessEndpoint Cluster Public Network Access Address
-     * @param string $WebConsoleEndpoint Cluster Console Access Address
-     * @param string $WebConsoleUsername Cluster Console Login Username
-     * @param string $WebConsolePassword Cluster Console Login Password
-     * @param boolean $PublicAccessEndpointStatus Deprecated
-     * @param boolean $PublicControlConsoleSwitchStatus Deprecated
-     * @param boolean $VpcControlConsoleSwitchStatus Deprecated
-     * @param string $VpcWebConsoleEndpoint Vpc management console access address, example value: http://1.1.1.1:15672
+     * @var string Error message for public network console access point operations.
+     */
+    public $PublicWebConsoleErrorMessage;
+
+    /**
+     * @var string Error message for private network console access point operations.
+     */
+    public $VpcWebConsoleErrorMessage;
+
+    /**
+     * @var string Error message for public network access point operation failure.
+     */
+    public $PublicDataStreamErrorMessage;
+
+    /**
+     * @param string $PublicAccessEndpoint 
+     * @param string $WebConsoleEndpoint 
+     * @param string $WebConsoleUsername 
+     * @param string $WebConsolePassword 
+     * @param boolean $PublicAccessEndpointStatus 
+     * @param boolean $PublicControlConsoleSwitchStatus 
+     * @param boolean $VpcControlConsoleSwitchStatus 
+     * @param string $VpcWebConsoleEndpoint 
      * @param string $PublicWebConsoleSwitchStatus Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
      * @param string $VpcWebConsoleSwitchStatus Vpc console switch state. example value.
 OFF/ON/CREATING/DELETING
@@ -156,6 +177,9 @@ OFF/ON/CREATING/DELETING
      * @param VpcEndpointInfo $ControlPlaneEndpointInfo VPC information used by the control plane.
      * @param string $PublicTlsAccessEndpoint Encrypted TLS data stream public network access point.
      * @param boolean $PublicIpReused Specifies whether to reuse the public IP address.
+     * @param string $PublicWebConsoleErrorMessage Error message for public network console access point operations.
+     * @param string $VpcWebConsoleErrorMessage Error message for private network console access point operations.
+     * @param string $PublicDataStreamErrorMessage Error message for public network access point operation failure.
      */
     function __construct()
     {
@@ -234,6 +258,18 @@ OFF/ON/CREATING/DELETING
 
         if (array_key_exists("PublicIpReused",$param) and $param["PublicIpReused"] !== null) {
             $this->PublicIpReused = $param["PublicIpReused"];
+        }
+
+        if (array_key_exists("PublicWebConsoleErrorMessage",$param) and $param["PublicWebConsoleErrorMessage"] !== null) {
+            $this->PublicWebConsoleErrorMessage = $param["PublicWebConsoleErrorMessage"];
+        }
+
+        if (array_key_exists("VpcWebConsoleErrorMessage",$param) and $param["VpcWebConsoleErrorMessage"] !== null) {
+            $this->VpcWebConsoleErrorMessage = $param["VpcWebConsoleErrorMessage"];
+        }
+
+        if (array_key_exists("PublicDataStreamErrorMessage",$param) and $param["PublicDataStreamErrorMessage"] !== null) {
+            $this->PublicDataStreamErrorMessage = $param["PublicDataStreamErrorMessage"];
         }
     }
 }

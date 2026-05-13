@@ -35,6 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQuery() Obtain Query content.
 
  * @method void setQuery(string $Query) Set Query content.
+
+ * @method array getFilters() Obtain <p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p>
+ * @method void setFilters(array $Filters) Set <p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p>
  */
 class ListRejectedQuestionRequest extends AbstractModel
 {
@@ -63,6 +66,11 @@ class ListRejectedQuestionRequest extends AbstractModel
     public $Query;
 
     /**
+     * @var array <p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p>
+     */
+    public $Filters;
+
+    /**
      * @param string $BotBizId Application ID.
      * @param integer $PageNumber Page number.
 
@@ -70,6 +78,8 @@ class ListRejectedQuestionRequest extends AbstractModel
      * @param integer $PageSize Number of items per page.
 
      * @param string $Query Query content.
+
+     * @param array $Filters <p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p>
      */
     function __construct()
     {
@@ -98,6 +108,15 @@ class ListRejectedQuestionRequest extends AbstractModel
 
         if (array_key_exists("Query",$param) and $param["Query"] !== null) {
             $this->Query = $param["Query"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new FilterItem();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

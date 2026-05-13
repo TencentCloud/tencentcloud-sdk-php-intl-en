@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxBandWidth(integer $MaxBandWidth) Set Peak bandwidth in Mbps
  * @method integer getMaxNamespaces() Obtain Maximum number of namespaces
  * @method void setMaxNamespaces(integer $MaxNamespaces) Set Maximum number of namespaces
- * @method integer getMaxTopics() Obtain Maximum number of topic partitions
- * @method void setMaxTopics(integer $MaxTopics) Set Maximum number of topic partitions
+ * @method integer getMaxTopics() Obtain Maximum number of topics that can be created
+ * @method void setMaxTopics(integer $MaxTopics) Set Maximum number of topics that can be created
  * @method integer getScalableTps() Obtain Elastic TPS beyond the specification
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScalableTps(integer $ScalableTps) Set Elastic TPS beyond the specification
@@ -40,8 +40,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setMaxPartitions(integer $MaxPartitions) Set 32 or 128.
 Maximum number of partitions for topics in the current cluster.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxDelayedMessages() Obtain Maximum delayed message count for the product. 0 indicates no limit.	
- * @method void setMaxDelayedMessages(integer $MaxDelayedMessages) Set Maximum delayed message count for the product. 0 indicates no limit.	
+ * @method integer getMaxDelayedMessages() Obtain Maximum delayed message count. 0 means no limit.	
+ * @method void setMaxDelayedMessages(integer $MaxDelayedMessages) Set Maximum delayed message count. 0 means no limit.	
+ * @method integer getMaxTopicsPartitioned() Obtain Maximum number of topic partitions that can be created
+ * @method void setMaxTopicsPartitioned(integer $MaxTopicsPartitioned) Set Maximum number of topic partitions that can be created
+ * @method integer getBrokerMaxConnections() Obtain Maximum number of connections per broker
+ * @method void setBrokerMaxConnections(integer $BrokerMaxConnections) Set Maximum number of connections per broker
+ * @method integer getBrokerMaxConnectionsPerIp() Obtain Maximum number of connections per IP
+ * @method void setBrokerMaxConnectionsPerIp(integer $BrokerMaxConnectionsPerIp) Set Maximum number of connections per IP
+ * @method integer getMaximumElasticStorage() Obtain Elastic storage cluster maximum storage specification; fixed storage is 0.
+ * @method void setMaximumElasticStorage(integer $MaximumElasticStorage) Set Elastic storage cluster maximum storage specification; fixed storage is 0.
  */
 class PulsarProClusterSpecInfo extends AbstractModel
 {
@@ -66,7 +74,7 @@ class PulsarProClusterSpecInfo extends AbstractModel
     public $MaxNamespaces;
 
     /**
-     * @var integer Maximum number of topic partitions
+     * @var integer Maximum number of topics that can be created
      */
     public $MaxTopics;
 
@@ -84,22 +92,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MaxPartitions;
 
     /**
-     * @var integer Maximum delayed message count for the product. 0 indicates no limit.	
+     * @var integer Maximum delayed message count. 0 means no limit.	
      */
     public $MaxDelayedMessages;
+
+    /**
+     * @var integer Maximum number of topic partitions that can be created
+     */
+    public $MaxTopicsPartitioned;
+
+    /**
+     * @var integer Maximum number of connections per broker
+     */
+    public $BrokerMaxConnections;
+
+    /**
+     * @var integer Maximum number of connections per IP
+     */
+    public $BrokerMaxConnectionsPerIp;
+
+    /**
+     * @var integer Elastic storage cluster maximum storage specification; fixed storage is 0.
+     */
+    public $MaximumElasticStorage;
 
     /**
      * @param string $SpecName Cluster specification name
      * @param integer $MaxTps Peak TPS
      * @param integer $MaxBandWidth Peak bandwidth in Mbps
      * @param integer $MaxNamespaces Maximum number of namespaces
-     * @param integer $MaxTopics Maximum number of topic partitions
+     * @param integer $MaxTopics Maximum number of topics that can be created
      * @param integer $ScalableTps Elastic TPS beyond the specification
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MaxPartitions 32 or 128.
 Maximum number of partitions for topics in the current cluster.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxDelayedMessages Maximum delayed message count for the product. 0 indicates no limit.	
+     * @param integer $MaxDelayedMessages Maximum delayed message count. 0 means no limit.	
+     * @param integer $MaxTopicsPartitioned Maximum number of topic partitions that can be created
+     * @param integer $BrokerMaxConnections Maximum number of connections per broker
+     * @param integer $BrokerMaxConnectionsPerIp Maximum number of connections per IP
+     * @param integer $MaximumElasticStorage Elastic storage cluster maximum storage specification; fixed storage is 0.
      */
     function __construct()
     {
@@ -144,6 +176,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MaxDelayedMessages",$param) and $param["MaxDelayedMessages"] !== null) {
             $this->MaxDelayedMessages = $param["MaxDelayedMessages"];
+        }
+
+        if (array_key_exists("MaxTopicsPartitioned",$param) and $param["MaxTopicsPartitioned"] !== null) {
+            $this->MaxTopicsPartitioned = $param["MaxTopicsPartitioned"];
+        }
+
+        if (array_key_exists("BrokerMaxConnections",$param) and $param["BrokerMaxConnections"] !== null) {
+            $this->BrokerMaxConnections = $param["BrokerMaxConnections"];
+        }
+
+        if (array_key_exists("BrokerMaxConnectionsPerIp",$param) and $param["BrokerMaxConnectionsPerIp"] !== null) {
+            $this->BrokerMaxConnectionsPerIp = $param["BrokerMaxConnectionsPerIp"];
+        }
+
+        if (array_key_exists("MaximumElasticStorage",$param) and $param["MaximumElasticStorage"] !== null) {
+            $this->MaximumElasticStorage = $param["MaximumElasticStorage"];
         }
     }
 }

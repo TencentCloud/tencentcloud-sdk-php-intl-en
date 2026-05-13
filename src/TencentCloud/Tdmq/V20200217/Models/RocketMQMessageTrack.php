@@ -42,6 +42,14 @@ Consumption status UNKNOWN.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExceptionDesc(string $ExceptionDesc) Set Exception information
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getConsumeStatusSource() Obtain Consumption status source. The enumeration values are as follows:
+
+-DIFF_OFFSET: Calculate by server offset
+-TRACE_REPORT: Judge by the reported path.
+ * @method void setConsumeStatusSource(string $ConsumeStatusSource) Set Consumption status source. The enumeration values are as follows:
+
+-DIFF_OFFSET: Calculate by server offset
+-TRACE_REPORT: Judge by the reported path.
  */
 class RocketMQMessageTrack extends AbstractModel
 {
@@ -73,6 +81,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ExceptionDesc;
 
     /**
+     * @var string Consumption status source. The enumeration values are as follows:
+
+-DIFF_OFFSET: Calculate by server offset
+-TRACE_REPORT: Judge by the reported path.
+     */
+    public $ConsumeStatusSource;
+
+    /**
      * @param string $Group Consumer group
      * @param string $ConsumeStatus Consumption status.
 CONSUMED.
@@ -84,6 +100,10 @@ Consumption status UNKNOWN.
      * @param string $TrackType Message trace type
      * @param string $ExceptionDesc Exception information
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ConsumeStatusSource Consumption status source. The enumeration values are as follows:
+
+-DIFF_OFFSET: Calculate by server offset
+-TRACE_REPORT: Judge by the reported path.
      */
     function __construct()
     {
@@ -112,6 +132,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ExceptionDesc",$param) and $param["ExceptionDesc"] !== null) {
             $this->ExceptionDesc = $param["ExceptionDesc"];
+        }
+
+        if (array_key_exists("ConsumeStatusSource",$param) and $param["ConsumeStatusSource"] !== null) {
+            $this->ConsumeStatusSource = $param["ConsumeStatusSource"];
         }
     }
 }

@@ -20,91 +20,91 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstancesDetail request structure.
  *
- * @method string getInstanceId() Obtain (Filter) filter by instance ID
- * @method void setInstanceId(string $InstanceId) Set (Filter) filter by instance ID
- * @method string getSearchWord() Obtain Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
- * @method void setSearchWord(string $SearchWord) Set Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
- * @method array getStatus() Obtain (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
- * @method void setStatus(array $Status) Set (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
- * @method integer getOffset() Obtain Offset. If this parameter is left empty, `0` will be used by default.
- * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, `0` will be used by default.
- * @method integer getLimit() Obtain Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
- * @method void setLimit(integer $Limit) Set Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
- * @method string getTagKey() Obtain Tag key match.
- * @method void setTagKey(string $TagKey) Set Tag key match.
- * @method array getFilters() Obtain Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
- * @method void setFilters(array $Filters) Set Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
- * @method string getInstanceIds() Obtain This parameter has been deprecated and replaced with `InstanceIdList`.
- * @method void setInstanceIds(string $InstanceIds) Set This parameter has been deprecated and replaced with `InstanceIdList`.
- * @method array getInstanceIdList() Obtain Filter by instance ID.
- * @method void setInstanceIdList(array $InstanceIdList) Set Filter by instance ID.
- * @method array getTagList() Obtain Filter instances by a set of tags
- * @method void setTagList(array $TagList) Set Filter instances by a set of tags
+ * @method string getInstanceId() Obtain <p>(Filtering Conditions) Filter by instance ID</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>(Filtering Conditions) Filter by instance ID</p>
+ * @method string getSearchWord() Obtain <p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p>
+ * @method void setSearchWord(string $SearchWord) Set <p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p>
+ * @method array getStatus() Obtain <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
+ * @method void setStatus(array $Status) Set <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
+ * @method integer getOffset() Obtain <p>Offset, which is 0 by default.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset, which is 0 by default.</p>
+ * @method integer getLimit() Obtain <p>Number of returned results. Default value: 10. Maximum value: 20.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned results. Default value: 10. Maximum value: 20.</p>
+ * @method string getTagKey() Obtain <p>Match the tag key.</p>
+ * @method void setTagKey(string $TagKey) Set <p>Match the tag key.</p>
+ * @method array getFilters() Obtain <p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p>
+ * @method void setFilters(array $Filters) Set <p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p>
+ * @method string getInstanceIds() Obtain <p>Deprecated. Use InstanceIdList.</p>
+ * @method void setInstanceIds(string $InstanceIds) Set <p>Deprecated. Use InstanceIdList.</p>
+ * @method array getInstanceIdList() Obtain <p>Filter by instance ID</p>
+ * @method void setInstanceIdList(array $InstanceIdList) Set <p>Filter by instance ID</p>
+ * @method array getTagList() Obtain <p>Filter instances based on tag list (take the intersection)</p>
+ * @method void setTagList(array $TagList) Set <p>Filter instances based on tag list (take the intersection)</p>
  */
 class DescribeInstancesDetailRequest extends AbstractModel
 {
     /**
-     * @var string (Filter) filter by instance ID
+     * @var string <p>(Filtering Conditions) Filter by instance ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
+     * @var string <p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p>
      */
     public $SearchWord;
 
     /**
-     * @var array (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+     * @var array <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer Offset. If this parameter is left empty, `0` will be used by default.
+     * @var integer <p>Offset, which is 0 by default.</p>
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
+     * @var integer <p>Number of returned results. Default value: 10. Maximum value: 20.</p>
      */
     public $Limit;
 
     /**
-     * @var string Tag key match.
+     * @var string <p>Match the tag key.</p>
      */
     public $TagKey;
 
     /**
-     * @var array Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
+     * @var array <p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p>
      */
     public $Filters;
 
     /**
-     * @var string This parameter has been deprecated and replaced with `InstanceIdList`.
+     * @var string <p>Deprecated. Use InstanceIdList.</p>
      * @deprecated
      */
     public $InstanceIds;
 
     /**
-     * @var array Filter by instance ID.
+     * @var array <p>Filter by instance ID</p>
      */
     public $InstanceIdList;
 
     /**
-     * @var array Filter instances by a set of tags
+     * @var array <p>Filter instances based on tag list (take the intersection)</p>
      */
     public $TagList;
 
     /**
-     * @param string $InstanceId (Filter) filter by instance ID
-     * @param string $SearchWord Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
-     * @param array $Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
-     * @param integer $Offset Offset. If this parameter is left empty, `0` will be used by default.
-     * @param integer $Limit Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
-     * @param string $TagKey Tag key match.
-     * @param array $Filters Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
-     * @param string $InstanceIds This parameter has been deprecated and replaced with `InstanceIdList`.
-     * @param array $InstanceIdList Filter by instance ID.
-     * @param array $TagList Filter instances by a set of tags
+     * @param string $InstanceId <p>(Filtering Conditions) Filter by instance ID</p>
+     * @param string $SearchWord <p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p>
+     * @param array $Status <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
+     * @param integer $Offset <p>Offset, which is 0 by default.</p>
+     * @param integer $Limit <p>Number of returned results. Default value: 10. Maximum value: 20.</p>
+     * @param string $TagKey <p>Match the tag key.</p>
+     * @param array $Filters <p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p>
+     * @param string $InstanceIds <p>Deprecated. Use InstanceIdList.</p>
+     * @param array $InstanceIdList <p>Filter by instance ID</p>
+     * @param array $TagList <p>Filter instances based on tag list (take the intersection)</p>
      */
     function __construct()
     {

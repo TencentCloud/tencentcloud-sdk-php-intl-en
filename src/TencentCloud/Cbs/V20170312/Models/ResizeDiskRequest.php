@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResizeDisk request structure.
  *
- * @method string getDiskId() Obtain ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
- * @method void setDiskId(string $DiskId) Set ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
  * @method integer getDiskSize() Obtain Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
  * @method void setDiskSize(integer $DiskSize) Set Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+ * @method string getDiskId() Obtain Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. this field is only required when expanding a single cloud disk.
+ * @method void setDiskId(string $DiskId) Set Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. this field is only required when expanding a single cloud disk.
  */
 class ResizeDiskRequest extends AbstractModel
 {
-    /**
-     * @var string ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-     */
-    public $DiskId;
-
     /**
      * @var integer Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
      */
     public $DiskSize;
 
     /**
-     * @param string $DiskId ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+     * @var string Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. this field is only required when expanding a single cloud disk.
+     */
+    public $DiskId;
+
+    /**
      * @param integer $DiskSize Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+     * @param string $DiskId Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. this field is only required when expanding a single cloud disk.
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ResizeDiskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
-            $this->DiskId = $param["DiskId"];
-        }
-
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
+            $this->DiskId = $param["DiskId"];
         }
     }
 }

@@ -23,16 +23,20 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cbs\V20170312\Models as Models;
 
 /**
- * @method Models\ApplyDiskBackupResponse ApplyDiskBackup(Models\ApplyDiskBackupRequest $req) This API is used to roll back a backup point to the original cloud disk.
+ * @method Models\ApplyDiskBackupResponse ApplyDiskBackup(Models\ApplyDiskBackupRequest $req) This API is used to roll back a backup to the original cloud disk.
 
-* Only rollback to the original cloud disk is supported. For a data disk backup point, if you want to copy the backup point data to another cloud disk, use the `CreateSnapshot` API to convert the backup point into a snapshot, use the `CreateDisks` API to create an elastic cloud disk, and then copy the snapshot data to it.
-* Only backup points in `NORMAL` status can be rolled back. To query the status of a backup point, call the `DescribeDiskBackups` API and see the `BackupState` field in the response.
-* For an elastic cloud disk, it must be in unattached status. To query the status of the cloud disk, call the `DescribeDisks` API and see the `Attached` field in the response. For a non-elastic cloud disk purchased together with an instance, the instance must be in shutdown status, which can be queried through the `DescribeInstancesStatus` API.
+This API only supports rolling back to the original cloud disk. For data disk backup points, if you need to copy backup point data to other CBS, use first [CreateSnapshot](https://www.tencentcloud.com/document/product/362/15648?from_cn_redirect=1) to convert the backup point to a snapshot, and use [CreateDisks](https://www.tencentcloud.com/document/product/362/16312?from_cn_redirect=1) to create a new elastic cloud disk, then copy snapshot data to the newly purchased cloud disk.
+The backup point used for rollback must be in NORMAL status. The backup point status can be checked through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API, see BackupState field explanation in the output parameter.
+If it is an elastic cloud disk, the CBS must be in an unmounted state. The CBS mount status can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API. See Attached field explanation. If it is a non-elastic cloud hard disk purchased together with the instance, the instance must be in a powered off state. The instance status can be queried through the [DescribeInstancesStatus](https://www.tencentcloud.com/document/product/213/15738?from_cn_redirect=1) API.
  * @method Models\ApplySnapshotResponse ApplySnapshot(Models\ApplySnapshotRequest $req) This API (ApplySnapshot) is used to roll back a snapshot to the original cloud disk.
 
 * The snapshot can only be rolled back to the original cloud disk. For data disk snapshots, if you need to copy the snapshot data to other cloud disks, use the API [CreateDisks](https://intl.cloud.tencent.com/document/product/362/16312?from_cn_redirect=1) to create an elastic cloud disk and then copy the snapshot data to the created cloud disk. 
 * The snapshot for rollback must be in NORMAL status. The snapshot status can be queried in the SnapshotState field in the output parameters through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
 * For elastic cloud disks, the cloud disk must be in UNMOUNTED status. The cloud disk status can be queried in the Attached field returned by the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). For non-elastic cloud disks purchased together with instances, the instance must be in SHUTDOWN status. The instance status can be queried through the API [DescribeInstancesStatus](https://intl.cloud.tencent.com/document/product/213/15738?from_cn_redirect=1).
+ * @method Models\ApplySnapshotGroupResponse ApplySnapshotGroup(Models\ApplySnapshotGroupRequest $req) This API is used to rollback a snapshot group and restore the instance to the state at the moment the snapshot group was created.
+This API is used to roll back all or part of the disks in the snapshot group.
+This API is used to roll back disks. If the disks to be rolled back contain mounted disks, they must be mounted to the same instance, and the instance must be shut down before rollback.
+Rollback is an asynchronous operation. A successful API return does not indicate a successful rollback. You can call DescribeSnapshotGroups to check the snapshot group status.
  * @method Models\AttachDisksResponse AttachDisks(Models\AttachDisksRequest $req) This API is used to mount one or more cloud disks.
  
 * Batch operation is supported. You can mount multiple cloud disks to one CVM in a single request. If any of these cloud disks cannot be mounted, the operation fails and a specific error code returns.
@@ -41,10 +45,10 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 
 * For the scheduled snapshot policy limit of each region, see [Scheduled Snapshots](https://intl.cloud.tencent.com/document/product/362/8191?from_cn_redirect=1).
 * When a cloud disk that is bound to a scheduled snapshot policy is in the unused state (that is, an elastic cloud disk has not been mounted or the server of an inelastic disk is powered off) scheduled snapshots are not created.
- * @method Models\CopySnapshotCrossRegionsResponse CopySnapshotCrossRegions(Models\CopySnapshotCrossRegionsRequest $req) This API is used to replicate a snapshot to another region.
+ * @method Models\CopySnapshotCrossRegionsResponse CopySnapshotCrossRegions(Models\CopySnapshotCrossRegionsRequest $req) This API is used to replicate snapshots across regions.
 
-* This is an async API. A new snapshot ID is issued when the cross-region replication task is generated. It does not mean that the snapshot has been replicated successfully. You can all the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API in the destination region to check for this snapshot. If the snapshot status is `NORMAL`, the snapshot is replicated successfully.
-* The snapshot cross-region replication service will be commercialized in the Q3 of 2022. We will notify users about the commercialization in advance. Please check your messages in the Message Center.
+This API is asynchronous. When the cross-region replication request is issued successfully, it returns a new snapshot ID. At this point, the snapshot is not immediately replicated to the target region. You can use the [DescribeSnapshots](https://www.tencentcloud.com/document/product/362/15647?from_cn_redirect=1) API for the query in the target region to check the snapshot status and determine whether the replication is complete. If the snapshot status is "NORMAL", it indicates snapshot replication is complete.
+This API is used to perform snapshot cross-region replication, which will generate cross-region traffic. Commercial billing for this feature is expected in Q3 2025. Please check subsequent Message Center notices to avoid unexpected charges.
  * @method Models\CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicy(Models\CreateAutoSnapshotPolicyRequest $req) This API (CreateAutoSnapshotPolicy) is used to create a scheduled snapshot policy.
 
 * For the limits on the number of scheduled snapshot policies that can be created in each region, see [Scheduled Snapshots](https://intl.cloud.tencent.com/document/product/362/8191?from_cn_redirect=1).
@@ -59,10 +63,16 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 * You can only create snapshots for cloud disks with the snapshot capability. To check whether a cloud disk is snapshot-enabled, call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API and see the `SnapshotAbility` field in the response.
 * For the maximum number of snapshots that can be created, see [Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
 * Currently, you can convert backup points into general snapshots. After the conversion, snapshot usage fees may be charged, backup points will not be retained, and the occupied backup point quota will be released.
+ * @method Models\CreateSnapshotGroupResponse CreateSnapshotGroup(Models\CreateSnapshotGroupRequest $req) This API is used to create a snapshot group.
+This API is used to create snapshot groups. The CBS list must be mounted on the same instance.
+This API is used to create snapshot groups for all or some of the disks mounted to instance.
  * @method Models\DeleteAutoSnapshotPoliciesResponse DeleteAutoSnapshotPolicies(Models\DeleteAutoSnapshotPoliciesRequest $req) This API (DeleteAutoSnapshotPolicies) is used to delete scheduled snapshot policies.
 
 * Batch operations are supported. If one of the scheduled snapshot policies in a batch cannot be deleted, the operation is not performed and a specific error code is returned.
  * @method Models\DeleteDiskBackupsResponse DeleteDiskBackups(Models\DeleteDiskBackupsRequest $req) This API is used to delete the backup points of the specified cloud disk in batches.
+ * @method Models\DeleteSnapshotGroupResponse DeleteSnapshotGroup(Models\DeleteSnapshotGroupRequest $req) This API is used to delete snapshot groups. One snapshot group can be deleted per call.
+This API is used to delete all snapshots in the snapshot group by default.
+This API is used to delete a snapshot group. If a snapshot in the snapshot group has an associated image, deletion will fail and no snapshot will be deleted. Parameters can be input to enable simultaneous deletion of images bound to the snapshot by setting DeleteBindImages equal to true.
  * @method Models\DeleteSnapshotsResponse DeleteSnapshots(Models\DeleteSnapshotsRequest $req) This API is used to delete snapshots.
 
 * Only snapshots in the `NORMAL` state can be deleted. To query the state of a snapshot, you can call the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API and check the `SnapshotState` field in the response.
@@ -77,11 +87,6 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 You can filter results by backup point ID. You can also look for certain backup points by specifying the ID or type of the cloud disk for which the backup points are created. The relationship between different filters is logical `AND`. For more information on filters, see `Filter`.
 If the parameter is empty, a certain number (as specified by `Limit` and 20 by default) of backup points will be returned.
  * @method Models\DescribeDiskConfigQuotaResponse DescribeDiskConfigQuota(Models\DescribeDiskConfigQuotaRequest $req) This API (DescribeDiskConfigQuota) is used to query the cloud disk quota.
- * @method Models\DescribeDiskOperationLogsResponse DescribeDiskOperationLogs(Models\DescribeDiskOperationLogsRequest $req) 接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
-
-This API has been disused. Use the CloudAudit API instead, For more information, visit https://tapd.woa.com/pro/prong/stories/view/1010114221880719007.
-
-This API is used to query the operation logs of a cloud disk. It will be disused soon. Use [LookUpEvents](https://intl.cloud.tencent.com/document/product/629/12359?from_cn_redirect=1) instead.
  * @method Models\DescribeDisksResponse DescribeDisks(Models\DescribeDisksRequest $req) This API (DescribeDisks) is used to query the list of cloud disks.
 
 * The details of the cloud disk can be queried based on the ID, type or status of the cloud disk. The relationship between different conditions is AND. For more information about filtering, please see the `Filter`.
@@ -89,12 +94,10 @@ This API is used to query the operation logs of a cloud disk. It will be disused
  * @method Models\DescribeInstancesDiskNumResponse DescribeInstancesDiskNum(Models\DescribeInstancesDiskNumRequest $req) This API (DescribeInstancesDiskNum) is used to query the number of cloud disks mounted in the instance.
 
 * Batch operations are supported. If multiple CVM instance IDs are specified, the returned results will list the number of cloud disks mounted on each CVM.
- * @method Models\DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogs(Models\DescribeSnapshotOperationLogsRequest $req) 接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
-
-This API has been disused. Use the CloudAudit API instead, For more information, visit https://tapd.woa.com/pro/prong/stories/view/1010114221880719007.
-
-This API is used to query the operation logs of a snapshot. It will be disused soon. Use [LookUpEvents](https://intl.cloud.tencent.com/document/product/629/12359?from_cn_redirect=1) instead.
-
+ * @method Models\DescribeSnapshotGroupsResponse DescribeSnapshotGroups(Models\DescribeSnapshotGroupsRequest $req) This API is used to query the snapshot group list.
+This API is used to query the snapshot group list based on snapshot group ID, snapshot group status or snapshot ID associated with the snapshot group. The relationship among different criteria is AND. For detailed filtering information, see `Filter`.
+If the parameter is empty, a certain number of the cloud disk list for the current user is returned (specified by `Limit`, defaults to 20).
+ * @method Models\DescribeSnapshotOverviewResponse DescribeSnapshotOverview(Models\DescribeSnapshotOverviewRequest $req) This API is used to query the usage overview of user snapshots, including total snapshot capacity, cost capacity, etc.
  * @method Models\DescribeSnapshotSharePermissionResponse DescribeSnapshotSharePermission(Models\DescribeSnapshotSharePermissionRequest $req) This API is used to query the sharing information of snapshots.
  * @method Models\DescribeSnapshotsResponse DescribeSnapshots(Models\DescribeSnapshotsRequest $req) This API (DescribeSnapshots) is used to query the details of snapshots.
 
@@ -104,7 +107,9 @@ This API is used to query the operation logs of a snapshot. It will be disused s
 
 * Batch operation is supported. You can unmount multiple cloud disks from the same CVM in a single request. If any of these cloud disks cannot be unmounted, the operation fails and a specific error code returns.
 * This is an async API. A successful request does not mean that the cloud disks have been unmounted successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query the status of cloud disks. When the status changes from `ATTACHED` to `UNATTACHED`, the unmounting is successful.
- * @method Models\GetSnapOverviewResponse GetSnapOverview(Models\GetSnapOverviewRequest $req) This API is used to get snapshot overview information.
+ * @method Models\GetSnapOverviewResponse GetSnapOverview(Models\GetSnapOverviewRequest $req) This API is used to standardize API naming. This API will be decommissioned and replaced by the new API named DescribeSnapshotOverview.
+
+This API is used to obtain snapshot overview information.
  * @method Models\InitializeDisksResponse InitializeDisks(Models\InitializeDisksRequest $req) This API is used to reinitialize the cloud disks. Note the following when reinitializing the cloud disks:
 1. For a cloud disk created from a snapshot, it is rolled back to the state of the snapshot;
 2. For a cloud disk created from the scratch, all data are cleared. Please check and back up the necessary data before the reinitialization;
@@ -115,22 +120,26 @@ This API is used to query the operation logs of a snapshot. It will be disused s
  * @method Models\InquiryPriceCreateDisksResponse InquiryPriceCreateDisks(Models\InquiryPriceCreateDisksRequest $req) This API is used to query the price of creating cloud disks.
 
 * You can query the price of creating multiple cloud disks in a single request. In this case, the price returned will be the total price.
+ * @method Models\InquiryPriceRenewDisksResponse InquiryPriceRenewDisks(Models\InquiryPriceRenewDisksRequest $req) This API is used to query the renewal price of CBS.
+
+This API is used to support renewal along with mounted instances. The parameter specifies CurInstanceDeadline in [DiskChargePrepaid](https://www.tencentcloud.com/document/product/362/15669?from_cn_redirect=1#DiskChargePrepaid), and renewal will be performed at the expiry date after the instance is renewed.
+This API is used to support specifying different renewal durations for multiple cloud disks. The total price for renewing multiple cloud disks is returned.
  * @method Models\InquiryPriceResizeDiskResponse InquiryPriceResizeDisk(Models\InquiryPriceResizeDiskRequest $req) This API is used to query the price for expanding cloud disks.
  * @method Models\ModifyAutoSnapshotPolicyAttributeResponse ModifyAutoSnapshotPolicyAttribute(Models\ModifyAutoSnapshotPolicyAttributeRequest $req) This API (ModifyAutoSnapshotPolicyAttribute) is used to modify the attributes of an automatic snapshot policy.
 
 * You can use this API to modify the attributes of a scheduled snapshot policy, including the execution policy, name, and activation.
 * When modifying the number of days for retention, you must ensure that there is no clash with the permanent retention attribute. Otherwise, the entire operation will fail and a specific error code will be returned.
- * @method Models\ModifyDiskAttributesResponse ModifyDiskAttributes(Models\ModifyDiskAttributesRequest $req) * Only the project ID of elastic cloud disk can be modified. The project ID of the cloud disk created with the CVM is linked with the CVM. The project ID can be can be queried in the Portable field in the output parameters through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-* "Cloud disk name" is only used by users for their management. Tencent Cloud does not use the name as the basis for ticket submission or cloud disk management.
-* Batch operations are supported. If multiple cloud disk IDs are specified, all the specified cloud disks must have the same attribute. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
+ * @method Models\ModifyDiskAttributesResponse ModifyDiskAttributes(Models\ModifyDiskAttributesRequest $req) This API is used to modify only the Project ID of elastic cloud disks. The Project ID of a cloud disk created with a host is linked to the host. Whether a cloud disk is elastic can be checked through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API. See the Portable field explanation in the output parameters.
+The "cloud disk name" is only for ease of management for users. Tencent Cloud does not use this name as a basis for submitting tickets or performing cloud disk management operations.
+This API is used to support batch operations. If multiple cloud disk IDs are passed in, modify cloud disks to the same attribute. If there is a cloud disk that does not allow operation, the operation will not be executed and return a specific error code.
  * @method Models\ModifyDiskBackupQuotaResponse ModifyDiskBackupQuota(Models\ModifyDiskBackupQuotaRequest $req) This API is used to modify the cloud disk backup point quota.
  * @method Models\ModifyDiskExtraPerformanceResponse ModifyDiskExtraPerformance(Models\ModifyDiskExtraPerformanceRequest $req) This API is used to adjust extra performance for Enhanced SSD (CLOUD_HSSD) and ulTra SSD. 
 
 *This API only supports adjust extra performance for Enhanced SSD and ulTra SSD. 
- * @method Models\ModifySnapshotAttributeResponse ModifySnapshotAttribute(Models\ModifySnapshotAttributeRequest $req) This API (ModifySnapshotAttribute) is used to modify the attributes of a specified snapshot.
+ * @method Models\ModifySnapshotAttributeResponse ModifySnapshotAttribute(Models\ModifySnapshotAttributeRequest $req) This API is used to modify the attributes of a specified snapshot.
 
-* Currently, you can only modify snapshot name and change non-permanent snapshots into permanent snapshots.
-* "Snapshot name" is only used by users for their management. Tencent Cloud does not use the name as the basis for ticket submission or snapshot management.
+This API supports modifying snapshot name and expiration time, as well as changing a non-permanent snapshot to a permanent one.
+The "snapshot name" is only for making user management convenient. Tencent Cloud does not use this name as a basis for submitting tickets or managing snapshot operations.
  * @method Models\ModifySnapshotsSharePermissionResponse ModifySnapshotsSharePermission(Models\ModifySnapshotsSharePermissionRequest $req) This API is used to modify snapshot sharing information.
 
 After snapshots are shared, the accounts they are shared to can use the snapshot to create cloud disks.

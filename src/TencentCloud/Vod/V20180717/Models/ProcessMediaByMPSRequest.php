@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) Set <p>Media file ID, the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
  * @method integer getSubAppId() Obtain <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
  * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
- * @method string getMPSProcessMediaParams() Obtain <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
- * @method void setMPSProcessMediaParams(string $MPSProcessMediaParams) Set <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
+ * @method string getMPSProcessMediaParams() Obtain <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
+ * @method void setMPSProcessMediaParams(string $MPSProcessMediaParams) Set <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
  * @method MPSAiAnalysisTaskInput getAiAnalysisTask() Obtain <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
  * @method void setAiAnalysisTask(MPSAiAnalysisTaskInput $AiAnalysisTask) Set <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
  * @method MPSSmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain <p>Parameters for the smart subtitle task of type kind. Valid when MPSProcessMediaParams is empty.</p>
@@ -48,7 +48,7 @@ class ProcessMediaByMPSRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
+     * @var string <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
      */
     public $MPSProcessMediaParams;
 
@@ -75,7 +75,7 @@ class ProcessMediaByMPSRequest extends AbstractModel
     /**
      * @param string $FileId <p>Media file ID, the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
      * @param integer $SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
-     * @param string $MPSProcessMediaParams <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
+     * @param string $MPSProcessMediaParams <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
      * @param MPSAiAnalysisTaskInput $AiAnalysisTask <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
      * @param MPSSmartSubtitlesTaskInput $SmartSubtitlesTask <p>Parameters for the smart subtitle task of type kind. Valid when MPSProcessMediaParams is empty.</p>
      * @param MPSSmartEraseTaskInput $SmartEraseTask <p>Parameters for the intelligent erasure task of type kind. Valid when MPSProcessMediaParams is empty.</p>

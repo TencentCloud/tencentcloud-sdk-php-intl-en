@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(integer $ExpireTime) Set Instance expiration time in milliseconds
  * @method integer getAutoRenewFlag() Obtain Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
- * @method integer getPayMode() Obtain Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription).
- * @method void setPayMode(integer $PayMode) Set Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription).
+ * @method integer getPayMode() Obtain Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription).
+ * @method void setPayMode(integer $PayMode) Set Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription).
  * @method string getRemark() Obtain Remarks
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRemark(string $Remark) Set Remarks
@@ -125,7 +125,7 @@ class PulsarProInstance extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var integer Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription).
+     * @var integer Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription).
      */
     public $PayMode;
 
@@ -201,7 +201,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $MaxStorage Storage capacity in GB
      * @param integer $ExpireTime Instance expiration time in milliseconds
      * @param integer $AutoRenewFlag Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
-     * @param integer $PayMode Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription).
+     * @param integer $PayMode Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription).
      * @param string $Remark Remarks
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SpecName Instance specification ID

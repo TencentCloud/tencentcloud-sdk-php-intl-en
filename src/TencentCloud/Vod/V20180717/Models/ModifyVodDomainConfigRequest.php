@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain Domain name
  * @method void setDomain(string $Domain) Set Domain name
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method RefererAuthPolicy getRefererAuthPolicy() Obtain [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/14046?from_cn_redirect=1) policy
  * @method void setRefererAuthPolicy(RefererAuthPolicy $RefererAuthPolicy) Set [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/14046?from_cn_redirect=1) policy
  * @method UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() Obtain [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/14047?from_cn_redirect=1) policy
  * @method void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy $UrlSignatureAuthPolicy) Set [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/14047?from_cn_redirect=1) policy
  * @method DomainQUICConfig getQUICConfig() Obtain The QUIC configuration.
  * @method void setQUICConfig(DomainQUICConfig $QUICConfig) Set The QUIC configuration.
+ * @method IPFilterPolicy getIPFilterPolicy() Obtain IP access restriction rules.
+ * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) Set IP access restriction rules.
  */
 class ModifyVodDomainConfigRequest extends AbstractModel
 {
@@ -39,7 +41,7 @@ class ModifyVodDomainConfigRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
@@ -59,11 +61,17 @@ class ModifyVodDomainConfigRequest extends AbstractModel
     public $QUICConfig;
 
     /**
+     * @var IPFilterPolicy IP access restriction rules.
+     */
+    public $IPFilterPolicy;
+
+    /**
      * @param string $Domain Domain name
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param RefererAuthPolicy $RefererAuthPolicy [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/14046?from_cn_redirect=1) policy
      * @param UrlSignatureAuthPolicy $UrlSignatureAuthPolicy [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/14047?from_cn_redirect=1) policy
      * @param DomainQUICConfig $QUICConfig The QUIC configuration.
+     * @param IPFilterPolicy $IPFilterPolicy IP access restriction rules.
      */
     function __construct()
     {
@@ -99,6 +107,11 @@ class ModifyVodDomainConfigRequest extends AbstractModel
         if (array_key_exists("QUICConfig",$param) and $param["QUICConfig"] !== null) {
             $this->QUICConfig = new DomainQUICConfig();
             $this->QUICConfig->deserialize($param["QUICConfig"]);
+        }
+
+        if (array_key_exists("IPFilterPolicy",$param) and $param["IPFilterPolicy"] !== null) {
+            $this->IPFilterPolicy = new IPFilterPolicy();
+            $this->IPFilterPolicy->deserialize($param["IPFilterPolicy"]);
         }
     }
 }

@@ -94,8 +94,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSystemMaintenanceTime(string $SystemMaintenanceTime) Set <P>Specifies the system maintenance time.</p>.
  * @method integer getMaxMessageByte() Obtain <P>Specifies the maximum size of instance level messages.</p>.
  * @method void setMaxMessageByte(integer $MaxMessageByte) Set <P>Specifies the maximum size of instance level messages.</p>.
- * @method string getInstanceChargeType() Obtain <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
- * @method void setInstanceChargeType(string $InstanceChargeType) Set <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+ * @method string getInstanceChargeType() Obtain <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
  * @method integer getElasticBandwidthSwitch() Obtain <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
  * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) Set <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
  * @method integer getElasticBandwidthOpenStatus() Obtain <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
  * @method integer getDeleteProtectionEnable() Obtain <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
  * @method void setDeleteProtectionEnable(integer $DeleteProtectionEnable) Set <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
+ * @method integer getRetentionBytes() Obtain <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+ * @method void setRetentionBytes(integer $RetentionBytes) Set <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+ * @method integer getTransactionalIdExpirationMs() Obtain <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+ * @method void setTransactionalIdExpirationMs(integer $TransactionalIdExpirationMs) Set <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -301,7 +305,7 @@ class InstanceAttributesResponse extends AbstractModel
     public $MaxMessageByte;
 
     /**
-     * @var string <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+     * @var string <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
      */
     public $InstanceChargeType;
 
@@ -346,6 +350,16 @@ class InstanceAttributesResponse extends AbstractModel
     public $DeleteProtectionEnable;
 
     /**
+     * @var integer <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+     */
+    public $RetentionBytes;
+
+    /**
+     * @var integer <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+     */
+    public $TransactionalIdExpirationMs;
+
+    /**
      * @param string $InstanceId <p>ckafka cluster instance Id.</p>.
      * @param string $InstanceName <p>Specifies the Name of the ckafka cluster instance.</p>.
      * @param array $VipList <p>Access point VIP list information.</p>.
@@ -383,7 +397,7 @@ class InstanceAttributesResponse extends AbstractModel
      * @param DynamicDiskConfig $DynamicDiskConfig <P>Dynamic disk expansion policy.</p>.
      * @param string $SystemMaintenanceTime <P>Specifies the system maintenance time.</p>.
      * @param integer $MaxMessageByte <P>Specifies the maximum size of instance level messages.</p>.
-     * @param string $InstanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+     * @param string $InstanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
      * @param integer $ElasticBandwidthSwitch <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
      * @param integer $ElasticBandwidthOpenStatus <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
      * @param string $ClusterType <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
@@ -392,6 +406,8 @@ class InstanceAttributesResponse extends AbstractModel
      * @param string $CustomCertId <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
      * @param integer $UncleanLeaderElectionEnable <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
      * @param integer $DeleteProtectionEnable <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
+     * @param integer $RetentionBytes <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+     * @param integer $TransactionalIdExpirationMs <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
      */
     function __construct()
     {
@@ -601,6 +617,14 @@ class InstanceAttributesResponse extends AbstractModel
 
         if (array_key_exists("DeleteProtectionEnable",$param) and $param["DeleteProtectionEnable"] !== null) {
             $this->DeleteProtectionEnable = $param["DeleteProtectionEnable"];
+        }
+
+        if (array_key_exists("RetentionBytes",$param) and $param["RetentionBytes"] !== null) {
+            $this->RetentionBytes = $param["RetentionBytes"];
+        }
+
+        if (array_key_exists("TransactionalIdExpirationMs",$param) and $param["TransactionalIdExpirationMs"] !== null) {
+            $this->TransactionalIdExpirationMs = $param["TransactionalIdExpirationMs"];
         }
     }
 }

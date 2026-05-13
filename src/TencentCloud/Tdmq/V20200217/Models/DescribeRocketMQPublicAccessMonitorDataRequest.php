@@ -20,10 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRocketMQPublicAccessMonitorData request structure.
  *
- * @method string getInstanceId() Obtain Exclusive Edition cluster ID.
- * @method void setInstanceId(string $InstanceId) Set Exclusive Edition cluster ID.
- * @method string getMetricName() Obtain Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic.
- * @method void setMetricName(string $MetricName) Set Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic.
+ * @method string getInstanceId() Obtain Cluster ID
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID
+ * @method string getMetricName() Obtain Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+
+-ClientIntraffic: Inbound traffic
+-ClientOuttraffic: Outbound traffic
+ * @method void setMetricName(string $MetricName) Set Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+
+-ClientIntraffic: Inbound traffic
+-ClientOuttraffic: Outbound traffic
  * @method string getStartTime() Obtain Start time.
  * @method void setStartTime(string $StartTime) Set Start time.
  * @method string getEndTime() Obtain End time, current time by default.
@@ -34,12 +40,15 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRocketMQPublicAccessMonitorDataRequest extends AbstractModel
 {
     /**
-     * @var string Exclusive Edition cluster ID.
+     * @var string Cluster ID
      */
     public $InstanceId;
 
     /**
-     * @var string Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic.
+     * @var string Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+
+-ClientIntraffic: Inbound traffic
+-ClientOuttraffic: Outbound traffic
      */
     public $MetricName;
 
@@ -59,8 +68,11 @@ class DescribeRocketMQPublicAccessMonitorDataRequest extends AbstractModel
     public $Period;
 
     /**
-     * @param string $InstanceId Exclusive Edition cluster ID.
-     * @param string $MetricName Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic.
+     * @param string $InstanceId Cluster ID
+     * @param string $MetricName Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+
+-ClientIntraffic: Inbound traffic
+-ClientOuttraffic: Outbound traffic
      * @param string $StartTime Start time.
      * @param string $EndTime End time, current time by default.
      * @param integer $Period Monitoring statistical period, such as 60 (in seconds). The default value is 300.

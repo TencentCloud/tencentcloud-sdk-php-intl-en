@@ -22,36 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getClusterName() Obtain Cluster Name
- * @method void setClusterName(string $ClusterName) Set Cluster Name
- * @method string getRegion() Obtain Region Information
- * @method void setRegion(string $Region) Set Region Information
+ * @method string getClusterName() Obtain 
+ * @method void setClusterName(string $ClusterName) Set 
+ * @method string getRegion() Obtain 
+ * @method void setRegion(string $Region) Set 
  * @method integer getCreateTime() Obtain Creation time in milliseconds. unix timestamp.
  * @method void setCreateTime(integer $CreateTime) Set Creation time in milliseconds. unix timestamp.
  * @method string getRemark() Obtain Cluster description information
  * @method void setRemark(string $Remark) Set Cluster description information
- * @method array getVpcs() Obtain VPC and network information
- * @method void setVpcs(array $Vpcs) Set VPC and network information
+ * @method array getVpcs() Obtain 
+ * @method void setVpcs(array $Vpcs) Set 
  * @method array getZoneIds() Obtain AZ information
  * @method void setZoneIds(array $ZoneIds) Set AZ information
- * @method integer getVirtualHostNumber() Obtain Virtual Host Quantity
- * @method void setVirtualHostNumber(integer $VirtualHostNumber) Set Virtual Host Quantity
- * @method integer getQueueNumber() Obtain Number of Queues
- * @method void setQueueNumber(integer $QueueNumber) Set Number of Queues
- * @method float getMessagePublishRate() Obtain Number of messages produced per second Unit: messages/second
- * @method void setMessagePublishRate(float $MessagePublishRate) Set Number of messages produced per second Unit: messages/second
- * @method integer getMessageStackNumber() Obtain Number of backlogged messages Unit: messages
- * @method void setMessageStackNumber(integer $MessageStackNumber) Set Number of backlogged messages Unit: messages
+ * @method integer getVirtualHostNumber() Obtain 
+ * @method void setVirtualHostNumber(integer $VirtualHostNumber) Set 
+ * @method integer getQueueNumber() Obtain 
+ * @method void setQueueNumber(integer $QueueNumber) Set 
+ * @method float getMessagePublishRate() Obtain 
+ * @method void setMessagePublishRate(float $MessagePublishRate) Set 
+ * @method integer getMessageStackNumber() Obtain 
+ * @method void setMessageStackNumber(integer $MessageStackNumber) Set 
  * @method integer getExpireTime() Obtain Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
  * @method void setExpireTime(integer $ExpireTime) Set Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
- * @method integer getChannelNumber() Obtain Channel Count
- * @method void setChannelNumber(integer $ChannelNumber) Set Channel Count
- * @method integer getConnectionNumber() Obtain Connection Count
- * @method void setConnectionNumber(integer $ConnectionNumber) Set Connection Count
- * @method integer getConsumerNumber() Obtain Consumer Count
- * @method void setConsumerNumber(integer $ConsumerNumber) Set Consumer Count
- * @method integer getExchangeNumber() Obtain Exchange Count
- * @method void setExchangeNumber(integer $ExchangeNumber) Set Exchange Count
+ * @method integer getChannelNumber() Obtain 
+ * @method void setChannelNumber(integer $ChannelNumber) Set 
+ * @method integer getConnectionNumber() Obtain 
+ * @method void setConnectionNumber(integer $ConnectionNumber) Set 
+ * @method integer getConsumerNumber() Obtain 
+ * @method void setConsumerNumber(integer $ConsumerNumber) Set 
+ * @method integer getExchangeNumber() Obtain 
+ * @method void setExchangeNumber(integer $ExchangeNumber) Set 
  * @method string getExceptionInformation() Obtain Cluster exception information.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExceptionInformation(string $ExceptionInformation) Set Cluster exception information.
@@ -78,6 +78,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTags(array $Tags) Set Tag list
  * @method boolean getEnableDeletionProtection() Obtain Whether deletion protection is enabled.
  * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) Set Whether deletion protection is enabled.
+ * @method boolean getMirroredQueueRisk() Obtain Whether there is a risk of vhost without mirror queue enabled
+ * @method void setMirroredQueueRisk(boolean $MirroredQueueRisk) Set Whether there is a risk of vhost without mirror queue enabled
+ * @method boolean getEnableRiskWarning() Obtain whether to indicate risk
+ * @method void setEnableRiskWarning(boolean $EnableRiskWarning) Set whether to indicate risk
+ * @method integer getConsumeTimeout() Obtain Timeout period for consumption
+ * @method void setConsumeTimeout(integer $ConsumeTimeout) Set Timeout period for consumption
+ * @method integer getChannelMax() Obtain Maximum number of channels
+ * @method void setChannelMax(integer $ChannelMax) Set Maximum number of channels
  */
 class RabbitMQClusterInfo extends AbstractModel
 {
@@ -87,12 +95,12 @@ class RabbitMQClusterInfo extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Cluster Name
+     * @var string 
      */
     public $ClusterName;
 
     /**
-     * @var string Region Information
+     * @var string 
      */
     public $Region;
 
@@ -107,7 +115,7 @@ class RabbitMQClusterInfo extends AbstractModel
     public $Remark;
 
     /**
-     * @var array VPC and network information
+     * @var array 
      */
     public $Vpcs;
 
@@ -117,22 +125,22 @@ class RabbitMQClusterInfo extends AbstractModel
     public $ZoneIds;
 
     /**
-     * @var integer Virtual Host Quantity
+     * @var integer 
      */
     public $VirtualHostNumber;
 
     /**
-     * @var integer Number of Queues
+     * @var integer 
      */
     public $QueueNumber;
 
     /**
-     * @var float Number of messages produced per second Unit: messages/second
+     * @var float 
      */
     public $MessagePublishRate;
 
     /**
-     * @var integer Number of backlogged messages Unit: messages
+     * @var integer 
      */
     public $MessageStackNumber;
 
@@ -142,22 +150,22 @@ class RabbitMQClusterInfo extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var integer Channel Count
+     * @var integer 
      */
     public $ChannelNumber;
 
     /**
-     * @var integer Connection Count
+     * @var integer 
      */
     public $ConnectionNumber;
 
     /**
-     * @var integer Consumer Count
+     * @var integer 
      */
     public $ConsumerNumber;
 
     /**
-     * @var integer Exchange Count
+     * @var integer 
      */
     public $ExchangeNumber;
 
@@ -223,22 +231,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EnableDeletionProtection;
 
     /**
+     * @var boolean Whether there is a risk of vhost without mirror queue enabled
+     */
+    public $MirroredQueueRisk;
+
+    /**
+     * @var boolean whether to indicate risk
+     */
+    public $EnableRiskWarning;
+
+    /**
+     * @var integer Timeout period for consumption
+     */
+    public $ConsumeTimeout;
+
+    /**
+     * @var integer Maximum number of channels
+     */
+    public $ChannelMax;
+
+    /**
      * @param string $ClusterId Cluster ID
-     * @param string $ClusterName Cluster Name
-     * @param string $Region Region Information
+     * @param string $ClusterName 
+     * @param string $Region 
      * @param integer $CreateTime Creation time in milliseconds. unix timestamp.
      * @param string $Remark Cluster description information
-     * @param array $Vpcs VPC and network information
+     * @param array $Vpcs 
      * @param array $ZoneIds AZ information
-     * @param integer $VirtualHostNumber Virtual Host Quantity
-     * @param integer $QueueNumber Number of Queues
-     * @param float $MessagePublishRate Number of messages produced per second Unit: messages/second
-     * @param integer $MessageStackNumber Number of backlogged messages Unit: messages
+     * @param integer $VirtualHostNumber 
+     * @param integer $QueueNumber 
+     * @param float $MessagePublishRate 
+     * @param integer $MessageStackNumber 
      * @param integer $ExpireTime Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
-     * @param integer $ChannelNumber Channel Count
-     * @param integer $ConnectionNumber Connection Count
-     * @param integer $ConsumerNumber Consumer Count
-     * @param integer $ExchangeNumber Exchange Count
+     * @param integer $ChannelNumber 
+     * @param integer $ConnectionNumber 
+     * @param integer $ConsumerNumber 
+     * @param integer $ExchangeNumber 
      * @param string $ExceptionInformation Cluster exception information.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ClusterStatus Instance status. 0: creating; 1: normal; 2: isolating; 3: terminated; 4: abnormal; 5: delivery failed.
@@ -252,6 +280,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param boolean $Container Whether it is a container instance. default true.
      * @param array $Tags Tag list
      * @param boolean $EnableDeletionProtection Whether deletion protection is enabled.
+     * @param boolean $MirroredQueueRisk Whether there is a risk of vhost without mirror queue enabled
+     * @param boolean $EnableRiskWarning whether to indicate risk
+     * @param integer $ConsumeTimeout Timeout period for consumption
+     * @param integer $ChannelMax Maximum number of channels
      */
     function __construct()
     {
@@ -386,6 +418,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
             $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
+        }
+
+        if (array_key_exists("MirroredQueueRisk",$param) and $param["MirroredQueueRisk"] !== null) {
+            $this->MirroredQueueRisk = $param["MirroredQueueRisk"];
+        }
+
+        if (array_key_exists("EnableRiskWarning",$param) and $param["EnableRiskWarning"] !== null) {
+            $this->EnableRiskWarning = $param["EnableRiskWarning"];
+        }
+
+        if (array_key_exists("ConsumeTimeout",$param) and $param["ConsumeTimeout"] !== null) {
+            $this->ConsumeTimeout = $param["ConsumeTimeout"];
+        }
+
+        if (array_key_exists("ChannelMax",$param) and $param["ChannelMax"] !== null) {
+            $this->ChannelMax = $param["ChannelMax"];
         }
     }
 }

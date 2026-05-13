@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getNamespaceId() Obtain Namespace
- * @method void setNamespaceId(string $NamespaceId) Set Namespace
+ * @method string getNamespaceId() Obtain Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) Set Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
  * @method string getGroupId() Obtain Consumer group name
  * @method void setGroupId(string $GroupId) Set Consumer group name
  * @method string getRemark() Obtain Remarks (up to 128 characters)
@@ -43,7 +43,7 @@ class ModifyRocketMQGroupRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Namespace
+     * @var string Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public $NamespaceId;
 
@@ -74,7 +74,7 @@ class ModifyRocketMQGroupRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $NamespaceId Namespace
+     * @param string $NamespaceId Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
      * @param string $GroupId Consumer group name
      * @param string $Remark Remarks (up to 128 characters)
      * @param boolean $ReadEnable Whether to enable consumption

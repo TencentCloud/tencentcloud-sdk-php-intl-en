@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppType(string $AppType) Set Application type; knowledge_qa - knowledge qa management.
  * @method BaseConfig getBaseConfig() Obtain Basic application configuration.
  * @method void setBaseConfig(BaseConfig $BaseConfig) Set Basic application configuration.
+ * @method string getPattern() Obtain <p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p>
+ * @method void setPattern(string $Pattern) Set <p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p>
+ * @method string getAgentType() Obtain <p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p>
+ * @method void setAgentType(string $AgentType) Set <p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p>
  */
 class CreateAppRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class CreateAppRequest extends AbstractModel
     public $BaseConfig;
 
     /**
+     * @var string <p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p>
+     */
+    public $Pattern;
+
+    /**
+     * @var string <p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p>
+     */
+    public $AgentType;
+
+    /**
      * @param string $AppType Application type; knowledge_qa - knowledge qa management.
      * @param BaseConfig $BaseConfig Basic application configuration.
+     * @param string $Pattern <p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p>
+     * @param string $AgentType <p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p>
      */
     function __construct()
     {
@@ -61,6 +77,14 @@ class CreateAppRequest extends AbstractModel
         if (array_key_exists("BaseConfig",$param) and $param["BaseConfig"] !== null) {
             $this->BaseConfig = new BaseConfig();
             $this->BaseConfig->deserialize($param["BaseConfig"]);
+        }
+
+        if (array_key_exists("Pattern",$param) and $param["Pattern"] !== null) {
+            $this->Pattern = $param["Pattern"];
+        }
+
+        if (array_key_exists("AgentType",$param) and $param["AgentType"] !== null) {
+            $this->AgentType = $param["AgentType"];
         }
     }
 }

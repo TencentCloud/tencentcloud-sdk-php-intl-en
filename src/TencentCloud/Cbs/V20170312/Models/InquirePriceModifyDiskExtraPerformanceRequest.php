@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceModifyDiskExtraPerformance request structure.
  *
+ * @method integer getThroughputPerformance() Obtain Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) Set Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
  * @method string getDiskId() Obtain Cloud disk ID, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
  * @method void setDiskId(string $DiskId) Set Cloud disk ID, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
- * @method integer getThroughputPerformance() Obtain The extra throughput to purchase, in MB/s
- * @method void setThroughputPerformance(integer $ThroughputPerformance) Set The extra throughput to purchase, in MB/s
  */
 class InquirePriceModifyDiskExtraPerformanceRequest extends AbstractModel
 {
+    /**
+     * @var integer Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+     */
+    public $ThroughputPerformance;
+
     /**
      * @var string Cloud disk ID, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
      */
     public $DiskId;
 
     /**
-     * @var integer The extra throughput to purchase, in MB/s
-     */
-    public $ThroughputPerformance;
-
-    /**
+     * @param integer $ThroughputPerformance Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
      * @param string $DiskId Cloud disk ID, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
-     * @param integer $ThroughputPerformance The extra throughput to purchase, in MB/s
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class InquirePriceModifyDiskExtraPerformanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
-            $this->DiskId = $param["DiskId"];
-        }
-
         if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
             $this->ThroughputPerformance = $param["ThroughputPerformance"];
+        }
+
+        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
+            $this->DiskId = $param["DiskId"];
         }
     }
 }

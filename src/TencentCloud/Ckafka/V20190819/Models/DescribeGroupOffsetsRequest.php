@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroupOffsets request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
- * @method string getGroup() Obtain Kafka consumer group
- * @method void setGroup(string $Group) Set Kafka consumer group
- * @method array getTopics() Obtain Array of the names of topics subscribed to by a group. If there is no such array, this parameter means the information of all topics in the specified group
- * @method void setTopics(array $Topics) Set Array of the names of topics subscribed to by a group. If there is no such array, this parameter means the information of all topics in the specified group
- * @method string getSearchWord() Obtain Fuzzy match by `topicName`
- * @method void setSearchWord(string $SearchWord) Set Fuzzy match by `topicName`
- * @method integer getOffset() Obtain Offset position of this query. Default value: 0
- * @method void setOffset(integer $Offset) Set Offset position of this query. Default value: 0
- * @method integer getLimit() Obtain Maximum number of results to be returned in this request. Default value: 50. Maximum value: 50
- * @method void setLimit(integer $Limit) Set Maximum number of results to be returned in this request. Default value: 50. Maximum value: 50
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method string getGroup() Obtain <p>Kafka consumption group</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40840?from_cn_redirect=1">DescribeGroup</a></p>
+ * @method void setGroup(string $Group) Set <p>Kafka consumption group</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40840?from_cn_redirect=1">DescribeGroup</a></p>
+ * @method array getTopics() Obtain <p>Name array of the subscribed topics for the group. If there is no array, it means all topic info under the designated group.</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
+ * @method void setTopics(array $Topics) Set <p>Name array of the subscribed topics for the group. If there is no array, it means all topic info under the designated group.</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
+ * @method string getSearchWord() Obtain <p>Fuzzy matching topicName</p>
+ * @method void setSearchWord(string $SearchWord) Set <p>Fuzzy matching topicName</p>
+ * @method integer getOffset() Obtain <p>Offset position of this query, defaults to 0</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset position of this query, defaults to 0</p>
+ * @method integer getLimit() Obtain <p>Maximum number of returned results this time. Default value: 50. Maximum value: 50.</p>
+ * @method void setLimit(integer $Limit) Set <p>Maximum number of returned results this time. Default value: 50. Maximum value: 50.</p>
  */
 class DescribeGroupOffsetsRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id.
+     * @var string <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string Kafka consumer group
+     * @var string <p>Kafka consumption group</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40840?from_cn_redirect=1">DescribeGroup</a></p>
      */
     public $Group;
 
     /**
-     * @var array Array of the names of topics subscribed to by a group. If there is no such array, this parameter means the information of all topics in the specified group
+     * @var array <p>Name array of the subscribed topics for the group. If there is no array, it means all topic info under the designated group.</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
      */
     public $Topics;
 
     /**
-     * @var string Fuzzy match by `topicName`
+     * @var string <p>Fuzzy matching topicName</p>
      */
     public $SearchWord;
 
     /**
-     * @var integer Offset position of this query. Default value: 0
+     * @var integer <p>Offset position of this query, defaults to 0</p>
      */
     public $Offset;
 
     /**
-     * @var integer Maximum number of results to be returned in this request. Default value: 50. Maximum value: 50
+     * @var integer <p>Maximum number of returned results this time. Default value: 50. Maximum value: 50.</p>
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id.
-     * @param string $Group Kafka consumer group
-     * @param array $Topics Array of the names of topics subscribed to by a group. If there is no such array, this parameter means the information of all topics in the specified group
-     * @param string $SearchWord Fuzzy match by `topicName`
-     * @param integer $Offset Offset position of this query. Default value: 0
-     * @param integer $Limit Maximum number of results to be returned in this request. Default value: 50. Maximum value: 50
+     * @param string $InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param string $Group <p>Kafka consumption group</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40840?from_cn_redirect=1">DescribeGroup</a></p>
+     * @param array $Topics <p>Name array of the subscribed topics for the group. If there is no array, it means all topic info under the designated group.</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
+     * @param string $SearchWord <p>Fuzzy matching topicName</p>
+     * @param integer $Offset <p>Offset position of this query, defaults to 0</p>
+     * @param integer $Limit <p>Maximum number of returned results this time. Default value: 50. Maximum value: 50.</p>
      */
     function __construct()
     {

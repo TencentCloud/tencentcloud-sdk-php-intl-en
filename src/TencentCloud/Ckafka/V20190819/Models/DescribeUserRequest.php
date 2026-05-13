@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUser request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
- * @method string getSearchWord() Obtain Filter by name
- * @method void setSearchWord(string $SearchWord) Set Filter by name
- * @method integer getOffset() Obtain Offset.
- * @method void setOffset(integer $Offset) Set Offset.
- * @method integer getLimit() Obtain The number of returns.
- * @method void setLimit(integer $Limit) Set The number of returns.
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method string getSearchWord() Obtain <p>Filter by name</p><p>Support fuzzy matching</p>
+ * @method void setSearchWord(string $SearchWord) Set <p>Filter by name</p><p>Support fuzzy matching</p>
+ * @method integer getOffset() Obtain <p>Offset</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset</p>
+ * @method integer getLimit() Obtain <p>Number of returned results</p><p>Default value: 20</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned results</p><p>Default value: 20</p>
  */
 class DescribeUserRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id.
+     * @var string <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string Filter by name
+     * @var string <p>Filter by name</p><p>Support fuzzy matching</p>
      */
     public $SearchWord;
 
     /**
-     * @var integer Offset.
+     * @var integer <p>Offset</p>
      */
     public $Offset;
 
     /**
-     * @var integer The number of returns.
+     * @var integer <p>Number of returned results</p><p>Default value: 20</p>
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id.
-     * @param string $SearchWord Filter by name
-     * @param integer $Offset Offset.
-     * @param integer $Limit The number of returns.
+     * @param string $InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param string $SearchWord <p>Filter by name</p><p>Support fuzzy matching</p>
+     * @param integer $Offset <p>Offset</p>
+     * @param integer $Limit <p>Number of returned results</p><p>Default value: 20</p>
      */
     function __construct()
     {

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRegion request structure.
  *
- * @method integer getOffset() Obtain The offset value
- * @method void setOffset(integer $Offset) Set The offset value
- * @method integer getLimit() Obtain The maximum number of results returned
- * @method void setLimit(integer $Limit) Set The maximum number of results returned
- * @method string getBusiness() Obtain Business field, which can be ignored.
- * @method void setBusiness(string $Business) Set Business field, which can be ignored.
- * @method string getCdcId() Obtain CDC business field, which can be ignored.
- * @method void setCdcId(string $CdcId) Set CDC business field, which can be ignored.
+ * @method integer getOffset() Obtain <p>Offset</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset</p>
+ * @method integer getLimit() Obtain <p>Return the maximum number of results</p>
+ * @method void setLimit(integer $Limit) Set <p>Return the maximum number of results</p>
+ * @method string getBusiness() Obtain <p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p>
+ * @method void setBusiness(string $Business) Set <p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p>
+ * @method string getCdcId() Obtain <p>cdc dedicated cluster business field, can be ignored</p>
+ * @method void setCdcId(string $CdcId) Set <p>cdc dedicated cluster business field, can be ignored</p>
  */
 class DescribeRegionRequest extends AbstractModel
 {
     /**
-     * @var integer The offset value
+     * @var integer <p>Offset</p>
      */
     public $Offset;
 
     /**
-     * @var integer The maximum number of results returned
+     * @var integer <p>Return the maximum number of results</p>
      */
     public $Limit;
 
     /**
-     * @var string Business field, which can be ignored.
+     * @var string <p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p>
      */
     public $Business;
 
     /**
-     * @var string CDC business field, which can be ignored.
+     * @var string <p>cdc dedicated cluster business field, can be ignored</p>
      */
     public $CdcId;
 
     /**
-     * @param integer $Offset The offset value
-     * @param integer $Limit The maximum number of results returned
-     * @param string $Business Business field, which can be ignored.
-     * @param string $CdcId CDC business field, which can be ignored.
+     * @param integer $Offset <p>Offset</p>
+     * @param integer $Limit <p>Return the maximum number of results</p>
+     * @param string $Business <p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p>
+     * @param string $CdcId <p>cdc dedicated cluster business field, can be ignored</p>
      */
     function __construct()
     {

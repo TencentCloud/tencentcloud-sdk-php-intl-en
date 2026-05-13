@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAclRule request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
- * @method string getRuleName() Obtain ACL rule name.
- * @method void setRuleName(string $RuleName) Set ACL rule name.
- * @method integer getIsApplied() Obtain Specifies whether to apply to newly-added topics when importing predefined rule modifications.
- * @method void setIsApplied(integer $IsApplied) Set Specifies whether to apply to newly-added topics when importing predefined rule modifications.
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method string getRuleName() Obtain <p>ACL rule name</p>
+ * @method void setRuleName(string $RuleName) Set <p>ACL rule name</p>
+ * @method integer getIsApplied() Obtain <p>Input when modifying the preset rule, whether to apply to newly-added topics</p><p>Enumeration value:</p><ul><li>0: Not allowed to apply to newly-added topics</li><li>1: Allowed to apply to newly-added topics</li></ul><p>Default value: 0</p>
+ * @method void setIsApplied(integer $IsApplied) Set <p>Input when modifying the preset rule, whether to apply to newly-added topics</p><p>Enumeration value:</p><ul><li>0: Not allowed to apply to newly-added topics</li><li>1: Allowed to apply to newly-added topics</li></ul><p>Default value: 0</p>
  */
 class ModifyAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id.
+     * @var string <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string ACL rule name.
+     * @var string <p>ACL rule name</p>
      */
     public $RuleName;
 
     /**
-     * @var integer Specifies whether to apply to newly-added topics when importing predefined rule modifications.
+     * @var integer <p>Input when modifying the preset rule, whether to apply to newly-added topics</p><p>Enumeration value:</p><ul><li>0: Not allowed to apply to newly-added topics</li><li>1: Allowed to apply to newly-added topics</li></ul><p>Default value: 0</p>
      */
     public $IsApplied;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id.
-     * @param string $RuleName ACL rule name.
-     * @param integer $IsApplied Specifies whether to apply to newly-added topics when importing predefined rule modifications.
+     * @param string $InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param string $RuleName <p>ACL rule name</p>
+     * @param integer $IsApplied <p>Input when modifying the preset rule, whether to apply to newly-added topics</p><p>Enumeration value:</p><ul><li>0: Not allowed to apply to newly-added topics</li><li>1: Allowed to apply to newly-added topics</li></ul><p>Default value: 0</p>
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopic() Obtain Topic name, which can contain 3–64 letters, digits, hyphens, and underscores
  * @method void setTopic(string $Topic) Set Topic name, which can contain 3–64 letters, digits, hyphens, and underscores
- * @method array getNamespaces() Obtain Topic namespace. Currently, you can create topics only in one single namespace.
- * @method void setNamespaces(array $Namespaces) Set Topic namespace. Currently, you can create topics only in one single namespace.
+ * @method array getNamespaces() Obtain Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default
+ * @method void setNamespaces(array $Namespaces) Set Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default
  * @method string getType() Obtain Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction, and DelayScheduled. Transaction is only supported in the Exclusive Edition.
  * @method void setType(string $Type) Set Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction, and DelayScheduled. Transaction is only supported in the Exclusive Edition.
  * @method string getClusterId() Obtain Cluster ID
@@ -41,7 +41,7 @@ class CreateRocketMQTopicRequest extends AbstractModel
     public $Topic;
 
     /**
-     * @var array Topic namespace. Currently, you can create topics only in one single namespace.
+     * @var array Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default
      */
     public $Namespaces;
 
@@ -67,7 +67,7 @@ class CreateRocketMQTopicRequest extends AbstractModel
 
     /**
      * @param string $Topic Topic name, which can contain 3–64 letters, digits, hyphens, and underscores
-     * @param array $Namespaces Topic namespace. Currently, you can create topics only in one single namespace.
+     * @param array $Namespaces Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default
      * @param string $Type Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction, and DelayScheduled. Transaction is only supported in the Exclusive Edition.
      * @param string $ClusterId Cluster ID
      * @param string $Remark Topic remarks (up to 128 characters)

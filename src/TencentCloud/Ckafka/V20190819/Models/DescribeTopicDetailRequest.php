@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicDetail request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
- * @method string getSearchWord() Obtain (Filter) filter by `topicName`. Fuzzy search is supported
- * @method void setSearchWord(string $SearchWord) Set (Filter) filter by `topicName`. Fuzzy search is supported
- * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default
- * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default
- * @method integer getLimit() Obtain Number of returned results. default: 20. value must be above 0.
- * @method void setLimit(integer $Limit) Set Number of returned results. default: 20. value must be above 0.
- * @method string getAclRuleName() Obtain Name of the preset ACL rule.
- * @method void setAclRuleName(string $AclRuleName) Set Name of the preset ACL rule.
- * @method string getOrderBy() Obtain Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
- * @method void setOrderBy(string $OrderBy) Set Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
- * @method integer getOrderType() Obtain 0 - sequential, 1 - reverse order. default value: 0.
- * @method void setOrderType(integer $OrderType) Set 0 - sequential, 1 - reverse order. default value: 0.
- * @method array getFilters() Obtain Currently supports ReplicaNum (number of replicas) filter criteria.
- * @method void setFilters(array $Filters) Set Currently supports ReplicaNum (number of replicas) filter criteria.
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
+ * @method string getSearchWord() Obtain <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
+ * @method void setSearchWord(string $SearchWord) Set <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
+ * @method integer getOffset() Obtain <p>Offset, which is 0 by default</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset, which is 0 by default</p>
+ * @method integer getLimit() Obtain <p>Number of returned results. Default value: 20. Value must be above 0.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned results. Default value: 20. Value must be above 0.</p>
+ * @method string getAclRuleName() Obtain <p>Acl preset policy name</p>
+ * @method void setAclRuleName(string $AclRuleName) Set <p>Acl preset policy name</p>
+ * @method string getOrderBy() Obtain <p>Sort by specific attributes (Currently supports PartitionNum/CreateTime). Default value is CreateTime.</p><p>If empty, default to reverse sort by CreateTime.</p>
+ * @method void setOrderBy(string $OrderBy) Set <p>Sort by specific attributes (Currently supports PartitionNum/CreateTime). Default value is CreateTime.</p><p>If empty, default to reverse sort by CreateTime.</p>
+ * @method integer getOrderType() Obtain <p>0-sequential, 1-reverse, default value is 0.</p>
+ * @method void setOrderType(integer $OrderType) Set <p>0-sequential, 1-reverse, default value is 0.</p>
+ * @method array getFilters() Obtain <p>Currently supports filtering by ReplicaNum (number of replicas)</p>
+ * @method void setFilters(array $Filters) Set <p>Currently supports filtering by ReplicaNum (number of replicas)</p>
  */
 class DescribeTopicDetailRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+     * @var string <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
      */
     public $InstanceId;
 
     /**
-     * @var string (Filter) filter by `topicName`. Fuzzy search is supported
+     * @var string <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
      */
     public $SearchWord;
 
     /**
-     * @var integer Offset. If this parameter is left empty, 0 will be used by default
+     * @var integer <p>Offset, which is 0 by default</p>
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned results. default: 20. value must be above 0.
+     * @var integer <p>Number of returned results. Default value: 20. Value must be above 0.</p>
      */
     public $Limit;
 
     /**
-     * @var string Name of the preset ACL rule.
+     * @var string <p>Acl preset policy name</p>
      */
     public $AclRuleName;
 
     /**
-     * @var string Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+     * @var string <p>Sort by specific attributes (Currently supports PartitionNum/CreateTime). Default value is CreateTime.</p><p>If empty, default to reverse sort by CreateTime.</p>
      */
     public $OrderBy;
 
     /**
-     * @var integer 0 - sequential, 1 - reverse order. default value: 0.
+     * @var integer <p>0-sequential, 1-reverse, default value is 0.</p>
      */
     public $OrderType;
 
     /**
-     * @var array Currently supports ReplicaNum (number of replicas) filter criteria.
+     * @var array <p>Currently supports filtering by ReplicaNum (number of replicas)</p>
      */
     public $Filters;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
-     * @param string $SearchWord (Filter) filter by `topicName`. Fuzzy search is supported
-     * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default
-     * @param integer $Limit Number of returned results. default: 20. value must be above 0.
-     * @param string $AclRuleName Name of the preset ACL rule.
-     * @param string $OrderBy Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
-     * @param integer $OrderType 0 - sequential, 1 - reverse order. default value: 0.
-     * @param array $Filters Currently supports ReplicaNum (number of replicas) filter criteria.
+     * @param string $InstanceId <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
+     * @param string $SearchWord <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
+     * @param integer $Offset <p>Offset, which is 0 by default</p>
+     * @param integer $Limit <p>Number of returned results. Default value: 20. Value must be above 0.</p>
+     * @param string $AclRuleName <p>Acl preset policy name</p>
+     * @param string $OrderBy <p>Sort by specific attributes (Currently supports PartitionNum/CreateTime). Default value is CreateTime.</p><p>If empty, default to reverse sort by CreateTime.</p>
+     * @param integer $OrderType <p>0-sequential, 1-reverse, default value is 0.</p>
+     * @param array $Filters <p>Currently supports filtering by ReplicaNum (number of replicas)</p>
      */
     function __construct()
     {

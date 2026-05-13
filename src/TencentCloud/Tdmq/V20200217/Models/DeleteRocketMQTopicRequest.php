@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getNamespaceId() Obtain Namespace name
- * @method void setNamespaceId(string $NamespaceId) Set Namespace name
+ * @method string getNamespaceId() Obtain Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) Set Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
  * @method string getTopic() Obtain Topic name
  * @method void setTopic(string $Topic) Set Topic name
  */
@@ -35,7 +35,7 @@ class DeleteRocketMQTopicRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Namespace name
+     * @var string Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
      */
     public $NamespaceId;
 
@@ -46,7 +46,7 @@ class DeleteRocketMQTopicRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $NamespaceId Namespace name
+     * @param string $NamespaceId Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
      * @param string $Topic Topic name
      */
     function __construct()

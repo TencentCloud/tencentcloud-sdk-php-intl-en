@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopic request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
- * @method string getSearchWord() Obtain Filter by `topicName`. Fuzzy search is supported
- * @method void setSearchWord(string $SearchWord) Set Filter by `topicName`. Fuzzy search is supported
- * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default
- * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default
- * @method integer getLimit() Obtain The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
- * @method void setLimit(integer $Limit) Set The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
- * @method string getAclRuleName() Obtain Name of the preset ACL rule.
- * @method void setAclRuleName(string $AclRuleName) Set Name of the preset ACL rule.
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method string getSearchWord() Obtain <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
+ * @method void setSearchWord(string $SearchWord) Set <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
+ * @method integer getOffset() Obtain <p>Offset, which is 0 by default</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset, which is 0 by default</p>
+ * @method integer getLimit() Obtain <p>Number of returned results. Default value: 20. Maximum value: 50.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned results. Default value: 20. Maximum value: 50.</p>
+ * @method string getAclRuleName() Obtain <p>Acl preset policy name</p>
+ * @method void setAclRuleName(string $AclRuleName) Set <p>Acl preset policy name</p>
  */
 class DescribeTopicRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id.
+     * @var string <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string Filter by `topicName`. Fuzzy search is supported
+     * @var string <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
      */
     public $SearchWord;
 
     /**
-     * @var integer Offset. If this parameter is left empty, 0 will be used by default
+     * @var integer <p>Offset, which is 0 by default</p>
      */
     public $Offset;
 
     /**
-     * @var integer The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
+     * @var integer <p>Number of returned results. Default value: 20. Maximum value: 50.</p>
      */
     public $Limit;
 
     /**
-     * @var string Name of the preset ACL rule.
+     * @var string <p>Acl preset policy name</p>
      */
     public $AclRuleName;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id.
-     * @param string $SearchWord Filter by `topicName`. Fuzzy search is supported
-     * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default
-     * @param integer $Limit The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
-     * @param string $AclRuleName Name of the preset ACL rule.
+     * @param string $InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param string $SearchWord <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
+     * @param integer $Offset <p>Offset, which is 0 by default</p>
+     * @param integer $Limit <p>Number of returned results. Default value: 20. Maximum value: 50.</p>
+     * @param string $AclRuleName <p>Acl preset policy name</p>
      */
     function __construct()
     {

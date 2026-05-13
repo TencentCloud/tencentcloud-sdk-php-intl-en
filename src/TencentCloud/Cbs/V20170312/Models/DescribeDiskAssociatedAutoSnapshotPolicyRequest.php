@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDiskAssociatedAutoSnapshotPolicy request structure.
  *
- * @method string getDiskId() Obtain The ID of the queried cloud disk.
- * @method void setDiskId(string $DiskId) Set The ID of the queried cloud disk.
+ * @method string getDiskId() Obtain Specifies the cloud disk ID to query. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/362/16315?from_cn_redirect=1) api.
+ * @method void setDiskId(string $DiskId) Set Specifies the cloud disk ID to query. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/362/16315?from_cn_redirect=1) api.
  */
 class DescribeDiskAssociatedAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string The ID of the queried cloud disk.
+     * @var string Specifies the cloud disk ID to query. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/362/16315?from_cn_redirect=1) api.
      */
     public $DiskId;
 
     /**
-     * @param string $DiskId The ID of the queried cloud disk.
+     * @param string $DiskId Specifies the cloud disk ID to query. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/362/16315?from_cn_redirect=1) api.
      */
     function __construct()
     {

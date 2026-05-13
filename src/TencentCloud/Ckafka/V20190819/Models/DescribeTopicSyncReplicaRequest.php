@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicSyncReplica request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getTopicName() Obtain Topic name
- * @method void setTopicName(string $TopicName) Set Topic name
- * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default.
- * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default.
- * @method integer getLimit() Obtain Number of returned results. default value: 20. must be greater than 0.
- * @method void setLimit(integer $Limit) Set Number of returned results. default value: 20. must be greater than 0.
- * @method boolean getOutOfSyncReplicaOnly() Obtain Filters unsynced replicas only
- * @method void setOutOfSyncReplicaOnly(boolean $OutOfSyncReplicaOnly) Set Filters unsynced replicas only
+ * @method string getInstanceId() Obtain <p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method string getTopicName() Obtain <p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
+ * @method void setTopicName(string $TopicName) Set <p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
+ * @method integer getOffset() Obtain <p>Offset, which is 0 by default</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset, which is 0 by default</p>
+ * @method integer getLimit() Obtain <p>Number of returned results. Default value: 20. Must be greater than 0.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned results. Default value: 20. Must be greater than 0.</p>
+ * @method boolean getOutOfSyncReplicaOnly() Obtain <p>Only filter unsynced replicas</p>
+ * @method void setOutOfSyncReplicaOnly(boolean $OutOfSyncReplicaOnly) Set <p>Only filter unsynced replicas</p>
  */
 class DescribeTopicSyncReplicaRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string <p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string Topic name
+     * @var string <p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
      */
     public $TopicName;
 
     /**
-     * @var integer Offset. If this parameter is left empty, 0 will be used by default.
+     * @var integer <p>Offset, which is 0 by default</p>
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned results. default value: 20. must be greater than 0.
+     * @var integer <p>Number of returned results. Default value: 20. Must be greater than 0.</p>
      */
     public $Limit;
 
     /**
-     * @var boolean Filters unsynced replicas only
+     * @var boolean <p>Only filter unsynced replicas</p>
      */
     public $OutOfSyncReplicaOnly;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $TopicName Topic name
-     * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default.
-     * @param integer $Limit Number of returned results. default value: 20. must be greater than 0.
-     * @param boolean $OutOfSyncReplicaOnly Filters unsynced replicas only
+     * @param string $InstanceId <p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param string $TopicName <p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
+     * @param integer $Offset <p>Offset, which is 0 by default</p>
+     * @param integer $Limit <p>Number of returned results. Default value: 20. Must be greater than 0.</p>
+     * @param boolean $OutOfSyncReplicaOnly <p>Only filter unsynced replicas</p>
      */
     function __construct()
     {

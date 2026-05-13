@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceCount(integer $InstanceCount) Set <p>Number of instances to purchase. Value range: [1-6]. The maximum allowed number is 6.</p>
  * @method integer getPeriod() Obtain <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: supports only 1.</li>
  * @method void setPeriod(integer $Period) Set <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: supports only 1.</li>
- * @method string getVpcId() Obtain <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> API to obtain it from the unVpcId field in the return value.</p>
- * @method void setVpcId(string $VpcId) Set <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> API to obtain it from the unVpcId field in the return value.</p>
+ * @method string getVpcId() Obtain <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the DescribeVpcEx API to obtain it from the unVpcId field in the return value.</p>
+ * @method void setVpcId(string $VpcId) Set <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the DescribeVpcEx API to obtain it from the unVpcId field in the return value.</p>
  * @method string getSubnetId() Obtain <p>VPC subnet ID, such as subnet-xxxxxxxx (this parameter is required). A valid VPC subnet ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> API and obtain it from the unSubnetId field in the return value.</p>
  * @method void setSubnetId(string $SubnetId) Set <p>VPC subnet ID, such as subnet-xxxxxxxx (this parameter is required). A valid VPC subnet ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> API and obtain it from the unSubnetId field in the return value.</p>
  * @method string getInstanceChargeType() Obtain <p>Instance billing type. Valid values:</p><li>PREPAID: prepaid (yearly/monthly subscription).</li><li>POSTPAID_BY_HOUR: postpaid (pay-as-you-go).</li>Default value: PREPAID. If the primary instance is postpaid, the read-only instance must also be postpaid.
@@ -98,7 +98,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $Period;
 
     /**
-     * @var string <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> API to obtain it from the unVpcId field in the return value.</p>
+     * @var string <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the DescribeVpcEx API to obtain it from the unVpcId field in the return value.</p>
      */
     public $VpcId;
 
@@ -185,7 +185,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
      * @param integer $Storage <p>Instance disk capacity, in GB. The value for this parameter must be set in increments of 10.</p>
      * @param integer $InstanceCount <p>Number of instances to purchase. Value range: [1-6]. The maximum allowed number is 6.</p>
      * @param integer $Period <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: supports only 1.</li>
-     * @param string $VpcId <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> API to obtain it from the unVpcId field in the return value.</p>
+     * @param string $VpcId <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the DescribeVpcEx API to obtain it from the unVpcId field in the return value.</p>
      * @param string $SubnetId <p>VPC subnet ID, such as subnet-xxxxxxxx (this parameter is required). A valid VPC subnet ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> API and obtain it from the unSubnetId field in the return value.</p>
      * @param string $InstanceChargeType <p>Instance billing type. Valid values:</p><li>PREPAID: prepaid (yearly/monthly subscription).</li><li>POSTPAID_BY_HOUR: postpaid (pay-as-you-go).</li>Default value: PREPAID. If the primary instance is postpaid, the read-only instance must also be postpaid.
      * @param integer $AutoVoucher <p>Indicates whether to use vouchers automatically:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.

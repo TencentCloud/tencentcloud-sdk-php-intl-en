@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) Set Message retention policy
  * @method boolean getAutoSubscriptionCreation() Obtain Whether to enable "Auto-Create Subscription"
  * @method void setAutoSubscriptionCreation(boolean $AutoSubscriptionCreation) Set Whether to enable "Auto-Create Subscription"
+ * @method integer getSubscriptionExpirationTime() Obtain Offline subscription automatic expiration cleanup time
+ * @method void setSubscriptionExpirationTime(integer $SubscriptionExpirationTime) Set Offline subscription automatic expiration cleanup time
+ * @method boolean getSubscriptionExpirationTimeEnable() Obtain Offline subscription automatic expiration cleanup time switch
+ * @method void setSubscriptionExpirationTimeEnable(boolean $SubscriptionExpirationTimeEnable) Set Offline subscription automatic expiration cleanup time switch
+ * @method array getTags() Obtain Namespace tag
+ * @method void setTags(array $Tags) Set Namespace tag
  */
 class CreateEnvironmentRequest extends AbstractModel
 {
@@ -66,12 +72,30 @@ class CreateEnvironmentRequest extends AbstractModel
     public $AutoSubscriptionCreation;
 
     /**
+     * @var integer Offline subscription automatic expiration cleanup time
+     */
+    public $SubscriptionExpirationTime;
+
+    /**
+     * @var boolean Offline subscription automatic expiration cleanup time switch
+     */
+    public $SubscriptionExpirationTimeEnable;
+
+    /**
+     * @var array Namespace tag
+     */
+    public $Tags;
+
+    /**
      * @param string $EnvironmentId Environment (namespace) name, which can contain up to 16 letters, digits, hyphens, and underscores.
      * @param integer $MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
      * @param string $ClusterId Pulsar cluster ID
      * @param string $Remark Remarks (up to 128 characters).
      * @param RetentionPolicy $RetentionPolicy Message retention policy
      * @param boolean $AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
+     * @param integer $SubscriptionExpirationTime Offline subscription automatic expiration cleanup time
+     * @param boolean $SubscriptionExpirationTimeEnable Offline subscription automatic expiration cleanup time switch
+     * @param array $Tags Namespace tag
      */
     function __construct()
     {
@@ -109,6 +133,23 @@ class CreateEnvironmentRequest extends AbstractModel
 
         if (array_key_exists("AutoSubscriptionCreation",$param) and $param["AutoSubscriptionCreation"] !== null) {
             $this->AutoSubscriptionCreation = $param["AutoSubscriptionCreation"];
+        }
+
+        if (array_key_exists("SubscriptionExpirationTime",$param) and $param["SubscriptionExpirationTime"] !== null) {
+            $this->SubscriptionExpirationTime = $param["SubscriptionExpirationTime"];
+        }
+
+        if (array_key_exists("SubscriptionExpirationTimeEnable",$param) and $param["SubscriptionExpirationTimeEnable"] !== null) {
+            $this->SubscriptionExpirationTimeEnable = $param["SubscriptionExpirationTimeEnable"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Query limit.
  * @method string getClusterId() Obtain Cluster ID.
  * @method void setClusterId(string $ClusterId) Set Cluster ID.
- * @method string getNamespaceId() Obtain Namespace.
- * @method void setNamespaceId(string $NamespaceId) Set Namespace.
+ * @method string getNamespaceId() Obtain Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) Set Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
  * @method array getFilterType() Obtain Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
  * @method void setFilterType(array $FilterType) Set Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
  * @method string getFilterName() Obtain Search by topic name. Fuzzy query is supported.
@@ -55,7 +55,7 @@ class DescribeRocketMQTopicsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Namespace.
+     * @var string Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
      */
     public $NamespaceId;
 
@@ -83,7 +83,7 @@ class DescribeRocketMQTopicsRequest extends AbstractModel
      * @param integer $Offset Offset for query.
      * @param integer $Limit Query limit.
      * @param string $ClusterId Cluster ID.
-     * @param string $NamespaceId Namespace.
+     * @param string $NamespaceId Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
      * @param array $FilterType Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
      * @param string $FilterName Search by topic name. Fuzzy query is supported.
      * @param string $FilterGroup Filters by subscription consumer group name.

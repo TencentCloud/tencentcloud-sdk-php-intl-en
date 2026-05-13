@@ -18,28 +18,28 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Document list filter flag
+ * 
  *
- * @method string getFlag() Obtain Flag
- * @method void setFlag(string $Flag) Set Flag
- * @method boolean getValue() Obtain ID Value
- * @method void setValue(boolean $Value) Set ID Value
+ * @method string getFlag() Obtain 
+ * @method void setFlag(string $Flag) Set 
+ * @method boolean getValue() Obtain 
+ * @method void setValue(boolean $Value) Set 
  */
 class DocFilterFlag extends AbstractModel
 {
     /**
-     * @var string Flag
+     * @var string 
      */
     public $Flag;
 
     /**
-     * @var boolean ID Value
+     * @var boolean 
      */
     public $Value;
 
     /**
-     * @param string $Flag Flag
-     * @param boolean $Value ID Value
+     * @param string $Flag 
+     * @param boolean $Value 
      */
     function __construct()
     {

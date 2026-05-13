@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterType(string $ClusterType) Set <P>Specifies the underlying cluster type of the ckafka cluster instance.</p>.
  * @method array getFeatures() Obtain <P>Specifies the instance feature list.</p>.
  * @method void setFeatures(array $Features) Set <P>Specifies the instance feature list.</p>.
+ * @method integer getRetentionBytes() Obtain <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+ * @method void setRetentionBytes(integer $RetentionBytes) Set <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
  */
 class InstanceDetail extends AbstractModel
 {
@@ -248,6 +250,11 @@ class InstanceDetail extends AbstractModel
     public $Features;
 
     /**
+     * @var integer <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+     */
+    public $RetentionBytes;
+
+    /**
      * @param string $InstanceId <p>ckafka cluster instance Id.</p>.
      * @param string $InstanceName <P>Specifies the name of the ckafka cluster instance.</p>.
      * @param string $Vip <P>Specifies the vip information for accessing the instance.</p>.
@@ -280,6 +287,7 @@ class InstanceDetail extends AbstractModel
      * @param integer $PublicNetwork <p>Specifies the public network bandwidth. value range: 3Mbps to 999Mbps. only supported in pro edition.</p>.
      * @param string $ClusterType <P>Specifies the underlying cluster type of the ckafka cluster instance.</p>.
      * @param array $Features <P>Specifies the instance feature list.</p>.
+     * @param integer $RetentionBytes <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
      */
     function __construct()
     {
@@ -430,6 +438,10 @@ class InstanceDetail extends AbstractModel
 
         if (array_key_exists("Features",$param) and $param["Features"] !== null) {
             $this->Features = $param["Features"];
+        }
+
+        if (array_key_exists("RetentionBytes",$param) and $param["RetentionBytes"] !== null) {
+            $this->RetentionBytes = $param["RetentionBytes"];
         }
     }
 }

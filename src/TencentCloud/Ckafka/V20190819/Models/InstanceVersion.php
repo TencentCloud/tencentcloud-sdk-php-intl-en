@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance version information.
  *
- * @method string getKafkaVersion() Obtain CKafka cluster instance version.
- * @method void setKafkaVersion(string $KafkaVersion) Set CKafka cluster instance version.
- * @method string getCurBrokerVersion() Obtain Broker version information.
- * @method void setCurBrokerVersion(string $CurBrokerVersion) Set Broker version information.
- * @method array getLatestBrokerVersion() Obtain Latest version information.
- * @method void setLatestBrokerVersion(array $LatestBrokerVersion) Set Latest version information.
- * @method boolean getAllowUpgradeHighVersion() Obtain Whether to allow kernel upgrades across major versions.
- * @method void setAllowUpgradeHighVersion(boolean $AllowUpgradeHighVersion) Set Whether to allow kernel upgrades across major versions.
- * @method array getHighVersionSet() Obtain Major version allowed for upgrades.
- * @method void setHighVersionSet(array $HighVersionSet) Set Major version allowed for upgrades.
- * @method boolean getAllowAutoDeleteTimestamp() Obtain Whether to allow automatic deletion of consumer groups during minor version configuration.
- * @method void setAllowAutoDeleteTimestamp(boolean $AllowAutoDeleteTimestamp) Set Whether to allow automatic deletion of consumer groups during minor version configuration.
+ * @method string getKafkaVersion() Obtain <p>ckafka cluster instance version</p>
+ * @method void setKafkaVersion(string $KafkaVersion) Set <p>ckafka cluster instance version</p>
+ * @method string getCurBrokerVersion() Obtain <p>broker version info</p>
+ * @method void setCurBrokerVersion(string $CurBrokerVersion) Set <p>broker version info</p>
+ * @method array getLatestBrokerVersion() Obtain <p>latest version info</p>
+ * @method void setLatestBrokerVersion(array $LatestBrokerVersion) Set <p>latest version info</p>
+ * @method boolean getAllowUpgradeHighVersion() Obtain <p>Permission for cross-major version kernel upgrade</p>
+ * @method void setAllowUpgradeHighVersion(boolean $AllowUpgradeHighVersion) Set <p>Permission for cross-major version kernel upgrade</p>
+ * @method array getHighVersionSet() Obtain <p>Permission for major version upgrade</p>
+ * @method void setHighVersionSet(array $HighVersionSet) Set <p>Permission for major version upgrade</p>
+ * @method boolean getAllowAutoDeleteTimestamp() Obtain <p>Permission to configure auto deletion of consumer group for minor version number</p>
+ * @method void setAllowAutoDeleteTimestamp(boolean $AllowAutoDeleteTimestamp) Set <p>Permission to configure auto deletion of consumer group for minor version number</p>
+ * @method boolean getAllowModifyTxnIdExpiration() Obtain <p>Allow the modification of transaction ID expiration time configuration</p>
+ * @method void setAllowModifyTxnIdExpiration(boolean $AllowModifyTxnIdExpiration) Set <p>Allow the modification of transaction ID expiration time configuration</p>
  */
 class InstanceVersion extends AbstractModel
 {
     /**
-     * @var string CKafka cluster instance version.
+     * @var string <p>ckafka cluster instance version</p>
      */
     public $KafkaVersion;
 
     /**
-     * @var string Broker version information.
+     * @var string <p>broker version info</p>
      */
     public $CurBrokerVersion;
 
     /**
-     * @var array Latest version information.
+     * @var array <p>latest version info</p>
      */
     public $LatestBrokerVersion;
 
     /**
-     * @var boolean Whether to allow kernel upgrades across major versions.
+     * @var boolean <p>Permission for cross-major version kernel upgrade</p>
      */
     public $AllowUpgradeHighVersion;
 
     /**
-     * @var array Major version allowed for upgrades.
+     * @var array <p>Permission for major version upgrade</p>
      */
     public $HighVersionSet;
 
     /**
-     * @var boolean Whether to allow automatic deletion of consumer groups during minor version configuration.
+     * @var boolean <p>Permission to configure auto deletion of consumer group for minor version number</p>
      */
     public $AllowAutoDeleteTimestamp;
 
     /**
-     * @param string $KafkaVersion CKafka cluster instance version.
-     * @param string $CurBrokerVersion Broker version information.
-     * @param array $LatestBrokerVersion Latest version information.
-     * @param boolean $AllowUpgradeHighVersion Whether to allow kernel upgrades across major versions.
-     * @param array $HighVersionSet Major version allowed for upgrades.
-     * @param boolean $AllowAutoDeleteTimestamp Whether to allow automatic deletion of consumer groups during minor version configuration.
+     * @var boolean <p>Allow the modification of transaction ID expiration time configuration</p>
+     */
+    public $AllowModifyTxnIdExpiration;
+
+    /**
+     * @param string $KafkaVersion <p>ckafka cluster instance version</p>
+     * @param string $CurBrokerVersion <p>broker version info</p>
+     * @param array $LatestBrokerVersion <p>latest version info</p>
+     * @param boolean $AllowUpgradeHighVersion <p>Permission for cross-major version kernel upgrade</p>
+     * @param array $HighVersionSet <p>Permission for major version upgrade</p>
+     * @param boolean $AllowAutoDeleteTimestamp <p>Permission to configure auto deletion of consumer group for minor version number</p>
+     * @param boolean $AllowModifyTxnIdExpiration <p>Allow the modification of transaction ID expiration time configuration</p>
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class InstanceVersion extends AbstractModel
 
         if (array_key_exists("AllowAutoDeleteTimestamp",$param) and $param["AllowAutoDeleteTimestamp"] !== null) {
             $this->AllowAutoDeleteTimestamp = $param["AllowAutoDeleteTimestamp"];
+        }
+
+        if (array_key_exists("AllowModifyTxnIdExpiration",$param) and $param["AllowModifyTxnIdExpiration"] !== null) {
+            $this->AllowModifyTxnIdExpiration = $param["AllowModifyTxnIdExpiration"];
         }
     }
 }

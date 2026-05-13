@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeModifyType request structure.
  *
- * @method string getInstanceId() Obtain CKafka cluster instance ID.
- * @method void setInstanceId(string $InstanceId) Set CKafka cluster instance ID.
- * @method integer getBandWidth() Obtain Specifies the bandwidth after upgrade. measurement unit: mb.
- * @method void setBandWidth(integer $BandWidth) Set Specifies the bandwidth after upgrade. measurement unit: mb.
- * @method integer getDiskSize() Obtain Specifies the disk after upgrade, in gb.
- * @method void setDiskSize(integer $DiskSize) Set Specifies the disk after upgrade, in gb.
- * @method string getDiskType() Obtain Disk type, such as CLOUD_PREMIUM.
- * @method void setDiskType(string $DiskType) Set Disk type, such as CLOUD_PREMIUM.
- * @method integer getPartition() Obtain Number of partitions.
- * @method void setPartition(integer $Partition) Set Number of partitions.
- * @method integer getTopic() Obtain Number of Topics
- * @method void setTopic(integer $Topic) Set Number of Topics
- * @method string getType() Obtain Instance type, such as sp_ckafka_profession.
- * @method void setType(string $Type) Set Instance type, such as sp_ckafka_profession.
- * @method string getModifyEntry() Obtain Configuration change portal.
- * @method void setModifyEntry(string $ModifyEntry) Set Configuration change portal.
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id</p>
+ * @method integer getBandWidth() Obtain <p>Bandwidth after upgrade, unit mb</p>
+ * @method void setBandWidth(integer $BandWidth) Set <p>Bandwidth after upgrade, unit mb</p>
+ * @method integer getDiskSize() Obtain <p>Disk capacity after upgrade, in GB</p>
+ * @method void setDiskSize(integer $DiskSize) Set <p>Disk capacity after upgrade, in GB</p>
+ * @method string getDiskType() Obtain <p>Disk type, such as CLOUD_PREMIUM</p>
+ * @method void setDiskType(string $DiskType) Set <p>Disk type, such as CLOUD_PREMIUM</p>
+ * @method integer getPartition() Obtain <p>Number of partitions</p>
+ * @method void setPartition(integer $Partition) Set <p>Number of partitions</p>
+ * @method integer getTopic() Obtain <p>topic count</p>
+ * @method void setTopic(integer $Topic) Set <p>topic count</p>
+ * @method string getType() Obtain <p>Instance type such as sp_ckafka_profession</p>
+ * @method void setType(string $Type) Set <p>Instance type such as sp_ckafka_profession</p>
+ * @method string getModifyEntry() Obtain <p>Resize portal</p>
+ * @method void setModifyEntry(string $ModifyEntry) Set <p>Resize portal</p>
+ * @method boolean getModifyZone() Obtain <p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p>
+ * @method void setModifyZone(boolean $ModifyZone) Set <p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p>
  */
 class DescribeModifyTypeRequest extends AbstractModel
 {
     /**
-     * @var string CKafka cluster instance ID.
+     * @var string <p>ckafka cluster instance Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer Specifies the bandwidth after upgrade. measurement unit: mb.
+     * @var integer <p>Bandwidth after upgrade, unit mb</p>
      */
     public $BandWidth;
 
     /**
-     * @var integer Specifies the disk after upgrade, in gb.
+     * @var integer <p>Disk capacity after upgrade, in GB</p>
      */
     public $DiskSize;
 
     /**
-     * @var string Disk type, such as CLOUD_PREMIUM.
+     * @var string <p>Disk type, such as CLOUD_PREMIUM</p>
      */
     public $DiskType;
 
     /**
-     * @var integer Number of partitions.
+     * @var integer <p>Number of partitions</p>
      */
     public $Partition;
 
     /**
-     * @var integer Number of Topics
+     * @var integer <p>topic count</p>
      */
     public $Topic;
 
     /**
-     * @var string Instance type, such as sp_ckafka_profession.
+     * @var string <p>Instance type such as sp_ckafka_profession</p>
      */
     public $Type;
 
     /**
-     * @var string Configuration change portal.
+     * @var string <p>Resize portal</p>
      */
     public $ModifyEntry;
 
     /**
-     * @param string $InstanceId CKafka cluster instance ID.
-     * @param integer $BandWidth Specifies the bandwidth after upgrade. measurement unit: mb.
-     * @param integer $DiskSize Specifies the disk after upgrade, in gb.
-     * @param string $DiskType Disk type, such as CLOUD_PREMIUM.
-     * @param integer $Partition Number of partitions.
-     * @param integer $Topic Number of Topics
-     * @param string $Type Instance type, such as sp_ckafka_profession.
-     * @param string $ModifyEntry Configuration change portal.
+     * @var boolean <p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p>
+     */
+    public $ModifyZone;
+
+    /**
+     * @param string $InstanceId <p>ckafka cluster instance Id</p>
+     * @param integer $BandWidth <p>Bandwidth after upgrade, unit mb</p>
+     * @param integer $DiskSize <p>Disk capacity after upgrade, in GB</p>
+     * @param string $DiskType <p>Disk type, such as CLOUD_PREMIUM</p>
+     * @param integer $Partition <p>Number of partitions</p>
+     * @param integer $Topic <p>topic count</p>
+     * @param string $Type <p>Instance type such as sp_ckafka_profession</p>
+     * @param string $ModifyEntry <p>Resize portal</p>
+     * @param boolean $ModifyZone <p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeModifyTypeRequest extends AbstractModel
 
         if (array_key_exists("ModifyEntry",$param) and $param["ModifyEntry"] !== null) {
             $this->ModifyEntry = $param["ModifyEntry"];
+        }
+
+        if (array_key_exists("ModifyZone",$param) and $param["ModifyZone"] !== null) {
+            $this->ModifyZone = $param["ModifyZone"];
         }
     }
 }

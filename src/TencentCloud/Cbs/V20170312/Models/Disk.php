@@ -20,142 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The details of a cloud disk
  *
- * @method boolean getDeleteWithInstance() Obtain Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setDeleteWithInstance(boolean $DeleteWithInstance) Set Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-Note: This field may return null, indicating that no valid value was found.
- * @method string getRenewFlag() Obtain Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setRenewFlag(string $RenewFlag) Set Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-Note: This field may return null, indicating that no valid value was found.
- * @method string getDiskType() Obtain Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
- * @method void setDiskType(string $DiskType) Set Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
- * @method string getDiskState() Obtain The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
- * @method void setDiskState(string $DiskState) Set The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
+ * @method boolean getDeleteWithInstance() Obtain Specifies whether the cloud disk is destroyed along with the mounted instance.<br><li>true: destroy the cloud disk along with the instance. only hourly postpaid cloud disk is supported.</li><li>false: destroying instance without destroying cloud disk.</li>.
+ * @method void setDeleteWithInstance(boolean $DeleteWithInstance) Set Specifies whether the cloud disk is destroyed along with the mounted instance.<br><li>true: destroy the cloud disk along with the instance. only hourly postpaid cloud disk is supported.</li><li>false: destroying instance without destroying cloud disk.</li>.
+ * @method string getRenewFlag() Obtain AUTO renewal flag. supported values:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY expiry AND RENEW automatically</li><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY expiry but not RENEW automatically</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: neither NOTIFY expiry nor RENEW automatically.</li>.
+ * @method void setRenewFlag(string $RenewFlag) Set AUTO renewal flag. supported values:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY expiry AND RENEW automatically</li><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY expiry but not RENEW automatically</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: neither NOTIFY expiry nor RENEW automatically.</li>.
+ * @method string getDiskType() Obtain Hard disk media type. valid values:<br><li>CLOUD_BASIC: BASIC CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_BSSD: universal type SSD CLOUD disk</li><li>CLOUD_SSD: SSD CLOUD disk</li><li>CLOUD_HSSD: enhanced SSD CLOUD disk</li><li>CLOUD_TSSD: ultra-fast SSD cbs.</li>.
+ * @method void setDiskType(string $DiskType) Set Hard disk media type. valid values:<br><li>CLOUD_BASIC: BASIC CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_BSSD: universal type SSD CLOUD disk</li><li>CLOUD_SSD: SSD CLOUD disk</li><li>CLOUD_HSSD: enhanced SSD CLOUD disk</li><li>CLOUD_TSSD: ultra-fast SSD cbs.</li>.
+ * @method string getDiskState() Obtain Cloud disk state. valid values:<br><li>UNATTACHED: unmounted</li><li>ATTACHING: mounting</li><li>ATTACHED: mounted</li><li>DETACHING: unmounting</li><li>EXPANDING: EXPANDING</li><li>ROLLBACKING: rolling back</li><li>TORECYCLE: to be recycled</li><li>DUMPING: copying hard drive.</li>.
+ * @method void setDiskState(string $DiskState) Set Cloud disk state. valid values:<br><li>UNATTACHED: unmounted</li><li>ATTACHING: mounting</li><li>ATTACHED: mounted</li><li>DETACHING: unmounting</li><li>EXPANDING: EXPANDING</li><li>ROLLBACKING: rolling back</li><li>TORECYCLE: to be recycled</li><li>DUMPING: copying hard drive.</li>.
  * @method integer getSnapshotCount() Obtain The total number of snapshots of the cloud disk.
  * @method void setSnapshotCount(integer $SnapshotCount) Set The total number of snapshots of the cloud disk.
- * @method boolean getAutoRenewFlagError() Obtain Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setAutoRenewFlagError(boolean $AutoRenewFlagError) Set Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-Note: This field may return null, indicating that no valid value was found.
- * @method boolean getRollbacking() Obtain Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
- * @method void setRollbacking(boolean $Rollbacking) Set Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
+ * @method boolean getAutoRenewFlagError() Obtain Cloud disk mounted to child machine, and both child machine and cloud disk are on a monthly subscription basis.<br><li>true: auto renewal flag is set for child machine, but cloud disk not set</li><li>false: cloud disk auto-renewal flag normal</li>.
+ * @method void setAutoRenewFlagError(boolean $AutoRenewFlagError) Set Cloud disk mounted to child machine, and both child machine and cloud disk are on a monthly subscription basis.<br><li>true: auto renewal flag is set for child machine, but cloud disk not set</li><li>false: cloud disk auto-renewal flag normal</li>.
+ * @method boolean getRollbacking() Obtain Indicates if the cloud disk is in snapshot rollback status. valid values: <br><li>false: means not in snapshot rollback status</li><li>true: means in snapshot rollback status.</li>.
+ * @method void setRollbacking(boolean $Rollbacking) Set Indicates if the cloud disk is in snapshot rollback status. valid values: <br><li>false: means not in snapshot rollback status</li><li>true: means in snapshot rollback status.</li>.
  * @method array getInstanceIdList() Obtain For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
  * @method void setInstanceIdList(array $InstanceIdList) Set For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
- * @method boolean getEncrypt() Obtain Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
- * @method void setEncrypt(boolean $Encrypt) Set Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
+ * @method boolean getEncrypt() Obtain Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
+ * @method void setEncrypt(boolean $Encrypt) Set Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
  * @method string getDiskName() Obtain Cloud disk name.
  * @method void setDiskName(string $DiskName) Set Cloud disk name.
  * @method boolean getBackupDisk() Obtain Specifies whether to create a snapshot when the cloud disk is terminated due to overdue payment or expiration. `true`: create snapshot; `false`: do not create snapshot.
  * @method void setBackupDisk(boolean $BackupDisk) Set Specifies whether to create a snapshot when the cloud disk is terminated due to overdue payment or expiration. `true`: create snapshot; `false`: do not create snapshot.
- * @method array getTags() Obtain The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setTags(array $Tags) Set The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-Note: This field may return null, indicating that no valid value was found.
+ * @method array getTags() Obtain It indicates the tag bound to the cloud disk. If the cloud disk is not bound to any tag, the value is empty.
+ * @method void setTags(array $Tags) Set It indicates the tag bound to the cloud disk. If the cloud disk is not bound to any tag, the value is empty.
  * @method string getInstanceId() Obtain ID of the CVM to which the cloud disk is mounted.
  * @method void setInstanceId(string $InstanceId) Set ID of the CVM to which the cloud disk is mounted.
- * @method string getAttachMode() Obtain Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setAttachMode(string $AttachMode) Set Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method array getAutoSnapshotPolicyIds() Obtain ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setAutoSnapshotPolicyIds(array $AutoSnapshotPolicyIds) Set ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-Note: This field may return null, indicating that no valid value was found.
- * @method integer getThroughputPerformance() Obtain Extra performance for a cloud disk, in MB/sec.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setThroughputPerformance(integer $ThroughputPerformance) Set Extra performance for a cloud disk, in MB/sec.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getMigrating() Obtain Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setMigrating(boolean $Migrating) Set Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
-Note: This field may return null, indicating that no valid value was found.
+ * @method string getAttachMode() Obtain The mount type of the cloud disk. valid values: <br><li>PF: PF mount</li><li>VF: VF mount</li>.
+ * @method void setAttachMode(string $AttachMode) Set The mount type of the cloud disk. valid values: <br><li>PF: PF mount</li><li>VF: VF mount</li>.
+ * @method array getAutoSnapshotPolicyIds() Obtain Regular snapshot ID associated with the cloud disk. return this parameter only when calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API with ReturnBindAutoSnapshotPolicy set to TRUE.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAutoSnapshotPolicyIds(array $AutoSnapshotPolicyIds) Set Regular snapshot ID associated with the cloud disk. return this parameter only when calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API with ReturnBindAutoSnapshotPolicy set to TRUE.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getThroughputPerformance() Obtain Specifies the additional performance value of the CBS in MiB/s.
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) Set Specifies the additional performance value of the CBS in MiB/s.
+ * @method boolean getMigrating() Obtain Indicates if the cloud disk is in type change. valid values: <br><li>false: means the cloud disk is not in type change</li><li>true: means the cloud disk has initiated type change and is migrating.</li>.
+ * @method void setMigrating(boolean $Migrating) Set Indicates if the cloud disk is in type change. valid values: <br><li>false: means the cloud disk is not in type change</li><li>true: means the cloud disk has initiated type change and is migrating.</li>.
  * @method string getDiskId() Obtain Cloud disk ID.
  * @method void setDiskId(string $DiskId) Set Cloud disk ID.
- * @method integer getSnapshotSize() Obtain The total capacity of the snapshots of the cloud disk. Unit: MB.
- * @method void setSnapshotSize(integer $SnapshotSize) Set The total capacity of the snapshots of the cloud disk. Unit: MB.
+ * @method integer getSnapshotSize() Obtain Total snapshot capacity of the cloud disk. unit: MiB.
+ * @method void setSnapshotSize(integer $SnapshotSize) Set Total snapshot capacity of the cloud disk. unit: MiB.
  * @method Placement getPlacement() Obtain Location of the cloud disk.
  * @method void setPlacement(Placement $Placement) Set Location of the cloud disk.
- * @method boolean getIsReturnable() Obtain Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setIsReturnable(boolean $IsReturnable) Set Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-Note: This field may return null, indicating that no valid value was found.
+ * @method boolean getIsReturnable() Obtain Determines if a prepaid cloud disk supports proactive return.<br><li>true: supports proactive return</li><li>false: does not support proactive return.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsReturnable(boolean $IsReturnable) Set Determines if a prepaid cloud disk supports proactive return.<br><li>true: supports proactive return</li><li>false: does not support proactive return.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDeadlineTime() Obtain Expiration time of the cloud disk.
  * @method void setDeadlineTime(string $DeadlineTime) Set Expiration time of the cloud disk.
- * @method boolean getAttached() Obtain Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
- * @method void setAttached(boolean $Attached) Set Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
- * @method integer getDiskSize() Obtain Cloud disk size (in GB).
- * @method void setDiskSize(integer $DiskSize) Set Cloud disk size (in GB).
- * @method integer getMigratePercent() Obtain Migration progress of cloud disk type change, from 0 to 100.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setMigratePercent(integer $MigratePercent) Set Migration progress of cloud disk type change, from 0 to 100.
-Note: This field may return null, indicating that no valid value was found.
- * @method string getDiskUsage() Obtain Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
- * @method void setDiskUsage(string $DiskUsage) Set Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
- * @method string getDiskChargeType() Obtain Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
- * @method void setDiskChargeType(string $DiskChargeType) Set Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+ * @method boolean getAttached() Obtain Indicates whether the cloud disk is mounted to the cvm. valid values: <br><li>false: means not mounted</li><li>true: means mounted.</li>.
+ * @method void setAttached(boolean $Attached) Set Indicates whether the cloud disk is mounted to the cvm. valid values: <br><li>false: means not mounted</li><li>true: means mounted.</li>.
+ * @method integer getDiskSize() Obtain Specifies the disk capacity in GiB.
+ * @method void setDiskSize(integer $DiskSize) Set Specifies the disk capacity in GiB.
+ * @method integer getMigratePercent() Obtain It indicates the migration progress of cloud disk type change. The value range is 0 to 100.
+ * @method void setMigratePercent(integer $MigratePercent) Set It indicates the migration progress of cloud disk type change. The value range is 0 to 100.
+ * @method string getDiskUsage() Obtain Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><li>DATA_DISK: DATA DISK.</li>.
+ * @method void setDiskUsage(string $DiskUsage) Set Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><li>DATA_DISK: DATA DISK.</li>.
+ * @method string getDiskChargeType() Obtain Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
+ * @method void setDiskChargeType(string $DiskChargeType) Set Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
  * @method boolean getPortable() Obtain Whether it is an elastic cloud disk. false: Non-elastic cloud disk; true: Elastic cloud disk.
  * @method void setPortable(boolean $Portable) Set Whether it is an elastic cloud disk. false: Non-elastic cloud disk; true: Elastic cloud disk.
- * @method boolean getSnapshotAbility() Obtain Whether the cloud disk has the capability to create snapshots. Value range: <br><li>false: Cannot create snapshots. true: Can create snapshots.
- * @method void setSnapshotAbility(boolean $SnapshotAbility) Set Whether the cloud disk has the capability to create snapshots. Value range: <br><li>false: Cannot create snapshots. true: Can create snapshots.
- * @method boolean getDeadlineError() Obtain This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setDeadlineError(boolean $DeadlineError) Set This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
-Note: This field may return null, indicating that no valid value was found.
+ * @method boolean getSnapshotAbility() Obtain Specifies whether the cloud disk has the capability to create snapshots. valid values:<br><li>false: cannot create snapshots</li><li>true: can create snapshots.</li>.
+ * @method void setSnapshotAbility(boolean $SnapshotAbility) Set Specifies whether the cloud disk has the capability to create snapshots. valid values:<br><li>false: cannot create snapshots</li><li>true: can create snapshots.</li>.
+ * @method boolean getDeadlineError() Obtain Indicates whether the cloud disk expiration time is earlier than that of the instance. this field is valid only when the cloud disk is mounted to the instance and both the instance and the cloud disk are on a monthly subscription basis.<br><li>true: the expiration time of the cloud disk is earlier than that of the instance.</li><li>false: cloud disk expiration time later than instance.</li>.
+ * @method void setDeadlineError(boolean $DeadlineError) Set Indicates whether the cloud disk expiration time is earlier than that of the instance. this field is valid only when the cloud disk is mounted to the instance and both the instance and the cloud disk are on a monthly subscription basis.<br><li>true: the expiration time of the cloud disk is earlier than that of the instance.</li><li>false: cloud disk expiration time later than instance.</li>.
  * @method integer getRollbackPercent() Obtain Rollback progress of a cloud disk snapshot.
  * @method void setRollbackPercent(integer $RollbackPercent) Set Rollback progress of a cloud disk snapshot.
- * @method integer getDifferDaysOfDeadline() Obtain Number of days from current time until disk expiration (only applicable for prepaid disks).
-Note: This field may return null, indicating that no valid value was found.
- * @method void setDifferDaysOfDeadline(integer $DifferDaysOfDeadline) Set Number of days from current time until disk expiration (only applicable for prepaid disks).
-Note: This field may return null, indicating that no valid value was found.
- * @method integer getReturnFailCode() Obtain In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setReturnFailCode(integer $ReturnFailCode) Set In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-Note: This field may return null, indicating that no valid value was found.
+ * @method integer getDifferDaysOfDeadline() Obtain The number of days from the current time to disk expiration (only applicable to prepaid cbs).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDifferDaysOfDeadline(integer $DifferDaysOfDeadline) Set The number of days from the current time to disk expiration (only applicable to prepaid cbs).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getReturnFailCode() Obtain For prepaid cloud disks that do not support proactive return, this parameter indicates the specific reason for not supporting refund. value range: <br><li>1: the cloud disk has already been returned.</li><li>2: the cloud disk has expired.</li><li>3: the cloud disk does not support return.</li><li>8: the maximum returnable quantity is exceeded.</li><li>10: non-elastic cloud disks, system disks, and pay-as-you-go cloud disks do not support return.</li>.
+ * @method void setReturnFailCode(integer $ReturnFailCode) Set For prepaid cloud disks that do not support proactive return, this parameter indicates the specific reason for not supporting refund. value range: <br><li>1: the cloud disk has already been returned.</li><li>2: the cloud disk has expired.</li><li>3: the cloud disk does not support return.</li><li>8: the maximum returnable quantity is exceeded.</li><li>10: non-elastic cloud disks, system disks, and pay-as-you-go cloud disks do not support return.</li>.
  * @method boolean getShareable() Obtain Whether or not cloud disk is shareable cloud disk.
  * @method void setShareable(boolean $Shareable) Set Whether or not cloud disk is shareable cloud disk.
  * @method string getCreateTime() Obtain Creation time of the cloud disk.
  * @method void setCreateTime(string $CreateTime) Set Creation time of the cloud disk.
- * @method integer getDeleteSnapshot() Obtain Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
- * @method void setDeleteSnapshot(integer $DeleteSnapshot) Set Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+ * @method integer getDeleteSnapshot() Obtain Specifies whether to delete associated non-permanently retained snapshots when destroying the cloud disk. 0 indicates non-permanent snapshots are not deleted with cloud disk destruction, 1 indicates non-permanent snapshots are deleted with cloud disk destruction. default value: 0. whether a snapshot is permanently retained can be determined through the IsPermanent field in the snapshot description returned by the DescribeSnapshots API (https://www.tencentcloud.com/document/product/362/15647?from_cn_redirect=1). true indicates permanent snapshot, false indicates non-permanent snapshot.
+ * @method void setDeleteSnapshot(integer $DeleteSnapshot) Set Specifies whether to delete associated non-permanently retained snapshots when destroying the cloud disk. 0 indicates non-permanent snapshots are not deleted with cloud disk destruction, 1 indicates non-permanent snapshots are deleted with cloud disk destruction. default value: 0. whether a snapshot is permanently retained can be determined through the IsPermanent field in the snapshot description returned by the DescribeSnapshots API (https://www.tencentcloud.com/document/product/362/15647?from_cn_redirect=1). true indicates permanent snapshot, false indicates non-permanent snapshot.
  * @method integer getDiskBackupQuota() Obtain Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
  * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
  * @method integer getDiskBackupCount() Obtain Number of used cloud disk backups.
  * @method void setDiskBackupCount(integer $DiskBackupCount) Set Number of used cloud disk backups.
- * @method string getInstanceType() Obtain Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
- * @method void setInstanceType(string $InstanceType) Set Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+ * @method string getInstanceType() Obtain The type of the CBS mounting instance. valid values: <br><li>CVM</li><li>EKS</li>.
+ * @method void setInstanceType(string $InstanceType) Set The type of the CBS mounting instance. valid values: <br><li>CVM</li><li>EKS</li>.
  * @method string getLastAttachInsId() Obtain ID of the last instance to which the cloud disk is attached
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLastAttachInsId(string $LastAttachInsId) Set ID of the last instance to which the cloud disk is attached
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getErrorPrompt() Obtain Error message for the last operation of the cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setErrorPrompt(string $ErrorPrompt) Set Error message for the last operation of the cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getBurstPerformance() Obtain Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBurstPerformance(boolean $BurstPerformance) Set Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getErrorPrompt() Obtain Error prompt for the last operation on cbs.
+ * @method void setErrorPrompt(string $ErrorPrompt) Set Error prompt for the last operation on cbs.
+ * @method boolean getBurstPerformance() Obtain Whether performance burst is enabled for the cloud disk.
+ * @method void setBurstPerformance(boolean $BurstPerformance) Set Whether performance burst is enabled for the cloud disk.
+ * @method string getEncryptType() Obtain Encryption type of cbs. valid values: ENCRYPT_V1 and ENCRYPT_V2, which indicate first generation and second generation encryption technology respectively. the two kinds are incompatible.
+ * @method void setEncryptType(string $EncryptType) Set Encryption type of cbs. valid values: ENCRYPT_V1 and ENCRYPT_V2, which indicate first generation and second generation encryption technology respectively. the two kinds are incompatible.
+ * @method string getKmsKeyId() Obtain Key ID of the encrypted disk.
+ * @method void setKmsKeyId(string $KmsKeyId) Set Key ID of the encrypted disk.
  */
 class Disk extends AbstractModel
 {
     /**
-     * @var boolean Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-Note: This field may return null, indicating that no valid value was found.
+     * @var boolean Specifies whether the cloud disk is destroyed along with the mounted instance.<br><li>true: destroy the cloud disk along with the instance. only hourly postpaid cloud disk is supported.</li><li>false: destroying instance without destroying cloud disk.</li>.
      */
     public $DeleteWithInstance;
 
     /**
-     * @var string Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-Note: This field may return null, indicating that no valid value was found.
+     * @var string AUTO renewal flag. supported values:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY expiry AND RENEW automatically</li><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY expiry but not RENEW automatically</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: neither NOTIFY expiry nor RENEW automatically.</li>.
      */
     public $RenewFlag;
 
     /**
-     * @var string Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
+     * @var string Hard disk media type. valid values:<br><li>CLOUD_BASIC: BASIC CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_BSSD: universal type SSD CLOUD disk</li><li>CLOUD_SSD: SSD CLOUD disk</li><li>CLOUD_HSSD: enhanced SSD CLOUD disk</li><li>CLOUD_TSSD: ultra-fast SSD cbs.</li>.
      */
     public $DiskType;
 
     /**
-     * @var string The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
+     * @var string Cloud disk state. valid values:<br><li>UNATTACHED: unmounted</li><li>ATTACHING: mounting</li><li>ATTACHED: mounted</li><li>DETACHING: unmounting</li><li>EXPANDING: EXPANDING</li><li>ROLLBACKING: rolling back</li><li>TORECYCLE: to be recycled</li><li>DUMPING: copying hard drive.</li>.
      */
     public $DiskState;
 
@@ -165,13 +145,12 @@ Note: This field may return null, indicating that no valid value was found.
     public $SnapshotCount;
 
     /**
-     * @var boolean Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-Note: This field may return null, indicating that no valid value was found.
+     * @var boolean Cloud disk mounted to child machine, and both child machine and cloud disk are on a monthly subscription basis.<br><li>true: auto renewal flag is set for child machine, but cloud disk not set</li><li>false: cloud disk auto-renewal flag normal</li>.
      */
     public $AutoRenewFlagError;
 
     /**
-     * @var boolean Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
+     * @var boolean Indicates if the cloud disk is in snapshot rollback status. valid values: <br><li>false: means not in snapshot rollback status</li><li>true: means in snapshot rollback status.</li>.
      */
     public $Rollbacking;
 
@@ -181,7 +160,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $InstanceIdList;
 
     /**
-     * @var boolean Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
+     * @var boolean Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
      */
     public $Encrypt;
 
@@ -196,8 +175,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $BackupDisk;
 
     /**
-     * @var array The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-Note: This field may return null, indicating that no valid value was found.
+     * @var array It indicates the tag bound to the cloud disk. If the cloud disk is not bound to any tag, the value is empty.
      */
     public $Tags;
 
@@ -207,26 +185,23 @@ Note: This field may return null, indicating that no valid value was found.
     public $InstanceId;
 
     /**
-     * @var string Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var string The mount type of the cloud disk. valid values: <br><li>PF: PF mount</li><li>VF: VF mount</li>.
      */
     public $AttachMode;
 
     /**
-     * @var array ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-Note: This field may return null, indicating that no valid value was found.
+     * @var array Regular snapshot ID associated with the cloud disk. return this parameter only when calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API with ReturnBindAutoSnapshotPolicy set to TRUE.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AutoSnapshotPolicyIds;
 
     /**
-     * @var integer Extra performance for a cloud disk, in MB/sec.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Specifies the additional performance value of the CBS in MiB/s.
      */
     public $ThroughputPerformance;
 
     /**
-     * @var boolean Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
-Note: This field may return null, indicating that no valid value was found.
+     * @var boolean Indicates if the cloud disk is in type change. valid values: <br><li>false: means the cloud disk is not in type change</li><li>true: means the cloud disk has initiated type change and is migrating.</li>.
      */
     public $Migrating;
 
@@ -236,7 +211,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $DiskId;
 
     /**
-     * @var integer The total capacity of the snapshots of the cloud disk. Unit: MB.
+     * @var integer Total snapshot capacity of the cloud disk. unit: MiB.
      */
     public $SnapshotSize;
 
@@ -246,8 +221,8 @@ Note: This field may return null, indicating that no valid value was found.
     public $Placement;
 
     /**
-     * @var boolean Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-Note: This field may return null, indicating that no valid value was found.
+     * @var boolean Determines if a prepaid cloud disk supports proactive return.<br><li>true: supports proactive return</li><li>false: does not support proactive return.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsReturnable;
 
@@ -257,28 +232,27 @@ Note: This field may return null, indicating that no valid value was found.
     public $DeadlineTime;
 
     /**
-     * @var boolean Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
+     * @var boolean Indicates whether the cloud disk is mounted to the cvm. valid values: <br><li>false: means not mounted</li><li>true: means mounted.</li>.
      */
     public $Attached;
 
     /**
-     * @var integer Cloud disk size (in GB).
+     * @var integer Specifies the disk capacity in GiB.
      */
     public $DiskSize;
 
     /**
-     * @var integer Migration progress of cloud disk type change, from 0 to 100.
-Note: This field may return null, indicating that no valid value was found.
+     * @var integer It indicates the migration progress of cloud disk type change. The value range is 0 to 100.
      */
     public $MigratePercent;
 
     /**
-     * @var string Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+     * @var string Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><li>DATA_DISK: DATA DISK.</li>.
      */
     public $DiskUsage;
 
     /**
-     * @var string Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+     * @var string Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
      */
     public $DiskChargeType;
 
@@ -288,13 +262,12 @@ Note: This field may return null, indicating that no valid value was found.
     public $Portable;
 
     /**
-     * @var boolean Whether the cloud disk has the capability to create snapshots. Value range: <br><li>false: Cannot create snapshots. true: Can create snapshots.
+     * @var boolean Specifies whether the cloud disk has the capability to create snapshots. valid values:<br><li>false: cannot create snapshots</li><li>true: can create snapshots.</li>.
      */
     public $SnapshotAbility;
 
     /**
-     * @var boolean This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
-Note: This field may return null, indicating that no valid value was found.
+     * @var boolean Indicates whether the cloud disk expiration time is earlier than that of the instance. this field is valid only when the cloud disk is mounted to the instance and both the instance and the cloud disk are on a monthly subscription basis.<br><li>true: the expiration time of the cloud disk is earlier than that of the instance.</li><li>false: cloud disk expiration time later than instance.</li>.
      */
     public $DeadlineError;
 
@@ -304,14 +277,13 @@ Note: This field may return null, indicating that no valid value was found.
     public $RollbackPercent;
 
     /**
-     * @var integer Number of days from current time until disk expiration (only applicable for prepaid disks).
-Note: This field may return null, indicating that no valid value was found.
+     * @var integer The number of days from the current time to disk expiration (only applicable to prepaid cbs).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DifferDaysOfDeadline;
 
     /**
-     * @var integer In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-Note: This field may return null, indicating that no valid value was found.
+     * @var integer For prepaid cloud disks that do not support proactive return, this parameter indicates the specific reason for not supporting refund. value range: <br><li>1: the cloud disk has already been returned.</li><li>2: the cloud disk has expired.</li><li>3: the cloud disk does not support return.</li><li>8: the maximum returnable quantity is exceeded.</li><li>10: non-elastic cloud disks, system disks, and pay-as-you-go cloud disks do not support return.</li>.
      */
     public $ReturnFailCode;
 
@@ -326,7 +298,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $CreateTime;
 
     /**
-     * @var integer Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+     * @var integer Specifies whether to delete associated non-permanently retained snapshots when destroying the cloud disk. 0 indicates non-permanent snapshots are not deleted with cloud disk destruction, 1 indicates non-permanent snapshots are deleted with cloud disk destruction. default value: 0. whether a snapshot is permanently retained can be determined through the IsPermanent field in the snapshot description returned by the DescribeSnapshots API (https://www.tencentcloud.com/document/product/362/15647?from_cn_redirect=1). true indicates permanent snapshot, false indicates non-permanent snapshot.
      */
     public $DeleteSnapshot;
 
@@ -341,7 +313,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $DiskBackupCount;
 
     /**
-     * @var string Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+     * @var string The type of the CBS mounting instance. valid values: <br><li>CVM</li><li>EKS</li>.
      */
     public $InstanceType;
 
@@ -352,74 +324,74 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $LastAttachInsId;
 
     /**
-     * @var string Error message for the last operation of the cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Error prompt for the last operation on cbs.
      */
     public $ErrorPrompt;
 
     /**
-     * @var boolean Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether performance burst is enabled for the cloud disk.
      */
     public $BurstPerformance;
 
     /**
-     * @param boolean $DeleteWithInstance Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-Note: This field may return null, indicating that no valid value was found.
-     * @param string $RenewFlag Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-Note: This field may return null, indicating that no valid value was found.
-     * @param string $DiskType Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
-     * @param string $DiskState The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
+     * @var string Encryption type of cbs. valid values: ENCRYPT_V1 and ENCRYPT_V2, which indicate first generation and second generation encryption technology respectively. the two kinds are incompatible.
+     */
+    public $EncryptType;
+
+    /**
+     * @var string Key ID of the encrypted disk.
+     */
+    public $KmsKeyId;
+
+    /**
+     * @param boolean $DeleteWithInstance Specifies whether the cloud disk is destroyed along with the mounted instance.<br><li>true: destroy the cloud disk along with the instance. only hourly postpaid cloud disk is supported.</li><li>false: destroying instance without destroying cloud disk.</li>.
+     * @param string $RenewFlag AUTO renewal flag. supported values:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY expiry AND RENEW automatically</li><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY expiry but not RENEW automatically</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: neither NOTIFY expiry nor RENEW automatically.</li>.
+     * @param string $DiskType Hard disk media type. valid values:<br><li>CLOUD_BASIC: BASIC CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_BSSD: universal type SSD CLOUD disk</li><li>CLOUD_SSD: SSD CLOUD disk</li><li>CLOUD_HSSD: enhanced SSD CLOUD disk</li><li>CLOUD_TSSD: ultra-fast SSD cbs.</li>.
+     * @param string $DiskState Cloud disk state. valid values:<br><li>UNATTACHED: unmounted</li><li>ATTACHING: mounting</li><li>ATTACHED: mounted</li><li>DETACHING: unmounting</li><li>EXPANDING: EXPANDING</li><li>ROLLBACKING: rolling back</li><li>TORECYCLE: to be recycled</li><li>DUMPING: copying hard drive.</li>.
      * @param integer $SnapshotCount The total number of snapshots of the cloud disk.
-     * @param boolean $AutoRenewFlagError Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-Note: This field may return null, indicating that no valid value was found.
-     * @param boolean $Rollbacking Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
+     * @param boolean $AutoRenewFlagError Cloud disk mounted to child machine, and both child machine and cloud disk are on a monthly subscription basis.<br><li>true: auto renewal flag is set for child machine, but cloud disk not set</li><li>false: cloud disk auto-renewal flag normal</li>.
+     * @param boolean $Rollbacking Indicates if the cloud disk is in snapshot rollback status. valid values: <br><li>false: means not in snapshot rollback status</li><li>true: means in snapshot rollback status.</li>.
      * @param array $InstanceIdList For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
-     * @param boolean $Encrypt Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
+     * @param boolean $Encrypt Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
      * @param string $DiskName Cloud disk name.
      * @param boolean $BackupDisk Specifies whether to create a snapshot when the cloud disk is terminated due to overdue payment or expiration. `true`: create snapshot; `false`: do not create snapshot.
-     * @param array $Tags The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-Note: This field may return null, indicating that no valid value was found.
+     * @param array $Tags It indicates the tag bound to the cloud disk. If the cloud disk is not bound to any tag, the value is empty.
      * @param string $InstanceId ID of the CVM to which the cloud disk is mounted.
-     * @param string $AttachMode Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param array $AutoSnapshotPolicyIds ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-Note: This field may return null, indicating that no valid value was found.
-     * @param integer $ThroughputPerformance Extra performance for a cloud disk, in MB/sec.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $Migrating Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
-Note: This field may return null, indicating that no valid value was found.
+     * @param string $AttachMode The mount type of the cloud disk. valid values: <br><li>PF: PF mount</li><li>VF: VF mount</li>.
+     * @param array $AutoSnapshotPolicyIds Regular snapshot ID associated with the cloud disk. return this parameter only when calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API with ReturnBindAutoSnapshotPolicy set to TRUE.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ThroughputPerformance Specifies the additional performance value of the CBS in MiB/s.
+     * @param boolean $Migrating Indicates if the cloud disk is in type change. valid values: <br><li>false: means the cloud disk is not in type change</li><li>true: means the cloud disk has initiated type change and is migrating.</li>.
      * @param string $DiskId Cloud disk ID.
-     * @param integer $SnapshotSize The total capacity of the snapshots of the cloud disk. Unit: MB.
+     * @param integer $SnapshotSize Total snapshot capacity of the cloud disk. unit: MiB.
      * @param Placement $Placement Location of the cloud disk.
-     * @param boolean $IsReturnable Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-Note: This field may return null, indicating that no valid value was found.
+     * @param boolean $IsReturnable Determines if a prepaid cloud disk supports proactive return.<br><li>true: supports proactive return</li><li>false: does not support proactive return.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DeadlineTime Expiration time of the cloud disk.
-     * @param boolean $Attached Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
-     * @param integer $DiskSize Cloud disk size (in GB).
-     * @param integer $MigratePercent Migration progress of cloud disk type change, from 0 to 100.
-Note: This field may return null, indicating that no valid value was found.
-     * @param string $DiskUsage Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-     * @param string $DiskChargeType Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+     * @param boolean $Attached Indicates whether the cloud disk is mounted to the cvm. valid values: <br><li>false: means not mounted</li><li>true: means mounted.</li>.
+     * @param integer $DiskSize Specifies the disk capacity in GiB.
+     * @param integer $MigratePercent It indicates the migration progress of cloud disk type change. The value range is 0 to 100.
+     * @param string $DiskUsage Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><li>DATA_DISK: DATA DISK.</li>.
+     * @param string $DiskChargeType Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
      * @param boolean $Portable Whether it is an elastic cloud disk. false: Non-elastic cloud disk; true: Elastic cloud disk.
-     * @param boolean $SnapshotAbility Whether the cloud disk has the capability to create snapshots. Value range: <br><li>false: Cannot create snapshots. true: Can create snapshots.
-     * @param boolean $DeadlineError This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
-Note: This field may return null, indicating that no valid value was found.
+     * @param boolean $SnapshotAbility Specifies whether the cloud disk has the capability to create snapshots. valid values:<br><li>false: cannot create snapshots</li><li>true: can create snapshots.</li>.
+     * @param boolean $DeadlineError Indicates whether the cloud disk expiration time is earlier than that of the instance. this field is valid only when the cloud disk is mounted to the instance and both the instance and the cloud disk are on a monthly subscription basis.<br><li>true: the expiration time of the cloud disk is earlier than that of the instance.</li><li>false: cloud disk expiration time later than instance.</li>.
      * @param integer $RollbackPercent Rollback progress of a cloud disk snapshot.
-     * @param integer $DifferDaysOfDeadline Number of days from current time until disk expiration (only applicable for prepaid disks).
-Note: This field may return null, indicating that no valid value was found.
-     * @param integer $ReturnFailCode In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-Note: This field may return null, indicating that no valid value was found.
+     * @param integer $DifferDaysOfDeadline The number of days from the current time to disk expiration (only applicable to prepaid cbs).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ReturnFailCode For prepaid cloud disks that do not support proactive return, this parameter indicates the specific reason for not supporting refund. value range: <br><li>1: the cloud disk has already been returned.</li><li>2: the cloud disk has expired.</li><li>3: the cloud disk does not support return.</li><li>8: the maximum returnable quantity is exceeded.</li><li>10: non-elastic cloud disks, system disks, and pay-as-you-go cloud disks do not support return.</li>.
      * @param boolean $Shareable Whether or not cloud disk is shareable cloud disk.
      * @param string $CreateTime Creation time of the cloud disk.
-     * @param integer $DeleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+     * @param integer $DeleteSnapshot Specifies whether to delete associated non-permanently retained snapshots when destroying the cloud disk. 0 indicates non-permanent snapshots are not deleted with cloud disk destruction, 1 indicates non-permanent snapshots are deleted with cloud disk destruction. default value: 0. whether a snapshot is permanently retained can be determined through the IsPermanent field in the snapshot description returned by the DescribeSnapshots API (https://www.tencentcloud.com/document/product/362/15647?from_cn_redirect=1). true indicates permanent snapshot, false indicates non-permanent snapshot.
      * @param integer $DiskBackupQuota Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
      * @param integer $DiskBackupCount Number of used cloud disk backups.
-     * @param string $InstanceType Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+     * @param string $InstanceType The type of the CBS mounting instance. valid values: <br><li>CVM</li><li>EKS</li>.
      * @param string $LastAttachInsId ID of the last instance to which the cloud disk is attached
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ErrorPrompt Error message for the last operation of the cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $BurstPerformance Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ErrorPrompt Error prompt for the last operation on cbs.
+     * @param boolean $BurstPerformance Whether performance burst is enabled for the cloud disk.
+     * @param string $EncryptType Encryption type of cbs. valid values: ENCRYPT_V1 and ENCRYPT_V2, which indicate first generation and second generation encryption technology respectively. the two kinds are incompatible.
+     * @param string $KmsKeyId Key ID of the encrypted disk.
      */
     function __construct()
     {
@@ -606,6 +578,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BurstPerformance",$param) and $param["BurstPerformance"] !== null) {
             $this->BurstPerformance = $param["BurstPerformance"];
+        }
+
+        if (array_key_exists("EncryptType",$param) and $param["EncryptType"] !== null) {
+            $this->EncryptType = $param["EncryptType"];
+        }
+
+        if (array_key_exists("KmsKeyId",$param) and $param["KmsKeyId"] !== null) {
+            $this->KmsKeyId = $param["KmsKeyId"];
         }
     }
 }

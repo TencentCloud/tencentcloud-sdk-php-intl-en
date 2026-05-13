@@ -20,16 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * This describes the detailed information of the scheduled snapshot policy.
  *
- * @method array getDiskIdSet() Obtain The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
- * @method void setDiskIdSet(array $DiskIdSet) Set The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+ * @method array getDiskIdSet() Obtain It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+
+In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty.
+ * @method void setDiskIdSet(array $DiskIdSet) Set It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+
+In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty.
  * @method boolean getIsActivated() Obtain Whether scheduled snapshot policy is activated.
  * @method void setIsActivated(boolean $IsActivated) Set Whether scheduled snapshot policy is activated.
- * @method string getAutoSnapshotPolicyState() Obtain Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
- * @method void setAutoSnapshotPolicyState(string $AutoSnapshotPolicyState) Set Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
- * @method integer getIsCopyToRemote() Obtain Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsCopyToRemote(integer $IsCopyToRemote) Set Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAutoSnapshotPolicyState() Obtain Status of regular snapshot policy. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>ISOLATED: specifies the instance is isolated.</li>.
+</ul>
+ * @method void setAutoSnapshotPolicyState(string $AutoSnapshotPolicyState) Set Status of regular snapshot policy. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>ISOLATED: specifies the instance is isolated.</li>.
+</ul>
+ * @method integer getIsCopyToRemote() Obtain Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no).
+ * @method void setIsCopyToRemote(integer $IsCopyToRemote) Set Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no).
  * @method boolean getIsPermanent() Obtain Whether the snapshot created by this scheduled snapshot policy is retained permanently.
  * @method void setIsPermanent(boolean $IsPermanent) Set Whether the snapshot created by this scheduled snapshot policy is retained permanently.
  * @method string getNextTriggerTime() Obtain The time the scheduled snapshot will be triggered again.
@@ -48,18 +58,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCopyToAccountUin(string $CopyToAccountUin) Set ID of the replication target account
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getInstanceIdSet() Obtain List of IDs of the instances associated with the scheduled snapshot policy.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceIdSet(array $InstanceIdSet) Set List of IDs of the instances associated with the scheduled snapshot policy.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRetentionMonths() Obtain The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRetentionMonths(integer $RetentionMonths) Set The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRetentionAmount() Obtain The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRetentionAmount(integer $RetentionAmount) Set The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getInstanceIdSet() Obtain Lists instance ids that are bound to the current periodic snapshot policy.
+ * @method void setInstanceIdSet(array $InstanceIdSet) Set Lists instance ids that are bound to the current periodic snapshot policy.
+ * @method integer getRetentionMonths() Obtain Specifies the number of months snapshot can be retained.
+ * @method void setRetentionMonths(integer $RetentionMonths) Set Specifies the number of months snapshot can be retained.
+ * @method integer getRetentionAmount() Obtain Specifies the maximum retention number of snapshots created by scheduled snapshot.
+ * @method void setRetentionAmount(integer $RetentionAmount) Set Specifies the maximum retention number of snapshots created by scheduled snapshot.
  * @method AdvancedRetentionPolicy getAdvancedRetentionPolicy() Obtain Retention policy for scheduled snapshots.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAdvancedRetentionPolicy(AdvancedRetentionPolicy $AdvancedRetentionPolicy) Set Retention policy for scheduled snapshots.
@@ -69,14 +73,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setCopyFromAccountUin(string $CopyFromAccountUin) Set Source account ID of the copied snapshot policy
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getTags() Obtain Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AutoSnapshotPolicy extends AbstractModel
 {
     /**
-     * @var array The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+     * @var array It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+
+In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty.
      */
     public $DiskIdSet;
 
@@ -86,13 +90,16 @@ class AutoSnapshotPolicy extends AbstractModel
     public $IsActivated;
 
     /**
-     * @var string Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+     * @var string Status of regular snapshot policy. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>ISOLATED: specifies the instance is isolated.</li>.
+</ul>
      */
     public $AutoSnapshotPolicyState;
 
     /**
-     * @var integer Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no).
      */
     public $IsCopyToRemote;
 
@@ -138,20 +145,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CopyToAccountUin;
 
     /**
-     * @var array List of IDs of the instances associated with the scheduled snapshot policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Lists instance ids that are bound to the current periodic snapshot policy.
      */
     public $InstanceIdSet;
 
     /**
-     * @var integer The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the number of months snapshot can be retained.
      */
     public $RetentionMonths;
 
     /**
-     * @var integer The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the maximum retention number of snapshots created by scheduled snapshot.
      */
     public $RetentionAmount;
 
@@ -169,16 +173,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var array Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
     /**
-     * @param array $DiskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+     * @param array $DiskIdSet It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+
+In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty.
      * @param boolean $IsActivated Whether scheduled snapshot policy is activated.
-     * @param string $AutoSnapshotPolicyState Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
-     * @param integer $IsCopyToRemote Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AutoSnapshotPolicyState Status of regular snapshot policy. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>ISOLATED: specifies the instance is isolated.</li>.
+</ul>
+     * @param integer $IsCopyToRemote Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no).
      * @param boolean $IsPermanent Whether the snapshot created by this scheduled snapshot policy is retained permanently.
      * @param string $NextTriggerTime The time the scheduled snapshot will be triggered again.
      * @param string $AutoSnapshotPolicyName Scheduled snapshot policy name.
@@ -188,18 +196,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $RetentionDays Number of days the snapshot created by this scheduled snapshot policy is retained.
      * @param string $CopyToAccountUin ID of the replication target account
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $InstanceIdSet List of IDs of the instances associated with the scheduled snapshot policy.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RetentionMonths The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RetentionAmount The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $InstanceIdSet Lists instance ids that are bound to the current periodic snapshot policy.
+     * @param integer $RetentionMonths Specifies the number of months snapshot can be retained.
+     * @param integer $RetentionAmount Specifies the maximum retention number of snapshots created by scheduled snapshot.
      * @param AdvancedRetentionPolicy $AdvancedRetentionPolicy Retention policy for scheduled snapshots.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CopyFromAccountUin Source account ID of the copied snapshot policy
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

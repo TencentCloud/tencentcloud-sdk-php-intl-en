@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID.
  * @method void setClusterId(string $ClusterId) Set Cluster ID.
- * @method string getEnvironmentId() Obtain Namespace
- * @method void setEnvironmentId(string $EnvironmentId) Set Namespace
+ * @method string getEnvironmentId() Obtain namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
+ * @method void setEnvironmentId(string $EnvironmentId) Set namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
  * @method string getTopicName() Obtain Topic. When the system queries RocketMQ dead letters, the value is groupId.
  * @method void setTopicName(string $TopicName) Set Topic. When the system queries RocketMQ dead letters, the value is groupId.
  * @method string getMsgId() Obtain Message ID
@@ -43,7 +43,7 @@ class DescribeRocketMQMsgTraceRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Namespace
+     * @var string namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public $EnvironmentId;
 
@@ -75,7 +75,7 @@ class DescribeRocketMQMsgTraceRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID.
-     * @param string $EnvironmentId Namespace
+     * @param string $EnvironmentId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      * @param string $TopicName Topic. When the system queries RocketMQ dead letters, the value is groupId.
      * @param string $MsgId Message ID
      * @param string $GroupName Consumer Group and Subscription

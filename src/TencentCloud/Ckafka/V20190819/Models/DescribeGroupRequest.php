@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroup request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
- * @method string getSearchWord() Obtain Search keyword
- * @method void setSearchWord(string $SearchWord) Set Search keyword
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
- * @method integer getLimit() Obtain Maximum number of results to be returned
- * @method void setLimit(integer $Limit) Set Maximum number of results to be returned
- * @method array getFilters() Obtain Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
- * @method void setFilters(array $Filters) Set Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method string getSearchWord() Obtain <p>Search keywords</p>
+ * @method void setSearchWord(string $SearchWord) Set <p>Search keywords</p>
+ * @method integer getOffset() Obtain <p>Offset</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset</p>
+ * @method integer getLimit() Obtain <p>Maximum return quantity</p><p>Default value: 20</p>
+ * @method void setLimit(integer $Limit) Set <p>Maximum return quantity</p><p>Default value: 20</p>
+ * @method array getFilters() Obtain <p>Only supports filtering by GroupState. Supported filter statuses are Empty/Stable. Note: This parameter is only supported for versions 2.8/3.2.</p>
+ * @method void setFilters(array $Filters) Set <p>Only supports filtering by GroupState. Supported filter statuses are Empty/Stable. Note: This parameter is only supported for versions 2.8/3.2.</p>
  */
 class DescribeGroupRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id.
+     * @var string <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string Search keyword
+     * @var string <p>Search keywords</p>
      */
     public $SearchWord;
 
     /**
-     * @var integer Offset
+     * @var integer <p>Offset</p>
      */
     public $Offset;
 
     /**
-     * @var integer Maximum number of results to be returned
+     * @var integer <p>Maximum return quantity</p><p>Default value: 20</p>
      */
     public $Limit;
 
     /**
-     * @var array Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
+     * @var array <p>Only supports filtering by GroupState. Supported filter statuses are Empty/Stable. Note: This parameter is only supported for versions 2.8/3.2.</p>
      */
     public $Filters;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id.
-     * @param string $SearchWord Search keyword
-     * @param integer $Offset Offset
-     * @param integer $Limit Maximum number of results to be returned
-     * @param array $Filters Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
+     * @param string $InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param string $SearchWord <p>Search keywords</p>
+     * @param integer $Offset <p>Offset</p>
+     * @param integer $Limit <p>Maximum return quantity</p><p>Default value: 20</p>
+     * @param array $Filters <p>Only supports filtering by GroupState. Supported filter statuses are Empty/Stable. Note: This parameter is only supported for versions 2.8/3.2.</p>
      */
     function __construct()
     {

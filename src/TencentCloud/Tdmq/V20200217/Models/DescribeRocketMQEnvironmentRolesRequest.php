@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Required. Specifies the ID of the RocketMQ cluster.
  * @method void setClusterId(string $ClusterId) Set Required. Specifies the ID of the RocketMQ cluster.
- * @method string getEnvironmentId() Obtain Namespace
- * @method void setEnvironmentId(string $EnvironmentId) Set Namespace
+ * @method string getEnvironmentId() Obtain Namespace, the common Cluster Namespace for 4.x is fixed as: tdmq_default
+
+ * @method void setEnvironmentId(string $EnvironmentId) Set Namespace, the common Cluster Namespace for 4.x is fixed as: tdmq_default
+
  * @method integer getOffset() Obtain Starting index. Default is 0 if left empty.
  * @method void setOffset(integer $Offset) Set Starting index. Default is 0 if left empty.
  * @method integer getLimit() Obtain Number of returns, default to 10 if not specified, maximum value: 20.
@@ -41,7 +43,8 @@ class DescribeRocketMQEnvironmentRolesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Namespace
+     * @var string Namespace, the common Cluster Namespace for 4.x is fixed as: tdmq_default
+
      */
     public $EnvironmentId;
 
@@ -67,7 +70,8 @@ class DescribeRocketMQEnvironmentRolesRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Required. Specifies the ID of the RocketMQ cluster.
-     * @param string $EnvironmentId Namespace
+     * @param string $EnvironmentId Namespace, the common Cluster Namespace for 4.x is fixed as: tdmq_default
+
      * @param integer $Offset Starting index. Default is 0 if left empty.
      * @param integer $Limit Number of returns, default to 10 if not specified, maximum value: 20.
      * @param string $RoleName Role name.

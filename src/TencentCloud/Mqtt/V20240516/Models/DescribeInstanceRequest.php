@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstance request structure.
  *
- * @method string getInstanceId() Obtain tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
- * @method void setInstanceId(string $InstanceId) Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+ * @method string getInstanceId() Obtain <p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p>
  */
 class DescribeInstanceRequest extends AbstractModel
 {
     /**
-     * @var string tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @var string <p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @param string $InstanceId <p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p>
      */
     function __construct()
     {

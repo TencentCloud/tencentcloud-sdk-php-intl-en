@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDiskBackupQuota request structure.
  *
- * @method string getDiskId() Obtain Cloud disk ID.
- * @method void setDiskId(string $DiskId) Set Cloud disk ID.
- * @method integer getDiskBackupQuota() Obtain Cloud disk backup point quota after the adjustment
- * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Cloud disk backup point quota after the adjustment
+ * @method string getDiskId() Obtain Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+ * @method void setDiskId(string $DiskId) Set Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+ * @method integer getDiskBackupQuota() Obtain Adjusted cloud disk backup point quota. value range: 1-1024.
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Adjusted cloud disk backup point quota. value range: 1-1024.
  */
 class ModifyDiskBackupQuotaRequest extends AbstractModel
 {
     /**
-     * @var string Cloud disk ID.
+     * @var string Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
      */
     public $DiskId;
 
     /**
-     * @var integer Cloud disk backup point quota after the adjustment
+     * @var integer Adjusted cloud disk backup point quota. value range: 1-1024.
      */
     public $DiskBackupQuota;
 
     /**
-     * @param string $DiskId Cloud disk ID.
-     * @param integer $DiskBackupQuota Cloud disk backup point quota after the adjustment
+     * @param string $DiskId Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+     * @param integer $DiskBackupQuota Adjusted cloud disk backup point quota. value range: 1-1024.
      */
     function __construct()
     {

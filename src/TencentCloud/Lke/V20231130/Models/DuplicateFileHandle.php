@@ -18,28 +18,28 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Duplicate document handling method
+ * 
  *
- * @method integer getCheckType() Obtain Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist
- * @method void setCheckType(integer $CheckType) Set Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist
- * @method integer getHandleType() Obtain Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document
- * @method void setHandleType(integer $HandleType) Set Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document
+ * @method integer getCheckType() Obtain 
+ * @method void setCheckType(integer $CheckType) Set 
+ * @method integer getHandleType() Obtain 
+ * @method void setHandleType(integer $HandleType) Set 
  */
 class DuplicateFileHandle extends AbstractModel
 {
     /**
-     * @var integer Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist
+     * @var integer 
      */
     public $CheckType;
 
     /**
-     * @var integer Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document
+     * @var integer 
      */
     public $HandleType;
 
     /**
-     * @param integer $CheckType Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist
-     * @param integer $HandleType Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document
+     * @param integer $CheckType 
+     * @param integer $HandleType 
      */
     function __construct()
     {

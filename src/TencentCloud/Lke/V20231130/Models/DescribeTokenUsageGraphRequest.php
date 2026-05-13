@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End timestamp, in seconds.
  * @method array getAppBizIds() Obtain Application ID list.
  * @method void setAppBizIds(array $AppBizIds) Set Application ID list.
- * @method string getAppType() Obtain Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
- * @method void setAppType(string $AppType) Set Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
- * @method array getSubScenes() Obtain Filter Sub-scenarios
- * @method void setSubScenes(array $SubScenes) Set Filter Sub-scenarios
+ * @method string getAppType() Obtain 
+ * @method void setAppType(string $AppType) Set 
+ * @method array getSubScenes() Obtain 
+ * @method void setSubScenes(array $SubScenes) Set 
  */
 class DescribeTokenUsageGraphRequest extends AbstractModel
 {
@@ -56,11 +56,13 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
 
     /**
      * @var string Start timestamp, in seconds.
+     * @deprecated
      */
     public $StartTime;
 
     /**
      * @var string End timestamp, in seconds.
+     * @deprecated
      */
     public $EndTime;
 
@@ -70,12 +72,12 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
     public $AppBizIds;
 
     /**
-     * @var string Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
+     * @var string 
      */
     public $AppType;
 
     /**
-     * @var array Filter Sub-scenarios
+     * @var array 
      */
     public $SubScenes;
 
@@ -86,8 +88,8 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
      * @param string $StartTime Start timestamp, in seconds.
      * @param string $EndTime End timestamp, in seconds.
      * @param array $AppBizIds Application ID list.
-     * @param string $AppType Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
-     * @param array $SubScenes Filter Sub-scenarios
+     * @param string $AppType 
+     * @param array $SubScenes 
      */
     function __construct()
     {

@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Pricing details for the cloud disk.
  *
- * @method string getPriceTitle() Obtain Name of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPriceTitle(string $PriceTitle) Set Name of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPriceTitle() Obtain Name of a billable item.
+ * @method void setPriceTitle(string $PriceTitle) Set Name of a billable item.
  * @method string getPriceName() Obtain Name of the billable item displayed in the console.
  * @method void setPriceName(string $PriceName) Set Name of the billable item displayed in the console.
  * @method float getOriginalPrice() Obtain Original price of a monthly subscribed cloud disk, in USD.
@@ -66,8 +64,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class DetailPrice extends AbstractModel
 {
     /**
-     * @var string Name of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name of a billable item.
      */
     public $PriceTitle;
 
@@ -131,8 +128,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UnitPriceDiscountHigh;
 
     /**
-     * @param string $PriceTitle Name of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PriceTitle Name of a billable item.
      * @param string $PriceName Name of the billable item displayed in the console.
      * @param float $OriginalPrice Original price of a monthly subscribed cloud disk, in USD.
 Note: This field may return null, indicating that no valid values can be obtained.

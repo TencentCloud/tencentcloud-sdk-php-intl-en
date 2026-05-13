@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeDistribution(array $NodeDistribution) Set Node distribution
  * @method array getTopicDistribution() Obtain Topic distribution
  * @method void setTopicDistribution(array $TopicDistribution) Set Topic distribution
- * @method integer getMaxQueuesPerTopic() Obtain Maximum number of queues per topic
- * @method void setMaxQueuesPerTopic(integer $MaxQueuesPerTopic) Set Maximum number of queues per topic
+ * @method integer getMaxQueuesPerTopic() Obtain 
+ * @method void setMaxQueuesPerTopic(integer $MaxQueuesPerTopic) Set 
  * @method integer getMaxRetention() Obtain Maximum configurable message retention time, in hours	
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMaxRetention(integer $MaxRetention) Set Maximum configurable message retention time, in hours	
@@ -66,6 +66,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method float getSendReceiveRatio() Obtain Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
  * @method void setSendReceiveRatio(float $SendReceiveRatio) Set Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
+ * @method integer getTpsLimit() Obtain Send and receive TPS peak cap
+ * @method void setTpsLimit(integer $TpsLimit) Set Send and receive TPS peak cap
+ * @method string getGeneralSkuCode() Obtain Generic cluster specification
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGeneralSkuCode(string $GeneralSkuCode) Set Generic cluster specification
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RocketMQInstanceConfig extends AbstractModel
 {
@@ -125,7 +131,7 @@ class RocketMQInstanceConfig extends AbstractModel
     public $TopicDistribution;
 
     /**
-     * @var integer Maximum number of queues per topic
+     * @var integer 
      */
     public $MaxQueuesPerTopic;
 
@@ -165,6 +171,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SendReceiveRatio;
 
     /**
+     * @var integer Send and receive TPS peak cap
+     */
+    public $TpsLimit;
+
+    /**
+     * @var string Generic cluster specification
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GeneralSkuCode;
+
+    /**
      * @param integer $MaxTpsPerNamespace Maximum TPS per namespace
      * @param integer $MaxNamespaceNum Maximum number of namespaces
      * @param integer $UsedNamespaceNum Number of used namespaces
@@ -176,7 +193,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $NodeCount Number of nodes in the cluster
      * @param array $NodeDistribution Node distribution
      * @param array $TopicDistribution Topic distribution
-     * @param integer $MaxQueuesPerTopic Maximum number of queues per topic
+     * @param integer $MaxQueuesPerTopic 
      * @param integer $MaxRetention Maximum configurable message retention time, in hours	
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MinRetention Minimum configurable message retention time, in hours
@@ -188,6 +205,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $TopicNumUpperLimit Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param float $SendReceiveRatio Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
+     * @param integer $TpsLimit Send and receive TPS peak cap
+     * @param string $GeneralSkuCode Generic cluster specification
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -282,6 +302,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SendReceiveRatio",$param) and $param["SendReceiveRatio"] !== null) {
             $this->SendReceiveRatio = $param["SendReceiveRatio"];
+        }
+
+        if (array_key_exists("TpsLimit",$param) and $param["TpsLimit"] !== null) {
+            $this->TpsLimit = $param["TpsLimit"];
+        }
+
+        if (array_key_exists("GeneralSkuCode",$param) and $param["GeneralSkuCode"] !== null) {
+            $this->GeneralSkuCode = $param["GeneralSkuCode"];
         }
     }
 }

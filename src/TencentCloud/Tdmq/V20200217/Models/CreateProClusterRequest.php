@@ -30,10 +30,6 @@ Single-AZ deployment selects an availability zone. example: [200002].
 Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
  * @method void setProductName(string $ProductName) Set Cluster specification code.
 Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
- * @method integer getStorageSize() Obtain Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
- * @method void setStorageSize(integer $StorageSize) Set Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
  * @method integer getAutoRenewFlag() Obtain `1`: true. enables automatic monthly renewal.
 
 false. disables automatic monthly renewal.
@@ -46,6 +42,10 @@ false. disables automatic monthly renewal.
  * @method void setClusterName(string $ClusterName) Set Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
  * @method integer getAutoVoucher() Obtain Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
+ * @method integer getStorageSize() Obtain Specifies the storage specification.
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+ * @method void setStorageSize(integer $StorageSize) Set Specifies the storage specification.
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
  * @method VpcInfo getVpc() Obtain Specifies the vpc network tag.
  * @method void setVpc(VpcInfo $Vpc) Set Specifies the vpc network tag.
  * @method array getTags() Obtain Tag list of the cluster (abandoned).
@@ -65,12 +65,6 @@ Single-AZ deployment selects an availability zone. example: [200002].
 Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
      */
     public $ProductName;
-
-    /**
-     * @var integer Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-     */
-    public $StorageSize;
 
     /**
      * @var integer `1`: true. enables automatic monthly renewal.
@@ -95,6 +89,12 @@ false. disables automatic monthly renewal.
     public $AutoVoucher;
 
     /**
+     * @var integer Specifies the storage specification.
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+     */
+    public $StorageSize;
+
+    /**
      * @var VpcInfo Specifies the vpc network tag.
      */
     public $Vpc;
@@ -110,14 +110,14 @@ false. disables automatic monthly renewal.
 Single-AZ deployment selects an availability zone. example: [200002].
      * @param string $ProductName Cluster specification code.
 Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-     * @param integer $StorageSize Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
      * @param integer $AutoRenewFlag `1`: true. enables automatic monthly renewal.
 
 false. disables automatic monthly renewal.
      * @param integer $TimeSpan Purchase duration. value range: 1–50.
      * @param string $ClusterName Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
      * @param integer $AutoVoucher Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
+     * @param integer $StorageSize Specifies the storage specification.
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
      * @param VpcInfo $Vpc Specifies the vpc network tag.
      * @param array $Tags Tag list of the cluster (abandoned).
      */
@@ -142,10 +142,6 @@ false. disables automatic monthly renewal.
             $this->ProductName = $param["ProductName"];
         }
 
-        if (array_key_exists("StorageSize",$param) and $param["StorageSize"] !== null) {
-            $this->StorageSize = $param["StorageSize"];
-        }
-
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
@@ -160,6 +156,10 @@ false. disables automatic monthly renewal.
 
         if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
             $this->AutoVoucher = $param["AutoVoucher"];
+        }
+
+        if (array_key_exists("StorageSize",$param) and $param["StorageSize"] !== null) {
+            $this->StorageSize = $param["StorageSize"];
         }
 
         if (array_key_exists("Vpc",$param) and $param["Vpc"] !== null) {

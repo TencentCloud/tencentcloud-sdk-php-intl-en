@@ -54,6 +54,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetryInterval(integer $RetryInterval) Set Retry interval for task failure. value range: 600-86400 seconds.
  * @method integer getMaxRingTimeoutSecond() Obtain Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
  * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) Set Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+ * @method array getRetryHangupTypes() Obtain <p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+<p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p>
+ * @method void setRetryHangupTypes(array $RetryHangupTypes) Set <p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+<p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p>
+ * @method array getRetryTags() Obtain Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration.
+ * @method void setRetryTags(array $RetryTags) Set Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration.
+ * @method array getAvailableWorkTimeConfig() Obtain <p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p>
+ * @method void setAvailableWorkTimeConfig(array $AvailableWorkTimeConfig) Set <p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p>
+ * @method array getTriggerStrategy() Obtain <p>Trigger Strategy</p>
+ * @method void setTriggerStrategy(array $TriggerStrategy) Set <p>Trigger Strategy</p>
  */
 class CreateAutoCalloutTaskRequest extends AbstractModel
 {
@@ -143,6 +153,27 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $MaxRingTimeoutSecond;
 
     /**
+     * @var array <p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+<p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p>
+     */
+    public $RetryHangupTypes;
+
+    /**
+     * @var array Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration.
+     */
+    public $RetryTags;
+
+    /**
+     * @var array <p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p>
+     */
+    public $AvailableWorkTimeConfig;
+
+    /**
+     * @var array <p>Trigger Strategy</p>
+     */
+    public $TriggerStrategy;
+
+    /**
      * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param integer $NotBefore Task starting timestamp. unix second-level timestamp.
      * @param array $Callees List of called numbers.
@@ -160,6 +191,11 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
      * @param integer $AIAgentId Intelligent agent ID. if not filled, IvrId needs to be filled.
      * @param integer $RetryInterval Retry interval for task failure. value range: 600-86400 seconds.
      * @param integer $MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+     * @param array $RetryHangupTypes <p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+<p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p>
+     * @param array $RetryTags Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration.
+     * @param array $AvailableWorkTimeConfig <p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p>
+     * @param array $TriggerStrategy <p>Trigger Strategy</p>
      */
     function __construct()
     {
@@ -255,6 +291,37 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
 
         if (array_key_exists("MaxRingTimeoutSecond",$param) and $param["MaxRingTimeoutSecond"] !== null) {
             $this->MaxRingTimeoutSecond = $param["MaxRingTimeoutSecond"];
+        }
+
+        if (array_key_exists("RetryHangupTypes",$param) and $param["RetryHangupTypes"] !== null) {
+            $this->RetryHangupTypes = $param["RetryHangupTypes"];
+        }
+
+        if (array_key_exists("RetryTags",$param) and $param["RetryTags"] !== null) {
+            $this->RetryTags = [];
+            foreach ($param["RetryTags"] as $key => $value){
+                $obj = new RetryTagItem();
+                $obj->deserialize($value);
+                array_push($this->RetryTags, $obj);
+            }
+        }
+
+        if (array_key_exists("AvailableWorkTimeConfig",$param) and $param["AvailableWorkTimeConfig"] !== null) {
+            $this->AvailableWorkTimeConfig = [];
+            foreach ($param["AvailableWorkTimeConfig"] as $key => $value){
+                $obj = new AvailableTimeConfig();
+                $obj->deserialize($value);
+                array_push($this->AvailableWorkTimeConfig, $obj);
+            }
+        }
+
+        if (array_key_exists("TriggerStrategy",$param) and $param["TriggerStrategy"] !== null) {
+            $this->TriggerStrategy = [];
+            foreach ($param["TriggerStrategy"] as $key => $value){
+                $obj = new TriggerStrategyItem();
+                $obj->deserialize($value);
+                array_push($this->TriggerStrategy, $obj);
+            }
         }
     }
 }

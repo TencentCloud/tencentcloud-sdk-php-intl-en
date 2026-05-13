@@ -46,6 +46,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAutoSubscriptionCreation(boolean $AutoSubscriptionCreation) Set Whether to enable "Auto-Create Subscription"
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSubscriptionExpirationTime() Obtain Offline subscription automatic expiration cleanup time
+ * @method void setSubscriptionExpirationTime(integer $SubscriptionExpirationTime) Set Offline subscription automatic expiration cleanup time
+ * @method boolean getSubscriptionExpirationTimeEnable() Obtain Offline subscription automatic expiration cleanup time switch
+ * @method void setSubscriptionExpirationTimeEnable(boolean $SubscriptionExpirationTimeEnable) Set Offline subscription automatic expiration cleanup time switch
+ * @method array getTags() Obtain Namespace tag
+ * @method void setTags(array $Tags) Set Namespace tag
  */
 class Environment extends AbstractModel
 {
@@ -103,6 +109,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AutoSubscriptionCreation;
 
     /**
+     * @var integer Offline subscription automatic expiration cleanup time
+     */
+    public $SubscriptionExpirationTime;
+
+    /**
+     * @var boolean Offline subscription automatic expiration cleanup time switch
+     */
+    public $SubscriptionExpirationTimeEnable;
+
+    /**
+     * @var array Namespace tag
+     */
+    public $Tags;
+
+    /**
      * @param string $EnvironmentId Namespace name.
      * @param string $Remark Description.
      * @param integer $MsgTTL Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
@@ -116,6 +137,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SubscriptionExpirationTime Offline subscription automatic expiration cleanup time
+     * @param boolean $SubscriptionExpirationTimeEnable Offline subscription automatic expiration cleanup time switch
+     * @param array $Tags Namespace tag
      */
     function __construct()
     {
@@ -169,6 +193,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("AutoSubscriptionCreation",$param) and $param["AutoSubscriptionCreation"] !== null) {
             $this->AutoSubscriptionCreation = $param["AutoSubscriptionCreation"];
+        }
+
+        if (array_key_exists("SubscriptionExpirationTime",$param) and $param["SubscriptionExpirationTime"] !== null) {
+            $this->SubscriptionExpirationTime = $param["SubscriptionExpirationTime"];
+        }
+
+        if (array_key_exists("SubscriptionExpirationTimeEnable",$param) and $param["SubscriptionExpirationTimeEnable"] !== null) {
+            $this->SubscriptionExpirationTimeEnable = $param["SubscriptionExpirationTimeEnable"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

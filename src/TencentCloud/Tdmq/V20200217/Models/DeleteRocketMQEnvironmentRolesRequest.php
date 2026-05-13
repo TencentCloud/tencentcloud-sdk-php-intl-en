@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRocketMQEnvironmentRoles request structure.
  *
- * @method string getEnvironmentId() Obtain Environment (namespace) name.
- * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
+ * @method string getEnvironmentId() Obtain namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
+ * @method void setEnvironmentId(string $EnvironmentId) Set namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
  * @method array getRoleNames() Obtain Role name array.
  * @method void setRoleNames(array $RoleNames) Set Role name array.
  * @method string getClusterId() Obtain Cluster ID
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteRocketMQEnvironmentRolesRequest extends AbstractModel
 {
     /**
-     * @var string Environment (namespace) name.
+     * @var string namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public $EnvironmentId;
 
@@ -45,7 +45,7 @@ class DeleteRocketMQEnvironmentRolesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @param string $EnvironmentId Environment (namespace) name.
+     * @param string $EnvironmentId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      * @param array $RoleNames Role name array.
      * @param string $ClusterId Cluster ID
      */

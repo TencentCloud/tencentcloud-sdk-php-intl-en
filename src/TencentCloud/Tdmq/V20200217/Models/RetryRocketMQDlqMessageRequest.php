@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID.
  * @method void setClusterId(string $ClusterId) Set Cluster ID.
- * @method string getNamespaceId() Obtain Specifies the namespace name.
- * @method void setNamespaceId(string $NamespaceId) Set Specifies the namespace name.
+ * @method string getNamespaceId() Obtain namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) Set namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
  * @method string getGroupName() Obtain Group Name
  * @method void setGroupName(string $GroupName) Set Group Name
  * @method array getMessageIds() Obtain Dead Letter Message ID
@@ -37,7 +37,7 @@ class RetryRocketMQDlqMessageRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Specifies the namespace name.
+     * @var string namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public $NamespaceId;
 
@@ -53,7 +53,7 @@ class RetryRocketMQDlqMessageRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID.
-     * @param string $NamespaceId Specifies the namespace name.
+     * @param string $NamespaceId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      * @param string $GroupName Group Name
      * @param array $MessageIds Dead Letter Message ID
      */

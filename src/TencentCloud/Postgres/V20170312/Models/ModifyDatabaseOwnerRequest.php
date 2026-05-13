@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
- * @method string getDatabaseName() Obtain Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1).
- * @method void setDatabaseName(string $DatabaseName) Set Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1).
+ * @method string getDatabaseName() Obtain Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118).
+ * @method void setDatabaseName(string $DatabaseName) Set Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118).
  * @method string getDatabaseOwner() Obtain New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
  * @method void setDatabaseOwner(string $DatabaseOwner) Set New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
  */
@@ -35,7 +35,7 @@ class ModifyDatabaseOwnerRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var string Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1).
+     * @var string Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118).
      */
     public $DatabaseName;
 
@@ -46,7 +46,7 @@ class ModifyDatabaseOwnerRequest extends AbstractModel
 
     /**
      * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
-     * @param string $DatabaseName Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1).
+     * @param string $DatabaseName Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118).
      * @param string $DatabaseOwner New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
      */
     function __construct()

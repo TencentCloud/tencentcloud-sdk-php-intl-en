@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDocCate request structure.
  *
- * @method string getBotBizId() Obtain Application ID.
- * @method void setBotBizId(string $BotBizId) Set Application ID.
+ * @method string getBotBizId() Obtain Application ID
+ * @method void setBotBizId(string $BotBizId) Set Application ID
  * @method string getParentBizId() Obtain Parent business ID.
  * @method void setParentBizId(string $ParentBizId) Set Parent business ID.
  * @method string getName() Obtain Category name.
@@ -31,7 +31,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDocCateRequest extends AbstractModel
 {
     /**
-     * @var string Application ID.
+     * @var string Application ID
      */
     public $BotBizId;
 
@@ -47,7 +47,7 @@ class CreateDocCateRequest extends AbstractModel
     public $Name;
 
     /**
-     * @param string $BotBizId Application ID.
+     * @param string $BotBizId Application ID
      * @param string $ParentBizId Parent business ID.
      * @param string $Name Category name.
      */

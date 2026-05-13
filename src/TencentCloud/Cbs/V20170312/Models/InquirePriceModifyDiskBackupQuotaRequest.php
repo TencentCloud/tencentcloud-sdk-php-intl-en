@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceModifyDiskBackupQuota request structure.
  *
- * @method string getDiskId() Obtain Cloud disk ID, which can be queried through the `DescribeDisks` API.
- * @method void setDiskId(string $DiskId) Set Cloud disk ID, which can be queried through the `DescribeDisks` API.
+ * @method string getDiskId() Obtain Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API.
+ * @method void setDiskId(string $DiskId) Set Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API.
  * @method integer getDiskBackupQuota() Obtain Cloud disk backup point quota after the modification, i.e., the number of backup points that a cloud disk can have.
  * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Cloud disk backup point quota after the modification, i.e., the number of backup points that a cloud disk can have.
  */
 class InquirePriceModifyDiskBackupQuotaRequest extends AbstractModel
 {
     /**
-     * @var string Cloud disk ID, which can be queried through the `DescribeDisks` API.
+     * @var string Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API.
      */
     public $DiskId;
 
@@ -38,7 +38,7 @@ class InquirePriceModifyDiskBackupQuotaRequest extends AbstractModel
     public $DiskBackupQuota;
 
     /**
-     * @param string $DiskId Cloud disk ID, which can be queried through the `DescribeDisks` API.
+     * @param string $DiskId Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API.
      * @param integer $DiskBackupQuota Cloud disk backup point quota after the modification, i.e., the number of backup points that a cloud disk can have.
      */
     function __construct()

@@ -142,6 +142,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setIsolateConsumerEnable(boolean $IsolateConsumerEnable) Set Whether exception consumer isolation is enabled.
  * @method integer getAckTimeOut() Obtain Specifies the consumer Ack timeout period in seconds.
  * @method void setAckTimeOut(integer $AckTimeOut) Set Specifies the consumer Ack timeout period in seconds.
+ * @method integer getPulsarTopicMessageType() Obtain Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+ * @method void setPulsarTopicMessageType(integer $PulsarTopicMessageType) Set Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+ * @method array getTags() Obtain Theme tag
+ * @method void setTags(array $Tags) Set Theme tag
+ * @method string getDelayMessagePolicy() Obtain defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+ * @method void setDelayMessagePolicy(string $DelayMessagePolicy) Set defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
  */
 class Topic extends AbstractModel
 {
@@ -315,6 +321,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AckTimeOut;
 
     /**
+     * @var integer Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+     */
+    public $PulsarTopicMessageType;
+
+    /**
+     * @var array Theme tag
+     */
+    public $Tags;
+
+    /**
+     * @var string defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+     */
+    public $DelayMessagePolicy;
+
+    /**
      * @param string $AverageMsgSize Average size of the messages published in the last interval in bytes.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $ConsumerCount The number of consumers.
@@ -376,6 +397,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
      * @param boolean $IsolateConsumerEnable Whether exception consumer isolation is enabled.
      * @param integer $AckTimeOut Specifies the consumer Ack timeout period in seconds.
+     * @param integer $PulsarTopicMessageType Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+     * @param array $Tags Theme tag
+     * @param string $DelayMessagePolicy defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
      */
     function __construct()
     {
@@ -501,6 +525,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("AckTimeOut",$param) and $param["AckTimeOut"] !== null) {
             $this->AckTimeOut = $param["AckTimeOut"];
+        }
+
+        if (array_key_exists("PulsarTopicMessageType",$param) and $param["PulsarTopicMessageType"] !== null) {
+            $this->PulsarTopicMessageType = $param["PulsarTopicMessageType"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("DelayMessagePolicy",$param) and $param["DelayMessagePolicy"] !== null) {
+            $this->DelayMessagePolicy = $param["DelayMessagePolicy"];
         }
     }
 }

@@ -46,6 +46,7 @@ class AttrLabelDetail extends AbstractModel
 
     /**
      * @var string Label identification.
+     * @deprecated
      */
     public $AttrKey;
 

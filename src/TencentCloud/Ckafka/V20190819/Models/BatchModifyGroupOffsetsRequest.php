@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchModifyGroupOffsets request structure.
  *
- * @method string getGroupName() Obtain Consumer group name.
- * @method void setGroupName(string $GroupName) Set Consumer group name.
- * @method string getInstanceId() Obtain The ckafka cluster instance Id.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
- * @method array getPartitions() Obtain Partition information.
- * @method void setPartitions(array $Partitions) Set Partition information.
- * @method array getTopicName() Obtain Name of the specified topic. Default value: names of all topics.
- * @method void setTopicName(array $TopicName) Set Name of the specified topic. Default value: names of all topics.
+ * @method string getGroupName() Obtain <p>Consumer group name</p>
+ * @method void setGroupName(string $GroupName) Set <p>Consumer group name</p>
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+ * @method array getPartitions() Obtain <p>partition info</p>
+ * @method void setPartitions(array $Partitions) Set <p>partition info</p>
+ * @method array getTopicName() Obtain <p>Specify topic, default to all topics</p>
+ * @method void setTopicName(array $TopicName) Set <p>Specify topic, default to all topics</p>
  */
 class BatchModifyGroupOffsetsRequest extends AbstractModel
 {
     /**
-     * @var string Consumer group name.
+     * @var string <p>Consumer group name</p>
      */
     public $GroupName;
 
     /**
-     * @var string The ckafka cluster instance Id.
+     * @var string <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var array Partition information.
+     * @var array <p>partition info</p>
      */
     public $Partitions;
 
     /**
-     * @var array Name of the specified topic. Default value: names of all topics.
+     * @var array <p>Specify topic, default to all topics</p>
      */
     public $TopicName;
 
     /**
-     * @param string $GroupName Consumer group name.
-     * @param string $InstanceId The ckafka cluster instance Id.
-     * @param array $Partitions Partition information.
-     * @param array $TopicName Name of the specified topic. Default value: names of all topics.
+     * @param string $GroupName <p>Consumer group name</p>
+     * @param string $InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param array $Partitions <p>partition info</p>
+     * @param array $TopicName <p>Specify topic, default to all topics</p>
      */
     function __construct()
     {

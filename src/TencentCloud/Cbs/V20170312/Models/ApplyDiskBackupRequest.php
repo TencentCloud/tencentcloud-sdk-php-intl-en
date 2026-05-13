@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyDiskBackup request structure.
  *
- * @method string getDiskBackupId() Obtain ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
- * @method void setDiskBackupId(string $DiskBackupId) Set ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
- * @method string getDiskId() Obtain ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
- * @method void setDiskId(string $DiskId) Set ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
+ * @method string getDiskBackupId() Obtain Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
+ * @method void setDiskBackupId(string $DiskBackupId) Set Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
+ * @method string getDiskId() Obtain Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+ * @method void setDiskId(string $DiskId) Set Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+ * @method boolean getAutoStopInstance() Obtain Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown.
+ * @method void setAutoStopInstance(boolean $AutoStopInstance) Set Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown.
+ * @method boolean getAutoStartInstance() Obtain Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true.
+ * @method void setAutoStartInstance(boolean $AutoStartInstance) Set Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true.
  */
 class ApplyDiskBackupRequest extends AbstractModel
 {
     /**
-     * @var string ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
+     * @var string Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
      */
     public $DiskBackupId;
 
     /**
-     * @var string ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
+     * @var string Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
      */
     public $DiskId;
 
     /**
-     * @param string $DiskBackupId ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
-     * @param string $DiskId ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
+     * @var boolean Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown.
+     */
+    public $AutoStopInstance;
+
+    /**
+     * @var boolean Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true.
+     */
+    public $AutoStartInstance;
+
+    /**
+     * @param string $DiskBackupId Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
+     * @param string $DiskId Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+     * @param boolean $AutoStopInstance Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown.
+     * @param boolean $AutoStartInstance Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true.
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class ApplyDiskBackupRequest extends AbstractModel
 
         if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
             $this->DiskId = $param["DiskId"];
+        }
+
+        if (array_key_exists("AutoStopInstance",$param) and $param["AutoStopInstance"] !== null) {
+            $this->AutoStopInstance = $param["AutoStopInstance"];
+        }
+
+        if (array_key_exists("AutoStartInstance",$param) and $param["AutoStartInstance"] !== null) {
+            $this->AutoStartInstance = $param["AutoStartInstance"];
         }
     }
 }

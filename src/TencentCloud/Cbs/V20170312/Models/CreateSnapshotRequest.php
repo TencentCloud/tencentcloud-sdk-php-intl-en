@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotName(string $SnapshotName) Set Snapshot name. If it is not specified, "Unnamed" will be used by default.
  * @method string getDeadline() Obtain Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
  * @method void setDeadline(string $Deadline) Set Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
- * @method string getDiskBackupId() Obtain ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
- * @method void setDiskBackupId(string $DiskBackupId) Set ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+ * @method string getDiskBackupId() Obtain Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query.
+ * @method void setDiskBackupId(string $DiskBackupId) Set Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query.
  * @method array getTags() Obtain Tags bound to the snapshot.
  * @method void setTags(array $Tags) Set Tags bound to the snapshot.
+ * @method string getDiskUsage() Obtain Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage.
+ * @method void setDiskUsage(string $DiskUsage) Set Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage.
  */
 class CreateSnapshotRequest extends AbstractModel
 {
@@ -49,7 +51,7 @@ class CreateSnapshotRequest extends AbstractModel
     public $Deadline;
 
     /**
-     * @var string ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+     * @var string Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query.
      */
     public $DiskBackupId;
 
@@ -59,11 +61,17 @@ class CreateSnapshotRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage.
+     */
+    public $DiskUsage;
+
+    /**
      * @param string $DiskId ID of the cloud disk for which to create a snapshot, which can be queried through the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
      * @param string $SnapshotName Snapshot name. If it is not specified, "Unnamed" will be used by default.
      * @param string $Deadline Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
-     * @param string $DiskBackupId ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+     * @param string $DiskBackupId Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query.
      * @param array $Tags Tags bound to the snapshot.
+     * @param string $DiskUsage Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage.
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class CreateSnapshotRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("DiskUsage",$param) and $param["DiskUsage"] !== null) {
+            $this->DiskUsage = $param["DiskUsage"];
         }
     }
 }

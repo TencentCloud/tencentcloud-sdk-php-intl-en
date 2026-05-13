@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) Set Message retention policy
  * @method boolean getAutoSubscriptionCreation() Obtain Whether to enable "Auto-Create Subscription"
  * @method void setAutoSubscriptionCreation(boolean $AutoSubscriptionCreation) Set Whether to enable "Auto-Create Subscription"
+ * @method integer getSubscriptionExpirationTime() Obtain Offline subscription automatic expiration cleanup time
+ * @method void setSubscriptionExpirationTime(integer $SubscriptionExpirationTime) Set Offline subscription automatic expiration cleanup time
+ * @method boolean getSubscriptionExpirationTimeEnable() Obtain Offline subscription automatic expiration cleanup time switch
+ * @method void setSubscriptionExpirationTimeEnable(boolean $SubscriptionExpirationTimeEnable) Set Offline subscription automatic expiration cleanup time switch
  */
 class ModifyEnvironmentAttributesRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
     public $AutoSubscriptionCreation;
 
     /**
+     * @var integer Offline subscription automatic expiration cleanup time
+     */
+    public $SubscriptionExpirationTime;
+
+    /**
+     * @var boolean Offline subscription automatic expiration cleanup time switch
+     */
+    public $SubscriptionExpirationTimeEnable;
+
+    /**
      * @param string $EnvironmentId Namespace name.
      * @param integer $MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
      * @param string $ClusterId Cluster ID
      * @param string $Remark Remarks (up to 128 characters).
      * @param RetentionPolicy $RetentionPolicy Message retention policy
      * @param boolean $AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
+     * @param integer $SubscriptionExpirationTime Offline subscription automatic expiration cleanup time
+     * @param boolean $SubscriptionExpirationTimeEnable Offline subscription automatic expiration cleanup time switch
      */
     function __construct()
     {
@@ -109,6 +125,14 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
 
         if (array_key_exists("AutoSubscriptionCreation",$param) and $param["AutoSubscriptionCreation"] !== null) {
             $this->AutoSubscriptionCreation = $param["AutoSubscriptionCreation"];
+        }
+
+        if (array_key_exists("SubscriptionExpirationTime",$param) and $param["SubscriptionExpirationTime"] !== null) {
+            $this->SubscriptionExpirationTime = $param["SubscriptionExpirationTime"];
+        }
+
+        if (array_key_exists("SubscriptionExpirationTimeEnable",$param) and $param["SubscriptionExpirationTimeEnable"] !== null) {
+            $this->SubscriptionExpirationTimeEnable = $param["SubscriptionExpirationTimeEnable"];
         }
     }
 }

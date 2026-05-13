@@ -42,10 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternalAddr(string $InternalAddr) Set Download address on private network
  * @method string getExternalAddr() Obtain Download address on public network
  * @method void setExternalAddr(string $ExternalAddr) Set Download address on public network
- * @method string getSetId() Obtain Backup set ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSetId(string $SetId) Set Backup set ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getSetId() Obtain Backup set ID.
+ * @method void setSetId(string $SetId) Set Backup set ID.
  */
 class DBBackup extends AbstractModel
 {
@@ -105,8 +103,7 @@ class DBBackup extends AbstractModel
     public $ExternalAddr;
 
     /**
-     * @var string Backup set ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Backup set ID.
      */
     public $SetId;
 
@@ -122,8 +119,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $DbList DB list
      * @param string $InternalAddr Download address on private network
      * @param string $ExternalAddr Download address on public network
-     * @param string $SetId Backup set ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $SetId Backup set ID.
      */
     function __construct()
     {
