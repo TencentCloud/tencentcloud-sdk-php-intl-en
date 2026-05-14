@@ -20,114 +20,150 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Detailed information about applications.
  *
- * @method string getServiceID() Obtain Application ID
+ * @method string getServiceID() Obtain <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setServiceID(string $ServiceID) Set Application ID
+ * @method void setServiceID(string $ServiceID) Set <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceKey() Obtain Business system ID
+ * @method string getInstanceKey() Obtain <p>Business system ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceKey(string $InstanceKey) Set Business system ID
+ * @method void setInstanceKey(string $InstanceKey) Set <p>Business system ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAppID() Obtain User appid.
+ * @method integer getAppID() Obtain <p>User appid</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAppID(integer $AppID) Set User appid.
+ * @method void setAppID(integer $AppID) Set <p>User appid</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateUIN() Obtain Host account UIN
+ * @method string getCreateUIN() Obtain <p>main account uin</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateUIN(string $CreateUIN) Set Host account UIN
+ * @method void setCreateUIN(string $CreateUIN) Set <p>main account uin</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getServiceName() Obtain Application name
+ * @method string getServiceName() Obtain <p>Application name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setServiceName(string $ServiceName) Set Application name
+ * @method void setServiceName(string $ServiceName) Set <p>Application name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getServiceDescription() Obtain Application description
+ * @method string getServiceDescription() Obtain <p>Application description</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setServiceDescription(string $ServiceDescription) Set Application description
+ * @method void setServiceDescription(string $ServiceDescription) Set <p>Application description</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain Region.
+ * @method string getRegion() Obtain <p>Region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Region.
+ * @method void setRegion(string $Region) Set <p>Region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTags() Obtain Tag.
+ * @method array getTags() Obtain <p>Tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag.
+ * @method void setTags(array $Tags) Set <p>Tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceName() Obtain Business system name.
- * @method void setInstanceName(string $InstanceName) Set Business system name.
+ * @method string getInstanceName() Obtain <p>Business system name</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Business system name</p>
+ * @method boolean getEnableThresholdConfig() Obtain <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEnableThresholdConfig(boolean $EnableThresholdConfig) Set <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getErrRateThreshold() Obtain <p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setErrRateThreshold(integer $ErrRateThreshold) Set <p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getResponseDurationWarningThreshold() Obtain <p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) Set <p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ServiceDetail extends AbstractModel
 {
     /**
-     * @var string Application ID
+     * @var string <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceID;
 
     /**
-     * @var string Business system ID
+     * @var string <p>Business system ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceKey;
 
     /**
-     * @var integer User appid.
+     * @var integer <p>User appid</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AppID;
 
     /**
-     * @var string Host account UIN
+     * @var string <p>main account uin</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateUIN;
 
     /**
-     * @var string Application name
+     * @var string <p>Application name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceName;
 
     /**
-     * @var string Application description
+     * @var string <p>Application description</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceDescription;
 
     /**
-     * @var string Region.
+     * @var string <p>Region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Region;
 
     /**
-     * @var array Tag.
+     * @var array <p>Tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
     /**
-     * @var string Business system name.
+     * @var string <p>Business system name</p>
      */
     public $InstanceName;
 
     /**
-     * @param string $ServiceID Application ID
+     * @var boolean <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceKey Business system ID
+     */
+    public $EnableThresholdConfig;
+
+    /**
+     * @var integer <p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AppID User appid.
+     */
+    public $ErrRateThreshold;
+
+    /**
+     * @var integer <p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateUIN Host account UIN
+     */
+    public $ResponseDurationWarningThreshold;
+
+    /**
+     * @param string $ServiceID <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceName Application name
+     * @param string $InstanceKey <p>Business system ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ServiceDescription Application description
+     * @param integer $AppID <p>User appid</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Region Region.
+     * @param string $CreateUIN <p>main account uin</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tags Tag.
+     * @param string $ServiceName <p>Application name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceName Business system name.
+     * @param string $ServiceDescription <p>Application description</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Region <p>Region</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags <p>Tag</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceName <p>Business system name</p>
+     * @param boolean $EnableThresholdConfig <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ErrRateThreshold <p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ResponseDurationWarningThreshold <p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -181,6 +217,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("EnableThresholdConfig",$param) and $param["EnableThresholdConfig"] !== null) {
+            $this->EnableThresholdConfig = $param["EnableThresholdConfig"];
+        }
+
+        if (array_key_exists("ErrRateThreshold",$param) and $param["ErrRateThreshold"] !== null) {
+            $this->ErrRateThreshold = $param["ErrRateThreshold"];
+        }
+
+        if (array_key_exists("ResponseDurationWarningThreshold",$param) and $param["ResponseDurationWarningThreshold"] !== null) {
+            $this->ResponseDurationWarningThreshold = $param["ResponseDurationWarningThreshold"];
         }
     }
 }

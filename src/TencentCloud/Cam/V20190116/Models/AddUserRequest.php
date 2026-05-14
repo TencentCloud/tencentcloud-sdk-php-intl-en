@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddUser request structure.
  *
- * @method string getName() Obtain Sub-user username
- * @method void setName(string $Name) Set Sub-user username
+ * @method string getName() Obtain Sub-user username.
+ * @method void setName(string $Name) Set Sub-user username.
  * @method string getRemark() Obtain Sub-user remarks
  * @method void setRemark(string $Remark) Set Sub-user remarks
  * @method integer getConsoleLogin() Obtain Whether or not the sub-user is allowed to log in to the console. 0: No; 1: Yes.
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class AddUserRequest extends AbstractModel
 {
     /**
-     * @var string Sub-user username
+     * @var string Sub-user username.
      */
     public $Name;
 
@@ -87,7 +87,7 @@ class AddUserRequest extends AbstractModel
     public $Email;
 
     /**
-     * @param string $Name Sub-user username
+     * @param string $Name Sub-user username.
      * @param string $Remark Sub-user remarks
      * @param integer $ConsoleLogin Whether or not the sub-user is allowed to log in to the console. 0: No; 1: Yes.
      * @param integer $UseApi Whether or not to generate keys for sub-users. 0: No; 1: Yes.

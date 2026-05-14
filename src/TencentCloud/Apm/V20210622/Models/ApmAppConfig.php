@@ -20,518 +20,598 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Querying application configuration response parameters structure.
  *
- * @method string getInstanceKey() Obtain Instance ID.
- * @method void setInstanceKey(string $InstanceKey) Set Instance ID.
- * @method string getServiceName() Obtain Service name.
- * @method void setServiceName(string $ServiceName) Set Service name.
- * @method integer getUrlConvergenceSwitch() Obtain URL convergence switch.
- * @method void setUrlConvergenceSwitch(integer $UrlConvergenceSwitch) Set URL convergence switch.
- * @method integer getUrlConvergenceThreshold() Obtain URL convergence threshold
- * @method void setUrlConvergenceThreshold(integer $UrlConvergenceThreshold) Set URL convergence threshold
- * @method string getUrlConvergence() Obtain URL convergence regular expression.
- * @method void setUrlConvergence(string $UrlConvergence) Set URL convergence regular expression.
- * @method string getExceptionFilter() Obtain Exception filtering regular expression.
- * @method void setExceptionFilter(string $ExceptionFilter) Set Exception filtering regular expression.
- * @method string getErrorCodeFilter() Obtain Error code filtering.
- * @method void setErrorCodeFilter(string $ErrorCodeFilter) Set Error code filtering.
- * @method string getComponents() Obtain Service component type.
- * @method void setComponents(string $Components) Set Service component type.
- * @method string getUrlExclude() Obtain URL exclusion regular.
- * @method void setUrlExclude(string $UrlExclude) Set URL exclusion regular.
- * @method string getLogSource() Obtain Specifies the log source.
- * @method void setLogSource(string $LogSource) Set Specifies the log source.
- * @method string getLogRegion() Obtain Log region.
- * @method void setLogRegion(string $LogRegion) Set Log region.
- * @method integer getIsRelatedLog() Obtain Whether logging is enabled. valid values: 0 (disabled), 1 (enabled).
- * @method void setIsRelatedLog(integer $IsRelatedLog) Set Whether logging is enabled. valid values: 0 (disabled), 1 (enabled).
- * @method string getLogTopicID() Obtain Log topic ID
- * @method void setLogTopicID(string $LogTopicID) Set Log topic ID
- * @method string getIgnoreOperationName() Obtain API names to filter
- * @method void setIgnoreOperationName(string $IgnoreOperationName) Set API names to filter
- * @method string getLogSet() Obtain CLS log set/ES cluster ID
- * @method void setLogSet(string $LogSet) Set CLS log set/ES cluster ID
- * @method integer getTraceRateLimit() Obtain Number of traces reported by the probe per second.
- * @method void setTraceRateLimit(integer $TraceRateLimit) Set Number of traces reported by the probe per second.
- * @method boolean getEnableSnapshot() Obtain Whether thread profiling is enabled.
- * @method void setEnableSnapshot(boolean $EnableSnapshot) Set Whether thread profiling is enabled.
- * @method integer getSnapshotTimeout() Obtain Timeout threshold for thread profiling.
- * @method void setSnapshotTimeout(integer $SnapshotTimeout) Set Timeout threshold for thread profiling.
- * @method boolean getAgentEnable() Obtain Whether agent is enabled.
- * @method void setAgentEnable(boolean $AgentEnable) Set Whether agent is enabled.
- * @method array getInstrumentList() Obtain Component List
+ * @method string getInstanceKey() Obtain <p>Instance ID</p>
+ * @method void setInstanceKey(string $InstanceKey) Set <p>Instance ID</p>
+ * @method string getServiceName() Obtain <p>Service name</p>
+ * @method void setServiceName(string $ServiceName) Set <p>Service name</p>
+ * @method integer getUrlConvergenceSwitch() Obtain <p>URL convergence switch</p>
+ * @method void setUrlConvergenceSwitch(integer $UrlConvergenceSwitch) Set <p>URL convergence switch</p>
+ * @method integer getUrlConvergenceThreshold() Obtain <p>URL convergence threshold</p>
+ * @method void setUrlConvergenceThreshold(integer $UrlConvergenceThreshold) Set <p>URL convergence threshold</p>
+ * @method string getUrlConvergence() Obtain <p>URL regular convergence</p>
+ * @method void setUrlConvergence(string $UrlConvergence) Set <p>URL regular convergence</p>
+ * @method string getExceptionFilter() Obtain <p>Exception filter regular</p>
+ * @method void setExceptionFilter(string $ExceptionFilter) Set <p>Exception filter regular</p>
+ * @method string getErrorCodeFilter() Obtain <p>Error code filtering</p>
+ * @method void setErrorCodeFilter(string $ErrorCodeFilter) Set <p>Error code filtering</p>
+ * @method string getComponents() Obtain <p>Service component type</p>
+ * @method void setComponents(string $Components) Set <p>Service component type</p>
+ * @method string getUrlExclude() Obtain <p>URL exclusion regular</p>
+ * @method void setUrlExclude(string $UrlExclude) Set <p>URL exclusion regular</p>
+ * @method string getLogSource() Obtain <p>Log source</p>
+ * @method void setLogSource(string $LogSource) Set <p>Log source</p>
+ * @method string getLogRegion() Obtain <p>Log region</p>
+ * @method void setLogRegion(string $LogRegion) Set <p>Log region</p>
+ * @method integer getIsRelatedLog() Obtain <p>Whether logging is enabled 0 Disabled 1 Enabled</p>
+ * @method void setIsRelatedLog(integer $IsRelatedLog) Set <p>Whether logging is enabled 0 Disabled 1 Enabled</p>
+ * @method string getLogTopicID() Obtain <p>Log topic ID</p>
+ * @method void setLogTopicID(string $LogTopicID) Set <p>Log topic ID</p>
+ * @method string getIgnoreOperationName() Obtain <p>Interface Names to Filter</p>
+ * @method void setIgnoreOperationName(string $IgnoreOperationName) Set <p>Interface Names to Filter</p>
+ * @method string getLogSet() Obtain <p>CLS logset | ES cluster ID</p>
+ * @method void setLogSet(string $LogSet) Set <p>CLS logset | ES cluster ID</p>
+ * @method integer getTraceRateLimit() Obtain <p>Number of traces reported by the probe per second</p>
+ * @method void setTraceRateLimit(integer $TraceRateLimit) Set <p>Number of traces reported by the probe per second</p>
+ * @method boolean getEnableSnapshot() Obtain <p>Whether thread profiling is enabled</p>
+ * @method void setEnableSnapshot(boolean $EnableSnapshot) Set <p>Whether thread profiling is enabled</p>
+ * @method integer getSnapshotTimeout() Obtain <p>Timeout threshold for thread profiling</p>
+ * @method void setSnapshotTimeout(integer $SnapshotTimeout) Set <p>Timeout threshold for thread profiling</p>
+ * @method boolean getAgentEnable() Obtain <p>Whether to enable agent</p>
+ * @method void setAgentEnable(boolean $AgentEnable) Set <p>Whether to enable agent</p>
+ * @method array getInstrumentList() Obtain <p>Component list</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstrumentList(array $InstrumentList) Set Component List
+ * @method void setInstrumentList(array $InstrumentList) Set <p>Component list</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getTraceSquash() Obtain Whether link compression is enabled.
- * @method void setTraceSquash(boolean $TraceSquash) Set Whether link compression is enabled.
- * @method boolean getEventEnable() Obtain Whether application diagnosis is enabled.
- * @method void setEventEnable(boolean $EventEnable) Set Whether application diagnosis is enabled.
- * @method AgentOperationConfigView getAgentOperationConfigView() Obtain Related configurations of the probe APIs.
+ * @method boolean getTraceSquash() Obtain <p>Whether to enable link compression</p>
+ * @method void setTraceSquash(boolean $TraceSquash) Set <p>Whether to enable link compression</p>
+ * @method boolean getEventEnable() Obtain <p>Whether the application diagnosis switch is enabled</p>
+ * @method void setEventEnable(boolean $EventEnable) Set <p>Whether the application diagnosis switch is enabled</p>
+ * @method AgentOperationConfigView getAgentOperationConfigView() Obtain <p>probe API related configuration</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAgentOperationConfigView(AgentOperationConfigView $AgentOperationConfigView) Set Related configurations of the probe APIs.
+ * @method void setAgentOperationConfigView(AgentOperationConfigView $AgentOperationConfigView) Set <p>probe API related configuration</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getEnableLogConfig() Obtain Whether to enable application log configuration.
- * @method void setEnableLogConfig(boolean $EnableLogConfig) Set Whether to enable application log configuration.
- * @method string getServiceID() Obtain Application ID
+ * @method boolean getEnableLogConfig() Obtain <p>Whether the application log configuration is enabled</p>
+ * @method void setEnableLogConfig(boolean $EnableLogConfig) Set <p>Whether the application log configuration is enabled</p>
+ * @method string getServiceID() Obtain <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setServiceID(string $ServiceID) Set Application ID
+ * @method void setServiceID(string $ServiceID) Set <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getEnableDashboardConfig() Obtain Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+ * @method boolean getEnableDashboardConfig() Obtain <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, hierarchical configuration)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnableDashboardConfig(boolean $EnableDashboardConfig) Set Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+ * @method void setEnableDashboardConfig(boolean $EnableDashboardConfig) Set <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, hierarchical configuration)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsRelatedDashboard() Obtain Whether to associate with Dashboard. 0: disabled; 1: enabled.
+ * @method integer getIsRelatedDashboard() Obtain <p>Whether dashboard is associated: 0 Disabled 1 Enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsRelatedDashboard(integer $IsRelatedDashboard) Set Whether to associate with Dashboard. 0: disabled; 1: enabled.
+ * @method void setIsRelatedDashboard(integer $IsRelatedDashboard) Set <p>Whether dashboard is associated: 0 Disabled 1 Enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDashboardTopicID() Obtain dashboard ID
+ * @method string getDashboardTopicID() Obtain <p>dashboard ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDashboardTopicID(string $DashboardTopicID) Set dashboard ID
+ * @method void setDashboardTopicID(string $DashboardTopicID) Set <p>dashboard ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getEnableSecurityConfig() Obtain Whether to enable the application-level configuration.
+ * @method boolean getEnableSecurityConfig() Obtain <p>Whether the application-level configuration is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnableSecurityConfig(boolean $EnableSecurityConfig) Set Whether to enable the application-level configuration.
+ * @method void setEnableSecurityConfig(boolean $EnableSecurityConfig) Set <p>Whether the application-level configuration is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsInstrumentationVulnerabilityScan() Obtain Whether to enable detection of component vulnerability.
+ * @method integer getIsInstrumentationVulnerabilityScan() Obtain <p>Whether the component vulnerability detection is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsInstrumentationVulnerabilityScan(integer $IsInstrumentationVulnerabilityScan) Set Whether to enable detection of component vulnerability.
+ * @method void setIsInstrumentationVulnerabilityScan(integer $IsInstrumentationVulnerabilityScan) Set <p>Whether the component vulnerability detection is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsSqlInjectionAnalysis() Obtain Whether to enable SQL injection analysis.
+ * @method integer getIsSqlInjectionAnalysis() Obtain <p>Whether SQL injection analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsSqlInjectionAnalysis(integer $IsSqlInjectionAnalysis) Set Whether to enable SQL injection analysis.
+ * @method void setIsSqlInjectionAnalysis(integer $IsSqlInjectionAnalysis) Set <p>Whether SQL injection analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsRemoteCommandExecutionAnalysis() Obtain Whether to enable execution analysis of remote command.
+ * @method integer getIsRemoteCommandExecutionAnalysis() Obtain <p>Whether remote command execution analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsRemoteCommandExecutionAnalysis(integer $IsRemoteCommandExecutionAnalysis) Set Whether to enable execution analysis of remote command.
+ * @method void setIsRemoteCommandExecutionAnalysis(integer $IsRemoteCommandExecutionAnalysis) Set <p>Whether remote command execution analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsMemoryHijackingAnalysis() Obtain Whether to enable detection analysis of Java webshell.
+ * @method integer getIsMemoryHijackingAnalysis() Obtain <p>Whether Java Webshell detection and analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsMemoryHijackingAnalysis(integer $IsMemoryHijackingAnalysis) Set Whether to enable detection analysis of Java webshell.
+ * @method void setIsMemoryHijackingAnalysis(integer $IsMemoryHijackingAnalysis) Set <p>Whether Java Webshell detection and analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getLogIndexType() Obtain CLS index type. (0 = full-text index; 1 = key-value index).
- * @method void setLogIndexType(integer $LogIndexType) Set CLS index type. (0 = full-text index; 1 = key-value index).
- * @method string getLogTraceIdKey() Obtain Index key of traceId. It is valid when the CLS index type is key-value index.
- * @method void setLogTraceIdKey(string $LogTraceIdKey) Set Index key of traceId. It is valid when the CLS index type is key-value index.
- * @method integer getIsDeleteAnyFileAnalysis() Obtain Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+ * @method integer getLogIndexType() Obtain <p>CLS index type (0=full-text index, 1=key-value index)</p>
+ * @method void setLogIndexType(integer $LogIndexType) Set <p>CLS index type (0=full-text index, 1=key-value index)</p>
+ * @method string getLogTraceIdKey() Obtain <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
+ * @method void setLogTraceIdKey(string $LogTraceIdKey) Set <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
+ * @method integer getIsDeleteAnyFileAnalysis() Obtain <p>Whether to enable file deletion detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsDeleteAnyFileAnalysis(integer $IsDeleteAnyFileAnalysis) Set Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+ * @method void setIsDeleteAnyFileAnalysis(integer $IsDeleteAnyFileAnalysis) Set <p>Whether to enable file deletion detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsReadAnyFileAnalysis() Obtain Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+ * @method integer getIsReadAnyFileAnalysis() Obtain <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsReadAnyFileAnalysis(integer $IsReadAnyFileAnalysis) Set Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+ * @method void setIsReadAnyFileAnalysis(integer $IsReadAnyFileAnalysis) Set <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsUploadAnyFileAnalysis() Obtain Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+ * @method integer getIsUploadAnyFileAnalysis() Obtain <p>Whether to enable arbitrary file upload detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsUploadAnyFileAnalysis(integer $IsUploadAnyFileAnalysis) Set Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+ * @method void setIsUploadAnyFileAnalysis(integer $IsUploadAnyFileAnalysis) Set <p>Whether to enable arbitrary file upload detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsIncludeAnyFileAnalysis() Obtain Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+ * @method integer getIsIncludeAnyFileAnalysis() Obtain <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsIncludeAnyFileAnalysis(integer $IsIncludeAnyFileAnalysis) Set Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+ * @method void setIsIncludeAnyFileAnalysis(integer $IsIncludeAnyFileAnalysis) Set <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsDirectoryTraversalAnalysis() Obtain Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+ * @method integer getIsDirectoryTraversalAnalysis() Obtain <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsDirectoryTraversalAnalysis(integer $IsDirectoryTraversalAnalysis) Set Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+ * @method void setIsDirectoryTraversalAnalysis(integer $IsDirectoryTraversalAnalysis) Set <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsTemplateEngineInjectionAnalysis() Obtain Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+ * @method integer getIsTemplateEngineInjectionAnalysis() Obtain <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsTemplateEngineInjectionAnalysis(integer $IsTemplateEngineInjectionAnalysis) Set Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+ * @method void setIsTemplateEngineInjectionAnalysis(integer $IsTemplateEngineInjectionAnalysis) Set <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsScriptEngineInjectionAnalysis() Obtain Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+ * @method integer getIsScriptEngineInjectionAnalysis() Obtain <p>Whether script engine injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsScriptEngineInjectionAnalysis(integer $IsScriptEngineInjectionAnalysis) Set Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+ * @method void setIsScriptEngineInjectionAnalysis(integer $IsScriptEngineInjectionAnalysis) Set <p>Whether script engine injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsExpressionInjectionAnalysis() Obtain Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+ * @method integer getIsExpressionInjectionAnalysis() Obtain <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsExpressionInjectionAnalysis(integer $IsExpressionInjectionAnalysis) Set Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+ * @method void setIsExpressionInjectionAnalysis(integer $IsExpressionInjectionAnalysis) Set <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsJNDIInjectionAnalysis() Obtain Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+ * @method integer getIsJNDIInjectionAnalysis() Obtain <p>Whether JNDI injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsJNDIInjectionAnalysis(integer $IsJNDIInjectionAnalysis) Set Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+ * @method void setIsJNDIInjectionAnalysis(integer $IsJNDIInjectionAnalysis) Set <p>Whether JNDI injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsJNIInjectionAnalysis() Obtain Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+ * @method integer getIsJNIInjectionAnalysis() Obtain <p>Whether JNI injection detection is enabled (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsJNIInjectionAnalysis(integer $IsJNIInjectionAnalysis) Set Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+ * @method void setIsJNIInjectionAnalysis(integer $IsJNIInjectionAnalysis) Set <p>Whether JNI injection detection is enabled (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsWebshellBackdoorAnalysis() Obtain Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+ * @method integer getIsWebshellBackdoorAnalysis() Obtain <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsWebshellBackdoorAnalysis(integer $IsWebshellBackdoorAnalysis) Set Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+ * @method void setIsWebshellBackdoorAnalysis(integer $IsWebshellBackdoorAnalysis) Set <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsDeserializationAnalysis() Obtain Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+ * @method integer getIsDeserializationAnalysis() Obtain <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsDeserializationAnalysis(integer $IsDeserializationAnalysis) Set Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+ * @method void setIsDeserializationAnalysis(integer $IsDeserializationAnalysis) Set <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getUrlAutoConvergenceEnable() Obtain API name automatic convergence switch (0 - disabled; 1 - enabled)
- * @method void setUrlAutoConvergenceEnable(boolean $UrlAutoConvergenceEnable) Set API name automatic convergence switch (0 - disabled; 1 - enabled)
- * @method integer getUrlLongSegmentThreshold() Obtain Convergence threshold for URL long segments.
- * @method void setUrlLongSegmentThreshold(integer $UrlLongSegmentThreshold) Set Convergence threshold for URL long segments.
- * @method integer getUrlNumberSegmentThreshold() Obtain Convergence threshold for URL numerical segments.
- * @method void setUrlNumberSegmentThreshold(integer $UrlNumberSegmentThreshold) Set Convergence threshold for URL numerical segments.
- * @method integer getDisableMemoryUsed() Obtain Specifies the memory threshold for probe fusing.
- * @method void setDisableMemoryUsed(integer $DisableMemoryUsed) Set Specifies the memory threshold for probe fusing.
- * @method integer getDisableCpuUsed() Obtain Specifies the CPU threshold for probe fusing.
- * @method void setDisableCpuUsed(integer $DisableCpuUsed) Set Specifies the CPU threshold for probe fusing.
+ * @method boolean getUrlAutoConvergenceEnable() Obtain <p>API name auto convergence switch (0-off, 1-on)</p>
+ * @method void setUrlAutoConvergenceEnable(boolean $UrlAutoConvergenceEnable) Set <p>API name auto convergence switch (0-off, 1-on)</p>
+ * @method integer getUrlLongSegmentThreshold() Obtain <p>URL long segment convergence threshold</p>
+ * @method void setUrlLongSegmentThreshold(integer $UrlLongSegmentThreshold) Set <p>URL long segment convergence threshold</p>
+ * @method integer getUrlNumberSegmentThreshold() Obtain <p>URL digit segment convergence threshold</p>
+ * @method void setUrlNumberSegmentThreshold(integer $UrlNumberSegmentThreshold) Set <p>URL digit segment convergence threshold</p>
+ * @method integer getDisableMemoryUsed() Obtain <p>Fuse memory threshold of the probe</p>
+ * @method void setDisableMemoryUsed(integer $DisableMemoryUsed) Set <p>Fuse memory threshold of the probe</p>
+ * @method integer getDisableCpuUsed() Obtain <p>Probe fuse CPU threshold</p>
+ * @method void setDisableCpuUsed(integer $DisableCpuUsed) Set <p>Probe fuse CPU threshold</p>
+ * @method boolean getDbStatementParametersEnabled() Obtain <p>Whether SQL parameter access is enabled</p>
+ * @method void setDbStatementParametersEnabled(boolean $DbStatementParametersEnabled) Set <p>Whether SQL parameter access is enabled</p>
+ * @method array getSlowSQLThresholds() Obtain <p>Slow SQL threshold</p>
+ * @method void setSlowSQLThresholds(array $SlowSQLThresholds) Set <p>Slow SQL threshold</p>
+ * @method integer getEnableDesensitizationRule() Obtain <p>Whether the masking rule is enabled</p>
+ * @method void setEnableDesensitizationRule(integer $EnableDesensitizationRule) Set <p>Whether the masking rule is enabled</p>
+ * @method string getDesensitizationRule() Obtain <p>Masking rule</p>
+ * @method void setDesensitizationRule(string $DesensitizationRule) Set <p>Masking rule</p>
+ * @method string getLogSpanIdKey() Obtain <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+ * @method void setLogSpanIdKey(string $LogSpanIdKey) Set <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+ * @method AutoProfilingConfig getAutoProfilingConfig() Obtain <p>Automated performance analysis configuration</p>
+ * @method void setAutoProfilingConfig(AutoProfilingConfig $AutoProfilingConfig) Set <p>Automated performance analysis configuration</p>
+ * @method boolean getEnableThresholdConfig() Obtain <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+ * @method void setEnableThresholdConfig(boolean $EnableThresholdConfig) Set <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+ * @method integer getErrRateThreshold() Obtain <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+ * @method void setErrRateThreshold(integer $ErrRateThreshold) Set <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+ * @method integer getResponseDurationWarningThreshold() Obtain <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+ * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) Set <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+ * @method boolean getUseDefaultFuseConfig() Obtain <p>Whether to use the built-in fuse threshold of the probe by default</p>
+ * @method void setUseDefaultFuseConfig(boolean $UseDefaultFuseConfig) Set <p>Whether to use the built-in fuse threshold of the probe by default</p>
  */
 class ApmAppConfig extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string <p>Instance ID</p>
      */
     public $InstanceKey;
 
     /**
-     * @var string Service name.
+     * @var string <p>Service name</p>
      */
     public $ServiceName;
 
     /**
-     * @var integer URL convergence switch.
+     * @var integer <p>URL convergence switch</p>
      */
     public $UrlConvergenceSwitch;
 
     /**
-     * @var integer URL convergence threshold
+     * @var integer <p>URL convergence threshold</p>
      */
     public $UrlConvergenceThreshold;
 
     /**
-     * @var string URL convergence regular expression.
+     * @var string <p>URL regular convergence</p>
      */
     public $UrlConvergence;
 
     /**
-     * @var string Exception filtering regular expression.
+     * @var string <p>Exception filter regular</p>
      */
     public $ExceptionFilter;
 
     /**
-     * @var string Error code filtering.
+     * @var string <p>Error code filtering</p>
      */
     public $ErrorCodeFilter;
 
     /**
-     * @var string Service component type.
+     * @var string <p>Service component type</p>
      */
     public $Components;
 
     /**
-     * @var string URL exclusion regular.
+     * @var string <p>URL exclusion regular</p>
      */
     public $UrlExclude;
 
     /**
-     * @var string Specifies the log source.
+     * @var string <p>Log source</p>
      */
     public $LogSource;
 
     /**
-     * @var string Log region.
+     * @var string <p>Log region</p>
      */
     public $LogRegion;
 
     /**
-     * @var integer Whether logging is enabled. valid values: 0 (disabled), 1 (enabled).
+     * @var integer <p>Whether logging is enabled 0 Disabled 1 Enabled</p>
      */
     public $IsRelatedLog;
 
     /**
-     * @var string Log topic ID
+     * @var string <p>Log topic ID</p>
      */
     public $LogTopicID;
 
     /**
-     * @var string API names to filter
+     * @var string <p>Interface Names to Filter</p>
      */
     public $IgnoreOperationName;
 
     /**
-     * @var string CLS log set/ES cluster ID
+     * @var string <p>CLS logset | ES cluster ID</p>
      */
     public $LogSet;
 
     /**
-     * @var integer Number of traces reported by the probe per second.
+     * @var integer <p>Number of traces reported by the probe per second</p>
      */
     public $TraceRateLimit;
 
     /**
-     * @var boolean Whether thread profiling is enabled.
+     * @var boolean <p>Whether thread profiling is enabled</p>
      */
     public $EnableSnapshot;
 
     /**
-     * @var integer Timeout threshold for thread profiling.
+     * @var integer <p>Timeout threshold for thread profiling</p>
      */
     public $SnapshotTimeout;
 
     /**
-     * @var boolean Whether agent is enabled.
+     * @var boolean <p>Whether to enable agent</p>
      */
     public $AgentEnable;
 
     /**
-     * @var array Component List
+     * @var array <p>Component list</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstrumentList;
 
     /**
-     * @var boolean Whether link compression is enabled.
+     * @var boolean <p>Whether to enable link compression</p>
      */
     public $TraceSquash;
 
     /**
-     * @var boolean Whether application diagnosis is enabled.
+     * @var boolean <p>Whether the application diagnosis switch is enabled</p>
      */
     public $EventEnable;
 
     /**
-     * @var AgentOperationConfigView Related configurations of the probe APIs.
+     * @var AgentOperationConfigView <p>probe API related configuration</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AgentOperationConfigView;
 
     /**
-     * @var boolean Whether to enable application log configuration.
+     * @var boolean <p>Whether the application log configuration is enabled</p>
      */
     public $EnableLogConfig;
 
     /**
-     * @var string Application ID
+     * @var string <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceID;
 
     /**
-     * @var boolean Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+     * @var boolean <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, hierarchical configuration)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EnableDashboardConfig;
 
     /**
-     * @var integer Whether to associate with Dashboard. 0: disabled; 1: enabled.
+     * @var integer <p>Whether dashboard is associated: 0 Disabled 1 Enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsRelatedDashboard;
 
     /**
-     * @var string dashboard ID
+     * @var string <p>dashboard ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DashboardTopicID;
 
     /**
-     * @var boolean Whether to enable the application-level configuration.
+     * @var boolean <p>Whether the application-level configuration is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EnableSecurityConfig;
 
     /**
-     * @var integer Whether to enable detection of component vulnerability.
+     * @var integer <p>Whether the component vulnerability detection is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsInstrumentationVulnerabilityScan;
 
     /**
-     * @var integer Whether to enable SQL injection analysis.
+     * @var integer <p>Whether SQL injection analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsSqlInjectionAnalysis;
 
     /**
-     * @var integer Whether to enable execution analysis of remote command.
+     * @var integer <p>Whether remote command execution analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsRemoteCommandExecutionAnalysis;
 
     /**
-     * @var integer Whether to enable detection analysis of Java webshell.
+     * @var integer <p>Whether Java Webshell detection and analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsMemoryHijackingAnalysis;
 
     /**
-     * @var integer CLS index type. (0 = full-text index; 1 = key-value index).
+     * @var integer <p>CLS index type (0=full-text index, 1=key-value index)</p>
      */
     public $LogIndexType;
 
     /**
-     * @var string Index key of traceId. It is valid when the CLS index type is key-value index.
+     * @var string <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
      */
     public $LogTraceIdKey;
 
     /**
-     * @var integer Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+     * @var integer <p>Whether to enable file deletion detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsDeleteAnyFileAnalysis;
 
     /**
-     * @var integer Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+     * @var integer <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsReadAnyFileAnalysis;
 
     /**
-     * @var integer Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+     * @var integer <p>Whether to enable arbitrary file upload detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsUploadAnyFileAnalysis;
 
     /**
-     * @var integer Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+     * @var integer <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsIncludeAnyFileAnalysis;
 
     /**
-     * @var integer Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+     * @var integer <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsDirectoryTraversalAnalysis;
 
     /**
-     * @var integer Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+     * @var integer <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsTemplateEngineInjectionAnalysis;
 
     /**
-     * @var integer Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+     * @var integer <p>Whether script engine injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsScriptEngineInjectionAnalysis;
 
     /**
-     * @var integer Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+     * @var integer <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsExpressionInjectionAnalysis;
 
     /**
-     * @var integer Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+     * @var integer <p>Whether JNDI injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsJNDIInjectionAnalysis;
 
     /**
-     * @var integer Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+     * @var integer <p>Whether JNI injection detection is enabled (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsJNIInjectionAnalysis;
 
     /**
-     * @var integer Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+     * @var integer <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsWebshellBackdoorAnalysis;
 
     /**
-     * @var integer Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+     * @var integer <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsDeserializationAnalysis;
 
     /**
-     * @var boolean API name automatic convergence switch (0 - disabled; 1 - enabled)
+     * @var boolean <p>API name auto convergence switch (0-off, 1-on)</p>
      */
     public $UrlAutoConvergenceEnable;
 
     /**
-     * @var integer Convergence threshold for URL long segments.
+     * @var integer <p>URL long segment convergence threshold</p>
      */
     public $UrlLongSegmentThreshold;
 
     /**
-     * @var integer Convergence threshold for URL numerical segments.
+     * @var integer <p>URL digit segment convergence threshold</p>
      */
     public $UrlNumberSegmentThreshold;
 
     /**
-     * @var integer Specifies the memory threshold for probe fusing.
+     * @var integer <p>Fuse memory threshold of the probe</p>
      */
     public $DisableMemoryUsed;
 
     /**
-     * @var integer Specifies the CPU threshold for probe fusing.
+     * @var integer <p>Probe fuse CPU threshold</p>
      */
     public $DisableCpuUsed;
 
     /**
-     * @param string $InstanceKey Instance ID.
-     * @param string $ServiceName Service name.
-     * @param integer $UrlConvergenceSwitch URL convergence switch.
-     * @param integer $UrlConvergenceThreshold URL convergence threshold
-     * @param string $UrlConvergence URL convergence regular expression.
-     * @param string $ExceptionFilter Exception filtering regular expression.
-     * @param string $ErrorCodeFilter Error code filtering.
-     * @param string $Components Service component type.
-     * @param string $UrlExclude URL exclusion regular.
-     * @param string $LogSource Specifies the log source.
-     * @param string $LogRegion Log region.
-     * @param integer $IsRelatedLog Whether logging is enabled. valid values: 0 (disabled), 1 (enabled).
-     * @param string $LogTopicID Log topic ID
-     * @param string $IgnoreOperationName API names to filter
-     * @param string $LogSet CLS log set/ES cluster ID
-     * @param integer $TraceRateLimit Number of traces reported by the probe per second.
-     * @param boolean $EnableSnapshot Whether thread profiling is enabled.
-     * @param integer $SnapshotTimeout Timeout threshold for thread profiling.
-     * @param boolean $AgentEnable Whether agent is enabled.
-     * @param array $InstrumentList Component List
+     * @var boolean <p>Whether SQL parameter access is enabled</p>
+     */
+    public $DbStatementParametersEnabled;
+
+    /**
+     * @var array <p>Slow SQL threshold</p>
+     */
+    public $SlowSQLThresholds;
+
+    /**
+     * @var integer <p>Whether the masking rule is enabled</p>
+     */
+    public $EnableDesensitizationRule;
+
+    /**
+     * @var string <p>Masking rule</p>
+     */
+    public $DesensitizationRule;
+
+    /**
+     * @var string <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+     */
+    public $LogSpanIdKey;
+
+    /**
+     * @var AutoProfilingConfig <p>Automated performance analysis configuration</p>
+     */
+    public $AutoProfilingConfig;
+
+    /**
+     * @var boolean <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+     */
+    public $EnableThresholdConfig;
+
+    /**
+     * @var integer <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+     */
+    public $ErrRateThreshold;
+
+    /**
+     * @var integer <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+     */
+    public $ResponseDurationWarningThreshold;
+
+    /**
+     * @var boolean <p>Whether to use the built-in fuse threshold of the probe by default</p>
+     */
+    public $UseDefaultFuseConfig;
+
+    /**
+     * @param string $InstanceKey <p>Instance ID</p>
+     * @param string $ServiceName <p>Service name</p>
+     * @param integer $UrlConvergenceSwitch <p>URL convergence switch</p>
+     * @param integer $UrlConvergenceThreshold <p>URL convergence threshold</p>
+     * @param string $UrlConvergence <p>URL regular convergence</p>
+     * @param string $ExceptionFilter <p>Exception filter regular</p>
+     * @param string $ErrorCodeFilter <p>Error code filtering</p>
+     * @param string $Components <p>Service component type</p>
+     * @param string $UrlExclude <p>URL exclusion regular</p>
+     * @param string $LogSource <p>Log source</p>
+     * @param string $LogRegion <p>Log region</p>
+     * @param integer $IsRelatedLog <p>Whether logging is enabled 0 Disabled 1 Enabled</p>
+     * @param string $LogTopicID <p>Log topic ID</p>
+     * @param string $IgnoreOperationName <p>Interface Names to Filter</p>
+     * @param string $LogSet <p>CLS logset | ES cluster ID</p>
+     * @param integer $TraceRateLimit <p>Number of traces reported by the probe per second</p>
+     * @param boolean $EnableSnapshot <p>Whether thread profiling is enabled</p>
+     * @param integer $SnapshotTimeout <p>Timeout threshold for thread profiling</p>
+     * @param boolean $AgentEnable <p>Whether to enable agent</p>
+     * @param array $InstrumentList <p>Component list</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $TraceSquash Whether link compression is enabled.
-     * @param boolean $EventEnable Whether application diagnosis is enabled.
-     * @param AgentOperationConfigView $AgentOperationConfigView Related configurations of the probe APIs.
+     * @param boolean $TraceSquash <p>Whether to enable link compression</p>
+     * @param boolean $EventEnable <p>Whether the application diagnosis switch is enabled</p>
+     * @param AgentOperationConfigView $AgentOperationConfigView <p>probe API related configuration</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $EnableLogConfig Whether to enable application log configuration.
-     * @param string $ServiceID Application ID
+     * @param boolean $EnableLogConfig <p>Whether the application log configuration is enabled</p>
+     * @param string $ServiceID <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $EnableDashboardConfig Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+     * @param boolean $EnableDashboardConfig <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, hierarchical configuration)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsRelatedDashboard Whether to associate with Dashboard. 0: disabled; 1: enabled.
+     * @param integer $IsRelatedDashboard <p>Whether dashboard is associated: 0 Disabled 1 Enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DashboardTopicID dashboard ID
+     * @param string $DashboardTopicID <p>dashboard ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $EnableSecurityConfig Whether to enable the application-level configuration.
+     * @param boolean $EnableSecurityConfig <p>Whether the application-level configuration is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsInstrumentationVulnerabilityScan Whether to enable detection of component vulnerability.
+     * @param integer $IsInstrumentationVulnerabilityScan <p>Whether the component vulnerability detection is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsSqlInjectionAnalysis Whether to enable SQL injection analysis.
+     * @param integer $IsSqlInjectionAnalysis <p>Whether SQL injection analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsRemoteCommandExecutionAnalysis Whether to enable execution analysis of remote command.
+     * @param integer $IsRemoteCommandExecutionAnalysis <p>Whether remote command execution analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsMemoryHijackingAnalysis Whether to enable detection analysis of Java webshell.
+     * @param integer $IsMemoryHijackingAnalysis <p>Whether Java Webshell detection and analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $LogIndexType CLS index type. (0 = full-text index; 1 = key-value index).
-     * @param string $LogTraceIdKey Index key of traceId. It is valid when the CLS index type is key-value index.
-     * @param integer $IsDeleteAnyFileAnalysis Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+     * @param integer $LogIndexType <p>CLS index type (0=full-text index, 1=key-value index)</p>
+     * @param string $LogTraceIdKey <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
+     * @param integer $IsDeleteAnyFileAnalysis <p>Whether to enable file deletion detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsReadAnyFileAnalysis Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+     * @param integer $IsReadAnyFileAnalysis <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsUploadAnyFileAnalysis Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+     * @param integer $IsUploadAnyFileAnalysis <p>Whether to enable arbitrary file upload detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsIncludeAnyFileAnalysis Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+     * @param integer $IsIncludeAnyFileAnalysis <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsDirectoryTraversalAnalysis Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+     * @param integer $IsDirectoryTraversalAnalysis <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsTemplateEngineInjectionAnalysis Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+     * @param integer $IsTemplateEngineInjectionAnalysis <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsScriptEngineInjectionAnalysis Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+     * @param integer $IsScriptEngineInjectionAnalysis <p>Whether script engine injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsExpressionInjectionAnalysis Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+     * @param integer $IsExpressionInjectionAnalysis <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsJNDIInjectionAnalysis Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+     * @param integer $IsJNDIInjectionAnalysis <p>Whether JNDI injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsJNIInjectionAnalysis Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+     * @param integer $IsJNIInjectionAnalysis <p>Whether JNI injection detection is enabled (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsWebshellBackdoorAnalysis Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+     * @param integer $IsWebshellBackdoorAnalysis <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsDeserializationAnalysis Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+     * @param integer $IsDeserializationAnalysis <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $UrlAutoConvergenceEnable API name automatic convergence switch (0 - disabled; 1 - enabled)
-     * @param integer $UrlLongSegmentThreshold Convergence threshold for URL long segments.
-     * @param integer $UrlNumberSegmentThreshold Convergence threshold for URL numerical segments.
-     * @param integer $DisableMemoryUsed Specifies the memory threshold for probe fusing.
-     * @param integer $DisableCpuUsed Specifies the CPU threshold for probe fusing.
+     * @param boolean $UrlAutoConvergenceEnable <p>API name auto convergence switch (0-off, 1-on)</p>
+     * @param integer $UrlLongSegmentThreshold <p>URL long segment convergence threshold</p>
+     * @param integer $UrlNumberSegmentThreshold <p>URL digit segment convergence threshold</p>
+     * @param integer $DisableMemoryUsed <p>Fuse memory threshold of the probe</p>
+     * @param integer $DisableCpuUsed <p>Probe fuse CPU threshold</p>
+     * @param boolean $DbStatementParametersEnabled <p>Whether SQL parameter access is enabled</p>
+     * @param array $SlowSQLThresholds <p>Slow SQL threshold</p>
+     * @param integer $EnableDesensitizationRule <p>Whether the masking rule is enabled</p>
+     * @param string $DesensitizationRule <p>Masking rule</p>
+     * @param string $LogSpanIdKey <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+     * @param AutoProfilingConfig $AutoProfilingConfig <p>Automated performance analysis configuration</p>
+     * @param boolean $EnableThresholdConfig <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+     * @param integer $ErrRateThreshold <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+     * @param integer $ResponseDurationWarningThreshold <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+     * @param boolean $UseDefaultFuseConfig <p>Whether to use the built-in fuse threshold of the probe by default</p>
      */
     function __construct()
     {
@@ -758,6 +838,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DisableCpuUsed",$param) and $param["DisableCpuUsed"] !== null) {
             $this->DisableCpuUsed = $param["DisableCpuUsed"];
+        }
+
+        if (array_key_exists("DbStatementParametersEnabled",$param) and $param["DbStatementParametersEnabled"] !== null) {
+            $this->DbStatementParametersEnabled = $param["DbStatementParametersEnabled"];
+        }
+
+        if (array_key_exists("SlowSQLThresholds",$param) and $param["SlowSQLThresholds"] !== null) {
+            $this->SlowSQLThresholds = [];
+            foreach ($param["SlowSQLThresholds"] as $key => $value){
+                $obj = new ApmTag();
+                $obj->deserialize($value);
+                array_push($this->SlowSQLThresholds, $obj);
+            }
+        }
+
+        if (array_key_exists("EnableDesensitizationRule",$param) and $param["EnableDesensitizationRule"] !== null) {
+            $this->EnableDesensitizationRule = $param["EnableDesensitizationRule"];
+        }
+
+        if (array_key_exists("DesensitizationRule",$param) and $param["DesensitizationRule"] !== null) {
+            $this->DesensitizationRule = $param["DesensitizationRule"];
+        }
+
+        if (array_key_exists("LogSpanIdKey",$param) and $param["LogSpanIdKey"] !== null) {
+            $this->LogSpanIdKey = $param["LogSpanIdKey"];
+        }
+
+        if (array_key_exists("AutoProfilingConfig",$param) and $param["AutoProfilingConfig"] !== null) {
+            $this->AutoProfilingConfig = new AutoProfilingConfig();
+            $this->AutoProfilingConfig->deserialize($param["AutoProfilingConfig"]);
+        }
+
+        if (array_key_exists("EnableThresholdConfig",$param) and $param["EnableThresholdConfig"] !== null) {
+            $this->EnableThresholdConfig = $param["EnableThresholdConfig"];
+        }
+
+        if (array_key_exists("ErrRateThreshold",$param) and $param["ErrRateThreshold"] !== null) {
+            $this->ErrRateThreshold = $param["ErrRateThreshold"];
+        }
+
+        if (array_key_exists("ResponseDurationWarningThreshold",$param) and $param["ResponseDurationWarningThreshold"] !== null) {
+            $this->ResponseDurationWarningThreshold = $param["ResponseDurationWarningThreshold"];
+        }
+
+        if (array_key_exists("UseDefaultFuseConfig",$param) and $param["UseDefaultFuseConfig"] !== null) {
+            $this->UseDefaultFuseConfig = $param["UseDefaultFuseConfig"];
         }
     }
 }

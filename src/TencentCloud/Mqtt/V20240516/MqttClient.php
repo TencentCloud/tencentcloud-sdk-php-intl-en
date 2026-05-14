@@ -38,6 +38,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) This API is used to delete an MQTT user.
  * @method Models\DescribeAuthorizationPoliciesResponse DescribeAuthorizationPolicies(Models\DescribeAuthorizationPoliciesRequest $req) This API is used to query authorization rules.
  * @method Models\DescribeClientListResponse DescribeClientList(Models\DescribeClientListRequest $req) This API is used to query the MQTT client details.
+ * @method Models\DescribeDeviceCertificateResponse DescribeDeviceCertificate(Models\DescribeDeviceCertificateRequest $req) This API is used to query device certificate details.
  * @method Models\DescribeDeviceCertificatesResponse DescribeDeviceCertificates(Models\DescribeDeviceCertificatesRequest $req) Query device certificates with paging
  * @method Models\DescribeDeviceIdentitiesResponse DescribeDeviceIdentities(Models\DescribeDeviceIdentitiesRequest $req) Query the list of device identifiers in a cluster
  * @method Models\DescribeDeviceIdentityResponse DescribeDeviceIdentity(Models\DescribeDeviceIdentityRequest $req) Query device identification

@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Shows the association between the apm business system and other cloud products in the return format.
  *
- * @method string getPeerId() Obtain Associated product instance ID.
+ * @method string getPeerId() Obtain <p>Instance ID of the associated product</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPeerId(string $PeerId) Set Associated product instance ID.
+ * @method void setPeerId(string $PeerId) Set <p>Instance ID of the associated product</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+ * @method integer getStatus() Obtain <p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+ * @method void setStatus(integer $Status) Set <p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTopic() Obtain Specifies the CKafka message topic.
- * @method void setTopic(string $Topic) Set Specifies the CKafka message topic.
+ * @method string getTopic() Obtain <p>CKafka message topic</p>
+ * @method void setTopic(string $Topic) Set <p>CKafka message topic</p>
+ * @method string getMetricTopic() Obtain <p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p>
+ * @method void setMetricTopic(string $MetricTopic) Set <p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p>
  */
 class ApmAssociation extends AbstractModel
 {
     /**
-     * @var string Associated product instance ID.
+     * @var string <p>Instance ID of the associated product</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PeerId;
 
     /**
-     * @var integer Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+     * @var integer <p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @var string Specifies the CKafka message topic.
+     * @var string <p>CKafka message topic</p>
      */
     public $Topic;
 
     /**
-     * @param string $PeerId Associated product instance ID.
+     * @var string <p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p>
+     */
+    public $MetricTopic;
+
+    /**
+     * @param string $PeerId <p>Instance ID of the associated product</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+     * @param integer $Status <p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Topic Specifies the CKafka message topic.
+     * @param string $Topic <p>CKafka message topic</p>
+     * @param string $MetricTopic <p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p>
      */
     function __construct()
     {
@@ -80,6 +88,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
             $this->Topic = $param["Topic"];
+        }
+
+        if (array_key_exists("MetricTopic",$param) and $param["MetricTopic"] !== null) {
+            $this->MetricTopic = $param["MetricTopic"];
         }
     }
 }

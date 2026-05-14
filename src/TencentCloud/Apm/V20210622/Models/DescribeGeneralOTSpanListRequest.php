@@ -20,118 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGeneralOTSpanList request structure.
  *
- * @method string getInstanceId() Obtain Business system id.
- * @method void setInstanceId(string $InstanceId) Set Business system id.
- * @method integer getStartTime() Obtain Span query start timestamp (unit: seconds).
- * @method void setStartTime(integer $StartTime) Set Span query start timestamp (unit: seconds).
- * @method integer getEndTime() Obtain Span query end timestamp (unit: seconds).
- * @method void setEndTime(integer $EndTime) Set Span query end timestamp (unit: seconds).
- * @method array getFilters() Obtain Universal filter parameters.
- * @method void setFilters(array $Filters) Set Universal filter parameters.
- * @method OrderBy getOrderBy() Obtain Sort
-.
-The currently supported keys are:.
-
--StartTime (start time).
--EndTime (end time).
--Duration (response time).
-
-The currently supported values are:.
-
-- desc: sort in descending order.
--Asc - ascending order.
- * @method void setOrderBy(OrderBy $OrderBy) Set Sort
-.
-The currently supported keys are:.
-
--StartTime (start time).
--EndTime (end time).
--Duration (response time).
-
-The currently supported values are:.
-
-- desc: sort in descending order.
--Asc - ascending order.
- * @method string getBusinessName() Obtain The service name of the business itself. console users should fill in taw.
- * @method void setBusinessName(string $BusinessName) Set The service name of the business itself. console users should fill in taw.
- * @method integer getLimit() Obtain Number of items per page, defaults to 10,000, valid value range is 0 – 10,000.
- * @method void setLimit(integer $Limit) Set Number of items per page, defaults to 10,000, valid value range is 0 – 10,000.
- * @method integer getOffset() Obtain Pagination.
- * @method void setOffset(integer $Offset) Set Pagination.
+ * @method string getInstanceId() Obtain <p>Business system ID</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Business system ID</p>
+ * @method integer getStartTime() Obtain <p>Span query start timestamp (unit: seconds)</p>
+ * @method void setStartTime(integer $StartTime) Set <p>Span query start timestamp (unit: seconds)</p>
+ * @method integer getEndTime() Obtain <p>Span query end timestamp (unit: s)</p>
+ * @method void setEndTime(integer $EndTime) Set <p>Span query end timestamp (unit: s)</p>
+ * @method array getFilters() Obtain <p>Universal filter parameters supported filter key such as service.name</p>
+ * @method void setFilters(array $Filters) Set <p>Universal filter parameters supported filter key such as service.name</p>
+ * @method OrderBy getOrderBy() Obtain <p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul>
+ * @method void setOrderBy(OrderBy $OrderBy) Set <p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul>
+ * @method string getBusinessName() Obtain <p>Business service name. Console users please enter taw</p>
+ * @method void setBusinessName(string $BusinessName) Set <p>Business service name. Console users please enter taw</p>
+ * @method integer getLimit() Obtain <p>Count of single-page projects. Defaults to 10000. Valid value range is 0–10000.</p>
+ * @method void setLimit(integer $Limit) Set <p>Count of single-page projects. Defaults to 10000. Valid value range is 0–10000.</p>
+ * @method integer getOffset() Obtain <p>Page</p>
+ * @method void setOffset(integer $Offset) Set <p>Page</p>
  */
 class DescribeGeneralOTSpanListRequest extends AbstractModel
 {
     /**
-     * @var string Business system id.
+     * @var string <p>Business system ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer Span query start timestamp (unit: seconds).
+     * @var integer <p>Span query start timestamp (unit: seconds)</p>
      */
     public $StartTime;
 
     /**
-     * @var integer Span query end timestamp (unit: seconds).
+     * @var integer <p>Span query end timestamp (unit: s)</p>
      */
     public $EndTime;
 
     /**
-     * @var array Universal filter parameters.
+     * @var array <p>Universal filter parameters supported filter key such as service.name</p>
      */
     public $Filters;
 
     /**
-     * @var OrderBy Sort
-.
-The currently supported keys are:.
-
--StartTime (start time).
--EndTime (end time).
--Duration (response time).
-
-The currently supported values are:.
-
-- desc: sort in descending order.
--Asc - ascending order.
+     * @var OrderBy <p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul>
      */
     public $OrderBy;
 
     /**
-     * @var string The service name of the business itself. console users should fill in taw.
+     * @var string <p>Business service name. Console users please enter taw</p>
      */
     public $BusinessName;
 
     /**
-     * @var integer Number of items per page, defaults to 10,000, valid value range is 0 – 10,000.
+     * @var integer <p>Count of single-page projects. Defaults to 10000. Valid value range is 0–10000.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Pagination.
+     * @var integer <p>Page</p>
      */
     public $Offset;
 
     /**
-     * @param string $InstanceId Business system id.
-     * @param integer $StartTime Span query start timestamp (unit: seconds).
-     * @param integer $EndTime Span query end timestamp (unit: seconds).
-     * @param array $Filters Universal filter parameters.
-     * @param OrderBy $OrderBy Sort
-.
-The currently supported keys are:.
-
--StartTime (start time).
--EndTime (end time).
--Duration (response time).
-
-The currently supported values are:.
-
-- desc: sort in descending order.
--Asc - ascending order.
-     * @param string $BusinessName The service name of the business itself. console users should fill in taw.
-     * @param integer $Limit Number of items per page, defaults to 10,000, valid value range is 0 – 10,000.
-     * @param integer $Offset Pagination.
+     * @param string $InstanceId <p>Business system ID</p>
+     * @param integer $StartTime <p>Span query start timestamp (unit: seconds)</p>
+     * @param integer $EndTime <p>Span query end timestamp (unit: s)</p>
+     * @param array $Filters <p>Universal filter parameters supported filter key such as service.name</p>
+     * @param OrderBy $OrderBy <p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul>
+     * @param string $BusinessName <p>Business service name. Console users please enter taw</p>
+     * @param integer $Limit <p>Count of single-page projects. Defaults to 10000. Valid value range is 0–10000.</p>
+     * @param integer $Offset <p>Page</p>
      */
     function __construct()
     {

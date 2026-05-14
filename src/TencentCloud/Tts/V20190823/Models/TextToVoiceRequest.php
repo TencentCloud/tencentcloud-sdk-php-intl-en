@@ -44,8 +44,8 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
 <li>101054-zhiyou (Chinese)</li>
 <li>101055-zhiyou (Chinese)</li>
 <li>101056-zhilin (Northeastern Mandarin)</li>
- * @method string getFastVoiceType() Obtain One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice.
- * @method void setFastVoiceType(string $FastVoiceType) Set One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice.
+ * @method string getFastVoiceType() Obtain 
+ * @method void setFastVoiceType(string $FastVoiceType) Set 
  * @method integer getPrimaryLanguage() Obtain Primary language type: <li>1 - Chinese (default)</li><li>2 - English</li>
  * @method void setPrimaryLanguage(integer $PrimaryLanguage) Set Primary language type: <li>1 - Chinese (default)</li><li>2 - English</li>
  * @method integer getSampleRate() Obtain Audio sample rate: <li>16000: 16k (default)</li><li>8000: 8k</li>
@@ -56,12 +56,10 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
  * @method void setEnableSubtitle(boolean $EnableSubtitle) Set Whether to enable the timestamp feature. Default value: `false`.
  * @method integer getSegmentRate() Obtain The threshold of speech segmentation sensibility, which can be `0` (default), `1`, or `2`. A larger value indicates fewer segments, and the model tends to only segment sentences based on punctuation marks. We recommend you not change this parameter to avoid adverse effect on speech synthesis.
  * @method void setSegmentRate(integer $SegmentRate) Set The threshold of speech segmentation sensibility, which can be `0` (default), `1`, or `2`. A larger value indicates fewer segments, and the model tends to only segment sentences based on punctuation marks. We recommend you not change this parameter to avoid adverse effect on speech synthesis.
- * @method string getEmotionCategory() Obtain Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
-Sample value: neutral
- * @method void setEmotionCategory(string $EmotionCategory) Set Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
-Sample value: neutral
- * @method integer getEmotionIntensity() Obtain Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty;
- * @method void setEmotionIntensity(integer $EmotionIntensity) Set Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty;
+ * @method string getEmotionCategory() Obtain 
+ * @method void setEmotionCategory(string $EmotionCategory) Set 
+ * @method integer getEmotionIntensity() Obtain 
+ * @method void setEmotionIntensity(integer $EmotionIntensity) Set 
  */
 class TextToVoiceRequest extends AbstractModel
 {
@@ -106,7 +104,7 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     public $VoiceType;
 
     /**
-     * @var string One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice.
+     * @var string 
      */
     public $FastVoiceType;
 
@@ -136,13 +134,12 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     public $SegmentRate;
 
     /**
-     * @var string Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
-Sample value: neutral
+     * @var string 
      */
     public $EmotionCategory;
 
     /**
-     * @var integer Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty;
+     * @var integer 
      */
     public $EmotionIntensity;
 
@@ -159,15 +156,14 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
 <li>101054-zhiyou (Chinese)</li>
 <li>101055-zhiyou (Chinese)</li>
 <li>101056-zhilin (Northeastern Mandarin)</li>
-     * @param string $FastVoiceType One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice.
+     * @param string $FastVoiceType 
      * @param integer $PrimaryLanguage Primary language type: <li>1 - Chinese (default)</li><li>2 - English</li>
      * @param integer $SampleRate Audio sample rate: <li>16000: 16k (default)</li><li>8000: 8k</li>
      * @param string $Codec Format of returned audio. Valid values: WAV (default), MP3, and PCM.
      * @param boolean $EnableSubtitle Whether to enable the timestamp feature. Default value: `false`.
      * @param integer $SegmentRate The threshold of speech segmentation sensibility, which can be `0` (default), `1`, or `2`. A larger value indicates fewer segments, and the model tends to only segment sentences based on punctuation marks. We recommend you not change this parameter to avoid adverse effect on speech synthesis.
-     * @param string $EmotionCategory Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
-Sample value: neutral
-     * @param integer $EmotionIntensity Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty;
+     * @param string $EmotionCategory 
+     * @param integer $EmotionIntensity 
      */
     function __construct()
     {

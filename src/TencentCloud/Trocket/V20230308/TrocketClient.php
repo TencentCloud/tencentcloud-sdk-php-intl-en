@@ -35,6 +35,19 @@ use TencentCloud\Trocket\V20230308\Models as Models;
  * @method Models\DescribeConsumerClientResponse DescribeConsumerClient(Models\DescribeConsumerClientRequest $req) Query consumer client details.
  * @method Models\DescribeConsumerClientListResponse DescribeConsumerClientList(Models\DescribeConsumerClientListRequest $req) This API is used to query the client connection list of a consumer group.
  * @method Models\DescribeConsumerGroupResponse DescribeConsumerGroup(Models\DescribeConsumerGroupRequest $req) Query consumer group details.
+ * @method Models\DescribeConsumerGroupListResponse DescribeConsumerGroupList(Models\DescribeConsumerGroupListRequest $req) Get the consumer group list. The Filter parameter usage instructions are as follows:
+
+-ConsumerGroupName, the consumer group name, supports fuzzy query and can be obtained from the [ConsumeGroupItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) in the API response of [DescribeConsumerGroupList](https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or the console.
+-ConsumeMessageOrderly, shipping order, enumeration value as follows:
+-ordered delivery
+-Concurrent delivery: false.
+-RetryPolicy, retry policy, enumeration values as follows:
+-EXPONENTIAL: fixed interval
+-CUSTOMIZED: Tier backoff
+
+Example of Filters: 
+[{ "Name": "ConsumeMessageOrderly", "Values": ["true"] }]
+This API is applicable to 5.x clusters. For 4.x clusters, refer to the REST API documentation [DescribeRocketMQGroups](https://www.tencentcloud.com/document/api/1179/63420?from_cn_redirect=1) to get the consumer group list.
  * @method Models\DescribeConsumerLagResponse DescribeConsumerLag(Models\DescribeConsumerLagRequest $req) This API is used to query the number of heaped messages in a specified consumer group.
  * @method Models\DescribeFusionInstanceListResponse DescribeFusionInstanceList(Models\DescribeFusionInstanceListRequest $req) This API is used to describe clusters, supporting both 4.x and 5.x clusters. Among them, parameter usage of Filters is as follows:.
 

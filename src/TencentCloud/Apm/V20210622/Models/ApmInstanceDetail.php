@@ -144,6 +144,8 @@ Account in arrears.
  * @method void setUrlLongSegmentThreshold(integer $UrlLongSegmentThreshold) Set Convergence threshold for URL long segments.
  * @method integer getUrlNumberSegmentThreshold() Obtain Convergence threshold for URL numerical segments.
  * @method void setUrlNumberSegmentThreshold(integer $UrlNumberSegmentThreshold) Set Convergence threshold for URL numerical segments.
+ * @method string getLogSpanIdKey() Obtain Index key of spanId: This parameter is valid only when the CLS index type is key-value index
+ * @method void setLogSpanIdKey(string $LogSpanIdKey) Set Index key of spanId: This parameter is valid only when the CLS index type is key-value index
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -434,6 +436,11 @@ Account in arrears.
     public $UrlNumberSegmentThreshold;
 
     /**
+     * @var string Index key of spanId: This parameter is valid only when the CLS index type is key-value index
+     */
+    public $LogSpanIdKey;
+
+    /**
      * @param string $InstanceId Business system id.
      * @param string $Name Business system name.
      * @param string $Description Business system description information.
@@ -496,6 +503,7 @@ Account in arrears.
      * @param string $Token Business system authentication token.
      * @param integer $UrlLongSegmentThreshold Convergence threshold for URL long segments.
      * @param integer $UrlNumberSegmentThreshold Convergence threshold for URL numerical segments.
+     * @param string $LogSpanIdKey Index key of spanId: This parameter is valid only when the CLS index type is key-value index
      */
     function __construct()
     {
@@ -737,6 +745,10 @@ Account in arrears.
 
         if (array_key_exists("UrlNumberSegmentThreshold",$param) and $param["UrlNumberSegmentThreshold"] !== null) {
             $this->UrlNumberSegmentThreshold = $param["UrlNumberSegmentThreshold"];
+        }
+
+        if (array_key_exists("LogSpanIdKey",$param) and $param["LogSpanIdKey"] !== null) {
+            $this->LogSpanIdKey = $param["LogSpanIdKey"];
         }
     }
 }

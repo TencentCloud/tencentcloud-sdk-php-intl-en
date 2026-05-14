@@ -104,6 +104,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrlLongSegmentThreshold(integer $UrlLongSegmentThreshold) Set Convergence threshold for URL long segments.
  * @method integer getUrlNumberSegmentThreshold() Obtain Convergence threshold for URL numerical segments.
  * @method void setUrlNumberSegmentThreshold(integer $UrlNumberSegmentThreshold) Set Convergence threshold for URL numerical segments.
+ * @method string getLogSpanIdKey() Obtain Index key of spanId: This parameter is valid only when the CLS index type is key-value index
+ * @method void setLogSpanIdKey(string $LogSpanIdKey) Set Index key of spanId: This parameter is valid only when the CLS index type is key-value index
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
@@ -318,6 +320,11 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $UrlNumberSegmentThreshold;
 
     /**
+     * @var string Index key of spanId: This parameter is valid only when the CLS index type is key-value index
+     */
+    public $LogSpanIdKey;
+
+    /**
      * @param string $InstanceId Business system id.
      * @param string $Name Business system name.
      * @param array $Tags Tag list.
@@ -360,6 +367,7 @@ class ModifyApmInstanceRequest extends AbstractModel
      * @param integer $IsDeserializationAnalysis Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
      * @param integer $UrlLongSegmentThreshold Convergence threshold for URL long segments.
      * @param integer $UrlNumberSegmentThreshold Convergence threshold for URL numerical segments.
+     * @param string $LogSpanIdKey Index key of spanId: This parameter is valid only when the CLS index type is key-value index
      */
     function __construct()
     {
@@ -545,6 +553,10 @@ class ModifyApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("UrlNumberSegmentThreshold",$param) and $param["UrlNumberSegmentThreshold"] !== null) {
             $this->UrlNumberSegmentThreshold = $param["UrlNumberSegmentThreshold"];
+        }
+
+        if (array_key_exists("LogSpanIdKey",$param) and $param["LogSpanIdKey"] !== null) {
+            $this->LogSpanIdKey = $param["LogSpanIdKey"];
         }
     }
 }

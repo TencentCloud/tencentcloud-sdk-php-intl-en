@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKmsKeyId(string $KmsKeyId) Set KMS CMK used for Secret encryption. If this parameter is left empty, SecretsManager will create a CMK by default. You can also specify a KMS CMK that is created in the same region.
  * @method integer getSecretType() Obtain Secret type. It defaults to `custom`.
  * @method void setSecretType(integer $SecretType) Set Secret type. It defaults to `custom`.
- * @method string getSecretBinary() Obtain Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
- * @method void setSecretBinary(string $SecretBinary) Set Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
- * @method string getSecretString() Obtain Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
- * @method void setSecretString(string $SecretString) Set Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+ * @method string getSecretBinary() Obtain Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
+ * @method void setSecretBinary(string $SecretBinary) Set Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
+ * @method string getSecretString() Obtain The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
+ * @method void setSecretString(string $SecretString) Set The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
  * @method string getAdditionalConfig() Obtain Additional configuration of the Secret in JSON format
  * @method void setAdditionalConfig(string $AdditionalConfig) Set Additional configuration of the Secret in JSON format
  * @method array getTags() Obtain List of tags.
@@ -67,12 +67,12 @@ class CreateSecretRequest extends AbstractModel
     public $SecretType;
 
     /**
-     * @var string Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+     * @var string Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
      */
     public $SecretBinary;
 
     /**
-     * @var string Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+     * @var string The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
      */
     public $SecretString;
 
@@ -92,8 +92,8 @@ class CreateSecretRequest extends AbstractModel
      * @param string $Description Description information, such as the detailed use cases. It can be up to 2048 bytes.
      * @param string $KmsKeyId KMS CMK used for Secret encryption. If this parameter is left empty, SecretsManager will create a CMK by default. You can also specify a KMS CMK that is created in the same region.
      * @param integer $SecretType Secret type. It defaults to `custom`.
-     * @param string $SecretBinary Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
-     * @param string $SecretString Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+     * @param string $SecretBinary Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
+     * @param string $SecretString The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
      * @param string $AdditionalConfig Additional configuration of the Secret in JSON format
      * @param array $Tags List of tags.
      */

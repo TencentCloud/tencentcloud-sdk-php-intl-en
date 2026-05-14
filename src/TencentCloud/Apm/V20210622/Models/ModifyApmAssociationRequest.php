@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApmAssociation request structure.
  *
- * @method string getProductName() Obtain Associated product name. currently only supports Prometheus.
- * @method void setProductName(string $ProductName) Set Associated product name. currently only supports Prometheus.
- * @method integer getStatus() Obtain Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted).
- * @method void setStatus(integer $Status) Set Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted).
- * @method string getInstanceId() Obtain Business system ID
- * @method void setInstanceId(string $InstanceId) Set Business system ID
- * @method string getPeerId() Obtain Associated product instance ID.
- * @method void setPeerId(string $PeerId) Set Associated product instance ID.
- * @method string getTopic() Obtain Specifies the CKafka message topic.
- * @method void setTopic(string $Topic) Set Specifies the CKafka message topic.
+ * @method string getProductName() Obtain <p>Associated product name, currently only support Prometheus, CKafka</p>
+ * @method void setProductName(string $ProductName) Set <p>Associated product name, currently only support Prometheus, CKafka</p>
+ * @method integer getStatus() Obtain <p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p>
+ * @method void setStatus(integer $Status) Set <p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p>
+ * @method string getInstanceId() Obtain <p>Business system ID</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Business system ID</p>
+ * @method string getPeerId() Obtain <p>ID of the associated product instance</p>
+ * @method void setPeerId(string $PeerId) Set <p>ID of the associated product instance</p>
+ * @method string getTopic() Obtain <p>CKafka message topic</p>
+ * @method void setTopic(string $Topic) Set <p>CKafka message topic</p>
+ * @method string getMetricTopic() Obtain <p>Ckafka message topic</p>
+ * @method void setMetricTopic(string $MetricTopic) Set <p>Ckafka message topic</p>
  */
 class ModifyApmAssociationRequest extends AbstractModel
 {
     /**
-     * @var string Associated product name. currently only supports Prometheus.
+     * @var string <p>Associated product name, currently only support Prometheus, CKafka</p>
      */
     public $ProductName;
 
     /**
-     * @var integer Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted).
+     * @var integer <p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p>
      */
     public $Status;
 
     /**
-     * @var string Business system ID
+     * @var string <p>Business system ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Associated product instance ID.
+     * @var string <p>ID of the associated product instance</p>
      */
     public $PeerId;
 
     /**
-     * @var string Specifies the CKafka message topic.
+     * @var string <p>CKafka message topic</p>
      */
     public $Topic;
 
     /**
-     * @param string $ProductName Associated product name. currently only supports Prometheus.
-     * @param integer $Status Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted).
-     * @param string $InstanceId Business system ID
-     * @param string $PeerId Associated product instance ID.
-     * @param string $Topic Specifies the CKafka message topic.
+     * @var string <p>Ckafka message topic</p>
+     */
+    public $MetricTopic;
+
+    /**
+     * @param string $ProductName <p>Associated product name, currently only support Prometheus, CKafka</p>
+     * @param integer $Status <p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p>
+     * @param string $InstanceId <p>Business system ID</p>
+     * @param string $PeerId <p>ID of the associated product instance</p>
+     * @param string $Topic <p>CKafka message topic</p>
+     * @param string $MetricTopic <p>Ckafka message topic</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyApmAssociationRequest extends AbstractModel
 
         if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
             $this->Topic = $param["Topic"];
+        }
+
+        if (array_key_exists("MetricTopic",$param) and $param["MetricTopic"] !== null) {
+            $this->MetricTopic = $param["MetricTopic"];
         }
     }
 }

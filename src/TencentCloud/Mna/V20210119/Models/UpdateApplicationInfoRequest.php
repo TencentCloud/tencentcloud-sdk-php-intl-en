@@ -1,0 +1,89 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Mna\V20210119\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * UpdateApplicationInfo request structure.
+ *
+ * @method string getMpApplicationId() Obtain Application ID
+ * @method void setMpApplicationId(string $MpApplicationId) Set Application ID
+ * @method string getMpApplicationName() Obtain Application name of the created app
+ * @method void setMpApplicationName(string $MpApplicationName) Set Application name of the created app
+ * @method string getRemark() Obtain Remark of the created device
+ * @method void setRemark(string $Remark) Set Remark of the created device
+ * @method integer getAccessScope() Obtain Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. By default if left blank, public cloud gateway is selected. Specific meaning: Public cloud gateway: The device can only connect to public cloud gateway (Proximity access). Private gateway: The device can only connect to already launched private gateway (Proximity access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both public cloud gateway and already launched private gateway (Proximity access or fixed ip access).
+ * @method void setAccessScope(integer $AccessScope) Set Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. By default if left blank, public cloud gateway is selected. Specific meaning: Public cloud gateway: The device can only connect to public cloud gateway (Proximity access). Private gateway: The device can only connect to already launched private gateway (Proximity access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both public cloud gateway and already launched private gateway (Proximity access or fixed ip access).
+ */
+class UpdateApplicationInfoRequest extends AbstractModel
+{
+    /**
+     * @var string Application ID
+     */
+    public $MpApplicationId;
+
+    /**
+     * @var string Application name of the created app
+     */
+    public $MpApplicationName;
+
+    /**
+     * @var string Remark of the created device
+     */
+    public $Remark;
+
+    /**
+     * @var integer Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. By default if left blank, public cloud gateway is selected. Specific meaning: Public cloud gateway: The device can only connect to public cloud gateway (Proximity access). Private gateway: The device can only connect to already launched private gateway (Proximity access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both public cloud gateway and already launched private gateway (Proximity access or fixed ip access).
+     */
+    public $AccessScope;
+
+    /**
+     * @param string $MpApplicationId Application ID
+     * @param string $MpApplicationName Application name of the created app
+     * @param string $Remark Remark of the created device
+     * @param integer $AccessScope Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. By default if left blank, public cloud gateway is selected. Specific meaning: Public cloud gateway: The device can only connect to public cloud gateway (Proximity access). Private gateway: The device can only connect to already launched private gateway (Proximity access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both public cloud gateway and already launched private gateway (Proximity access or fixed ip access).
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("MpApplicationId",$param) and $param["MpApplicationId"] !== null) {
+            $this->MpApplicationId = $param["MpApplicationId"];
+        }
+
+        if (array_key_exists("MpApplicationName",$param) and $param["MpApplicationName"] !== null) {
+            $this->MpApplicationName = $param["MpApplicationName"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("AccessScope",$param) and $param["AccessScope"] !== null) {
+            $this->AccessScope = $param["AccessScope"];
+        }
+    }
+}

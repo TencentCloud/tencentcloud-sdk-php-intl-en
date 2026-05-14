@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Queries filter parameters.
  *
- * @method string getType() Obtain Filtering method (=, !=, in).
- * @method void setType(string $Type) Set Filtering method (=, !=, in).
- * @method string getKey() Obtain Filter dimension name.
- * @method void setKey(string $Key) Set Filter dimension name.
- * @method string getValue() Obtain Filter value. uses commas to separate multiple values in in filtering method.
- * @method void setValue(string $Value) Set Filter value. uses commas to separate multiple values in in filtering method.
+ * @method string getType() Obtain <p>Filter method (=, !=, in)</p>
+ * @method void setType(string $Type) Set <p>Filter method (=, !=, in)</p>
+ * @method string getKey() Obtain <p>Filter dimension name</p><p>For details, see the actual interface field description</p>
+ * @method void setKey(string $Key) Set <p>Filter dimension name</p><p>For details, see the actual interface field description</p>
+ * @method string getValue() Obtain <p>Filter value. Use comma-separated multiple values for in filtering method.</p>
+ * @method void setValue(string $Value) Set <p>Filter value. Use comma-separated multiple values for in filtering method.</p>
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string Filtering method (=, !=, in).
+     * @var string <p>Filter method (=, !=, in)</p>
      */
     public $Type;
 
     /**
-     * @var string Filter dimension name.
+     * @var string <p>Filter dimension name</p><p>For details, see the actual interface field description</p>
      */
     public $Key;
 
     /**
-     * @var string Filter value. uses commas to separate multiple values in in filtering method.
+     * @var string <p>Filter value. Use comma-separated multiple values for in filtering method.</p>
      */
     public $Value;
 
     /**
-     * @param string $Type Filtering method (=, !=, in).
-     * @param string $Key Filter dimension name.
-     * @param string $Value Filter value. uses commas to separate multiple values in in filtering method.
+     * @param string $Type <p>Filter method (=, !=, in)</p>
+     * @param string $Key <p>Filter dimension name</p><p>For details, see the actual interface field description</p>
+     * @param string $Value <p>Filter value. Use comma-separated multiple values for in filtering method.</p>
      */
     function __construct()
     {

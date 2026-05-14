@@ -23,6 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Aiart\V20221229\Models as Models;
 
 /**
+ * @method Models\ChangeClothesResponse ChangeClothes(Models\ChangeClothesRequest $req) This API is used to generate the images of the model changing clothes based on the model photo and the clothes image.
+It supports 1 concurrency by default, which means that up to 1 submitted task can be processed simultaneously. Subsequent tasks can be processed only after ongoing ones are completed.
  * @method Models\ImageToImageResponse ImageToImage(Models\ImageToImageRequest $req) This API is used to transfer the image style based on the image to image technology. Images with small figures, complex gestures or too many figures are not recommended.
 It supports 3 concurrency by default, which means that up to 3 submitted tasks can be processed simultaneously. Subsequent tasks can be processed only after ongoing ones are completed.
  */
