@@ -102,6 +102,7 @@ Default API request rate limit: 20 requests/sec.
  * @method Models\DescribeScoresResponse DescribeScores(Models\DescribeScoresRequest $req) This API is used to get the list of homepage scores.
  * @method Models\DescribeScoresV2Response DescribeScoresV2(Models\DescribeScoresV2Request $req) This API is used to obtain the home page score list.
  * @method Models\DescribeTawAreasResponse DescribeTawAreas(Models\DescribeTawAreasRequest $req) This API is used to query region information.
+ * @method Models\DescribeTawInstancesResponse DescribeTawInstances(Models\DescribeTawInstancesRequest $req) This API is used to query instance information.
  * @method Models\DescribeUvListResponse DescribeUvList(Models\DescribeUvListRequest $req) This API is used to get the list of UVs under a project.
  * @method Models\DescribeWhitelistsResponse DescribeWhitelists(Models\DescribeWhitelistsRequest $req) This API is used to get the list of allowlists.
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) This API is used to modify a RUM business system.

@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CopySnapshotCrossRegions request structure.
  *
- * @method array getDestinationRegions() Obtain Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
- * @method void setDestinationRegions(array $DestinationRegions) Set Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
+ * @method array getDestinationRegions() Obtain Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots.
+ * @method void setDestinationRegions(array $DestinationRegions) Set Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots.
  * @method string getSnapshotId() Obtain Snapshot ID, which can be queried via the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API.
  * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID, which can be queried via the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API.
- * @method string getSnapshotName() Obtain Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
- * @method void setSnapshotName(string $SnapshotName) Set Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
+ * @method string getSnapshotName() Obtain Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name]
+ * @method void setSnapshotName(string $SnapshotName) Set Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name]
  */
 class CopySnapshotCrossRegionsRequest extends AbstractModel
 {
     /**
-     * @var array Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
+     * @var array Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots.
      */
     public $DestinationRegions;
 
@@ -40,14 +40,14 @@ class CopySnapshotCrossRegionsRequest extends AbstractModel
     public $SnapshotId;
 
     /**
-     * @var string Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
+     * @var string Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name]
      */
     public $SnapshotName;
 
     /**
-     * @param array $DestinationRegions Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
+     * @param array $DestinationRegions Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots.
      * @param string $SnapshotId Snapshot ID, which can be queried via the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API.
-     * @param string $SnapshotName Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
+     * @param string $SnapshotName Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name]
      */
     function __construct()
     {

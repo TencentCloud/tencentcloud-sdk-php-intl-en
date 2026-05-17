@@ -42,11 +42,13 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\DescribeCertificateDetailResponse DescribeCertificateDetail(Models\DescribeCertificateDetailRequest $req) This API is used to get certificate details.
  * @method Models\DescribeCertificateOperateLogsResponse DescribeCertificateOperateLogs(Models\DescribeCertificateOperateLogsRequest $req) This API is used to get certificate operation logs in the current account.
  * @method Models\DescribeCertificatesResponse DescribeCertificates(Models\DescribeCertificatesRequest $req) This API is used to get the certificate list.
+ * @method Models\DescribeCompaniesResponse DescribeCompanies(Models\DescribeCompaniesRequest $req) Query company list
  * @method Models\DescribeHostTeoInstanceListResponse DescribeHostTeoInstanceList(Models\DescribeHostTeoInstanceListRequest $req) This API is used to query the list of EdgeOne instances to which a certificate can be deployed.
  * @method Models\DescribeHostUpdateRecordResponse DescribeHostUpdateRecord(Models\DescribeHostUpdateRecordRequest $req) Query certificate cloud resource update record list
  * @method Models\DescribeHostUpdateRecordDetailResponse DescribeHostUpdateRecordDetail(Models\DescribeHostUpdateRecordDetailRequest $req) This API is used to query the update record details of certificate cloud resources.
  * @method Models\DescribeHostUploadUpdateRecordResponse DescribeHostUploadUpdateRecord(Models\DescribeHostUploadUpdateRecordRequest $req) This API is used to query the record list of cloud resource updates for certificates (certificate ID unchanged).
  * @method Models\DescribeHostUploadUpdateRecordDetailResponse DescribeHostUploadUpdateRecordDetail(Models\DescribeHostUploadUpdateRecordDetailRequest $req) This API is used to query the deployment record details of certificate update records (certificate ID unchanged).
+ * @method Models\DescribeManagersResponse DescribeManagers(Models\DescribeManagersRequest $req) Query the list of people in charge
  * @method Models\DownloadCertificateResponse DownloadCertificate(Models\DownloadCertificateRequest $req) This API is used to download a certificate.
  * @method Models\ModifyCSRResponse ModifyCSR(Models\ModifyCSRRequest $req) This API is used to modify the information of a CSR.
  * @method Models\ModifyCertificateAliasResponse ModifyCertificateAlias(Models\ModifyCertificateAliasRequest $req) This API is used to modify a certificate alias by passing in the certificate ID and new alias.
