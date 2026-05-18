@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 **Note**: The number of shards after changes cannot be less than the current number. Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
  * @method void setReplicateSetNum(integer $ReplicateSetNum) Set Sharded cluster instance, which refers to the number of shards for the instance after configuration changes. Value range: [2, 36].
 **Note**: The number of shards after changes cannot be less than the current number. Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
+ * @method integer getCpu() Obtain CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory.
+ * @method void setCpu(integer $Cpu) Set CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory.
  */
 class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
 {
@@ -71,6 +75,12 @@ class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
     public $ReplicateSetNum;
 
     /**
+     * @var integer CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory.
+     */
+    public $Cpu;
+
+    /**
      * @param string $InstanceId Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      * @param integer $Memory Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
      * @param integer $Volume Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
@@ -80,6 +90,8 @@ class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
 **Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
      * @param integer $ReplicateSetNum Sharded cluster instance, which refers to the number of shards for the instance after configuration changes. Value range: [2, 36].
 **Note**: The number of shards after changes cannot be less than the current number. Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
+     * @param integer $Cpu CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory.
      */
     function __construct()
     {
@@ -112,6 +124,10 @@ class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
 
         if (array_key_exists("ReplicateSetNum",$param) and $param["ReplicateSetNum"] !== null) {
             $this->ReplicateSetNum = $param["ReplicateSetNum"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

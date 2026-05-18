@@ -76,6 +76,7 @@ use TencentCloud\Common\AbstractModel;
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
  * @method void setMongoVersion(string $MongoVersion) Set Storage engine version information on instances.
 - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
 - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
@@ -84,6 +85,7 @@ use TencentCloud\Common\AbstractModel;
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
  * @method integer getMemory() Obtain Instance memory specification, in MB.
  * @method void setMemory(integer $Memory) Set Instance memory specification, in MB.
  * @method integer getVolume() Obtain Instance disk specification, in MB.
@@ -260,6 +262,7 @@ class InstanceDetail extends AbstractModel
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
      */
     public $MongoVersion;
 
@@ -456,6 +459,7 @@ class InstanceDetail extends AbstractModel
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
      * @param integer $Memory Instance memory specification, in MB.
      * @param integer $Volume Instance disk specification, in MB.
      * @param integer $CpuNum Number of the instance CPU cores.

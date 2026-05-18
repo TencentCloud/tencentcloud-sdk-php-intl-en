@@ -29,11 +29,11 @@ use TencentCloud\Common\AbstractModel;
 - Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
 - Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
  * @method integer getStatus() Obtain Saleable specification status flag. Valid values are as follows:
- - 0: selling stopped.
- - 1: available for sale.
+- 0: selling stopped.
+- 1: available for sale.
  * @method void setStatus(integer $Status) Set Saleable specification status flag. Valid values are as follows:
- - 0: selling stopped.
- - 1: available for sale.
+- 0: selling stopped.
+- 1: available for sale.
  * @method integer getCpu() Obtain Computing resource specification, indicating the number of CPU cores.
  * @method void setCpu(integer $Cpu) Set Computing resource specification, indicating the number of CPU cores.
  * @method integer getMemory() Obtain Memory specification. Unit: MB.
@@ -55,6 +55,7 @@ use TencentCloud\Common\AbstractModel;
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
  * @method void setMongoVersionCode(string $MongoVersionCode) Set Storage engine version information on instances.
 - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
 - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
@@ -62,12 +63,31 @@ use TencentCloud\Common\AbstractModel;
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
  * @method integer getMongoVersionValue() Obtain Digital version corresponding to the instance version.
+- MongoDB version 3.2: 2.
+- MongoDB version 3.6: 4.
+- MongoDB version 4.0: 5.
+- MongoDB version 4.2: 9.
+- MongoDB version 4.4: 10.
+- MongoDB version 5.0: 11.
+- MongoDB version 6.0: 12.
+- MongoDB version 7.0: 13.
+- MongoDB version 8.0: 14.
  * @method void setMongoVersionValue(integer $MongoVersionValue) Set Digital version corresponding to the instance version.
- * @method string getVersion() Obtain Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
- * @method void setVersion(string $Version) Set Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
- * @method string getEngineName() Obtain Storage engine.
- * @method void setEngineName(string $EngineName) Set Storage engine.
+- MongoDB version 3.2: 2.
+- MongoDB version 3.6: 4.
+- MongoDB version 4.0: 5.
+- MongoDB version 4.2: 9.
+- MongoDB version 4.4: 10.
+- MongoDB version 5.0: 11.
+- MongoDB version 6.0: 12.
+- MongoDB version 7.0: 13.
+- MongoDB version 8.0: 14.
+ * @method string getVersion() Obtain Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0.
+ * @method void setVersion(string $Version) Set Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0.
+ * @method string getEngineName() Obtain Storage engine. Only WiredTiger is supported.
+ * @method void setEngineName(string $EngineName) Set Storage engine. Only WiredTiger is supported.
  * @method integer getClusterType() Obtain Cluster type. Valid values are as follows:
  - 1: sharded cluster.
  - 0: replica set cluster.
@@ -105,8 +125,8 @@ class SpecItem extends AbstractModel
 
     /**
      * @var integer Saleable specification status flag. Valid values are as follows:
- - 0: selling stopped.
- - 1: available for sale.
+- 0: selling stopped.
+- 1: available for sale.
      */
     public $Status;
 
@@ -153,21 +173,31 @@ class SpecItem extends AbstractModel
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
      */
     public $MongoVersionCode;
 
     /**
      * @var integer Digital version corresponding to the instance version.
+- MongoDB version 3.2: 2.
+- MongoDB version 3.6: 4.
+- MongoDB version 4.0: 5.
+- MongoDB version 4.2: 9.
+- MongoDB version 4.4: 10.
+- MongoDB version 5.0: 11.
+- MongoDB version 6.0: 12.
+- MongoDB version 7.0: 13.
+- MongoDB version 8.0: 14.
      */
     public $MongoVersionValue;
 
     /**
-     * @var string Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
+     * @var string Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0.
      */
     public $Version;
 
     /**
-     * @var string Storage engine.
+     * @var string Storage engine. Only WiredTiger is supported.
      */
     public $EngineName;
 
@@ -221,8 +251,8 @@ class SpecItem extends AbstractModel
 - Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
 - Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
      * @param integer $Status Saleable specification status flag. Valid values are as follows:
- - 0: selling stopped.
- - 1: available for sale.
+- 0: selling stopped.
+- 1: available for sale.
      * @param integer $Cpu Computing resource specification, indicating the number of CPU cores.
      * @param integer $Memory Memory specification. Unit: MB.
      * @param integer $DefaultStorage Default disk specification. Unit: MB.
@@ -237,9 +267,19 @@ class SpecItem extends AbstractModel
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
      * @param integer $MongoVersionValue Digital version corresponding to the instance version.
-     * @param string $Version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
-     * @param string $EngineName Storage engine.
+- MongoDB version 3.2: 2.
+- MongoDB version 3.6: 4.
+- MongoDB version 4.0: 5.
+- MongoDB version 4.2: 9.
+- MongoDB version 4.4: 10.
+- MongoDB version 5.0: 11.
+- MongoDB version 6.0: 12.
+- MongoDB version 7.0: 13.
+- MongoDB version 8.0: 14.
+     * @param string $Version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0.
+     * @param string $EngineName Storage engine. Only WiredTiger is supported.
      * @param integer $ClusterType Cluster type. Valid values are as follows:
  - 1: sharded cluster.
  - 0: replica set cluster.

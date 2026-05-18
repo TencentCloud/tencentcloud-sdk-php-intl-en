@@ -22,10 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain List of instance IDs, which are in the format of cmgo-p8vnipr5. It is the same as the format of the instance ID displayed on the TencentDB for MongoDB console page.
  * @method void setInstanceId(string $InstanceId) Set List of instance IDs, which are in the format of cmgo-p8vnipr5. It is the same as the format of the instance ID displayed on the TencentDB for MongoDB console page.
- * @method string getMongoVersion() Obtain Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine).
- * @method void setMongoVersion(string $MongoVersion) Set Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine).
- * @method integer getInMaintenance() Obtain Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period.
- * @method void setInMaintenance(integer $InMaintenance) Set Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period.
+ * @method string getMongoVersion() Obtain The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+- MONGO_40_WT: Version 4.0.
+- MONGO_42_WT: Version 4.2.
+- MONGO_44_WT: Version 4.4.
+- MONGO_50_WT: Version 5.0.
+- MONGO_60_WT: Version 6.0.
+-MONGO_70_WT: Version 7.0.
+- MONGO_80_WT: Version 8.0.
+ * @method void setMongoVersion(string $MongoVersion) Set The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+- MONGO_40_WT: Version 4.0.
+- MONGO_42_WT: Version 4.2.
+- MONGO_44_WT: Version 4.4.
+- MONGO_50_WT: Version 5.0.
+- MONGO_60_WT: Version 6.0.
+-MONGO_70_WT: Version 7.0.
+- MONGO_80_WT: Version 8.0.
+ * @method integer getInMaintenance() Obtain Specify whether to perform the upgrade during the maintenance period.
+-0: Upgrade now.
+- 1: Upgrade during the maintenance window.
+ * @method void setInMaintenance(integer $InMaintenance) Set Specify whether to perform the upgrade during the maintenance period.
+-0: Upgrade now.
+- 1: Upgrade during the maintenance window.
  */
 class UpgradeDbInstanceVersionRequest extends AbstractModel
 {
@@ -35,19 +53,37 @@ class UpgradeDbInstanceVersionRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine).
+     * @var string The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+- MONGO_40_WT: Version 4.0.
+- MONGO_42_WT: Version 4.2.
+- MONGO_44_WT: Version 4.4.
+- MONGO_50_WT: Version 5.0.
+- MONGO_60_WT: Version 6.0.
+-MONGO_70_WT: Version 7.0.
+- MONGO_80_WT: Version 8.0.
      */
     public $MongoVersion;
 
     /**
-     * @var integer Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period.
+     * @var integer Specify whether to perform the upgrade during the maintenance period.
+-0: Upgrade now.
+- 1: Upgrade during the maintenance window.
      */
     public $InMaintenance;
 
     /**
      * @param string $InstanceId List of instance IDs, which are in the format of cmgo-p8vnipr5. It is the same as the format of the instance ID displayed on the TencentDB for MongoDB console page.
-     * @param string $MongoVersion Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine).
-     * @param integer $InMaintenance Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period.
+     * @param string $MongoVersion The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+- MONGO_40_WT: Version 4.0.
+- MONGO_42_WT: Version 4.2.
+- MONGO_44_WT: Version 4.4.
+- MONGO_50_WT: Version 5.0.
+- MONGO_60_WT: Version 6.0.
+-MONGO_70_WT: Version 7.0.
+- MONGO_80_WT: Version 8.0.
+     * @param integer $InMaintenance Specify whether to perform the upgrade during the maintenance period.
+-0: Upgrade now.
+- 1: Upgrade during the maintenance window.
      */
     function __construct()
     {

@@ -20,154 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Backup information.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method integer getBackupType() Obtain Backup method.
-- 0: automatic backup.
-- 1: manual backup.
- * @method void setBackupType(integer $BackupType) Set Backup method.
-- 0: automatic backup.
-- 1: manual backup.
- * @method string getBackupName() Obtain Backup file name.
- * @method void setBackupName(string $BackupName) Set Backup file name.
- * @method string getBackupDesc() Obtain Backup task remarks.
- * @method void setBackupDesc(string $BackupDesc) Set Backup task remarks.
- * @method integer getBackupSize() Obtain Backup file size, in KB.
- * @method void setBackupSize(integer $BackupSize) Set Backup file size, in KB.
- * @method string getStartTime() Obtain Backup start time.
- * @method void setStartTime(string $StartTime) Set Backup start time.
- * @method string getEndTime() Obtain Backup end time.
- * @method void setEndTime(string $EndTime) Set Backup end time.
- * @method integer getStatus() Obtain Backup status.
-- 1: backing up.
-- 2: backup successful.
- * @method void setStatus(integer $Status) Set Backup status.
-- 1: backing up.
-- 2: backup successful.
- * @method integer getBackupMethod() Obtain Backup method.
-- 0: logical backup.
-- 1: physical backup.
-- 3: snapshot backup.
-**Note:**
-- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
-- Physical backup is not supported when storage encryption is enabled for the instance.
- * @method void setBackupMethod(integer $BackupMethod) Set Backup method.
-- 0: logical backup.
-- 1: physical backup.
-- 3: snapshot backup.
-**Note:**
-- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
-- Physical backup is not supported when storage encryption is enabled for the instance.
- * @method integer getBackId() Obtain Backup record ID.
- * @method void setBackId(integer $BackId) Set Backup record ID.
- * @method string getDeleteTime() Obtain Backup deletion time.
- * @method void setDeleteTime(string $DeleteTime) Set Backup deletion time.
- * @method string getBackupRegion() Obtain Cross-region backup region.
- * @method void setBackupRegion(string $BackupRegion) Set Cross-region backup region.
- * @method string getRestoreTime() Obtain Rollback time supported by the backup.
- * @method void setRestoreTime(string $RestoreTime) Set Rollback time supported by the backup.
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method integer getBackupType() Obtain <p>Backup method.</p><ul><li>0: Automatic backup.</li><li>1: Manual backup.</li></ul>
+ * @method void setBackupType(integer $BackupType) Set <p>Backup method.</p><ul><li>0: Automatic backup.</li><li>1: Manual backup.</li></ul>
+ * @method string getBackupName() Obtain <p>Backup file name.</p>
+ * @method void setBackupName(string $BackupName) Set <p>Backup file name.</p>
+ * @method string getBackupDesc() Obtain <p>Backup task notes.</p>
+ * @method void setBackupDesc(string $BackupDesc) Set <p>Backup task notes.</p>
+ * @method integer getBackupSize() Obtain <p>Backup file size, in KB.</p>
+ * @method void setBackupSize(integer $BackupSize) Set <p>Backup file size, in KB.</p>
+ * @method string getStartTime() Obtain <p>Backup start time.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Backup start time.</p>
+ * @method string getEndTime() Obtain <p>Backup end time.</p>
+ * @method void setEndTime(string $EndTime) Set <p>Backup end time.</p>
+ * @method integer getStatus() Obtain <p>Backup status.</p><ul><li>1: Backup in progress.</li><li>2: Backup successful.</li></ul>
+ * @method void setStatus(integer $Status) Set <p>Backup status.</p><ul><li>1: Backup in progress.</li><li>2: Backup successful.</li></ul>
+ * @method integer getBackupMethod() Obtain <p>Backup method.</p><ul><li>0: Logical backup.</li><li>1: Physical backup.</li><li>3: Snapshot backup.<br><strong>Description:</strong></li><li>The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.</li><li>If storage encryption is activated for the instance, physical backup is not supported.</li></ul>
+ * @method void setBackupMethod(integer $BackupMethod) Set <p>Backup method.</p><ul><li>0: Logical backup.</li><li>1: Physical backup.</li><li>3: Snapshot backup.<br><strong>Description:</strong></li><li>The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.</li><li>If storage encryption is activated for the instance, physical backup is not supported.</li></ul>
+ * @method integer getBackId() Obtain <p>Backup record ID.</p>
+ * @method void setBackId(integer $BackId) Set <p>Backup record ID.</p>
+ * @method string getDeleteTime() Obtain <p>Backup deletion time.</p>
+ * @method void setDeleteTime(string $DeleteTime) Set <p>Backup deletion time.</p>
+ * @method string getBackupRegion() Obtain <p>Backup region in a different location.</p>
+ * @method void setBackupRegion(string $BackupRegion) Set <p>Backup region in a different location.</p>
+ * @method string getRestoreTime() Obtain <p>Rollback time supported by the backup.</p>
+ * @method void setRestoreTime(string $RestoreTime) Set <p>Rollback time supported by the backup.</p>
  */
 class BackupInfo extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer Backup method.
-- 0: automatic backup.
-- 1: manual backup.
+     * @var integer <p>Backup method.</p><ul><li>0: Automatic backup.</li><li>1: Manual backup.</li></ul>
      */
     public $BackupType;
 
     /**
-     * @var string Backup file name.
+     * @var string <p>Backup file name.</p>
      */
     public $BackupName;
 
     /**
-     * @var string Backup task remarks.
+     * @var string <p>Backup task notes.</p>
      */
     public $BackupDesc;
 
     /**
-     * @var integer Backup file size, in KB.
+     * @var integer <p>Backup file size, in KB.</p>
      */
     public $BackupSize;
 
     /**
-     * @var string Backup start time.
+     * @var string <p>Backup start time.</p>
      */
     public $StartTime;
 
     /**
-     * @var string Backup end time.
+     * @var string <p>Backup end time.</p>
      */
     public $EndTime;
 
     /**
-     * @var integer Backup status.
-- 1: backing up.
-- 2: backup successful.
+     * @var integer <p>Backup status.</p><ul><li>1: Backup in progress.</li><li>2: Backup successful.</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer Backup method.
-- 0: logical backup.
-- 1: physical backup.
-- 3: snapshot backup.
-**Note:**
-- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
-- Physical backup is not supported when storage encryption is enabled for the instance.
+     * @var integer <p>Backup method.</p><ul><li>0: Logical backup.</li><li>1: Physical backup.</li><li>3: Snapshot backup.<br><strong>Description:</strong></li><li>The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.</li><li>If storage encryption is activated for the instance, physical backup is not supported.</li></ul>
      */
     public $BackupMethod;
 
     /**
-     * @var integer Backup record ID.
+     * @var integer <p>Backup record ID.</p>
      */
     public $BackId;
 
     /**
-     * @var string Backup deletion time.
+     * @var string <p>Backup deletion time.</p>
      */
     public $DeleteTime;
 
     /**
-     * @var string Cross-region backup region.
+     * @var string <p>Backup region in a different location.</p>
      */
     public $BackupRegion;
 
     /**
-     * @var string Rollback time supported by the backup.
+     * @var string <p>Rollback time supported by the backup.</p>
      */
     public $RestoreTime;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param integer $BackupType Backup method.
-- 0: automatic backup.
-- 1: manual backup.
-     * @param string $BackupName Backup file name.
-     * @param string $BackupDesc Backup task remarks.
-     * @param integer $BackupSize Backup file size, in KB.
-     * @param string $StartTime Backup start time.
-     * @param string $EndTime Backup end time.
-     * @param integer $Status Backup status.
-- 1: backing up.
-- 2: backup successful.
-     * @param integer $BackupMethod Backup method.
-- 0: logical backup.
-- 1: physical backup.
-- 3: snapshot backup.
-**Note:**
-- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
-- Physical backup is not supported when storage encryption is enabled for the instance.
-     * @param integer $BackId Backup record ID.
-     * @param string $DeleteTime Backup deletion time.
-     * @param string $BackupRegion Cross-region backup region.
-     * @param string $RestoreTime Rollback time supported by the backup.
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param integer $BackupType <p>Backup method.</p><ul><li>0: Automatic backup.</li><li>1: Manual backup.</li></ul>
+     * @param string $BackupName <p>Backup file name.</p>
+     * @param string $BackupDesc <p>Backup task notes.</p>
+     * @param integer $BackupSize <p>Backup file size, in KB.</p>
+     * @param string $StartTime <p>Backup start time.</p>
+     * @param string $EndTime <p>Backup end time.</p>
+     * @param integer $Status <p>Backup status.</p><ul><li>1: Backup in progress.</li><li>2: Backup successful.</li></ul>
+     * @param integer $BackupMethod <p>Backup method.</p><ul><li>0: Logical backup.</li><li>1: Physical backup.</li><li>3: Snapshot backup.<br><strong>Description:</strong></li><li>The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.</li><li>If storage encryption is activated for the instance, physical backup is not supported.</li></ul>
+     * @param integer $BackId <p>Backup record ID.</p>
+     * @param string $DeleteTime <p>Backup deletion time.</p>
+     * @param string $BackupRegion <p>Backup region in a different location.</p>
+     * @param string $RestoreTime <p>Rollback time supported by the backup.</p>
      */
     function __construct()
     {
