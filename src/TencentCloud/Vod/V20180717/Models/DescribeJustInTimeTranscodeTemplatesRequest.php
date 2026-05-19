@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJustInTimeTranscodeTemplates request structure.
  *
- * @method array getNames() Obtain Template name filter condition, array length limit: 100.
- * @method void setNames(array $Names) Set Template name filter condition, array length limit: 100.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getType() Obtain Template type filter conditions, optional values:
+ * @method array getNames() Obtain Filter condition for template name, with an array length limit of 100.
+ * @method void setNames(array $Names) Set Filter condition for template name, with an array length limit of 100.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getType() Obtain Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
-<li>Custom: user-defined task flow template. </li>
- * @method void setType(string $Type) Set Template type filter conditions, optional values:
+<li>Custom: User-defined task flow template.</li>
+ * @method void setType(string $Type) Set Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
-<li>Custom: user-defined task flow template. </li>
- * @method integer getOffset() Obtain Paging offset, default value: 0.
- * @method void setOffset(integer $Offset) Set Paging offset, default value: 0.
- * @method integer getLimit() Obtain Returns the number of records, default value: 10, maximum value: 100.
- * @method void setLimit(integer $Limit) Set Returns the number of records, default value: 10, maximum value: 100.
+<li>Custom: User-defined task flow template.</li>
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  */
 class DescribeJustInTimeTranscodeTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Template name filter condition, array length limit: 100.
+     * @var array Filter condition for template name, with an array length limit of 100.
      */
     public $Names;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Template type filter conditions, optional values:
+     * @var string Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
-<li>Custom: user-defined task flow template. </li>
+<li>Custom: User-defined task flow template.</li>
      */
     public $Type;
 
     /**
-     * @var integer Paging offset, default value: 0.
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Returns the number of records, default value: 10, maximum value: 100.
+     * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @param array $Names Template name filter condition, array length limit: 100.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $Type Template type filter conditions, optional values:
+     * @param array $Names Filter condition for template name, with an array length limit of 100.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $Type Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
-<li>Custom: user-defined task flow template. </li>
-     * @param integer $Offset Paging offset, default value: 0.
-     * @param integer $Limit Returns the number of records, default value: 10, maximum value: 100.
+<li>Custom: User-defined task flow template.</li>
+     * @param integer $Offset Pagination offset. Default value: 0.
+     * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */
     function __construct()
     {

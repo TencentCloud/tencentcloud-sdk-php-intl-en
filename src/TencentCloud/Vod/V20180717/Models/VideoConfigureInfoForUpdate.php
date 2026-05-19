@@ -58,10 +58,10 @@ Default value: open.
 <li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
 
 Default value: open.
- * @method integer getBitrate() Obtain The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-When the value is 0, it means that the video bitrate remains the same as the original video.
- * @method void setBitrate(integer $Bitrate) Set The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-When the value is 0, it means that the video bitrate remains the same as the original video.
+ * @method integer getBitrate() Obtain Bitrate of video stream, value ranges from 0 to [128, 10000], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
+ * @method void setBitrate(integer $Bitrate) Set Bitrate of video stream, value ranges from 0 to [128, 10000], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
  */
 class VideoConfigureInfoForUpdate extends AbstractModel
 {
@@ -97,8 +97,8 @@ Default value: open.
     public $ResolutionAdaptive;
 
     /**
-     * @var integer The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-When the value is 0, it means that the video bitrate remains the same as the original video.
+     * @var integer Bitrate of video stream, value ranges from 0 to [128, 10000], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
      */
     public $Bitrate;
 
@@ -122,8 +122,8 @@ Default value: 0.
 <li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
 
 Default value: open.
-     * @param integer $Bitrate The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-When the value is 0, it means that the video bitrate remains the same as the original video.
+     * @param integer $Bitrate Bitrate of video stream, value ranges from 0 to [128, 10000], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
      */
     function __construct()
     {

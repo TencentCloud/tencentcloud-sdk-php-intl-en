@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetVodDomainCertificate request structure.
  *
- * @method string getDomain() Obtain Domain name
- * @method void setDomain(string $Domain) Set Domain name
- * @method string getOperation() Obtain The operation type of this API call, optional value:
-<li>Set: Set the certificate required for the domain name HTTPS;</li>
-<li>Clear: Clear the domain name HTTPS configuration, after clearing, the domain name cannot support </li>
- * @method void setOperation(string $Operation) Set The operation type of this API call, optional value:
-<li>Set: Set the certificate required for the domain name HTTPS;</li>
-<li>Clear: Clear the domain name HTTPS configuration, after clearing, the domain name cannot support </li>
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getCertID() Obtain [Tencent Cloud SSL](https://intl.cloud.tencent.com/document/product/400/7572?from_cn_redirect=1) uploaded certificate ID. No need to fill in this field when clearing domain HTTPS configuration
- * @method void setCertID(string $CertID) Set [Tencent Cloud SSL](https://intl.cloud.tencent.com/document/product/400/7572?from_cn_redirect=1) uploaded certificate ID. No need to fill in this field when clearing domain HTTPS configuration
+ * @method string getDomain() Obtain Domain name.
+ * @method void setDomain(string $Domain) Set Domain name.
+ * @method string getOperation() Obtain Operation type of this API call. Valid values:
+<li>Set: Certificate required for setting domain HTTPS.</li>
+<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
+ * @method void setOperation(string $Operation) Set Operation type of this API call. Valid values:
+<li>Set: Certificate required for setting domain HTTPS.</li>
+<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getCertID() Obtain [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
+ * @method void setCertID(string $CertID) Set [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
  */
 class SetVodDomainCertificateRequest extends AbstractModel
 {
     /**
-     * @var string Domain name
+     * @var string Domain name.
      */
     public $Domain;
 
     /**
-     * @var string The operation type of this API call, optional value:
-<li>Set: Set the certificate required for the domain name HTTPS;</li>
-<li>Clear: Clear the domain name HTTPS configuration, after clearing, the domain name cannot support </li>
+     * @var string Operation type of this API call. Valid values:
+<li>Set: Certificate required for setting domain HTTPS.</li>
+<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
      */
     public $Operation;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string [Tencent Cloud SSL](https://intl.cloud.tencent.com/document/product/400/7572?from_cn_redirect=1) uploaded certificate ID. No need to fill in this field when clearing domain HTTPS configuration
+     * @var string [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
      */
     public $CertID;
 
     /**
-     * @param string $Domain Domain name
-     * @param string $Operation The operation type of this API call, optional value:
-<li>Set: Set the certificate required for the domain name HTTPS;</li>
-<li>Clear: Clear the domain name HTTPS configuration, after clearing, the domain name cannot support </li>
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $CertID [Tencent Cloud SSL](https://intl.cloud.tencent.com/document/product/400/7572?from_cn_redirect=1) uploaded certificate ID. No need to fill in this field when clearing domain HTTPS configuration
+     * @param string $Domain Domain name.
+     * @param string $Operation Operation type of this API call. Valid values:
+<li>Set: Certificate required for setting domain HTTPS.</li>
+<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $CertID [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
      */
     function __construct()
     {

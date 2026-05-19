@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output file info of the AIGC video generation task.
  *
- * @method string getStorageMode() Obtain Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
-Default value: Temporary
- * @method void setStorageMode(string $StorageMode) Set Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
-Default value: Temporary
- * @method string getMediaName() Obtain Output filename, up to 64 characters. Default filename is specified generation by system. Valid when StorageMode is Permanent.
- * @method void setMediaName(string $MediaName) Set Output filename, up to 64 characters. Default filename is specified generation by system. Valid when StorageMode is Permanent.
- * @method integer getClassId() Obtain Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
-
- * @method void setClassId(integer $ClassId) Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
-
- * @method string getExpireTime() Obtain Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setExpireTime(string $ExpireTime) Set Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getFileType() Obtain File type, such as mp4, flv.
- * @method void setFileType(string $FileType) Set File type, such as mp4, flv.
- * @method string getFileUrl() Obtain Media file playback address.
- * @method void setFileUrl(string $FileUrl) Set Media file playback address.
- * @method string getFileId() Obtain Media file ID. Valid when StorageMode is Permanent.
- * @method void setFileId(string $FileId) Set Media file ID. Valid when StorageMode is Permanent.
- * @method MediaMetaData getMetaData() Obtain Output video meta information. Valid when StorageMode is Permanent.
- * @method void setMetaData(MediaMetaData $MetaData) Set Output video meta information. Valid when StorageMode is Permanent.
+ * @method string getStorageMode() Obtain <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
+ * @method void setStorageMode(string $StorageMode) Set <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
+ * @method string getMediaName() Obtain <p>Output file name, up to 64 characters. Default filename is specified by the system. Valid when StorageMode is Permanent.</p>
+ * @method void setMediaName(string $MediaName) Set <p>Output file name, up to 64 characters. Default filename is specified by the system. Valid when StorageMode is Permanent.</p>
+ * @method integer getClassId() Obtain <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API. Valid at that time when StorageMode is Permanent.</p>
+ * @method void setClassId(integer $ClassId) Set <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API. Valid at that time when StorageMode is Permanent.</p>
+ * @method string getExpireTime() Obtain <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+ * @method void setExpireTime(string $ExpireTime) Set <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+ * @method string getFileType() Obtain <p>File type, such as mp4 or flv.</p>
+ * @method void setFileType(string $FileType) Set <p>File type, such as mp4 or flv.</p>
+ * @method string getFileUrl() Obtain <p>Media file playback address.</p>
+ * @method void setFileUrl(string $FileUrl) Set <p>Media file playback address.</p>
+ * @method string getFileContent() Obtain <p>File content. Return value is available when UsageType is position_info.</p>
+ * @method void setFileContent(string $FileContent) Set <p>File content. Return value is available when UsageType is position_info.</p>
+ * @method string getFileId() Obtain <p>Media file ID. Valid when StorageMode is Permanent.</p>
+ * @method void setFileId(string $FileId) Set <p>Media file ID. Valid when StorageMode is Permanent.</p>
+ * @method MediaMetaData getMetaData() Obtain <p>Output video meta-information. Valid when StorageMode is Permanent.</p>
+ * @method void setMetaData(MediaMetaData $MetaData) Set <p>Output video meta-information. Valid when StorageMode is Permanent.</p>
+ * @method string getUsageType() Obtain <p>Purpose type of the file.</p><p>Enumeration value:</p><ul><li>scene_url: 3D scene file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original grid model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified grid model file. The FileUrl field has a return value.</li><li>position_info: Spatial position info of the scenario. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
+ * @method void setUsageType(string $UsageType) Set <p>Purpose type of the file.</p><p>Enumeration value:</p><ul><li>scene_url: 3D scene file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original grid model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified grid model file. The FileUrl field has a return value.</li><li>position_info: Spatial position info of the scenario. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
  */
 class AigcVideoTaskOutputFileInfo extends AbstractModel
 {
     /**
-     * @var string Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
-Default value: Temporary
+     * @var string <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
      */
     public $StorageMode;
 
     /**
-     * @var string Output filename, up to 64 characters. Default filename is specified generation by system. Valid when StorageMode is Permanent.
+     * @var string <p>Output file name, up to 64 characters. Default filename is specified by the system. Valid when StorageMode is Permanent.</p>
      */
     public $MediaName;
 
     /**
-     * @var integer Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
-
+     * @var integer <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API. Valid at that time when StorageMode is Permanent.</p>
      */
     public $ClassId;
 
     /**
-     * @var string Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string File type, such as mp4, flv.
+     * @var string <p>File type, such as mp4 or flv.</p>
      */
     public $FileType;
 
     /**
-     * @var string Media file playback address.
+     * @var string <p>Media file playback address.</p>
      */
     public $FileUrl;
 
     /**
-     * @var string Media file ID. Valid when StorageMode is Permanent.
+     * @var string <p>File content. Return value is available when UsageType is position_info.</p>
+     */
+    public $FileContent;
+
+    /**
+     * @var string <p>Media file ID. Valid when StorageMode is Permanent.</p>
      */
     public $FileId;
 
     /**
-     * @var MediaMetaData Output video meta information. Valid when StorageMode is Permanent.
+     * @var MediaMetaData <p>Output video meta-information. Valid when StorageMode is Permanent.</p>
      */
     public $MetaData;
 
     /**
-     * @param string $StorageMode Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
-Default value: Temporary
-     * @param string $MediaName Output filename, up to 64 characters. Default filename is specified generation by system. Valid when StorageMode is Permanent.
-     * @param integer $ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+     * @var string <p>Purpose type of the file.</p><p>Enumeration value:</p><ul><li>scene_url: 3D scene file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original grid model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified grid model file. The FileUrl field has a return value.</li><li>position_info: Spatial position info of the scenario. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
+     */
+    public $UsageType;
 
-     * @param string $ExpireTime Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $FileType File type, such as mp4, flv.
-     * @param string $FileUrl Media file playback address.
-     * @param string $FileId Media file ID. Valid when StorageMode is Permanent.
-     * @param MediaMetaData $MetaData Output video meta information. Valid when StorageMode is Permanent.
+    /**
+     * @param string $StorageMode <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
+     * @param string $MediaName <p>Output file name, up to 64 characters. Default filename is specified by the system. Valid when StorageMode is Permanent.</p>
+     * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API. Valid at that time when StorageMode is Permanent.</p>
+     * @param string $ExpireTime <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @param string $FileType <p>File type, such as mp4 or flv.</p>
+     * @param string $FileUrl <p>Media file playback address.</p>
+     * @param string $FileContent <p>File content. Return value is available when UsageType is position_info.</p>
+     * @param string $FileId <p>Media file ID. Valid when StorageMode is Permanent.</p>
+     * @param MediaMetaData $MetaData <p>Output video meta-information. Valid when StorageMode is Permanent.</p>
+     * @param string $UsageType <p>Purpose type of the file.</p><p>Enumeration value:</p><ul><li>scene_url: 3D scene file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original grid model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified grid model file. The FileUrl field has a return value.</li><li>position_info: Spatial position info of the scenario. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
      */
     function __construct()
     {
@@ -134,6 +142,10 @@ Default value: Temporary
             $this->FileUrl = $param["FileUrl"];
         }
 
+        if (array_key_exists("FileContent",$param) and $param["FileContent"] !== null) {
+            $this->FileContent = $param["FileContent"];
+        }
+
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
         }
@@ -141,6 +153,10 @@ Default value: Temporary
         if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
             $this->MetaData = new MediaMetaData();
             $this->MetaData->deserialize($param["MetaData"]);
+        }
+
+        if (array_key_exists("UsageType",$param) and $param["UsageType"] !== null) {
+            $this->UsageType = $param["UsageType"];
         }
     }
 }

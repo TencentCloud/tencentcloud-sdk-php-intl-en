@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI outfit change parameter configuration.
  *
- * @method array getClothesFileInfos() Obtain Manually input the image list of **clothing** that needs to be replaced. currently support a maximum of 4 images.
- * @method void setClothesFileInfos(array $ClothesFileInfos) Set Manually input the image list of **clothing** that needs to be replaced. currently support a maximum of 4 images.
+ * @method array getClothesFileInfos() Obtain <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+ * @method void setClothesFileInfos(array $ClothesFileInfos) Set <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+ * @method string getPrompt() Obtain <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
+ * @method void setPrompt(string $Prompt) Set <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
  */
 class ChangeClothesConfig extends AbstractModel
 {
     /**
-     * @var array Manually input the image list of **clothing** that needs to be replaced. currently support a maximum of 4 images.
+     * @var array <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
      */
     public $ClothesFileInfos;
 
     /**
-     * @param array $ClothesFileInfos Manually input the image list of **clothing** that needs to be replaced. currently support a maximum of 4 images.
+     * @var string <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
+     */
+    public $Prompt;
+
+    /**
+     * @param array $ClothesFileInfos <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+     * @param string $Prompt <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class ChangeClothesConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ClothesFileInfos, $obj);
             }
+        }
+
+        if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {
+            $this->Prompt = $param["Prompt"];
         }
     }
 }

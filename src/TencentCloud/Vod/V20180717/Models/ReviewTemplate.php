@@ -18,10 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The details of a moderation template.
+ * Review template detail
  *
- * @method integer getDefinition() Obtain The unique ID of the moderation template.
- * @method void setDefinition(integer $Definition) Set The unique ID of the moderation template.
+ * @method integer getDefinition() Obtain Unique tag of the moderation template.
+ * @method void setDefinition(integer $Definition) Set Unique tag of the moderation template.
  * @method string getName() Obtain The template name.
  * @method void setName(string $Name) Set The template name.
  * @method string getComment() Obtain The template description.
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class ReviewTemplate extends AbstractModel
 {
     /**
-     * @var integer The unique ID of the moderation template.
+     * @var integer Unique tag of the moderation template.
      */
     public $Definition;
 
@@ -79,7 +79,7 @@ class ReviewTemplate extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @param integer $Definition The unique ID of the moderation template.
+     * @param integer $Definition Unique tag of the moderation template.
      * @param string $Name The template name.
      * @param string $Comment The template description.
      * @param string $Type The template type. Valid values:

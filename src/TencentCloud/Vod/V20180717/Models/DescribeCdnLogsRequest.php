@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCdnLogs request structure.
  *
- * @method string getDomainName() Obtain Domain name.
- * @method void setDomainName(string $DomainName) Set Domain name.
- * @method string getStartTime() Obtain Start time for log acquisition in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setStartTime(string $StartTime) Set Start time for log acquisition in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method string getEndTime() Obtain End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F), which must be after the start time.
- * @method void setEndTime(string $EndTime) Set End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F), which must be after the start time.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method integer getLimit() Obtain Maximum return results of pulling paginated queries. Default value: 100; maximum value: 1000
- * @method void setLimit(integer $Limit) Set Maximum return results of pulling paginated queries. Default value: 100; maximum value: 1000
- * @method integer getOffset() Obtain Page number offset from the beginning of paginated queries. Default value: 0
- * @method void setOffset(integer $Offset) Set Page number offset from the beginning of paginated queries. Default value: 0
+ * @method string getDomainName() Obtain <p>Domain name.</p>
+ * @method void setDomainName(string $DomainName) Set <p>Domain name.</p>
+ * @method string getStartTime() Obtain <p>Get log start time point. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+ * @method void setStartTime(string $StartTime) Set <p>Get log start time point. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+ * @method string getEndTime() Obtain <p>End time must be greater than start time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
+ * @method void setEndTime(string $EndTime) Set <p>End time must be greater than start time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
+ * @method integer getSubAppId() Obtain <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+ * @method integer getLimit() Obtain <p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
+ * @method void setLimit(integer $Limit) Set <p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
+ * @method integer getOffset() Obtain <p>Starting offset for pagination pull. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Starting offset for pagination pull. Default value: 0.</p>
  */
 class DescribeCdnLogsRequest extends AbstractModel
 {
     /**
-     * @var string Domain name.
+     * @var string <p>Domain name.</p>
      */
     public $DomainName;
 
     /**
-     * @var string Start time for log acquisition in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string <p>Get log start time point. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
      */
     public $StartTime;
 
     /**
-     * @var string End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F), which must be after the start time.
+     * @var string <p>End time must be greater than start time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
      */
     public $EndTime;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var integer Maximum return results of pulling paginated queries. Default value: 100; maximum value: 1000
+     * @var integer <p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Page number offset from the beginning of paginated queries. Default value: 0
+     * @var integer <p>Starting offset for pagination pull. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @param string $DomainName Domain name.
-     * @param string $StartTime Start time for log acquisition in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param string $EndTime End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F), which must be after the start time.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param integer $Limit Maximum return results of pulling paginated queries. Default value: 100; maximum value: 1000
-     * @param integer $Offset Page number offset from the beginning of paginated queries. Default value: 0
+     * @param string $DomainName <p>Domain name.</p>
+     * @param string $StartTime <p>Get log start time point. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * @param string $EndTime <p>End time must be greater than start time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
+     * @param integer $SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+     * @param integer $Limit <p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
+     * @param integer $Offset <p>Starting offset for pagination pull. Default value: 0.</p>
      */
     function __construct()
     {

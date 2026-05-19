@@ -20,198 +20,198 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSuperPlayerConfig request structure.
  *
- * @method string getName() Obtain Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
- * @method void setName(string $Name) Set Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getAudioVideoType() Obtain Type of audio/video played. Valid values:
-<li>AdaptiveDynamicStreaming</li>
-<li>Transcode</li>
-<li>Original</li>
-Default value: `AdaptiveDynamicStream`
- * @method void setAudioVideoType(string $AudioVideoType) Set Type of audio/video played. Valid values:
-<li>AdaptiveDynamicStreaming</li>
-<li>Transcode</li>
-<li>Original</li>
-Default value: `AdaptiveDynamicStream`
- * @method string getDrmSwitch() Obtain Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
-<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
-<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
-Default value: `OFF`
-This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
- * @method void setDrmSwitch(string $DrmSwitch) Set Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
-<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
-<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
-Default value: `OFF`
-This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
- * @method integer getAdaptiveDynamicStreamingDefinition() Obtain ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+ * @method string getName() Obtain Player configuration name. Length limit: 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (such as test_ABC-123). The name is unique for the same user.
+ * @method void setName(string $Name) Set Player configuration name. Length limit: 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (such as test_ABC-123). The name is unique for the same user.
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getAudioVideoType() Obtain Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcoding output;</li>
+<li>Original: original audio/video.</li>
+Default is AdaptiveDynamicStream.
+ * @method void setAudioVideoType(string $AudioVideoType) Set Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcoding output;</li>
+<li>Original: original audio/video.</li>
+Default is AdaptiveDynamicStream.
+ * @method string getDrmSwitch() Obtain Switch for playing DRM-protected adaptive bitstream.
+<li>ON: Enable, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+ * @method void setDrmSwitch(string $DrmSwitch) Set Switch for playing DRM-protected adaptive bitstream.
+<li>ON: Enable, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+ * @method integer getAdaptiveDynamicStreamingDefinition() Obtain Allowed output of unencrypted adaptive bitstream template ID.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
- * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) Set ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is OFF.
+ * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) Set Allowed output of unencrypted adaptive bitstream template ID.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
- * @method DrmStreamingsInfo getDrmStreamingsInfo() Obtain Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is OFF.
+ * @method DrmStreamingsInfo getDrmStreamingsInfo() Obtain Allowed output of DRM adaptive bitstream template content.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
- * @method void setDrmStreamingsInfo(DrmStreamingsInfo $DrmStreamingsInfo) Set Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is ON.
+ * @method void setDrmStreamingsInfo(DrmStreamingsInfo $DrmStreamingsInfo) Set Allowed output of DRM adaptive bitstream template content.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
- * @method integer getTranscodeDefinition() Obtain ID of the transcoding template allowed for playback
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is ON.
+ * @method integer getTranscodeDefinition() Obtain Allowed output transcoding template ID.
 
-This parameter is required if `AudioVideoType` is `Transcode`.
- * @method void setTranscodeDefinition(integer $TranscodeDefinition) Set ID of the transcoding template allowed for playback
+Required when AudioVideoType is Transcode.
+ * @method void setTranscodeDefinition(integer $TranscodeDefinition) Set Allowed output transcoding template ID.
 
-This parameter is required if `AudioVideoType` is `Transcode`.
- * @method integer getImageSpriteDefinition() Obtain ID of the image sprite generating template that allows output.
- * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) Set ID of the image sprite generating template that allows output.
- * @method array getResolutionNames() Obtain The player displays names for substreams of different resolutions. If left unfilled or filled in a blank array, the default configuration is used:
+Required when AudioVideoType is Transcode.
+ * @method integer getImageSpriteDefinition() Obtain Allowed output sprite template ID.
+ * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) Set Allowed output sprite template ID.
+ * @method array getResolutionNames() Obtain Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array.
 <li>MinEdgeLength: 240, Name: smooth;</li>
-<li>MinEdgeLength: 480, Name: SD; </li>
-<li>MinEdgeLength: 720, Name: HD; </li>
-<li>MinEdgeLength: 1080, Name: Full HD; </li>
-<li>MinEdgeLength: 1440, Name: 2K; </li>
-<li>MinEdgeLength: 2160, Name: 4K; </li>
-<li>MinEdgeLength: 4320, Name: 8K. </li>
- * @method void setResolutionNames(array $ResolutionNames) Set The player displays names for substreams of different resolutions. If left unfilled or filled in a blank array, the default configuration is used:
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
+ * @method void setResolutionNames(array $ResolutionNames) Set Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array.
 <li>MinEdgeLength: 240, Name: smooth;</li>
-<li>MinEdgeLength: 480, Name: SD; </li>
-<li>MinEdgeLength: 720, Name: HD; </li>
-<li>MinEdgeLength: 1080, Name: Full HD; </li>
-<li>MinEdgeLength: 1440, Name: 2K; </li>
-<li>MinEdgeLength: 2160, Name: 4K; </li>
-<li>MinEdgeLength: 4320, Name: 8K. </li>
- * @method string getDomain() Obtain Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
- * @method void setDomain(string $Domain) Set Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
- * @method string getScheme() Obtain Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
+ * @method string getDomain() Obtain Domain name used during playback. Leave it blank or enter Default to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
+ * @method void setDomain(string $Domain) Set Domain name used during playback. Leave it blank or enter Default to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
+ * @method string getScheme() Obtain Scheme used during playback. Leave it blank or enter Default to indicate usage of the scheme in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
- * @method void setScheme(string $Scheme) Set Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+ * @method void setScheme(string $Scheme) Set Scheme used during playback. Leave it blank or enter Default to indicate usage of the scheme in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
- * @method string getComment() Obtain Template description. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
+ * @method string getComment() Obtain Template description, with a length limit of 256 characters.
+ * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
  */
 class CreateSuperPlayerConfigRequest extends AbstractModel
 {
     /**
-     * @var string Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
+     * @var string Player configuration name. Length limit: 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (such as test_ABC-123). The name is unique for the same user.
      */
     public $Name;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Type of audio/video played. Valid values:
-<li>AdaptiveDynamicStreaming</li>
-<li>Transcode</li>
-<li>Original</li>
-Default value: `AdaptiveDynamicStream`
+     * @var string Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcoding output;</li>
+<li>Original: original audio/video.</li>
+Default is AdaptiveDynamicStream.
      */
     public $AudioVideoType;
 
     /**
-     * @var string Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
-<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
-<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
-Default value: `OFF`
-This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
+     * @var string Switch for playing DRM-protected adaptive bitstream.
+<li>ON: Enable, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
      */
     public $DrmSwitch;
 
     /**
-     * @var integer ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+     * @var integer Allowed output of unencrypted adaptive bitstream template ID.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is OFF.
      */
     public $AdaptiveDynamicStreamingDefinition;
 
     /**
-     * @var DrmStreamingsInfo Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+     * @var DrmStreamingsInfo Allowed output of DRM adaptive bitstream template content.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is ON.
      */
     public $DrmStreamingsInfo;
 
     /**
-     * @var integer ID of the transcoding template allowed for playback
+     * @var integer Allowed output transcoding template ID.
 
-This parameter is required if `AudioVideoType` is `Transcode`.
+Required when AudioVideoType is Transcode.
      */
     public $TranscodeDefinition;
 
     /**
-     * @var integer ID of the image sprite generating template that allows output.
+     * @var integer Allowed output sprite template ID.
      */
     public $ImageSpriteDefinition;
 
     /**
-     * @var array The player displays names for substreams of different resolutions. If left unfilled or filled in a blank array, the default configuration is used:
+     * @var array Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array.
 <li>MinEdgeLength: 240, Name: smooth;</li>
-<li>MinEdgeLength: 480, Name: SD; </li>
-<li>MinEdgeLength: 720, Name: HD; </li>
-<li>MinEdgeLength: 1080, Name: Full HD; </li>
-<li>MinEdgeLength: 1440, Name: 2K; </li>
-<li>MinEdgeLength: 2160, Name: 4K; </li>
-<li>MinEdgeLength: 4320, Name: 8K. </li>
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
      */
     public $ResolutionNames;
 
     /**
-     * @var string Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
+     * @var string Domain name used during playback. Leave it blank or enter Default to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
      */
     public $Domain;
 
     /**
-     * @var string Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+     * @var string Scheme used during playback. Leave it blank or enter Default to indicate usage of the scheme in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
      */
     public $Scheme;
 
     /**
-     * @var string Template description. Length limit: 256 characters.
+     * @var string Template description, with a length limit of 256 characters.
      */
     public $Comment;
 
     /**
-     * @param string $Name Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $AudioVideoType Type of audio/video played. Valid values:
-<li>AdaptiveDynamicStreaming</li>
-<li>Transcode</li>
-<li>Original</li>
-Default value: `AdaptiveDynamicStream`
-     * @param string $DrmSwitch Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
-<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
-<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
-Default value: `OFF`
-This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
-     * @param integer $AdaptiveDynamicStreamingDefinition ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+     * @param string $Name Player configuration name. Length limit: 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (such as test_ABC-123). The name is unique for the same user.
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $AudioVideoType Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcoding output;</li>
+<li>Original: original audio/video.</li>
+Default is AdaptiveDynamicStream.
+     * @param string $DrmSwitch Switch for playing DRM-protected adaptive bitstream.
+<li>ON: Enable, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+     * @param integer $AdaptiveDynamicStreamingDefinition Allowed output of unencrypted adaptive bitstream template ID.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
-     * @param DrmStreamingsInfo $DrmStreamingsInfo Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is OFF.
+     * @param DrmStreamingsInfo $DrmStreamingsInfo Allowed output of DRM adaptive bitstream template content.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
-     * @param integer $TranscodeDefinition ID of the transcoding template allowed for playback
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is ON.
+     * @param integer $TranscodeDefinition Allowed output transcoding template ID.
 
-This parameter is required if `AudioVideoType` is `Transcode`.
-     * @param integer $ImageSpriteDefinition ID of the image sprite generating template that allows output.
-     * @param array $ResolutionNames The player displays names for substreams of different resolutions. If left unfilled or filled in a blank array, the default configuration is used:
+Required when AudioVideoType is Transcode.
+     * @param integer $ImageSpriteDefinition Allowed output sprite template ID.
+     * @param array $ResolutionNames Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array.
 <li>MinEdgeLength: 240, Name: smooth;</li>
-<li>MinEdgeLength: 480, Name: SD; </li>
-<li>MinEdgeLength: 720, Name: HD; </li>
-<li>MinEdgeLength: 1080, Name: Full HD; </li>
-<li>MinEdgeLength: 1440, Name: 2K; </li>
-<li>MinEdgeLength: 2160, Name: 4K; </li>
-<li>MinEdgeLength: 4320, Name: 8K. </li>
-     * @param string $Domain Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
-     * @param string $Scheme Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
+     * @param string $Domain Domain name used during playback. Leave it blank or enter Default to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
+     * @param string $Scheme Scheme used during playback. Leave it blank or enter Default to indicate usage of the scheme in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
-     * @param string $Comment Template description. Length limit: 256 characters.
+     * @param string $Comment Template description, with a length limit of 256 characters.
      */
     function __construct()
     {

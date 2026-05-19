@@ -20,130 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Domain name information
  *
- * @method string getDomain() Obtain Domain name
- * @method void setDomain(string $Domain) Set Domain name
- * @method array getAccelerateAreaInfos() Obtain Acceleration region information
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setAccelerateAreaInfos(array $AccelerateAreaInfos) Set Acceleration region information
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method string getDeployStatus() Obtain Deployment status. Valid values:
-<li>Online</li>
-<li>Deploying</li>
-<li>Locked: you cannot change the deployment status of locked domain names</li>
- * @method void setDeployStatus(string $DeployStatus) Set Deployment status. Valid values:
-<li>Online</li>
-<li>Deploying</li>
-<li>Locked: you cannot change the deployment status of locked domain names</li>
- * @method DomainHTTPSConfig getHTTPSConfig() Obtain HTTPS configuration information
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setHTTPSConfig(DomainHTTPSConfig $HTTPSConfig) Set HTTPS configuration information
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() Obtain [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy $UrlSignatureAuthPolicy) Set [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method RefererAuthPolicy getRefererAuthPolicy() Obtain [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setRefererAuthPolicy(RefererAuthPolicy $RefererAuthPolicy) Set [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method string getCreateTime() Obtain The time when the domain name was added in the VOD system
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
- * @method void setCreateTime(string $CreateTime) Set The time when the domain name was added in the VOD system
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
- * @method DomainQUICConfig getQUICConfig() Obtain The QUIC configuration for the domain.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQUICConfig(DomainQUICConfig $QUICConfig) Set The QUIC configuration for the domain.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method IPFilterPolicy getIPFilterPolicy() Obtain 
- * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) Set 
- * @method string getType() Obtain Domain type. Valid values:
-<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
- * @method void setType(string $Type) Set Domain type. Valid values:
-<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+ * @method string getDomain() Obtain <p>Domain name.</p>
+ * @method void setDomain(string $Domain) Set <p>Domain name.</p>
+ * @method array getAccelerateAreaInfos() Obtain <p>Acceleration region information.</p>
+ * @method void setAccelerateAreaInfos(array $AccelerateAreaInfos) Set <p>Acceleration region information.</p>
+ * @method string getDeployStatus() Obtain <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
+ * @method void setDeployStatus(string $DeployStatus) Set <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
+ * @method DomainHTTPSConfig getHTTPSConfig() Obtain <p>HTTPS configuration message.</p>
+ * @method void setHTTPSConfig(DomainHTTPSConfig $HTTPSConfig) Set <p>HTTPS configuration message.</p>
+ * @method UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() Obtain <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
+ * @method void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy $UrlSignatureAuthPolicy) Set <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
+ * @method RefererAuthPolicy getRefererAuthPolicy() Obtain <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
+ * @method void setRefererAuthPolicy(RefererAuthPolicy $RefererAuthPolicy) Set <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
+ * @method string getCreateTime() Obtain <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
+ * @method void setCreateTime(string $CreateTime) Set <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
+ * @method DomainQUICConfig getQUICConfig() Obtain <p>Domain name QUIC configuration message.</p>
+ * @method void setQUICConfig(DomainQUICConfig $QUICConfig) Set <p>Domain name QUIC configuration message.</p>
+ * @method IPFilterPolicy getIPFilterPolicy() Obtain <p>IP access restriction configuration message.</p>
+ * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) Set <p>IP access restriction configuration message.</p>
+ * @method string getType() Obtain <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
+ * @method void setType(string $Type) Set <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
  */
 class DomainDetailInfo extends AbstractModel
 {
     /**
-     * @var string Domain name
+     * @var string <p>Domain name.</p>
      */
     public $Domain;
 
     /**
-     * @var array Acceleration region information
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var array <p>Acceleration region information.</p>
      */
     public $AccelerateAreaInfos;
 
     /**
-     * @var string Deployment status. Valid values:
-<li>Online</li>
-<li>Deploying</li>
-<li>Locked: you cannot change the deployment status of locked domain names</li>
+     * @var string <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
      */
     public $DeployStatus;
 
     /**
-     * @var DomainHTTPSConfig HTTPS configuration information
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var DomainHTTPSConfig <p>HTTPS configuration message.</p>
      */
     public $HTTPSConfig;
 
     /**
-     * @var UrlSignatureAuthPolicy [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var UrlSignatureAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
      */
     public $UrlSignatureAuthPolicy;
 
     /**
-     * @var RefererAuthPolicy [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var RefererAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
      */
     public $RefererAuthPolicy;
 
     /**
-     * @var string The time when the domain name was added in the VOD system
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+     * @var string <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
      */
     public $CreateTime;
 
     /**
-     * @var DomainQUICConfig The QUIC configuration for the domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var DomainQUICConfig <p>Domain name QUIC configuration message.</p>
      */
     public $QUICConfig;
 
     /**
-     * @var IPFilterPolicy 
+     * @var IPFilterPolicy <p>IP access restriction configuration message.</p>
      */
     public $IPFilterPolicy;
 
     /**
-     * @var string Domain type. Valid values:
-<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+     * @var string <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
      */
     public $Type;
 
     /**
-     * @param string $Domain Domain name
-     * @param array $AccelerateAreaInfos Acceleration region information
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param string $DeployStatus Deployment status. Valid values:
-<li>Online</li>
-<li>Deploying</li>
-<li>Locked: you cannot change the deployment status of locked domain names</li>
-     * @param DomainHTTPSConfig $HTTPSConfig HTTPS configuration information
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param UrlSignatureAuthPolicy $UrlSignatureAuthPolicy [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param RefererAuthPolicy $RefererAuthPolicy [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param string $CreateTime The time when the domain name was added in the VOD system
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
-     * @param DomainQUICConfig $QUICConfig The QUIC configuration for the domain.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IPFilterPolicy $IPFilterPolicy 
-     * @param string $Type Domain type. Valid values:
-<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+     * @param string $Domain <p>Domain name.</p>
+     * @param array $AccelerateAreaInfos <p>Acceleration region information.</p>
+     * @param string $DeployStatus <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
+     * @param DomainHTTPSConfig $HTTPSConfig <p>HTTPS configuration message.</p>
+     * @param UrlSignatureAuthPolicy $UrlSignatureAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
+     * @param RefererAuthPolicy $RefererAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
+     * @param string $CreateTime <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
+     * @param DomainQUICConfig $QUICConfig <p>Domain name QUIC configuration message.</p>
+     * @param IPFilterPolicy $IPFilterPolicy <p>IP access restriction configuration message.</p>
+     * @param string $Type <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
      */
     function __construct()
     {

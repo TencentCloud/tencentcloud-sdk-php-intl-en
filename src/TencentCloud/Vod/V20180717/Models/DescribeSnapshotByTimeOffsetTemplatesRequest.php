@@ -20,35 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSnapshotByTimeOffsetTemplates request structure.
  *
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method array getDefinitions() Obtain Unique ID filter of time point screencapturing templates. Array length limit: 100.
- * @method void setDefinitions(array $Definitions) Set Unique ID filter of time point screencapturing templates. Array length limit: 100.
- * @method integer getOffset() Obtain Paged offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Paged offset. Default value: 0.
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method array getDefinitions() Obtain Filtering condition for the unique identifier of the screenshot template at specified time point. The array length cannot exceed 100.
+ * @method void setDefinitions(array $Definitions) Set Filtering condition for the unique identifier of the screenshot template at specified time point. The array length cannot exceed 100.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
- * @method string getType() Obtain Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
- * @method void setType(string $Type) Set Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+ * @method string getType() Obtain Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
+ * @method void setType(string $Type) Set Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
  */
 class DescribeSnapshotByTimeOffsetTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var array Unique ID filter of time point screencapturing templates. Array length limit: 100.
+     * @var array Filtering condition for the unique identifier of the screenshot template at specified time point. The array length cannot exceed 100.
      */
     public $Definitions;
 
     /**
-     * @var integer Paged offset. Default value: 0.
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
@@ -58,20 +58,20 @@ class DescribeSnapshotByTimeOffsetTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+     * @var string Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
      */
     public $Type;
 
     /**
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param array $Definitions Unique ID filter of time point screencapturing templates. Array length limit: 100.
-     * @param integer $Offset Paged offset. Default value: 0.
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param array $Definitions Filtering condition for the unique identifier of the screenshot template at specified time point. The array length cannot exceed 100.
+     * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
-     * @param string $Type Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+     * @param string $Type Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
      */
     function __construct()
     {

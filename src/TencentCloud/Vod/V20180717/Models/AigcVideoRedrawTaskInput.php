@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input of the AIGC video conversion task.
  *
- * @method AigcVideoRedrawTaskInputFileInfo getFileInfo() Obtain 
- * @method void setFileInfo(AigcVideoRedrawTaskInputFileInfo $FileInfo) Set 
- * @method AigcVideoRedrawOutputConfig getOutputConfig() Obtain 
- * @method void setOutputConfig(AigcVideoRedrawOutputConfig $OutputConfig) Set 
+ * @method AigcVideoRedrawTaskInputFileInfo getFileInfo() Obtain <p>Input info of the AIGC video conversion task.</p>
+ * @method void setFileInfo(AigcVideoRedrawTaskInputFileInfo $FileInfo) Set <p>Input info of the AIGC video conversion task.</p>
+ * @method AigcVideoRedrawOutputConfig getOutputConfig() Obtain <p>AIGC video conversion output configuration.</p>
+ * @method void setOutputConfig(AigcVideoRedrawOutputConfig $OutputConfig) Set <p>AIGC video conversion output configuration.</p>
  */
 class AigcVideoRedrawTaskInput extends AbstractModel
 {
     /**
-     * @var AigcVideoRedrawTaskInputFileInfo 
+     * @var AigcVideoRedrawTaskInputFileInfo <p>Input info of the AIGC video conversion task.</p>
      */
     public $FileInfo;
 
     /**
-     * @var AigcVideoRedrawOutputConfig 
+     * @var AigcVideoRedrawOutputConfig <p>AIGC video conversion output configuration.</p>
      */
     public $OutputConfig;
 
     /**
-     * @param AigcVideoRedrawTaskInputFileInfo $FileInfo 
-     * @param AigcVideoRedrawOutputConfig $OutputConfig 
+     * @param AigcVideoRedrawTaskInputFileInfo $FileInfo <p>Input info of the AIGC video conversion task.</p>
+     * @param AigcVideoRedrawOutputConfig $OutputConfig <p>AIGC video conversion output configuration.</p>
      */
     function __construct()
     {

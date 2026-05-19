@@ -28,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCname(string $Cname) Set Cname record.
  * @method string getCreateTime() Obtain Create Time
  * @method void setCreateTime(string $CreateTime) Set Create Time
- * @method CDNDomainConfig getConfig() Obtain CDN domain name configuration information. 
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setConfig(CDNDomainConfig $Config) Set CDN domain name configuration information. 
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method CDNDomainConfig getConfig() Obtain cdn domain configuration information.
+ * @method void setConfig(CDNDomainConfig $Config) Set cdn domain configuration information.
  */
 class CDNDomainInfo extends AbstractModel
 {
@@ -56,8 +54,7 @@ class CDNDomainInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var CDNDomainConfig CDN domain name configuration information. 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var CDNDomainConfig cdn domain configuration information.
      */
     public $Config;
 
@@ -66,8 +63,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $DeployStatus Deployment status.
      * @param string $Cname Cname record.
      * @param string $CreateTime Create Time
-     * @param CDNDomainConfig $Config CDN domain name configuration information. 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param CDNDomainConfig $Config cdn domain configuration information.
      */
     function __construct()
     {

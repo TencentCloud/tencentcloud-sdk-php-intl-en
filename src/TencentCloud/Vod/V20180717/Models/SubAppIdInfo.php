@@ -40,6 +40,18 @@ use TencentCloud\Common\AbstractModel;
 <li>Destroyed: terminated</li>
  * @method string getName() Obtain The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
  * @method void setName(string $Name) Set The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+ * @method string getMode() Obtain Mode of this application. Valid values:
+-fileid: Only in fileid mode
+-fileid+path: FileID & Path mode
+Leave empty to select FileID mode by default
+ * @method void setMode(string $Mode) Set Mode of this application. Valid values:
+-fileid: Only in fileid mode
+-fileid+path: FileID & Path mode
+Leave empty to select FileID mode by default
+ * @method array getStorageRegions() Obtain Storage regions enabled for the sub-app.
+ * @method void setStorageRegions(array $StorageRegions) Set Storage regions enabled for the sub-app.
+ * @method array getTags() Obtain tag bound to the sub-application.
+ * @method void setTags(array $Tags) Set tag bound to the sub-application.
  */
 class SubAppIdInfo extends AbstractModel
 {
@@ -78,6 +90,24 @@ class SubAppIdInfo extends AbstractModel
     public $Name;
 
     /**
+     * @var string Mode of this application. Valid values:
+-fileid: Only in fileid mode
+-fileid+path: FileID & Path mode
+Leave empty to select FileID mode by default
+     */
+    public $Mode;
+
+    /**
+     * @var array Storage regions enabled for the sub-app.
+     */
+    public $StorageRegions;
+
+    /**
+     * @var array tag bound to the sub-application.
+     */
+    public $Tags;
+
+    /**
      * @param integer $SubAppId Subapplication ID.
      * @param string $SubAppIdName The subapplication name.
      * @param string $Description Subapplication overview.
@@ -88,6 +118,12 @@ class SubAppIdInfo extends AbstractModel
 <li>Destroying: terminating</li>
 <li>Destroyed: terminated</li>
      * @param string $Name The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+     * @param string $Mode Mode of this application. Valid values:
+-fileid: Only in fileid mode
+-fileid+path: FileID & Path mode
+Leave empty to select FileID mode by default
+     * @param array $StorageRegions Storage regions enabled for the sub-app.
+     * @param array $Tags tag bound to the sub-application.
      */
     function __construct()
     {
@@ -124,6 +160,23 @@ class SubAppIdInfo extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
+        }
+
+        if (array_key_exists("StorageRegions",$param) and $param["StorageRegions"] !== null) {
+            $this->StorageRegions = $param["StorageRegions"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

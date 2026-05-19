@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AI-generated product 360-degree show video parameter configuration
  *
- * @method string getCameraMovement() Obtain 
- * @method void setCameraMovement(string $CameraMovement) Set 
+ * @method string getCameraMovement() Obtain Camera movement method. Supported values: AutoMatch, ZoomIn, ZoomOut, GlideRight, GlideLeft, CraneDown.
+ * @method void setCameraMovement(string $CameraMovement) Set Camera movement method. Supported values: AutoMatch, ZoomIn, ZoomOut, GlideRight, GlideLeft, CraneDown.
  */
 class ProductShowcaseConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Camera movement method. Supported values: AutoMatch, ZoomIn, ZoomOut, GlideRight, GlideLeft, CraneDown.
      */
     public $CameraMovement;
 
     /**
-     * @param string $CameraMovement 
+     * @param string $CameraMovement Camera movement method. Supported values: AutoMatch, ZoomIn, ZoomOut, GlideRight, GlideLeft, CraneDown.
      */
     function __construct()
     {

@@ -58,8 +58,8 @@ If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
 <li>`libfdk_aac`</li>
 If `Container` is `wav`, the valid value is:
 <li>`pcm16`</li>
- * @method integer getBitrate() Obtain Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
- * @method void setBitrate(integer $Bitrate) Set Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+ * @method integer getBitrate() Obtain Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps. When value is 0, it means VOD automatically sets bitrate.
+ * @method void setBitrate(integer $Bitrate) Set Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps. When value is 0, it means VOD automatically sets bitrate.
  * @method integer getSampleRate() Obtain The audio sample rate. Valid values:
 <li>`16000` (valid only if `Codec` is `pcm16`)</li>
 <li>`32000`</li>
@@ -109,7 +109,7 @@ If `Container` is `wav`, the valid value is:
     public $Codec;
 
     /**
-     * @var integer Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+     * @var integer Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps. When value is 0, it means VOD automatically sets bitrate.
      */
     public $Bitrate;
 
@@ -152,7 +152,7 @@ If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
 <li>`libfdk_aac`</li>
 If `Container` is `wav`, the valid value is:
 <li>`pcm16`</li>
-     * @param integer $Bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+     * @param integer $Bitrate Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps. When value is 0, it means VOD automatically sets bitrate.
      * @param integer $SampleRate The audio sample rate. Valid values:
 <li>`16000` (valid only if `Codec` is `pcm16`)</li>
 <li>`32000`</li>

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output media file configuration for the scenario-based AIGC image generation task.
  *
- * @method string getStorageMode() Obtain <p>Storage mode. Valid values: <li>Permanent: Permanent storage. Generated image files will be stored in VOD and the FileId can be obtained in event notification;</li> <li>Temporary: Temporary storage. Generated image files will not be stored in VOD, and a temporary access URL can be obtained in event notification;</li><br>Default value: Temporary</p>
- * @method void setStorageMode(string $StorageMode) Set <p>Storage mode. Valid values: <li>Permanent: Permanent storage. Generated image files will be stored in VOD and the FileId can be obtained in event notification;</li> <li>Temporary: Temporary storage. Generated image files will not be stored in VOD, and a temporary access URL can be obtained in event notification;</li><br>Default value: Temporary</p>
+ * @method string getStorageMode() Obtain <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from the event notification.</li></ul><p>Default value: Temporary</p>
+ * @method void setStorageMode(string $StorageMode) Set <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from the event notification.</li></ul><p>Default value: Temporary</p>
  * @method string getMediaName() Obtain <p>Output filename, up to 64 characters. Default filename is specified by the system.</p>
  * @method void setMediaName(string $MediaName) Set <p>Output filename, up to 64 characters. Default filename is specified by the system.</p>
  * @method integer getClassId() Obtain <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class SceneAigcImageOutputConfig extends AbstractModel
 {
     /**
-     * @var string <p>Storage mode. Valid values: <li>Permanent: Permanent storage. Generated image files will be stored in VOD and the FileId can be obtained in event notification;</li> <li>Temporary: Temporary storage. Generated image files will not be stored in VOD, and a temporary access URL can be obtained in event notification;</li><br>Default value: Temporary</p>
+     * @var string <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from the event notification.</li></ul><p>Default value: Temporary</p>
      */
     public $StorageMode;
 
@@ -87,7 +87,7 @@ class SceneAigcImageOutputConfig extends AbstractModel
     public $Resolution;
 
     /**
-     * @param string $StorageMode <p>Storage mode. Valid values: <li>Permanent: Permanent storage. Generated image files will be stored in VOD and the FileId can be obtained in event notification;</li> <li>Temporary: Temporary storage. Generated image files will not be stored in VOD, and a temporary access URL can be obtained in event notification;</li><br>Default value: Temporary</p>
+     * @param string $StorageMode <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from the event notification.</li></ul><p>Default value: Temporary</p>
      * @param string $MediaName <p>Output filename, up to 64 characters. Default filename is specified by the system.</p>
      * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
      * @param string $ExpireTime <p>Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>

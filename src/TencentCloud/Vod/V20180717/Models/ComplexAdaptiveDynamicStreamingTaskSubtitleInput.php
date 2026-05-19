@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameters for subtitles in the complex adaptive bitrate streaming task.
+ * Input parameter of adaptive bitrate task multilingual subtitles.
  *
- * @method string getId() Obtain Subtitle ID, which must belongs to the main media.
- * @method void setId(string $Id) Set Subtitle ID, which must belongs to the main media.
- * @method string getDefault() Obtain Whether to set as the default subtitle for adaptive bitrate streaming.
-<li>YES: Set as the default subtitle;</li>
-<li>NO: Not set as the default subtitle (default value).</li>
- * @method void setDefault(string $Default) Set Whether to set as the default subtitle for adaptive bitrate streaming.
-<li>YES: Set as the default subtitle;</li>
-<li>NO: Not set as the default subtitle (default value).</li>
+ * @method string getId() Obtain Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+ * @method void setId(string $Id) Set Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+ * @method string getDefault() Obtain Set as the default subtitle for adaptive bitrate. Value:
+<li>YES: Set as default subtitle;</li>
+<li>NO: Not set as default subtitle (default value).</li>
+ * @method void setDefault(string $Default) Set Set as the default subtitle for adaptive bitrate. Value:
+<li>YES: Set as default subtitle;</li>
+<li>NO: Not set as default subtitle (default value).</li>
  */
 class ComplexAdaptiveDynamicStreamingTaskSubtitleInput extends AbstractModel
 {
     /**
-     * @var string Subtitle ID, which must belongs to the main media.
+     * @var string Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
      */
     public $Id;
 
     /**
-     * @var string Whether to set as the default subtitle for adaptive bitrate streaming.
-<li>YES: Set as the default subtitle;</li>
-<li>NO: Not set as the default subtitle (default value).</li>
+     * @var string Set as the default subtitle for adaptive bitrate. Value:
+<li>YES: Set as default subtitle;</li>
+<li>NO: Not set as default subtitle (default value).</li>
      */
     public $Default;
 
     /**
-     * @param string $Id Subtitle ID, which must belongs to the main media.
-     * @param string $Default Whether to set as the default subtitle for adaptive bitrate streaming.
-<li>YES: Set as the default subtitle;</li>
-<li>NO: Not set as the default subtitle (default value).</li>
+     * @param string $Id Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+     * @param string $Default Set as the default subtitle for adaptive bitrate. Value:
+<li>YES: Set as default subtitle;</li>
+<li>NO: Not set as default subtitle (default value).</li>
      */
     function __construct()
     {

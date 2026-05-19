@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The information of an image moderation segment.
  *
- * @method float getConfidence() Obtain The confidence score for the suspicious segment.
- * @method void setConfidence(float $Confidence) Set The confidence score for the suspicious segment.
- * @method string getSuggestion() Obtain The suggestion. Valid values:
-<li>`review`: The content may be non-compliant and needs to be reviewed.</li>
-<li>`block`: The content is non-compliant and should be blocked.</li>
- * @method void setSuggestion(string $Suggestion) Set The suggestion. Valid values:
-<li>`review`: The content may be non-compliant and needs to be reviewed.</li>
-<li>`block`: The content is non-compliant and should be blocked.</li>
+ * @method float getConfidence() Obtain Score of offensive information involved in suspected clips.
+ * @method void setConfidence(float $Confidence) Set Score of offensive information involved in suspected clips.
+ * @method string getSuggestion() Obtain Result suggestions for identifying violations in suspected clips. Value ranges from...to...
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
+ * @method void setSuggestion(string $Suggestion) Set Result suggestions for identifying violations in suspected clips. Value ranges from...to...
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
  * @method string getLabel() Obtain The most likely label for the suspicious content. Valid values: <li>`Porn`</li> <li>`Terror`</li>
  * @method void setLabel(string $Label) Set The most likely label for the suspicious content. Valid values: <li>`Porn`</li> <li>`Terror`</li>
- * @method string getSubLabel() Obtain The sub-label.
- * @method void setSubLabel(string $SubLabel) Set The sub-label.
- * @method string getForm() Obtain The type of the suspicious segment. Valid values:
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
- * @method void setForm(string $Form) Set The type of the suspicious segment. Valid values:
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
- * @method array getAreaCoordSet() Obtain The pixel coordinates of the suspicious people, icons, or text. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set The pixel coordinates of the suspicious people, icons, or text. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
- * @method string getText() Obtain The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR`.
- * @method void setText(string $Text) Set The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR`.
- * @method array getKeywordSet() Obtain The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR`.
- * @method void setKeywordSet(array $KeywordSet) Set The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR`.
+ * @method string getSubLabel() Obtain Rule violation subtag.
+ * @method void setSubLabel(string $SubLabel) Set Rule violation subtag.
+ * @method string getForm() Obtain Suspected segment is prohibited in the form of, value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on screen.</li>
+ * @method void setForm(string $Form) Set Suspected segment is prohibited in the form of, value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on screen.</li>
+ * @method array getAreaCoordSet() Obtain Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+ * @method string getText() Obtain Valid when Form is OCR, means the OCR Text Content that comes out.
+ * @method void setText(string $Text) Set Valid when Form is OCR, means the OCR Text Content that comes out.
+ * @method array getKeywordSet() Obtain Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments.
+ * @method void setKeywordSet(array $KeywordSet) Set Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments.
  */
 class ReviewImageSegmentItem extends AbstractModel
 {
     /**
-     * @var float The confidence score for the suspicious segment.
+     * @var float Score of offensive information involved in suspected clips.
      */
     public $Confidence;
 
     /**
-     * @var string The suggestion. Valid values:
-<li>`review`: The content may be non-compliant and needs to be reviewed.</li>
-<li>`block`: The content is non-compliant and should be blocked.</li>
+     * @var string Result suggestions for identifying violations in suspected clips. Value ranges from...to...
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
      */
     public $Suggestion;
 
@@ -65,45 +65,45 @@ class ReviewImageSegmentItem extends AbstractModel
     public $Label;
 
     /**
-     * @var string The sub-label.
+     * @var string Rule violation subtag.
      */
     public $SubLabel;
 
     /**
-     * @var string The type of the suspicious segment. Valid values:
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
+     * @var string Suspected segment is prohibited in the form of, value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on screen.</li>
      */
     public $Form;
 
     /**
-     * @var array The pixel coordinates of the suspicious people, icons, or text. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+     * @var array Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
      */
     public $AreaCoordSet;
 
     /**
-     * @var string The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR`.
+     * @var string Valid when Form is OCR, means the OCR Text Content that comes out.
      */
     public $Text;
 
     /**
-     * @var array The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR`.
+     * @var array Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments.
      */
     public $KeywordSet;
 
     /**
-     * @param float $Confidence The confidence score for the suspicious segment.
-     * @param string $Suggestion The suggestion. Valid values:
-<li>`review`: The content may be non-compliant and needs to be reviewed.</li>
-<li>`block`: The content is non-compliant and should be blocked.</li>
+     * @param float $Confidence Score of offensive information involved in suspected clips.
+     * @param string $Suggestion Result suggestions for identifying violations in suspected clips. Value ranges from...to...
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
      * @param string $Label The most likely label for the suspicious content. Valid values: <li>`Porn`</li> <li>`Terror`</li>
-     * @param string $SubLabel The sub-label.
-     * @param string $Form The type of the suspicious segment. Valid values:
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
-     * @param array $AreaCoordSet The pixel coordinates of the suspicious people, icons, or text. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
-     * @param string $Text The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR`.
-     * @param array $KeywordSet The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR`.
+     * @param string $SubLabel Rule violation subtag.
+     * @param string $Form Suspected segment is prohibited in the form of, value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on screen.</li>
+     * @param array $AreaCoordSet Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+     * @param string $Text Valid when Form is OCR, means the OCR Text Content that comes out.
+     * @param array $KeywordSet Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments.
      */
     function __construct()
     {

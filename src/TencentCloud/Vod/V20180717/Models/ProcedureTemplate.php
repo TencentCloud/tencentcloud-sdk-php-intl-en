@@ -44,10 +44,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Parameter of AI-based content analysis task.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain Type parameter of AI-based content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Type parameter of AI-based content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getAiRecognitionTaskSet() Obtain Parameters for the AI content recognition task.
+ * @method void setAiRecognitionTaskSet(array $AiRecognitionTaskSet) Set Parameters for the AI content recognition task.
+ * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method WechatMiniProgramPublishTaskInput getMiniProgramPublishTask() Obtain Parameter of a release on WeChat Mini Program task.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMiniProgramPublishTask(WechatMiniProgramPublishTaskInput $MiniProgramPublishTask) Set Parameter of a release on WeChat Mini Program task.
@@ -100,8 +102,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AiAnalysisTask;
 
     /**
-     * @var AiRecognitionTaskInput Type parameter of AI-based content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Parameters for the AI content recognition task.
+     */
+    public $AiRecognitionTaskSet;
+
+    /**
+     * @var AiRecognitionTaskInput This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     public $AiRecognitionTask;
@@ -141,8 +148,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param AiAnalysisTaskInput $AiAnalysisTask Parameter of AI-based content analysis task.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of AI-based content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $AiRecognitionTaskSet Parameters for the AI content recognition task.
+     * @param AiRecognitionTaskInput $AiRecognitionTask This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param WechatMiniProgramPublishTaskInput $MiniProgramPublishTask Parameter of a release on WeChat Mini Program task.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask The information of the moderation task.
@@ -188,6 +196,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("AiAnalysisTask",$param) and $param["AiAnalysisTask"] !== null) {
             $this->AiAnalysisTask = new AiAnalysisTaskInput();
             $this->AiAnalysisTask->deserialize($param["AiAnalysisTask"]);
+        }
+
+        if (array_key_exists("AiRecognitionTaskSet",$param) and $param["AiRecognitionTaskSet"] !== null) {
+            $this->AiRecognitionTaskSet = [];
+            foreach ($param["AiRecognitionTaskSet"] as $key => $value){
+                $obj = new AiRecognitionTaskInput();
+                $obj->deserialize($value);
+                array_push($this->AiRecognitionTaskSet, $obj);
+            }
         }
 
         if (array_key_exists("AiRecognitionTask",$param) and $param["AiRecognitionTask"] !== null) {

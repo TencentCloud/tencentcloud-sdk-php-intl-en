@@ -20,130 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyQualityInspectTemplate request structure.
  *
- * @method integer getDefinition() Obtain Media quality inspection template ID.
- * @method void setDefinition(integer $Definition) Set Media quality inspection template ID.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getName() Obtain Media quality inspection template name.Length limit: 64 characters.
- * @method void setName(string $Name) Set Media quality inspection template name.Length limit: 64 characters.
- * @method string getComment() Obtain Template description. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
- * @method float getScreenshotInterval() Obtain Frame interval, unit in seconds, minimum value is 1. When not filled, the default frame interval is 1 second.
- * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame interval, unit in seconds, minimum value is 1. When not filled, the default frame interval is 1 second.
- * @method JitterConfigureInfoForUpdate getJitterConfigure() Obtain Control parameters for detecting video jitter and ghosting.
- * @method void setJitterConfigure(JitterConfigureInfoForUpdate $JitterConfigure) Set Control parameters for detecting video jitter and ghosting.
- * @method BlurConfigureInfoForUpdate getBlurConfigure() Obtain Control parameters for detecting video blur.
- * @method void setBlurConfigure(BlurConfigureInfoForUpdate $BlurConfigure) Set Control parameters for detecting video blur.
- * @method AbnormalLightingConfigureInfoForUpdate getAbnormalLightingConfigure() Obtain Control parameters for detecting low brightness and overexposure of video.
- * @method void setAbnormalLightingConfigure(AbnormalLightingConfigureInfoForUpdate $AbnormalLightingConfigure) Set Control parameters for detecting low brightness and overexposure of video.
- * @method CrashScreenConfigureInfoForUpdate getCrashScreenConfigure() Obtain Control parameters for detecting video crash.
- * @method void setCrashScreenConfigure(CrashScreenConfigureInfoForUpdate $CrashScreenConfigure) Set Control parameters for detecting video crash.
- * @method BlackWhiteEdgeConfigureInfoForUpdate getBlackWhiteEdgeConfigure() Obtain Control parameters for detecting video black edges, white edges, black screen, and white screen.
- * @method void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfoForUpdate $BlackWhiteEdgeConfigure) Set Control parameters for detecting video black edges, white edges, black screen, and white screen.
- * @method NoiseConfigureInfoForUpdate getNoiseConfigure() Obtain Control parameters for detecting video noise.
- * @method void setNoiseConfigure(NoiseConfigureInfoForUpdate $NoiseConfigure) Set Control parameters for detecting video noise.
- * @method MosaicConfigureInfoForUpdate getMosaicConfigure() Obtain Control parameters for detecting video mosaic.
- * @method void setMosaicConfigure(MosaicConfigureInfoForUpdate $MosaicConfigure) Set Control parameters for detecting video mosaic.
- * @method QRCodeConfigureInfoForUpdate getQRCodeConfigure() Obtain Control parameters for QR code detection in video.
- * @method void setQRCodeConfigure(QRCodeConfigureInfoForUpdate $QRCodeConfigure) Set Control parameters for QR code detection in video.
- * @method VoiceConfigureInfoForUpdate getVoiceConfigure() Obtain Control parameters for audio (mutes, bass, blast sound).
- * @method void setVoiceConfigure(VoiceConfigureInfoForUpdate $VoiceConfigure) Set Control parameters for audio (mutes, bass, blast sound).
- * @method QualityEvaluationConfigureInfoForUpdate getQualityEvaluationConfigure() Obtain Control parameters for video quality evaluation.
- * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfoForUpdate $QualityEvaluationConfigure) Set Control parameters for video quality evaluation.
+ * @method integer getDefinition() Obtain Template ID.
+ * @method void setDefinition(integer $Definition) Set Template ID.
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getName() Obtain Template name. The length cannot exceed 64 characters.
+ * @method void setName(string $Name) Set Template name. The length cannot exceed 64 characters.
+ * @method string getComment() Obtain Template description, with a length limit of 256 characters.
+ * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
+ * @method float getScreenshotInterval() Obtain Frame interception interval, unit: seconds, minimum value 1.
+ * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame interception interval, unit: seconds, minimum value 1.
+ * @method JitterConfigureInfoForUpdate getJitterConfigure() Obtain Control parameters for video frame jitter and ghosting detection.
+ * @method void setJitterConfigure(JitterConfigureInfoForUpdate $JitterConfigure) Set Control parameters for video frame jitter and ghosting detection.
+ * @method BlurConfigureInfoForUpdate getBlurConfigure() Obtain Control parameters for video frame blur detection.
+ * @method void setBlurConfigure(BlurConfigureInfoForUpdate $BlurConfigure) Set Control parameters for video frame blur detection.
+ * @method AbnormalLightingConfigureInfoForUpdate getAbnormalLightingConfigure() Obtain Control parameters for low-light and overexposure detection in video frames.
+ * @method void setAbnormalLightingConfigure(AbnormalLightingConfigureInfoForUpdate $AbnormalLightingConfigure) Set Control parameters for low-light and overexposure detection in video frames.
+ * @method CrashScreenConfigureInfoForUpdate getCrashScreenConfigure() Obtain Control parameters for screen glitch detection in video footage.
+ * @method void setCrashScreenConfigure(CrashScreenConfigureInfoForUpdate $CrashScreenConfigure) Set Control parameters for screen glitch detection in video footage.
+ * @method BlackWhiteEdgeConfigureInfoForUpdate getBlackWhiteEdgeConfigure() Obtain Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+ * @method void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfoForUpdate $BlackWhiteEdgeConfigure) Set Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+ * @method NoiseConfigureInfoForUpdate getNoiseConfigure() Obtain Control parameters for video frame noise detection.
+ * @method void setNoiseConfigure(NoiseConfigureInfoForUpdate $NoiseConfigure) Set Control parameters for video frame noise detection.
+ * @method MosaicConfigureInfoForUpdate getMosaicConfigure() Obtain Control parameters for video frame mosaic detection.
+ * @method void setMosaicConfigure(MosaicConfigureInfoForUpdate $MosaicConfigure) Set Control parameters for video frame mosaic detection.
+ * @method QRCodeConfigureInfoForUpdate getQRCodeConfigure() Obtain Control parameters for video frame QR code detection.
+ * @method void setQRCodeConfigure(QRCodeConfigureInfoForUpdate $QRCodeConfigure) Set Control parameters for video frame QR code detection.
+ * @method VoiceConfigureInfoForUpdate getVoiceConfigure() Obtain Audio (mute, bass, clipping) detection control parameters.
+ * @method void setVoiceConfigure(VoiceConfigureInfoForUpdate $VoiceConfigure) Set Audio (mute, bass, clipping) detection control parameters.
+ * @method QualityEvaluationConfigureInfoForUpdate getQualityEvaluationConfigure() Obtain Control parameters for video frame quality evaluation.
+ * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfoForUpdate $QualityEvaluationConfigure) Set Control parameters for video frame quality evaluation.
  */
 class ModifyQualityInspectTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Media quality inspection template ID.
+     * @var integer Template ID.
      */
     public $Definition;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Media quality inspection template name.Length limit: 64 characters.
+     * @var string Template name. The length cannot exceed 64 characters.
      */
     public $Name;
 
     /**
-     * @var string Template description. Length limit: 256 characters.
+     * @var string Template description, with a length limit of 256 characters.
      */
     public $Comment;
 
     /**
-     * @var float Frame interval, unit in seconds, minimum value is 1. When not filled, the default frame interval is 1 second.
+     * @var float Frame interception interval, unit: seconds, minimum value 1.
      */
     public $ScreenshotInterval;
 
     /**
-     * @var JitterConfigureInfoForUpdate Control parameters for detecting video jitter and ghosting.
+     * @var JitterConfigureInfoForUpdate Control parameters for video frame jitter and ghosting detection.
      */
     public $JitterConfigure;
 
     /**
-     * @var BlurConfigureInfoForUpdate Control parameters for detecting video blur.
+     * @var BlurConfigureInfoForUpdate Control parameters for video frame blur detection.
      */
     public $BlurConfigure;
 
     /**
-     * @var AbnormalLightingConfigureInfoForUpdate Control parameters for detecting low brightness and overexposure of video.
+     * @var AbnormalLightingConfigureInfoForUpdate Control parameters for low-light and overexposure detection in video frames.
      */
     public $AbnormalLightingConfigure;
 
     /**
-     * @var CrashScreenConfigureInfoForUpdate Control parameters for detecting video crash.
+     * @var CrashScreenConfigureInfoForUpdate Control parameters for screen glitch detection in video footage.
      */
     public $CrashScreenConfigure;
 
     /**
-     * @var BlackWhiteEdgeConfigureInfoForUpdate Control parameters for detecting video black edges, white edges, black screen, and white screen.
+     * @var BlackWhiteEdgeConfigureInfoForUpdate Control parameters for video picture black edge, white edge, black screen, and white screen detection.
      */
     public $BlackWhiteEdgeConfigure;
 
     /**
-     * @var NoiseConfigureInfoForUpdate Control parameters for detecting video noise.
+     * @var NoiseConfigureInfoForUpdate Control parameters for video frame noise detection.
      */
     public $NoiseConfigure;
 
     /**
-     * @var MosaicConfigureInfoForUpdate Control parameters for detecting video mosaic.
+     * @var MosaicConfigureInfoForUpdate Control parameters for video frame mosaic detection.
      */
     public $MosaicConfigure;
 
     /**
-     * @var QRCodeConfigureInfoForUpdate Control parameters for QR code detection in video.
+     * @var QRCodeConfigureInfoForUpdate Control parameters for video frame QR code detection.
      */
     public $QRCodeConfigure;
 
     /**
-     * @var VoiceConfigureInfoForUpdate Control parameters for audio (mutes, bass, blast sound).
+     * @var VoiceConfigureInfoForUpdate Audio (mute, bass, clipping) detection control parameters.
      */
     public $VoiceConfigure;
 
     /**
-     * @var QualityEvaluationConfigureInfoForUpdate Control parameters for video quality evaluation.
+     * @var QualityEvaluationConfigureInfoForUpdate Control parameters for video frame quality evaluation.
      */
     public $QualityEvaluationConfigure;
 
     /**
-     * @param integer $Definition Media quality inspection template ID.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $Name Media quality inspection template name.Length limit: 64 characters.
-     * @param string $Comment Template description. Length limit: 256 characters.
-     * @param float $ScreenshotInterval Frame interval, unit in seconds, minimum value is 1. When not filled, the default frame interval is 1 second.
-     * @param JitterConfigureInfoForUpdate $JitterConfigure Control parameters for detecting video jitter and ghosting.
-     * @param BlurConfigureInfoForUpdate $BlurConfigure Control parameters for detecting video blur.
-     * @param AbnormalLightingConfigureInfoForUpdate $AbnormalLightingConfigure Control parameters for detecting low brightness and overexposure of video.
-     * @param CrashScreenConfigureInfoForUpdate $CrashScreenConfigure Control parameters for detecting video crash.
-     * @param BlackWhiteEdgeConfigureInfoForUpdate $BlackWhiteEdgeConfigure Control parameters for detecting video black edges, white edges, black screen, and white screen.
-     * @param NoiseConfigureInfoForUpdate $NoiseConfigure Control parameters for detecting video noise.
-     * @param MosaicConfigureInfoForUpdate $MosaicConfigure Control parameters for detecting video mosaic.
-     * @param QRCodeConfigureInfoForUpdate $QRCodeConfigure Control parameters for QR code detection in video.
-     * @param VoiceConfigureInfoForUpdate $VoiceConfigure Control parameters for audio (mutes, bass, blast sound).
-     * @param QualityEvaluationConfigureInfoForUpdate $QualityEvaluationConfigure Control parameters for video quality evaluation.
+     * @param integer $Definition Template ID.
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $Name Template name. The length cannot exceed 64 characters.
+     * @param string $Comment Template description, with a length limit of 256 characters.
+     * @param float $ScreenshotInterval Frame interception interval, unit: seconds, minimum value 1.
+     * @param JitterConfigureInfoForUpdate $JitterConfigure Control parameters for video frame jitter and ghosting detection.
+     * @param BlurConfigureInfoForUpdate $BlurConfigure Control parameters for video frame blur detection.
+     * @param AbnormalLightingConfigureInfoForUpdate $AbnormalLightingConfigure Control parameters for low-light and overexposure detection in video frames.
+     * @param CrashScreenConfigureInfoForUpdate $CrashScreenConfigure Control parameters for screen glitch detection in video footage.
+     * @param BlackWhiteEdgeConfigureInfoForUpdate $BlackWhiteEdgeConfigure Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+     * @param NoiseConfigureInfoForUpdate $NoiseConfigure Control parameters for video frame noise detection.
+     * @param MosaicConfigureInfoForUpdate $MosaicConfigure Control parameters for video frame mosaic detection.
+     * @param QRCodeConfigureInfoForUpdate $QRCodeConfigure Control parameters for video frame QR code detection.
+     * @param VoiceConfigureInfoForUpdate $VoiceConfigure Audio (mute, bass, clipping) detection control parameters.
+     * @param QualityEvaluationConfigureInfoForUpdate $QualityEvaluationConfigure Control parameters for video frame quality evaluation.
      */
     function __construct()
     {

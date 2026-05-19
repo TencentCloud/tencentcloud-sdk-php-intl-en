@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFileVerifyDomains() Obtain File verification domain name list.
  * @method void setFileVerifyDomains(array $FileVerifyDomains) Set File verification domain name list.
  * @method string getFileVerifyName() Obtain File verification file name.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setFileVerifyName(string $FileVerifyName) Set File verification file name.
-Note: This field may return null, indicating that no valid value can be obtained.
  */
 class FileVerifyInfo extends AbstractModel
 {
@@ -43,7 +41,6 @@ class FileVerifyInfo extends AbstractModel
 
     /**
      * @var string File verification file name.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $FileVerifyName;
 
@@ -51,7 +48,6 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $FileVerifyUrl File verification URL guidance.
      * @param array $FileVerifyDomains File verification domain name list.
      * @param string $FileVerifyName File verification file name.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

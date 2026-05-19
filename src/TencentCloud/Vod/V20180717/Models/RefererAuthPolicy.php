@@ -34,8 +34,8 @@ When `Status` is set to `Enabled`, `AuthType` must be specified.
 <li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
 <li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
 When `Status` is set to `Enabled`, `AuthType` must be specified.
- * @method array getReferers() Obtain The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
- * @method void setReferers(array $Referers) Set The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
+ * @method array getReferers() Obtain Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
+ * @method void setReferers(array $Referers) Set Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
  * @method string getBlankRefererAllowed() Obtain Whether to allow requests with empty referer to access this domain name. Valid values:
 <li>`Yes`</li>
 <li>`No`</li>
@@ -63,7 +63,7 @@ When `Status` is set to `Enabled`, `AuthType` must be specified.
     public $AuthType;
 
     /**
-     * @var array The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
+     * @var array Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
      */
     public $Referers;
 
@@ -83,7 +83,7 @@ When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified.
 <li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
 <li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
 When `Status` is set to `Enabled`, `AuthType` must be specified.
-     * @param array $Referers The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
+     * @param array $Referers Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
      * @param string $BlankRefererAllowed Whether to allow requests with empty referer to access this domain name. Valid values:
 <li>`Yes`</li>
 <li>`No`</li>

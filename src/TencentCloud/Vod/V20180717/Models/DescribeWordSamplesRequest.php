@@ -20,62 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWordSamples request structure.
  *
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method array getUsages() Obtain <b>Keyword usage. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition
-2. Recognition.Asr: ASR-based content recognition
-3. Review.Ocr: OCR-based inappropriate information recognition
-4. Review.Asr: ASR-based inappropriate information recognition
-<b>Valid values can also be:</b>
-5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
-6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
-You can select multiple elements, which are connected by OR logic. If a use case contains any element in this parameter, the keyword sample will be used.
- * @method void setUsages(array $Usages) Set <b>Keyword usage. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition
-2. Recognition.Asr: ASR-based content recognition
-3. Review.Ocr: OCR-based inappropriate information recognition
-4. Review.Asr: ASR-based inappropriate information recognition
-<b>Valid values can also be:</b>
-5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
-6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
-You can select multiple elements, which are connected by OR logic. If a use case contains any element in this parameter, the keyword sample will be used.
- * @method array getKeywords() Obtain Keyword filter. Array length limit: 100 words.
- * @method void setKeywords(array $Keywords) Set Keyword filter. Array length limit: 100 words.
- * @method array getTags() Obtain Tag filter. Array length limit: 20 words.
- * @method void setTags(array $Tags) Set Tag filter. Array length limit: 20 words.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method array getUsages() Obtain <b>Keyword application scenario filtering conditions, available values:</b>
+1. Recognition.Ocr: Perform content recognition using OCR.
+2. Recognition.Asr: Perform content recognition using audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition using OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition using OCR and audio recognition technology, equivalent to 1+2.
+6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+Multiple selections allowed. The relationship between elements is OR, meaning records where the keyword's application scenario includes any element in the field collection meet the condition.
+ * @method void setUsages(array $Usages) Set <b>Keyword application scenario filtering conditions, available values:</b>
+1. Recognition.Ocr: Perform content recognition using OCR.
+2. Recognition.Asr: Perform content recognition using audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition using OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition using OCR and audio recognition technology, equivalent to 1+2.
+6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+Multiple selections allowed. The relationship between elements is OR, meaning records where the keyword's application scenario includes any element in the field collection meet the condition.
+ * @method array getKeywords() Obtain Keyword filtering conditions. The array can contain up to 100 keywords.
+ * @method void setKeywords(array $Keywords) Set Keyword filtering conditions. The array can contain up to 100 keywords.
+ * @method array getTags() Obtain Tag filtering condition. Array length limit: 20 words.
+ * @method void setTags(array $Tags) Set Tag filtering condition. Array length limit: 20 words.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
- * @method integer getLimit() Obtain Number of entries to be returned. Default value: 100. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of entries to be returned. Default value: 100. Maximum value: 100.
+ * @method integer getLimit() Obtain Number of returned entries. Default value: 100. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 100. Maximum value: 100.
  */
 class DescribeWordSamplesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var array <b>Keyword usage. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition
-2. Recognition.Asr: ASR-based content recognition
-3. Review.Ocr: OCR-based inappropriate information recognition
-4. Review.Asr: ASR-based inappropriate information recognition
-<b>Valid values can also be:</b>
-5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
-6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
-You can select multiple elements, which are connected by OR logic. If a use case contains any element in this parameter, the keyword sample will be used.
+     * @var array <b>Keyword application scenario filtering conditions, available values:</b>
+1. Recognition.Ocr: Perform content recognition using OCR.
+2. Recognition.Asr: Perform content recognition using audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition using OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition using OCR and audio recognition technology, equivalent to 1+2.
+6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+Multiple selections allowed. The relationship between elements is OR, meaning records where the keyword's application scenario includes any element in the field collection meet the condition.
      */
     public $Usages;
 
     /**
-     * @var array Keyword filter. Array length limit: 100 words.
+     * @var array Keyword filtering conditions. The array can contain up to 100 keywords.
      */
     public $Keywords;
 
     /**
-     * @var array Tag filter. Array length limit: 20 words.
+     * @var array Tag filtering condition. Array length limit: 20 words.
      */
     public $Tags;
 
@@ -85,25 +85,25 @@ You can select multiple elements, which are connected by OR logic. If a use case
     public $Offset;
 
     /**
-     * @var integer Number of entries to be returned. Default value: 100. Maximum value: 100.
+     * @var integer Number of returned entries. Default value: 100. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param array $Usages <b>Keyword usage. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition
-2. Recognition.Asr: ASR-based content recognition
-3. Review.Ocr: OCR-based inappropriate information recognition
-4. Review.Asr: ASR-based inappropriate information recognition
-<b>Valid values can also be:</b>
-5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
-6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
-You can select multiple elements, which are connected by OR logic. If a use case contains any element in this parameter, the keyword sample will be used.
-     * @param array $Keywords Keyword filter. Array length limit: 100 words.
-     * @param array $Tags Tag filter. Array length limit: 20 words.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param array $Usages <b>Keyword application scenario filtering conditions, available values:</b>
+1. Recognition.Ocr: Perform content recognition using OCR.
+2. Recognition.Asr: Perform content recognition using audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition using OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition using OCR and audio recognition technology, equivalent to 1+2.
+6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+Multiple selections allowed. The relationship between elements is OR, meaning records where the keyword's application scenario includes any element in the field collection meet the condition.
+     * @param array $Keywords Keyword filtering conditions. The array can contain up to 100 keywords.
+     * @param array $Tags Tag filtering condition. Array length limit: 20 words.
      * @param integer $Offset Pagination offset. Default value: 0.
-     * @param integer $Limit Number of entries to be returned. Default value: 100. Maximum value: 100.
+     * @param integer $Limit Number of returned entries. Default value: 100. Maximum value: 100.
      */
     function __construct()
     {

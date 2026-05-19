@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getComment() Obtain Template description.
  * @method void setComment(string $Comment) Set Template description.
  * @method VideoConfigureInfo getVideoConfigure() Obtain Video parameter configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setVideoConfigure(VideoConfigureInfo $VideoConfigure) Set Video parameter configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method WatermarkConfigureData getWatermarkConfigure() Obtain Watermark parameter configuration. 
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setWatermarkConfigure(WatermarkConfigureData $WatermarkConfigure) Set Watermark parameter configuration. 
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method WatermarkConfigureData getWatermarkConfigure() Obtain Watermark parameter configuration.
+ * @method void setWatermarkConfigure(WatermarkConfigureData $WatermarkConfigure) Set Watermark parameter configuration.
  */
 class JustInTimeTranscodeTemplate extends AbstractModel
 {
@@ -54,13 +50,11 @@ class JustInTimeTranscodeTemplate extends AbstractModel
 
     /**
      * @var VideoConfigureInfo Video parameter configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $VideoConfigure;
 
     /**
-     * @var WatermarkConfigureData Watermark parameter configuration. 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var WatermarkConfigureData Watermark parameter configuration.
      */
     public $WatermarkConfigure;
 
@@ -69,9 +63,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $Name Template name.
      * @param string $Comment Template description.
      * @param VideoConfigureInfo $VideoConfigure Video parameter configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param WatermarkConfigureData $WatermarkConfigure Watermark parameter configuration. 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param WatermarkConfigureData $WatermarkConfigure Watermark parameter configuration.
      */
     function __construct()
     {

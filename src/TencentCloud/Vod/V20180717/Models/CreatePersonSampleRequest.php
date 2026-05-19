@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePersonSample request structure.
  *
- * @method string getName() Obtain Name of a sample. Length limit: 20 characters.
- * @method void setName(string $Name) Set Name of a sample. Length limit: 20 characters.
- * @method array getUsages() Obtain Usage of a sample. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: equivalent to 1+2.
- * @method void setUsages(array $Usages) Set Usage of a sample. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: equivalent to 1+2.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getDescription() Obtain Description of a sample. Length limit: 1024 characters.
- * @method void setDescription(string $Description) Set Description of a sample. Length limit: 1024 characters.
- * @method array getFaceContents() Obtain String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
-Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
- * @method void setFaceContents(array $FaceContents) Set String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
-Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
- * @method array getTags() Obtain Tags of a sample
-<li>Array length limit: 20 tags</li>
-<li>Length limit of a tag: 128 characters</li>
- * @method void setTags(array $Tags) Set Tags of a sample
-<li>Array length limit: 20 tags</li>
-<li>Length limit of a tag: 128 characters</li>
+ * @method string getName() Obtain Material name, length limited to 20 characters.
+ * @method void setName(string $Name) Set Material name, length limited to 20 characters.
+ * @method array getUsages() Obtain Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: For inappropriate content, equivalent to Review.Face.
+3. All: Include all of the above, equivalent to 1+2.
+ * @method void setUsages(array $Usages) Set Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: For inappropriate content, equivalent to Review.Face.
+3. All: Include all of the above, equivalent to 1+2.
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getDescription() Obtain Material description, with a length limit of 1024 characters.
+ * @method void setDescription(string $Description) Set Material description, with a length limit of 1024 characters.
+ * @method array getFaceContents() Obtain The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
+ * @method void setFaceContents(array $FaceContents) Set The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
+ * @method array getTags() Obtain material tag
+<li>Array length limit: 20 tags;</li>
+<li>Length limit for a single tag: 128 characters.</li>
+ * @method void setTags(array $Tags) Set material tag
+<li>Array length limit: 20 tags;</li>
+<li>Length limit for a single tag: 128 characters.</li>
  */
 class CreatePersonSampleRequest extends AbstractModel
 {
     /**
-     * @var string Name of a sample. Length limit: 20 characters.
+     * @var string Material name, length limited to 20 characters.
      */
     public $Name;
 
     /**
-     * @var array Usage of a sample. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: equivalent to 1+2.
+     * @var array Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: For inappropriate content, equivalent to Review.Face.
+3. All: Include all of the above, equivalent to 1+2.
      */
     public $Usages;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Description of a sample. Length limit: 1024 characters.
+     * @var string Material description, with a length limit of 1024 characters.
      */
     public $Description;
 
     /**
-     * @var array String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
-Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
+     * @var array The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
      */
     public $FaceContents;
 
     /**
-     * @var array Tags of a sample
-<li>Array length limit: 20 tags</li>
-<li>Length limit of a tag: 128 characters</li>
+     * @var array material tag
+<li>Array length limit: 20 tags;</li>
+<li>Length limit for a single tag: 128 characters.</li>
      */
     public $Tags;
 
     /**
-     * @param string $Name Name of a sample. Length limit: 20 characters.
-     * @param array $Usages Usage of a sample. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: equivalent to 1+2.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $Description Description of a sample. Length limit: 1024 characters.
-     * @param array $FaceContents String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
-Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
-     * @param array $Tags Tags of a sample
-<li>Array length limit: 20 tags</li>
-<li>Length limit of a tag: 128 characters</li>
+     * @param string $Name Material name, length limited to 20 characters.
+     * @param array $Usages Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: For inappropriate content, equivalent to Review.Face.
+3. All: Include all of the above, equivalent to 1+2.
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $Description Material description, with a length limit of 1024 characters.
+     * @param array $FaceContents The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
+     * @param array $Tags material tag
+<li>Array length limit: 20 tags;</li>
+<li>Length limit for a single tag: 128 characters.</li>
      */
     function __construct()
     {

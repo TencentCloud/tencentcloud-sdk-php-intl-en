@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSuperPlayerConfigs request structure.
  *
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method array getNames() Obtain Player configuration name filter. Array length limit: 100.
- * @method void setNames(array $Names) Set Player configuration name filter. Array length limit: 100.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method array getNames() Obtain Player configuration name filter condition, with a maximum array length of 100.
+ * @method void setNames(array $Names) Set Player configuration name filter condition, with a maximum array length of 100.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
- * @method integer getLimit() Obtain Number of entries to be returned. Default value: 10. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of entries to be returned. Default value: 10. Maximum value: 100.
- * @method string getType() Obtain Player configuration type filter. Valid values:
-<li>Preset: preset configuration;</li>
-<li>Custom: custom configuration.</li>
- * @method void setType(string $Type) Set Player configuration type filter. Valid values:
-<li>Preset: preset configuration;</li>
-<li>Custom: custom configuration.</li>
+ * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method string getType() Obtain Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: User-customized configuration.</li>
+ * @method void setType(string $Type) Set Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: User-customized configuration.</li>
  */
 class DescribeSuperPlayerConfigsRequest extends AbstractModel
 {
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var array Player configuration name filter. Array length limit: 100.
+     * @var array Player configuration name filter condition, with a maximum array length of 100.
      */
     public $Names;
 
@@ -53,25 +53,25 @@ class DescribeSuperPlayerConfigsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of entries to be returned. Default value: 10. Maximum value: 100.
+     * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @var string Player configuration type filter. Valid values:
-<li>Preset: preset configuration;</li>
-<li>Custom: custom configuration.</li>
+     * @var string Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: User-customized configuration.</li>
      */
     public $Type;
 
     /**
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param array $Names Player configuration name filter. Array length limit: 100.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param array $Names Player configuration name filter condition, with a maximum array length of 100.
      * @param integer $Offset Pagination offset. Default value: 0.
-     * @param integer $Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
-     * @param string $Type Player configuration type filter. Valid values:
-<li>Preset: preset configuration;</li>
-<li>Custom: custom configuration.</li>
+     * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * @param string $Type Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: User-customized configuration.</li>
      */
     function __construct()
     {

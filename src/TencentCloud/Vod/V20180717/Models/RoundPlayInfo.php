@@ -48,10 +48,10 @@ Default value: Loop.
 Default value: Loop.
  * @method string getUrl() Obtain Carousel playback address.
  * @method void setUrl(string $Url) Set Carousel playback address.
- * @method string getCreateTime() Obtain Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
- * @method void setCreateTime(string $CreateTime) Set Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
- * @method string getUpdateTime() Obtain Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
- * @method void setUpdateTime(string $UpdateTime) Set Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+ * @method string getCreateTime() Obtain Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method void setCreateTime(string $CreateTime) Set Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method string getUpdateTime() Obtain Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method void setUpdateTime(string $UpdateTime) Set Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
  * @method string getExpiredTime() Obtain Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
  * @method void setExpiredTime(string $ExpiredTime) Set Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
  */
@@ -104,12 +104,12 @@ Default value: Loop.
     public $Url;
 
     /**
-     * @var string Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     * @var string Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public $CreateTime;
 
     /**
-     * @var string Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     * @var string Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public $UpdateTime;
 
@@ -133,8 +133,8 @@ Default value: Enabled.
 <li>Linear: Play once, stop playing after the playlist is played. </li>
 Default value: Loop.
      * @param string $Url Carousel playback address.
-     * @param string $CreateTime Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
-     * @param string $UpdateTime Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     * @param string $CreateTime Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param string $UpdateTime Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      * @param string $ExpiredTime Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
      */
     function __construct()

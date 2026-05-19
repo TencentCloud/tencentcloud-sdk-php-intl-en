@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
 <li>on: on; </li>
 <li>off: off. </li>
  * @method HeuristicCacheConfig getCacheConfig() Obtain Custom heuristic cache time configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setCacheConfig(HeuristicCacheConfig $CacheConfig) Set Custom heuristic cache time configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
  */
 class HeuristicCache extends AbstractModel
 {
@@ -42,7 +40,6 @@ class HeuristicCache extends AbstractModel
 
     /**
      * @var HeuristicCacheConfig Custom heuristic cache time configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $CacheConfig;
 
@@ -51,7 +48,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>on: on; </li>
 <li>off: off. </li>
      * @param HeuristicCacheConfig $CacheConfig Custom heuristic cache time configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Volume: volume adjustment.</li>
  * @method void setType(string $Type) Set Audio operation type. Valid values:
 <li>Volume: volume adjustment.</li>
- * @method AudioVolumeParam getVolumeParam() Obtain Volume adjustment parameter, which is valid if `Type` is `Volume`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVolumeParam(AudioVolumeParam $VolumeParam) Set Volume adjustment parameter, which is valid if `Type` is `Volume`.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AudioVolumeParam getVolumeParam() Obtain Audio volume adjustment parameter. Valid when Type = Volume.
+ * @method void setVolumeParam(AudioVolumeParam $VolumeParam) Set Audio volume adjustment parameter. Valid when Type = Volume.
  */
 class AudioTransform extends AbstractModel
 {
@@ -38,16 +36,14 @@ class AudioTransform extends AbstractModel
     public $Type;
 
     /**
-     * @var AudioVolumeParam Volume adjustment parameter, which is valid if `Type` is `Volume`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AudioVolumeParam Audio volume adjustment parameter. Valid when Type = Volume.
      */
     public $VolumeParam;
 
     /**
      * @param string $Type Audio operation type. Valid values:
 <li>Volume: volume adjustment.</li>
-     * @param AudioVolumeParam $VolumeParam Volume adjustment parameter, which is valid if `Type` is `Volume`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AudioVolumeParam $VolumeParam Audio volume adjustment parameter. Valid when Type = Volume.
      */
     function __construct()
     {

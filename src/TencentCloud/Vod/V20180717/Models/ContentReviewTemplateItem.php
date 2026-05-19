@@ -26,30 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Name of an intelligent recognition template. Max 64 characters
  * @method string getComment() Obtain Description of an intelligent recognition template. Max 256 characters
  * @method void setComment(string $Comment) Set Description of an intelligent recognition template. Max 256 characters
- * @method PornConfigureInfo getPornConfigure() Obtain Parameters for recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Parameters for recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Parameters for recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Parameters for recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Parameters for recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Parameters for recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain Custom recognition parameters
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set Custom recognition parameters
-Note: This field may return `null`, indicating that no valid value can be found.
+ * @method PornConfigureInfo getPornConfigure() Obtain Authentication involves control parameters for offensive information.
+ * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Authentication involves control parameters for offensive information.
+ * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Authentication involves control parameters for unsafe information.
+ * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Authentication involves control parameters for unsafe information.
+ * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Authentication involves control parameters for inappropriate information.
+ * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Authentication involves control parameters for inappropriate information.
+ * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related illegal activities.</li>
+ * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related illegal activities.</li>
+ * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain Customize video moderation control parameters.
+ * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set Customize video moderation control parameters.
  * @method string getReviewWallSwitch() Obtain Whether to subject the recognition result to human review
 <li>ON</li>
 <li>OFF</li>
@@ -81,34 +71,29 @@ class ContentReviewTemplateItem extends AbstractModel
     public $Comment;
 
     /**
-     * @var PornConfigureInfo Parameters for recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var PornConfigureInfo Authentication involves control parameters for offensive information.
      */
     public $PornConfigure;
 
     /**
-     * @var TerrorismConfigureInfo Parameters for recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var TerrorismConfigureInfo Authentication involves control parameters for unsafe information.
      */
     public $TerrorismConfigure;
 
     /**
-     * @var PoliticalConfigureInfo Parameters for recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var PoliticalConfigureInfo Authentication involves control parameters for inappropriate information.
      */
     public $PoliticalConfigure;
 
     /**
-     * @var ProhibitedConfigureInfo Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ProhibitedConfigureInfo Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related illegal activities.</li>
      */
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfo Custom recognition parameters
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var UserDefineConfigureInfo Customize video moderation control parameters.
      */
     public $UserDefineConfigure;
 
@@ -138,18 +123,13 @@ Note: This field may return `null`, indicating that no valid value can be found.
      * @param integer $Definition Unique ID of an intelligent recognition template
      * @param string $Name Name of an intelligent recognition template. Max 64 characters
      * @param string $Comment Description of an intelligent recognition template. Max 256 characters
-     * @param PornConfigureInfo $PornConfigure Parameters for recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param TerrorismConfigureInfo $TerrorismConfigure Parameters for recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param PoliticalConfigureInfo $PoliticalConfigure Parameters for recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param ProhibitedConfigureInfo $ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UserDefineConfigureInfo $UserDefineConfigure Custom recognition parameters
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @param PornConfigureInfo $PornConfigure Authentication involves control parameters for offensive information.
+     * @param TerrorismConfigureInfo $TerrorismConfigure Authentication involves control parameters for unsafe information.
+     * @param PoliticalConfigureInfo $PoliticalConfigure Authentication involves control parameters for inappropriate information.
+     * @param ProhibitedConfigureInfo $ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related illegal activities.</li>
+     * @param UserDefineConfigureInfo $UserDefineConfigure Customize video moderation control parameters.
      * @param string $ReviewWallSwitch Whether to subject the recognition result to human review
 <li>ON</li>
 <li>OFF</li>

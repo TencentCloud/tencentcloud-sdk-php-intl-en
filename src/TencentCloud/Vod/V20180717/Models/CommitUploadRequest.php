@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CommitUpload request structure.
  *
- * @method string getVodSessionKey() Obtain VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API.
- * @method void setVodSessionKey(string $VodSessionKey) Set VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method string getVodSessionKey() Obtain <p>VOD session takes the returned value VodSessionKey from the upload request API.</p>
+ * @method void setVodSessionKey(string $VodSessionKey) Set <p>VOD session takes the returned value VodSessionKey from the upload request API.</p>
+ * @method integer getSubAppId() Obtain <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
  */
 class CommitUploadRequest extends AbstractModel
 {
     /**
-     * @var string VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API.
+     * @var string <p>VOD session takes the returned value VodSessionKey from the upload request API.</p>
      */
     public $VodSessionKey;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @param string $VodSessionKey VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param string $VodSessionKey <p>VOD session takes the returned value VodSessionKey from the upload request API.</p>
+     * @param integer $SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     function __construct()
     {

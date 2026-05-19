@@ -30,10 +30,10 @@ The default codec is H.264.
 <li>`libx265`: H.265</li>
 <li>`av1`: AOMedia Video 1</li>
 The default codec is H.264.
- * @method integer getBitrate() Obtain The video bitrate (Kbps). Value range: 0 and 128-35000.
-If the value is `0`, the original video bitrate will be used.
- * @method void setBitrate(integer $Bitrate) Set The video bitrate (Kbps). Value range: 0 and 128-35000.
-If the value is `0`, the original video bitrate will be used.
+ * @method integer getBitrate() Obtain Bitrate of video stream, value ranges from 0 to [128, 35000], measurement unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
+ * @method void setBitrate(integer $Bitrate) Set Bitrate of video stream, value ranges from 0 to [128, 35000], measurement unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
  * @method integer getFps() Obtain The video frame rate (Hz). Value range: 0-100. If the value is `0`, the original video frame rate will be used.
  * @method void setFps(integer $Fps) Set The video frame rate (Hz). Value range: 0-100. If the value is `0`, the original video frame rate will be used.
  * @method string getResolutionAdaptive() Obtain Resolution adaption. Valid values:
@@ -101,8 +101,8 @@ The default codec is H.264.
     public $Codec;
 
     /**
-     * @var integer The video bitrate (Kbps). Value range: 0 and 128-35000.
-If the value is `0`, the original video bitrate will be used.
+     * @var integer Bitrate of video stream, value ranges from 0 to [128, 35000], measurement unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
      */
     public $Bitrate;
 
@@ -163,8 +163,8 @@ If this parameter is `0` or left empty, the interval will be determined by the s
 <li>`libx265`: H.265</li>
 <li>`av1`: AOMedia Video 1</li>
 The default codec is H.264.
-     * @param integer $Bitrate The video bitrate (Kbps). Value range: 0 and 128-35000.
-If the value is `0`, the original video bitrate will be used.
+     * @param integer $Bitrate Bitrate of video stream, value ranges from 0 to [128, 35000], measurement unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
      * @param integer $Fps The video frame rate (Hz). Value range: 0-100. If the value is `0`, the original video frame rate will be used.
      * @param string $ResolutionAdaptive Resolution adaption. Valid values:
 <li>`open`: Enable. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>

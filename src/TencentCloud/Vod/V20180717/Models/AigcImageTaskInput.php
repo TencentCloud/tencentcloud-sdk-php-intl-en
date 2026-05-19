@@ -20,74 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input of the AIGC image generation task.
  *
- * @method string getModelName() Obtain Model name.
- * @method void setModelName(string $ModelName) Set Model name.
- * @method string getModelVersion() Obtain Model version.
- * @method void setModelVersion(string $ModelVersion) Set Model version.
- * @method array getFileInfos() Obtain Input file of the AIGC image generation task.
- * @method void setFileInfos(array $FileInfos) Set Input file of the AIGC image generation task.
- * @method string getPrompt() Obtain Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
- * @method void setPrompt(string $Prompt) Set Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
- * @method string getNegativePrompt() Obtain To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
- * @method void setNegativePrompt(string $NegativePrompt) Set To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
- * @method string getEnhancePrompt() Obtain Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
- * @method void setEnhancePrompt(string $EnhancePrompt) Set Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
- * @method string getGenerationMode() Obtain Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
- * @method void setGenerationMode(string $GenerationMode) Set Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
- * @method AigcImageOutputConfig getOutputConfig() Obtain Output the result file of the AIGC image generation.
- * @method void setOutputConfig(AigcImageOutputConfig $OutputConfig) Set Output the result file of the AIGC image generation.
+ * @method string getModelName() Obtain <p>Model name.</p>
+ * @method void setModelName(string $ModelName) Set <p>Model name.</p>
+ * @method string getModelVersion() Obtain <p>Model version.</p>
+ * @method void setModelVersion(string $ModelVersion) Set <p>Model version.</p>
+ * @method array getFileInfos() Obtain <p>File information for AIGC image generation task input.</p>
+ * @method void setFileInfos(array $FileInfos) Set <p>File information for AIGC image generation task input.</p>
+ * @method string getPrompt() Obtain <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+ * @method void setPrompt(string $Prompt) Set <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+ * @method string getNegativePrompt() Obtain <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
+ * @method void setNegativePrompt(string $NegativePrompt) Set <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
+ * @method string getEnhancePrompt() Obtain <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+ * @method void setEnhancePrompt(string $EnhancePrompt) Set <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+ * @method string getGenerationMode() Obtain <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
+ * @method void setGenerationMode(string $GenerationMode) Set <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
+ * @method AigcImageOutputConfig getOutputConfig() Obtain <p>Output result file for AIGC image generation.</p>
+ * @method void setOutputConfig(AigcImageOutputConfig $OutputConfig) Set <p>Output result file for AIGC image generation.</p>
+ * @method integer getSeed() Obtain <p>Random seed of the model.</p>
+ * @method void setSeed(integer $Seed) Set <p>Random seed of the model.</p>
+ * @method string getSceneType() Obtain <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p>
+ * @method void setSceneType(string $SceneType) Set <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p>
  */
 class AigcImageTaskInput extends AbstractModel
 {
     /**
-     * @var string Model name.
+     * @var string <p>Model name.</p>
      */
     public $ModelName;
 
     /**
-     * @var string Model version.
+     * @var string <p>Model version.</p>
      */
     public $ModelVersion;
 
     /**
-     * @var array Input file of the AIGC image generation task.
+     * @var array <p>File information for AIGC image generation task input.</p>
      */
     public $FileInfos;
 
     /**
-     * @var string Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
+     * @var string <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
      */
     public $Prompt;
 
     /**
-     * @var string To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
+     * @var string <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
      */
     public $NegativePrompt;
 
     /**
-     * @var string Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
+     * @var string <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
      */
     public $EnhancePrompt;
 
     /**
-     * @var string Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
+     * @var string <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
      */
     public $GenerationMode;
 
     /**
-     * @var AigcImageOutputConfig Output the result file of the AIGC image generation.
+     * @var AigcImageOutputConfig <p>Output result file for AIGC image generation.</p>
      */
     public $OutputConfig;
 
     /**
-     * @param string $ModelName Model name.
-     * @param string $ModelVersion Model version.
-     * @param array $FileInfos Input file of the AIGC image generation task.
-     * @param string $Prompt Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
-     * @param string $NegativePrompt To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
-     * @param string $EnhancePrompt Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
-     * @param string $GenerationMode Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
-     * @param AigcImageOutputConfig $OutputConfig Output the result file of the AIGC image generation.
+     * @var integer <p>Random seed of the model.</p>
+     */
+    public $Seed;
+
+    /**
+     * @var string <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p>
+     */
+    public $SceneType;
+
+    /**
+     * @param string $ModelName <p>Model name.</p>
+     * @param string $ModelVersion <p>Model version.</p>
+     * @param array $FileInfos <p>File information for AIGC image generation task input.</p>
+     * @param string $Prompt <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+     * @param string $NegativePrompt <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
+     * @param string $EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+     * @param string $GenerationMode <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
+     * @param AigcImageOutputConfig $OutputConfig <p>Output result file for AIGC image generation.</p>
+     * @param integer $Seed <p>Random seed of the model.</p>
+     * @param string $SceneType <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p>
      */
     function __construct()
     {
@@ -138,6 +154,14 @@ class AigcImageTaskInput extends AbstractModel
         if (array_key_exists("OutputConfig",$param) and $param["OutputConfig"] !== null) {
             $this->OutputConfig = new AigcImageOutputConfig();
             $this->OutputConfig->deserialize($param["OutputConfig"]);
+        }
+
+        if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {
+            $this->Seed = $param["Seed"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
     }
 }

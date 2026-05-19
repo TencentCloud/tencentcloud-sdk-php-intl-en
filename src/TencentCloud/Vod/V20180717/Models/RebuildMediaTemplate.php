@@ -32,22 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set The remaster template name.
  * @method string getComment() Obtain The template description.
  * @method void setComment(string $Comment) Set The template description.
- * @method RebuildVideoInfo getRebuildVideoInfo() Obtain The video remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) Set The video remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method RebuildAudioInfo getRebuildAudioInfo() Obtain The audio remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRebuildAudioInfo(RebuildAudioInfo $RebuildAudioInfo) Set The audio remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method RebuildMediaTargetVideoStream getTargetVideoInfo() Obtain The output video parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetVideoInfo(RebuildMediaTargetVideoStream $TargetVideoInfo) Set The output video parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method RebuildMediaTargetAudioStream getTargetAudioInfo() Obtain The output audio parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargetAudioInfo(RebuildMediaTargetAudioStream $TargetAudioInfo) Set The output audio parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method RebuildVideoInfo getRebuildVideoInfo() Obtain Audio-visual quality revival video control info.
+ * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) Set Audio-visual quality revival video control info.
+ * @method RebuildAudioInfo getRebuildAudioInfo() Obtain Audio-visual quality revival audio control info.
+ * @method void setRebuildAudioInfo(RebuildAudioInfo $RebuildAudioInfo) Set Audio-visual quality revival audio control info.
+ * @method RebuildMediaTargetVideoStream getTargetVideoInfo() Obtain Output video control information.
+ * @method void setTargetVideoInfo(RebuildMediaTargetVideoStream $TargetVideoInfo) Set Output video control information.
+ * @method RebuildMediaTargetAudioStream getTargetAudioInfo() Obtain Output audio control information.
+ * @method void setTargetAudioInfo(RebuildMediaTargetAudioStream $TargetAudioInfo) Set Output audio control information.
  * @method string getContainer() Obtain The output file format. Valid values: `mp4` (default), `hls`.
  * @method void setContainer(string $Container) Set The output file format. Valid values: `mp4` (default), `hls`.
  * @method integer getRemoveVideo() Obtain Whether to remove video data. Valid values:
@@ -96,26 +88,22 @@ class RebuildMediaTemplate extends AbstractModel
     public $Comment;
 
     /**
-     * @var RebuildVideoInfo The video remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RebuildVideoInfo Audio-visual quality revival video control info.
      */
     public $RebuildVideoInfo;
 
     /**
-     * @var RebuildAudioInfo The audio remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RebuildAudioInfo Audio-visual quality revival audio control info.
      */
     public $RebuildAudioInfo;
 
     /**
-     * @var RebuildMediaTargetVideoStream The output video parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RebuildMediaTargetVideoStream Output video control information.
      */
     public $TargetVideoInfo;
 
     /**
-     * @var RebuildMediaTargetAudioStream The output audio parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RebuildMediaTargetAudioStream Output audio control information.
      */
     public $TargetAudioInfo;
 
@@ -157,14 +145,10 @@ Default value: 0.
 <li>`Custom`</li>
      * @param string $Name The remaster template name.
      * @param string $Comment The template description.
-     * @param RebuildVideoInfo $RebuildVideoInfo The video remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RebuildAudioInfo $RebuildAudioInfo The audio remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RebuildMediaTargetVideoStream $TargetVideoInfo The output video parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RebuildMediaTargetAudioStream $TargetAudioInfo The output audio parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RebuildVideoInfo $RebuildVideoInfo Audio-visual quality revival video control info.
+     * @param RebuildAudioInfo $RebuildAudioInfo Audio-visual quality revival audio control info.
+     * @param RebuildMediaTargetVideoStream $TargetVideoInfo Output video control information.
+     * @param RebuildMediaTargetAudioStream $TargetAudioInfo Output audio control information.
      * @param string $Container The output file format. Valid values: `mp4` (default), `hls`.
      * @param integer $RemoveVideo Whether to remove video data. Valid values:
 <li>`0`: No</li>

@@ -33,6 +33,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\CreateLogDownloadTaskResponse CreateLogDownloadTask(Models\CreateLogDownloadTaskRequest $req) This API is used to create a log download task.
  * @method Models\DeleteAccountUserResponse DeleteAccountUser(Models\DeleteAccountUserRequest $req) This API is used to delete a custom account of an instance.
  * @method Models\DeleteLogDownloadTaskResponse DeleteLogDownloadTask(Models\DeleteLogDownloadTaskRequest $req) This API is used to delete a log download task.
+ * @method Models\DescribeAccountUsersResponse DescribeAccountUsers(Models\DescribeAccountUsersRequest $req) This API is used to obtain all accounts of the current instance.
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) This API is used to query the asynchronous task status.
  * @method Models\DescribeAuditConfigResponse DescribeAuditConfig(Models\DescribeAuditConfigRequest $req) This API is used to query the service configurations for a TencentDB audit policy, including the audit log retention period.
  * @method Models\DescribeAuditLogFilesResponse DescribeAuditLogFiles(Models\DescribeAuditLogFilesRequest $req) This API is used to query audit log files of a cloud database instance.

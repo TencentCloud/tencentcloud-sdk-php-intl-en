@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Control parameter of prohibited information detection task
  *
- * @method ProhibitedAsrReviewTemplateInfo getAsrReviewInfo() Obtain Control parameter of prohibited information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfo $AsrReviewInfo) Set Control parameter of prohibited information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method ProhibitedOcrReviewTemplateInfo getOcrReviewInfo() Obtain Control parameter of prohibited information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfo $OcrReviewInfo) Set Control parameter of prohibited information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method ProhibitedAsrReviewTemplateInfo getAsrReviewInfo() Obtain Voice prohibition control parameter.
+ * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfo $AsrReviewInfo) Set Voice prohibition control parameter.
+ * @method ProhibitedOcrReviewTemplateInfo getOcrReviewInfo() Obtain Text prohibited control parameters.
+ * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfo $OcrReviewInfo) Set Text prohibited control parameters.
  */
 class ProhibitedConfigureInfo extends AbstractModel
 {
     /**
-     * @var ProhibitedAsrReviewTemplateInfo Control parameter of prohibited information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ProhibitedAsrReviewTemplateInfo Voice prohibition control parameter.
      */
     public $AsrReviewInfo;
 
     /**
-     * @var ProhibitedOcrReviewTemplateInfo Control parameter of prohibited information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ProhibitedOcrReviewTemplateInfo Text prohibited control parameters.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param ProhibitedAsrReviewTemplateInfo $AsrReviewInfo Control parameter of prohibited information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProhibitedOcrReviewTemplateInfo $OcrReviewInfo Control parameter of prohibited information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ProhibitedAsrReviewTemplateInfo $AsrReviewInfo Voice prohibition control parameter.
+     * @param ProhibitedOcrReviewTemplateInfo $OcrReviewInfo Text prohibited control parameters.
      */
     function __construct()
     {

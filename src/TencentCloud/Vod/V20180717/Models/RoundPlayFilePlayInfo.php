@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStartPlayTime() Obtain The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
  * @method void setStartPlayTime(string $StartPlayTime) Set The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
  * @method float getDuration() Obtain Playback duration, in seconds.
-Note: this field may return null, indicating that no valid value was found.
  * @method void setDuration(float $Duration) Set Playback duration, in seconds.
-Note: this field may return null, indicating that no valid value was found.
  * @method float getProgress() Obtain Playback progress, in seconds.
-Note: this field may return null, indicating that no valid value was found.
  * @method void setProgress(float $Progress) Set Playback progress, in seconds.
-Note: this field may return null, indicating that no valid value was found.
  */
 class RoundPlayFilePlayInfo extends AbstractModel
 {
@@ -54,13 +50,11 @@ class RoundPlayFilePlayInfo extends AbstractModel
 
     /**
      * @var float Playback duration, in seconds.
-Note: this field may return null, indicating that no valid value was found.
      */
     public $Duration;
 
     /**
      * @var float Playback progress, in seconds.
-Note: this field may return null, indicating that no valid value was found.
      */
     public $Progress;
 
@@ -69,9 +63,7 @@ Note: this field may return null, indicating that no valid value was found.
      * @param string $FileId The media file id.
      * @param string $StartPlayTime The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
      * @param float $Duration Playback duration, in seconds.
-Note: this field may return null, indicating that no valid value was found.
      * @param float $Progress Playback progress, in seconds.
-Note: this field may return null, indicating that no valid value was found.
      */
     function __construct()
     {

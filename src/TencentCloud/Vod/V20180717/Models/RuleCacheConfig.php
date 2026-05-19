@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Path cache cache configuration (select one of the three cache modes)
  *
  * @method CacheConfigCache getCache() Obtain Cache configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setCache(CacheConfigCache $Cache) Set Cache configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method CacheConfigNoCache getNoCache() Obtain Configuration is not cached.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setNoCache(CacheConfigNoCache $NoCache) Set Configuration is not cached.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method CacheConfigFollowOrigin getFollowOrigin() Obtain Follow the origin configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setFollowOrigin(CacheConfigFollowOrigin $FollowOrigin) Set Follow the origin configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method CacheConfigNoCache getNoCache() Obtain No cache configuration.
+ * @method void setNoCache(CacheConfigNoCache $NoCache) Set No cache configuration.
+ * @method CacheConfigFollowOrigin getFollowOrigin() Obtain Follow the origin site.
+ * @method void setFollowOrigin(CacheConfigFollowOrigin $FollowOrigin) Set Follow the origin site.
  */
 class RuleCacheConfig extends AbstractModel
 {
     /**
      * @var CacheConfigCache Cache configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Cache;
 
     /**
-     * @var CacheConfigNoCache Configuration is not cached.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var CacheConfigNoCache No cache configuration.
      */
     public $NoCache;
 
     /**
-     * @var CacheConfigFollowOrigin Follow the origin configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var CacheConfigFollowOrigin Follow the origin site.
      */
     public $FollowOrigin;
 
     /**
      * @param CacheConfigCache $Cache Cache configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CacheConfigNoCache $NoCache Configuration is not cached.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CacheConfigFollowOrigin $FollowOrigin Follow the origin configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param CacheConfigNoCache $NoCache No cache configuration.
+     * @param CacheConfigFollowOrigin $FollowOrigin Follow the origin site.
      */
     function __construct()
     {

@@ -20,93 +20,77 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTranscodeTemplates request structure.
  *
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method array getDefinitions() Obtain Unique ID filter of transcoding templates. Array length limit: 100.
- * @method void setDefinitions(array $Definitions) Set Unique ID filter of transcoding templates. Array length limit: 100.
- * @method string getType() Obtain Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
- * @method void setType(string $Type) Set Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
- * @method string getContainerType() Obtain Container filter. Valid values:
-<li>Video: video container that can contain both video stream and audio stream;</li>
-<li>PureAudio: audio container that can contain only audio stream.</li>
- * @method void setContainerType(string $ContainerType) Set Container filter. Valid values:
-<li>Video: video container that can contain both video stream and audio stream;</li>
-<li>PureAudio: audio container that can contain only audio stream.</li>
- * @method string getTEHDType() Obtain TESHD filter, which is used to filter common transcoding or ultra-fast HD transcoding templates. Valid values:
-<li>Common: Common transcoding template;</li>
-<li>TEHD: TESHD template.</li>
- * @method void setTEHDType(string $TEHDType) Set TESHD filter, which is used to filter common transcoding or ultra-fast HD transcoding templates. Valid values:
-<li>Common: Common transcoding template;</li>
-<li>TEHD: TESHD template.</li>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method array getDefinitions() Obtain Filter condition for the unique identifier of the transcoding template. The array can contain up to 100 unique identifiers.
+ * @method void setDefinitions(array $Definitions) Set Filter condition for the unique identifier of the transcoding template. The array can contain up to 100 unique identifiers.
+ * @method string getType() Obtain Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
+ * @method void setType(string $Type) Set Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
+ * @method string getContainerType() Obtain Muxing format filter condition. Available values:
+<li>Video: Video format that contains both video stream and audio stream in a muxing format.</li>
+<li>PureAudio: Pure audio format, a muxing format that can only contain audio streams.</li>
+ * @method void setContainerType(string $ContainerType) Set Muxing format filter condition. Available values:
+<li>Video: Video format that contains both video stream and audio stream in a muxing format.</li>
+<li>PureAudio: Pure audio format, a muxing format that can only contain audio streams.</li>
+ * @method string getTEHDType() Obtain Top Speed Codec filter conditions for filtering standard transcoding or TSC transcoding templates. Available values:
+<li>Common: standard transcoding template.</li>
+<li>TEHD: Ultra-HD template.</li>
+ * @method void setTEHDType(string $TEHDType) Set Top Speed Codec filter conditions for filtering standard transcoding or TSC transcoding templates. Available values:
+<li>Common: standard transcoding template.</li>
+<li>TEHD: Ultra-HD template.</li>
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  * @method string getEnhanceType() Obtain Enhancement type. Valid values:
 <li>VideoEnhance: video enhancement only.</li>
-<li>AudioEnhance: audio enhancement only.</li>
-<li>AudioVideoEnhance: video and audio enhancement included.</li>
-<li> AnyEnhance: `VideoEnhance`, `AudioEnhance ` and `AudioVideoEnhance` included.</li>
-<li> None: Not any enhancement type</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>AudioVideoEnhance: audio and video enhancement included.</li>
+<li>AnyEnhance (including video enhancement only, audio enhancement only, audio and video enhancement)</li>
+<li>None (non-enhanced)</li>
  * @method void setEnhanceType(string $EnhanceType) Set Enhancement type. Valid values:
 <li>VideoEnhance: video enhancement only.</li>
-<li>AudioEnhance: audio enhancement only.</li>
-<li>AudioVideoEnhance: video and audio enhancement included.</li>
-<li> AnyEnhance: `VideoEnhance`, `AudioEnhance ` and `AudioVideoEnhance` included.</li>
-<li> None: Not any enhancement type</li>
- * @method string getEnhanceScenarioType() Obtain Enhancement scenario configuration. Valid values:
-<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
-<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
-<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
-<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
-<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
-<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
-<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
- * @method void setEnhanceScenarioType(string $EnhanceScenarioType) Set Enhancement scenario configuration. Valid values:
-<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
-<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
-<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
-<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
-<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
-<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
-<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>AudioVideoEnhance: audio and video enhancement included.</li>
+<li>AnyEnhance (including video enhancement only, audio enhancement only, audio and video enhancement)</li>
+<li>None (non-enhanced)</li>
+ * @method string getEnhanceScenarioType() Obtain Enhance scenario configuration. Available values: <li>common (general): general enhancement parameter, suitable for basic optimization parameters of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li> <li>short_play (mini-drama): enhances face and subtitle details, highlights facial expression details and subtitle clarity to improve viewing experience.</li> <li>short_video (short video): optimizes complex and diverse image quality issues, targets complex scenarios in short videos, improves video quality, and addresses multiple visual problems.</li> <li>game (gaming video): restores motion blur, enhances details, focuses on improving game detail clarity, restores motion blur areas, and makes the game screen content clearer and more vivid.</li> <li>HD_movie_series (UHD TV shows and movies): achieves ultra-high-definition smooth effects, targets the demand for UHD videos in broadcasting and OTT scenarios, and generates UHD standard videos in 4K 60fps HDR. Supports broadcasting scenario format standards.</li> <li>LQ_material (low-quality material/classic film restoration): improves overall resolution, specifically optimizes issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature due to their age.</li> <li>lecture (showroom/e-commerce/conference/lecture): beautifies and enhances face effects, specifically optimizes face regions, noise reduction, and burr processing for scenarios where figures are explained in showrooms, e-commerce, conferences, or lectures.</li>
+ * @method void setEnhanceScenarioType(string $EnhanceScenarioType) Set Enhance scenario configuration. Available values: <li>common (general): general enhancement parameter, suitable for basic optimization parameters of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li> <li>short_play (mini-drama): enhances face and subtitle details, highlights facial expression details and subtitle clarity to improve viewing experience.</li> <li>short_video (short video): optimizes complex and diverse image quality issues, targets complex scenarios in short videos, improves video quality, and addresses multiple visual problems.</li> <li>game (gaming video): restores motion blur, enhances details, focuses on improving game detail clarity, restores motion blur areas, and makes the game screen content clearer and more vivid.</li> <li>HD_movie_series (UHD TV shows and movies): achieves ultra-high-definition smooth effects, targets the demand for UHD videos in broadcasting and OTT scenarios, and generates UHD standard videos in 4K 60fps HDR. Supports broadcasting scenario format standards.</li> <li>LQ_material (low-quality material/classic film restoration): improves overall resolution, specifically optimizes issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature due to their age.</li> <li>lecture (showroom/e-commerce/conference/lecture): beautifies and enhances face effects, specifically optimizes face regions, noise reduction, and burr processing for scenarios where figures are explained in showrooms, e-commerce, conferences, or lectures.</li>
  */
 class DescribeTranscodeTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var array Unique ID filter of transcoding templates. Array length limit: 100.
+     * @var array Filter condition for the unique identifier of the transcoding template. The array can contain up to 100 unique identifiers.
      */
     public $Definitions;
 
     /**
-     * @var string Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+     * @var string Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
      */
     public $Type;
 
     /**
-     * @var string Container filter. Valid values:
-<li>Video: video container that can contain both video stream and audio stream;</li>
-<li>PureAudio: audio container that can contain only audio stream.</li>
+     * @var string Muxing format filter condition. Available values:
+<li>Video: Video format that contains both video stream and audio stream in a muxing format.</li>
+<li>PureAudio: Pure audio format, a muxing format that can only contain audio streams.</li>
      */
     public $ContainerType;
 
     /**
-     * @var string TESHD filter, which is used to filter common transcoding or ultra-fast HD transcoding templates. Valid values:
-<li>Common: Common transcoding template;</li>
-<li>TEHD: TESHD template.</li>
+     * @var string Top Speed Codec filter conditions for filtering standard transcoding or TSC transcoding templates. Available values:
+<li>Common: standard transcoding template.</li>
+<li>TEHD: Ultra-HD template.</li>
      */
     public $TEHDType;
 
@@ -123,55 +107,39 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
     /**
      * @var string Enhancement type. Valid values:
 <li>VideoEnhance: video enhancement only.</li>
-<li>AudioEnhance: audio enhancement only.</li>
-<li>AudioVideoEnhance: video and audio enhancement included.</li>
-<li> AnyEnhance: `VideoEnhance`, `AudioEnhance ` and `AudioVideoEnhance` included.</li>
-<li> None: Not any enhancement type</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>AudioVideoEnhance: audio and video enhancement included.</li>
+<li>AnyEnhance (including video enhancement only, audio enhancement only, audio and video enhancement)</li>
+<li>None (non-enhanced)</li>
      */
     public $EnhanceType;
 
     /**
-     * @var string Enhancement scenario configuration. Valid values:
-<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
-<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
-<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
-<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
-<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
-<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
-<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
+     * @var string Enhance scenario configuration. Available values: <li>common (general): general enhancement parameter, suitable for basic optimization parameters of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li> <li>short_play (mini-drama): enhances face and subtitle details, highlights facial expression details and subtitle clarity to improve viewing experience.</li> <li>short_video (short video): optimizes complex and diverse image quality issues, targets complex scenarios in short videos, improves video quality, and addresses multiple visual problems.</li> <li>game (gaming video): restores motion blur, enhances details, focuses on improving game detail clarity, restores motion blur areas, and makes the game screen content clearer and more vivid.</li> <li>HD_movie_series (UHD TV shows and movies): achieves ultra-high-definition smooth effects, targets the demand for UHD videos in broadcasting and OTT scenarios, and generates UHD standard videos in 4K 60fps HDR. Supports broadcasting scenario format standards.</li> <li>LQ_material (low-quality material/classic film restoration): improves overall resolution, specifically optimizes issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature due to their age.</li> <li>lecture (showroom/e-commerce/conference/lecture): beautifies and enhances face effects, specifically optimizes face regions, noise reduction, and burr processing for scenarios where figures are explained in showrooms, e-commerce, conferences, or lectures.</li>
      */
     public $EnhanceScenarioType;
 
     /**
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param array $Definitions Unique ID filter of transcoding templates. Array length limit: 100.
-     * @param string $Type Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
-     * @param string $ContainerType Container filter. Valid values:
-<li>Video: video container that can contain both video stream and audio stream;</li>
-<li>PureAudio: audio container that can contain only audio stream.</li>
-     * @param string $TEHDType TESHD filter, which is used to filter common transcoding or ultra-fast HD transcoding templates. Valid values:
-<li>Common: Common transcoding template;</li>
-<li>TEHD: TESHD template.</li>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param array $Definitions Filter condition for the unique identifier of the transcoding template. The array can contain up to 100 unique identifiers.
+     * @param string $Type Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
+     * @param string $ContainerType Muxing format filter condition. Available values:
+<li>Video: Video format that contains both video stream and audio stream in a muxing format.</li>
+<li>PureAudio: Pure audio format, a muxing format that can only contain audio streams.</li>
+     * @param string $TEHDType Top Speed Codec filter conditions for filtering standard transcoding or TSC transcoding templates. Available values:
+<li>Common: standard transcoding template.</li>
+<li>TEHD: Ultra-HD template.</li>
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param string $EnhanceType Enhancement type. Valid values:
 <li>VideoEnhance: video enhancement only.</li>
-<li>AudioEnhance: audio enhancement only.</li>
-<li>AudioVideoEnhance: video and audio enhancement included.</li>
-<li> AnyEnhance: `VideoEnhance`, `AudioEnhance ` and `AudioVideoEnhance` included.</li>
-<li> None: Not any enhancement type</li>
-     * @param string $EnhanceScenarioType Enhancement scenario configuration. Valid values:
-<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
-<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
-<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
-<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
-<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
-<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
-<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>AudioVideoEnhance: audio and video enhancement included.</li>
+<li>AnyEnhance (including video enhancement only, audio enhancement only, audio and video enhancement)</li>
+<li>None (non-enhanced)</li>
+     * @param string $EnhanceScenarioType Enhance scenario configuration. Available values: <li>common (general): general enhancement parameter, suitable for basic optimization parameters of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li> <li>short_play (mini-drama): enhances face and subtitle details, highlights facial expression details and subtitle clarity to improve viewing experience.</li> <li>short_video (short video): optimizes complex and diverse image quality issues, targets complex scenarios in short videos, improves video quality, and addresses multiple visual problems.</li> <li>game (gaming video): restores motion blur, enhances details, focuses on improving game detail clarity, restores motion blur areas, and makes the game screen content clearer and more vivid.</li> <li>HD_movie_series (UHD TV shows and movies): achieves ultra-high-definition smooth effects, targets the demand for UHD videos in broadcasting and OTT scenarios, and generates UHD standard videos in 4K 60fps HDR. Supports broadcasting scenario format standards.</li> <li>LQ_material (low-quality material/classic film restoration): improves overall resolution, specifically optimizes issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature due to their age.</li> <li>lecture (showroom/e-commerce/conference/lecture): beautifies and enhances face effects, specifically optimizes face regions, noise reduction, and burr processing for scenarios where figures are explained in showrooms, e-commerce, conferences, or lectures.</li>
      */
     function __construct()
     {

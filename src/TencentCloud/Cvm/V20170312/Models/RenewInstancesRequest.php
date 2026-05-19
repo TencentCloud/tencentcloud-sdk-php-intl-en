@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() Obtain One or more instance IDs to be operated. You can obtain the instance ID through the `InstanceId` in the return value from the API [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258). The maximum number of instances per request is 100.
  * @method void setInstanceIds(array $InstanceIds) Set One or more instance IDs to be operated. You can obtain the instance ID through the `InstanceId` in the return value from the API [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258). The maximum number of instances per request is 100.
- * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>.
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>.
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances.
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances.
  * @method boolean getRenewPortableDataDisk() Obtain Whether to renew the elastic data disk. valid values:<br><li>true: indicates renewing the annual and monthly subscription instance and its mounted elastic data disk simultaneously</li><li>false: indicates renewing the annual and monthly subscription instance while no longer renewing its mounted elastic data disk</li><br>default value: true.
  * @method void setRenewPortableDataDisk(boolean $RenewPortableDataDisk) Set Whether to renew the elastic data disk. valid values:<br><li>true: indicates renewing the annual and monthly subscription instance and its mounted elastic data disk simultaneously</li><li>false: indicates renewing the annual and monthly subscription instance while no longer renewing its mounted elastic data disk</li><br>default value: true.
  */
@@ -37,8 +35,7 @@ class RenewInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var InstanceChargePrepaid Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>.
+     * @var InstanceChargePrepaid Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances.
      */
     public $InstanceChargePrepaid;
 
@@ -49,8 +46,7 @@ Annual and monthly subscription instances. this parameter is a required paramete
 
     /**
      * @param array $InstanceIds One or more instance IDs to be operated. You can obtain the instance ID through the `InstanceId` in the return value from the API [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258). The maximum number of instances per request is 100.
-     * @param InstanceChargePrepaid $InstanceChargePrepaid Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>.
+     * @param InstanceChargePrepaid $InstanceChargePrepaid Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances.
      * @param boolean $RenewPortableDataDisk Whether to renew the elastic data disk. valid values:<br><li>true: indicates renewing the annual and monthly subscription instance and its mounted elastic data disk simultaneously</li><li>false: indicates renewing the annual and monthly subscription instance while no longer renewing its mounted elastic data disk</li><br>default value: true.
      */
     function __construct()

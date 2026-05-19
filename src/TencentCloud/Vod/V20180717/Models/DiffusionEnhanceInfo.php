@@ -20,53 +20,49 @@ use TencentCloud\Common\AbstractModel;
 /**
  * LLM enhancement configuration.
  *
- * @method string getSwitch() Obtain Whether to enable LLM enhancement. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: OFF.
- * @method void setSwitch(string $Switch) Set Whether to enable LLM enhancement. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: OFF.
- * @method string getType() Obtain The strength. Valid values:
-<li>weak</li>
-<li>normal</li>
-<li>strong</li>
+ * @method string getSwitch() Obtain Large model enhancement switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+ * @method void setSwitch(string $Switch) Set Large model enhancement switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+ * @method string getType() Obtain Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
+<li>weak: weak;</li>
+<li>NORMAL: The scaling group is normal.</li>
+<li>strong: strong.</li>
 Default value: normal.
- * @method void setType(string $Type) Set The strength. Valid values:
-<li>weak</li>
-<li>normal</li>
-<li>strong</li>
+ * @method void setType(string $Type) Set Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
+<li>weak: weak;</li>
+<li>NORMAL: The scaling group is normal.</li>
+<li>strong: strong.</li>
 Default value: normal.
  */
 class DiffusionEnhanceInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable LLM enhancement. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: OFF.
+     * @var string Large model enhancement switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
      */
     public $Switch;
 
     /**
-     * @var string The strength. Valid values:
-<li>weak</li>
-<li>normal</li>
-<li>strong</li>
+     * @var string Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
+<li>weak: weak;</li>
+<li>NORMAL: The scaling group is normal.</li>
+<li>strong: strong.</li>
 Default value: normal.
      */
     public $Type;
 
     /**
-     * @param string $Switch Whether to enable LLM enhancement. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: OFF.
-     * @param string $Type The strength. Valid values:
-<li>weak</li>
-<li>normal</li>
-<li>strong</li>
+     * @param string $Switch Large model enhancement switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+     * @param string $Type Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
+<li>weak: weak;</li>
+<li>NORMAL: The scaling group is normal.</li>
+<li>strong: strong.</li>
 Default value: normal.
      */
     function __construct()

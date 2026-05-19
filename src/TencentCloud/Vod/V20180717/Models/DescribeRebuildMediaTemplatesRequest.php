@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRebuildMediaTemplates request structure.
  *
- * @method array getDefinitions() Obtain List of rebuild media templates.
- * @method void setDefinitions(array $Definitions) Set List of rebuild media templates.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getType() Obtain The template type. Valid values:
-<li>`Preset`</li>
-<li>`Custom`</li>
- * @method void setType(string $Type) Set The template type. Valid values:
-<li>`Preset`</li>
-<li>`Custom`</li>
- * @method integer getOffset() Obtain The pagination offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set The pagination offset. Default value: 0.
- * @method integer getLimit() Obtain The maximum number of records to return. Default value: 10. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set The maximum number of records to return. Default value: 10. Maximum value: 100.
+ * @method array getDefinitions() Obtain Video rebirth template list.
+ * @method void setDefinitions(array $Definitions) Set Video rebirth template list.
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getType() Obtain Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
+ * @method void setType(string $Type) Set Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  */
 class DescribeRebuildMediaTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array List of rebuild media templates.
+     * @var array Video rebirth template list.
      */
     public $Definitions;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string The template type. Valid values:
-<li>`Preset`</li>
-<li>`Custom`</li>
+     * @var string Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
      */
     public $Type;
 
     /**
-     * @var integer The pagination offset. Default value: 0.
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer The maximum number of records to return. Default value: 10. Maximum value: 100.
+     * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @param array $Definitions List of rebuild media templates.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $Type The template type. Valid values:
-<li>`Preset`</li>
-<li>`Custom`</li>
-     * @param integer $Offset The pagination offset. Default value: 0.
-     * @param integer $Limit The maximum number of records to return. Default value: 10. Maximum value: 100.
+     * @param array $Definitions Video rebirth template list.
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $Type Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
+     * @param integer $Offset Pagination offset. Default value: 0.
+     * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */
     function __construct()
     {

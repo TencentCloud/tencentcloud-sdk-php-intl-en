@@ -20,322 +20,322 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCDNStatDetails request structure.
  *
- * @method string getMetric() Obtain Query indicators, the values u200bu200bare:
-<li>Traffic: traffic, unit is Byte. </li>
-<li>Bandwidth: Bandwidth, unit is Bps. </li>
-<li>Requests: Number of requests. </li>
-<li>QUICRequests: Number of QUIC requests. </li>
-<li>IpVisit: Number of IP visits. </li>
- * @method void setMetric(string $Metric) Set Query indicators, the values u200bu200bare:
-<li>Traffic: traffic, unit is Byte. </li>
-<li>Bandwidth: Bandwidth, unit is Bps. </li>
-<li>Requests: Number of requests. </li>
-<li>QUICRequests: Number of QUIC requests. </li>
-<li>IpVisit: Number of IP visits. </li>
- * @method string getStartTime() Obtain Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
- * @method void setStartTime(string $StartTime) Set Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
- * @method string getEndTime() Obtain End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
- * @method void setEndTime(string $EndTime) Set End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method array getDomainNames() Obtain List of domain names. The usage data of up to 20 domain names can be queried at a time. The usage data of all domain names is returned by default.
- * @method void setDomainNames(array $DomainNames) Set List of domain names. The usage data of up to 20 domain names can be queried at a time. The usage data of all domain names is returned by default.
- * @method string getArea() Obtain Service region. Valid values:
-<li>Chinese Mainland</li>
-<li>Asia Pacific Region 1: Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand</li>
-<li>Asia Pacific Region 2: Taiwan (China), Japan, Malaysia, Indonesia, and South Korea</li>
-<li>Asia Pacific Region 3: Philippines, India, Australia, and other Asia Pacific countries and regions</li>
-<li>Middle East</li>
-<li>Europe</li>
-<li>North America</li>
-<li>South America</li>
-<li>Africa</li>
-Default value: Chinese Mainland
- * @method void setArea(string $Area) Set Service region. Valid values:
-<li>Chinese Mainland</li>
-<li>Asia Pacific Region 1: Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand</li>
-<li>Asia Pacific Region 2: Taiwan (China), Japan, Malaysia, Indonesia, and South Korea</li>
-<li>Asia Pacific Region 3: Philippines, India, Australia, and other Asia Pacific countries and regions</li>
-<li>Middle East</li>
-<li>Europe</li>
-<li>North America</li>
-<li>South America</li>
-<li>Africa</li>
-Default value: Chinese Mainland
- * @method array getDistricts() Obtain District where users are located. When `Area` is `Chinese Mainland`, valid values for `Districts` are as follows. Otherwise, `Districts` can be ignored.
-<li>Beijing</li>
-<li>Inner Mongolia</li>
-<li>Shanxi</li>
-<li>Hebei</li>
-<li>Tianjin</li>
-<li>Ningxia</li>
-<li>Shaanxi</li>
-<li>Gansu</li>
-<li>Qinghai</li>
-<li>Xinjiang</li>
-<li>Heilongjiang</li>
-<li>Jilin</li>
-<li>Liaoning</li>
-<li>Fujian</li>
-<li>Jiangsu</li>
-<li>Anhui</li>
-<li>Shandong</li>
-<li>Shanghai</li>
-<li>Zhejiang</li>
-<li>Henan</li>
-<li>Hubei</li>
-<li>Jiangxi</li>
-<li>Hunan</li>
-<li>Guizhou</li>
-<li>Yunnan</li>
-<li>Chongqing</li>
-<li>Sichuan</li>
-<li>Xizang</li>
-<li>Guangdong</li>
-<li>Guangxi</li>
-<li>Hainan</li>
-<li>Hong Kong, Macao and Taiwan</li>
-<li>Outside Chinese Mainland</li>
-<li>Other</li>
- * @method void setDistricts(array $Districts) Set District where users are located. When `Area` is `Chinese Mainland`, valid values for `Districts` are as follows. Otherwise, `Districts` can be ignored.
-<li>Beijing</li>
-<li>Inner Mongolia</li>
-<li>Shanxi</li>
-<li>Hebei</li>
-<li>Tianjin</li>
-<li>Ningxia</li>
-<li>Shaanxi</li>
-<li>Gansu</li>
-<li>Qinghai</li>
-<li>Xinjiang</li>
-<li>Heilongjiang</li>
-<li>Jilin</li>
-<li>Liaoning</li>
-<li>Fujian</li>
-<li>Jiangsu</li>
-<li>Anhui</li>
-<li>Shandong</li>
-<li>Shanghai</li>
-<li>Zhejiang</li>
-<li>Henan</li>
-<li>Hubei</li>
-<li>Jiangxi</li>
-<li>Hunan</li>
-<li>Guizhou</li>
-<li>Yunnan</li>
-<li>Chongqing</li>
-<li>Sichuan</li>
-<li>Xizang</li>
-<li>Guangdong</li>
-<li>Guangxi</li>
-<li>Hainan</li>
-<li>Hong Kong, Macao and Taiwan</li>
-<li>Outside Chinese Mainland</li>
-<li>Other</li>
- * @method array getIsps() Obtain ISP of users. When `Area` is `Chinese Mainland`, valid values for `Isps` are as follows. Otherwise, `Isps` can be ignored.
-<li>China Telecom</li>
-<li>China Unicom</li>
-<li>CERNET</li>
-<li>Great Wall Broadband Network</li>
-<li>China Mobile</li>
-<li>China Mobile Tietong</li>
-<li>ISPs outside Chinese Mainland</li>
-<li>Other ISPs</li>
- * @method void setIsps(array $Isps) Set ISP of users. When `Area` is `Chinese Mainland`, valid values for `Isps` are as follows. Otherwise, `Isps` can be ignored.
-<li>China Telecom</li>
-<li>China Unicom</li>
-<li>CERNET</li>
-<li>Great Wall Broadband Network</li>
-<li>China Mobile</li>
-<li>China Mobile Tietong</li>
-<li>ISPs outside Chinese Mainland</li>
-<li>Other ISPs</li>
- * @method integer getDataInterval() Obtain Time granularity of every piece of data in minutes. Valid values:
-<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
-<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned. If the query period is larger than 24 hours, only data at 1-day granularity can be queried.</li>
-If the difference between `StartTime` and `EndTime` is larger than 24 hours, the default value of `DataInterval` is 1440.
- * @method void setDataInterval(integer $DataInterval) Set Time granularity of every piece of data in minutes. Valid values:
-<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
-<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned. If the query period is larger than 24 hours, only data at 1-day granularity can be queried.</li>
-If the difference between `StartTime` and `EndTime` is larger than 24 hours, the default value of `DataInterval` is 1440.
+ * @method string getMetric() Obtain Query metric. Valid values:
+<li>Traffic: Total Traffic in bytes.</li>
+<li>Bandwidth: bandwidth, in Bps.</li>
+<li>Requests: Request count.</li>
+<li>QUICRequests: Number of QUIC requests.</li>
+<li>IpVisit: Number of IP visits.</li>
+ * @method void setMetric(string $Metric) Set Query metric. Valid values:
+<li>Traffic: Total Traffic in bytes.</li>
+<li>Bandwidth: bandwidth, in Bps.</li>
+<li>Requests: Request count.</li>
+<li>QUICRequests: Number of QUIC requests.</li>
+<li>IpVisit: Number of IP visits.</li>
+ * @method string getStartTime() Obtain Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setStartTime(string $StartTime) Set Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getEndTime() Obtain End time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setEndTime(string $EndTime) Set End time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method array getDomainNames() Obtain Domain name list. Up to 20 domain names can be queried for data. Default returns the overlaid usage data of all domains.
+ * @method void setDomainNames(array $DomainNames) Set Domain name list. Up to 20 domain names can be queried for data. Default returns the overlaid usage data of all domains.
+ * @method string getArea() Obtain Service area. Valid values:
+<li>Chinese Mainland: Chinese mainland.</li>
+<li>Asia Pacific Region 1: Asia Pacific zone 1, including Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand.</li>
+<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan, Japan, Malaysia, Indonesia, Korea.</li>
+<li>Asia Pacific Region 3: Asia Pacific zone 3, including Philippines, India, Australia and other countries and regions in Asia Pacific.</li>
+<li>Middle East: Middle East.</li>
+<li>Europe: Europe.</li>
+<li>North America: North America.</li>
+<li>South America: South America.</li>
+<li>Africa: Africa.</li>
+Default is Chinese mainland.
+ * @method void setArea(string $Area) Set Service area. Valid values:
+<li>Chinese Mainland: Chinese mainland.</li>
+<li>Asia Pacific Region 1: Asia Pacific zone 1, including Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand.</li>
+<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan, Japan, Malaysia, Indonesia, Korea.</li>
+<li>Asia Pacific Region 3: Asia Pacific zone 3, including Philippines, India, Australia and other countries and regions in Asia Pacific.</li>
+<li>Middle East: Middle East.</li>
+<li>Europe: Europe.</li>
+<li>North America: North America.</li>
+<li>South America: South America.</li>
+<li>Africa: Africa.</li>
+Default is Chinese mainland.
+ * @method array getDistricts() Obtain When the user's located region is Chinese Mainland, value is the following region information. When Area has other values, ignore the Districts parameter.
+<li>Beijing: Beijing.</li>
+<li>Inner Mongolia: Inner Mongolia.</li>
+<li>Shanxi: Shanxi.</li>
+<li>Hebei: Hebei.</li>
+<li>Tianjin: Tianjin.</li>
+<li>Ningxia: Ningxia.</li>
+<li>Shaanxi: Shaanxi.</li>
+<li>Gansu: Gansu.</li>
+<li>Qinghai: Qinghai.</li>
+<li>Xinjiang: Xinjiang.</li>
+<li>Heilongjiang: Heilongjiang.</li>
+<li>Jilin: Jilin.</li>
+<li>Liaoning: Liaoning.</li>
+<li>Fujian: Fujian.</li>
+<li>Jiangsu: Jiangsu.</li>
+<li>Anhui: Anhui.</li>
+<li>Shandong: Shandong.</li>
+<li>Shanghai: Shanghai.</li>
+<li>Zhejiang: Zhejiang.</li>
+<li>Henan: Henan.</li>
+<li>Hubei: Hubei.</li>
+<li>Jiangxi: Jiangxi.</li>
+<li>Hunan: Hu’nan.</li>
+<li>Guizhou: Guizhou.</li>
+<li>Yunnan: Yunnan.</li>
+<li>Chongqing: Chongqing.</li>
+<li>Sichuan: Sichuan.</li>
+<li>Xizang: Tibet.</li>
+<li>Guangdong: Guangdong.</li>
+<li>Guangxi: Guangxi.</li>
+<li>Hainan: Hainan.</li>
+<li>Hong Kong, Macao and Taiwan: Hong Kong (China), Macao (China) and Taiwan (China).</li>
+<li>Outside Chinese Mainland: overseas.</li>
+<li>Other: other.</li>
+ * @method void setDistricts(array $Districts) Set When the user's located region is Chinese Mainland, value is the following region information. When Area has other values, ignore the Districts parameter.
+<li>Beijing: Beijing.</li>
+<li>Inner Mongolia: Inner Mongolia.</li>
+<li>Shanxi: Shanxi.</li>
+<li>Hebei: Hebei.</li>
+<li>Tianjin: Tianjin.</li>
+<li>Ningxia: Ningxia.</li>
+<li>Shaanxi: Shaanxi.</li>
+<li>Gansu: Gansu.</li>
+<li>Qinghai: Qinghai.</li>
+<li>Xinjiang: Xinjiang.</li>
+<li>Heilongjiang: Heilongjiang.</li>
+<li>Jilin: Jilin.</li>
+<li>Liaoning: Liaoning.</li>
+<li>Fujian: Fujian.</li>
+<li>Jiangsu: Jiangsu.</li>
+<li>Anhui: Anhui.</li>
+<li>Shandong: Shandong.</li>
+<li>Shanghai: Shanghai.</li>
+<li>Zhejiang: Zhejiang.</li>
+<li>Henan: Henan.</li>
+<li>Hubei: Hubei.</li>
+<li>Jiangxi: Jiangxi.</li>
+<li>Hunan: Hu’nan.</li>
+<li>Guizhou: Guizhou.</li>
+<li>Yunnan: Yunnan.</li>
+<li>Chongqing: Chongqing.</li>
+<li>Sichuan: Sichuan.</li>
+<li>Xizang: Tibet.</li>
+<li>Guangdong: Guangdong.</li>
+<li>Guangxi: Guangxi.</li>
+<li>Hainan: Hainan.</li>
+<li>Hong Kong, Macao and Taiwan: Hong Kong (China), Macao (China) and Taiwan (China).</li>
+<li>Outside Chinese Mainland: overseas.</li>
+<li>Other: other.</li>
+ * @method array getIsps() Obtain User's Operator Information. When Area is Chinese Mainland, value is the following carrier information. When Area is other values, ignore the Isps parameter.
+<li>China Telecom: CTCC. </li>
+<li>China Unicom: CUCC. </li>
+<li>CERNET: China Education Network.</li>
+<li>Great Wall Broadband Network: Great Wall Broadband.</li>
+<li>China Mobile: CMCC.</li>
+<li>China Mobile Tietong: China Tietong.</li>
+<li>ISPs outside Chinese Mainland: Overseas carriers.</li>
+<li>Other ISPs: Other ISPs.</li>
+ * @method void setIsps(array $Isps) Set User's Operator Information. When Area is Chinese Mainland, value is the following carrier information. When Area is other values, ignore the Isps parameter.
+<li>China Telecom: CTCC. </li>
+<li>China Unicom: CUCC. </li>
+<li>CERNET: China Education Network.</li>
+<li>Great Wall Broadband Network: Great Wall Broadband.</li>
+<li>China Mobile: CMCC.</li>
+<li>China Mobile Tietong: China Tietong.</li>
+<li>ISPs outside Chinese Mainland: Overseas carriers.</li>
+<li>Other ISPs: Other ISPs.</li>
+ * @method integer getDataInterval() Obtain Time granularity of each data entry. Unit: minute. Valid values:
+<li>5: 5 minutes, return detailed data at a minute granularity for the specified query time.</li>
+<li>1440: Day granularity. Returns the data of day granularity within the specified query time. The duration between start time and end time is more than 24 hours. Supports only day granularity data.</li>
+When the duration between StartTime and EndTime is more than 24 hours, DataInterval defaults to 1440.
+ * @method void setDataInterval(integer $DataInterval) Set Time granularity of each data entry. Unit: minute. Valid values:
+<li>5: 5 minutes, return detailed data at a minute granularity for the specified query time.</li>
+<li>1440: Day granularity. Returns the data of day granularity within the specified query time. The duration between start time and end time is more than 24 hours. Supports only day granularity data.</li>
+When the duration between StartTime and EndTime is more than 24 hours, DataInterval defaults to 1440.
  */
 class DescribeCDNStatDetailsRequest extends AbstractModel
 {
     /**
-     * @var string Query indicators, the values u200bu200bare:
-<li>Traffic: traffic, unit is Byte. </li>
-<li>Bandwidth: Bandwidth, unit is Bps. </li>
-<li>Requests: Number of requests. </li>
-<li>QUICRequests: Number of QUIC requests. </li>
-<li>IpVisit: Number of IP visits. </li>
+     * @var string Query metric. Valid values:
+<li>Traffic: Total Traffic in bytes.</li>
+<li>Bandwidth: bandwidth, in Bps.</li>
+<li>Requests: Request count.</li>
+<li>QUICRequests: Number of QUIC requests.</li>
+<li>IpVisit: Number of IP visits.</li>
      */
     public $Metric;
 
     /**
-     * @var string Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * @var string Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $StartTime;
 
     /**
-     * @var string End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * @var string End time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $EndTime;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var array List of domain names. The usage data of up to 20 domain names can be queried at a time. The usage data of all domain names is returned by default.
+     * @var array Domain name list. Up to 20 domain names can be queried for data. Default returns the overlaid usage data of all domains.
      */
     public $DomainNames;
 
     /**
-     * @var string Service region. Valid values:
-<li>Chinese Mainland</li>
-<li>Asia Pacific Region 1: Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand</li>
-<li>Asia Pacific Region 2: Taiwan (China), Japan, Malaysia, Indonesia, and South Korea</li>
-<li>Asia Pacific Region 3: Philippines, India, Australia, and other Asia Pacific countries and regions</li>
-<li>Middle East</li>
-<li>Europe</li>
-<li>North America</li>
-<li>South America</li>
-<li>Africa</li>
-Default value: Chinese Mainland
+     * @var string Service area. Valid values:
+<li>Chinese Mainland: Chinese mainland.</li>
+<li>Asia Pacific Region 1: Asia Pacific zone 1, including Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand.</li>
+<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan, Japan, Malaysia, Indonesia, Korea.</li>
+<li>Asia Pacific Region 3: Asia Pacific zone 3, including Philippines, India, Australia and other countries and regions in Asia Pacific.</li>
+<li>Middle East: Middle East.</li>
+<li>Europe: Europe.</li>
+<li>North America: North America.</li>
+<li>South America: South America.</li>
+<li>Africa: Africa.</li>
+Default is Chinese mainland.
      */
     public $Area;
 
     /**
-     * @var array District where users are located. When `Area` is `Chinese Mainland`, valid values for `Districts` are as follows. Otherwise, `Districts` can be ignored.
-<li>Beijing</li>
-<li>Inner Mongolia</li>
-<li>Shanxi</li>
-<li>Hebei</li>
-<li>Tianjin</li>
-<li>Ningxia</li>
-<li>Shaanxi</li>
-<li>Gansu</li>
-<li>Qinghai</li>
-<li>Xinjiang</li>
-<li>Heilongjiang</li>
-<li>Jilin</li>
-<li>Liaoning</li>
-<li>Fujian</li>
-<li>Jiangsu</li>
-<li>Anhui</li>
-<li>Shandong</li>
-<li>Shanghai</li>
-<li>Zhejiang</li>
-<li>Henan</li>
-<li>Hubei</li>
-<li>Jiangxi</li>
-<li>Hunan</li>
-<li>Guizhou</li>
-<li>Yunnan</li>
-<li>Chongqing</li>
-<li>Sichuan</li>
-<li>Xizang</li>
-<li>Guangdong</li>
-<li>Guangxi</li>
-<li>Hainan</li>
-<li>Hong Kong, Macao and Taiwan</li>
-<li>Outside Chinese Mainland</li>
-<li>Other</li>
+     * @var array When the user's located region is Chinese Mainland, value is the following region information. When Area has other values, ignore the Districts parameter.
+<li>Beijing: Beijing.</li>
+<li>Inner Mongolia: Inner Mongolia.</li>
+<li>Shanxi: Shanxi.</li>
+<li>Hebei: Hebei.</li>
+<li>Tianjin: Tianjin.</li>
+<li>Ningxia: Ningxia.</li>
+<li>Shaanxi: Shaanxi.</li>
+<li>Gansu: Gansu.</li>
+<li>Qinghai: Qinghai.</li>
+<li>Xinjiang: Xinjiang.</li>
+<li>Heilongjiang: Heilongjiang.</li>
+<li>Jilin: Jilin.</li>
+<li>Liaoning: Liaoning.</li>
+<li>Fujian: Fujian.</li>
+<li>Jiangsu: Jiangsu.</li>
+<li>Anhui: Anhui.</li>
+<li>Shandong: Shandong.</li>
+<li>Shanghai: Shanghai.</li>
+<li>Zhejiang: Zhejiang.</li>
+<li>Henan: Henan.</li>
+<li>Hubei: Hubei.</li>
+<li>Jiangxi: Jiangxi.</li>
+<li>Hunan: Hu’nan.</li>
+<li>Guizhou: Guizhou.</li>
+<li>Yunnan: Yunnan.</li>
+<li>Chongqing: Chongqing.</li>
+<li>Sichuan: Sichuan.</li>
+<li>Xizang: Tibet.</li>
+<li>Guangdong: Guangdong.</li>
+<li>Guangxi: Guangxi.</li>
+<li>Hainan: Hainan.</li>
+<li>Hong Kong, Macao and Taiwan: Hong Kong (China), Macao (China) and Taiwan (China).</li>
+<li>Outside Chinese Mainland: overseas.</li>
+<li>Other: other.</li>
      */
     public $Districts;
 
     /**
-     * @var array ISP of users. When `Area` is `Chinese Mainland`, valid values for `Isps` are as follows. Otherwise, `Isps` can be ignored.
-<li>China Telecom</li>
-<li>China Unicom</li>
-<li>CERNET</li>
-<li>Great Wall Broadband Network</li>
-<li>China Mobile</li>
-<li>China Mobile Tietong</li>
-<li>ISPs outside Chinese Mainland</li>
-<li>Other ISPs</li>
+     * @var array User's Operator Information. When Area is Chinese Mainland, value is the following carrier information. When Area is other values, ignore the Isps parameter.
+<li>China Telecom: CTCC. </li>
+<li>China Unicom: CUCC. </li>
+<li>CERNET: China Education Network.</li>
+<li>Great Wall Broadband Network: Great Wall Broadband.</li>
+<li>China Mobile: CMCC.</li>
+<li>China Mobile Tietong: China Tietong.</li>
+<li>ISPs outside Chinese Mainland: Overseas carriers.</li>
+<li>Other ISPs: Other ISPs.</li>
      */
     public $Isps;
 
     /**
-     * @var integer Time granularity of every piece of data in minutes. Valid values:
-<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
-<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned. If the query period is larger than 24 hours, only data at 1-day granularity can be queried.</li>
-If the difference between `StartTime` and `EndTime` is larger than 24 hours, the default value of `DataInterval` is 1440.
+     * @var integer Time granularity of each data entry. Unit: minute. Valid values:
+<li>5: 5 minutes, return detailed data at a minute granularity for the specified query time.</li>
+<li>1440: Day granularity. Returns the data of day granularity within the specified query time. The duration between start time and end time is more than 24 hours. Supports only day granularity data.</li>
+When the duration between StartTime and EndTime is more than 24 hours, DataInterval defaults to 1440.
      */
     public $DataInterval;
 
     /**
-     * @param string $Metric Query indicators, the values u200bu200bare:
-<li>Traffic: traffic, unit is Byte. </li>
-<li>Bandwidth: Bandwidth, unit is Bps. </li>
-<li>Requests: Number of requests. </li>
-<li>QUICRequests: Number of QUIC requests. </li>
-<li>IpVisit: Number of IP visits. </li>
-     * @param string $StartTime Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-     * @param string $EndTime End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param array $DomainNames List of domain names. The usage data of up to 20 domain names can be queried at a time. The usage data of all domain names is returned by default.
-     * @param string $Area Service region. Valid values:
-<li>Chinese Mainland</li>
-<li>Asia Pacific Region 1: Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand</li>
-<li>Asia Pacific Region 2: Taiwan (China), Japan, Malaysia, Indonesia, and South Korea</li>
-<li>Asia Pacific Region 3: Philippines, India, Australia, and other Asia Pacific countries and regions</li>
-<li>Middle East</li>
-<li>Europe</li>
-<li>North America</li>
-<li>South America</li>
-<li>Africa</li>
-Default value: Chinese Mainland
-     * @param array $Districts District where users are located. When `Area` is `Chinese Mainland`, valid values for `Districts` are as follows. Otherwise, `Districts` can be ignored.
-<li>Beijing</li>
-<li>Inner Mongolia</li>
-<li>Shanxi</li>
-<li>Hebei</li>
-<li>Tianjin</li>
-<li>Ningxia</li>
-<li>Shaanxi</li>
-<li>Gansu</li>
-<li>Qinghai</li>
-<li>Xinjiang</li>
-<li>Heilongjiang</li>
-<li>Jilin</li>
-<li>Liaoning</li>
-<li>Fujian</li>
-<li>Jiangsu</li>
-<li>Anhui</li>
-<li>Shandong</li>
-<li>Shanghai</li>
-<li>Zhejiang</li>
-<li>Henan</li>
-<li>Hubei</li>
-<li>Jiangxi</li>
-<li>Hunan</li>
-<li>Guizhou</li>
-<li>Yunnan</li>
-<li>Chongqing</li>
-<li>Sichuan</li>
-<li>Xizang</li>
-<li>Guangdong</li>
-<li>Guangxi</li>
-<li>Hainan</li>
-<li>Hong Kong, Macao and Taiwan</li>
-<li>Outside Chinese Mainland</li>
-<li>Other</li>
-     * @param array $Isps ISP of users. When `Area` is `Chinese Mainland`, valid values for `Isps` are as follows. Otherwise, `Isps` can be ignored.
-<li>China Telecom</li>
-<li>China Unicom</li>
-<li>CERNET</li>
-<li>Great Wall Broadband Network</li>
-<li>China Mobile</li>
-<li>China Mobile Tietong</li>
-<li>ISPs outside Chinese Mainland</li>
-<li>Other ISPs</li>
-     * @param integer $DataInterval Time granularity of every piece of data in minutes. Valid values:
-<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
-<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned. If the query period is larger than 24 hours, only data at 1-day granularity can be queried.</li>
-If the difference between `StartTime` and `EndTime` is larger than 24 hours, the default value of `DataInterval` is 1440.
+     * @param string $Metric Query metric. Valid values:
+<li>Traffic: Total Traffic in bytes.</li>
+<li>Bandwidth: bandwidth, in Bps.</li>
+<li>Requests: Request count.</li>
+<li>QUICRequests: Number of QUIC requests.</li>
+<li>IpVisit: Number of IP visits.</li>
+     * @param string $StartTime Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $EndTime End time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param array $DomainNames Domain name list. Up to 20 domain names can be queried for data. Default returns the overlaid usage data of all domains.
+     * @param string $Area Service area. Valid values:
+<li>Chinese Mainland: Chinese mainland.</li>
+<li>Asia Pacific Region 1: Asia Pacific zone 1, including Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand.</li>
+<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan, Japan, Malaysia, Indonesia, Korea.</li>
+<li>Asia Pacific Region 3: Asia Pacific zone 3, including Philippines, India, Australia and other countries and regions in Asia Pacific.</li>
+<li>Middle East: Middle East.</li>
+<li>Europe: Europe.</li>
+<li>North America: North America.</li>
+<li>South America: South America.</li>
+<li>Africa: Africa.</li>
+Default is Chinese mainland.
+     * @param array $Districts When the user's located region is Chinese Mainland, value is the following region information. When Area has other values, ignore the Districts parameter.
+<li>Beijing: Beijing.</li>
+<li>Inner Mongolia: Inner Mongolia.</li>
+<li>Shanxi: Shanxi.</li>
+<li>Hebei: Hebei.</li>
+<li>Tianjin: Tianjin.</li>
+<li>Ningxia: Ningxia.</li>
+<li>Shaanxi: Shaanxi.</li>
+<li>Gansu: Gansu.</li>
+<li>Qinghai: Qinghai.</li>
+<li>Xinjiang: Xinjiang.</li>
+<li>Heilongjiang: Heilongjiang.</li>
+<li>Jilin: Jilin.</li>
+<li>Liaoning: Liaoning.</li>
+<li>Fujian: Fujian.</li>
+<li>Jiangsu: Jiangsu.</li>
+<li>Anhui: Anhui.</li>
+<li>Shandong: Shandong.</li>
+<li>Shanghai: Shanghai.</li>
+<li>Zhejiang: Zhejiang.</li>
+<li>Henan: Henan.</li>
+<li>Hubei: Hubei.</li>
+<li>Jiangxi: Jiangxi.</li>
+<li>Hunan: Hu’nan.</li>
+<li>Guizhou: Guizhou.</li>
+<li>Yunnan: Yunnan.</li>
+<li>Chongqing: Chongqing.</li>
+<li>Sichuan: Sichuan.</li>
+<li>Xizang: Tibet.</li>
+<li>Guangdong: Guangdong.</li>
+<li>Guangxi: Guangxi.</li>
+<li>Hainan: Hainan.</li>
+<li>Hong Kong, Macao and Taiwan: Hong Kong (China), Macao (China) and Taiwan (China).</li>
+<li>Outside Chinese Mainland: overseas.</li>
+<li>Other: other.</li>
+     * @param array $Isps User's Operator Information. When Area is Chinese Mainland, value is the following carrier information. When Area is other values, ignore the Isps parameter.
+<li>China Telecom: CTCC. </li>
+<li>China Unicom: CUCC. </li>
+<li>CERNET: China Education Network.</li>
+<li>Great Wall Broadband Network: Great Wall Broadband.</li>
+<li>China Mobile: CMCC.</li>
+<li>China Mobile Tietong: China Tietong.</li>
+<li>ISPs outside Chinese Mainland: Overseas carriers.</li>
+<li>Other ISPs: Other ISPs.</li>
+     * @param integer $DataInterval Time granularity of each data entry. Unit: minute. Valid values:
+<li>5: 5 minutes, return detailed data at a minute granularity for the specified query time.</li>
+<li>1440: Day granularity. Returns the data of day granularity within the specified query time. The duration between start time and end time is more than 24 hours. Supports only day granularity data.</li>
+When the duration between StartTime and EndTime is more than 24 hours, DataInterval defaults to 1440.
      */
     function __construct()
     {

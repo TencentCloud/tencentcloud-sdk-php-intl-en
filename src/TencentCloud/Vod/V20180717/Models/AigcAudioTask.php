@@ -18,76 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Create AIGC sound effect task info.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getErrCodeExt() Obtain 
- * @method void setErrCodeExt(string $ErrCodeExt) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method integer getProgress() Obtain 
- * @method void setProgress(integer $Progress) Set 
- * @method AigcAudioTaskInput getInput() Obtain 
- * @method void setInput(AigcAudioTaskInput $Input) Set 
- * @method AigcAudioTaskOutput getOutput() Obtain 
- * @method void setOutput(AigcAudioTaskOutput $Output) Set 
+ * @method string getTaskId() Obtain <p>Task ID.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
+ * @method string getStatus() Obtain <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
+ * @method void setStatus(string $Status) Set <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
+ * @method integer getErrCode() Obtain <p>Error code. Returns a non-zero error code for source errors. For zero returns, please use the ErrCode of each specific task.</p>
+ * @method void setErrCode(integer $ErrCode) Set <p>Error code. Returns a non-zero error code for source errors. For zero returns, please use the ErrCode of each specific task.</p>
+ * @method string getErrCodeExt() Obtain <p>Error code extension. A null string indicates success, while other values indicate failure.</p>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Error code extension. A null string indicates success, while other values indicate failure.</p>
+ * @method string getMessage() Obtain <p>Error message.</p>
+ * @method void setMessage(string $Message) Set <p>Error message.</p>
+ * @method integer getProgress() Obtain <p>Task progress, in the range of [0-100].</p>
+ * @method void setProgress(integer $Progress) Set <p>Task progress, in the range of [0-100].</p>
+ * @method AigcAudioTaskInput getInput() Obtain <p>Input info of the AIGC audio task.</p>
+ * @method void setInput(AigcAudioTaskInput $Input) Set <p>Input info of the AIGC audio task.</p>
+ * @method AigcAudioTaskOutput getOutput() Obtain <p>AIGC audio task output information.</p>
+ * @method void setOutput(AigcAudioTaskOutput $Output) Set <p>AIGC audio task output information.</p>
  */
 class AigcAudioTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Task ID.</p>
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer <p>Error code. Returns a non-zero error code for source errors. For zero returns, please use the ErrCode of each specific task.</p>
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string <p>Error code extension. A null string indicates success, while other values indicate failure.</p>
      */
     public $ErrCodeExt;
 
     /**
-     * @var string 
+     * @var string <p>Error message.</p>
      */
     public $Message;
 
     /**
-     * @var integer 
+     * @var integer <p>Task progress, in the range of [0-100].</p>
      */
     public $Progress;
 
     /**
-     * @var AigcAudioTaskInput 
+     * @var AigcAudioTaskInput <p>Input info of the AIGC audio task.</p>
      */
     public $Input;
 
     /**
-     * @var AigcAudioTaskOutput 
+     * @var AigcAudioTaskOutput <p>AIGC audio task output information.</p>
      */
     public $Output;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param integer $ErrCode 
-     * @param string $ErrCodeExt 
-     * @param string $Message 
-     * @param integer $Progress 
-     * @param AigcAudioTaskInput $Input 
-     * @param AigcAudioTaskOutput $Output 
+     * @param string $TaskId <p>Task ID.</p>
+     * @param string $Status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
+     * @param integer $ErrCode <p>Error code. Returns a non-zero error code for source errors. For zero returns, please use the ErrCode of each specific task.</p>
+     * @param string $ErrCodeExt <p>Error code extension. A null string indicates success, while other values indicate failure.</p>
+     * @param string $Message <p>Error message.</p>
+     * @param integer $Progress <p>Task progress, in the range of [0-100].</p>
+     * @param AigcAudioTaskInput $Input <p>Input info of the AIGC audio task.</p>
+     * @param AigcAudioTaskOutput $Output <p>AIGC audio task output information.</p>
      */
     function __construct()
     {

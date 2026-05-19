@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Scenario-Based AIGC image generation configuration.
  *
- * @method string getType() Obtain Scenario type of AI image generation. Available values:
--change_clothes: AI clothing change.
--Product image: AI-generated product image.
--outpainting: AI image expansion.
- * @method void setType(string $Type) Set Scenario type of AI image generation. Available values:
--change_clothes: AI clothing change.
--Product image: AI-generated product image.
--outpainting: AI image expansion.
- * @method ChangeClothesConfig getChangeClothesConfig() Obtain Valid when Type is change_clothes. this item is required and indicates the AI clothes-changing image generation config.
- * @method void setChangeClothesConfig(ChangeClothesConfig $ChangeClothesConfig) Set Valid when Type is change_clothes. this item is required and indicates the AI clothes-changing image generation config.
- * @method ProductImageConfig getProductImageConfig() Obtain Valid when Type is product_image. indicates the AI-generated product image config.
- * @method void setProductImageConfig(ProductImageConfig $ProductImageConfig) Set Valid when Type is product_image. indicates the AI-generated product image config.
+ * @method string getType() Obtain <p>AI image generation scenario type. Available values:</p><ul><li>change_clothes: Change clothes in regular scenes.</li><li>change_clothes_under: Change clothes in special scenarios.</li><li>change_clothes_top_wear: Change upper body clothes.</li><li>change_clothes_bottom_wear: Change lower body clothes.</li><li>change_clothes_full_wear: Change full body clothes.</li><li>product_image: AI-generated product image.</li><li>outpainting: AI image outpainting.</li></ul>
+ * @method void setType(string $Type) Set <p>AI image generation scenario type. Available values:</p><ul><li>change_clothes: Change clothes in regular scenes.</li><li>change_clothes_under: Change clothes in special scenarios.</li><li>change_clothes_top_wear: Change upper body clothes.</li><li>change_clothes_bottom_wear: Change lower body clothes.</li><li>change_clothes_full_wear: Change full body clothes.</li><li>product_image: AI-generated product image.</li><li>outpainting: AI image outpainting.</li></ul>
+ * @method ChangeClothesConfig getChangeClothesConfig() Obtain <p>When the Type is one of the following column types, this item is required and represents the AI clothing change image generation config:</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
+ * @method void setChangeClothesConfig(ChangeClothesConfig $ChangeClothesConfig) Set <p>When the Type is one of the following column types, this item is required and represents the AI clothing change image generation config:</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
+ * @method ProductImageConfig getProductImageConfig() Obtain <p>Valid when Type is product_image, indicating AI-generated product image config.</p>
+ * @method void setProductImageConfig(ProductImageConfig $ProductImageConfig) Set <p>Valid when Type is product_image, indicating AI-generated product image config.</p>
  */
 class AigcImageSceneInfo extends AbstractModel
 {
     /**
-     * @var string Scenario type of AI image generation. Available values:
--change_clothes: AI clothing change.
--Product image: AI-generated product image.
--outpainting: AI image expansion.
+     * @var string <p>AI image generation scenario type. Available values:</p><ul><li>change_clothes: Change clothes in regular scenes.</li><li>change_clothes_under: Change clothes in special scenarios.</li><li>change_clothes_top_wear: Change upper body clothes.</li><li>change_clothes_bottom_wear: Change lower body clothes.</li><li>change_clothes_full_wear: Change full body clothes.</li><li>product_image: AI-generated product image.</li><li>outpainting: AI image outpainting.</li></ul>
      */
     public $Type;
 
     /**
-     * @var ChangeClothesConfig Valid when Type is change_clothes. this item is required and indicates the AI clothes-changing image generation config.
+     * @var ChangeClothesConfig <p>When the Type is one of the following column types, this item is required and represents the AI clothing change image generation config:</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
      */
     public $ChangeClothesConfig;
 
     /**
-     * @var ProductImageConfig Valid when Type is product_image. indicates the AI-generated product image config.
+     * @var ProductImageConfig <p>Valid when Type is product_image, indicating AI-generated product image config.</p>
      */
     public $ProductImageConfig;
 
     /**
-     * @param string $Type Scenario type of AI image generation. Available values:
--change_clothes: AI clothing change.
--Product image: AI-generated product image.
--outpainting: AI image expansion.
-     * @param ChangeClothesConfig $ChangeClothesConfig Valid when Type is change_clothes. this item is required and indicates the AI clothes-changing image generation config.
-     * @param ProductImageConfig $ProductImageConfig Valid when Type is product_image. indicates the AI-generated product image config.
+     * @param string $Type <p>AI image generation scenario type. Available values:</p><ul><li>change_clothes: Change clothes in regular scenes.</li><li>change_clothes_under: Change clothes in special scenarios.</li><li>change_clothes_top_wear: Change upper body clothes.</li><li>change_clothes_bottom_wear: Change lower body clothes.</li><li>change_clothes_full_wear: Change full body clothes.</li><li>product_image: AI-generated product image.</li><li>outpainting: AI image outpainting.</li></ul>
+     * @param ChangeClothesConfig $ChangeClothesConfig <p>When the Type is one of the following column types, this item is required and represents the AI clothing change image generation config:</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
+     * @param ProductImageConfig $ProductImageConfig <p>Valid when Type is product_image, indicating AI-generated product image config.</p>
      */
     function __construct()
     {

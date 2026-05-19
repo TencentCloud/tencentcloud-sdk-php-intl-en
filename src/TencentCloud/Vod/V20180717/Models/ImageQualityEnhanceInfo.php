@@ -18,55 +18,51 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Overall enhancement configuration.
+ * Comprehensive enhancement control
  *
- * @method string getSwitch() Obtain Whether to enable overall enhancement. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: OFF.
- * @method void setSwitch(string $Switch) Set Whether to enable overall enhancement. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: OFF.
- * @method string getType() Obtain The strength. Valid values:
-<li>weak</li>
-<li>normal</li>
-<li>strong</li>
+ * @method string getSwitch() Obtain Comprehensive enhancement control switch. Valid values:
+<li>ON: enable comprehensive enhancement</li>
+<li>OFF: disable comprehensive enhancement</li>
+ * @method void setSwitch(string $Switch) Set Comprehensive enhancement control switch. Valid values:
+<li>ON: enable comprehensive enhancement</li>
+<li>OFF: disable comprehensive enhancement</li>
+ * @method string getType() Obtain Comprehensive enhancement type. Valid only when the control switch is ON. Available values:
+<li>weak: light comprehensive enhancement.</li>
+<li>NORMAL: Comprehensive enhancement is normal.</li>
+<li>strong: comprehensive enhancement.</li>
 Default value: weak.
- * @method void setType(string $Type) Set The strength. Valid values:
-<li>weak</li>
-<li>normal</li>
-<li>strong</li>
+ * @method void setType(string $Type) Set Comprehensive enhancement type. Valid only when the control switch is ON. Available values:
+<li>weak: light comprehensive enhancement.</li>
+<li>NORMAL: Comprehensive enhancement is normal.</li>
+<li>strong: comprehensive enhancement.</li>
 Default value: weak.
  */
 class ImageQualityEnhanceInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable overall enhancement. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: OFF.
+     * @var string Comprehensive enhancement control switch. Valid values:
+<li>ON: enable comprehensive enhancement</li>
+<li>OFF: disable comprehensive enhancement</li>
      */
     public $Switch;
 
     /**
-     * @var string The strength. Valid values:
-<li>weak</li>
-<li>normal</li>
-<li>strong</li>
+     * @var string Comprehensive enhancement type. Valid only when the control switch is ON. Available values:
+<li>weak: light comprehensive enhancement.</li>
+<li>NORMAL: Comprehensive enhancement is normal.</li>
+<li>strong: comprehensive enhancement.</li>
 Default value: weak.
      */
     public $Type;
 
     /**
-     * @param string $Switch Whether to enable overall enhancement. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: OFF.
-     * @param string $Type The strength. Valid values:
-<li>weak</li>
-<li>normal</li>
-<li>strong</li>
+     * @param string $Switch Comprehensive enhancement control switch. Valid values:
+<li>ON: enable comprehensive enhancement</li>
+<li>OFF: disable comprehensive enhancement</li>
+     * @param string $Type Comprehensive enhancement type. Valid only when the control switch is ON. Available values:
+<li>weak: light comprehensive enhancement.</li>
+<li>NORMAL: Comprehensive enhancement is normal.</li>
+<li>strong: comprehensive enhancement.</li>
 Default value: weak.
      */
     function __construct()

@@ -20,146 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Media quality inspection template details.
  *
- * @method integer getDefinition() Obtain Media quality inspection template ID.
- * @method void setDefinition(integer $Definition) Set Media quality inspection template ID.
- * @method string getType() Obtain Template Type, available options: <li>Preset: Preset Template;</li> <li>Custom: User Custom Template.</li>
- * @method void setType(string $Type) Set Template Type, available options: <li>Preset: Preset Template;</li> <li>Custom: User Custom Template.</li>
- * @method string getName() Obtain Media quality inspection template name.
- * @method void setName(string $Name) Set Media quality inspection template name.
- * @method string getComment() Obtain Template description. 
- * @method void setComment(string $Comment) Set Template description. 
- * @method float getScreenshotInterval() Obtain Frame interval, unit in seconds.
- * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame interval, unit in seconds.
- * @method JitterConfigureInfo getJitterConfigure() Obtain Control parameters for detecting video jitter and ghosting.
- * @method void setJitterConfigure(JitterConfigureInfo $JitterConfigure) Set Control parameters for detecting video jitter and ghosting.
- * @method BlurConfigureInfo getBlurConfigure() Obtain Control parameters for detecting video blur.
- * @method void setBlurConfigure(BlurConfigureInfo $BlurConfigure) Set Control parameters for detecting video blur.
- * @method AbnormalLightingConfigureInfo getAbnormalLightingConfigure() Obtain Control parameters for detecting low brightness and overexposure of video.
- * @method void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo $AbnormalLightingConfigure) Set Control parameters for detecting low brightness and overexposure of video.
- * @method CrashScreenConfigureInfo getCrashScreenConfigure() Obtain Control parameters for detecting video crash.
- * @method void setCrashScreenConfigure(CrashScreenConfigureInfo $CrashScreenConfigure) Set Control parameters for detecting video crash.
- * @method BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() Obtain Control parameters for detecting video black edges, white edges, black screen, and white screen.
- * @method void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure) Set Control parameters for detecting video black edges, white edges, black screen, and white screen.
- * @method NoiseConfigureInfo getNoiseConfigure() Obtain Control parameters for detecting video noise.
- * @method void setNoiseConfigure(NoiseConfigureInfo $NoiseConfigure) Set Control parameters for detecting video noise.
- * @method MosaicConfigureInfo getMosaicConfigure() Obtain Control parameters for detecting video mosaic.
- * @method void setMosaicConfigure(MosaicConfigureInfo $MosaicConfigure) Set Control parameters for detecting video mosaic.
- * @method QRCodeConfigureInfo getQRCodeConfigure() Obtain Control parameters for QR code detection in video.
- * @method void setQRCodeConfigure(QRCodeConfigureInfo $QRCodeConfigure) Set Control parameters for QR code detection in video.
- * @method QualityEvaluationConfigureInfo getQualityEvaluationConfigure() Obtain Control parameters for video quality evaluation.
- * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo $QualityEvaluationConfigure) Set Control parameters for video quality evaluation.
- * @method VoiceConfigureInfo getVoiceConfigure() Obtain Control parameters for audio (mutes, bass, blast sound).
- * @method void setVoiceConfigure(VoiceConfigureInfo $VoiceConfigure) Set Control parameters for audio (mutes, bass, blast sound).
- * @method string getCreateTime() Obtain Template Creation Time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method void setCreateTime(string $CreateTime) Set Template Creation Time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method string getUpdateTime() Obtain Template Modification time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method void setUpdateTime(string $UpdateTime) Set Template Modification time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method integer getDefinition() Obtain Template ID.
+ * @method void setDefinition(integer $Definition) Set Template ID.
+ * @method string getType() Obtain Template type. Available values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
+ * @method void setType(string $Type) Set Template type. Available values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
+ * @method string getName() Obtain Template Name
+ * @method void setName(string $Name) Set Template Name
+ * @method string getComment() Obtain Template description.
+ * @method void setComment(string $Comment) Set Template description.
+ * @method float getScreenshotInterval() Obtain Frame interception interval in seconds.
+ * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame interception interval in seconds.
+ * @method JitterConfigureInfo getJitterConfigure() Obtain Control parameters for video frame jitter and ghosting detection.
+ * @method void setJitterConfigure(JitterConfigureInfo $JitterConfigure) Set Control parameters for video frame jitter and ghosting detection.
+ * @method BlurConfigureInfo getBlurConfigure() Obtain Control parameters for video frame blur detection.
+ * @method void setBlurConfigure(BlurConfigureInfo $BlurConfigure) Set Control parameters for video frame blur detection.
+ * @method AbnormalLightingConfigureInfo getAbnormalLightingConfigure() Obtain Control parameters for low-light and overexposure detection in video frames.
+ * @method void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo $AbnormalLightingConfigure) Set Control parameters for low-light and overexposure detection in video frames.
+ * @method CrashScreenConfigureInfo getCrashScreenConfigure() Obtain Control parameters for screen glitch detection in video footage.
+ * @method void setCrashScreenConfigure(CrashScreenConfigureInfo $CrashScreenConfigure) Set Control parameters for screen glitch detection in video footage.
+ * @method BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() Obtain Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+ * @method void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure) Set Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+ * @method NoiseConfigureInfo getNoiseConfigure() Obtain Control parameters for video frame noise detection.
+ * @method void setNoiseConfigure(NoiseConfigureInfo $NoiseConfigure) Set Control parameters for video frame noise detection.
+ * @method MosaicConfigureInfo getMosaicConfigure() Obtain Control parameters for video frame mosaic detection.
+ * @method void setMosaicConfigure(MosaicConfigureInfo $MosaicConfigure) Set Control parameters for video frame mosaic detection.
+ * @method QRCodeConfigureInfo getQRCodeConfigure() Obtain Control parameters for video frame QR code detection.
+ * @method void setQRCodeConfigure(QRCodeConfigureInfo $QRCodeConfigure) Set Control parameters for video frame QR code detection.
+ * @method QualityEvaluationConfigureInfo getQualityEvaluationConfigure() Obtain Control parameters for video frame quality evaluation.
+ * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo $QualityEvaluationConfigure) Set Control parameters for video frame quality evaluation.
+ * @method VoiceConfigureInfo getVoiceConfigure() Obtain Control parameters for audio (mute, bass, clipping) detection.
+ * @method void setVoiceConfigure(VoiceConfigureInfo $VoiceConfigure) Set Control parameters for audio (mute, bass, clipping) detection.
+ * @method string getCreateTime() Obtain Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getUpdateTime() Obtain Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setUpdateTime(string $UpdateTime) Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class QualityInspectTemplateItem extends AbstractModel
 {
     /**
-     * @var integer Media quality inspection template ID.
+     * @var integer Template ID.
      */
     public $Definition;
 
     /**
-     * @var string Template Type, available options: <li>Preset: Preset Template;</li> <li>Custom: User Custom Template.</li>
+     * @var string Template type. Available values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
      */
     public $Type;
 
     /**
-     * @var string Media quality inspection template name.
+     * @var string Template Name
      */
     public $Name;
 
     /**
-     * @var string Template description. 
+     * @var string Template description.
      */
     public $Comment;
 
     /**
-     * @var float Frame interval, unit in seconds.
+     * @var float Frame interception interval in seconds.
      */
     public $ScreenshotInterval;
 
     /**
-     * @var JitterConfigureInfo Control parameters for detecting video jitter and ghosting.
+     * @var JitterConfigureInfo Control parameters for video frame jitter and ghosting detection.
      */
     public $JitterConfigure;
 
     /**
-     * @var BlurConfigureInfo Control parameters for detecting video blur.
+     * @var BlurConfigureInfo Control parameters for video frame blur detection.
      */
     public $BlurConfigure;
 
     /**
-     * @var AbnormalLightingConfigureInfo Control parameters for detecting low brightness and overexposure of video.
+     * @var AbnormalLightingConfigureInfo Control parameters for low-light and overexposure detection in video frames.
      */
     public $AbnormalLightingConfigure;
 
     /**
-     * @var CrashScreenConfigureInfo Control parameters for detecting video crash.
+     * @var CrashScreenConfigureInfo Control parameters for screen glitch detection in video footage.
      */
     public $CrashScreenConfigure;
 
     /**
-     * @var BlackWhiteEdgeConfigureInfo Control parameters for detecting video black edges, white edges, black screen, and white screen.
+     * @var BlackWhiteEdgeConfigureInfo Control parameters for video picture black edge, white edge, black screen, and white screen detection.
      */
     public $BlackWhiteEdgeConfigure;
 
     /**
-     * @var NoiseConfigureInfo Control parameters for detecting video noise.
+     * @var NoiseConfigureInfo Control parameters for video frame noise detection.
      */
     public $NoiseConfigure;
 
     /**
-     * @var MosaicConfigureInfo Control parameters for detecting video mosaic.
+     * @var MosaicConfigureInfo Control parameters for video frame mosaic detection.
      */
     public $MosaicConfigure;
 
     /**
-     * @var QRCodeConfigureInfo Control parameters for QR code detection in video.
+     * @var QRCodeConfigureInfo Control parameters for video frame QR code detection.
      */
     public $QRCodeConfigure;
 
     /**
-     * @var QualityEvaluationConfigureInfo Control parameters for video quality evaluation.
+     * @var QualityEvaluationConfigureInfo Control parameters for video frame quality evaluation.
      */
     public $QualityEvaluationConfigure;
 
     /**
-     * @var VoiceConfigureInfo Control parameters for audio (mutes, bass, blast sound).
+     * @var VoiceConfigureInfo Control parameters for audio (mute, bass, clipping) detection.
      */
     public $VoiceConfigure;
 
     /**
-     * @var string Template Creation Time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @var string Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string Template Modification time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @var string Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Definition Media quality inspection template ID.
-     * @param string $Type Template Type, available options: <li>Preset: Preset Template;</li> <li>Custom: User Custom Template.</li>
-     * @param string $Name Media quality inspection template name.
-     * @param string $Comment Template description. 
-     * @param float $ScreenshotInterval Frame interval, unit in seconds.
-     * @param JitterConfigureInfo $JitterConfigure Control parameters for detecting video jitter and ghosting.
-     * @param BlurConfigureInfo $BlurConfigure Control parameters for detecting video blur.
-     * @param AbnormalLightingConfigureInfo $AbnormalLightingConfigure Control parameters for detecting low brightness and overexposure of video.
-     * @param CrashScreenConfigureInfo $CrashScreenConfigure Control parameters for detecting video crash.
-     * @param BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure Control parameters for detecting video black edges, white edges, black screen, and white screen.
-     * @param NoiseConfigureInfo $NoiseConfigure Control parameters for detecting video noise.
-     * @param MosaicConfigureInfo $MosaicConfigure Control parameters for detecting video mosaic.
-     * @param QRCodeConfigureInfo $QRCodeConfigure Control parameters for QR code detection in video.
-     * @param QualityEvaluationConfigureInfo $QualityEvaluationConfigure Control parameters for video quality evaluation.
-     * @param VoiceConfigureInfo $VoiceConfigure Control parameters for audio (mutes, bass, blast sound).
-     * @param string $CreateTime Template Creation Time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-     * @param string $UpdateTime Template Modification time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param integer $Definition Template ID.
+     * @param string $Type Template type. Available values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
+     * @param string $Name Template Name
+     * @param string $Comment Template description.
+     * @param float $ScreenshotInterval Frame interception interval in seconds.
+     * @param JitterConfigureInfo $JitterConfigure Control parameters for video frame jitter and ghosting detection.
+     * @param BlurConfigureInfo $BlurConfigure Control parameters for video frame blur detection.
+     * @param AbnormalLightingConfigureInfo $AbnormalLightingConfigure Control parameters for low-light and overexposure detection in video frames.
+     * @param CrashScreenConfigureInfo $CrashScreenConfigure Control parameters for screen glitch detection in video footage.
+     * @param BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+     * @param NoiseConfigureInfo $NoiseConfigure Control parameters for video frame noise detection.
+     * @param MosaicConfigureInfo $MosaicConfigure Control parameters for video frame mosaic detection.
+     * @param QRCodeConfigureInfo $QRCodeConfigure Control parameters for video frame QR code detection.
+     * @param QualityEvaluationConfigureInfo $QualityEvaluationConfigure Control parameters for video frame quality evaluation.
+     * @param VoiceConfigureInfo $VoiceConfigure Control parameters for audio (mute, bass, clipping) detection.
+     * @param string $CreateTime Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

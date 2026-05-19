@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputRegion(string $InputRegion) Set <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
  * @method string getSceneType() Obtain <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li><li>Other ModelName not currently supported.</li></p>
  * @method void setSceneType(string $SceneType) Set <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li><li>Other ModelName not currently supported.</li></p>
+ * @method integer getSeed() Obtain <p>Random seed of the model.</p>
+ * @method void setSeed(integer $Seed) Set <p>Random seed of the model.</p>
  */
 class AigcVideoTaskInput extends AbstractModel
 {
@@ -115,6 +117,11 @@ class AigcVideoTaskInput extends AbstractModel
     public $SceneType;
 
     /**
+     * @var integer <p>Random seed of the model.</p>
+     */
+    public $Seed;
+
+    /**
      * @param string $ModelName <p>Model name.</p>
      * @param string $ModelVersion <p>Model version.</p>
      * @param array $FileInfos <p>Input file information of the AIGC video generation task.</p>
@@ -128,6 +135,7 @@ class AigcVideoTaskInput extends AbstractModel
      * @param AigcVideoOutputConfig $OutputConfig <p>Output the result file of the AIGC image generation.</p>
      * @param string $InputRegion <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
      * @param string $SceneType <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li><li>Other ModelName not currently supported.</li></p>
+     * @param integer $Seed <p>Random seed of the model.</p>
      */
     function __construct()
     {
@@ -203,6 +211,10 @@ class AigcVideoTaskInput extends AbstractModel
 
         if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
             $this->SceneType = $param["SceneType"];
+        }
+
+        if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {
+            $this->Seed = $param["Seed"];
         }
     }
 }

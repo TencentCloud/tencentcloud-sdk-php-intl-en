@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Digital watermark parameter type in the MPS task.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method integer getDefinition() Obtain Digital watermark template ID.
+ * @method void setDefinition(integer $Definition) Set Digital watermark template ID.
  */
 class BlindWatermarkInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Digital watermark template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 
+     * @param integer $Definition Digital watermark template ID.
      */
     function __construct()
     {

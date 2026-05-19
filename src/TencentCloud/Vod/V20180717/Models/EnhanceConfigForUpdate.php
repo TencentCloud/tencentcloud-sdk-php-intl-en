@@ -18,15 +18,15 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Audio/Video enhancement configuration.
+ * audio/video enhancement configuration
  *
  * @method VideoEnhanceConfig getVideoEnhance() Obtain Video enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVideoEnhance(VideoEnhanceConfig $VideoEnhance) Set Video enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method AudioEnhanceConfig getAudioEnhance() Obtain The audio enhancement configuration.
+ * @method AudioEnhanceConfig getAudioEnhance() Obtain Audio enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAudioEnhance(AudioEnhanceConfig $AudioEnhance) Set The audio enhancement configuration.
+ * @method void setAudioEnhance(AudioEnhanceConfig $AudioEnhance) Set Audio enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class EnhanceConfigForUpdate extends AbstractModel
@@ -38,7 +38,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VideoEnhance;
 
     /**
-     * @var AudioEnhanceConfig The audio enhancement configuration.
+     * @var AudioEnhanceConfig Audio enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AudioEnhance;
@@ -46,7 +46,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param VideoEnhanceConfig $VideoEnhance Video enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioEnhanceConfig $AudioEnhance The audio enhancement configuration.
+     * @param AudioEnhanceConfig $AudioEnhance Audio enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

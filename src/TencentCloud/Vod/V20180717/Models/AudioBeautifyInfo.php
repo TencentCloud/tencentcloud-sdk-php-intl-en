@@ -18,52 +18,48 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The audio improvement configuration.
+ * Audio beautification configuration.
  *
- * @method string getSwitch() Obtain Whether to enable audio improvement. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
- * @method void setSwitch(string $Switch) Set Whether to enable audio improvement. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
- * @method array getTypes() Obtain The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
- * @method void setTypes(array $Types) Set The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
+ * @method string getSwitch() Obtain Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disable audio beautification</li>
+ * @method void setSwitch(string $Switch) Set Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disable audio beautification</li>
+ * @method array getTypes() Obtain Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: de-ess</li>
+Default value: declick.
+ * @method void setTypes(array $Types) Set Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: de-ess</li>
+Default value: declick.
  */
 class AudioBeautifyInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable audio improvement. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+     * @var string Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disable audio beautification</li>
      */
     public $Switch;
 
     /**
-     * @var array The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
+     * @var array Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: de-ess</li>
+Default value: declick.
      */
     public $Types;
 
     /**
-     * @param string $Switch Whether to enable audio improvement. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
-     * @param array $Types The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
+     * @param string $Switch Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disable audio beautification</li>
+     * @param array $Types Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: de-ess</li>
+Default value: declick.
      */
     function __construct()
     {

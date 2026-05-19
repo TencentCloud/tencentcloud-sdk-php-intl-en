@@ -20,68 +20,68 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEnhanceMediaTemplate request structure.
  *
- * @method string getContainer() Obtain Output file encapsulation format, optional values: mp4, flv, hls.
- * @method void setContainer(string $Container) Set Output file encapsulation format, optional values: mp4, flv, hls.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getName() Obtain Audio and video quality rebirth template name, length limit: 64 characters.
- * @method void setName(string $Name) Set Audio and video quality rebirth template name, length limit: 64 characters.
- * @method string getComment() Obtain Template description information, length limit: 256 characters.
- * @method void setComment(string $Comment) Set Template description information, length limit: 256 characters.
- * @method RebuildVideoInfo getRebuildVideoInfo() Obtain Audio and picture quality regeneration video control control information.
- * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) Set Audio and picture quality regeneration video control control information.
- * @method RebuildAudioInfo getRebuildAudioInfo() Obtain Audio and video quality regeneration audio control information.
- * @method void setRebuildAudioInfo(RebuildAudioInfo $RebuildAudioInfo) Set Audio and video quality regeneration audio control information.
+ * @method string getContainer() Obtain Container format. Valid values: mp4, flv, and hls.
+ * @method void setContainer(string $Container) Set Container format. Valid values: mp4, flv, and hls.
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getName() Obtain Audio and video quality rebirth template name, with a length limit of 64 characters.
+ * @method void setName(string $Name) Set Audio and video quality rebirth template name, with a length limit of 64 characters.
+ * @method string getComment() Obtain Template description, with a length limit of 256 characters.
+ * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
+ * @method RebuildVideoInfo getRebuildVideoInfo() Obtain Audio-visual quality revival video control information.
+ * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) Set Audio-visual quality revival video control information.
+ * @method RebuildAudioInfo getRebuildAudioInfo() Obtain Audio-visual quality revival audio control information.
+ * @method void setRebuildAudioInfo(RebuildAudioInfo $RebuildAudioInfo) Set Audio-visual quality revival audio control information.
  * @method RebuildMediaTargetVideoStream getTargetVideoInfo() Obtain Output target video control information.
  * @method void setTargetVideoInfo(RebuildMediaTargetVideoStream $TargetVideoInfo) Set Output target video control information.
  * @method RebuildMediaTargetAudioStream getTargetAudioInfo() Obtain Output target audio control information.
  * @method void setTargetAudioInfo(RebuildMediaTargetAudioStream $TargetAudioInfo) Set Output target audio control information.
- * @method integer getRemoveVideo() Obtain Whether to remove video data, optional values:
-<li>0: Keep</li>
+ * @method integer getRemoveVideo() Obtain Whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
- * @method void setRemoveVideo(integer $RemoveVideo) Set Whether to remove video data, optional values:
-<li>0: Keep</li>
+Default value: 0.
+ * @method void setRemoveVideo(integer $RemoveVideo) Set Whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
- * @method integer getRemoveAudio() Obtain Whether to remove audio data, optional values:
-<li>0: Keep</li>
+Default value: 0.
+ * @method integer getRemoveAudio() Obtain Remove audio data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
- * @method void setRemoveAudio(integer $RemoveAudio) Set Whether to remove audio data, optional values:
-<li>0: Keep</li>
+Default value: 0.
+ * @method void setRemoveAudio(integer $RemoveAudio) Set Remove audio data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
+Default value: 0.
  */
 class CreateEnhanceMediaTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Output file encapsulation format, optional values: mp4, flv, hls.
+     * @var string Container format. Valid values: mp4, flv, and hls.
      */
     public $Container;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Audio and video quality rebirth template name, length limit: 64 characters.
+     * @var string Audio and video quality rebirth template name, with a length limit of 64 characters.
      */
     public $Name;
 
     /**
-     * @var string Template description information, length limit: 256 characters.
+     * @var string Template description, with a length limit of 256 characters.
      */
     public $Comment;
 
     /**
-     * @var RebuildVideoInfo Audio and picture quality regeneration video control control information.
+     * @var RebuildVideoInfo Audio-visual quality revival video control information.
      */
     public $RebuildVideoInfo;
 
     /**
-     * @var RebuildAudioInfo Audio and video quality regeneration audio control information.
+     * @var RebuildAudioInfo Audio-visual quality revival audio control information.
      */
     public $RebuildAudioInfo;
 
@@ -96,38 +96,38 @@ class CreateEnhanceMediaTemplateRequest extends AbstractModel
     public $TargetAudioInfo;
 
     /**
-     * @var integer Whether to remove video data, optional values:
-<li>0: Keep</li>
+     * @var integer Whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
+Default value: 0.
      */
     public $RemoveVideo;
 
     /**
-     * @var integer Whether to remove audio data, optional values:
-<li>0: Keep</li>
+     * @var integer Remove audio data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
+Default value: 0.
      */
     public $RemoveAudio;
 
     /**
-     * @param string $Container Output file encapsulation format, optional values: mp4, flv, hls.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $Name Audio and video quality rebirth template name, length limit: 64 characters.
-     * @param string $Comment Template description information, length limit: 256 characters.
-     * @param RebuildVideoInfo $RebuildVideoInfo Audio and picture quality regeneration video control control information.
-     * @param RebuildAudioInfo $RebuildAudioInfo Audio and video quality regeneration audio control information.
+     * @param string $Container Container format. Valid values: mp4, flv, and hls.
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $Name Audio and video quality rebirth template name, with a length limit of 64 characters.
+     * @param string $Comment Template description, with a length limit of 256 characters.
+     * @param RebuildVideoInfo $RebuildVideoInfo Audio-visual quality revival video control information.
+     * @param RebuildAudioInfo $RebuildAudioInfo Audio-visual quality revival audio control information.
      * @param RebuildMediaTargetVideoStream $TargetVideoInfo Output target video control information.
      * @param RebuildMediaTargetAudioStream $TargetAudioInfo Output target audio control information.
-     * @param integer $RemoveVideo Whether to remove video data, optional values:
-<li>0: Keep</li>
+     * @param integer $RemoveVideo Whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
-     * @param integer $RemoveAudio Whether to remove audio data, optional values:
-<li>0: Keep</li>
+Default value: 0.
+     * @param integer $RemoveAudio Remove audio data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
+Default value: 0.
      */
     function __construct()
     {

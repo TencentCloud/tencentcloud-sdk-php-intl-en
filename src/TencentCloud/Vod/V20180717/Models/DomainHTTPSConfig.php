@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTPS configuration information of the domain name
  *
- * @method string getCertExpireTime() Obtain Time when the certificate expires
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
- * @method void setCertExpireTime(string $CertExpireTime) Set Time when the certificate expires
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
- * @method string getCloudCertId() Obtain Certificate ID in Tencent Cloud SSL product.
- * @method void setCloudCertId(string $CloudCertId) Set Certificate ID in Tencent Cloud SSL product.
+ * @method string getCertExpireTime() Obtain <p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
+ * @method void setCertExpireTime(string $CertExpireTime) Set <p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
+ * @method string getCloudCertId() Obtain <p>Certificate ID in Tencent Cloud SSL product.</p>
+ * @method void setCloudCertId(string $CloudCertId) Set <p>Certificate ID in Tencent Cloud SSL product.</p>
  */
 class DomainHTTPSConfig extends AbstractModel
 {
     /**
-     * @var string Time when the certificate expires
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+     * @var string <p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
      */
     public $CertExpireTime;
 
     /**
-     * @var string Certificate ID in Tencent Cloud SSL product.
+     * @var string <p>Certificate ID in Tencent Cloud SSL product.</p>
      */
     public $CloudCertId;
 
     /**
-     * @param string $CertExpireTime Time when the certificate expires
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
-     * @param string $CloudCertId Certificate ID in Tencent Cloud SSL product.
+     * @param string $CertExpireTime <p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
+     * @param string $CloudCertId <p>Certificate ID in Tencent Cloud SSL product.</p>
      */
     function __construct()
     {

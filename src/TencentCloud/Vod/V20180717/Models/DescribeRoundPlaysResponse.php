@@ -33,6 +33,7 @@ class DescribeRoundPlaysResponse extends AbstractModel
 {
     /**
      * @var integer The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter.
+     * @deprecated
      */
     public $TotalCount;
 

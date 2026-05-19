@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) Set The image moderation template ID. Valid values: <li>10: The preset template, whose violation labels are `Porn` and `Terror`.</li>
  * @method string getFileId() Obtain The unique ID of the media file. For this API to work, the file must be an image.
  * @method void setFileId(string $FileId) Set The unique ID of the media file. For this API to work, the file must be an image.
- * @method string getMediaStoragePath() Obtain 
- * @method void setMediaStoragePath(string $MediaStoragePath) Set 
+ * @method string getMediaStoragePath() Obtain Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
+ * @method void setMediaStoragePath(string $MediaStoragePath) Set Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
  * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  */
@@ -42,7 +46,9 @@ class ReviewImageRequest extends AbstractModel
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
      */
     public $MediaStoragePath;
 
@@ -54,7 +60,9 @@ class ReviewImageRequest extends AbstractModel
     /**
      * @param integer $Definition The image moderation template ID. Valid values: <li>10: The preset template, whose violation labels are `Porn` and `Terror`.</li>
      * @param string $FileId The unique ID of the media file. For this API to work, the file must be an image.
-     * @param string $MediaStoragePath 
+     * @param string $MediaStoragePath Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
      * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     function __construct()

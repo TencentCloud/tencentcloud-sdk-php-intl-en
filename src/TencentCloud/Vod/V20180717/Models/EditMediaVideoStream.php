@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
 <li>libx265: H.265 encoding;</li>
 <li>av1: AOMedia Video 1 encoding;</li>
 <li>H.266: H.266 encoding. </li>
- * @method integer getBitrate() Obtain The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
-When the value is 0 or left blank, it means automatically selecting the best video bit rate.
- * @method void setBitrate(integer $Bitrate) Set The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
-When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+ * @method integer getBitrate() Obtain Bitrate of video stream, value ranges from 0 to [128, 100000], measurement unit: kbps.
+When the value is 0 or left blank, VOD automatically sets the bitrate.
+ * @method void setBitrate(integer $Bitrate) Set Bitrate of video stream, value ranges from 0 to [128, 100000], measurement unit: kbps.
+When the value is 0 or left blank, VOD automatically sets the bitrate.
  * @method string getResolutionAdaptive() Obtain Resolution adaptive, optional values:
 <li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
@@ -81,8 +81,8 @@ class EditMediaVideoStream extends AbstractModel
     public $Codec;
 
     /**
-     * @var integer The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
-When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+     * @var integer Bitrate of video stream, value ranges from 0 to [128, 100000], measurement unit: kbps.
+When the value is 0 or left blank, VOD automatically sets the bitrate.
      */
     public $Bitrate;
 
@@ -125,8 +125,8 @@ The default value is 0.
 <li>libx265: H.265 encoding;</li>
 <li>av1: AOMedia Video 1 encoding;</li>
 <li>H.266: H.266 encoding. </li>
-     * @param integer $Bitrate The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
-When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+     * @param integer $Bitrate Bitrate of video stream, value ranges from 0 to [128, 100000], measurement unit: kbps.
+When the value is 0 or left blank, VOD automatically sets the bitrate.
      * @param string $ResolutionAdaptive Resolution adaptive, optional values:
 <li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>

@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameters for recognition of terrorism content
  *
- * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() Obtain Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) Set Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain Parameters for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set Parameters for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+ * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() Obtain Image recognition involves task control parameters for unsafe information.
+ * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) Set Image recognition involves task control parameters for unsafe information.
+ * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain Text identification involves task control parameters for unsafe information.
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set Text identification involves task control parameters for unsafe information.
  */
 class TerrorismConfigureInfo extends AbstractModel
 {
     /**
-     * @var TerrorismImgReviewTemplateInfo Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var TerrorismImgReviewTemplateInfo Image recognition involves task control parameters for unsafe information.
      */
     public $ImgReviewInfo;
 
     /**
-     * @var TerrorismOcrReviewTemplateInfo Parameters for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var TerrorismOcrReviewTemplateInfo Text identification involves task control parameters for unsafe information.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo Parameters for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo Image recognition involves task control parameters for unsafe information.
+     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo Text identification involves task control parameters for unsafe information.
      */
     function __construct()
     {

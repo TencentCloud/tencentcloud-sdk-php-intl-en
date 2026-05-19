@@ -50,10 +50,10 @@ If `Container` is `mp4` or `flv`, the valid values are:
 <li>`mp2`</li>
 If `Container` is `hls`, the valid value is:
 <li>`libfdk_aac`</li>
- * @method integer getBitrate() Obtain The audio bitrate, in Kbps. Value range: 0 and 26-256.
-If the value is `0`, the original audio bitrate will be used.
- * @method void setBitrate(integer $Bitrate) Set The audio bitrate, in Kbps. Value range: 0 and 26-256.
-If the value is `0`, the original audio bitrate will be used.
+ * @method integer getBitrate() Obtain Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
+ * @method void setBitrate(integer $Bitrate) Set Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
  * @method integer getSampleRate() Obtain The audio sample rate. Valid values:
 <li>`32000`</li>
 <li>`44100`</li>
@@ -103,8 +103,8 @@ If `Container` is `hls`, the valid value is:
     public $Codec;
 
     /**
-     * @var integer The audio bitrate, in Kbps. Value range: 0 and 26-256.
-If the value is `0`, the original audio bitrate will be used.
+     * @var integer Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
      */
     public $Bitrate;
 
@@ -145,8 +145,8 @@ If `Container` is `mp4` or `flv`, the valid values are:
 <li>`mp2`</li>
 If `Container` is `hls`, the valid value is:
 <li>`libfdk_aac`</li>
-     * @param integer $Bitrate The audio bitrate, in Kbps. Value range: 0 and 26-256.
-If the value is `0`, the original audio bitrate will be used.
+     * @param integer $Bitrate Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
      * @param integer $SampleRate The audio sample rate. Valid values:
 <li>`32000`</li>
 <li>`44100`</li>

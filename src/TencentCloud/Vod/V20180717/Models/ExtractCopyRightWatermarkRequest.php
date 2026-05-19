@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExtractCopyRightWatermark request structure.
  *
- * @method string getUrl() Obtain The media URL from which the watermark needs to be extracted.
- * @method void setUrl(string $Url) Set The media URL from which the watermark needs to be extracted.
- * @method integer getSubAppId() Obtain <b> VOD [Application](/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether it is a default application or a newly created application), must fill in this field as the application ID. </b>
- * @method void setSubAppId(integer $SubAppId) Set <b> VOD [Application](/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether it is a default application or a newly created application), must fill in this field as the application ID. </b>
- * @method string getSessionContext() Obtain Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback, with a maximum length of 1000 characters.
- * @method void setSessionContext(string $SessionContext) Set Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback, with a maximum length of 1000 characters.
- * @method string getSessionId() Obtain The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
- * @method void setSessionId(string $SessionId) Set The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
- * @method integer getTasksPriority() Obtain The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
- * @method void setTasksPriority(integer $TasksPriority) Set The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
- * @method string getExtInfo() Obtain Reserved fields, used for special purposes.
- * @method void setExtInfo(string $ExtInfo) Set Reserved fields, used for special purposes.
+ * @method string getUrl() Obtain URL of media requiring watermark extraction.
+ * @method void setUrl(string $Url) Set URL of media requiring watermark extraction.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getSessionContext() Obtain Identify source context, used to pass through user request information. The ExtractCopyRightWatermarkComplete callback and task flow status change callback will return the value of this field, with a maximum of 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Identify source context, used to pass through user request information. The ExtractCopyRightWatermarkComplete callback and task flow status change callback will return the value of this field, with a maximum of 1000 characters.
+ * @method string getSessionId() Obtain An identifier for task deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with empty string indicates no deduplication.
+ * @method void setSessionId(string $SessionId) Set An identifier for task deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with empty string indicates no deduplication.
+ * @method integer getTasksPriority() Obtain Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+ * @method void setTasksPriority(integer $TasksPriority) Set Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+ * @method string getExtInfo() Obtain Reserved field, used when special purpose.
+ * @method void setExtInfo(string $ExtInfo) Set Reserved field, used when special purpose.
  */
 class ExtractCopyRightWatermarkRequest extends AbstractModel
 {
     /**
-     * @var string The media URL from which the watermark needs to be extracted.
+     * @var string URL of media requiring watermark extraction.
      */
     public $Url;
 
     /**
-     * @var integer <b> VOD [Application](/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether it is a default application or a newly created application), must fill in this field as the application ID. </b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback, with a maximum length of 1000 characters.
+     * @var string Identify source context, used to pass through user request information. The ExtractCopyRightWatermarkComplete callback and task flow status change callback will return the value of this field, with a maximum of 1000 characters.
      */
     public $SessionContext;
 
     /**
-     * @var string The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * @var string An identifier for task deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with empty string indicates no deduplication.
      */
     public $SessionId;
 
     /**
-     * @var integer The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
+     * @var integer Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
      */
     public $TasksPriority;
 
     /**
-     * @var string Reserved fields, used for special purposes.
+     * @var string Reserved field, used when special purpose.
      */
     public $ExtInfo;
 
     /**
-     * @param string $Url The media URL from which the watermark needs to be extracted.
-     * @param integer $SubAppId <b> VOD [Application](/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether it is a default application or a newly created application), must fill in this field as the application ID. </b>
-     * @param string $SessionContext Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback, with a maximum length of 1000 characters.
-     * @param string $SessionId The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
-     * @param integer $TasksPriority The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
-     * @param string $ExtInfo Reserved fields, used for special purposes.
+     * @param string $Url URL of media requiring watermark extraction.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $SessionContext Identify source context, used to pass through user request information. The ExtractCopyRightWatermarkComplete callback and task flow status change callback will return the value of this field, with a maximum of 1000 characters.
+     * @param string $SessionId An identifier for task deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with empty string indicates no deduplication.
+     * @param integer $TasksPriority Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+     * @param string $ExtInfo Reserved field, used when special purpose.
      */
     function __construct()
     {

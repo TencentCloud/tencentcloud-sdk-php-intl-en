@@ -20,60 +20,60 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePersonSamples request structure.
  *
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getType() Obtain Type of samples to pull. Valid values:
-<li>UserDefine: custom sample library</li>
-<li>Default: default sample library</li>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getType() Obtain Pulled material type. Valid values:
+<li>UserDefine: User-customized material library;</li>
+<li>Default: Default sample library.</li>
 
-Default value: UserDefine. Samples in the custom sample library will be pulled.
-Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
- * @method void setType(string $Type) Set Type of samples to pull. Valid values:
-<li>UserDefine: custom sample library</li>
-<li>Default: default sample library</li>
+Default value: UserDefine, pull user-customized material library materials.
+Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
+ * @method void setType(string $Type) Set Pulled material type. Valid values:
+<li>UserDefine: User-customized material library;</li>
+<li>Default: Default sample library.</li>
 
-Default value: UserDefine. Samples in the custom sample library will be pulled.
-Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
- * @method array getPersonIds() Obtain IDs of samples. Array length limit: 100.
- * @method void setPersonIds(array $PersonIds) Set IDs of samples. Array length limit: 100.
- * @method array getNames() Obtain Names of samples. Array length limit: 20.
- * @method void setNames(array $Names) Set Names of samples. Array length limit: 20.
- * @method array getTags() Obtain Tags of a sample. Array length limit: 20.
- * @method void setTags(array $Tags) Set Tags of a sample. Array length limit: 20.
+Default value: UserDefine, pull user-customized material library materials.
+Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
+ * @method array getPersonIds() Obtain Material ID, with an array length limit of 100.
+ * @method void setPersonIds(array $PersonIds) Set Material ID, with an array length limit of 100.
+ * @method array getNames() Obtain Material name. Array length limit: 20.
+ * @method void setNames(array $Names) Set Material name. Array length limit: 20.
+ * @method array getTags() Obtain Material tag. Array length limit: 20.
+ * @method void setTags(array $Tags) Set Material tag. Array length limit: 20.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
- * @method integer getLimit() Obtain Number of entries to be returned. Default value: 100. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of entries to be returned. Default value: 100. Maximum value: 100.
+ * @method integer getLimit() Obtain Number of returned entries. Default value: 100. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 100. Maximum value: 100.
  */
 class DescribePersonSamplesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Type of samples to pull. Valid values:
-<li>UserDefine: custom sample library</li>
-<li>Default: default sample library</li>
+     * @var string Pulled material type. Valid values:
+<li>UserDefine: User-customized material library;</li>
+<li>Default: Default sample library.</li>
 
-Default value: UserDefine. Samples in the custom sample library will be pulled.
-Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
+Default value: UserDefine, pull user-customized material library materials.
+Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
      */
     public $Type;
 
     /**
-     * @var array IDs of samples. Array length limit: 100.
+     * @var array Material ID, with an array length limit of 100.
      */
     public $PersonIds;
 
     /**
-     * @var array Names of samples. Array length limit: 20.
+     * @var array Material name. Array length limit: 20.
      */
     public $Names;
 
     /**
-     * @var array Tags of a sample. Array length limit: 20.
+     * @var array Material tag. Array length limit: 20.
      */
     public $Tags;
 
@@ -83,23 +83,23 @@ Note: samples from the default library can only be pulled by providing the name 
     public $Offset;
 
     /**
-     * @var integer Number of entries to be returned. Default value: 100. Maximum value: 100.
+     * @var integer Number of returned entries. Default value: 100. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $Type Type of samples to pull. Valid values:
-<li>UserDefine: custom sample library</li>
-<li>Default: default sample library</li>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $Type Pulled material type. Valid values:
+<li>UserDefine: User-customized material library;</li>
+<li>Default: Default sample library.</li>
 
-Default value: UserDefine. Samples in the custom sample library will be pulled.
-Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
-     * @param array $PersonIds IDs of samples. Array length limit: 100.
-     * @param array $Names Names of samples. Array length limit: 20.
-     * @param array $Tags Tags of a sample. Array length limit: 20.
+Default value: UserDefine, pull user-customized material library materials.
+Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
+     * @param array $PersonIds Material ID, with an array length limit of 100.
+     * @param array $Names Material name. Array length limit: 20.
+     * @param array $Tags Material tag. Array length limit: 20.
      * @param integer $Offset Pagination offset. Default value: 0.
-     * @param integer $Limit Number of entries to be returned. Default value: 100. Maximum value: 100.
+     * @param integer $Limit Number of returned entries. Default value: 100. Maximum value: 100.
      */
     function __construct()
     {

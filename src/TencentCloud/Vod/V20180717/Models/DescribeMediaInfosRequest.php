@@ -20,82 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMediaInfos request structure.
  *
- * @method array getFileIds() Obtain List of media file IDs. N starts from 0 and can be up to 19.
- * @method void setFileIds(array $FileIds) Set List of media file IDs. N starts from 0 and can be up to 19.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method array getFilters() Obtain The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
-<li>`basicInfo` (basic information)</li>
-<li>`metaData` (video metadata)</li>
-<li>`transcodeInfo` (transcoding information)</li>
-<li>`animatedGraphicsInfo` (animated image information)</li>
-<li>`imageSpriteInfo` (image sprite information)</li>
-<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
-<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
-<li>`keyFrameDescInfo` (timestamp information)</li>
-<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
-<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
-<li>`subtitleInfo` (subtitle information)</li>
-<li>`reviewInfo` (moderation information)</li>
- * @method void setFilters(array $Filters) Set The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
-<li>`basicInfo` (basic information)</li>
-<li>`metaData` (video metadata)</li>
-<li>`transcodeInfo` (transcoding information)</li>
-<li>`animatedGraphicsInfo` (animated image information)</li>
-<li>`imageSpriteInfo` (image sprite information)</li>
-<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
-<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
-<li>`keyFrameDescInfo` (timestamp information)</li>
-<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
-<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
-<li>`subtitleInfo` (subtitle information)</li>
-<li>`reviewInfo` (moderation information)</li>
+ * @method array getFileIds() Obtain <p>Media file ID list. N starts from 0 with a maximum of 19.</p>
+ * @method void setFileIds(array $FileIds) Set <p>Media file ID list. N starts from 0 with a maximum of 19.</p>
+ * @method integer getSubAppId() Obtain <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method array getFilters() Obtain <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously, with N starting from 0. If this field is not filled in, default return all information. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (Intelligent Media Assets information).</li>
+ * @method void setFilters(array $Filters) Set <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously, with N starting from 0. If this field is not filled in, default return all information. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (Intelligent Media Assets information).</li>
  */
 class DescribeMediaInfosRequest extends AbstractModel
 {
     /**
-     * @var array List of media file IDs. N starts from 0 and can be up to 19.
+     * @var array <p>Media file ID list. N starts from 0 with a maximum of 19.</p>
      */
     public $FileIds;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var array The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
-<li>`basicInfo` (basic information)</li>
-<li>`metaData` (video metadata)</li>
-<li>`transcodeInfo` (transcoding information)</li>
-<li>`animatedGraphicsInfo` (animated image information)</li>
-<li>`imageSpriteInfo` (image sprite information)</li>
-<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
-<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
-<li>`keyFrameDescInfo` (timestamp information)</li>
-<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
-<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
-<li>`subtitleInfo` (subtitle information)</li>
-<li>`reviewInfo` (moderation information)</li>
+     * @var array <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously, with N starting from 0. If this field is not filled in, default return all information. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (Intelligent Media Assets information).</li>
      */
     public $Filters;
 
     /**
-     * @param array $FileIds List of media file IDs. N starts from 0 and can be up to 19.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param array $Filters The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
-<li>`basicInfo` (basic information)</li>
-<li>`metaData` (video metadata)</li>
-<li>`transcodeInfo` (transcoding information)</li>
-<li>`animatedGraphicsInfo` (animated image information)</li>
-<li>`imageSpriteInfo` (image sprite information)</li>
-<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
-<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
-<li>`keyFrameDescInfo` (timestamp information)</li>
-<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
-<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
-<li>`subtitleInfo` (subtitle information)</li>
-<li>`reviewInfo` (moderation information)</li>
+     * @param array $FileIds <p>Media file ID list. N starts from 0 with a maximum of 19.</p>
+     * @param integer $SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param array $Filters <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously, with N starting from 0. If this field is not filled in, default return all information. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (Intelligent Media Assets information).</li>
      */
     function __construct()
     {

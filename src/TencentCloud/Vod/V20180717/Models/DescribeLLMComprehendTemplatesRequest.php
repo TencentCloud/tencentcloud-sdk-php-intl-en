@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLLMComprehendTemplates request structure.
  *
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b>
- * @method array getDefinitions() Obtain Filter condition for the unique identifier of the large model comprehend template. The maximum array length is 100.
- * @method void setDefinitions(array $Definitions) Set Filter condition for the unique identifier of the large model comprehend template. The maximum array length is 100.
- * @method integer getOffset() Obtain Pagination offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
- * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method integer getSubAppId() Obtain <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+ * @method array getDefinitions() Obtain <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
+ * @method void setDefinitions(array $Definitions) Set <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
+ * @method integer getOffset() Obtain <p>Paging offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Paging offset. Default value: 0.</p>
+ * @method integer getLimit() Obtain <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
  */
 class DescribeLLMComprehendTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b>
+     * @var integer <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var array Filter condition for the unique identifier of the large model comprehend template. The maximum array length is 100.
+     * @var array <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
      */
     public $Definitions;
 
     /**
-     * @var integer Pagination offset. Default value: 0.
+     * @var integer <p>Paging offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
+     * @var integer <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b>
-     * @param array $Definitions Filter condition for the unique identifier of the large model comprehend template. The maximum array length is 100.
-     * @param integer $Offset Pagination offset. Default value: 0.
-     * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * @param integer $SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+     * @param array $Definitions <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
+     * @param integer $Offset <p>Paging offset. Default value: 0.</p>
+     * @param integer $Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     function __construct()
     {

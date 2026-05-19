@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() Obtain Task ID.
  * @method void setTaskId(string $TaskId) Set Task ID.
- * @method string getStatus() Obtain Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
- * @method void setStatus(string $Status) Set Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+ * @method string getStatus() Obtain Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
+ * @method void setStatus(string $Status) Set Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
  * @method string getFileId() Obtain Video ID
  * @method void setFileId(string $FileId) Set Video ID
  * @method string getTaskType() Obtain The task type. Valid values:
@@ -69,7 +69,7 @@ class TaskSimpleInfo extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+     * @var string Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
      */
     public $Status;
 
@@ -121,7 +121,7 @@ Task types for v2017:
 
     /**
      * @param string $TaskId Task ID.
-     * @param string $Status Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+     * @param string $Status Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
      * @param string $FileId Video ID
      * @param string $TaskType The task type. Valid values:
 <li>`Procedure`: Video processing</li>

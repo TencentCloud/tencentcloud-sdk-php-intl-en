@@ -20,62 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input parameter type of adaptive bitrate streaming
  *
- * @method integer getDefinition() Obtain Adaptive bitrate streaming template ID.
- * @method void setDefinition(integer $Definition) Set Adaptive bitrate streaming template ID.
- * @method array getWatermarkSet() Obtain List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method TraceWatermarkInput getTraceWatermark() Obtain Digital watermark.
- * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) Set Digital watermark.
- * @method CopyRightWatermarkInput getCopyRightWatermark() Obtain CopyRight Watermark.
- * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) Set CopyRight Watermark.
- * @method BlindWatermarkInput getBlindWatermark() Obtain Digital watermark.
- * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set Digital watermark.
- * @method array getSubtitleSet() Obtain List of subtitle IDs (maximum: 16)
- * @method void setSubtitleSet(array $SubtitleSet) Set List of subtitle IDs (maximum: 16)
+ * @method integer getDefinition() Obtain <p>Adaptive bitrate streaming template ID.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Adaptive bitrate streaming template ID.</p>
+ * @method array getWatermarkSet() Obtain <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+ * @method void setWatermarkSet(array $WatermarkSet) Set <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+ * @method TraceWatermarkInput getTraceWatermark() Obtain <p>Traceable watermark.</p>
+ * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) Set <p>Traceable watermark.</p>
+ * @method CopyRightWatermarkInput getCopyRightWatermark() Obtain <p>Copyright watermark.</p>
+ * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) Set <p>Copyright watermark.</p>
+ * @method BlindWatermarkInput getBlindWatermark() Obtain <p>Digital watermark.</p>
+ * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set <p>Digital watermark.</p>
+ * @method array getSubtitleSet() Obtain <p>External subtitle file, with subtitle ID as the element, supports multiple subtitles, up to 16.</p>
+ * @method void setSubtitleSet(array $SubtitleSet) Set <p>External subtitle file, with subtitle ID as the element, supports multiple subtitles, up to 16.</p>
+ * @method array getSubtitleInfoSet() Obtain <p>List of subtitle suppression information. A maximum of 2 are supported.</p>
+ * @method void setSubtitleInfoSet(array $SubtitleInfoSet) Set <p>List of subtitle suppression information. A maximum of 2 are supported.</p>
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
     /**
-     * @var integer Adaptive bitrate streaming template ID.
+     * @var integer <p>Adaptive bitrate streaming template ID.</p>
      */
     public $Definition;
 
     /**
-     * @var array List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
      */
     public $WatermarkSet;
 
     /**
-     * @var TraceWatermarkInput Digital watermark.
+     * @var TraceWatermarkInput <p>Traceable watermark.</p>
      */
     public $TraceWatermark;
 
     /**
-     * @var CopyRightWatermarkInput CopyRight Watermark.
+     * @var CopyRightWatermarkInput <p>Copyright watermark.</p>
      */
     public $CopyRightWatermark;
 
     /**
-     * @var BlindWatermarkInput Digital watermark.
+     * @var BlindWatermarkInput <p>Digital watermark.</p>
      */
     public $BlindWatermark;
 
     /**
-     * @var array List of subtitle IDs (maximum: 16)
+     * @var array <p>External subtitle file, with subtitle ID as the element, supports multiple subtitles, up to 16.</p>
      */
     public $SubtitleSet;
 
     /**
-     * @param integer $Definition Adaptive bitrate streaming template ID.
-     * @param array $WatermarkSet List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TraceWatermarkInput $TraceWatermark Digital watermark.
-     * @param CopyRightWatermarkInput $CopyRightWatermark CopyRight Watermark.
-     * @param BlindWatermarkInput $BlindWatermark Digital watermark.
-     * @param array $SubtitleSet List of subtitle IDs (maximum: 16)
+     * @var array <p>List of subtitle suppression information. A maximum of 2 are supported.</p>
+     */
+    public $SubtitleInfoSet;
+
+    /**
+     * @param integer $Definition <p>Adaptive bitrate streaming template ID.</p>
+     * @param array $WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+     * @param TraceWatermarkInput $TraceWatermark <p>Traceable watermark.</p>
+     * @param CopyRightWatermarkInput $CopyRightWatermark <p>Copyright watermark.</p>
+     * @param BlindWatermarkInput $BlindWatermark <p>Digital watermark.</p>
+     * @param array $SubtitleSet <p>External subtitle file, with subtitle ID as the element, supports multiple subtitles, up to 16.</p>
+     * @param array $SubtitleInfoSet <p>List of subtitle suppression information. A maximum of 2 are supported.</p>
      */
     function __construct()
     {
@@ -120,6 +124,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SubtitleSet",$param) and $param["SubtitleSet"] !== null) {
             $this->SubtitleSet = $param["SubtitleSet"];
+        }
+
+        if (array_key_exists("SubtitleInfoSet",$param) and $param["SubtitleInfoSet"] !== null) {
+            $this->SubtitleInfoSet = [];
+            foreach ($param["SubtitleInfoSet"] as $key => $value){
+                $obj = new SubtitleInfoInput();
+                $obj->deserialize($value);
+                array_push($this->SubtitleInfoSet, $obj);
+            }
         }
     }
 }

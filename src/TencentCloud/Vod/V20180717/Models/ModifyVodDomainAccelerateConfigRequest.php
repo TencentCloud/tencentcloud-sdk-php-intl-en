@@ -20,37 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVodDomainAccelerateConfig request structure.
  *
- * @method string getDomain() Obtain Domain name for acceleration setting
- * @method void setDomain(string $Domain) Set Domain name for acceleration setting
- * @method string getArea() Obtain Region. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
- * @method void setArea(string $Area) Set Region. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
+ * @method string getDomain() Obtain Domains requiring acceleration configuration.
+ * @method void setDomain(string $Domain) Set Domains requiring acceleration configuration.
+ * @method string getArea() Obtain Region, optional value:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+<li>Global: global.</li>
+ * @method void setArea(string $Area) Set Region, optional value:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+<li>Global: global.</li>
  * @method string getStatus() Obtain Whether to enable or disable domain name acceleration for the selected region. Valid values:
 <li>`Enabled`: enable</li>
 <li>`Disabled`: disable</li>
  * @method void setStatus(string $Status) Set Whether to enable or disable domain name acceleration for the selected region. Valid values:
 <li>`Enabled`: enable</li>
 <li>`Disabled`: disable</li>
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
  */
 class ModifyVodDomainAccelerateConfigRequest extends AbstractModel
 {
     /**
-     * @var string Domain name for acceleration setting
+     * @var string Domains requiring acceleration configuration.
      */
     public $Domain;
 
     /**
-     * @var string Region. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
+     * @var string Region, optional value:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+<li>Global: global.</li>
      */
     public $Area;
 
@@ -62,20 +62,20 @@ class ModifyVodDomainAccelerateConfigRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @param string $Domain Domain name for acceleration setting
-     * @param string $Area Region. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
+     * @param string $Domain Domains requiring acceleration configuration.
+     * @param string $Area Region, optional value:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+<li>Global: global.</li>
      * @param string $Status Whether to enable or disable domain name acceleration for the selected region. Valid values:
 <li>`Enabled`: enable</li>
 <li>`Disabled`: disable</li>
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     function __construct()
     {

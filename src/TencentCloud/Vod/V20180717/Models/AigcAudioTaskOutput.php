@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Output message of the AIGC sound effect task.
  *
- * @method array getAudioInfos() Obtain 
- * @method void setAudioInfos(array $AudioInfos) Set 
- * @method array getVideoInfos() Obtain 
- * @method void setVideoInfos(array $VideoInfos) Set 
+ * @method array getAudioInfos() Obtain <p>Output audio content</p>
+ * @method void setAudioInfos(array $AudioInfos) Set <p>Output audio content</p>
+ * @method array getVideoInfos() Obtain <p>Output video information.</p>
+ * @method void setVideoInfos(array $VideoInfos) Set <p>Output video information.</p>
  */
 class AigcAudioTaskOutput extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array <p>Output audio content</p>
      */
     public $AudioInfos;
 
     /**
-     * @var array 
+     * @var array <p>Output video information.</p>
      */
     public $VideoInfos;
 
     /**
-     * @param array $AudioInfos 
-     * @param array $VideoInfos 
+     * @param array $AudioInfos <p>Output audio content</p>
+     * @param array $VideoInfos <p>Output video information.</p>
      */
     function __construct()
     {

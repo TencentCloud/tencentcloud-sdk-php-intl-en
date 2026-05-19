@@ -26,48 +26,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Video content recognition template name.
  * @method string getComment() Obtain Video content recognition template description.
  * @method void setComment(string $Comment) Set Video content recognition template description.
- * @method string getType() Obtain Template type, values:
+ * @method string getType() Obtain Template type. Valid values:
 <li>Preset: system preset template;</li>
-<li>Custom: user-defined template.</li>
- * @method void setType(string $Type) Set Template type, values:
+<li>Custom: User-defined template.</li>
+ * @method void setType(string $Type) Set Template type. Valid values:
 <li>Preset: system preset template;</li>
-<li>Custom: user-defined template.</li>
- * @method HeadTailConfigureInfo getHeadTailConfigure() Obtain Control parameter of opening and closing credits recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setHeadTailConfigure(HeadTailConfigureInfo $HeadTailConfigure) Set Control parameter of opening and closing credits recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method SegmentConfigureInfo getSegmentConfigure() Obtain Control parameter of splitting recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSegmentConfigure(SegmentConfigureInfo $SegmentConfigure) Set Control parameter of splitting recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+<li>Custom: User-defined template.</li>
+ * @method HeadTailConfigureInfo getHeadTailConfigure() Obtain Head and tail recognition control parameter.
+ * @method void setHeadTailConfigure(HeadTailConfigureInfo $HeadTailConfigure) Set Head and tail recognition control parameter.
+ * @method SegmentConfigureInfo getSegmentConfigure() Obtain Segmentation recognition control parameter.
+ * @method void setSegmentConfigure(SegmentConfigureInfo $SegmentConfigure) Set Segmentation recognition control parameter.
  * @method FaceConfigureInfo getFaceConfigure() Obtain Face recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFaceConfigure(FaceConfigureInfo $FaceConfigure) Set Face recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method OcrFullTextConfigureInfo getOcrFullTextConfigure() Obtain Full text recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOcrFullTextConfigure(OcrFullTextConfigureInfo $OcrFullTextConfigure) Set Full text recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method OcrFullTextConfigureInfo getOcrFullTextConfigure() Obtain Text Full-text Recognition Control Parameters.
+ * @method void setOcrFullTextConfigure(OcrFullTextConfigureInfo $OcrFullTextConfigure) Set Text Full-text Recognition Control Parameters.
  * @method OcrWordsConfigureInfo getOcrWordsConfigure() Obtain Text keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOcrWordsConfigure(OcrWordsConfigureInfo $OcrWordsConfigure) Set Text keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AsrFullTextConfigureInfo getAsrFullTextConfigure() Obtain Full speech recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) Set Full speech recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AsrWordsConfigureInfo getAsrWordsConfigure() Obtain Speech keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) Set Speech keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AsrTranslateConfigureInfo getAsrTranslateConfigure() Obtain Voice translation control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAsrTranslateConfigure(AsrTranslateConfigureInfo $AsrTranslateConfigure) Set Voice translation control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method ObjectConfigureInfo getObjectConfigure() Obtain Control parameter of object recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setObjectConfigure(ObjectConfigureInfo $ObjectConfigure) Set Control parameter of object recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AsrFullTextConfigureInfo getAsrFullTextConfigure() Obtain Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger speech translation recognition (when DstLanguage is empty or a fill-in string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+ * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) Set Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger speech translation recognition (when DstLanguage is empty or a fill-in string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+ * @method AsrWordsConfigureInfo getAsrWordsConfigure() Obtain Voice keyword recognition control parameters.
+ * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) Set Voice keyword recognition control parameters.
+ * @method AsrTranslateConfigureInfo getAsrTranslateConfigure() Obtain Voice translation recognition control parameters.
+ * @method void setAsrTranslateConfigure(AsrTranslateConfigureInfo $AsrTranslateConfigure) Set Voice translation recognition control parameters.
+ * @method ObjectConfigureInfo getObjectConfigure() Obtain Object recognition control parameter.
+ * @method void setObjectConfigure(ObjectConfigureInfo $ObjectConfigure) Set Object recognition control parameter.
  * @method float getScreenshotInterval() Obtain Screencapturing interval in seconds.
  * @method void setScreenshotInterval(float $ScreenshotInterval) Set Screencapturing interval in seconds.
  * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -93,63 +77,55 @@ class AIRecognitionTemplateItem extends AbstractModel
     public $Comment;
 
     /**
-     * @var string Template type, values:
+     * @var string Template type. Valid values:
 <li>Preset: system preset template;</li>
-<li>Custom: user-defined template.</li>
+<li>Custom: User-defined template.</li>
      */
     public $Type;
 
     /**
-     * @var HeadTailConfigureInfo Control parameter of opening and closing credits recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var HeadTailConfigureInfo Head and tail recognition control parameter.
      */
     public $HeadTailConfigure;
 
     /**
-     * @var SegmentConfigureInfo Control parameter of splitting recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var SegmentConfigureInfo Segmentation recognition control parameter.
      */
     public $SegmentConfigure;
 
     /**
      * @var FaceConfigureInfo Face recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FaceConfigure;
 
     /**
-     * @var OcrFullTextConfigureInfo Full text recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var OcrFullTextConfigureInfo Text Full-text Recognition Control Parameters.
      */
     public $OcrFullTextConfigure;
 
     /**
      * @var OcrWordsConfigureInfo Text keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OcrWordsConfigure;
 
     /**
-     * @var AsrFullTextConfigureInfo Full speech recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AsrFullTextConfigureInfo Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger speech translation recognition (when DstLanguage is empty or a fill-in string, no translation is performed, and the billing item is the same as full speech recognition).</font>
      */
     public $AsrFullTextConfigure;
 
     /**
-     * @var AsrWordsConfigureInfo Speech keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AsrWordsConfigureInfo Voice keyword recognition control parameters.
      */
     public $AsrWordsConfigure;
 
     /**
-     * @var AsrTranslateConfigureInfo Voice translation control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AsrTranslateConfigureInfo Voice translation recognition control parameters.
      */
     public $AsrTranslateConfigure;
 
     /**
-     * @var ObjectConfigureInfo Control parameter of object recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ObjectConfigureInfo Object recognition control parameter.
      */
     public $ObjectConfigure;
 
@@ -172,27 +148,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Definition Unique ID of video content recognition template.
      * @param string $Name Video content recognition template name.
      * @param string $Comment Video content recognition template description.
-     * @param string $Type Template type, values:
+     * @param string $Type Template type. Valid values:
 <li>Preset: system preset template;</li>
-<li>Custom: user-defined template.</li>
-     * @param HeadTailConfigureInfo $HeadTailConfigure Control parameter of opening and closing credits recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SegmentConfigureInfo $SegmentConfigure Control parameter of splitting recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+<li>Custom: User-defined template.</li>
+     * @param HeadTailConfigureInfo $HeadTailConfigure Head and tail recognition control parameter.
+     * @param SegmentConfigureInfo $SegmentConfigure Segmentation recognition control parameter.
      * @param FaceConfigureInfo $FaceConfigure Face recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OcrFullTextConfigureInfo $OcrFullTextConfigure Full text recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param OcrFullTextConfigureInfo $OcrFullTextConfigure Text Full-text Recognition Control Parameters.
      * @param OcrWordsConfigureInfo $OcrWordsConfigure Text keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AsrFullTextConfigureInfo $AsrFullTextConfigure Full speech recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AsrWordsConfigureInfo $AsrWordsConfigure Speech keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AsrTranslateConfigureInfo $AsrTranslateConfigure Voice translation control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ObjectConfigureInfo $ObjectConfigure Control parameter of object recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AsrFullTextConfigureInfo $AsrFullTextConfigure Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger speech translation recognition (when DstLanguage is empty or a fill-in string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+     * @param AsrWordsConfigureInfo $AsrWordsConfigure Voice keyword recognition control parameters.
+     * @param AsrTranslateConfigureInfo $AsrTranslateConfigure Voice translation recognition control parameters.
+     * @param ObjectConfigureInfo $ObjectConfigure Object recognition control parameter.
      * @param float $ScreenshotInterval Screencapturing interval in seconds.
      * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).

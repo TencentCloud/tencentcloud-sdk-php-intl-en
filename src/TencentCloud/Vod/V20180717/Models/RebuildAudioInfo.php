@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The audio remaster parameters.
  *
- * @method AudioDenoiseInfo getAudioDenoiseInfo() Obtain The noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAudioDenoiseInfo(AudioDenoiseInfo $AudioDenoiseInfo) Set The noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AudioDenoiseInfo getAudioDenoiseInfo() Obtain Audio noise reduction control parameters.
+ * @method void setAudioDenoiseInfo(AudioDenoiseInfo $AudioDenoiseInfo) Set Audio noise reduction control parameters.
  */
 class RebuildAudioInfo extends AbstractModel
 {
     /**
-     * @var AudioDenoiseInfo The noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AudioDenoiseInfo Audio noise reduction control parameters.
      */
     public $AudioDenoiseInfo;
 
     /**
-     * @param AudioDenoiseInfo $AudioDenoiseInfo The noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AudioDenoiseInfo $AudioDenoiseInfo Audio noise reduction control parameters.
      */
     function __construct()
     {

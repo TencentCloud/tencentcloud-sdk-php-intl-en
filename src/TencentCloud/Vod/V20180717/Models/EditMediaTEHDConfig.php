@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() Obtain TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF.
  * @method void setType(string $Type) Set TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF.
+ * @method integer getMaxVideoBitrate() Obtain Maximum video bitrate. Valid when Type is specified as top speed Codec.
+Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+ * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set Maximum video bitrate. Valid when Type is specified as top speed Codec.
+Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
  */
 class EditMediaTEHDConfig extends AbstractModel
 {
@@ -31,7 +35,15 @@ class EditMediaTEHDConfig extends AbstractModel
     public $Type;
 
     /**
+     * @var integer Maximum video bitrate. Valid when Type is specified as top speed Codec.
+Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+     */
+    public $MaxVideoBitrate;
+
+    /**
      * @param string $Type TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF.
+     * @param integer $MaxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
+Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
      */
     function __construct()
     {
@@ -48,6 +60,10 @@ class EditMediaTEHDConfig extends AbstractModel
         }
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("MaxVideoBitrate",$param) and $param["MaxVideoBitrate"] !== null) {
+            $this->MaxVideoBitrate = $param["MaxVideoBitrate"];
         }
     }
 }

@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameters for recognition of politically sensitive content
  *
- * @method PoliticalImgReviewTemplateInfo getImgReviewInfo() Obtain Parameters for recognition of politically sensitive content in images
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfo $ImgReviewInfo) Set Parameters for recognition of politically sensitive content in images
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method PoliticalAsrReviewTemplateInfo getAsrReviewInfo() Obtain Parameters for ASR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo $AsrReviewInfo) Set Parameters for ASR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method PoliticalOcrReviewTemplateInfo getOcrReviewInfo() Obtain Parameters for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo $OcrReviewInfo) Set Parameters for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+ * @method PoliticalImgReviewTemplateInfo getImgReviewInfo() Obtain Image recognition involves control parameters for inappropriate information.
+ * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfo $ImgReviewInfo) Set Image recognition involves control parameters for inappropriate information.
+ * @method PoliticalAsrReviewTemplateInfo getAsrReviewInfo() Obtain ASR-based recognition involves control parameters for inappropriate information.
+ * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo $AsrReviewInfo) Set ASR-based recognition involves control parameters for inappropriate information.
+ * @method PoliticalOcrReviewTemplateInfo getOcrReviewInfo() Obtain Text recognition involves control parameters for inappropriate information.
+ * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo $OcrReviewInfo) Set Text recognition involves control parameters for inappropriate information.
  */
 class PoliticalConfigureInfo extends AbstractModel
 {
     /**
-     * @var PoliticalImgReviewTemplateInfo Parameters for recognition of politically sensitive content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var PoliticalImgReviewTemplateInfo Image recognition involves control parameters for inappropriate information.
      */
     public $ImgReviewInfo;
 
     /**
-     * @var PoliticalAsrReviewTemplateInfo Parameters for ASR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var PoliticalAsrReviewTemplateInfo ASR-based recognition involves control parameters for inappropriate information.
      */
     public $AsrReviewInfo;
 
     /**
-     * @var PoliticalOcrReviewTemplateInfo Parameters for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var PoliticalOcrReviewTemplateInfo Text recognition involves control parameters for inappropriate information.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param PoliticalImgReviewTemplateInfo $ImgReviewInfo Parameters for recognition of politically sensitive content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param PoliticalAsrReviewTemplateInfo $AsrReviewInfo Parameters for ASR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param PoliticalOcrReviewTemplateInfo $OcrReviewInfo Parameters for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @param PoliticalImgReviewTemplateInfo $ImgReviewInfo Image recognition involves control parameters for inappropriate information.
+     * @param PoliticalAsrReviewTemplateInfo $AsrReviewInfo ASR-based recognition involves control parameters for inappropriate information.
+     * @param PoliticalOcrReviewTemplateInfo $OcrReviewInfo Text recognition involves control parameters for inappropriate information.
      */
     function __construct()
     {

@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AttachMediaSubtitles request structure.
  *
- * @method string getFileId() Obtain Unique ID of the media file
- * @method void setFileId(string $FileId) Set Unique ID of the media file
- * @method string getOperation() Obtain Operation. Valid values:
-<li>`Attach`: associates subtitles.</li>
-<li>`Detach`: disassociates subtitles.</li>
- * @method void setOperation(string $Operation) Set Operation. Valid values:
-<li>`Attach`: associates subtitles.</li>
-<li>`Detach`: disassociates subtitles.</li>
- * @method integer getAdaptiveDynamicStreamingDefinition() Obtain [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
- * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) Set [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
- * @method array getSubtitleIds() Obtain Unique IDs of the subtitles
- * @method void setSubtitleIds(array $SubtitleIds) Set Unique IDs of the subtitles
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method string getFileId() Obtain Unique identifier of a media file.
+ * @method void setFileId(string $FileId) Set Unique identifier of a media file.
+ * @method string getOperation() Obtain Operation. Values as follows:
+<li>Attach: Associate subtitles.</li>
+<li>Detach: Remove associated subtitles.</li>
+ * @method void setOperation(string $Operation) Set Operation. Values as follows:
+<li>Attach: Associate subtitles.</li>
+<li>Detach: Remove associated subtitles.</li>
+ * @method integer getAdaptiveDynamicStreamingDefinition() Obtain [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
+ * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) Set [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
+ * @method array getSubtitleIds() Obtain Unique identifier of the subtitle.
+ * @method void setSubtitleIds(array $SubtitleIds) Set Unique identifier of the subtitle.
+ * @method string getDefaultSubtitleId() Obtain Unique identifier for default subtitle. Leave empty to not set default subtitle.
+ * @method void setDefaultSubtitleId(string $DefaultSubtitleId) Set Unique identifier for default subtitle. Leave empty to not set default subtitle.
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
  */
 class AttachMediaSubtitlesRequest extends AbstractModel
 {
     /**
-     * @var string Unique ID of the media file
+     * @var string Unique identifier of a media file.
      */
     public $FileId;
 
     /**
-     * @var string Operation. Valid values:
-<li>`Attach`: associates subtitles.</li>
-<li>`Detach`: disassociates subtitles.</li>
+     * @var string Operation. Values as follows:
+<li>Attach: Associate subtitles.</li>
+<li>Detach: Remove associated subtitles.</li>
      */
     public $Operation;
 
     /**
-     * @var integer [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
+     * @var integer [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
      */
     public $AdaptiveDynamicStreamingDefinition;
 
     /**
-     * @var array Unique IDs of the subtitles
+     * @var array Unique identifier of the subtitle.
      */
     public $SubtitleIds;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var string Unique identifier for default subtitle. Leave empty to not set default subtitle.
+     */
+    public $DefaultSubtitleId;
+
+    /**
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @param string $FileId Unique ID of the media file
-     * @param string $Operation Operation. Valid values:
-<li>`Attach`: associates subtitles.</li>
-<li>`Detach`: disassociates subtitles.</li>
-     * @param integer $AdaptiveDynamicStreamingDefinition [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
-     * @param array $SubtitleIds Unique IDs of the subtitles
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param string $FileId Unique identifier of a media file.
+     * @param string $Operation Operation. Values as follows:
+<li>Attach: Associate subtitles.</li>
+<li>Detach: Remove associated subtitles.</li>
+     * @param integer $AdaptiveDynamicStreamingDefinition [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
+     * @param array $SubtitleIds Unique identifier of the subtitle.
+     * @param string $DefaultSubtitleId Unique identifier for default subtitle. Leave empty to not set default subtitle.
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class AttachMediaSubtitlesRequest extends AbstractModel
 
         if (array_key_exists("SubtitleIds",$param) and $param["SubtitleIds"] !== null) {
             $this->SubtitleIds = $param["SubtitleIds"];
+        }
+
+        if (array_key_exists("DefaultSubtitleId",$param) and $param["DefaultSubtitleId"] !== null) {
+            $this->DefaultSubtitleId = $param["DefaultSubtitleId"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

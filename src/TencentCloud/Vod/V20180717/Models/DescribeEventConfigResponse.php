@@ -20,49 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEventConfig response structure.
  *
- * @method string getMode() Obtain How to receive event notifications. 
-<li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948);</li>
-<li>PULL: [Reliable notification based on message queue ](https://www.tencentcloud.com/document/product/266/33948). </li>
- * @method void setMode(string $Mode) Set How to receive event notifications. 
-<li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948);</li>
-<li>PULL: [Reliable notification based on message queue ](https://www.tencentcloud.com/document/product/266/33948). </li>
- * @method string getNotificationUrl() Obtain The address used to receive 3.0 format callbacks when using the [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948) reception method. 
- * @method void setNotificationUrl(string $NotificationUrl) Set The address used to receive 3.0 format callbacks when using the [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948) reception method. 
- * @method string getUploadMediaCompleteEventSwitch() Obtain Whether to receive the [Video Upload Completed](https://www.tencentcloud.com/document/product/266/33950) event notification. "OFF" is to ignore the event notification, and "ON" is to receive the event notification. 
- * @method void setUploadMediaCompleteEventSwitch(string $UploadMediaCompleteEventSwitch) Set Whether to receive the [Video Upload Completed](https://www.tencentcloud.com/document/product/266/33950) event notification. "OFF" is to ignore the event notification, and "ON" is to receive the event notification. 
- * @method string getDeleteMediaCompleteEventSwitch() Obtain Whether to receive [Video deletion completed](https://www.tencentcloud.com/document/product/266/33952) event notification, "OFF" means to ignore the event notification, "ON" means to receive the event notification .
- * @method void setDeleteMediaCompleteEventSwitch(string $DeleteMediaCompleteEventSwitch) Set Whether to receive [Video deletion completed](https://www.tencentcloud.com/document/product/266/33952) event notification, "OFF" means to ignore the event notification, "ON" means to receive the event notification .
- * @method string getPersistenceCompleteEventSwitch() Obtain Whether to receive the Persistence completed event notification,  "OFF" means to ignore the event notification, "ON" means to receive the event notification.
- * @method void setPersistenceCompleteEventSwitch(string $PersistenceCompleteEventSwitch) Set Whether to receive the Persistence completed event notification,  "OFF" means to ignore the event notification, "ON" means to receive the event notification.
+ * @method string getMode() Obtain Method of receiving event notifications. "PUSH" is [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83), "PULL" is [reliable callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83).
+ * @method void setMode(string $Mode) Set Method of receiving event notifications. "PUSH" is [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83), "PULL" is [reliable callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83).
+ * @method string getNotificationUrl() Obtain Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for domain names or IP addresses to receive V3 version event notifications.
+ * @method void setNotificationUrl(string $NotificationUrl) Set Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for domain names or IP addresses to receive V3 version event notifications.
+ * @method string getUploadMediaCompleteEventSwitch() Obtain Whether to receive [video upload complete](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) event notification. "OFF" means the event notification is ignored, and "ON" means to receive event notifications.
+ * @method void setUploadMediaCompleteEventSwitch(string $UploadMediaCompleteEventSwitch) Set Whether to receive [video upload complete](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) event notification. "OFF" means the event notification is ignored, and "ON" means to receive event notifications.
+ * @method string getDeleteMediaCompleteEventSwitch() Obtain Whether to receive [video deletion completion](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notification. "OFF" means the event notification is ignored, and "ON" means to receive event notifications.
+ * @method void setDeleteMediaCompleteEventSwitch(string $DeleteMediaCompleteEventSwitch) Set Whether to receive [video deletion completion](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notification. "OFF" means the event notification is ignored, and "ON" means to receive event notifications.
+ * @method string getPersistenceCompleteEventSwitch() Obtain Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, "ON" means to receive event notifications.
+ * @method void setPersistenceCompleteEventSwitch(string $PersistenceCompleteEventSwitch) Set Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, "ON" means to receive event notifications.
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeEventConfigResponse extends AbstractModel
 {
     /**
-     * @var string How to receive event notifications. 
-<li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948);</li>
-<li>PULL: [Reliable notification based on message queue ](https://www.tencentcloud.com/document/product/266/33948). </li>
+     * @var string Method of receiving event notifications. "PUSH" is [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83), "PULL" is [reliable callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83).
      */
     public $Mode;
 
     /**
-     * @var string The address used to receive 3.0 format callbacks when using the [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948) reception method. 
+     * @var string Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for domain names or IP addresses to receive V3 version event notifications.
      */
     public $NotificationUrl;
 
     /**
-     * @var string Whether to receive the [Video Upload Completed](https://www.tencentcloud.com/document/product/266/33950) event notification. "OFF" is to ignore the event notification, and "ON" is to receive the event notification. 
+     * @var string Whether to receive [video upload complete](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) event notification. "OFF" means the event notification is ignored, and "ON" means to receive event notifications.
      */
     public $UploadMediaCompleteEventSwitch;
 
     /**
-     * @var string Whether to receive [Video deletion completed](https://www.tencentcloud.com/document/product/266/33952) event notification, "OFF" means to ignore the event notification, "ON" means to receive the event notification .
+     * @var string Whether to receive [video deletion completion](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notification. "OFF" means the event notification is ignored, and "ON" means to receive event notifications.
      */
     public $DeleteMediaCompleteEventSwitch;
 
     /**
-     * @var string Whether to receive the Persistence completed event notification,  "OFF" means to ignore the event notification, "ON" means to receive the event notification.
+     * @var string Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, "ON" means to receive event notifications.
      */
     public $PersistenceCompleteEventSwitch;
 
@@ -72,13 +66,11 @@ class DescribeEventConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Mode How to receive event notifications. 
-<li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948);</li>
-<li>PULL: [Reliable notification based on message queue ](https://www.tencentcloud.com/document/product/266/33948). </li>
-     * @param string $NotificationUrl The address used to receive 3.0 format callbacks when using the [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948) reception method. 
-     * @param string $UploadMediaCompleteEventSwitch Whether to receive the [Video Upload Completed](https://www.tencentcloud.com/document/product/266/33950) event notification. "OFF" is to ignore the event notification, and "ON" is to receive the event notification. 
-     * @param string $DeleteMediaCompleteEventSwitch Whether to receive [Video deletion completed](https://www.tencentcloud.com/document/product/266/33952) event notification, "OFF" means to ignore the event notification, "ON" means to receive the event notification .
-     * @param string $PersistenceCompleteEventSwitch Whether to receive the Persistence completed event notification,  "OFF" means to ignore the event notification, "ON" means to receive the event notification.
+     * @param string $Mode Method of receiving event notifications. "PUSH" is [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83), "PULL" is [reliable callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83).
+     * @param string $NotificationUrl Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for domain names or IP addresses to receive V3 version event notifications.
+     * @param string $UploadMediaCompleteEventSwitch Whether to receive [video upload complete](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) event notification. "OFF" means the event notification is ignored, and "ON" means to receive event notifications.
+     * @param string $DeleteMediaCompleteEventSwitch Whether to receive [video deletion completion](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notification. "OFF" means the event notification is ignored, and "ON" means to receive event notifications.
+     * @param string $PersistenceCompleteEventSwitch Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, "ON" means to receive event notifications.
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()

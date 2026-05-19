@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameters for custom recognition
  *
- * @method UserDefineFaceReviewTemplateInfo getFaceReviewInfo() Obtain Parameters for custom facial recognition
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo $FaceReviewInfo) Set Parameters for custom facial recognition
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() Obtain Parameters for custom ASR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo) Set Parameters for custom ASR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() Obtain Parameters for custom OCR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo) Set Parameters for custom OCR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+ * @method UserDefineFaceReviewTemplateInfo getFaceReviewInfo() Obtain User-defined character video moderation control parameter.
+ * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo $FaceReviewInfo) Set User-defined character video moderation control parameter.
+ * @method UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() Obtain User custom voice video moderation control parameter.
+ * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo) Set User custom voice video moderation control parameter.
+ * @method UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() Obtain User custom text video moderation control parameter.
+ * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo) Set User custom text video moderation control parameter.
  */
 class UserDefineConfigureInfo extends AbstractModel
 {
     /**
-     * @var UserDefineFaceReviewTemplateInfo Parameters for custom facial recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var UserDefineFaceReviewTemplateInfo User-defined character video moderation control parameter.
      */
     public $FaceReviewInfo;
 
     /**
-     * @var UserDefineAsrTextReviewTemplateInfo Parameters for custom ASR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var UserDefineAsrTextReviewTemplateInfo User custom voice video moderation control parameter.
      */
     public $AsrReviewInfo;
 
     /**
-     * @var UserDefineOcrTextReviewTemplateInfo Parameters for custom OCR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var UserDefineOcrTextReviewTemplateInfo User custom text video moderation control parameter.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param UserDefineFaceReviewTemplateInfo $FaceReviewInfo Parameters for custom facial recognition
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo Parameters for custom ASR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo Parameters for custom OCR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @param UserDefineFaceReviewTemplateInfo $FaceReviewInfo User-defined character video moderation control parameter.
+     * @param UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo User custom voice video moderation control parameter.
+     * @param UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo User custom text video moderation control parameter.
      */
     function __construct()
     {

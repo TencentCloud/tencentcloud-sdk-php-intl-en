@@ -18,52 +18,48 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The volume equalization configuration.
+ * Volume equalization configuration.
  *
- * @method string getSwitch() Obtain Whether to enable volume equalization. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
- * @method void setSwitch(string $Switch) Set Whether to enable volume equalization. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
- * @method string getType() Obtain The type. Valid values:
-<li>`loudNorm`: Loudness normalization.</li>
-<li>`gainControl`: Volume leveling.</li>
-Default value: `loudNorm`.
- * @method void setType(string $Type) Set The type. Valid values:
-<li>`loudNorm`: Loudness normalization.</li>
-<li>`gainControl`: Volume leveling.</li>
-Default value: `loudNorm`.
+ * @method string getSwitch() Obtain Volume equalization control switch. Available values:
+<li>ON: enable volume equalization;</li>
+<li>OFF: Disable volume normalization.</li>
+ * @method void setSwitch(string $Switch) Set Volume equalization control switch. Available values:
+<li>ON: enable volume equalization;</li>
+<li>OFF: Disable volume normalization.</li>
+ * @method string getType() Obtain Type, available values:
+<li>loudNorm: Loudness normalization</li>
+<li>gainControl: Reduce abrupt change</li>
+Default value: loudNorm.
+ * @method void setType(string $Type) Set Type, available values:
+<li>loudNorm: Loudness normalization</li>
+<li>gainControl: Reduce abrupt change</li>
+Default value: loudNorm.
  */
 class AudioVolumeBalanceInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable volume equalization. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+     * @var string Volume equalization control switch. Available values:
+<li>ON: enable volume equalization;</li>
+<li>OFF: Disable volume normalization.</li>
      */
     public $Switch;
 
     /**
-     * @var string The type. Valid values:
-<li>`loudNorm`: Loudness normalization.</li>
-<li>`gainControl`: Volume leveling.</li>
-Default value: `loudNorm`.
+     * @var string Type, available values:
+<li>loudNorm: Loudness normalization</li>
+<li>gainControl: Reduce abrupt change</li>
+Default value: loudNorm.
      */
     public $Type;
 
     /**
-     * @param string $Switch Whether to enable volume equalization. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
-     * @param string $Type The type. Valid values:
-<li>`loudNorm`: Loudness normalization.</li>
-<li>`gainControl`: Volume leveling.</li>
-Default value: `loudNorm`.
+     * @param string $Switch Volume equalization control switch. Available values:
+<li>ON: enable volume equalization;</li>
+<li>OFF: Disable volume normalization.</li>
+     * @param string $Type Type, available values:
+<li>loudNorm: Loudness normalization</li>
+<li>gainControl: Reduce abrupt change</li>
+Default value: loudNorm.
      */
     function __construct()
     {

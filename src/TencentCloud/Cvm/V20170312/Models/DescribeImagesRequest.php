@@ -54,10 +54,10 @@ use TencentCloud\Common\AbstractModel;
 <p style="padding-left: 30px;">Filter by the <strong>tag value</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 <li><strong>tag:tag-key</strong></li>
 <p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace "tag-key" with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
- * @method integer getOffset() Obtain Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
- * @method void setOffset(integer $Offset) Set Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
- * @method integer getLimit() Obtain Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
- * @method void setLimit(integer $Limit) Set Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+ * @method integer getOffset() Obtain Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
+ * @method void setOffset(integer $Offset) Set Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
+ * @method integer getLimit() Obtain Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
+ * @method void setLimit(integer $Limit) Set Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
  * @method string getInstanceType() Obtain Instance type, e.g. `SA5.MEDIUM2`
  * @method void setInstanceType(string $InstanceType) Set Instance type, e.g. `SA5.MEDIUM2`
  */
@@ -89,12 +89,12 @@ class DescribeImagesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+     * @var integer Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
      */
     public $Offset;
 
     /**
-     * @var integer Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+     * @var integer Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
      */
     public $Limit;
 
@@ -121,8 +121,8 @@ class DescribeImagesRequest extends AbstractModel
 <p style="padding-left: 30px;">Filter by the <strong>tag value</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 <li><strong>tag:tag-key</strong></li>
 <p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace "tag-key" with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
-     * @param integer $Offset Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
-     * @param integer $Limit Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+     * @param integer $Offset Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
+     * @param integer $Limit Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
      * @param string $InstanceType Instance type, e.g. `SA5.MEDIUM2`
      */
     function __construct()

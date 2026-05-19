@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ForbidMediaDistribution request structure.
  *
- * @method array getFileIds() Obtain List of media files. Up to 20 ones can be submitted at a time.
- * @method void setFileIds(array $FileIds) Set List of media files. Up to 20 ones can be submitted at a time.
- * @method string getOperation() Obtain forbid: forbids, recover: unblocks.
- * @method void setOperation(string $Operation) Set forbid: forbids, recover: unblocks.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method array getFileIds() Obtain Media file list, up to 20 entries are submittable each time.
+ * @method void setFileIds(array $FileIds) Set Media file list, up to 20 entries are submittable each time.
+ * @method string getOperation() Obtain forbid: block, recover: unblock.
+ * @method void setOperation(string $Operation) Set forbid: block, recover: unblock.
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
  */
 class ForbidMediaDistributionRequest extends AbstractModel
 {
     /**
-     * @var array List of media files. Up to 20 ones can be submitted at a time.
+     * @var array Media file list, up to 20 entries are submittable each time.
      */
     public $FileIds;
 
     /**
-     * @var string forbid: forbids, recover: unblocks.
+     * @var string forbid: block, recover: unblock.
      */
     public $Operation;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @param array $FileIds List of media files. Up to 20 ones can be submitted at a time.
-     * @param string $Operation forbid: forbids, recover: unblocks.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param array $FileIds Media file list, up to 20 entries are submittable each time.
+     * @param string $Operation forbid: block, recover: unblock.
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     function __construct()
     {

@@ -20,87 +20,87 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProcedureTemplate request structure.
  *
- * @method string getName() Obtain Task flow name (up to 20 characters).
- * @method void setName(string $Name) Set Task flow name (up to 20 characters).
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getComment() Obtain Template description. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
- * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameter of video processing task.
- * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of video processing task.
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
- * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Parameter of AI-based content analysis task.
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Parameter of AI-based content analysis task.
- * @method array getAiRecognitionTaskSet() Obtain 
- * @method void setAiRecognitionTaskSet(array $AiRecognitionTaskSet) Set 
- * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain Type parameter of AI-based content recognition task.
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Type parameter of AI-based content recognition task.
- * @method ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() Obtain The information of the moderation task.
- * @method void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask) Set The information of the moderation task.
+ * @method string getName() Obtain Task flow name (support Chinese, up to 20 characters).
+ * @method void setName(string $Name) Set Task flow name (support Chinese, up to 20 characters).
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getComment() Obtain Template description, with a length limit of 256 characters.
+ * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
+ * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameters for the video processing type task.
+ * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameters for the video processing type task.
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Parameters for the AI content review task.
+<font color=red>\*: This parameter is used for legacy review initiation, not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font>
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Parameters for the AI content review task.
+<font color=red>\*: This parameter is used for legacy review initiation, not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font>
+ * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Parameters for the AI content analysis task.
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Parameters for the AI content analysis task.
+ * @method array getAiRecognitionTaskSet() Obtain Parameters for the AI content recognition task.
+ * @method void setAiRecognitionTaskSet(array $AiRecognitionTaskSet) Set Parameters for the AI content recognition task.
+ * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain This is not recommended. Recommend using AiRecognitionTaskSet.
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set This is not recommended. Recommend using AiRecognitionTaskSet.
+ * @method ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() Obtain Parameters for the audio and video moderation task.
+ * @method void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask) Set Parameters for the audio and video moderation task.
  */
 class CreateProcedureTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Task flow name (up to 20 characters).
+     * @var string Task flow name (support Chinese, up to 20 characters).
      */
     public $Name;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Template description. Length limit: 256 characters.
+     * @var string Template description, with a length limit of 256 characters.
      */
     public $Comment;
 
     /**
-     * @var MediaProcessTaskInput Parameter of video processing task.
+     * @var MediaProcessTaskInput Parameters for the video processing type task.
      */
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+     * @var AiContentReviewTaskInput Parameters for the AI content review task.
+<font color=red>\*: This parameter is used for legacy review initiation, not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font>
      */
     public $AiContentReviewTask;
 
     /**
-     * @var AiAnalysisTaskInput Parameter of AI-based content analysis task.
+     * @var AiAnalysisTaskInput Parameters for the AI content analysis task.
      */
     public $AiAnalysisTask;
 
     /**
-     * @var array 
+     * @var array Parameters for the AI content recognition task.
      */
     public $AiRecognitionTaskSet;
 
     /**
-     * @var AiRecognitionTaskInput Type parameter of AI-based content recognition task.
+     * @var AiRecognitionTaskInput This is not recommended. Recommend using AiRecognitionTaskSet.
      * @deprecated
      */
     public $AiRecognitionTask;
 
     /**
-     * @var ProcedureReviewAudioVideoTaskInput The information of the moderation task.
+     * @var ProcedureReviewAudioVideoTaskInput Parameters for the audio and video moderation task.
      */
     public $ReviewAudioVideoTask;
 
     /**
-     * @param string $Name Task flow name (up to 20 characters).
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $Comment Template description. Length limit: 256 characters.
-     * @param MediaProcessTaskInput $MediaProcessTask Parameter of video processing task.
-     * @param AiContentReviewTaskInput $AiContentReviewTask The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-     * @param AiAnalysisTaskInput $AiAnalysisTask Parameter of AI-based content analysis task.
-     * @param array $AiRecognitionTaskSet 
-     * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of AI-based content recognition task.
-     * @param ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask The information of the moderation task.
+     * @param string $Name Task flow name (support Chinese, up to 20 characters).
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $Comment Template description, with a length limit of 256 characters.
+     * @param MediaProcessTaskInput $MediaProcessTask Parameters for the video processing type task.
+     * @param AiContentReviewTaskInput $AiContentReviewTask Parameters for the AI content review task.
+<font color=red>\*: This parameter is used for legacy review initiation, not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font>
+     * @param AiAnalysisTaskInput $AiAnalysisTask Parameters for the AI content analysis task.
+     * @param array $AiRecognitionTaskSet Parameters for the AI content recognition task.
+     * @param AiRecognitionTaskInput $AiRecognitionTask This is not recommended. Recommend using AiRecognitionTaskSet.
+     * @param ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask Parameters for the audio and video moderation task.
      */
     function __construct()
     {

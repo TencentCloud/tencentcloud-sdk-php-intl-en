@@ -71,6 +71,7 @@ class DescribeRoundPlaysRequest extends AbstractModel
 
     /**
      * @var integer Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
+     * @deprecated
      */
     public $Offset;
 

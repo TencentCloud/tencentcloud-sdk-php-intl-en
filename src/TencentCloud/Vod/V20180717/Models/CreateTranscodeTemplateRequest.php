@@ -20,142 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTranscodeTemplate request structure.
  *
- * @method string getContainer() Obtain The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
- * @method void setContainer(string $Container) Set The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getName() Obtain Transcoding template name. Length limit: 64 characters.
- * @method void setName(string $Name) Set Transcoding template name. Length limit: 64 characters.
- * @method string getComment() Obtain Template description. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
- * @method integer getRemoveVideo() Obtain Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
- * @method void setRemoveVideo(integer $RemoveVideo) Set Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
- * @method integer getRemoveAudio() Obtain Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
- * @method void setRemoveAudio(integer $RemoveAudio) Set Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
- * @method VideoTemplateInfo getVideoTemplate() Obtain Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
- * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) Set Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
- * @method AudioTemplateInfo getAudioTemplate() Obtain Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
- * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) Set Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
- * @method TEHDConfig getTEHDConfig() Obtain TESHD transcoding parameter.
- * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set TESHD transcoding parameter.
- * @method EnhanceConfig getEnhanceConfig() Obtain Audio/Video enhancement parameter.
- * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement parameter.
- * @method string getSegmentType() Obtain The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
- * @method void setSegmentType(string $SegmentType) Set The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
- * @method string getStdExtInfo() Obtain 
- * @method void setStdExtInfo(string $StdExtInfo) Set 
+ * @method string getContainer() Obtain <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+ * @method void setContainer(string $Container) Set <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+ * @method string getName() Obtain <p>Transcoding template name. The length cannot exceed 64 characters.</p>
+ * @method void setName(string $Name) Set <p>Transcoding template name. The length cannot exceed 64 characters.</p>
+ * @method string getComment() Obtain <p>Template description, with a length limit of 256 characters.</p>
+ * @method void setComment(string $Comment) Set <p>Template description, with a length limit of 256 characters.</p>
+ * @method integer getRemoveVideo() Obtain <p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>Default value: 0.</p>
+ * @method void setRemoveVideo(integer $RemoveVideo) Set <p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>Default value: 0.</p>
+ * @method integer getRemoveAudio() Obtain <p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>Default value: 0.
+ * @method void setRemoveAudio(integer $RemoveAudio) Set <p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>Default value: 0.
+ * @method VideoTemplateInfo getVideoTemplate() Obtain <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
+ * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) Set <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
+ * @method AudioTemplateInfo getAudioTemplate() Obtain <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
+ * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) Set <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
+ * @method TEHDConfig getTEHDConfig() Obtain <p>TSC transcoding parameter.</p>
+ * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set <p>TSC transcoding parameter.</p>
+ * @method EnhanceConfig getEnhanceConfig() Obtain <p>Audio/Video enhancement configuration.</p>
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set <p>Audio/Video enhancement configuration.</p>
+ * @method string getSegmentType() Obtain <p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+ * @method void setSegmentType(string $SegmentType) Set <p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+ * @method string getStdExtInfo() Obtain <p>Extended parameter.</p>
+ * @method void setStdExtInfo(string $StdExtInfo) Set <p>Extended parameter.</p>
  */
 class CreateTranscodeTemplateRequest extends AbstractModel
 {
     /**
-     * @var string The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
+     * @var string <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
      */
     public $Container;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string Transcoding template name. Length limit: 64 characters.
+     * @var string <p>Transcoding template name. The length cannot exceed 64 characters.</p>
      */
     public $Name;
 
     /**
-     * @var string Template description. Length limit: 256 characters.
+     * @var string <p>Template description, with a length limit of 256 characters.</p>
      */
     public $Comment;
 
     /**
-     * @var integer Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+     * @var integer <p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>Default value: 0.</p>
      */
     public $RemoveVideo;
 
     /**
-     * @var integer Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+     * @var integer <p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>Default value: 0.
      */
     public $RemoveAudio;
 
     /**
-     * @var VideoTemplateInfo Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+     * @var VideoTemplateInfo <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
      */
     public $VideoTemplate;
 
     /**
-     * @var AudioTemplateInfo Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+     * @var AudioTemplateInfo <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
      */
     public $AudioTemplate;
 
     /**
-     * @var TEHDConfig TESHD transcoding parameter.
+     * @var TEHDConfig <p>TSC transcoding parameter.</p>
      */
     public $TEHDConfig;
 
     /**
-     * @var EnhanceConfig Audio/Video enhancement parameter.
+     * @var EnhanceConfig <p>Audio/Video enhancement configuration.</p>
      */
     public $EnhanceConfig;
 
     /**
-     * @var string The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
+     * @var string <p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
      */
     public $SegmentType;
 
     /**
-     * @var string 
+     * @var string <p>Extended parameter.</p>
      */
     public $StdExtInfo;
 
     /**
-     * @param string $Container The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $Name Transcoding template name. Length limit: 64 characters.
-     * @param string $Comment Template description. Length limit: 256 characters.
-     * @param integer $RemoveVideo Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
-     * @param integer $RemoveAudio Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
-     * @param VideoTemplateInfo $VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
-     * @param AudioTemplateInfo $AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
-     * @param TEHDConfig $TEHDConfig TESHD transcoding parameter.
-     * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement parameter.
-     * @param string $SegmentType The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
-     * @param string $StdExtInfo 
+     * @param string $Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+     * @param string $Name <p>Transcoding template name. The length cannot exceed 64 characters.</p>
+     * @param string $Comment <p>Template description, with a length limit of 256 characters.</p>
+     * @param integer $RemoveVideo <p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>Default value: 0.</p>
+     * @param integer $RemoveAudio <p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>Default value: 0.
+     * @param VideoTemplateInfo $VideoTemplate <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
+     * @param AudioTemplateInfo $AudioTemplate <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
+     * @param TEHDConfig $TEHDConfig <p>TSC transcoding parameter.</p>
+     * @param EnhanceConfig $EnhanceConfig <p>Audio/Video enhancement configuration.</p>
+     * @param string $SegmentType <p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+     * @param string $StdExtInfo <p>Extended parameter.</p>
      */
     function __construct()
     {

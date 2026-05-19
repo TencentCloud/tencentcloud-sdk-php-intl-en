@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateContentReviewTemplate request structure.
  *
- * @method string getReviewWallSwitch() Obtain Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+ * @method string getReviewWallSwitch() Obtain Switch for whether the audio/video moderation result enters the audio/video moderation wall (manual review of the recognition result).
 <li>ON: yes</li>
-<li>OFF: no</li>
- * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+<li>OFF: No.</li>
+ * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Switch for whether the audio/video moderation result enters the audio/video moderation wall (manual review of the recognition result).
 <li>ON: yes</li>
-<li>OFF: no</li>
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getName() Obtain Name of an intelligent content recognition template. Length limit: 64 characters.
- * @method void setName(string $Name) Set Name of an intelligent content recognition template. Length limit: 64 characters.
- * @method string getComment() Obtain Description of an intelligent content recognition template. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Description of an intelligent content recognition template. Length limit: 256 characters.
- * @method PornConfigureInfo getPornConfigure() Obtain Control parameter for porn information.
- * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Control parameter for porn information.
- * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Control parameter for terrorism information.
- * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Control parameter for terrorism information.
- * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Control parameter for politically sensitive information.
- * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Control parameter for politically sensitive information.
- * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
- * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
- * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain Control parameter for custom intelligent content recognition.
- * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set Control parameter for custom intelligent content recognition.
- * @method float getScreenshotInterval() Obtain Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
- * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+<li>OFF: No.</li>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getName() Obtain Content review template name. Length limit: 64 characters.
+ * @method void setName(string $Name) Set Content review template name. Length limit: 64 characters.
+ * @method string getComment() Obtain Content review template description, with a length limit of 256 characters.
+ * @method void setComment(string $Comment) Set Content review template description, with a length limit of 256 characters.
+ * @method PornConfigureInfo getPornConfigure() Obtain Control parameters for offensive information.
+ * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Control parameters for offensive information.
+ * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Control parameters for unsafe information.
+ * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Control parameters for unsafe information.
+ * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Uncomfortable control parameters.
+ * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Uncomfortable control parameters.
+ * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related violation.</li>
+ * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related violation.</li>
+ * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain User-defined content review control parameters.
+ * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set User-defined content review control parameters.
+ * @method float getScreenshotInterval() Obtain Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds.
+ * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds.
  */
 class CreateContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+     * @var string Switch for whether the audio/video moderation result enters the audio/video moderation wall (manual review of the recognition result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
      */
     public $ReviewWallSwitch;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Name of an intelligent content recognition template. Length limit: 64 characters.
+     * @var string Content review template name. Length limit: 64 characters.
      */
     public $Name;
 
     /**
-     * @var string Description of an intelligent content recognition template. Length limit: 256 characters.
+     * @var string Content review template description, with a length limit of 256 characters.
      */
     public $Comment;
 
     /**
-     * @var PornConfigureInfo Control parameter for porn information.
+     * @var PornConfigureInfo Control parameters for offensive information.
      */
     public $PornConfigure;
 
     /**
-     * @var TerrorismConfigureInfo Control parameter for terrorism information.
+     * @var TerrorismConfigureInfo Control parameters for unsafe information.
      */
     public $TerrorismConfigure;
 
     /**
-     * @var PoliticalConfigureInfo Control parameter for politically sensitive information.
+     * @var PoliticalConfigureInfo Uncomfortable control parameters.
      */
     public $PoliticalConfigure;
 
     /**
-     * @var ProhibitedConfigureInfo Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
+     * @var ProhibitedConfigureInfo Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related violation.</li>
      */
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfo Control parameter for custom intelligent content recognition.
+     * @var UserDefineConfigureInfo User-defined content review control parameters.
      */
     public $UserDefineConfigure;
 
     /**
-     * @var float Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+     * @var float Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds.
      */
     public $ScreenshotInterval;
 
     /**
-     * @param string $ReviewWallSwitch Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+     * @param string $ReviewWallSwitch Switch for whether the audio/video moderation result enters the audio/video moderation wall (manual review of the recognition result).
 <li>ON: yes</li>
-<li>OFF: no</li>
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $Name Name of an intelligent content recognition template. Length limit: 64 characters.
-     * @param string $Comment Description of an intelligent content recognition template. Length limit: 256 characters.
-     * @param PornConfigureInfo $PornConfigure Control parameter for porn information.
-     * @param TerrorismConfigureInfo $TerrorismConfigure Control parameter for terrorism information.
-     * @param PoliticalConfigureInfo $PoliticalConfigure Control parameter for politically sensitive information.
-     * @param ProhibitedConfigureInfo $ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-     * @param UserDefineConfigureInfo $UserDefineConfigure Control parameter for custom intelligent content recognition.
-     * @param float $ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+<li>OFF: No.</li>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $Name Content review template name. Length limit: 64 characters.
+     * @param string $Comment Content review template description, with a length limit of 256 characters.
+     * @param PornConfigureInfo $PornConfigure Control parameters for offensive information.
+     * @param TerrorismConfigureInfo $TerrorismConfigure Control parameters for unsafe information.
+     * @param PoliticalConfigureInfo $PoliticalConfigure Uncomfortable control parameters.
+     * @param ProhibitedConfigureInfo $ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related violation.</li>
+     * @param UserDefineConfigureInfo $UserDefineConfigure User-defined content review control parameters.
+     * @param float $ScreenshotInterval Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds.
      */
     function __construct()
     {

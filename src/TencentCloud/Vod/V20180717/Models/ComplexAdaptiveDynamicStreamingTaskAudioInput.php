@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameters for audio streams in the adaptive bitrate streaming task.
+ * Input parameter of multilingual audio stream for adaptive bitrate streaming.
  *
- * @method string getFileId() Obtain Media ID of the input audio file. The first audio stream in the media will be fixed, while video streams and other audio streams (if any) will be ignored.
- * @method void setFileId(string $FileId) Set Media ID of the input audio file. The first audio stream in the media will be fixed, while video streams and other audio streams (if any) will be ignored.
- * @method string getName() Obtain Audio stream name in the output, supporting up to 16 characters.
- * @method void setName(string $Name) Set Audio stream name in the output, supporting up to 16 characters.
- * @method string getLanguage() Obtain The language of the audio stream in the output, supporting up to 16 characters. It must comply with the RFC5646 specification.
- * @method void setLanguage(string $Language) Set The language of the audio stream in the output, supporting up to 16 characters. It must comply with the RFC5646 specification.
- * @method string getDefault() Obtain Whether to set as the default audio for adaptive bitrate streaming.
-<li>YES: Set as the default audio;</li>
-<li>NO: Not set as the default audio (default value).</li>
- * @method void setDefault(string $Default) Set Whether to set as the default audio for adaptive bitrate streaming.
-<li>YES: Set as the default audio;</li>
-<li>NO: Not set as the default audio (default value).</li>
+ * @method string getFileId() Obtain <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
+ * @method void setFileId(string $FileId) Set <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
+ * @method string getName() Obtain <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
+ * @method void setName(string $Name) Set <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
+ * @method string getLanguage() Obtain <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
+ * @method void setLanguage(string $Language) Set <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
+ * @method string getDefault() Obtain <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
+ * @method void setDefault(string $Default) Set <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
+ * @method integer getAudioTrackIdx() Obtain <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+ * @method void setAudioTrackIdx(integer $AudioTrackIdx) Set <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
  */
 class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel
 {
     /**
-     * @var string Media ID of the input audio file. The first audio stream in the media will be fixed, while video streams and other audio streams (if any) will be ignored.
+     * @var string <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
      */
     public $FileId;
 
     /**
-     * @var string Audio stream name in the output, supporting up to 16 characters.
+     * @var string <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
      */
     public $Name;
 
     /**
-     * @var string The language of the audio stream in the output, supporting up to 16 characters. It must comply with the RFC5646 specification.
+     * @var string <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
      */
     public $Language;
 
     /**
-     * @var string Whether to set as the default audio for adaptive bitrate streaming.
-<li>YES: Set as the default audio;</li>
-<li>NO: Not set as the default audio (default value).</li>
+     * @var string <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
      */
     public $Default;
 
     /**
-     * @param string $FileId Media ID of the input audio file. The first audio stream in the media will be fixed, while video streams and other audio streams (if any) will be ignored.
-     * @param string $Name Audio stream name in the output, supporting up to 16 characters.
-     * @param string $Language The language of the audio stream in the output, supporting up to 16 characters. It must comply with the RFC5646 specification.
-     * @param string $Default Whether to set as the default audio for adaptive bitrate streaming.
-<li>YES: Set as the default audio;</li>
-<li>NO: Not set as the default audio (default value).</li>
+     * @var integer <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+     */
+    public $AudioTrackIdx;
+
+    /**
+     * @param string $FileId <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
+     * @param string $Name <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
+     * @param string $Language <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
+     * @param string $Default <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
+     * @param integer $AudioTrackIdx <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
      */
     function __construct()
     {
@@ -92,6 +92,10 @@ class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel
 
         if (array_key_exists("Default",$param) and $param["Default"] !== null) {
             $this->Default = $param["Default"];
+        }
+
+        if (array_key_exists("AudioTrackIdx",$param) and $param["AudioTrackIdx"] !== null) {
+            $this->AudioTrackIdx = $param["AudioTrackIdx"];
         }
     }
 }

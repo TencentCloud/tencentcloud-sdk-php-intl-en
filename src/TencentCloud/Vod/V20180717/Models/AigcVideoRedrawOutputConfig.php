@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Output media file config of the AIGC video conversion task.
  *
- * @method string getStorageMode() Obtain 
- * @method void setStorageMode(string $StorageMode) Set 
- * @method string getMediaName() Obtain 
- * @method void setMediaName(string $MediaName) Set 
- * @method integer getClassId() Obtain 
- * @method void setClassId(integer $ClassId) Set 
- * @method string getExpireTime() Obtain 
- * @method void setExpireTime(string $ExpireTime) Set 
+ * @method string getStorageMode() Obtain <p>Storage mode. Valid values: <li>Permanent: permanent storage. The generated video file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: temporary storage. The generated video file will not be stored in VOD, and the URL for temporary access can be obtained in the event notification;</li>Default value: Temporary</p>
+ * @method void setStorageMode(string $StorageMode) Set <p>Storage mode. Valid values: <li>Permanent: permanent storage. The generated video file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: temporary storage. The generated video file will not be stored in VOD, and the URL for temporary access can be obtained in the event notification;</li>Default value: Temporary</p>
+ * @method string getMediaName() Obtain <p>Output media filename, up to 64 characters. Default filename is specified by the system.</p>
+ * @method void setMediaName(string $MediaName) Set <p>Output media filename, up to 64 characters. Default filename is specified by the system.</p>
+ * @method integer getClassId() Obtain <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
+ * @method void setClassId(integer $ClassId) Set <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
+ * @method string getExpireTime() Obtain <p>The expiry date of the output file. Files will be deleted longer than this time. Default is never expire, format according to ISO 8601. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z.</p>
+ * @method void setExpireTime(string $ExpireTime) Set <p>The expiry date of the output file. Files will be deleted longer than this time. Default is never expire, format according to ISO 8601. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z.</p>
  */
 class AigcVideoRedrawOutputConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Storage mode. Valid values: <li>Permanent: permanent storage. The generated video file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: temporary storage. The generated video file will not be stored in VOD, and the URL for temporary access can be obtained in the event notification;</li>Default value: Temporary</p>
      */
     public $StorageMode;
 
     /**
-     * @var string 
+     * @var string <p>Output media filename, up to 64 characters. Default filename is specified by the system.</p>
      */
     public $MediaName;
 
     /**
-     * @var integer 
+     * @var integer <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
      */
     public $ClassId;
 
     /**
-     * @var string 
+     * @var string <p>The expiry date of the output file. Files will be deleted longer than this time. Default is never expire, format according to ISO 8601. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z.</p>
      */
     public $ExpireTime;
 
     /**
-     * @param string $StorageMode 
-     * @param string $MediaName 
-     * @param integer $ClassId 
-     * @param string $ExpireTime 
+     * @param string $StorageMode <p>Storage mode. Valid values: <li>Permanent: permanent storage. The generated video file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: temporary storage. The generated video file will not be stored in VOD, and the URL for temporary access can be obtained in the event notification;</li>Default value: Temporary</p>
+     * @param string $MediaName <p>Output media filename, up to 64 characters. Default filename is specified by the system.</p>
+     * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
+     * @param string $ExpireTime <p>The expiry date of the output file. Files will be deleted longer than this time. Default is never expire, format according to ISO 8601. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z.</p>
      */
     function __construct()
     {

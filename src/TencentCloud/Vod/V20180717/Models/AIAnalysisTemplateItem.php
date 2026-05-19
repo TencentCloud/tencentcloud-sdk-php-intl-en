@@ -26,22 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Intelligent analysis template name.
  * @method string getComment() Obtain Intelligent analysis template description.
  * @method void setComment(string $Comment) Set Intelligent analysis template description.
- * @method ClassificationConfigureInfo getClassificationConfigure() Obtain Control parameter of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setClassificationConfigure(ClassificationConfigureInfo $ClassificationConfigure) Set Control parameter of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method TagConfigureInfo getTagConfigure() Obtain Control parameter of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTagConfigure(TagConfigureInfo $TagConfigure) Set Control parameter of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method CoverConfigureInfo getCoverConfigure() Obtain Control parameter of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCoverConfigure(CoverConfigureInfo $CoverConfigure) Set Control parameter of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method FrameTagConfigureInfo getFrameTagConfigure() Obtain Control parameter of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) Set Control parameter of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method ClassificationConfigureInfo getClassificationConfigure() Obtain Intelligent Classification Task Control Parameters.
+ * @method void setClassificationConfigure(ClassificationConfigureInfo $ClassificationConfigure) Set Intelligent Classification Task Control Parameters.
+ * @method TagConfigureInfo getTagConfigure() Obtain Intelligent tag task control parameter.
+ * @method void setTagConfigure(TagConfigureInfo $TagConfigure) Set Intelligent tag task control parameter.
+ * @method CoverConfigureInfo getCoverConfigure() Obtain Intelligent Cover Task Control Parameters.
+ * @method void setCoverConfigure(CoverConfigureInfo $CoverConfigure) Set Intelligent Cover Task Control Parameters.
+ * @method FrameTagConfigureInfo getFrameTagConfigure() Obtain Intelligent frame tagging task control parameter.
+ * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) Set Intelligent frame tagging task control parameter.
  * @method HighlightsConfigureInfo getHighlightConfigure() Obtain Control parameter of an intelligent highlight generating task.
  * @method void setHighlightConfigure(HighlightsConfigureInfo $HighlightConfigure) Set Control parameter of an intelligent highlight generating task.
  * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -67,26 +59,22 @@ class AIAnalysisTemplateItem extends AbstractModel
     public $Comment;
 
     /**
-     * @var ClassificationConfigureInfo Control parameter of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ClassificationConfigureInfo Intelligent Classification Task Control Parameters.
      */
     public $ClassificationConfigure;
 
     /**
-     * @var TagConfigureInfo Control parameter of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var TagConfigureInfo Intelligent tag task control parameter.
      */
     public $TagConfigure;
 
     /**
-     * @var CoverConfigureInfo Control parameter of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var CoverConfigureInfo Intelligent Cover Task Control Parameters.
      */
     public $CoverConfigure;
 
     /**
-     * @var FrameTagConfigureInfo Control parameter of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var FrameTagConfigureInfo Intelligent frame tagging task control parameter.
      */
     public $FrameTagConfigure;
 
@@ -109,14 +97,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Definition Unique ID of intelligent analysis template.
      * @param string $Name Intelligent analysis template name.
      * @param string $Comment Intelligent analysis template description.
-     * @param ClassificationConfigureInfo $ClassificationConfigure Control parameter of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TagConfigureInfo $TagConfigure Control parameter of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CoverConfigureInfo $CoverConfigure Control parameter of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FrameTagConfigureInfo $FrameTagConfigure Control parameter of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ClassificationConfigureInfo $ClassificationConfigure Intelligent Classification Task Control Parameters.
+     * @param TagConfigureInfo $TagConfigure Intelligent tag task control parameter.
+     * @param CoverConfigureInfo $CoverConfigure Intelligent Cover Task Control Parameters.
+     * @param FrameTagConfigureInfo $FrameTagConfigure Intelligent frame tagging task control parameter.
      * @param HighlightsConfigureInfo $HighlightConfigure Control parameter of an intelligent highlight generating task.
      * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).

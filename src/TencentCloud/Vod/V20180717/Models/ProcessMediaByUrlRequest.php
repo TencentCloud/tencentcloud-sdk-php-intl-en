@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessMediaByUrl request structure.
  *
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method MediaInputInfo getInputInfo() Obtain This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.
- * @method MediaOutputInfo getOutputInfo() Obtain Information of COS path to output file.
- * @method void setOutputInfo(MediaOutputInfo $OutputInfo) Set Information of COS path to output file.
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Type parameter of video content audit task.
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Type parameter of video content audit task.
- * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Video content analysis task parameter.
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Video content analysis task parameter.
- * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain Type parameter of video content recognition task.
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Type parameter of video content recognition task.
- * @method integer getTasksPriority() Obtain Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
- * @method void setTasksPriority(integer $TasksPriority) Set Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
- * @method string getTasksNotifyMode() Obtain Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
- * @method void setTasksNotifyMode(string $TasksNotifyMode) Set Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
- * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
- * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
- * @method string getSessionId() Obtain Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
- * @method void setSessionId(string $SessionId) Set Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method MediaInputInfo getInputInfo() Obtain The API is <font color='red'>no longer maintained</font>. Refer to the API description for the recommended alternative API.
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set The API is <font color='red'>no longer maintained</font>. Refer to the API description for the recommended alternative API.
+ * @method MediaOutputInfo getOutputInfo() Obtain Output file COS path information.
+ * @method void setOutputInfo(MediaOutputInfo $OutputInfo) Set Output file COS path information.
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Parameters for the video content review task.
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Parameters for the video content review task.
+ * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Parameters for the video content analysis task.
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Parameters for the video content analysis task.
+ * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain Parameters for the video content recognition task.
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Parameters for the video content recognition task.
+ * @method integer getTasksPriority() Obtain Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+ * @method void setTasksPriority(integer $TasksPriority) Set Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+ * @method string getTasksNotifyMode() Obtain Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.
+ * @method void setTasksNotifyMode(string $TasksNotifyMode) Set Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.
+ * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+ * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
  */
 class ProcessMediaByUrlRequest extends AbstractModel
 {
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var MediaInputInfo This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.
+     * @var MediaInputInfo The API is <font color='red'>no longer maintained</font>. Refer to the API description for the recommended alternative API.
      */
     public $InputInfo;
 
     /**
-     * @var MediaOutputInfo Information of COS path to output file.
+     * @var MediaOutputInfo Output file COS path information.
      */
     public $OutputInfo;
 
     /**
-     * @var AiContentReviewTaskInput Type parameter of video content audit task.
+     * @var AiContentReviewTaskInput Parameters for the video content review task.
      */
     public $AiContentReviewTask;
 
     /**
-     * @var AiAnalysisTaskInput Video content analysis task parameter.
+     * @var AiAnalysisTaskInput Parameters for the video content analysis task.
      */
     public $AiAnalysisTask;
 
     /**
-     * @var AiRecognitionTaskInput Type parameter of video content recognition task.
+     * @var AiRecognitionTaskInput Parameters for the video content recognition task.
      */
     public $AiRecognitionTask;
 
     /**
-     * @var integer Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+     * @var integer Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
      */
     public $TasksPriority;
 
     /**
-     * @var string Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
+     * @var string Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.
      */
     public $TasksNotifyMode;
 
     /**
-     * @var string The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * @var string Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public $SessionContext;
 
     /**
-     * @var string Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+     * @var string Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public $SessionId;
 
     /**
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param MediaInputInfo $InputInfo This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.
-     * @param MediaOutputInfo $OutputInfo Information of COS path to output file.
-     * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of video content audit task.
-     * @param AiAnalysisTaskInput $AiAnalysisTask Video content analysis task parameter.
-     * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of video content recognition task.
-     * @param integer $TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
-     * @param string $TasksNotifyMode Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
-     * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-     * @param string $SessionId Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param MediaInputInfo $InputInfo The API is <font color='red'>no longer maintained</font>. Refer to the API description for the recommended alternative API.
+     * @param MediaOutputInfo $OutputInfo Output file COS path information.
+     * @param AiContentReviewTaskInput $AiContentReviewTask Parameters for the video content review task.
+     * @param AiAnalysisTaskInput $AiAnalysisTask Parameters for the video content analysis task.
+     * @param AiRecognitionTaskInput $AiRecognitionTask Parameters for the video content recognition task.
+     * @param integer $TasksPriority Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+     * @param string $TasksNotifyMode Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.
+     * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     function __construct()
     {

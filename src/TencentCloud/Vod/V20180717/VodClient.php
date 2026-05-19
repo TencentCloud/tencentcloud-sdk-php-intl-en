@@ -43,12 +43,19 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
  * @method Models\ConfirmEventsResponse ConfirmEvents(Models\ConfirmEventsRequest $req) * After the `PullEvents` API is called to get an event, this API must be called to confirm that the message has been received;
 * After the event handler is obtained, the validity period of waiting for confirmation is 30 seconds. If the wait exceeds 30 seconds, a parameter error will be reported (4000);
 * For more information, please see the [reliable callback](https://intl.cloud.tencent.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) of event notification.
- * @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) This API is used to create a custom video content analysis template. Up to 50 templates can be created.
+ * @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) Create a user-defined audio and video content analysis template. Maximum quantity: 50. HLS format not supported currently.
  * @method Models\CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(Models\CreateAIRecognitionTemplateRequest $req) This API is used to create a custom video content recognition template. Up to 50 templates can be created.
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) This API is used to create an adaptive bitrate streaming template. Up to 100 templates can be created.
+ * @method Models\CreateAigcAdvancedCustomElementResponse CreateAigcAdvancedCustomElement(Models\CreateAigcAdvancedCustomElementRequest $req) This API is used to create an advanced custom AIGC subject.
  * @method Models\CreateAigcApiTokenResponse CreateAigcApiToken(Models\CreateAigcApiTokenRequest $req) This API is used to create a Token for invoking AIGC API. After creation, there is a delay in data sync. It becomes queryable or deletable after about 30 seconds.
- * @method Models\CreateAigcImageTaskResponse CreateAigcImageTask(Models\CreateAigcImageTaskRequest $req) This API is used to generate AIGC images. <b>The API is in beta. If needed, contact us. API calls will incur actual fees.</b>
- * @method Models\CreateAigcVideoTaskResponse CreateAigcVideoTask(Models\CreateAigcVideoTaskRequest $req) This API is used to generate AIGC videos. <b>The API is in beta. If needed, contact us. API calls will incur actual fees.</b>
+ * @method Models\CreateAigcAudioCloneResponse CreateAigcAudioClone(Models\CreateAigcAudioCloneRequest $req) This API is used to create AIGC voice replication. Note that calling this API will incur fees. See the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#96b3b59a-f9e1-49e9-966a-bedb70a4bf12).
+ * @method Models\CreateAigcAudioTaskResponse CreateAigcAudioTask(Models\CreateAigcAudioTaskRequest $req) This API is used to create AI audio generation tasks.
+ * @method Models\CreateAigcCustomElementResponse CreateAigcCustomElement(Models\CreateAigcCustomElementRequest $req) Call this API to target a specified model and perform subject creation.
+ * @method Models\CreateAigcCustomVoiceResponse CreateAigcCustomVoice(Models\CreateAigcCustomVoiceRequest $req) This API is used to create custom voice types for AIGC.
+ * @method Models\CreateAigcImageTaskResponse CreateAigcImageTask(Models\CreateAigcImageTaskRequest $req) This API is used to generate AIGC images. The default limit is 1 concurrent processing. API calls will occur actual fee. Refer to the VOD AIGC image generation billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac). The feature settlement mode is pay-as-you-go. Daily billing customers will be billed on the second day for usage on the day. Monthly billing customers will be billed on the 1st of the next month for usage in the previous month.
+ * @method Models\CreateAigcSubjectResponse CreateAigcSubject(Models\CreateAigcSubjectRequest $req) This API is used to create AIGC custom subjects (Vidu). Note that calling this API may incur fees. Refer to the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#96b3b59a-f9e1-49e9-966a-bedb70a4bf12).
+ * @method Models\CreateAigcVideoRedrawTaskResponse CreateAigcVideoRedrawTask(Models\CreateAigcVideoRedrawTaskRequest $req) This API is used to generate AIGC videos. API calls will occur actual fee. Refer to the video-on-demand [AIGC video generation billing documentation](https://www.tencentcloud.com/zh/document/product/266/14666#96b3b59a-f9e1-49e9-966a-bedb70a4bf12). The feature settlement mode is [pay-as-you-go](https://www.tencentcloud.com/document/product/266/2838?from_cn_redirect=1). Daily billing customers will be charged on the second day for usage on the day, while monthly billing customers will be billed on the 1st of the next month for usage in the previous month.
+ * @method Models\CreateAigcVideoTaskResponse CreateAigcVideoTask(Models\CreateAigcVideoTaskRequest $req) This API is used to generate AIGC videos. The default limit is 1 concurrent processing. API calls will incur actual fees. Refer to the VOD AIGC video generation billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#96b3b59a-f9e1-49e9-966a-bedb70a4bf12). The feature settlement mode is pay-as-you-go. Daily billing customers will be charged on the second day for usage on the day, while monthly settlement customers will be billed on the 1st of the next month for usage in the previous month.
  * @method Models\CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(Models\CreateAnimatedGraphicsTemplateRequest $req) This API is used to create a custom animated image generating template. Up to 16 templates can be created.
  * @method Models\CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplate(Models\CreateBlindWatermarkTemplateRequest $req) This API is used to create a user-defined digital watermark template.
  * @method Models\CreateCDNDomainResponse CreateCDNDomain(Models\CreateCDNDomainRequest $req) This API is used for adding domain names to VOD. A user can add up to 20 domain names. 1. After the domain name is added successfully, VOD will carry out the deployment of the domain name. It takes approximately 2 minutes for the domain name to change from the deployment status to the online status.
@@ -56,28 +63,40 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
 * It does not affect the categories of existing media assets. If you want to modify the category of a media asset, call the [ModifyMediaInfo](https://intl.cloud.tencent.com/document/product/266/31762?from_cn_redirect=1) API.
 * There can be up to 4 levels of categories.
 * One category can have up to 500 subcategories under it.
- * @method Models\CreateComplexAdaptiveDynamicStreamingTaskResponse CreateComplexAdaptiveDynamicStreamingTask(Models\CreateComplexAdaptiveDynamicStreamingTaskRequest $req) Initiate an adaptive bitrate streaming processing task, with the following features:
-1. Output HLS and MPEG-DASH adaptive streams based on the specified templates;
-2. DRM options for the adaptive bitrate streaming include no encryption, Widevine, or FairPlay.
-3. The output adaptive bitrate streaming can include multiple audio streams in different languages, with each language sourced from different media files.
-4. The output adaptive stream can also include multiple subtitle streams in different languages.
+ * @method Models\CreateComplexAdaptiveDynamicStreamingTaskResponse CreateComplexAdaptiveDynamicStreamingTask(Models\CreateComplexAdaptiveDynamicStreamingTaskRequest $req) Initiate complex adaptive bitstream processing. Features include:
+1. Output HLS and DASH adaptive bitrate streams based on the specified template.
+2. The content protection solution for adaptive bitrate streams is available in unencrypted, Widevine, or FairPlay.
+3. Support adding opening and ending segments.
+4. The output adaptive bitrate stream can include multilingual audio streams, each language comes from a different media file.
+5. The output adaptive bitrate stream can include multilingual subtitles.
 
-**Notes:**
-1. When using opening/closing credits, the video stream in the opening credit must be synchronized with the audio stream; otherwise, it will result in audio and video desynchronization in the output content.
-2. If the output adaptive bitrate streaming needs to include audio from the main media, the FileId of the main media must be specified in the AudioSet parameter.
-3. Subtitles must be added to the main media beforehand, which can be done through the ModifyMediaInfo API interface or the Video Management page in the console.
-4. Support for TESHD transcoding and watermarking is currently not available.
+Notes:
+1. When using the opening scene, the video stream in the media needs to align with the audio stream, otherwise will cause out-of-sync audio and video in the output content;
+2. If the output adaptive bitrate stream needs to include the audio of the main media, then the FileId of the main media must be specified in the AudioSet parameter.
+3. To use subtitles, you must first add them to the main media. You can add subtitles through the ModifyMediaInfo API or the audio and video details page in the console.
+4. Not currently supported: top speed Codec, watermark.
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) We have <font color=red>stopped updating</font> this API. Our new moderation templates can moderate audio/video as well as images. For details, see [CreateReviewTemplate](https://intl.cloud.tencent.com/document/api/266/84391?from_cn_redirect=1).
 This API is used to create a custom audio/video moderation template. Up to 50 templates can be created in total.
  * @method Models\CreateDomainVerifyRecordResponse CreateDomainVerifyRecord(Models\CreateDomainVerifyRecordRequest $req) This API is used for generating a subdomain resolution, prompting the customer to add it to the domain name resolution, used for wildcard domain and domain name retrieval verification of ownership.
  * @method Models\CreateEnhanceMediaTemplateResponse CreateEnhanceMediaTemplate(Models\CreateEnhanceMediaTemplateRequest $req) Create enhance media template.
- * @method Models\CreateHeadTailTemplateResponse CreateHeadTailTemplate(Models\CreateHeadTailTemplateRequest $req) Create HeadTail Template.
+ * @method Models\CreateHeadTailTemplateResponse CreateHeadTailTemplate(Models\CreateHeadTailTemplateRequest $req) This API is used to create a title and trailer template.
+-The maximum supported template quantity is 100.
  * @method Models\CreateImageProcessingTemplateResponse CreateImageProcessingTemplate(Models\CreateImageProcessingTemplateRequest $req) This API is used to create a custom image processing template. A template can include at most 10 operations, for example, crop-scale-crop-blur-scale-crop-scale-crop-blur-scale. You can have up to 16 image processing templates.
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) This API is used to create a custom image sprite generating template. Up to 16 templates can be created.
  * @method Models\CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplate(Models\CreateJustInTimeTranscodeTemplateRequest $req) Create Just In Time Transcode Template.
  * @method Models\CreateLLMComprehendTemplateResponse CreateLLMComprehendTemplate(Models\CreateLLMComprehendTemplateRequest $req) Create a large model comprehend template
+ * @method Models\CreateMPSTemplateResponse CreateMPSTemplate(Models\CreateMPSTemplateRequest $req) This API is used to create a custom template for partial features of the ProcessMediaByMPS API.
+When creating a template, you need to fill in MPS-related parameters in JSON format into the MPSCreateTemplateParams parameter. For specific task parameter configuration methods, refer to the MPS task template related documentation.
+Currently supported MPS features: create custom template.
+1. [Audio and video enhancement](https://www.tencentcloud.com/document/product/862/118703?from_cn_redirect=1).
+2. [Media AI](https://www.tencentcloud.com/document/product/1041/54517)
+
+Task Template created by this method
+Template management is still done on the VOD platform.
+2. The feature is currently in closed beta testing. If needed, you can contact us for support.
  * @method Models\CreatePersonSampleResponse CreatePersonSample(Models\CreatePersonSampleRequest $req) This API is used to create samples for using facial features positioning and other technologies to perform video processing operations such as content recognition and inappropriate information recognition.
  * @method Models\CreateProcedureTemplateResponse CreateProcedureTemplate(Models\CreateProcedureTemplateRequest $req) This API is used to create a custom task flow template. Up to 50 templates can be created.
+ * @method Models\CreateProcessImageAsyncTemplateResponse CreateProcessImageAsyncTemplate(Models\CreateProcessImageAsyncTemplateRequest $req) Create a user-customized image processing template asynchronously. Maximum quantity: 50. HLS format not supported currently.
  * @method Models\CreateQualityInspectTemplateResponse CreateQualityInspectTemplate(Models\CreateQualityInspectTemplateRequest $req) Creates media quality inspection template.
  * @method Models\CreateRebuildMediaTemplateResponse CreateRebuildMediaTemplate(Models\CreateRebuildMediaTemplateRequest $req) Create rebuild media template.
  * @method Models\CreateReviewTemplateResponse CreateReviewTemplate(Models\CreateReviewTemplateRequest $req) This API is used to create a custom moderation template. Up to 50 templates can be created in total.
@@ -87,6 +106,7 @@ For each video on the list, you can either use the original file or a transcodin
 The files must be in HLS format. Preferably, they should have the same bitrate and resolution.
  * @method Models\CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(Models\CreateSampleSnapshotTemplateRequest $req) This API is used to create a custom sampled screencapturing template. Up to 16 templates can be created.
  * @method Models\CreateSceneAigcImageTaskResponse CreateSceneAigcImageTask(Models\CreateSceneAigcImageTaskRequest $req) This API is used to generate scenario-based AIGC images. <b>This interface is in beta. If you need to use it, please contact us. API calls will incur actual fees.</b>
+ * @method Models\CreateSceneAigcVideoTaskResponse CreateSceneAigcVideoTask(Models\CreateSceneAigcVideoTaskRequest $req) This API is used to generate scenario-based AIGC images. API calls will occur actual fee.
  * @method Models\CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(Models\CreateSnapshotByTimeOffsetTemplateRequest $req) This API is used to create a custom time point screencapturing template. Up to 16 templates can be created.
  * @method Models\CreateStorageRegionResponse CreateStorageRegion(Models\CreateStorageRegionRequest $req) This API is used to enable storage in a region.
   1. When you activate VOD, the system will enable storage for you in certain regions. If you need to store data in another region, you can use this API to enable storage in that region.
@@ -104,6 +124,7 @@ This API is used to create a player configuration. Up to 100 configurations can 
 Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DeleteAIRecognitionTemplateResponse DeleteAIRecognitionTemplate(Models\DeleteAIRecognitionTemplateRequest $req) This API is used to delete a custom video content recognition template.
  * @method Models\DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplate(Models\DeleteAdaptiveDynamicStreamingTemplateRequest $req) This API is used to delete an adaptive bitrate streaming template.
+ * @method Models\DeleteAigcAdvancedCustomElementResponse DeleteAigcAdvancedCustomElement(Models\DeleteAigcAdvancedCustomElementRequest $req) This API is used to delete the senior custom AIGC subject.
  * @method Models\DeleteAigcApiTokenResponse DeleteAigcApiToken(Models\DeleteAigcApiTokenRequest $req) Delete an AIGC API Token.
  * @method Models\DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(Models\DeleteAnimatedGraphicsTemplateRequest $req) This API is used to delete a custom animated image generating template.
  * @method Models\DeleteBlindWatermarkTemplateResponse DeleteBlindWatermarkTemplate(Models\DeleteBlindWatermarkTemplateRequest $req) This API is used to delete a user-defined digital watermark template.
@@ -117,14 +138,18 @@ This API is used to delete a custom audio/video moderation template.
  * @method Models\DeleteImageProcessingTemplateResponse DeleteImageProcessingTemplate(Models\DeleteImageProcessingTemplateRequest $req) This API is used to delete an image processing template.
  * @method Models\DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(Models\DeleteImageSpriteTemplateRequest $req) This API is used to delete an image sprite generating template.
  * @method Models\DeleteJustInTimeTranscodeTemplateResponse DeleteJustInTimeTranscodeTemplate(Models\DeleteJustInTimeTranscodeTemplateRequest $req) Delete Just In Time Transcode Template.
- * @method Models\DeleteLLMComprehendTemplateResponse DeleteLLMComprehendTemplate(Models\DeleteLLMComprehendTemplateRequest $req) This API is used to delete a user-customized  large model comprehend template.
+ * @method Models\DeleteLLMComprehendTemplateResponse DeleteLLMComprehendTemplate(Models\DeleteLLMComprehendTemplateRequest $req) This API is used to delete a user's customized large model parsing template.
 
-Note: Templates with an ID below 10000 are system-preset templates and cannot be deleted.
+Note: Template IDs below 10000 are system-preset templates and cannot be deleted.
+ * @method Models\DeleteMPSTemplateResponse DeleteMPSTemplate(Models\DeleteMPSTemplateRequest $req) This API is used to delete a user-defined MPS task template.
  * @method Models\DeleteMediaResponse DeleteMedia(Models\DeleteMediaRequest $req) * This API is used to delete a media file and its processed files, such as the transcoded video files, image sprites, screenshots, and videos for publishing on WeChat.
 * You can delete the original files, transcoded video files, and videos for publishing on WeChat, etc. of videos with specified IDs.
 * Note: after the original file of a video is deleted, you cannot transcode the video, publish it on WeChat, or perform other operations on it.
  * @method Models\DeletePersonSampleResponse DeletePersonSample(Models\DeletePersonSampleRequest $req) This API is used to delete samples according to sample IDs.
  * @method Models\DeleteProcedureTemplateResponse DeleteProcedureTemplate(Models\DeleteProcedureTemplateRequest $req) Delete user-created task flow templates.
+ * @method Models\DeleteProcessImageAsyncTemplateResponse DeleteProcessImageAsyncTemplate(Models\DeleteProcessImageAsyncTemplateRequest $req) This API is used to delete a user-customized image async processing template.
+
+Note: Template IDs below 10000 are system-preset templates and cannot be deleted.
  * @method Models\DeleteQualityInspectTemplateResponse DeleteQualityInspectTemplate(Models\DeleteQualityInspectTemplateRequest $req) Deletes media quality inspection template.
  * @method Models\DeleteRebuildMediaTemplateResponse DeleteRebuildMediaTemplate(Models\DeleteRebuildMediaTemplateRequest $req) Delete rebuild media template.
  * @method Models\DeleteReviewTemplateResponse DeleteReviewTemplate(Models\DeleteReviewTemplateRequest $req) This API is used to delete a custom moderation template.
@@ -143,7 +168,9 @@ This API is used to delete a player configuration.
  * @method Models\DescribeAIAnalysisTemplatesResponse DescribeAIAnalysisTemplates(Models\DescribeAIAnalysisTemplatesRequest $req) This API is used to get the list of video content analysis templates based on unique template ID. The returned result includes all eligible custom and [preset video content analysis templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.88.86.E6.9E.90.E6.A8.A1.E6.9D.BF).
  * @method Models\DescribeAIRecognitionTemplatesResponse DescribeAIRecognitionTemplates(Models\DescribeAIRecognitionTemplatesRequest $req) This API is used to get the list of video content recognition templates based on unique template ID. The return result includes all eligible custom and [preset video content recognition templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E8.AF.86.E5.88.AB.E6.A8.A1.E6.9D.BF).
  * @method Models\DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(Models\DescribeAdaptiveDynamicStreamingTemplatesRequest $req) This API is used to query the list of transcoding to adaptive bitrate streaming templates and supports paged queries by filters.
+ * @method Models\DescribeAigcAdvancedCustomElementsResponse DescribeAigcAdvancedCustomElements(Models\DescribeAigcAdvancedCustomElementsRequest $req) This API is used to retrieve an advanced custom AIGC subject.
  * @method Models\DescribeAigcApiTokensResponse DescribeAigcApiTokens(Models\DescribeAigcApiTokensRequest $req) Query the AIGC API Token list. There is a delay in data sync after creation or deletion. The latest data is queryable after about 30 seconds.
+ * @method Models\DescribeAigcFaceInfoResponse DescribeAigcFaceInfo(Models\DescribeAigcFaceInfoRequest $req) This API is used to obtain AIGC face information. Note that calling this API will incur face recognition fees. Refer to the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#96b3b59a-f9e1-49e9-966a-bedb70a4bf12).
  * @method Models\DescribeAigcUsageDataResponse DescribeAigcUsageData(Models\DescribeAigcUsageDataRequest $req) This API is used to return statistical information of AIGC within a specified time range.
 1. AIGC stats from the last 365 days can be queried.
    2. The query time span should not exceed 90 days.
@@ -152,19 +179,21 @@ This API is used to delete a player configuration.
  * @method Models\DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(Models\DescribeAnimatedGraphicsTemplatesRequest $req) This API is used to query the list of animated image generating templates and supports paged queries by filters.
  * @method Models\DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplates(Models\DescribeBlindWatermarkTemplatesRequest $req) Query user-customized digital watermark templates.
  * @method Models\DescribeCDNDomainsResponse DescribeCDNDomains(Models\DescribeCDNDomainsRequest $req) Describe CDN Domains
- * @method Models\DescribeCDNStatDetailsResponse DescribeCDNStatDetails(Models\DescribeCDNStatDetailsRequest $req) This API is used to query CDN bandwidth, traffic, and other data of VOD domain names.
-* The query period is up to 90 days.
-* You can query data of different service regions.
-* You can query data of Chinese mainland by region and ISP.
- * @method Models\DescribeCDNUsageDataResponse DescribeCDNUsageData(Models\DescribeCDNUsageDataRequest $req) This API is used to query the CDN statistics of VOD such as traffic and bandwidth.
-   1. CDN usage data is retained on the system side for 13 months, while you can only query the CDN usage data for the most recent 365 days via the API.If you need to retrieve historical usage data beyond 365 days, please contact us.
-   2. The query time range cannot be more than 90 days.
-   3. The time granularity of usage data can be specified, including 5-minute, 1-hour, and 1-day.
-   4. Traffic refers to the total traffic within the query time granularity, while bandwidth the peak bandwidth.
- * @method Models\DescribeCdnLogsResponse DescribeCdnLogs(Models\DescribeCdnLogsRequest $req) This API is used to query the download links of CDN access logs of a VOD domain name.
-    1. Only download links of CDN logs for the last 30 days can be queried.
-    2. By default, CDN generates a log file every hour. If there is no CDN access for a certain hour, no log file will be generated for the hour.    
-    3. A CDN log download link is valid for 24 hours.
+ * @method Models\DescribeCDNStatDetailsResponse DescribeCDNStatDetails(Models\DescribeCDNStatDetailsRequest $req) This API is used to query CDN bandwidth, traffic volume and stats of on-demand domain names.
+* The start time and end time of the query should not exceed a 90-day span.
+* You can query data from different service regions.
+Data support within the Chinese mainland allows querying stats by specified region and carrier.
+Playback statistics only target VOD domains (EdgeOne domain name distribution is not included).
+ * @method Models\DescribeCDNUsageDataResponse DescribeCDNUsageData(Models\DescribeCDNUsageDataRequest $req) This API is used to query traffic, bandwidth and stats of video-on-demand (VOD) CDN.
+1. The system side reserves CDN usage data for 13 months. You can query the most recent 365 days of usage data through the API. If needed, contact us to call historical usage data exceeding 365 days.
+   2. The query time span should not exceed 90 days.
+3. You can specify the time granularity of usage data, which supports 5 minutes, 1 hour, and 1 day.
+4. Traffic volume is the total traffic within the query time granularity, and bandwidth is the peak bandwidth within the query time granularity.
+5. Playback statistics only target VOD domains (EdgeOne domain name distribution is not included).
+ * @method Models\DescribeCdnLogsResponse DescribeCdnLogs(Models\DescribeCdnLogsRequest $req) Query the download URL of the access log for the CDN (exclude EdgeOne origin back to VOD domain) of the on-demand domain name.
+1. You can query the log download links for CDN in the most recent 30 days.
+2. By default, CDN creates a log file per hour. If no CDN access occurs in an hour, it does not generate a log file.    
+3. The CDN log download link is with a validity of 24 hours.
  * @method Models\DescribeClientUploadAccelerationUsageDataResponse DescribeClientUploadAccelerationUsageData(Models\DescribeClientUploadAccelerationUsageDataRequest $req) This interface returns client upload acceleration statistics within the query time range. 
  1. You can query the client upload acceleration statistics in the last 365 days. 
  2. The query time span does not exceed 90 days. 
@@ -172,17 +201,22 @@ This API is used to delete a player configuration.
  * @method Models\DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(Models\DescribeContentReviewTemplatesRequest $req) We have <font color=red>stopped updating</font> this API. Our new moderation templates can moderate audio/video as well as images. For details, see [DescribeReviewTemplates](https://intl.cloud.tencent.com/document/api/266/84389?from_cn_redirect=1).
 This API is used to get the information of custom and [preset](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF) audio/video moderation templates based on template IDs.
  * @method Models\DescribeCurrentPlaylistResponse DescribeCurrentPlaylist(Models\DescribeCurrentPlaylistRequest $req) Query current playlist of the round play.
- * @method Models\DescribeDailyPlayStatFileListResponse DescribeDailyPlayStatFileList(Models\DescribeDailyPlayStatFileListRequest $req) This API is used to query the download links of playback statistics files.
-* You can query the download links of playback statistics files in the past year. The start and end dates for query cannot be more than 90 days apart.
-* Every day, VOD will analyze CDN request logs of the previous day and then generate a playback statistics file.
-* A playback statistics file includes playback times and traffic of media files.
-* Notes on playback times:
-    1. HLS file: VOD counts playback times when M3U8 files are accessed, but not when TS files are accessed.
-    2. Other files (MP4 files for example): VOD does not count playback times when the playback request carries the `range` parameter and the `start` parameter in `range` is not `0`. In other cases, VOD counts playback times.
-* Statistics on playback devices: VOD counts playback times on mobile clients when the playback request carries the `UserAgent` parameter which includes an identifier such as `Android` or `iPhone`. In other cases, VOD counts playback times on PC clients.
+ * @method Models\DescribeDailyPlayStatFileListResponse DescribeDailyPlayStatFileList(Models\DescribeDailyPlayStatFileListRequest $req) This API is used to query the download address of the playback statistics file.
+* You can query the download links for playback statistics from the past one year, with the time span between the start date and end date no more than 90 days.
+VOD analyzes and processes CDN request logs from the previous day to generate playback statistics files.
+The playback statistics file contains statistical information such as the number of plays and total traffic of media files.
+Play count statistics description:
+1. HLS file: Count playback times when accessing M3U8 files; do not count playback times when accessing TS files.
+2. Other files (such as MP4 files): The number of plays is not counted when the playback request has a range parameter and the start parameter is not equal to 0. In other cases, the number of plays is counted.
+* Playback device statistics: If a playback request includes the UserAgent parameter and the UserAgent contains identification such as Android or iPhone, it will be counted as mobile playback. Otherwise, it will be counted as PC playback.
+Playback statistics only target VOD domains (EdgeOne domain name distribution is not included).
  * @method Models\DescribeDrmKeyProviderInfoResponse DescribeDrmKeyProviderInfo(Models\DescribeDrmKeyProviderInfoRequest $req) This API is used to query DRM key information.
  * @method Models\DescribeEnhanceMediaTemplatesResponse DescribeEnhanceMediaTemplates(Models\DescribeEnhanceMediaTemplatesRequest $req) Describe Enhance Media Templates.
- * @method Models\DescribeEventConfigResponse DescribeEventConfig(Models\DescribeEventConfigRequest $req) Tencent Cloud VOD provides customers with services such as media upload, media management, and media processing. During or after the execution of these services, Tencent Cloud VOD also offers various corresponding event notifications to facilitate developers' awareness of the service processing status and to perform subsequent business operations. Developers can use this interface to query the current configuration of event notification reception methods, reception addresses, and which events have callback notification reception enabled.
+ * @method Models\DescribeEventConfigResponse DescribeEventConfig(Models\DescribeEventConfigRequest $req) Tencent Cloud Video on Demand (VOD) provides customers with services such as media upload, media management, and media processing. During the execution process or when execution ends, VOD also offers various event notifications to help developers monitor service processing status and proceed with next business operations.
+
+Developers can use this interface to query the current configuration of event notification receiving method, recipient address and which events have enabled callback notification.
+
+Default API request rate limit: 100 requests/second.
  * @method Models\DescribeFileAttributesResponse DescribeFileAttributes(Models\DescribeFileAttributesRequest $req) This API is used to get file attributes asynchronously.
 - Currently, this API can only get the MD5 hash of a file.
 - If the file queried is in HLS or DASH format, the attributes of the index file will be returned.
@@ -199,6 +233,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
    1. You can query the license request statistics in the last 365 days.
    2. The query time span does not exceed 90 days.
    3. If the query time span exceeds 1 day, data with a granularity of days will be returned. Otherwise, data with a granularity of 5 minutes will be returned.
+ * @method Models\DescribeMPSTemplatesResponse DescribeMPSTemplates(Models\DescribeMPSTemplatesRequest $req) Retrieve user-customized MPS task templates.
+When querying the template list, require MPS related parameters to be filled in MPSDescribeTemplateParams in JSON format. For task parameter configuration method, refer to MPS task template document description.
  * @method Models\DescribeMediaInfosResponse DescribeMediaInfos(Models\DescribeMediaInfosRequest $req) 1. This API is used to get the information of multiple media files. Specifically, the information returned is as follows:
     1. `basicInfo`: Basic information including the file name, category, playback URL, and thumbnail.
     2. `metaData`: Metadata including the file size, duration, video stream information, and audio stream information.
@@ -211,15 +247,17 @@ This API is used to get the information of custom and [preset](https://intl.clou
     9. `adaptiveDynamicStreamingInfo`: Adaptive bitrate information including the specifications, encryption type, and formats of the streams.
     10. `reviewInfo`: Moderation details for audio/video content and thumbnails.
 2. You can specify what information to return.
- * @method Models\DescribeMediaPlayStatDetailsResponse DescribeMediaPlayStatDetails(Models\DescribeMediaPlayStatDetailsRequest $req) This API is used to query the playback statistics of a media file at the specified granularity.
-* You can query playback statistics in the past year.
-* If the granularity is an hour, the start and end time cannot be more than seven days apart.
-* If the granularity is a day, the start and end time cannot be more than 90 days apart.
- * @method Models\DescribeMediaProcessUsageDataResponse DescribeMediaProcessUsageData(Models\DescribeMediaProcessUsageDataRequest $req) This API is used to query the information of video processing usage within the specified time range.
-   1. Video processing usage data is retained on the system side for 13 months, and you may only query the usage data for the most recent 365 days via the API. If you need to retrieve historical usage data beyond 365 days, please contact us.
-   2. The query time range cannot be more than 90 days.
+ * @method Models\DescribeMediaPlayStatDetailsResponse DescribeMediaPlayStatDetails(Models\DescribeMediaPlayStatDetailsRequest $req) This API is used to query playback statistics of media files by specified time granularity.
+* Playback statistics from the past one year can be queried.
+* The time granularity is hourly, and the span between end time and start time cannot exceed 7 days.
+* The time granularity is day, and the span between the end time and start time is up to 90 days.
+Playback statistics only target VOD domains (EdgeOne domain name distribution is not included).
+ * @method Models\DescribeMediaProcessUsageDataResponse DescribeMediaProcessUsageData(Models\DescribeMediaProcessUsageDataRequest $req) This API is used to return the daily video processing usage information within the specified query time range.
+1. The data system reserves video processing usage for 13 months. You can use the interface to query the most recent 365 days of usage data. If needed, contact us to call historical usage data exceeding 365 days.
+   2. The query time span should not exceed 90 days.
  * @method Models\DescribePersonSamplesResponse DescribePersonSamples(Models\DescribePersonSamplesRequest $req) This API is used to query the information of samples and supports paginated queries by sample ID, name, and tag.
  * @method Models\DescribeProcedureTemplatesResponse DescribeProcedureTemplates(Models\DescribeProcedureTemplatesRequest $req) This API is used to get the list of task flow template details by task flow template name.
+ * @method Models\DescribeProcessImageAsyncTemplatesResponse DescribeProcessImageAsyncTemplates(Models\DescribeProcessImageAsyncTemplatesRequest $req) This API is used to obtain the template details list of image asynchronous processing based on the Template Unique Identifier. The returned results include ALL eligible user-customized image asynchronous processing templates.
  * @method Models\DescribeQualityInspectTemplatesResponse DescribeQualityInspectTemplates(Models\DescribeQualityInspectTemplatesRequest $req) Get media quality inspection Template List.
  * @method Models\DescribeRebuildMediaTemplatesResponse DescribeRebuildMediaTemplates(Models\DescribeRebuildMediaTemplatesRequest $req) Describe Rebuild Media Templates
  * @method Models\DescribeReviewDetailsResponse DescribeReviewDetails(Models\DescribeReviewDetailsRequest $req) <b>This API is disused and replaced by [DescribeMediaProcessUsageData](https://intl.cloud.tencent.com/document/product/266/41464?from_cn_redirect=1).</b>
@@ -234,10 +272,10 @@ This API returns the video content duration for intelligent recognition in secon
  * @method Models\DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(Models\DescribeSampleSnapshotTemplatesRequest $req) This API is used to query the list of sampled screencapturing templates and supports paged queries by filters.
  * @method Models\DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(Models\DescribeSnapshotByTimeOffsetTemplatesRequest $req) This API is used to query the list of time point screencapturing templates and supports paged queries by filters.
  * @method Models\DescribeStorageDataResponse DescribeStorageData(Models\DescribeStorageDataRequest $req) This API is used to query the storage capacity usage and number of files.
- * @method Models\DescribeStorageDetailsResponse DescribeStorageDetails(Models\DescribeStorageDetailsRequest $req) This API is used to query VOD storage usage in bytes within the query period.
-    1. Storage usage data is retained on the system side for 13 months, and you may only query the usage data for the most recent 365 days via the API. If you need to retrieve historical usage data beyond 365 days, please contact us.
-    2. The query period is up to 90 days.
-    3. The query period at minute-level granularity is up to 7 days.
+ * @method Models\DescribeStorageDetailsResponse DescribeStorageDetails(Models\DescribeStorageDetailsRequest $req) This API is used to query the VOD storage space used within a specified time range. The measurement unit is byte.
+1. The system side reserves storage usage data for 13 months. You can be queried usage data within the most recent 365 days through the API. If needed to call historical usage data exceeding 365 days, contact us.
+2. The query time span should not exceed 90 days.
+3. The query span at a minute granularity should not exceed 7 days.
  * @method Models\DescribeStorageRegionsResponse DescribeStorageRegions(Models\DescribeStorageRegionsRequest $req) This API is used to query the following information:
   1. All supported storage regions.
   2. The regions you have storage access to currently.
@@ -272,14 +310,22 @@ If event notification is used, the type of event notification is [Video editing 
  * @method Models\EnhanceMediaQualityResponse EnhanceMediaQuality(Models\EnhanceMediaQualityRequest $req) Initiate a Remaster task for audio and video media in VOD
  * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) This API is only used in special scenarios of custom development. Unless requested by VOD customer service, please do not call it.
  * @method Models\ExtractBlindWatermarkResponse ExtractBlindWatermark(Models\ExtractBlindWatermarkRequest $req) This API is used to initiate a digital watermark extraction task for a video. The extraction result can be queried through DescribeTaskDetail.
- * @method Models\ExtractCopyRightWatermarkResponse ExtractCopyRightWatermark(Models\ExtractCopyRightWatermarkRequest $req) Extract CopyRight Watermark.
- * @method Models\ExtractTraceWatermarkResponse ExtractTraceWatermark(Models\ExtractTraceWatermarkRequest $req) This API is used to extract the user ID of a user that distributed a video containing a digital watermark.
- * @method Models\FastEditMediaResponse FastEditMedia(Models\FastEditMediaRequest $req) Implement quick concatenation and quick clipping for Tencent Cloud VOD's HLS videos to generate new media in HLS format. The video generated by quick concatenation or clipping will produce a new FileId and undergo solidification. After successful solidification, the new video file exists independently of the original input video and is not affected by deletions or other actions on the original video. <font color='red'>Note:</font> Enable the reception of persistence completed event notifications through the ModifyEvent config interface, and a PersistenceComplete type event notification will be received after successful solidification. Before receiving this event notification, operations such as deletion or cooling down of the original input video should not be performed, otherwise, abnormal playback may occur in the video generated by the concatenation and clipping.
- * @method Models\ForbidMediaDistributionResponse ForbidMediaDistribution(Models\ForbidMediaDistributionRequest $req) * After a media file is forbidden, except previewing it in the VOD Console, accessing the URLs of its various resources (such as source file, output files, and screenshots) in other scenarios will return error 403.
-  It takes about 5-10 minutes for a forbidding/unblocking operation to take effect across the entire network.
+ * @method Models\ExtractCopyRightWatermarkResponse ExtractCopyRightWatermark(Models\ExtractCopyRightWatermarkRequest $req) If you need source tracing for piracy, refer to ghost watermark (https://www.tencentcloud.com/document/product/266/94228?from_cn_redirect=1).
+ * @method Models\ExtractTraceWatermarkResponse ExtractTraceWatermark(Models\ExtractTraceWatermarkRequest $req) If you need source tracing for piracy, ghost watermark (https://www.tencentcloud.com/document/product/266/94228?from_cn_redirect=1) is recommended.
+ * @method Models\FastEditMediaResponse FastEditMedia(Models\FastEditMediaRequest $req) This API is used to implement quick splice and quick editing for HLS videos in VOD, generating new media in HLS format.
+
+Quickly splice or edit the generated video to generate a new FileId and perform solidification. After successful solidification, the new video file exists independent of the original input video and is not impacted by the deletion of the original video.
+
+<font color='red'>Note:</font> Enable reception of editing solidification event notifications through the ModifyEventConfig API. After successful solidification, you will receive an event notification of PersistenceComplete type. Before receiving this event notification, you should not perform operations such as delete or downgrade on the original input video, otherwise exceptions may occur during playback of the generated video from splicing and clipping.
+ * @method Models\ForbidMediaDistributionResponse ForbidMediaDistribution(Models\ForbidMediaDistributionRequest $req) After media blocking is enabled, all URLs for accessing various resources (raw file, transcoding output file, screenshot, etc.) will return 403 except for vod console preview.
+The unblock operation takes effect across the entire network in approximately 5-10 minutes.
+* Note: Banned media can only operate standard storage and infrequent storage media. Infrequent storage media must be stored for at least 30 days. Early deletion or changing the storage class will still be billed for 30 days. If infrequent storage media is banned and its infrequent access storage period is less than 30 days, early deletion billing will occur. Meanwhile, the infrequent access storage duration of the banned media will restart from the current system time. If the media is deleted or its storage class is changed within 30 days, early deletion billing will also occur. For example: Media 001 has been in infrequent storage for 10 days. At this point, if 001 is banned, the infrequent storage billing will still be calculated for 30 days (early deletion billing duration is 30 - 10 = 20 days). After the ban, the infrequent access storage duration of 001 restarts. If 001 is deleted on the 5th day after the ban, the infrequent storage billing will also be calculated for 30 days (early deletion billing duration is 30 - 5 = 25 days). The actual infrequent access storage duration of 001 is 10 + 5 = 15 days, while the infrequent storage billing duration is 10 + 20 (early deletion billing) + 5 + 25 (early deletion billing) = 60 days.
  * @method Models\HandleCurrentPlaylistResponse HandleCurrentPlaylist(Models\HandleCurrentPlaylistRequest $req) Operate the current play list . Supported operations include:<li> Insert: Insert a playing program into the current playlist.</li><li> Delete: Remove a playing program from the playlist.</li>
  * @method Models\ImportMediaKnowledgeResponse ImportMediaKnowledge(Models\ImportMediaKnowledgeRequest $req) This API is used to import AI analysis results into the knowledge base.
  * @method Models\InspectMediaQualityResponse InspectMediaQuality(Models\InspectMediaQualityRequest $req) Initiate media quality inspection task.
+ * @method Models\ListFilesResponse ListFiles(Models\ListFilesRequest $req) This API is used to list stored file entries under a sub-app.
+
+This API is available only in "FileID+Path mode".
  * @method Models\LiveRealTimeClipResponse LiveRealTimeClip(Models\LiveRealTimeClipRequest $req) Live stream clipping refers to the process where, during a live stream (not yet ended), customers can select a segment from past live stream content to generate a new video (HLS format) in real time. Developers can instantly share it or preserve it for long-term storage.
 
 Tencent Cloud Video on Demand (VOD) supports two instant editing modes:
@@ -330,6 +376,8 @@ Developers can achieve this by calling this interface:
  * @method Models\ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(Models\ModifyImageSpriteTemplateRequest $req) This API is used to modify a custom image sprite generating template.
  * @method Models\ModifyJustInTimeTranscodeTemplateResponse ModifyJustInTimeTranscodeTemplate(Models\ModifyJustInTimeTranscodeTemplateRequest $req) Modify Just In Time Transcode Template.
  * @method Models\ModifyLLMComprehendTemplateResponse ModifyLLMComprehendTemplate(Models\ModifyLLMComprehendTemplateRequest $req) Modify the parsing template of a large model
+ * @method Models\ModifyMPSTemplateResponse ModifyMPSTemplate(Models\ModifyMPSTemplateRequest $req) Modify a user-customized MPS task template.
+When modifying a template, require filling in MPS related parameters in JSON format into the MPSModifyTemplateParams parameter. For specific task parameter configuration methods, refer to the MPS task template document description.
  * @method Models\ModifyMediaInfoResponse ModifyMediaInfo(Models\ModifyMediaInfoRequest $req) This API is used to modify the attributes of a media file, including category, name, description, tag, expiration time, timestamp information, video thumbnail, and subtitle information.
  * @method Models\ModifyMediaStorageClassResponse ModifyMediaStorageClass(Models\ModifyMediaStorageClassRequest $req) This API is used to modify the storage class of media files.
 If the current storage class is STANDARD, it can be changed to one of the following classes:
@@ -345,6 +393,9 @@ If the current storage class is ARCHIVE, it can be changed to the following clas
 If the current storage class is DEEP ARCHIVE, it can be changed to the following class:
 <li>STANDARD</li>
  * @method Models\ModifyPersonSampleResponse ModifyPersonSample(Models\ModifyPersonSampleRequest $req) This API is used to modify sample information according to the sample ID. You can modify the name and description, add, delete, and reset facial features or tags. Leave at least one image after deleting facial features. To leave no image, please use the reset operation.
+ * @method Models\ModifyProcessImageAsyncTemplateResponse ModifyProcessImageAsyncTemplate(Models\ModifyProcessImageAsyncTemplateRequest $req) This API is used to modify a user-customized image asynchronous processing template.
+
+Note: Template IDs below 10000 are system-preset templates and not allowed to be modified.
  * @method Models\ModifyQualityInspectTemplateResponse ModifyQualityInspectTemplate(Models\ModifyQualityInspectTemplateRequest $req) Modifies media quality inspection template.
  * @method Models\ModifyRebuildMediaTemplateResponse ModifyRebuildMediaTemplate(Models\ModifyRebuildMediaTemplateRequest $req) Modify Rebuild Media Template.
  * @method Models\ModifyReviewTemplateResponse ModifyReviewTemplate(Models\ModifyReviewTemplateRequest $req) This API is used to modify a custom moderation template.
@@ -365,19 +416,20 @@ This API is used to modify a player configuration.
  * @method Models\ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(Models\ModifyWatermarkTemplateRequest $req) This API is used to modify a custom watermarking template. The watermark type cannot be modified.
  * @method Models\ModifyWordSampleResponse ModifyWordSample(Models\ModifyWordSampleRequest $req) This API is used to modify the use case and tag of a keyword. The keyword itself cannot be modified, but you can delete it and create another one if needed.
  * @method Models\ParseStreamingManifestResponse ParseStreamingManifest(Models\ParseStreamingManifestRequest $req) This API is used to parse the index file content and return the list of segment files to be uploaded when an HLS video is uploaded. A segment file path must be a relative path of the current directory or subdirectory instead of a URL or absolute path.
- * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) Initiate processing tasks for media file in VOD, including: 
-1. Video transcoding (with Watermark); 
-2. Video to animated image; 
-3. Screencapturing the video at specified Time point;
-4. Sampled screenshot of the video;
-5. Generated Image sprite template from the video;
-6. Generated a cover image from the video;
-7. Adaptive Bitrate Streaming for the video (with encryption); 
-8. Content Moderation (offensive Information, unsafe Information, inappropriate Information), it is <font color=red>not recommended</font> to use this API, recommend using [Video moderation(ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/50634) or [Image moderation(ReviewImage)](https://www.tencentcloud.com/document/api/266/47138);
-9. Content analysis (tag, category, cover, frame-by-frame tag);
-10. Content recognition (video intro and outro, face, Text, keyword, voice, Key object).
+ * @method Models\ProcessImageAsyncResponse ProcessImageAsync(Models\ProcessImageAsyncRequest $req) This API is used to process images.
+ * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate processing tasks for audio-video media in on-demand video, with features including:
+1. Video transcoding (watermarked);
+2. Video-to-GIF.
+3. Screenshot taking at specified time points;
+4. Sampled screenshot taking;
+5. Capture CSS sprites from video.
+6. Capture a cover image from the video.
+7. Transcoding to adaptive bitrate streaming (and encrypting);
+8. Content review (offensive content, unsafe information, inappropriate information). <font color=red>Not recommended</font> to use this API for initiation. Recommended for use: [Audio-Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
+9. Content analysis (tag, category, cover, frame tagging), HLS format not supported currently;
+10. Content recognition (video intro and outro, human face, full text, text keyword, full speech, speech keyword, object).
 
-If using event notification, the event notification type is [task flow status change](https://www.tencentcloud.com/document/product/266/33953).
+If you use event notification, the event notification type is task flow status change (https://www.tencentcloud.com/document/product/266/9636?from_cn_redirect=1).
  * @method Models\ProcessMediaByMPSResponse ProcessMediaByMPS(Models\ProcessMediaByMPSRequest $req) Use the media processing capability of the media processing service to trigger media processing for on-demand video.
 
 Video processing tasks initiated by this method:
@@ -459,31 +511,29 @@ Conditional filtering not recommend
  * @method Models\SearchMediaBySemanticsResponse SearchMediaBySemantics(Models\SearchMediaBySemanticsRequest $req) This API is used to conduct semantic search on media using natural language.
  * @method Models\SetDrmKeyProviderInfoResponse SetDrmKeyProviderInfo(Models\SetDrmKeyProviderInfoRequest $req) This API is used to configure DRM key information.
  * @method Models\SetVodDomainCertificateResponse SetVodDomainCertificate(Models\SetVodDomainCertificateRequest $req) Set Vod Domain Certificate.
- * @method Models\SimpleHlsClipResponse SimpleHlsClip(Models\SimpleHlsClipRequest $req) This API is used to cut a clip from an HLS video to generate a new video (in HLS format). You can either share the new video or save it.
+ * @method Models\SimpleHlsClipResponse SimpleHlsClip(Models\SimpleHlsClipRequest $req) This API is used to crop an HLS video by time period and generate a new real-time HLS video. Developers can share it immediately or preserve it for long-term.
 
-VOD supports two types of clipping:
-- Clipping for persistent storage: The video clip is saved as an independent video file with its own `FileId`.
-- Clipping for temporary sharing: The video clip shares `FileId` with the input file.
+Tencent Cloud Video on Demand (VOD) supports two editing modes:
+-Edit and save: Save the edited video as an independent video with a standalone FileId. Suitable for scenarios requiring long-term preservation of highlight clips.
+-Editing is not solidified: The video obtained by editing is attached to the input file with no standalone FileId. It is suitable for scenarios where highlight clips are temporarily shared.
 
-Notes:
-- Clipping is based on the M3U8 file that contains a list of TS segments, so the smallest clipping unit is one TS segment instead of a second or less.
+This API is used to crop based on input m3u8 files, with a minimum editing precision of a ts slice. Second-level or more precise editing precision cannot be achieved.
 
+### Edit solidification
+Video clipping persistence refers to saving an edited video as an independent video (with an independent FileId). Its lifecycle is not subject to the original input video (even if the original input video is deleted, the clipping result will not have any impact). It can also be post-processed, such as transcoding or publishing on WeChat.
 
-### Clipping for persistent storage
-In this mode, a video clip is saved as an independent video file with a `FileId`, and its lifecycle is not subject to the input video. Even if the source video is deleted, the video clip still exists. Moreover, the video clip can be transcoded, published on WeChat, and processed in other ways.
+For example, a complete football match may last for over 2 hours. To save costs, the customer can store the original video for 2 months, but may choose to store the highlight reel for longer. You can also transcode the highlight reel, publish it on WeChat, and perform additional on-demand operations. In this case, you can choose the edit and save solution.
 
-Suppose you recorded a two-hour football match. You want to save the full video for only two months to save costs, but want to save the highlights for a longer time and perhaps transcode and publish the highlight clip to WeChat. In this case, you can choose clipping for persistent storage.
+The advantage of edit is that its lifecycle is independent of the original input video, allowing separate management and long-term preservation.
 
-The advantage of clipping for persistent storage is that the video clip has a lifecycle independent of the input video and can be managed independently and stored persistently.
+<font color='red'>Note:</font> If you specify solidification when editing, enable reception of editing solidification event notifications via the ModifyEventConfig API. After successful solidification, you will receive a PersistenceComplete event notification. Before receiving this event notification, you should not delete or downgrade the original input video, otherwise exceptions may occur during playback of the generated video.
 
-<font color='red'>Notice:</font> If solidification is specified during clipping, enable the reception of persistence completed event notifications through the ModifyEventConfig interface. After successful solidification, an event notification of type PersistenceComplete will be received. Before receiving this event notification, operations such as deletion or cooling down of live recording videos should not be performed, otherwise, abnormal playback may occur in the video generated by the clipping.
+### Editing is not solidified
+Non-solidified editing means the result of editing (m3u8 file) shares the same TS segments with the original input video. The generated video is not an independent and complete video (it has no standalone FileId, only a playback URL), and its valid period is consistent with that of the original input full video. Once the original input video is deleted, it will lead to the video clip being unable to play.
 
-### Clipping for temporary sharing
-The video clip (an M3U8 file) shares the same TS segments with the input video instead of being an independent video. It only has a playback URL but has no `FileId`, and its validity period is the same as that of the input video. Once the input video is deleted, the video clip cannot be played back.
+Editing is not solidified. Since the clipping result is not an independent video, it will not be included in video management of on-demand media assets (for example, the total number of videos in the console will not count this video clip) and cannot be targeted for any video processing operations such as transcoding or publishing on WeChat.
 
-Because the video clip is not an independent video, it's not displayed as a media asset in the VOD console, and cannot be transcoded or published to WeChat.
-
-Clipping for temporary sharing is lightweight and incurs no additional storage fees. However, the video clip has the same lifecycle as the source recording video and cannot be transcoded or processed in other ways.
+The advantage of editing not being solidified is that the editing operation is relatively lightweight and will not generate additional storage overhead. However, the shortcoming is that its lifecycle is the same as the original recorded video, and it is unable to further transcode or perform video processing.
  * @method Models\SplitMediaResponse SplitMedia(Models\SplitMediaRequest $req) Split the video into strips to generate multiple new videos.
  * @method Models\StartCDNDomainResponse StartCDNDomain(Models\StartCDNDomainRequest $req) This API is used for enabling/disabling the CDN acceleration domain.
  * @method Models\VerifyDomainRecordResponse VerifyDomainRecord(Models\VerifyDomainRecordRequest $req) This API is used to verify the domain name resolution value.

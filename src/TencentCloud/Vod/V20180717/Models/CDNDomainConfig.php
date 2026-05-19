@@ -22,42 +22,42 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getArea() Obtain Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
  * @method void setArea(string $Area) Set Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
- * @method Origin getOrigin() Obtain Origin Server Configuration
- * @method void setOrigin(Origin $Origin) Set Origin Server Configuration
- * @method IpFilter getIpFilter() Obtain IP blocklist/allowlist configuration. This is disabled by default.
- * @method void setIpFilter(IpFilter $IpFilter) Set IP blocklist/allowlist configuration. This is disabled by default.
- * @method UserAgentFilter getUserAgentFilter() Obtain UserAgent:blacklist/whitelist configuration.
- * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set UserAgent:blacklist/whitelist configuration.
- * @method FollowRedirect getFollowRedirect() Obtain Back to the source 301/302 status code automatically follows the configuration, the default is off
- * @method void setFollowRedirect(FollowRedirect $FollowRedirect) Set Back to the source 301/302 status code automatically follows the configuration, the default is off
- * @method RequestHeader getRequestHeader() Obtain Custom request header configuration. This is disabled by default.
- * @method void setRequestHeader(RequestHeader $RequestHeader) Set Custom request header configuration. This is disabled by default.
- * @method ResponseHeader getResponseHeader() Obtain Custom response header configuration. This is disabled by default.
- * @method void setResponseHeader(ResponseHeader $ResponseHeader) Set Custom response header configuration. This is disabled by default.
- * @method Cache getCache() Obtain Node cache expiration time configuration.
- * @method void setCache(Cache $Cache) Set Node cache expiration time configuration.
- * @method Https getHttps() Obtain Domain name HTTPS acceleration configuration. This is disabled by default.
- * @method void setHttps(Https $Https) Set Domain name HTTPS acceleration configuration. This is disabled by default.
+ * @method Origin getOrigin() Obtain Origin server configuration.
+ * @method void setOrigin(Origin $Origin) Set Origin server configuration.
+ * @method IpFilter getIpFilter() Obtain IP allowlist/blocklist configuration.
+ * @method void setIpFilter(IpFilter $IpFilter) Set IP allowlist/blocklist configuration.
+ * @method UserAgentFilter getUserAgentFilter() Obtain UA Blocklist/Allowlist Configuration.
+ * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set UA Blocklist/Allowlist Configuration.
+ * @method FollowRedirect getFollowRedirect() Obtain 301/302 origin follow configuration.
+ * @method void setFollowRedirect(FollowRedirect $FollowRedirect) Set 301/302 origin follow configuration.
+ * @method RequestHeader getRequestHeader() Obtain Request header configuration.
+ * @method void setRequestHeader(RequestHeader $RequestHeader) Set Request header configuration.
+ * @method ResponseHeader getResponseHeader() Obtain Response header configuration.
+ * @method void setResponseHeader(ResponseHeader $ResponseHeader) Set Response header configuration.
+ * @method Cache getCache() Obtain Cache expiration time settings.
+ * @method void setCache(Cache $Cache) Set Cache expiration time settings.
+ * @method Https getHttps() Obtain Https configuration.
+ * @method void setHttps(Https $Https) Set Https configuration.
  * @method Authentication getAuthentication() Obtain Timestamp hotlink protection configuration.
  * @method void setAuthentication(Authentication $Authentication) Set Timestamp hotlink protection configuration.
- * @method ForceRedirect getForceRedirect() Obtain Access protocol forced redirect configuration. This is disabled by default.
- * @method void setForceRedirect(ForceRedirect $ForceRedirect) Set Access protocol forced redirect configuration. This is disabled by default.
- * @method Referer getReferer() Obtain Referer blacklist/whitelist configuration. This is disabled by default.
- * @method void setReferer(Referer $Referer) Set Referer blacklist/whitelist configuration. This is disabled by default.
- * @method MaxAge getMaxAge() Obtain Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
- * @method void setMaxAge(MaxAge $MaxAge) Set Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
- * @method Ipv6Access getIpv6Access() Obtain IPv6 access configuration.
- * @method void setIpv6Access(Ipv6Access $Ipv6Access) Set IPv6 access configuration.
- * @method Quic getQuic() Obtain QUIC configuration item.
- * @method void setQuic(Quic $Quic) Set QUIC configuration item.
- * @method AwsPrivateAccess getAwsPrivateAccess() Obtain Origin access authentication for S3 bucket.
- * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set Origin access authentication for S3 bucket.
- * @method OssPrivateAccess getOssPrivateAccess() Obtain Access authentication configuration for OSS origin.
- * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) Set Access authentication configuration for OSS origin.
- * @method HwPrivateAccess getHwPrivateAccess() Obtain Access authentication for Huawei Cloud OBS origin
- * @method void setHwPrivateAccess(HwPrivateAccess $HwPrivateAccess) Set Access authentication for Huawei Cloud OBS origin
- * @method OthersPrivateAccess getOthersPrivateAccess() Obtain Origin-pull authentication for other origins.
- * @method void setOthersPrivateAccess(OthersPrivateAccess $OthersPrivateAccess) Set Origin-pull authentication for other origins.
+ * @method ForceRedirect getForceRedirect() Obtain Access protocol force redirection configuration.
+ * @method void setForceRedirect(ForceRedirect $ForceRedirect) Set Access protocol force redirection configuration.
+ * @method Referer getReferer() Obtain Referer Anti-leech Configuration.
+ * @method void setReferer(Referer $Referer) Set Referer Anti-leech Configuration.
+ * @method MaxAge getMaxAge() Obtain Browser cache configuration.
+ * @method void setMaxAge(MaxAge $MaxAge) Set Browser cache configuration.
+ * @method Ipv6Access getIpv6Access() Obtain Ipv6 access configuration
+ * @method void setIpv6Access(Ipv6Access $Ipv6Access) Set Ipv6 access configuration
+ * @method Quic getQuic() Obtain Quic access configuration.
+ * @method void setQuic(Quic $Quic) Set Quic access configuration.
+ * @method AwsPrivateAccess getAwsPrivateAccess() Obtain AWS S3 origin authentication configuration.
+ * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set AWS S3 origin authentication configuration.
+ * @method OssPrivateAccess getOssPrivateAccess() Obtain Alibaba Cloud OSS authentication configuration.
+ * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) Set Alibaba Cloud OSS authentication configuration.
+ * @method HwPrivateAccess getHwPrivateAccess() Obtain Huawei cloud object storage back-to-origin authentication configuration.
+ * @method void setHwPrivateAccess(HwPrivateAccess $HwPrivateAccess) Set Huawei cloud object storage back-to-origin authentication configuration.
+ * @method OthersPrivateAccess getOthersPrivateAccess() Obtain Authentication configuration for cross-origin access to object storage of other vendors.
+ * @method void setOthersPrivateAccess(OthersPrivateAccess $OthersPrivateAccess) Set Authentication configuration for cross-origin access to object storage of other vendors.
  */
 class CDNDomainConfig extends AbstractModel
 {
@@ -67,42 +67,42 @@ class CDNDomainConfig extends AbstractModel
     public $Area;
 
     /**
-     * @var Origin Origin Server Configuration
+     * @var Origin Origin server configuration.
      */
     public $Origin;
 
     /**
-     * @var IpFilter IP blocklist/allowlist configuration. This is disabled by default.
+     * @var IpFilter IP allowlist/blocklist configuration.
      */
     public $IpFilter;
 
     /**
-     * @var UserAgentFilter UserAgent:blacklist/whitelist configuration.
+     * @var UserAgentFilter UA Blocklist/Allowlist Configuration.
      */
     public $UserAgentFilter;
 
     /**
-     * @var FollowRedirect Back to the source 301/302 status code automatically follows the configuration, the default is off
+     * @var FollowRedirect 301/302 origin follow configuration.
      */
     public $FollowRedirect;
 
     /**
-     * @var RequestHeader Custom request header configuration. This is disabled by default.
+     * @var RequestHeader Request header configuration.
      */
     public $RequestHeader;
 
     /**
-     * @var ResponseHeader Custom response header configuration. This is disabled by default.
+     * @var ResponseHeader Response header configuration.
      */
     public $ResponseHeader;
 
     /**
-     * @var Cache Node cache expiration time configuration.
+     * @var Cache Cache expiration time settings.
      */
     public $Cache;
 
     /**
-     * @var Https Domain name HTTPS acceleration configuration. This is disabled by default.
+     * @var Https Https configuration.
      */
     public $Https;
 
@@ -112,70 +112,70 @@ class CDNDomainConfig extends AbstractModel
     public $Authentication;
 
     /**
-     * @var ForceRedirect Access protocol forced redirect configuration. This is disabled by default.
+     * @var ForceRedirect Access protocol force redirection configuration.
      */
     public $ForceRedirect;
 
     /**
-     * @var Referer Referer blacklist/whitelist configuration. This is disabled by default.
+     * @var Referer Referer Anti-leech Configuration.
      */
     public $Referer;
 
     /**
-     * @var MaxAge Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
+     * @var MaxAge Browser cache configuration.
      */
     public $MaxAge;
 
     /**
-     * @var Ipv6Access IPv6 access configuration.
+     * @var Ipv6Access Ipv6 access configuration
      */
     public $Ipv6Access;
 
     /**
-     * @var Quic QUIC configuration item.
+     * @var Quic Quic access configuration.
      */
     public $Quic;
 
     /**
-     * @var AwsPrivateAccess Origin access authentication for S3 bucket.
+     * @var AwsPrivateAccess AWS S3 origin authentication configuration.
      */
     public $AwsPrivateAccess;
 
     /**
-     * @var OssPrivateAccess Access authentication configuration for OSS origin.
+     * @var OssPrivateAccess Alibaba Cloud OSS authentication configuration.
      */
     public $OssPrivateAccess;
 
     /**
-     * @var HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+     * @var HwPrivateAccess Huawei cloud object storage back-to-origin authentication configuration.
      */
     public $HwPrivateAccess;
 
     /**
-     * @var OthersPrivateAccess Origin-pull authentication for other origins.
+     * @var OthersPrivateAccess Authentication configuration for cross-origin access to object storage of other vendors.
      */
     public $OthersPrivateAccess;
 
     /**
      * @param string $Area Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
-     * @param Origin $Origin Origin Server Configuration
-     * @param IpFilter $IpFilter IP blocklist/allowlist configuration. This is disabled by default.
-     * @param UserAgentFilter $UserAgentFilter UserAgent:blacklist/whitelist configuration.
-     * @param FollowRedirect $FollowRedirect Back to the source 301/302 status code automatically follows the configuration, the default is off
-     * @param RequestHeader $RequestHeader Custom request header configuration. This is disabled by default.
-     * @param ResponseHeader $ResponseHeader Custom response header configuration. This is disabled by default.
-     * @param Cache $Cache Node cache expiration time configuration.
-     * @param Https $Https Domain name HTTPS acceleration configuration. This is disabled by default.
+     * @param Origin $Origin Origin server configuration.
+     * @param IpFilter $IpFilter IP allowlist/blocklist configuration.
+     * @param UserAgentFilter $UserAgentFilter UA Blocklist/Allowlist Configuration.
+     * @param FollowRedirect $FollowRedirect 301/302 origin follow configuration.
+     * @param RequestHeader $RequestHeader Request header configuration.
+     * @param ResponseHeader $ResponseHeader Response header configuration.
+     * @param Cache $Cache Cache expiration time settings.
+     * @param Https $Https Https configuration.
      * @param Authentication $Authentication Timestamp hotlink protection configuration.
-     * @param ForceRedirect $ForceRedirect Access protocol forced redirect configuration. This is disabled by default.
-     * @param Referer $Referer Referer blacklist/whitelist configuration. This is disabled by default.
-     * @param MaxAge $MaxAge Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
-     * @param Ipv6Access $Ipv6Access IPv6 access configuration.
-     * @param Quic $Quic QUIC configuration item.
-     * @param AwsPrivateAccess $AwsPrivateAccess Origin access authentication for S3 bucket.
-     * @param OssPrivateAccess $OssPrivateAccess Access authentication configuration for OSS origin.
-     * @param HwPrivateAccess $HwPrivateAccess Access authentication for Huawei Cloud OBS origin
-     * @param OthersPrivateAccess $OthersPrivateAccess Origin-pull authentication for other origins.
+     * @param ForceRedirect $ForceRedirect Access protocol force redirection configuration.
+     * @param Referer $Referer Referer Anti-leech Configuration.
+     * @param MaxAge $MaxAge Browser cache configuration.
+     * @param Ipv6Access $Ipv6Access Ipv6 access configuration
+     * @param Quic $Quic Quic access configuration.
+     * @param AwsPrivateAccess $AwsPrivateAccess AWS S3 origin authentication configuration.
+     * @param OssPrivateAccess $OssPrivateAccess Alibaba Cloud OSS authentication configuration.
+     * @param HwPrivateAccess $HwPrivateAccess Huawei cloud object storage back-to-origin authentication configuration.
+     * @param OthersPrivateAccess $OthersPrivateAccess Authentication configuration for cross-origin access to object storage of other vendors.
      */
     function __construct()
     {

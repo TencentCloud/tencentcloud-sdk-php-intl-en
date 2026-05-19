@@ -20,114 +20,118 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAIRecognitionTemplate request structure.
  *
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getName() Obtain Video content recognition template name. Length limit: 64 characters.
- * @method void setName(string $Name) Set Video content recognition template name. Length limit: 64 characters.
- * @method string getComment() Obtain Description of video content recognition template. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Description of video content recognition template. Length limit: 256 characters.
- * @method HeadTailConfigureInfo getHeadTailConfigure() Obtain Control parameter of video opening and ending credits recognition.
- * @method void setHeadTailConfigure(HeadTailConfigureInfo $HeadTailConfigure) Set Control parameter of video opening and ending credits recognition.
- * @method SegmentConfigureInfo getSegmentConfigure() Obtain Control parameter of video splitting recognition.
- * @method void setSegmentConfigure(SegmentConfigureInfo $SegmentConfigure) Set Control parameter of video splitting recognition.
- * @method FaceConfigureInfo getFaceConfigure() Obtain Control parameter of face recognition.
- * @method void setFaceConfigure(FaceConfigureInfo $FaceConfigure) Set Control parameter of face recognition.
- * @method OcrFullTextConfigureInfo getOcrFullTextConfigure() Obtain Control parameter of full text recognition.
- * @method void setOcrFullTextConfigure(OcrFullTextConfigureInfo $OcrFullTextConfigure) Set Control parameter of full text recognition.
- * @method OcrWordsConfigureInfo getOcrWordsConfigure() Obtain Control parameter of text keyword recognition.
- * @method void setOcrWordsConfigure(OcrWordsConfigureInfo $OcrWordsConfigure) Set Control parameter of text keyword recognition.
- * @method AsrFullTextConfigureInfo getAsrFullTextConfigure() Obtain Control parameter of full speech recognition.
- * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) Set Control parameter of full speech recognition.
- * @method AsrWordsConfigureInfo getAsrWordsConfigure() Obtain Control parameter of speech keyword recognition.
- * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) Set Control parameter of speech keyword recognition.
- * @method AsrTranslateConfigureInfo getAsrTranslateConfigure() Obtain Control parameter of voice translation.
- * @method void setAsrTranslateConfigure(AsrTranslateConfigureInfo $AsrTranslateConfigure) Set Control parameter of voice translation.
- * @method ObjectConfigureInfo getObjectConfigure() Obtain Control parameter of object recognition.
- * @method void setObjectConfigure(ObjectConfigureInfo $ObjectConfigure) Set Control parameter of object recognition.
- * @method float getScreenshotInterval() Obtain Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
- * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getName() Obtain Audio and video content recognition template name. Length limit: 64 characters.
+ * @method void setName(string $Name) Set Audio and video content recognition template name. Length limit: 64 characters.
+ * @method string getComment() Obtain Audio/video content recognition template description. Length limit: 256 characters.
+ * @method void setComment(string $Comment) Set Audio/video content recognition template description. Length limit: 256 characters.
+ * @method HeadTailConfigureInfo getHeadTailConfigure() Obtain Video opening and closing recognition control parameters.
+ * @method void setHeadTailConfigure(HeadTailConfigureInfo $HeadTailConfigure) Set Video opening and closing recognition control parameters.
+ * @method SegmentConfigureInfo getSegmentConfigure() Obtain Video split recognition control parameters.
+ * @method void setSegmentConfigure(SegmentConfigureInfo $SegmentConfigure) Set Video split recognition control parameters.
+ * @method FaceConfigureInfo getFaceConfigure() Obtain Face recognition control parameter.
+ * @method void setFaceConfigure(FaceConfigureInfo $FaceConfigure) Set Face recognition control parameter.
+ * @method OcrFullTextConfigureInfo getOcrFullTextConfigure() Obtain Text Full-text Recognition Control Parameters.
+ * @method void setOcrFullTextConfigure(OcrFullTextConfigureInfo $OcrFullTextConfigure) Set Text Full-text Recognition Control Parameters.
+ * @method OcrWordsConfigureInfo getOcrWordsConfigure() Obtain Text keyword recognition control parameters.
+ * @method void setOcrWordsConfigure(OcrWordsConfigureInfo $OcrWordsConfigure) Set Text keyword recognition control parameters.
+ * @method AsrFullTextConfigureInfo getAsrFullTextConfigure() Obtain Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger voice translation recognition (when DstLanguage is left empty or filled with an empty string, no translation is performed, and the billing item matches that of full speech recognition).</font>
+ * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) Set Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger voice translation recognition (when DstLanguage is left empty or filled with an empty string, no translation is performed, and the billing item matches that of full speech recognition).</font>
+ * @method AsrWordsConfigureInfo getAsrWordsConfigure() Obtain Voice keyword recognition control parameters.
+ * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) Set Voice keyword recognition control parameters.
+ * @method AsrTranslateConfigureInfo getAsrTranslateConfigure() Obtain Voice translation recognition control parameters.
+ * @method void setAsrTranslateConfigure(AsrTranslateConfigureInfo $AsrTranslateConfigure) Set Voice translation recognition control parameters.
+ * @method ObjectConfigureInfo getObjectConfigure() Obtain Object recognition control parameters.
+ * @method void setObjectConfigure(ObjectConfigureInfo $ObjectConfigure) Set Object recognition control parameters.
+ * @method float getScreenshotInterval() Obtain Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds.
+ * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds.
  */
 class CreateAIRecognitionTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Video content recognition template name. Length limit: 64 characters.
+     * @var string Audio and video content recognition template name. Length limit: 64 characters.
      */
     public $Name;
 
     /**
-     * @var string Description of video content recognition template. Length limit: 256 characters.
+     * @var string Audio/video content recognition template description. Length limit: 256 characters.
      */
     public $Comment;
 
     /**
-     * @var HeadTailConfigureInfo Control parameter of video opening and ending credits recognition.
+     * @var HeadTailConfigureInfo Video opening and closing recognition control parameters.
      */
     public $HeadTailConfigure;
 
     /**
-     * @var SegmentConfigureInfo Control parameter of video splitting recognition.
+     * @var SegmentConfigureInfo Video split recognition control parameters.
      */
     public $SegmentConfigure;
 
     /**
-     * @var FaceConfigureInfo Control parameter of face recognition.
+     * @var FaceConfigureInfo Face recognition control parameter.
      */
     public $FaceConfigure;
 
     /**
-     * @var OcrFullTextConfigureInfo Control parameter of full text recognition.
+     * @var OcrFullTextConfigureInfo Text Full-text Recognition Control Parameters.
      */
     public $OcrFullTextConfigure;
 
     /**
-     * @var OcrWordsConfigureInfo Control parameter of text keyword recognition.
+     * @var OcrWordsConfigureInfo Text keyword recognition control parameters.
      */
     public $OcrWordsConfigure;
 
     /**
-     * @var AsrFullTextConfigureInfo Control parameter of full speech recognition.
+     * @var AsrFullTextConfigureInfo Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger voice translation recognition (when DstLanguage is left empty or filled with an empty string, no translation is performed, and the billing item matches that of full speech recognition).</font>
      */
     public $AsrFullTextConfigure;
 
     /**
-     * @var AsrWordsConfigureInfo Control parameter of speech keyword recognition.
+     * @var AsrWordsConfigureInfo Voice keyword recognition control parameters.
      */
     public $AsrWordsConfigure;
 
     /**
-     * @var AsrTranslateConfigureInfo Control parameter of voice translation.
+     * @var AsrTranslateConfigureInfo Voice translation recognition control parameters.
      */
     public $AsrTranslateConfigure;
 
     /**
-     * @var ObjectConfigureInfo Control parameter of object recognition.
+     * @var ObjectConfigureInfo Object recognition control parameters.
      */
     public $ObjectConfigure;
 
     /**
-     * @var float Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+     * @var float Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds.
      */
     public $ScreenshotInterval;
 
     /**
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $Name Video content recognition template name. Length limit: 64 characters.
-     * @param string $Comment Description of video content recognition template. Length limit: 256 characters.
-     * @param HeadTailConfigureInfo $HeadTailConfigure Control parameter of video opening and ending credits recognition.
-     * @param SegmentConfigureInfo $SegmentConfigure Control parameter of video splitting recognition.
-     * @param FaceConfigureInfo $FaceConfigure Control parameter of face recognition.
-     * @param OcrFullTextConfigureInfo $OcrFullTextConfigure Control parameter of full text recognition.
-     * @param OcrWordsConfigureInfo $OcrWordsConfigure Control parameter of text keyword recognition.
-     * @param AsrFullTextConfigureInfo $AsrFullTextConfigure Control parameter of full speech recognition.
-     * @param AsrWordsConfigureInfo $AsrWordsConfigure Control parameter of speech keyword recognition.
-     * @param AsrTranslateConfigureInfo $AsrTranslateConfigure Control parameter of voice translation.
-     * @param ObjectConfigureInfo $ObjectConfigure Control parameter of object recognition.
-     * @param float $ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $Name Audio and video content recognition template name. Length limit: 64 characters.
+     * @param string $Comment Audio/video content recognition template description. Length limit: 256 characters.
+     * @param HeadTailConfigureInfo $HeadTailConfigure Video opening and closing recognition control parameters.
+     * @param SegmentConfigureInfo $SegmentConfigure Video split recognition control parameters.
+     * @param FaceConfigureInfo $FaceConfigure Face recognition control parameter.
+     * @param OcrFullTextConfigureInfo $OcrFullTextConfigure Text Full-text Recognition Control Parameters.
+     * @param OcrWordsConfigureInfo $OcrWordsConfigure Text keyword recognition control parameters.
+     * @param AsrFullTextConfigureInfo $AsrFullTextConfigure Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger voice translation recognition (when DstLanguage is left empty or filled with an empty string, no translation is performed, and the billing item matches that of full speech recognition).</font>
+     * @param AsrWordsConfigureInfo $AsrWordsConfigure Voice keyword recognition control parameters.
+     * @param AsrTranslateConfigureInfo $AsrTranslateConfigure Voice translation recognition control parameters.
+     * @param ObjectConfigureInfo $ObjectConfigure Object recognition control parameters.
+     * @param float $ScreenshotInterval Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds.
      */
     function __construct()
     {

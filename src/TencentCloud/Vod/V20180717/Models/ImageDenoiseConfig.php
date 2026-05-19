@@ -18,28 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Image denoising configuration.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getSwitch() Obtain Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: Disabled.</li>
+Default value: ON.
+ * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: Disabled.</li>
+Default value: ON.
+ * @method string getType() Obtain Type, available values:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
+ * @method void setType(string $Type) Set Type, available values:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
  */
 class ImageDenoiseConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: Disabled.</li>
+Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Type, available values:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
      */
     public $Type;
 
     /**
-     * @param string $Switch 
-     * @param string $Type 
+     * @param string $Switch Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: Disabled.</li>
+Default value: ON.
+     * @param string $Type Type, available values:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
      */
     function __construct()
     {

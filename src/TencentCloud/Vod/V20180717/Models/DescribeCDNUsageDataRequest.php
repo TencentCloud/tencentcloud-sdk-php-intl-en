@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCDNUsageData request structure.
  *
- * @method string getStartTime() Obtain Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setStartTime(string $StartTime) Set Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getEndTime() Obtain End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
- * @method void setEndTime(string $EndTime) Set End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
- * @method string getDataType() Obtain CDN statistics type. Valid values:
-<li>Flux: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
- * @method void setDataType(string $DataType) Set CDN statistics type. Valid values:
-<li>Flux: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method integer getDataInterval() Obtain Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
-<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
-<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
-Default value: 1440. Data at 1-day granularity will be returned.
- * @method void setDataInterval(integer $DataInterval) Set Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
-<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
-<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
-Default value: 1440. Data at 1-day granularity will be returned.
- * @method array getDomainNames() Obtain List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
- * @method void setDomainNames(array $DomainNames) Set List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
+ * @method string getStartTime() Obtain Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setStartTime(string $StartTime) Set Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getEndTime() Obtain End date, which must be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setEndTime(string $EndTime) Set End date, which must be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getDataType() Obtain CDN statistics data type. Valid value:
+<li>Flux: Traffic volume, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
+ * @method void setDataType(string $DataType) Set CDN statistics data type. Valid value:
+<li>Flux: Traffic volume, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method integer getDataInterval() Obtain Time granularity of usage data, unit: minute. Valid values:
+<li>5: 5 minutes, return detailed data at a minute granularity for the specified query time.</li>
+<li>60: Hourly granularity. Returns the data of 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Returns data with day granularity within the specified query time.</li>
+The default value is 1440, which returns data with day granularity.
+ * @method void setDataInterval(integer $DataInterval) Set Time granularity of usage data, unit: minute. Valid values:
+<li>5: 5 minutes, return detailed data at a minute granularity for the specified query time.</li>
+<li>60: Hourly granularity. Returns the data of 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Returns data with day granularity within the specified query time.</li>
+The default value is 1440, which returns data with day granularity.
+ * @method array getDomainNames() Obtain Domain name list. Up to 20 domain names can be queried for usage data. Multiple values can be specified to query the superimposed usage data of these domains. Default returns the overlaid usage data of all domains.
+ * @method void setDomainNames(array $DomainNames) Set Domain name list. Up to 20 domain names can be queried for usage data. Multiple values can be specified to query the superimposed usage data of these domains. Default returns the overlaid usage data of all domains.
  */
 class DescribeCDNUsageDataRequest extends AbstractModel
 {
     /**
-     * @var string Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $StartTime;
 
     /**
-     * @var string End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
+     * @var string End date, which must be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $EndTime;
 
     /**
-     * @var string CDN statistics type. Valid values:
-<li>Flux: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
+     * @var string CDN statistics data type. Valid value:
+<li>Flux: Traffic volume, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
      */
     public $DataType;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public $SubAppId;
 
     /**
-     * @var integer Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
-<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
-<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
-Default value: 1440. Data at 1-day granularity will be returned.
+     * @var integer Time granularity of usage data, unit: minute. Valid values:
+<li>5: 5 minutes, return detailed data at a minute granularity for the specified query time.</li>
+<li>60: Hourly granularity. Returns the data of 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Returns data with day granularity within the specified query time.</li>
+The default value is 1440, which returns data with day granularity.
      */
     public $DataInterval;
 
     /**
-     * @var array List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
+     * @var array Domain name list. Up to 20 domain names can be queried for usage data. Multiple values can be specified to query the superimposed usage data of these domains. Default returns the overlaid usage data of all domains.
      */
     public $DomainNames;
 
     /**
-     * @param string $StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
-     * @param string $DataType CDN statistics type. Valid values:
-<li>Flux: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param integer $DataInterval Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
-<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
-<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
-Default value: 1440. Data at 1-day granularity will be returned.
-     * @param array $DomainNames List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
+     * @param string $StartTime Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $EndTime End date, which must be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $DataType CDN statistics data type. Valid value:
+<li>Flux: Traffic volume, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param integer $DataInterval Time granularity of usage data, unit: minute. Valid values:
+<li>5: 5 minutes, return detailed data at a minute granularity for the specified query time.</li>
+<li>60: Hourly granularity. Returns the data of 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Returns data with day granularity within the specified query time.</li>
+The default value is 1440, which returns data with day granularity.
+     * @param array $DomainNames Domain name list. Up to 20 domain names can be queried for usage data. Multiple values can be specified to query the superimposed usage data of these domains. Default returns the overlaid usage data of all domains.
      */
     function __construct()
     {

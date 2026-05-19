@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameters for recognition of pornographic content
  *
- * @method PornImgReviewTemplateInfo getImgReviewInfo() Obtain Parameters for recognition of pornographic content in images
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setImgReviewInfo(PornImgReviewTemplateInfo $ImgReviewInfo) Set Parameters for recognition of pornographic content in images
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method PornAsrReviewTemplateInfo getAsrReviewInfo() Obtain Parameters for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setAsrReviewInfo(PornAsrReviewTemplateInfo $AsrReviewInfo) Set Parameters for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method PornOcrReviewTemplateInfo getOcrReviewInfo() Obtain Parameters for OCR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setOcrReviewInfo(PornOcrReviewTemplateInfo $OcrReviewInfo) Set Parameters for OCR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+ * @method PornImgReviewTemplateInfo getImgReviewInfo() Obtain Image recognition involves control parameters for offensive information.
+ * @method void setImgReviewInfo(PornImgReviewTemplateInfo $ImgReviewInfo) Set Image recognition involves control parameters for offensive information.
+ * @method PornAsrReviewTemplateInfo getAsrReviewInfo() Obtain ASR-based recognition involves control parameters for offensive information.
+ * @method void setAsrReviewInfo(PornAsrReviewTemplateInfo $AsrReviewInfo) Set ASR-based recognition involves control parameters for offensive information.
+ * @method PornOcrReviewTemplateInfo getOcrReviewInfo() Obtain Text recognition involves control parameters for offensive information.
+ * @method void setOcrReviewInfo(PornOcrReviewTemplateInfo $OcrReviewInfo) Set Text recognition involves control parameters for offensive information.
  */
 class PornConfigureInfo extends AbstractModel
 {
     /**
-     * @var PornImgReviewTemplateInfo Parameters for recognition of pornographic content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var PornImgReviewTemplateInfo Image recognition involves control parameters for offensive information.
      */
     public $ImgReviewInfo;
 
     /**
-     * @var PornAsrReviewTemplateInfo Parameters for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var PornAsrReviewTemplateInfo ASR-based recognition involves control parameters for offensive information.
      */
     public $AsrReviewInfo;
 
     /**
-     * @var PornOcrReviewTemplateInfo Parameters for OCR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var PornOcrReviewTemplateInfo Text recognition involves control parameters for offensive information.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param PornImgReviewTemplateInfo $ImgReviewInfo Parameters for recognition of pornographic content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param PornAsrReviewTemplateInfo $AsrReviewInfo Parameters for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param PornOcrReviewTemplateInfo $OcrReviewInfo Parameters for OCR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @param PornImgReviewTemplateInfo $ImgReviewInfo Image recognition involves control parameters for offensive information.
+     * @param PornAsrReviewTemplateInfo $AsrReviewInfo ASR-based recognition involves control parameters for offensive information.
+     * @param PornOcrReviewTemplateInfo $OcrReviewInfo Text recognition involves control parameters for offensive information.
      */
     function __construct()
     {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
  * @method string getHttp2() Obtain http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
  * @method void setHttp2(string $Http2) Set http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method CDNCertInfo getCertInfo() Obtain Server certificate configuration information
- * @method void setCertInfo(CDNCertInfo $CertInfo) Set Server certificate configuration information
+ * @method CDNCertInfo getCertInfo() Obtain Cert configuration message.
+ * @method void setCertInfo(CDNCertInfo $CertInfo) Set Cert configuration message.
  */
 class Https extends AbstractModel
 {
@@ -40,14 +40,14 @@ class Https extends AbstractModel
     public $Http2;
 
     /**
-     * @var CDNCertInfo Server certificate configuration information
+     * @var CDNCertInfo Cert configuration message.
      */
     public $CertInfo;
 
     /**
      * @param string $Switch https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
      * @param string $Http2 http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-     * @param CDNCertInfo $CertInfo Server certificate configuration information
+     * @param CDNCertInfo $CertInfo Cert configuration message.
      */
     function __construct()
     {

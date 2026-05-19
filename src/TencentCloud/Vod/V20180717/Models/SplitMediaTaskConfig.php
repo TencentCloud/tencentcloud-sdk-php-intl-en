@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Leave it blank or fill it in with 0, which means that the transcoded video will continue until the end of the original video;</li>
 <li>When the value is greater than 0 (assumed to be n), it means that the transcoded video will continue until the end of the original video. The video continues until the nth second of the original video and terminates;</li>
 <li>When the value is less than 0 (assumed to be -n), it means that the transcoded video continues until n seconds before the end of the original video. </li>
- * @method string getProcedureName() Obtain Task flow template name, if you want Fill in when executing the task flow on the generated new video.
- * @method void setProcedureName(string $ProcedureName) Set Task flow template name, if you want Fill in when executing the task flow on the generated new video.
+ * @method string getProcedureName() Obtain [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
+ * @method void setProcedureName(string $ProcedureName) Set [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
  * @method SplitMediaOutputConfig getOutputConfig() Obtain The video is split into strips to output information.
  * @method void setOutputConfig(SplitMediaOutputConfig $OutputConfig) Set The video is split into strips to output information.
  */
@@ -60,7 +60,7 @@ class SplitMediaTaskConfig extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var string Task flow template name, if you want Fill in when executing the task flow on the generated new video.
+     * @var string [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
      */
     public $ProcedureName;
 
@@ -78,7 +78,7 @@ class SplitMediaTaskConfig extends AbstractModel
 <li>Leave it blank or fill it in with 0, which means that the transcoded video will continue until the end of the original video;</li>
 <li>When the value is greater than 0 (assumed to be n), it means that the transcoded video will continue until the end of the original video. The video continues until the nth second of the original video and terminates;</li>
 <li>When the value is less than 0 (assumed to be -n), it means that the transcoded video continues until n seconds before the end of the original video. </li>
-     * @param string $ProcedureName Task flow template name, if you want Fill in when executing the task flow on the generated new video.
+     * @param string $ProcedureName [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
      * @param SplitMediaOutputConfig $OutputConfig The video is split into strips to output information.
      */
     function __construct()
