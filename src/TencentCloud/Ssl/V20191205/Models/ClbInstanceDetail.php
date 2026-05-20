@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerName(string $LoadBalancerName) Set The CLB instance name.
  * @method array getListeners() Obtain CLB listener list.
  * @method void setListeners(array $Listeners) Set CLB listener list.
+ * @method integer getForward() Obtain CLB type. 0 classic CLB; 1 application CLB.
+ * @method void setForward(integer $Forward) Set CLB type. 0 classic CLB; 1 application CLB.
  */
 class ClbInstanceDetail extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ClbInstanceDetail extends AbstractModel
     public $Listeners;
 
     /**
+     * @var integer CLB type. 0 classic CLB; 1 application CLB.
+     */
+    public $Forward;
+
+    /**
      * @param string $LoadBalancerId The CLB instance ID.
      * @param string $LoadBalancerName The CLB instance name.
      * @param array $Listeners CLB listener list.
+     * @param integer $Forward CLB type. 0 classic CLB; 1 application CLB.
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class ClbInstanceDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Listeners, $obj);
             }
+        }
+
+        if (array_key_exists("Forward",$param) and $param["Forward"] !== null) {
+            $this->Forward = $param["Forward"];
         }
     }
 }

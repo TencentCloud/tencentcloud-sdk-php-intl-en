@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of TCB service instances subject to static hosting
  *
- * @method string getDomain() Obtain The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) Set The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain The status.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set The status.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDNSStatus() Obtain The resolution status.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDNSStatus(string $DNSStatus) Set The resolution status.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOldCertificateId() Obtain The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOldCertificateId(string $OldCertificateId) Set The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDomain() Obtain Domain
+ * @method void setDomain(string $Domain) Set Domain
+ * @method string getStatus() Obtain Status.
+ * @method void setStatus(string $Status) Set Status.
+ * @method string getDNSStatus() Obtain Parsing status
+ * @method void setDNSStatus(string $DNSStatus) Set Parsing status
+ * @method string getOldCertificateId() Obtain Bound Certificate ID
+ * @method void setOldCertificateId(string $OldCertificateId) Set Bound Certificate ID
  */
 class TCBHostInstance extends AbstractModel
 {
     /**
-     * @var string The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Domain
      */
     public $Domain;
 
     /**
-     * @var string The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Status.
      */
     public $Status;
 
     /**
-     * @var string The resolution status.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Parsing status
      */
     public $DNSStatus;
 
     /**
-     * @var string The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Bound Certificate ID
      */
     public $OldCertificateId;
 
     /**
-     * @param string $Domain The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status The status.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DNSStatus The resolution status.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OldCertificateId The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Domain Domain
+     * @param string $Status Status.
+     * @param string $DNSStatus Parsing status
+     * @param string $OldCertificateId Bound Certificate ID
      */
     function __construct()
     {

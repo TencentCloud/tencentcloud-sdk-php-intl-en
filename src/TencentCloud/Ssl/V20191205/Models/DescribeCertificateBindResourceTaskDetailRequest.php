@@ -20,98 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCertificateBindResourceTaskDetail request structure.
  *
- * @method string getTaskId() Obtain Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
- * @method void setTaskId(string $TaskId) Set Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
- * @method string getLimit() Obtain The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100.
- * @method void setLimit(string $Limit) Set The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100.
- * @method string getOffset() Obtain Current offset, default is 0.
- * @method void setOffset(string $Offset) Set Current offset, default is 0.
- * @method array getResourceTypes() Obtain Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-- clb.
-- cdn.
-- ddos.
-- live.
-- vod.
-- waf.
-- apigateway.
-- teo.
-- tke.
-- cos.
-- tse.
-- tcb.
- * @method void setResourceTypes(array $ResourceTypes) Set Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-- clb.
-- cdn.
-- ddos.
-- live.
-- vod.
-- waf.
-- apigateway.
-- teo.
-- tke.
-- cos.
-- tse.
-- tcb.
- * @method array getRegions() Obtain Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
- * @method void setRegions(array $Regions) Set Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
+ * @method string getTaskId() Obtain <p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p>
+ * @method string getLimit() Obtain <p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p>
+ * @method void setLimit(string $Limit) Set <p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p>
+ * @method string getOffset() Obtain <p>Offset, defaults to 0</p>
+ * @method void setOffset(string $Offset) Set <p>Offset, defaults to 0</p>
+ * @method array getResourceTypes() Obtain <p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
+ * @method void setResourceTypes(array $ResourceTypes) Set <p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
+ * @method array getRegions() Obtain <p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p>
+ * @method void setRegions(array $Regions) Set <p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p>
  */
 class DescribeCertificateBindResourceTaskDetailRequest extends AbstractModel
 {
     /**
-     * @var string Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
+     * @var string <p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p>
      */
     public $TaskId;
 
     /**
-     * @var string The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100.
+     * @var string <p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p>
      */
     public $Limit;
 
     /**
-     * @var string Current offset, default is 0.
+     * @var string <p>Offset, defaults to 0</p>
      */
     public $Offset;
 
     /**
-     * @var array Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-- clb.
-- cdn.
-- ddos.
-- live.
-- vod.
-- waf.
-- apigateway.
-- teo.
-- tke.
-- cos.
-- tse.
-- tcb.
+     * @var array <p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
      */
     public $ResourceTypes;
 
     /**
-     * @var array Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
+     * @var array <p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p>
      */
     public $Regions;
 
     /**
-     * @param string $TaskId Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
-     * @param string $Limit The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100.
-     * @param string $Offset Current offset, default is 0.
-     * @param array $ResourceTypes Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-- clb.
-- cdn.
-- ddos.
-- live.
-- vod.
-- waf.
-- apigateway.
-- teo.
-- tke.
-- cos.
-- tse.
-- tcb.
-     * @param array $Regions Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
+     * @param string $TaskId <p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p>
+     * @param string $Limit <p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p>
+     * @param string $Offset <p>Offset, defaults to 0</p>
+     * @param array $ResourceTypes <p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
+     * @param array $Regions <p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p>
      */
     function __construct()
     {

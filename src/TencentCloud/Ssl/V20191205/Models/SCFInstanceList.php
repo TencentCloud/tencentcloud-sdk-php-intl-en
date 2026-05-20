@@ -18,28 +18,44 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of TCB access instances
+ * SCF Instance Details - Asynchronous Associate Cloud Resources Data Structure
  *
- * @method array getInstanceList() Obtain Instance list
- * @method void setInstanceList(array $InstanceList) Set Instance list
- * @method integer getTotalCount() Obtain Quantity.
- * @method void setTotalCount(integer $TotalCount) Set Quantity.
+ * @method string getRegion() Obtain <p>Region.</p>
+ * @method void setRegion(string $Region) Set <p>Region.</p>
+ * @method array getInstanceList() Obtain <p>SCF instance details</p>
+ * @method void setInstanceList(array $InstanceList) Set <p>SCF instance details</p>
+ * @method string getError() Obtain <p>Error message</p>
+ * @method void setError(string $Error) Set <p>Error message</p>
+ * @method integer getTotalCount() Obtain <p>Total count in the region</p>
+ * @method void setTotalCount(integer $TotalCount) Set <p>Total count in the region</p>
  */
-class TCBAccessService extends AbstractModel
+class SCFInstanceList extends AbstractModel
 {
     /**
-     * @var array Instance list
+     * @var string <p>Region.</p>
+     */
+    public $Region;
+
+    /**
+     * @var array <p>SCF instance details</p>
      */
     public $InstanceList;
 
     /**
-     * @var integer Quantity.
+     * @var string <p>Error message</p>
+     */
+    public $Error;
+
+    /**
+     * @var integer <p>Total count in the region</p>
      */
     public $TotalCount;
 
     /**
-     * @param array $InstanceList Instance list
-     * @param integer $TotalCount Quantity.
+     * @param string $Region <p>Region.</p>
+     * @param array $InstanceList <p>SCF instance details</p>
+     * @param string $Error <p>Error message</p>
+     * @param integer $TotalCount <p>Total count in the region</p>
      */
     function __construct()
     {
@@ -54,13 +70,21 @@ class TCBAccessService extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
         if (array_key_exists("InstanceList",$param) and $param["InstanceList"] !== null) {
             $this->InstanceList = [];
             foreach ($param["InstanceList"] as $key => $value){
-                $obj = new TCBAccessInstance();
+                $obj = new SCFInstanceDetail();
                 $obj->deserialize($value);
                 array_push($this->InstanceList, $obj);
             }
+        }
+
+        if (array_key_exists("Error",$param) and $param["Error"] !== null) {
+            $this->Error = $param["Error"];
         }
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {

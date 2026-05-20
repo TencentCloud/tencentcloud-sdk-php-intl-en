@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * Cloud-native gateway certificate information
  *
  * @method string getId() Obtain Gateway certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setId(string $Id) Set Gateway certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getName() Obtain Gateway certificate information
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setName(string $Name) Set Gateway certificate information
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getBindDomains() Obtain Bound domain name
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setBindDomains(array $BindDomains) Set Bound domain name
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getName() Obtain gateway certificate name
+ * @method void setName(string $Name) Set gateway certificate name
+ * @method array getBindDomains() Obtain Bind Domain Name
+ * @method void setBindDomains(array $BindDomains) Set Bind Domain Name
  * @method string getCertSource() Obtain Certificate source
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setCertSource(string $CertSource) Set Certificate source
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getCertId() Obtain SSL certificate ID that is currently bound
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCertId(string $CertId) Set SSL certificate ID that is currently bound
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getCertId() Obtain Currently bound SSL certificate ID
+ * @method void setCertId(string $CertId) Set Currently bound SSL certificate ID
  */
 class GatewayCertificate extends AbstractModel
 {
     /**
      * @var string Gateway certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Id;
 
     /**
-     * @var string Gateway certificate information
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string gateway certificate name
      */
     public $Name;
 
     /**
-     * @var array Bound domain name
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array Bind Domain Name
      */
     public $BindDomains;
 
     /**
      * @var string Certificate source
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $CertSource;
 
     /**
-     * @var string SSL certificate ID that is currently bound
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Currently bound SSL certificate ID
      */
     public $CertId;
 
     /**
      * @param string $Id Gateway certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Name Gateway certificate information
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $BindDomains Bound domain name
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Name gateway certificate name
+     * @param array $BindDomains Bind Domain Name
      * @param string $CertSource Certificate source
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $CertId SSL certificate ID that is currently bound
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $CertId Currently bound SSL certificate ID
      */
     function __construct()
     {

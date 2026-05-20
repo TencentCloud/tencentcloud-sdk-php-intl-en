@@ -20,144 +20,136 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCertificateBindResourceTaskDetail response structure.
  *
- * @method array getCLB() Obtain The details of associated CLB resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCLB(array $CLB) Set The details of associated CLB resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getCDN() Obtain The details of associated CDN resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCDN(array $CDN) Set The details of associated CDN resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getWAF() Obtain The details of associated WAF resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWAF(array $WAF) Set The details of associated WAF resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDDOS() Obtain The details of associated Anti-DDS resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDDOS(array $DDOS) Set The details of associated Anti-DDS resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getLIVE() Obtain The details of associated LIVE resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLIVE(array $LIVE) Set The details of associated LIVE resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getVOD() Obtain The details of associated VOD resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVOD(array $VOD) Set The details of associated VOD resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTKE() Obtain The details of associated TKE resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTKE(array $TKE) Set The details of associated TKE resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAPIGATEWAY() Obtain The details of associated APIGATEWAY resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAPIGATEWAY(array $APIGATEWAY) Set The details of associated APIGATEWAY resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTCB() Obtain The details of associated TCB resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTCB(array $TCB) Set The details of associated TCB resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTEO() Obtain The details of associated TEO resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTEO(array $TEO) Set The details of associated TEO resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, check the result of `BindResourceResult` ; if the status is `2`, check the `error` .
- * @method void setStatus(integer $Status) Set The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, check the result of `BindResourceResult` ; if the status is `2`, check the `error` .
- * @method string getCacheTime() Obtain The cache time of the current result.
- * @method void setCacheTime(string $CacheTime) Set The cache time of the current result.
- * @method array getTSE() Obtain Associated TSE resource details
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setTSE(array $TSE) Set Associated TSE resource details
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getCOS() Obtain Information of associated cos resource.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCOS(array $COS) Set Information of associated cos resource.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getCLB() Obtain <p>clb resource detail</p>
+ * @method void setCLB(array $CLB) Set <p>clb resource detail</p>
+ * @method array getCDN() Obtain <p>cdn resource detail</p>
+ * @method void setCDN(array $CDN) Set <p>cdn resource detail</p>
+ * @method array getWAF() Obtain <p>waf resource detail</p>
+ * @method void setWAF(array $WAF) Set <p>waf resource detail</p>
+ * @method array getDDOS() Obtain <p>Associate ddos resource detail</p>
+ * @method void setDDOS(array $DDOS) Set <p>Associate ddos resource detail</p>
+ * @method array getLIVE() Obtain <p>Associate live resource detail</p>
+ * @method void setLIVE(array $LIVE) Set <p>Associate live resource detail</p>
+ * @method array getVOD() Obtain <p>vod resource detail</p>
+ * @method void setVOD(array $VOD) Set <p>vod resource detail</p>
+ * @method array getTKE() Obtain <p>tke resource detail</p>
+ * @method void setTKE(array $TKE) Set <p>tke resource detail</p>
+ * @method array getAPIGATEWAY() Obtain <p>apigateway resource detail</p>
+ * @method void setAPIGATEWAY(array $APIGATEWAY) Set <p>apigateway resource detail</p>
+ * @method array getTCB() Obtain <p>tcb resource detail</p>
+ * @method void setTCB(array $TCB) Set <p>tcb resource detail</p>
+ * @method array getTEO() Obtain <p>Associate teo resource detail</p>
+ * @method void setTEO(array $TEO) Set <p>Associate teo resource detail</p>
+ * @method integer getStatus() Obtain <p>Associate cloud resources async query result: 0 indicates querying, 1 indicates success. 2 indicates an exception. If the status is 1, view the BindResourceResult. If the status is 2, view the Error reason.</p>
+ * @method void setStatus(integer $Status) Set <p>Associate cloud resources async query result: 0 indicates querying, 1 indicates success. 2 indicates an exception. If the status is 1, view the BindResourceResult. If the status is 2, view the Error reason.</p>
+ * @method string getCacheTime() Obtain <p>Current result cache time</p>
+ * @method void setCacheTime(string $CacheTime) Set <p>Current result cache time</p>
+ * @method array getTSE() Obtain <p>Associate tse resource detail</p>
+ * @method void setTSE(array $TSE) Set <p>Associate tse resource detail</p>
+ * @method array getCOS() Obtain <p>Associated COS resource detail</p>
+ * @method void setCOS(array $COS) Set <p>Associated COS resource detail</p>
+ * @method array getTDMQ() Obtain <p>Associated TDMQ - Rabbit resource detail</p>
+ * @method void setTDMQ(array $TDMQ) Set <p>Associated TDMQ - Rabbit resource detail</p>
+ * @method array getMQTT() Obtain <p>Associated MQTT resource detail</p>
+ * @method void setMQTT(array $MQTT) Set <p>Associated MQTT resource detail</p>
+ * @method array getGAAP() Obtain <p>Associated GAAP resource detail</p>
+ * @method void setGAAP(array $GAAP) Set <p>Associated GAAP resource detail</p>
+ * @method array getSCF() Obtain <p>Associated SCF resource detail</p>
+ * @method void setSCF(array $SCF) Set <p>Associated SCF resource detail</p>
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeCertificateBindResourceTaskDetailResponse extends AbstractModel
 {
     /**
-     * @var array The details of associated CLB resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>clb resource detail</p>
      */
     public $CLB;
 
     /**
-     * @var array The details of associated CDN resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>cdn resource detail</p>
      */
     public $CDN;
 
     /**
-     * @var array The details of associated WAF resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>waf resource detail</p>
      */
     public $WAF;
 
     /**
-     * @var array The details of associated Anti-DDS resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Associate ddos resource detail</p>
      */
     public $DDOS;
 
     /**
-     * @var array The details of associated LIVE resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Associate live resource detail</p>
      */
     public $LIVE;
 
     /**
-     * @var array The details of associated VOD resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>vod resource detail</p>
      */
     public $VOD;
 
     /**
-     * @var array The details of associated TKE resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>tke resource detail</p>
      */
     public $TKE;
 
     /**
-     * @var array The details of associated APIGATEWAY resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>apigateway resource detail</p>
      */
     public $APIGATEWAY;
 
     /**
-     * @var array The details of associated TCB resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>tcb resource detail</p>
      */
     public $TCB;
 
     /**
-     * @var array The details of associated TEO resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Associate teo resource detail</p>
      */
     public $TEO;
 
     /**
-     * @var integer The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, check the result of `BindResourceResult` ; if the status is `2`, check the `error` .
+     * @var integer <p>Associate cloud resources async query result: 0 indicates querying, 1 indicates success. 2 indicates an exception. If the status is 1, view the BindResourceResult. If the status is 2, view the Error reason.</p>
      */
     public $Status;
 
     /**
-     * @var string The cache time of the current result.
+     * @var string <p>Current result cache time</p>
      */
     public $CacheTime;
 
     /**
-     * @var array Associated TSE resource details
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array <p>Associate tse resource detail</p>
      */
     public $TSE;
 
     /**
-     * @var array Information of associated cos resource.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Associated COS resource detail</p>
      */
     public $COS;
+
+    /**
+     * @var array <p>Associated TDMQ - Rabbit resource detail</p>
+     */
+    public $TDMQ;
+
+    /**
+     * @var array <p>Associated MQTT resource detail</p>
+     */
+    public $MQTT;
+
+    /**
+     * @var array <p>Associated GAAP resource detail</p>
+     */
+    public $GAAP;
+
+    /**
+     * @var array <p>Associated SCF resource detail</p>
+     */
+    public $SCF;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -165,32 +157,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param array $CLB The details of associated CLB resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $CDN The details of associated CDN resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $WAF The details of associated WAF resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $DDOS The details of associated Anti-DDS resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $LIVE The details of associated LIVE resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $VOD The details of associated VOD resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $TKE The details of associated TKE resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $APIGATEWAY The details of associated APIGATEWAY resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $TCB The details of associated TCB resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $TEO The details of associated TEO resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, check the result of `BindResourceResult` ; if the status is `2`, check the `error` .
-     * @param string $CacheTime The cache time of the current result.
-     * @param array $TSE Associated TSE resource details
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $COS Information of associated cos resource.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $CLB <p>clb resource detail</p>
+     * @param array $CDN <p>cdn resource detail</p>
+     * @param array $WAF <p>waf resource detail</p>
+     * @param array $DDOS <p>Associate ddos resource detail</p>
+     * @param array $LIVE <p>Associate live resource detail</p>
+     * @param array $VOD <p>vod resource detail</p>
+     * @param array $TKE <p>tke resource detail</p>
+     * @param array $APIGATEWAY <p>apigateway resource detail</p>
+     * @param array $TCB <p>tcb resource detail</p>
+     * @param array $TEO <p>Associate teo resource detail</p>
+     * @param integer $Status <p>Associate cloud resources async query result: 0 indicates querying, 1 indicates success. 2 indicates an exception. If the status is 1, view the BindResourceResult. If the status is 2, view the Error reason.</p>
+     * @param string $CacheTime <p>Current result cache time</p>
+     * @param array $TSE <p>Associate tse resource detail</p>
+     * @param array $COS <p>Associated COS resource detail</p>
+     * @param array $TDMQ <p>Associated TDMQ - Rabbit resource detail</p>
+     * @param array $MQTT <p>Associated MQTT resource detail</p>
+     * @param array $GAAP <p>Associated GAAP resource detail</p>
+     * @param array $SCF <p>Associated SCF resource detail</p>
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -319,6 +303,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj = new COSInstanceList();
                 $obj->deserialize($value);
                 array_push($this->COS, $obj);
+            }
+        }
+
+        if (array_key_exists("TDMQ",$param) and $param["TDMQ"] !== null) {
+            $this->TDMQ = [];
+            foreach ($param["TDMQ"] as $key => $value){
+                $obj = new TDMQInstanceList();
+                $obj->deserialize($value);
+                array_push($this->TDMQ, $obj);
+            }
+        }
+
+        if (array_key_exists("MQTT",$param) and $param["MQTT"] !== null) {
+            $this->MQTT = [];
+            foreach ($param["MQTT"] as $key => $value){
+                $obj = new MQTTInstanceList();
+                $obj->deserialize($value);
+                array_push($this->MQTT, $obj);
+            }
+        }
+
+        if (array_key_exists("GAAP",$param) and $param["GAAP"] !== null) {
+            $this->GAAP = [];
+            foreach ($param["GAAP"] as $key => $value){
+                $obj = new GAAPInstanceList();
+                $obj->deserialize($value);
+                array_push($this->GAAP, $obj);
+            }
+        }
+
+        if (array_key_exists("SCF",$param) and $param["SCF"] !== null) {
+            $this->SCF = [];
+            foreach ($param["SCF"] as $key => $value){
+                $obj = new SCFInstanceList();
+                $obj->deserialize($value);
+                array_push($this->SCF, $obj);
             }
         }
 

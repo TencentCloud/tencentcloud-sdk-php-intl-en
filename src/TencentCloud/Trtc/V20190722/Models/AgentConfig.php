@@ -18,68 +18,184 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Robot parameters
+ * Bot parameters.
  *
- * @method string getUserId() Obtain The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
- * @method void setUserId(string $UserId) Set The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
- * @method string getUserSig() Obtain The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
- * @method void setUserSig(string $UserSig) Set The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
- * @method string getTargetUserId() Obtain The UserId of the robot pulling the media stream. After filling in, the robot will pull the media stream of the UserId for real-time processing
- * @method void setTargetUserId(string $TargetUserId) Set The UserId of the robot pulling the media stream. After filling in, the robot will pull the media stream of the UserId for real-time processing
- * @method integer getMaxIdleTime() Obtain If there is no streaming in the room for more than MaxIdleTime, the Service will automatically close the task. The default value is 60s.
- * @method void setMaxIdleTime(integer $MaxIdleTime) Set If there is no streaming in the room for more than MaxIdleTime, the Service will automatically close the task. The default value is 60s.
- * @method string getWelcomeMessage() Obtain Robot's welcome message
- * @method void setWelcomeMessage(string $WelcomeMessage) Set Robot's welcome message
- * @method integer getInterruptMode() Obtain Intelligent interruption mode, the default value is 0, 0 means the server automatically interrupts, 1 means the server does not interrupt, and the client sends an interrupt signal to interrupt
- * @method void setInterruptMode(integer $InterruptMode) Set Intelligent interruption mode, the default value is 0, 0 means the server automatically interrupts, 1 means the server does not interrupt, and the client sends an interrupt signal to interrupt
- * @method integer getInterruptSpeechDuration() Obtain Used when InterruptMode is 0, in milliseconds, with a default value of 500ms. This means that the server will interrupt when it detects a human voice that lasts for InterruptSpeechDuration milliseconds.
- * @method void setInterruptSpeechDuration(integer $InterruptSpeechDuration) Set Used when InterruptMode is 0, in milliseconds, with a default value of 500ms. This means that the server will interrupt when it detects a human voice that lasts for InterruptSpeechDuration milliseconds.
+ * @method string getUserId() Obtain The robot's UserId is used to enter a room and initiate a task. note that this UserId cannot be duplicated with the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple tasks are initiated in a room, the robot's UserId cannot be mutually duplicated. otherwise, the previous task will be interrupted. ensure the robot's UserId is unique in the room.
+ * @method void setUserId(string $UserId) Set The robot's UserId is used to enter a room and initiate a task. note that this UserId cannot be duplicated with the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple tasks are initiated in a room, the robot's UserId cannot be mutually duplicated. otherwise, the previous task will be interrupted. ensure the robot's UserId is unique in the room.
+ * @method string getUserSig() Obtain Signature verification corresponding to the chatbot's UserId, namely, the UserId and UserSig serve as the login password for the chatbot to enter the room. for specific calculation methods, see TRTC solution for calculating [UserSig](https://www.tencentcloud.com/document/product/647/45910?from_cn_redirect=1#UserSig).
+ * @method void setUserSig(string $UserSig) Set Signature verification corresponding to the chatbot's UserId, namely, the UserId and UserSig serve as the login password for the chatbot to enter the room. for specific calculation methods, see TRTC solution for calculating [UserSig](https://www.tencentcloud.com/document/product/647/45910?from_cn_redirect=1#UserSig).
+ * @method string getTargetUserId() Obtain UserId for robot stream pulling. after fill, the robot performs stream pulling and processes in real time.
+ * @method void setTargetUserId(string $TargetUserId) Set UserId for robot stream pulling. after fill, the robot performs stream pulling and processes in real time.
+ * @method integer getMaxIdleTime() Obtain Exceeding MaxIdleTime in the room with no streaming automatically shuts down the backend task. default value is 60s.
+ * @method void setMaxIdleTime(integer $MaxIdleTime) Set Exceeding MaxIdleTime in the room with no streaming automatically shuts down the backend task. default value is 60s.
+ * @method string getWelcomeMessage() Obtain Robot'S greeting.
+ * @method void setWelcomeMessage(string $WelcomeMessage) Set Robot'S greeting.
+ * @method integer getInterruptMode() Obtain Intelligent interruption mode, defaults to 0. 0 means server-side automatic interruption. 1 means the server does not interrupt, and the client sends an interruption signal to perform interruption.
+ * @method void setInterruptMode(integer $InterruptMode) Set Intelligent interruption mode, defaults to 0. 0 means server-side automatic interruption. 1 means the server does not interrupt, and the client sends an interruption signal to perform interruption.
+ * @method integer getInterruptSpeechDuration() Obtain Used when InterruptMode is 0, in milliseconds, defaults to 500ms. indicates the server will interrupt when it detects continuous voice for InterruptSpeechDuration milliseconds.
+ * @method void setInterruptSpeechDuration(integer $InterruptSpeechDuration) Set Used when InterruptMode is 0, in milliseconds, defaults to 500ms. indicates the server will interrupt when it detects continuous voice for InterruptSpeechDuration milliseconds.
+ * @method integer getTurnDetectionMode() Obtain Controls the trigger mode for a new dialogue. default is 0.
+-0 means a new dialogue is automatically triggered when the server detects a complete sentence through automatic speech recognition.
+-1 indicates the client determines whether to manually send a chat signaling trigger for a new dialogue upon receiving the caption message.
+ * @method void setTurnDetectionMode(integer $TurnDetectionMode) Set Controls the trigger mode for a new dialogue. default is 0.
+-0 means a new dialogue is automatically triggered when the server detects a complete sentence through automatic speech recognition.
+-1 indicates the client determines whether to manually send a chat signaling trigger for a new dialogue upon receiving the caption message.
+ * @method boolean getFilterOneWord() Obtain Whether to filter out sentences where the user only says one word. true indicates filtering, false indicates no filtering. default value is true.
+ * @method void setFilterOneWord(boolean $FilterOneWord) Set Whether to filter out sentences where the user only says one word. true indicates filtering, false indicates no filtering. default value is true.
+ * @method integer getWelcomeMessagePriority() Obtain Welcome message priority. valid values: 0 (default), 1 (high priority). high priority messages cannot be interrupted.
+ * @method void setWelcomeMessagePriority(integer $WelcomeMessagePriority) Set Welcome message priority. valid values: 0 (default), 1 (high priority). high priority messages cannot be interrupted.
+ * @method integer getFilterBracketsContent() Obtain For filtering LLM return content, do not play the content in brackets.
+Chinese bracket ().
+2: english parentheses.
+3: chinese square brackets [].
+4: english square brackets [].
+5: english curly braces {}.
+Empty by default, means no filtering.
+ * @method void setFilterBracketsContent(integer $FilterBracketsContent) Set For filtering LLM return content, do not play the content in brackets.
+Chinese bracket ().
+2: english parentheses.
+3: chinese square brackets [].
+4: english square brackets [].
+5: english curly braces {}.
+Empty by default, means no filtering.
+ * @method AmbientSound getAmbientSound() Obtain Ambient sound settings.
+ * @method void setAmbientSound(AmbientSound $AmbientSound) Set Ambient sound settings.
+ * @method VoicePrint getVoicePrint() Obtain Voiceprint configuration.
+ * @method void setVoicePrint(VoicePrint $VoicePrint) Set Voiceprint configuration.
+ * @method TurnDetection getTurnDetection() Obtain Semantic sentence segmentation detection.
+ * @method void setTurnDetection(TurnDetection $TurnDetection) Set Semantic sentence segmentation detection.
+ * @method integer getSubtitleMode() Obtain Robot subtitle display mode.
+-0 means display as soon as possible without synchronizing with audio playback. at this point, subtitles are fully delivered, and subsequent subtitles will include previous ones.
+-1 indicates sentence-level real-time display, which synchronizes with audio playback. only when the current sentence's corresponding audio playback is complete will the next subtitle be delivered. at this point, subtitles are delivered incrementally, and the terminal needs to concatenate the leading and trailing subtitles to form a complete subtitle.
+ * @method void setSubtitleMode(integer $SubtitleMode) Set Robot subtitle display mode.
+-0 means display as soon as possible without synchronizing with audio playback. at this point, subtitles are fully delivered, and subsequent subtitles will include previous ones.
+-1 indicates sentence-level real-time display, which synchronizes with audio playback. only when the current sentence's corresponding audio playback is complete will the next subtitle be delivered. at this point, subtitles are delivered incrementally, and the terminal needs to concatenate the leading and trailing subtitles to form a complete subtitle.
+ * @method array getInterruptWordList() Obtain Interruption word list. during AI speaking, only speak words in the list to interrupt AI speaking.
+Note: interrupt words avoid triggering AI reply.
+ * @method void setInterruptWordList(array $InterruptWordList) Set Interruption word list. during AI speaking, only speak words in the list to interrupt AI speaking.
+Note: interrupt words avoid triggering AI reply.
  */
 class AgentConfig extends AbstractModel
 {
     /**
-     * @var string The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
+     * @var string The robot's UserId is used to enter a room and initiate a task. note that this UserId cannot be duplicated with the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple tasks are initiated in a room, the robot's UserId cannot be mutually duplicated. otherwise, the previous task will be interrupted. ensure the robot's UserId is unique in the room.
      */
     public $UserId;
 
     /**
-     * @var string The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
+     * @var string Signature verification corresponding to the chatbot's UserId, namely, the UserId and UserSig serve as the login password for the chatbot to enter the room. for specific calculation methods, see TRTC solution for calculating [UserSig](https://www.tencentcloud.com/document/product/647/45910?from_cn_redirect=1#UserSig).
      */
     public $UserSig;
 
     /**
-     * @var string The UserId of the robot pulling the media stream. After filling in, the robot will pull the media stream of the UserId for real-time processing
+     * @var string UserId for robot stream pulling. after fill, the robot performs stream pulling and processes in real time.
      */
     public $TargetUserId;
 
     /**
-     * @var integer If there is no streaming in the room for more than MaxIdleTime, the Service will automatically close the task. The default value is 60s.
+     * @var integer Exceeding MaxIdleTime in the room with no streaming automatically shuts down the backend task. default value is 60s.
      */
     public $MaxIdleTime;
 
     /**
-     * @var string Robot's welcome message
+     * @var string Robot'S greeting.
      */
     public $WelcomeMessage;
 
     /**
-     * @var integer Intelligent interruption mode, the default value is 0, 0 means the server automatically interrupts, 1 means the server does not interrupt, and the client sends an interrupt signal to interrupt
+     * @var integer Intelligent interruption mode, defaults to 0. 0 means server-side automatic interruption. 1 means the server does not interrupt, and the client sends an interruption signal to perform interruption.
      */
     public $InterruptMode;
 
     /**
-     * @var integer Used when InterruptMode is 0, in milliseconds, with a default value of 500ms. This means that the server will interrupt when it detects a human voice that lasts for InterruptSpeechDuration milliseconds.
+     * @var integer Used when InterruptMode is 0, in milliseconds, defaults to 500ms. indicates the server will interrupt when it detects continuous voice for InterruptSpeechDuration milliseconds.
      */
     public $InterruptSpeechDuration;
 
     /**
-     * @param string $UserId The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
-     * @param string $UserSig The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
-     * @param string $TargetUserId The UserId of the robot pulling the media stream. After filling in, the robot will pull the media stream of the UserId for real-time processing
-     * @param integer $MaxIdleTime If there is no streaming in the room for more than MaxIdleTime, the Service will automatically close the task. The default value is 60s.
-     * @param string $WelcomeMessage Robot's welcome message
-     * @param integer $InterruptMode Intelligent interruption mode, the default value is 0, 0 means the server automatically interrupts, 1 means the server does not interrupt, and the client sends an interrupt signal to interrupt
-     * @param integer $InterruptSpeechDuration Used when InterruptMode is 0, in milliseconds, with a default value of 500ms. This means that the server will interrupt when it detects a human voice that lasts for InterruptSpeechDuration milliseconds.
+     * @var integer Controls the trigger mode for a new dialogue. default is 0.
+-0 means a new dialogue is automatically triggered when the server detects a complete sentence through automatic speech recognition.
+-1 indicates the client determines whether to manually send a chat signaling trigger for a new dialogue upon receiving the caption message.
+     */
+    public $TurnDetectionMode;
+
+    /**
+     * @var boolean Whether to filter out sentences where the user only says one word. true indicates filtering, false indicates no filtering. default value is true.
+     */
+    public $FilterOneWord;
+
+    /**
+     * @var integer Welcome message priority. valid values: 0 (default), 1 (high priority). high priority messages cannot be interrupted.
+     */
+    public $WelcomeMessagePriority;
+
+    /**
+     * @var integer For filtering LLM return content, do not play the content in brackets.
+Chinese bracket ().
+2: english parentheses.
+3: chinese square brackets [].
+4: english square brackets [].
+5: english curly braces {}.
+Empty by default, means no filtering.
+     */
+    public $FilterBracketsContent;
+
+    /**
+     * @var AmbientSound Ambient sound settings.
+     */
+    public $AmbientSound;
+
+    /**
+     * @var VoicePrint Voiceprint configuration.
+     */
+    public $VoicePrint;
+
+    /**
+     * @var TurnDetection Semantic sentence segmentation detection.
+     */
+    public $TurnDetection;
+
+    /**
+     * @var integer Robot subtitle display mode.
+-0 means display as soon as possible without synchronizing with audio playback. at this point, subtitles are fully delivered, and subsequent subtitles will include previous ones.
+-1 indicates sentence-level real-time display, which synchronizes with audio playback. only when the current sentence's corresponding audio playback is complete will the next subtitle be delivered. at this point, subtitles are delivered incrementally, and the terminal needs to concatenate the leading and trailing subtitles to form a complete subtitle.
+     */
+    public $SubtitleMode;
+
+    /**
+     * @var array Interruption word list. during AI speaking, only speak words in the list to interrupt AI speaking.
+Note: interrupt words avoid triggering AI reply.
+     */
+    public $InterruptWordList;
+
+    /**
+     * @param string $UserId The robot's UserId is used to enter a room and initiate a task. note that this UserId cannot be duplicated with the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple tasks are initiated in a room, the robot's UserId cannot be mutually duplicated. otherwise, the previous task will be interrupted. ensure the robot's UserId is unique in the room.
+     * @param string $UserSig Signature verification corresponding to the chatbot's UserId, namely, the UserId and UserSig serve as the login password for the chatbot to enter the room. for specific calculation methods, see TRTC solution for calculating [UserSig](https://www.tencentcloud.com/document/product/647/45910?from_cn_redirect=1#UserSig).
+     * @param string $TargetUserId UserId for robot stream pulling. after fill, the robot performs stream pulling and processes in real time.
+     * @param integer $MaxIdleTime Exceeding MaxIdleTime in the room with no streaming automatically shuts down the backend task. default value is 60s.
+     * @param string $WelcomeMessage Robot'S greeting.
+     * @param integer $InterruptMode Intelligent interruption mode, defaults to 0. 0 means server-side automatic interruption. 1 means the server does not interrupt, and the client sends an interruption signal to perform interruption.
+     * @param integer $InterruptSpeechDuration Used when InterruptMode is 0, in milliseconds, defaults to 500ms. indicates the server will interrupt when it detects continuous voice for InterruptSpeechDuration milliseconds.
+     * @param integer $TurnDetectionMode Controls the trigger mode for a new dialogue. default is 0.
+-0 means a new dialogue is automatically triggered when the server detects a complete sentence through automatic speech recognition.
+-1 indicates the client determines whether to manually send a chat signaling trigger for a new dialogue upon receiving the caption message.
+     * @param boolean $FilterOneWord Whether to filter out sentences where the user only says one word. true indicates filtering, false indicates no filtering. default value is true.
+     * @param integer $WelcomeMessagePriority Welcome message priority. valid values: 0 (default), 1 (high priority). high priority messages cannot be interrupted.
+     * @param integer $FilterBracketsContent For filtering LLM return content, do not play the content in brackets.
+Chinese bracket ().
+2: english parentheses.
+3: chinese square brackets [].
+4: english square brackets [].
+5: english curly braces {}.
+Empty by default, means no filtering.
+     * @param AmbientSound $AmbientSound Ambient sound settings.
+     * @param VoicePrint $VoicePrint Voiceprint configuration.
+     * @param TurnDetection $TurnDetection Semantic sentence segmentation detection.
+     * @param integer $SubtitleMode Robot subtitle display mode.
+-0 means display as soon as possible without synchronizing with audio playback. at this point, subtitles are fully delivered, and subsequent subtitles will include previous ones.
+-1 indicates sentence-level real-time display, which synchronizes with audio playback. only when the current sentence's corresponding audio playback is complete will the next subtitle be delivered. at this point, subtitles are delivered incrementally, and the terminal needs to concatenate the leading and trailing subtitles to form a complete subtitle.
+     * @param array $InterruptWordList Interruption word list. during AI speaking, only speak words in the list to interrupt AI speaking.
+Note: interrupt words avoid triggering AI reply.
      */
     function __construct()
     {
@@ -120,6 +236,45 @@ class AgentConfig extends AbstractModel
 
         if (array_key_exists("InterruptSpeechDuration",$param) and $param["InterruptSpeechDuration"] !== null) {
             $this->InterruptSpeechDuration = $param["InterruptSpeechDuration"];
+        }
+
+        if (array_key_exists("TurnDetectionMode",$param) and $param["TurnDetectionMode"] !== null) {
+            $this->TurnDetectionMode = $param["TurnDetectionMode"];
+        }
+
+        if (array_key_exists("FilterOneWord",$param) and $param["FilterOneWord"] !== null) {
+            $this->FilterOneWord = $param["FilterOneWord"];
+        }
+
+        if (array_key_exists("WelcomeMessagePriority",$param) and $param["WelcomeMessagePriority"] !== null) {
+            $this->WelcomeMessagePriority = $param["WelcomeMessagePriority"];
+        }
+
+        if (array_key_exists("FilterBracketsContent",$param) and $param["FilterBracketsContent"] !== null) {
+            $this->FilterBracketsContent = $param["FilterBracketsContent"];
+        }
+
+        if (array_key_exists("AmbientSound",$param) and $param["AmbientSound"] !== null) {
+            $this->AmbientSound = new AmbientSound();
+            $this->AmbientSound->deserialize($param["AmbientSound"]);
+        }
+
+        if (array_key_exists("VoicePrint",$param) and $param["VoicePrint"] !== null) {
+            $this->VoicePrint = new VoicePrint();
+            $this->VoicePrint->deserialize($param["VoicePrint"]);
+        }
+
+        if (array_key_exists("TurnDetection",$param) and $param["TurnDetection"] !== null) {
+            $this->TurnDetection = new TurnDetection();
+            $this->TurnDetection->deserialize($param["TurnDetection"]);
+        }
+
+        if (array_key_exists("SubtitleMode",$param) and $param["SubtitleMode"] !== null) {
+            $this->SubtitleMode = $param["SubtitleMode"];
+        }
+
+        if (array_key_exists("InterruptWordList",$param) and $param["InterruptWordList"] !== null) {
+            $this->InterruptWordList = $param["InterruptWordList"];
         }
     }
 }

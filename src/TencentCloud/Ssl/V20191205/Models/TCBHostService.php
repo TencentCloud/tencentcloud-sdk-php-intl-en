@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * List of TCB services subject to static hosting
  *
- * @method array getInstanceList() Obtain The list of instances.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceList(array $InstanceList) Set The list of instances.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTotalCount() Obtain The instance count.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set The instance count.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getInstanceList() Obtain Instance list
+ * @method void setInstanceList(array $InstanceList) Set Instance list
+ * @method integer getTotalCount() Obtain Quantity.
+ * @method void setTotalCount(integer $TotalCount) Set Quantity.
  */
 class TCBHostService extends AbstractModel
 {
     /**
-     * @var array The list of instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Instance list
      */
     public $InstanceList;
 
     /**
-     * @var integer The instance count.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Quantity.
      */
     public $TotalCount;
 
     /**
-     * @param array $InstanceList The list of instances.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TotalCount The instance count.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $InstanceList Instance list
+     * @param integer $TotalCount Quantity.
      */
     function __construct()
     {

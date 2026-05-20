@@ -40,6 +40,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Applying`: applying;.
 `Failed`: application failed;.
 `Issued`: binding failed.
+ * @method string getAlgorithm() Obtain Certificate encryption algorithm
+ * @method void setAlgorithm(string $Algorithm) Set Certificate encryption algorithm
  */
 class TeoInstanceDetail extends AbstractModel
 {
@@ -70,6 +72,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Status;
 
     /**
+     * @var string Certificate encryption algorithm
+     */
+    public $Algorithm;
+
+    /**
      * @param string $Host The domain.
      * @param string $CertId The certificate ID.
      * @param string $ZoneId The AZ ID.
@@ -80,6 +87,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Applying`: applying;.
 `Failed`: application failed;.
 `Issued`: binding failed.
+     * @param string $Algorithm Certificate encryption algorithm
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Algorithm",$param) and $param["Algorithm"] !== null) {
+            $this->Algorithm = $param["Algorithm"];
         }
     }
 }

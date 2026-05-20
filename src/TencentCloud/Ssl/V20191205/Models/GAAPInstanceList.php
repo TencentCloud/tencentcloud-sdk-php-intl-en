@@ -18,28 +18,36 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of TCB access instances
+ * GAAP instance details - Asynchronous associate cloud resources data structure
  *
- * @method array getInstanceList() Obtain Instance list
- * @method void setInstanceList(array $InstanceList) Set Instance list
- * @method integer getTotalCount() Obtain Quantity.
- * @method void setTotalCount(integer $TotalCount) Set Quantity.
+ * @method array getInstanceList() Obtain Instance details
+ * @method void setInstanceList(array $InstanceList) Set Instance details
+ * @method integer getTotalCount() Obtain Total number.
+ * @method void setTotalCount(integer $TotalCount) Set Total number.
+ * @method string getError() Obtain Error message	
+ * @method void setError(string $Error) Set Error message	
  */
-class TCBAccessService extends AbstractModel
+class GAAPInstanceList extends AbstractModel
 {
     /**
-     * @var array Instance list
+     * @var array Instance details
      */
     public $InstanceList;
 
     /**
-     * @var integer Quantity.
+     * @var integer Total number.
      */
     public $TotalCount;
 
     /**
-     * @param array $InstanceList Instance list
-     * @param integer $TotalCount Quantity.
+     * @var string Error message	
+     */
+    public $Error;
+
+    /**
+     * @param array $InstanceList Instance details
+     * @param integer $TotalCount Total number.
+     * @param string $Error Error message	
      */
     function __construct()
     {
@@ -57,7 +65,7 @@ class TCBAccessService extends AbstractModel
         if (array_key_exists("InstanceList",$param) and $param["InstanceList"] !== null) {
             $this->InstanceList = [];
             foreach ($param["InstanceList"] as $key => $value){
-                $obj = new TCBAccessInstance();
+                $obj = new GAAPInstanceDetail();
                 $obj->deserialize($value);
                 array_push($this->InstanceList, $obj);
             }
@@ -65,6 +73,10 @@ class TCBAccessService extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Error",$param) and $param["Error"] !== null) {
+            $this->Error = $param["Error"];
         }
     }
 }

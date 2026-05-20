@@ -18,24 +18,24 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Returned data of the [recording recognition] (https://intl.cloud.tencent.com/document/product/1093/37823?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) or [asynchronous real-time audio recognition] (https://intl.cloud.tencent.com/document/product/1093/52061?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) request.
+ * Returneddata of the [recording recognition](https://intl.cloud.tencent.com/document/product/1093/37823?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) request.
  *
- * @method integer getTaskId() Obtain Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
- * @method void setTaskId(integer $TaskId) Set Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
+ * @method integer getTaskId() Obtain Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. 
+ * @method void setTaskId(integer $TaskId) Set Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. 
  */
 class Task extends AbstractModel
 {
     /**
-     * @var integer Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
+     * @var integer Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. 
      */
     public $TaskId;
 
     /**
-     * @param integer $TaskId Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
+     * @param integer $TaskId Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. 
      */
     function __construct()
     {

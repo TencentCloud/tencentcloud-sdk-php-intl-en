@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * TSE instance details
  *
  * @method string getGatewayId() Obtain Gateway ID
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setGatewayId(string $GatewayId) Set Gateway ID
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getGatewayName() Obtain Gateway name
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setGatewayName(string $GatewayName) Set Gateway name
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getGatewayName() Obtain gateway name
+ * @method void setGatewayName(string $GatewayName) Set gateway name
  * @method array getCertificateList() Obtain Gateway certificate list
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setCertificateList(array $CertificateList) Set Gateway certificate list
-Note: This field may return null, indicating that no valid value can be obtained.
  */
 class TSEInstanceDetail extends AbstractModel
 {
     /**
      * @var string Gateway ID
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $GatewayId;
 
     /**
-     * @var string Gateway name
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string gateway name
      */
     public $GatewayName;
 
     /**
      * @var array Gateway certificate list
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $CertificateList;
 
     /**
      * @param string $GatewayId Gateway ID
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $GatewayName Gateway name
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $GatewayName gateway name
      * @param array $CertificateList Gateway certificate list
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

@@ -20,94 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TCB access instances
  *
- * @method string getDomain() Obtain The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) Set The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain The status.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set The status.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getUnionStatus() Obtain The unified domain status.
+ * @method string getDomain() Obtain Domain
+ * @method void setDomain(string $Domain) Set Domain
+ * @method integer getStatus() Obtain Status.
+ * @method void setStatus(integer $Status) Set Status.
+ * @method integer getUnionStatus() Obtain Unified domain status
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUnionStatus(integer $UnionStatus) Set The unified domain status.
+ * @method void setUnionStatus(integer $UnionStatus) Set Unified domain status
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsPreempted() Obtain Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
+ * @method boolean getIsPreempted() Obtain Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsPreempted(boolean $IsPreempted) Set Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
+ * @method void setIsPreempted(boolean $IsPreempted) Set Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getICPStatus() Obtain Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
+ * @method integer getICPStatus() Obtain icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setICPStatus(integer $ICPStatus) Set Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
+ * @method void setICPStatus(integer $ICPStatus) Set icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOldCertificateId() Obtain The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOldCertificateId(string $OldCertificateId) Set The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOldCertificateId() Obtain Bound Certificate ID
+ * @method void setOldCertificateId(string $OldCertificateId) Set Bound Certificate ID
  */
 class TCBAccessInstance extends AbstractModel
 {
     /**
-     * @var string The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Domain
      */
     public $Domain;
 
     /**
-     * @var integer The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Status.
      */
     public $Status;
 
     /**
-     * @var integer The unified domain status.
+     * @var integer Unified domain status
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UnionStatus;
 
     /**
-     * @var boolean Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
+     * @var boolean Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsPreempted;
 
     /**
-     * @var integer Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
+     * @var integer icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ICPStatus;
 
     /**
-     * @var string The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Bound Certificate ID
      */
     public $OldCertificateId;
 
     /**
-     * @param string $Domain The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status The status.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $UnionStatus The unified domain status.
+     * @param string $Domain Domain
+     * @param integer $Status Status.
+     * @param integer $UnionStatus Unified domain status
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsPreempted Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
+     * @param boolean $IsPreempted Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ICPStatus Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
+     * @param integer $ICPStatus icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OldCertificateId The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OldCertificateId Bound Certificate ID
      */
     function __construct()
     {

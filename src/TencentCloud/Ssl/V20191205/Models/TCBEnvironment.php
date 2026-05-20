@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of TCB environment instance
  *
- * @method string getID() Obtain The unique ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setID(string $ID) Set The unique ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSource() Obtain The source.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSource(string $Source) Set The source.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getName() Obtain The name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set The name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain The status.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getID() Obtain Unique ID
+ * @method void setID(string $ID) Set Unique ID
+ * @method string getSource() Obtain Source.
+ * @method void setSource(string $Source) Set Source.
+ * @method string getName() Obtain Name
+ * @method void setName(string $Name) Set Name
+ * @method string getStatus() Obtain Status.
+ * @method void setStatus(string $Status) Set Status.
  */
 class TCBEnvironment extends AbstractModel
 {
     /**
-     * @var string The unique ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Unique ID
      */
     public $ID;
 
     /**
-     * @var string The source.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Source.
      */
     public $Source;
 
     /**
-     * @var string The name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name
      */
     public $Name;
 
     /**
-     * @var string The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Status.
      */
     public $Status;
 
     /**
-     * @param string $ID The unique ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Source The source.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Name The name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ID Unique ID
+     * @param string $Source Source.
+     * @param string $Name Name
+     * @param string $Status Status.
      */
     function __construct()
     {
